@@ -198,7 +198,7 @@ The default value is 1 (do not resolve conflicts).
 Type: String
 Parameter Sets: MySiteSettings
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: False
 Position: Named
@@ -216,7 +216,7 @@ The type must be a valid name of an organizational unit; for example, OrgUnit1.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: False
 Position: Named
@@ -233,7 +233,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: False
 Position: Named

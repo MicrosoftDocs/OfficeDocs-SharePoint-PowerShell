@@ -2,7 +2,7 @@
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchqueryspellingcorrection
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 title: Get-SPEnterpriseSearchQuerySpellingCorrection
 schema: 2.0.0
 author: techwriter40
@@ -47,7 +47,7 @@ Specifies an object that represents the current status for the query spelling co
 Type: QuerySpellingCorrectionPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: False
 Position: 1
@@ -64,7 +64,7 @@ Specifies the search service application that contains the query spelling correc
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named
@@ -82,7 +82,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: False
 Position: Named

@@ -2,7 +2,7 @@
 external help file: Microsoft.PerformancePoint.Scorecards.BIMonitoringService.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/import-spperformancepointcontent
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 title: Import-SPPerformancePointContent
 schema: 2.0.0
 author: techwriter40
@@ -48,7 +48,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: False
 Position: Named
@@ -64,7 +64,7 @@ Maps existing or adds new data sources to destination library.
 Type: Hashtable
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named
@@ -80,7 +80,7 @@ Path and Name of the CMP file created in the export command.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named
@@ -96,7 +96,7 @@ Maps the locations between source lists and destination lists.
 Type: Hashtable
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named
@@ -112,7 +112,7 @@ Specifies which master page to use for imported dashboards.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named
@@ -128,7 +128,7 @@ Specifies the site to which the dashboard will be deployed. Also used to determi
 Type: SPWebPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named

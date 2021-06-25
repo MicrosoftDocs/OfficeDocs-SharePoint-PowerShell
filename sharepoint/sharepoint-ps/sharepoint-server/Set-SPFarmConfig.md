@@ -268,7 +268,7 @@ Specifies if the `UserAccountDirectoryPath` property on an `SPSite` object is im
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: False
 Position: Named

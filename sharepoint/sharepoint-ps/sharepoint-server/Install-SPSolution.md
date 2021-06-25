@@ -166,7 +166,7 @@ Valid values are:
 Type: String
 Parameter Sets: Deploy
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: False
 Position: Named
@@ -220,7 +220,7 @@ For additional information about bin assembly, see Assembly Element
 Type: SwitchParameter
 Parameter Sets: Deploy
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: False
 Position: Named

@@ -2,7 +2,7 @@
 external help file: microsoft.office.access.server.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spaccessservicesdatabaseserver
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 title: Set-SPAccessServicesDatabaseServer
 schema: 2.0.0
 author: techwriter40
@@ -111,7 +111,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: False
 Position: Named
@@ -127,7 +127,7 @@ Indicates whether new Access Services databases can be created on the specified 
 Type: Boolean
 Parameter Sets: SetAvailableForCreateParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named
@@ -143,7 +143,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: False
 Position: Named
@@ -159,7 +159,7 @@ Specifies the SQL Server hosting Access Services databases.
 Type: AccessServicesDatabaseServerPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named
@@ -175,7 +175,7 @@ Specifies the Credential object for the database user. Use this parameter if you
 Type: PSCredential
 Parameter Sets: SetCredentialsParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: False
 Position: Named
@@ -191,7 +191,7 @@ The name of the Access Services database server group containing the SQL Server 
 Type: AccessServicesDatabaseServerGroupPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named
@@ -207,7 +207,7 @@ Specifies the database server hosting Access Services databases.
 Type: String
 Parameter Sets: SetCredentialsParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: False
 Position: Named
@@ -223,7 +223,7 @@ Encrypts the database server connection.
 Type: Boolean
 Parameter Sets: SetEncryptParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named
@@ -239,7 +239,7 @@ Sets the database server to exclusive mode. No further Access Services databases
 Type: Boolean
 Parameter Sets: SetAvailableForCreateParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: False
 Position: Named
@@ -255,7 +255,7 @@ Enables or disables failover for the Access Services database server.
 Type: Boolean
 Parameter Sets: SetFailoverParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named
@@ -271,7 +271,7 @@ Specifies the failover database server name.
 Type: String
 Parameter Sets: SetSecondaryDatabaseServerNameParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: False
 Position: Named
@@ -287,7 +287,7 @@ Specifies the service context which is in the form of an instance of an SPServic
 Type: SPServiceContextPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: 0
@@ -303,7 +303,7 @@ Sets a value that indicates whether the channel will be encrypted while bypassin
 Type: Boolean
 Parameter Sets: SetEncryptParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named
@@ -319,7 +319,7 @@ Sets the user domain for the specified database server.
 Type: String
 Parameter Sets: SetUserDomainParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named
@@ -336,7 +336,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: False
 Position: Named

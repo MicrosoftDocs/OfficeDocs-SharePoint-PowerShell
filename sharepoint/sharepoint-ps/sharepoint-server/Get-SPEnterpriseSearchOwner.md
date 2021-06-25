@@ -2,7 +2,7 @@
 external help file: sharepointserver.xml
 Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchowner
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 title: Get-SPEnterpriseSearchOwner
 schema: 2.0.0
 author: techwriter40
@@ -46,7 +46,7 @@ Specifies the search object owner to retrieve.
 Type: SearchObjectOwner
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: False
 Position: 1
@@ -62,7 +62,7 @@ Specifies whether the owner object resides at the SPWeb, SPSite, SPSite Subscrip
 Type: SearchObjectLevel
 Parameter Sets: (All)
 Aliases: l
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named
@@ -84,7 +84,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: False
 Position: Named
@@ -101,7 +101,7 @@ It is only needed if Level is equal to SPWeb or SPSite.
 Type: SPWebPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: False
 Position: Named

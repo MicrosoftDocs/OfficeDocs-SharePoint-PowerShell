@@ -2,7 +2,7 @@
 external help file: microsoft.office.access.server.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spaccessservicesdatabaseserver
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 title: Get-SPAccessServicesDatabaseServer
 schema: 2.0.0
 author: techwriter40
@@ -63,7 +63,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: False
 Position: Named
@@ -79,7 +79,7 @@ Specifies an existing Database Server associated with Access Services.
 Type: AccessServicesDatabaseServerPipeBind
 Parameter Sets: GetSingleDatabaseServerParamterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named
@@ -95,7 +95,7 @@ The name of the database server group.
 Type: AccessServicesDatabaseServerGroupPipeBind
 Parameter Sets: GetSingleDatabaseServerParamterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 Type: AccessServicesDatabaseServerGroupPipeBind
 Parameter Sets: GetDatabaseServersParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: False
 Position: Named
@@ -124,7 +124,7 @@ Specifies the service context to retrieve Access Services database server inform
 Type: SPServiceContextPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: 0

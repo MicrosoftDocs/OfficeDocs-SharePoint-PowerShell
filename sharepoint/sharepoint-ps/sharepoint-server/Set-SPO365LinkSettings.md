@@ -2,7 +2,7 @@
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spo365linksettings
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 title: Set-SPO365LinkSettings
 schema: 2.0.0
 author: techwriter40
@@ -46,7 +46,7 @@ Sets the user(s) for whom redirection is active.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 Required: False
 Position: Named
 Default value: None
@@ -61,7 +61,7 @@ Sets a flag that indicates whether app launcher get data from SharePoint Online 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 Required: False
 Position: Named
 Default value: None
@@ -76,7 +76,7 @@ Sets the root URL for the redirected pages.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 Required: True
 Position: Named
 Default value: None
@@ -91,7 +91,7 @@ Sets a flag that indicates whether Local Onedrive is redirected to SPO OneDrive.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 Required: False
 Position: Named
 Default value: None

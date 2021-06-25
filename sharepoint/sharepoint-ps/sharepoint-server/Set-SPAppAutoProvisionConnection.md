@@ -2,7 +2,7 @@
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spappautoprovisionconnection
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 title: Set-SPAppAutoProvisionConnection
 schema: 2.0.0
 author: techwriter40
@@ -100,7 +100,7 @@ Specifies the connection type to provision.
 Type: ConnectionTypes
 Parameter Sets: WebHostEndPoint, WebHostSetup, WebHostCredential
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named
@@ -116,7 +116,7 @@ Specifies the end point of the provision connection.
 Type: String
 Parameter Sets: WebHostEndPoint, WebHostSetup
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named
@@ -132,7 +132,7 @@ Specifies the password for the provision connection.
 Type: String
 Parameter Sets: WebHostSetup, WebHostCredential
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named
@@ -148,7 +148,7 @@ Removes the auto provision connection of the app.
 Type: SwitchParameter
 Parameter Sets: Remove
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named
@@ -164,7 +164,7 @@ Specifies the user name of the connection.
 Type: String
 Parameter Sets: WebHostSetup, WebHostCredential
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named
@@ -186,7 +186,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: False
 Position: Named
@@ -202,7 +202,7 @@ Specifies the site collection for which the provision connection is to be associ
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: False
 Position: Named

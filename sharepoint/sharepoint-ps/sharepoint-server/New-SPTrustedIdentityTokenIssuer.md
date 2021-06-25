@@ -238,7 +238,7 @@ Specifies the URI for the metadata endpoint of the trusted provider.
 Type: Uri
 Parameter Sets: MetadataEndPointParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named
@@ -306,7 +306,7 @@ Specifies the Registered Issuer Name instead of not using the metadata endpoint.
 Type: String
 Parameter Sets: BasicParameterSet, ActiveDirectoryBackedParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: False
 Position: Named
@@ -340,7 +340,7 @@ If UseDefaultConfiguration parameter is used, then the IdentifierClaimIs paramet
 Type: SwitchParameter
 Parameter Sets: ActiveDirectoryBackedParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named

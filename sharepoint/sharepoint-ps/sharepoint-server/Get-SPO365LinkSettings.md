@@ -2,7 +2,7 @@
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spo365linksettings
-applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 title: Get-SPO365LinkSettings
 schema: 2.0.0
 author: techwriter40

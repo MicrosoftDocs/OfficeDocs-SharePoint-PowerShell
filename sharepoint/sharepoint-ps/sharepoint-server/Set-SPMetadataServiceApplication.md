@@ -434,7 +434,7 @@ When in partitioned mode, disables the partition quota.
 Type: SwitchParameter
 Parameter Sets: NoQuota
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named
@@ -450,7 +450,7 @@ When in partitioned mode, sets the maximum number of groups per partition.
 Type: Int32
 Parameter Sets: Quota
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named
@@ -466,7 +466,7 @@ When in partitioned mode, sets the maximum number of labels per partition.
 Type: Int32
 Parameter Sets: Quota
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named
@@ -482,7 +482,7 @@ When in partitioned mode, sets the maximum number of properties per partition.
 Type: Int32
 Parameter Sets: Quota
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named
@@ -498,7 +498,7 @@ When in partitioned mode, sets the maximum number of term sets per partition.
 Type: Int32
 Parameter Sets: Quota
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named
@@ -514,7 +514,7 @@ When in partitioned mode, sets the maximum number of terms per partition.
 Type: Int32
 Parameter Sets: Quota
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription edition
 
 Required: True
 Position: Named
