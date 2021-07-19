@@ -6,6 +6,9 @@
           "**/*.md",
           "**/*.yml"
         ],
+        "src": "docs-conceptual",
+        "version": "sharepoint-server-ps",
+        "dest": "sharepoint",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
@@ -36,16 +39,24 @@
         ]
       }
     ],
+    "versions": {
+      "sharepoint-server-ps": {
+        "dest": "sharepoint-server-ps"
+      },
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/powershell/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None"
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/OfficeDocs-SharePoint-powershell",
+      "feedback_product_url": "https://github.com/MicrosoftDocs/OfficeDocs-SharePoint-powershell/issues",
+      "ms.devlang": "powershell"
     },
     "fileMetadata": {},
     "template": [],
     "dest": "OfficeDocs-Sharepoint-PowerShell",
     "markdownEngineName": "markdig"
+    }
   }
 }
