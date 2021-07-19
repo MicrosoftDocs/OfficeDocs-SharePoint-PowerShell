@@ -42,7 +42,7 @@
     "versions": {
       "sharepoint-server-ps": {
         "dest": "sharepoint-server-ps"
-      }    
+      },
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
