@@ -1,0 +1,11 @@
+{
+    "sharepoint-ps": {
+        "conceptualToc": "docs-conceptual/toc.yml",
+        "conceptualTocUrl": "/powershell/sharepoint/sharepoint-ps/toc.json",
+        "referenceTocUrl": "/powershell/module/sharepoint-ps/toc.json",
+        "packageRoot": "sharepoint-ps",
+        "modules": {
+            "sharepoint-server": {}
+        }
+    }
+}
