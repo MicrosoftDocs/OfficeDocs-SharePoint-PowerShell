@@ -57,5 +57,6 @@
     "template": [],
     "dest": "OfficeDocs-Sharepoint-PowerShell",
     "markdownEngineName": "markdig"
+    }
   }
 }
