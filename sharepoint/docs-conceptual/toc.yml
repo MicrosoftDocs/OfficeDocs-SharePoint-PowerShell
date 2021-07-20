@@ -1,5 +1,6 @@
-- name: Overview
-  href: index.md
-  items:
-  - name: Introduction
-    href: intro.md
+items:
+- name: SharePoint Server Subscription Edition PowerShell
+  href: index.yml
+- name: Cmdlet reference
+  href: sharepoint-server/sharepoint-server-cmdlets.md
+

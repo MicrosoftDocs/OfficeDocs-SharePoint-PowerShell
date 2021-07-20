@@ -1,0 +1,44 @@
+### YamlMime:Landing
+
+title: SharePoint Server Subscription Edition PowerShell # < 60 chars
+summary: Learn about using PowerShell cmdlets for SharePoint Server Subscription Edition. # < 160 chars
+
+metadata:
+  title: SharePoint Server Subscription Edition PowerShell # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Use PowerShell cmdlets for SharePoint Server Subscription Edition # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: sharepoint-online #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.subservice: subservice
+  ms.topic: landing-page # Required
+  ms.collection: M365-collaboration
+  author: kaarins #Required; your GitHub user alias, with correct capitalization.
+  ms.author: kaarins #Required; microsoft alias of author; optional team alias.
+  ms.date: 03/16/2020 #Required; mm/dd/yyyy format
+  localization_priority: Priority
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+  # Card
+  - title: SharePoint Server Subscription Edition
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Overview
+            url: sharepoint-server-cmdlets         
+          - text: Cmdlet reference
+            url: /powershell/module/sharepoint-subscription
+
+  # Card
+  - title: Learning PowerShell
+    linkLists:
+      - linkListType: learn
+        links:
+          - text: PowerShell documentation
+            url: /powershell
+          - text: Overview
+            url: /powershell/scripting/overview
+          - text: More resources for learning PowerShell
+            url: /powershell/scripting/learn/more-powershell-learning
+          
+
+   
