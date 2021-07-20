@@ -2,5 +2,5 @@ items:
 - name: SharePoint Server Subscription Edition PowerShell
   href: index.yml
 - name: Cmdlet reference
-  href: sharepoint-server/sharepoint-server-cmdlets.md
+  href: sharepoint-subscription-cmdlets.md
 

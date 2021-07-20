@@ -24,7 +24,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Overview
-            url: sharepoint-server-cmdlets         
+            url: sharepoint-subscription-cmdlets         
           - text: Cmdlet reference
             url: /powershell/module/sharepoint-subscription
 
