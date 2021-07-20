@@ -3,7 +3,7 @@
     {
       "docset_name": "OfficeDocs-Sharepoint-PowerShell",
       "build_source_folder": "sharepoint",
-      "build_output_subfolder": "OfficeDocs-Sharepoint-PowerShell",
+      "build_output_subfolder": "sharepoint-server-ps",
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
@@ -44,7 +44,11 @@
       "branch_mapping": {}
     }
   ],
-  "branch_target_mapping": {},
+  "branch_target_mapping": {
+    "live": [
+      "Publish"
+    ]
+  },
   "need_generate_pdf_url_template": false,
   "targets": {
     "Pdf": {
