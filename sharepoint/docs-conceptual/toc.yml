@@ -1,6 +1,13 @@
-items:
-- name: SharePoint Server Subscription Edition PowerShell
+- name: SharePoint PowerShell
   href: index.yml
-- name: Cmdlet reference
-  href: sharepoint-subscription-cmdlets.md
+- name: SharePoint in Microsoft 365
+  items:
+  - name: Intro to SharePoint Online Management Shell
+    href: sharepoint-online/introduction-sharepoint-online-management-shell.md
+  - name: Get started with SharePoint Online Management Shell
+    href: sharepoint-online/connect-sharepoint-online.md
+- name: SharePoint PnP
+  href: sharepoint-pnp/sharepoint-pnp-cmdlets.md
+- name: SharePoint Server
+  href: sharepoint-server/sharepoint-server-cmdlets.md
 

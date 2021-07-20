@@ -5,7 +5,7 @@
         "referenceTocUrl": "/powershell/module/sharepoint-server-ps/toc.json",
         "packageRoot": "sharepoint-server-ps",
         "modules": {
-            "sharepoint-subscription": {}
+            "sharepoint-server": {}
         }
     }
 }
