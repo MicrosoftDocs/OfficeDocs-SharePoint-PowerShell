@@ -2,26 +2,37 @@
   "build": {
     "content": [
       {
-        "files": [
-          "**/*.md",
-          "**/*.yml"
-        ],
+        "files": ["**/*.md"],
         "src": "docs-conceptual",
         "version": "sharepoint-server-ps",
         "dest": "sharepoint",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
-          "_themes/**",
-          "_themes.pdf/**",
-          "**/docfx.json",
-          "_repo.en-us/**",
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
-          "ThirdPartyNotices.md"
-        ]
-      }
+          "ThirdPartyNotices"]
+      },
+      {
+         "files": ["toc.yml"],
+        "src": "docs-conceptual",
+        "version": "sharepoint-server-ps",
+        "dest": "sharepoint/sharepoint-server-ps"
+      },
+      {
+      "files": ["**/*.yml"],
+      "exclude": ["toc.yml"],
+      "src": "sharepoint-server-ps",
+      "version": "sharepoint-server-ps",
+      "dest": "module"
+    },
+    {
+      "files": ["toc.yml"],
+      "src": "sharepoint-server-ps",
+      "version": "sharepoint-server-ps",
+      "dest": "module/sharepoint-server-ps"
+    }
     ],
     "resource": [
       {
@@ -31,18 +42,15 @@
         ],
         "exclude": [
           "**/obj/**",
-          "**/includes/**",
-          "_themes/**",
-          "_themes.pdf/**",
-          "**/docfx.json",
-          "_repo.en-us/**"
+          "**/includes/**"
         ]
       }
     ],
     "versions": {
       "sharepoint-server-ps": {
         "dest": "sharepoint-server-ps"
-      },
+      }
+    },
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
@@ -55,8 +63,6 @@
     },
     "fileMetadata": {},
     "template": [],
-    "dest": "OfficeDocs-Sharepoint-PowerShell",
-    "markdownEngineName": "markdig"
-    }
+    "dest": "sharepoint-server-ps"
   }
 }
