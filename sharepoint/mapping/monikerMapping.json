@@ -1,9 +1,9 @@
 {
-    "sharepoint-ps": {
+    "sharepoint-server-ps": {
         "conceptualToc": "docs-conceptual/toc.yml",
-        "conceptualTocUrl": "/powershell/sharepoint/sharepoint-ps/toc.json",
-        "referenceTocUrl": "/powershell/module/sharepoint-ps/toc.json",
-        "packageRoot": "sharepoint-ps",
+        "conceptualTocUrl": "/powershell/sharepoint/sharepoint-server-ps/toc.json",
+        "referenceTocUrl": "/powershell/module/sharepoint-server-ps/toc.json",
+        "packageRoot": "sharepoint-server-ps",
         "modules": {
             "sharepoint-server": {}
         }
