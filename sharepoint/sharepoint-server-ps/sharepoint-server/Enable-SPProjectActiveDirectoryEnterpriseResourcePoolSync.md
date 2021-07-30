@@ -1,6 +1,6 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/enable-spprojectactivedirectoryenterpriseresourcepoolsync
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Enable-SPProjectActiveDirectoryEnterpriseResourcePoolSync
@@ -48,8 +48,8 @@ For permissions and the most current information about Windows PowerShell for Pr
 ## EXAMPLES
 
 ###   ------------ Example 1 --------------------
-```
-$groupGuids = Get-ADGroup -Filter {Name -eq 'Domain Users' -or Name -eq 'Domain Admins'} | select ObjectGuid #Active Directory PowerShell Module required
+```powershell
+PS C:\> $groupGuids = Get-ADGroup -Filter {Name -eq 'Domain Users' -or Name -eq 'Domain Admins'} | select ObjectGuid #Active Directory PowerShell Module required
 [Guid[]]$groupUids = $groupGuids[0].ObjectGuid,$groupGuids[1].ObjectGuid
 Enable-SPProjectActiveDirectoryEnterpriseResourcePoolSync -Url https://pwa_site -GroupUids $groupUids
 ```

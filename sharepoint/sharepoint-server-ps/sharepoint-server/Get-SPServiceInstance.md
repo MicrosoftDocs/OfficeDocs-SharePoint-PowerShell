@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spserviceinstance
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Get-SPServiceInstance
 schema: 2.0.0
 author: techwriter40
@@ -21,14 +21,14 @@ Returns the services instance for a specific server or the entire farm.
 ## SYNTAX
 
 ### Identity
-```
-Get-SPServiceInstance [[-Identity] <SPServiceInstancePipeBind>]
+```powershell
+PS C:\> Get-SPServiceInstance [[-Identity] <SPServiceInstancePipeBind>]
  [-AssignmentCollection <SPAssignmentCollection>] [-All] [<CommonParameters>]
 ```
 
 ### Server
-```
-Get-SPServiceInstance -Server <SPServerPipeBind> [-AssignmentCollection <SPAssignmentCollection>] [-All]
+```powershell
+PS C:\> Get-SPServiceInstance -Server <SPServerPipeBind> [-AssignmentCollection <SPAssignmentCollection>] [-All]
  [<CommonParameters>]
 ```
 
@@ -45,8 +45,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------EXAMPLE----------------- 
-```
-Get-SPServiceInstance -Server ServerA
+```powershell
+PS C:\> Get-SPServiceInstance -Server ServerA
 ```
 
 This example displays the service instances from a given server.
@@ -62,7 +62,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPServiceInstancePipeBind
 Parameter Sets: Identity
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 1
@@ -78,7 +78,7 @@ Specifies the server from which to return the service instance.
 Type: SPServerPipeBind
 Parameter Sets: Server
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -96,7 +96,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -112,7 +112,7 @@ Returns all services instance in the farm.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

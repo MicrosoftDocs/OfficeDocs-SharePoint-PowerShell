@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spserverscaleoutdatabasedatarange
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Set-SPServerScaleOutDatabaseDataRange
 schema: 2.0.0
 author: techwriter40
@@ -31,8 +31,8 @@ Use the Set-SPServerScaleOutDatabaseDataRange cmdlet to extend the range of a sp
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
-```
-$databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
+```powershell
+PS C:\> $databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
 $database = $databases[0]
 $state = Get-SPServerScaleOutDatabaseDataState -Database $database
 Set-SPServerScaleOutDatabaseDataRange -Database $database -Range $state.Range -NewRangePoint $null -IsUpperSubRange $true
@@ -51,7 +51,7 @@ Specifies the scale-out database to which to extend the data range.
 Type: SPDatabasePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -68,7 +68,7 @@ Specifies whether to set the start point or the end point of the data range with
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -85,7 +85,7 @@ Specifies the expected data range of the scale-out database.
 Type: SPScaleOutDataRange
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -104,7 +104,7 @@ Note: When the Global parameter is used, all objects are contained in the global
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -121,7 +121,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -138,7 +138,7 @@ The maximum value is NULL.
 Type: Byte[]
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -156,7 +156,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

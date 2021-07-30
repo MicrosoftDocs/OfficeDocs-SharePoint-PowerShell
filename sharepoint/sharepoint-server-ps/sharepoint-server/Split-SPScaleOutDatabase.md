@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/split-spscaleoutdatabase
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Split-SPScaleOutDatabase
 schema: 2.0.0
 author: techwriter40
@@ -19,16 +19,16 @@ Moves a specified percentage of partitions from one scale-out database to anothe
 ## SYNTAX
 
 ### NewDatabase
-```
-Split-SPScaleOutDatabase -NewDatabaseName <String> -SourceDatabase <SPDatabasePipeBind>
+```powershell
+PS C:\> Split-SPScaleOutDatabase -NewDatabaseName <String> -SourceDatabase <SPDatabasePipeBind>
  -SourceServiceApplication <SPServiceApplicationPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-MoveLowerHalf] [-NewDatabaseCredentials <PSCredential>] [-NewDatabaseFailoverServer <String>]
  [-NewDatabaseServer <String>] [-SourcePercentage <Int32>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### ExistingDatabase
-```
-Split-SPScaleOutDatabase -SourceDatabase <SPDatabasePipeBind>
+```powershell
+PS C:\> Split-SPScaleOutDatabase -SourceDatabase <SPDatabasePipeBind>
  -SourceServiceApplication <SPServiceApplicationPipeBind> -TargetDatabase <SPDatabasePipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-MoveLowerHalf] [-SourcePercentage <Int32>]
  [-WhatIf] [<CommonParameters>]
@@ -46,8 +46,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ---------------EXAMPLE 1---------------
-```
-$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
+```powershell
+PS C:\> $databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
 $database = $databases[0]
 Split-SPScaleOutDatabase -NewDatabaseName Database2 -NewDatabaseServer MyDatabaseServer -SourceDatabase $database -SourceServiceApplication $serviceApplication -SourcePercentage 30
 ```
@@ -58,8 +58,8 @@ The example also moves 30% of the data from the upper side of the data range in 
 
 ### ---------------EXAMPLE 2---------------
 
-```
-$ssa = Get-SPEnterpriseSearchServiceApplication
+```powershell
+PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
 
 $newReportingDb = "Search_AnalyticsReporting2"
 $reportingDb = Get-SPScaleOutDatabase -SearchApplication $ssa
@@ -77,7 +77,7 @@ Specifies the name of a new scale-out database that you are creating.
 Type: String
 Parameter Sets: NewDatabase
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -93,7 +93,7 @@ The source scale-out database to move data from.
 Type: SPDatabasePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -109,7 +109,7 @@ The service application in which the data move operation will take place.
 Type: SPServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -125,7 +125,7 @@ The target scale-out database to move data to.
 Type: SPDatabasePipeBind
 Parameter Sets: ExistingDatabase
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -147,7 +147,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -164,7 +164,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -181,7 +181,7 @@ If this parameter is not specified, the default behavior is to move the upper si
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -199,7 +199,7 @@ If a value is not provided, the current user's credentials will be used by defau
 Type: PSCredential
 Parameter Sets: NewDatabase
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -216,7 +216,7 @@ If a value is not provided, the new scale-out database does not have a failover 
 Type: String
 Parameter Sets: NewDatabase
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -233,7 +233,7 @@ If a value is not provided, the default database server is used.
 Type: String
 Parameter Sets: NewDatabase
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -250,7 +250,7 @@ If a value is not provided, the default value of 50 percent is used.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -267,7 +267,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

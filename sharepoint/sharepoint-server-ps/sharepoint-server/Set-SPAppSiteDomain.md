@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spappsitedomain
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Set-SPAppSiteDomain
 schema: 2.0.0
 author: techwriter40
@@ -30,8 +30,8 @@ Use the Set-SPAppSiteDomain cmdlet to create or change the URL of any installed 
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
-```
-Set-SPAppSiteDomain -Site https://www.contoso.com
+```powershell
+PS C:\> Set-SPAppSiteDomain -Site https://www.contoso.com
 ```
 
 This example sets the subscription name and app site domain identifier for the https://www.contoso.com site.
@@ -47,7 +47,7 @@ Specifies the SPSite object or the GUID of the SPSite or the URL of the SPSite.
 Type: SPSitePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -66,7 +66,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -83,7 +83,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -101,7 +101,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

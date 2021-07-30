@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/stop-sptaxonomyreplication
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Stop-SPTaxonomyReplication
 schema: 2.0.0
 author: techwriter40
@@ -28,8 +28,8 @@ Use the Stop-SPTaxonomyReplication cmdlet to terminate Hybrid SharePoint Taxonom
 ## EXAMPLES
 
 ### ------------------EXAMPLE-----------------------
-```
-Stop-SPTaxonomyReplication -Credential (Get-Credential)
+```powershell
+PS C:\> Stop-SPTaxonomyReplication -Credential (Get-Credential)
 ```
 
 This example performs a full replication and deletes the Taxonomy Groups Replication timer job. If the full replication fails, you can run the cmdlet again.  The credential is a SharePoint Online tenant administrator credential.
@@ -45,7 +45,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -63,7 +63,7 @@ Fetches full taxonomy data properties, so a Term Store Administrator's credentia
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named

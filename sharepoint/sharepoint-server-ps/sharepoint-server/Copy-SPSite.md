@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/copy-spsite
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Copy-SPSite
 schema: 2.0.0
 author: techwriter40
@@ -38,8 +38,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------EXAMPLE------------- 
-```
-Copy-SPSite https://contoso/sites/OldTeam -DestinationDatabase WSS_Content -TargetUrl https://contoso/sites/NewTeam
+```powershell
+PS C:\> Copy-SPSite https://contoso/sites/OldTeam -DestinationDatabase WSS_Content -TargetUrl https://contoso/sites/NewTeam
 ```
 
 This example makes a copy of the https://contoso/sites/OldTeam site collection from its database to the WSS_Content database with the new URL, https://contoso/sites/NewTeam and a new Site ID.
@@ -54,7 +54,7 @@ This can be a valid URL or GUID.
 Type: SPSitePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -70,7 +70,7 @@ The URL that will be used for the destination copy of the site collection.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 2
@@ -92,7 +92,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -108,7 +108,7 @@ Specifies the location where the copy will be sent to.
 Type: SPContentDatabasePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -124,7 +124,7 @@ Use when the site collection is a host-named site collection that allows the sit
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

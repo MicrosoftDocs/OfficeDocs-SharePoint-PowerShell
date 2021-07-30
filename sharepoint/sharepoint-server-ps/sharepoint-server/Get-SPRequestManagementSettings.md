@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-sprequestmanagementsettings
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Get-SPRequestManagementSettings
 schema: 2.0.0
 author: techwriter40
@@ -33,8 +33,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### -----------EXAMPLE------- 
-```
-Get-SPRequestManagementSettings -Identity <GUID>
+```powershell
+PS C:\> Get-SPRequestManagementSettings -Identity <GUID>
 ```
 
 This example returns a request manager object for a specified identity.
@@ -48,7 +48,7 @@ Specifies the web-application for which a user wants to enable routing or thrott
 Type: SPRequestManagementSettingsPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -70,7 +70,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

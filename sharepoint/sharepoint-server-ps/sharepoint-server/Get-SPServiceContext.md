@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spservicecontext
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Get-SPServiceContext
 schema: 2.0.0
 author: techwriter40
@@ -21,14 +21,14 @@ Returns a service context.
 ## SYNTAX
 
 ### Site
-```
-Get-SPServiceContext [-Site] <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+```powershell
+PS C:\> Get-SPServiceContext [-Site] <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [<CommonParameters>]
 ```
 
 ### SiteSubscription
-```
-Get-SPServiceContext -SiteSubscription <SPSiteSubscriptionPipeBind>
+```powershell
+PS C:\> Get-SPServiceContext -SiteSubscription <SPSiteSubscriptionPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
@@ -45,8 +45,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ----------------EXAMPLE--------------- 
-```
-C:\PS>$sitesub = Get-SPSiteSubscription https://my.contoso.com/
+```powershell
+PS C:\> $sitesub = Get-SPSiteSubscription https://my.contoso.com/
 
 Get-SPServiceContext $sitesub
 ```
@@ -64,7 +64,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPSitePipeBind
 Parameter Sets: Site
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -82,7 +82,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: SiteSubscription
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -104,7 +104,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

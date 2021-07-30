@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spthrottlingrule
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Remove-SPThrottlingRule
 schema: 2.0.0
 author: techwriter40
@@ -32,14 +32,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ----------------------EXAMPLE-----------------------
-```
-C:\PS>$web=Get-SPWebApplication -Identity <URL of web application>
+```powershell
+PS C:\> $web=Get-SPWebApplication -Identity <URL of web application>
 
-C:\PS>$rm=Get-SPRequestManagementSettings -Identity $web
+PS C:\> $rm=Get-SPRequestManagementSettings -Identity $web
 
-C:\PS>$c=New-SPRequestManagementRuleCriteria -Value http -Property url -MatchType startswith -CaseSensitive $false
+PS C:\> $c=New-SPRequestManagementRuleCriteria -Value http -Property url -MatchType startswith -CaseSensitive $false
 
-C:\PS>$throttlingrule=Add-SPThrottlingRule -RequestManagementSettings $rm -Name <Rule Name> -Criteria $c -Threshold 4
+PS C:\> $throttlingrule=Add-SPThrottlingRule -RequestManagementSettings $rm -Name <Rule Name> -Criteria $c -Threshold 4
 
 Remove-SPThrottlingRule -Identity $throttlingrule
 ```
@@ -56,7 +56,7 @@ Specifies the throttling rule object to remove.
 Type: SPThrottlingRulePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -78,7 +78,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

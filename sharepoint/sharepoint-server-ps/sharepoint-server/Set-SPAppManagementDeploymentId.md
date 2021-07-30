@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spappmanagementdeploymentid
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Set-SPAppManagementDeploymentId
 schema: 2.0.0
 author: techwriter40
@@ -34,8 +34,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### -----------EXAMPLE 1----------
-```
-$sa = Get-SPServiceApplication | where {$_.TypeName -eq "App Management Service Application"}
+```powershell
+PS C:\> $sa = Get-SPServiceApplication | where {$_.TypeName -eq "App Management Service Application"}
 Set-SPAppManagementDeploymentId -DeploymentId 3102B7C3-1866-48EE-91CB-84E20AD24BF2 -AppManagementServiceApplication $sa
 ```
 
@@ -43,8 +43,8 @@ This example sets the deployment identifier of the current farm to 3102B7C3-1866
 
 
 ### -----------EXAMPLE 2----------
-```
-$sa = Get-SPServiceApplication | where {$_.TypeName -eq "App Management Service Application"}
+```powershell
+PS C:\> $sa = Get-SPServiceApplication | where {$_.TypeName -eq "App Management Service Application"}
 Get-SPSiteSubscription | where{$_.Id -eq "88f16a50-0530-4f3f-b749-24ef0b30d685"} | Set-SPAppManagementDeploymentId -DeploymentId 3102B7C3-1866-48EE-91CB-84E20AD24BF2 -AppManagementServiceApplication $sa
 ```
 
@@ -60,7 +60,7 @@ Specifies the app management service application object that is running on the f
 Type: AppManagementServiceApplication
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -78,7 +78,7 @@ If Identity parameter is omitted, then it is assumed that this deployment identi
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -100,7 +100,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -117,7 +117,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -134,7 +134,7 @@ If the Identity parameter is omitted, it is assumed that the deployment identifi
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All)
 Aliases: Subscription
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -151,7 +151,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

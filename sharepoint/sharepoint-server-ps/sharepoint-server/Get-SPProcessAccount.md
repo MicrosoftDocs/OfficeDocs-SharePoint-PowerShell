@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spprocessaccount
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Get-SPProcessAccount
 schema: 2.0.0
 author: techwriter40
@@ -21,18 +21,18 @@ Returns a system account or a managed account.
 ## SYNTAX
 
 ### LocalService
-```
-Get-SPProcessAccount [-AssignmentCollection <SPAssignmentCollection>] [-LocalService] [<CommonParameters>]
+```powershell
+PS C:\> Get-SPProcessAccount [-AssignmentCollection <SPAssignmentCollection>] [-LocalService] [<CommonParameters>]
 ```
 
 ### LocalSystem
-```
-Get-SPProcessAccount [-AssignmentCollection <SPAssignmentCollection>] [-LocalSystem] [<CommonParameters>]
+```powershell
+PS C:\> Get-SPProcessAccount [-AssignmentCollection <SPAssignmentCollection>] [-LocalSystem] [<CommonParameters>]
 ```
 
 ### NetworkService
-```
-Get-SPProcessAccount [-AssignmentCollection <SPAssignmentCollection>] [-NetworkService] [<CommonParameters>]
+```powershell
+PS C:\> Get-SPProcessAccount [-AssignmentCollection <SPAssignmentCollection>] [-NetworkService] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,15 +48,15 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1----------------------- 
-```
-Get-SPProcessAccount -NetworkService
+```powershell
+PS C:\> Get-SPProcessAccount -NetworkService
 ```
 
 This example creates the SPProcessAccountPipeBind type by using the NetworkService account.
 
 ### ------------------EXAMPLE 2----------------------- 
-```
-Get-SPProcessAccount -NetworkService | New-SPServiceApplicationPool -Account $_
+```powershell
+PS C:\> Get-SPProcessAccount -NetworkService | New-SPServiceApplicationPool -Account $_
 ```
 
 This example creates an SPServiceApplicationPool account by using the NetworkService account returned by the Get-SPProcessAccount cmdlet.
@@ -76,7 +76,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -92,7 +92,7 @@ Returns the LocalService account.
 Type: SwitchParameter
 Parameter Sets: LocalService
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -108,7 +108,7 @@ Returns the LocalSystem account.
 Type: SwitchParameter
 Parameter Sets: LocalSystem
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -124,7 +124,7 @@ Returns the NetworkService account.
 Type: SwitchParameter
 Parameter Sets: NetworkService
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

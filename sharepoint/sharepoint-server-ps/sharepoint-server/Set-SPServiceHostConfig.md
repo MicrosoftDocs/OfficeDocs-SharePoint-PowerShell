@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spservicehostconfig
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Set-SPServiceHostConfig
 schema: 2.0.0
 author: techwriter40
@@ -19,15 +19,15 @@ Configures one or more common settings for all Web services.
 ## SYNTAX
 
 ### SslCertificateReference
-```
-Set-SPServiceHostConfig [-Identity] <SPIisWebServiceSettings> -SslCertificateThumbprint <String>
+```powershell
+PS C:\> Set-SPServiceHostConfig [-Identity] <SPIisWebServiceSettings> -SslCertificateThumbprint <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-HttpPort <Int32>] [-HttpsPort <Int32>]
  [-NetTcpPort <Int32>] [-NoWait] [-SslCertificateStoreName <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### SslCertificateImport
-```
-Set-SPServiceHostConfig [-Identity] <SPIisWebServiceSettings> [-AssignmentCollection <SPAssignmentCollection>]
+```powershell
+PS C:\> Set-SPServiceHostConfig [-Identity] <SPIisWebServiceSettings> [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-HttpPort <Int32>] [-HttpsPort <Int32>] [-ImportSslCertificate <X509Certificate2>]
  [-NetTcpPort <Int32>] [-NoWait] [-WhatIf] [<CommonParameters>]
 ```
@@ -45,8 +45,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE-----------------------
-```
-Set-SPServiceHostConfig -Port 12345
+```powershell
+PS C:\> Set-SPServiceHostConfig -Port 12345
 ```
 
 This example sets the HTTP port for the Web services.
@@ -61,7 +61,7 @@ Specifies the identity of the Web service application to configure.
 Type: SPIisWebServiceSettings
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -77,7 +77,7 @@ Specifies the thumbprint of the SSL certificate to retrieve for secure protocols
 Type: String
 Parameter Sets: SslCertificateReference
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -99,7 +99,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -116,7 +116,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -132,7 +132,7 @@ Specifies the new port for the Web service.
 Type: Int32
 Parameter Sets: (All)
 Aliases: Port
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -148,7 +148,7 @@ Specifies the new secure port for the Web service.
 Type: Int32
 Parameter Sets: (All)
 Aliases: SecurePort
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -164,7 +164,7 @@ Specifies the SSL Certificate to use for secure protocols.
 Type: X509Certificate2
 Parameter Sets: SslCertificateImport
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -180,7 +180,7 @@ Sets the TCP port for the Web service.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -196,7 +196,7 @@ For more information, see TechNet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -212,7 +212,7 @@ Specifies the thumbprint of the SSL certificate to retrieve for secure protocols
 Type: String
 Parameter Sets: SslCertificateReference
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -229,7 +229,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

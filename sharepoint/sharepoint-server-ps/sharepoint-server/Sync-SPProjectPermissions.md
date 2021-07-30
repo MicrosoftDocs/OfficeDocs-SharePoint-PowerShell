@@ -1,6 +1,6 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/sync-spprojectpermissions
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Sync-SPProjectPermissions
@@ -18,14 +18,14 @@ Manually synchronizes permissions between a Project Web App instance and its ass
 ## SYNTAX
 
 ### PSMode
-```
-Sync-SPProjectPermissions [-Url] <Uri> [-SyncPWASite] [-SyncProjectSites] [-Async]
+```powershell
+PS C:\> Sync-SPProjectPermissions [-Url] <Uri> [-SyncPWASite] [-SyncProjectSites] [-Async]
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### SPMode
-```
-Sync-SPProjectPermissions [-Url] <Uri> [[-Type] <SharePointPermissionModeSyncType>]
+```powershell
+PS C:\> Sync-SPProjectPermissions [-Url] <Uri> [[-Type] <SharePointPermissionModeSyncType>]
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
@@ -39,8 +39,8 @@ For permissions and the most current information about Windows PowerShell for Pr
 ## EXAMPLES
 
 ### --------------EXAMPLE-----------------
-```
-Sync-SPProjectPermissions -Url https://pwa_site -Type Full
+```powershell
+PS C:\> Sync-SPProjectPermissions -Url https://pwa_site -Type Full
 ```
 
 Performs a full sync against the PWA site https://pwa_site.

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.TopologyService-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/receive-spserviceapplicationconnectioninfo
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Receive-SPServiceApplicationConnectionInfo
 schema: 2.0.0
 author: techwriter40
@@ -32,8 +32,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE-----------------------
-```
-Receive-SPServiceApplicationConnectionInfo -FarmUrl https://FarmB/topology/topology.svc
+```powershell
+PS C:\> Receive-SPServiceApplicationConnectionInfo -FarmUrl https://FarmB/topology/topology.svc
 ```
 
 This example retreives a list of service applications published by a given farm.
@@ -52,7 +52,7 @@ The type must be a valid URL, in the form https://site_name.
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -74,7 +74,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -90,7 +90,7 @@ Specifies a filter to use.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

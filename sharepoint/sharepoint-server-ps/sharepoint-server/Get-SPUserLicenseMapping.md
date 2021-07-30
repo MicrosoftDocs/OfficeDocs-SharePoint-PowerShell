@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spuserlicensemapping
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Get-SPUserLicenseMapping
 schema: 2.0.0
 author: techwriter40
@@ -38,22 +38,22 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ---------------EXAMPLE 1----------------- 
-```
-Get-SPUserLicenseMapping
+```powershell
+PS C:\> Get-SPUserLicenseMapping
 ```
 
 This example returns all claim-to-user license mappings for the entire SharePoint farm.
 
 ### ---------------EXAMPLE 2 ----------------- 
-```
-Get-SPUserLicenseMapping -WebApplication "SharePoint - 80"
+```powershell
+PS C:\> Get-SPUserLicenseMapping -WebApplication "SharePoint - 80"
 ```
 
 This example returns all claim-to-user license mappings for the web application with the name "SharePoint - 80".
 
 ### ---------------EXAMPLE 3 ----------------- 
-```
-Get-SPUserLicenseMapping -WebApplication https://<server_name>/sitename
+```powershell
+PS C:\> Get-SPUserLicenseMapping -WebApplication https://<server_name>/sitename
 ```
 
 This example returns all claim-to-user license mappings for the Web application with the URL https://\<server_name\>/sites/sitename.
@@ -73,7 +73,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -90,7 +90,7 @@ The type must be an URL in the form https://server_name or https://server_name/s
 Type: SPWebApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spworkflowconfig
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Get-SPWorkflowConfig
 schema: 2.0.0
 author: techwriter40
@@ -21,14 +21,14 @@ Returns workflow settings for the specified Web application.
 ## SYNTAX
 
 ### SiteCollection
-```
-Get-SPWorkflowConfig [-SiteCollection] <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+```powershell
+PS C:\> Get-SPWorkflowConfig [-SiteCollection] <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [<CommonParameters>]
 ```
 
 ### WebApplication
-```
-Get-SPWorkflowConfig [-WebApplication] <SPWebApplicationPipeBind>
+```powershell
+PS C:\> Get-SPWorkflowConfig [-WebApplication] <SPWebApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
@@ -44,8 +44,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------EXAMPLE----------------- 
-```
-Get-SPWorkFlowConfig -webapplication https://sitename
+```powershell
+PS C:\> Get-SPWorkFlowConfig -webapplication https://sitename
 ```
 
 This example gets workflow settings for the specified Web application (https://sitename).
@@ -64,7 +64,7 @@ No other parameters are used.
 Type: SPSitePipeBind
 Parameter Sets: SiteCollection
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -82,7 +82,7 @@ The type must be a valid name, in the form WebApplication-1212, or a URL, in the
 Type: SPWebApplicationPipeBind
 Parameter Sets: WebApplication
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -104,7 +104,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

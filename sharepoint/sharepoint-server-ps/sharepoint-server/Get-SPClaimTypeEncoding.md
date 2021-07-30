@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spclaimtypeencoding
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Get-SPClaimTypeEncoding
 schema: 2.0.0
 author: techwriter40
@@ -43,15 +43,15 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------EXAMPLE 1-------- 
-```
-Get-SPClaimTypeEncoding
+```powershell
+PS C:\> Get-SPClaimTypeEncoding
 ```
 
 This example returns a list of all types of claima in the farm.
 
 ### --------------EXAMPLE 2-------- 
-```
-Get-SPClaimTypeEncoding -ClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/country"
+```powershell
+PS C:\> Get-SPClaimTypeEncoding -ClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/country"
 ```
 
 This example returns a specific claim type by using the ClaimType parameter.
@@ -67,7 +67,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -83,7 +83,7 @@ Specifies an encoding character that is mapped to a type of input claim.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -99,7 +99,7 @@ Specifies a type of claim that is mapped to an input character.
 Type: Char
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

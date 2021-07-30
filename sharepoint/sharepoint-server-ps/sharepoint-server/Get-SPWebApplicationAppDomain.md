@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spwebapplicationappdomain
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Get-SPWebApplicationAppDomain
 schema: 2.0.0
 author: techwriter40
@@ -19,14 +19,14 @@ Returns all app domains for a specific web application.
 ## SYNTAX
 
 ### ResourceName
-```
-Get-SPWebApplicationAppDomain [[-Identity] <SPAppDomainPipeBind>] -AppDomain <String>
+```powershell
+PS C:\> Get-SPWebApplicationAppDomain [[-Identity] <SPAppDomainPipeBind>] -AppDomain <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-Zone <SPUrlZone>] [<CommonParameters>]
 ```
 
 ### WebApplication
-```
-Get-SPWebApplicationAppDomain [[-Identity] <SPAppDomainPipeBind>] -WebApplication <SPWebApplicationPipeBind>
+```powershell
+PS C:\> Get-SPWebApplicationAppDomain [[-Identity] <SPAppDomainPipeBind>] -WebApplication <SPWebApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Zone <SPUrlZone>] [<CommonParameters>]
 ```
 
@@ -39,29 +39,29 @@ Use the Get-SPWebApplicationAppDoman cmdlet to return all app domains for a spec
 ## EXAMPLES
 
 ### -----------EXAMPLE 1--------- 
-```
-Get-SPWebApplicationAppDomain
+```powershell
+PS C:\> Get-SPWebApplicationAppDomain
 ```
 
 Returns a list of SPAppDomain objects, one for each of the app domains for all web applications in the farm.
 
 ### -----------EXAMPLE 2--------- 
-```
-Get-SPWebApplicationAppDomain -Zone Default
+```powershell
+PS C:\> Get-SPWebApplicationAppDomain -Zone Default
 ```
 
 Returns a list of SPAppDomain objects, one for each of the app domains for the Default zone for all web applications in the farm.
 
 ### -----------EXAMPLE 3--------- 
-```
-Get-SPWebApplicationAppDomain -WebApplication https://www.contoso.com
+```powershell
+PS C:\> Get-SPWebApplicationAppDomain -WebApplication https://www.contoso.com
 ```
 
 Returns a list of SPAppDomain objects, one for each of all the app domains for the specified web application for all zones.
 
 ### -----------EXAMPLE 4--------- 
-```
-Get-SPWebApplicationAppDomain -AppDomain contosoapps.com
+```powershell
+PS C:\> Get-SPWebApplicationAppDomain -AppDomain contosoapps.com
 ```
 
 Returns a list of SPAppDomain objects, one for each web application and zone pair that shares the specified app domain.
@@ -76,7 +76,7 @@ Specifies the string of a domain name (that is, contoso.com) or a SPAppDomain ob
 Type: SPAppDomainPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 1
@@ -93,7 +93,7 @@ Specifies the URI of the app domain.
 Type: String
 Parameter Sets: ResourceName
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -110,7 +110,7 @@ Specifies the GUID, URI, or name of the web application for which the app domain
 Type: SPWebApplicationPipeBind
 Parameter Sets: WebApplication
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -129,7 +129,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -158,7 +158,7 @@ If no value is specified, Default is applied.
 Type: SPUrlZone
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

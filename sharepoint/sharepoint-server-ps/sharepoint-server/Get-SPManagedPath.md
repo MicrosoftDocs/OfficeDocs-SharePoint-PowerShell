@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spmanagedpath
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Get-SPManagedPath
 schema: 2.0.0
 author: techwriter40
@@ -21,14 +21,14 @@ Returns all managed paths that match the given criteria.
 ## SYNTAX
 
 ### HostHeader
-```
-Get-SPManagedPath [[-Identity] <SPPrefixPipeBind>] [-HostHeader]
+```powershell
+PS C:\> Get-SPManagedPath [[-Identity] <SPPrefixPipeBind>] [-HostHeader]
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### WebApplication
-```
-Get-SPManagedPath [[-Identity] <SPPrefixPipeBind>] -WebApplication <SPWebApplicationPipeBind>
+```powershell
+PS C:\> Get-SPManagedPath [[-Identity] <SPPrefixPipeBind>] -WebApplication <SPWebApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
@@ -48,15 +48,15 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------EXAMPLE 1----------------- 
-```
-Get-SPManagedPath -WebApplication https://sitename
+```powershell
+PS C:\> Get-SPManagedPath -WebApplication https://sitename
 ```
 
 This example returns all managed paths for the specified Web application.
 
 ### --------------EXAMPLE 2----------------- 
-```
-Get-SPManagedPath -identity "Sites" -HostHeader
+```powershell
+PS C:\> Get-SPManagedPath -identity "Sites" -HostHeader
 ```
 
 This example gets the Sites managed path from the host-named site collections-scoped managed paths.
@@ -72,7 +72,7 @@ The type must be a valid URL, in the https://server_name or a valid GUID (for ex
 Type: SPPrefixPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 1
@@ -88,7 +88,7 @@ If provided, the managed paths returned are for the host-named sites in the farm
 Type: SwitchParameter
 Parameter Sets: HostHeader
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -106,7 +106,7 @@ The type must be a valid URL, in the form https://server_name, or a valid GUID (
 Type: SPWebApplicationPipeBind
 Parameter Sets: WebApplication
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -128,7 +128,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

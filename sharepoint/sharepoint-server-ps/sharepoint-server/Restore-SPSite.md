@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/restore-spsite
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Restore-SPSite
 schema: 2.0.0
 author: techwriter40
@@ -19,15 +19,15 @@ Restores a site collection.
 ## SYNTAX
 
 ### DatabaseFromPipebind
-```
-Restore-SPSite [-Identity] <String> -Path <String> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+```powershell
+PS C:\> Restore-SPSite [-Identity] <String> -Path <String> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-ContentDatabase <SPContentDatabasePipeBind>] [-Force] [-GradualDelete] [-HostHeaderWebApplication <String>]
  [-WhatIf] [-PreserveSiteID] [<CommonParameters>]
 ```
 
 ### DatabaseParameter
-```
-Restore-SPSite [-Identity] <String> -Path <String> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+```powershell
+PS C:\> Restore-SPSite [-Identity] <String> -Path <String> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-DatabaseName <String>] [-DatabaseServer <String>] [-Force] [-GradualDelete]
  [-HostHeaderWebApplication <String>] [-WhatIf] [-PreserveSiteID] [<CommonParameters>]
 ```
@@ -45,24 +45,24 @@ If a site collection is backed up and restored to a different URL location withi
 ## EXAMPLES
 
 ### ----------------------EXAMPLE 1----------------------
-```
-Restore-SPSite https://server_name/sites/site_name -Path C:\Backup\site_name.bak
+```powershell
+PS C:\> Restore-SPSite https://server_name/sites/site_name -Path C:\Backup\site_name.bak
 ```
 
 This example restores a site collection from the backup file C:\Backup\site_name.bak to the site collection URL https://server_name/sites/site_name.
 
 
 ### ----------------------EXAMPLE 2----------------------
-```
-Restore-SPSite https://server_name/sites/site_name -Path C:\Backup\site_name.bak -Force -DatabaseServer SQLBE1 -DatabaseName SQLDB1
+```powershell
+PS C:\> Restore-SPSite https://server_name/sites/site_name -Path C:\Backup\site_name.bak -Force -DatabaseServer SQLBE1 -DatabaseName SQLDB1
 ```
 
 This example restores a site collection backup from the backup file C:\Backup\site_name.bak, but overwrites the existing site collection at https://server_name/sites/site_name while specifying that the site collection must be stored in a specific content database.
 
 
 ### ----------------------EXAMPLE 3----------------------
-```
-Restore-SPSite https://www.example.com -Path \\file_server\share\site_name.bak -HostHeaderWebApplication https://server_name
+```powershell
+PS C:\> Restore-SPSite https://www.example.com -Path \\file_server\share\site_name.bak -HostHeaderWebApplication https://server_name
 ```
 
 This example restores a site collection backup from the backup file \\\\file_server\share\site_name.bak to the host-named site collection https://www.example.com on the Web application https://server_name.
@@ -83,7 +83,7 @@ The type must be a valid URL, in the form https://server_name/sites/site_name.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -100,7 +100,7 @@ For example, C:\Backup\site_name.bak.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -122,7 +122,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -139,7 +139,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -156,7 +156,7 @@ If no content database is specified, the content database with the greatest unus
 Type: SPContentDatabasePipeBind
 Parameter Sets: DatabaseFromPipebind
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -175,7 +175,7 @@ The type must be a valid database name, in the form SQLDB1.
 Type: String
 Parameter Sets: DatabaseParameter
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -193,7 +193,7 @@ The type must be a valid database server name, in the form SQLBE1 and needs to b
 Type: String
 Parameter Sets: DatabaseParameter
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -209,7 +209,7 @@ Specifies that the existing site collection at the URL location is to be overwri
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -226,7 +226,7 @@ This option is recommended for large site collections.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -245,7 +245,7 @@ When the HostHeaderWebApplication parameter is present, the value of the Identit
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -262,7 +262,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -278,7 +278,7 @@ Preserves the original Site ID instead of creating a new one.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

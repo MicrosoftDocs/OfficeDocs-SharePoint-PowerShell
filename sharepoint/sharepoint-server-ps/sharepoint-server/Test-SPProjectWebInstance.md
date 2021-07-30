@@ -1,6 +1,6 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/test-spprojectwebinstance
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Test-SPProjectWebInstance
@@ -32,8 +32,8 @@ For permissions and the most current information about Windows PowerShell for Pr
 ## EXAMPLES
 
 ### ----------------------EXAMPLE-----------------------
-```
-Get-SPProjectWebInstance | Test-SPProjectWebInstance
+```powershell
+PS C:\> Get-SPProjectWebInstance | Test-SPProjectWebInstance
 ```
 
 This example runs a suite of tests on all Project Web Instances in the SharePoint Server farm.

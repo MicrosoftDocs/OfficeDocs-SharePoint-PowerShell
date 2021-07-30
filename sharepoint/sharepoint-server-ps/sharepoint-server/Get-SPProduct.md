@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spproduct
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Get-SPProduct
 schema: 2.0.0
 author: techwriter40
@@ -21,13 +21,13 @@ Returns a list of the SharePoint-related products installed in the farm and the 
 ## SYNTAX
 
 ### Local
-```
-Get-SPProduct [-AssignmentCollection <SPAssignmentCollection>] [-Local] [<CommonParameters>]
+```powershell
+PS C:\> Get-SPProduct [-AssignmentCollection <SPAssignmentCollection>] [-Local] [<CommonParameters>]
 ```
 
 ### Server
-```
-Get-SPProduct [-AssignmentCollection <SPAssignmentCollection>] [-Server <SPServerPipeBind>]
+```powershell
+PS C:\> Get-SPProduct [-AssignmentCollection <SPAssignmentCollection>] [-Server <SPServerPipeBind>]
  [<CommonParameters>]
 ```
 
@@ -45,8 +45,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------EXAMPLE----------------- 
-```
-Get-SPProduct -Local
+```powershell
+PS C:\> Get-SPProduct -Local
 ```
 
 This example displays the SharePoint-related products installed on the local server.
@@ -66,7 +66,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -83,7 +83,7 @@ If you use the Local parameter, you cannot use the Server parameter.
 Type: SwitchParameter
 Parameter Sets: Local
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -100,7 +100,7 @@ If you use the Server parameter, you cannot use the Local parameter.
 Type: SPServerPipeBind
 Parameter Sets: Server
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

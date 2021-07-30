@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spwopisuppressionsetting
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Remove-SPWOPISuppressionSetting
 schema: 2.0.0
 author: techwriter40
@@ -19,14 +19,14 @@ Removes the suppression settings for a file name extension or programmatic ID an
 ## SYNTAX
 
 ### DocTypeAndAction
-```
-Remove-SPWOPISuppressionSetting [-Action <String>] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+```powershell
+PS C:\> Remove-SPWOPISuppressionSetting [-Action <String>] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-Extension <String>] [-ProgId <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Identity
-```
-Remove-SPWOPISuppressionSetting [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+```powershell
+PS C:\> Remove-SPWOPISuppressionSetting [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-Identity <String>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -39,16 +39,16 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------EXAMPLE 1-----------------
-```
-Remove-SPWOPISuppressionSetting -Extension "XLSX" -Action "view"
+```powershell
+PS C:\> Remove-SPWOPISuppressionSetting -Extension "XLSX" -Action "view"
 ```
 
 This example removes suppression settings for viewing Excel workbooks that have the file name extension ".xlsx."
 
 
 ### --------------EXAMPLE 2-----------------
-```
-Get-SPWOPISuppressionSetting | Remove-SPWOPISuppressionSetting
+```powershell
+PS C:\> Get-SPWOPISuppressionSetting | Remove-SPWOPISuppressionSetting
 ```
 
 This example removes all suppression settings on the current SharePoint farm where this cmdlet is run.
@@ -64,7 +64,7 @@ For example, "view," "edit," and "embedview."
 Type: String
 Parameter Sets: DocTypeAndAction
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -86,7 +86,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -103,7 +103,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -120,7 +120,7 @@ Run `Get-SPWOPIBinding` to get the list of file name extensions the WOPI applica
 Type: String
 Parameter Sets: DocTypeAndAction
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -137,7 +137,7 @@ Run `Get-SPWOPISuppressionSetting` to see examples of such strings.
 Type: String
 Parameter Sets: Identity
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -154,7 +154,7 @@ Run `Get-SPWOPIBinding` to get the list of ProgIDs that the WOPI application sup
 Type: String
 Parameter Sets: DocTypeAndAction
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -171,7 +171,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

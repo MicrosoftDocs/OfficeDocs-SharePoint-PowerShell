@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-sptrustedrootauthority
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: New-SPTrustedRootAuthority
 schema: 2.0.0
 ---
@@ -16,14 +16,14 @@ Creates a trusted root authority.
 ## SYNTAX
 
 ### ManualUpdateCertificateParameterSet
-```
-New-SPTrustedRootAuthority [-Name] <String> -Certificate <X509Certificate2>
+```powershell
+PS C:\> New-SPTrustedRootAuthority [-Name] <String> -Certificate <X509Certificate2>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### MetadataEndPointParameterSet
-```
-New-SPTrustedRootAuthority [-Name] <String> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+```powershell
+PS C:\> New-SPTrustedRootAuthority [-Name] <String> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  -MetadataEndPoint <Uri> [-WhatIf] [<CommonParameters>]
 ```
 
@@ -37,8 +37,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE------------------
-```
-$cert = Get-PfxCertificate C:\LiveIDSigningCert.pfx
+```powershell
+PS C:\> $cert = Get-PfxCertificate C:\LiveIDSigningCert.pfx
 New-SPTrustedRootAuthority -Name "WFEFarm1" -Certificate $cert
 ```
 
@@ -56,7 +56,7 @@ The value must be a valid name of a trusted root authority; for example, WFEFarm
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -74,7 +74,7 @@ The value must be a name of a valid X.509 certificate; for example, Certificate1
 Type: X509Certificate2
 Parameter Sets: ManualUpdateCertificateParameterSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -96,7 +96,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -112,7 +112,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -128,7 +128,7 @@ Specifies the Uri of the metadata endpoint.
 Type: Uri
 Parameter Sets: MetadataEndPointParameterSet
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -145,7 +145,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

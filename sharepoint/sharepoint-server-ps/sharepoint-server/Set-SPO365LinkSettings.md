@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spo365linksettings
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Set-SPO365LinkSettings
 schema: 2.0.0
 author: techwriter40
@@ -30,7 +30,7 @@ To run this cmdlet requires farm administrator permission and that the user acco
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### ------------EXAMPLE 1-----------
 ```powershell
  Set-SPO365LinkSettings -MySiteHostUrl https://contoso-my.sharepoint.com/ -RedirectSites $true
 ```
@@ -46,7 +46,7 @@ Sets the user(s) for whom redirection is active.
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 Required: False
 Position: Named
 Default value: None
@@ -61,7 +61,7 @@ Sets a flag that indicates whether app launcher get data from SharePoint Online 
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 Required: False
 Position: Named
 Default value: None
@@ -76,7 +76,7 @@ Sets the root URL for the redirected pages.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 Required: True
 Position: Named
 Default value: None
@@ -91,14 +91,14 @@ Sets a flag that indicates whether Local Onedrive is redirected to SPO OneDrive.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
-```
-### -AssignmentCollection
+```powershell
+PS C:\> ### -AssignmentCollection
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.

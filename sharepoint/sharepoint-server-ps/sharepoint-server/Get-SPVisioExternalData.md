@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Office.Visio.Server.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spvisioexternaldata
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Get-SPVisioExternalData
 schema: 2.0.0
 author: techwriter40
@@ -30,15 +30,15 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------------ 
-```
-Get-SPVisioExternalData -VisioServiceApplication "VGS1"
+```powershell
+PS C:\> Get-SPVisioExternalData -VisioServiceApplication "VGS1"
 ```
 
 This example gets settings related to external data for a Visio Services application.
 
 ### ------------------EXAMPLE 2------------------------ 
-```
-Get-SPVisioServiceApplication -identity "VGS1" | Get-SPVisioExternalData
+```powershell
+PS C:\> Get-SPVisioServiceApplication -identity "VGS1" | Get-SPVisioExternalData
 ```
 
 This example uses a pipe bind to get settings related to external data for a Visio Services application.
@@ -54,7 +54,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPVisioServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -76,7 +76,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

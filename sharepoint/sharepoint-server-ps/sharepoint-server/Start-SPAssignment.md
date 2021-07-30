@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/start-spassignment
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Start-SPAssignment
 schema: 2.0.0
 author: serdarsoysal
@@ -45,8 +45,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1-----------------------
-```
-Start-SPAssignment -global
+```powershell
+PS C:\> Start-SPAssignment -global
 $w = Get-SPWeb https://MyWeb
 $w | Set-SPWeb -title "Accounting"
 Stop-SPAssignment -global
@@ -58,8 +58,8 @@ Ensure that you run `Stop-SPAssignment` before you attempt any iterations of mul
 
 
 ### ------------------EXAMPLE 2-----------------------
-```
-$gc = Start-SPAssignment
+```powershell
+PS C:\> $gc = Start-SPAssignment
 $web = $gc | Get-SPWeb https://MyWeb
 $web | Set-SPWeb -title "Accounting"
 Stop-SPAssignment -SemiGlobal $gc
@@ -85,7 +85,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -103,7 +103,7 @@ If you do not use this parameter, you must assign the output of this cmdlet to a
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

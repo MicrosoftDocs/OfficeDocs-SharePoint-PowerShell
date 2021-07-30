@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-sprequestmanagementrulecriteria
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: New-SPRequestManagementRuleCriteria
 schema: 2.0.0
 author: techwriter40
@@ -19,15 +19,15 @@ Creates criteria for the rule to match.
 ## SYNTAX
 
 ### CustomPropertyParameterSet
-```
-New-SPRequestManagementRuleCriteria [-Value] <String> [-CustomHeader] <String> [-CaseSensitive]
+```powershell
+PS C:\> New-SPRequestManagementRuleCriteria [-Value] <String> [-CustomHeader] <String> [-CaseSensitive]
  [[-MatchType] <SPRequestManagementRuleMatchType>] [-AssignmentCollection <SPAssignmentCollection>]
  [<CommonParameters>]
 ```
 
 ### StandardParameterSet
-```
-New-SPRequestManagementRuleCriteria [-Value] <String> [-Property] <SPRequestManagementRulePropertyType>
+```powershell
+PS C:\> New-SPRequestManagementRuleCriteria [-Value] <String> [-Property] <SPRequestManagementRulePropertyType>
  [-CaseSensitive] [[-MatchType] <SPRequestManagementRuleMatchType>]
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
@@ -43,8 +43,8 @@ Use the `New-SPRequestManagementRuleCriteria` cmdlet to create criteria for the 
 ## EXAMPLES
 
 ### ------------------EXAMPLE-----------------------
-```
-New-SPRequestManagementRuleCriteria -Property Host -Value Client01 -MatchType Equals
+```powershell
+PS C:\> New-SPRequestManagementRuleCriteria -Property Host -Value Client01 -MatchType Equals
 ```
 
 This example creates a new rule that matches the Host 'Client01'.
@@ -58,7 +58,7 @@ Specifies a value for the rule to match.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -74,7 +74,7 @@ Specifies the custom header for the rule.
 Type: String
 Parameter Sets: CustomPropertyParameterSet
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 2
@@ -108,7 +108,7 @@ The following are the valid values:
 Type: SPRequestManagementRulePropertyType
 Parameter Sets: StandardParameterSet
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 2
@@ -124,7 +124,7 @@ Specifies whether or not the match is case sensitive.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 3
@@ -150,7 +150,7 @@ The following are the valid values:
 Type: SPRequestManagementRuleMatchType
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 3
@@ -172,7 +172,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

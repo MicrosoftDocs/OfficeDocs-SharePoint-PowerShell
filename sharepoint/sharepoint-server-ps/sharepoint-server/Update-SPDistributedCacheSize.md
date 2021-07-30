@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/update-spdistributedcachesize
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Update-SPDistributedCacheSize
 schema: 2.0.0
 author: techwriter40
@@ -28,8 +28,8 @@ Use the Update-SPDistributedCacheSize cmdlet to allocate memory to the Distribut
 ## EXAMPLES
 
 ### -------------EXAMPLE----------
-```
-Update-SPDistributedCacheSize -CacheSizeInMB 2048
+```powershell
+PS C:\> Update-SPDistributedCacheSize -CacheSizeInMB 2048
 ```
 
 Updates the Distributed Cache size to 2048MB.
@@ -45,7 +45,7 @@ Specifies the memory size in megabytes (MB) that you want to allocate to the Dis
 Type: UInt32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -63,7 +63,7 @@ NOTE: When the Global parameter is used, all objects are contained in the global
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

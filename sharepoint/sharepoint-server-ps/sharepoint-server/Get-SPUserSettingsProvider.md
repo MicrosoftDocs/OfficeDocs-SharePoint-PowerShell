@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spusersettingsprovider
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Get-SPUserSettingsProvider
 schema: 2.0.0
 author: techwriter40
@@ -35,16 +35,16 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### -----------EXAMPLE-------- 
-```
-C:\PS>$provider = Get-SPUserSettingsProvider
+```powershell
+PS C:\> $provider = Get-SPUserSettingsProvider
 
-C:\PS>$site = Get-SPSite -Identity https://someserver
+PS C:\> $site = Get-SPSite -Identity https://someserver
 
-C:\PS>$user = $site.RootWeb.CurrentUser
+PS C:\> $user = $site.RootWeb.CurrentUser
 
-C:\PS>$ctx = $provider.GetProviderContext($user)
+PS C:\> $ctx = $provider.GetProviderContext($user)
 
-C:\PS>$provider.GetUserRegionalSettings($ctx,$user)
+PS C:\> $provider.GetUserRegionalSettings($ctx,$user)
 ```
 
 This example returns the regional settings for a specified user.
@@ -58,7 +58,7 @@ Specifies the GUID ID for a User Settings Provider.
 Type: SPUserSettingsProviderPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 1
@@ -80,7 +80,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

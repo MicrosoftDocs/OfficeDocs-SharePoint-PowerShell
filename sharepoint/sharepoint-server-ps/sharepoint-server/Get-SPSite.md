@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spsite
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Get-SPSite
 schema: 2.0.0
 author: techwriter40
@@ -21,29 +21,29 @@ Returns all site collections that match the specified criteria.
 ## SYNTAX
 
 ### AllSitesInIdentity
-```
-Get-SPSite [-Identity] <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+```powershell
+PS C:\> Get-SPSite [-Identity] <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-CompatibilityLevel <Int32>] [-Confirm] [-Filter <ScriptBlock>] [-Limit <String>] [-Regex] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### AllSitesInContentDB
-```
-Get-SPSite -ContentDatabase <SPContentDatabasePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+```powershell
+PS C:\> Get-SPSite -ContentDatabase <SPContentDatabasePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-CompatibilityLevel <Int32>] [-Confirm] [-Filter <ScriptBlock>] [-Limit <String>] [-WhatIf]
  [-NeedsB2BUpgrade] [<CommonParameters>]
 ```
 
 ### AllSitesInSiteSubscription
-```
-Get-SPSite -SiteSubscription <SPSiteSubscriptionPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+```powershell
+PS C:\> Get-SPSite -SiteSubscription <SPSiteSubscriptionPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-CompatibilityLevel <Int32>] [-Confirm] [-Filter <ScriptBlock>] [-Limit <String>] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### AllSitesInWebApplication
-```
-Get-SPSite [-AssignmentCollection <SPAssignmentCollection>] [-CompatibilityLevel <Int32>] [-Confirm]
+```powershell
+PS C:\> Get-SPSite [-AssignmentCollection <SPAssignmentCollection>] [-CompatibilityLevel <Int32>] [-Confirm]
  [-Filter <ScriptBlock>] [-Limit <String>] [-WebApplication <SPWebApplicationPipeBind>] [-WhatIf]
  [<CommonParameters>]
 ```
@@ -76,22 +76,22 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1--------------------- 
-```
-Get-SPSite 'https://<site name>' | Get-SPWeb -Limit All | Select Title
+```powershell
+PS C:\> Get-SPSite 'https://<site name>' | Get-SPWeb -Limit All | Select Title
 ```
 
 This example gets the collection of subweb titles in site collection at https://\<site name\>.
 
 ### ------------------EXAMPLE 2--------------------- 
-```
-Get-SPSite -ContentDatabase "b399a366-d899-4cff-8a9b-8c0594ee755f" | Format-Table -Property Url, Owner, SecondaryOwner
+```powershell
+PS C:\> Get-SPSite -ContentDatabase "b399a366-d899-4cff-8a9b-8c0594ee755f" | Format-Table -Property Url, Owner, SecondaryOwner
 ```
 
 This example gets a subset of data from all sites in the content database b399a366-d899-4cff-8a9b-8c0594ee755f.
 
 ### ------------------EXAMPLE 3--------------------- 
-```
-Start-SPAssignment -Global
+```powershell
+PS C:\> Start-SPAssignment -Global
 
 $s = Get-SPSite -Identity https://<MyApp>/Sites/Site1
 
@@ -107,8 +107,8 @@ The Global method is easy to use but the contents of this object grows quickly.
 Be careful not to run a Get-SPSite command that returns many results while global assignment is enabled.
 
 ### ------------------EXAMPLE 4--------------------- 
-```
-$GC = Start-SPAssignment
+```powershell
+PS C:\> $GC = Start-SPAssignment
 $Sites = $GC | Get-SPSite -Filter {$_.Owner -eq "DOMAIN\JDow"} -Limit 50
 Stop-SPAssignment $GC
 ```
@@ -118,15 +118,15 @@ This example gets the first 50 sites owned by user DOMAIN\JDow by using a server
 This example uses advanced assignment collection methods.
 
 ### ------------------EXAMPLE 5--------------------- 
-```
-Get-SPWebApplication https://<site name> | Get-SPSite -Limit All |ForEach-Object {$sum=0}{ $sum+=$_.Usage.Storage }{$sum}
+```powershell
+PS C:\> Get-SPWebApplication https://<site name> | Get-SPSite -Limit All |ForEach-Object {$sum=0}{ $sum+=$_.Usage.Storage }{$sum}
 ```
 
 This example shows a command that returns the sum of the disk space usage for all sites in a given web application.
 
 ### ------------------EXAMPLE 6--------------------- 
-```
-Get-SPSite -Identity "https://localserver/(my|personal)/sites" -Regex
+```powershell
+PS C:\> Get-SPSite -Identity "https://localserver/(my|personal)/sites" -Regex
 ```
 
 This example returns all sites that match the given regular expression.
@@ -134,22 +134,22 @@ This example returns all sites that match the given regular expression.
 The Quotes on the Identity parameter are required when the Regex parameter is used.
 
 ### ------------------EXAMPLE 7--------------------- 
-```
-Get-SPSite https://<site name>/sites/teams/* -Limit 100
+```powershell
+PS C:\> Get-SPSite https://<site name>/sites/teams/* -Limit 100
 ```
 
 This example gets up to 100 of the sites under the URL https://sitename/sites/teams.
 
 ### ------------------EXAMPLE 8--------------------- 
-```
-Get-SPSite | select url, @{Expression={$_.Usage.Storage}}
+```powershell
+PS C:\> Get-SPSite | select url, @{Expression={$_.Usage.Storage}}
 ```
 
 This example gets the amount of storage used by a site collection, by using the storage field of the .UsageInfo property.
 
 ### ------------------EXAMPLE 9--------------------- 
-```
-Get-SPSite -Limit all -CompatibilityLevel 14
+```powershell
+PS C:\> Get-SPSite -Limit all -CompatibilityLevel 14
 ```
 
 This example returns all SharePoint Server mode site collections.
@@ -165,7 +165,7 @@ The type must be a valid URL, in the form, https://server_name or https://server
 Type: SPSitePipeBind
 Parameter Sets: AllSitesInIdentity
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -183,7 +183,7 @@ The type must be a valid database name, in the form, SPContentDB01, or a valid G
 Type: SPContentDatabasePipeBind
 Parameter Sets: AllSitesInContentDB
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -201,7 +201,7 @@ The type must be a valid URL, in the form, https://server_name or a valid GUID (
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: AllSitesInSiteSubscription
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -219,7 +219,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -238,7 +238,7 @@ When this parameter is not specified, the CompatibilityLevel will default to the
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -255,7 +255,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -275,7 +275,7 @@ Valid operators are: EQ, NE, LIKE, NOTLIKE.
 Type: ScriptBlock
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -295,7 +295,7 @@ Specify ALL to return all site collections for the given scope.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -311,7 +311,7 @@ When used, the URL provided for the Identity parameter is treated as a regular e
 Type: SwitchParameter
 Parameter Sets: AllSitesInIdentity
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -329,7 +329,7 @@ The type must be a valid URL, in the form, https://server_name, a valid GUID (fo
 Type: SPWebApplicationPipeBind
 Parameter Sets: AllSitesInWebApplication
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -346,7 +346,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

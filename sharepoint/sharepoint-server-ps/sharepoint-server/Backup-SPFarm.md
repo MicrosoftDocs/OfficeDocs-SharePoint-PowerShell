@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/backup-spfarm
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Backup-SPFarm
 schema: 2.0.0
 author: techwriter40
@@ -21,15 +21,15 @@ Creates a backup of an individual database, Web application, or the entire farm.
 ## SYNTAX
 
 ### DefaultSet
-```
-Backup-SPFarm -BackupMethod <String> -Directory <String> [-AssignmentCollection <SPAssignmentCollection>]
+```powershell
+PS C:\> Backup-SPFarm -BackupMethod <String> -Directory <String> [-AssignmentCollection <SPAssignmentCollection>]
  [-BackupThreads <Int32>] [-ConfigurationOnly] [-Force] [-Item <String>] [-Percentage <Int32>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### ShowTree
-```
-Backup-SPFarm [-ShowTree] [-AssignmentCollection <SPAssignmentCollection>] [-ConfigurationOnly]
+```powershell
+PS C:\> Backup-SPFarm [-ShowTree] [-AssignmentCollection <SPAssignmentCollection>] [-ConfigurationOnly]
  [-Item <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -49,29 +49,29 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------------EXAMPLE 1--------------------- 
-```
-Backup-SPFarm -Directory \\file_server\share\Backup -BackupMethod full -ConfigurationOnly
+```powershell
+PS C:\> Backup-SPFarm -Directory \\file_server\share\Backup -BackupMethod full -ConfigurationOnly
 ```
 
 This example backs up the configuration settings of the farm to the \\\\file_server\share\Backup directory.
 
 ### --------------------EXAMPLE 2--------------------- 
-```
-Backup-SPFarm -ShowTree -Item "Microsoft SharePoint Foundation Web Application" -Verbose
+```powershell
+PS C:\> Backup-SPFarm -ShowTree -Item "Microsoft SharePoint Foundation Web Application" -Verbose
 ```
 
 This example shows which components of the farm would be backed up under the "Microsoft SharePoint Foundation Web Application" node, but do not actually back them up.
 
 ### --------------------EXAMPLE 3--------------------- 
-```
-Backup-SPFarm -Directory C:\Backup -BackupMethod full -BackupThreads 10 -Force
+```powershell
+PS C:\> Backup-SPFarm -Directory C:\Backup -BackupMethod full -BackupThreads 10 -Force
 ```
 
 This example performs a backup of a farm using 10 threads and forces the backup to be saved to the C:\Backup directory even though SharePoint estimates that it does not have sufficient space available.
 
 ### --------------------EXAMPLE 4--------------------- 
-```
-Backup-SPFarm -ShowTree
+```powershell
+PS C:\> Backup-SPFarm -ShowTree
 ```
 
 This example shows you the available objects to backup with `Backup-SPFarm`.
@@ -96,7 +96,7 @@ The type must be either of the following:
 Type: String
 Parameter Sets: DefaultSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -125,7 +125,7 @@ The spbr* folders are automatically created.
 Type: String
 Parameter Sets: DefaultSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -144,7 +144,7 @@ A backup will not be performed if the ShowTree parameter is present.
 Type: SwitchParameter
 Parameter Sets: ShowTree
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -166,7 +166,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -189,7 +189,7 @@ If a backup is performed with the -ShowTree parameter, then the BackupMethod par
 Type: Int32
 Parameter Sets: DefaultSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -205,7 +205,7 @@ If set, the backup will contain configuration settings only (no data) for each o
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -223,7 +223,7 @@ If a backup is performed with the ShowTree parameter, then the Force parameter i
 Type: SwitchParameter
 Parameter Sets: DefaultSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -246,7 +246,7 @@ The type must be a valid item; for example, Farm\Microsoft SharePoint Foundation
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -273,7 +273,7 @@ Valid values are an integer value between 1 and 100.
 Type: Int32
 Parameter Sets: DefaultSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -290,7 +290,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -306,7 +306,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

@@ -1,6 +1,6 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/reset-spprojecteventservicesettings
 applicable: Project Server 2016, Project Server 2019
 title: Reset-SPProjectEventServiceSettings
@@ -29,8 +29,8 @@ Resets the Microsoft Project Server Events Service 2016 settings to the default 
 ## EXAMPLES
 
 ### ----------------------EXAMPLE-----------------------
-```
-Reset-SPProjectEventServiceSettings
+```powershell
+PS C:\> Reset-SPProjectEventServiceSettings
 ```
 
 Resets the Microsoft Project Server Events Service 2016 settings to the default values. The Microsoft Project Server Events Service 2016 needs to be restarted for the changes to take effect.

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spservice
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPService
@@ -27,9 +27,9 @@ The Get-SPService cmdlet gets a service in the farm.
 
 ## EXAMPLES
 
-### Example 1 
-```
-Get-SPService -Identity 'Microsoft SharePoint Server Diagnostics Service'
+### ------------Example 1 -----------
+```powershell
+PS C:\> Get-SPService -Identity 'Microsoft SharePoint Server Diagnostics Service'
 ```
 
 This example gets the Microsoft SharePoint Server Diagnostics Service in the farm.

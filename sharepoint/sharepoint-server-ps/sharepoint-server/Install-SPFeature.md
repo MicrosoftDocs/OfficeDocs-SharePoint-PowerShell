@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/install-spfeature
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Install-SPFeature
 schema: 2.0.0
 author: techwriter40
@@ -21,20 +21,20 @@ Installs a SharePoint Feature by using the Feature.xml file.
 ## SYNTAX
 
 ### PathSet
-```
-Install-SPFeature [-Path] <String> [-AssignmentCollection <SPAssignmentCollection>]
+```powershell
+PS C:\> Install-SPFeature [-Path] <String> [-AssignmentCollection <SPAssignmentCollection>]
  [-CompatibilityLevel <Int32>] [-Confirm] [-Force] [-WhatIf] [<CommonParameters>]
 ```
 
 ### AllExistingFeatures
-```
-Install-SPFeature [-AllExistingFeatures] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Force]
+```powershell
+PS C:\> Install-SPFeature [-AllExistingFeatures] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Force]
  [-SolutionId <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### ScanForFeatures
-```
-Install-SPFeature [-ScanForFeatures] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Force]
+```powershell
+PS C:\> Install-SPFeature [-ScanForFeatures] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Force]
  [-SolutionId <String>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -55,30 +55,30 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------EXAMPLE 1----------------- 
-```
-Install-SPFeature -path "MyCustomFeature"
+```powershell
+PS C:\> Install-SPFeature -path "MyCustomFeature"
 ```
 
 This example installs a new feature at $env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\15\TEMPLATE\FEATURES\MyCustomFeature/feature.xml.
 
 ### --------------EXAMPLE 2----------------- 
-```
-Install-SPFeature -AllExistingFeatures -Whatif
+```powershell
+PS C:\> Install-SPFeature -AllExistingFeatures -Whatif
 ```
 
 This example shows the unregistered features that are available on the file system and that are installed if this command is run without the WhatIf parameter.
 This is commonly done after an upgrade process.
 
 ### --------------EXAMPLE 3----------------- 
-```
-Install-SPFeature -path "MyCustomFeature"  -CompatibilityLevel 14
+```powershell
+PS C:\> Install-SPFeature -path "MyCustomFeature"  -CompatibilityLevel 14
 ```
 
 This example installs a new feature at $env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\14\TEMPLATE\FEATURES\MyCustomFeature\feature.xml.
 
 ### --------------EXAMPLE 4----------------- 
-```
-Install-SPFeature -path "MyCustomFeature"  -CompatibilityLevel 15
+```powershell
+PS C:\> Install-SPFeature -path "MyCustomFeature"  -CompatibilityLevel 15
 ```
 
 This example installs a new feature at $env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\15\TEMPLATE\FEATURES\MyCustomFeature\feature.xml.
@@ -97,7 +97,7 @@ If the path to the feature is not found , the following error message is display
 Type: String
 Parameter Sets: PathSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -113,7 +113,7 @@ Scans for existing, but unregistered features, and then registers them with the 
 Type: SwitchParameter
 Parameter Sets: AllExistingFeatures
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -130,7 +130,7 @@ The ScanForFeatures parameter does not install a feature.
 Type: SwitchParameter
 Parameter Sets: ScanForFeatures
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -152,7 +152,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -171,7 +171,7 @@ The values for this can be either 14 or 15.
 Type: Int32
 Parameter Sets: PathSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -188,7 +188,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -204,7 +204,7 @@ Forces the installation of an already installed feature.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -221,7 +221,7 @@ If the SolutionId parameter is not provided, all solution IDs are scanned.
 Type: String
 Parameter Sets: AllExistingFeatures, ScanForFeatures
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -238,7 +238,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

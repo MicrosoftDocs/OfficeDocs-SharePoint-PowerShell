@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-splogevent
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Get-SPLogEvent
 schema: 2.0.0
 author: techwriter40
@@ -21,15 +21,15 @@ Returns results from a Unified Logging Service (ULS) trace log.
 ## SYNTAX
 
 ### Directory
-```
-Get-SPLogEvent [-AssignmentCollection <SPAssignmentCollection>] [-AsString] [-ContextKey <String[]>]
+```powershell
+PS C:\> Get-SPLogEvent [-AssignmentCollection <SPAssignmentCollection>] [-AsString] [-ContextKey <String[]>]
  [-Directory <String>] [-MinimumLevel <String>] [-EndTime <DateTime>] [-StartTime <DateTime>]
  [<CommonParameters>]
 ```
 
 ### File
-```
-Get-SPLogEvent [-AssignmentCollection <SPAssignmentCollection>] [-AsString] [-ContextKey <String[]>]
+```powershell
+PS C:\> Get-SPLogEvent [-AssignmentCollection <SPAssignmentCollection>] [-AsString] [-ContextKey <String[]>]
  [-MinimumLevel <String>] [-EndTime <DateTime>] [-File <String>] [-StartTime <DateTime>] [<CommonParameters>]
 ```
 
@@ -48,43 +48,43 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------EXAMPLE 1----------------- 
-```
-Get-SPLogEvent -MinimumLevel "Warning"
+```powershell
+PS C:\> Get-SPLogEvent -MinimumLevel "Warning"
 ```
 
 This example returns all log entries equal to or more severe than Warning from the default log directory.
 
 ### --------------EXAMPLE 2----------------- 
-```
-Get-SPLogEvent -Directory "C:\Logs" | Where-Object {$_.Level -eq "Warning"}
+```powershell
+PS C:\> Get-SPLogEvent -Directory "C:\Logs" | Where-Object {$_.Level -eq "Warning"}
 ```
 
 This example returns all warning entries from log files in the C:\Logs directory.
 
 ### --------------EXAMPLE 3-----------------
-```
-Get-SPLogEvent -StartTime "12/04/2007 17:00" -EndTime "12/04/2007 18:00"
+```powershell
+PS C:\> Get-SPLogEvent -StartTime "12/04/2007 17:00" -EndTime "12/04/2007 18:00"
 ```
 
 This example returns error entries that occurred during a particular time range, which is culture-specific to the United States.
 
 ### --------------EXAMPLE 4----------------- 
-```
-Get-SPLogEvent -ContextKey @("UserName" ,"SiteName")
+```powershell
+PS C:\> Get-SPLogEvent -ContextKey @("UserName" ,"SiteName")
 ```
 
 This example returns the contents of the most recent log file and adds the specified context key data.
 
 ### --------------EXAMPLE 5----------------- 
-```
-Get-SPLogEvent | Where-Object {$_.Level -eq "Error" -and {$_.Area -eq "SharePoint Foundation "}
+```powershell
+PS C:\> Get-SPLogEvent | Where-Object {$_.Level -eq "Error" -and {$_.Area -eq "SharePoint Foundation "}
 ```
 
 This example returns all error entries related to SharePoint Foundation.
 
 ### --------------EXAMPLE 6----------------- 
-```
-Get-SPLogEvent -ContextKey @("Name") | %{$_.ToString() + "'t" + $_.Context["Name"]}
+```powershell
+PS C:\> Get-SPLogEvent -ContextKey @("Name") | %{$_.ToString() + "'t" + $_.Context["Name"]}
 ```
 
 This example returns the contents of the log file and adds context data.
@@ -104,7 +104,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -120,7 +120,7 @@ Returns each record as a separate string
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -136,7 +136,7 @@ Specifies that context data should be added to the results for the specified Con
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -152,7 +152,7 @@ Lists log files from an alternate directory (any directory other than the config
 Type: String
 Parameter Sets: Directory
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -169,7 +169,7 @@ The valid values are Error or Warning.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -185,7 +185,7 @@ The type must be a valid DateTime format that is culture-specific to the adminis
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -201,7 +201,7 @@ Specifies a specific file to query records from.
 Type: String
 Parameter Sets: File
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -217,7 +217,7 @@ The type must be a valid DateTime format that is culture-specific to the adminis
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

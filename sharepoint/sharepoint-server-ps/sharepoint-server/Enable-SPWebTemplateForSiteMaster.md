@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/enable-spwebtemplateforsitemaster
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Enable-SPWebTemplateForSiteMaster
@@ -27,9 +27,9 @@ Use the Enable-SPWebTemplateEnabledForSiteMaster cmdlet to create a site master 
 
 ## EXAMPLES
 
-### Example 1 
-```
-Enable-SPWebTemplateForSiteMaster -Template STS#0 -CompatibilityLevel 15
+### ------------Example 1 -----------
+```powershell
+PS C:\> Enable-SPWebTemplateForSiteMaster -Template STS#0 -CompatibilityLevel 15
 ```
 
 This example creates a site master in the database using the Team Site template.

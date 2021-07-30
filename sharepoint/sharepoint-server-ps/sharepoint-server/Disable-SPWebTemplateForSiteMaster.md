@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/disable-spwebtemplateforsitemaster
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Disable-SPWebTemplateForSiteMaster
@@ -27,9 +27,9 @@ Use the Disable-SPWebTemplateForSiteMaster cmdlet to disable a site master in th
 
 ## EXAMPLES
 
-### Example 1 
-```
-Disable-SPWebTemplateForSiteMaster -Template STS#0
+### ------------Example 1 -----------
+```powershell
+PS C:\> Disable-SPWebTemplateForSiteMaster -Template STS#0
 ```
 
 This example disables the template in the site master of a farm.

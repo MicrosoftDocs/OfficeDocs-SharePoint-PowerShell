@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/add-sproutingmachinepool
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Add-SPRoutingMachinePool
 schema: 2.0.0
 author: techwriter40
@@ -34,12 +34,12 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ----------EXAMPLE-------- 
-```
-C:\PS>$web=Get-SPWebApplication -Identity <URL of web application>
+```powershell
+PS C:\> $web=Get-SPWebApplication -Identity <URL of web application>
 
-C:\PS>$rm=Get-SPRequestManagementSettings -Identity $web
+PS C:\> $rm=Get-SPRequestManagementSettings -Identity $web
 
-C:\PS>Add-SPRoutingMachinePool -RequestManagementSettings $rm -Name <MachineName>
+PS C:\> Add-SPRoutingMachinePool -RequestManagementSettings $rm -Name <MachineName>
 ```
 
 This example adds a machine pool.
@@ -53,7 +53,7 @@ Specifies the name of the request management settings object to add to the routi
 Type: SPRequestManagementSettingsPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -69,7 +69,7 @@ Specifies the name of machine pool.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 2
@@ -91,7 +91,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -107,7 +107,7 @@ Specifies the routing targets collection that the machine pool will contain.
 Type: SPRoutingRuleTargetPipeBind[]
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

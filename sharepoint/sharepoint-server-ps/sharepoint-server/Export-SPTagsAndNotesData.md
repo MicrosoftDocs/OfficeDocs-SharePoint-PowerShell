@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/export-sptagsandnotesdata
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Export-SPTagsAndNotesData
@@ -29,8 +29,8 @@ The tags and notes are written into separate files, and then the two are compres
 ## EXAMPLES
 
 ### ----------------EXAMPLE----------------- 
-```
-Export-SPTagsAndNotesData -Site https://site.contoso.com -FilePath C:\TagsAndNotes.zip
+```powershell
+PS C:\> Export-SPTagsAndNotesData -Site https://site.contoso.com -FilePath C:\TagsAndNotes.zip
 ```
 
 This example creates a new ZIP file called TagsAndNotes.zip, on the root of C: drive, exports tags and notes from the SharePoint database for the site https://site.contoso.com, and adds the resulting files to the TagsAndNotes.zip file

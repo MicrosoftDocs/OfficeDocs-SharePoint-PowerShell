@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/stop-spcontenttypereplication
 applicable: SSharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Stop-SPContentTypeReplication
@@ -27,8 +27,8 @@ Stops Content Type replication job from SharePoint Online and deletes the replic
 ## EXAMPLES
 
 ### -----------------EXAMPLE----------------
-```
-Stop-SPContentTypeReplication
+```powershell
+PS C:\> Stop-SPContentTypeReplication
 ```
 Stops Content Type replication job from SharePoint Online.
 
@@ -43,7 +43,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

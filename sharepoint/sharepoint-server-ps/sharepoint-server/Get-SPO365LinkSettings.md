@@ -1,8 +1,8 @@
 ﻿---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spo365linksettings
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Get-SPO365LinkSettings
 schema: 2.0.0
 author: techwriter40
@@ -26,7 +26,7 @@ Use the **Get-SPO365LinkSettings** cmdlet to display current hybrid configuratio
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### ------------EXAMPLE 1-----------
 ```powershell
 $gc = Start-SPAssignment
 Get-SPO365LinkSettings -AssignmentCollection $gc
@@ -50,7 +50,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

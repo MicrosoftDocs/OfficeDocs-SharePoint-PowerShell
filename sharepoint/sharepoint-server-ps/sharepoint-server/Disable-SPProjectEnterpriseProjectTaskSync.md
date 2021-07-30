@@ -1,6 +1,6 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/disable-spprojectenterpriseprojecttasksync
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Disable-SPProjectEnterpriseProjectTaskSync
@@ -27,9 +27,9 @@ Disables task sync between Project Web App and the associated project site.
 
 ## EXAMPLES
 
-### Example 1 
-```
-Disable-SPProjectEnterpriseProjectTaskSync -Url https://pwa_site
+### ------------Example 1 -----------
+```powershell
+PS C:\> Disable-SPProjectEnterpriseProjectTaskSync -Url https://pwa_site
 ```
 
 Disables Project Server task sync on the Project Web App site, https://pwa_site.

@@ -1,6 +1,6 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spprojectusersync
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Set-SPProjectUserSync
@@ -33,8 +33,8 @@ For permissions and the most current information about Windows PowerShell for Pr
 ## EXAMPLES
 
 ### ----------------------EXAMPLE-----------------------
-```
-Set-SPProjectUserSync https://localhost/pwa EnablePWA
+```powershell
+PS C:\> Set-SPProjectUserSync https://localhost/pwa EnablePWA
 ```
 
 In this example, WSS User sync is enabled for the Project Web App site at https://localhost/pwa.

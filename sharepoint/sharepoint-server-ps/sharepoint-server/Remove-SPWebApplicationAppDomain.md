@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spwebapplicationappdomain
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Remove-SPWebApplicationAppDomain
 schema: 2.0.0
 author: techwriter40
@@ -30,14 +30,14 @@ This cmdlet also deletes the Internet Information Services (IIS) port binding if
 ## EXAMPLES
 
 ### ----------------------EXAMPLE 1-----------------------
-```
-Remove-SPWebApplicationAppDomain -WebApplication https://www.contoso.com
+```powershell
+PS C:\> Remove-SPWebApplicationAppDomain -WebApplication https://www.contoso.com
 ```
 Removes all of the app domains for the specified web application.
 
 ### ----------------------EXAMPLE 2-----------------------
-```
-Remove-SPWebApplicationAppDomain -WebApplication https://www.contoso.com -Zone Internet
+```powershell
+PS C:\> Remove-SPWebApplicationAppDomain -WebApplication https://www.contoso.com -Zone Internet
 ```
 Removes the app domains for the internet zone for the specified web application.
 
@@ -50,7 +50,7 @@ Specifies the string of a domain name (that is, contoso.com) or a SPAppDomain ob
 Type: SPAppDomainPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -69,7 +69,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -86,7 +86,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -104,7 +104,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/reset-spsites
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Reset-SPSites
@@ -33,8 +33,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ----------------------EXAMPLE-----------------------
-```
-$contentdb = Get-SPContentDatabase ContentDbName
+```powershell
+PS C:\> $contentdb = Get-SPContentDatabase ContentDbName
 Reset-SPSites -Identity $contentDb
 ```
 

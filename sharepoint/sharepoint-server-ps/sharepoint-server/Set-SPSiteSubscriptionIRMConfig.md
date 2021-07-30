@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spsitesubscriptionirmconfig
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Set-SPSiteSubscriptionIRMConfig
 schema: 2.0.0
 author: techwriter40
@@ -33,10 +33,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------------EXAMPLE 1---------------------
-```
-site = Get-SPSite  HYPERLINK "https://<myspserver>" https:// <myspserver>
+```powershell
+PS C:\> site = Get-SPSite  HYPERLINK "https://<myspserver>" https:// <myspserver>
 
-C:\PS>$subscription = $site.SiteSubscription
+PS C:\> $subscription = $site.SiteSubscription
 
 Set-SPSiteSubscriptionIRMConfig -Identity $subscription -IrmEnabled -CertificateServerUrl https:// <rmsserver>
 ```
@@ -45,10 +45,10 @@ This example enables IRM for the tenant and configures it to use the specified R
 
 
 ### --------------------EXAMPLE 2---------------------
-```
-site = Get-SPSite  HYPERLINK "https://myspserver" https:// <myspserver>
+```powershell
+PS C:\> site = Get-SPSite  HYPERLINK "https://myspserver" https:// <myspserver>
 
-C:\PS>$subscription = $site.SiteSubscription
+PS C:\> $subscription = $site.SiteSubscription
 
 Set- SPSiteSubscriptionIRMConfig -Identity $subscription -IrmEnabled:$false
 ```
@@ -65,7 +65,7 @@ Specifies a site subscription for a particular tenant.
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -83,7 +83,7 @@ The default value is false.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -105,7 +105,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -121,7 +121,7 @@ Specifies the address of the RMS certificate server to use for the tenant.
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -138,7 +138,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -154,7 +154,7 @@ Specifies that the output object can be passed through the pipeline.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -171,7 +171,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/add-databasetoavailabilitygroup
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Add-DatabaseToAvailabilityGroup
 schema: 2.0.0
 author: techwriter40
@@ -34,14 +34,14 @@ Use the Add-DatabaseToAvailabilityGroup cmdlet to add an availability group to t
 
 ## EXAMPLES
 
-### Example 1 
+### ------------Example 1 -----------
 ```
 Add-DatabaseToAvailabilityGroup -AGName MyAvailabilityGroup -DatabaseName WSS_Content -FileShare \\backup\share\ 
 ```
 
 This example adds the database WSS_Content to the availability group named "MyAvailabilityGroup".
 
-### Example 2
+### ------------Example 2-----------
 ```
 Add-DatabaseToAvailabilityGroup -AGName MyAvailabilityGroup -ProcessAllDatabases -FileShare \\backup\share\ 
 ```
@@ -57,7 +57,7 @@ The name of the availability group from which the databases are being added.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 0
@@ -75,7 +75,7 @@ Manages objects for the purpose of proper disposal. Use of objects, such as SPWe
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -92,7 +92,7 @@ The name of the database to be added to the availability group.
 Type: String
 Parameter Sets: Default
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -108,7 +108,7 @@ When a database is being added to the availability group, backup / restores are 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -124,7 +124,7 @@ Adds all databases from the current SharePoint farm into the availability group.
 Type: SwitchParameter
 Parameter Sets: AllDatabases
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named

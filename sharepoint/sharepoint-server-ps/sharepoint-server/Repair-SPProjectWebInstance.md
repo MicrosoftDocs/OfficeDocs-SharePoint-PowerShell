@@ -1,6 +1,6 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/repair-spprojectwebinstance
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Repair-SPProjectWebInstance
@@ -33,8 +33,8 @@ For permissions and the most current information about Windows PowerShell for Pr
 ## EXAMPLES
 
 ### ----------------------EXAMPLE-----------------------
-```
-Repair-SPProjectWebInstance -Identity https://contoso-appsrv/PWA -RepairRule QueueMissingTriggers
+```powershell
+PS C:\> Repair-SPProjectWebInstance -Identity https://contoso-appsrv/PWA -RepairRule QueueMissingTriggers
 ```
 
 This example enqueues any missing triggers for the Project Web App instance at https://contoso-appsrv/PWA.

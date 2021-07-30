@@ -1,6 +1,6 @@
 ---
 external help file: sharepointonline.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spodataconnectionsettingmetadata
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Get-SPODataConnectionSettingMetadata
@@ -36,8 +36,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
-```
-Get-SPODataConnectionSettingMetadata -ServiceContext "http://contoso" -Name "ContosoServiceApp"
+```powershell
+PS C:\> Get-SPODataConnectionSettingMetadata -ServiceContext "http://contoso" -Name "ContosoServiceApp"
 ```
 
 This example displays metadata properties of BCS connection named ContosoServiceApp

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spsecurestoresystemaccount
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Remove-SPSecureStoreSystemAccount
 schema: 2.0.0
 author: techwriter40
@@ -32,16 +32,16 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
-```
-Remove-SPSecureStoreSystemAccount -Identity contoso\jdoe
+```powershell
+PS C:\> Remove-SPSecureStoreSystemAccount -Identity contoso\jdoe
 ```
 
 This example removes a specific user name jdoe by using the Identity parameter.
 
 
 ### -----------------------EXAMPLE 2-----------------------------
-```
-Get-SPSecureStoreSystemAccount | Where-Object -filter {$_.AccountName -eq 'Contoso\admin'} | Remove-SPSecureStoreSystemAccount
+```powershell
+PS C:\> Get-SPSecureStoreSystemAccount | Where-Object -filter {$_.AccountName -eq 'Contoso\admin'} | Remove-SPSecureStoreSystemAccount
 ```
 
 This example removes the admin, user from the contoso domain by filtering the results from the `Get-SPSecureStoreSystemAccount` cmdlet.
@@ -56,7 +56,7 @@ Specifies the name, object, or GUID to remove.
 Type: SPSecureStoreSystemAccountPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -78,7 +78,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -95,7 +95,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -112,7 +112,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

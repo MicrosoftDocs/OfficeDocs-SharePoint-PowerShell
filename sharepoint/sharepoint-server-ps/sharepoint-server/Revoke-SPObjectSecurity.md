@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/revoke-spobjectsecurity
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Revoke-SPObjectSecurity
@@ -19,14 +19,14 @@ Removes a security principal from a SPObjectSecurity object.
 ## SYNTAX
 
 ### RevokeOne
-```
-Revoke-SPObjectSecurity [-Identity] <SPObjectSecurity> [-Principal] <SPClaim> [[-Rights] <String[]>]
+```powershell
+PS C:\> Revoke-SPObjectSecurity [-Identity] <SPObjectSecurity> [-Principal] <SPClaim> [[-Rights] <String[]>]
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### RevokeAll
-```
-Revoke-SPObjectSecurity [-Identity] <SPObjectSecurity> [-All] [-AssignmentCollection <SPAssignmentCollection>]
+```powershell
+PS C:\> Revoke-SPObjectSecurity [-Identity] <SPObjectSecurity> [-All] [-AssignmentCollection <SPAssignmentCollection>]
  [<CommonParameters>]
 ```
 
@@ -44,8 +44,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE------------------
-```
-$security = Get-SPServiceApplicationSecurity $serviceApp -Admin
+```powershell
+PS C:\> $security = Get-SPServiceApplicationSecurity $serviceApp -Admin
 Revoke-SPObjectSecurity $security "domain\user"
 Set-SPServiceApplicationSecurity $serviceApp -Admin $security
 ```

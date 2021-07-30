@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spappstoreconfiguration
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Set-SPAppStoreConfiguration
 schema: 2.0.0
 author: techwriter40
@@ -32,23 +32,23 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------------EXAMPLE 1---------------------
-```
-Set-SPAppStoreConfiguration -Url https://office.microsoft.com -Enable $true
+```powershell
+PS C:\> Set-SPAppStoreConfiguration -Url https://office.microsoft.com -Enable $true
 ```
 
 This example sets the URL to the Office.com server.
 
 
 ### --------------------EXAMPLE 2---------------------
-```
-Set-SPAppStoreConfiguration -Enable $false
+```powershell
+PS C:\> Set-SPAppStoreConfiguration -Enable $false
 ```
 
 This example turns off the SharePoint Store.
 
 ### --------------------EXAMPLE 3---------------------
-```
-Set-SPAppStoreConfiguration -Enable $true
+```powershell
+PS C:\> Set-SPAppStoreConfiguration -Enable $true
 ```
 
 This example turns on the SharePoint Store.
@@ -65,7 +65,7 @@ The SharePoint store value should not be changed unless instructed by a Microsof
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -84,7 +84,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -101,7 +101,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -119,7 +119,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -141,7 +141,7 @@ The default value is False.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spappstorewebserviceconfiguration
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPAppStoreWebServiceConfiguration
@@ -30,9 +30,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### Example 1 
-```
-Get-SPAppStoreWebServiceConfiguration
+### ------------Example 1 -----------
+```powershell
+PS C:\> Get-SPAppStoreWebServiceConfiguration
 ```
 
 This example returns the product type and version for a SharePoint Store app.

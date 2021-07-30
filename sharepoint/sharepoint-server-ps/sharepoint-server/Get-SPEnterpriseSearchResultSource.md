@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchresultsource
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Get-SPEnterpriseSearchResultSource
 schema: 2.0.0
 author: techwriter40
@@ -34,8 +34,8 @@ If the Identity parameter is not specified, this cmdlet returns the result sourc
 ## EXAMPLES
 
 ### --------------  Example 1: Get result source by name  -------------- 
-```
-$ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
+```powershell
+PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
 $owner = Get-SPEnterpriseSearchOwner -Level SSA
 Get-SPEnterpriseSearchResultSource -Identity "Local SharePoint Results" -SearchApplication $ssa -Owner $owner
 ```
@@ -44,8 +44,8 @@ This example retrieves the search service application level result source with t
 
 
 ### --------------  Example 2: Get result source by id  -------------- 
-```
-$ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
+```powershell
+PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
 $owner = Get-SPEnterpriseSearchOwner -Level SSA
 Get-SPEnterpriseSearchResultSource -Identity 8413cd39-2156-4e00-b54d-11efd9abdB89 -SearchApplication $ssa -Owner $owner
 ```
@@ -53,8 +53,8 @@ Get-SPEnterpriseSearchResultSource -Identity 8413cd39-2156-4e00-b54d-11efd9abdB8
 This example retrieves the search service application level result source with the id 8413cd39-2156-4e00-b54d-11efd9abdB89.
 
 ### --------------  Example 3: Get all result sources under SSA  -------------- 
-```
-$ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
+```powershell
+PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
 $owner = Get-SPEnterpriseSearchOwner -Level SSA
 Get-SPEnterpriseSearchResultSource -SearchApplication $ssa -Owner $owner
 ```
@@ -74,7 +74,7 @@ If not specified, the result source collection for the specified search object o
 Type: ResultSourcePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 1
@@ -90,7 +90,7 @@ Specifies the search object owner that defines the scope at which the correspond
 Type: SearchObjectOwner
 Parameter Sets: (All)
 Aliases: o
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -108,7 +108,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -127,7 +127,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

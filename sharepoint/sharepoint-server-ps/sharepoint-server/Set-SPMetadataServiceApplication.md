@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spmetadataserviceapplication
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Set-SPMetadataServiceApplication
 schema: 2.0.0
 author: techwriter40
@@ -19,8 +19,8 @@ Sets the properties of a managed metadata service application.
 ## SYNTAX
 
 ### NoQuota
-```
-Set-SPMetadataServiceApplication [-Identity] <SPMetadataServiceCmdletPipeBind> [-AdministratorAccount <String>]
+```powershell
+PS C:\> Set-SPMetadataServiceApplication [-Identity] <SPMetadataServiceCmdletPipeBind> [-AdministratorAccount <String>]
  [-ApplicationPool <SPIisWebServiceApplicationPoolPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
  [-CacheTimeCheckInterval <Int32>] [-Confirm] [-DatabaseCredentials <PSCredential>] [-DatabaseName <String>]
  [-DatabaseServer <String>] [-DoNotUnpublishAllPackages] [-FailoverDatabaseServer <String>]
@@ -30,8 +30,8 @@ Set-SPMetadataServiceApplication [-Identity] <SPMetadataServiceCmdletPipeBind> [
 ```
 
 ### Quota
-```
-Set-SPMetadataServiceApplication [-Identity] <SPMetadataServiceCmdletPipeBind> [-AdministratorAccount <String>]
+```powershell
+PS C:\> Set-SPMetadataServiceApplication [-Identity] <SPMetadataServiceCmdletPipeBind> [-AdministratorAccount <String>]
  [-ApplicationPool <SPIisWebServiceApplicationPoolPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
  [-CacheTimeCheckInterval <Int32>] [-Confirm] [-DatabaseCredentials <PSCredential>] [-DatabaseName <String>]
  [-DatabaseServer <String>] [-DoNotUnpublishAllPackages] [-FailoverDatabaseServer <String>]
@@ -50,8 +50,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------------EXAMPLE 1---------------------
-```
-$sa = Get-SPMetadataServiceApplication -Identity 'Managed Metadata Service Application'
+```powershell
+PS C:\> $sa = Get-SPMetadataServiceApplication -Identity 'Managed Metadata Service Application'
 Set-SPMetadataServiceApplication -Identity $sa -HubUri 'https://sitename' -SyndicationErrorReportEnabled
 ```
 
@@ -60,8 +60,8 @@ It also enables error reporting when content types are imported.
 
 
 ### --------------------EXAMPLE 2---------------------
-```
-$sa = Get-SPMetadataServiceApplication -Identity 'Managed Metadata Service Application'
+```powershell
+PS C:\> $sa = Get-SPMetadataServiceApplication -Identity 'Managed Metadata Service Application'
 Set-SPMetadataServiceApplication -Identity $sa -AdministratorAccount 'contoso\username1' -FullAccessAccount 'contoso\AppPoolAccount1,contoso\AppPoolAccount2' -RestrictedAccount 'contoso\AppPoolAccount3,contoso\AppPoolAccount4,contoso\AppPoolAccount5' -ReadAccessAccount 'contoso\AppPoolAccount6'
 ```
 
@@ -82,7 +82,7 @@ The type must be a valid GUID or the name of a valid managed metadata  service a
 Type: SPMetadataServiceCmdletPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -102,7 +102,7 @@ Consider setting all four parameters at the same time.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -120,7 +120,7 @@ The value must be a GUID that is the identity of an SPServiceApplicationPool obj
 Type: SPIisWebServiceApplicationPoolPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -142,7 +142,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -162,7 +162,7 @@ The default value is 10.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -179,7 +179,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -199,7 +199,7 @@ The type must be a valid PSCredential object.
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -217,7 +217,7 @@ The type must be a valid name of a SQL Server database; for example MeatadataDB1
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -235,7 +235,7 @@ The type must be a valid name of a SQL Server database; for example SqlServerHos
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -254,7 +254,7 @@ If the HubUri parameter is not changed, this flag has no effect.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -272,7 +272,7 @@ The type must be a valid SQL Server host name; for example, SQLServerHost1.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -292,7 +292,7 @@ Consider setting all four parameters at the same time.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -309,7 +309,7 @@ The name can contain a maximum of 128 characters.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -329,7 +329,7 @@ Consider setting all four parameters at the same time.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -345,7 +345,7 @@ Enables reporting of errors when content types are imported.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -361,7 +361,7 @@ Specifies the fully qualified URL of the site collection that contains the conte
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -381,7 +381,7 @@ The default value is 4.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -401,7 +401,7 @@ Consider setting all four parameters at the same time.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -418,7 +418,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -434,7 +434,7 @@ When in partitioned mode, disables the partition quota.
 Type: SwitchParameter
 Parameter Sets: NoQuota
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -450,7 +450,7 @@ When in partitioned mode, sets the maximum number of groups per partition.
 Type: Int32
 Parameter Sets: Quota
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -466,7 +466,7 @@ When in partitioned mode, sets the maximum number of labels per partition.
 Type: Int32
 Parameter Sets: Quota
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -482,7 +482,7 @@ When in partitioned mode, sets the maximum number of properties per partition.
 Type: Int32
 Parameter Sets: Quota
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -498,7 +498,7 @@ When in partitioned mode, sets the maximum number of term sets per partition.
 Type: Int32
 Parameter Sets: Quota
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -514,7 +514,7 @@ When in partitioned mode, sets the maximum number of terms per partition.
 Type: Int32
 Parameter Sets: Quota
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named

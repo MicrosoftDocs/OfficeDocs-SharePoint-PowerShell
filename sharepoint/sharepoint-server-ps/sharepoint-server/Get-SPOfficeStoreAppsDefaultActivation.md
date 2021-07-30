@@ -1,6 +1,6 @@
 ---
 external help file: sharepointserver.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spofficestoreappsdefaultactivation
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Get-SPOfficeStoreAppsDefaultActivation
@@ -20,14 +20,14 @@ Returns the properties of apps for Office.
 ## SYNTAX
 
 ### AppsForOfficeSettingsInSiteSubscription
-```
-Get-SPOfficeStoreAppsDefaultActivation -SiteSubscription <SPSiteSubscriptionPipeBind>
+```powershell
+PS C:\> Get-SPOfficeStoreAppsDefaultActivation -SiteSubscription <SPSiteSubscriptionPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### AppsForOfficeSettingsInWebApplication
-```
-Get-SPOfficeStoreAppsDefaultActivation -WebApplication <SPWebApplicationPipeBind>
+```powershell
+PS C:\> Get-SPOfficeStoreAppsDefaultActivation -WebApplication <SPWebApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
@@ -44,15 +44,15 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
-```
-Get-SPOfficeStoreAppsDefaultActivation -WebApplication https://sphvm-8044
+```powershell
+PS C:\> Get-SPOfficeStoreAppsDefaultActivation -WebApplication https://sphvm-8044
 ```
 
 This examples returns the setting for the web application https://sphvm-8044.
 
 ### -----------------------EXAMPLE 2-----------------------------
-```
-Get-SPOfficeStoreAppsDefaultActivation -SiteSubscription efca5b88-b3a3-448d-afbc-ef620f4744f1
+```powershell
+PS C:\> Get-SPOfficeStoreAppsDefaultActivation -SiteSubscription efca5b88-b3a3-448d-afbc-ef620f4744f1
 ```
 
 This examples returns the Subscription ID setting for the tenant

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchstatus
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Get-SPEnterpriseSearchStatus
 schema: 2.0.0
 author: techwriter40
@@ -59,22 +59,22 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------ 
-```
-Get-SPEnterpriseSearchServiceApplication | Get-SPEnterpriseSearchStatus -Text
+```powershell
+PS C:\> Get-SPEnterpriseSearchServiceApplication | Get-SPEnterpriseSearchStatus -Text
 ```
 
 This example retrieves a list that has diagnostics information about all search components of the default Search Service Application.
 
 ### ------------------EXAMPLE 2------------------ 
-```
-Get-SPEnterpriseSearchStatus -SearchApplication 'Search Service Application' -JobStatus -Text
+```powershell
+PS C:\> Get-SPEnterpriseSearchStatus -SearchApplication 'Search Service Application' -JobStatus -Text
 ```
 
 This example retrieves the background activity job status for the search analytics timer jobs.
 
 ### ------------------EXAMPLE 3------------------ 
-```
-Get-SPEnterpriseSearchServiceApplication | Get-SPEnterpriseSearchStatus -HealthReport -Component IndexComponent1 -Text
+```powershell
+PS C:\> Get-SPEnterpriseSearchServiceApplication | Get-SPEnterpriseSearchStatus -HealthReport -Component IndexComponent1 -Text
 ```
 
 This example retrieves the diagnostic information for the index component named IndexComponent1.
@@ -88,7 +88,7 @@ Specifies the search service application that contains the search components.
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -106,7 +106,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -126,7 +126,7 @@ This parameter is only used in association with the HealthReport and Primary par
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -146,7 +146,7 @@ This parameter should only be used for debugging.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -163,7 +163,7 @@ When this parameter is used, the cmdlet will also output verbose diagnostic info
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -183,7 +183,7 @@ This parameter should only be used for debugging.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -203,7 +203,7 @@ When using this parameter, you must specify the component name using the Compone
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -219,7 +219,7 @@ Specifies if status information for the Search Analytics and Usage Analytics tim
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -240,7 +240,7 @@ Returns true if the Admin Component has the Primary role.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -262,7 +262,7 @@ When using this parameter, the output is printed to the console and cannot be pi
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/upgrade-spappmanagementserviceapplication
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Upgrade-SPAppManagementServiceApplication
@@ -18,15 +18,15 @@ Do Not Use
 ## SYNTAX
 
 ### AppManagementSvcAppById
-```
-Upgrade-SPAppManagementServiceApplication [[-Identity] <SPServiceApplicationPipeBind>]
+```powershell
+PS C:\> Upgrade-SPAppManagementServiceApplication [[-Identity] <SPServiceApplicationPipeBind>]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-DatabaseIds <Guid[]>] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### AppManagementSvcAppByName
-```
-Upgrade-SPAppManagementServiceApplication [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+```powershell
+PS C:\> Upgrade-SPAppManagementServiceApplication [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-DatabaseIds <Guid[]>] [-Name <String>] [-WhatIf] [<CommonParameters>]
 ```
 

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Office.Server.Powerpoint.dll-Help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-sppowerpointconversionserviceapplication
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: New-SPPowerPointConversionServiceApplication
 schema: 2.0.0
 author: techwriter40
@@ -36,8 +36,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE------------------
-```
-New-SPPowerPointConversionServiceApplication -Name "MyWorkgroupPPTApp" -ApplicationPool "SharePoint Web Services Default"
+```powershell
+PS C:\> New-SPPowerPointConversionServiceApplication -Name "MyWorkgroupPPTApp" -ApplicationPool "SharePoint Web Services Default"
 ```
 
 This example creates a new instance of the PowerPoint Conversion Service application named MyWorkgroupPPTApp and assigns it to the default application pool.
@@ -52,7 +52,7 @@ Specifies the name of the PowerPoint Conversion Service application.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -68,7 +68,7 @@ Assigns an application pool that Internet Information Services (IIS) will use fo
 Type: SPIisWebServiceApplicationPoolPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -90,7 +90,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -107,7 +107,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -124,7 +124,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

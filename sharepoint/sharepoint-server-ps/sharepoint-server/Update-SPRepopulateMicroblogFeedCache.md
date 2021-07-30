@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/update-sprepopulatemicroblogfeedcache
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Update-SPRepopulateMicroblogFeedCache
 schema: 2.0.0
 author: techwriter40
@@ -20,8 +20,8 @@ Refreshes the microblog feed cache.
 
 ### (Default)
 
-```
-Update-SPRepopulateMicroblogFeedCache [-AccountName <String>]
+```powershell
+PS C:\> Update-SPRepopulateMicroblogFeedCache [-AccountName <String>]
  -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-SiteSubscription <SPSiteSubscriptionPipeBind>]
  [-SiteUrl <String>] [<CommonParameters>]
@@ -29,8 +29,8 @@ Update-SPRepopulateMicroblogFeedCache [-AccountName <String>]
 
 ### Default
 
-```
-Update-SPRepopulateMicroblogFeedCache [-AccountName <String>]
+```powershell
+PS C:\> Update-SPRepopulateMicroblogFeedCache [-AccountName <String>]
  -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-SiteSubscription <SPSiteSubscriptionPipeBind>]
  [-SiteUrl <String>] [<CommonParameters>]
@@ -38,8 +38,8 @@ Update-SPRepopulateMicroblogFeedCache [-AccountName <String>]
 
 ### FollowableList
 
-```
-Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
+```powershell
+PS C:\> Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] -SiteSubscription <SPSiteSubscriptionPipeBind> -ListId <Guid>
  -ListRootFolderUrl <String> -SiteId <Guid> -WebId <Guid> [<CommonParameters>]
 ```
@@ -57,8 +57,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE 1------------
 
-```
-$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+```powershell
+PS C:\> $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
 Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy $proxy -AccountName contoso\userName
 ```
 
@@ -97,7 +97,7 @@ Specifies the user's account name for the User Profile Service application.
 Type: String
 Parameter Sets: (All), Default
 Aliases:
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -120,7 +120,7 @@ The type must be in one of the following forms:
 Type: SPServiceApplicationProxyPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -143,7 +143,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -161,7 +161,7 @@ This parameter is mandatory in a hosted-environment and optional in a non-hosted
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All), Default
 Aliases:
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -174,7 +174,7 @@ Accept wildcard characters: False
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: FollowableList
 Aliases:
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -191,7 +191,7 @@ Specifies the Site's URL to repopulate the site feeds. If you don't specify this
 Type: String
 Parameter Sets: (All), Default
 Aliases:
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

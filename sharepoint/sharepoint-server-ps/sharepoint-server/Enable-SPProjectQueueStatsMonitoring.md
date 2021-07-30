@@ -1,6 +1,6 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/enable-spprojectqueuestatsmonitoring
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Enable-SPProjectQueueStatsMonitoring
@@ -26,9 +26,9 @@ Enables monitoring Project Server queue statistics.
 
 ## EXAMPLES
 
-### Example 1 
-```
-Enable-SPProjectQueueStatsMonitoring
+### ------------Example 1 -----------
+```powershell
+PS C:\> Enable-SPProjectQueueStatsMonitoring
 ```
 
 Enables monitoring Project Server queue statistics.

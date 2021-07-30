@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-sploglevel
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Get-SPLogLevel
 schema: 2.0.0
 author: techwriter40
@@ -33,29 +33,29 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------EXAMPLE 1----------------- 
-```
-Get-SPLogLevel
+```powershell
+PS C:\> Get-SPLogLevel
 ```
 
 This example displays throttle levels for all categories.
 
 ### --------------EXAMPLE 2----------------- 
-```
-Get-SPLogLevel -Identity "Category1"
+```powershell
+PS C:\> Get-SPLogLevel -Identity "Category1"
 ```
 
 This example displays the throttle level for the Category1 category.
 
 ### --------------EXAMPLE 3----------------- 
-```
-C:\PS>"Cat1", "Cat2", "Cat3" | Get-SpLogLevel
+```powershell
+PS C:\> "Cat1", "Cat2", "Cat3" | Get-SpLogLevel
 ```
 
 This example displays the throttle level for multiple categories.
 
 ### --------------EXAMPLE 4----------------- 
-```
-Get-SPLogLevel -Identity "Area:*"
+```powershell
+PS C:\> Get-SPLogLevel -Identity "Area:*"
 ```
 
 This example displays the throttle level for all categories in one area.
@@ -75,7 +75,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -91,7 +91,7 @@ Specifies a valid category name; for example, Backup and Restore, or Administrat
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

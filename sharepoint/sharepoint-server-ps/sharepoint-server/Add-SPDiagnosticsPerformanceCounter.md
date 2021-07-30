@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/add-spdiagnosticsperformancecounter
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Add-SPDiagnosticsPerformanceCounter
 schema: 2.0.0
 author: techwriter40
@@ -21,22 +21,22 @@ Adds a new instance of a performance counter to a Web front end computer or a da
 ## SYNTAX
 
 ### AddCounter
-```
-Add-SPDiagnosticsPerformanceCounter [-Category] <String> -Counter <String> [-AllInstances]
+```powershell
+PS C:\> Add-SPDiagnosticsPerformanceCounter [-Category] <String> -Counter <String> [-AllInstances]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-DatabaseServer] [-WebFrontEnd] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### AddInstance
-```
-Add-SPDiagnosticsPerformanceCounter [-Category] <String> [-Counter <String>] -Instance <String> [-AllInstances]
+```powershell
+PS C:\> Add-SPDiagnosticsPerformanceCounter [-Category] <String> [-Counter <String>] -Instance <String> [-AllInstances]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-DatabaseServer] [-WebFrontEnd] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### AddMultipleCounters
-```
-Add-SPDiagnosticsPerformanceCounter [-Category] <String> [-Instance <String>] [-AllInstances]
+```powershell
+PS C:\> Add-SPDiagnosticsPerformanceCounter [-Category] <String> [-Instance <String>] [-AllInstances]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-DatabaseServer] [-WebFrontEnd] [-WhatIf]
  -CounterList <String[]> [<CommonParameters>]
 ```
@@ -54,23 +54,23 @@ By default, the new performance counter is added to the database servers in the 
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------ 
-```
-C:\PS>Add-SPDiagnosticsPerformanceCounter -category ASP.NET -Counter "Requests Queued"
+```powershell
+PS C:\> Add-SPDiagnosticsPerformanceCounter -category ASP.NET -Counter "Requests Queued"
 ```
 
 This example adds the counter that has the name ASP.NET\Requests Queued on front end Web servers.
 
 ### ------------------EXAMPLE 2------------------ 
-```
-C:\PS>Add-SPDiagnosticsPerformanceCounter -category PhysicalDisk -counter "Avg. Disk Queue Length" -allinstances
+```powershell
+PS C:\> Add-SPDiagnosticsPerformanceCounter -category PhysicalDisk -counter "Avg. Disk Queue Length" -allinstances
 ```
 
 This example adds all instances of the counter PhysicalDisk in the category Avg.
 Disk Queue Length on front end Web servers.
 
 ### ------------------EXAMPLE 3------------------ 
-```
-C:\PS>Add-SPDiagnosticsPerformanceCounter -category Processor -counter "% Processor Time" -instance "_Total" -databaseserver
+```powershell
+PS C:\> Add-SPDiagnosticsPerformanceCounter -category Processor -counter "% Processor Time" -instance "_Total" -databaseserver
 ```
 
 This example adds the _Total instance of the counter % Processor Time in the category Processor on database servers.
@@ -86,7 +86,7 @@ The type must be a valid name of a category of performance counters; for example
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 2
@@ -105,7 +105,7 @@ Disk Queue Length, and % Processor Time.
 Type: String
 Parameter Sets: AddCounter
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: AddInstance
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -136,7 +136,7 @@ The type must be a valid name of a performance counter instance; for example Tot
 Type: String
 Parameter Sets: AddInstance
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: AddMultipleCounters
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -165,7 +165,7 @@ Collects all instances of a counter category and type on the target Web front en
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -187,7 +187,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -204,7 +204,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -220,7 +220,7 @@ Adds the specified performance counter to all database servers in the farm.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -236,7 +236,7 @@ Adds the specified performance counter to all Web front end computers in the far
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -253,7 +253,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

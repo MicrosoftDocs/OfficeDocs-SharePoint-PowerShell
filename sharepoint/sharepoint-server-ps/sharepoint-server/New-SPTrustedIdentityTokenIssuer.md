@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-sptrustedidentitytokenissuer
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: New-SPTrustedIdentityTokenIssuer
 schema: 2.0.0
 author: techwriter40
@@ -19,8 +19,8 @@ Creates an identity provider in the farm.
 ## SYNTAX
 
 ### BasicParameterSet
-```
-New-SPTrustedIdentityTokenIssuer -ClaimsMappings <SPClaimMappingPipeBind[]> -Description <String>
+```powershell
+PS C:\> New-SPTrustedIdentityTokenIssuer -ClaimsMappings <SPClaimMappingPipeBind[]> -Description <String>
  -IdentifierClaim <String> -Name <String> -Realm <String> -SignInUrl <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-ClaimProvider <SPClaimProviderPipeBind>]
  [-ImportTrustCertificate <X509Certificate2>] [-UseWReply] [-Confirm] [-RegisteredIssuerName <String>]
@@ -28,16 +28,16 @@ New-SPTrustedIdentityTokenIssuer -ClaimsMappings <SPClaimMappingPipeBind[]> -Des
 ```
 
 ### MetadataEndPointParameterSet
-```
-New-SPTrustedIdentityTokenIssuer -ClaimsMappings <SPClaimMappingPipeBind[]> -Description <String>
+```powershell
+PS C:\> New-SPTrustedIdentityTokenIssuer -ClaimsMappings <SPClaimMappingPipeBind[]> -Description <String>
  -IdentifierClaim <String> -Name <String> -Realm <String> -SignInUrl <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-ClaimProvider <SPClaimProviderPipeBind>]
  -MetadataEndPoint <Uri> [-UseWReply] [-Confirm] [-SignOutUrl <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### ActiveDirectoryBackedParameterSet
-```
-New-SPTrustedIdentityTokenIssuer -Description <String> -Name <String> -Realm <String> -SignInUrl <String>
+```powershell
+PS C:\> New-SPTrustedIdentityTokenIssuer -Description <String> -Name <String> -Realm <String> -SignInUrl <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-ImportTrustCertificate <X509Certificate2>] [-UseWReply]
  [-Confirm] [-IdentifierClaimIs <String>] [-RegisteredIssuerName <String>] [-SignOutUrl <String>]
  [-UseDefaultConfiguration] [-WhatIf] [<CommonParameters>]
@@ -56,8 +56,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ----------------------- EXAMPLE---------------------------
-```
-New-SPTrustedIdentityTokenIssuer -Name "LiveIDSTS" - Description "LiveID STS" -Certificate (Get-ChildItem "cert:Certificates (LocalComputer)\Personal\Certificates -Name "LiveID Cert") -SignInUrl https://int.contoso.com/ -IdentifierClaim "http://schemas.contoso.com/2007/05/Claims/Puid"
+```powershell
+PS C:\> New-SPTrustedIdentityTokenIssuer -Name "LiveIDSTS" - Description "LiveID STS" -Certificate (Get-ChildItem "cert:Certificates (LocalComputer)\Personal\Certificates -Name "LiveID Cert") -SignInUrl https://int.contoso.com/ -IdentifierClaim "http://schemas.contoso.com/2007/05/Claims/Puid"
 ```
 
 This example creates a new identity provider in the farm named LiveIDSTS.
@@ -74,7 +74,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPClaimMappingPipeBind[]
 Parameter Sets: BasicParameterSet, MetadataEndPointParameterSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -92,7 +92,7 @@ The type must be a valid string; for example, LiveID STS.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -110,7 +110,7 @@ The type must be a valid claim type from the trusted STS; for example, http://sc
 Type: String
 Parameter Sets: BasicParameterSet, MetadataEndPointParameterSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -128,7 +128,7 @@ The type must be a valid name of an identity provider; for example, LiveIDSTS.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -146,7 +146,7 @@ The type must be a name of a valid realm; for example, MD_REALM.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -164,7 +164,7 @@ The type must be a valid URL, in the form https://int.live.com/.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -186,7 +186,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -204,7 +204,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPClaimProviderPipeBind
 Parameter Sets: BasicParameterSet, MetadataEndPointParameterSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -222,7 +222,7 @@ The type must be a name of a valid X.509 certificate; for example, Certificate1.
 Type: X509Certificate2
 Parameter Sets: BasicParameterSet, ActiveDirectoryBackedParameterSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -238,7 +238,7 @@ Specifies the URI for the metadata endpoint of the trusted provider.
 Type: Uri
 Parameter Sets: MetadataEndPointParameterSet
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -256,7 +256,7 @@ WReply is a URL at the relying party to which the requestor is redirected once s
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -272,7 +272,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -290,7 +290,7 @@ Only used if the UseDefaultConfiguration parameter is set to true, otherwise use
 Type: String
 Parameter Sets: ActiveDirectoryBackedParameterSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -306,7 +306,7 @@ Specifies the Registered Issuer Name instead of not using the metadata endpoint.
 Type: String
 Parameter Sets: BasicParameterSet, ActiveDirectoryBackedParameterSet
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -340,7 +340,7 @@ If UseDefaultConfiguration parameter is used, then the IdentifierClaimIs paramet
 Type: SwitchParameter
 Parameter Sets: ActiveDirectoryBackedParameterSet
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -357,7 +357,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

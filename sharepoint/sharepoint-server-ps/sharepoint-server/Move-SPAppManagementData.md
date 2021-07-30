@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/move-spappmanagementdata
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Move-SPAppManagementData
@@ -28,7 +28,7 @@ Do Not Use
 
 ## EXAMPLES
 
-### Example 1 
+### ------------Example 1 -----------
 ```
 Do Not Use
 ```

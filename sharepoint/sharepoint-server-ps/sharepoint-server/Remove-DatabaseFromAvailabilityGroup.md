@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-databasefromavailabilitygroup
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Remove-DatabaseFromAvailabilityGroup
 schema: 2.0.0
 author: techwriter40
@@ -19,14 +19,14 @@ Removes one or more SharePoint databases from an availability group in SQL Serve
 ## SYNTAX
 
 ### Default
-```
-Remove-DatabaseFromAvailabilityGroup [-AGName] <String> [-AssignmentCollection <SPAssignmentCollection>]
+```powershell
+PS C:\> Remove-DatabaseFromAvailabilityGroup [-AGName] <String> [-AssignmentCollection <SPAssignmentCollection>]
  -DatabaseName <String> [-Force] [-KeepSecondaryData] [<CommonParameters>]
 ```
 
 ### AllDatabases
-```
-Remove-DatabaseFromAvailabilityGroup [-AGName] <String> [-AssignmentCollection <SPAssignmentCollection>]
+```powershell
+PS C:\> Remove-DatabaseFromAvailabilityGroup [-AGName] <String> [-AssignmentCollection <SPAssignmentCollection>]
  [-Force] [-KeepSecondaryData] [-ProcessAllDatabases] [<CommonParameters>]
 ```
 
@@ -37,8 +37,8 @@ This cmdlet contains more than one parameter set. You may only use parameters fr
 ## EXAMPLES
 
 ### ------------------EXAMPLE------------------
-```
-Remove-DatabaseFromAvailabilityGroup -AGName MyAvailabilityGroup -DatabaseName WSS_Content 
+```powershell
+PS C:\> Remove-DatabaseFromAvailabilityGroup -AGName MyAvailabilityGroup -DatabaseName WSS_Content 
 ```
 
 This example removes the availability group named "MyAvailabilityGroup" from the WSS_Content database.
@@ -53,7 +53,7 @@ The name of the availability group from which the databases are being removed.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 0
@@ -71,7 +71,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -89,7 +89,7 @@ NOTE: This parameter should not be used in conjunction with the ProcessAllDataba
 Type: String
 Parameter Sets: Default
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -105,7 +105,7 @@ Forces a remove from the group.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -121,7 +121,7 @@ Specifies that copies of the databases on the replicas in the availability group
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -137,7 +137,7 @@ Removes all databases from the current SharePoint farm into the availability gro
 Type: SwitchParameter
 Parameter Sets: AllDatabases
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named

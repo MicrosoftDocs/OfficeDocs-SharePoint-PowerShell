@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spauthenticationprovider
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: New-SPAuthenticationProvider
 schema: 2.0.0
 author: techwriter40
@@ -21,20 +21,20 @@ Creates a new authentication provider in the farm.
 ## SYNTAX
 
 ### Forms
-```
-New-SPAuthenticationProvider -ASPNETMembershipProvider <String> -ASPNETRoleProviderName <String>
+```powershell
+PS C:\> New-SPAuthenticationProvider -ASPNETMembershipProvider <String> -ASPNETRoleProviderName <String>
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### Trusted
-```
-New-SPAuthenticationProvider -TrustedIdentityTokenIssuer <SPTrustedIdentityTokenIssuerPipeBind>
+```powershell
+PS C:\> New-SPAuthenticationProvider -TrustedIdentityTokenIssuer <SPTrustedIdentityTokenIssuerPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### Windows
-```
-New-SPAuthenticationProvider [-AllowAnonymous] [-AssignmentCollection <SPAssignmentCollection>]
+```powershell
+PS C:\> New-SPAuthenticationProvider [-AllowAnonymous] [-AssignmentCollection <SPAssignmentCollection>]
  [-DisableKerberos] [-UseBasicAuthentication] [-UseWindowsIntegratedAuthentication] [<CommonParameters>]
 ```
 
@@ -56,24 +56,24 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ---------------------------EXAMPLE1------------------ 
-```
-$ap = New-SPAuthenticationProvider -UseWindowsIntegratedAuthentication
+```powershell
+PS C:\> $ap = New-SPAuthenticationProvider -UseWindowsIntegratedAuthentication
 Set-SPWebApplication -Name "Claims Windows Web App" -ApplicationPool "Claims App Pool" -ApplicationPoolAccount "redmond\appool" -Url http://<servername> -Port 80 -AuthenticationProvider $ap
 ```
 
 This example creates a Windows claims authentication provider.
 
 ### ---------------------------EXAMPLE2------------------ 
-```
-$ap = New-SPAuthenticationProvider -ASPNETMembershipProvider "membership" -ASPNETRoleProviderName "rolemanager"
+```powershell
+PS C:\> $ap = New-SPAuthenticationProvider -ASPNETMembershipProvider "membership" -ASPNETRoleProviderName "rolemanager"
 Set-SPWebApplication -Name "Claims Windows Web App" -ApplicationPool "Claims App Pool" -ApplicationPoolAccount "redmond\appool" -Url http://<servername> -Port 80 -AuthenticationProvider $ap
 ```
 
 This example creates an authentication provider that is based on the ASP.NET membership role provider.
 
 ### ---------------------------EXAMPLE3------------------ 
-```
-$ap = New-SPAuthenticationProvider -TrustedIdentityTokenIssuer | Get-SPTrustedIdentityTokenIssuer "LiveIDSTS"
+```powershell
+PS C:\> $ap = New-SPAuthenticationProvider -TrustedIdentityTokenIssuer | Get-SPTrustedIdentityTokenIssuer "LiveIDSTS"
 Set-SPWebApplication -Name "Claims Windows Web App" -ApplicationPool "Claims App Pool" -ApplicationPoolAccount "redmond\appool" -Url http://<servername> -Port 80 -AuthenticationProvider $ap
 ```
 
@@ -90,7 +90,7 @@ The value must be a valid name of an ASP.NET membership provider; for example, m
 Type: String
 Parameter Sets: Forms
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -108,7 +108,7 @@ The value must be a valid name of an ASP.NET role provider; for example, myRoleP
 Type: String
 Parameter Sets: Forms
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -130,7 +130,7 @@ The value must be in one of the following forms:
 Type: SPTrustedIdentityTokenIssuerPipeBind
 Parameter Sets: Trusted
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -146,7 +146,7 @@ Specifies whether the web application allows anonymous access.
 Type: SwitchParameter
 Parameter Sets: Windows
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -168,7 +168,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -184,7 +184,7 @@ Specifies whether the web application disables Kerberos authentication.
 Type: SwitchParameter
 Parameter Sets: Windows
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -200,7 +200,7 @@ Specifies whether the web application uses Basic authentication.
 Type: SwitchParameter
 Parameter Sets: Windows
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -216,7 +216,7 @@ Specifies whether the web application uses Integrated Windows authentication.
 Type: SwitchParameter
 Parameter Sets: Windows
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

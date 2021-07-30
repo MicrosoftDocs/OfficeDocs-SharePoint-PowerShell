@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spalternateurl
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Get-SPAlternateURL
 schema: 2.0.0
 author: techwriter40
@@ -21,14 +21,14 @@ Returns all alternate URLs that match a given set of criteria.
 ## SYNTAX
 
 ### ResourceName
-```
-Get-SPAlternateURL [[-Identity] <SPAlternateUrlPipeBind>] -ResourceName <String>
+```powershell
+PS C:\> Get-SPAlternateURL [[-Identity] <SPAlternateUrlPipeBind>] -ResourceName <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-Zone <SPUrlZone>] [<CommonParameters>]
 ```
 
 ### WebApplication
-```
-Get-SPAlternateURL [[-Identity] <SPAlternateUrlPipeBind>] -WebApplication <SPWebApplicationPipeBind>
+```powershell
+PS C:\> Get-SPAlternateURL [[-Identity] <SPAlternateUrlPipeBind>] -WebApplication <SPWebApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Zone <SPUrlZone>] [<CommonParameters>]
 ```
 
@@ -49,15 +49,15 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------EXAMPLE 1----------------- 
-```
-Get-SPAlternateURL -WebApplication https://sitename
+```powershell
+PS C:\> Get-SPAlternateURL -WebApplication https://sitename
 ```
 
 This example displays all the alternate URLs on a given Web application.
 
 ### --------------EXAMPLE 2----------------- 
-```
-Get-SPAlternateURL -ResourceName "MyResource"
+```powershell
+PS C:\> Get-SPAlternateURL -ResourceName "MyResource"
 ```
 
 This example displays all the alternate URLs for a given resource.
@@ -73,7 +73,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPAlternateUrlPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 1
@@ -89,7 +89,7 @@ Specifies the name of the resource from which to list alternate URLs.
 Type: String
 Parameter Sets: ResourceName
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -105,7 +105,7 @@ Specifies the Web application from which to list alternate URLs.
 Type: SPWebApplicationPipeBind
 Parameter Sets: WebApplication
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -127,7 +127,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -145,7 +145,7 @@ Must be a valid zone: Default, Intranet, Internet, Extranet, or Custom
 Type: SPUrlZone
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

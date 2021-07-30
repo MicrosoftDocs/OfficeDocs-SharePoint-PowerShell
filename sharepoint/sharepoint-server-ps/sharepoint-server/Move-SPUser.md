@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/move-spuser
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Move-SPUser
 schema: 2.0.0
 author: techwriter40
@@ -34,24 +34,24 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE------------------ 
-```
-$user = Get-SPUser -Identity "DOMAIN\JaneDoe" -Web https://webUrl
+```powershell
+PS C:\> $user = Get-SPUser -Identity "DOMAIN\JaneDoe" -Web https://webUrl
 Move-SPUser -Identity $user -NewAlias "Domain\JaneSmith" -IgnoreSid
 ```
 
 This example migrates DOMAIN\JaneDoe to the new account of DOMAIN\JaneSmith.
 
 ### ------------------EXAMPLE 2------------------ 
-```
-$user = Get-SPUser -Identity "DomainA\JaneDoe" -Web https://webUrl
+```powershell
+PS C:\> $user = Get-SPUser -Identity "DomainA\JaneDoe" -Web https://webUrl
 Move-SPUser -Identity $user -NewAlias "DomainB\JaneDoe"
 ```
 
 This example migrates DOMAIN\JaneDoe from DomainA to the new account of DOMAINB\JaneDoe in DomainB with SID History enabled.
 
 ### ------------------EXAMPLE 3------------------ 
-```
-$user = Get-SPUser -Identity "i:0#.w|DOMAIN\JaneDoe" -Web https://webUrl
+```powershell
+PS C:\> $user = Get-SPUser -Identity "i:0#.w|DOMAIN\JaneDoe" -Web https://webUrl
 Move-SPUser -Identity $user -NewAlias "i:0#.w|Domain\JaneSmith" -IgnoreSid
 ```
 
@@ -68,7 +68,7 @@ The type must be a valid `SPUser` object.
 Type: SPUserPipeBind
 Parameter Sets: (All)
 Aliases: UserAlias
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -86,7 +86,7 @@ The type must be a valid login name, in the form DOMAIN\username.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -108,7 +108,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -125,7 +125,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -141,7 +141,7 @@ Indicates (if present) that Active Directory will not be queried for the SID his
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -158,7 +158,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

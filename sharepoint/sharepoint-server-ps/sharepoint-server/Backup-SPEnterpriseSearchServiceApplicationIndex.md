@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/backup-spenterprisesearchserviceapplicationindex
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Backup-SPEnterpriseSearchServiceApplicationIndex
 schema: 2.0.0
 author: techwriter40
@@ -18,16 +18,16 @@ Takes a backup of the search index to a specified backup location.
 ## SYNTAX
 
 ### RunBackup
-```
-Backup-SPEnterpriseSearchServiceApplicationIndex [-Phase] <Int32>
+```powershell
+PS C:\> Backup-SPEnterpriseSearchServiceApplicationIndex [-Phase] <Int32>
  [-SearchApplication] <SearchServiceApplication> [-BackupFolder] <String> [-BackupHandleFile] <String>
  [[-Retries] <Int32>] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [-PeerToPeer]
  [-SpecifiedBackupHandle <String>] [<CommonParameters>]
 ```
 
 ### AbortBackup
-```
-Backup-SPEnterpriseSearchServiceApplicationIndex [-SearchApplication] <SearchServiceApplication>
+```powershell
+PS C:\> Backup-SPEnterpriseSearchServiceApplicationIndex [-SearchApplication] <SearchServiceApplication>
  [-BackupHandleFile] <String> [[-Retries] <Int32>] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-WhatIf] [-Abort] [-PeerToPeer] [-SpecifiedBackupHandle <String>] [<CommonParameters>]
 ```
@@ -46,8 +46,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------ 
-```
-$ssa = Get-SPEnterpriseSearchServiceApplication
+```powershell
+PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
 Backup-SPEnterpriseSearchServiceApplicationIndex -Phase 1 -SearchApplication $ssa -BackupFolder "\\backuphost\backupfolder" -BackupHandleFile "\\backuphost\backupfolder\backuphandle.txt" -Retries 3
 ```
 
@@ -55,16 +55,16 @@ This example starts a Phase 1 backup of the search index for the default search 
 The cmdlet stores a handle file backuphandle.txt that is used by the second phase cmdlet.
 
 ### ------------------EXAMPLE 2------------------ 
-```
-$ssa = Get-SPEnterpriseSearchServiceApplication
+```powershell
+PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
 Backup-SPEnterpriseSearchServiceApplicationIndex -Phase 1 $ssa -BackupFolder "\\backuphost\backupfolder" -BackupHandleFile "\\backuphost\backupfolder\backuphandle.txt" -Retries 3
 ```
 
 This example checks the backup status and progress by re-running the cmdlet for Phase 1.
 
 ### ------------------EXAMPLE 3------------------ 
-```
-$ssa = Get-SPEnterpriseSearchServiceApplication
+```powershell
+PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
 Backup-SPEnterpriseSearchServiceApplicationIndex -Phase 2 -SearchApplication $ssa -BackupFolder "\\backuphost\backupfolder" -BackupHandleFile "\\backuphost\backupfolder\backuphandle.txt" -Retries 3
 ```
 
@@ -80,7 +80,7 @@ Specifies the phase of the backup job.
 Type: Int32
 Parameter Sets: RunBackup
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -96,7 +96,7 @@ Name of the search service application to be backed up
 Type: SearchServiceApplication
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 2
@@ -112,7 +112,7 @@ Full UNC path of the backup files should be written.
 Type: String
 Parameter Sets: RunBackup
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 3
@@ -128,7 +128,7 @@ Specifies a file handle for an ongoing backup job.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 4
@@ -144,7 +144,7 @@ Number of times to retry if temporary failure occurs.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 5
@@ -166,7 +166,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -183,7 +183,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -200,7 +200,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: AbortBackup
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named

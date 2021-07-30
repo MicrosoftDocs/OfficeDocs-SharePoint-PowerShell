@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/add-spdistributedcacheserviceinstance
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Add-SPDistributedCacheServiceInstance
 schema: 2.0.0
 author: techwriter40
@@ -21,19 +21,19 @@ Adds an instance of the distributed cache service to a local server.
 ## SYNTAX
 
 ###  (Default)
-```
-Add-SPDistributedCacheServiceInstance [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+```powershell
+PS C:\> Add-SPDistributedCacheServiceInstance [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### CacheSizeSet
-```
-Add-SPDistributedCacheServiceInstance [-AssignmentCollection <SPAssignmentCollection>] [-CacheSizeInMB <Int32>]
+```powershell
+PS C:\> Add-SPDistributedCacheServiceInstance [-AssignmentCollection <SPAssignmentCollection>] [-CacheSizeInMB <Int32>]
  [<CommonParameters>]
 ```
 
 ### LocalServerRoleSet
-```
-Add-SPDistributedCacheServiceInstance [-AssignmentCollection <SPAssignmentCollection>] [-Role <SPServerRole>]
+```powershell
+PS C:\> Add-SPDistributedCacheServiceInstance [-AssignmentCollection <SPAssignmentCollection>] [-Role <SPServerRole>]
  [<CommonParameters>]
 ```
 
@@ -47,9 +47,9 @@ Use the Add-SPDistributedCacheServiceInstance cmdlet to add an instance of the d
 
 ## EXAMPLES
 
-### Example 1 
-```
-Add-SPDistributedCacheServiceInstance
+### ------------Example 1 -----------
+```powershell
+PS C:\> Add-SPDistributedCacheServiceInstance
 ```
 
 This example adds an instance of the distributed cache service to a local server.
@@ -68,7 +68,7 @@ Manages objects for the purpose of proper disposal. Use of objects, such as SPWe
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

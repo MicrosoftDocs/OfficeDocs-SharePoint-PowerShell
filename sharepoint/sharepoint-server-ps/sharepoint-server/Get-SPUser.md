@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spuser
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Get-SPUser
 schema: 2.0.0
 author: techwriter40
@@ -20,8 +20,8 @@ Returns the user account or accounts that match a given search criteria.
 
 ## SYNTAX 
 
-```
-Get-SPUser [[-Identity] <SPUserPipeBind>] -Web <SPWebPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+```powershell
+PS C:\> Get-SPUser [[-Identity] <SPUserPipeBind>] -Web <SPWebPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-Group <SPGroupPipeBind>] [-Limit <String>] [<CommonParameters>]
 ```
 
@@ -35,23 +35,23 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------ 
-```
-Get-SPUser -Web 'https://sharepoint.contoso.com' -Group 'Viewers'
+```powershell
+PS C:\> Get-SPUser -Web 'https://sharepoint.contoso.com' -Group 'Viewers'
 ```
 
 This example returns all members of the SharePoint group Viewers on the site https://sharepoint.contoso.com.
 
 
 ### ------------------EXAMPLE 2------------------ 
-```
-Get-SPUser -Identity 'i:0#.w|contoso\jdoe' -Web 'https://sharepoint.contoso.com'
+```powershell
+PS C:\> Get-SPUser -Identity 'i:0#.w|contoso\jdoe' -Web 'https://sharepoint.contoso.com'
 ```
 
 This example returns the specific user identified via Windows Claims on the site https://sharepoint.contoso.com.
 
 ### ------------------EXAMPLE 3------------------ 
-```
-Get-SPUser -Identity 'contoso\jdoe' -Web 'https://sharepoint.contoso.com'
+```powershell
+PS C:\> Get-SPUser -Identity 'contoso\jdoe' -Web 'https://sharepoint.contoso.com'
 ```
 
 This example returns the specific user identified via Classic Windows authentication on the site https://sharepoint.contoso.com.
@@ -67,7 +67,7 @@ The type must be a valid ID or login name, such as the format of 'CONTOSO\jdoe' 
 Type: SPUserPipeBind
 Parameter Sets: (All)
 Aliases: UserAlias
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 1
@@ -85,7 +85,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPWebPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -107,7 +107,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -123,7 +123,7 @@ Specifies the user group to which the new user belongs.
 Type: SPGroupPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -140,7 +140,7 @@ The default value is 500.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

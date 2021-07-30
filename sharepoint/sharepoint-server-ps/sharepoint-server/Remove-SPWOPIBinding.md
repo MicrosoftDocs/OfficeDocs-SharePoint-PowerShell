@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spwopibinding
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Remove-SPWOPIBinding
 schema: 2.0.0
 author: techwriter40
@@ -19,21 +19,21 @@ Removes bindings for applications, file name extensions and their associated act
 ## SYNTAX
 
 ### Identity
-```
-Remove-SPWOPIBinding [[-Identity] <SPWopiBindingPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
+```powershell
+PS C:\> Remove-SPWOPIBinding [[-Identity] <SPWopiBindingPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Filter
-```
-Remove-SPWOPIBinding [-Action <String>] [-Application <String>]
+```powershell
+PS C:\> Remove-SPWOPIBinding [-Action <String>] [-Application <String>]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Extension <String>] [-ProgId <String>]
  [-Server <String>] [-WhatIf] [-WOPIZone <String>] [<CommonParameters>]
 ```
 
 ### RemoveAll
-```
-Remove-SPWOPIBinding [-All] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf]
+```powershell
+PS C:\> Remove-SPWOPIBinding [-All] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -51,24 +51,24 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------EXAMPLE 1-----------------
-```
-Remove-SPWOPIBinding -Application "Excel"
+```powershell
+PS C:\> Remove-SPWOPIBinding -Application "Excel"
 ```
 
 This example removes all bindings for Excel on the current SharePoint farm where this cmdlet is run.
 
 
 ### --------------EXAMPLE 2-----------------
-```
-Remove-SPWOPIBinding -All:$true
+```powershell
+PS C:\> Remove-SPWOPIBinding -All:$true
 ```
 
 This example removes all bindings on the current SharePoint farm where this cmdlet is run.
 
 
 ### --------------EXAMPLE 3-----------------
-```
-Get-SPWOPIBinding -Action "MobileView" | Remove-SPWOPIBinding
+```powershell
+PS C:\> Get-SPWOPIBinding -Action "MobileView" | Remove-SPWOPIBinding
 ```
 
 This example removes all bindings for Office Mobile Web Apps on the current SharePoint farm where this cmdlet is run.
@@ -83,7 +83,7 @@ Specifies the binding.
 Type: SPWopiBindingPipeBind
 Parameter Sets: Identity
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 1
@@ -102,7 +102,7 @@ If you specify some actions but not others, some features in SharePoint may not 
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -118,7 +118,7 @@ Removes all bindings.
 Type: SwitchParameter
 Parameter Sets: RemoveAll
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -135,7 +135,7 @@ Possible applications are as follows: "Word," "Excel," "PowerPoint," or "OneNote
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -157,7 +157,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -174,7 +174,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -191,7 +191,7 @@ Run `Get-SPWOPIBinding` to get the list of file name extensions.
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -209,7 +209,7 @@ You may only want to use this parameter to remove bindings for OneNote.
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -225,7 +225,7 @@ Specifies the name of WOPI application (like Office Web Apps Server) to remove b
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -242,7 +242,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -258,7 +258,7 @@ Specifies the zone to remove bindings for.
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

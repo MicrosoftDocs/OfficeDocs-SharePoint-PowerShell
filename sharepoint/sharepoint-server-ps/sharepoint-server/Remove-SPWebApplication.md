@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spwebapplication
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Remove-SPWebApplication
 schema: 2.0.0
 author: techwriter40
@@ -19,14 +19,14 @@ Deletes the specified Web application.
 ## SYNTAX
 
 ### RemoveZoneOfWebApp
-```
-Remove-SPWebApplication [-Identity] <SPWebApplicationPipeBind> -Zone <SPUrlZone>
+```powershell
+PS C:\> Remove-SPWebApplication [-Identity] <SPWebApplicationPipeBind> -Zone <SPUrlZone>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-DeleteIISSite] [-WhatIf] [<CommonParameters>]
 ```
 
 ### RemoveWebApp
-```
-Remove-SPWebApplication [-Identity] <SPWebApplicationPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+```powershell
+PS C:\> Remove-SPWebApplication [-Identity] <SPWebApplicationPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-DeleteIISSite] [-RemoveContentDatabases] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -44,8 +44,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1-----------------------
-```
-Get-SPWebApplication https://sitename | Remove-SPWebApplication -Zone "Internet" -Confirm
+```powershell
+PS C:\> Get-SPWebApplication https://sitename | Remove-SPWebApplication -Zone "Internet" -Confirm
 ```
 
 This example prompts and then removes the Internet zone Web application extension on the Web application at https://sitename.
@@ -53,8 +53,8 @@ This command does not remove the content databases or the IIS Web site.
 
 
 ### ------------------EXAMPLE 2-----------------------
-```
-Remove-SPWebApplication https://sitename -Confirm -DeleteIISSite -RemoveContentDatabases
+```powershell
+PS C:\> Remove-SPWebApplication https://sitename -Confirm -DeleteIISSite -RemoveContentDatabases
 ```
 
 This example permanently removes the Web application, all content databases and the IIS Web site at https://sitename
@@ -71,7 +71,7 @@ The type must be a valid URL, in the form https://server_name, or a valid name, 
 Type: SPWebApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -90,7 +90,7 @@ The type must be any one of the following values: Default, Intranet, Internet, E
 Type: SPUrlZone
 Parameter Sets: RemoveZoneOfWebApp
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -112,7 +112,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -129,7 +129,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -146,7 +146,7 @@ If this parameter is not provided, the IIS site is not removed.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -163,7 +163,7 @@ If this parameter is not provided, no content databases are removed.
 Type: SwitchParameter
 Parameter Sets: RemoveWebApp
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -180,7 +180,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spweb
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Get-SPWeb
 schema: 2.0.0
 author: techwriter40
@@ -48,28 +48,28 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------------EXAMPLE 1---------------------- 
-```
-Get-SPWeb -site https://sitename/sites/site1
+```powershell
+PS C:\> Get-SPWeb -site https://sitename/sites/site1
 ```
 
 This example returns all the subwebs in a given site collection.
 
 ### --------------------EXAMPLE 2---------------------- 
-```
-Get-SPWeb -Site https://sitename/sites/site1  -filter {$_.Template -eq "STS#0"}
+```powershell
+PS C:\> Get-SPWeb -Site https://sitename/sites/site1  -filter {$_.Template -eq "STS#0"}
 ```
 
 This example displays all subsites that use the "STS#0" template.
 
 ### --------------------EXAMPLE 3---------------------- 
-```
-Start-SPAssignment -Global
+```powershell
+PS C:\> Start-SPAssignment -Global
 
-C:\PS>$w = Get-SPWeb https://sitename
+PS C:\> $w = Get-SPWeb https://sitename
 
-C:\PS>$w.set_SiteLogoUrl("https://PathToImage/test.jpg")
+PS C:\> $w.set_SiteLogoUrl("https://PathToImage/test.jpg")
 
-C:\PS>$w.Update()
+PS C:\> $w.Update()
 
 Stop-SPAssignment -Global
 ```
@@ -88,7 +88,7 @@ A valid URL in the form https://server_name or a relative path in the form of /S
 Type: SPWebPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 1
@@ -110,7 +110,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -127,7 +127,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -145,7 +145,7 @@ The type must be a valid filter in the form {filterName \<operator\> "filterValu
 Type: ScriptBlock
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -165,7 +165,7 @@ The type must be a valid number greater than 0 or ALL.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -181,7 +181,7 @@ Specifies the URL that is provided by the Identity parameter is treated as a reg
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -199,7 +199,7 @@ The type must be a valid URL, in the form  of https://server_name; a GUID, in th
 Type: SPSitePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -216,7 +216,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

@@ -1,6 +1,6 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/disable-spprojectemailnotification
 applicable: Project Server 2016, Project Server 2019
 title: Disable-SPProjectEmailNotification
@@ -27,7 +27,7 @@ Turns off the Project Web App site level setting for email notifications in Proj
 
 ## EXAMPLES
 
-### Example 1 
+### ------------Example 1 -----------
 ```
 Disable-SPProjectEmailNotification -Url https://pwa_site
 ```

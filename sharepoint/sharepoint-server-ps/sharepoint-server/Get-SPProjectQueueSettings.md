@@ -1,6 +1,6 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spprojectqueuesettings
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Get-SPProjectQueueSettings
@@ -43,8 +43,8 @@ For permissions and the most current information about Windows PowerShell for Pr
 ## EXAMPLES
 
 ### --------------------EXAMPLE--------------------- 
-```
-Get-SPProjectQueueSettings -ServiceApplication "Project Service Application"
+```powershell
+PS C:\> Get-SPProjectQueueSettings -ServiceApplication "Project Service Application"
 ```
 
 This example retrieves the queue settings for the "Project Service Application" service application.

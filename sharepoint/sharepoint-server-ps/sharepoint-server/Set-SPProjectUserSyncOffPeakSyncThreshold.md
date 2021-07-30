@@ -1,6 +1,6 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spprojectusersyncoffpeaksyncthreshold
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Set-SPProjectUserSyncOffPeakSyncThreshold
@@ -36,8 +36,8 @@ For permissions and the most current information about Windows PowerShell for Pr
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
-```
-Set-SPProjectUserSyncOffPeakSyncThreshold -URL https://contoso/PWA -Threshold 900000
+```powershell
+PS C:\> Set-SPProjectUserSyncOffPeakSyncThreshold -URL https://contoso/PWA -Threshold 900000
 ```
 
 This example sets the sync off-peak threshold for the Project Web App instance at https://contoso-AppSrv/PWA to 900000.

@@ -1,6 +1,6 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-projectserverlicense
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Get-ProjectServerLicense
@@ -26,9 +26,9 @@ Retrieves the status of the license for Project Server. If the current license i
 
 ## EXAMPLES
 
-### Example 1 
-```
-Get-ProjectServerLicense
+### ------------Example 1 -----------
+```powershell
+PS C:\> Get-ProjectServerLicense
 ```
 
 Gets the status of the Project Server license and when it was activated.

@@ -1,6 +1,6 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/disable-spprojectqueuestatsmonitoring
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Disable-SPProjectQueueStatsMonitoring
@@ -26,9 +26,9 @@ Disables monitoring Project Server queue statistics.
 
 ## EXAMPLES
 
-### Example 1 
-```
-Disable-SPProjectQueueStatsMonitoring
+### ------------Example 1 -----------
+```powershell
+PS C:\> Disable-SPProjectQueueStatsMonitoring
 ```
 
 Disables monitoring Project Server queue statistics.

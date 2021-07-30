@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spserverscaleoutdatabase
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Remove-SPServerScaleOutDatabase
 schema: 2.0.0
 author: techwriter40
@@ -31,8 +31,8 @@ Use the Remove-SPServerScaleOutDatabase cmdlet to remove a specific scale-out da
 ## EXAMPLES
 
 ### -----------------------EXAMPLE-----------------------------
-```
-$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Managed Metadata Service'}
+```powershell
+PS C:\> $sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Managed Metadata Service'}
 $database = Get-SPServerScaleOutDatabase -ServiceApplication $sa
 Remove-SPServerScaleOutDatabase -Database $database -ServiceApplication $sa
 ```
@@ -49,7 +49,7 @@ Specifies the scale-out database to remove.
 Type: SPDatabasePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -65,7 +65,7 @@ Specifies the service application of the scale-out database to remove.
 Type: SPServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -83,7 +83,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -99,7 +99,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -115,7 +115,7 @@ Specifies whether to delete data when the scale out database is removed.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -132,7 +132,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

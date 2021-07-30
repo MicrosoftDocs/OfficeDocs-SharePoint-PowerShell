@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/uninstall-spsolution
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Uninstall-SPSolution
 schema: 2.0.0
 author: techwriter40
@@ -19,15 +19,15 @@ Retracts a deployed SharePoint solution.
 ## SYNTAX
 
 ### AllWebApplication
-```
-Uninstall-SPSolution [-Identity] <SPSolutionPipeBind> [-AllWebApplications]
+```powershell
+PS C:\> Uninstall-SPSolution [-Identity] <SPSolutionPipeBind> [-AllWebApplications]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-CompatibilityLevel <String>]
  [-Language <UInt32>] [-Local] [-Time <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### OneWebApplication
-```
-Uninstall-SPSolution [-Identity] <SPSolutionPipeBind> -WebApplication <SPWebApplicationPipeBind>
+```powershell
+PS C:\> Uninstall-SPSolution [-Identity] <SPSolutionPipeBind> -WebApplication <SPWebApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-CompatibilityLevel <String>]
  [-Language <UInt32>] [-Local] [-Time <String>] [-WhatIf] [<CommonParameters>]
 ```
@@ -47,8 +47,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE------------------
-```
-Uninstall-SPSolution -Identity contoso_solution.wsp
+```powershell
+PS C:\> Uninstall-SPSolution -Identity contoso_solution.wsp
 ```
 
 This example retracts the deployed SharePoint solution contoso_solution.wsp.
@@ -64,7 +64,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPSolutionPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -80,7 +80,7 @@ Specifies that the new SharePoint solution will be uninstalled for all SharePoin
 Type: SwitchParameter
 Parameter Sets: AllWebApplication
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -98,7 +98,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPWebApplicationPipeBind
 Parameter Sets: OneWebApplication
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -120,7 +120,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -137,7 +137,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -153,7 +153,7 @@ Specifies whether to uninstall the solution, from a specific version directory b
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -171,7 +171,7 @@ The type must be a valid language identifier; for example, 1033.
 Type: UInt32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -187,7 +187,7 @@ Uninstalls the solution from the active server computer.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -206,7 +206,7 @@ The type must be a valid DateTime value, in the form 2010,12,05.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -223,7 +223,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

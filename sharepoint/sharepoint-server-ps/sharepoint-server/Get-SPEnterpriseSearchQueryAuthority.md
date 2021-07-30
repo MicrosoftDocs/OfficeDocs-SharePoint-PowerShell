@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchqueryauthority
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Get-SPEnterpriseSearchQueryAuthority
 schema: 2.0.0
 author: techwriter40
@@ -33,16 +33,16 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------ 
-```
-$ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
+```powershell
+PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
 Get-SPEnterpriseSearchQueryAuthority -Identity 'https://contoso.com' -SearchApplication $ssa
 ```
 
 This example obtains the authoritative page for the URL https://contoso.com from the search service application named 'Search Service Application'.
 
 ### ------------------EXAMPLE 2------------------ 
-```
-Get-SPEnterpriseSearchQueryAuthority -SearchApplication 'Search Service Application'
+```powershell
+PS C:\> Get-SPEnterpriseSearchQueryAuthority -SearchApplication 'Search Service Application'
 ```
 
 This example obtains the collection of query authority pages from a search service application named 'Search Service Application'.
@@ -58,7 +58,7 @@ The type must be a valid URL, in the form https://server_name; or an instance of
 Type: AuthorityPagePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 1
@@ -74,7 +74,7 @@ Specifies the search object owner that defines the scope at which the correspond
 Type: SearchObjectOwner
 Parameter Sets: (All)
 Aliases: o
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -92,7 +92,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -114,7 +114,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

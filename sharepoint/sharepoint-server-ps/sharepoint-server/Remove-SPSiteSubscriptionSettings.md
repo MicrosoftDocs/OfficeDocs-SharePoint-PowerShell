@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spsitesubscriptionsettings
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Remove-SPSiteSubscriptionSettings
 schema: 2.0.0
 author: techwriter40
@@ -19,15 +19,15 @@ Removes the settings service data for a specified site subscription, or finds an
 ## SYNTAX
 
 ### FindAllOrphans
-```
-Remove-SPSiteSubscriptionSettings [-Identity] <SPServiceApplicationPipeBind> [-FindAllOrphans]
+```powershell
+PS C:\> Remove-SPSiteSubscriptionSettings [-Identity] <SPServiceApplicationPipeBind> [-FindAllOrphans]
  [-AlternativeSiteSubscriptions <Guid[]>] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Force]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### SpecifySiteSubscriptions
-```
-Remove-SPSiteSubscriptionSettings [-Identity] <SPServiceApplicationPipeBind> -SiteSubscriptions <Guid[]>
+```powershell
+PS C:\> Remove-SPSiteSubscriptionSettings [-Identity] <SPServiceApplicationPipeBind> -SiteSubscriptions <Guid[]>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -50,8 +50,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------EXAMPLE 1--------------
-```
-Remove-SPSiteSubscriptionSettings -FindAllOrphans -Whatif
+```powershell
+PS C:\> Remove-SPSiteSubscriptionSettings -FindAllOrphans -Whatif
 ```
 
 This example finds all orphans and displays them on the screen.
@@ -59,8 +59,8 @@ Remove the WhatIf parameter to remove these extra settings.
 
 
 ### ------------EXAMPLE 2--------------
-```
-Remove-SPSubscriptionSettingsServiceApplication -FindAllOrphans -AlternativeSiteSubscriptions $SubscriptionList
+```powershell
+PS C:\> Remove-SPSubscriptionSettingsServiceApplication -FindAllOrphans -AlternativeSiteSubscriptions $SubscriptionList
 ```
 
 Use this example if the service application is consumed by a remote farm and you want the clean orphaned site subscription settings data (an array of all site subscriptions whose data must remain in the service application is assigned to the $SubscriptionList variable.
@@ -77,7 +77,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -93,7 +93,7 @@ Specifies that orphaned settings stores in the service application are deleted.
 Type: SwitchParameter
 Parameter Sets: FindAllOrphans
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -111,7 +111,7 @@ The type must be an array of valid GUIDs.
 Type: Guid[]
 Parameter Sets: SpecifySiteSubscriptions
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -133,7 +133,7 @@ The type must be an array of valid GUIDs.
 Type: Guid[]
 Parameter Sets: FindAllOrphans
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -155,7 +155,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -172,7 +172,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -188,7 +188,7 @@ Automatically bypasses the secondary warning provided by the cmdlet prior to the
 Type: SwitchParameter
 Parameter Sets: FindAllOrphans
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -205,7 +205,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

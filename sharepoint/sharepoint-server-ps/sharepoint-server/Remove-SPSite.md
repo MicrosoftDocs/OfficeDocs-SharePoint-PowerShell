@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spsite
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Remove-SPSite
 schema: 2.0.0
 author: techwriter40
@@ -32,15 +32,15 @@ This operation cannot be undone.
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1-----------------------
-```
-Remove-SPSite -Identity 'https://sitename' -GradualDelete -Confirm:$False
+```powershell
+PS C:\> Remove-SPSite -Identity 'https://sitename' -GradualDelete -Confirm:$False
 ```
 
 This example removes the given site collection and all included sites by using GradualDelete which places the site in the site recycle bin; confirmation has been suppressed.
 
 ### ------------------EXAMPLE 2-----------------------
-```
-Remove-SPSite -Identity 'https://sitename'
+```powershell
+PS C:\> Remove-SPSite -Identity 'https://sitename'
 ```
 
 This example immediately deletes the site and it's contents from the farm.
@@ -55,15 +55,15 @@ The identity can be either a valid URL, in the form https://server_name; a valid
 Type: SPSitePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-```
-### -DeleteADAccounts
+```powershell
+PS C:\> ### -DeleteADAccounts
 Forces deletion of user accounts from Active Directory Domain Services (AD DS).
 This applies when in AD DS account creation mode and the value of this parameter is True, AD DS accounts associated with the site collection are also deleted from AD DS.
 
@@ -77,8 +77,8 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-```
-### -CheckComplianceFlags
+```powershell
+PS C:\> ### -CheckComplianceFlags
 Specifies if compliance flags are enabled. 
 
 ```yaml
@@ -102,7 +102,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -119,7 +119,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -137,7 +137,7 @@ This applies when in AD DS account creation mode and the value of this parameter
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -155,7 +155,7 @@ This operation is strongly recommended for deleting very large sites. This optio
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -172,7 +172,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

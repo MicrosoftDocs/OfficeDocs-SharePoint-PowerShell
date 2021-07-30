@@ -1,6 +1,6 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spprojectodataconfiguration
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Set-SPProjectOdataConfiguration
@@ -37,32 +37,32 @@ For permissions and the most current information about Windows PowerShell for Pr
 ## EXAMPLES
 
 ### ----------------------EXAMPLE 1-----------------------
-```
-Set-SPProjectOdataConfiguration -ClearEntityPageSizeOverrides
+```powershell
+PS C:\> Set-SPProjectOdataConfiguration -ClearEntityPageSizeOverrides
 ```
 
 This example clears any page size overrides that have been set for any specific entities.
 
 
 ### ----------------------EXAMPLE 2-----------------------
-```
-Set-SPProjectOdataConfiguration -AcceptProjectionRequests $true
+```powershell
+PS C:\> Set-SPProjectOdataConfiguration -AcceptProjectionRequests $true
 ```
 
 This example sets AcceptProjectionRequests to true.
 
 
 ### ----------------------EXAMPLE 3-----------------------
-```
-Set-SPProjectOdataConfiguration -DefaultMaxPageSize 50
+```powershell
+PS C:\> Set-SPProjectOdataConfiguration -DefaultMaxPageSize 50
 ```
 
 This example sets the default maximum page size to 50 rows.
 
 
 ### ----------------------EXAMPLE 4-----------------------
-```
-Set-SPProjectOdataConfiguration -EntitySetName Assignments -PageSizeOverride 100
+```powershell
+PS C:\> Set-SPProjectOdataConfiguration -EntitySetName Assignments -PageSizeOverride 100
 ```
 
 This example sets the page size override for the Assignments entity.

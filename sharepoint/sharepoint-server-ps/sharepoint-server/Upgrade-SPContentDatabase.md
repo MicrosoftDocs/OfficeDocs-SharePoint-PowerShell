@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/upgrade-spcontentdatabase
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Upgrade-SPContentDatabase
 schema: 2.0.0
 author: techwriter40
@@ -19,16 +19,16 @@ Resumes a failed database upgrade or begins a build-to-build database upgrade.
 ## SYNTAX
 
 ### ContentDatabaseById
-```
-Upgrade-SPContentDatabase [-Identity] <SPContentDatabasePipeBind> [-ForceDeleteLock]
+```powershell
+PS C:\> Upgrade-SPContentDatabase [-Identity] <SPContentDatabasePipeBind> [-ForceDeleteLock]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-NoB2BSiteUpgrade]
  [-ServerInstance <SPDatabaseServiceInstancePipeBind>] [-SkipIntegrityChecks] [-UseSnapshot] [-WhatIf]
  [-AllowUnattached] [-SkipSiteUpgrade] [<CommonParameters>]
 ```
 
 ### ContentDatabaseByName
-```
-Upgrade-SPContentDatabase [-ForceDeleteLock] -Name <String> -WebApplication <SPWebApplicationPipeBind>
+```powershell
+PS C:\> Upgrade-SPContentDatabase [-ForceDeleteLock] -Name <String> -WebApplication <SPWebApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-NoB2BSiteUpgrade]
  [-ServerInstance <SPDatabaseServiceInstancePipeBind>] [-SkipIntegrityChecks] [-UseSnapshot] [-WhatIf]
  [-AllowUnattached] [-SkipSiteUpgrade] [<CommonParameters>]
@@ -56,16 +56,16 @@ This cmdlet does not trigger version-to-version upgrade of any site collections.
 ## EXAMPLES
 
 ### --------------------------EXAMPLE 1------------------------------
-```
-Upgrade-SPContentDatabase WSS_Content
+```powershell
+PS C:\> Upgrade-SPContentDatabase WSS_Content
 ```
 
 This example upgrades the existing WSS_Content content database schema and then performs only build-to-build upgrade actions on existing site collections if required.
 This operation does not changed the CompatibilityLevel for existing site collections in this database.
 
 ### --------------------------EXAMPLE 2------------------------------
-```
-Upgrade-SPContentDatabase WSS_Content -NoB2BSiteUpgrade
+```powershell
+PS C:\> Upgrade-SPContentDatabase WSS_Content -NoB2BSiteUpgrade
 ```
 
 This example upgrades the existing WSS_Content content database schema only.
@@ -73,8 +73,8 @@ No build-to-build upgrade actions are performed on any site collections.
 This operation does not change The CompatibilityLevel for existing site collections in this database.
 
 ### --------------------------EXAMPLE 3------------------------------
-```
-Upgrade-SPContentDatabase WSS_Content -NoB2BSiteUpgrade -UseSnapshot
+```powershell
+PS C:\> Upgrade-SPContentDatabase WSS_Content -NoB2BSiteUpgrade -UseSnapshot
 ```
 
 This example upgrades the existing WSS_Content content database schema only while using a snapshot of the database to retain read-only access to the content during the upgrade. 
@@ -92,7 +92,7 @@ The value must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefg
 Type: SPContentDatabasePipeBind
 Parameter Sets: ContentDatabaseById
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -108,7 +108,7 @@ Forces deletion of locks on the database before the upgrade starts.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 2
@@ -124,7 +124,7 @@ Specifies the name of attached content database.
 Type: String
 Parameter Sets: ContentDatabaseByName
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -140,7 +140,7 @@ Specifies the web application that hosts the attached content database.
 Type: SPWebApplicationPipeBind
 Parameter Sets: ContentDatabaseByName
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -162,7 +162,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -179,7 +179,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -211,7 +211,7 @@ The SQL Server instance that hosts the attached content database.
 Type: SPDatabaseServiceInstancePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -227,7 +227,7 @@ Specifies the upgrade process not to run the internal integrity checks such as m
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -249,7 +249,7 @@ This parameter only works for versions of SQL Server that support creation and u
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -266,7 +266,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

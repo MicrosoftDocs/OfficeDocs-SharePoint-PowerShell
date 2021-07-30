@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spmanagedaccount
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Set-SPManagedAccount
 schema: 2.0.0
 author: techwriter40
@@ -19,30 +19,30 @@ Configures the managed account.
 ## SYNTAX
 
 ### NewPassword
-```
-Set-SPManagedAccount [-Identity] <SPManagedAccountPipeBind> -ConfirmPassword <SecureString>
+```powershell
+PS C:\> Set-SPManagedAccount [-Identity] <SPManagedAccountPipeBind> -ConfirmPassword <SecureString>
  -NewPassword <SecureString> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-EmailNotification <Int32>] [-PreExpireDays <Int32>] [-Schedule <String>] [-SetNewPassword] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### ExistingPassword
-```
-Set-SPManagedAccount [-Identity] <SPManagedAccountPipeBind> -ExistingPassword <SecureString>
+```powershell
+PS C:\> Set-SPManagedAccount [-Identity] <SPManagedAccountPipeBind> -ExistingPassword <SecureString>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-EmailNotification <Int32>]
  [-PreExpireDays <Int32>] [-Schedule <String>] [-UseExistingPassword] [-WhatIf] [<CommonParameters>]
 ```
 
 ### NewPasswordAsParameter
-```
-Set-SPManagedAccount [-Identity] <SPManagedAccountPipeBind> -Password <SecureString>
+```powershell
+PS C:\> Set-SPManagedAccount [-Identity] <SPManagedAccountPipeBind> -Password <SecureString>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-EmailNotification <Int32>]
  [-PreExpireDays <Int32>] [-Schedule <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### AutoGeneratePassword
-```
-Set-SPManagedAccount [-Identity] <SPManagedAccountPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+```powershell
+PS C:\> Set-SPManagedAccount [-Identity] <SPManagedAccountPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-AutoGeneratePassword] [-Confirm] [-EmailNotification <Int32>] [-PreExpireDays <Int32>] [-Schedule <String>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -64,8 +64,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE-----------------------
-```
-$m = Get-SPManagedAccount -Identity "DOMAINx\UserY"
+```powershell
+PS C:\> $m = Get-SPManagedAccount -Identity "DOMAINx\UserY"
 Set-SPManagedAccount -Identity $m -AutoGeneratePassword true
 ```
 
@@ -83,7 +83,7 @@ The type must be a valid account name, in the form Domain\User, or a GUID, in th
 Type: SPManagedAccountPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -99,7 +99,7 @@ Confirms the new password for this managed account.
 Type: SecureString
 Parameter Sets: NewPassword
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -115,7 +115,7 @@ Sets the password for this managed account to an existing value that has already
 Type: SecureString
 Parameter Sets: ExistingPassword
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -131,7 +131,7 @@ Sets a new password for the managed account
 Type: SecureString
 Parameter Sets: NewPassword
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -147,7 +147,7 @@ Sets a password for the managed account.
 Type: SecureString
 Parameter Sets: NewPasswordAsParameter
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -169,7 +169,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -192,7 +192,7 @@ The default value is False.
 Type: SwitchParameter
 Parameter Sets: AutoGeneratePassword
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -209,7 +209,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -227,7 +227,7 @@ The default value is 5.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -245,7 +245,7 @@ The default value is 2.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -261,7 +261,7 @@ Specifies the new schedule on which the password change job is to run.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -284,7 +284,7 @@ The default value is False.
 Type: SwitchParameter
 Parameter Sets: NewPassword
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -307,7 +307,7 @@ The default value is False.
 Type: SwitchParameter
 Parameter Sets: ExistingPassword
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -324,7 +324,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

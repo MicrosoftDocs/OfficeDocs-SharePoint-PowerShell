@@ -1,6 +1,6 @@
 ---
 external help file: sharepointonline.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spodataconnectionsetting
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Get-SPODataConnectionSetting
@@ -38,15 +38,15 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
-```
-Get-SPODataConnectionSetting -ServiceContext  "http://contoso" -Name "ContosoServiceApp"
+```powershell
+PS C:\> Get-SPODataConnectionSetting -ServiceContext  "http://contoso" -Name "ContosoServiceApp"
 ```
 
 This example returns properties of the BCS connection named ContosoServiceApp
 
 ### -----------------------EXAMPLE 2-----------------------------
-```
-Get-SPODataConnectionSetting -ServiceContext "http://contoso"
+```powershell
+PS C:\> Get-SPODataConnectionSetting -ServiceContext "http://contoso"
 ```
 
 This example returns a list of BCS connections for the service context named http://contoso

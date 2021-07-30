@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spsitesubscription
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Get-SPSiteSubscription
 schema: 2.0.0
 author: techwriter40
@@ -34,10 +34,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE---------------------- 
-```
-C:\PS>$SiteSub = Get-SPSiteSubscription https://Contoso.com
+```powershell
+PS C:\> $SiteSub = Get-SPSiteSubscription https://Contoso.com
 
-C:\PS>$SiteSub = Get-SPSite https://contoso.com | Get-SPSiteSubscription
+PS C:\> $SiteSub = Get-SPSite https://contoso.com | Get-SPSiteSubscription
 ```
 
 This example retrieves the site subscription for https://Contoso.com.
@@ -53,7 +53,7 @@ The type must be a valid URL, in the form https://server_name.
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 1
@@ -75,7 +75,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

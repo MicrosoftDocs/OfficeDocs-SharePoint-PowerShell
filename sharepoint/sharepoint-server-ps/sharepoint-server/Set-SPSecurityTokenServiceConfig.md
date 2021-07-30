@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spsecuritytokenserviceconfig
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Set-SPSecurityTokenServiceConfig
 schema: 2.0.0
 author: techwriter40
@@ -19,8 +19,8 @@ Updates the settings of the SharePoint security token service (STS) identity pro
 ## SYNTAX
 
 ### QueueSigningCertificateReference
-```
-Set-SPSecurityTokenServiceConfig -QueueSigningCertificateThumbprint <String>
+```powershell
+PS C:\> Set-SPSecurityTokenServiceConfig -QueueSigningCertificateThumbprint <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-FormsTokenLifetime <Int32>]
  [-MaxLogonTokenCacheItems <Int32>] [-MaxServiceTokenCacheItems <Int32>]
  [-QueueSigningCertificateStoreName <String>] [-ServiceTokenCacheExpirationWindow <Int32>]
@@ -28,8 +28,8 @@ Set-SPSecurityTokenServiceConfig -QueueSigningCertificateThumbprint <String>
 ```
 
 ### RevokeSigningCertificateReference
-```
-Set-SPSecurityTokenServiceConfig -RevokeSigningCertificateThumbprint <String>
+```powershell
+PS C:\> Set-SPSecurityTokenServiceConfig -RevokeSigningCertificateThumbprint <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-FormsTokenLifetime <Int32>]
  [-MaxLogonTokenCacheItems <Int32>] [-MaxServiceTokenCacheItems <Int32>]
  [-RevokeSigningCertificateStoreName <String>] [-ServiceTokenCacheExpirationWindow <Int32>]
@@ -37,8 +37,8 @@ Set-SPSecurityTokenServiceConfig -RevokeSigningCertificateThumbprint <String>
 ```
 
 ### SigningCertificateReference
-```
-Set-SPSecurityTokenServiceConfig -SigningCertificateThumbprint <String>
+```powershell
+PS C:\> Set-SPSecurityTokenServiceConfig -SigningCertificateThumbprint <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-FormsTokenLifetime <Int32>]
  [-MaxLogonTokenCacheItems <Int32>] [-MaxServiceTokenCacheItems <Int32>]
  [-ServiceTokenCacheExpirationWindow <Int32>] [-ServiceTokenLifetime <Int32>]
@@ -48,8 +48,8 @@ Set-SPSecurityTokenServiceConfig -SigningCertificateThumbprint <String>
 ```
 
 ### SigningCertificateImport
-```
-Set-SPSecurityTokenServiceConfig [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+```powershell
+PS C:\> Set-SPSecurityTokenServiceConfig [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-FormsTokenLifetime <Int32>] [-ImportSigningCertificate <X509Certificate2>]
  [-MaxLogonTokenCacheItems <Int32>] [-MaxServiceTokenCacheItems <Int32>]
  [-ServiceTokenCacheExpirationWindow <Int32>] [-ServiceTokenLifetime <Int32>] [-WhatIf]
@@ -57,16 +57,16 @@ Set-SPSecurityTokenServiceConfig [-AssignmentCollection <SPAssignmentCollection>
 ```
 
 ### SigningCertificateQueue
-```
-Set-SPSecurityTokenServiceConfig [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+```powershell
+PS C:\> Set-SPSecurityTokenServiceConfig [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-FormsTokenLifetime <Int32>] [-MaxLogonTokenCacheItems <Int32>] [-MaxServiceTokenCacheItems <Int32>]
  [-QueueSigningCertificate <X509Certificate2>] [-ServiceTokenCacheExpirationWindow <Int32>]
  [-ServiceTokenLifetime <Int32>] [-WhatIf] [-WindowsTokenLifetime <Int32>] [<CommonParameters>]
 ```
 
 ### SigningCertificateRevoke
-```
-Set-SPSecurityTokenServiceConfig [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+```powershell
+PS C:\> Set-SPSecurityTokenServiceConfig [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-FormsTokenLifetime <Int32>] [-MaxLogonTokenCacheItems <Int32>] [-MaxServiceTokenCacheItems <Int32>]
  [-RevokeSigningCertificate <X509Certificate2>] [-ServiceTokenCacheExpirationWindow <Int32>]
  [-ServiceTokenLifetime <Int32>] [-WhatIf] [-WindowsTokenLifetime <Int32>] [<CommonParameters>]
@@ -89,16 +89,16 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------------EXAMPLE 1---------------------
-```
-Set-SPSecurityTokenServiceConfig -SigningCertificateThumbprint "2796BAE63F1801E277261BA0D77770028F20EEE4"
+```powershell
+PS C:\> Set-SPSecurityTokenServiceConfig -SigningCertificateThumbprint "2796BAE63F1801E277261BA0D77770028F20EEE4"
 ```
 
 This example updates the signing certificate of the SharePoint security token service (STS) identity provider with a certificate that has been deployed in the certificate store.
 
 
 ### --------------------EXAMPLE 2---------------------
-```
-$stsCert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2 "c:\sts.pfx","a",20
+```powershell
+PS C:\> $stsCert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2 "c:\sts.pfx","a",20
 Set-SPSecurityTokenServiceConfig -ImportSigningCertificate $stsCert
 ```
 
@@ -114,7 +114,7 @@ Sets the certificate with the provided thumbprint as the queued signing certific
 Type: String
 Parameter Sets: QueueSigningCertificateReference
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: SigningCertificateReference
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -143,7 +143,7 @@ Revoke the signing certificate with the provided thumbprint.
 Type: String
 Parameter Sets: RevokeSigningCertificateReference
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -161,7 +161,7 @@ The type must be a valid identity of a signing certificate; for example 2796BAE6
 Type: String
 Parameter Sets: SigningCertificateReference
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -183,7 +183,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -200,7 +200,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -219,7 +219,7 @@ The type must be a valid integer.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -237,7 +237,7 @@ The type must be a name of a valid X.509 certificate; for example, Certificate1.
 Type: X509Certificate2
 Parameter Sets: SigningCertificateImport
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -256,7 +256,7 @@ The type must be a valid integer.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -275,7 +275,7 @@ The type must be a valid integer.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -291,7 +291,7 @@ Sets the provided certificate as the queued signing certificate.
 Type: X509Certificate2
 Parameter Sets: SigningCertificateQueue
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -307,7 +307,7 @@ The store to search in when looking up a certificate to be set as the queued sig
 Type: String
 Parameter Sets: QueueSigningCertificateReference, SigningCertificateReference
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -323,7 +323,7 @@ Revokes the signing certificate that matches the provided certificate.
 Type: X509Certificate2
 Parameter Sets: SigningCertificateRevoke
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -339,7 +339,7 @@ The store to search when looking up a certificate to be revoked by its thumbprin
 Type: String
 Parameter Sets: RevokeSigningCertificateReference
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -358,7 +358,7 @@ The type must be a valid integer.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -377,7 +377,7 @@ The type must be a valid integer.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -396,7 +396,7 @@ The type must be a valid identity of a signing certificate store; for example Id
 Type: String
 Parameter Sets: SigningCertificateReference
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -413,7 +413,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -432,7 +432,7 @@ The type must be a valid integer.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

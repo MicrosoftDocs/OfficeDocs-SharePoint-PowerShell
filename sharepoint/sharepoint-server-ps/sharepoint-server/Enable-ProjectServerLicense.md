@@ -1,6 +1,6 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/enable-projectserverlicense
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Enable-ProjectServerLicense
@@ -27,9 +27,9 @@ Enables Project Server functionality on the farm.
 
 ## EXAMPLES
 
-### Example 1 
-```
-Enable-ProjectServerLicense -Key XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+### ------------Example 1 -----------
+```powershell
+PS C:\> Enable-ProjectServerLicense -Key XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
 ```
 
 This example enables all Project Server functionality in the farm. The type of license being enabled (full or trial) depends on the key that is passed in.

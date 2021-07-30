@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/install-sphelpcollection
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Install-SPHelpCollection
 schema: 2.0.0
 author: techwriter40
@@ -21,13 +21,13 @@ Installs the provided Help site collection files in the current farm.
 ## SYNTAX
 
 ### InstallAll
-```
-Install-SPHelpCollection [-All] [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+```powershell
+PS C:\> Install-SPHelpCollection [-All] [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### InstallOne
-```
-Install-SPHelpCollection -LiteralPath <String> [-AssignmentCollection <SPAssignmentCollection>]
+```powershell
+PS C:\> Install-SPHelpCollection -LiteralPath <String> [-AssignmentCollection <SPAssignmentCollection>]
  [<CommonParameters>]
 ```
 
@@ -45,8 +45,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE------------------ 
-```
-Install-SPHelpCollection -LiteralPath 'C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\HCCab\1033\OSSAdmin.cab'
+```powershell
+PS C:\> Install-SPHelpCollection -LiteralPath 'C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\HCCab\1033\OSSAdmin.cab'
 ```
 
 This example installs the specified help collection in the current farm.
@@ -60,7 +60,7 @@ If the LiteralPath parameter is not specified, specifies that all Help Collectio
 Type: SwitchParameter
 Parameter Sets: InstallAll
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -81,7 +81,7 @@ The type must be a valid path in either of the following forms:
 Type: String
 Parameter Sets: InstallOne
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -103,7 +103,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

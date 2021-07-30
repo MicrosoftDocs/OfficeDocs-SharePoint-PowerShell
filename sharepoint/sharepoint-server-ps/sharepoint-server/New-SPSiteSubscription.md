@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spsitesubscription
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: New-SPSiteSubscription
 schema: 2.0.0
 author: techwriter40
@@ -36,27 +36,25 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1-----------------------
-```
-
-$subscription = New-SPSiteSubscription
-
+```powershell
+PS C:\> $subscription = New-SPSiteSubscription
 ```
 
 This example creates a new site subscription.
 
 
 ### ------------------EXAMPLE 2-----------------------
-```
-$subscription = New-SPSiteSubscription
-Set-SPSite -Identity https://siteUrl -SiteSubscription $subscription
+```powershell
+PS C:\> $subscription = New-SPSiteSubscription
+PS C:\> Set-SPSite -Identity https://siteUrl -SiteSubscription $subscription
 ```
 
 This example creates a new Site Subscription and sets it on the site collection https://siteUrl.
 
 
 ### ------------------EXAMPLE 3-----------------------
-```
-New-SPSite -URL https://siteUrl -OwnerAlias "DOMAIN\JDow" -Language 1033 -SiteSubscription (New-SPSiteSubscription)
+```powershell
+PS C:\> New-SPSite -URL https://siteUrl -OwnerAlias "DOMAIN\JDow" -Language 1033 -SiteSubscription (New-SPSiteSubscription)
 ```
 
 This example creates a new Site Collection at https://siteUrl along with a new Site Subscription.
@@ -77,7 +75,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

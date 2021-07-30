@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spstateservicedatabase
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Get-SPStateServiceDatabase
 schema: 2.0.0
 author: techwriter40
@@ -18,14 +18,14 @@ Returns a state service database.
 ## SYNTAX
 
 ### Default
-```
-Get-SPStateServiceDatabase [[-Identity] <SPStateDatabasePipeBind>]
+```powershell
+PS C:\> Get-SPStateServiceDatabase [[-Identity] <SPStateDatabasePipeBind>]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### ServiceApplication
-```
-Get-SPStateServiceDatabase [[-ServiceApplication] <SPStateServiceApplicationPipeBind>]
+```powershell
+PS C:\> Get-SPStateServiceDatabase [[-ServiceApplication] <SPStateServiceApplicationPipeBind>]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -42,22 +42,22 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------EXAMPLE 1---------------- 
-```
-Get-SPStateServiceDatabase
+```powershell
+PS C:\> Get-SPStateServiceDatabase
 ```
 
 This example displays all of the state service databases on the farm.
 
 ### --------------EXAMPLE 2-------------- 
-```
-Get-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b
+```powershell
+PS C:\> Get-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b
 ```
 
 This example displays a specific state service database in the farm.
 
 ### --------------EXAMPLE 3-------------- 
-```
-Get-SPStateServiceDatabase -ServiceApplication "StateServiceApp1"
+```powershell
+PS C:\> Get-SPStateServiceDatabase -ServiceApplication "StateServiceApp1"
 ```
 
 This example displays all state service databases associated with a specific service.
@@ -73,7 +73,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPStateDatabasePipeBind
 Parameter Sets: Default
 Aliases: Name
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 1
@@ -91,7 +91,7 @@ The type must be a valid name of a state service application (for example, State
 Type: SPStateServiceApplicationPipeBind
 Parameter Sets: ServiceApplication
 Aliases: Application
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 1
@@ -113,7 +113,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -130,7 +130,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -147,7 +147,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

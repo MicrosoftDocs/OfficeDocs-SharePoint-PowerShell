@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spsitemaster
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPSiteMaster
@@ -41,9 +41,9 @@ Typically the following information is displayed:
 
 ## EXAMPLES
 
-### Example 1 
-```
-Get-SPSiteMaster -ContentDatabase WSS_Content
+### ------------Example 1 -----------
+```powershell
+PS C:\> Get-SPSiteMaster -ContentDatabase WSS_Content
 ```
 
 This example returns the site master in the database WSS_Content.

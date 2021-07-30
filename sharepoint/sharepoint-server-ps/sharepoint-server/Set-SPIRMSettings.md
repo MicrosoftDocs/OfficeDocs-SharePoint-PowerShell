@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spirmsettings
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Set-SPIRMSettings
 schema: 2.0.0
 author: techwriter40
@@ -19,15 +19,15 @@ Sets the Information Rights Management (IRM) settings.
 ## SYNTAX
 
 ### UseSpecifiedCertificateUrl
-```
-Set-SPIRMSettings -CertificateServerUrl <Uri> [-IrmEnabled] [-AssignmentCollection <SPAssignmentCollection>]
+```powershell
+PS C:\> Set-SPIRMSettings -CertificateServerUrl <Uri> [-IrmEnabled] [-AssignmentCollection <SPAssignmentCollection>]
  [-CertificatePassword <SecureString>] [-Confirm] [-ServiceAuthenticationCertificate <X509Certificate2>]
  [-SubscriptionScopeSettingsEnabled] [-WhatIf] [-UseOauth] [<CommonParameters>]
 ```
 
 ### UseServiceDiscovery
-```
-Set-SPIRMSettings [-IrmEnabled] [-AssignmentCollection <SPAssignmentCollection>]
+```powershell
+PS C:\> Set-SPIRMSettings [-IrmEnabled] [-AssignmentCollection <SPAssignmentCollection>]
  [-CertificatePassword <SecureString>] [-Confirm] [-ServiceAuthenticationCertificate <X509Certificate2>]
  [-SubscriptionScopeSettingsEnabled] [-UseActiveDirectoryDiscovery] [-WhatIf] [-UseOauth] [<CommonParameters>]
 ```
@@ -45,22 +45,22 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------EXAMPLE 1------------
-```
-Set-SPIRMSettings -RmsEnabled -UseActiveDirectoryDiscovery
+```powershell
+PS C:\> Set-SPIRMSettings -RmsEnabled -UseActiveDirectoryDiscovery
 ```
 
 This example enables IRM for the farm and configures it to use the default RMS server configured in Active Directory.
 
 ### --------------EXAMPLE 2------------
-```
-Set-SPIRMSettings -RmsEnabled -CertificateServerUrl https://myrmsserver
+```powershell
+PS C:\> Set-SPIRMSettings -RmsEnabled -CertificateServerUrl https://myrmsserver
 ```
 
 This example enables IRM for the farm and specifies the URL of the RMS server to use.
 
 ### --------------EXAMPLE 3------------
-```
-site = Get-SPSite http://myspserver
+```powershell
+PS C:\> site = Get-SPSite http://myspserver
 $subscription = $site.SiteSubscription
 Set-SPIRMSettings -SiteSubscription $subscription -RmsEnabled -CertificateServerUrl https://myrmsserver
 ```
@@ -68,8 +68,8 @@ Set-SPIRMSettings -SiteSubscription $subscription -RmsEnabled -CertificateServer
 This example enables IRM for the specified tenant and specifies the URL of the RMS server to use.
 
 ### --------------EXAMPLE 4------------
-```
-Set-SPIRMSettings -RmsEnabled:$false
+```powershell
+PS C:\> Set-SPIRMSettings -RmsEnabled:$false
 ```
 
 This example disables IRM for the farm.
@@ -84,7 +84,7 @@ Specifies the address of the RMS certificate server to use for the tenant.
 Type: Uri
 Parameter Sets: UseSpecifiedCertificateUrl
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -102,7 +102,7 @@ The default value is false.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -124,7 +124,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -141,7 +141,7 @@ This password is required in order to install the certificate in the machine cer
 Type: SecureString
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -158,7 +158,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -177,7 +177,7 @@ If the parameter is not specified, the local farm connects to RMS server using i
 Type: X509Certificate2
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -195,7 +195,7 @@ Site subscriptions can only configure custom IRM settings if IRM is enabled at t
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -211,7 +211,7 @@ Specifies whether or not the RMS service should be used for discovery that will 
 Type: SwitchParameter
 Parameter Sets: UseServiceDiscovery
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -228,7 +228,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

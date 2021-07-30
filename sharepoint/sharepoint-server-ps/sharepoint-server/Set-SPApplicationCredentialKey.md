@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spapplicationcredentialkey
 applicable: SharePoint Server 2019
 title: Set-SPApplicationCredentialKey
@@ -31,7 +31,7 @@ The application credential key must be identical on each server in the farm wher
 
 ## EXAMPLES
 
-### EXAMPLE 
+### ------------EXAMPLE -----------
 ```powershell
  $key = ConvertTo-SecureString -String "New Password" -AsPlainText -Force
 Set-SPApplicationCredentialKey -Password $key
@@ -70,21 +70,21 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-```
-### -Confirm
+```powershell
+PS C:\> ### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 Required: False
 Position: Named
 Default value: None
@@ -100,7 +100,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 Required: False
 Position: Named
 Default value: None

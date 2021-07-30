@@ -1,6 +1,6 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spprojectodataconfiguration
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Get-SPProjectOdataConfiguration
@@ -31,15 +31,15 @@ For permissions and the most current information about Windows PowerShell for Pr
 ## EXAMPLES
 
 ### ----------------------EXAMPLE 1----------------------- 
-```
-Get-SPProjectOdataConfiguration
+```powershell
+PS C:\> Get-SPProjectOdataConfiguration
 ```
 
 This example returns the OData configuration for the instance of Project Web App.
 
 ### ----------------------EXAMPLE 2----------------------- 
-```
-C:\PS>(Get-SPProjectOdataConfiguration).EntitySetsWithMaxPAgeSizeOverride
+```powershell
+PS C:\> (Get-SPProjectOdataConfiguration).EntitySetsWithMaxPAgeSizeOverride
 ```
 
 This example returns the list of entities that have the MaxPageSizeOverride option configured.

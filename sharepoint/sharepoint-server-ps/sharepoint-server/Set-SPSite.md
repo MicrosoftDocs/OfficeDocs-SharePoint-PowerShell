@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spsite
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Set-SPSite
 schema: 2.0.0
 author: techwriter40
@@ -19,15 +19,15 @@ Configures the specified sites.
 ## SYNTAX
 
 ### SiteSubscription
-```
-Set-SPSite [-Identity] <SPSitePipeBind> [-AdministrationSiteType <SPAdministrationSiteType>]
+```powershell
+PS C:\> Set-SPSite [-Identity] <SPSitePipeBind> [-AdministrationSiteType <SPAdministrationSiteType>]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Force]
  [-SiteSubscription <SPSiteSubscriptionPipeBind>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Default
-```
-Set-SPSite [-Identity] <SPSitePipeBind> [-AdministrationSiteType <SPAdministrationSiteType>]
+```powershell
+PS C:\> Set-SPSite [-Identity] <SPSitePipeBind> [-AdministrationSiteType <SPAdministrationSiteType>]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-LockState <String>] [-MaxSize <Int64>]
  [-OwnerAlias <SPUserPipeBind>] [-QuotaTemplate <SPQuotaTemplatePipeBind>]
  [-SecondaryOwnerAlias <SPUserPipeBind>] [-SharingType <String>] [-Template <SPWebTemplatePipeBind>]
@@ -50,16 +50,16 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------------EXAMPLE 1---------------------
-```
-Get-SPSite https://sitename/sites/teams/* | Set-SPSite -SecondaryOwner "DOMAIN\Jdoe"
+```powershell
+PS C:\> Get-SPSite https://sitename/sites/teams/* | Set-SPSite -SecondaryOwner "DOMAIN\Jdoe"
 ```
 
 This example sets the secondary owner on a set of site collections to DOMAIN\Jdoe.
 
 
 ### --------------------EXAMPLE 2---------------------
-```
-Set-SPSite -identity "https://sitename" -MaxSize 4000000 -WarningSize 2000000
+```powershell
+PS C:\> Set-SPSite -identity "https://sitename" -MaxSize 4000000 -WarningSize 2000000
 ```
 
 This example configures the Quota settings for the site collection https://sitename.
@@ -76,7 +76,7 @@ The type must be a valid URL, in the form https://server_name; a valid GUID, in 
 Type: SPSitePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -94,7 +94,7 @@ Valid values are None or TentantAdministration.
 Type: SPAdministrationSiteType
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -116,7 +116,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -133,7 +133,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -150,7 +150,7 @@ This parameter is used in conjunction with the SiteSubscription parameter.
 Type: SwitchParameter
 Parameter Sets: SiteSubscription
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -177,7 +177,7 @@ Users who attempt to access the site receive an access-denied message.
 Type: String
 Parameter Sets: Default
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -196,7 +196,7 @@ You cannot use this parameter if the site collection is using a quota template.
 Type: Int64
 Parameter Sets: Default
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -214,7 +214,7 @@ The type must be a valid e-mail alias, in the form domain\username.
 Type: SPUserPipeBind
 Parameter Sets: Default
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -232,7 +232,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890abcdef 
 Type: SPQuotaTemplatePipeBind
 Parameter Sets: Default
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -250,7 +250,7 @@ The type must be a valid e-mail alias, in the form domain\username.
 Type: SPUserPipeBind
 Parameter Sets: Default
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -266,7 +266,7 @@ Specifies whether external access a site collection should be disabled, limited 
 Type: String
 Parameter Sets: Default
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -282,7 +282,7 @@ Specifies the Site Group to get site collections.
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: SiteSubscription
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -300,7 +300,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890abcdef.
 Type: SPWebTemplatePipeBind
 Parameter Sets: Default
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -316,7 +316,7 @@ Specifies the URL of the new site.
 Type: String
 Parameter Sets: Default
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -332,7 +332,7 @@ Sets an organization unit to which to scope user accounts.
 Type: String
 Parameter Sets: Default
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -351,7 +351,7 @@ You cannot use this parameter if the site collection is using a quota template.
 Type: Int64
 Parameter Sets: Default
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -368,7 +368,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

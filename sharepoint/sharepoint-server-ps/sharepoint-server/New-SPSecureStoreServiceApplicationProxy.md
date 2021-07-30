@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spsecurestoreserviceapplicationproxy
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: New-SPSecureStoreServiceApplicationProxy
 schema: 2.0.0
 author: techwriter40
@@ -19,15 +19,15 @@ Creates a new Secure Store Service application proxy in the farm.
 ## SYNTAX
 
 ### PipeBind
-```
-New-SPSecureStoreServiceApplicationProxy -ServiceApplication <SPServiceApplicationPipeBind>
+```powershell
+PS C:\> New-SPSecureStoreServiceApplicationProxy -ServiceApplication <SPServiceApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-DefaultProxyGroup] [-Name <String>] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### Uri
-```
-New-SPSecureStoreServiceApplicationProxy -Uri <Uri> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+```powershell
+PS C:\> New-SPSecureStoreServiceApplicationProxy -Uri <Uri> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-DefaultProxyGroup] [-Name <String>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -50,23 +50,23 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
-```
-$sa = New-SPSecureStoreServiceApplication -ApplicationPool 'SharePoint Web Services Default' -AuditingEnabled:$false -DatabaseName 'Secure Store' -Name 'Secure Store Service Application'
-New-SPSecureStoreServiceApplicationProxy -Name 'Secure Store Service Application Proxy' -ServiceApplication $sa
+```powershell
+PS C:\> $sa = New-SPSecureStoreServiceApplication -ApplicationPool 'SharePoint Web Services Default' -AuditingEnabled:$false -DatabaseName 'Secure Store' -Name 'Secure Store Service Application'
+PS C:\> New-SPSecureStoreServiceApplicationProxy -Name 'Secure Store Service Application Proxy' -ServiceApplication $sa
 ```
 
 This example creates a new Secure Store Service application and proxy.
 
 
 ### ------------------EXAMPLE 2------------------
-```
-$nameofproxy = "Connection to: HostedSecureStoreInParentFarm"
-$proxy = Get-SPServiceApplicationProxy | where {$_ -match $nameofproxy}
-$prop = $proxy.Properties
-$type = $prop["Microsoft.Office.Server.Utilities.SPPartitionOptions"].GetType()
-$partition = [enum]::Parse( $type, 1 )
-$prop["Microsoft.Office.Server.Utilities.SPPartitionOptions"] = $partition
-$proxy.Update()
+```powershell
+PS C:\> $nameofproxy = "Connection to: HostedSecureStoreInParentFarm"
+PS C:\> $proxy = Get-SPServiceApplicationProxy | where {$_ -match $nameofproxy}
+PS C:\> $prop = $proxy.Properties
+PS C:\> $type = $prop["Microsoft.Office.Server.Utilities.SPPartitionOptions"].GetType()
+PS C:\> $partition = [enum]::Parse( $type, 1 )
+PS C:\> $prop["Microsoft.Office.Server.Utilities.SPPartitionOptions"] = $partition
+PS C:\> $proxy.Update()
 ```
 
 This example converts an unpartitioned secure store service application proxy in the child to a partitioned one.
@@ -81,7 +81,7 @@ Specifies the local Secure Store Service application associated with the new pro
 Type: SPServiceApplicationPipeBind
 Parameter Sets: PipeBind
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -99,7 +99,7 @@ The type must be a valid URI, in the form file:\\\\server_name\sitedocs.
 Type: Uri
 Parameter Sets: Uri
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -121,7 +121,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -138,7 +138,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -154,7 +154,7 @@ Specifies that the service application proxy be added to the farm's default prox
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -170,7 +170,7 @@ Specifies the name of the new service application proxy to create.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -187,7 +187,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

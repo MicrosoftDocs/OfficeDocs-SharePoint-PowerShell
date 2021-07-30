@@ -1,6 +1,6 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spprojectpermissionmode
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Get-SPProjectPermissionMode
@@ -29,8 +29,8 @@ For permissions and the most current information about Windows PowerShell for Pr
 ## EXAMPLES
 
 ### --------------EXAMPLE 1------------------- 
-```
-Get-SPProjectPermissionMode -Url https://AppServer/pwa
+```powershell
+PS C:\> Get-SPProjectPermissionMode -Url https://AppServer/pwa
 ```
 
 This example returns the permission mode setting for a PWA instance.

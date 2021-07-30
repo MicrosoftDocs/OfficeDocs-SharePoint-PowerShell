@@ -1,6 +1,6 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spprojectserviceapplicationproxy
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: New-SPProjectServiceApplicationProxy
@@ -32,16 +32,16 @@ For permissions and the most current information about Windows PowerShell for Pr
 ## EXAMPLES
 
 ### -------------------EXAMPLE 1------------------
-```
-New-SPProjectServiceApplicationProxy -Name PsiApplicationProxy -ServiceApplication PsiApplication
+```powershell
+PS C:\> New-SPProjectServiceApplicationProxy -Name PsiApplicationProxy -ServiceApplication PsiApplication
 ```
 
 This example creates a Project Server Service application proxy with the name PsiApplicationProxy for the application PsiApplication.
 
 
 ### -------------------EXAMPLE 2------------------
-```
-Get-SPServiceApplication | ?{ $_.Name -eq "PsiApplication" } | New-SPProjectServiceApplicationProxy -Name "PsiApplicationProxy" -Default
+```powershell
+PS C:\> Get-SPServiceApplication | ?{ $_.Name -eq "PsiApplication" } | New-SPProjectServiceApplicationProxy -Name "PsiApplicationProxy" -Default
 ```
 
 This example creates a Project Server Service application proxy with the name PsiApplicationProxy for the application PsiApplication and adds the proxy to the Default proxy group.

@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.Translation.dll-Help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-sptranslationthrottlingsetting
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Set-SPTranslationThrottlingSetting
 schema: 2.0.0
 author: techwriter40
@@ -28,8 +28,8 @@ Use the Set-SPTranslationThrottlingSetting cmdlet to set the timer job duration 
 ## EXAMPLES
 
 ### -----------------EXAMPLE--------------------
-```
-Set-SPTranslationThrottlingSetting -SiteQuota 300 -TenantQuota 600
+```powershell
+PS C:\> Set-SPTranslationThrottlingSetting -SiteQuota 300 -TenantQuota 600
 ```
 
 This limits the Translation Timer job to spend no more than 300 seconds (5 minutes) per site collection, and no more than 600 seconds (10 minutes) per tenant.
@@ -48,7 +48,7 @@ Manages objects for the purpose of proper disposal. Use of objects, such as SPWe
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -64,7 +64,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -81,7 +81,7 @@ The duration (in seconds) of timer job processing time that an individual SPSite
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -97,7 +97,7 @@ The duration (in seconds) of timer job processing time that an individual tenant
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -114,7 +114,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

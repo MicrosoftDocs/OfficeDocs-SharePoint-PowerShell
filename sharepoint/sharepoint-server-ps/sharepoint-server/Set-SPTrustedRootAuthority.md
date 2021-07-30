@@ -1,8 +1,8 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-sptrustedrootauthority
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Set-SPTrustedRootAuthority
 schema: 2.0.0
 author: techwriter40
@@ -19,15 +19,15 @@ Creates a new trusted root authority.
 ## SYNTAX
 
 ### ManualUpdateCertificateParameterSet
-```
-Set-SPTrustedRootAuthority [-Identity] <SPTrustedRootAuthorityPipeBind>
+```powershell
+PS C:\> Set-SPTrustedRootAuthority [-Identity] <SPTrustedRootAuthorityPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Certificate <X509Certificate2>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### MetadataEndPointParameterSet
-```
-Set-SPTrustedRootAuthority [-Identity] <SPTrustedRootAuthorityPipeBind>
+```powershell
+PS C:\> Set-SPTrustedRootAuthority [-Identity] <SPTrustedRootAuthorityPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-MetadataEndPoint <Uri>] [-WhatIf]
  [<CommonParameters>]
 ```
@@ -42,8 +42,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE------------------
-```
-C:\PS>$cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2
+```powershell
+PS C:\> $cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2
 $cert.Import('C:\LiveIDSigningCert.pfx')
 Get-SPTrustedRootAuthority -Name "WFEFarm1" | Set-SPTrustedRootAuthority -Certificate $cert
 ```
@@ -62,7 +62,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPTrustedRootAuthorityPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -84,7 +84,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -102,7 +102,7 @@ The type must be a name of a valid X.509 certificate; for example, Certificate1.
 Type: X509Certificate2
 Parameter Sets: ManualUpdateCertificateParameterSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -118,7 +118,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 Type: Uri
 Parameter Sets: MetadataEndPointParameterSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -151,7 +151,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

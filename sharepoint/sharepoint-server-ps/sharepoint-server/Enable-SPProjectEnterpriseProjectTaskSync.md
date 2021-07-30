@@ -1,6 +1,6 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/enable-spprojectenterpriseprojecttasksync
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Enable-SPProjectEnterpriseProjectTaskSync
@@ -31,9 +31,9 @@ Enables task sync between Project Web App and the associated project site.
 
 ## EXAMPLES
 
-### Example 1 
-```
-Enable-SPProjectEnterpriseProjectTaskSync -Url https://pwa_site
+### ------------Example 1 -----------
+```powershell
+PS C:\> Enable-SPProjectEnterpriseProjectTaskSync -Url https://pwa_site
 ```
 
 Enables Project Task sync on the Project Web Apps site, https://pwa_site.

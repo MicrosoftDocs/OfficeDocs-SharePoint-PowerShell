@@ -1,6 +1,6 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/test-spprojectserviceapplication
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Test-SPProjectServiceApplication
@@ -29,8 +29,8 @@ This cmdlet runs a series of health checks against the Project Service Applicati
 ## EXAMPLES
 
 ### ---------------EXAMPLE--------------
-```
-$sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Project Application Services'}
+```powershell
+PS C:\> $sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Project Application Services'}
 Test-SPProjectServiceApplication -Identity $sa
 ```
 
