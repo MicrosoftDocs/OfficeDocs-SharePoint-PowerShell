@@ -218,8 +218,9 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-```powershell
-PS C:\> ### -DaysSinceLastProfileSync
+```
+
+### -DaysSinceLastProfileSync
 Specifies the minimum number of days since the User Profile service last synchronized the content database.
 
 ```yaml
