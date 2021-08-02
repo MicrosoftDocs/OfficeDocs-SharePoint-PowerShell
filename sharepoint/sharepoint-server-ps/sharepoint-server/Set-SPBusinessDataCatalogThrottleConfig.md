@@ -19,14 +19,14 @@ Sets the throttling configuration for a Business Data Connectivity Service appli
 ## SYNTAX
 
 ### MaxDefault
-```powershell
-PS C:\> Set-SPBusinessDataCatalogThrottleConfig -Default <Int32> -Identity <ThrottleConfig> -Maximum <Int32>
+```
+Set-SPBusinessDataCatalogThrottleConfig -Default <Int32> -Identity <ThrottleConfig> -Maximum <Int32>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Enforcement
-```powershell
-PS C:\> Set-SPBusinessDataCatalogThrottleConfig [-Enforced] -Identity <ThrottleConfig>
+```
+Set-SPBusinessDataCatalogThrottleConfig [-Enforced] -Identity <ThrottleConfig>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 

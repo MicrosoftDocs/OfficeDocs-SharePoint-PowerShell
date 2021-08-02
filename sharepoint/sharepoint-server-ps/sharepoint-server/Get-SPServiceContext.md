@@ -21,14 +21,14 @@ Returns a service context.
 ## SYNTAX
 
 ### Site
-```powershell
-PS C:\> Get-SPServiceContext [-Site] <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+```
+Get-SPServiceContext [-Site] <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [<CommonParameters>]
 ```
 
 ### SiteSubscription
-```powershell
-PS C:\> Get-SPServiceContext -SiteSubscription <SPSiteSubscriptionPipeBind>
+```
+Get-SPServiceContext -SiteSubscription <SPSiteSubscriptionPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
@@ -48,7 +48,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```powershell
 PS C:\> $sitesub = Get-SPSiteSubscription https://my.contoso.com/
 
-Get-SPServiceContext $sitesub
+PS C:\> Get-SPServiceContext $sitesub
 ```
 
 This example returns the service context for a site in a hosted environment.

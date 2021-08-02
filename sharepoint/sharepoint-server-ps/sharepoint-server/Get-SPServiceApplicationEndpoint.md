@@ -21,14 +21,14 @@ Returns the endpoint of a service application.
 ## SYNTAX
 
 ### Identity
-```powershell
-PS C:\> Get-SPServiceApplicationEndpoint [-Identity] <SPServiceEndpointPipeBind>
+```
+Get-SPServiceApplicationEndpoint [-Identity] <SPServiceEndpointPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### Name
-```powershell
-PS C:\> Get-SPServiceApplicationEndpoint -ServiceApplication <SPServiceApplicationPipeBind>
+```
+Get-SPServiceApplicationEndpoint -ServiceApplication <SPServiceApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Name <String>] [<CommonParameters>]
 ```
 

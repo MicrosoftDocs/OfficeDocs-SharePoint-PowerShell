@@ -38,7 +38,7 @@ PS C:\> site = Get-SPSite https://myspserver
 
 PS C:\> $subscription = $site.SiteSubscription
 
-Get-SPSiteSubscriptionIRMConfig -Identity $subscription
+PS C:\> Get-SPSiteSubscriptionIRMConfig -Identity $subscription
 ```
 
 This example gets the IRM settings for a specified tenant by using the Identity parameter.

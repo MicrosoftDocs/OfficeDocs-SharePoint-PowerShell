@@ -35,8 +35,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE 1------------------
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Identity 4b32-4fe6-8f8d-065388df201e
-Remove-SPEnterpriseSearchTopology -Identity $topology
+PS C:\> $topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Identity 4b32-4fe6-8f8d-065388df201e
+PS C:\> Remove-SPEnterpriseSearchTopology -Identity $topology
 ```
 
 This example removes a search topology with the identity 4b32-4fe6-8f8d-065388df201e.
@@ -45,7 +45,7 @@ This example removes a search topology with the identity 4b32-4fe6-8f8d-065388df
 ### ------------------EXAMPLE 2------------------
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-Remove-SPEnterpriseSearchTopology -Identity $topo -SearchApplication $ssa
+PS C:\> Remove-SPEnterpriseSearchTopology -Identity $topo -SearchApplication $ssa
 ```
 
 This example removes the search topology referenced by $topo in the search service application referenced by $ssa.

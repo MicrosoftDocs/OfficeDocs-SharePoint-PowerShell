@@ -19,14 +19,14 @@ Sets the properties of apps for Office.
 ## SYNTAX
 
 ### AppsForOfficeSettingsInSiteSubscription
-```powershell
-PS C:\> Set-SPOfficeStoreAppsDefaultActivation -Enable <Boolean> -SiteSubscription <SPSiteSubscriptionPipeBind>
+```
+Set-SPOfficeStoreAppsDefaultActivation -Enable <Boolean> -SiteSubscription <SPSiteSubscriptionPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### AppsForOfficeSettingsInWebApplication
-```powershell
-PS C:\> Set-SPOfficeStoreAppsDefaultActivation -Enable <Boolean> -WebApplication <SPWebApplicationPipeBind>
+```
+Set-SPOfficeStoreAppsDefaultActivation -Enable <Boolean> -WebApplication <SPWebApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 

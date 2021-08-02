@@ -19,15 +19,15 @@ Configures the specified sites.
 ## SYNTAX
 
 ### SiteSubscription
-```powershell
-PS C:\> Set-SPSite [-Identity] <SPSitePipeBind> [-AdministrationSiteType <SPAdministrationSiteType>]
+```
+Set-SPSite [-Identity] <SPSitePipeBind> [-AdministrationSiteType <SPAdministrationSiteType>]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Force]
  [-SiteSubscription <SPSiteSubscriptionPipeBind>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Default
-```powershell
-PS C:\> Set-SPSite [-Identity] <SPSitePipeBind> [-AdministrationSiteType <SPAdministrationSiteType>]
+```
+Set-SPSite [-Identity] <SPSitePipeBind> [-AdministrationSiteType <SPAdministrationSiteType>]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-LockState <String>] [-MaxSize <Int64>]
  [-OwnerAlias <SPUserPipeBind>] [-QuotaTemplate <SPQuotaTemplatePipeBind>]
  [-SecondaryOwnerAlias <SPUserPipeBind>] [-SharingType <String>] [-Template <SPWebTemplatePipeBind>]

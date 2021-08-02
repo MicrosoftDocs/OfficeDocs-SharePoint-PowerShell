@@ -19,15 +19,15 @@ Sets the trusted token issuer.
 ## SYNTAX
 
 ### ImportCertificateParameterSet
-```powershell
-PS C:\> Set-SPTrustedSecurityTokenIssuer [-Identity] <SPTrustedSecurityTokenServicePipeBind>
+```
+Set-SPTrustedSecurityTokenIssuer [-Identity] <SPTrustedSecurityTokenServicePipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Certificate <X509Certificate2>] [-Confirm]
  [-Description <String>] [-IsTrustBroker] [-RegisteredIssuerName <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### MetadataEndPointParameterSet
-```powershell
-PS C:\> Set-SPTrustedSecurityTokenIssuer [-Identity] <SPTrustedSecurityTokenServicePipeBind>
+```
+Set-SPTrustedSecurityTokenIssuer [-Identity] <SPTrustedSecurityTokenServicePipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Description <String>] [-IsTrustBroker]
  [-MetadataEndPoint <Uri>] [-RegisteredIssuerName <String>] [-WhatIf] [<CommonParameters>]
 ```
@@ -47,8 +47,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### -----------------EXAMPLE--------------------
 ```powershell
 PS C:\> $a=Get-SPTrustedSecurityTokenIssuer
-
-Set-SPTrustedSecurityTokenIssuer -Identity $a -MetadataEndpoint https://<webappurl/>/_layouts/15/metadata/json/1/
+PS C:\> Set-SPTrustedSecurityTokenIssuer -Identity $a -MetadataEndpoint https://<webappurl/>/_layouts/15/metadata/json/1/
 ```
 
 This example sets the metadata endpoint of the url for the self-issue.

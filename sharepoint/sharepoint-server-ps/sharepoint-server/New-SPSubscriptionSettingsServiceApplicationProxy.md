@@ -19,14 +19,14 @@ Creates an application proxy to a subscription settings service application.
 ## SYNTAX
 
 ### ServiceApplication
-```powershell
-PS C:\> New-SPSubscriptionSettingsServiceApplicationProxy -ServiceApplication <SPServiceApplicationPipeBind>
+```
+New-SPSubscriptionSettingsServiceApplicationProxy -ServiceApplication <SPServiceApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Uri
-```powershell
-PS C:\> New-SPSubscriptionSettingsServiceApplicationProxy -Uri <String>
+```
+New-SPSubscriptionSettingsServiceApplicationProxy -Uri <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -46,7 +46,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### --------------------EXAMPLE---------------------------
 ```powershell
 PS C:\> $sa = New-SPSubscriptionSettingsServiceApplication -ApplicationPool 'SharePoint Web Services Default' -Name 'Subscriptions Settings Service Application' -DatabaseName 'Subscription'
-New-SPSubscriptionSettingsServiceApplicationProxy -ServiceApplication $sa
+PS C:\> New-SPSubscriptionSettingsServiceApplicationProxy -ServiceApplication $sa
 ```
 
 This example creates a new Subscription Settings Service application and proxy.

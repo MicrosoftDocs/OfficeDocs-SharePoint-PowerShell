@@ -16,8 +16,8 @@ ms.reviewer:
 Removes a site master.
 
 ## SYNTAX
-```powershell
-PS C:\> Remove-SPSiteMaster [-ContentDatabase] <SPContentDatabasePipeBind> [-SiteId] <Guid>
+```
+Remove-SPSiteMaster [-ContentDatabase] <SPContentDatabasePipeBind> [-SiteId] <Guid>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -28,7 +28,7 @@ Use the Remove-SPSiteMaster cmdlet to remove a site master from the database.
 ### -----------------------EXAMPLE-----------------------------
 ```powershell
 PS C:\> $master = Get-SPSiteMaster -ContentDatabase WSS_Content | Select -First 1
-Remove-SPSiteMaster -ContentDatabase WSS_Content -SiteId $master.SiteId
+PS C:\> Remove-SPSiteMaster -ContentDatabase WSS_Content -SiteId $master.SiteId
 ```
 
 This example removes the first Site Master found in the WSS_Content database.

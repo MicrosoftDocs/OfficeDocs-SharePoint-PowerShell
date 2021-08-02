@@ -19,16 +19,16 @@ Creates a subrange for a specified scale-out database.
 ## SYNTAX
 
 ### UnattachedDatabase
-```powershell
-PS C:\> Set-SPServerScaleOutDatabaseDataSubRange -ConnectionString <String> -IsUpperSubRange <Boolean>
+```
+Set-SPServerScaleOutDatabaseDataSubRange -ConnectionString <String> -IsUpperSubRange <Boolean>
  -Range <SPScaleOutDataRange> -SubRangeMode <SPScaleOutDatabaseSubRangeMode>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-IgnoreSubRangePointOnBoundary]
  [-IsAzureDatabase] [-SubRangePoint <Byte[]>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### AttachedDatabase
-```powershell
-PS C:\> Set-SPServerScaleOutDatabaseDataSubRange -Database <SPDatabasePipeBind> -IsUpperSubRange <Boolean>
+```
+Set-SPServerScaleOutDatabaseDataSubRange -Database <SPDatabasePipeBind> -IsUpperSubRange <Boolean>
  -Range <SPScaleOutDataRange> -SubRangeMode <SPScaleOutDatabaseSubRangeMode>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-IgnoreSubRangePointOnBoundary]
  [-SubRangePoint <Byte[]>] [-WhatIf] [<CommonParameters>]
@@ -43,9 +43,9 @@ This cmdlet contains more than one parameter set. You may only use parameters fr
 ### --------------------EXAMPLE---------------------
 ```powershell
 PS C:\> $databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
-$database = $databases[0]
-$state = Get-SPServerScaleOutDatabaseDataState -Database $database
-Set-SPServerScaleOutDatabaseDataSubRange -Database $database -Range $state.Range -SubRangePoint $state.Range.RangeEnd -SubRangeMode ReadOnly -IsUpperSubRange $false
+PS C:\> $database = $databases[0]
+PS C:\> $state = Get-SPServerScaleOutDatabaseDataState -Database $database
+PS C:\> Set-SPServerScaleOutDatabaseDataSubRange -Database $database -Range $state.Range -SubRangePoint $state.Range.RangeEnd -SubRangeMode ReadOnly -IsUpperSubRange $false
 
 ```
 

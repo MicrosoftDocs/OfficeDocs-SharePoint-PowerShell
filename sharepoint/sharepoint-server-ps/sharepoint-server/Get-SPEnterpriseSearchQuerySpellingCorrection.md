@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------ 
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-Get-SPEnterpriseSearchQuerySpellingCorrection -SearchApplication $ssa
+PS C:\> Get-SPEnterpriseSearchQuerySpellingCorrection -SearchApplication $ssa
 ```
 
 Returns the current configuration for the Query Spelling Correction component for the default search service application.

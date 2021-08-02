@@ -31,7 +31,7 @@ This cmdlet runs a series of health checks against the Project Service Applicati
 ### ---------------EXAMPLE--------------
 ```powershell
 PS C:\> $sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Project Application Services'}
-Test-SPProjectServiceApplication -Identity $sa
+PS C:\> Test-SPProjectServiceApplication -Identity $sa
 ```
 
 This example runs all health checks again the service application named "Project Service Application."

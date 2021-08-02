@@ -21,14 +21,14 @@ Returns all alternate URLs that match a given set of criteria.
 ## SYNTAX
 
 ### ResourceName
-```powershell
-PS C:\> Get-SPAlternateURL [[-Identity] <SPAlternateUrlPipeBind>] -ResourceName <String>
+```
+Get-SPAlternateURL [[-Identity] <SPAlternateUrlPipeBind>] -ResourceName <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-Zone <SPUrlZone>] [<CommonParameters>]
 ```
 
 ### WebApplication
-```powershell
-PS C:\> Get-SPAlternateURL [[-Identity] <SPAlternateUrlPipeBind>] -WebApplication <SPWebApplicationPipeBind>
+```
+Get-SPAlternateURL [[-Identity] <SPAlternateUrlPipeBind>] -WebApplication <SPWebApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Zone <SPUrlZone>] [<CommonParameters>]
 ```
 

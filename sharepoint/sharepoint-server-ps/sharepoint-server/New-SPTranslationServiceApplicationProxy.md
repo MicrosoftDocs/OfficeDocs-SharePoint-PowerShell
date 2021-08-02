@@ -19,15 +19,15 @@ Creates a Machine Translation Service application proxy on the local farm.
 ## SYNTAX
 
 ### ConnectLocal
-```powershell
-PS C:\> New-SPTranslationServiceApplicationProxy -Name <String>
+```
+New-SPTranslationServiceApplicationProxy -Name <String>
  -ServiceApplication <TranslationServiceApplicationPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-DefaultProxyGroup] [-PartitionMode] [-WhatIf] [<CommonParameters>]
 ```
 
 ### ConnectRemote
-```powershell
-PS C:\> New-SPTranslationServiceApplicationProxy -Name <String> -Uri <String>
+```
+New-SPTranslationServiceApplicationProxy -Name <String> -Uri <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-DefaultProxyGroup] [-PartitionMode] [-WhatIf]
  [<CommonParameters>]
 ```
@@ -48,7 +48,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### -----------EXAMPLE---------
 ```powershell
 PS C:\> $sa = New-SPTranslationServiceApplication -Name TranslationService -ApplicationPool 'SharePoint Web Services Default' -DatabaseServer Server1 -DatabaseName TranslationServiceDatabase
-New-SPTranslationServiceApplicationProxy -Name TranslationServiceProxy -ServiceApplication $sa -DefaultProxyGroup
+PS C:\> New-SPTranslationServiceApplicationProxy -Name TranslationServiceProxy -ServiceApplication $sa -DefaultProxyGroup
 ```
 
 This example creates a Machine Translation Service application and proxy in the default proxy group named TranslationServiceProxy.

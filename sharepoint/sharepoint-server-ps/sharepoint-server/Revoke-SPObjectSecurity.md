@@ -19,14 +19,14 @@ Removes a security principal from a SPObjectSecurity object.
 ## SYNTAX
 
 ### RevokeOne
-```powershell
-PS C:\> Revoke-SPObjectSecurity [-Identity] <SPObjectSecurity> [-Principal] <SPClaim> [[-Rights] <String[]>]
+```
+Revoke-SPObjectSecurity [-Identity] <SPObjectSecurity> [-Principal] <SPClaim> [[-Rights] <String[]>]
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### RevokeAll
-```powershell
-PS C:\> Revoke-SPObjectSecurity [-Identity] <SPObjectSecurity> [-All] [-AssignmentCollection <SPAssignmentCollection>]
+```
+Revoke-SPObjectSecurity [-Identity] <SPObjectSecurity> [-All] [-AssignmentCollection <SPAssignmentCollection>]
  [<CommonParameters>]
 ```
 
@@ -46,8 +46,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```powershell
 PS C:\> $security = Get-SPServiceApplicationSecurity $serviceApp -Admin
-Revoke-SPObjectSecurity $security "domain\user"
-Set-SPServiceApplicationSecurity $serviceApp -Admin $security
+PS C:\> Revoke-SPObjectSecurity $security "domain\user"
+PS C:\> Set-SPServiceApplicationSecurity $serviceApp -Admin $security
 ```
 
 This example retrieves the SPObjectSecurity object corresponding to the administrator ACL on a service application and removes a user from that ACL.

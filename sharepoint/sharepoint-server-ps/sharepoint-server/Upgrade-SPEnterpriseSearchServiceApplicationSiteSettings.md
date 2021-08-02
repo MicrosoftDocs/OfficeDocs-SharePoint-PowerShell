@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```powershell
 PS C:\> $site= Get-SPSite https://test
 
-Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings -Identity $site
+PS C:\> Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings -Identity $site
 ```
 
 This example upgrades the search settings for the site collection referenced by $site.

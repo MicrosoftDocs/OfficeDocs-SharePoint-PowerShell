@@ -37,7 +37,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```powershell
 PS C:\> $sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Business Data Connectivity Service Application'}
-Set-SPBusinessDataCatalogServiceApplication -Identity $sa -FailoverDatabaseServer "CONTOSO\Backup"
+PS C:\> Set-SPBusinessDataCatalogServiceApplication -Identity $sa -FailoverDatabaseServer "CONTOSO\Backup"
 ```
 
 This example sets the failover database server to CONTOSO\Backup for the given service application.

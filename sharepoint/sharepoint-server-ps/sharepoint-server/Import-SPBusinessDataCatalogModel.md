@@ -19,16 +19,16 @@ Imports a Business Data Connectivity Model.
 ## SYNTAX
 
 ### Catalog
-```powershell
-PS C:\> Import-SPBusinessDataCatalogModel -Identity <MetadataObject> -Path <String>
+```
+Import-SPBusinessDataCatalogModel -Identity <MetadataObject> -Path <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Force] [-LocalizedNamesIncluded]
  [-ModelsIncluded] [-PermissionsIncluded] [-PropertiesIncluded] [-SettingId <String>] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### ServiceContext
-```powershell
-PS C:\> Import-SPBusinessDataCatalogModel -Path <String> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+```
+Import-SPBusinessDataCatalogModel -Path <String> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-Force] [-LocalizedNamesIncluded] [-ModelsIncluded] [-PermissionsIncluded] [-PropertiesIncluded]
  [-SettingId <String>] [-WhatIf] -ServiceContext <SPServiceContextPipeBind> [<CommonParameters>]
 ```
@@ -46,7 +46,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------ 
 ```powershell
 PS C:\> $MetadataStore = Get-SPBusinessDataCatalogMetadataObject -BdcObjectType "Catalog" -ServiceConext https://contoso
-Import-SPBusinessDataCatalogModel -Path "C:\folder\model.bdcm" -Identity $MetadataStore
+PS C:\> Import-SPBusinessDataCatalogModel -Path "C:\folder\model.bdcm" -Identity $MetadataStore
 ```
 
 This example gets the Business Data Connectivity Metadata Store and then imports a Business Data Connectivity Model of Model type to it from the path specified with the name model.

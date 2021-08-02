@@ -21,20 +21,20 @@ Retrieves all properties of a database.
 ## SYNTAX
 
 ### DefaultParameterSet
-```powershell
-PS C:\> Get-SPDatabase [[-Identity] <SPDatabasePipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
+```
+Get-SPDatabase [[-Identity] <SPDatabasePipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
  [<CommonParameters>]
 ```
 
 ### ServerParameterSet
-```powershell
-PS C:\> Get-SPDatabase -ServerInstance <SPDatabaseServiceInstancePipeBind>
+```
+Get-SPDatabase -ServerInstance <SPDatabaseServiceInstancePipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### NameParameterSet
-```powershell
-PS C:\> Get-SPDatabase [-AssignmentCollection <SPAssignmentCollection>] -Name <String> [<CommonParameters>]
+```
+Get-SPDatabase [-AssignmentCollection <SPAssignmentCollection>] -Name <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION

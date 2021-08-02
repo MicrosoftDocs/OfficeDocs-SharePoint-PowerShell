@@ -13,16 +13,16 @@ Exports certificates from the SharePoint farm.
 ## SYNTAX
 
 ### Pfx
-```powershell
-PS C:\> Export-SPCertificate [-Identity] <SPServerCertificatePipeBind> -Password <SecureString>
+```
+Export-SPCertificate [-Identity] <SPServerCertificatePipeBind> -Password <SecureString>
  [-EncryptionType <String>] [-IncludeAllCertificatesInCertificationPath] [-NoExtendedProperties]
  [-Path <String>] [-Force] [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### Cert/Pkcs7
-```powershell
-PS C:\> Export-SPCertificate [-Identity] <SPServerCertificatePipeBind> -Type <String>
+```
+Export-SPCertificate [-Identity] <SPServerCertificatePipeBind> -Type <String>
  [-IncludeAllCertificatesInCertificationPath] [-Path <String>] [-Force]
  [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -41,7 +41,7 @@ CER files contain only a single certificate.
 ### ------------EXAMPLE 1-----------
 ```powershell
 PS C:\> $password = ConvertTo-SecureString -AsPlainText -Force 
- 
+PS C:\>  
 PS C:\> Export-SPCertificate -Identity "Team Site Certificate" -Password $password -IncludeAllCertificatesInCertificationPath -IncludeExtendedProperties -Path "\\server\fileshare\certificates.pfx"
 ```
 

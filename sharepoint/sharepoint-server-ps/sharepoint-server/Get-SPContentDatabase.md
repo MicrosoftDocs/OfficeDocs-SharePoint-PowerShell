@@ -21,31 +21,31 @@ Returns one or more content databases.
 ## SYNTAX
 
 ### DefaultSet
-```powershell
-PS C:\> Get-SPContentDatabase [[-Identity] <SPContentDatabasePipeBind>]
+```
+Get-SPContentDatabase [[-Identity] <SPContentDatabasePipeBind>]
  [-AssignmentCollection <SPAssignmentCollection>] [-NoStatusFilter] [<CommonParameters>]
 ```
 
 ### ContentDatabasesOfSite
-```powershell
-PS C:\> Get-SPContentDatabase -Site <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+```
+Get-SPContentDatabase -Site <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [<CommonParameters>]
 ```
 
 ### AllContentDatabasesInWebApplication
-```powershell
-PS C:\> Get-SPContentDatabase -WebApplication <SPWebApplicationPipeBind>
+```
+Get-SPContentDatabase -WebApplication <SPWebApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-NoStatusFilter] [<CommonParameters>]
 ```
 ### ContentDatabasesSinceLastProfileSync
-```powershell
-PS C:\> Get-SPContentDatabase -DaysSinceLastProfileSync <Int32> [-NoStatusFilter]
+```
+Get-SPContentDatabase -DaysSinceLastProfileSync <Int32> [-NoStatusFilter]
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### Unattached
-```powershell
-PS C:\> Get-SPContentDatabase [-AssignmentCollection <SPAssignmentCollection>] [-ConnectAsUnattachedDatabase]
+```
+Get-SPContentDatabase [-AssignmentCollection <SPAssignmentCollection>] [-ConnectAsUnattachedDatabase]
  [-DatabaseCredentials <PSCredential>] -DatabaseName <String> -DatabaseServer <String> [<CommonParameters>]
 ```
 

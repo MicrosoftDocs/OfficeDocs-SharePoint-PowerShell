@@ -19,15 +19,15 @@ Maps a new path for a custom layout page.
 ## SYNTAX
 
 ### CustomPage
-```powershell
-PS C:\> Set-SPCustomLayoutsPage -Identity <SPCustomPage> -RelativePath <String>
+```
+Set-SPCustomLayoutsPage -Identity <SPCustomPage> -RelativePath <String>
  -WebApplication <SPWebApplicationPipeBind> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-WhatIf] [-CompatibilityLevel <Int32>] [<CommonParameters>]
 ```
 
 ### ResetCustomPage
-```powershell
-PS C:\> Set-SPCustomLayoutsPage -Identity <SPCustomPage> [-Reset] -WebApplication <SPWebApplicationPipeBind>
+```
+Set-SPCustomLayoutsPage -Identity <SPCustomPage> [-Reset] -WebApplication <SPWebApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [-CompatibilityLevel <Int32>]
  [<CommonParameters>]
 ```

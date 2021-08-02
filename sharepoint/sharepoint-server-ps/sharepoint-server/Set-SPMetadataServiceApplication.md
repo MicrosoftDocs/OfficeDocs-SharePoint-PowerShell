@@ -19,8 +19,8 @@ Sets the properties of a managed metadata service application.
 ## SYNTAX
 
 ### NoQuota
-```powershell
-PS C:\> Set-SPMetadataServiceApplication [-Identity] <SPMetadataServiceCmdletPipeBind> [-AdministratorAccount <String>]
+```
+Set-SPMetadataServiceApplication [-Identity] <SPMetadataServiceCmdletPipeBind> [-AdministratorAccount <String>]
  [-ApplicationPool <SPIisWebServiceApplicationPoolPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
  [-CacheTimeCheckInterval <Int32>] [-Confirm] [-DatabaseCredentials <PSCredential>] [-DatabaseName <String>]
  [-DatabaseServer <String>] [-DoNotUnpublishAllPackages] [-FailoverDatabaseServer <String>]
@@ -30,8 +30,8 @@ PS C:\> Set-SPMetadataServiceApplication [-Identity] <SPMetadataServiceCmdletPip
 ```
 
 ### Quota
-```powershell
-PS C:\> Set-SPMetadataServiceApplication [-Identity] <SPMetadataServiceCmdletPipeBind> [-AdministratorAccount <String>]
+```
+Set-SPMetadataServiceApplication [-Identity] <SPMetadataServiceCmdletPipeBind> [-AdministratorAccount <String>]
  [-ApplicationPool <SPIisWebServiceApplicationPoolPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
  [-CacheTimeCheckInterval <Int32>] [-Confirm] [-DatabaseCredentials <PSCredential>] [-DatabaseName <String>]
  [-DatabaseServer <String>] [-DoNotUnpublishAllPackages] [-FailoverDatabaseServer <String>]
@@ -52,7 +52,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### --------------------EXAMPLE 1---------------------
 ```powershell
 PS C:\> $sa = Get-SPMetadataServiceApplication -Identity 'Managed Metadata Service Application'
-Set-SPMetadataServiceApplication -Identity $sa -HubUri 'https://sitename' -SyndicationErrorReportEnabled
+PS C:\> Set-SPMetadataServiceApplication -Identity $sa -HubUri 'https://sitename' -SyndicationErrorReportEnabled
 ```
 
 This example adds a content type hub to an existing managed metadata service application.
@@ -62,7 +62,7 @@ It also enables error reporting when content types are imported.
 ### --------------------EXAMPLE 2---------------------
 ```powershell
 PS C:\> $sa = Get-SPMetadataServiceApplication -Identity 'Managed Metadata Service Application'
-Set-SPMetadataServiceApplication -Identity $sa -AdministratorAccount 'contoso\username1' -FullAccessAccount 'contoso\AppPoolAccount1,contoso\AppPoolAccount2' -RestrictedAccount 'contoso\AppPoolAccount3,contoso\AppPoolAccount4,contoso\AppPoolAccount5' -ReadAccessAccount 'contoso\AppPoolAccount6'
+PS C:\> Set-SPMetadataServiceApplication -Identity $sa -AdministratorAccount 'contoso\username1' -FullAccessAccount 'contoso\AppPoolAccount1,contoso\AppPoolAccount2' -RestrictedAccount 'contoso\AppPoolAccount3,contoso\AppPoolAccount4,contoso\AppPoolAccount5' -ReadAccessAccount 'contoso\AppPoolAccount6'
 ```
 
 This example sets permissions on an existing managed metadata service application.

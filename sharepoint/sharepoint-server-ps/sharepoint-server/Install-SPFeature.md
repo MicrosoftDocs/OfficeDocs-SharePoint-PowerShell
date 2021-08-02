@@ -21,20 +21,20 @@ Installs a SharePoint Feature by using the Feature.xml file.
 ## SYNTAX
 
 ### PathSet
-```powershell
-PS C:\> Install-SPFeature [-Path] <String> [-AssignmentCollection <SPAssignmentCollection>]
+```
+Install-SPFeature [-Path] <String> [-AssignmentCollection <SPAssignmentCollection>]
  [-CompatibilityLevel <Int32>] [-Confirm] [-Force] [-WhatIf] [<CommonParameters>]
 ```
 
 ### AllExistingFeatures
-```powershell
-PS C:\> Install-SPFeature [-AllExistingFeatures] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Force]
+```
+Install-SPFeature [-AllExistingFeatures] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Force]
  [-SolutionId <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### ScanForFeatures
-```powershell
-PS C:\> Install-SPFeature [-ScanForFeatures] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Force]
+```
+Install-SPFeature [-ScanForFeatures] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Force]
  [-SolutionId <String>] [-WhatIf] [<CommonParameters>]
 ```
 

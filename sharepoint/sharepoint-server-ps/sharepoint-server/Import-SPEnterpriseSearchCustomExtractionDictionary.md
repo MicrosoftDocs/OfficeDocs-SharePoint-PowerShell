@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE----------------- 
 ```powershell
 PS C:\> $searchApp = Get-SPEnterpriseSearchServiceApplication
-Import-SPEnterpriseSearchCustomExtractionDictionary -SearchApplication $searchApp -Filename c:\transfer\entity_extraction.csv -DictionaryName Microsoft.UserDictionaries.EntityExtraction.Custom.Word.1
+PS C:\> Import-SPEnterpriseSearchCustomExtractionDictionary -SearchApplication $searchApp -Filename c:\transfer\entity_extraction.csv -DictionaryName Microsoft.UserDictionaries.EntityExtraction.Custom.Word.1
 ```
 
 This example imports the custom extraction dictionary that is located at c:\transfer to the default search service application.

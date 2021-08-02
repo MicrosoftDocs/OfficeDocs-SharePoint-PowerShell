@@ -49,7 +49,7 @@ This example creates an English site collection at https://\<site name\>/sites/t
 ### ------------------EXAMPLE 2-----------------------
 ```powershell
 PS C:\> $w = Get-SPWebApplication https://webApp
-New-SPSite https://www.contoso.com -OwnerAlias "DOMAIN\jdow" -HostHeaderWebApplication $w -Name "Contoso" -Template STS#0
+PS C:\> New-SPSite https://www.contoso.com -OwnerAlias "DOMAIN\jdow" -HostHeaderWebApplication $w -Name "Contoso" -Template STS#0
 ```
 
 This example creates a host-named site collection.

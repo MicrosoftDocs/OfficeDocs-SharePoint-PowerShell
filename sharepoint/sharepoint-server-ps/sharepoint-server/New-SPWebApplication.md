@@ -56,10 +56,10 @@ This example creates a new SSL enabled Web application by using an internal host
 ### ------------------EXAMPLE 3-----------------------
 ```powershell
 PS C:\> $ap = New-SPAuthenticationProvider
-New-SPWebApplication -Name "Contoso Internet Site" -URL "https://www.contoso.com"  -Port 443 
--ApplicationPool "ContosoAppPool" 
--ApplicationPoolAccount (Get-SPManagedAccount "DOMAIN\wa") 
--AuthenticationProvider $ap -SecureSocketsLayer
+PS C:\> New-SPWebApplication -Name "Contoso Internet Site" -URL "https://www.contoso.com"  -Port 443 
+PS C:\> -ApplicationPool "ContosoAppPool" 
+PS C:\> -ApplicationPoolAccount (Get-SPManagedAccount "DOMAIN\wa") 
+PS C:\> -AuthenticationProvider $ap -SecureSocketsLayer
 ```
 
 Creates a Windows Claims web application at the URL https://www.contoso.com using the domain account domain\wa.

@@ -18,16 +18,16 @@ Adds a new site subscription to a User Profile Service application.
 ## SYNTAX
 
 ### Default
-```powershell
-PS C:\> Add-SPSiteSubscriptionProfileConfig [-Identity] <SPSiteSubscriptionPipeBind>
+```
+Add-SPSiteSubscriptionProfileConfig [-Identity] <SPSiteSubscriptionPipeBind>
  [-MySiteHostLocation <SPSitePipeBind>] -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-SynchronizationOU <String>] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### MySiteSettings
-```powershell
-PS C:\> Add-SPSiteSubscriptionProfileConfig [-Identity] <SPSiteSubscriptionPipeBind>
+```
+Add-SPSiteSubscriptionProfileConfig [-Identity] <SPSiteSubscriptionPipeBind>
  -MySiteHostLocation <SPSitePipeBind> -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-MySiteManagedPath <SPPrefixPipeBind>]
  [-SiteNamingConflictResolution <String>] [-SynchronizationOU <String>] [-WhatIf] [<CommonParameters>]
@@ -47,9 +47,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### --------------EXAMPLE------------------
 ```powershell
 PS C:\> $sub = Get-SPSiteSubscription https://contoso/my
-$proxy = Get-SPServiceApplicationProxy | ? {$_.TypeName -eq 'User Profile Service Application Proxy'}
-Add-SPSiteSubscriptionProfileConfig -Identity $sub -ProfileServiceApplicationProxy $proxy -MySiteHostLocation https://contoso/my
-$sub = New-SPSiteSubscription
+PS C:\> $proxy = Get-SPServiceApplicationProxy | ? {$_.TypeName -eq 'User Profile Service Application Proxy'}
+PS C:\> Add-SPSiteSubscriptionProfileConfig -Identity $sub -ProfileServiceApplicationProxy $proxy -MySiteHostLocation https://contoso/my
+PS C:\> $sub = New-SPSiteSubscription
 ```
 
 This example creates a new User Profile Service application tenant.

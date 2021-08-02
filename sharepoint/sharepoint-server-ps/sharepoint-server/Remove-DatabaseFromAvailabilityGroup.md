@@ -19,14 +19,14 @@ Removes one or more SharePoint databases from an availability group in SQL Serve
 ## SYNTAX
 
 ### Default
-```powershell
-PS C:\> Remove-DatabaseFromAvailabilityGroup [-AGName] <String> [-AssignmentCollection <SPAssignmentCollection>]
+```
+Remove-DatabaseFromAvailabilityGroup [-AGName] <String> [-AssignmentCollection <SPAssignmentCollection>]
  -DatabaseName <String> [-Force] [-KeepSecondaryData] [<CommonParameters>]
 ```
 
 ### AllDatabases
-```powershell
-PS C:\> Remove-DatabaseFromAvailabilityGroup [-AGName] <String> [-AssignmentCollection <SPAssignmentCollection>]
+```
+Remove-DatabaseFromAvailabilityGroup [-AGName] <String> [-AssignmentCollection <SPAssignmentCollection>]
  [-Force] [-KeepSecondaryData] [-ProcessAllDatabases] [<CommonParameters>]
 ```
 

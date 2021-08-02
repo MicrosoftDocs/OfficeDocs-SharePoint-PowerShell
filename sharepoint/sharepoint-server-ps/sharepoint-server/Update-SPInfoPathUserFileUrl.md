@@ -19,20 +19,20 @@ Updates InfoPath form templates (.xsn files) and universal data connections (.ud
 ## SYNTAX
 
 ### ContentDB
-```powershell
-PS C:\> Update-SPInfoPathUserFileUrl [-ContentDatabase] <SPContentDatabasePipeBind> -Find <Uri> -Replace <Uri>
+```
+Update-SPInfoPathUserFileUrl [-ContentDatabase] <SPContentDatabasePipeBind> -Find <Uri> -Replace <Uri>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Scan] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Site
-```powershell
-PS C:\> Update-SPInfoPathUserFileUrl [-Site] <SPSitePipeBind> -Find <Uri> -Replace <Uri>
+```
+Update-SPInfoPathUserFileUrl [-Site] <SPSitePipeBind> -Find <Uri> -Replace <Uri>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Scan] [-WhatIf] [<CommonParameters>]
 ```
 
 ### WebApp
-```powershell
-PS C:\> Update-SPInfoPathUserFileUrl [-WebApplication] <SPWebApplicationPipeBind> -Find <Uri> -Replace <Uri>
+```
+Update-SPInfoPathUserFileUrl [-WebApplication] <SPWebApplicationPipeBind> -Find <Uri> -Replace <Uri>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Scan] [-WhatIf] [<CommonParameters>]
 ```
 

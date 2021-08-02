@@ -35,8 +35,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------EXAMPLE 1----------------- 
-```
-Disable-SPFeature -identity "MyCustom" -URL https://somesite
+```powershell
+PS C:\> Disable-SPFeature -identity "MyCustom" -URL https://somesite
 ```
 
 This example disables the "MyCustom" Web site scoped feature at   https://somesite.
@@ -44,7 +44,7 @@ This example disables the "MyCustom" Web site scoped feature at   https://somesi
 ### --------------EXAMPLE 2----------------- 
 ```powershell
 PS C:\> $w = Get-SPWeb https://somesite/myweb | ForEach{ $_.URL }
-Get-SPFeature -Web $w |%{ Disable-SPFeature -Identity $_ -URL $w}
+PS C:\> Get-SPFeature -Web $w |%{ Disable-SPFeature -Identity $_ -URL $w}
 ```
 
 This example disables all features in the subsite at https://somesite/myweb.

@@ -19,15 +19,15 @@ Creates a new Secure Store Service application proxy in the farm.
 ## SYNTAX
 
 ### PipeBind
-```powershell
-PS C:\> New-SPSecureStoreServiceApplicationProxy -ServiceApplication <SPServiceApplicationPipeBind>
+```
+New-SPSecureStoreServiceApplicationProxy -ServiceApplication <SPServiceApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-DefaultProxyGroup] [-Name <String>] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### Uri
-```powershell
-PS C:\> New-SPSecureStoreServiceApplicationProxy -Uri <Uri> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+```
+New-SPSecureStoreServiceApplicationProxy -Uri <Uri> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-DefaultProxyGroup] [-Name <String>] [-WhatIf] [<CommonParameters>]
 ```
 

@@ -21,14 +21,14 @@ Returns the state information about the specified scale-out database.
 ## SYNTAX
 
 ### UnattachedDatabase
-```powershell
-PS C:\> Get-SPScaleOutDatabaseDataState -ConnectionString <String> [-AssignmentCollection <SPAssignmentCollection>]
+```
+Get-SPScaleOutDatabaseDataState -ConnectionString <String> [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-IsAzureDatabase] [-WhatIf] [<CommonParameters>]
 ```
 
 ### AttachedDatabase
-```powershell
-PS C:\> Get-SPScaleOutDatabaseDataState -Database <SPDatabasePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+```
+Get-SPScaleOutDatabaseDataState -Database <SPDatabasePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -50,7 +50,7 @@ PS C:\> $databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplicat
 
 PS C:\> $database = $databases[0]
 
-Get-SPScaleOutDatabaseDataState -Database $database
+PS C:\> Get-SPScaleOutDatabaseDataState -Database $database
 ```
 
 This example gets the data state of the scale-out database for the first scale-out database of the given service application.

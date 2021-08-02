@@ -38,7 +38,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```powershell
 PS C:\> $site = Get-SPSite 'http://www.contoso.com'
 
-Set-SPSiteURL -Identity $site -Url http://contoso.sharepoint.com -Zone 0
+PS C:\> Set-SPSiteURL -Identity $site -Url http://contoso.sharepoint.com -Zone 0
 ```
 
 This example adds an additional URL, http://contoso.sharepoint.com, to the site collection.

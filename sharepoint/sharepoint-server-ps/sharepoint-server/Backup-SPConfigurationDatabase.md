@@ -21,15 +21,15 @@ Performs a farm-level configuration-only backup.
 ## SYNTAX
 
 ### DefaultSet
-```powershell
-PS C:\> Backup-SPConfigurationDatabase -Directory <String> [-AssignmentCollection <SPAssignmentCollection>]
+```
+Backup-SPConfigurationDatabase -Directory <String> [-AssignmentCollection <SPAssignmentCollection>]
  [-DatabaseCredentials <PSCredential>] [-DatabaseName <String>] [-DatabaseServer <String>] [-Item <String>]
  [<CommonParameters>]
 ```
 
 ### ShowTree
-```powershell
-PS C:\> Backup-SPConfigurationDatabase [-AssignmentCollection <SPAssignmentCollection>]
+```
+Backup-SPConfigurationDatabase [-AssignmentCollection <SPAssignmentCollection>]
  [-DatabaseCredentials <PSCredential>] [-DatabaseName <String>] [-DatabaseServer <String>] [-Item <String>]
  [-ShowTree] [<CommonParameters>]
 ```

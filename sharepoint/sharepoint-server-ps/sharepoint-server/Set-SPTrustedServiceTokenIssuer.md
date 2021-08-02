@@ -19,15 +19,15 @@ Updates a trust with the farm.
 ## SYNTAX
 
 ### ImportCertificateParameterSet
-```powershell
-PS C:\> Set-SPTrustedServiceTokenIssuer [-Identity] <SPTrustedServiceTokenIssuerPipeBind>
+```
+Set-SPTrustedServiceTokenIssuer [-Identity] <SPTrustedServiceTokenIssuerPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Certificate <X509Certificate2>] [-Description <String>]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### MetadataEndPointParameterSet
-```powershell
-PS C:\> Set-SPTrustedServiceTokenIssuer [-Identity] <SPTrustedServiceTokenIssuerPipeBind>
+```
+Set-SPTrustedServiceTokenIssuer [-Identity] <SPTrustedServiceTokenIssuerPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Description <String>] [-Confirm] [-MetadataEndPoint <Uri>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -44,7 +44,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE 1------------------
 ```powershell
 PS C:\> $cert = Get-PfxCertificate C:\LiveIDSigningCert.pfx
-Set-SPTrustedServiceTokenIssuer "WFEFarm1" - Description "WFE Farm 1" - ImportTrustCertificate $cert
+PS C:\> Set-SPTrustedServiceTokenIssuer "WFEFarm1" - Description "WFE Farm 1" - ImportTrustCertificate $cert
 ```
 
 This example updates a SharePoint Farm trust using the trust certificate from a file.

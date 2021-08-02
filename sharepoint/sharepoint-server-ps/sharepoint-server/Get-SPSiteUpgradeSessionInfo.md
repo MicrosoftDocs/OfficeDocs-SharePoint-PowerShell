@@ -21,15 +21,15 @@ Manage or report site upgrade.
 ## SYNTAX
 
 ### ContentDB
-```powershell
-PS C:\> Get-SPSiteUpgradeSessionInfo -ContentDatabase <SPContentDatabasePipeBind>
+```
+Get-SPSiteUpgradeSessionInfo -ContentDatabase <SPContentDatabasePipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-HideWaiting] [-ShowCompleted] [-ShowFailed]
  [-ShowInProgress] [-SiteSubscription <SPSiteSubscriptionPipeBind>] [<CommonParameters>]
 ```
 
 ### Site
-```powershell
-PS C:\> Get-SPSiteUpgradeSessionInfo -Site <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+```
+Get-SPSiteUpgradeSessionInfo -Site <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [<CommonParameters>]
 ```
 
@@ -50,7 +50,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```powershell
 PS C:\> $db = Get-SPContentDatabase -Identity wss_content
 
-Get-SPSiteUpgradeSessionInfo -ContentDatabase $db
+PS C:\> Get-SPSiteUpgradeSessionInfo -ContentDatabase $db
 ```
 
 This example returns siteupgradeinfo for every SPContentDatabase returned from Get-SPContentDatabase cmdlet.
@@ -59,7 +59,7 @@ This example returns siteupgradeinfo for every SPContentDatabase returned from G
 ```powershell
 PS C:\> $site=Get-SPSite -Identity https://localhost
 
-Get-SPSiteUpgradeSessionInfo -Site $site
+PS C:\> Get-SPSiteUpgradeSessionInfo -Site $site
 ```
 
 This example returns siteupgradeinfo for every SPSite object returned from Get-SPSite cmdlet.

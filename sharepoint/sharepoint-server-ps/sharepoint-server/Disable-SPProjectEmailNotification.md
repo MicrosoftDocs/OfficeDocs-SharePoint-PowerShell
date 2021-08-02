@@ -28,8 +28,8 @@ Turns off the Project Web App site level setting for email notifications in Proj
 ## EXAMPLES
 
 ### ------------Example 1 -----------
-```
-Disable-SPProjectEmailNotification -Url https://pwa_site
+```powershell
+PS C:\> Disable-SPProjectEmailNotification -Url https://pwa_site
 ```
 
 Disables Project Server email notifications on the Project Web App site, https://pwa_site.

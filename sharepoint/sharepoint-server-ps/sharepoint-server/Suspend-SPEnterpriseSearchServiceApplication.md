@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication -Identity MySSA
-$ssa | Suspend-SPEnterpriseSearchServiceApplication
+PS C:\> $ssa | Suspend-SPEnterpriseSearchServiceApplication
 ```
 
 This example obtains a reference to a search service application named MySSA and pauses it, stopping all crawls and other search components such as content processing components, analytics processing components and indexing components.

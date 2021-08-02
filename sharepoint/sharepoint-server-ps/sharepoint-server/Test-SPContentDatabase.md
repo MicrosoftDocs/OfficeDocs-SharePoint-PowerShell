@@ -19,15 +19,15 @@ Tests a content database.
 ## SYNTAX
 
 ### ContentDatabaseById
-```powershell
-PS C:\> Test-SPContentDatabase [-Identity] <SPContentDatabasePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+```
+Test-SPContentDatabase [-Identity] <SPContentDatabasePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-DatabaseCredentials <PSCredential>] [-ExtendedCheck] [-ServerInstance <SPDatabaseServiceInstancePipeBind>]
  [-ShowLocation] [-ShowRowCounts] [<CommonParameters>]
 ```
 
 ### ContentDatabaseByName
-```powershell
-PS C:\> Test-SPContentDatabase -Name <String> -WebApplication <SPWebApplicationPipeBind>
+```
+Test-SPContentDatabase -Name <String> -WebApplication <SPWebApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-DatabaseCredentials <PSCredential>] [-ExtendedCheck]
  [-ServerInstance <SPDatabaseServiceInstancePipeBind>] [-ShowLocation] [-ShowRowCounts] [<CommonParameters>]
 ```
@@ -59,7 +59,7 @@ This example tests the WSS_Content_DB content database against the sitename Web 
 ### ----------------------------EXAMPLE 2-----------------------
 ```powershell
 PS C:\> $DB = Get-SPContentDatabase -site https://contoso.com
-Test-SPContentDatabase $DB -showrowcounts
+PS C:\> Test-SPContentDatabase $DB -showrowcounts
 ```
 
 This example gets the content database that contains the site collection at https://contoso.com and then tests the database against the Web application that hosts it to determine issues.

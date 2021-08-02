@@ -21,22 +21,22 @@ Adds a new instance of a performance counter to a Web front end computer or a da
 ## SYNTAX
 
 ### AddCounter
-```powershell
-PS C:\> Add-SPDiagnosticsPerformanceCounter [-Category] <String> -Counter <String> [-AllInstances]
+```
+Add-SPDiagnosticsPerformanceCounter [-Category] <String> -Counter <String> [-AllInstances]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-DatabaseServer] [-WebFrontEnd] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### AddInstance
-```powershell
-PS C:\> Add-SPDiagnosticsPerformanceCounter [-Category] <String> [-Counter <String>] -Instance <String> [-AllInstances]
+```
+Add-SPDiagnosticsPerformanceCounter [-Category] <String> [-Counter <String>] -Instance <String> [-AllInstances]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-DatabaseServer] [-WebFrontEnd] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### AddMultipleCounters
-```powershell
-PS C:\> Add-SPDiagnosticsPerformanceCounter [-Category] <String> [-Instance <String>] [-AllInstances]
+```
+Add-SPDiagnosticsPerformanceCounter [-Category] <String> [-Instance <String>] [-AllInstances]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-DatabaseServer] [-WebFrontEnd] [-WhatIf]
  -CounterList <String[]> [<CommonParameters>]
 ```

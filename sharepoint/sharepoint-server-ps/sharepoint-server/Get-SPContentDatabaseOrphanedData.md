@@ -31,7 +31,7 @@ Use the **Get-SPContentDatabaseOrphanedData** to display orphaned objects.
 
 ### ------------EXAMPLE 1-----------
 ```powershell
- Get-SPContentDatabase "WSS_Content" | Get-SPContentDatabaseOrphanedData
+PS C:\>  Get-SPContentDatabase "WSS_Content" | Get-SPContentDatabaseOrphanedData
 ```
 This example gets orphan objects in content database named "WSS_Content".
 

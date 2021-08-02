@@ -21,14 +21,14 @@ Returns workflow settings for the specified Web application.
 ## SYNTAX
 
 ### SiteCollection
-```powershell
-PS C:\> Get-SPWorkflowConfig [-SiteCollection] <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+```
+Get-SPWorkflowConfig [-SiteCollection] <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [<CommonParameters>]
 ```
 
 ### WebApplication
-```powershell
-PS C:\> Get-SPWorkflowConfig [-WebApplication] <SPWebApplicationPipeBind>
+```
+Get-SPWorkflowConfig [-WebApplication] <SPWebApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 

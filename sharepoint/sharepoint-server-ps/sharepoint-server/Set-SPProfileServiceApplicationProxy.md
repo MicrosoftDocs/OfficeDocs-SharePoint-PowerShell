@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ----------------EXAMPLE---------------------
 ```powershell
 PS C:\> $proxy = Get-SPServiceApplicationProxy | ? {$_.TypeName -eq 'User Profile Service Application Proxy'}
-Set-SPProfileServiceApplicationProxy -Identity $proxy -SiteNamingConflictResolution 2
+PS C:\> Set-SPProfileServiceApplicationProxy -Identity $proxy -SiteNamingConflictResolution 2
 ```
 
 This example sets the User Profile Service Application Proxy to use a site naming conflict resolution to use domain names prefixed to usernames.

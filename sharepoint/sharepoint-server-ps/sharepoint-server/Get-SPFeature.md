@@ -21,32 +21,32 @@ Returns the SharePoint Features based on a given scope.
 ## SYNTAX
 
 ### FarmFeatures
-```powershell
-PS C:\> Get-SPFeature [[-Identity] <SPFeatureDefinitionPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
+```
+Get-SPFeature [[-Identity] <SPFeatureDefinitionPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
  [-Farm] [-Limit <String>] [<CommonParameters>]
 ```
 
 ### SiteFeatures
-```powershell
-PS C:\> Get-SPFeature [[-Identity] <SPFeatureDefinitionPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
+```
+Get-SPFeature [[-Identity] <SPFeatureDefinitionPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
  [-Limit <String>] [-Site <SPSitePipeBind>] [-Sandboxed] [<CommonParameters>]
 ```
 
 ### WebFeatures
-```powershell
-PS C:\> Get-SPFeature [[-Identity] <SPFeatureDefinitionPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
+```
+Get-SPFeature [[-Identity] <SPFeatureDefinitionPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
  [-Limit <String>] [-Web <SPWebPipeBind>] [<CommonParameters>]
 ```
 
 ### WebApplicationFeatures
-```powershell
-PS C:\> Get-SPFeature [[-Identity] <SPFeatureDefinitionPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
+```
+Get-SPFeature [[-Identity] <SPFeatureDefinitionPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
  [-Limit <String>] [-WebApplication <SPWebApplicationPipeBind>] [<CommonParameters>]
 ```
 
 ### FarmFeatureDefinitions
-```powershell
-PS C:\> Get-SPFeature [[-Identity] <SPFeatureDefinitionPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
+```
+Get-SPFeature [[-Identity] <SPFeatureDefinitionPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
  [-Limit <String>] [-CompatibilityLevel <Int32>] [<CommonParameters>]
 ```
 

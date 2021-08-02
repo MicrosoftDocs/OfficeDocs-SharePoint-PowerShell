@@ -29,8 +29,8 @@ Do Not Use
 ## EXAMPLES
 
 ### ------------Example 1 -----------
-```
-Do Not Use
+```powershell
+PS C:\> Do Not Use
 ```
 
 

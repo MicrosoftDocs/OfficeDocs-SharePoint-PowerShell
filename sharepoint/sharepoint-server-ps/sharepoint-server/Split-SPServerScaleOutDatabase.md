@@ -19,16 +19,16 @@ Moves a specified percentage of partitions from one scale-out database to anothe
 ## SYNTAX
 
 ### NewDatabase
-```powershell
-PS C:\> Split-SPServerScaleOutDatabase -NewDatabaseName <String> -SourceDatabase <SPDatabasePipeBind>
+```
+Split-SPServerScaleOutDatabase -NewDatabaseName <String> -SourceDatabase <SPDatabasePipeBind>
  -SourceServiceApplication <SPServiceApplicationPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-MoveLowerHalf] [-NewDatabaseCredentials <PSCredential>] [-NewDatabaseFailoverServer <String>]
  [-NewDatabaseServer <String>] [-SourcePercentage <Int32>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### ExistingDatabase
-```powershell
-PS C:\> Split-SPServerScaleOutDatabase -SourceDatabase <SPDatabasePipeBind>
+```
+Split-SPServerScaleOutDatabase -SourceDatabase <SPDatabasePipeBind>
  -SourceServiceApplication <SPServiceApplicationPipeBind> -TargetDatabase <SPDatabasePipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-MoveLowerHalf] [-SourcePercentage <Int32>]
  [-WhatIf] [<CommonParameters>]
@@ -46,8 +46,8 @@ Use the Split-SPServerScaleOutDatabase cmdlet to move a specified percentage of 
 ### ---------------EXAMPLE---------------
 ```powershell
 PS C:\> $databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
-$database = $databases[0]
-Split-SPServerScaleOutDatabase -NewDatabaseName Database2 -NewDatabaseServer MyDatabaseServer -SourceDatabase $database -SourceServiceApplication $serviceApplication -SourcePercentage 30
+PS C:\> $database = $databases[0]
+PS C:\> Split-SPServerScaleOutDatabase -NewDatabaseName Database2 -NewDatabaseServer MyDatabaseServer -SourceDatabase $database -SourceServiceApplication $serviceApplication -SourcePercentage 30
 ```
 
 This example creates a new scale-out database named Database2 on the MyDatabaseServer database server in the given service application. The example also moves 30 percent of the data from the upper side of the data range in the first scale-out database of the given service application.

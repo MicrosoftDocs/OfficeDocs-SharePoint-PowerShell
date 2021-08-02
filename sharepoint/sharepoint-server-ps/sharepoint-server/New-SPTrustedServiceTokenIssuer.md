@@ -19,15 +19,15 @@ Creates a trust with a SharePoint farm.
 ## SYNTAX
 
 ### ImportCertificateParameterSet
-```powershell
-PS C:\> New-SPTrustedServiceTokenIssuer [-Name] <String> -Certificate <X509Certificate2>
+```
+New-SPTrustedServiceTokenIssuer [-Name] <String> -Certificate <X509Certificate2>
  [-AssignmentCollection <SPAssignmentCollection>] [-Description <String>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### MetadataEndPointParameterSet
-```powershell
-PS C:\> New-SPTrustedServiceTokenIssuer [-Name] <String> [-AssignmentCollection <SPAssignmentCollection>]
+```
+New-SPTrustedServiceTokenIssuer [-Name] <String> [-AssignmentCollection <SPAssignmentCollection>]
  [-Description <String>] [-Confirm] -MetadataEndPoint <Uri> [-WhatIf] [<CommonParameters>]
 ```
 
@@ -43,7 +43,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE 1------------------
 ```powershell
 PS C:\> $cert = Get-PfxCertificate C:\LiveIDSigningCert.pfx
-New-SPTrustedServiceTokenIssuer -Name "WFEFarm1" -Description "WFE Farm 1" -Certificate $cert
+PS C:\> New-SPTrustedServiceTokenIssuer -Name "WFEFarm1" -Description "WFE Farm 1" -Certificate $cert
 ```
 
 This example shows how to create a new SharePoint Farm trust using the trust certificate from a file.

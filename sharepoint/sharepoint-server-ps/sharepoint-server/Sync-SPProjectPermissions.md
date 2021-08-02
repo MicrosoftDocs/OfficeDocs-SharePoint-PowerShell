@@ -18,14 +18,14 @@ Manually synchronizes permissions between a Project Web App instance and its ass
 ## SYNTAX
 
 ### PSMode
-```powershell
-PS C:\> Sync-SPProjectPermissions [-Url] <Uri> [-SyncPWASite] [-SyncProjectSites] [-Async]
+```
+Sync-SPProjectPermissions [-Url] <Uri> [-SyncPWASite] [-SyncProjectSites] [-Async]
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### SPMode
-```powershell
-PS C:\> Sync-SPProjectPermissions [-Url] <Uri> [[-Type] <SharePointPermissionModeSyncType>]
+```
+Sync-SPProjectPermissions [-Url] <Uri> [[-Type] <SharePointPermissionModeSyncType>]
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 

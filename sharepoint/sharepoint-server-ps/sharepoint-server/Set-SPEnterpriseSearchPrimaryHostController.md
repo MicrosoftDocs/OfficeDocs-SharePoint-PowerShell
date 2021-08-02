@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE 1------------------
 ```powershell
 PS C:\> $si = Get-SPEnterpriseSearchServiceInstance -Local 
-Set-SPEnterpriseSearchPrimaryHostController $si
+PS C:\> Set-SPEnterpriseSearchPrimaryHostController $si
 ```
 
 This example sets the local SearchHostController instance as the new primary SearchHostController.
@@ -45,7 +45,7 @@ If you choose a SearchHostController that is not running the latest version of t
 ### ------------------EXAMPLE 2------------------
 ```powershell
 PS C:\> $si = Get-SPEnterpriseSearchServiceInstance -Local 
-Set-SPEnterpriseSearchPrimaryHostController $si -Force
+PS C:\> Set-SPEnterpriseSearchPrimaryHostController $si -Force
 ```
 
 This example sets the local SearchHostController instance as the new primary SearchHostController.

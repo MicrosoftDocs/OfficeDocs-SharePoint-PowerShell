@@ -36,7 +36,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```powershell
 PS C:\> Remove-SPEnterpriseSearchCrawlDatabase -Identity CrawlDB-0
--SearchApplication mySearchServiceApp
+PS C:\> -SearchApplication mySearchServiceApp
 ```
 
 This example removes the CrawlDB-0 crawl database from the mySearchServiceApp search service application.

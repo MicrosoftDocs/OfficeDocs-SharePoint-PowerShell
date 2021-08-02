@@ -18,15 +18,15 @@ Creates a session state database and turns on the session state service.
 ## SYNTAX
 
 ### AdvancedProvision
-```powershell
-PS C:\> Enable-SPSessionStateService -DatabaseName <String> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+```
+Enable-SPSessionStateService -DatabaseName <String> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-DatabaseCredentials <PSCredential>] [-DatabaseServer <String>] [-SessionTimeout <Int32>] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### DefaultProvision
-```powershell
-PS C:\> Enable-SPSessionStateService [-DefaultProvision] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+```
+Enable-SPSessionStateService [-DefaultProvision] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-SessionTimeout <Int32>] [-WhatIf] [<CommonParameters>]
 ```
 

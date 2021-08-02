@@ -18,16 +18,16 @@ Renews a certificate and creates a new certificate signing request.
 ## SYNTAX
 
 ### Default (Default)
-```powershell
-PS C:\> Renew-SPCertificate [-Identity] <SPServerCertificatePipeBind> -FriendlyName <String> [-CommonName <String>]
+```
+Renew-SPCertificate [-Identity] <SPServerCertificatePipeBind> -FriendlyName <String> [-CommonName <String>]
  [-AlternativeNames <String[]>] [-OrganizationalUnit <String>] [-Organization <String>] [-Locality <String>]
  [-State <String>] [-Country <String>] [-Exportable] [-HashAlgorithm <String>] [-Path <String>] [-Force]
  [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RSA
-```powershell
-PS C:\> Renew-SPCertificate [-Identity] <SPServerCertificatePipeBind> -FriendlyName <String> [-CommonName <String>]
+```
+Renew-SPCertificate [-Identity] <SPServerCertificatePipeBind> -FriendlyName <String> [-CommonName <String>]
  [-AlternativeNames <String[]>] [-OrganizationalUnit <String>] [-Organization <String>] [-Locality <String>]
  [-State <String>] [-Country <String>] [-Exportable] [-KeySize <Int32>] [-HashAlgorithm <String>]
  [-Path <String>] [-Force] [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm]
@@ -35,8 +35,8 @@ PS C:\> Renew-SPCertificate [-Identity] <SPServerCertificatePipeBind> -FriendlyN
 ```
 
 ### ECC
-```powershell
-PS C:\> Renew-SPCertificate [-Identity] <SPServerCertificatePipeBind> -FriendlyName <String> [-CommonName <String>]
+```
+Renew-SPCertificate [-Identity] <SPServerCertificatePipeBind> -FriendlyName <String> [-CommonName <String>]
  [-AlternativeNames <String[]>] [-OrganizationalUnit <String>] [-Organization <String>] [-Locality <String>]
  [-State <String>] [-Country <String>] [-Exportable] [-EllipticCurve <EllipticCurveType>]
  [-HashAlgorithm <String>] [-Path <String>] [-Force] [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf]

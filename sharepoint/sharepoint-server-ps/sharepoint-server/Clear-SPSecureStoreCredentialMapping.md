@@ -18,14 +18,14 @@ Deletes a credential mapping from a Secure Store Service application.
 ## SYNTAX
 
 ### AllApplications
-```powershell
-PS C:\> Clear-SPSecureStoreCredentialMapping [-All] -Principal <SPClaim> -ServiceContext <SPServiceContextPipeBind>
+```
+Clear-SPSecureStoreCredentialMapping [-All] -Principal <SPClaim> -ServiceContext <SPServiceContextPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### OneApplication
-```powershell
-PS C:\> Clear-SPSecureStoreCredentialMapping -Identity <SPSecureStoreApplication> -Principal <SPClaim>
+```
+Clear-SPSecureStoreCredentialMapping -Identity <SPSecureStoreApplication> -Principal <SPClaim>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -43,8 +43,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------ 
 ```powershell
 PS C:\> $ssApp = Get-SPSecureStoreApplication -ServiceContext http://contoso -Name "ContosoTargetApplication"
-$userClaim = New-SPClaimsPrincipal -Identity "CONTOSO\janedoe" -IdentityType WindowsSamAccountName
-Clear-SPSecureStoreCredentialMapping -Identity $ssApp -Principal $userClaim
+PS C:\> $userClaim = New-SPClaimsPrincipal -Identity "CONTOSO\janedoe" -IdentityType WindowsSamAccountName
+PS C:\> Clear-SPSecureStoreCredentialMapping -Identity $ssApp -Principal $userClaim
 ```
 
 This example deletes the credential mapping from the target application ContosoTargetApplication for the user with alias johndoe and domain CONTOSO.

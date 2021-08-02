@@ -18,15 +18,15 @@ Returns all certificates that match the specified criteria.
 ## SYNTAX
 
 ### SearchFilters (Default)
-```powershell
-PS C:\> Get-SPCertificate [-DisplayName <String>] [-Thumbprint <String>] [-SerialNumber <String>] [-Store <String>]
+```
+Get-SPCertificate [-DisplayName <String>] [-Thumbprint <String>] [-SerialNumber <String>] [-Store <String>]
  [-InUse] [-DaysToExpiration <Int32>] [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### Identity
-```powershell
-PS C:\> Get-SPCertificate [-Identity] <SPServerCertificatePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+```
+Get-SPCertificate [-Identity] <SPServerCertificatePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

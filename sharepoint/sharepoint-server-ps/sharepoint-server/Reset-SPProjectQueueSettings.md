@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 ### --------------------EXAMPLE---------------------
 ```powershell
 PS C:\> $sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Project Application Services'}
-Reset-SPProjectQueueSettings -ServiceApplication $sa
+PS C:\> Reset-SPProjectQueueSettings -ServiceApplication $sa
 ```
 
 This example resets the queue settings for a Project Server Service Application service application.

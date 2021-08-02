@@ -18,8 +18,8 @@ Sets properties of a User Profile Service application.
 ## SYNTAX
 
 ### Default
-```powershell
-PS C:\> Set-SPProfileServiceApplication [-Identity] <SPServiceApplicationPipeBind>
+```
+Set-SPProfileServiceApplication [-Identity] <SPServiceApplicationPipeBind>
  [-ApplicationPool <SPIisWebServiceApplicationPoolPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-GetNonImportedObjects <Boolean>] [-MySiteHostLocation <SPSitePipeBind>]
  [-ProfileDBCredentials <PSCredential>] [-ProfileSyncDBCredentials <PSCredential>]
@@ -30,8 +30,8 @@ PS C:\> Set-SPProfileServiceApplication [-Identity] <SPServiceApplicationPipeBin
 ```
 
 ### MySiteSettings
-```powershell
-PS C:\> Set-SPProfileServiceApplication [-Identity] <SPServiceApplicationPipeBind>
+```
+Set-SPProfileServiceApplication [-Identity] <SPServiceApplicationPipeBind>
  [-ApplicationPool <SPIisWebServiceApplicationPoolPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-GetNonImportedObjects <Boolean>] -MySiteHostLocation <SPSitePipeBind>
  [-MySiteManagedPath <SPPrefixPipeBind>] [-ProfileDBCredentials <PSCredential>]
@@ -57,7 +57,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ---------------EXAMPLE---------------------
 ```powershell
 PS C:\> $sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'User Profile Service Application'}
-Set-SPProfileServiceApplication -Identity $sa -PurgeNonImportedObjects:$true
+PS C:\> Set-SPProfileServiceApplication -Identity $sa -PurgeNonImportedObjects:$true
 ```
 
 This example purges objects from the Profile database which are not in scope of the User Profile import.

@@ -33,8 +33,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### -------------EXAMPLE------------- 
-```
-Add-SPAppDeniedEndpoint -Endpoint "/_vti_bin/contoso/service.asmx"
+```powershell
+PS C:\> Add-SPAppDeniedEndpoint -Endpoint "/_vti_bin/contoso/service.asmx"
 ```
 
 This example adds the "/_vti_bin/contoso/service.asmx" endpoint to the list of denied endpoints for apps.

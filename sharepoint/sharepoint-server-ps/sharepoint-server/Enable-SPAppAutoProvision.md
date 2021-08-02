@@ -42,7 +42,7 @@ This setting overrides site subscription level setting.
 ### --------------EXAMPLE 2-------- 
 ```powershell
 PS C:\> $subscription = Get-SPSiteSubscription https://Contoso.com
-Enable-SPAppAutoProvision -SiteSubscription $subscription
+PS C:\> Enable-SPAppAutoProvision -SiteSubscription $subscription
 ```
 
 This example enables app auto provisioning for the site subscription for Contoso.Com site.

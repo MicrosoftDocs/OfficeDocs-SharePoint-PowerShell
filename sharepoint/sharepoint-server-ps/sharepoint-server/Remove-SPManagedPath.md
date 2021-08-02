@@ -19,14 +19,14 @@ Deletes the specified managed path from the specified host header or Web applica
 ## SYNTAX
 
 ### HostHeader
-```powershell
-PS C:\> Remove-SPManagedPath [-Identity] <SPPrefixPipeBind> [-HostHeader]
+```
+Remove-SPManagedPath [-Identity] <SPPrefixPipeBind> [-HostHeader]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### WebApplication
-```powershell
-PS C:\> Remove-SPManagedPath [-Identity] <SPPrefixPipeBind> -WebApplication <SPWebApplicationPipeBind>
+```
+Remove-SPManagedPath [-Identity] <SPPrefixPipeBind> -WebApplication <SPWebApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 

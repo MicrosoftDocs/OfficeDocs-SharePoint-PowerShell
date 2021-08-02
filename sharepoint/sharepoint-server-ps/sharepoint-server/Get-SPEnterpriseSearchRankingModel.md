@@ -35,8 +35,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE 1------------------ 
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
-$owner = Get-SPEnterpriseSearchOwner -Level ssa
-Get-SPEnterpriseSearchRankingModel -Identity '8f6fd0bc-06f9-43cf-bbab-08c377e083f4' -SearchApplication $ssa -Owner $owner
+PS C:\> $owner = Get-SPEnterpriseSearchOwner -Level ssa
+PS C:\> Get-SPEnterpriseSearchRankingModel -Identity '8f6fd0bc-06f9-43cf-bbab-08c377e083f4' -SearchApplication $ssa -Owner $owner
 ```
 
 This example retrieves the ranking model on the search service application level with the identity 8f6fd0bc-06f9-43cf-bbab-08c377e083f4 for the search application Search Service Application.
@@ -44,8 +44,8 @@ This example retrieves the ranking model on the search service application level
 ### ------------------EXAMPLE 2------------------ 
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application"
-$owner = Get-SPEnterpriseSearchOwner -Level ssa
-Get-SPEnterpriseSearchRankingModel -SearchApplication $ssa -Owner $owner
+PS C:\> $owner = Get-SPEnterpriseSearchOwner -Level ssa
+PS C:\> Get-SPEnterpriseSearchRankingModel -SearchApplication $ssa -Owner $owner
 ```
 
 This example retrieves all ranking models defined on the search service application level for the search application Search Service Application.

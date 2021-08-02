@@ -37,7 +37,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE 1----------------- 
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-Get-SPEnterpriseSearchComponent -SearchTopology '56e6651d-ecdd-4105-bb65-6a83b6155525' -Identity '06e6651d-ecdd-4105-bb65-6a83b6155525' -SearchApplication $ssa
+PS C:\> Get-SPEnterpriseSearchComponent -SearchTopology '56e6651d-ecdd-4105-bb65-6a83b6155525' -Identity '06e6651d-ecdd-4105-bb65-6a83b6155525' -SearchApplication $ssa
 ```
 
 This example retrieves the search component with the identity 06e6651d-ecdd-4105-bb65-6a83b6155525 from the search topology with identity 56e6651d-ecdd-4105-bb65-6a83b6155525 in the search service application referenced by $ssa.
@@ -45,7 +45,7 @@ This example retrieves the search component with the identity 06e6651d-ecdd-4105
 ### ------------------EXAMPLE 2----------------- 
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-Get-SPEnterpriseSearchComponent -SearchTopology '56e6651d-ecdd-4105-bb65-6a83b6155525' -SearchApplication $ssa
+PS C:\> Get-SPEnterpriseSearchComponent -SearchTopology '56e6651d-ecdd-4105-bb65-6a83b6155525' -SearchApplication $ssa
 ```
 
 This example retrieves all search components from the search topology with the identity 56e6651d-ecdd-4105-bb65-6a83b6155525 in the search service application referenced by $ssa.

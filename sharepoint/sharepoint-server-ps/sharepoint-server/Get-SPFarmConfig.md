@@ -42,8 +42,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### -------------EXAMPLE---------------- 
 ```powershell
 PS C:\> $a = Get-SPFarmConfig
-$a.AjaxTimeout = 200
-$a | Set-SPFarmConfig
+PS C:\> $a.AjaxTimeout = 200
+PS C:\> $a | Set-SPFarmConfig
 ```
 
 This example uses the Get-SPFarmConfig cmdlet to add the Ajax Timeout setting to the PSCustomObject object, sets the value for Ajax Timeout, and then passes PSCustomObject to the Set-SPFarmConfig cmdlet to change the Ajax Timeout setting. Ajax Timeout, a farm-wide setting, is a member of the SPWebService object and cannot be accessed with a Windows PowerShell cmdlet.

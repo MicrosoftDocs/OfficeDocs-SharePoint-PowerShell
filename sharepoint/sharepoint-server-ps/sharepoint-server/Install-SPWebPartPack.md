@@ -19,15 +19,15 @@ Installs the specified Web Part package to the specified location.
 ## SYNTAX
 
 ### UseFileName
-```powershell
-PS C:\> Install-SPWebPartPack [-LiteralPath] <String> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+```
+Install-SPWebPartPack [-LiteralPath] <String> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-Force] [-GlobalInstall] [-Language <UInt32>] [-WebApplication <SPWebApplicationPipeBind>] [-WhatIf]
  [-CompatibilityLevel <String>] [<CommonParameters>]
 ```
 
 ### UseName
-```powershell
-PS C:\> Install-SPWebPartPack [-Name] <String> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Force]
+```
+Install-SPWebPartPack [-Name] <String> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Force]
  [-GlobalInstall] [-Language <UInt32>] [-WebApplication <SPWebApplicationPipeBind>] [-WhatIf]
  [-CompatibilityLevel <String>] [<CommonParameters>]
 ```

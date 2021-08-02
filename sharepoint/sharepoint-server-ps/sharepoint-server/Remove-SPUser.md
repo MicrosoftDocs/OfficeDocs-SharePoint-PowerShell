@@ -37,7 +37,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```powershell
 PS C:\> Remove-SPUser "Contoso\jdoe" -web https://test/web1
 
-Get-SPWeb "https://test/web1" | Remove-SPUser "Contoso\jdoe"
+PS C:\> Get-SPWeb "https://test/web1" | Remove-SPUser "Contoso\jdoe"
 ```
 
 This example removes the user (Contoso\jdoe) from the Web application https://test/web1.

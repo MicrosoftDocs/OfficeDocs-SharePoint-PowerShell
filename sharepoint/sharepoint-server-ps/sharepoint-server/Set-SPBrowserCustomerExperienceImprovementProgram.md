@@ -19,20 +19,20 @@ Turns on or off the browser Customer Experience Improvement Program.
 ## SYNTAX
 
 ### Farm
-```powershell
-PS C:\> Set-SPBrowserCustomerExperienceImprovementProgram [-Farm] [-AssignmentCollection <SPAssignmentCollection>]
+```
+Set-SPBrowserCustomerExperienceImprovementProgram [-Farm] [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-Enable] [-WhatIf] [<CommonParameters>]
 ```
 
 ### SiteSubscription
-```powershell
-PS C:\> Set-SPBrowserCustomerExperienceImprovementProgram -SiteSubscription <SPSiteSubscriptionPipeBind>
+```
+Set-SPBrowserCustomerExperienceImprovementProgram -SiteSubscription <SPSiteSubscriptionPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Enable] [-WhatIf] [<CommonParameters>]
 ```
 
 ### WebApplication
-```powershell
-PS C:\> Set-SPBrowserCustomerExperienceImprovementProgram -WebApplication <SPWebApplicationPipeBind>
+```
+Set-SPBrowserCustomerExperienceImprovementProgram -WebApplication <SPWebApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Enable] [-WhatIf] [<CommonParameters>]
 ```
 

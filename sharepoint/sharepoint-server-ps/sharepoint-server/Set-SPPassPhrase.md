@@ -19,14 +19,14 @@ Sets the pass phrase to a new value.
 ## SYNTAX
 
 ### LocalOnly
-```powershell
-PS C:\> Set-SPPassPhrase [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-LocalServerOnly] [-WhatIf]
+```
+Set-SPPassPhrase [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-LocalServerOnly] [-WhatIf]
  -PassPhrase <SecureString> [<CommonParameters>]
 ```
 
 ### AcrossFarm
-```powershell
-PS C:\> Set-SPPassPhrase [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf]
+```
+Set-SPPassPhrase [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf]
  -ConfirmPassPhrase <SecureString> -PassPhrase <SecureString> [<CommonParameters>]
 ```
 
@@ -49,7 +49,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE-----------------------
 ```powershell
 PS C:\> $passphrase = ConvertTo-SecureString -asPlainText -Force
-Set-SPPassPhrase -PassPhrase $passphrase -Confirm
+PS C:\> Set-SPPassPhrase -PassPhrase $passphrase -Confirm
 ```
 
 This example queries for a string to use as a passphrase and sets the farm passphrase to a new value.

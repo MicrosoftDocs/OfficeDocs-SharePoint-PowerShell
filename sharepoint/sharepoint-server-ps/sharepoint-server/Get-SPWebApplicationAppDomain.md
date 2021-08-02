@@ -19,14 +19,14 @@ Returns all app domains for a specific web application.
 ## SYNTAX
 
 ### ResourceName
-```powershell
-PS C:\> Get-SPWebApplicationAppDomain [[-Identity] <SPAppDomainPipeBind>] -AppDomain <String>
+```
+Get-SPWebApplicationAppDomain [[-Identity] <SPAppDomainPipeBind>] -AppDomain <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-Zone <SPUrlZone>] [<CommonParameters>]
 ```
 
 ### WebApplication
-```powershell
-PS C:\> Get-SPWebApplicationAppDomain [[-Identity] <SPAppDomainPipeBind>] -WebApplication <SPWebApplicationPipeBind>
+```
+Get-SPWebApplicationAppDomain [[-Identity] <SPAppDomainPipeBind>] -WebApplication <SPWebApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Zone <SPUrlZone>] [<CommonParameters>]
 ```
 

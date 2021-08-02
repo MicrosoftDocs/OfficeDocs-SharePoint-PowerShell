@@ -21,33 +21,33 @@ Creates a claims principal.
 ## SYNTAX
 
 ### STSIdentity
-```powershell
-PS C:\> New-SPClaimsPrincipal [-ClaimValue] <String> [[-ClaimType] <String>]
+```
+New-SPClaimsPrincipal [-ClaimValue] <String> [[-ClaimType] <String>]
  [-TrustedIdentityTokenIssuer] <SPTrustedIdentityTokenIssuerPipeBind> [-IdentifierClaim]
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### ClaimProvider
-```powershell
-PS C:\> New-SPClaimsPrincipal [-ClaimValue] <String> [-ClaimType] <String>
+```
+New-SPClaimsPrincipal [-ClaimValue] <String> [-ClaimType] <String>
  [-AssignmentCollection <SPAssignmentCollection>] -ClaimProvider <SPClaimProvider> [<CommonParameters>]
 ```
 
 ### BasicClaim
-```powershell
-PS C:\> New-SPClaimsPrincipal [-EncodedClaim] <String> [-AssignmentCollection <SPAssignmentCollection>]
+```
+New-SPClaimsPrincipal [-EncodedClaim] <String> [-AssignmentCollection <SPAssignmentCollection>]
  [<CommonParameters>]
 ```
 
 ### IdentityType
-```powershell
-PS C:\> New-SPClaimsPrincipal [-Identity] <String> [-IdentityType] <SPIdentifierTypes>
+```
+New-SPClaimsPrincipal [-Identity] <String> [-IdentityType] <SPIdentifierTypes>
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### TrustIdentity
-```powershell
-PS C:\> New-SPClaimsPrincipal [-Identity] <String> [-TrustedIdentityTokenIssuer] <SPTrustedIdentityTokenIssuerPipeBind>
+```
+New-SPClaimsPrincipal [-Identity] <String> [-TrustedIdentityTokenIssuer] <SPTrustedIdentityTokenIssuerPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
@@ -86,7 +86,7 @@ This example creates a claim principal for a trusted identity token issuer claim
 ### -------------------------EXAMPLE 4----------------------------- 
 ```powershell
 PS C:\> $ip = New-SPIdentityProvider -ASPNetMembershipProvider "myMembershipProvider" -ASPNetRoleProvider "myRoleProvider"
-New-SPSite https://sitename/sites/newsite -owner (New-SPClaimsPrincipal "john@contoso.com" -TrustedIdentityTokenIssuer $ip)
+PS C:\> New-SPSite https://sitename/sites/newsite -owner (New-SPClaimsPrincipal "john@contoso.com" -TrustedIdentityTokenIssuer $ip)
 ```
 
 This example creates a claim principal for a ASPNet Membership User.
@@ -101,7 +101,7 @@ This example creates a claim principal for a ASPNet Role.
 ### -------------------------EXAMPLE 6----------------------------- 
 ```powershell
 PS C:\> $cp = New-SPClaimsPrincipal -Identity "redmond\SiteOwner" -IdentityType 1
-New-SPSite https://servername:port -OwnerAlias $cp.ToEncodedString() -Template "STS#0"
+PS C:\> New-SPSite https://servername:port -OwnerAlias $cp.ToEncodedString() -Template "STS#0"
 ```
 
 This example creates a claim principal for a Basic Claim Role, which is also called an encoded claim).

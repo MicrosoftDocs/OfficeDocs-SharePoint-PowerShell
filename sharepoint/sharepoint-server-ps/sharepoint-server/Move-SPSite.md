@@ -70,7 +70,7 @@ You can access the properties of the SPSiteAdministration object as a SharePoint
 ### ---------------------EXAMPLE 4----------------------- 
 ```powershell
 PS C:\> Move-SPSite -Identity siteUrl -DestinationDatabase databaseName -RbsProviderMapping
-       @{"sourceProvider1"="targetProvider1", "sourceProvider2"="targetProvider2"}
+PS C:\>        @{"sourceProvider1"="targetProvider1", "sourceProvider2"="targetProvider2"}
 ```
 
 This example moves an RBS-enabled site collection from one RBS-enabled content database to another RBS-enabled content database, sourceProvider1 is the source RBS provider and targetProvider1 is the target RBS provider.

@@ -36,8 +36,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE----------------- 
 ```powershell
 PS C:\> $searchApp = Get-SPEnterpriseSearchServiceApplication 
-Import-SPEnterpriseSearchThesaurus -SearchApplication $searchApp -Filename 
-\\host\share\thesaurus.csv
+PS C:\> Import-SPEnterpriseSearchThesaurus -SearchApplication $searchApp -Filename 
+PS C:\> \\host\share\thesaurus.csv
 ```
 
 This example imports a thesaurus dictionary .csv file named thesaurus.csv that is located at \\\\host\share  to the default search service application.

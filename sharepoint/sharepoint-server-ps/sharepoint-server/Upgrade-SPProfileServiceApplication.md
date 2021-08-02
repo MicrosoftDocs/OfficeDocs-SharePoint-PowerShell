@@ -30,7 +30,7 @@ Upgrades User Profile Service and its related profile and social store.
 ### -----------EXAMPLE---------
 ```powershell
 PS C:\> $sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'User Profile Service Application'}
-Upgrade-SPProfileServiceApplication $sa
+PS C:\> Upgrade-SPProfileServiceApplication $sa
 ```
 
 This example upgrades the specified user profile service application.

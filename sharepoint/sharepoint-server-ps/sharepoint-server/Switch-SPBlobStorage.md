@@ -18,14 +18,14 @@ This cmdlet switches active BLOB storage.
 ## SYNTAX
 
 ### SQL
-```powershell
-PS C:\> Switch-SPBlobStorage -ContentDatabase <SPContentDatabasePipeBind> [-SQL]
+```
+Switch-SPBlobStorage -ContentDatabase <SPContentDatabasePipeBind> [-SQL]
  [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoteShareBlobStore
-```powershell
-PS C:\> Switch-SPBlobStorage -RemoteShareBlobStore <SPRemoteShareBlobStorePipeBind>
+```
+Switch-SPBlobStorage -RemoteShareBlobStore <SPRemoteShareBlobStorePipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

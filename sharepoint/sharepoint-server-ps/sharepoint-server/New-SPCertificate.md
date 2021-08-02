@@ -18,24 +18,24 @@ Creates a new certificate signing request.
 ## SYNTAX
 
 ### Default (Default)
-```powershell
-PS C:\> New-SPCertificate -FriendlyName <String> -CommonName <String> [-AlternativeNames <String[]>]
+```
+New-SPCertificate -FriendlyName <String> -CommonName <String> [-AlternativeNames <String[]>]
  [-OrganizationalUnit <String>] [-Organization <String>] [-Locality <String>] [-State <String>]
  [-Country <String>] [-Exportable] [-HashAlgorithm <String>] [-Path <String>] [-Force]
  [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RSA
-```powershell
-PS C:\> New-SPCertificate -FriendlyName <String> -CommonName <String> [-AlternativeNames <String[]>]
+```
+New-SPCertificate -FriendlyName <String> -CommonName <String> [-AlternativeNames <String[]>]
  [-OrganizationalUnit <String>] [-Organization <String>] [-Locality <String>] [-State <String>]
  [-Country <String>] [-Exportable] [-KeySize <Int32>] [-HashAlgorithm <String>] [-Path <String>] [-Force]
  [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ECC
-```powershell
-PS C:\> New-SPCertificate -FriendlyName <String> -CommonName <String> [-AlternativeNames <String[]>]
+```
+New-SPCertificate -FriendlyName <String> -CommonName <String> [-AlternativeNames <String[]>]
  [-OrganizationalUnit <String>] [-Organization <String>] [-Locality <String>] [-State <String>]
  [-Country <String>] [-Exportable] [-EllipticCurve <EllipticCurveType>] [-HashAlgorithm <String>]
  [-Path <String>] [-Force] [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm]

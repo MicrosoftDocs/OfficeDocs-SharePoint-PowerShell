@@ -19,20 +19,20 @@ Returns the metadata for an instance of an app.
 ## SYNTAX
 
 ### IdentityParameterSet
-```powershell
-PS C:\> Get-SPAppInstance -Identity <SPAppInstance> [-AssignmentCollection <SPAssignmentCollection>]
+```
+Get-SPAppInstance -Identity <SPAppInstance> [-AssignmentCollection <SPAssignmentCollection>]
  [<CommonParameters>]
 ```
 
 ### SiteAndIdParameterSet
-```powershell
-PS C:\> Get-SPAppInstance -Site <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>] -AppInstanceId <Guid>
+```
+Get-SPAppInstance -Site <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>] -AppInstanceId <Guid>
  [<CommonParameters>]
 ```
 
 ### WebParameterSet
-```powershell
-PS C:\> Get-SPAppInstance [-App <SPApp>] [-AssignmentCollection <SPAssignmentCollection>] -Web <SPWebPipeBind>
+```
+Get-SPAppInstance [-App <SPApp>] [-AssignmentCollection <SPAssignmentCollection>] -Web <SPWebPipeBind>
  [<CommonParameters>]
 ```
 

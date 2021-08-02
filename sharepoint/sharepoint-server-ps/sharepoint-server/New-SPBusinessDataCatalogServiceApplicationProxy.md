@@ -19,15 +19,15 @@ Creates a new Business Data Connectivity service application proxy in the farm.
 ## SYNTAX
 
 ### PipeBind
-```powershell
-PS C:\> New-SPBusinessDataCatalogServiceApplicationProxy [-Name <String>]
+```
+New-SPBusinessDataCatalogServiceApplicationProxy [-Name <String>]
  -ServiceApplication <SPServiceApplicationPipeBind> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-DefaultProxyGroup] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Uri
-```powershell
-PS C:\> New-SPBusinessDataCatalogServiceApplicationProxy [-Name <String>] -Uri <Uri>
+```
+New-SPBusinessDataCatalogServiceApplicationProxy [-Name <String>] -Uri <Uri>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-DefaultProxyGroup] [-WhatIf] [-PartitionMode]
  [<CommonParameters>]
 ```
@@ -46,7 +46,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------ 
 ```powershell
 PS C:\> $sa = New-SPBusinessDataCatalogServiceApplication -ApplicationPool "SharePoint Web Services Default" -DatabaseName "ContosoBdcDB" -DatabaseServer "CONTOSO\SharePoint" -Name "ContosoServiceApp"
-New-SPBusinessDataCatalogServiceApplicationProxy -Name "ContosoServiceAppProxy" -ServiceApplication $sa
+PS C:\> New-SPBusinessDataCatalogServiceApplicationProxy -Name "ContosoServiceAppProxy" -ServiceApplication $sa
 ```
 
 This example creates a new Business Data Connectivity service application proxy with the name ContosoServiceAppProxy for the given service application.

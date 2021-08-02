@@ -37,8 +37,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication 
-$guid = [System.Guid]::NewGuid() 
-New-SPEnterpriseSearchMetadataCategory -SearchApplication $ssa -Name MyCategory -DiscoverNewProperties $true -PropSet $guid
+PS C:\> $guid = [System.Guid]::NewGuid() 
+PS C:\> New-SPEnterpriseSearchMetadataCategory -SearchApplication $ssa -Name MyCategory -DiscoverNewProperties $true -PropSet $guid
 ```
 
 This example adds a new metadata category named MyCategory to the default search service application.

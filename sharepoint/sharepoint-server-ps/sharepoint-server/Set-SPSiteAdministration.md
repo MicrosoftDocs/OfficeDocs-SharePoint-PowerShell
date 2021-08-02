@@ -19,15 +19,15 @@ Allows farm administrators to configure any site collection.
 ## SYNTAX
 
 ### SiteSubscription
-```powershell
-PS C:\> Set-SPSiteAdministration [-Identity] <SPSiteAdministrationPipeBind>
+```
+Set-SPSiteAdministration [-Identity] <SPSiteAdministrationPipeBind>
  [-AdministrationSiteType <SPAdministrationSiteType>] [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-Force] [-SiteSubscription <SPSiteSubscriptionPipeBind>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Default
-```powershell
-PS C:\> Set-SPSiteAdministration [-Identity] <SPSiteAdministrationPipeBind>
+```
+Set-SPSiteAdministration [-Identity] <SPSiteAdministrationPipeBind>
  [-AdministrationSiteType <SPAdministrationSiteType>] [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-LockState <String>] [-MaxSize <Int64>] [-OwnerAlias <SPUserPipeBind>]
  [-SecondaryOwnerAlias <SPUserPipeBind>] [-Template <SPWebTemplatePipeBind>] [-WarningSize <Int64>] [-WhatIf]

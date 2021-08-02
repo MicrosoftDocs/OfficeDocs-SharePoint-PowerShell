@@ -18,8 +18,8 @@ Uninstalls an instance of an app.
 
 ## SYNTAX 
 
-```powershell
-PS C:\> Uninstall-SPAppInstance -Identity <SPAppInstance> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+```
+Uninstall-SPAppInstance -Identity <SPAppInstance> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
 
@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### -------------EXAMPLE--------------
 ```powershell
 PS C:\> $spapp = Get-SPAppInstance -AppInstanceId $instance.Id
-Uninstall-SPAppInstance -Identity $spapp
+PS C:\> Uninstall-SPAppInstance -Identity $spapp
 ```
 
 This example uninstalls an instance of an app.

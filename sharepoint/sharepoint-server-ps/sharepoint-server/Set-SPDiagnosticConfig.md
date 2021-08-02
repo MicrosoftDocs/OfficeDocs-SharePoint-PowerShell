@@ -49,9 +49,9 @@ This example enables ErrorReporting, disables DownloadErrorReportingUpdatesEnabl
 ### ------------------EXAMPLE 2-----------------------
 ```powershell
 PS C:\> $config = Get-SPDiagnosticConfig
-$config.CustomerExperienceImprovementProgramEnabled = $false
-$config.LogCutInterval = 60
-$config | Set-SPDiagnosticConfig
+PS C:\> $config.CustomerExperienceImprovementProgramEnabled = $false
+PS C:\> $config.LogCutInterval = 60
+PS C:\> $config | Set-SPDiagnosticConfig
 ```
 
 This example disables CEIP and sets LogCutInterval to 60 minutes.

@@ -36,7 +36,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE----------------------- 
 ```powershell
 PS C:\> $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -match 'User Profile Service Application Proxy'}
-Add-SPServiceApplicationProxyGroupMember RemoteProxyGroup -Member $proxy
+PS C:\> Add-SPServiceApplicationProxyGroupMember RemoteProxyGroup -Member $proxy
 ```
 
 This example adds a select service application proxy to the service application proxy group named RemoteProxyGroup.

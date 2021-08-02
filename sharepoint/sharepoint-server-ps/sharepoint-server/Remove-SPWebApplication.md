@@ -19,14 +19,14 @@ Deletes the specified Web application.
 ## SYNTAX
 
 ### RemoveZoneOfWebApp
-```powershell
-PS C:\> Remove-SPWebApplication [-Identity] <SPWebApplicationPipeBind> -Zone <SPUrlZone>
+```
+Remove-SPWebApplication [-Identity] <SPWebApplicationPipeBind> -Zone <SPUrlZone>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-DeleteIISSite] [-WhatIf] [<CommonParameters>]
 ```
 
 ### RemoveWebApp
-```powershell
-PS C:\> Remove-SPWebApplication [-Identity] <SPWebApplicationPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+```
+Remove-SPWebApplication [-Identity] <SPWebApplicationPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-DeleteIISSite] [-RemoveContentDatabases] [-WhatIf] [<CommonParameters>]
 ```
 

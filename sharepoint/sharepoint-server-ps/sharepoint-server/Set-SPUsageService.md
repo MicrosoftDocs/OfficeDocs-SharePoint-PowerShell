@@ -37,10 +37,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```powershell
 PS C:\> Set-SPUsageService -LoggingEnabled $false
 
-Set-SPUsageService -UsageLogLocation "D:\\testusagelogdir"
+PS C:\> Set-SPUsageService -UsageLogLocation "D:\\testusagelogdir"
 
-
-Set-SPUsageService -UsageLogCutTime 5
+PS C:\> Set-SPUsageService -UsageLogCutTime 5
 ```
 
 The examples disables usage logging, changes the directory where usage files are stored and creates a new usage log file every 5 minutes.

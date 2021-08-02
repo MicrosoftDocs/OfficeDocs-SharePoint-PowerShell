@@ -39,7 +39,7 @@ Use the Get-SPServerScaleOutDatabaseInconsistency cmdlet to return all inconsist
 ```powershell
 PS C:\> $serviceApplication = Get-SPServiceApplication -Name "AppManagement"
 
-Get-SPServerScaleOutDatabaseInconsistency -ServiceApplication $serviceApplication
+PS C:\> Get-SPServerScaleOutDatabaseInconsistency -ServiceApplication $serviceApplication
 ```
 
 This example gets all the scale-out inconsistencies for the given service application.

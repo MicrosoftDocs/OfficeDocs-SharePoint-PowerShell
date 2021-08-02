@@ -33,8 +33,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### -----------EXAMPLE------- 
 ```powershell
 PS C:\> $databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
-$database = $databases[0]
-Clear-SPScaleOutDatabaseLog -Database $database -LogEntryTimeout 30
+PS C:\> $database = $databases[0]
+PS C:\> Clear-SPScaleOutDatabaseLog -Database $database -LogEntryTimeout 30
 ```
 
 This example removes all scale-out log entries in the first scale-out database of the specified service application unless there is a scale-out log entry which is more recent than 30 minutes.

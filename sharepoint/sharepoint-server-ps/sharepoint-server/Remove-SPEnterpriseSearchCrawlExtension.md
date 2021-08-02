@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```powershell
 PS C:\> $searchapp = Get-SPEnterpriseSearchServiceApplication "SearchApp1"
-$searchapp | Get-SPEnterpriseSearchCrawlExtension "pdf" | Remove-SPEnterpriseSearchCrawlExtension
+PS C:\> $searchapp | Get-SPEnterpriseSearchCrawlExtension "pdf" | Remove-SPEnterpriseSearchCrawlExtension
 ```
 
 This example removes the PDF IFilter and removes the pdf file extension from the list of file types to include in the content index.

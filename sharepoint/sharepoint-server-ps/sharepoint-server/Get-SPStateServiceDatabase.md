@@ -18,14 +18,14 @@ Returns a state service database.
 ## SYNTAX
 
 ### Default
-```powershell
-PS C:\> Get-SPStateServiceDatabase [[-Identity] <SPStateDatabasePipeBind>]
+```
+Get-SPStateServiceDatabase [[-Identity] <SPStateDatabasePipeBind>]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### ServiceApplication
-```powershell
-PS C:\> Get-SPStateServiceDatabase [[-ServiceApplication] <SPStateServiceApplicationPipeBind>]
+```
+Get-SPStateServiceDatabase [[-ServiceApplication] <SPStateServiceApplicationPipeBind>]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 

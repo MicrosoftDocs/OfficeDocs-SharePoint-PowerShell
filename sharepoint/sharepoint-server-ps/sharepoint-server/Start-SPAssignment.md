@@ -47,9 +47,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE 1-----------------------
 ```powershell
 PS C:\> Start-SPAssignment -global
-$w = Get-SPWeb https://MyWeb
-$w | Set-SPWeb -title "Accounting"
-Stop-SPAssignment -global
+PS C:\> $w = Get-SPWeb https://MyWeb
+PS C:\> $w | Set-SPWeb -title "Accounting"
+PS C:\> Stop-SPAssignment -global
 ```
 
 This example uses simple assignment.
@@ -60,9 +60,9 @@ Ensure that you run `Stop-SPAssignment` before you attempt any iterations of mul
 ### ------------------EXAMPLE 2-----------------------
 ```powershell
 PS C:\> $gc = Start-SPAssignment
-$web = $gc | Get-SPWeb https://MyWeb
-$web | Set-SPWeb -title "Accounting"
-Stop-SPAssignment -SemiGlobal $gc
+PS C:\> $web = $gc | Get-SPWeb https://MyWeb
+PS C:\> $web | Set-SPWeb -title "Accounting"
+PS C:\> Stop-SPAssignment -SemiGlobal $gc
 ```
 
 This example sets the title of the SPWeb object in multiple lines and controls the rate of disposal.

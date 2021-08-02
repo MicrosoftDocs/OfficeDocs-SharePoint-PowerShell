@@ -42,7 +42,7 @@ This example returns the entire app auto provisioning connection information for
 ### ---------------EXAMPLE 2---------- 
 ```powershell
 PS C:\> $subscription = Get-SPSiteSubscription https://Contoso.com
-Get-SPAppAutoProvisionConnection -SiteSubscription $subscription -ConnectionType RemoteWebHost
+PS C:\> Get-SPAppAutoProvisionConnection -SiteSubscription $subscription -ConnectionType RemoteWebHost
 ```
 
 This example returns the remote web host app auto provisioning connection information for the site subscription for Contoso.com site

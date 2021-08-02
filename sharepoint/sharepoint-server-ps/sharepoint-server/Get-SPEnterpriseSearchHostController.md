@@ -41,7 +41,7 @@ This example retrieves a list of all HostControllers in the farm with their stat
 ### ------------------EXAMPLE 2------------------ 
 ```powershell
 PS C:\> $ssi = Get-SPEnterpriseSearchServiceInstance -Local
-Get-SPEnterpriseSearchHostController -SearchServiceInstance $ssi
+PS C:\> Get-SPEnterpriseSearchHostController -SearchServiceInstance $ssi
 ```
 
 This example retrieves the status information for the SearchHostController on the local server.

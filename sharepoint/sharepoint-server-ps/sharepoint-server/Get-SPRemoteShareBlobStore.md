@@ -21,14 +21,14 @@ Returns all Remote Share BLOB Stores that match the given criteria.
 ## SYNTAX
 
 ### DefaultSet
-```powershell
-PS C:\> Get-SPRemoteShareBlobStore [-RemoteShareBlobStore <SPRemoteShareBlobStorePipeBind>]
+```
+Get-SPRemoteShareBlobStore [-RemoteShareBlobStore <SPRemoteShareBlobStorePipeBind>]
  [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ContentDatabase
-```powershell
-PS C:\> Get-SPRemoteShareBlobStore -ContentDatabase <SPContentDatabasePipeBind> [-Name <String>]
+```
+Get-SPRemoteShareBlobStore -ContentDatabase <SPContentDatabasePipeBind> [-Name <String>]
  [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

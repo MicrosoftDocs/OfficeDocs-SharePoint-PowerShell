@@ -19,8 +19,8 @@ Updates the settings of the SharePoint security token service (STS) identity pro
 ## SYNTAX
 
 ### QueueSigningCertificateReference
-```powershell
-PS C:\> Set-SPSecurityTokenServiceConfig -QueueSigningCertificateThumbprint <String>
+```
+Set-SPSecurityTokenServiceConfig -QueueSigningCertificateThumbprint <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-FormsTokenLifetime <Int32>]
  [-MaxLogonTokenCacheItems <Int32>] [-MaxServiceTokenCacheItems <Int32>]
  [-QueueSigningCertificateStoreName <String>] [-ServiceTokenCacheExpirationWindow <Int32>]
@@ -28,8 +28,8 @@ PS C:\> Set-SPSecurityTokenServiceConfig -QueueSigningCertificateThumbprint <Str
 ```
 
 ### RevokeSigningCertificateReference
-```powershell
-PS C:\> Set-SPSecurityTokenServiceConfig -RevokeSigningCertificateThumbprint <String>
+```
+Set-SPSecurityTokenServiceConfig -RevokeSigningCertificateThumbprint <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-FormsTokenLifetime <Int32>]
  [-MaxLogonTokenCacheItems <Int32>] [-MaxServiceTokenCacheItems <Int32>]
  [-RevokeSigningCertificateStoreName <String>] [-ServiceTokenCacheExpirationWindow <Int32>]
@@ -37,8 +37,8 @@ PS C:\> Set-SPSecurityTokenServiceConfig -RevokeSigningCertificateThumbprint <St
 ```
 
 ### SigningCertificateReference
-```powershell
-PS C:\> Set-SPSecurityTokenServiceConfig -SigningCertificateThumbprint <String>
+```
+Set-SPSecurityTokenServiceConfig -SigningCertificateThumbprint <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-FormsTokenLifetime <Int32>]
  [-MaxLogonTokenCacheItems <Int32>] [-MaxServiceTokenCacheItems <Int32>]
  [-ServiceTokenCacheExpirationWindow <Int32>] [-ServiceTokenLifetime <Int32>]
@@ -48,8 +48,8 @@ PS C:\> Set-SPSecurityTokenServiceConfig -SigningCertificateThumbprint <String>
 ```
 
 ### SigningCertificateImport
-```powershell
-PS C:\> Set-SPSecurityTokenServiceConfig [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+```
+Set-SPSecurityTokenServiceConfig [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-FormsTokenLifetime <Int32>] [-ImportSigningCertificate <X509Certificate2>]
  [-MaxLogonTokenCacheItems <Int32>] [-MaxServiceTokenCacheItems <Int32>]
  [-ServiceTokenCacheExpirationWindow <Int32>] [-ServiceTokenLifetime <Int32>] [-WhatIf]
@@ -57,16 +57,16 @@ PS C:\> Set-SPSecurityTokenServiceConfig [-AssignmentCollection <SPAssignmentCol
 ```
 
 ### SigningCertificateQueue
-```powershell
-PS C:\> Set-SPSecurityTokenServiceConfig [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+```
+Set-SPSecurityTokenServiceConfig [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-FormsTokenLifetime <Int32>] [-MaxLogonTokenCacheItems <Int32>] [-MaxServiceTokenCacheItems <Int32>]
  [-QueueSigningCertificate <X509Certificate2>] [-ServiceTokenCacheExpirationWindow <Int32>]
  [-ServiceTokenLifetime <Int32>] [-WhatIf] [-WindowsTokenLifetime <Int32>] [<CommonParameters>]
 ```
 
 ### SigningCertificateRevoke
-```powershell
-PS C:\> Set-SPSecurityTokenServiceConfig [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+```
+Set-SPSecurityTokenServiceConfig [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-FormsTokenLifetime <Int32>] [-MaxLogonTokenCacheItems <Int32>] [-MaxServiceTokenCacheItems <Int32>]
  [-RevokeSigningCertificate <X509Certificate2>] [-ServiceTokenCacheExpirationWindow <Int32>]
  [-ServiceTokenLifetime <Int32>] [-WhatIf] [-WindowsTokenLifetime <Int32>] [<CommonParameters>]
@@ -99,7 +99,7 @@ This example updates the signing certificate of the SharePoint security token se
 ### --------------------EXAMPLE 2---------------------
 ```powershell
 PS C:\> $stsCert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2 "c:\sts.pfx","a",20
-Set-SPSecurityTokenServiceConfig -ImportSigningCertificate $stsCert
+PS C:\> Set-SPSecurityTokenServiceConfig -ImportSigningCertificate $stsCert
 ```
 
 This example imports the signing certificate for the SharePoint STS identity provider.

@@ -37,7 +37,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------Example 1 -----------
 ```powershell
 PS C:\> $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
-Move-SPSocialComments -ProfileServiceApplicationProxy $proxy -OldUrl "https://contoso/Pages/oldtest.aspx" -NewUrl "https://contoso/Pages/newtest.aspx"
+PS C:\> Move-SPSocialComments -ProfileServiceApplicationProxy $proxy -OldUrl "https://contoso/Pages/oldtest.aspx" -NewUrl "https://contoso/Pages/newtest.aspx"
 ```
 
 This example moves social comments from oldtest.aspx to newtest.aspx.

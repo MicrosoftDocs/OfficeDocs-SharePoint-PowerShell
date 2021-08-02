@@ -21,29 +21,29 @@ Returns all site collections that match the specified criteria.
 ## SYNTAX
 
 ### AllSitesInIdentity
-```powershell
-PS C:\> Get-SPSite [-Identity] <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+```
+Get-SPSite [-Identity] <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-CompatibilityLevel <Int32>] [-Confirm] [-Filter <ScriptBlock>] [-Limit <String>] [-Regex] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### AllSitesInContentDB
-```powershell
-PS C:\> Get-SPSite -ContentDatabase <SPContentDatabasePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+```
+Get-SPSite -ContentDatabase <SPContentDatabasePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-CompatibilityLevel <Int32>] [-Confirm] [-Filter <ScriptBlock>] [-Limit <String>] [-WhatIf]
  [-NeedsB2BUpgrade] [<CommonParameters>]
 ```
 
 ### AllSitesInSiteSubscription
-```powershell
-PS C:\> Get-SPSite -SiteSubscription <SPSiteSubscriptionPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+```
+Get-SPSite -SiteSubscription <SPSiteSubscriptionPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-CompatibilityLevel <Int32>] [-Confirm] [-Filter <ScriptBlock>] [-Limit <String>] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### AllSitesInWebApplication
-```powershell
-PS C:\> Get-SPSite [-AssignmentCollection <SPAssignmentCollection>] [-CompatibilityLevel <Int32>] [-Confirm]
+```
+Get-SPSite [-AssignmentCollection <SPAssignmentCollection>] [-CompatibilityLevel <Int32>] [-Confirm]
  [-Filter <ScriptBlock>] [-Limit <String>] [-WebApplication <SPWebApplicationPipeBind>] [-WhatIf]
  [<CommonParameters>]
 ```
@@ -93,11 +93,11 @@ This example gets a subset of data from all sites in the content database b399a3
 ```powershell
 PS C:\> Start-SPAssignment -Global
 
-$s = Get-SPSite -Identity https://<MyApp>/Sites/Site1
+PS C:\> $s = Get-SPSite -Identity https://<MyApp>/Sites/Site1
 
-$s.Url
+PS C:\> $s.Url
 
-Stop-SPAssignment -Global
+PS C:\> Stop-SPAssignment -Global
 ```
 
 This example gets the sites specified by the Identity parameter and inserts the results in the variable s
@@ -109,8 +109,8 @@ Be careful not to run a Get-SPSite command that returns many results while globa
 ### ------------------EXAMPLE 4--------------------- 
 ```powershell
 PS C:\> $GC = Start-SPAssignment
-$Sites = $GC | Get-SPSite -Filter {$_.Owner -eq "DOMAIN\JDow"} -Limit 50
-Stop-SPAssignment $GC
+PS C:\> $Sites = $GC | Get-SPSite -Filter {$_.Owner -eq "DOMAIN\JDow"} -Limit 50
+PS C:\> Stop-SPAssignment $GC
 ```
 
 This example gets the first 50 sites owned by user DOMAIN\JDow by using a server-side query, and assigns them to a local variable.

@@ -36,8 +36,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE 1------------------
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application"
-$owner = Get-SPEnterpriseSearchOwner -Level SSA
-Remove-SPEnterpriseSearchResultSource -Identity "Custom SharePoint Result Source" -SearchApplication $ssa -Owner $owner
+PS C:\> $owner = Get-SPEnterpriseSearchOwner -Level SSA
+PS C:\> Remove-SPEnterpriseSearchResultSource -Identity "Custom SharePoint Result Source" -SearchApplication $ssa -Owner $owner
 ```
 
 This example deletes the search service application level result source with the name "Custom SharePoint Result Source".
@@ -46,8 +46,8 @@ This example deletes the search service application level result source with the
 ### ------------------EXAMPLE 2------------------
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application"
-$owner = Get-SPEnterpriseSearchOwner -Level SSA
-Remove-SPEnterpriseSearchResultSource -Identity 12345678-90ab-cdef-1234-567890bcdefgh -SearchApplication $ssa -Owner $owner
+PS C:\> $owner = Get-SPEnterpriseSearchOwner -Level SSA
+PS C:\> Remove-SPEnterpriseSearchResultSource -Identity 12345678-90ab-cdef-1234-567890bcdefgh -SearchApplication $ssa -Owner $owner
 ```
 
 This example deletes the search service application level result source with the id 12345678-90ab-cdef-1234-567890bcdefgh.
@@ -56,9 +56,9 @@ This example deletes the search service application level result source with the
 ### ------------------EXAMPLE 3------------------
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application"
-$owner = Get-SPEnterpriseSearchOwner -Level SSA
-$resultSource = Get-SPEnterpriseSearchResultSource -Identity "Custom SharePoint Result Source" -SearchApplication $ssa -Owner $owner
-Remove-SPEnterpriseSearchResultSource -Identity $resultSource -SearchApplication $ssa -Owner $owner
+PS C:\> $owner = Get-SPEnterpriseSearchOwner -Level SSA
+PS C:\> $resultSource = Get-SPEnterpriseSearchResultSource -Identity "Custom SharePoint Result Source" -SearchApplication $ssa -Owner $owner
+PS C:\> Remove-SPEnterpriseSearchResultSource -Identity $resultSource -SearchApplication $ssa -Owner $owner
 ```
 
 This example deletes the search service application level result source with the name "Custom SharePoint Result Source", by specifying a Source instance.

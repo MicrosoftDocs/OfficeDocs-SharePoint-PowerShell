@@ -40,7 +40,7 @@ This example displays all timer jobs for a specified Web application.
 
 ### ---------------------EXAMPLE 02---------------------
 ```powershell
-Get-SPTimerJob | select -ExpandProperty HistoryEntries
+PS C:\> Get-SPTimerJob | select -ExpandProperty HistoryEntries
 ```
 The above example will show you timer job run history
 

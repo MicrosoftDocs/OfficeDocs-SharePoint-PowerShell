@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 module name: Microsoft.SharePoint.Powershell
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spo365linksettings
@@ -28,9 +28,9 @@ Use the **Get-SPO365LinkSettings** cmdlet to display current hybrid configuratio
 
 ### ------------EXAMPLE 1-----------
 ```powershell
-$gc = Start-SPAssignment
-Get-SPO365LinkSettings -AssignmentCollection $gc
-Stop-SPAssignment $gc
+PS C:\> $gc = Start-SPAssignment
+PS C:\> Get-SPO365LinkSettings -AssignmentCollection $gc
+PS C:\> Stop-SPAssignment $gc
 ```
 
 This example returns all hybrid configurations.

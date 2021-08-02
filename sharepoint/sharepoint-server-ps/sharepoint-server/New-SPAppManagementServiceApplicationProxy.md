@@ -21,15 +21,15 @@ Creates an App Management Service application proxy.
 ## SYNTAX
 
 ### ServiceApplication
-```powershell
-PS C:\> New-SPAppManagementServiceApplicationProxy -ServiceApplication <SPServiceApplicationPipeBind>
+```
+New-SPAppManagementServiceApplicationProxy -ServiceApplication <SPServiceApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Name <String>] [-UseDefaultProxyGroup] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### Uri
-```powershell
-PS C:\> New-SPAppManagementServiceApplicationProxy -Uri <String> [-AssignmentCollection <SPAssignmentCollection>]
+```
+New-SPAppManagementServiceApplicationProxy -Uri <String> [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-Name <String>] [-UseDefaultProxyGroup] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -48,7 +48,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ---------------EXAMPLE------------- 
 ```powershell
 PS C:\> $sa = New-SPAppManagementServiceApplication -Name AppManagement -DatabaseServer MyDatabaseServer -DatabaseName AppManagementDB -ApplicationPool MyServiceAppPool
-New-SPAppManagementServiceApplicationProxy -Name AppManagementProxy -UseDefaultProxyGroup -ServiceApplication $sa
+PS C:\> New-SPAppManagementServiceApplicationProxy -Name AppManagementProxy -UseDefaultProxyGroup -ServiceApplication $sa
 ```
 
 This example creates a new App Management Service application proxy named AppManagementProxy for the specified service application and adds the new App Management Service application proxy to the default proxy group.

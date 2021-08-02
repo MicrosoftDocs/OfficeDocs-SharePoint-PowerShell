@@ -19,16 +19,16 @@ Moves a specified percentage of partitions from one scale-out database to anothe
 ## SYNTAX
 
 ### NewDatabase
-```powershell
-PS C:\> Split-SPScaleOutDatabase -NewDatabaseName <String> -SourceDatabase <SPDatabasePipeBind>
+```
+Split-SPScaleOutDatabase -NewDatabaseName <String> -SourceDatabase <SPDatabasePipeBind>
  -SourceServiceApplication <SPServiceApplicationPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-MoveLowerHalf] [-NewDatabaseCredentials <PSCredential>] [-NewDatabaseFailoverServer <String>]
  [-NewDatabaseServer <String>] [-SourcePercentage <Int32>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### ExistingDatabase
-```powershell
-PS C:\> Split-SPScaleOutDatabase -SourceDatabase <SPDatabasePipeBind>
+```
+Split-SPScaleOutDatabase -SourceDatabase <SPDatabasePipeBind>
  -SourceServiceApplication <SPServiceApplicationPipeBind> -TargetDatabase <SPDatabasePipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-MoveLowerHalf] [-SourcePercentage <Int32>]
  [-WhatIf] [<CommonParameters>]
@@ -48,8 +48,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ---------------EXAMPLE 1---------------
 ```powershell
 PS C:\> $databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
-$database = $databases[0]
-Split-SPScaleOutDatabase -NewDatabaseName Database2 -NewDatabaseServer MyDatabaseServer -SourceDatabase $database -SourceServiceApplication $serviceApplication -SourcePercentage 30
+PS C:\> $database = $databases[0]
+PS C:\> Split-SPScaleOutDatabase -NewDatabaseName Database2 -NewDatabaseServer MyDatabaseServer -SourceDatabase $database -SourceServiceApplication $serviceApplication -SourcePercentage 30
 ```
 
 This example creates a new scale-out database named Database2 on the MyDatabaseServer database server  in the given service application.
@@ -60,10 +60,9 @@ The example also moves 30% of the data from the upper side of the data range in 
 
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-
-$newReportingDb = "Search_AnalyticsReporting2"
-$reportingDb = Get-SPScaleOutDatabase -SearchApplication $ssa
-Split-SPServerScaleOutDatabase -SourceServiceApplication $ssa -SourceDatabase $reportingDb -NewDatabaseName $newReportingDb -SourcePercentage 33
+PS C:\> $newReportingDb = "Search_AnalyticsReporting2"
+PS C:\> $reportingDb = Get-SPScaleOutDatabase -SearchApplication $ssa
+PS C:\> Split-SPServerScaleOutDatabase -SourceServiceApplication $ssa -SourceDatabase $reportingDb -NewDatabaseName $newReportingDb -SourcePercentage 33
 
 ```
 This example scales out the Search Analytics database, moving 33% of data to the new databases.

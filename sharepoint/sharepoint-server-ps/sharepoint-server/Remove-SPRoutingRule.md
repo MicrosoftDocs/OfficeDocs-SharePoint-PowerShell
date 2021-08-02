@@ -36,7 +36,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```powershell
 PS C:\> $rm=Get-SPRequestManagementSettings -Identity $web
 
-Get-SPRoutingRule -RequestManagementSettings $rm
+PS C:\> Get-SPRoutingRule -RequestManagementSettings $rm
 
 PS C:\> $machines=Get-SPRoutingMachineInfo -RequestManagementSettings $rm
 
@@ -46,7 +46,7 @@ PS C:\> $c=New-SPRequestManagementRuleCriteria -Value http -Property url -MatchT
 
 PS C:\> $rule=Add-SPRoutingRule -RequestManagementSettings $rm -Name <Rule Name> -Criteria $c -MachinePool $pool
 
-Remove-SPRoutingRule -Identity $rule
+PS C:\> Remove-SPRoutingRule -Identity $rule
 ```
 
 This example removes a routing for a specified identity by using the $rule variable.

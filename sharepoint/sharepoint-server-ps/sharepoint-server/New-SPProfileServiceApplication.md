@@ -19,8 +19,8 @@ Adds a User Profile Service Application to a farm.
 ## SYNTAX
 
 ### Default
-```powershell
-PS C:\> New-SPProfileServiceApplication -ApplicationPool <SPIisWebServiceApplicationPoolPipeBind> [-Name <String>]
+```
+New-SPProfileServiceApplication -ApplicationPool <SPIisWebServiceApplicationPoolPipeBind> [-Name <String>]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-MySiteHostLocation <SPSitePipeBind>]
  [-PartitionMode] [-ProfileDBCredentials <PSCredential>] [-ProfileDBName <String>] [-ProfileDBServer <String>]
  [-ProfileSyncDBCredentials <PSCredential>] [-ProfileDBFailoverServer <String>] [-ProfileSyncDBName <String>]
@@ -30,8 +30,8 @@ PS C:\> New-SPProfileServiceApplication -ApplicationPool <SPIisWebServiceApplica
 ```
 
 ### MySiteSettings
-```powershell
-PS C:\> New-SPProfileServiceApplication -ApplicationPool <SPIisWebServiceApplicationPoolPipeBind> [-Name <String>]
+```
+New-SPProfileServiceApplication -ApplicationPool <SPIisWebServiceApplicationPoolPipeBind> [-Name <String>]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] -MySiteHostLocation <SPSitePipeBind>
  [-MySiteManagedPath <SPPrefixPipeBind>] [-PartitionMode] [-ProfileDBCredentials <PSCredential>]
  [-ProfileDBName <String>] [-ProfileDBServer <String>] [-ProfileSyncDBCredentials <PSCredential>]

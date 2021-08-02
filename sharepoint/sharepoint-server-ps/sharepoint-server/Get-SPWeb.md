@@ -71,7 +71,7 @@ PS C:\> $w.set_SiteLogoUrl("https://PathToImage/test.jpg")
 
 PS C:\> $w.Update()
 
-Stop-SPAssignment -Global
+PS C:\> Stop-SPAssignment -Global
 ```
 
 This example demonstrates how to save a subsite as a variable and to call object model methods on the SPAssignment object.

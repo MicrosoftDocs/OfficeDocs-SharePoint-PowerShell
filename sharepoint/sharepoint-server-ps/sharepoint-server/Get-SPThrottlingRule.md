@@ -38,7 +38,7 @@ PS C:\> $web=Get-SPWebApplication -Identity <URL of web application>
 
 PS C:\> $rm=Get-SPRequestManagementSettings -Identity $web
 
-Get-SPThrottlingRule -RequestManagementSettings $rm
+PS C:\> Get-SPThrottlingRule -RequestManagementSettings $rm
 ```
 
 This example returns throttling rules for the farm by using the $rm and $web variables.

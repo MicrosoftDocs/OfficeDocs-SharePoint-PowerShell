@@ -19,22 +19,22 @@ Sets the value of a property or attribute of a Business Data Connectivity Metada
 ## SYNTAX
 
 ### Display
-```powershell
-PS C:\> Set-SPBusinessDataCatalogMetadataObject -Identity <MetadataObject>
+```
+Set-SPBusinessDataCatalogMetadataObject -Identity <MetadataObject>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-DisplayName <String>] [-Remove]
  [-SettingId <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### NameValue
-```powershell
-PS C:\> Set-SPBusinessDataCatalogMetadataObject -Identity <MetadataObject>
+```
+Set-SPBusinessDataCatalogMetadataObject -Identity <MetadataObject>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-PropertyName <String>]
  [-PropertyValue <PSObject>] [-Remove] [-SettingId <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### NameRemove
-```powershell
-PS C:\> Set-SPBusinessDataCatalogMetadataObject -Identity <MetadataObject>
+```
+Set-SPBusinessDataCatalogMetadataObject -Identity <MetadataObject>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-PropertyName <String>] [-Remove]
  [-SettingId <String>] [-WhatIf] [<CommonParameters>]
 ```
@@ -54,7 +54,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE 1------------------
 ```powershell
 PS C:\> $obj = Get-SPBusinessDataCatalogMetadataObject -Namespace "ContosoDatabase" -Name "ContosoDatabase" -BdcObjectType "LobSystemInstance" -ServiceContext http://contoso
-Set-SPBusinessDataCatalogMetadataObject -Identity $obj -PropertyName "ShowInSearchUI" -PropertyValue "True"
+PS C:\> Set-SPBusinessDataCatalogMetadataObject -Identity $obj -PropertyName "ShowInSearchUI" -PropertyValue "True"
 ```
 
 This example creates a property on the LobSystemInstance (External System Instance) of name ContosoDatabase.

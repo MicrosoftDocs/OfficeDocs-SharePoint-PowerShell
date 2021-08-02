@@ -51,7 +51,7 @@ This example updates the associated service application for a state service data
 ```powershell
 PS C:\> $cred = Get-Credential
 
-Set-SPStateServiceDatabase -Identity "StateSvcDB1" -DatabaseCredentials $cred
+PS C:\> Set-SPStateServiceDatabase -Identity "StateSvcDB1" -DatabaseCredentials $cred
 ```
 
 This example updates the SQL Authentication credentials that are used for a given database.

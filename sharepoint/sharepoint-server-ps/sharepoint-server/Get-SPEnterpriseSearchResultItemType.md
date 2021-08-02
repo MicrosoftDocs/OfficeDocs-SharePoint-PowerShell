@@ -48,8 +48,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### --------EXAMPLE-------- 
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-$tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite
-Get-SPEnterpriseSearchResultItemType -Owner $tenantOwner -SearchApplication $ssa
+PS C:\> $tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite
+PS C:\> Get-SPEnterpriseSearchResultItemType -Owner $tenantOwner -SearchApplication $ssa
 ```
 
 This example retrieves the result item types that are defined for the owner referenced by $tenantowner for the search application referenced by $ssa.

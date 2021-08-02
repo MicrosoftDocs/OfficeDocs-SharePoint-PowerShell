@@ -36,9 +36,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### -----------EXAMPLE--------- 
 ```powershell
 PS C:\> $web=Get-SPWebApplication -Identity <URL of web application>
-$rm=Get-SPRequestManagementSettings -Identity $web
-$c=New-SPRequestManagementRuleCriteria -Value http -Property url -MatchType startswith -CaseSensitive $false
-Add-SPThrottlingRule -RequestManagementSettings $rm -Name <Rule Name> -Criteria $c -Threshold 4
+PS C:\> $rm=Get-SPRequestManagementSettings -Identity $web
+PS C:\> $c=New-SPRequestManagementRuleCriteria -Value http -Property url -MatchType startswith -CaseSensitive $false
+PS C:\> Add-SPThrottlingRule -RequestManagementSettings $rm -Name <Rule Name> -Criteria $c -Threshold 4
 ```
 
 This example adds a throttling rule for a specified identity by using the $rm and $c variables.

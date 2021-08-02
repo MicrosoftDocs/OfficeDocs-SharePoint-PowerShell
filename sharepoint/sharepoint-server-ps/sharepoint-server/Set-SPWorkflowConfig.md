@@ -19,15 +19,15 @@ Configures the workflow settings for the specified Web application.
 ## SYNTAX
 
 ### SiteCollection
-```powershell
-PS C:\> Set-SPWorkflowConfig [-SiteCollection] <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+```
+Set-SPWorkflowConfig [-SiteCollection] <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-DeclarativeWorkflowsEnabled <Boolean>] [-EmailNoPermissionParticipantsEnabled <Boolean>]
  [-SendDocumentToExternalParticipants <Boolean>] [-SingleWorkflowEpisodeTimeout <Int32>] [<CommonParameters>]
 ```
 
 ### WebApplication
-```powershell
-PS C:\> Set-SPWorkflowConfig [-WebApplication] <SPWebApplicationPipeBind>
+```
+Set-SPWorkflowConfig [-WebApplication] <SPWebApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-DeclarativeWorkflowsEnabled <Boolean>]
  [-EmailNoPermissionParticipantsEnabled <Boolean>] [-SendDocumentToExternalParticipants <Boolean>]
  [-SingleWorkflowEpisodeTimeout <Int32>] [<CommonParameters>]

@@ -35,8 +35,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```powershell
 PS C:\> $searchapp = Get-SPEnterpriseSearchServiceApplication "Sample Search Service Application"
-$mappingtodelete = Get-SPEnterpriseSearchCrawlContentSource -Identity "somemapping"
-mappingtodelete | Remove-SPEnterpriseSearchCrawlMapping
+PS C:\> $mappingtodelete = Get-SPEnterpriseSearchCrawlContentSource -Identity "somemapping"
+PS C:\> mappingtodelete | Remove-SPEnterpriseSearchCrawlMapping
 ```
 
 This example removes a crawl mapping from a search application.

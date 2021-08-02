@@ -19,14 +19,14 @@ Enables an installed SharePoint Feature at the given scope.
 ## SYNTAX
 
 ### SiteFeature
-```powershell
-PS C:\> Enable-SPFeature [-Identity] <SPFeatureDefinitionPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+```
+Enable-SPFeature [-Identity] <SPFeatureDefinitionPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-Force] [-PassThru] [-Url <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### FarmFeatureDefinition
-```powershell
-PS C:\> Enable-SPFeature [-Identity] <SPFeatureDefinitionPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+```
+Enable-SPFeature [-Identity] <SPFeatureDefinitionPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-Force] [-PassThru] [-WhatIf] [-CompatibilityLevel <Int32>] [<CommonParameters>]
 ```
 
@@ -55,7 +55,7 @@ This example enables the "MyCustom" site scoped SharePoint Feature at https://so
 ### --------------EXAMPLE 2----------------- 
 ```powershell
 PS C:\> $w = Get-SPWeb https://somesite/myweb | ForEach{ $_.URL }
-Get-SPFeature -Web $w |%{ Enable-SPFeature -Identity $_ -URL $w}
+PS C:\> Get-SPFeature -Web $w |%{ Enable-SPFeature -Identity $_ -URL $w}
 ```
 
 This example enables all SharePoint Features in the subsite at https://somesite/myweb.

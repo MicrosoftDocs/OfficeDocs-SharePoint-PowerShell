@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication -Identity MySSA
-$ssa | Resume-SPEnterpriseSearchServiceApplication
+PS C:\> $ssa | Resume-SPEnterpriseSearchServiceApplication
 ```
 
 This example obtains a reference to a search service application named MySSA and then resumes it.

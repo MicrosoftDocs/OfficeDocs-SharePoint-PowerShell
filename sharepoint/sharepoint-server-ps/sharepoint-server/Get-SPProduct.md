@@ -21,13 +21,13 @@ Returns a list of the SharePoint-related products installed in the farm and the 
 ## SYNTAX
 
 ### Local
-```powershell
-PS C:\> Get-SPProduct [-AssignmentCollection <SPAssignmentCollection>] [-Local] [<CommonParameters>]
+```
+Get-SPProduct [-AssignmentCollection <SPAssignmentCollection>] [-Local] [<CommonParameters>]
 ```
 
 ### Server
-```powershell
-PS C:\> Get-SPProduct [-AssignmentCollection <SPAssignmentCollection>] [-Server <SPServerPipeBind>]
+```
+Get-SPProduct [-AssignmentCollection <SPAssignmentCollection>] [-Server <SPServerPipeBind>]
  [<CommonParameters>]
 ```
 

@@ -18,14 +18,14 @@ Returns a Secure Store application.
 ## SYNTAX
 
 ### NameSet
-```powershell
-PS C:\> Get-SPSecureStoreApplication -Name <String> -ServiceContext <SPServiceContextPipeBind>
+```
+Get-SPSecureStoreApplication -Name <String> -ServiceContext <SPServiceContextPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### AllSet
-```powershell
-PS C:\> Get-SPSecureStoreApplication -ServiceContext <SPServiceContextPipeBind>
+```
+Get-SPSecureStoreApplication -ServiceContext <SPServiceContextPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-All] [<CommonParameters>]
 ```
 

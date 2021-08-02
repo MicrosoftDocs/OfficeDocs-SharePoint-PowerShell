@@ -19,15 +19,15 @@ Creates a trust between a server to server principal.
 ## SYNTAX
 
 ### ImportCertificateParameterSet
-```powershell
-PS C:\> New-SPTrustedSecurityTokenIssuer [-Name] <String> -Certificate <X509Certificate2>
+```
+New-SPTrustedSecurityTokenIssuer [-Name] <String> -Certificate <X509Certificate2>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Description <String>] [-IsTrustBroker]
  [-RegisteredIssuerName <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### MetadataEndPointParameterSet
-```powershell
-PS C:\> New-SPTrustedSecurityTokenIssuer [-Name] <String> -MetadataEndPoint <Uri>
+```
+New-SPTrustedSecurityTokenIssuer [-Name] <String> -MetadataEndPoint <Uri>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Description <String>] [-IsTrustBroker]
  [-RegisteredIssuerName <String>] [-WhatIf] [<CommonParameters>]
 ```

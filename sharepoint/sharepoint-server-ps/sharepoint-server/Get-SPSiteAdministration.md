@@ -21,29 +21,29 @@ Returns a site administration object that allows farm administrators to view cer
 ## SYNTAX
 
 ### AllSitesInIdentity
-```powershell
-PS C:\> Get-SPSiteAdministration [-Identity] <SPSiteAdministrationPipeBind>
+```
+Get-SPSiteAdministration [-Identity] <SPSiteAdministrationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Filter <ScriptBlock>] [-Limit <String>] [-Regex]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### AllSitesInContentDB
-```powershell
-PS C:\> Get-SPSiteAdministration -ContentDatabase <SPContentDatabasePipeBind>
+```
+Get-SPSiteAdministration -ContentDatabase <SPContentDatabasePipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Filter <ScriptBlock>] [-Limit <String>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### AllSitesInSiteSubscription
-```powershell
-PS C:\> Get-SPSiteAdministration -SiteSubscription <SPSiteSubscriptionPipeBind>
+```
+Get-SPSiteAdministration -SiteSubscription <SPSiteSubscriptionPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Filter <ScriptBlock>] [-Limit <String>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### AllSitesInWebApplication
-```powershell
-PS C:\> Get-SPSiteAdministration [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Filter <ScriptBlock>]
+```
+Get-SPSiteAdministration [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Filter <ScriptBlock>]
  [-Limit <String>] [-WebApplication <SPWebApplicationPipeBind>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -69,9 +69,9 @@ This command uses the calculated property Storage to display the maximum storage
 ### ------------------EXAMPLE 2------------------ 
 ```powershell
 PS C:\> Start-SPAssignment -Global
-$s = Get-SPSiteAdministration -Identity https://MyApp/Sites/Site1
-$s.Url
-Stop-SPAssignment -Global
+PS C:\> $s = Get-SPSiteAdministration -Identity https://MyApp/Sites/Site1
+PS C:\> $s.Url
+PS C:\> Stop-SPAssignment -Global
 ```
 
 This example gets the site collections specified by the Identity parameter and inserts the results into the variable s.
@@ -82,8 +82,8 @@ Do not run a Get-SPSite command that returns many results while global assignmen
 ### ------------------EXAMPLE 3-------------------
 ```powershell
 PS C:\> $GC = Start-SPAssignment
-$Sites = $GC | Get-SPSiteAdministration -Filter {$_.Owner -eq "DOMAIN\JDoe"} -Limit 50
-Stop-SPAssignment $GC
+PS C:\> $Sites = $GC | Get-SPSiteAdministration -Filter {$_.Owner -eq "DOMAIN\JDoe"} -Limit 50
+PS C:\> Stop-SPAssignment $GC
 ```
 
 This example gets the first 50 sites owned by user DOMAIN\JDoe by using a server-side query, and assigns the returned sites to a local variable.

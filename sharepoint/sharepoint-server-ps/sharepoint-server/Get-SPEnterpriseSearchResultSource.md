@@ -36,8 +36,8 @@ If the Identity parameter is not specified, this cmdlet returns the result sourc
 ### --------------  Example 1: Get result source by name  -------------- 
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
-$owner = Get-SPEnterpriseSearchOwner -Level SSA
-Get-SPEnterpriseSearchResultSource -Identity "Local SharePoint Results" -SearchApplication $ssa -Owner $owner
+PS C:\> $owner = Get-SPEnterpriseSearchOwner -Level SSA
+PS C:\> Get-SPEnterpriseSearchResultSource -Identity "Local SharePoint Results" -SearchApplication $ssa -Owner $owner
 ```
 
 This example retrieves the search service application level result source with the name "Local SharePoint Results".
@@ -46,8 +46,8 @@ This example retrieves the search service application level result source with t
 ### --------------  Example 2: Get result source by id  -------------- 
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
-$owner = Get-SPEnterpriseSearchOwner -Level SSA
-Get-SPEnterpriseSearchResultSource -Identity 8413cd39-2156-4e00-b54d-11efd9abdB89 -SearchApplication $ssa -Owner $owner
+PS C:\> $owner = Get-SPEnterpriseSearchOwner -Level SSA
+PS C:\> Get-SPEnterpriseSearchResultSource -Identity 8413cd39-2156-4e00-b54d-11efd9abdB89 -SearchApplication $ssa -Owner $owner
 ```
 
 This example retrieves the search service application level result source with the id 8413cd39-2156-4e00-b54d-11efd9abdB89.
@@ -55,8 +55,8 @@ This example retrieves the search service application level result source with t
 ### --------------  Example 3: Get all result sources under SSA  -------------- 
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
-$owner = Get-SPEnterpriseSearchOwner -Level SSA
-Get-SPEnterpriseSearchResultSource -SearchApplication $ssa -Owner $owner
+PS C:\> $owner = Get-SPEnterpriseSearchOwner -Level SSA
+PS C:\> Get-SPEnterpriseSearchResultSource -SearchApplication $ssa -Owner $owner
 ```
 
 This example retrieves all the search service application level result sources.

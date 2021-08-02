@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 ## EXAMPLES
 
 ### ------------ Example 1 --------------------  
-```
+```powershell
 
 ```
 

@@ -39,8 +39,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### -------------EXAMPLE---------------- 
 ```powershell
 PS C:\> $fp = New-SPSiteSubscriptionFeaturePack
-Get-SPFeature -limit all | Where{ $_.Scope -eq "WEB" } | Add-SPSiteSubscriptionFeaturePackMember -id $fp
-$fp = Get-SPSiteSubscriptionFeaturePack $fp
+PS C:\> Get-SPFeature -limit all | Where{ $_.Scope -eq "WEB" } | Add-SPSiteSubscriptionFeaturePackMember -id $fp
+PS C:\> $fp = Get-SPSiteSubscriptionFeaturePack $fp
 ```
 
 This example creates a Feature set and adds all Web site scoped Features to the set.

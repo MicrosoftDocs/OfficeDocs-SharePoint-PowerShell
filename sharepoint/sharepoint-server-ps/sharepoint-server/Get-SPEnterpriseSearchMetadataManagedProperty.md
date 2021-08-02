@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------ 
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-Get-SPEnterpriseSearchMetadataManagedProperty -SearchApplication $ssa -Identity UserName
+PS C:\> Get-SPEnterpriseSearchMetadataManagedProperty -SearchApplication $ssa -Identity UserName
 ```
 
 This example retrieves the managed property UserName from the default search service application.

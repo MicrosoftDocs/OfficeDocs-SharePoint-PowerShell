@@ -19,8 +19,8 @@ Sets the identity providers of a Web application.
 ## SYNTAX
 
 ### ImportCertificateParameterSet
-```powershell
-PS C:\> Set-SPTrustedIdentityTokenIssuer [-Identity] <SPTrustedIdentityTokenIssuerPipeBind>
+```
+Set-SPTrustedIdentityTokenIssuer [-Identity] <SPTrustedIdentityTokenIssuerPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-ClaimProvider <SPClaimProviderPipeBind>]
  [-ClaimsMappings <SPClaimMappingPipeBind[]>] [-Description <String>]
  -ImportTrustCertificate <X509Certificate2> [-Realm <String>] [-SignInUrl <String>] [-UseWReply] [-Confirm]
@@ -28,8 +28,8 @@ PS C:\> Set-SPTrustedIdentityTokenIssuer [-Identity] <SPTrustedIdentityTokenIssu
 ```
 
 ### MetadataEndPointParameterSet
-```powershell
-PS C:\> Set-SPTrustedIdentityTokenIssuer [-Identity] <SPTrustedIdentityTokenIssuerPipeBind>
+```
+Set-SPTrustedIdentityTokenIssuer [-Identity] <SPTrustedIdentityTokenIssuerPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-ClaimProvider <SPClaimProviderPipeBind>]
  [-ClaimsMappings <SPClaimMappingPipeBind[]>] [-Description <String>] -MetadataEndPoint <Uri> [-Realm <String>]
  [-SignInUrl <String>] [-UseWReply] [-Confirm] [-RegisteredIssuerName <String>] [-WhatIf] [<CommonParameters>]
@@ -55,7 +55,7 @@ This example sets the identity provider to LiveIDSTS.
 ### -------------------------EXAMPLE 2----------------------
 ```powershell
 PS C:\> $ip = @( (Get-SPTrustedIdentityTokenIssuer "LiveID STS"), (New-SPTrustedIdentityTokenIssuer -ASPNetMembershipProvider "myMembershipProvider" -ASPNetRoleProvider "myRoleProvider"), (Get-SPTrustedIdentityTokenIssuer "NTLM")) )
-New-SPWebApplication https://contoso.com -IdentityProvider $ip
+PS C:\> New-SPWebApplication https://contoso.com -IdentityProvider $ip
 ```
 
 This example sets the identity provider using the .ASPNetMembership and Role parameters.

@@ -37,7 +37,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```powershell
 PS C:\> $applicationPool = GetServiceApplicationPool SettingsApplicationPool
 
-Get-SPServiceApplication -Name SettingsServiceApp | Set-SPSubscriptionSettingsServiceApplication -ApplicationPool $applicationPool
+PS C:\> Get-SPServiceApplication -Name SettingsServiceApp | Set-SPSubscriptionSettingsServiceApplication -ApplicationPool $applicationPool
 ```
 
 This example changes the application pool of the subscription settings service application.

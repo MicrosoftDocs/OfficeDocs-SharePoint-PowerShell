@@ -42,8 +42,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication -Identity "MySSA"
-$scope = Get-SPEnterpriseSearchQueryScope -Identity MustCrawl -SearchApplication $ssa
-Get-SPEnterpriseSearchQueryScopeRule -Scope $scope -Url https://criticalSite | Remove-SPEnterpriseSearchQueryScopeRule -Url https://criticalSite
+PS C:\> $scope = Get-SPEnterpriseSearchQueryScope -Identity MustCrawl -SearchApplication $ssa
+PS C:\> Get-SPEnterpriseSearchQueryScopeRule -Scope $scope -Url https://criticalSite | Remove-SPEnterpriseSearchQueryScopeRule -Url https://criticalSite
 ```
 
 This example removes a scope rule for the URL https://criticalSite from a search service application named MySSA.

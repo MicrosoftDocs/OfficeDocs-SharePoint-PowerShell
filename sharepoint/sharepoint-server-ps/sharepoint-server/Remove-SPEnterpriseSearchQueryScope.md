@@ -43,7 +43,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```powershell
 PS C:\> $ssa = Get-SPenterpriseSearchServiceApplication -Identity MySSA
-Get-SPEnterpriseSearchQueryScope -Identity MustCrawl -SearchApplication $ssa | Remove-SPEnterpriseSearchQueryScope
+PS C:\> Get-SPEnterpriseSearchQueryScope -Identity MustCrawl -SearchApplication $ssa | Remove-SPEnterpriseSearchQueryScope
 ```
 
 This example removes a scope named MustCrawl from a search service application named MySSA.

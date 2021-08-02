@@ -19,21 +19,21 @@ Removes bindings for applications, file name extensions and their associated act
 ## SYNTAX
 
 ### Identity
-```powershell
-PS C:\> Remove-SPWOPIBinding [[-Identity] <SPWopiBindingPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
+```
+Remove-SPWOPIBinding [[-Identity] <SPWopiBindingPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Filter
-```powershell
-PS C:\> Remove-SPWOPIBinding [-Action <String>] [-Application <String>]
+```
+Remove-SPWOPIBinding [-Action <String>] [-Application <String>]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Extension <String>] [-ProgId <String>]
  [-Server <String>] [-WhatIf] [-WOPIZone <String>] [<CommonParameters>]
 ```
 
 ### RemoveAll
-```powershell
-PS C:\> Remove-SPWOPIBinding [-All] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf]
+```
+Remove-SPWOPIBinding [-All] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 

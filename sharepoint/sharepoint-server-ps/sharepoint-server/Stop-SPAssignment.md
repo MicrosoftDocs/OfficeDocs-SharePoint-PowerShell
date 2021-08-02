@@ -36,9 +36,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```powershell
 PS C:\> Start-SPAssignment -global
-$w = Get-SPWeb https://MyWeb
-$w | Set-SPWeb -title "Accounting"
-Stop-SPAssignment -global
+PS C:\> $w = Get-SPWeb https://MyWeb
+PS C:\> $w | Set-SPWeb -title "Accounting"
+PS C:\> Stop-SPAssignment -global
 ```
 
 This example uses simple assignment.

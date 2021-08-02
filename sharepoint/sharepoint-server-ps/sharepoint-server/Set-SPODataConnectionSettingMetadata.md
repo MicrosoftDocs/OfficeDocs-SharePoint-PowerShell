@@ -18,16 +18,16 @@ ms.reviewer:
 ## SYNTAX
 
 ### Name (Default)
-```powershell
-PS C:\> Set-SPODataConnectionSettingMetadata -ServiceContext <SPServiceContextPipeBind> -Name <String>
+```
+Set-SPODataConnectionSettingMetadata -ServiceContext <SPServiceContextPipeBind> -Name <String>
  [-ServiceAddressMetadataURL <Uri>] [-AuthenticationMode <ODataAuthenticationMode>]
  [-SecureStoreTargetApplicationId <String>] [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### Identity
-```powershell
-PS C:\> Set-SPODataConnectionSettingMetadata -ServiceContext <SPServiceContextPipeBind>
+```
+Set-SPODataConnectionSettingMetadata -ServiceContext <SPServiceContextPipeBind>
  [-ServiceAddressMetadataURL <Uri>] [-AuthenticationMode <ODataAuthenticationMode>]
  [-SecureStoreTargetApplicationId <String>] [-Identity] <ODataConnectionSettings>
  [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]

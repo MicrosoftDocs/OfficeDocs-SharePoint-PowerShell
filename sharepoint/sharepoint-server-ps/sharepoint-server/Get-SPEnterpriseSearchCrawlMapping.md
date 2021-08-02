@@ -36,7 +36,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ###  ------ EXAMPLE ------
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication 'Search Service Application'
-Get-SPEnterpriseSearchCrawlMapping -SearchApplication $ssa
+PS C:\> Get-SPEnterpriseSearchCrawlMapping -SearchApplication $ssa
 ```
 
 This example returns the crawl mappings for the search application 'Search Service Application'.

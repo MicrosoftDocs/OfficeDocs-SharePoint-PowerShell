@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### --------------EXAMPLE 1-----------------
 ```powershell
 PS C:\> $db = New-SPStateServiceDatabase -Name 'StateSvcDB1'
-New-SPStateServiceApplication -Name 'State Service' -Database $db
+PS C:\> New-SPStateServiceApplication -Name 'State Service' -Database $db
 ```
 
 This example creates a new state service database and a state service application associated with the database.

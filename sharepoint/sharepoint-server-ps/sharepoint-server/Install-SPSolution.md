@@ -21,16 +21,16 @@ Deploys an installed SharePoint solution in the farm.
 ## SYNTAX
 
 ### Deploy
-```powershell
-PS C:\> Install-SPSolution [-Identity] <SPSolutionPipeBind> [-AllWebApplications]
+```
+Install-SPSolution [-Identity] <SPSolutionPipeBind> [-AllWebApplications]
  [-AssignmentCollection <SPAssignmentCollection>] [-CASPolicies] [-CompatibilityLevel <String>] [-Confirm]
  [-Force] [-FullTrustBinDeployment] [-GACDeployment] [-Language <UInt32>] [-Local] [-Time <String>]
  [-WebApplication <SPWebApplicationPipeBind>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Synchronize
-```powershell
-PS C:\> Install-SPSolution [[-Identity] <SPSolutionPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
+```
+Install-SPSolution [[-Identity] <SPSolutionPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-Language <UInt32>] [-Synchronize] [-WhatIf] [<CommonParameters>]
 ```
 

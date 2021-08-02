@@ -19,16 +19,16 @@ Sets the parameters of a site subscription.
 ## SYNTAX
 
 ### Default
-```powershell
-PS C:\> Set-SPSiteSubscriptionProfileConfig [-Identity] <SPSiteSubscriptionPipeBind>
+```
+Set-SPSiteSubscriptionProfileConfig [-Identity] <SPSiteSubscriptionPipeBind>
  [-MySiteHostLocation <SPSitePipeBind>] -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-SynchronizationOU <String>] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### MySiteSettings
-```powershell
-PS C:\> Set-SPSiteSubscriptionProfileConfig [-Identity] <SPSiteSubscriptionPipeBind>
+```
+Set-SPSiteSubscriptionProfileConfig [-Identity] <SPSiteSubscriptionPipeBind>
  -MySiteHostLocation <SPSitePipeBind> -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-MySiteManagedPath <SPPrefixPipeBind>]
  [-SiteNamingConflictResolution <String>] [-SynchronizationOU <String>] [-WhatIf] [<CommonParameters>]
@@ -49,7 +49,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### --------------------EXAMPLE---------------------
 ```powershell
 PS C:\> $sub = Get-SPSiteSubscription http://contoso/my
-Set-SPSiteSubscriptionProfileConfig -Identity $sub -SiteNamingConflictResolution 3 -SynchronizationOU OrgUnit1
+PS C:\> Set-SPSiteSubscriptionProfileConfig -Identity $sub -SiteNamingConflictResolution 3 -SynchronizationOU OrgUnit1
 ```
 
 This example sets the parameter of the site subscription SiteNamingConflictResolution to always avoid any conflicts and parameter SynchronizationOU to OrgUnit1.

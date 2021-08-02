@@ -38,7 +38,7 @@ PS C:\> site = Get-SPSite  HYPERLINK "https://<myspserver>" https:// <myspserver
 
 PS C:\> $subscription = $site.SiteSubscription
 
-Set-SPSiteSubscriptionIRMConfig -Identity $subscription -IrmEnabled -CertificateServerUrl https:// <rmsserver>
+PS C:\> Set-SPSiteSubscriptionIRMConfig -Identity $subscription -IrmEnabled -CertificateServerUrl https:// <rmsserver>
 ```
 
 This example enables IRM for the tenant and configures it to use the specified RMS server.
@@ -50,7 +50,7 @@ PS C:\> site = Get-SPSite  HYPERLINK "https://myspserver" https:// <myspserver>
 
 PS C:\> $subscription = $site.SiteSubscription
 
-Set- SPSiteSubscriptionIRMConfig -Identity $subscription -IrmEnabled:$false
+PS C:\> Set- SPSiteSubscriptionIRMConfig -Identity $subscription -IrmEnabled:$false
 ```
 
 This example disables IRM for the tenant.

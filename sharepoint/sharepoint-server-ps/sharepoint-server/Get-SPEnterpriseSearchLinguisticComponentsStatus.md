@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------ 
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-Get-SpEnterpriseSearchLinguisticComponentsStatus -SearchApplication $ssa
+PS C:\> Get-SpEnterpriseSearchLinguisticComponentsStatus -SearchApplication $ssa
 ```
 
 This example gets the current status of the linguistic query and document processing components from the default SearchServiceApplication.

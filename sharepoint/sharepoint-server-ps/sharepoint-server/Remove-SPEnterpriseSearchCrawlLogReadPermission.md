@@ -38,8 +38,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-$crawlLogPermission = Get-SPEnterpriseSearchCrawlLogReadPermission -SearchApplication $ssa -Tenant "00000000-0000-0000-0000-000000000001"
-Remove-SPEnterpriseSearchCrawlLogReadPermission -Identity $crawlLogPermission -UserNames "contoso\user1;contoso\user2"
+PS C:\> $crawlLogPermission = Get-SPEnterpriseSearchCrawlLogReadPermission -SearchApplication $ssa -Tenant "00000000-0000-0000-0000-000000000001"
+PS C:\> Remove-SPEnterpriseSearchCrawlLogReadPermission -Identity $crawlLogPermission -UserNames "contoso\user1;contoso\user2"
 ```
 
 This example removes user1 and user2 from the list of users referenced by $crawlLogPermission.

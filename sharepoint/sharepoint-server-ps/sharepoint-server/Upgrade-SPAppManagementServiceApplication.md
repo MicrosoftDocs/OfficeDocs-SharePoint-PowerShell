@@ -18,15 +18,15 @@ Do Not Use
 ## SYNTAX
 
 ### AppManagementSvcAppById
-```powershell
-PS C:\> Upgrade-SPAppManagementServiceApplication [[-Identity] <SPServiceApplicationPipeBind>]
+```
+Upgrade-SPAppManagementServiceApplication [[-Identity] <SPServiceApplicationPipeBind>]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-DatabaseIds <Guid[]>] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### AppManagementSvcAppByName
-```powershell
-PS C:\> Upgrade-SPAppManagementServiceApplication [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+```
+Upgrade-SPAppManagementServiceApplication [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-DatabaseIds <Guid[]>] [-Name <String>] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -36,7 +36,7 @@ Do Not Use
 ## EXAMPLES
 
 ### --------------EXAMPLE-----------------
-```
+```powershell
 Do Not Use
 ```
 

@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-Remove-SPEnterpriseSearchTenantConfiguration -SiteSubscriptionId "00000000-0000-0000-0000-000000000001" -SearchApplication $ssa
+PS C:\> Remove-SPEnterpriseSearchTenantConfiguration -SiteSubscriptionId "00000000-0000-0000-0000-000000000001" -SearchApplication $ssa
 ```
 
 This example uses Remove-SPEnterpriseSearchTenantConfiguration to remove all tenant specific settings from the search service application referenced by $ssa.

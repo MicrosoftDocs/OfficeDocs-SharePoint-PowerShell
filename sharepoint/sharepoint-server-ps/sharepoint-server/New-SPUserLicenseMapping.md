@@ -19,28 +19,28 @@ Creates a license mapping object.
 ## SYNTAX
 
 ### TrustIdentity
-```powershell
-PS C:\> New-SPUserLicenseMapping -Claim <SPClaim> -License <String> [-AssignmentCollection <SPAssignmentCollection>]
+```
+New-SPUserLicenseMapping -Claim <SPClaim> -License <String> [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-WebApplication <SPWebApplicationPipeBind>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### ClaimsValues
-```powershell
-PS C:\> New-SPUserLicenseMapping -ClaimType <String> -License <String> -OriginalIssuer <String> -Value <String>
+```
+New-SPUserLicenseMapping -ClaimType <String> -License <String> -OriginalIssuer <String> -Value <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-ValueType <String>]
  [-WebApplication <SPWebApplicationPipeBind>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### FormsAuth
-```powershell
-PS C:\> New-SPUserLicenseMapping -License <String> -Role <String> -RoleProviderName <String>
+```
+New-SPUserLicenseMapping -License <String> -Role <String> -RoleProviderName <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WebApplication <SPWebApplicationPipeBind>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### WindowsAuth
-```powershell
-PS C:\> New-SPUserLicenseMapping -License <String> -SecurityGroup <String>
+```
+New-SPUserLicenseMapping -License <String> -SecurityGroup <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WebApplication <SPWebApplicationPipeBind>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -64,7 +64,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ----------------------- EXAMPLE---------------------------)
 ```powershell
 PS C:\> $a = New-SPUserLicenseMapping -SecurityGroup EntSecGroup -License Enterprise
-$a | Add-SPUserLicenseMapping
+PS C:\> $a | Add-SPUserLicenseMapping
 ```
 
 This example creates a license mapping object for the Active Directory secured group named 'EntSecGroup' and then pipes the result to the `Add-SPUserLicenseMapping` cmdlet.

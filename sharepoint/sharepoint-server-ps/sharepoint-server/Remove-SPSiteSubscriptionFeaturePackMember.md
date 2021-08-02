@@ -19,15 +19,15 @@ Removes a feature definition from the provided SharePoint Feature set.
 ## SYNTAX
 
 ### AllFeatureDefinitions
-```powershell
-PS C:\> Remove-SPSiteSubscriptionFeaturePackMember [-Identity] <SPSiteSubscriptionFeaturePackPipeBind>
+```
+Remove-SPSiteSubscriptionFeaturePackMember [-Identity] <SPSiteSubscriptionFeaturePackPipeBind>
  [-AllFeatureDefinitions] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### SingleFeatureDefinition
-```powershell
-PS C:\> Remove-SPSiteSubscriptionFeaturePackMember [-Identity] <SPSiteSubscriptionFeaturePackPipeBind>
+```
+Remove-SPSiteSubscriptionFeaturePackMember [-Identity] <SPSiteSubscriptionFeaturePackPipeBind>
  -FeatureDefinition <SPFeatureDefinitionPipeBind> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -49,7 +49,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```powershell
 PS C:\> $FS = Get-SPSiteSubscriptionFeaturePack "30daa535-b0fe-4d10-84b0-fb04029d161a"
 
-Remove-SPSiteSubscriptionFeaturePackMember -Identity $fs -FeatureDefinition (Get-SPFeature "PublishingSite")
+PS C:\> Remove-SPSiteSubscriptionFeaturePackMember -Identity $fs -FeatureDefinition (Get-SPFeature "PublishingSite")
 ```
 
 This example removes the PublishingSite feature from the Feature set that has ID 30daa535-b0fe-4d10-84b0-fb04029d161a.

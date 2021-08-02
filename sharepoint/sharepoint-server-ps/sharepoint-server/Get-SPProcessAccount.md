@@ -21,18 +21,18 @@ Returns a system account or a managed account.
 ## SYNTAX
 
 ### LocalService
-```powershell
-PS C:\> Get-SPProcessAccount [-AssignmentCollection <SPAssignmentCollection>] [-LocalService] [<CommonParameters>]
+```
+Get-SPProcessAccount [-AssignmentCollection <SPAssignmentCollection>] [-LocalService] [<CommonParameters>]
 ```
 
 ### LocalSystem
-```powershell
-PS C:\> Get-SPProcessAccount [-AssignmentCollection <SPAssignmentCollection>] [-LocalSystem] [<CommonParameters>]
+```
+Get-SPProcessAccount [-AssignmentCollection <SPAssignmentCollection>] [-LocalSystem] [<CommonParameters>]
 ```
 
 ### NetworkService
-```powershell
-PS C:\> Get-SPProcessAccount [-AssignmentCollection <SPAssignmentCollection>] [-NetworkService] [<CommonParameters>]
+```
+Get-SPProcessAccount [-AssignmentCollection <SPAssignmentCollection>] [-NetworkService] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

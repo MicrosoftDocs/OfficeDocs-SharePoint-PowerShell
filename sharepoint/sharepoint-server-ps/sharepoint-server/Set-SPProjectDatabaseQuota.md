@@ -18,14 +18,14 @@ Microsoft internal use only.
 ## SYNTAX
 
 ### settings
-```powershell
-PS C:\> Set-SPProjectDatabaseQuota [-Settings] <ProjectDatabaseQuotaSettings> -Url <Uri>
+```
+Set-SPProjectDatabaseQuota [-Settings] <ProjectDatabaseQuotaSettings> -Url <Uri>
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### options
-```powershell
-PS C:\> Set-SPProjectDatabaseQuota [-Enabled] -MaxDbSize <Int32> -ReadOnlyLimit <Int32>
+```
+Set-SPProjectDatabaseQuota [-Enabled] -MaxDbSize <Int32> -ReadOnlyLimit <Int32>
  -ReadOnlyWarningThreshold <Int32> -Url <Uri> [-AssignmentCollection <SPAssignmentCollection>]
  [<CommonParameters>]
 ```
@@ -39,8 +39,8 @@ For permissions and the most current information about Windows PowerShell for Pr
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
-```
- {{ Add example code here }}
+```powershell
+PS C:\>  {{ Add example code here }}
 ```
 
 {{ Add example description here }}

@@ -36,7 +36,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE-----------------
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-New-SPEnterpriseSearchQueryDemoted -Url https://examplesite -SearchApplication $ssa
+PS C:\> New-SPEnterpriseSearchQueryDemoted -Url https://examplesite -SearchApplication $ssa
 ```
 
 This example adds a demoted site rule for the URL https://examplesite.com to a search service application.

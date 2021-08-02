@@ -19,8 +19,8 @@ Creates a new managed metadata service application.
 ## SYNTAX
 
 ### NoQuota
-```powershell
-PS C:\> New-SPMetadataServiceApplication -Name <String> [-AdministratorAccount <String>]
+```
+New-SPMetadataServiceApplication -Name <String> [-AdministratorAccount <String>]
  -ApplicationPool <SPIisWebServiceApplicationPoolPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-CacheTimeCheckInterval <Int32>] [-Confirm] [-DatabaseCredentials <PSCredential>] [-DatabaseName <String>]
  [-DatabaseServer <String>] [-FailoverDatabaseServer <String>] [-FullAccessAccount <String>] [-HubUri <String>]
@@ -30,8 +30,8 @@ PS C:\> New-SPMetadataServiceApplication -Name <String> [-AdministratorAccount <
 ```
 
 ### Quota
-```powershell
-PS C:\> New-SPMetadataServiceApplication -Name <String> [-AdministratorAccount <String>]
+```
+New-SPMetadataServiceApplication -Name <String> [-AdministratorAccount <String>]
  -ApplicationPool <SPIisWebServiceApplicationPoolPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-CacheTimeCheckInterval <Int32>] [-Confirm] [-DatabaseCredentials <PSCredential>] [-DatabaseName <String>]
  [-DatabaseServer <String>] [-FailoverDatabaseServer <String>] [-FullAccessAccount <String>] [-HubUri <String>]

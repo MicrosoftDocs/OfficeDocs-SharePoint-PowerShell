@@ -19,15 +19,15 @@ Deletes a site subscription from a User Profile Service application.
 ## SYNTAX
 
 ### Default
-```powershell
-PS C:\> Remove-SPSiteSubscriptionProfileConfig [-Identity] <SPSiteSubscriptionPipeBind>
+```
+Remove-SPSiteSubscriptionProfileConfig [-Identity] <SPSiteSubscriptionPipeBind>
  -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### ServiceContext
-```powershell
-PS C:\> Remove-SPSiteSubscriptionProfileConfig -ServiceContext <SPServiceContextPipeBind>
+```
+Remove-SPSiteSubscriptionProfileConfig -ServiceContext <SPServiceContextPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -42,8 +42,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ----------------EXAMPLE-----------------
 ```powershell
 PS C:\> $sub = Get-SPSiteSubscription https://contoso/my
-$pr = Get-SPServiceApplicationProxy | ?{$_.DisplayName.Contains(PartitionedUserProfileApplication_Proxy)}
-Remove-SPSiteSubscriptionProfileConfig -Identity $sub -ProfileServiceApplicationProxy $pr
+PS C:\> $pr = Get-SPServiceApplicationProxy | ?{$_.DisplayName.Contains(PartitionedUserProfileApplication_Proxy)}
+PS C:\> Remove-SPSiteSubscriptionProfileConfig -Identity $sub -ProfileServiceApplicationProxy $pr
 ```
 
 This example removes tenant data.

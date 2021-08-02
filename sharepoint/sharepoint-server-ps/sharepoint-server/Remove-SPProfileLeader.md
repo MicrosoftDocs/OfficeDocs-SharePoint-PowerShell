@@ -39,7 +39,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### -----------------------EXAMPLE-----------------------------
 ```powershell
 PS C:\> $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
-Remove-SPProfileLeader -ProfileServiceApplicationProxy $proxy -Name "contoso\janedow"
+PS C:\> Remove-SPProfileLeader -ProfileServiceApplicationProxy $proxy -Name "contoso\janedow"
 ```
 
 This example removes the user "Jane Dow" from the leaders list for a specific user profile service application.

@@ -43,7 +43,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------ 
 ```powershell
 PS C:\> Connect-SPConfigurationDatabase -DatabaseServer "ServerName\InstanceName" -DatabaseName "SharePointConfigurationDatabaseName" -Passphrase (ConvertTo-SecureString "MyP@ssw0rd" -AsPlainText -Force)
-Start-Service SPTimerv4
+PS C:\> Start-Service SPTimerv4
 ```
 
 This example joins the local server computer to a farm that is configured to use the database SharePointConfigurationDatabase on an instance of SQL Server by using the name ServerName\InstanceName with the passphrase MyP@ssw0rd.

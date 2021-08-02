@@ -47,8 +47,8 @@ For permissions and the most current information about Windows PowerShell for Pr
 ## EXAMPLES
 
 ### --------------------EXAMPLE--------------------- 
-```
-Disable-SPProjectActiveDirectoryEnterpriseResourcePoolSync https://localhost/pwa
+```powershell
+PS C:\> Disable-SPProjectActiveDirectoryEnterpriseResourcePoolSync https://localhost/pwa
 ```
 
 This example disables Timer Job execution of the Active Directory Enterprise Resource Pool synchronization on https://localhost/pwa.

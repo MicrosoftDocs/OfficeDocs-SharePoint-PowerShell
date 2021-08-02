@@ -18,16 +18,16 @@ Do not use.
 ## SYNTAX
 
 ### SiteSubscription
-```powershell
-PS C:\> Migrate-SPDatabase [-Identity] <SPDatabasePipeBind> [-DestinationDatabase] <SPContentDatabasePipeBind>
+```
+Migrate-SPDatabase [-Identity] <SPDatabasePipeBind> [-DestinationDatabase] <SPContentDatabasePipeBind>
  [-SiteSubscription] <SPSiteSubscriptionPipeBind> [-ServiceType] <ServiceExtensionType> [-Overwrite]
  [-UseLinkedSqlServer] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### SiteCollection
-```powershell
-PS C:\> Migrate-SPDatabase [-Identity] <SPDatabasePipeBind> [-SiteCollection] <SPSitePipeBind>
+```
+Migrate-SPDatabase [-Identity] <SPDatabasePipeBind> [-SiteCollection] <SPSitePipeBind>
  [-ServiceType] <ServiceExtensionType> [-Overwrite] [-UseLinkedSqlServer]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -38,8 +38,8 @@ Do not use.
 ## EXAMPLES
 
 ### ------------Example 1 -----------
-```
-#Do not use.
+```powershell
+PS C:\> #Do not use.
 ```
 
 Do not use.

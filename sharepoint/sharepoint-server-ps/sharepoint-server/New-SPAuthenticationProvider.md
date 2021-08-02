@@ -21,20 +21,20 @@ Creates a new authentication provider in the farm.
 ## SYNTAX
 
 ### Forms
-```powershell
-PS C:\> New-SPAuthenticationProvider -ASPNETMembershipProvider <String> -ASPNETRoleProviderName <String>
+```
+New-SPAuthenticationProvider -ASPNETMembershipProvider <String> -ASPNETRoleProviderName <String>
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### Trusted
-```powershell
-PS C:\> New-SPAuthenticationProvider -TrustedIdentityTokenIssuer <SPTrustedIdentityTokenIssuerPipeBind>
+```
+New-SPAuthenticationProvider -TrustedIdentityTokenIssuer <SPTrustedIdentityTokenIssuerPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### Windows
-```powershell
-PS C:\> New-SPAuthenticationProvider [-AllowAnonymous] [-AssignmentCollection <SPAssignmentCollection>]
+```
+New-SPAuthenticationProvider [-AllowAnonymous] [-AssignmentCollection <SPAssignmentCollection>]
  [-DisableKerberos] [-UseBasicAuthentication] [-UseWindowsIntegratedAuthentication] [<CommonParameters>]
 ```
 
@@ -58,7 +58,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ---------------------------EXAMPLE1------------------ 
 ```powershell
 PS C:\> $ap = New-SPAuthenticationProvider -UseWindowsIntegratedAuthentication
-Set-SPWebApplication -Name "Claims Windows Web App" -ApplicationPool "Claims App Pool" -ApplicationPoolAccount "redmond\appool" -Url http://<servername> -Port 80 -AuthenticationProvider $ap
+PS C:\> Set-SPWebApplication -Name "Claims Windows Web App" -ApplicationPool "Claims App Pool" -ApplicationPoolAccount "redmond\appool" -Url http://<servername> -Port 80 -AuthenticationProvider $ap
 ```
 
 This example creates a Windows claims authentication provider.
@@ -66,7 +66,7 @@ This example creates a Windows claims authentication provider.
 ### ---------------------------EXAMPLE2------------------ 
 ```powershell
 PS C:\> $ap = New-SPAuthenticationProvider -ASPNETMembershipProvider "membership" -ASPNETRoleProviderName "rolemanager"
-Set-SPWebApplication -Name "Claims Windows Web App" -ApplicationPool "Claims App Pool" -ApplicationPoolAccount "redmond\appool" -Url http://<servername> -Port 80 -AuthenticationProvider $ap
+PS C:\> Set-SPWebApplication -Name "Claims Windows Web App" -ApplicationPool "Claims App Pool" -ApplicationPoolAccount "redmond\appool" -Url http://<servername> -Port 80 -AuthenticationProvider $ap
 ```
 
 This example creates an authentication provider that is based on the ASP.NET membership role provider.
@@ -74,7 +74,7 @@ This example creates an authentication provider that is based on the ASP.NET mem
 ### ---------------------------EXAMPLE3------------------ 
 ```powershell
 PS C:\> $ap = New-SPAuthenticationProvider -TrustedIdentityTokenIssuer | Get-SPTrustedIdentityTokenIssuer "LiveIDSTS"
-Set-SPWebApplication -Name "Claims Windows Web App" -ApplicationPool "Claims App Pool" -ApplicationPoolAccount "redmond\appool" -Url http://<servername> -Port 80 -AuthenticationProvider $ap
+PS C:\> Set-SPWebApplication -Name "Claims Windows Web App" -ApplicationPool "Claims App Pool" -ApplicationPoolAccount "redmond\appool" -Url http://<servername> -Port 80 -AuthenticationProvider $ap
 ```
 
 This example creates a trusted token issuer authentication provider.

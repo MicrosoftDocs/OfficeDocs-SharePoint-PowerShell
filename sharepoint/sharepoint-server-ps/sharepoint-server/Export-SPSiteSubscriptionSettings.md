@@ -43,7 +43,7 @@ The example backs up the subscription settings store of https://siteCollection.
 ### --------------EXAMPLE 2----------------- 
 ```powershell
 PS C:\> $site = Get-SPSite https://siteCollection
-Export-SPSiteSubscriptionSettings -Identity $site.SiteSubscription -Path "C:\siteCollection_sitesubscriptionsettings.txt"
+PS C:\> Export-SPSiteSubscriptionSettings -Identity $site.SiteSubscription -Path "C:\siteCollection_sitesubscriptionsettings.txt"
 ```
 
 The example backs up the subscription settings store of https://siteCollection using the Site Subscription object.

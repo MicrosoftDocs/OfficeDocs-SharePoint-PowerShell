@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------ 
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-New-SPEnterpriseSearchCrawlCustomConnector -SearchApplication $ssa -ModelFilePath \\models\myFileTypeModel.mft -Protocol "mftml://"
+PS C:\> New-SPEnterpriseSearchCrawlCustomConnector -SearchApplication $ssa -ModelFilePath \\models\myFileTypeModel.mft -Protocol "mftml://"
 ```
 
 This example creates a custom connector for a file type whose model is located at \\\\models\myFileTypeModel.mft and has the protocol name mftml://.

@@ -39,7 +39,7 @@ PS C:\> $rm=Get-SPRequestManagementSettings -Identity $web
 
 PS C:\> $pool=Get-SPRoutingMachinePool -RequestManagementSettings $rm
 
-Remove-SPRoutingMachinePool -Identity $pool
+PS C:\> Remove-SPRoutingMachinePool -Identity $pool
 ```
 
 This example removes a routing pool for the specified identity by using the $pool variable.

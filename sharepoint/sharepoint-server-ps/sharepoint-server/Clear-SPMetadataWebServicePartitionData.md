@@ -18,15 +18,15 @@ Removes all data for a site subscription on a metadata Web service application.
 ## SYNTAX
 
 ### Default
-```powershell
-PS C:\> Clear-SPMetadataWebServicePartitionData [-Identity] <SPSiteSubscriptionPipeBind>
+```
+Clear-SPMetadataWebServicePartitionData [-Identity] <SPSiteSubscriptionPipeBind>
  [-ServiceProxy] <SPMetadataServiceProxyCmdletPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-FromContentDatabase <SPContentDatabasePipeBind>] [-FromServiceDatabase] [<CommonParameters>]
 ```
 
 ### ServiceContext
-```powershell
-PS C:\> Clear-SPMetadataWebServicePartitionData [-ServiceProxy] <SPMetadataServiceProxyCmdletPipeBind>
+```
+Clear-SPMetadataWebServicePartitionData [-ServiceProxy] <SPMetadataServiceProxyCmdletPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] -ServiceContext <SPServiceContextPipeBind>
  [-FromContentDatabase <SPContentDatabasePipeBind>] [-FromServiceDatabase] [<CommonParameters>]
 ```

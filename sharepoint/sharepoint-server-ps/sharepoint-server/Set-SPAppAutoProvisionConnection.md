@@ -19,29 +19,29 @@ Sets provision connection settings for an app.
 ## SYNTAX
 
 ### WebHostEndPoint
-```powershell
-PS C:\> Set-SPAppAutoProvisionConnection -ConnectionType <ConnectionTypes> -EndPoint <String>
+```
+Set-SPAppAutoProvisionConnection -ConnectionType <ConnectionTypes> -EndPoint <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-SiteSubscription <SPSiteSubscriptionPipeBind>]
  [<CommonParameters>]
 ```
 
 ### WebHostSetup
-```powershell
-PS C:\> Set-SPAppAutoProvisionConnection -ConnectionType <ConnectionTypes> -EndPoint <String> -Password <String>
+```
+Set-SPAppAutoProvisionConnection -ConnectionType <ConnectionTypes> -EndPoint <String> -Password <String>
  -Username <String> [-AssignmentCollection <SPAssignmentCollection>]
  [-SiteSubscription <SPSiteSubscriptionPipeBind>] [<CommonParameters>]
 ```
 
 ### WebHostCredential
-```powershell
-PS C:\> Set-SPAppAutoProvisionConnection -ConnectionType <ConnectionTypes> -Password <String> -Username <String>
+```
+Set-SPAppAutoProvisionConnection -ConnectionType <ConnectionTypes> -Password <String> -Username <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-SiteSubscription <SPSiteSubscriptionPipeBind>]
  [<CommonParameters>]
 ```
 
 ### Remove
-```powershell
-PS C:\> Set-SPAppAutoProvisionConnection [-Remove] [-AssignmentCollection <SPAssignmentCollection>]
+```
+Set-SPAppAutoProvisionConnection [-Remove] [-AssignmentCollection <SPAssignmentCollection>]
  [-SiteSubscription <SPSiteSubscriptionPipeBind>] [<CommonParameters>]
 ```
 
@@ -69,7 +69,7 @@ This example configures remote web host to be used provision apps that use this 
 ```powershell
 PS C:\> $subscription = Get-SPSiteSubscription https://Contoso.com
 
-Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost -Password passname -Username <username> -SiteSubscription $subscription
+PS C:\> Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost -Password passname -Username <username> -SiteSubscription $subscription
 ```
 
 This example configures remote web host to be used provision apps that use this functionality for the site subscription of Contoso.com site to server on https://SPremotewebhost.

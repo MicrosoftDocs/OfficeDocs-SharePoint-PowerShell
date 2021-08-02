@@ -21,14 +21,14 @@ Retrieves available SharePoint Feature sets or the Feature set assigned to a giv
 ## SYNTAX
 
 ### FeaturePack
-```powershell
-PS C:\> Get-SPSiteSubscriptionFeaturePack [[-Identity] <SPSiteSubscriptionFeaturePackPipeBind>]
+```
+Get-SPSiteSubscriptionFeaturePack [[-Identity] <SPSiteSubscriptionFeaturePackPipeBind>]
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### SiteSubscription
-```powershell
-PS C:\> Get-SPSiteSubscriptionFeaturePack [-AssignmentCollection <SPAssignmentCollection>]
+```
+Get-SPSiteSubscriptionFeaturePack [-AssignmentCollection <SPAssignmentCollection>]
  [-SiteSubscription <SPSiteSubscriptionPipeBind>] [<CommonParameters>]
 ```
 

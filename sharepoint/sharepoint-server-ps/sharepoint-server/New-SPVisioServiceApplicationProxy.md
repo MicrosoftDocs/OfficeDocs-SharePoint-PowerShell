@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### --------------------EXAMPLE------------------------
 ```powershell
 PS C:\> $sa = New-SPVisioServiceApplication -Identity 'Visio Graphics Service Application' -ApplicationPool 'SharePoint Web Services Default'
-New-SPVisioServiceApplicationProxy -Identity 'Visio Graphics Service Application Proxy' -ServiceApplication $sa
+PS C:\> New-SPVisioServiceApplicationProxy -Identity 'Visio Graphics Service Application Proxy' -ServiceApplication $sa
 ```
 
 This example creates a new Visio Services application proxy connected to a Visio Services application.

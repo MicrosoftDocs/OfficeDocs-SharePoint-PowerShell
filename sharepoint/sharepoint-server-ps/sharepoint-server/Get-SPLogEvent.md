@@ -21,15 +21,15 @@ Returns results from a Unified Logging Service (ULS) trace log.
 ## SYNTAX
 
 ### Directory
-```powershell
-PS C:\> Get-SPLogEvent [-AssignmentCollection <SPAssignmentCollection>] [-AsString] [-ContextKey <String[]>]
+```
+Get-SPLogEvent [-AssignmentCollection <SPAssignmentCollection>] [-AsString] [-ContextKey <String[]>]
  [-Directory <String>] [-MinimumLevel <String>] [-EndTime <DateTime>] [-StartTime <DateTime>]
  [<CommonParameters>]
 ```
 
 ### File
-```powershell
-PS C:\> Get-SPLogEvent [-AssignmentCollection <SPAssignmentCollection>] [-AsString] [-ContextKey <String[]>]
+```
+Get-SPLogEvent [-AssignmentCollection <SPAssignmentCollection>] [-AsString] [-ContextKey <String[]>]
  [-MinimumLevel <String>] [-EndTime <DateTime>] [-File <String>] [-StartTime <DateTime>] [<CommonParameters>]
 ```
 

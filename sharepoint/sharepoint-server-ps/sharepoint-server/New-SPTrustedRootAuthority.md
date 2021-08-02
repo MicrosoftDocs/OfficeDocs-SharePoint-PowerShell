@@ -16,14 +16,14 @@ Creates a trusted root authority.
 ## SYNTAX
 
 ### ManualUpdateCertificateParameterSet
-```powershell
-PS C:\> New-SPTrustedRootAuthority [-Name] <String> -Certificate <X509Certificate2>
+```
+New-SPTrustedRootAuthority [-Name] <String> -Certificate <X509Certificate2>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### MetadataEndPointParameterSet
-```powershell
-PS C:\> New-SPTrustedRootAuthority [-Name] <String> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+```
+New-SPTrustedRootAuthority [-Name] <String> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  -MetadataEndPoint <Uri> [-WhatIf] [<CommonParameters>]
 ```
 
@@ -39,7 +39,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```powershell
 PS C:\> $cert = Get-PfxCertificate C:\LiveIDSigningCert.pfx
-New-SPTrustedRootAuthority -Name "WFEFarm1" -Certificate $cert
+PS C:\> New-SPTrustedRootAuthority -Name "WFEFarm1" -Certificate $cert
 ```
 
 This example creates a new trusted root authority, WFEFarm1.

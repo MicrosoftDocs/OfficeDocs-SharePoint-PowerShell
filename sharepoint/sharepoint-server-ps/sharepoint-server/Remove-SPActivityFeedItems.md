@@ -33,7 +33,7 @@ Use the Remove-SPActivityFeedItems cmdlet to remove an activity event.
 ### ------------------EXAMPLE------------------
 ```powershell
 PS C:\> $upaProxy = Get-SPServiceApplicationProxy 1232b6f7-b9ff-99ad-0cd0-fg1g67h981aq
-$upaProxy = Get-SPServiceApplicationProxy 1232b6f7-b9ff-99ad-0cd0-fg1g67h981aq
+PS C:\> $upaProxy = Get-SPServiceApplicationProxy 1232b6f7-b9ff-99ad-0cd0-fg1g67h981aq
 ```
 
 This example removes the specific user profile service application.

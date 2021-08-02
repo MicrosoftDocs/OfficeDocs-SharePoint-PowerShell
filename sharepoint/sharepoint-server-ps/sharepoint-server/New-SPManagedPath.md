@@ -19,14 +19,14 @@ Creates a new managed path for the given Web application for all host header sit
 ## SYNTAX
 
 ### HostHeader
-```powershell
-PS C:\> New-SPManagedPath [-RelativeURL] <String> [-HostHeader] [-AssignmentCollection <SPAssignmentCollection>]
+```
+New-SPManagedPath [-RelativeURL] <String> [-HostHeader] [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-Explicit] [-WhatIf] [<CommonParameters>]
 ```
 
 ### WebApplication
-```powershell
-PS C:\> New-SPManagedPath [-RelativeURL] <String> -WebApplication <SPWebApplicationPipeBind>
+```
+New-SPManagedPath [-RelativeURL] <String> -WebApplication <SPWebApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Explicit] [-WhatIf] [<CommonParameters>]
 ```
 

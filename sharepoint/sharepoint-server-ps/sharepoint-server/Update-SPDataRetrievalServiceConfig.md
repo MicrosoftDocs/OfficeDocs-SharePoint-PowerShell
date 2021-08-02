@@ -18,16 +18,16 @@ This cmdlet configures settings for data retrieval services.
 ## SYNTAX
 
 ### WebApplication
-```powershell
-PS C:\> Update-SPDataRetrievalServiceConfig [-WebApplication] <SPWebApplicationPipeBind> [-Inherit] [-Enable <Boolean>]
+```
+Update-SPDataRetrievalServiceConfig [-WebApplication] <SPWebApplicationPipeBind> [-Inherit] [-Enable <Boolean>]
  [-LimitResponseSize <Int32>] [-EnableUpdateSupport <Boolean>] [-DataSourceTimeout <Int32>]
  [-EnableDataSourceControls <Boolean>] [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### Farm
-```powershell
-PS C:\> Update-SPDataRetrievalServiceConfig [-Farm] [-Enable <Boolean>] [-LimitResponseSize <Int32>]
+```
+Update-SPDataRetrievalServiceConfig [-Farm] [-Enable <Boolean>] [-LimitResponseSize <Int32>]
  [-EnableUpdateSupport <Boolean>] [-DataSourceTimeout <Int32>] [-EnableDataSourceControls <Boolean>]
  [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```

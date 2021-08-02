@@ -19,16 +19,16 @@ Resumes a failed database upgrade or begins a build-to-build database upgrade.
 ## SYNTAX
 
 ### ContentDatabaseById
-```powershell
-PS C:\> Upgrade-SPContentDatabase [-Identity] <SPContentDatabasePipeBind> [-ForceDeleteLock]
+```
+Upgrade-SPContentDatabase [-Identity] <SPContentDatabasePipeBind> [-ForceDeleteLock]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-NoB2BSiteUpgrade]
  [-ServerInstance <SPDatabaseServiceInstancePipeBind>] [-SkipIntegrityChecks] [-UseSnapshot] [-WhatIf]
  [-AllowUnattached] [-SkipSiteUpgrade] [<CommonParameters>]
 ```
 
 ### ContentDatabaseByName
-```powershell
-PS C:\> Upgrade-SPContentDatabase [-ForceDeleteLock] -Name <String> -WebApplication <SPWebApplicationPipeBind>
+```
+Upgrade-SPContentDatabase [-ForceDeleteLock] -Name <String> -WebApplication <SPWebApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-NoB2BSiteUpgrade]
  [-ServerInstance <SPDatabaseServiceInstancePipeBind>] [-SkipIntegrityChecks] [-UseSnapshot] [-WhatIf]
  [-AllowUnattached] [-SkipSiteUpgrade] [<CommonParameters>]

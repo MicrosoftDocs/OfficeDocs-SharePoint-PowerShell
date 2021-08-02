@@ -3,7 +3,7 @@ external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
 module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/add-spcertificatenotificationcontact
 applicable: SharePoint Server Subscription Edition
-title: Clear-SPCertificateNotificationContact
+title: Add-SPCertificateNotificationContact
 schema: 2.0.0
 author:
 ms.author:

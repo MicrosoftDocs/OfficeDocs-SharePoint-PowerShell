@@ -19,8 +19,8 @@ Sets the properties of a crawl content source for a Search service application.
 ## SYNTAX
 
 ### MonthlyDate
-```powershell
-PS C:\> Set-SPEnterpriseSearchCrawlContentSource [-Identity] <ContentSourcePipeBind>
+```
+Set-SPEnterpriseSearchCrawlContentSource [-Identity] <ContentSourcePipeBind>
  [-AssignmentCollection <SPAssignmentCollection>]
  [-BDCApplicationProxyGroup <SPServiceApplicationProxyGroupPipeBind>] [-Confirm]
  [-CrawlPriority <CrawlPriority>] [-CrawlScheduleDaysOfMonth <Int32>]
@@ -33,8 +33,8 @@ PS C:\> Set-SPEnterpriseSearchCrawlContentSource [-Identity] <ContentSourcePipeB
 ```
 
 ### Weekly
-```powershell
-PS C:\> Set-SPEnterpriseSearchCrawlContentSource [-Identity] <ContentSourcePipeBind>
+```
+Set-SPEnterpriseSearchCrawlContentSource [-Identity] <ContentSourcePipeBind>
  [-AssignmentCollection <SPAssignmentCollection>]
  [-BDCApplicationProxyGroup <SPServiceApplicationProxyGroupPipeBind>] [-Confirm]
  [-CrawlPriority <CrawlPriority>] [-CrawlScheduleDaysOfWeek <DaysOfWeek>]
@@ -47,8 +47,8 @@ PS C:\> Set-SPEnterpriseSearchCrawlContentSource [-Identity] <ContentSourcePipeB
 ```
 
 ### Daily
-```powershell
-PS C:\> Set-SPEnterpriseSearchCrawlContentSource [-Identity] <ContentSourcePipeBind>
+```
+Set-SPEnterpriseSearchCrawlContentSource [-Identity] <ContentSourcePipeBind>
  [-AssignmentCollection <SPAssignmentCollection>]
  [-BDCApplicationProxyGroup <SPServiceApplicationProxyGroupPipeBind>] [-Confirm]
  [-CrawlPriority <CrawlPriority>] [-CrawlScheduleRepeatDuration <Int32>] [-CrawlScheduleRepeatInterval <Int32>]
@@ -60,8 +60,8 @@ PS C:\> Set-SPEnterpriseSearchCrawlContentSource [-Identity] <ContentSourcePipeB
 ```
 
 ### RemoveSchedule
-```powershell
-PS C:\> Set-SPEnterpriseSearchCrawlContentSource [-Identity] <ContentSourcePipeBind>
+```
+Set-SPEnterpriseSearchCrawlContentSource [-Identity] <ContentSourcePipeBind>
  [-AssignmentCollection <SPAssignmentCollection>]
  [-BDCApplicationProxyGroup <SPServiceApplicationProxyGroupPipeBind>] [-Confirm]
  [-CrawlPriority <CrawlPriority>] [-CustomProtocol <String>] [-EnableContinuousCrawls <Boolean>]
@@ -93,9 +93,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### --------------------EXAMPLE---------------------
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-$cs = Get-SPEnterpriseSearchCrawlContentSource -Identity 'Local SharePoint Sites' -SearchApplication $ssa
-$cs | Set-SPEnterpriseSearchCrawlContentSource -ScheduleType Full -DailyCrawlSchedule -CrawlScheduleRunEveryInterval 30
-$cs | Set-SPEnterpriseSearchCrawlContentSource -ScheduleType Incremental -DailyCrawlSchedule -CrawlScheduleRepeatInterval 60 -CrawlScheduleRepeatDuration 1440
+PS C:\> $cs = Get-SPEnterpriseSearchCrawlContentSource -Identity 'Local SharePoint Sites' -SearchApplication $ssa
+PS C:\> $cs | Set-SPEnterpriseSearchCrawlContentSource -ScheduleType Full -DailyCrawlSchedule -CrawlScheduleRunEveryInterval 30
+PS C:\> $cs | Set-SPEnterpriseSearchCrawlContentSource -ScheduleType Incremental -DailyCrawlSchedule -CrawlScheduleRepeatInterval 60 -CrawlScheduleRepeatDuration 1440
 ```
 
 This example returns the "Local SharePoint Sites" content source and creates a schedule to run a full crawl every 30 days and an incremental crawl every hour every day.

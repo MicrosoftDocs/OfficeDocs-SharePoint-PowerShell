@@ -32,7 +32,7 @@ To run this cmdlet requires farm administrator permission and that the user acco
 
 ### ------------EXAMPLE 1-----------
 ```powershell
- Set-SPO365LinkSettings -MySiteHostUrl https://contoso-my.sharepoint.com/ -RedirectSites $true
+PS C:\>  Set-SPO365LinkSettings -MySiteHostUrl https://contoso-my.sharepoint.com/ -RedirectSites $true
 ```
 
 This example sets the mysite host URL to contoso-my.sharepoint.com

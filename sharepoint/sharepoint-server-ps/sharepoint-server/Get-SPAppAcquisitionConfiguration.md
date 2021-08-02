@@ -19,14 +19,14 @@ Returns app acquisition settings.
 ## SYNTAX
 
 ### MarketplaceSettingsInSiteSubscription
-```powershell
-PS C:\> Get-SPAppAcquisitionConfiguration -SiteSubscription <SPSiteSubscriptionPipeBind>
+```
+Get-SPAppAcquisitionConfiguration -SiteSubscription <SPSiteSubscriptionPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### MarketplaceSettingsInWebApplication
-```powershell
-PS C:\> Get-SPAppAcquisitionConfiguration [-AssignmentCollection <SPAssignmentCollection>]
+```
+Get-SPAppAcquisitionConfiguration [-AssignmentCollection <SPAssignmentCollection>]
  -WebApplication <SPWebApplicationPipeBind> [<CommonParameters>]
 ```
 

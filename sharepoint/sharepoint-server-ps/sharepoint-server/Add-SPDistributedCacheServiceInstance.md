@@ -21,19 +21,19 @@ Adds an instance of the distributed cache service to a local server.
 ## SYNTAX
 
 ###  (Default)
-```powershell
-PS C:\> Add-SPDistributedCacheServiceInstance [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+```
+Add-SPDistributedCacheServiceInstance [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### CacheSizeSet
-```powershell
-PS C:\> Add-SPDistributedCacheServiceInstance [-AssignmentCollection <SPAssignmentCollection>] [-CacheSizeInMB <Int32>]
+```
+Add-SPDistributedCacheServiceInstance [-AssignmentCollection <SPAssignmentCollection>] [-CacheSizeInMB <Int32>]
  [<CommonParameters>]
 ```
 
 ### LocalServerRoleSet
-```powershell
-PS C:\> Add-SPDistributedCacheServiceInstance [-AssignmentCollection <SPAssignmentCollection>] [-Role <SPServerRole>]
+```
+Add-SPDistributedCacheServiceInstance [-AssignmentCollection <SPAssignmentCollection>] [-Role <SPServerRole>]
  [<CommonParameters>]
 ```
 

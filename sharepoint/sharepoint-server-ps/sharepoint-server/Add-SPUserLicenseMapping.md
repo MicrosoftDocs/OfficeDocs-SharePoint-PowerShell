@@ -42,7 +42,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ---------------EXAMPLE 1------------------- 
 ```powershell
 PS C:\> $a = New-SPUserLicenseMapping -SecurityGroup yoursecuritygroup -License Enterprise
-Add-SPUserLicenseMapping -Mapping $a
+PS C:\> Add-SPUserLicenseMapping -Mapping $a
 ```
 
 This example adds user mappings for the entire farm.

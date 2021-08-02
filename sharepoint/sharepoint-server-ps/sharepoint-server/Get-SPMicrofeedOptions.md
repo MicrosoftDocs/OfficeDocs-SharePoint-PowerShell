@@ -31,7 +31,7 @@ Returns the feed cache settings for the current user profile application.
 ### ------------Example 1 -----------
 ```powershell
 PS C:\> $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
-Get-SPMicrofeedOptions -ProfileServiceApplicationProxy $proxy
+PS C:\> Get-SPMicrofeedOptions -ProfileServiceApplicationProxy $proxy
 ```
 
 This example returns cache feed settings from the specified User Profile Service Application Proxy.

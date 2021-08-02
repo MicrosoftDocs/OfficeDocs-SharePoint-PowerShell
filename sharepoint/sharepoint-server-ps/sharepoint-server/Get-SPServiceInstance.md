@@ -21,14 +21,14 @@ Returns the services instance for a specific server or the entire farm.
 ## SYNTAX
 
 ### Identity
-```powershell
-PS C:\> Get-SPServiceInstance [[-Identity] <SPServiceInstancePipeBind>]
+```
+Get-SPServiceInstance [[-Identity] <SPServiceInstancePipeBind>]
  [-AssignmentCollection <SPAssignmentCollection>] [-All] [<CommonParameters>]
 ```
 
 ### Server
-```powershell
-PS C:\> Get-SPServiceInstance -Server <SPServerPipeBind> [-AssignmentCollection <SPAssignmentCollection>] [-All]
+```
+Get-SPServiceInstance -Server <SPServerPipeBind> [-AssignmentCollection <SPAssignmentCollection>] [-All]
  [<CommonParameters>]
 ```
 

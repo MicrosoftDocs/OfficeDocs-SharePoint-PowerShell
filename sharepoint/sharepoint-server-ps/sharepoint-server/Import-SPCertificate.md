@@ -41,7 +41,7 @@ Uninstalling SharePoint from a server will not automatically remove SharePoint-m
 ### ------------EXAMPLE 1-----------
 ```powershell
 PS C:\> $password = ConvertTo-SecureString -AsPlainText -Force 
- 
+PS C:\>  
 PS C:\> Import-SPCertificate -Path "\\server\fileshare\certificates.pfx" -Password $password -Exportable
 ```
 

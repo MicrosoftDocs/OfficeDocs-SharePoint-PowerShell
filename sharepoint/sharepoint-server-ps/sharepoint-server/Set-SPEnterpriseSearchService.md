@@ -37,7 +37,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```powershell
 PS C:\> $password = Read-Host -AsSecureString
-Set-SPEnterpriseSearchService -IgnoreSSLWarnings $true -ServiceAccount 'contoso\adminAccount' -ServicePassword $password
+PS C:\> Set-SPEnterpriseSearchService -IgnoreSSLWarnings $true -ServiceAccount 'contoso\adminAccount' -ServicePassword $password
 ```
 
 This example configures the search service to ignore SSL warnings and changes the service account for the search service.

@@ -19,15 +19,15 @@ Restores a site collection.
 ## SYNTAX
 
 ### DatabaseFromPipebind
-```powershell
-PS C:\> Restore-SPSite [-Identity] <String> -Path <String> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+```
+Restore-SPSite [-Identity] <String> -Path <String> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-ContentDatabase <SPContentDatabasePipeBind>] [-Force] [-GradualDelete] [-HostHeaderWebApplication <String>]
  [-WhatIf] [-PreserveSiteID] [<CommonParameters>]
 ```
 
 ### DatabaseParameter
-```powershell
-PS C:\> Restore-SPSite [-Identity] <String> -Path <String> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+```
+Restore-SPSite [-Identity] <String> -Path <String> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-DatabaseName <String>] [-DatabaseServer <String>] [-Force] [-GradualDelete]
  [-HostHeaderWebApplication <String>] [-WhatIf] [-PreserveSiteID] [<CommonParameters>]
 ```

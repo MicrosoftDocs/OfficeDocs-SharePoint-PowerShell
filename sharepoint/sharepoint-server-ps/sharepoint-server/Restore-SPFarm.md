@@ -19,15 +19,15 @@ Restores one or more items from a backup.
 ## SYNTAX
 
 ### DefaultSet
-```powershell
-PS C:\> Restore-SPFarm -Directory <String> -RestoreMethod <String> [-AssignmentCollection <SPAssignmentCollection>]
+```
+Restore-SPFarm -Directory <String> -RestoreMethod <String> [-AssignmentCollection <SPAssignmentCollection>]
  [-BackupId <Guid>] [-ConfigurationOnly] [-Confirm] [-FarmCredentials <PSCredential>] [-Force] [-Item <String>]
  [-NewDatabaseServer <String>] [-Percentage <Int32>] [-RestoreThreads <Int32>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### ShowTree
-```powershell
-PS C:\> Restore-SPFarm -Directory <String> [-ShowTree] [-AssignmentCollection <SPAssignmentCollection>]
+```
+Restore-SPFarm -Directory <String> [-ShowTree] [-AssignmentCollection <SPAssignmentCollection>]
  [-BackupId <Guid>] [-ConfigurationOnly] [-Confirm] [-Item <String>] [-WhatIf] [<CommonParameters>]
 ```
 

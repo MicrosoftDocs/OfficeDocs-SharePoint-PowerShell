@@ -19,15 +19,15 @@ Sets the Information Rights Management (IRM) settings.
 ## SYNTAX
 
 ### UseSpecifiedCertificateUrl
-```powershell
-PS C:\> Set-SPIRMSettings -CertificateServerUrl <Uri> [-IrmEnabled] [-AssignmentCollection <SPAssignmentCollection>]
+```
+Set-SPIRMSettings -CertificateServerUrl <Uri> [-IrmEnabled] [-AssignmentCollection <SPAssignmentCollection>]
  [-CertificatePassword <SecureString>] [-Confirm] [-ServiceAuthenticationCertificate <X509Certificate2>]
  [-SubscriptionScopeSettingsEnabled] [-WhatIf] [-UseOauth] [<CommonParameters>]
 ```
 
 ### UseServiceDiscovery
-```powershell
-PS C:\> Set-SPIRMSettings [-IrmEnabled] [-AssignmentCollection <SPAssignmentCollection>]
+```
+Set-SPIRMSettings [-IrmEnabled] [-AssignmentCollection <SPAssignmentCollection>]
  [-CertificatePassword <SecureString>] [-Confirm] [-ServiceAuthenticationCertificate <X509Certificate2>]
  [-SubscriptionScopeSettingsEnabled] [-UseActiveDirectoryDiscovery] [-WhatIf] [-UseOauth] [<CommonParameters>]
 ```
@@ -61,8 +61,8 @@ This example enables IRM for the farm and specifies the URL of the RMS server to
 ### --------------EXAMPLE 3------------
 ```powershell
 PS C:\> site = Get-SPSite http://myspserver
-$subscription = $site.SiteSubscription
-Set-SPIRMSettings -SiteSubscription $subscription -RmsEnabled -CertificateServerUrl https://myrmsserver
+PS C:\> $subscription = $site.SiteSubscription
+PS C:\> Set-SPIRMSettings -SiteSubscription $subscription -RmsEnabled -CertificateServerUrl https://myrmsserver
 ```
 
 This example enables IRM for the specified tenant and specifies the URL of the RMS server to use.

@@ -39,7 +39,7 @@ PS C:\> $databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplicat
 
 PS C:\> $database = $databases[0]
 
-Get-SPScaleOutDatabaseLogEntry -Database  $database -Count 10 -MajorAction DataMove
+PS C:\> Get-SPScaleOutDatabaseLogEntry -Database  $database -Count 10 -MajorAction DataMove
 ```
 
 This example gets the 10 most recent scale-out log entries from the first scale-out database of the given service application.

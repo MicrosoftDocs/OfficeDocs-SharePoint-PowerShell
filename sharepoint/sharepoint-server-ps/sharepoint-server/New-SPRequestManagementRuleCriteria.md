@@ -19,15 +19,15 @@ Creates criteria for the rule to match.
 ## SYNTAX
 
 ### CustomPropertyParameterSet
-```powershell
-PS C:\> New-SPRequestManagementRuleCriteria [-Value] <String> [-CustomHeader] <String> [-CaseSensitive]
+```
+New-SPRequestManagementRuleCriteria [-Value] <String> [-CustomHeader] <String> [-CaseSensitive]
  [[-MatchType] <SPRequestManagementRuleMatchType>] [-AssignmentCollection <SPAssignmentCollection>]
  [<CommonParameters>]
 ```
 
 ### StandardParameterSet
-```powershell
-PS C:\> New-SPRequestManagementRuleCriteria [-Value] <String> [-Property] <SPRequestManagementRulePropertyType>
+```
+New-SPRequestManagementRuleCriteria [-Value] <String> [-Property] <SPRequestManagementRulePropertyType>
  [-CaseSensitive] [[-MatchType] <SPRequestManagementRuleMatchType>]
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```

@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ###   ------------ Example 1 --------------------
-```
+```powershell
 
 ```
 

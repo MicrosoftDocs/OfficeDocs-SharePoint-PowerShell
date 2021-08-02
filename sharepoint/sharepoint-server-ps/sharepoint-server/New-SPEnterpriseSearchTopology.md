@@ -37,7 +37,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE 1------------------
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-New-SPEnterpriseSearchTopology -SearchApplication $ssa
+PS C:\> New-SPEnterpriseSearchTopology -SearchApplication $ssa
 ```
 
 This example creates a new, empty search topology in the search service application referenced by $ssa.
@@ -46,8 +46,8 @@ This example creates a new, empty search topology in the search service applicat
 ### ------------------EXAMPLE 2------------------
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-$topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa
-New-SPEnterpriseSearchTopology -SearchApplication $ssa -Clone -SearchTopology $topology
+PS C:\> $topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa
+PS C:\> New-SPEnterpriseSearchTopology -SearchApplication $ssa -Clone -SearchTopology $topology
 ```
 
 This example creates a new search topology in the search service application referenced by $ssa by cloning the existing topology referenced by $topology.

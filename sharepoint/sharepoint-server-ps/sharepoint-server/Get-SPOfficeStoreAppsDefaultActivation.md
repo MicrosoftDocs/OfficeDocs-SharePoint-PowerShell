@@ -20,14 +20,14 @@ Returns the properties of apps for Office.
 ## SYNTAX
 
 ### AppsForOfficeSettingsInSiteSubscription
-```powershell
-PS C:\> Get-SPOfficeStoreAppsDefaultActivation -SiteSubscription <SPSiteSubscriptionPipeBind>
+```
+Get-SPOfficeStoreAppsDefaultActivation -SiteSubscription <SPSiteSubscriptionPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### AppsForOfficeSettingsInWebApplication
-```powershell
-PS C:\> Get-SPOfficeStoreAppsDefaultActivation -WebApplication <SPWebApplicationPipeBind>
+```
+Get-SPOfficeStoreAppsDefaultActivation -WebApplication <SPWebApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 

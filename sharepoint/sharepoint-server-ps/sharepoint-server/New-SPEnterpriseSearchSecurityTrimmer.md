@@ -37,7 +37,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-New-SPEnterpriseSearchSecurityTrimmer -SearchApplication $ssa -TypeName "SearchCustomSecurityTrimmer.CustomSecurityTrimmerPost, SearchCustomSecurityTrimmer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=48e046c834625a88, processorArchitecture=MSIL" -Id 1
+PS C:\> New-SPEnterpriseSearchSecurityTrimmer -SearchApplication $ssa -TypeName "SearchCustomSecurityTrimmer.CustomSecurityTrimmerPost, SearchCustomSecurityTrimmer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=48e046c834625a88, processorArchitecture=MSIL" -Id 1
 ```
 
 This example adds a new custom security trimmer for trimming the returned result set. This new security trimmer is added to the search application by using the id 1. The strong named assembly contains the class CustomSecurityTrimmerPost, which implements the ISecurityTrimmerPost interface.

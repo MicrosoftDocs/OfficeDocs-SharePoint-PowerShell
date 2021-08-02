@@ -18,14 +18,14 @@ Returns all Active Directory forests or domains that the People Picker uses when
 ## SYNTAX
 
 ### BasicParameterSet
-```powershell
-PS C:\> Get-SPPeoplePickerSearchADDomain -WebApplication <SPWebApplicationPipeBind>
+```
+Get-SPPeoplePickerSearchADDomain -WebApplication <SPWebApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SpecificDomainParameterSet
-```powershell
-PS C:\> Get-SPPeoplePickerSearchADDomain -WebApplication <SPWebApplicationPipeBind> -DomainName <String> [-IsForest]
+```
+Get-SPPeoplePickerSearchADDomain -WebApplication <SPWebApplicationPipeBind> -DomainName <String> [-IsForest]
  [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

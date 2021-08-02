@@ -21,15 +21,15 @@ Creates a new public or internal URL for the specified Web application zone or r
 ## SYNTAX
 
 ### WebApplication
-```powershell
-PS C:\> New-SPAlternateURL [-Url] <String> -WebApplication <SPWebApplicationPipeBind>
+```
+New-SPAlternateURL [-Url] <String> -WebApplication <SPWebApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Internal] [-WhatIf] [-Zone <SPUrlZone>]
  [<CommonParameters>]
 ```
 
 ### ResourceName
-```powershell
-PS C:\> New-SPAlternateURL [-Url] <String> -ResourceName <String> [-AssignmentCollection <SPAssignmentCollection>]
+```
+New-SPAlternateURL [-Url] <String> -ResourceName <String> [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-Internal] [-WhatIf] [-Zone <SPUrlZone>] [<CommonParameters>]
 ```
 
@@ -55,11 +55,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE----------------------- 
-```
-#create the public URL
+```powershell
+PS C:\> #create the public URL
 PS C:\> New-SPAlternateURL https://www.contoso.com -Zone "Internet"
 
-#create the internal URL
+PS C:\> #create the internal URL
 PS C:\> New-SPAlternateURL https://sharepoint.contoso.com -Zone "Internet" -internal
 ```
 

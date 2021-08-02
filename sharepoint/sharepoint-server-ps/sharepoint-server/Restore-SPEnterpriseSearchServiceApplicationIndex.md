@@ -19,15 +19,15 @@ Restores the search index from the specified backup files.
 ## SYNTAX
 
 ### Restore
-```powershell
-PS C:\> Restore-SPEnterpriseSearchServiceApplicationIndex [-SearchApplication] <SearchServiceApplication>
+```
+Restore-SPEnterpriseSearchServiceApplicationIndex [-SearchApplication] <SearchServiceApplication>
  [-BackupFolder] <String> [-AllReplicas] [-AllowMove] [[-Retries] <Int32>] [[-RetryPauseSeconds] <Int32>]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### RestoreProgress
-```powershell
-PS C:\> Restore-SPEnterpriseSearchServiceApplicationIndex [-SearchApplication] <SearchServiceApplication>
+```
+Restore-SPEnterpriseSearchServiceApplicationIndex [-SearchApplication] <SearchServiceApplication>
  [-Handle] <String> [[-Retries] <Int32>] [[-RetryPauseSeconds] <Int32>]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -50,8 +50,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE 1------------------
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-$handle = Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -BackupFolder "\\sample\backup\spbr0000"
-Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -Handle $handle
+PS C:\> $handle = Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -BackupFolder "\\sample\backup\spbr0000"
+PS C:\> Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -Handle $handle
 ```
 
 This example starts a restore of the search index in the default search service application from a backup located at \\\\sample\backup\spbr0000.
@@ -60,7 +60,7 @@ This example starts a restore of the search index in the default search service 
 ### ------------------EXAMPLE 2------------------
 ```powershell
 PS C:\> $handle = Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -BackupFolder "\\sample\backup\spbr0000"
-Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication "Search Service Application" -Handle $handle
+PS C:\> Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication "Search Service Application" -Handle $handle
 ```
 
 This example checks the status of the running job to restore of the search index in the search service application Search Service Application with the handle $handle .

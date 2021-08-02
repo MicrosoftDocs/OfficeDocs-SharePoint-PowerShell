@@ -41,7 +41,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-Set-SPEnterpriseSearchMetadataManagedProperty -SearchApplication $ssa -Identity UserName -EnabledForScoping $true
+PS C:\> Set-SPEnterpriseSearchMetadataManagedProperty -SearchApplication $ssa -Identity UserName -EnabledForScoping $true
 ```
 
 This example sets the EnabledForScoping property to true for the managed property named UserName in the default search service application.

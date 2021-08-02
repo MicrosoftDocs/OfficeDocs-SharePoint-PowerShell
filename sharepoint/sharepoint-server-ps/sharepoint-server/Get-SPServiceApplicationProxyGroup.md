@@ -21,14 +21,14 @@ Returns the proxy group for the specified service application.
 ## SYNTAX
 
 ### Identity
-```powershell
-PS C:\> Get-SPServiceApplicationProxyGroup [[-Identity] <SPServiceApplicationProxyGroupPipeBind>]
+```
+Get-SPServiceApplicationProxyGroup [[-Identity] <SPServiceApplicationProxyGroupPipeBind>]
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### Default identity
-```powershell
-PS C:\> Get-SPServiceApplicationProxyGroup [-Default] [-AssignmentCollection <SPAssignmentCollection>]
+```
+Get-SPServiceApplicationProxyGroup [-Default] [-AssignmentCollection <SPAssignmentCollection>]
  [<CommonParameters>]
 ```
 

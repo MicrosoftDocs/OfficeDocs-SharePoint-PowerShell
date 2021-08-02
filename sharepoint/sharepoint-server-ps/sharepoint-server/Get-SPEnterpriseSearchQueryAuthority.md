@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE 1------------------ 
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
-Get-SPEnterpriseSearchQueryAuthority -Identity 'https://contoso.com' -SearchApplication $ssa
+PS C:\> Get-SPEnterpriseSearchQueryAuthority -Identity 'https://contoso.com' -SearchApplication $ssa
 ```
 
 This example obtains the authoritative page for the URL https://contoso.com from the search service application named 'Search Service Application'.

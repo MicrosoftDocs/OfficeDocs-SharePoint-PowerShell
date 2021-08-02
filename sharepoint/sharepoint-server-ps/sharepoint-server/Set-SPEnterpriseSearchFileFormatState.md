@@ -38,7 +38,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### --------------------EXAMPLE---------------------
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-Set-SPEnterpriseSearchFileFormatState -SearchApplication $ssa -Identity PDF -Enable $false
+PS C:\> Set-SPEnterpriseSearchFileFormatState -SearchApplication $ssa -Identity PDF -Enable $false
 ```
 
 This example uses the `Set-SPEnterpriseSearchFileFormatState` cmdlet to disable the parser for the file format "PDF".

@@ -21,14 +21,14 @@ Returns all managed paths that match the given criteria.
 ## SYNTAX
 
 ### HostHeader
-```powershell
-PS C:\> Get-SPManagedPath [[-Identity] <SPPrefixPipeBind>] [-HostHeader]
+```
+Get-SPManagedPath [[-Identity] <SPPrefixPipeBind>] [-HostHeader]
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### WebApplication
-```powershell
-PS C:\> Get-SPManagedPath [[-Identity] <SPPrefixPipeBind>] -WebApplication <SPWebApplicationPipeBind>
+```
+Get-SPManagedPath [[-Identity] <SPPrefixPipeBind>] -WebApplication <SPWebApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 

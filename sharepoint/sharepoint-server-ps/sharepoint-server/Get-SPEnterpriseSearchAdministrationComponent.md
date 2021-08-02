@@ -32,7 +32,7 @@ For permissions and the most current information about search cmdlets, see the o
 ### ------------Example 1 -----------
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication 'Search Service Application'
-Get-SPEnterpriseSearchAdministrationComponent -SearchApplication $ssa
+PS C:\> Get-SPEnterpriseSearchAdministrationComponent -SearchApplication $ssa
 ```
 
 This example obtains an object reference to the administration component of a search service application named Search Service Application.

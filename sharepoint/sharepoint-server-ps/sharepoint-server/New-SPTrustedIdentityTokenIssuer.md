@@ -19,8 +19,8 @@ Creates an identity provider in the farm.
 ## SYNTAX
 
 ### BasicParameterSet
-```powershell
-PS C:\> New-SPTrustedIdentityTokenIssuer -ClaimsMappings <SPClaimMappingPipeBind[]> -Description <String>
+```
+New-SPTrustedIdentityTokenIssuer -ClaimsMappings <SPClaimMappingPipeBind[]> -Description <String>
  -IdentifierClaim <String> -Name <String> -Realm <String> -SignInUrl <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-ClaimProvider <SPClaimProviderPipeBind>]
  [-ImportTrustCertificate <X509Certificate2>] [-UseWReply] [-Confirm] [-RegisteredIssuerName <String>]
@@ -28,16 +28,16 @@ PS C:\> New-SPTrustedIdentityTokenIssuer -ClaimsMappings <SPClaimMappingPipeBind
 ```
 
 ### MetadataEndPointParameterSet
-```powershell
-PS C:\> New-SPTrustedIdentityTokenIssuer -ClaimsMappings <SPClaimMappingPipeBind[]> -Description <String>
+```
+New-SPTrustedIdentityTokenIssuer -ClaimsMappings <SPClaimMappingPipeBind[]> -Description <String>
  -IdentifierClaim <String> -Name <String> -Realm <String> -SignInUrl <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-ClaimProvider <SPClaimProviderPipeBind>]
  -MetadataEndPoint <Uri> [-UseWReply] [-Confirm] [-SignOutUrl <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### ActiveDirectoryBackedParameterSet
-```powershell
-PS C:\> New-SPTrustedIdentityTokenIssuer -Description <String> -Name <String> -Realm <String> -SignInUrl <String>
+```
+New-SPTrustedIdentityTokenIssuer -Description <String> -Name <String> -Realm <String> -SignInUrl <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-ImportTrustCertificate <X509Certificate2>] [-UseWReply]
  [-Confirm] [-IdentifierClaimIs <String>] [-RegisteredIssuerName <String>] [-SignOutUrl <String>]
  [-UseDefaultConfiguration] [-WhatIf] [<CommonParameters>]

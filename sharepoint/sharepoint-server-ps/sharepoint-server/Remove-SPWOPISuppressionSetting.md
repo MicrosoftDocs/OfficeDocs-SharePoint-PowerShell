@@ -19,14 +19,14 @@ Removes the suppression settings for a file name extension or programmatic ID an
 ## SYNTAX
 
 ### DocTypeAndAction
-```powershell
-PS C:\> Remove-SPWOPISuppressionSetting [-Action <String>] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+```
+Remove-SPWOPISuppressionSetting [-Action <String>] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-Extension <String>] [-ProgId <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Identity
-```powershell
-PS C:\> Remove-SPWOPISuppressionSetting [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+```
+Remove-SPWOPISuppressionSetting [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-Identity <String>] [-WhatIf] [<CommonParameters>]
 ```
 

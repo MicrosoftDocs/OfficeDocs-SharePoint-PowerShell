@@ -19,8 +19,8 @@ Restores third-party backup of a search application.
 ## SYNTAX
 
 ### Config
-```powershell
-PS C:\> Restore-SPEnterpriseSearchServiceApplication [-Name] <String>
+```
+Restore-SPEnterpriseSearchServiceApplication [-Name] <String>
  -ApplicationPool <SPIisWebServiceApplicationPoolPipeBind>
  -AdminSearchServiceInstance <SearchServiceInstancePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] -DatabaseName <String> [-DatabasePassword <SecureString>] -DatabaseServer <String>
@@ -28,8 +28,8 @@ PS C:\> Restore-SPEnterpriseSearchServiceApplication [-Name] <String>
 ```
 
 ### Full
-```powershell
-PS C:\> Restore-SPEnterpriseSearchServiceApplication [-Name] <String>
+```
+Restore-SPEnterpriseSearchServiceApplication [-Name] <String>
  -ApplicationPool <SPIisWebServiceApplicationPoolPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-KeepId] [-WhatIf] -TopologyFile <String> [-DeferUpgradeActions] [<CommonParameters>]
 ```
@@ -59,8 +59,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ----------------------EXAMPLE 1-----------------------
 ```powershell
 PS C:\> $searchInstance = Get-SPEnterpriseSearchServiceInstance -local
-$applicationPool = New-SPServiceApplicationPool -Name "SearchServiceApplicationPool" -Account "domain\username"
-Restore-SPEnterpriseSearchServiceApplication -Name "SearchServiceApplication" -ApplicationPool $applicationPool -AdminSearchServiceInstance $searchInstance -DatabaseName "SearchServiceApplication_Admindb" -DatabaseServer "SQLServer1"
+PS C:\> $applicationPool = New-SPServiceApplicationPool -Name "SearchServiceApplicationPool" -Account "domain\username"
+PS C:\> Restore-SPEnterpriseSearchServiceApplication -Name "SearchServiceApplication" -ApplicationPool $applicationPool -AdminSearchServiceInstance $searchInstance -DatabaseName "SearchServiceApplication_Admindb" -DatabaseServer "SQLServer1"
 ```
 
 This example uses Application Configuration Attach mode to restore configuration data.
@@ -69,7 +69,7 @@ This example uses Application Configuration Attach mode to restore configuration
 ### ----------------------EXAMPLE 2-----------------------
 ```powershell
 PS C:\> $applicationPool = New-SPServiceApplicationPool -Name "SearchServiceApplicationPool" -Account "domain\username"
-Restore-SPEnterpriseSearchServiceApplication -Name "SearchServiceApplication" -ApplicationPool $applicationPool -TopologyFile "C:\TopologyFile.xml"
+PS C:\> Restore-SPEnterpriseSearchServiceApplication -Name "SearchServiceApplication" -ApplicationPool $applicationPool -TopologyFile "C:\TopologyFile.xml"
 ```
 
 This example uses Search Application Attach mode to restore topology data in the file that is named topology.xml.

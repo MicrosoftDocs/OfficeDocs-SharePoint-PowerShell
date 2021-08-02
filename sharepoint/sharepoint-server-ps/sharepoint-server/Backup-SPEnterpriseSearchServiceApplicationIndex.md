@@ -18,16 +18,16 @@ Takes a backup of the search index to a specified backup location.
 ## SYNTAX
 
 ### RunBackup
-```powershell
-PS C:\> Backup-SPEnterpriseSearchServiceApplicationIndex [-Phase] <Int32>
+```
+Backup-SPEnterpriseSearchServiceApplicationIndex [-Phase] <Int32>
  [-SearchApplication] <SearchServiceApplication> [-BackupFolder] <String> [-BackupHandleFile] <String>
  [[-Retries] <Int32>] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [-PeerToPeer]
  [-SpecifiedBackupHandle <String>] [<CommonParameters>]
 ```
 
 ### AbortBackup
-```powershell
-PS C:\> Backup-SPEnterpriseSearchServiceApplicationIndex [-SearchApplication] <SearchServiceApplication>
+```
+Backup-SPEnterpriseSearchServiceApplicationIndex [-SearchApplication] <SearchServiceApplication>
  [-BackupHandleFile] <String> [[-Retries] <Int32>] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-WhatIf] [-Abort] [-PeerToPeer] [-SpecifiedBackupHandle <String>] [<CommonParameters>]
 ```
@@ -48,7 +48,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE 1------------------ 
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-Backup-SPEnterpriseSearchServiceApplicationIndex -Phase 1 -SearchApplication $ssa -BackupFolder "\\backuphost\backupfolder" -BackupHandleFile "\\backuphost\backupfolder\backuphandle.txt" -Retries 3
+PS C:\> Backup-SPEnterpriseSearchServiceApplicationIndex -Phase 1 -SearchApplication $ssa -BackupFolder "\\backuphost\backupfolder" -BackupHandleFile "\\backuphost\backupfolder\backuphandle.txt" -Retries 3
 ```
 
 This example starts a Phase 1 backup of the search index for the default search application, and stores the backup at the location \\\\backuphost\backupfolder. 
@@ -57,7 +57,7 @@ The cmdlet stores a handle file backuphandle.txt that is used by the second phas
 ### ------------------EXAMPLE 2------------------ 
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-Backup-SPEnterpriseSearchServiceApplicationIndex -Phase 1 $ssa -BackupFolder "\\backuphost\backupfolder" -BackupHandleFile "\\backuphost\backupfolder\backuphandle.txt" -Retries 3
+PS C:\> Backup-SPEnterpriseSearchServiceApplicationIndex -Phase 1 $ssa -BackupFolder "\\backuphost\backupfolder" -BackupHandleFile "\\backuphost\backupfolder\backuphandle.txt" -Retries 3
 ```
 
 This example checks the backup status and progress by re-running the cmdlet for Phase 1.
@@ -65,7 +65,7 @@ This example checks the backup status and progress by re-running the cmdlet for 
 ### ------------------EXAMPLE 3------------------ 
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-Backup-SPEnterpriseSearchServiceApplicationIndex -Phase 2 -SearchApplication $ssa -BackupFolder "\\backuphost\backupfolder" -BackupHandleFile "\\backuphost\backupfolder\backuphandle.txt" -Retries 3
+PS C:\> Backup-SPEnterpriseSearchServiceApplicationIndex -Phase 2 -SearchApplication $ssa -BackupFolder "\\backuphost\backupfolder" -BackupHandleFile "\\backuphost\backupfolder\backuphandle.txt" -Retries 3
 ```
 
 This example starts the Phase 2 of the search index backup by using the same backup location and backup handle file as used for Phase 1. 

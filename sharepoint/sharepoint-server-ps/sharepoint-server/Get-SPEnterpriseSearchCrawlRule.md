@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ---------------EXAMPLE 1----------------- 
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication 'Search Service Application' 
-Get-SPEnterpriseSearchCrawlRule -SearchApplication  $ssa -Identity https://webAppUrl
+PS C:\> Get-SPEnterpriseSearchCrawlRule -SearchApplication  $ssa -Identity https://webAppUrl
 ```
 
 This example uses the `Get-SPEnterpriseSearchCrawlRule` cmdlet to retrieve a crawl rule.
@@ -41,7 +41,7 @@ This example uses the `Get-SPEnterpriseSearchCrawlRule` cmdlet to retrieve a cra
 ### ---------------EXAMPLE 2--------------- 
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication 'Search Service Application'
-Get-SPEnterpriseSearchCrawlRule -SearchApplication $searchApp | ?{$_.Path -like '*example*'}
+PS C:\> Get-SPEnterpriseSearchCrawlRule -SearchApplication $searchApp | ?{$_.Path -like '*example*'}
 ```
 
 This example returns a list of crawl rules with paths that contain the word example from the search service application named 'Search Service Application'.

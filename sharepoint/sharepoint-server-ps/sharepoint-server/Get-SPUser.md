@@ -20,8 +20,8 @@ Returns the user account or accounts that match a given search criteria.
 
 ## SYNTAX 
 
-```powershell
-PS C:\> Get-SPUser [[-Identity] <SPUserPipeBind>] -Web <SPWebPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+```
+Get-SPUser [[-Identity] <SPUserPipeBind>] -Web <SPWebPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-Group <SPGroupPipeBind>] [-Limit <String>] [<CommonParameters>]
 ```
 

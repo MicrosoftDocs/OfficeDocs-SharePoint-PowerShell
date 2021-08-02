@@ -38,7 +38,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-Set-SPEnterpriseSearchCrawlDatabase -Identity SearchApp_CrawlStore -SearchApplication $ssa -FailoverDatabaseServer \\failoverServer
+PS C:\> Set-SPEnterpriseSearchCrawlDatabase -Identity SearchApp_CrawlStore -SearchApplication $ssa -FailoverDatabaseServer \\failoverServer
 ```
 
 This example sets the failover database server for the crawl database, SearchApp_CrawlStore, to the \\\\failoverServer server.

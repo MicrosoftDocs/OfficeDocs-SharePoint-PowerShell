@@ -19,15 +19,15 @@ Configures one or more common settings for all Web services.
 ## SYNTAX
 
 ### SslCertificateReference
-```powershell
-PS C:\> Set-SPServiceHostConfig [-Identity] <SPIisWebServiceSettings> -SslCertificateThumbprint <String>
+```
+Set-SPServiceHostConfig [-Identity] <SPIisWebServiceSettings> -SslCertificateThumbprint <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-HttpPort <Int32>] [-HttpsPort <Int32>]
  [-NetTcpPort <Int32>] [-NoWait] [-SslCertificateStoreName <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### SslCertificateImport
-```powershell
-PS C:\> Set-SPServiceHostConfig [-Identity] <SPIisWebServiceSettings> [-AssignmentCollection <SPAssignmentCollection>]
+```
+Set-SPServiceHostConfig [-Identity] <SPIisWebServiceSettings> [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-HttpPort <Int32>] [-HttpsPort <Int32>] [-ImportSslCertificate <X509Certificate2>]
  [-NetTcpPort <Int32>] [-NoWait] [-WhatIf] [<CommonParameters>]
 ```

@@ -21,14 +21,14 @@ Returns the throttling configuration for a Business Data Connectivity Service ap
 ## SYNTAX
 
 ### FileBackedProvided
-```powershell
-PS C:\> Get-SPBusinessDataCatalogThrottleConfig [-FileBacked] -Scope <ThrottleScope> -ThrottleType <ThrottleType>
+```
+Get-SPBusinessDataCatalogThrottleConfig [-FileBacked] -Scope <ThrottleScope> -ThrottleType <ThrottleType>
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### ProxyProvided
-```powershell
-PS C:\> Get-SPBusinessDataCatalogThrottleConfig -Scope <ThrottleScope>
+```
+Get-SPBusinessDataCatalogThrottleConfig -Scope <ThrottleScope>
  -ServiceApplicationProxy <SPServiceApplicationProxyPipeBind> -ThrottleType <ThrottleType>
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```

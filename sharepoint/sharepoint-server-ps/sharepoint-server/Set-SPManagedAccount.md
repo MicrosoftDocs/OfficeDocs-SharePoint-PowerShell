@@ -19,30 +19,30 @@ Configures the managed account.
 ## SYNTAX
 
 ### NewPassword
-```powershell
-PS C:\> Set-SPManagedAccount [-Identity] <SPManagedAccountPipeBind> -ConfirmPassword <SecureString>
+```
+Set-SPManagedAccount [-Identity] <SPManagedAccountPipeBind> -ConfirmPassword <SecureString>
  -NewPassword <SecureString> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  [-EmailNotification <Int32>] [-PreExpireDays <Int32>] [-Schedule <String>] [-SetNewPassword] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ### ExistingPassword
-```powershell
-PS C:\> Set-SPManagedAccount [-Identity] <SPManagedAccountPipeBind> -ExistingPassword <SecureString>
+```
+Set-SPManagedAccount [-Identity] <SPManagedAccountPipeBind> -ExistingPassword <SecureString>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-EmailNotification <Int32>]
  [-PreExpireDays <Int32>] [-Schedule <String>] [-UseExistingPassword] [-WhatIf] [<CommonParameters>]
 ```
 
 ### NewPasswordAsParameter
-```powershell
-PS C:\> Set-SPManagedAccount [-Identity] <SPManagedAccountPipeBind> -Password <SecureString>
+```
+Set-SPManagedAccount [-Identity] <SPManagedAccountPipeBind> -Password <SecureString>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-EmailNotification <Int32>]
  [-PreExpireDays <Int32>] [-Schedule <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### AutoGeneratePassword
-```powershell
-PS C:\> Set-SPManagedAccount [-Identity] <SPManagedAccountPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+```
+Set-SPManagedAccount [-Identity] <SPManagedAccountPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-AutoGeneratePassword] [-Confirm] [-EmailNotification <Int32>] [-PreExpireDays <Int32>] [-Schedule <String>]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -66,7 +66,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE-----------------------
 ```powershell
 PS C:\> $m = Get-SPManagedAccount -Identity "DOMAINx\UserY"
-Set-SPManagedAccount -Identity $m -AutoGeneratePassword true
+PS C:\> Set-SPManagedAccount -Identity $m -AutoGeneratePassword true
 ```
 
 This example displays an explicit managed account if it exists and then attempts to update it to use automatically generated passwords.

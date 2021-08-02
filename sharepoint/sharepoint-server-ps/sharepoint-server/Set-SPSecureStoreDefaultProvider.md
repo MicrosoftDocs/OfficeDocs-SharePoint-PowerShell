@@ -40,7 +40,7 @@ PS C:\> [Reflection.Assembly]::LoadFrom("C:\ContosoFolder\contosoSecureStore.dll
 
 PS C:\> $type = [Contoso.SecureStore.ContosoSecureStoreProvider]
 
-Set-SPSecureStoreDefaultProvider -Type $type
+PS C:\> Set-SPSecureStoreDefaultProvider -Type $type
 ```
 
 This example sets the custom implemented secure store provider.

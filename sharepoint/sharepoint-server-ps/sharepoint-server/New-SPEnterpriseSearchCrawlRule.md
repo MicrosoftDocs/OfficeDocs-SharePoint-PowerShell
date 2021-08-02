@@ -39,7 +39,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-New-SPEnterpriseSearchCrawlRule -SearchApplication $ssa -Path https://ExampleSharePointSite -CrawlAsHttp 1 -Type InclusionRule
+PS C:\> New-SPEnterpriseSearchCrawlRule -SearchApplication $ssa -Path https://ExampleSharePointSite -CrawlAsHttp 1 -Type InclusionRule
 ```
 
 This example creates an inclusion type crawl rule for the site at https://ExampleSharePointSite.

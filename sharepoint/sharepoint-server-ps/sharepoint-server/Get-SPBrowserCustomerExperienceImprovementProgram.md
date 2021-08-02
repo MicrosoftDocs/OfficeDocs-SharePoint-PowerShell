@@ -21,20 +21,20 @@ Returns the current opt-in state for the browser Customer Experience Improvement
 ## SYNTAX
 
 ### Farm
-```powershell
-PS C:\> Get-SPBrowserCustomerExperienceImprovementProgram [-Farm] [-AssignmentCollection <SPAssignmentCollection>]
+```
+Get-SPBrowserCustomerExperienceImprovementProgram [-Farm] [-AssignmentCollection <SPAssignmentCollection>]
  [<CommonParameters>]
 ```
 
 ### SiteSubscription
-```powershell
-PS C:\> Get-SPBrowserCustomerExperienceImprovementProgram -SiteSubscription <SPSiteSubscriptionPipeBind>
+```
+Get-SPBrowserCustomerExperienceImprovementProgram -SiteSubscription <SPSiteSubscriptionPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### WebApplication
-```powershell
-PS C:\> Get-SPBrowserCustomerExperienceImprovementProgram -WebApplication <SPWebApplicationPipeBind>
+```
+Get-SPBrowserCustomerExperienceImprovementProgram -WebApplication <SPWebApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 

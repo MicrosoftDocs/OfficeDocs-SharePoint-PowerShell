@@ -28,8 +28,8 @@ The \`Clear-SPCertificateNotificationContact\` cmdlet deletes all email addresse
 ## EXAMPLES
 
 ### ------------EXAMPLE-----------
-```
-C:\PS > Clear-SPCertificateNotificationContact
+```powershell
+PS C:\> C:\PS > Clear-SPCertificateNotificationContact
 ```
 
 This example deletes all email addresses from the list of contacts to be notified when certificates are about to expire or have already expired.

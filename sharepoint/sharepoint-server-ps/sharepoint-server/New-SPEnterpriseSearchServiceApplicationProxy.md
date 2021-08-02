@@ -19,15 +19,15 @@ Adds a new search application proxy to a farm.
 ## SYNTAX
 
 ### SSA
-```powershell
-PS C:\> New-SPEnterpriseSearchServiceApplicationProxy [[-Name] <String>]
+```
+New-SPEnterpriseSearchServiceApplicationProxy [[-Name] <String>]
  -SearchApplication <SearchServiceApplicationPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-MergeWithDefaultPartition] [-Partitioned] [-WhatIf] [<CommonParameters>]
 ```
 
 ### Uri
-```powershell
-PS C:\> New-SPEnterpriseSearchServiceApplicationProxy [[-Name] <String>] -Uri <String>
+```
+New-SPEnterpriseSearchServiceApplicationProxy [[-Name] <String>] -Uri <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-MergeWithDefaultPartition] [-Partitioned]
  [-WhatIf] [<CommonParameters>]
 ```
@@ -52,7 +52,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-New-SPEnterpriseSearchServiceApplicationProxy -Name 'Search Service Application Proxy' -SearchApplication $ssa
+PS C:\> New-SPEnterpriseSearchServiceApplicationProxy -Name 'Search Service Application Proxy' -SearchApplication $ssa
 ```
 
 This example adds a search service application proxy to a search service application.

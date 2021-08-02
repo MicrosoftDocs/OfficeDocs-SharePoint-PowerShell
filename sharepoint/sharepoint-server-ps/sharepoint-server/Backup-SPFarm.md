@@ -21,15 +21,15 @@ Creates a backup of an individual database, Web application, or the entire farm.
 ## SYNTAX
 
 ### DefaultSet
-```powershell
-PS C:\> Backup-SPFarm -BackupMethod <String> -Directory <String> [-AssignmentCollection <SPAssignmentCollection>]
+```
+Backup-SPFarm -BackupMethod <String> -Directory <String> [-AssignmentCollection <SPAssignmentCollection>]
  [-BackupThreads <Int32>] [-ConfigurationOnly] [-Force] [-Item <String>] [-Percentage <Int32>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### ShowTree
-```powershell
-PS C:\> Backup-SPFarm [-ShowTree] [-AssignmentCollection <SPAssignmentCollection>] [-ConfigurationOnly]
+```
+Backup-SPFarm [-ShowTree] [-AssignmentCollection <SPAssignmentCollection>] [-ConfigurationOnly]
  [-Item <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

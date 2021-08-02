@@ -36,9 +36,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE-----------------------
-```
+```powershell
 
-$fs = New-SPSiteSubscriptionFeaturePack
+PS C:\> $fs = New-SPSiteSubscriptionFeaturePack
 
 ```
 

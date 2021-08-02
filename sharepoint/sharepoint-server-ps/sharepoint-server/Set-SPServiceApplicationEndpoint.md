@@ -19,14 +19,14 @@ Sets the host of an endpoint for a service application.
 ## SYNTAX
 
 ### HostName
-```powershell
-PS C:\> Set-SPServiceApplicationEndpoint [-Identity] <SPServiceEndpointPipeBind> -HostName <String>
+```
+Set-SPServiceApplicationEndpoint [-Identity] <SPServiceEndpointPipeBind> -HostName <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### ResetHostName
-```powershell
-PS C:\> Set-SPServiceApplicationEndpoint [-Identity] <SPServiceEndpointPipeBind> [-ResetHostName]
+```
+Set-SPServiceApplicationEndpoint [-Identity] <SPServiceEndpointPipeBind> [-ResetHostName]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 

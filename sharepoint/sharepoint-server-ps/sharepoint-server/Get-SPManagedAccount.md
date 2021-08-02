@@ -21,20 +21,20 @@ Retrieves accounts registered in the configuration database.
 ## SYNTAX
 
 ### Server
-```powershell
-PS C:\> Get-SPManagedAccount [[-Identity] <SPManagedAccountPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
+```
+Get-SPManagedAccount [[-Identity] <SPManagedAccountPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
  [-Server <SPServerPipeBind>] [<CommonParameters>]
 ```
 
 ### Service
-```powershell
-PS C:\> Get-SPManagedAccount [[-Identity] <SPManagedAccountPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
+```
+Get-SPManagedAccount [[-Identity] <SPManagedAccountPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
  [-Service <SPServicePipeBind>] [<CommonParameters>]
 ```
 
 ### WebApplication
-```powershell
-PS C:\> Get-SPManagedAccount [[-Identity] <SPManagedAccountPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
+```
+Get-SPManagedAccount [[-Identity] <SPManagedAccountPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
  [-WebApplication <SPWebApplicationPipeBind>] [<CommonParameters>]
 ```
 

@@ -41,7 +41,7 @@ PS C:\> $c=New-SPRequestManagementRuleCriteria -Value http -Property url -MatchT
 
 PS C:\> $throttlingrule=Add-SPThrottlingRule -RequestManagementSettings $rm -Name <Rule Name> -Criteria $c -Threshold 4
 
-Remove-SPThrottlingRule -Identity $throttlingrule
+PS C:\> Remove-SPThrottlingRule -Identity $throttlingrule
 ```
 
 This example removes a throttling rule for a specified identity by using the $throttlingrule variable.

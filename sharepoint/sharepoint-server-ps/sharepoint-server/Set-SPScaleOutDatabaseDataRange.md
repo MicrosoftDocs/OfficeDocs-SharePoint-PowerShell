@@ -40,7 +40,7 @@ PS C:\> $database = $databases[0]
 
 PS C:\> $state = Get-SPScaleOutDatabaseDataState -Database $database
 
-Set-SPScaleOutDatabaseDataRange -Database $database -Range $state.Range -NewRangePoint $null -IsUpperSubRange $true
+PS C:\> Set-SPScaleOutDatabaseDataRange -Database $database -Range $state.Range -NewRangePoint $null -IsUpperSubRange $true
 ```
 
 This example extends the data range end point of the first database in the specified service application up to the maximum range point.

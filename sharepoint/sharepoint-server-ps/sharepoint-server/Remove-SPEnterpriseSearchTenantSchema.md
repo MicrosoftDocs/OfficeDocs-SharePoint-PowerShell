@@ -37,8 +37,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-[Guid]$guid = "909b84cb-90f2-4a1b-8df4-22547a9b2227"
-Remove-SPEnterpriseSearchTenantSchema -Identity $guid -SearchApplication $ssa
+PS C:\> [Guid]$guid = "909b84cb-90f2-4a1b-8df4-22547a9b2227"
+PS C:\> Remove-SPEnterpriseSearchTenantSchema -Identity $guid -SearchApplication $ssa
 ```
 
 This example removes the search schema for the tenant with GUID 909b84cb-90f2-4a1b-8df4-22547a9b2227.

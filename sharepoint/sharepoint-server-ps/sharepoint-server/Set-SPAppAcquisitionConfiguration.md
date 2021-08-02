@@ -18,14 +18,14 @@ Sets app acquisition settings.
 ## SYNTAX
 
 ### MarketplaceSettingsInSiteSubscription
-```powershell
-PS C:\> Set-SPAppAcquisitionConfiguration -Enable <Boolean> -SiteSubscription <SPSiteSubscriptionPipeBind>
+```
+Set-SPAppAcquisitionConfiguration -Enable <Boolean> -SiteSubscription <SPSiteSubscriptionPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### MarketplaceSettingsInWebApplication
-```powershell
-PS C:\> Set-SPAppAcquisitionConfiguration -Enable <Boolean> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+```
+Set-SPAppAcquisitionConfiguration -Enable <Boolean> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
  -WebApplication <SPWebApplicationPipeBind> [-WhatIf] [<CommonParameters>]
 ```
 

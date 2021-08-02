@@ -19,16 +19,16 @@ Creates a subrange for a specified scale-out database.
 ## SYNTAX
 
 ### UnattachedDatabase
-```powershell
-PS C:\> Set-SPScaleOutDatabaseDataSubRange -ConnectionString <String> -IsUpperSubRange <Boolean>
+```
+Set-SPScaleOutDatabaseDataSubRange -ConnectionString <String> -IsUpperSubRange <Boolean>
  -Range <SPScaleOutDataRange> -SubRangeMode <SPScaleOutDatabaseSubRangeMode>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-IgnoreSubRangePointOnBoundary]
  [-IsAzureDatabase] [-SubRangePoint <Byte[]>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### AttachedDatabase
-```powershell
-PS C:\> Set-SPScaleOutDatabaseDataSubRange -Database <SPDatabasePipeBind> -IsUpperSubRange <Boolean>
+```
+Set-SPScaleOutDatabaseDataSubRange -Database <SPDatabasePipeBind> -IsUpperSubRange <Boolean>
  -Range <SPScaleOutDataRange> -SubRangeMode <SPScaleOutDatabaseSubRangeMode>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-IgnoreSubRangePointOnBoundary]
  [-SubRangePoint <Byte[]>] [-WhatIf] [<CommonParameters>]
@@ -51,7 +51,7 @@ PS C:\> $database = $databases[0]
 
 PS C:\> $state = Get-SPScaleOutDatabaseDataState -Database $database
 
-Set-SPScaleOutDatabaseDataSubRange -Database $database -Range $state.Range -SubRangePoint $state.Range.RangeEnd -SubRangeMode ReadOnly -IsUpperSubRange $false
+PS C:\> Set-SPScaleOutDatabaseDataSubRange -Database $database -Range $state.Range -SubRangePoint $state.Range.RangeEnd -SubRangeMode ReadOnly -IsUpperSubRange $false
 ```
 
 This example creates a read-only subrange that starts from the data range start point and ends at the data range end point on the first scale-out database of the specified service application.

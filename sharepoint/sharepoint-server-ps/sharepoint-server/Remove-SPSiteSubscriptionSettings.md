@@ -19,15 +19,15 @@ Removes the settings service data for a specified site subscription, or finds an
 ## SYNTAX
 
 ### FindAllOrphans
-```powershell
-PS C:\> Remove-SPSiteSubscriptionSettings [-Identity] <SPServiceApplicationPipeBind> [-FindAllOrphans]
+```
+Remove-SPSiteSubscriptionSettings [-Identity] <SPServiceApplicationPipeBind> [-FindAllOrphans]
  [-AlternativeSiteSubscriptions <Guid[]>] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Force]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ### SpecifySiteSubscriptions
-```powershell
-PS C:\> Remove-SPSiteSubscriptionSettings [-Identity] <SPServiceApplicationPipeBind> -SiteSubscriptions <Guid[]>
+```
+Remove-SPSiteSubscriptionSettings [-Identity] <SPServiceApplicationPipeBind> -SiteSubscriptions <Guid[]>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 

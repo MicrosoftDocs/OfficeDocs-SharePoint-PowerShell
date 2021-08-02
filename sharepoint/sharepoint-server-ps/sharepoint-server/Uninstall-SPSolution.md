@@ -19,15 +19,15 @@ Retracts a deployed SharePoint solution.
 ## SYNTAX
 
 ### AllWebApplication
-```powershell
-PS C:\> Uninstall-SPSolution [-Identity] <SPSolutionPipeBind> [-AllWebApplications]
+```
+Uninstall-SPSolution [-Identity] <SPSolutionPipeBind> [-AllWebApplications]
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-CompatibilityLevel <String>]
  [-Language <UInt32>] [-Local] [-Time <String>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### OneWebApplication
-```powershell
-PS C:\> Uninstall-SPSolution [-Identity] <SPSolutionPipeBind> -WebApplication <SPWebApplicationPipeBind>
+```
+Uninstall-SPSolution [-Identity] <SPSolutionPipeBind> -WebApplication <SPWebApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-CompatibilityLevel <String>]
  [-Language <UInt32>] [-Local] [-Time <String>] [-WhatIf] [<CommonParameters>]
 ```

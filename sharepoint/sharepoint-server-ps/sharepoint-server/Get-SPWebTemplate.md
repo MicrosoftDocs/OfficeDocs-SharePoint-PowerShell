@@ -36,7 +36,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```powershell
 PS C:\> $template = Get-SPWebTemplate "STS#0"
 
-New-SPSite https://contoso.com -OwnerAlias "DOMAIN\JDOE" -Template $template
+PS C:\> New-SPSite https://contoso.com -OwnerAlias "DOMAIN\JDOE" -Template $template
 ```
 
 This example creates a site collection by using the team site Web template (ID=STS#0).

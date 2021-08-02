@@ -19,16 +19,16 @@ Configures the specified Web application.
 ## SYNTAX
 
 ### UpdateMailSettings
-```powershell
-PS C:\> Set-SPWebApplication [-Identity] <SPWebApplicationPipeBind> [-OutgoingEmailAddress <String>]
+```
+Set-SPWebApplication [-Identity] <SPWebApplicationPipeBind> [-OutgoingEmailAddress <String>]
  [-ReplyToEmailAddress <String>] -SMTPServer <String> [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-Force] [-WhatIf] [-DisableSMTPEncryption] [-NotProvisionGlobally] [-SMTPServerPort <Int32>]
  [<CommonParameters>]
 ```
 
 ### UpdateClaimSettings
-```powershell
-PS C:\> Set-SPWebApplication [-Identity] <SPWebApplicationPipeBind> -Zone <SPUrlZone>
+```
+Set-SPWebApplication [-Identity] <SPWebApplicationPipeBind> -Zone <SPUrlZone>
  [-AdditionalClaimProvider <SPClaimProviderPipeBind[]>] [-AssignmentCollection <SPAssignmentCollection>]
  [-AuthenticationMethod <String>] [-AuthenticationProvider <SPAuthenticationProviderPipeBind[]>] [-Confirm]
  [-Force] [-SignInRedirectProvider <SPTrustedIdentityTokenIssuerPipeBind>] [-SignInRedirectURL <String>]
@@ -36,8 +36,8 @@ PS C:\> Set-SPWebApplication [-Identity] <SPWebApplicationPipeBind> -Zone <SPUrl
 ```
 
 ### UpdateGeneralSettings
-```powershell
-PS C:\> Set-SPWebApplication [-Identity] <SPWebApplicationPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+```
+Set-SPWebApplication [-Identity] <SPWebApplicationPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
  [-Confirm] [-DefaultQuotaTemplate <String>] [-DefaultTimeZone <Int32>] [-Force]
  [-ServiceApplicationProxyGroup <SPServiceApplicationProxyGroupPipeBind>] [-WhatIf] [-NotProvisionGlobally]
  [<CommonParameters>]

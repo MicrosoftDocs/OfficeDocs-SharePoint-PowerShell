@@ -40,7 +40,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```powershell
 PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-Set-SPEnterpriseSearchMetadataCategory -Identity People -SearchApplication $ssa -DiscoverNewProperties $false -MapToContents $false
+PS C:\> Set-SPEnterpriseSearchMetadataCategory -Identity People -SearchApplication $ssa -DiscoverNewProperties $false -MapToContents $false
 ```
 
 This example sets both DiscoverNewProperties and MapToContents properties to False for the People category for the default search service application.

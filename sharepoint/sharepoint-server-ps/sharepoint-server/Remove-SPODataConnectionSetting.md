@@ -18,14 +18,14 @@ ms.reviewer:
 ## SYNTAX
 
 ### Name (Default)
-```powershell
-PS C:\> Remove-SPODataConnectionSetting -ServiceContext <SPServiceContextPipeBind> -Name <String>
+```
+Remove-SPODataConnectionSetting -ServiceContext <SPServiceContextPipeBind> -Name <String>
  [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Identity
-```powershell
-PS C:\> Remove-SPODataConnectionSetting -ServiceContext <SPServiceContextPipeBind>
+```
+Remove-SPODataConnectionSetting -ServiceContext <SPServiceContextPipeBind>
  [-Identity] <ODataConnectionSettings> [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```

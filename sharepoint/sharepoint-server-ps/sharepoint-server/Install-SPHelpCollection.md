@@ -21,13 +21,13 @@ Installs the provided Help site collection files in the current farm.
 ## SYNTAX
 
 ### InstallAll
-```powershell
-PS C:\> Install-SPHelpCollection [-All] [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+```
+Install-SPHelpCollection [-All] [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
 
 ### InstallOne
-```powershell
-PS C:\> Install-SPHelpCollection -LiteralPath <String> [-AssignmentCollection <SPAssignmentCollection>]
+```
+Install-SPHelpCollection -LiteralPath <String> [-AssignmentCollection <SPAssignmentCollection>]
  [<CommonParameters>]
 ```
 

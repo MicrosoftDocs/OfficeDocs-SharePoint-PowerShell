@@ -39,8 +39,7 @@ This example removes the association between the SharePoint farm and the SQL Ser
 
 ### --------------EXAMPLE 2----------------- 
 ```powershell
-PS C:\> Get-SPStateServiceDatabase -ServiceApplication F9168C5E-CEB2-4faa-B6B
-F-329BF39FA1E4 | Dismount-SPStateServiceDatabase
+PS C:\> Get-SPStateServiceDatabase -ServiceApplication F9168C5E-CEB2-4faa-B6BF-329BF39FA1E4 | Dismount-SPStateServiceDatabase
 ```
 
 This example dismounts a single database because only the Identity parameter is used.
