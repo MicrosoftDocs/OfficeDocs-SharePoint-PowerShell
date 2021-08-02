@@ -76,8 +76,9 @@ Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-```powershell
-PS C:\> ### -Confirm
+```
+
+### -Confirm
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml

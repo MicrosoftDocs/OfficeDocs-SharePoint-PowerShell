@@ -57,8 +57,9 @@ Position: 1
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-```powershell
-PS C:\> ### -CheckComplianceFlags
+```
+
+### -CheckComplianceFlags
 Specifies if compliance flags are enabled. 
 
 ```yaml

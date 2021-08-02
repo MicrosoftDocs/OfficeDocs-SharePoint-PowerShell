@@ -56,8 +56,9 @@ Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-```powershell
-PS C:\> ### -MySiteHostUrl
+```
+
+### -MySiteHostUrl
 The root URL for the redirected pages
 
 ```yaml

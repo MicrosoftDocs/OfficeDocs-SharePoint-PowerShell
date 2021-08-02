@@ -62,8 +62,9 @@ Position: 1
 Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
-```powershell
-PS C:\> ### -DeleteADAccounts
+```
+
+### -DeleteADAccounts
 Forces deletion of user accounts from Active Directory Domain Services (AD DS).
 This applies when in AD DS account creation mode and the value of this parameter is True, AD DS accounts associated with the site collection are also deleted from AD DS.
 
@@ -77,8 +78,9 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-```powershell
-PS C:\> ### -CheckComplianceFlags
+```
+
+### -CheckComplianceFlags
 Specifies if compliance flags are enabled. 
 
 ```yaml
