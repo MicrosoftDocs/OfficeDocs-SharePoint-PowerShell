@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE----------------- 
 ```powershell
-PS C:\> Get-SPTopologyServiceApplication
+Get-SPTopologyServiceApplication
 ```
 
 This example displays properties of the topology service application for the current farm.

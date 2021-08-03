@@ -34,11 +34,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------EXAMPLE--------
 ```powershell
-PS C:\> $web=Get-SPWebApplication -Identity <URL of web application>
+$web=Get-SPWebApplication -Identity <URL of web application>
 
-PS C:\> $rm=Get-SPRequestManagementSettings -Identity $web
+$rm=Get-SPRequestManagementSettings -Identity $web
 
-PS C:\> Get-SPThrottlingRule -RequestManagementSettings $rm
+Get-SPThrottlingRule -RequestManagementSettings $rm
 ```
 
 This example returns throttling rules for the farm by using the $rm and $web variables.

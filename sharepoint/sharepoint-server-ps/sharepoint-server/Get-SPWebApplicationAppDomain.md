@@ -40,28 +40,28 @@ Use the Get-SPWebApplicationAppDoman cmdlet to return all app domains for a spec
 
 ### -----------EXAMPLE 1--------- 
 ```powershell
-PS C:\> Get-SPWebApplicationAppDomain
+Get-SPWebApplicationAppDomain
 ```
 
 Returns a list of SPAppDomain objects, one for each of the app domains for all web applications in the farm.
 
 ### -----------EXAMPLE 2--------- 
 ```powershell
-PS C:\> Get-SPWebApplicationAppDomain -Zone Default
+Get-SPWebApplicationAppDomain -Zone Default
 ```
 
 Returns a list of SPAppDomain objects, one for each of the app domains for the Default zone for all web applications in the farm.
 
 ### -----------EXAMPLE 3--------- 
 ```powershell
-PS C:\> Get-SPWebApplicationAppDomain -WebApplication https://www.contoso.com
+Get-SPWebApplicationAppDomain -WebApplication https://www.contoso.com
 ```
 
 Returns a list of SPAppDomain objects, one for each of all the app domains for the specified web application for all zones.
 
 ### -----------EXAMPLE 4--------- 
 ```powershell
-PS C:\> Get-SPWebApplicationAppDomain -AppDomain contosoapps.com
+Get-SPWebApplicationAppDomain -AppDomain contosoapps.com
 ```
 
 Returns a list of SPAppDomain objects, one for each web application and zone pair that shares the specified app domain.

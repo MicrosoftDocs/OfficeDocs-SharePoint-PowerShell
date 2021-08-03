@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE------------- 
 ```powershell
-PS C:\> Export-SPCacheClusterConfig -Path C:\Config.txt
+Export-SPCacheClusterConfig -Path C:\Config.txt
 ```
 
 This example exports cache cluster configuration details to C:\Config.txt.

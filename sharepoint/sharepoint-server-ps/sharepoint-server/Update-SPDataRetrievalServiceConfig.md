@@ -43,21 +43,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE 1------------- 
 ```powershell
-PS C:\> Update-SPDataRetrievalServiceConfig -Farm -Enable $false
+Update-SPDataRetrievalServiceConfig -Farm -Enable $false
 ```
 
 This example turns off the data retrieval service for the farm.
 
 ### -------------EXAMPLE 2------------- 
 ```powershell
-PS C:\> Update-SPDataRetrievalServiceConfig -WebApplication http://MyOfficeApp1 -Inherit
+Update-SPDataRetrievalServiceConfig -WebApplication http://MyOfficeApp1 -Inherit
 ```
 
 This example enables the Web application, MyOfficeApp1, to inherit the global settings.
 
 ### -------------EXAMPLE 3------------- 
 ```powershell
-PS C:\> Update-SPDataRetrievalServiceConfig -WebApplication http://MyOfficeApp1 -Enable $false
+Update-SPDataRetrievalServiceConfig -WebApplication http://MyOfficeApp1 -Enable $false
 ```
 
 This example turns off the data retrieval service for the Web application, MyOfficeApp1.

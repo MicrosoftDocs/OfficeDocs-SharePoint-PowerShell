@@ -36,7 +36,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------EXAMPLE 1----------------- 
 ```powershell
-PS C:\> Get-SPAuthenticationProvider -WebApplication https://webAppUrl -Zone Default
+Get-SPAuthenticationProvider -WebApplication https://webAppUrl -Zone Default
 ```
 
 This example retrieves the authentication provider in the Default zone of the Web Application 'https://webAppUrl'. 

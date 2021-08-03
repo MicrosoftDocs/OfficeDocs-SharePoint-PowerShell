@@ -46,30 +46,30 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1------------
 ```powershell
-PS C:\> Set-SPIRMSettings -RmsEnabled -UseActiveDirectoryDiscovery
+Set-SPIRMSettings -RmsEnabled -UseActiveDirectoryDiscovery
 ```
 
 This example enables IRM for the farm and configures it to use the default RMS server configured in Active Directory.
 
 ### --------------EXAMPLE 2------------
 ```powershell
-PS C:\> Set-SPIRMSettings -RmsEnabled -CertificateServerUrl https://myrmsserver
+Set-SPIRMSettings -RmsEnabled -CertificateServerUrl https://myrmsserver
 ```
 
 This example enables IRM for the farm and specifies the URL of the RMS server to use.
 
 ### --------------EXAMPLE 3------------
 ```powershell
-PS C:\> site = Get-SPSite http://myspserver
-PS C:\> $subscription = $site.SiteSubscription
-PS C:\> Set-SPIRMSettings -SiteSubscription $subscription -RmsEnabled -CertificateServerUrl https://myrmsserver
+site = Get-SPSite http://myspserver
+$subscription = $site.SiteSubscription
+Set-SPIRMSettings -SiteSubscription $subscription -RmsEnabled -CertificateServerUrl https://myrmsserver
 ```
 
 This example enables IRM for the specified tenant and specifies the URL of the RMS server to use.
 
 ### --------------EXAMPLE 4------------
 ```powershell
-PS C:\> Set-SPIRMSettings -RmsEnabled:$false
+Set-SPIRMSettings -RmsEnabled:$false
 ```
 
 This example disables IRM for the farm.

@@ -34,16 +34,16 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```powershell
-PS C:\> $template = Get-SPWebTemplate "STS#0"
+$template = Get-SPWebTemplate "STS#0"
 
-PS C:\> New-SPSite https://contoso.com -OwnerAlias "DOMAIN\JDOE" -Template $template
+New-SPSite https://contoso.com -OwnerAlias "DOMAIN\JDOE" -Template $template
 ```
 
 This example creates a site collection by using the team site Web template (ID=STS#0).
 
 ### --------------EXAMPLE 2----------------- 
 ```powershell
-PS C:\> Get-SPWebTemplate "STS*"
+Get-SPWebTemplate "STS*"
 ```
 
 This example displays basic information about all the STS templates.

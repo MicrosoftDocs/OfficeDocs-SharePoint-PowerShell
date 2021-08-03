@@ -30,14 +30,14 @@ This Add-SPPeoplePickerSearchADDomain cmdlet adds a forest or domain with domain
 
 ### -------------EXAMPLE 1------------- 
 ```powershell
-PS C:\> Add-SPPeoplePickerSearchADDomain -WebApplication http://MyOfficeApp1 -DomainName "corp.contoso.com" -IsForest
+Add-SPPeoplePickerSearchADDomain -WebApplication http://MyOfficeApp1 -DomainName "corp.contoso.com" -IsForest
 ```
 
 This example adds forest corp.contoso.com to the People Picker search Active Directory domain list of the Web application MyOfficeApp1.
 
 ### -------------EXAMPLE 2------------- 
 ```powershell
-PS C:\> Add-SPPeoplePickerSearchADDomain -WebApplication http://MyOfficeApp1 -DomainName "corp.contoso.com" -Credential (NewObject System.Management.Automation.PSCredential "contoso\user", (ConvertTo-SecureString "password" -AsPlainText -Force))
+Add-SPPeoplePickerSearchADDomain -WebApplication http://MyOfficeApp1 -DomainName "corp.contoso.com" -Credential (NewObject System.Management.Automation.PSCredential "contoso\user", (ConvertTo-SecureString "password" -AsPlainText -Force))
 ```
 
 This example adds domain corp.contoso.com to the People Picker search Active Directory domain list of the Web application MyOfficeApp1, with login name user and password password.

@@ -41,7 +41,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```powershell
-PS C:\> Remove-SPDeletedSite -Identity 610857cb-8414-4a89-8bf3-ad3628f6c86c
+Remove-SPDeletedSite -Identity 610857cb-8414-4a89-8bf3-ad3628f6c86c
 ```
 
 This example permanently removes a specific deleted site collection by using a site ID.

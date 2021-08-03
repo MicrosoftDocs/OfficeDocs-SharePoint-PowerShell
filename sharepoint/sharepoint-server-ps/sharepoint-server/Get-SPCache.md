@@ -28,7 +28,7 @@ Use the Get-SPCache cmdlet to get the cache information from the cache cluster.
 
 ### -------------EXAMPLE------------- 
 ```powershell
-PS C:\> Get-SPCache
+Get-SPCache
 ```
 
 This example returns the cache information of the local machine from the cluster.

@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------EXAMPLE----------- 
 ```powershell
-PS C:\> Get-SPBusinessDataCatalogEntityNotificationWeb -ServiceContext "http://contoso"
+Get-SPBusinessDataCatalogEntityNotificationWeb -ServiceContext "http://contoso"
 ```
 
 This example returns the entity notification site for the site collection at http://contoso.

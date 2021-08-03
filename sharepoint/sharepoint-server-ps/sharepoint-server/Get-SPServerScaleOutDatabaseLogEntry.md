@@ -36,11 +36,11 @@ Use the Get-SPServerScaleOutDatabaseLogEntry cmdlet to query a scale-out databas
 
 ### -------------EXAMPLE----------- 
 ```powershell
-PS C:\> $databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
+$databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
 
-PS C:\> $database = $databases[0]
+$database = $databases[0]
 
-PS C:\> Get-SPServerScaleOutDatabaseLogEntry -Database $database -Count 10 -MajorAction DataMove
+Get-SPServerScaleOutDatabaseLogEntry -Database $database -Count 10 -MajorAction DataMove
 ```
 
 This example gets the 10 most recent scale-out log entries from the first scale-out database of the given service application.

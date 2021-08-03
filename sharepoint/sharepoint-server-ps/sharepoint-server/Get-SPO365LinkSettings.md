@@ -28,9 +28,9 @@ Use the **Get-SPO365LinkSettings** cmdlet to display current hybrid configuratio
 
 ### ------------EXAMPLE 1-----------
 ```powershell
-PS C:\> $gc = Start-SPAssignment
-PS C:\> Get-SPO365LinkSettings -AssignmentCollection $gc
-PS C:\> Stop-SPAssignment $gc
+$gc = Start-SPAssignment
+Get-SPO365LinkSettings -AssignmentCollection $gc
+Stop-SPAssignment $gc
 ```
 
 This example returns all hybrid configurations.

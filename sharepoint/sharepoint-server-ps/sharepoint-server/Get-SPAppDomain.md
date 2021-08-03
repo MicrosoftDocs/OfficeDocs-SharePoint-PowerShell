@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE-------------- 
 ```powershell
-PS C:\> Get-SPAppDomain
+Get-SPAppDomain
 ```
 
 This example returns the domain name that hosts apps in the entire farm.

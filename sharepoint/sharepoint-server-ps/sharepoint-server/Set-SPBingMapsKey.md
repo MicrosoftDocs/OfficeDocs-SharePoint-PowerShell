@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```powershell
-PS C:\> Set-SPBingMapsKey -BingKey <Bing Maps Key>
+Set-SPBingMapsKey -BingKey <Bing Maps Key>
 ```
 
 This example sets the key that is used by Bing Maps.

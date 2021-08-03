@@ -29,7 +29,7 @@ Use the Update-SPFlightsConfigFile cmdlet to update the SPFlightsConfigFile in t
 
 ### -------------EXAMPLE------------- 
 ```powershell
-PS C:\> Update-SPFlightsConfigFile -FilePath C:\Users\Administrator\Downloads\SPFlightRawConfig.json
+Update-SPFlightsConfigFile -FilePath C:\Users\Administrator\Downloads\SPFlightRawConfig.json
 ```
 
 This example updates the SPFlightsConfigFile in the content database with C:\Downloads\SPFlightRawConfig.json.

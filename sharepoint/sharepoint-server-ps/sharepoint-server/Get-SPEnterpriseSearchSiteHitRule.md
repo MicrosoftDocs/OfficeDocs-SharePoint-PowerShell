@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```powershell
-PS C:\> $shRule = Get-SPEnterpriseSearchSiteHitRule -Identity MySiteHitRule
+$shRule = Get-SPEnterpriseSearchSiteHitRule -Identity MySiteHitRule
 ```
 
 The following example obtains a reference to the site hit rule with the name MySiteHitRule.

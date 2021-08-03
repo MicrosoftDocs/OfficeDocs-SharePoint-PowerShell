@@ -38,8 +38,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```powershell
-PS C:\> $Model = Get-SPBusinessDataCatalogMetadataObject -BdcObjectType "Model" -Name "ContosoModel" -ServiceContext http://contoso
-PS C:\> Export-SPBusinessDataCatalogModel -Identity $Model -Path "C:\folder\model.bdcm"
+$Model = Get-SPBusinessDataCatalogMetadataObject -BdcObjectType "Model" -Name "ContosoModel" -ServiceContext http://contoso
+Export-SPBusinessDataCatalogModel -Identity $Model -Path "C:\folder\model.bdcm"
 ```
 
 This example gets a Business Data Connectivity Model from the Business Data Connectivity Metadata Store and exports it to the location specified with the name model and using the bdcm file extension.

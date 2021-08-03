@@ -32,14 +32,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE 1--------------------- 
 ```powershell
-PS C:\> Get-SPVisioServiceApplicationProxy
+Get-SPVisioServiceApplicationProxy
 ```
 
 This example returns a list of Visio Services application proxies.
 
 ### ----------------EXAMPLE 2--------------------- 
 ```powershell
-PS C:\> Get-SPVisioServiceApplicationProxy "Connection to VGS2"
+Get-SPVisioServiceApplicationProxy "Connection to VGS2"
 ```
 
 This example returns settings for a Visio Services application proxy.

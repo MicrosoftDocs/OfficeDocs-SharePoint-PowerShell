@@ -34,8 +34,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```powershell
-PS C:\> $entityToEnable = Get-SPBusinessDataCatalogMetadataObject -Namespace "Contoso" -Name "Customer" -BdcObjectType "Entity" -ServiceContext http://contoso
-PS C:\> Enable-SPBusinessDataCatalogEntity -Identity $entityToEnable
+$entityToEnable = Get-SPBusinessDataCatalogMetadataObject -Namespace "Contoso" -Name "Customer" -BdcObjectType "Entity" -ServiceContext http://contoso
+Enable-SPBusinessDataCatalogEntity -Identity $entityToEnable
 ```
 
 This example activates the External Content type with the name Customer in the Contoso namespace on the site http://contoso.

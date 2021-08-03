@@ -43,8 +43,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS C:\> $cert = Get-PfxCertificate C:\LiveIDSigningCert.pfx
-PS C:\> Set-SPTrustedServiceTokenIssuer "WFEFarm1" - Description "WFE Farm 1" - ImportTrustCertificate $cert
+$cert = Get-PfxCertificate C:\LiveIDSigningCert.pfx
+Set-SPTrustedServiceTokenIssuer "WFEFarm1" - Description "WFE Farm 1" - ImportTrustCertificate $cert
 ```
 
 This example updates a SharePoint Farm trust using the trust certificate from a file.
@@ -52,7 +52,7 @@ This example updates a SharePoint Farm trust using the trust certificate from a 
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS C:\> Set-SPTrustedServiceTokenIssuer "WFEFarm1" - Description "WFE Farm 1" -FederationMetadataUrl "https://liveid.com/STS/2007/03/fedmetadata.xml"
+Set-SPTrustedServiceTokenIssuer "WFEFarm1" - Description "WFE Farm 1" -FederationMetadataUrl "https://liveid.com/STS/2007/03/fedmetadata.xml"
 ```
 
 This example updates a SharePoint farm trust using the trust certificate from the federation metadata endpoint URL.

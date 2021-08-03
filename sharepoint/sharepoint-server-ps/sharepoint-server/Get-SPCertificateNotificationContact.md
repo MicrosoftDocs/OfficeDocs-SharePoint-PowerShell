@@ -29,7 +29,7 @@ The \`Get-SPCertificateNotificationContact\` cmdlet gets the email addresses to 
 
 ### ------------EXAMPLE-----------
 ```powershell
-PS C:\> Get-SPCertificateNotificationContact -EmailAddress sharepoint-admins@example.com
+Get-SPCertificateNotificationContact -EmailAddress sharepoint-admins@example.com
 ```
 
 This example gets sharepoint-admins@example.com email addresses to be notified when certificates are about to expire or have already expired.

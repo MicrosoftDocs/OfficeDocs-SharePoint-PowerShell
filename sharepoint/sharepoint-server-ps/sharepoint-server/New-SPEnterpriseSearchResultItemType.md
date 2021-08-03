@@ -57,22 +57,22 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```powershell
-PS C:\> $rule = Get-SPEnterpriseSearchPropertyRule -PropertyName "ContentTypeId" -Operator "StartsWith"
-PS C:\> $rule.AddValue('0x010063C2F478ACC511DFB869B5BFDFD720851252')
-PS C:\> $ruleCollection = Get-SPEnterpriseSearchPropertyRuleCollection
-PS C:\> $ruleCollection.Add($rule)
-PS C:\> $displayProperties = "WorkId,Rank,Title,Size,Path,Description,SiteName,HitHighlightedSummary,HitHighlightedProperties,ViewsLifeTime"
-PS C:\> $displaytemplateUrl = "~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_MyCustomDisplayTemplate.js"
-PS C:\> $web = Get-SPWeb https://webUrl
-PS C:\> $tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite -SPWeb $web
-PS C:\> $proxy = Get-SPEnterpriseSearchServiceApplicationProxy
-PS C:\> New-SPEnterpriseSearchResultItemType -SearchApplicationProxy $proxy `
-PS C:\> >> -Name "CustomResultType" `
-PS C:\> >> -Rules $ruleCollection `
-PS C:\> >> -RulePriority 1 `
-PS C:\> >> -DisplayProperties $displayProperties `
-PS C:\> >> -DisplayTemplateUrl $displaytemplateUrl `
-PS C:\> >> -Owner $tenantOwner
+$rule = Get-SPEnterpriseSearchPropertyRule -PropertyName "ContentTypeId" -Operator "StartsWith"
+$rule.AddValue('0x010063C2F478ACC511DFB869B5BFDFD720851252')
+$ruleCollection = Get-SPEnterpriseSearchPropertyRuleCollection
+$ruleCollection.Add($rule)
+$displayProperties = "WorkId,Rank,Title,Size,Path,Description,SiteName,HitHighlightedSummary,HitHighlightedProperties,ViewsLifeTime"
+$displaytemplateUrl = "~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_MyCustomDisplayTemplate.js"
+$web = Get-SPWeb https://webUrl
+$tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite -SPWeb $web
+$proxy = Get-SPEnterpriseSearchServiceApplicationProxy
+New-SPEnterpriseSearchResultItemType -SearchApplicationProxy $proxy `
+>> -Name "CustomResultType" `
+>> -Rules $ruleCollection `
+>> -RulePriority 1 `
+>> -DisplayProperties $displayProperties `
+>> -DisplayTemplateUrl $displaytemplateUrl `
+>> -Owner $tenantOwner
 ```
 
 This example first defines the rule to apply to the search results in order to target results with a specific property and adds the rule to the rule collection.

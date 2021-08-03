@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```powershell
-PS C:\> Rename-SPServer -Identity "wfb1" -Name "WFE1"
+Rename-SPServer -Identity "wfb1" -Name "WFE1"
 ```
 
 This example changes the name of the SharePoint server wfb1 to WFE1.

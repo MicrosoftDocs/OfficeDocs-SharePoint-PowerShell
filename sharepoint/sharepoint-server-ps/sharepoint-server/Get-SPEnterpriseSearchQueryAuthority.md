@@ -34,15 +34,15 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------ 
 ```powershell
-PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
-PS C:\> Get-SPEnterpriseSearchQueryAuthority -Identity 'https://contoso.com' -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
+Get-SPEnterpriseSearchQueryAuthority -Identity 'https://contoso.com' -SearchApplication $ssa
 ```
 
 This example obtains the authoritative page for the URL https://contoso.com from the search service application named 'Search Service Application'.
 
 ### ------------------EXAMPLE 2------------------ 
 ```powershell
-PS C:\> Get-SPEnterpriseSearchQueryAuthority -SearchApplication 'Search Service Application'
+Get-SPEnterpriseSearchQueryAuthority -SearchApplication 'Search Service Application'
 ```
 
 This example obtains the collection of query authority pages from a search service application named 'Search Service Application'.

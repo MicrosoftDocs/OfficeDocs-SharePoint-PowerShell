@@ -29,7 +29,7 @@ The \`Add-SPCertificateNotificationContact\` cmdlet adds an email address to the
 
 ### ------------EXAMPLE-----------
 ```powershell
-PS C:\> Add-SPCertificateNotificationContact -EmailAddress sharepoint-admins@example.com
+Add-SPCertificateNotificationContact -EmailAddress sharepoint-admins@example.com
 ```
 
 This example adds the sharepoint-admins@example.com email address to the list of contacts to be notified when certificates are about to expire or have already expired.

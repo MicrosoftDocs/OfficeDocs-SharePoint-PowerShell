@@ -29,7 +29,7 @@ Use the Update-SPDistributedCacheSize cmdlet to allocate memory to the Distribut
 
 ### -------------EXAMPLE----------
 ```powershell
-PS C:\> Update-SPDistributedCacheSize -CacheSizeInMB 2048
+Update-SPDistributedCacheSize -CacheSizeInMB 2048
 ```
 
 Updates the Distributed Cache size to 2048MB.

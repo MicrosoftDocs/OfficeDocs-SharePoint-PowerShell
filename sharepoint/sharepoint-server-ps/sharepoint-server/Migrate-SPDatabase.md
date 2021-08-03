@@ -39,7 +39,7 @@ Do not use.
 
 ### ------------Example 1 -----------
 ```powershell
-PS C:\> #Do not use.
+#Do not use.
 ```
 
 Do not use.

@@ -35,9 +35,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```powershell
-PS C:\> $searchapp = Get-SPEnterpriseSearchServiceApplication "SearchApp1"
-PS C:\> $obsoletephrase = Get-SPEnterpriseSearchLanguageResourcePhrase -SearchApplication $searchapp -Language en-us -Type QuerySuggestionBlockList -Identity secret
-PS C:\> $obsoletephrase | Remove-SPEnterpriseSearchLanguageResourcePhrase -SearchApplication $searchapp -Type QuerySuggestionBlockList -Language en-us
+$searchapp = Get-SPEnterpriseSearchServiceApplication "SearchApp1"
+$obsoletephrase = Get-SPEnterpriseSearchLanguageResourcePhrase -SearchApplication $searchapp -Language en-us -Type QuerySuggestionBlockList -Identity secret
+$obsoletephrase | Remove-SPEnterpriseSearchLanguageResourcePhrase -SearchApplication $searchapp -Type QuerySuggestionBlockList -Language en-us
 ```
 
 This example removes a language resource item on the QuerySuggestionBlockList for the en-us language.

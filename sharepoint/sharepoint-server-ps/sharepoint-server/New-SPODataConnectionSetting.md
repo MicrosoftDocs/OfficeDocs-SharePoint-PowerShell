@@ -30,7 +30,7 @@ New-SPODataConnectionSetting -ServiceContext <SPServiceContextPipeBind> -Name <S
 
 ### -------------EXAMPLE 1------------- 
 ```powershell
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}

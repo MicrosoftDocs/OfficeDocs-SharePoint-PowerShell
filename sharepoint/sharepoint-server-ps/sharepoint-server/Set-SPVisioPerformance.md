@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE 1----------------------
 ```powershell
-PS C:\> Set-SPVisioPerformance -VisioServiceApplication "VGS2" -MaxDiagramSize 10 -MaxRecalcDuration 120 -MinDiagramCacheAge 1 -MaxDiagramCacheAge 4
+Set-SPVisioPerformance -VisioServiceApplication "VGS2" -MaxDiagramSize 10 -MaxRecalcDuration 120 -MinDiagramCacheAge 1 -MaxDiagramCacheAge 4
 ```
 
 This example changes settings that are related to performance for a Visio Services application.
@@ -42,7 +42,7 @@ This example changes settings that are related to performance for a Visio Servic
 
 ### -------------------EXAMPLE 2----------------------
 ```powershell
-PS C:\> Set-SPVisioPerformance -VisioServiceApplication "VGS2" -MaxDiagramSize 10
+Set-SPVisioPerformance -VisioServiceApplication "VGS2" -MaxDiagramSize 10
 ```
 
 This example changes settings that are related to performance for a Visio Services application.

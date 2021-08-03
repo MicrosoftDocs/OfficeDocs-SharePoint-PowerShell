@@ -47,9 +47,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE 1---------------
 ```powershell
-PS C:\> $databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
-PS C:\> $database = $databases[0]
-PS C:\> Split-SPScaleOutDatabase -NewDatabaseName Database2 -NewDatabaseServer MyDatabaseServer -SourceDatabase $database -SourceServiceApplication $serviceApplication -SourcePercentage 30
+$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
+$database = $databases[0]
+Split-SPScaleOutDatabase -NewDatabaseName Database2 -NewDatabaseServer MyDatabaseServer -SourceDatabase $database -SourceServiceApplication $serviceApplication -SourcePercentage 30
 ```
 
 This example creates a new scale-out database named Database2 on the MyDatabaseServer database server  in the given service application.
@@ -59,10 +59,10 @@ The example also moves 30% of the data from the upper side of the data range in 
 ### ---------------EXAMPLE 2---------------
 
 ```powershell
-PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\> $newReportingDb = "Search_AnalyticsReporting2"
-PS C:\> $reportingDb = Get-SPScaleOutDatabase -SearchApplication $ssa
-PS C:\> Split-SPServerScaleOutDatabase -SourceServiceApplication $ssa -SourceDatabase $reportingDb -NewDatabaseName $newReportingDb -SourcePercentage 33
+$ssa = Get-SPEnterpriseSearchServiceApplication
+$newReportingDb = "Search_AnalyticsReporting2"
+$reportingDb = Get-SPScaleOutDatabase -SearchApplication $ssa
+Split-SPServerScaleOutDatabase -SourceServiceApplication $ssa -SourceDatabase $reportingDb -NewDatabaseName $newReportingDb -SourcePercentage 33
 
 ```
 This example scales out the Search Analytics database, moving 33% of data to the new databases.

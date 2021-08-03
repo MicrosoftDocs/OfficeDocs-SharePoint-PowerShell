@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE---------- 
 ```powershell
-PS C:\> Get-SPAppDeniedEndpoint
+Get-SPAppDeniedEndpoint
 ```
 
 This example returns all the app-denied endpoints within the farm.

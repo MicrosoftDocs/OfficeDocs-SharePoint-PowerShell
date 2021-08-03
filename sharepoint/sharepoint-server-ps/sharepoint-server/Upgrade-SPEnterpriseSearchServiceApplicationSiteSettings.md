@@ -32,9 +32,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------EXAMPLE--------
 ```powershell
-PS C:\> $site= Get-SPSite https://test
+$site= Get-SPSite https://test
 
-PS C:\> Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings -Identity $site
+Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings -Identity $site
 ```
 
 This example upgrades the search settings for the site collection referenced by $site.

@@ -34,7 +34,7 @@ These include default properties for creating and renewing certificates and cert
 
 ### ------------EXAMPLE-----------
 ```powershell
-PS C:\> Set-SPCertificateSettings -CertificateExpirationWarningThreshold 22
+Set-SPCertificateSettings -CertificateExpirationWarningThreshold 22
 ```
 
 This examples changes the certificate expiration warning threshold to 22 days.

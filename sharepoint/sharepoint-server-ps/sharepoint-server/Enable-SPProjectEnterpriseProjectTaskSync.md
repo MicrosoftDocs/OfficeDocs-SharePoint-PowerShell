@@ -33,7 +33,7 @@ Enables task sync between Project Web App and the associated project site.
 
 ### ------------Example 1 -----------
 ```powershell
-PS C:\> Enable-SPProjectEnterpriseProjectTaskSync -Url https://pwa_site
+Enable-SPProjectEnterpriseProjectTaskSync -Url https://pwa_site
 ```
 
 Enables Project Task sync on the Project Web Apps site, https://pwa_site.

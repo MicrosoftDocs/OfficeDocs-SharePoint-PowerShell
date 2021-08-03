@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------EXAMPLE 1----------------------
 ```powershell
-PS C:\> Set-SPVisioServiceApplication -identity "VGS1" -ServiceApplicationPool "SharePoint Web Services System Default"
+Set-SPVisioServiceApplication -identity "VGS1" -ServiceApplicationPool "SharePoint Web Services System Default"
 ```
 
 This example changes the application pool of the VGS1 service application.
@@ -41,7 +41,7 @@ This example changes the application pool of the VGS1 service application.
 
 ### -----------------EXAMPLE 2----------------------
 ```powershell
-PS C:\> Get-SPServiceApplicationPool "SharePoint Web Services Default" | Set-SPVisioServiceApplication VGS1
+Get-SPServiceApplicationPool "SharePoint Web Services Default" | Set-SPVisioServiceApplication VGS1
 ```
 
 This example changes the application pool of the VGS1 service application.

@@ -45,14 +45,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE 1-----------------------------
 ```powershell
-PS C:\> Get-SPOfficeStoreAppsDefaultActivation -WebApplication https://sphvm-8044
+Get-SPOfficeStoreAppsDefaultActivation -WebApplication https://sphvm-8044
 ```
 
 This examples returns the setting for the web application https://sphvm-8044.
 
 ### -----------------------EXAMPLE 2-----------------------------
 ```powershell
-PS C:\> Get-SPOfficeStoreAppsDefaultActivation -SiteSubscription efca5b88-b3a3-448d-afbc-ef620f4744f1
+Get-SPOfficeStoreAppsDefaultActivation -SiteSubscription efca5b88-b3a3-448d-afbc-ef620f4744f1
 ```
 
 This examples returns the Subscription ID setting for the tenant

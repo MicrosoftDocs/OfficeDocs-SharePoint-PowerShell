@@ -50,7 +50,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```powershell
-PS C:\> Set-SPBrowserCustomerExperienceImprovementProgram -Farm -Enable
+Set-SPBrowserCustomerExperienceImprovementProgram -Farm -Enable
 ```
 
 This example turns on the browser Customer Experience Improvement Program for the farm.
@@ -58,7 +58,7 @@ This example turns on the browser Customer Experience Improvement Program for th
 
 ### ------------------EXAMPLE 2-----------------------
 ```powershell
-PS C:\> Set-SPBrowserCustomerExperienceImprovementProgram -Farm -Enable:$False
+Set-SPBrowserCustomerExperienceImprovementProgram -Farm -Enable:$False
 ```
 
 This example turns off the browser Customer Experience Improvement Program for the farm.
@@ -66,7 +66,7 @@ This example turns off the browser Customer Experience Improvement Program for t
 
 ### ------------------EXAMPLE 3-----------------------
 ```powershell
-PS C:\> Set-SPWebApplication https://MyOfficeApp1 | Get- SPBrowserCustomerExperienceImprovementProgram -Enable
+Set-SPWebApplication https://MyOfficeApp1 | Get- SPBrowserCustomerExperienceImprovementProgram -Enable
 ```
 
 This example turns on the browser Customer Experience Improvement Program for the Web application, MyOfficeApp1.

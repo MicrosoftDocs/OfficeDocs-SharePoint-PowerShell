@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE 1---------------------
 ```powershell
-PS C:\> Set-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b -Weight 10
+Set-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b -Weight 10
 ```
 
 This example updates the database weight to the maximum (10).
@@ -41,7 +41,7 @@ This example updates the database weight to the maximum (10).
 
 ### --------------------EXAMPLE 2---------------------
 ```powershell
-PS C:\> Set-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b -ServiceApplication "StateSvcApp1"
+Set-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b -ServiceApplication "StateSvcApp1"
 ```
 
 This example updates the associated service application for a state service database.
@@ -49,9 +49,9 @@ This example updates the associated service application for a state service data
 
 ### --------------------EXAMPLE 3---------------------
 ```powershell
-PS C:\> $cred = Get-Credential
+$cred = Get-Credential
 
-PS C:\> Set-SPStateServiceDatabase -Identity "StateSvcDB1" -DatabaseCredentials $cred
+Set-SPStateServiceDatabase -Identity "StateSvcDB1" -DatabaseCredentials $cred
 ```
 
 This example updates the SQL Authentication credentials that are used for a given database.

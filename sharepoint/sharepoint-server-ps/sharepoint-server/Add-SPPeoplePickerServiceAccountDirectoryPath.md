@@ -32,7 +32,7 @@ This Add-SPPeoplePickerServiceAccountDirectoryPath cmdlet adds an OU into the se
 
 ### -------------EXAMPLE 1------------- 
 ```powershell
-PS C:\> Add-SPPeoplePickerServiceAccountDirectoryPath -WebApplication http://MyOfficeApp1 -OUName "OU=FarmAdmin,DC=Contoso,DC=local"
+Add-SPPeoplePickerServiceAccountDirectoryPath -WebApplication http://MyOfficeApp1 -OUName "OU=FarmAdmin,DC=Contoso,DC=local"
 ```
 
 This example adds OU "FarmAdmin" to the service account directory path list of Web application MyOfficeApp1, so that Administrator can use People Picker to get users that are in the OU "FarmAdmin"

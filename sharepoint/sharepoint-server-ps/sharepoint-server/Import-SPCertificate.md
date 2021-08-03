@@ -40,9 +40,9 @@ Uninstalling SharePoint from a server will not automatically remove SharePoint-m
 
 ### ------------EXAMPLE 1-----------
 ```powershell
-PS C:\> $password = ConvertTo-SecureString -AsPlainText -Force 
-PS C:\>  
-PS C:\> Import-SPCertificate -Path "\\server\fileshare\certificates.pfx" -Password $password -Exportable
+$password = ConvertTo-SecureString -AsPlainText -Force 
+ 
+Import-SPCertificate -Path "\\server\fileshare\certificates.pfx" -Password $password -Exportable
 ```
 
 This example imports certificates and any associated private keys from the \\\\server\fileshare\certificates.pfx file into the SharePoint farm.
@@ -50,7 +50,7 @@ It also allows private keys that were imported during this operation to be expor
 
 ### ------------EXAMPLE 2-----------
 ```powershell
-PS C:\> Import-SPCertificate -Path D:\test.cer
+Import-SPCertificate -Path D:\test.cer
 ```
 
 This example imports a certificate from the D:\test.cer file into the SharePoint farm.

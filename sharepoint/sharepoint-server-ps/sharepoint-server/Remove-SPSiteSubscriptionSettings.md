@@ -51,7 +51,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE 1--------------
 ```powershell
-PS C:\> Remove-SPSiteSubscriptionSettings -FindAllOrphans -Whatif
+Remove-SPSiteSubscriptionSettings -FindAllOrphans -Whatif
 ```
 
 This example finds all orphans and displays them on the screen.
@@ -60,7 +60,7 @@ Remove the WhatIf parameter to remove these extra settings.
 
 ### ------------EXAMPLE 2--------------
 ```powershell
-PS C:\> Remove-SPSubscriptionSettingsServiceApplication -FindAllOrphans -AlternativeSiteSubscriptions $SubscriptionList
+Remove-SPSubscriptionSettingsServiceApplication -FindAllOrphans -AlternativeSiteSubscriptions $SubscriptionList
 ```
 
 Use this example if the service application is consumed by a remote farm and you want the clean orphaned site subscription settings data (an array of all site subscriptions whose data must remain in the service application is assigned to the $SubscriptionList variable.

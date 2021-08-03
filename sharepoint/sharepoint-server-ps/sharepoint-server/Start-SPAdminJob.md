@@ -36,7 +36,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```powershell
-PS C:\> Start-SPAdminJob -Verbose
+Start-SPAdminJob -Verbose
 ```
 
 This example runs all waiting administrative jobs and shows verbose output to the administrator.

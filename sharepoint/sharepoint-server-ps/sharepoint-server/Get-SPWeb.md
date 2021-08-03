@@ -49,29 +49,29 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE 1---------------------- 
 ```powershell
-PS C:\> Get-SPWeb -site https://sitename/sites/site1
+Get-SPWeb -site https://sitename/sites/site1
 ```
 
 This example returns all the subwebs in a given site collection.
 
 ### --------------------EXAMPLE 2---------------------- 
 ```powershell
-PS C:\> Get-SPWeb -Site https://sitename/sites/site1  -filter {$_.Template -eq "STS#0"}
+Get-SPWeb -Site https://sitename/sites/site1  -filter {$_.Template -eq "STS#0"}
 ```
 
 This example displays all subsites that use the "STS#0" template.
 
 ### --------------------EXAMPLE 3---------------------- 
 ```powershell
-PS C:\> Start-SPAssignment -Global
+Start-SPAssignment -Global
 
-PS C:\> $w = Get-SPWeb https://sitename
+$w = Get-SPWeb https://sitename
 
-PS C:\> $w.set_SiteLogoUrl("https://PathToImage/test.jpg")
+$w.set_SiteLogoUrl("https://PathToImage/test.jpg")
 
-PS C:\> $w.Update()
+$w.Update()
 
-PS C:\> Stop-SPAssignment -Global
+Stop-SPAssignment -Global
 ```
 
 This example demonstrates how to save a subsite as a variable and to call object model methods on the SPAssignment object.

@@ -36,12 +36,12 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1 ------------------
 ```powershell
-PS C:\> $config = New-SPEnterpriseSearchContentEnrichmentConfiguration
-PS C:\> $config.Endpoint = "https://server/service"
-PS C:\> $config.InputProperties = "Title", "Url"
-PS C:\> $config.OutputProperties = "Title", "Url"
-PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\> Set-SPEnterpriseSearchContentEnrichmentConfiguration -SearchApplication $ssa -ContentEnrichmentConfiguration $config
+$config = New-SPEnterpriseSearchContentEnrichmentConfiguration
+$config.Endpoint = "https://server/service"
+$config.InputProperties = "Title", "Url"
+$config.OutputProperties = "Title", "Url"
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Set-SPEnterpriseSearchContentEnrichmentConfiguration -SearchApplication $ssa -ContentEnrichmentConfiguration $config
 ```
 
 This example creates a new ContentEnrichmentConfiguration object.
@@ -53,13 +53,13 @@ The SearchServiceApplication object is retrieved and used for storing the newly 
 
 ### ------------------EXAMPLE 2 ------------------
 ```powershell
-PS C:\> $config = New-SPEnterpriseSearchContentEnrichmentConfiguration
-PS C:\> $config.Endpoint = "https://server/service"
-PS C:\> $config.InputProperties = "Title"
-PS C:\> $config.OutputProperties = "Title"
-PS C:\> $config.Trigger = 'Contains(Title, "Example")'
-PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\> Set-SPEnterpriseSearchContentEnrichmentConfiguration -SearchApplication $ssa -ContentEnrichmentConfiguration $config
+$config = New-SPEnterpriseSearchContentEnrichmentConfiguration
+$config.Endpoint = "https://server/service"
+$config.InputProperties = "Title"
+$config.OutputProperties = "Title"
+$config.Trigger = 'Contains(Title, "Example")'
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Set-SPEnterpriseSearchContentEnrichmentConfiguration -SearchApplication $ssa -ContentEnrichmentConfiguration $config
 ```
 
 This example creates a new ContentEnrichmentConfiguration object.

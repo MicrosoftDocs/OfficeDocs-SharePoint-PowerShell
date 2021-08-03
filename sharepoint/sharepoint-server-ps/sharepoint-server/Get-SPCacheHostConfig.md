@@ -29,7 +29,7 @@ Use the Get-SPCacheHostConfig cmdlet to get the cache host config information in
 
 ### -------------EXAMPLE------------- 
 ```powershell
-PS C:\> Get-SPCacheHostConfig -HostName SP01
+Get-SPCacheHostConfig -HostName SP01
 ```
 
 This example returns the host config information of machine SP01 in the culster.

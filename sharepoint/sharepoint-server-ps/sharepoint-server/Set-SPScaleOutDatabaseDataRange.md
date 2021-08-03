@@ -34,13 +34,13 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```powershell
-PS C:\> $databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
+$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
 
-PS C:\> $database = $databases[0]
+$database = $databases[0]
 
-PS C:\> $state = Get-SPScaleOutDatabaseDataState -Database $database
+$state = Get-SPScaleOutDatabaseDataState -Database $database
 
-PS C:\> Set-SPScaleOutDatabaseDataRange -Database $database -Range $state.Range -NewRangePoint $null -IsUpperSubRange $true
+Set-SPScaleOutDatabaseDataRange -Database $database -Range $state.Range -NewRangePoint $null -IsUpperSubRange $true
 ```
 
 This example extends the data range end point of the first database in the specified service application up to the maximum range point.

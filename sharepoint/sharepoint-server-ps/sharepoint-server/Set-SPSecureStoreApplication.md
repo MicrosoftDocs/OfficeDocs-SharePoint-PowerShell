@@ -35,9 +35,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```powershell
-PS C:\> $targetApp.FriendlyName = "Updated Contoso Target App"
+$targetApp.FriendlyName = "Updated Contoso Target App"
 
-PS C:\> Set-SPSecureStoreApplication -Identity $application -TargetApplication $targetApp
+Set-SPSecureStoreApplication -Identity $application -TargetApplication $targetApp
 ```
 
 This example sets a new display name Updated Contoso Target App for the target application.

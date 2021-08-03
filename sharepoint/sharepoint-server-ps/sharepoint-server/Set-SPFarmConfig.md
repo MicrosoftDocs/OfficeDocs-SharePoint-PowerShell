@@ -44,7 +44,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------------EXAMPLE--------------------------
 ```powershell
-PS C:\> Set-SPFarmConfig -WorkflowBatchSize 50
+Set-SPFarmConfig -WorkflowBatchSize 50
 ```
 
 This example sets the WorkflowBatdhSize to 50.

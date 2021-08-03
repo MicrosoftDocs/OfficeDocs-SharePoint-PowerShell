@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE----------------------
 ```powershell
-PS C:\> Remove-SPUserSolution -Identity contoso_solution.wsp -Site https://sitename
+Remove-SPUserSolution -Identity contoso_solution.wsp -Site https://sitename
 ```
 
 This example removes the sandboxed solution contoso_solution.wsp from the site https://sitename.

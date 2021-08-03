@@ -49,14 +49,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```powershell
-PS C:\> Get-SPManagedPath -WebApplication https://sitename
+Get-SPManagedPath -WebApplication https://sitename
 ```
 
 This example returns all managed paths for the specified Web application.
 
 ### --------------EXAMPLE 2----------------- 
 ```powershell
-PS C:\> Get-SPManagedPath -identity "Sites" -HostHeader
+Get-SPManagedPath -identity "Sites" -HostHeader
 ```
 
 This example gets the Sites managed path from the host-named site collections-scoped managed paths.

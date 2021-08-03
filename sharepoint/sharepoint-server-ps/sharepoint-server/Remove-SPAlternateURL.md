@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```powershell
-PS C:\> Remove-SPAlternateURL -Identity http://sitename
+Remove-SPAlternateURL -Identity http://sitename
 ```
 
 This example deletes the http://sitename alternate URL from the farm.
@@ -41,7 +41,7 @@ This example deletes the http://sitename alternate URL from the farm.
 
 ### ------------------EXAMPLE 2-----------------------
 ```powershell
-PS C:\> Get-SPWebApplication |%{ Get-SPAlternateURL -WebApplication $_ -Zone "Extranet" } | Remove-SPAlternateURL
+Get-SPWebApplication |%{ Get-SPAlternateURL -WebApplication $_ -Zone "Extranet" } | Remove-SPAlternateURL
 ```
 
 This example removes all extranet alternate URLs in the farm.

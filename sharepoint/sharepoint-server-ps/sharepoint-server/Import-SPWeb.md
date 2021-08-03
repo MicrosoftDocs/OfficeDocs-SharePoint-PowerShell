@@ -38,7 +38,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------------EXAMPLE---------------------- 
 ```powershell
-PS C:\> Import-SPWeb https://site -Path export.cmp -UpdateVersions Overwrite
+Import-SPWeb https://site -Path export.cmp -UpdateVersions Overwrite
 ```
 
 This example imports the contents of export.cmp into a site at https://site, overwriting the versioned content on the site with the contents of the export.cmp file.

@@ -33,14 +33,14 @@ This operation cannot be undone.
 
 ### ------------------EXAMPLE 1-----------------------
 ```powershell
-PS C:\> Remove-SPSite -Identity 'https://sitename' -GradualDelete -Confirm:$False
+Remove-SPSite -Identity 'https://sitename' -GradualDelete -Confirm:$False
 ```
 
 This example removes the given site collection and all included sites by using GradualDelete which places the site in the site recycle bin; confirmation has been suppressed.
 
 ### ------------------EXAMPLE 2-----------------------
 ```powershell
-PS C:\> Remove-SPSite -Identity 'https://sitename'
+Remove-SPSite -Identity 'https://sitename'
 ```
 
 This example immediately deletes the site and it's contents from the farm.

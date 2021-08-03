@@ -36,7 +36,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```powershell
-PS C:\> Set-SPBingMapsBlock 1
+Set-SPBingMapsBlock 1
 ```
 
 This example displays how to block Bing Maps in all locales for the farm.

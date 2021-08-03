@@ -46,7 +46,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------------EXAMPLE 1----------------------
 ```powershell
-PS C:\> Set-SPTrustedIdentityTokenIssuer "LiveIDSTS" -Certificate (Get-ChildItem"cert:Certificates (LocalComputer)\Personal\Certificates -Name "LiveID Cert")
+Set-SPTrustedIdentityTokenIssuer "LiveIDSTS" -Certificate (Get-ChildItem"cert:Certificates (LocalComputer)\Personal\Certificates -Name "LiveID Cert")
 ```
 
 This example sets the identity provider to LiveIDSTS.
@@ -54,8 +54,8 @@ This example sets the identity provider to LiveIDSTS.
 
 ### -------------------------EXAMPLE 2----------------------
 ```powershell
-PS C:\> $ip = @( (Get-SPTrustedIdentityTokenIssuer "LiveID STS"), (New-SPTrustedIdentityTokenIssuer -ASPNetMembershipProvider "myMembershipProvider" -ASPNetRoleProvider "myRoleProvider"), (Get-SPTrustedIdentityTokenIssuer "NTLM")) )
-PS C:\> New-SPWebApplication https://contoso.com -IdentityProvider $ip
+$ip = @( (Get-SPTrustedIdentityTokenIssuer "LiveID STS"), (New-SPTrustedIdentityTokenIssuer -ASPNetMembershipProvider "myMembershipProvider" -ASPNetRoleProvider "myRoleProvider"), (Get-SPTrustedIdentityTokenIssuer "NTLM")) )
+New-SPWebApplication https://contoso.com -IdentityProvider $ip
 ```
 
 This example sets the identity provider using the .ASPNetMembership and Role parameters.

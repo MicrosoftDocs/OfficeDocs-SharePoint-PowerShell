@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE-----------------------
 ```powershell
-PS C:\> Remove-SPContentDeploymentPath -Path1
+Remove-SPContentDeploymentPath -Path1
 ```
 
 This example removes a content path named Path1.

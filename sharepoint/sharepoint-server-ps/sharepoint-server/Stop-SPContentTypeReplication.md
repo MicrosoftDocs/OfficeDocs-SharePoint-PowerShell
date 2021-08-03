@@ -28,7 +28,7 @@ Stops Content Type replication job from SharePoint Online and deletes the replic
 
 ### -----------------EXAMPLE----------------
 ```powershell
-PS C:\> Stop-SPContentTypeReplication
+Stop-SPContentTypeReplication
 ```
 Stops Content Type replication job from SharePoint Online.
 

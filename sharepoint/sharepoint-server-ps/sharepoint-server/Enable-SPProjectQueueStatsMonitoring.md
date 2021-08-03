@@ -28,7 +28,7 @@ Enables monitoring Project Server queue statistics.
 
 ### ------------Example 1 -----------
 ```powershell
-PS C:\> Enable-SPProjectQueueStatsMonitoring
+Enable-SPProjectQueueStatsMonitoring
 ```
 
 Enables monitoring Project Server queue statistics.

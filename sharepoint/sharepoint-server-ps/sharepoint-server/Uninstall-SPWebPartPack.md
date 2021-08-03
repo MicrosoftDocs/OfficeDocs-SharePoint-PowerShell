@@ -33,14 +33,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS C:\> Uninstall-SPWebPartPack  "mypart.wpp" -WebApplication https://portal
+Uninstall-SPWebPartPack  "mypart.wpp" -WebApplication https://portal
 ```
 
 This example uninstalls mypart.wpp to from the Web application https://portal.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS C:\> Get-SPWebPartPack -WebApplication https://portal | Uninstall-SPWebPartPack
+Get-SPWebPartPack -WebApplication https://portal | Uninstall-SPWebPartPack
 ```
 
 This example uninstalls all Web part packages from the Web application https://portal.

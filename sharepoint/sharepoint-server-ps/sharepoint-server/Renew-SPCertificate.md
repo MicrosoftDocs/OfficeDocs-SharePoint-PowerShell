@@ -60,7 +60,7 @@ This tells SharePoint to automatically replace the certificate assignments of th
 
 ### ------------EXAMPLE-----------
 ```powershell
-PS C:\> Renew-SPCertificate -Identity "Sites Certificate (2020)" -FriendlyName "Sites Certificate (2021)" -Exportable -Path "\\server\fileshare\Team Sites Certificate Signing Request.txt"
+Renew-SPCertificate -Identity "Sites Certificate (2020)" -FriendlyName "Sites Certificate (2021)" -Exportable -Path "\\server\fileshare\Team Sites Certificate Signing Request.txt"
 ```
 
 This example renews a certificate and creates a certificate signing request.

@@ -45,9 +45,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```powershell
-PS C:\> $security = Get-SPServiceApplicationSecurity $serviceApp -Admin
-PS C:\> Revoke-SPObjectSecurity $security "domain\user"
-PS C:\> Set-SPServiceApplicationSecurity $serviceApp -Admin $security
+$security = Get-SPServiceApplicationSecurity $serviceApp -Admin
+Revoke-SPObjectSecurity $security "domain\user"
+Set-SPServiceApplicationSecurity $serviceApp -Admin $security
 ```
 
 This example retrieves the SPObjectSecurity object corresponding to the administrator ACL on a service application and removes a user from that ACL.

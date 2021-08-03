@@ -32,14 +32,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```powershell
-PS C:\> Uninstall-SPFeature -Identity "MyCustomFeature"
+Uninstall-SPFeature -Identity "MyCustomFeature"
 ```
 
 This example uninstalls the feature at $env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\15\TEMPLATE\FEATURES\MyCustomFeature/feature.xml.
 
 ### ------------------EXAMPLE 2-----------------------
 ```powershell
-PS C:\> Uninstall-SPFeature -Identity "MyCustomFeature" -CompatibilityLevel 14
+Uninstall-SPFeature -Identity "MyCustomFeature" -CompatibilityLevel 14
 ```
 
 This example uninstalls the feature at $env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\15\TEMPLATE\FEATURES\MyCustomFeature/feature.xml.

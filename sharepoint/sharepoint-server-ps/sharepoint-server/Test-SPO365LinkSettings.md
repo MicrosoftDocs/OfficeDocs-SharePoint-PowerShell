@@ -29,7 +29,7 @@ Use the **Test-SPO365LinkSettings** cmdlet to validate a templated against a con
 
 ### ------------EXAMPLE 1-----------
 ```powershell
-PS C:\> Test-SPO365LinkSettings -MySiteHostUrl https://contoso-my.sharepoint.com/
+Test-SPO365LinkSettings -MySiteHostUrl https://contoso-my.sharepoint.com/
 ```
 
 This example test a template using the contoso-my.sharepoint site.

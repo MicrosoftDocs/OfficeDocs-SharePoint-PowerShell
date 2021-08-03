@@ -33,11 +33,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE-----------------------------
 ```powershell
-PS C:\> $databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
+$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
 
-PS C:\> $database = $databases[0]
+$database = $databases[0]
 
-PS C:\> Remove-SPScaleOutDatabase -ServiceApplication $serviceApplication -Database $database
+Remove-SPScaleOutDatabase -ServiceApplication $serviceApplication -Database $database
 ```
 
 This example removes the specified scale-out database from the specified service application.

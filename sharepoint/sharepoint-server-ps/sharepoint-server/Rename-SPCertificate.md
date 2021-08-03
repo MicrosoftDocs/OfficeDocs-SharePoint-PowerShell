@@ -30,7 +30,7 @@ This name will only be visible to SharePoint farm administrators, not to end use
 
 ### ------------EXAMPLE-----------
 ```powershell
-PS C:\> Rename-SPCertificate -Identity "Team Sites Certificate" -NewFriendlyName "OneDrive Certificate"
+Rename-SPCertificate -Identity "Team Sites Certificate" -NewFriendlyName "OneDrive Certificate"
 ```
 
 This example changes the friendly name of the "Team Sites Certificate" certificate to "OneDrive Certificate".

@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE----------------- 
 ```powershell
-PS C:\> Get-SPInfoPathWebServiceProxy -Identity "https://server_name"
+Get-SPInfoPathWebServiceProxy -Identity "https://server_name"
 ```
 
 This example displays the Web service proxy settings for a specified Web application.

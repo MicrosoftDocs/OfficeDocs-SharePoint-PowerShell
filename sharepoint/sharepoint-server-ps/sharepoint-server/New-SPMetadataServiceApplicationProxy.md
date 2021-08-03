@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE 1----------------
 ```powershell
-PS C:\> New-SPMetadataServiceApplicationProxy -Name "MetadataServiceProxy1" -ServiceApplication "MetadataServiceApp1"
+New-SPMetadataServiceApplicationProxy -Name "MetadataServiceProxy1" -ServiceApplication "MetadataServiceApp1"
 ```
 
 This example creates a connection to a managed metadata service application in the local farm.
@@ -41,7 +41,7 @@ This example creates a connection to a managed metadata service application in t
 
 ### -------------------EXAMPLE 2----------------
 ```powershell
-PS C:\> New-SPMetadataServiceApplicationProxy -Name "MetadataServiceProxy3" -ServiceApplication "MetadataServiceApp3" -PartitionMode
+New-SPMetadataServiceApplicationProxy -Name "MetadataServiceProxy3" -ServiceApplication "MetadataServiceApp3" -PartitionMode
 ```
 
 This example creates a partitioned connection to a managed metadata service application in the local farm.

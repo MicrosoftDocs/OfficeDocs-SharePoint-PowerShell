@@ -62,21 +62,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE 1------------ 
 ```powershell
-PS C:\> Get-SPContentDatabase -WebApplication https://webAppUrl
+Get-SPContentDatabase -WebApplication https://webAppUrl
 ```
 
 This example returns all content databases used by the sitename Web application.
 
 ### ----------------EXAMPLE 2------------ 
 ```powershell
-PS C:\> Get-SPContentDatabase -Site https://siteUrl
+Get-SPContentDatabase -Site https://siteUrl
 ```
 
 This example returns the content database that contains the site collection at https://siteUrl.
 
 ### ----------------EXAMPLE 3------------ 
 ```powershell
-PS C:\> PS C:\>Get-SPContentDatabase -DaysSinceLastProfileSync 7
+PS C:\>Get-SPContentDatabase -DaysSinceLastProfileSync 7
 ```
 This example returns all content databases that were last synchronized with the User Profile service 7 or more days ago. Content databases that were last synchronized with the User Profile service less than 7 days ago would not be returned.
 

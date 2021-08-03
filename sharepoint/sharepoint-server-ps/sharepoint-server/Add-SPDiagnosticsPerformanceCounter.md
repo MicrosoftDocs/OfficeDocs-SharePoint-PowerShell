@@ -55,14 +55,14 @@ By default, the new performance counter is added to the database servers in the 
 
 ### ------------------EXAMPLE 1------------------ 
 ```powershell
-PS C:\> Add-SPDiagnosticsPerformanceCounter -category ASP.NET -Counter "Requests Queued"
+Add-SPDiagnosticsPerformanceCounter -category ASP.NET -Counter "Requests Queued"
 ```
 
 This example adds the counter that has the name ASP.NET\Requests Queued on front end Web servers.
 
 ### ------------------EXAMPLE 2------------------ 
 ```powershell
-PS C:\> Add-SPDiagnosticsPerformanceCounter -category PhysicalDisk -counter "Avg. Disk Queue Length" -allinstances
+Add-SPDiagnosticsPerformanceCounter -category PhysicalDisk -counter "Avg. Disk Queue Length" -allinstances
 ```
 
 This example adds all instances of the counter PhysicalDisk in the category Avg.
@@ -70,7 +70,7 @@ Disk Queue Length on front end Web servers.
 
 ### ------------------EXAMPLE 3------------------ 
 ```powershell
-PS C:\> Add-SPDiagnosticsPerformanceCounter -category Processor -counter "% Processor Time" -instance "_Total" -databaseserver
+Add-SPDiagnosticsPerformanceCounter -category Processor -counter "% Processor Time" -instance "_Total" -databaseserver
 ```
 
 This example adds the _Total instance of the counter % Processor Time in the category Processor on database servers.

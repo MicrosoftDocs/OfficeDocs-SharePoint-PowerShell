@@ -34,9 +34,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application"
-PS C:\> $owner = Get-SPEnterpriseSearchOwner -Level ssa
-PS C:\> Remove-SPEnterpriseSearchRankingModel -Identity 8f6fd0bc-06f9-43cf-bbab-08c377e083f4 -SearchApplication $ssa -Owner $owner
+$ssa = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application"
+$owner = Get-SPEnterpriseSearchOwner -Level ssa
+Remove-SPEnterpriseSearchRankingModel -Identity 8f6fd0bc-06f9-43cf-bbab-08c377e083f4 -SearchApplication $ssa -Owner $owner
 ```
 
 This example removes the ranking model for the search service application with the identity 8f6fd0bc-06f9-43cf-bbab-08c377e083f4.
@@ -44,9 +44,9 @@ This example removes the ranking model for the search service application with t
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS C:\> $owner = Get-SPEnterpriseSearchOwner -Level ssa
-PS C:\> $MyRanking = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application" | Get-SPEnterpriseSearchRankingModel -Owner $owner
-PS C:\> Remove-SPEnterpriseSearchRankingModel -Identity $MyRanking -Owner $owner
+$owner = Get-SPEnterpriseSearchOwner -Level ssa
+$MyRanking = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application" | Get-SPEnterpriseSearchRankingModel -Owner $owner
+Remove-SPEnterpriseSearchRankingModel -Identity $MyRanking -Owner $owner
 ```
 
 This example removes the ranking model object MyRanking from the search service application Search Service Application.

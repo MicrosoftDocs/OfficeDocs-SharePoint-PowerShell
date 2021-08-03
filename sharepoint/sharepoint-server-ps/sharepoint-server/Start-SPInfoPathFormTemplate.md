@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE--------------
 ```powershell
-PS C:\> Start-SPInfoPathFormTemplate -Identity formName.xsn
+Start-SPInfoPathFormTemplate -Identity formName.xsn
 ```
 
 This example activates a form with a specified name.

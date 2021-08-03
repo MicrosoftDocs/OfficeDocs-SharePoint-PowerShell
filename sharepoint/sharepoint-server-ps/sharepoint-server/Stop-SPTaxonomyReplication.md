@@ -29,7 +29,7 @@ Use the Stop-SPTaxonomyReplication cmdlet to terminate Hybrid SharePoint Taxonom
 
 ### ------------------EXAMPLE-----------------------
 ```powershell
-PS C:\> Stop-SPTaxonomyReplication -Credential (Get-Credential)
+Stop-SPTaxonomyReplication -Credential (Get-Credential)
 ```
 
 This example performs a full replication and deletes the Taxonomy Groups Replication timer job. If the full replication fails, you can run the cmdlet again.  The credential is a SharePoint Online tenant administrator credential.

@@ -29,7 +29,7 @@ Update-SPAzureBlobConfigLocatorEx1 [-AssignmentCollection <SPAssignmentCollectio
 
 ### -------------EXAMPLE 1------------- 
 ```powershell
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}

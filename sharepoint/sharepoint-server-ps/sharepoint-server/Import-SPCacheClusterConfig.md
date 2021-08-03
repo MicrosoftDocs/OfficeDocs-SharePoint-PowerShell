@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE------------- 
 ```powershell
-PS C:\> Import-SPCacheClusterConfig -Path C:\Config.txt
+Import-SPCacheClusterConfig -Path C:\Config.txt
 ```
 
 This example imports cache cluster configuration details from C:\Config.txt.

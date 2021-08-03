@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ###   
 ```powershell
-PS C:\> $f = Get-SPFarm
+$f = Get-SPFarm
 ```
 
 This example stores the local farm in a variable.

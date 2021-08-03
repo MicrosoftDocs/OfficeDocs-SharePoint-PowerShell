@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE-----------------------
 ```powershell
-PS C:\> New-SPServiceApplicationPool -Name 'SharePoint Web Services Default' -Account (Get-SPManagedAccount 'contoso\serviceAccount')
+New-SPServiceApplicationPool -Name 'SharePoint Web Services Default' -Account (Get-SPManagedAccount 'contoso\serviceAccount')
 ```
 
 This example creates a new Web service application pool.

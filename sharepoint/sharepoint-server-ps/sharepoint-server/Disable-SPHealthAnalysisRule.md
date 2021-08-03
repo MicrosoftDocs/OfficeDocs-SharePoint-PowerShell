@@ -39,7 +39,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------------EXAMPLE 1--------------------------- 
 ```powershell
-PS C:\> Disable-SPHealthAnalysisRule -Identity "CustomRule"
+Disable-SPHealthAnalysisRule -Identity "CustomRule"
 ```
 
 This example disables the health analyzer rule named CustomRule.

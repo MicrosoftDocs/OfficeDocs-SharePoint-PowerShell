@@ -41,14 +41,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE 1---------------------
 ```powershell
-PS C:\> Set-SPAppAcquisitionConfiguration -WebApplication https://localhost -Enable:$false
+Set-SPAppAcquisitionConfiguration -WebApplication https://localhost -Enable:$false
 ```
 
 This example disabled app purchases for the specified Web Application.
 
 ### --------------------EXAMPLE 2---------------------
 ```powershell
-PS C:\> Set-SPAppAcquisitionConfiguration -SiteSubscription https://localhost/sites/SharePointOnlineAdmin1 -Enable:$false
+Set-SPAppAcquisitionConfiguration -SiteSubscription https://localhost/sites/SharePointOnlineAdmin1 -Enable:$false
 ```
 
 This example disables app purchases for the specified tenant.

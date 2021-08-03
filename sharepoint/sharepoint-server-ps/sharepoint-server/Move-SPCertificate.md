@@ -29,7 +29,7 @@ Moves the specified certificate to a different certificate store.
 
 ### ------------EXAMPLE-----------
 ```powershell
-PS C:\> Move-SPCertificate -Identity "Team Site Certificate" -NewStore EndEntity
+Move-SPCertificate -Identity "Team Site Certificate" -NewStore EndEntity
 ```
 
 This example moves the certificate with the display name "Team Site Certificate" to the end entity certificate store.

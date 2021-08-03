@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE---------------------
 ```powershell
-PS C:\> Update-SPUserSolution -Identity contoso_solution.wsp -Site https://sitename -ToSolution contoso_solution_v2.wsp
+Update-SPUserSolution -Identity contoso_solution.wsp -Site https://sitename -ToSolution contoso_solution_v2.wsp
 ```
 
 This example upgrades the sandboxed solution contoso_solution.wsp in the site https://sitename to the sandboxed solution contoso_solution_v2.wsp.

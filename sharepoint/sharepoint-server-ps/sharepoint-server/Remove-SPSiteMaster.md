@@ -27,8 +27,8 @@ Use the Remove-SPSiteMaster cmdlet to remove a site master from the database.
 ## EXAMPLES
 ### -----------------------EXAMPLE-----------------------------
 ```powershell
-PS C:\> $master = Get-SPSiteMaster -ContentDatabase WSS_Content | Select -First 1
-PS C:\> Remove-SPSiteMaster -ContentDatabase WSS_Content -SiteId $master.SiteId
+$master = Get-SPSiteMaster -ContentDatabase WSS_Content | Select -First 1
+Remove-SPSiteMaster -ContentDatabase WSS_Content -SiteId $master.SiteId
 ```
 
 This example removes the first Site Master found in the WSS_Content database.

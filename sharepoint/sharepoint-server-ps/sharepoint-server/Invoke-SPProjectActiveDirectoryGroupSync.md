@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### --------------EXAMPLE 1------------------- 
 ```powershell
-PS C:\> Invoke-SPProjectActiveDirectoryGroupSync -Url https://AppServer/pwa
+Invoke-SPProjectActiveDirectoryGroupSync -Url https://AppServer/pwa
 ```
 
 This example synchronizes group membership for the specified PWA instance.

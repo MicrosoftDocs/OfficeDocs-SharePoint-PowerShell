@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE----------------- 
 ```powershell
-PS C:\> Get-SPMetadataServiceApplication -Identity "ManagedMetadataServiceApp1"
+Get-SPMetadataServiceApplication -Identity "ManagedMetadataServiceApp1"
 ```
 
 This example retrieves an existing managed metadata service application.

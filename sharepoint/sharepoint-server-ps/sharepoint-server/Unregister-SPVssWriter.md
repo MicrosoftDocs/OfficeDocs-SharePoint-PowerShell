@@ -29,7 +29,7 @@ This prevents the Volume Shadow Copy Service (VSS) from backing up and restoring
 
 ### -------------EXAMPLE 1------------- 
 ```powershell
-PS C:\> Unregister-SPVssWriter
+Unregister-SPVssWriter
 ```
 
 Unregisters the SharePoint VSS Writer service on the local server.

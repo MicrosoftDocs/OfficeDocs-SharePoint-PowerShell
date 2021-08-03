@@ -28,7 +28,7 @@ Disables monitoring Project Server queue statistics.
 
 ### ------------Example 1 -----------
 ```powershell
-PS C:\> Disable-SPProjectQueueStatsMonitoring
+Disable-SPProjectQueueStatsMonitoring
 ```
 
 Disables monitoring Project Server queue statistics.

@@ -34,13 +34,13 @@ Use the Add-SPRoutingMachineInfo cmdlet to add a new routing target to the farm 
 
 ### -------------EXAMPLE-------------- 
 ```powershell
-PS C:\> $web=Get-SPWebApplication -Identity <URL of web application>
+$web=Get-SPWebApplication -Identity <URL of web application>
 
-PS C:\> $rm=Get-SPRequestManagementSettings -Identity $web
+$rm=Get-SPRequestManagementSettings -Identity $web
 
-PS C:\> Add-SPRoutingMachineInfo -RequestManagementSettings $rm -Name <MachineName> -Availability Available
+Add-SPRoutingMachineInfo -RequestManagementSettings $rm -Name <MachineName> -Availability Available
 
-PS C:\> 
+
 ```
 
 This example adds a routing target for a specified identity to the farm.

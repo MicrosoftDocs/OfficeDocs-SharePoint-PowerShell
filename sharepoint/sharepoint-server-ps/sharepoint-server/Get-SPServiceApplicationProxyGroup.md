@@ -43,7 +43,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE----------------- 
 ```powershell
-PS C:\> Get-SPServiceApplicationProxyGroup
+Get-SPServiceApplicationProxyGroup
 ```
 
 This example retrieves all of the service application proxy groups in the farm.

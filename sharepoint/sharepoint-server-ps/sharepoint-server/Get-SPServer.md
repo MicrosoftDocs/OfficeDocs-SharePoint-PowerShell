@@ -33,14 +33,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```powershell
-PS C:\> Get-SPServer
+Get-SPServer
 ```
 
 This example returns all servers in the local farm in a list.
 
 ### --------------EXAMPLE 2----------------- 
 ```powershell
-PS C:\> Get-SPServer | Where{ $_.NeedsUpgrade -eq $TRUE}
+Get-SPServer | Where{ $_.NeedsUpgrade -eq $TRUE}
 ```
 
 This example returns a list of all servers in the farm that need an upgrade.

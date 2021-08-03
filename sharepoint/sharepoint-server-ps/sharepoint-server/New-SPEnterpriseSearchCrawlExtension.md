@@ -34,8 +34,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```powershell
-PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\> New-SPEnterpriseSearchCrawlExtension -Name "pdf" -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication
+New-SPEnterpriseSearchCrawlExtension -Name "pdf" -SearchApplication $ssa
 ```
 
 This example adds the PDF file type to the list of file name extensions to include in the index.

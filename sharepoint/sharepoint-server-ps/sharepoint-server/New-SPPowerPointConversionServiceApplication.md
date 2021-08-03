@@ -37,7 +37,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```powershell
-PS C:\> New-SPPowerPointConversionServiceApplication -Name "MyWorkgroupPPTApp" -ApplicationPool "SharePoint Web Services Default"
+New-SPPowerPointConversionServiceApplication -Name "MyWorkgroupPPTApp" -ApplicationPool "SharePoint Web Services Default"
 ```
 
 This example creates a new instance of the PowerPoint Conversion Service application named MyWorkgroupPPTApp and assigns it to the default application pool.

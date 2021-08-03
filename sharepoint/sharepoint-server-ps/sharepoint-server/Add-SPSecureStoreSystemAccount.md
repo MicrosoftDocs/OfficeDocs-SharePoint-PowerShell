@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE---------- 
 ```powershell
-PS C:\> Add-SPSecureStoreSystemAccount -AccountName contoso\jdoe
+Add-SPSecureStoreSystemAccount -AccountName contoso\jdoe
 ```
 
 This example adds the account name jdoe.

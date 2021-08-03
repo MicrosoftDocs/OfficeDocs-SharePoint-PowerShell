@@ -34,9 +34,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE-------------- 
 ```powershell
-PS C:\> $serviceApplication = Get-SPServiceApplication -Name "AppManagement"
+$serviceApplication = Get-SPServiceApplication -Name "AppManagement"
 
-PS C:\> Get-SPScaleOutDatabaseInconsistency -ServiceApplication $serviceApplication
+Get-SPScaleOutDatabaseInconsistency -ServiceApplication $serviceApplication
 ```
 
 This example gets all the scale-out inconsistencies for the given service application.

@@ -32,14 +32,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```powershell
-PS C:\> Dismount-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b
+Dismount-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b
 ```
 
 This example removes the association between the SharePoint farm and the SQL Server database without dropping the SQL Server database.
 
 ### --------------EXAMPLE 2----------------- 
 ```powershell
-PS C:\> Get-SPStateServiceDatabase -ServiceApplication F9168C5E-CEB2-4faa-B6BF-329BF39FA1E4 | Dismount-SPStateServiceDatabase
+Get-SPStateServiceDatabase -ServiceApplication F9168C5E-CEB2-4faa-B6BF-329BF39FA1E4 | Dismount-SPStateServiceDatabase
 ```
 
 This example dismounts a single database because only the Identity parameter is used.

@@ -30,7 +30,7 @@ The \`Register-SPRemoteShareBlobStore\` cmdlet registers a new BLOB store for th
 
 ### -------------EXAMPLE 1------------- 
 ```powershell
-PS C:\> Register-SPRemoteShareBlobStore -ContentDatabase WSS_Content -Name "RemoteBlob" -Location "\\storage_name\blobstore\"
+Register-SPRemoteShareBlobStore -ContentDatabase WSS_Content -Name "RemoteBlob" -Location "\\storage_name\blobstore\"
 ```
 
 This example registers \\\\storage_name\blobstore\ with name "RemoteBlob" to content database WSS_Content

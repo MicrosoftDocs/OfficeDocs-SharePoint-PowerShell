@@ -29,7 +29,7 @@ The \`Unregister-SPRemoteShareBlobStore\` cmdlet unregisters a Remote Share BLOB
 
 ### -------------EXAMPLE 1------------- 
 ```powershell
-PS C:\> Register-SPRemoteShareBlobStore -RemoteShareBlobStore "RemoteBlobStore" -Force
+Register-SPRemoteShareBlobStore -RemoteShareBlobStore "RemoteBlobStore" -Force
 ```
 
 This example forcely unregisters "RemoteBlobStore" from the farm

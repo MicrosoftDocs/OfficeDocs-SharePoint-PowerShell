@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE--------------
 ```powershell
-PS C:\> Set-SPAppStateUpdateInterval -AppStateSyncHours 24 -FastAppRevocationHours 6
+Set-SPAppStateUpdateInterval -AppStateSyncHours 24 -FastAppRevocationHours 6
 ```
 
 This example sets the app state update interval to 24 hours and the fast app revocation interval to 6 hours.

@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE--------------------
 ```powershell
-PS C:\> Set-SPSiteSubscriptionEdiscoverySearchScope -Site https://contoso.com/sites/sitecollection1 -SearchScope 1
+Set-SPSiteSubscriptionEdiscoverySearchScope -Site https://contoso.com/sites/sitecollection1 -SearchScope 1
 ```
 
 This example enables the search scope for the entire site subscription.

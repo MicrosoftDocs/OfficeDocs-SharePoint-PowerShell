@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```powershell
-PS C:\> $qssSvcProxy = Get-SPEnterpriseSearchQueryAndSiteSettingsServiceProxy
+$qssSvcProxy = Get-SPEnterpriseSearchQueryAndSiteSettingsServiceProxy
 ```
 
 This example obtains a reference to the query and site settings service proxy.

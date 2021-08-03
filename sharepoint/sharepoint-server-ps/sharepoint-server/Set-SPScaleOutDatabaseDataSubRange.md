@@ -45,13 +45,13 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```powershell
-PS C:\> $databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
+$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
 
-PS C:\> $database = $databases[0]
+$database = $databases[0]
 
-PS C:\> $state = Get-SPScaleOutDatabaseDataState -Database $database
+$state = Get-SPScaleOutDatabaseDataState -Database $database
 
-PS C:\> Set-SPScaleOutDatabaseDataSubRange -Database $database -Range $state.Range -SubRangePoint $state.Range.RangeEnd -SubRangeMode ReadOnly -IsUpperSubRange $false
+Set-SPScaleOutDatabaseDataSubRange -Database $database -Range $state.Range -SubRangePoint $state.Range.RangeEnd -SubRangeMode ReadOnly -IsUpperSubRange $false
 ```
 
 This example creates a read-only subrange that starts from the data range start point and ends at the data range end point on the first scale-out database of the specified service application.

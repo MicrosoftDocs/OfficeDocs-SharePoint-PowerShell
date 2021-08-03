@@ -37,7 +37,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE 1-------------------- 
 ```powershell
-PS C:\> Backup-SPSite https://server_name/sites/site_name -Path C:\Backup\site_name.bak
+Backup-SPSite https://server_name/sites/site_name -Path C:\Backup\site_name.bak
 ```
 
 This example backs up a site collection at https://server_name/sites/site_name to the C:\Backup\site_name.bak file.
@@ -45,7 +45,7 @@ This example backs up a site collection at https://server_name/sites/site_name t
 
 ### -------------------EXAMPLE 2-------------------- 
 ```powershell
-PS C:\> Get-SPSiteAdministration https://server_name/sites/site_name | Backup-SPSite -Path C:\Backup\site_name.bak
+Get-SPSiteAdministration https://server_name/sites/site_name | Backup-SPSite -Path C:\Backup\site_name.bak
 ```
 
 This example backs up a site collection at https://server_name/sites/site_name to the C:\Backup\site_name.bak file.
@@ -53,14 +53,14 @@ Same result as Example 1, but a different way of performing the operation.
 
 ### -------------------EXAMPLE 3-------------------- 
 ```powershell
-PS C:\> Backup-SPSite https://server_name/sites/site_name -Path C:\Backup\site_name.bak -UseSqlSnapshot
+Backup-SPSite https://server_name/sites/site_name -Path C:\Backup\site_name.bak -UseSqlSnapshot
 ```
 
 This example backs up a site collection using database snapshots to ensure backup integrity.
 
 ### -------------------EXAMPLE 4-------------------- 
 ```powershell
-PS C:\> Backup-SPSite https://server_name/sites/site_name -Path C:\Backup\site_name.bak -NoSiteLock
+Backup-SPSite https://server_name/sites/site_name -Path C:\Backup\site_name.bak -NoSiteLock
 ```
 
 This example backs up a site collection and prevents placing the site into a read only mode during the backup phase. Use the -NoSiteLock parameter when backing up a site in production where it is desirable to not place the site into a read only mode while the backup takes place.

@@ -60,7 +60,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------ 
 ```powershell
-PS C:\> Get-SPSiteAdministration | Select -Property Url, OwnerLoginName, @{Name="Storage";Expression={$_.Quota.StorageMaximumLevel}}
+Get-SPSiteAdministration | Select -Property Url, OwnerLoginName, @{Name="Storage";Expression={$_.Quota.StorageMaximumLevel}}
 ```
 
 This example gets a subset of data from all of the sites in the content database with the URL b399a366-d899-4cff-8a9b-8c0594ee755f (farm administrator does not require access).
@@ -68,10 +68,10 @@ This command uses the calculated property Storage to display the maximum storage
 
 ### ------------------EXAMPLE 2------------------ 
 ```powershell
-PS C:\> Start-SPAssignment -Global
-PS C:\> $s = Get-SPSiteAdministration -Identity https://MyApp/Sites/Site1
-PS C:\> $s.Url
-PS C:\> Stop-SPAssignment -Global
+Start-SPAssignment -Global
+$s = Get-SPSiteAdministration -Identity https://MyApp/Sites/Site1
+$s.Url
+Stop-SPAssignment -Global
 ```
 
 This example gets the site collections specified by the Identity parameter and inserts the results into the variable s.
@@ -81,9 +81,9 @@ Do not run a Get-SPSite command that returns many results while global assignmen
 
 ### ------------------EXAMPLE 3-------------------
 ```powershell
-PS C:\> $GC = Start-SPAssignment
-PS C:\> $Sites = $GC | Get-SPSiteAdministration -Filter {$_.Owner -eq "DOMAIN\JDoe"} -Limit 50
-PS C:\> Stop-SPAssignment $GC
+$GC = Start-SPAssignment
+$Sites = $GC | Get-SPSiteAdministration -Filter {$_.Owner -eq "DOMAIN\JDoe"} -Limit 50
+Stop-SPAssignment $GC
 ```
 
 This example gets the first 50 sites owned by user DOMAIN\JDoe by using a server-side query, and assigns the returned sites to a local variable.
@@ -91,21 +91,21 @@ This command uses advanced assignment collection methods.
 
 ### ------------------EXAMPLE 4------------------ 
 ```powershell
-PS C:\> Get-SPWebApplication https://sitename | Get-SPSiteAdministration -Limit All |ForEach-Object {$sum=0}{ $sum+=$_.DiskUsed }{$sum}
+Get-SPWebApplication https://sitename | Get-SPSiteAdministration -Limit All |ForEach-Object {$sum=0}{ $sum+=$_.DiskUsed }{$sum}
 ```
 
 This command returns the sum of the disk space usage for all sites in the specified Web application.
 
 ### ------------------EXAMPLE 5------------------ 
 ```powershell
-PS C:\> Get-SPWebApplication https://sitename | Get-SPSiteAdministration -Limit ALL | Select URL
+Get-SPWebApplication https://sitename | Get-SPSiteAdministration -Limit ALL | Select URL
 ```
 
 This example gets the URLs for all site collections in a Web application.
 
 ### ------------------EXAMPLE 6------------------ 
 ```powershell
-PS C:\> Get-SPSiteAdministration -identity "https://localserver/(my|personal)/sites" -Regex
+Get-SPSiteAdministration -identity "https://localserver/(my|personal)/sites" -Regex
 ```
 
 This example returns all sites that match the given regular expression.
@@ -113,7 +113,7 @@ The quotation marks around the value specified for the Identity parameter are re
 
 ### ------------------EXAMPLE 7------------------ 
 ```powershell
-PS C:\> Get-SPSite "https://sitename/sites/teams/*" -Limit 100
+Get-SPSite "https://sitename/sites/teams/*" -Limit 100
 ```
 
 This example gets up to 100 of the sites under the URL https://sitename/sites/teams.

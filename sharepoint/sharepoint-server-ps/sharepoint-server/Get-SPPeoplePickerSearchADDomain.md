@@ -36,14 +36,14 @@ The Get-SPPeoplePickerSearchADDomain cmdlet returns all People Picker search for
 
 ### -------------EXAMPLE 1------------- 
 ```powershell
-PS C:\> Get-SPPeoplePickerSearchADDomain -WebApplication http://sitename
+Get-SPPeoplePickerSearchADDomain -WebApplication http://sitename
 ```
 
 This example returns all Active Directory forests or domains that the People Picker uses when searching for users in the http://sitename web application.
 
 ### -------------EXAMPLE 2------------- 
 ```powershell
-PS C:\> Get-SPPeoplePickerSearchADDomain -WebApplication http://sitename -DomainName "corp.contoso.com" -IsForest
+Get-SPPeoplePickerSearchADDomain -WebApplication http://sitename -DomainName "corp.contoso.com" -IsForest
 ```
 
 This example returns the People Picker search entry in the http://sitename web application that uses the "corp.contoso.com" Active Directory forest.

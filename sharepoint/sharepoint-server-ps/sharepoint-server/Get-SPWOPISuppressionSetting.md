@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE----------------- 
 ```powershell
-PS C:\> Get-SPWOPISuppressionSetting
+Get-SPWOPISuppressionSetting
 ```
 
 This example returns all the suppression settings on the current SharePoint farm where this cmdlet is run.

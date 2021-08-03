@@ -29,7 +29,7 @@ The \`Set-SPMachineKey\` cmdlet configures the ASP.NET view state decryption and
 
 ### -------------EXAMPLE 1------------- 
 ```powershell
-PS C:\> Set-SPMachineKey -WebApplication http://sitename
+Set-SPMachineKey -WebApplication http://sitename
 ```
 
 This example sets the ASP.NET view state decryption and validation keys for web application 'http://sitename' to new randomly generated keys.
@@ -37,7 +37,7 @@ The new keys are deployed to all servers in the farm.
 
 ### -------------EXAMPLE 2------------- 
 ```powershell
-PS C:\> Set-SPMachineKey -WebApplication http://sitename -DecryptionKey '509EEEE0709AE3EA2690017D174648075D3E7659FB7CBC65F08661F737610501' -ValidationKey '988EAEF669CC691E420C3887F54BDD7D0741C84CBA36406FCA5250B780771469' -Local
+Set-SPMachineKey -WebApplication http://sitename -DecryptionKey '509EEEE0709AE3EA2690017D174648075D3E7659FB7CBC65F08661F737610501' -ValidationKey '988EAEF669CC691E420C3887F54BDD7D0741C84CBA36406FCA5250B780771469' -Local
 ```
 
 This example sets the ASP.NET view state decryption and validation keys for web application 'http://sitename' to new keys specified by the DecryptionKey and ValidationKey parameters.

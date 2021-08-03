@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE------------- 
 ```powershell
-PS C:\> Stop-SPCacheCluster
+Stop-SPCacheCluster
 ```
 
 This example stops the Caching Services on all cache hosts in the cluster.

@@ -29,7 +29,7 @@ Migrates the published resource plan assignment data to engagements. Run after d
 
 ### ------------Example 1 -----------
 ```powershell
-PS C:\> Migrate-SPProjectResourcePlans -Url https://pwa_site
+Migrate-SPProjectResourcePlans -Url https://pwa_site
 ```
 Migrates the Project Resource Plans on the Project Web App site https://pwa_site.
 

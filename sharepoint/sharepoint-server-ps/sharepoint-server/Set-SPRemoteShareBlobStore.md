@@ -30,14 +30,14 @@ The \`Set-SPRemoteShareBlobStore\` cmdlet changes the setting of the registed Re
 
 ### -------------EXAMPLE 1------------- 
 ```powershell
-PS C:\> Set-SPRemoteShareBlobStore -RemoteShareBlobStore "RemoteStore" -Location "\\storage_name\blobstore\"
+Set-SPRemoteShareBlobStore -RemoteShareBlobStore "RemoteStore" -Location "\\storage_name\blobstore\"
 ```
 
 This example sets the location of Remote Share BLOB Store "RemoteStore" to "\\\\storage_name\blobstore\"
 
 ### -------------EXAMPLE 2------------- 
 ```powershell
-PS C:\> Set-SPRemoteShareBlobStore -RemoteShareBlobStore "RemoteStore" -BlobStoreCredential (Get-Credential)
+Set-SPRemoteShareBlobStore -RemoteShareBlobStore "RemoteStore" -BlobStoreCredential (Get-Credential)
 ```
 
 This example prompts the user to provide BLOB store credentials for the specified Remote Share BLOB Store "RemoteStore".

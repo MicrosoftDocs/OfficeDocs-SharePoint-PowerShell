@@ -29,7 +29,7 @@ This Clear-PeoplePickerSearchADDomain cmdlet clears the list of forests and doma
 
 ### -------------EXAMPLE 1------------- 
 ```powershell
-PS C:\> Clear-SPPeoplePickerSearchAdDomain -WebApplication http://MyOfficeApp1
+Clear-SPPeoplePickerSearchAdDomain -WebApplication http://MyOfficeApp1
 ```
 
 This example clears the list of People Picker search forests and domains of the Web application, MyOfficeApp1.

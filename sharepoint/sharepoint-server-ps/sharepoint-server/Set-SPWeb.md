@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```powershell
-PS C:\> Get-SPWeb https://sitename/subweb | Set-SPWeb -Description "My Site Description"
+Get-SPWeb https://sitename/subweb | Set-SPWeb -Description "My Site Description"
 ```
 
 This example sets the description of an existing subsite.

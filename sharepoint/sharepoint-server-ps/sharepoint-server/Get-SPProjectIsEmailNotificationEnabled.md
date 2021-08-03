@@ -29,7 +29,7 @@ Returns the Project Web App site level setting for email notifications. True if 
 
 ### ------------Example 1 -----------
 ```powershell
-PS C:\> Get-SPProjectIsEmailNotificationEnabled -Url https://contoso/sites/pwa
+Get-SPProjectIsEmailNotificationEnabled -Url https://contoso/sites/pwa
 ```
 
 Returns the status of email notifications for the PWA site https://contoso/sites/pwa.

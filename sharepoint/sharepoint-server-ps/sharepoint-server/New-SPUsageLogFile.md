@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE-------------------
 ```powershell
-PS C:\> New-SPUsageLogFile
+New-SPUsageLogFile
 ```
 
 This example terminates the current usage log file and creates a new one.

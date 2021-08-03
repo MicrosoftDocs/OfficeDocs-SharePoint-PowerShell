@@ -34,8 +34,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```powershell
-PS C:\> $searchApp = Get-SPEnterpriseSearchServiceApplication mySearchServiceApp
-PS C:\> Remove-SPEnterpriseSearchCrawlRule -Identity https://mySPSite -SearchApplication $searchApp
+$searchApp = Get-SPEnterpriseSearchServiceApplication mySearchServiceApp
+Remove-SPEnterpriseSearchCrawlRule -Identity https://mySPSite -SearchApplication $searchApp
 ```
 
 This example removes a crawl rule pertaining to the path https://mySPSite from the mySearchServiceApp search service application.

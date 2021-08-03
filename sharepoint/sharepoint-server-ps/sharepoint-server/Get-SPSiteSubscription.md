@@ -35,9 +35,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE---------------------- 
 ```powershell
-PS C:\> $SiteSub = Get-SPSiteSubscription https://Contoso.com
+$SiteSub = Get-SPSiteSubscription https://Contoso.com
 
-PS C:\> $SiteSub = Get-SPSite https://contoso.com | Get-SPSiteSubscription
+$SiteSub = Get-SPSite https://contoso.com | Get-SPSiteSubscription
 ```
 
 This example retrieves the site subscription for https://Contoso.com.

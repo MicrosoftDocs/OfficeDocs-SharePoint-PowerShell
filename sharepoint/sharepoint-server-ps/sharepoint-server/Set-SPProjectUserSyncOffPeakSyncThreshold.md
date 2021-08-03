@@ -37,7 +37,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### --------------------EXAMPLE---------------------
 ```powershell
-PS C:\> Set-SPProjectUserSyncOffPeakSyncThreshold -URL https://contoso/PWA -Threshold 900000
+Set-SPProjectUserSyncOffPeakSyncThreshold -URL https://contoso/PWA -Threshold 900000
 ```
 
 This example sets the sync off-peak threshold for the Project Web App instance at https://contoso-AppSrv/PWA to 900000.

@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE-------------
 ```powershell
-PS C:\> Get-SPSite | Remove-SPSiteUpgradeSessionInfo
+Get-SPSite | Remove-SPSiteUpgradeSessionInfo
 ```
 
 This example removes the SPSite objects from the farm.

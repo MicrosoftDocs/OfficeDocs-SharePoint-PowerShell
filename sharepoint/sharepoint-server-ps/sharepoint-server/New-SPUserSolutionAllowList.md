@@ -31,7 +31,7 @@ Creates a user managed solutions gallery.
 
 ### ----------------------- EXAMPLE---------------------------
 ```powershell
-PS C:\> New-SPUserSolutionAllowList -Site https://contoso/sites/site1 -ListTitle "Allow List"
+New-SPUserSolutionAllowList -Site https://contoso/sites/site1 -ListTitle "Allow List"
 ```
 This example creates a user managed solutions gallery named "Allow List" under the root web of the site collection at https://contoso/sites/site1.
 

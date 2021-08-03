@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE-----------
 ```powershell
-PS C:\> PS C:\>Get-SPCertificateAuthority
+PS C:\>Get-SPCertificateAuthority
 ```
 
 This example gets the certificate authority.

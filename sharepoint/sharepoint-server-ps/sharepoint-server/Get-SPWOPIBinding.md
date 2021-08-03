@@ -35,14 +35,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1----------------- 
 ```powershell
-PS C:\> Get-SPWOPIBinding -Server "Server.corp.Contoso.com"
+Get-SPWOPIBinding -Server "Server.corp.Contoso.com"
 ```
 
 This example returns a list of bindings that were created on the current SharePoint farm where this cmdlet is run for the WOPI application "Server.corp.Contoso.com."  The WOPI application may be the server that runs Office Web Apps Server.
 
 ### --------------EXAMPLE 2----------------- 
 ```powershell
-PS C:\> Get-SPWOPIZone | Get-SPWOPIBinding
+Get-SPWOPIZone | Get-SPWOPIBinding
 ```
 
 This example returns a list of bindings that were created on the current SharePoint farm where this cmdlet is run for the zone configured for the WOPI application.

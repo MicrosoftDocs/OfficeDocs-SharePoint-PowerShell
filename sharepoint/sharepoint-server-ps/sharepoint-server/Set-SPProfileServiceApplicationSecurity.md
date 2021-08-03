@@ -38,22 +38,22 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE 1---------------------
 ```powershell
-PS C:\> $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
-PS C:\> $security = Get-SPProfileServiceApplicationSecurity -ProfileServiceApplicationProxy $proxy
-PS C:\> $everyone = New-SPClaimsPrincipal -Identity 'c:0(.s|true' -IdentityType EncodedClaim
-PS C:\> Revoke-SPObjectSecurity -Identity $security -Principal $everyone -Rights 'Create Personal Site'
-PS C:\> Set-SPProfileServiceApplicationSecurity -Identity $security -ProfileServiceApplicationProxy $proxy
+$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+$security = Get-SPProfileServiceApplicationSecurity -ProfileServiceApplicationProxy $proxy
+$everyone = New-SPClaimsPrincipal -Identity 'c:0(.s|true' -IdentityType EncodedClaim
+Revoke-SPObjectSecurity -Identity $security -Principal $everyone -Rights 'Create Personal Site'
+Set-SPProfileServiceApplicationSecurity -Identity $security -ProfileServiceApplicationProxy $proxy
 ```
 
 This example revokes the right 'Create Personal Site' from All Authenticated Users.
 
 ### --------------------EXAMPLE 2---------------------
 ```powershell
-PS C:\> $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
-PS C:\> $security = Get-SPProfileServiceApplicationSecurity -ProfileServiceApplicationProxy $proxy
-PS C:\> $everyone = New-SPClaimsPrincipal -Identity 'c:0(.s|true' -IdentityType EncodedClaim
-PS C:\> Grant-SPObjectSecurity -Identity $security -Principal $everyone -Rights 'All'
-PS C:\> Set-SPProfileServiceApplicationSecurity -Identity $security -ProfileServiceApplicationProxy $proxy
+$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+$security = Get-SPProfileServiceApplicationSecurity -ProfileServiceApplicationProxy $proxy
+$everyone = New-SPClaimsPrincipal -Identity 'c:0(.s|true' -IdentityType EncodedClaim
+Grant-SPObjectSecurity -Identity $security -Principal $everyone -Rights 'All'
+Set-SPProfileServiceApplicationSecurity -Identity $security -ProfileServiceApplicationProxy $proxy
 ```
 
 This example grants the right 'All' to All Authenticated Users.

@@ -46,21 +46,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------------EXAMPLE 1----------------------- 
 ```powershell
-PS C:\> Move-SPSite https://servername/sites/sitename -DestinationDatabase ContentDb2
+Move-SPSite https://servername/sites/sitename -DestinationDatabase ContentDb2
 ```
 
 This example moves the site collection https://servername/sites/sitename to the content database ContentDb2.
 
 ### ---------------------EXAMPLE 2----------------------- 
 ```powershell
-PS C:\> Get-SPSite -ContentDatabase ContentDb1 | Move-SPSite -DestinationDatabase ContentDb2
+Get-SPSite -ContentDatabase ContentDb1 | Move-SPSite -DestinationDatabase ContentDb2
 ```
 
 This example moves all site collections in ContentDb1 to ContentDb2.
 
 ### ---------------------EXAMPLE 3----------------------- 
 ```powershell
-PS C:\> Get-SPSiteAdministration | where { $_.OwnerLoginName -eq "DOMAIN\username" } | Move-SPSite -DestinationDatabase ContentDb2
+Get-SPSiteAdministration | where { $_.OwnerLoginName -eq "DOMAIN\username" } | Move-SPSite -DestinationDatabase ContentDb2
 ```
 
 This example moves all site collections where DOMAIN\username is the site collection owner to ContentDb2.
@@ -69,8 +69,8 @@ You can access the properties of the SPSiteAdministration object as a SharePoint
 
 ### ---------------------EXAMPLE 4----------------------- 
 ```powershell
-PS C:\> Move-SPSite -Identity siteUrl -DestinationDatabase databaseName -RbsProviderMapping
-PS C:\>        @{"sourceProvider1"="targetProvider1", "sourceProvider2"="targetProvider2"}
+Move-SPSite -Identity siteUrl -DestinationDatabase databaseName -RbsProviderMapping
+       @{"sourceProvider1"="targetProvider1", "sourceProvider2"="targetProvider2"}
 ```
 
 This example moves an RBS-enabled site collection from one RBS-enabled content database to another RBS-enabled content database, sourceProvider1 is the source RBS provider and targetProvider1 is the target RBS provider.

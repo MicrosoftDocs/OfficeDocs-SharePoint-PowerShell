@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```powershell
-PS C:\> Get-SPClaimProvider -Identity "MyClaimProvider" | Set-SPClaimProvider -Enabled $false
+Get-SPClaimProvider -Identity "MyClaimProvider" | Set-SPClaimProvider -Enabled $false
 ```
 
 This example disables the claim provider MyClaimProvider.

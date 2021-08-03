@@ -48,8 +48,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```powershell
-PS C:\> $sub = Get-SPSiteSubscription http://contoso/my
-PS C:\> Set-SPSiteSubscriptionProfileConfig -Identity $sub -SiteNamingConflictResolution 3 -SynchronizationOU OrgUnit1
+$sub = Get-SPSiteSubscription http://contoso/my
+Set-SPSiteSubscriptionProfileConfig -Identity $sub -SiteNamingConflictResolution 3 -SynchronizationOU OrgUnit1
 ```
 
 This example sets the parameter of the site subscription SiteNamingConflictResolution to always avoid any conflicts and parameter SynchronizationOU to OrgUnit1.

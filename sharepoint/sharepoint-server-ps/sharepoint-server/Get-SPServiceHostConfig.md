@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE------------------- 
 ```powershell
-PS C:\> Get-SPServiceHostConfig
+Get-SPServiceHostConfig
 ```
 
 This example displays the Web service settings.

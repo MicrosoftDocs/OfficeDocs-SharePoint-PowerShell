@@ -35,12 +35,12 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE-------------
 ```powershell
-PS C:\> $clientID = "11111111-2222-3333-4444-555555555555"
-PS C:\> $site = Get-SPSite https://siteUrl
-PS C:\> $realm = Get-SPAuthenticationRealm -ServiceContext $site
-PS C:\> $appIdentifier = $clientID + "@" + $realm
-PS C:\> $appPrincipal = Get-SPAppPrincipal -NameIdentifier $appIdentifier -Site $site.RootWeb
-PS C:\> Set-AppPrincipalPermission -AppPrincipal $appPrincipal -Site $site.RootWeb -Scope Site -Level Manage
+$clientID = "11111111-2222-3333-4444-555555555555"
+$site = Get-SPSite https://siteUrl
+$realm = Get-SPAuthenticationRealm -ServiceContext $site
+$appIdentifier = $clientID + "@" + $realm
+$appPrincipal = Get-SPAppPrincipal -NameIdentifier $appIdentifier -Site $site.RootWeb
+Set-AppPrincipalPermission -AppPrincipal $appPrincipal -Site $site.RootWeb -Scope Site -Level Manage
 ```
 
 This example sets the App Principal permission to Manage with a scope of Site.

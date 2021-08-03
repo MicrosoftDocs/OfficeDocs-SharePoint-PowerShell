@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```powershell
-PS C:\> Uninstall-SPHelpCollection -Name "OSSAdmin.1033"
+Uninstall-SPHelpCollection -Name "OSSAdmin.1033"
 ```
 
 This example uninstalls a Help collection.

@@ -48,7 +48,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```powershell
-PS C:\> New-SPManagedPath "Teams" -WebApplication "https://somesite"
+New-SPManagedPath "Teams" -WebApplication "https://somesite"
 ```
 
 This example creates a Teams managed path for a given Web application (https://somesite).

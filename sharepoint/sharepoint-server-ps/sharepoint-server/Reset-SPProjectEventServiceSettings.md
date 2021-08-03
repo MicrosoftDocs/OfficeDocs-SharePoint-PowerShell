@@ -30,7 +30,7 @@ Resets the Microsoft Project Server Events Service 2016 settings to the default 
 
 ### ----------------------EXAMPLE-----------------------
 ```powershell
-PS C:\> Reset-SPProjectEventServiceSettings
+Reset-SPProjectEventServiceSettings
 ```
 
 Resets the Microsoft Project Server Events Service 2016 settings to the default values. The Microsoft Project Server Events Service 2016 needs to be restarted for the changes to take effect.

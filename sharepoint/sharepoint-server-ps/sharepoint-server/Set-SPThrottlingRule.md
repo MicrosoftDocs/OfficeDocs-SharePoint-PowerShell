@@ -34,17 +34,17 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```powershell
-PS C:\> $web=Get-SPWebApplication -Identity <URL of web application>
+$web=Get-SPWebApplication -Identity <URL of web application>
 
-PS C:\> $rm=Get-SPRequestManagementSettings -Identity $web
+$rm=Get-SPRequestManagementSettings -Identity $web
 
-PS C:\> $c=New-SPRequestManagementRuleCriteria -Value http -Property url -MatchType startswith -CaseSensitive $false
+$c=New-SPRequestManagementRuleCriteria -Value http -Property url -MatchType startswith -CaseSensitive $false
 
-PS C:\> $throttlingrule=Add-SPThrottlingRule -RequestManagementSettings $rm -Name <Rule Name> -Criteria $c -Threshold 4
+$throttlingrule=Add-SPThrottlingRule -RequestManagementSettings $rm -Name <Rule Name> -Criteria $c -Threshold 4
 
-PS C:\> $criteriaNew = New-SPRequestManagementRuleCriteria -Property UserAgent -MatchType Equals -Value "Mozilla/4.0 (compatible; MSIE 4.01; Windows NT; MS Search 6.0 Robot)"
+$criteriaNew = New-SPRequestManagementRuleCriteria -Property UserAgent -MatchType Equals -Value "Mozilla/4.0 (compatible; MSIE 4.01; Windows NT; MS Search 6.0 Robot)"
 
-PS C:\> Set-SPThrottlingRule -Identity $ throttlingrule -Criteria $criteriaNew -Threshold 8
+Set-SPThrottlingRule -Identity $ throttlingrule -Criteria $criteriaNew -Threshold 8
 ```
 
 This example sets throttling rule property

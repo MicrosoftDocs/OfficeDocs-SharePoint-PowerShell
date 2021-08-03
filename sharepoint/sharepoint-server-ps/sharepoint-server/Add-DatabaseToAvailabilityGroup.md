@@ -36,14 +36,14 @@ Use the Add-DatabaseToAvailabilityGroup cmdlet to add an availability group to t
 
 ### ------------Example 1 -----------
 ```powershell
-PS C:\> Add-DatabaseToAvailabilityGroup -AGName MyAvailabilityGroup -DatabaseName WSS_Content -FileShare \\backup\share\ 
+Add-DatabaseToAvailabilityGroup -AGName MyAvailabilityGroup -DatabaseName WSS_Content -FileShare \\backup\share\ 
 ```
 
 This example adds the database WSS_Content to the availability group named "MyAvailabilityGroup".
 
 ### ------------Example 2-----------
 ```powershell
-PS C:\> Add-DatabaseToAvailabilityGroup -AGName MyAvailabilityGroup -ProcessAllDatabases -FileShare \\backup\share\ 
+Add-DatabaseToAvailabilityGroup -AGName MyAvailabilityGroup -ProcessAllDatabases -FileShare \\backup\share\ 
 ```
 
 This example adds all SharePoint databases attached to the farm to the availability group named "MyAvailabilityGroup"

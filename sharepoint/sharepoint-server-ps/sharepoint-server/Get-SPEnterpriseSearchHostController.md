@@ -33,15 +33,15 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------ 
 ```powershell
-PS C:\> Get-SPEnterpriseSearchHostController
+Get-SPEnterpriseSearchHostController
 ```
 
 This example retrieves a list of all HostControllers in the farm with their status (primary/secondary) and repository version.
 
 ### ------------------EXAMPLE 2------------------ 
 ```powershell
-PS C:\> $ssi = Get-SPEnterpriseSearchServiceInstance -Local
-PS C:\> Get-SPEnterpriseSearchHostController -SearchServiceInstance $ssi
+$ssi = Get-SPEnterpriseSearchServiceInstance -Local
+Get-SPEnterpriseSearchHostController -SearchServiceInstance $ssi
 ```
 
 This example retrieves the status information for the SearchHostController on the local server.

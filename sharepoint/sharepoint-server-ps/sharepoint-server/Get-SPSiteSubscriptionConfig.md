@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE--------------- 
 ```powershell
-PS C:\> Get-SPSiteSubscriptionConfig https://contoso.com | Select FeatureSet
+Get-SPSiteSubscriptionConfig https://contoso.com | Select FeatureSet
 ```
 
 This example gets the feature set ID for the site subscription that contains the Web site https://contoso.com.

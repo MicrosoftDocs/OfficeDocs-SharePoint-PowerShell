@@ -40,7 +40,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE 1----------
 ```powershell
-PS C:\> Upgrade-SPSite https://<site name>/sites/testsite
+Upgrade-SPSite https://<site name>/sites/testsite
 ```
 
 This example upgrades the existing https://\<site name\>/sites/testsite site collection by using only build-to-build upgrade actions.
@@ -48,7 +48,7 @@ The SPSite.CompatibilityLevel will not be changed by this operation.
 
 ### -------------EXAMPLE 2----------
 ```powershell
-PS C:\> Upgrade-SPSite https://<site name>/sites/testsite -VersionUpgrade
+Upgrade-SPSite https://<site name>/sites/testsite -VersionUpgrade
 ```
 
 This example upgrades the existing https://\<site name\>/sites/testsite site collection by using only build-to-build upgrade actions.

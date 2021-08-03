@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------------EXAMPLE-----------------------
 ```powershell
-PS C:\> Repair-SPManagedAccountDeployment
+Repair-SPManagedAccountDeployment
 ```
 
 This example repairs the deployment of credentials on all services and Web application associated with managed account (s) on the local server.

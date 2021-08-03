@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE----------- 
 ```powershell
-PS C:\> Get-SPInternalAppStateSyncLastRunTime
+Get-SPInternalAppStateSyncLastRunTime
 ```
 
 This example returns the latest time the internal app state update job was invoked.

@@ -40,21 +40,21 @@ This cmdlet can help you to get a specific BLOB store, or all the BLOB stores fo
 
 ### -------------EXAMPLE 1------------- 
 ```powershell
-PS C:\> Get-SPRemoteShareBlobStore
+Get-SPRemoteShareBlobStore
 ```
 
 Gets all the Remote Share BLOB Stores in the SharePoint farm.
 
 ### -------------EXAMPLE 2------------- 
 ```powershell
-PS C:\> Get-SPRemoteShareBlobStore -RemoteShareBlobStore "RemoteBlobStore"
+Get-SPRemoteShareBlobStore -RemoteShareBlobStore "RemoteBlobStore"
 ```
 
 Gets the Remote Share BLOB Store named "RemoteBlobStore."
 
 ### -------------EXAMPLE 3------------- 
 ```powershell
-PS C:\> Get-SPRemoteShareBlobStore -ContentDatabase "WSS_Content"
+Get-SPRemoteShareBlobStore -ContentDatabase "WSS_Content"
 ```
 
 Gets all the Remote Share BLOB Stores registered in content database "WSS_Content."

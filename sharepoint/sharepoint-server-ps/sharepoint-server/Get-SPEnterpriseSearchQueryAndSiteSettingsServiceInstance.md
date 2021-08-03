@@ -32,14 +32,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------ 
 ```powershell
-PS C:\> $qqssSvcInstance = Get-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance -Local
+$qqssSvcInstance = Get-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance -Local
 ```
 
 This example obtain a reference to the query and site setting service instance on the local farm.
 
 ### ------------------EXAMPLE 2------------------ 
 ```powershell
-PS C:\> $qssSvcInstance = Get-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance -Identity myServer
+$qssSvcInstance = Get-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance -Identity myServer
 ```
 
 This example obtain a reference to the query and site setting service instance from a specific server name.

@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE--------------
 ```powershell
-PS C:\> Stop-SPInfoPathFormTemplate -Identity formName.xsn
+Stop-SPInfoPathFormTemplate -Identity formName.xsn
 ```
 
 This example disables a form template for a specified name.

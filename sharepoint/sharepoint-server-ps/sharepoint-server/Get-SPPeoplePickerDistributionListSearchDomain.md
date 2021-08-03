@@ -30,14 +30,14 @@ The Get-SPGetPeoplePickerDistributionListSearchDomain cmdlet returns all domains
 
 ### -------------EXAMPLE 1------------- 
 ```powershell
-PS C:\> Get-SPPeoplePickerDistributionListSearchDomain -WebApplication http://sitename
+Get-SPPeoplePickerDistributionListSearchDomain -WebApplication http://sitename
 ```
 
 This example returns all domains in the People Picker distribution list search domains for users in the http://sitename web application.
 
 ### -------------EXAMPLE 2------------- 
 ```powershell
-PS C:\> Get-SPPeoplePickerDistributionListSearchDomain -WebApplication http://sitename -DomainName "corp.contoso.com"
+Get-SPPeoplePickerDistributionListSearchDomain -WebApplication http://sitename -DomainName "corp.contoso.com"
 ```
 
 This example returns the People Picker distribution list search entry in the http://sitename web application that uses the "corp.contoso.com" domain.

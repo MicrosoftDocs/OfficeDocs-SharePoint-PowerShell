@@ -37,7 +37,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```powershell
-PS C:\> Get-SPWebPartPack -WebApplication http://zsharepoint2:80
+Get-SPWebPartPack -WebApplication http://zsharepoint2:80
 ```
 
 This example returns all Web Part packages that have been installed on the Web application on port 80 in local farm.

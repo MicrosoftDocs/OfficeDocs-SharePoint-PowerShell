@@ -49,7 +49,7 @@ Use the Add-SPDistributedCacheServiceInstance cmdlet to add an instance of the d
 
 ### ------------Example 1 -----------
 ```powershell
-PS C:\> Add-SPDistributedCacheServiceInstance
+Add-SPDistributedCacheServiceInstance
 ```
 
 This example adds an instance of the distributed cache service to a local server.

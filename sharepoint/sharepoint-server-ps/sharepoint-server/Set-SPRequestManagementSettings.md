@@ -33,9 +33,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```powershell
-PS C:\> $wa = Get-SPWebApplication https://webAppUrl
-PS C:\> $req = $wa | Get-SPRequestManagementSettings
-PS C:\> Set-SPRequestManagementSettings -Identity $req -ThrottlingEnabled:$false
+$wa = Get-SPWebApplication https://webAppUrl
+$req = $wa | Get-SPRequestManagementSettings
+Set-SPRequestManagementSettings -Identity $req -ThrottlingEnabled:$false
 ```
 
 This example disables throttling on the specified Web Application.

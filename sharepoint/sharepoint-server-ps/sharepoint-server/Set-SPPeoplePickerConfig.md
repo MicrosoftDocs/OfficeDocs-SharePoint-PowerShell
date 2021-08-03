@@ -38,7 +38,7 @@ This Set-SPPeoplePickerConfig cmdlet sets the following settings of People Picke
 
 ### -------------EXAMPLE 1------------- 
 ```powershell
-PS C:\> Set-SPPeoplePickerConfig -WebApplication http://MyOfficeApp1 -ActiveDirectoryCustomFilter "((Title=Manager))" -ActiveDirectoryCustomQuery (sn={0}*) -ActiveDirectorySearchTimeout 60 -PeopleEditorOnlyResolveWithinSiteCollection -OnlySearchWithinSiteCollection -NoWindowsAccountsForNonWindowsAuthenticationMode
+Set-SPPeoplePickerConfig -WebApplication http://MyOfficeApp1 -ActiveDirectoryCustomFilter "((Title=Manager))" -ActiveDirectoryCustomQuery (sn={0}*) -ActiveDirectorySearchTimeout 60 -PeopleEditorOnlyResolveWithinSiteCollection -OnlySearchWithinSiteCollection -NoWindowsAccountsForNonWindowsAuthenticationMode
 ```
 
 This example sets the following settings to the People Picker of Web application MyOfficeApp1:

@@ -36,13 +36,13 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE-------- 
 ```powershell
-PS C:\> $rm=Get-SPRequestManagementSettings -Identity $web
+$rm=Get-SPRequestManagementSettings -Identity $web
 
-PS C:\> Get-SPRoutingRule -RequestManagementSettings $rm
+Get-SPRoutingRule -RequestManagementSettings $rm
 
-PS C:\> $machines=Get-SPRoutingMachineInfo -RequestManagementSettings $rm
+$machines=Get-SPRoutingMachineInfo -RequestManagementSettings $rm
 
-PS C:\> Add-SPRoutingMachinePool -RequestManagementSettings $rm -Name <Name of Pool> -MachineTargets $machines
+Add-SPRoutingMachinePool -RequestManagementSettings $rm -Name <Name of Pool> -MachineTargets $machines
 ```
 
 This examples adds a routing rule to the farm by using the $rm and $machines variables.

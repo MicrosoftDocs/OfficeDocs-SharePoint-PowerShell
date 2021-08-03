@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-------------------
 ```powershell
-PS C:\> Remove-SPEnterpriseSearchSiteHitRule -Identity myHost
+Remove-SPEnterpriseSearchSiteHitRule -Identity myHost
 ```
 
 This example removes a site hit rule for the myHost host.

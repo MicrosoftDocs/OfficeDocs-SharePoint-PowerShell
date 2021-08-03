@@ -33,9 +33,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```powershell
-PS C:\> $modelFile = Get-SPBusinessDataCatalogMetadataObject -Name "ContosoModel" -BdcObjectType Model -ServiceContext http://contoso
+$modelFile = Get-SPBusinessDataCatalogMetadataObject -Name "ContosoModel" -BdcObjectType Model -ServiceContext http://contoso
 
-PS C:\> Remove-SPBusinessDataCatalogModel -Identity $modelFile
+Remove-SPBusinessDataCatalogModel -Identity $modelFile
 ```
 
 This example removes the Business Data Connectivity Model file named ContosoModel.

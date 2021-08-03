@@ -46,7 +46,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```powershell
-PS C:\> Set-SPServiceHostConfig -Port 12345
+Set-SPServiceHostConfig -Port 12345
 ```
 
 This example sets the HTTP port for the Web services.

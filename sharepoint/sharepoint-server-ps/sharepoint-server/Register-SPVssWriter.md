@@ -29,7 +29,7 @@ This allows the Volume Shadow Copy Service (VSS) to back up and restore SharePoi
 
 ### -------------EXAMPLE 1------------- 
 ```powershell
-PS C:\> Register-SPVssWriter
+Register-SPVssWriter
 ```
 
 Registers the SharePoint VSS Writer service on the local server.

@@ -29,7 +29,7 @@ Disables task sync between Project Web App and the associated project site.
 
 ### ------------Example 1 -----------
 ```powershell
-PS C:\> Disable-SPProjectEnterpriseProjectTaskSync -Url https://pwa_site
+Disable-SPProjectEnterpriseProjectTaskSync -Url https://pwa_site
 ```
 
 Disables Project Server task sync on the Project Web App site, https://pwa_site.

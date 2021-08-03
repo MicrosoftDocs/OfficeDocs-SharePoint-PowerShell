@@ -36,9 +36,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE------------ 
 ```powershell
-PS C:\> $serviceApplication = Get-SPServiceApplication -Name "AppManagement"
+$serviceApplication = Get-SPServiceApplication -Name "AppManagement"
 
-PS C:\> Add-SPScaleOutDatabase -ServiceApplication $serviceApplication
+Add-SPScaleOutDatabase -ServiceApplication $serviceApplication
 ```
 
 This example adds a new or existing scale out database into a specific service application.

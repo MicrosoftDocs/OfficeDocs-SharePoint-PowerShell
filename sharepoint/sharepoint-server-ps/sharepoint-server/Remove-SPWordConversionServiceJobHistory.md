@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------------EXAMPLE 1------------------------
 ```powershell
-PS C:\> Get-SPServiceApplication -Name TestWordServer | Remove-SPWordConversionServiceJobHistory -BeforeDate 1/1/2009
+Get-SPServiceApplication -Name TestWordServer | Remove-SPWordConversionServiceJobHistory -BeforeDate 1/1/2009
 ```
 
 This example deletes all the items in the database before 1/1/2009.
@@ -42,7 +42,7 @@ This example deletes all the items in the database before 1/1/2009.
 
 ### ---------------------EXAMPLE 2------------------------
 ```powershell
-PS C:\> Get-SPServiceApplication -Name TestWordServer | Remove-SPWordConversionServiceJobHistory -JobId 00000000-0000-0112-08FF-63927635FEF1 -IncludeActiveJobs
+Get-SPServiceApplication -Name TestWordServer | Remove-SPWordConversionServiceJobHistory -JobId 00000000-0000-0112-08FF-63927635FEF1 -IncludeActiveJobs
 ```
 
 This example deletes the job with the specified ID, even if it is still processing.

@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE----------------- 
 ```powershell
-PS C:\> Add-SPInfoPathUserAgent -Name "NewAgent"
+Add-SPInfoPathUserAgent -Name "NewAgent"
 ```
 
 This example creates a new agent named NewAgent.

@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### ----------------------EXAMPLE----------------------- 
 ```powershell
-PS C:\> Get-SPProjectPCSSettings -sa "Project Service Application"
+Get-SPProjectPCSSettings -sa "Project Service Application"
 ```
 
 This example reads the settings for the Project Calculation Engine running on the "Project Service Application" service application.

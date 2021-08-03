@@ -34,8 +34,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```powershell
-PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\> New-SPEnterpriseSearchCrawlMapping -SearchApplication $ssa -Url "file://location1" -Target "https://location2"
+$ssa = Get-SPEnterpriseSearchServiceApplication
+New-SPEnterpriseSearchCrawlMapping -SearchApplication $ssa -Url "file://location1" -Target "https://location2"
 ```
 
 This example will change the query results link from the file share where the item was crawled to the Web site location from which the item can be browsed.

@@ -29,7 +29,7 @@ Returns whether the task list sync between Project Web App and project sites is 
 
 ### ------------Example 1 -----------
 ```powershell
-PS C:\> Get-SPProjectEnterpriseProjectTaskSync -Url https://contoso/sites/PWA
+Get-SPProjectEnterpriseProjectTaskSync -Url https://contoso/sites/PWA
 ```
 
 This example shows the syntax for getting the task sync status for the Project Web App site at https://contoso/sites/PWA.

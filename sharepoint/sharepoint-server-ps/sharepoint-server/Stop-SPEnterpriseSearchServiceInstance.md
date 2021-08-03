@@ -37,7 +37,7 @@ This can be done in three ways:
 
 ### ------------------EXAMPLE------------------
 ```powershell
-PS C:\> Get-SPEnterpriseSearchServiceInstance -Local | Stop-SPEnterpriseSearchServiceInstance
+Get-SPEnterpriseSearchServiceInstance -Local | Stop-SPEnterpriseSearchServiceInstance
 ```
 
 This example stops the local search service instance.

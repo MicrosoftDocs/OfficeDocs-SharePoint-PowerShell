@@ -33,13 +33,13 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------EXAMPLE-------
 ```powershell
-PS C:\> $web=Get-SPWebApplication -Identity <URL of web application>
+$web=Get-SPWebApplication -Identity <URL of web application>
 
-PS C:\> $rm=Get-SPRequestManagementSettings -Identity $web
+$rm=Get-SPRequestManagementSettings -Identity $web
 
-PS C:\> $M=Get-SPRoutingMachineInfo -RequestManagementSettings $rm -Name <MachineName>
+$M=Get-SPRoutingMachineInfo -RequestManagementSettings $rm -Name <MachineName>
 
-PS C:\> Remove-SPRoutingMachineInfo -Identity $M
+Remove-SPRoutingMachineInfo -Identity $M
 ```
 
 This example removes a routing target for a specified identity.

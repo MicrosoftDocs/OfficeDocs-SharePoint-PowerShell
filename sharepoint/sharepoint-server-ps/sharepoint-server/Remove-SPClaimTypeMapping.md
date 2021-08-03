@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE-------------------------
 ```powershell
-PS C:\> Get-SPTrustedIdentityTokenIssuer "LiveIDSTS" | Remove-SPClaimTypeMapping "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress" 
+Get-SPTrustedIdentityTokenIssuer "LiveIDSTS" | Remove-SPClaimTypeMapping "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress" 
 ```
 
 This example removes the claim type mapping emailaddress from the LiveIDSTS identity provider.

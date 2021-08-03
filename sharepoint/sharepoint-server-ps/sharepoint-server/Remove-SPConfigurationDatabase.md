@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```powershell
-PS C:\> Remove-SPConfigurationDatabase
+Remove-SPConfigurationDatabase
 ```
 
 This example permanently deletes a configuration database from a farm.

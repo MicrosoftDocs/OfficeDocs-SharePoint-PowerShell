@@ -49,7 +49,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```powershell
-PS C:\> Set-SPSiteAdministration https://sitename -OwnerAlias "DOMAIN\NewOwner"
+Set-SPSiteAdministration https://sitename -OwnerAlias "DOMAIN\NewOwner"
 ```
 
 This example allows farm administrators to change the ownership of a site collection to which they do not have access.

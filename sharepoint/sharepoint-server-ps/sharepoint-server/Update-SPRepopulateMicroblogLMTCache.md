@@ -34,8 +34,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE-----------
 ```powershell
-PS C:\> $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
-PS C:\> Update-SPRepopulateMicroblogLMTCache -ProfileServiceApplicationProxy $proxy
+$proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+Update-SPRepopulateMicroblogLMTCache -ProfileServiceApplicationProxy $proxy
 ```
 
 This example refreshes the cache for the specified proxy.

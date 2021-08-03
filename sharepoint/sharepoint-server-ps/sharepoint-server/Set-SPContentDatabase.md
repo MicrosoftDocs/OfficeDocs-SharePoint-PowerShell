@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE 1---------------
 ```powershell
-PS C:\> Get-SPContentDatabase https://contoso.com | Set-SPContentDatabase -MaxSiteCount 1
+Get-SPContentDatabase https://contoso.com | Set-SPContentDatabase -MaxSiteCount 1
 ```
 
 This example sets the MaxSiteCount for the content database that contains contoso.com to 1.
@@ -42,7 +42,7 @@ This example sets the MaxSiteCount for the content database that contains contos
 
 ### ---------------EXAMPLE 2---------------
 ```powershell
-PS C:\> Get-SPContentDatabase -WebApplication https://sitename | Set-SPContentDatabase -WarningSiteCount $null
+Get-SPContentDatabase -WebApplication https://sitename | Set-SPContentDatabase -WarningSiteCount $null
 ```
 
 This example clears the WarningSiteCount for all databases in the sitename Web application.

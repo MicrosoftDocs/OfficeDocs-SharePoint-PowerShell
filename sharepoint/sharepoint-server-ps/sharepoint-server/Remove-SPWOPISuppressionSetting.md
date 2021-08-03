@@ -40,7 +40,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1-----------------
 ```powershell
-PS C:\> Remove-SPWOPISuppressionSetting -Extension "XLSX" -Action "view"
+Remove-SPWOPISuppressionSetting -Extension "XLSX" -Action "view"
 ```
 
 This example removes suppression settings for viewing Excel workbooks that have the file name extension ".xlsx."
@@ -48,7 +48,7 @@ This example removes suppression settings for viewing Excel workbooks that have 
 
 ### --------------EXAMPLE 2-----------------
 ```powershell
-PS C:\> Get-SPWOPISuppressionSetting | Remove-SPWOPISuppressionSetting
+Get-SPWOPISuppressionSetting | Remove-SPWOPISuppressionSetting
 ```
 
 This example removes all suppression settings on the current SharePoint farm where this cmdlet is run.

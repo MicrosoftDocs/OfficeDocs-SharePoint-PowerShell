@@ -57,7 +57,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------------- EXAMPLE---------------------------
 ```powershell
-PS C:\> New-SPTrustedIdentityTokenIssuer -Name "LiveIDSTS" - Description "LiveID STS" -Certificate (Get-ChildItem "cert:Certificates (LocalComputer)\Personal\Certificates -Name "LiveID Cert") -SignInUrl https://int.contoso.com/ -IdentifierClaim "http://schemas.contoso.com/2007/05/Claims/Puid"
+New-SPTrustedIdentityTokenIssuer -Name "LiveIDSTS" - Description "LiveID STS" -Certificate (Get-ChildItem "cert:Certificates (LocalComputer)\Personal\Certificates -Name "LiveID Cert") -SignInUrl https://int.contoso.com/ -IdentifierClaim "http://schemas.contoso.com/2007/05/Claims/Puid"
 ```
 
 This example creates a new identity provider in the farm named LiveIDSTS.

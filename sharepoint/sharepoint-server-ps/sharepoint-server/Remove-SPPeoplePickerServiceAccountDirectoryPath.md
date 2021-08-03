@@ -32,7 +32,7 @@ This Remove-SPPeoplePickerServiceAccountDirectoryPath cmdlet removes an OU from 
 
 ### -------------EXAMPLE 1------------- 
 ```powershell
-PS C:\> Remove-SPPeoplePickerServiceAccountDirectoryPath -WebApplication http://MyOfficeApp1 -OUName "OU=FarmAdmin,DC=Contoso,DC=local"
+Remove-SPPeoplePickerServiceAccountDirectoryPath -WebApplication http://MyOfficeApp1 -OUName "OU=FarmAdmin,DC=Contoso,DC=local"
 ```
 
 This example removes OU "FarmAdmin" from the service account directory path list of Web application MyOfficeApp1.

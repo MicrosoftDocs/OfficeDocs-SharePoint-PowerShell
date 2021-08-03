@@ -29,7 +29,7 @@ Use the Get-SPCacheHost cmdlet to get the cache host information from the cache 
 
 ### -------------EXAMPLE------------- 
 ```powershell
-PS C:\> Get-SPCacheHost -HostName SP01 -CachePort 22233
+Get-SPCacheHost -HostName SP01 -CachePort 22233
 ```
 
 This example returns the cache host information of machine SP01 from the culster.

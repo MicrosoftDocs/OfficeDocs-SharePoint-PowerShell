@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```powershell
-PS C:\> $config = New-SPEnterpriseSearchContentEnrichmentConfiguration
+$config = New-SPEnterpriseSearchContentEnrichmentConfiguration
 ```
 
 This example creates a new ContentEnrichmentConfiguration object.

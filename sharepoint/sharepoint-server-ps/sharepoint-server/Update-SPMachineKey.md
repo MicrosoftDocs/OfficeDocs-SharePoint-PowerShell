@@ -29,14 +29,14 @@ The \`Update-SPMachineKey\` cmdlet deploys ASP.NET view state decryption and val
 
 ### -------------EXAMPLE 1------------- 
 ```powershell
-PS C:\> Update-SPMachineKey -WebApplication http://sitename
+Update-SPMachineKey -WebApplication http://sitename
 ```
 
 This example deploys the ASP.NET view state decryption and validation keys stored in the configuration database for web application 'http://sitename' to all servers in the farm.
 
 ### -------------EXAMPLE 2------------- 
 ```powershell
-PS C:\> Update-SPMachineKey -WebApplication http://sitename -Local
+Update-SPMachineKey -WebApplication http://sitename -Local
 ```
 
 This example deploys the ASP.NET view state decryption and validation keys stored in the configuration database for web application 'http://sitename' to the local server.

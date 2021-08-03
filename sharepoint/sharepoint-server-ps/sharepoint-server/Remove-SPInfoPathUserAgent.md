@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE-----------------------------
 ```powershell
-PS C:\> Remove-SPInfoPathUserAgent -Identity "UserAgentName"
+Remove-SPInfoPathUserAgent -Identity "UserAgentName"
 ```
 
 This example removes a user agent.

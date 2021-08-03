@@ -35,8 +35,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```powershell
-PS C:\> $searchapp = Get-SPEnterpriseSearchServiceApplication 
-PS C:\> Remove-SPEnterpriseSearchMetadataCategory -Identity MyCategory -SearchApplication $searchapp
+$searchapp = Get-SPEnterpriseSearchServiceApplication 
+Remove-SPEnterpriseSearchMetadataCategory -Identity MyCategory -SearchApplication $searchapp
 ```
 
 This example removes the metadata category named MyCategory for the default search service application.

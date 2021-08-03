@@ -36,9 +36,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------------EXAMPLE----------------
 ```powershell
-PS C:\> $serviceapp = Get-SPServiceApplication "My Service App"
+$serviceapp = Get-SPServiceApplication "My Service App"
 
-PS C:\> Set-SPServiceApplication $serviceapp -DefaultEndpoint https
+Set-SPServiceApplication $serviceapp -DefaultEndpoint https
 ```
 
 This example sets the default endpoint of the service application to be https.

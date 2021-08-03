@@ -30,7 +30,7 @@ This cmdlet disassociates the Project Server instance from the specified Site Co
 
 ### ----------------------EXAMPLE-----------------------
 ```powershell
-PS C:\> Remove-SPProjectWebInstanceData -SiteCollection https://contoso/sites/pwa
+Remove-SPProjectWebInstanceData -SiteCollection https://contoso/sites/pwa
 ```
 
 This example disassociates https://contoso/sites/pwa from the Project Server instance.

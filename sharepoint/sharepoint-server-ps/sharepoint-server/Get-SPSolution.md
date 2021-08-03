@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```powershell
-PS C:\> Get-SPSolution
+Get-SPSolution
 ```
 
 This example returns the collection of all installed SharePoint solutions in the farm.

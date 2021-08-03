@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE----------------------- 
 ```powershell
-PS C:\> Disable-SPTimerJob job-ceip-datacollection
+Disable-SPTimerJob job-ceip-datacollection
 ```
 
 This example disables the timer job named job-ceip-datacollection.

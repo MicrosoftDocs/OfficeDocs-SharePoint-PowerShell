@@ -36,11 +36,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```powershell
-PS C:\> [Reflection.Assembly]::LoadFrom("C:\ContosoFolder\contosoSecureStore.dll")
+[Reflection.Assembly]::LoadFrom("C:\ContosoFolder\contosoSecureStore.dll")
 
-PS C:\> $type = [Contoso.SecureStore.ContosoSecureStoreProvider]
+$type = [Contoso.SecureStore.ContosoSecureStoreProvider]
 
-PS C:\> Set-SPSecureStoreDefaultProvider -Type $type
+Set-SPSecureStoreDefaultProvider -Type $type
 ```
 
 This example sets the custom implemented secure store provider.

@@ -42,7 +42,7 @@ Use the `Get-SPAppAcquisitionConfiguration` cmdlet to return app acquisition set
 
 ### ------------EXAMPLE 1------- 
 ```powershell
-PS C:\> Get-SPAppAcquisitionConfiguration -WebApplication https://localhost
+Get-SPAppAcquisitionConfiguration -WebApplication https://localhost
 ```
 
 This example returns app acquisition settings for the specified web application.
@@ -50,7 +50,7 @@ This example returns app acquisition settings for the specified web application.
 
 ### ------------EXAMPLE 2------- 
 ```powershell
-PS C:\> Get-SPAppAcquisitionConfiguration -SiteSubscription https://localhost/sites/SharePointOnlineAdmin
+Get-SPAppAcquisitionConfiguration -SiteSubscription https://localhost/sites/SharePointOnlineAdmin
 ```
 
 This example returns app acquisition settings for the specified tenant.

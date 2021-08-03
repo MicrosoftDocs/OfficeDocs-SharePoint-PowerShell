@@ -36,15 +36,15 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------EXAMPLE-------- 
 ```powershell
-PS C:\> $provider = Get-SPUserSettingsProvider
+$provider = Get-SPUserSettingsProvider
 
-PS C:\> $site = Get-SPSite -Identity https://someserver
+$site = Get-SPSite -Identity https://someserver
 
-PS C:\> $user = $site.RootWeb.CurrentUser
+$user = $site.RootWeb.CurrentUser
 
-PS C:\> $ctx = $provider.GetProviderContext($user)
+$ctx = $provider.GetProviderContext($user)
 
-PS C:\> $provider.GetUserRegionalSettings($ctx,$user)
+$provider.GetUserRegionalSettings($ctx,$user)
 ```
 
 This example returns the regional settings for a specified user.

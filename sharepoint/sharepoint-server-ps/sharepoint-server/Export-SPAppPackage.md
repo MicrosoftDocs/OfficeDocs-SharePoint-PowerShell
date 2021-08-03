@@ -32,8 +32,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE----------- 
 ```powershell
-PS C:\> $instance = Get-SPAppInstance -AppInstanceId $instance.Id
-PS C:\> Export-SPAppPackage -App $instance.App -Path .\exported.spapp
+$instance = Get-SPAppInstance -AppInstanceId $instance.Id
+Export-SPAppPackage -App $instance.App -Path .\exported.spapp
 ```
 
 This example exports an app package to the \exported.spapp location.

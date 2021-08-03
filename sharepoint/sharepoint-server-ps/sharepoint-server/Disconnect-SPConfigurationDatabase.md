@@ -36,7 +36,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```powershell
-PS C:\> Disconnect-SPConfigurationDatabase -Confirm:$false
+Disconnect-SPConfigurationDatabase -Confirm:$false
 ```
 
 This example removes the local server computer from a farm without prompting for user confirmation.

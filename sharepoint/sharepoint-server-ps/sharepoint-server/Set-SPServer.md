@@ -31,7 +31,7 @@ The Set-SPServer cmdlet changes the role of the server in the farm by using the 
 
 ### --------------------EXAMPLE---------------------
 ```powershell
-PS C:\> Set-SPServer -Role SingleServerFarm
+Set-SPServer -Role SingleServerFarm
 ```
 
 This example changes the server to SingleServerFarm role.

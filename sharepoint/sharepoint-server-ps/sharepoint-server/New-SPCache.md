@@ -29,7 +29,7 @@ Use the New-SPCache cmdlet to create a new named cache.
 
 ### -------------EXAMPLE------------- 
 ```powershell
-PS C:\> New-SPCache -CacheName DistributedViewStateCache_b6c5efa9-e390-4d47-aa8a-45232229992b
+New-SPCache -CacheName DistributedViewStateCache_b6c5efa9-e390-4d47-aa8a-45232229992b
 ```
 
 This example creates a new cache named 'DistributedViewStateCache_b6c5efa9-e390-4d47-aa8a-45232229992b'.

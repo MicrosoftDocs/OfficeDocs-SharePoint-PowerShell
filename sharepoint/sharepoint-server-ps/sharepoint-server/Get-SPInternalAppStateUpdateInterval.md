@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE----------- 
 ```powershell
-PS C:\> Get-SPInternalAppStateUpdateInterval
+Get-SPInternalAppStateUpdateInterval
 ```
 
 This example returns the interval in hours between updates of the internal app state update job.

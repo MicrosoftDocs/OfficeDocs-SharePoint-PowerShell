@@ -48,18 +48,18 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------EXAMPLE 1---------- 
 ```powershell
-PS C:\> $db = Get-SPContentDatabase -Identity wss_content
+$db = Get-SPContentDatabase -Identity wss_content
 
-PS C:\> Get-SPSiteUpgradeSessionInfo -ContentDatabase $db
+Get-SPSiteUpgradeSessionInfo -ContentDatabase $db
 ```
 
 This example returns siteupgradeinfo for every SPContentDatabase returned from Get-SPContentDatabase cmdlet.
 
 ### -----------EXAMPLE 2---------- 
 ```powershell
-PS C:\> $site=Get-SPSite -Identity https://localhost
+$site=Get-SPSite -Identity https://localhost
 
-PS C:\> Get-SPSiteUpgradeSessionInfo -Site $site
+Get-SPSiteUpgradeSessionInfo -Site $site
 ```
 
 This example returns siteupgradeinfo for every SPSite object returned from Get-SPSite cmdlet.

@@ -30,7 +30,7 @@ This Clear-SPPeoplePickerDistributionListSearchDomain cmdlet clears the distribu
 
 ### -------------EXAMPLE 1------------- 
 ```powershell
-PS C:\> Clear-SPPeoplePickerDistributionListSearchDomain -WebApplication http://MyOfficeApp1
+Clear-SPPeoplePickerDistributionListSearchDomain -WebApplication http://MyOfficeApp1
 ```
 
 This example clears the distribution list search domain list of Web application MyOfficeApp1.

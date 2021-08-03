@@ -29,7 +29,7 @@ Use the Get-SPFlightsInfo cmdlet to get the current enabled flights info in the 
 
 ### -------------EXAMPLE------------- 
 ```powershell
-PS C:\> Get-SPFlightsInfo
+Get-SPFlightsInfo
 ```
 
 This example gets the whole current enabled flights info in the current farm..

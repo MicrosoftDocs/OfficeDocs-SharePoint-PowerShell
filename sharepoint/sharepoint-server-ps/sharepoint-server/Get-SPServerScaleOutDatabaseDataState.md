@@ -49,11 +49,11 @@ The database state information includes total count of partitions, total weight 
 
 ### ----------------EXAMPLE-------------- 
 ```powershell
-PS C:\> $databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
+$databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
 
-PS C:\> $database = $databases[0]
+$database = $databases[0]
 
-PS C:\> Get-SPServerScaleOutDatabaseDataState -Database $database
+Get-SPServerScaleOutDatabaseDataState -Database $database
 ```
 
 This example gets the data state of the scale-out database for the first scale-out database of the given service application.

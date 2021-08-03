@@ -29,7 +29,7 @@ Disables the user managed solutions gallery capability on the farm.
 
 ### ------------Example 1 -----------
 ```powershell
-PS C:\> Disable-SPUserSolutionAllowList
+Disable-SPUserSolutionAllowList
 ```
 
 Disables the user managed solutions gallery capability on the farm.

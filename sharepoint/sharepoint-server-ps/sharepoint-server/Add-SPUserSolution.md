@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE--------------------- 
 ```powershell
-PS C:\> Add-SPUserSolution -LiteralPath c:\contoso_solution.wsp -Site https://sitename
+Add-SPUserSolution -LiteralPath c:\contoso_solution.wsp -Site https://sitename
 ```
 
 This example adds the sandboxed solution c:\contoso_solution.wsp to the site https://sitename.

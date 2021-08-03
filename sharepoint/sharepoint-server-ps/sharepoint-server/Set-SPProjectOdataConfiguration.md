@@ -38,7 +38,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### ----------------------EXAMPLE 1-----------------------
 ```powershell
-PS C:\> Set-SPProjectOdataConfiguration -ClearEntityPageSizeOverrides
+Set-SPProjectOdataConfiguration -ClearEntityPageSizeOverrides
 ```
 
 This example clears any page size overrides that have been set for any specific entities.
@@ -46,7 +46,7 @@ This example clears any page size overrides that have been set for any specific 
 
 ### ----------------------EXAMPLE 2-----------------------
 ```powershell
-PS C:\> Set-SPProjectOdataConfiguration -AcceptProjectionRequests $true
+Set-SPProjectOdataConfiguration -AcceptProjectionRequests $true
 ```
 
 This example sets AcceptProjectionRequests to true.
@@ -54,7 +54,7 @@ This example sets AcceptProjectionRequests to true.
 
 ### ----------------------EXAMPLE 3-----------------------
 ```powershell
-PS C:\> Set-SPProjectOdataConfiguration -DefaultMaxPageSize 50
+Set-SPProjectOdataConfiguration -DefaultMaxPageSize 50
 ```
 
 This example sets the default maximum page size to 50 rows.
@@ -62,7 +62,7 @@ This example sets the default maximum page size to 50 rows.
 
 ### ----------------------EXAMPLE 4-----------------------
 ```powershell
-PS C:\> Set-SPProjectOdataConfiguration -EntitySetName Assignments -PageSizeOverride 100
+Set-SPProjectOdataConfiguration -EntitySetName Assignments -PageSizeOverride 100
 ```
 
 This example sets the page size override for the Assignments entity.

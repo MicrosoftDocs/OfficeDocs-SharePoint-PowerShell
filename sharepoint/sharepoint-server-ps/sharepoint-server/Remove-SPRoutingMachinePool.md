@@ -33,13 +33,13 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE-----------------------------
 ```powershell
-PS C:\> $web=Get-SPWebApplication -Identity <URL of web application>
+$web=Get-SPWebApplication -Identity <URL of web application>
 
-PS C:\> $rm=Get-SPRequestManagementSettings -Identity $web
+$rm=Get-SPRequestManagementSettings -Identity $web
 
-PS C:\> $pool=Get-SPRoutingMachinePool -RequestManagementSettings $rm
+$pool=Get-SPRoutingMachinePool -RequestManagementSettings $rm
 
-PS C:\> Remove-SPRoutingMachinePool -Identity $pool
+Remove-SPRoutingMachinePool -Identity $pool
 ```
 
 This example removes a routing pool for the specified identity by using the $pool variable.

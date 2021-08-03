@@ -56,7 +56,7 @@ The certificate is then ready to be used by SharePoint.
 
 ### ------------EXAMPLE1-----------
 ```powershell
-PS C:\> New-SPCertificate -FriendlyName "Team Sites Certificate" -KeySize 2048 -CommonName sharepoint.contoso.com -AlternativeNames extranet.contoso.com, onedrive.contoso.com -OrganizationalUnit "Contoso IT Department" -Organization "Contoso" -Locality "Redmond" -State "Washington" -Country "US" -Exportable -HashAlgorithm SHA256 -Path "\\server\fileshare\Team Sites Certificate Signing Request.txt"
+New-SPCertificate -FriendlyName "Team Sites Certificate" -KeySize 2048 -CommonName sharepoint.contoso.com -AlternativeNames extranet.contoso.com, onedrive.contoso.com -OrganizationalUnit "Contoso IT Department" -Organization "Contoso" -Locality "Redmond" -State "Washington" -Country "US" -Exportable -HashAlgorithm SHA256 -Path "\\server\fileshare\Team Sites Certificate Signing Request.txt"
 ```
 
 This example creates a new certificate signing request, specifying the organizational information, key algorithm and size, and path to the certificate signing request file that will be generated.
@@ -64,7 +64,7 @@ The private key of this certificate will be exportable.
 
 ### ------------EXAMPLE2-----------
 ```powershell
-PS C:\> New-SPCertificate -FriendlyName "Sites Certificate" -CommonName sharepoint.contoso.com -AlternativeNames extranet.contoso.com, onedrive.contoso.com
+New-SPCertificate -FriendlyName "Sites Certificate" -CommonName sharepoint.contoso.com -AlternativeNames extranet.contoso.com, onedrive.contoso.com
 ```
 
 This example creates a new certificate signing request, using the farm's default organizational information, key algorithm, and size.

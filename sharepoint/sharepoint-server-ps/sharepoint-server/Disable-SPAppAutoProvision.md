@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE 1-------------- 
 ```powershell
-PS C:\> Disable-SPAppAutoProvision
+Disable-SPAppAutoProvision
 ```
 
 This example disables app auto provisioning for the farm.
@@ -43,9 +43,9 @@ This setting overrides site subscription level setting.
 
 ### ---------------EXAMPLE 2-------------- 
 ```powershell
-PS C:\> $subscription = Get-SPSiteSubscription https://Contoso.com
+$subscription = Get-SPSiteSubscription https://Contoso.com
 
-PS C:\> Disable-SPAppAutoProvision -SiteSubscription $subscription
+Disable-SPAppAutoProvision -SiteSubscription $subscription
 ```
 
 This example disables app auto provisioning for the site subscription for Contoso.Com site.

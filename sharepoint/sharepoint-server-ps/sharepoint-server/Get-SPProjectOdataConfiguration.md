@@ -32,14 +32,14 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### ----------------------EXAMPLE 1----------------------- 
 ```powershell
-PS C:\> Get-SPProjectOdataConfiguration
+Get-SPProjectOdataConfiguration
 ```
 
 This example returns the OData configuration for the instance of Project Web App.
 
 ### ----------------------EXAMPLE 2----------------------- 
 ```powershell
-PS C:\> (Get-SPProjectOdataConfiguration).EntitySetsWithMaxPAgeSizeOverride
+(Get-SPProjectOdataConfiguration).EntitySetsWithMaxPAgeSizeOverride
 ```
 
 This example returns the list of entities that have the MaxPageSizeOverride option configured.

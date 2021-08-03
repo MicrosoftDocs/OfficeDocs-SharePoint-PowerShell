@@ -46,7 +46,7 @@ If a site collection is backed up and restored to a different URL location withi
 
 ### ----------------------EXAMPLE 1----------------------
 ```powershell
-PS C:\> Restore-SPSite https://server_name/sites/site_name -Path C:\Backup\site_name.bak
+Restore-SPSite https://server_name/sites/site_name -Path C:\Backup\site_name.bak
 ```
 
 This example restores a site collection from the backup file C:\Backup\site_name.bak to the site collection URL https://server_name/sites/site_name.
@@ -54,7 +54,7 @@ This example restores a site collection from the backup file C:\Backup\site_name
 
 ### ----------------------EXAMPLE 2----------------------
 ```powershell
-PS C:\> Restore-SPSite https://server_name/sites/site_name -Path C:\Backup\site_name.bak -Force -DatabaseServer SQLBE1 -DatabaseName SQLDB1
+Restore-SPSite https://server_name/sites/site_name -Path C:\Backup\site_name.bak -Force -DatabaseServer SQLBE1 -DatabaseName SQLDB1
 ```
 
 This example restores a site collection backup from the backup file C:\Backup\site_name.bak, but overwrites the existing site collection at https://server_name/sites/site_name while specifying that the site collection must be stored in a specific content database.
@@ -62,7 +62,7 @@ This example restores a site collection backup from the backup file C:\Backup\si
 
 ### ----------------------EXAMPLE 3----------------------
 ```powershell
-PS C:\> Restore-SPSite https://www.example.com -Path \\file_server\share\site_name.bak -HostHeaderWebApplication https://server_name
+Restore-SPSite https://www.example.com -Path \\file_server\share\site_name.bak -HostHeaderWebApplication https://server_name
 ```
 
 This example restores a site collection backup from the backup file \\\\file_server\share\site_name.bak to the host-named site collection https://www.example.com on the Web application https://server_name.

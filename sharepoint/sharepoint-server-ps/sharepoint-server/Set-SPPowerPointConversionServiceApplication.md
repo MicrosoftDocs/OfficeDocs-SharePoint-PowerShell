@@ -33,7 +33,7 @@ Use the `Set-SPPowerPointConversionServiceApplication` cmdlet to set properties 
 
 ### --------------------EXAMPLE 1---------------------
 ```powershell
-PS C:\> Set-SPPowerPointConversionServiceApplication -Identity "MyWorkgroupPPTApp" -CacheExpirationPeriodInSeconds 1200
+Set-SPPowerPointConversionServiceApplication -Identity "MyWorkgroupPPTApp" -CacheExpirationPeriodInSeconds 1200
 ```
 
 This example establishes new operational defaults for the conversion cache expiration.
@@ -41,7 +41,7 @@ This example establishes new operational defaults for the conversion cache expir
 
 ### --------------------EXAMPLE 2---------------------
 ```powershell
-PS C:\> Set-SPPowerPointConversionServiceApplication -Identity "MyWorkgroupPPTApp" -DisableBinaryScan:$false
+Set-SPPowerPointConversionServiceApplication -Identity "MyWorkgroupPPTApp" -DisableBinaryScan:$false
 ```
 
 This example disables binary scanning of documents.

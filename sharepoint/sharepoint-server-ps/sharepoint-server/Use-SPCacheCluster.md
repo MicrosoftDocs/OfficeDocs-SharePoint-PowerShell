@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE------------- 
 ```powershell
-PS C:\> Use-SPCacheCluster
+Use-SPCacheCluster
 ```
 
 This example sets the context of your PowerShell session to current farm's cache cluster.

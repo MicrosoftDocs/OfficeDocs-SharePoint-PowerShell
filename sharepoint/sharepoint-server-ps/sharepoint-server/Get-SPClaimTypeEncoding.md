@@ -44,14 +44,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1-------- 
 ```powershell
-PS C:\> Get-SPClaimTypeEncoding
+Get-SPClaimTypeEncoding
 ```
 
 This example returns a list of all types of claima in the farm.
 
 ### --------------EXAMPLE 2-------- 
 ```powershell
-PS C:\> Get-SPClaimTypeEncoding -ClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/country"
+Get-SPClaimTypeEncoding -ClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/country"
 ```
 
 This example returns a specific claim type by using the ClaimType parameter.

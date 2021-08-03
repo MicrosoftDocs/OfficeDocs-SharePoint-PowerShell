@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```powershell
-PS C:\> Remove-SPTrustedServiceTokenIssuer "WFE Farm 2"
+Remove-SPTrustedServiceTokenIssuer "WFE Farm 2"
 ```
 
 This example deletes the trusted service token issuer WFE Farm 2.

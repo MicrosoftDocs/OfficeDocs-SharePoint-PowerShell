@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```powershell
-PS C:\> Remove-SPDistributedCacheServiceInstance
+Remove-SPDistributedCacheServiceInstance
 ```
 
 This example removes an instance of a distributed cache.

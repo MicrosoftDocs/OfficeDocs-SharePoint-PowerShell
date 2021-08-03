@@ -46,9 +46,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE--------------- 
 ```powershell
-PS C:\> $sitesub = Get-SPSiteSubscription https://my.contoso.com/
+$sitesub = Get-SPSiteSubscription https://my.contoso.com/
 
-PS C:\> Get-SPServiceContext $sitesub
+Get-SPServiceContext $sitesub
 ```
 
 This example returns the service context for a site in a hosted environment.

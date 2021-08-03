@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE-------------- 
 ```powershell
-PS C:\> Get-SPContentDeploymentJob -Identity 'Job 1'
+Get-SPContentDeploymentJob -Identity 'Job 1'
 ```
 
 This example returns the content deployment job called Job 1.

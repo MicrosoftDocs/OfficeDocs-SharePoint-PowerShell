@@ -30,7 +30,7 @@ This Add-SPPeoplePickerDistributionListSearchDomain cmdlet adds a domain to the 
 
 ### -------------EXAMPLE 1------------- 
 ```powershell
-PS C:\> Add-SPPeoplePickerDistributionListSearchDomain -WebApplication http://MyOfficeApp1 -DomainName "corp.contoso.com" -Index 2
+Add-SPPeoplePickerDistributionListSearchDomain -WebApplication http://MyOfficeApp1 -DomainName "corp.contoso.com" -Index 2
 ```
 
 This example inserts domain "corp.contoso.com" to the distribution list search domain list of Web application MyOfficeApp1 at position 2.

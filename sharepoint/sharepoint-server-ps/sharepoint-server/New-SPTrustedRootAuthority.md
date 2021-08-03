@@ -38,8 +38,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```powershell
-PS C:\> $cert = Get-PfxCertificate C:\LiveIDSigningCert.pfx
-PS C:\> New-SPTrustedRootAuthority -Name "WFEFarm1" -Certificate $cert
+$cert = Get-PfxCertificate C:\LiveIDSigningCert.pfx
+New-SPTrustedRootAuthority -Name "WFEFarm1" -Certificate $cert
 ```
 
 This example creates a new trusted root authority, WFEFarm1.

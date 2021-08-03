@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------------EXAMPLE 1------------------------ 
 ```powershell
-PS C:\> $trustedsts = Get-SPTrustedIdentityTokenIssuer "LiveIDSTS"
+$trustedsts = Get-SPTrustedIdentityTokenIssuer "LiveIDSTS"
 ```
 
 This example gets a trusted identity token issuer.

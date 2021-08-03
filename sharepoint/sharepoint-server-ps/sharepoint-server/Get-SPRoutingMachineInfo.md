@@ -35,11 +35,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE------------ 
 ```powershell
-PS C:\> $web=Get-SPWebApplication -Identity <URL of web application>
+$web=Get-SPWebApplication -Identity <URL of web application>
 
-PS C:\> $rm=Get-SPRequestManagementSettings -Identity $web
+$rm=Get-SPRequestManagementSettings -Identity $web
 
-PS C:\> Get-SPRoutingMachineInfo -RequestManagementSettings $rm
+Get-SPRoutingMachineInfo -RequestManagementSettings $rm
 ```
 
 This example returns a routing target for a specified identity.

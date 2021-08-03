@@ -29,7 +29,7 @@ Use the Get-SPCacheClusterInfo cmdlet to get the cache cluster information in th
 
 ### -------------EXAMPLE------------- 
 ```powershell
-PS C:\> Get-SPCacheClusterInfo
+Get-SPCacheClusterInfo
 ```
 
 This example returns the cache cluster information configured in the farm.

@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE------------------ 
 ```powershell
-PS C:\> Enable-SPUserLicensing
+Enable-SPUserLicensing
 ```
 
 This example enables user-license enforcement on the SharePoint farm.

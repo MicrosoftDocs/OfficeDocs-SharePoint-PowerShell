@@ -42,10 +42,10 @@ This cmdlet contains more than one parameter set. You may only use parameters fr
 
 ### --------------------EXAMPLE---------------------
 ```powershell
-PS C:\> $databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
-PS C:\> $database = $databases[0]
-PS C:\> $state = Get-SPServerScaleOutDatabaseDataState -Database $database
-PS C:\> Set-SPServerScaleOutDatabaseDataSubRange -Database $database -Range $state.Range -SubRangePoint $state.Range.RangeEnd -SubRangeMode ReadOnly -IsUpperSubRange $false
+$databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
+$database = $databases[0]
+$state = Get-SPServerScaleOutDatabaseDataState -Database $database
+Set-SPServerScaleOutDatabaseDataSubRange -Database $database -Range $state.Range -SubRangePoint $state.Range.RangeEnd -SubRangeMode ReadOnly -IsUpperSubRange $false
 
 ```
 

@@ -31,7 +31,7 @@ This Clear-SPPeoplePickerServiceAccountDirectoryPath cmdlet clears the OUs of th
 
 ### -------------EXAMPLE 1------------- 
 ```powershell
-PS C:\> Clear-SPPeoplePickerServiceAccountDirectoryPath -WebApplication http://MyOfficeApp1
+Clear-SPPeoplePickerServiceAccountDirectoryPath -WebApplication http://MyOfficeApp1
 ```
 
 This example clears OUs of the service account directory path list of Web application MyOfficeApp1.

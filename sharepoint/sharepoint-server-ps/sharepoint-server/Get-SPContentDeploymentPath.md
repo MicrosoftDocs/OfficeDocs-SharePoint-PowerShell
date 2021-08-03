@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE-------------- 
 ```powershell
-PS C:\> Get-SPContentDeploymentPath -Identity 'Path 1'
+Get-SPContentDeploymentPath -Identity 'Path 1'
 ```
 
 This example returns the content deployment path named Path 1.

@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE------------------
 ```powershell
-PS C:\> Get-SPEnterpriseSearchCrawlCustomConnector -SearchApplication MySearchServiceApp" - Identity "dctm://" | Remove-SPEnterpriseSearchCrawlCustomConnector
+Get-SPEnterpriseSearchCrawlCustomConnector -SearchApplication MySearchServiceApp" - Identity "dctm://" | Remove-SPEnterpriseSearchCrawlCustomConnector
 ```
 
 This example removes a custom connector for the dctm:// protocol from the MySearchServiceApp search service application.

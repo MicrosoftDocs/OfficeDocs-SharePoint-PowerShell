@@ -43,9 +43,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```powershell
-PS C:\> $cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2
-PS C:\> $cert.Import('C:\LiveIDSigningCert.pfx')
-PS C:\> Get-SPTrustedRootAuthority -Name "WFEFarm1" | Set-SPTrustedRootAuthority -Certificate $cert
+$cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2
+$cert.Import('C:\LiveIDSigningCert.pfx')
+Get-SPTrustedRootAuthority -Name "WFEFarm1" | Set-SPTrustedRootAuthority -Certificate $cert
 ```
 
 This example updates the certificate of the trusted root authority WFEFarm1.

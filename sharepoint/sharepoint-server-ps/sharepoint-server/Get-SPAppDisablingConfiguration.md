@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE------- 
 ```powershell
-PS C:\> Get-SPAppDisablingConfiguration
+Get-SPAppDisablingConfiguration
 ```
 
 This example returns disable list sync state of a pp.

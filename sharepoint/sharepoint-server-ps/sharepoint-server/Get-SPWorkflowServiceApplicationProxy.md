@@ -29,7 +29,7 @@ Returns the Workflow Service Application Proxy.
 
 ### ------------Example 1 -----------
 ```powershell
-PS C:\> Get-SPWorkflowServiceApplicationProxy
+Get-SPWorkflowServiceApplicationProxy
 ```
 Returns the Workflow Service Application Proxy.
 

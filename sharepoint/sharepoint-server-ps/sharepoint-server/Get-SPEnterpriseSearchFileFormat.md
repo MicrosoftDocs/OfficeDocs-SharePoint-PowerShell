@@ -39,16 +39,16 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE 1------------- 
 ```powershell
-PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\> Get-SPEnterpriseSearchFileFormat -SearchApplication $ssa
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Get-SPEnterpriseSearchFileFormat -SearchApplication $ssa
 ```
 
 This example uses the Get-SPEnterpriseSearchFileFormat to retrieve all parseable file formats in the search service application referenced by $ssa.
 
 ### -------------EXAMPLE 2------------- 
 ```powershell
-PS C:\> $ssa = Get-SPEnterpriseSearchServiceApplication
-PS C:\> Get-SPEnterpriseSearchFileFormat -SearchApplication $ssa -Identity DOCX
+$ssa = Get-SPEnterpriseSearchServiceApplication
+Get-SPEnterpriseSearchFileFormat -SearchApplication $ssa -Identity DOCX
 ```
 
 This example uses the Get-SPEnterpriseSearchFileFormat cmdlet to retrieve information about the file format DOCX in the search service application referenced by `$ssa`.

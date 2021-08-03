@@ -34,19 +34,19 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE-----------------------------
 ```powershell
-PS C:\> $rm=Get-SPRequestManagementSettings -Identity $web
+$rm=Get-SPRequestManagementSettings -Identity $web
 
-PS C:\> Get-SPRoutingRule -RequestManagementSettings $rm
+Get-SPRoutingRule -RequestManagementSettings $rm
 
-PS C:\> $machines=Get-SPRoutingMachineInfo -RequestManagementSettings $rm
+$machines=Get-SPRoutingMachineInfo -RequestManagementSettings $rm
 
-PS C:\> $pool=Add-SPRoutingMachinePool -RequestManagementSettings $rm -Name <Name of Pool> -MachineTargets $machines
+$pool=Add-SPRoutingMachinePool -RequestManagementSettings $rm -Name <Name of Pool> -MachineTargets $machines
 
-PS C:\> $c=New-SPRequestManagementRuleCriteria -Value http -Property url -MatchType startswith -CaseSensitive $false
+$c=New-SPRequestManagementRuleCriteria -Value http -Property url -MatchType startswith -CaseSensitive $false
 
-PS C:\> $rule=Add-SPRoutingRule -RequestManagementSettings $rm -Name <Rule Name> -Criteria $c -MachinePool $pool
+$rule=Add-SPRoutingRule -RequestManagementSettings $rm -Name <Rule Name> -Criteria $c -MachinePool $pool
 
-PS C:\> Remove-SPRoutingRule -Identity $rule
+Remove-SPRoutingRule -Identity $rule
 ```
 
 This example removes a routing for a specified identity by using the $rule variable.

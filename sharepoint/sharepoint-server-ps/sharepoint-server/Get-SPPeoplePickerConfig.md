@@ -29,7 +29,7 @@ This Get-SPPeoplePickerConfig cmdlet gets People Picker settings of a specified 
 
 ### -------------EXAMPLE 1------------- 
 ```powershell
-PS C:\> Get-SPPeoplePickerConfig -WebApplication http://MyOfficeApp1
+Get-SPPeoplePickerConfig -WebApplication http://MyOfficeApp1
 ```
 
 This example gets the People Picker settings of the Web application, MyOfficeApp1.

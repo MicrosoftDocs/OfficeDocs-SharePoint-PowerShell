@@ -33,14 +33,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------------EXAMPLE 1---------------------- 
 ```powershell
-PS C:\> Get-SPVisioSafeDataProvider -VisioServiceApplication "VGS1"
+Get-SPVisioSafeDataProvider -VisioServiceApplication "VGS1"
 ```
 
 This example returns a list of safe data providers for a specific Visio Services application.
 
 ### -------------------EXAMPLE 2---------------------- 
 ```powershell
-PS C:\> Get-SPVisioSafeDataProvider -VisioServiceApplication "VGS1" -DataProviderID "SQLOLEDB" -DataProviderType 1
+Get-SPVisioSafeDataProvider -VisioServiceApplication "VGS1" -DataProviderID "SQLOLEDB" -DataProviderType 1
 ```
 
 This example returns information about a specified safe data provider for a specific Visio Services application.

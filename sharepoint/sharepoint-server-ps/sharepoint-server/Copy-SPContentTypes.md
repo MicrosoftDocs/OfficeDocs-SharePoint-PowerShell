@@ -30,7 +30,7 @@ This cmdlet is used in hybrid scenarios with SharePoint Online to copy Content T
 
 ### ------------Example 1 -----------
 ```powershell
-PS C:\> Copy-SPContentTypes -LocalSiteUrl https://localsite/ -LocalTermStoreName "managed metadata service application proxy" -RemoteSiteUrl https://contoso.sharepoint.com/ -ContentTypeNames @("ContentTypeA", "ContentTypeB") -Credential (Get-Credential) 
+Copy-SPContentTypes -LocalSiteUrl https://localsite/ -LocalTermStoreName "managed metadata service application proxy" -RemoteSiteUrl https://contoso.sharepoint.com/ -ContentTypeNames @("ContentTypeA", "ContentTypeB") -Credential (Get-Credential) 
 ```
 
 This example migrates the specified content types named: ContentTypeA, ContentTypeB on the local site https://localsite/ whose term store named "managed metadata service application proxy" to the hub site of remote site https://contoso.sharepoint.com/. If the remote site is a hub site, the migration target will be itself. 

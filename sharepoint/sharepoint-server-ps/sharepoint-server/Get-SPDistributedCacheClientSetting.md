@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------EXAMPLE-------- 
 ```powershell
-PS C:\> Get-SPDistributedCacheClientSetting -ContainerType DistributedLogonTokenCache
+Get-SPDistributedCacheClientSetting -ContainerType DistributedLogonTokenCache
 ```
 
 This example returns the Distributed Cache client settings for DistributedLogonTokenCache.

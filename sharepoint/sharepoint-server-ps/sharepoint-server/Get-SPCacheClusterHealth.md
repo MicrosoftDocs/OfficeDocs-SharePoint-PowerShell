@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE------------- 
 ```powershell
-PS C:\> Get-SPCacheClusterHealth
+Get-SPCacheClusterHealth
 ```
 
 This example returns health statistics for all of the named caches in the cache cluster.

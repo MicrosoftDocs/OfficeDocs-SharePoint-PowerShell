@@ -31,7 +31,7 @@ The Stop-SPService cmdlet disables a service in the farm. Service instances for 
 
 ### ---------------EXAMPLE--------------
 ```powershell
-PS C:\> Stop-SPService -Identity "Microsoft SharePoint Foundation Sandboxed Code Service"
+Stop-SPService -Identity "Microsoft SharePoint Foundation Sandboxed Code Service"
 ```
 
 This example disables the  Microsoft SharePoint Foundation Sandboxed Code Service  in the farm.

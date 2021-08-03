@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE----------------- 
 ```powershell
-PS C:\> Get-SPDataConnectionFileDependant -Identity 'FileName.udcx'
+Get-SPDataConnectionFileDependant -Identity 'FileName.udcx'
 ```
 
 This example displays a list of deployed forms with a specified name.

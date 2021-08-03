@@ -42,8 +42,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------
 ```powershell
-PS C:\> $ssa = Get-SPenterpriseSearchServiceApplication
-PS C:\> Get-SPEnterpriseSearchQueryScope -Identity MustCrawl -SearchApplication $ssa | Set-SPEnterpriseSearchQueryScope -Description "Business critical sites to index" -CompilationType 1 -AlternateResultsPage https://altServer
+$ssa = Get-SPenterpriseSearchServiceApplication
+Get-SPEnterpriseSearchQueryScope -Identity MustCrawl -SearchApplication $ssa | Set-SPEnterpriseSearchQueryScope -Description "Business critical sites to index" -CompilationType 1 -AlternateResultsPage https://altServer
 ```
 
 This example obtains a reference to the scope named MustCrawl on the search service application named MySSA and changes the description, compilation type and alternate access URL.

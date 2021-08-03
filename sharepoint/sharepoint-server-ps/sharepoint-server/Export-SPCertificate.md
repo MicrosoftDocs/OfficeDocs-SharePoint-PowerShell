@@ -40,16 +40,16 @@ CER files contain only a single certificate.
 
 ### ------------EXAMPLE 1-----------
 ```powershell
-PS C:\> $password = ConvertTo-SecureString -AsPlainText -Force 
-PS C:\>  
-PS C:\> Export-SPCertificate -Identity "Team Site Certificate" -Password $password -IncludeAllCertificatesInCertificationPath -IncludeExtendedProperties -Path "\\server\fileshare\certificates.pfx"
+$password = ConvertTo-SecureString -AsPlainText -Force 
+ 
+Export-SPCertificate -Identity "Team Site Certificate" -Password $password -IncludeAllCertificatesInCertificationPath -IncludeExtendedProperties -Path "\\server\fileshare\certificates.pfx"
 ```
 
 This example exports the "Team Sites Certificate" certificate and its private key to the \\\\server\fileshare\certificates.pfx file.
 
 ### ------------EXAMPLE 2-----------
 ```powershell
-PS C:\> Export-SPCertificate -Identity "Team Site Certificate" -Type Cert
+Export-SPCertificate -Identity "Team Site Certificate" -Type Cert
 ```
 
 This example exports the "Team Sites Certificate" certificate to a Cert file that's stored in Central Administration.

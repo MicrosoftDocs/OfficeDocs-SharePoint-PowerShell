@@ -32,7 +32,7 @@ These include default properties for creating and renewing certificates and cert
 
 ### ------------EXAMPLE-----------
 ```powershell
-PS C:\> Get-SPCertificateSettings
+Get-SPCertificateSettings
 ```
 
 This example gets the default properties for creating and renewing certificates and the certificate health analyzer rules.

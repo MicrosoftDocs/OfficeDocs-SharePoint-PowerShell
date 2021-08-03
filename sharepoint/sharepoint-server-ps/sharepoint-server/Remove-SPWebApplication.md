@@ -45,7 +45,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```powershell
-PS C:\> Get-SPWebApplication https://sitename | Remove-SPWebApplication -Zone "Internet" -Confirm
+Get-SPWebApplication https://sitename | Remove-SPWebApplication -Zone "Internet" -Confirm
 ```
 
 This example prompts and then removes the Internet zone Web application extension on the Web application at https://sitename.
@@ -54,7 +54,7 @@ This command does not remove the content databases or the IIS Web site.
 
 ### ------------------EXAMPLE 2-----------------------
 ```powershell
-PS C:\> Remove-SPWebApplication https://sitename -Confirm -DeleteIISSite -RemoveContentDatabases
+Remove-SPWebApplication https://sitename -Confirm -DeleteIISSite -RemoveContentDatabases
 ```
 
 This example permanently removes the Web application, all content databases and the IIS Web site at https://sitename

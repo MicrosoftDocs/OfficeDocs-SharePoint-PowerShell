@@ -29,7 +29,7 @@ Use the Get-SPTranslationThrottlingSetting cmdlet to display the time duration f
 
 ### ------------Example 1 -----------
 ```powershell
-PS C:\> Get-SPTranslationThrottlingSetting
+Get-SPTranslationThrottlingSetting
 ```
 
 This example displays all the time duration and timer jobs for the farm.

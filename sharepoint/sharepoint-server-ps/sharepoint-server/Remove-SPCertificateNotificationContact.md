@@ -29,7 +29,7 @@ The \`Remove-SPCertificateNotificationContact\` cmdlet deletes an email address 
 
 ### ------------EXAMPLE-----------
 ```powershell
-PS C:\> Remove-SPCertificateNotificationContact -EmailAddress sharepoint-admins@example.com
+Remove-SPCertificateNotificationContact -EmailAddress sharepoint-admins@example.com
 ```
 
 This example deletes the sharepoint-admins@example.com email address from the list of contacts to be notified when certificates are about to expire or have already expired.

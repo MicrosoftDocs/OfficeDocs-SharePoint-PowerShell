@@ -33,7 +33,7 @@ Deleting the top level Web site of a site collection causes the entire site coll
 
 ### ------------------EXAMPLE-----------------------
 ```powershell
-PS C:\> Remove-SPWeb https://sitename/subsite
+Remove-SPWeb https://sitename/subsite
 ```
 
 This example completely deletes a subsite.

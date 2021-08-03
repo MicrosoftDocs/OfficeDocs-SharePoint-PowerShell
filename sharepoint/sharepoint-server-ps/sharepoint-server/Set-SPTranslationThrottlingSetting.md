@@ -29,7 +29,7 @@ Use the Set-SPTranslationThrottlingSetting cmdlet to set the timer job duration 
 
 ### -----------------EXAMPLE--------------------
 ```powershell
-PS C:\> Set-SPTranslationThrottlingSetting -SiteQuota 300 -TenantQuota 600
+Set-SPTranslationThrottlingSetting -SiteQuota 300 -TenantQuota 600
 ```
 
 This limits the Translation Timer job to spend no more than 300 seconds (5 minutes) per site collection, and no more than 600 seconds (10 minutes) per tenant.

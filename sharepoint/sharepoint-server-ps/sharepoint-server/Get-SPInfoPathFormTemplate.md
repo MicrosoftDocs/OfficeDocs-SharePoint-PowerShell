@@ -32,14 +32,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE 1-------------- 
 ```powershell
-PS C:\> Get-SPInfoPathFormTemplate
+Get-SPInfoPathFormTemplate
 ```
 
 This example lists the Identity, DisplayName, and FormTemplateStatus property for each admininstrator-deployed InfoPath form template.
 
 ### ---------------EXAMPLE 2-------------- 
 ```powershell
-PS C:\> "SomeFormTemplate.xsn" | Get-SPInfoPathFormTemplate | format-list
+"SomeFormTemplate.xsn" | Get-SPInfoPathFormTemplate | format-list
 ```
 
 This example lists all the properties of the specified InfoPath form template.

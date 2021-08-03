@@ -28,14 +28,14 @@ The Update-SPProfileSync cmdlet updates the configuration of the User Profile Sy
 
 ### ------------EXAMPLE 1-----------
 ```powershell
-PS C:\> Update-SPProfileSync -IgnoreIsActive:$false
+Update-SPProfileSync -IgnoreIsActive:$false
 ```
 
 This example updates the User Profile Synchronization job marking it to sync all users irrespective of their activity, without prompting for user confirmation.
 
 ### ------------EXAMPLE 2-----------
 ```powershell
-PS C:\> Update-SPProfileSync -SynchronizationTiming "every 15 minutes"
+Update-SPProfileSync -SynchronizationTiming "every 15 minutes"
 ```
 
 This example updates the User Profile Synchronization job marking it to run every 15 minutes, without prompting for user confirmation.

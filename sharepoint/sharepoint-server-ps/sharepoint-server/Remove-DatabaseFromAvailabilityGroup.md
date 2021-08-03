@@ -38,7 +38,7 @@ This cmdlet contains more than one parameter set. You may only use parameters fr
 
 ### ------------------EXAMPLE------------------
 ```powershell
-PS C:\> Remove-DatabaseFromAvailabilityGroup -AGName MyAvailabilityGroup -DatabaseName WSS_Content 
+Remove-DatabaseFromAvailabilityGroup -AGName MyAvailabilityGroup -DatabaseName WSS_Content 
 ```
 
 This example removes the availability group named "MyAvailabilityGroup" from the WSS_Content database.

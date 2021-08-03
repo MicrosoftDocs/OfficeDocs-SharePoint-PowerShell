@@ -31,7 +31,7 @@ This Remove-SPPeoplePickerDistributionListSearchDomain cmdlet removes a domain f
 
 ### -------------EXAMPLE 1------------- 
 ```powershell
-PS C:\> Remove-SPPeoplePickerDistributionListSearchDomain -WebApplication http://MyOfficeApp1 -DomainName "corp.contoso.com"
+Remove-SPPeoplePickerDistributionListSearchDomain -WebApplication http://MyOfficeApp1 -DomainName "corp.contoso.com"
 ```
 
 This example removes domain "corp.contoso.com" from the distribution list search domain list of Web application MyOfficeApp1.

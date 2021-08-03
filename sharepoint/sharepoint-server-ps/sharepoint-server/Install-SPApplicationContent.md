@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------------EXAMPLE-------------------- 
 ```powershell
-PS C:\> Install-SPApplicationContent
+Install-SPApplicationContent
 ```
 
 This example copies data to a Web application in the existing folders.

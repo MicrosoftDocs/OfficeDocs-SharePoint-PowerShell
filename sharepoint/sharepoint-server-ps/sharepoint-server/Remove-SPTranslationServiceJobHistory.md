@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE--------------
 ```powershell
-PS C:\> Remove-SPTranslationServiceJobHistory TranslationService -BeforeDate 2012/01/31
+Remove-SPTranslationServiceJobHistory TranslationService -BeforeDate 2012/01/31
 ```
 
 This example removes all jobs completed before 2012/01/31 in the database associated with the Machine Translation Service application named TranslationService.

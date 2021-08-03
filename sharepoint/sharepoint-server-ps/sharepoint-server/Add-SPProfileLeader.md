@@ -38,8 +38,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------EXAMPLE------------ 
 ```powershell
-PS C:\> $upaProxy = Get-SPServiceApplicationProxy | where {$_.TypeName -eq 'User Profile Service Application Proxy'}
-PS C:\> Add-SPProfileLeader -ProfileServiceApplicationProxy $upaProxy -Name "contoso\janedoe"
+$upaProxy = Get-SPServiceApplicationProxy | where {$_.TypeName -eq 'User Profile Service Application Proxy'}
+Add-SPProfileLeader -ProfileServiceApplicationProxy $upaProxy -Name "contoso\janedoe"
 ```
 
 This example adds a company leader named Jane Doe.

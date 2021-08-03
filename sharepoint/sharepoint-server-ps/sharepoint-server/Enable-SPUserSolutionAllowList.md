@@ -29,7 +29,7 @@ Enables the user managed solutions gallery capability on the farm.
 
 ### ------------Example 1 -----------
 ```powershell
-PS C:\> Enable-SPUserSolutionAllowList
+Enable-SPUserSolutionAllowList
 ```
 
 This example enables a user managed solutions gallery on the entire farm.

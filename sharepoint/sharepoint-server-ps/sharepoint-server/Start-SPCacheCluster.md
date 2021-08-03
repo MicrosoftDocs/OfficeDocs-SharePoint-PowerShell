@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE------------- 
 ```powershell
-PS C:\> Start-SPCacheCluster
+Start-SPCacheCluster
 ```
 
 This example starts the Caching Services on all cache hosts in the cluster.

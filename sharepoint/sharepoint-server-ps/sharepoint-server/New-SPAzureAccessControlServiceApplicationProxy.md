@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE-------------- 
 ```powershell
-PS C:\> New-SPAzureAccessControlServiceApplicationProxy -Name "ACS" -metadataEndpointUri "http://test" -DefaultProxyGroup
+New-SPAzureAccessControlServiceApplicationProxy -Name "ACS" -metadataEndpointUri "http://test" -DefaultProxyGroup
 ```
 
 This example creates a proxy group named ACS which will be added to the default proxy group.

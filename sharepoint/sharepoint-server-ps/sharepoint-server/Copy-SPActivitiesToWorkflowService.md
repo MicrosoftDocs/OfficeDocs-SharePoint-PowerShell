@@ -32,11 +32,11 @@ Copies Workflow activities from SharePoint Server to Workflow Manager.
 
 ### ------------Example 1 -----------
 ```powershell
-PS C:\> $credential = [System.Net.CredentialCache]::DefaultNetworkCredentials
-PS C:\> $site = Get-SPSite <siteurl>
-PS C:\> $proxy = Get-SPWorkflowServiceApplicationProxy
-PS C:\> $svcAddress = $proxy.GetWorkflowServiceAddress($site)
-PS C:\> Copy-SPActivitiesToWorkflowService -WorkflowServiceAddress $svcAddress -Credential $credential -Force $true
+$credential = [System.Net.CredentialCache]::DefaultNetworkCredentials
+$site = Get-SPSite <siteurl>
+$proxy = Get-SPWorkflowServiceApplicationProxy
+$svcAddress = $proxy.GetWorkflowServiceAddress($site)
+Copy-SPActivitiesToWorkflowService -WorkflowServiceAddress $svcAddress -Credential $credential -Force $true
 ```
 
 

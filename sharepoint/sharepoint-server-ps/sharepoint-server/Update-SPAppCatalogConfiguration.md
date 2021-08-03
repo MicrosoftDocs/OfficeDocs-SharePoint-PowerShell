@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE-----------
 ```powershell
-PS C:\> Update-SPAppCatalogConfiguration -Site https://contoso/sites/appcatalog_1 -Force:$true -SkipWebTemplateChecking:$true
+Update-SPAppCatalogConfiguration -Site https://contoso/sites/appcatalog_1 -Force:$true -SkipWebTemplateChecking:$true
 ```
 This example sets https://contoso/sites/appcatalog_1 as the app catalog site collection for the tenant it belongs to.
 

@@ -41,9 +41,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE-----------------
 ```powershell
-PS C:\> $sub = Get-SPSiteSubscription https://contoso/my
-PS C:\> $pr = Get-SPServiceApplicationProxy | ?{$_.DisplayName.Contains(PartitionedUserProfileApplication_Proxy)}
-PS C:\> Remove-SPSiteSubscriptionProfileConfig -Identity $sub -ProfileServiceApplicationProxy $pr
+$sub = Get-SPSiteSubscription https://contoso/my
+$pr = Get-SPServiceApplicationProxy | ?{$_.DisplayName.Contains(PartitionedUserProfileApplication_Proxy)}
+Remove-SPSiteSubscriptionProfileConfig -Identity $sub -ProfileServiceApplicationProxy $pr
 ```
 
 This example removes tenant data.

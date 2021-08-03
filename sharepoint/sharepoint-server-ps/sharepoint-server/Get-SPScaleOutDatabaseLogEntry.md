@@ -35,11 +35,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -------------EXAMPLE----------- 
 ```powershell
-PS C:\> $databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
+$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
 
-PS C:\> $database = $databases[0]
+$database = $databases[0]
 
-PS C:\> Get-SPScaleOutDatabaseLogEntry -Database  $database -Count 10 -MajorAction DataMove
+Get-SPScaleOutDatabaseLogEntry -Database  $database -Count 10 -MajorAction DataMove
 ```
 
 This example gets the 10 most recent scale-out log entries from the first scale-out database of the given service application.

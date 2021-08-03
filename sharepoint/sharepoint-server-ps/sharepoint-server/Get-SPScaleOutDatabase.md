@@ -37,9 +37,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------EXAMPLE-------------- 
 ```powershell
-PS C:\> $serviceApplication = Get-SPServiceApplication -Name "AppManagement"
+$serviceApplication = Get-SPServiceApplication -Name "AppManagement"
 
-PS C:\> Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
+Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
 ```
 
 This example gets all scale-out databases for the given service application by using the $serviceApplication variable.

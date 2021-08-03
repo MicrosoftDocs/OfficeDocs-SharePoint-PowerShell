@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```powershell
-PS C:\> $rootauthority=Get-SPTrustedRootAuthority -Identity "WFEFarm1"
+$rootauthority=Get-SPTrustedRootAuthority -Identity "WFEFarm1"
 ```
 
 This example creates a new trusted root authority, WFEFarm1.

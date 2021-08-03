@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```powershell
-PS C:\> Set-SPAppDomain -Domain apps.contoso.com
+Set-SPAppDomain -Domain apps.contoso.com
 ```
 
 This example sets the app domain to apps.contoso.com.

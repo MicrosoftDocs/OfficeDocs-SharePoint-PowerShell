@@ -46,8 +46,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------EXAMPLE--------------------
 ```powershell
-PS C:\> $a=Get-SPTrustedSecurityTokenIssuer
-PS C:\> Set-SPTrustedSecurityTokenIssuer -Identity $a -MetadataEndpoint https://<webappurl/>/_layouts/15/metadata/json/1/
+$a=Get-SPTrustedSecurityTokenIssuer
+Set-SPTrustedSecurityTokenIssuer -Identity $a -MetadataEndpoint https://<webappurl/>/_layouts/15/metadata/json/1/
 ```
 
 This example sets the metadata endpoint of the url for the self-issue.

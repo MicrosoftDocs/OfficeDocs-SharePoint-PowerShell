@@ -35,7 +35,7 @@ This may lead to a short downtime for queries.
 
 ### ------------------EXAMPLE------------------
 ```powershell
-PS C:\> Get-SPEnterpriseSearchServiceInstance -Local | Start-SPEnterpriseSearchServiceInstance
+Get-SPEnterpriseSearchServiceInstance -Local | Start-SPEnterpriseSearchServiceInstance
 ```
 
 This example starts the local search service instance.

@@ -29,7 +29,7 @@ Use the Get-SPCacheStatistics cmdlet to get the name cache state.
 
 ### -------------EXAMPLE------------- 
 ```powershell
-PS C:\> Get-SPCacheStatistics -CacheName DistributedAccessCache_b6c5efa9-e390-4d47-aa8a-45232229992b
+Get-SPCacheStatistics -CacheName DistributedAccessCache_b6c5efa9-e390-4d47-aa8a-45232229992b
 ```
 
 This example returns the information of cache 'DistributedAccessCache_b6c5efa9-e390-4d47-aa8a-45232229992b'.

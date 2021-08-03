@@ -39,14 +39,14 @@ The \`Switch-SPBlobStorage\` cmdlet switches the BLOB of a content database betw
 
 ### -------------EXAMPLE 1------------- 
 ```powershell
-PS C:\> Switch-SPBlobStorage -ContentDatabase "WSS_Content" -SQL
+Switch-SPBlobStorage -ContentDatabase "WSS_Content" -SQL
 ```
 
 This example switches BLOB storage to SQL tables for content database "WSS_Content."
 
 ### -------------EXAMPLE 2------------- 
 ```powershell
-PS C:\> Switch-SPBlobStorage -RemoteShareBlobStore "RemoteBlobStore"
+Switch-SPBlobStorage -RemoteShareBlobStore "RemoteBlobStore"
 ```
 
 This example switches BLOB storage to the Remote Share BLOB Store named "RemoteBlobStore."

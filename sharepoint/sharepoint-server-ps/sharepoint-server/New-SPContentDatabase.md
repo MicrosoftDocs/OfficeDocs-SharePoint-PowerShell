@@ -37,7 +37,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE-------------------- 
 ```powershell
-PS C:\> New-SPContentDatabase "MyDatabase" -DatabaseServer "MyServer" -WebApplication https://sitename
+New-SPContentDatabase "MyDatabase" -DatabaseServer "MyServer" -WebApplication https://sitename
 ```
 
 This example creates a new content database for the sitename Web application.

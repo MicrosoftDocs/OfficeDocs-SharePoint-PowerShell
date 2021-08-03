@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE-------------- 
 ```powershell
-PS C:\> Disable-SPInfoPathFormTemplate -Identity "FormTemplate.xsn" -Site https://testSite
+Disable-SPInfoPathFormTemplate -Identity "FormTemplate.xsn" -Site https://testSite
 ```
 
 This example deactivates an InfoPath form template from a site collection named TestSite.

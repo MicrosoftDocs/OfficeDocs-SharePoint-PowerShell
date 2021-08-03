@@ -59,7 +59,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE 1---------------------
 ```powershell
-PS C:\> Set-SpAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost -Password passname -Username <username>
+Set-SpAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost -Password passname -Username <username>
 ```
 
 This example configures remote web host to be used provision apps that use this functionality for the default site subscription server on https://SPremotewebhost.
@@ -67,9 +67,9 @@ This example configures remote web host to be used provision apps that use this 
 
 ### --------------------EXAMPLE 2---------------------
 ```powershell
-PS C:\> $subscription = Get-SPSiteSubscription https://Contoso.com
+$subscription = Get-SPSiteSubscription https://Contoso.com
 
-PS C:\> Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost -Password passname -Username <username> -SiteSubscription $subscription
+Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost -Password passname -Username <username> -SiteSubscription $subscription
 ```
 
 This example configures remote web host to be used provision apps that use this functionality for the site subscription of Contoso.com site to server on https://SPremotewebhost.
@@ -77,7 +77,7 @@ This example configures remote web host to be used provision apps that use this 
 
 ### --------------------EXAMPLE 3---------------------
 ```powershell
-PS C:\> Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost
+Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost
 ```
 
 This example updates the endpoint of the already configured remote web host server https://SPRemotewebhost for the default site subscription.
@@ -85,7 +85,7 @@ This example updates the endpoint of the already configured remote web host serv
 
 ### --------------------EXAMPLE 4---------------------
 ```powershell
-PS C:\> Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -Remove
+Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -Remove
 ```
 
 This example removes the remote web host configuration for the default site subscription.

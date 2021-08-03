@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE----------------- 
 ```powershell
-PS C:\> Get-SPDiagnosticConfig
+Get-SPDiagnosticConfig
 ```
 
 This example returns all diagnostic configuration values.

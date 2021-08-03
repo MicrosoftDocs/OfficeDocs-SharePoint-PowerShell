@@ -30,14 +30,14 @@ This Remove-SPPeoplePickerSearchADDomain cmdlet removes a forest or domain with 
 
 ### -------------EXAMPLE 1------------- 
 ```powershell
-PS C:\> Remove-SPPeoplePickerSearchADDomain -WebApplication http://MyOfficeApp1 -DomainName "corp.contoso.com" -IsForest
+Remove-SPPeoplePickerSearchADDomain -WebApplication http://MyOfficeApp1 -DomainName "corp.contoso.com" -IsForest
 ```
 
 This example removes forest corp.contoso.com from the People Picker search Active Directory domain list of the Web application MyOfficeApp1.
 
 ### -------------EXAMPLE 2------------- 
 ```powershell
-PS C:\> Remove-SPPeoplePickerSearchADDomain -WebApplication http://MyOfficeApp1 -DomainName "corp.contoso.com" -UserName "contoso\user"
+Remove-SPPeoplePickerSearchADDomain -WebApplication http://MyOfficeApp1 -DomainName "corp.contoso.com" -UserName "contoso\user"
 ```
 
 This example removes domain corp.contoso.com from the People Picker search Active Directory domain list of the Web application MyOfficeApp1, with login name contoso\user.

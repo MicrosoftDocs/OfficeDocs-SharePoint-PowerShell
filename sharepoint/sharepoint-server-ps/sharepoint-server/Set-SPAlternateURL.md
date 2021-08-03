@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1------------------
 ```powershell
-PS C:\> Set-SPAlternateURL -Identity https://www.contoso.com -Zone "Internet"
+Set-SPAlternateURL -Identity https://www.contoso.com -Zone "Internet"
 ```
 
 This example changes the zone of the alternate URL https://www.contoso.com.
@@ -42,7 +42,7 @@ This example changes the zone of the alternate URL https://www.contoso.com.
 
 ### ------------------EXAMPLE 2------------------
 ```powershell
-PS C:\> Set-SPAlternateURL -Identity https://www.contoso.com -Url https://sharepoint.contoso.com -Zone "Default"
+Set-SPAlternateURL -Identity https://www.contoso.com -Url https://sharepoint.contoso.com -Zone "Default"
 ```
 
 This example changes the URL and zone of the alternate URL https://www.contoso.com.
@@ -50,7 +50,7 @@ This example changes the URL and zone of the alternate URL https://www.contoso.c
 
 ### ------------------EXAMPLE 3------------------
 ```powershell
-PS C:\> Get-SPAlternateURL https://www.contoso.com | Set-SPAlternateURL -Zone "Internet"
+Get-SPAlternateURL https://www.contoso.com | Set-SPAlternateURL -Zone "Internet"
 ```
 
 This example changes the zone of the alternate URL https://www.contoso.com.
@@ -58,7 +58,7 @@ This example changes the zone of the alternate URL https://www.contoso.com.
 
 ### ------------------EXAMPLE 4------------------
 ```powershell
-PS C:\> Get-SPWebApplication |%{ Get-SPAlternateURL -WebApplication $_ -Zone "Extranet" } | Set-SPAlternateURL -Zone "Intranet"
+Get-SPWebApplication |%{ Get-SPAlternateURL -WebApplication $_ -Zone "Extranet" } | Set-SPAlternateURL -Zone "Intranet"
 ```
 
 This example changes the zone of the alternate URL for the specified Web application from Extranet to Intranet.

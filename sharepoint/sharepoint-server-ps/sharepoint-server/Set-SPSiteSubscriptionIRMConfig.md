@@ -34,11 +34,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE 1---------------------
 ```powershell
-PS C:\> site = Get-SPSite  HYPERLINK "https://<myspserver>" https:// <myspserver>
+site = Get-SPSite  HYPERLINK "https://<myspserver>" https:// <myspserver>
 
-PS C:\> $subscription = $site.SiteSubscription
+$subscription = $site.SiteSubscription
 
-PS C:\> Set-SPSiteSubscriptionIRMConfig -Identity $subscription -IrmEnabled -CertificateServerUrl https:// <rmsserver>
+Set-SPSiteSubscriptionIRMConfig -Identity $subscription -IrmEnabled -CertificateServerUrl https:// <rmsserver>
 ```
 
 This example enables IRM for the tenant and configures it to use the specified RMS server.
@@ -46,11 +46,11 @@ This example enables IRM for the tenant and configures it to use the specified R
 
 ### --------------------EXAMPLE 2---------------------
 ```powershell
-PS C:\> site = Get-SPSite  HYPERLINK "https://myspserver" https:// <myspserver>
+site = Get-SPSite  HYPERLINK "https://myspserver" https:// <myspserver>
 
-PS C:\> $subscription = $site.SiteSubscription
+$subscription = $site.SiteSubscription
 
-PS C:\> Set- SPSiteSubscriptionIRMConfig -Identity $subscription -IrmEnabled:$false
+Set- SPSiteSubscriptionIRMConfig -Identity $subscription -IrmEnabled:$false
 ```
 
 This example disables IRM for the tenant.

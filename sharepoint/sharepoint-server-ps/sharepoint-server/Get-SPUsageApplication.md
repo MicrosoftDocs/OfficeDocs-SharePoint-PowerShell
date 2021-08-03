@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ---------------EXAMPLE------------------ 
 ```powershell
-PS C:\> Get-SPUsageApplication -Identity "Usage and Health data collection"
+Get-SPUsageApplication -Identity "Usage and Health data collection"
 ```
 
 This example returns the usage application named, Usage and Health data collection

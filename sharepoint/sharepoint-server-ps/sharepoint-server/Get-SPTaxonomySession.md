@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------EXAMPLE-------------------- 
 ```powershell
-PS C:\> $session = Get-SPTaxonomySession -Site "https://sitename"
+$session = Get-SPTaxonomySession -Site "https://sitename"
 ```
 
 This example retrieves a TaxonomySession object, which can be used to access term stores associated with the Web application for a site.

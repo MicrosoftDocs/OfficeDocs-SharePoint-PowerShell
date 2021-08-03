@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ### ----------------------EXAMPLE-----------------------
 ```powershell
-PS C:\> Get-SPProjectWebInstance | Test-SPProjectWebInstance
+Get-SPProjectWebInstance | Test-SPProjectWebInstance
 ```
 
 This example runs a suite of tests on all Project Web Instances in the SharePoint Server farm.

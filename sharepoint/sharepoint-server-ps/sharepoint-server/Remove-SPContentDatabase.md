@@ -34,14 +34,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------EXAMPLE---------------------
 ```powershell
-PS C:\> Remove-SPContentDatabase WSS_Content
+Remove-SPContentDatabase WSS_Content
 ```
 
 This example deletes the content database named 'WSS_Content'.
 
 ### -----------------EXAMPLE---------------------
 ```powershell
-PS C:\> Remove-SPContentDatabase WSS_Content -Confirm:$false -Force
+Remove-SPContentDatabase WSS_Content -Confirm:$false -Force
 ```
 
 This example deletes the content database named 'WSS_Content' without asking any confirmation.

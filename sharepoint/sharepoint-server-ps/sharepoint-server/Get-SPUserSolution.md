@@ -36,7 +36,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------EXAMPLE--------------------- 
 ```powershell
-PS C:\> Get-SPUserSolution -Site https://sitename
+Get-SPUserSolution -Site https://sitename
 ```
 
 This example displays information about sandboxed solutions in the site https://sitename.

@@ -32,7 +32,7 @@ All usage of that certificate within SharePoint will then be replaced with the d
 
 ### ------------EXAMPLE-----------
 ```powershell
-PS C:\> Switch-SPCertificate -Identity "Team Sites Certificate (2020)" -NewCertificate "Team Sites Certificate (2021)"
+Switch-SPCertificate -Identity "Team Sites Certificate (2020)" -NewCertificate "Team Sites Certificate (2021)"
 ```
 
 This example replaces the assignments of the "Team Sites Certificate (2020)" certificate with the "Team Sites Certificate (2021)" certificate.

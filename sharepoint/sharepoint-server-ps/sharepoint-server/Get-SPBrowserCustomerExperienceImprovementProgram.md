@@ -51,14 +51,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1----------------------- 
 ```powershell
-PS C:\> Get-SPBrowserCustomerExperienceImprovementProgram -WebApplication https://WebAppexample1
+Get-SPBrowserCustomerExperienceImprovementProgram -WebApplication https://WebAppexample1
 ```
 
 This example returns the current Customer Experience Improvement Program opt-in state for the Web application, WebAppexample1.
 
 ### ------------------EXAMPLE 2----------------------- 
 ```powershell
-PS C:\> Get-SPSiteSubscription https://SiteSubscription1 | Get-SPBrowserCustomerExperienceImprovementProgram
+Get-SPSiteSubscription https://SiteSubscription1 | Get-SPBrowserCustomerExperienceImprovementProgram
 ```
 
 The following example returns the Customer Experience Improvement Program opt-in state for the site subscription, SiteSubscription1.

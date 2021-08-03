@@ -30,7 +30,7 @@ The test verifies the permissions of the Remote Share BLOB stores and identifies
 
 ### -------------EXAMPLE 1------------- 
 ```powershell
-PS C:\> Test-SPRemoteShareBlobStore -ContentDatabase "WSS_Content"
+Test-SPRemoteShareBlobStore -ContentDatabase "WSS_Content"
 ```
 
 Tests all the Remote Share BLOB Stores in the WSS_Content content database.
@@ -38,7 +38,7 @@ The log file is written to the default SharePoint trace log path.
 
 ### -------------EXAMPLE 2------------- 
 ```powershell
-PS C:\> Test-SPRemoteShareBlobStore -ContentDatabase "WSS_Content" -LogPath C:\Logs\SharePointBlobTest.txt
+Test-SPRemoteShareBlobStore -ContentDatabase "WSS_Content" -LogPath C:\Logs\SharePointBlobTest.txt
 ```
 
 Tests all the Remote Share BLOB Stores in the WSS_Content content database.

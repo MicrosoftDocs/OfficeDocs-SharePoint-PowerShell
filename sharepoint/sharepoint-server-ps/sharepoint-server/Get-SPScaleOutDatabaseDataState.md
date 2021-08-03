@@ -46,11 +46,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------EXAMPLE-------------- 
 ```powershell
-PS C:\> $databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
+$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
 
-PS C:\> $database = $databases[0]
+$database = $databases[0]
 
-PS C:\> Get-SPScaleOutDatabaseDataState -Database $database
+Get-SPScaleOutDatabaseDataState -Database $database
 ```
 
 This example gets the data state of the scale-out database for the first scale-out database of the given service application.

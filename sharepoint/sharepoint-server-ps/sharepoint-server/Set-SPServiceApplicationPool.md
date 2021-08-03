@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```powershell
-PS C:\> Set-SPServiceApplicationPool  TestServiceWebApplicationPool -Account testdomain\testuser1
+Set-SPServiceApplicationPool  TestServiceWebApplicationPool -Account testdomain\testuser1
 ```
 
 This example changes the identity of the selected service application pool.

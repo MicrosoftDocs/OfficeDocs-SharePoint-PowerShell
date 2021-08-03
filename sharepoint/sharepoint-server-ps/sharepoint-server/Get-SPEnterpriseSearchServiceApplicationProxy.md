@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```powershell
-PS C:\> $proxy = Get-SPEnterpriseSearchServiceApplicationProxy -Identity 'Search Service Application Proxy'
+$proxy = Get-SPEnterpriseSearchServiceApplicationProxy -Identity 'Search Service Application Proxy'
 ```
 
 This example obtains a reference to a search service application proxy with the name 'Search Service Application Proxy'.

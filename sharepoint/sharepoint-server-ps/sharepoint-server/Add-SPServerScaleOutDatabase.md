@@ -34,8 +34,8 @@ Use the Add-SPServerScaleOutDatabase cmdlet to add an existing scale-out databas
 
 ### -------------EXAMPLE------------ 
 ```powershell
-PS C:\> $serviceApplication = Get-SPServiceApplication -Name "AppManagement"
-PS C:\> Add-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
+$serviceApplication = Get-SPServiceApplication -Name "AppManagement"
+Add-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
 ```
 
 This example adds a new or existing scale out database into a specific service application.

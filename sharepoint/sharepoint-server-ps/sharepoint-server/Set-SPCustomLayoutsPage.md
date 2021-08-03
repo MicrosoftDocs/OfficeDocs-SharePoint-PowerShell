@@ -47,7 +47,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```powershell
-PS C:\> Set-SPCustomLayoutsPage -Identity AccessDenied -RelativePath "/_layouts/custompages/myaccessdenied.aspx" -WebApplication "https://server_name/mywebapp"
+Set-SPCustomLayoutsPage -Identity AccessDenied -RelativePath "/_layouts/custompages/myaccessdenied.aspx" -WebApplication "https://server_name/mywebapp"
 ```
 
 This example maps the specified path for the AccessDenied layout page in the Web application "https://server_name/mywebapp".

@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE-----------------------
 ```powershell
-PS C:\> Update-SPFarmEncryptionKey -confirm
+Update-SPFarmEncryptionKey -confirm
 ```
 
 This example changes the farm encryption key to a new value and re-encrypts all the data.

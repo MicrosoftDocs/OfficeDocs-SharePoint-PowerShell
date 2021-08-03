@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```powershell
-PS C:\> $qssService = Get-SPEnterpriseSearchQUeryAndSiteSettingsService
+$qssService = Get-SPEnterpriseSearchQUeryAndSiteSettingsService
 ```
 
 This example obtains a reference to the query and site settings service.

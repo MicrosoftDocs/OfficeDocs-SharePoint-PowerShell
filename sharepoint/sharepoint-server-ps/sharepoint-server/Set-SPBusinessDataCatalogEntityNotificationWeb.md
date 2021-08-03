@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```powershell
-PS C:\> Set-SPBusinessDataCatalogEntityNotificationWeb -Web "https://contoso"
+Set-SPBusinessDataCatalogEntityNotificationWeb -Web "https://contoso"
 ```
 
 This example sets https://contoso as the entity notification site for the service context of the site at https://contoso.

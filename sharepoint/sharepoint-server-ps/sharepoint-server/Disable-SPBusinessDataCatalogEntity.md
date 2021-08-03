@@ -34,8 +34,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```powershell
-PS C:\> $entityToDisable = Get-SPBusinessDataCatalogMetadataObject -Namespace "Contoso" -Name "Customer" -BdcObjectType "Entity" -ServiceContext http://contoso
-PS C:\> Disable-SPBusinessDataCatalogEntity -Identity $entityToDisable
+$entityToDisable = Get-SPBusinessDataCatalogMetadataObject -Namespace "Contoso" -Name "Customer" -BdcObjectType "Entity" -ServiceContext http://contoso
+Disable-SPBusinessDataCatalogEntity -Identity $entityToDisable
 ```
 
 This example deactivates the External Content type of the name Customer in the Contoso.

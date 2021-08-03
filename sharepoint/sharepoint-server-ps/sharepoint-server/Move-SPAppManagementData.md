@@ -30,7 +30,7 @@ Do Not Use
 
 ### ------------Example 1 -----------
 ```powershell
-PS C:\> Do Not Use
+Do Not Use
 ```
 
 

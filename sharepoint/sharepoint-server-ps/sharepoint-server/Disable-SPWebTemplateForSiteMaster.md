@@ -29,7 +29,7 @@ Use the Disable-SPWebTemplateForSiteMaster cmdlet to disable a site master in th
 
 ### ------------Example 1 -----------
 ```powershell
-PS C:\> Disable-SPWebTemplateForSiteMaster -Template STS#0
+Disable-SPWebTemplateForSiteMaster -Template STS#0
 ```
 
 This example disables the template in the site master of a farm.

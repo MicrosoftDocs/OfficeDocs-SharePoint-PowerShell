@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1-----------------
 ```powershell
-PS C:\> Set-SPDataConnectionFile -Identity "sample.udcx" -Category "Temp"
+Set-SPDataConnectionFile -Identity "sample.udcx" -Category "Temp"
 ```
 
 This example updates the Category of the specified .udcx file.
@@ -42,7 +42,7 @@ This example updates the Category of the specified .udcx file.
 
 ### --------------EXAMPLE 2-----------------
 ```powershell
-PS C:\> Set-SPDataConnectionFile -Identity "sample.udcx" -DisplayName "NewDisplayName"
+Set-SPDataConnectionFile -Identity "sample.udcx" -DisplayName "NewDisplayName"
 ```
 
 This example updates the DisplayName of the specified .udcx file.
@@ -50,7 +50,7 @@ This example updates the DisplayName of the specified .udcx file.
 
 ### --------------EXAMPLE 3-----------------
 ```powershell
-PS C:\> Sample.udcx" | Set-SPDataConnectionFile -Category "Temp"
+Sample.udcx" | Set-SPDataConnectionFile -Category "Temp"
 ```
 
 This example updates the Category of the specified .udcx file.
@@ -58,7 +58,7 @@ This example updates the Category of the specified .udcx file.
 
 ### --------------EXAMPLE 4-----------------
 ```powershell
-PS C:\> Get-SPDataConnectionFile | where {$_.Category -eq "Category1"}  | Set-SPDataConnectionFile -Category "Category2"
+Get-SPDataConnectionFile | where {$_.Category -eq "Category1"}  | Set-SPDataConnectionFile -Category "Category2"
 ```
 
 This example updates the Category field for the collection of .udcx files that are returned from a query used by the `Get-SPDataConnectionFile` cmdlet.

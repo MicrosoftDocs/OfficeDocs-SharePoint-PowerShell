@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------EXAMPLE 1------------------- 
 ```powershell
-PS C:\> Disable-SPUserLicensing
+Disable-SPUserLicensing
 ```
 
 This example disables user license enforcement on the SharePoint farm.

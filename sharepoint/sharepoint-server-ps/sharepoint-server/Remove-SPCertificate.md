@@ -42,7 +42,7 @@ Those exported files will still exist.
 
 ### ------------EXAMPLE-----------
 ```powershell
-PS C:\> Remove-SPCertificate -Identity "Team Sites Certificate"
+Remove-SPCertificate -Identity "Team Sites Certificate"
 ```
 
 This example deletes the "Team Sites Certificate" certificate and any private key associated with that certificate.
