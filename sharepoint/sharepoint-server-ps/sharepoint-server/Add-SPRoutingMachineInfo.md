@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/add-sproutingmachineinfo
 applicable: SharePoint Server Subscription Edition
 title: Add-SPRoutingMachineInfo
@@ -35,12 +35,8 @@ Use the Add-SPRoutingMachineInfo cmdlet to add a new routing target to the farm 
 ### -------------EXAMPLE-------------- 
 ```powershell
 $web=Get-SPWebApplication -Identity <URL of web application>
-
 $rm=Get-SPRequestManagementSettings -Identity $web
-
 Add-SPRoutingMachineInfo -RequestManagementSettings $rm -Name <MachineName> -Availability Available
-
-
 ```
 
 This example adds a routing target for a specified identity to the farm.

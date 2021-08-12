@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spwebapplication
 applicable: SharePoint Server Subscription Edition
 title: Set-SPWebApplication
@@ -69,7 +69,7 @@ This example sets the HostHeader URL for the Extranet zone of the given Web appl
 ### -Identity
 Specifies the name or URL of the Web application.
 
-The type must be a valid name, in the form WebApplication-1212, or URL, in the form http://server_name/WebApplicaiton-1212.
+The type must be a valid name, in the form WebApplication-1212, or URL, in the form http://server_name.
 
 ```yaml
 Type: SPWebApplicationPipeBind

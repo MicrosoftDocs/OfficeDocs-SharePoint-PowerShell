@@ -1,16 +1,16 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-availabilitygroupstatus
+module name: SharePointServer
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spavailabilitygroupstatus
 applicable: SharePoint Server Subscription Edition
-title: Get-AvailabilityGroupStatus
+title: Get-SPAvailabilityGroupStatus
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
 ms.reviewer:
 ---
 
-# Get-AvailabilityGroupStatus
+# Get-SPAvailabilityGroupStatus
 
 ## SYNOPSIS
 Returns one or more objects representing the availability groups known to the SharePoint farm.
@@ -18,7 +18,7 @@ Returns one or more objects representing the availability groups known to the Sh
 ## SYNTAX
 
 ```
-Get-AvailabilityGroupStatus [-AssignmentCollection <SPAssignmentCollection>] [-Identity <String>]
+Get-SPAvailabilityGroupStatus [-AssignmentCollection <SPAssignmentCollection>] [-Identity <String>]
  [<CommonParameters>]
 ```
 
@@ -29,8 +29,7 @@ Returns one or more objects representing the availability groups known to the Sh
 
 ### ------------Example 1 -----------
 ```powershell
-Get-AvailabilityGroupStatus -Identity MyAvailabilityGroup 
-
+Get-SPAvailabilityGroupStatus -Identity MyAvailabilityGroup 
 ```
 
 This example returns an availability group named "MyAvailabilityGroup".

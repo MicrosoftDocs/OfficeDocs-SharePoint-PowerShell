@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spappstorewebserviceconfiguration
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPAppStoreWebServiceConfiguration

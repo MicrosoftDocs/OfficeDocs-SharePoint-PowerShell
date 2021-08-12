@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spserverscaleoutdatabaseinconsistency
 applicable: SharePoint Server Subscription Edition
 title: Get-SPServerScaleOutDatabaseInconsistency
@@ -38,7 +38,6 @@ Use the Get-SPServerScaleOutDatabaseInconsistency cmdlet to return all inconsist
 ### -------------EXAMPLE-------------- 
 ```powershell
 $serviceApplication = Get-SPServiceApplication -Name "AppManagement"
-
 Get-SPServerScaleOutDatabaseInconsistency -ServiceApplication $serviceApplication
 ```
 

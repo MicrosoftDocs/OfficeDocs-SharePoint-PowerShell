@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spsecurestoredefaultprovider
 applicable: SharePoint Server Subscription Edition
 title: Set-SPSecureStoreDefaultProvider
@@ -37,9 +37,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```powershell
 [Reflection.Assembly]::LoadFrom("C:\ContosoFolder\contosoSecureStore.dll")
-
 $type = [Contoso.SecureStore.ContosoSecureStoreProvider]
-
 Set-SPSecureStoreDefaultProvider -Type $type
 ```
 

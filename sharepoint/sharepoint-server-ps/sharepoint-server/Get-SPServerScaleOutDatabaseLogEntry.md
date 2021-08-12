@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spserverscaleoutdatabaselogentry
 applicable: SharePoint Server Subscription Edition
 title: Get-SPServerScaleOutDatabaseLogEntry
@@ -37,9 +37,7 @@ Use the Get-SPServerScaleOutDatabaseLogEntry cmdlet to query a scale-out databas
 ### -------------EXAMPLE----------- 
 ```powershell
 $databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
-
 $database = $databases[0]
-
 Get-SPServerScaleOutDatabaseLogEntry -Database $database -Count 10 -MajorAction DataMove
 ```
 

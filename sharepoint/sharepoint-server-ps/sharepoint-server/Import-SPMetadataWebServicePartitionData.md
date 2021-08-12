@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/import-spmetadatawebservicepartitiondata
 applicable: SharePoint Server Subscription Edition
 title: Import-SPMetadataWebServicePartitionData

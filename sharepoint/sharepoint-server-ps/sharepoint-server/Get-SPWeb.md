@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spweb
 applicable: SharePoint Server Subscription Edition
 title: Get-SPWeb
@@ -64,13 +64,9 @@ This example displays all subsites that use the "STS#0" template.
 ### --------------------EXAMPLE 3---------------------- 
 ```powershell
 Start-SPAssignment -Global
-
 $w = Get-SPWeb https://sitename
-
 $w.set_SiteLogoUrl("https://PathToImage/test.jpg")
-
 $w.Update()
-
 Stop-SPAssignment -Global
 ```
 

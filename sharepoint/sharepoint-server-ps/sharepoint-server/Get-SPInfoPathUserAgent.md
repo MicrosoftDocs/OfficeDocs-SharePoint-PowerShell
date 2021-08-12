@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spinfopathuseragent
 applicable: SharePoint Server Subscription Edition
 title: Get-SPInfoPathUserAgent

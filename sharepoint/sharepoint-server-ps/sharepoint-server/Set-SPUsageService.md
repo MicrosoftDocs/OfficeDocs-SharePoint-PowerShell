@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spusageservice
 applicable: SharePoint Server Subscription Edition
 title: Set-SPUsageService
@@ -36,9 +36,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### --------------------EXAMPLE-----------------
 ```powershell
 Set-SPUsageService -LoggingEnabled $false
-
 Set-SPUsageService -UsageLogLocation "D:\\testusagelogdir"
-
 Set-SPUsageService -UsageLogCutTime 5
 ```
 

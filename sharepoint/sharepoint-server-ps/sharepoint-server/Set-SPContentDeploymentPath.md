@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.Publishing.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spcontentdeploymentpath
 applicable: SharePoint Server Subscription Edition
 title: Set-SPContentDeploymentPath

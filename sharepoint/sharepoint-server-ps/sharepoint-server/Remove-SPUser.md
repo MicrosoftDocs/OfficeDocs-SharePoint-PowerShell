@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spuser
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPUser
@@ -36,7 +36,6 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE 1-----------------------
 ```powershell
 Remove-SPUser "Contoso\jdoe" -web https://test/web1
-
 Get-SPWeb "https://test/web1" | Remove-SPUser "Contoso\jdoe"
 ```
 

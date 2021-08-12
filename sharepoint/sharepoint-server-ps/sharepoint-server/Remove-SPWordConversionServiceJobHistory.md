@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Office.Word.Server.dll-Help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spwordconversionservicejobhistory
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPWordConversionServiceJobHistory

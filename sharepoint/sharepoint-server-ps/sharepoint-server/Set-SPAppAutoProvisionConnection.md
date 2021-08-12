@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spappautoprovisionconnection
 applicable: SharePoint Server Subscription Edition
 title: Set-SPAppAutoProvisionConnection
@@ -68,7 +68,6 @@ This example configures remote web host to be used provision apps that use this 
 ### --------------------EXAMPLE 2---------------------
 ```powershell
 $subscription = Get-SPSiteSubscription https://Contoso.com
-
 Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost -Password passname -Username <username> -SiteSubscription $subscription
 ```
 

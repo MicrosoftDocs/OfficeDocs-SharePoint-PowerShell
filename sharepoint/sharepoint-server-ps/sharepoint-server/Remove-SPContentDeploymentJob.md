@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.Publishing.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spcontentdeploymentjob
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPContentDeploymentJob

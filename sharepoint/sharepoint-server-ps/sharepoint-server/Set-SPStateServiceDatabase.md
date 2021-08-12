@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spstateservicedatabase
 applicable: SharePoint Server Subscription Edition
 title: Set-SPStateServiceDatabase
@@ -50,7 +50,6 @@ This example updates the associated service application for a state service data
 ### --------------------EXAMPLE 3---------------------
 ```powershell
 $cred = Get-Credential
-
 Set-SPStateServiceDatabase -Identity "StateSvcDB1" -DatabaseCredentials $cred
 ```
 

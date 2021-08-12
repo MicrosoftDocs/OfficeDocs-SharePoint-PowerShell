@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Office.Visio.Server.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spvisiosafedataprovider
 applicable: SharePoint Server Subscription Edition
 title: Set-SPVisioSafeDataProvider

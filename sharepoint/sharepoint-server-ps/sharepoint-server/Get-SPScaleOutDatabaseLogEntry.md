@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spscaleoutdatabaselogentry
 applicable: SharePoint Server Subscription Edition
 title: Get-SPScaleOutDatabaseLogEntry
@@ -36,7 +36,6 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### -------------EXAMPLE----------- 
 ```powershell
 $databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
-
 $database = $databases[0]
 
 Get-SPScaleOutDatabaseLogEntry -Database  $database -Count 10 -MajorAction DataMove

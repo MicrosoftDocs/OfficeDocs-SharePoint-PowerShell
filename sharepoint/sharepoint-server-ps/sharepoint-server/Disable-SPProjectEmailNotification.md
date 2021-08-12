@@ -1,6 +1,6 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/disable-spprojectemailnotification
 applicable: Project Server 2016, Project Server 2019
 title: Disable-SPProjectEmailNotification

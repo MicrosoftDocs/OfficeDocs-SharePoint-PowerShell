@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spsite
 applicable: SharePoint Server Subscription Edition
 title: Get-SPSite
@@ -92,11 +92,8 @@ This example gets a subset of data from all sites in the content database b399a3
 ### ------------------EXAMPLE 3--------------------- 
 ```powershell
 Start-SPAssignment -Global
-
 $s = Get-SPSite -Identity https://<MyApp>/Sites/Site1
-
 $s.Url
-
 Stop-SPAssignment -Global
 ```
 

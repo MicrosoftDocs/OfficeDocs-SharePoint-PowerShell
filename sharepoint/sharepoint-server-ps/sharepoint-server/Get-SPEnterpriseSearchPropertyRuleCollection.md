@@ -1,6 +1,6 @@
 ---
 external help file: sharepointserver.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchpropertyrulecollection
 applicable: SharePoint Server Subscription Edition
 title: Get-SPEnterpriseSearchPropertyRuleCollection

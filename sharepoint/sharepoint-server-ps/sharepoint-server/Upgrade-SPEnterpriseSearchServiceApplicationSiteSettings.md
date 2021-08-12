@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/upgrade-spenterprisesearchserviceapplicationsitesettings
 applicable: SharePoint Server Subscription Edition
 title: Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings
@@ -33,7 +33,6 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### --------EXAMPLE--------
 ```powershell
 $site= Get-SPSite https://test
-
 Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings -Identity $site
 ```
 

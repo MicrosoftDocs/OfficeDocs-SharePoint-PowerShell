@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spsitesubscriptionirmconfig
 applicable: SharePoint Server Subscription Edition
 title: Set-SPSiteSubscriptionIRMConfig
@@ -35,9 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### --------------------EXAMPLE 1---------------------
 ```powershell
 site = Get-SPSite  HYPERLINK "https://<myspserver>" https:// <myspserver>
-
 $subscription = $site.SiteSubscription
-
 Set-SPSiteSubscriptionIRMConfig -Identity $subscription -IrmEnabled -CertificateServerUrl https:// <rmsserver>
 ```
 
@@ -47,9 +45,7 @@ This example enables IRM for the tenant and configures it to use the specified R
 ### --------------------EXAMPLE 2---------------------
 ```powershell
 site = Get-SPSite  HYPERLINK "https://myspserver" https:// <myspserver>
-
 $subscription = $site.SiteSubscription
-
 Set- SPSiteSubscriptionIRMConfig -Identity $subscription -IrmEnabled:$false
 ```
 

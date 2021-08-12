@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spsecurestoreapplication
 applicable: SharePoint Server Subscription Edition
 title: Set-SPSecureStoreApplication
@@ -36,7 +36,6 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```powershell
 $targetApp.FriendlyName = "Updated Contoso Target App"
-
 Set-SPSecureStoreApplication -Identity $application -TargetApplication $targetApp
 ```
 

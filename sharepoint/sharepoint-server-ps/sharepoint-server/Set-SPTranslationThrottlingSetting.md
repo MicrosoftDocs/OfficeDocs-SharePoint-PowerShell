@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.Translation.dll-Help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-sptranslationthrottlingsetting
 applicable: SharePoint Server Subscription Edition
 title: Set-SPTranslationThrottlingSetting

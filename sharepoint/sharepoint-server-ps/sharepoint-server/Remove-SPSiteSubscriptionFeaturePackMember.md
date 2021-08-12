@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spsitesubscriptionfeaturepackmember
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPSiteSubscriptionFeaturePackMember
@@ -48,7 +48,6 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE 1-----------------------
 ```powershell
 $FS = Get-SPSiteSubscriptionFeaturePack "30daa535-b0fe-4d10-84b0-fb04029d161a"
-
 Remove-SPSiteSubscriptionFeaturePackMember -Identity $fs -FeatureDefinition (Get-SPFeature "PublishingSite")
 ```
 

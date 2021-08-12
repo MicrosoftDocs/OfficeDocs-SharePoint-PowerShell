@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spservicecontext
 applicable: SharePoint Server Subscription Edition
 title: Get-SPServiceContext
@@ -47,7 +47,6 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ----------------EXAMPLE--------------- 
 ```powershell
 $sitesub = Get-SPSiteSubscription https://my.contoso.com/
-
 Get-SPServiceContext $sitesub
 ```
 

@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-sproutingrule
 applicable: SharePoint Server Subscription Edition
 title: Get-SPRoutingRule
@@ -35,9 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### --------------EXAMPLE------------ 
 ```powershell
 $web=Get-SPWebApplication -Identity <URL of web application>
-
 $rm=Get-SPRequestManagementSettings -Identity $web
-
 Get-SPRoutingRule -RequestManagementSettings $rm
 ```
 

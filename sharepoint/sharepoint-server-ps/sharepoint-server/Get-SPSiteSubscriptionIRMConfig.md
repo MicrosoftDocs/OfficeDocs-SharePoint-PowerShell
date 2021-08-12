@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spsitesubscriptionirmconfig
 applicable: SharePoint Server Subscription Edition
 title: Get-SPSiteSubscriptionIRMConfig
@@ -35,9 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------EXAMPLE----------- 
 ```powershell
 site = Get-SPSite https://myspserver
-
 $subscription = $site.SiteSubscription
-
 Get-SPSiteSubscriptionIRMConfig -Identity $subscription
 ```
 

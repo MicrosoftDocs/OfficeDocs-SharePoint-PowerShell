@@ -1,6 +1,6 @@
 ---
 external help file: sharepointserver.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spofficestoreappsdefaultactivation
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Set-SPOfficeStoreAppsDefaultActivation

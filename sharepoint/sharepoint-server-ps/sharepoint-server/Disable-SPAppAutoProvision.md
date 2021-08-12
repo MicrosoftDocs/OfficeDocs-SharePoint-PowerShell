@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/disable-spappautoprovision
 applicable: SharePoint Server Subscription Edition
 title: Disable-SPAppAutoProvision
@@ -44,7 +44,6 @@ This setting overrides site subscription level setting.
 ### ---------------EXAMPLE 2-------------- 
 ```powershell
 $subscription = Get-SPSiteSubscription https://Contoso.com
-
 Disable-SPAppAutoProvision -SiteSubscription $subscription
 ```
 

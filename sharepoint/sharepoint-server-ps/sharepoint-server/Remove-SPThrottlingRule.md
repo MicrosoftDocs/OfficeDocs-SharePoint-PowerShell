@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spthrottlingrule
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPThrottlingRule
@@ -34,13 +34,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ----------------------EXAMPLE-----------------------
 ```powershell
 $web=Get-SPWebApplication -Identity <URL of web application>
-
 $rm=Get-SPRequestManagementSettings -Identity $web
-
 $c=New-SPRequestManagementRuleCriteria -Value http -Property url -MatchType startswith -CaseSensitive $false
-
 $throttlingrule=Add-SPThrottlingRule -RequestManagementSettings $rm -Name <Rule Name> -Criteria $c -Threshold 4
-
 Remove-SPThrottlingRule -Identity $throttlingrule
 ```
 

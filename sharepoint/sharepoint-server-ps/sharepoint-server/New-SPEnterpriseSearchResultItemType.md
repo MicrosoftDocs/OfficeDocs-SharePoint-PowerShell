@@ -1,6 +1,6 @@
 ---
 external help file: sharepointserver.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spenterprisesearchresultitemtype
 applicable: SharePoint Server Subscription Edition
 title: New-SPEnterpriseSearchResultItemType

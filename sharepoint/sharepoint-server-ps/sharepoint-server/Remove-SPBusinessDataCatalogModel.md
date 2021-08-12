@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spbusinessdatacatalogmodel
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPBusinessDataCatalogModel
@@ -34,7 +34,6 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE------------------
 ```powershell
 $modelFile = Get-SPBusinessDataCatalogMetadataObject -Name "ContosoModel" -BdcObjectType Model -ServiceContext http://contoso
-
 Remove-SPBusinessDataCatalogModel -Identity $modelFile
 ```
 

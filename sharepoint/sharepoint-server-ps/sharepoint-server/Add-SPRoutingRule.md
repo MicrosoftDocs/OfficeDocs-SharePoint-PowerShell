@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/add-sproutingrule
 applicable: SharePoint Server Subscription Edition
 title: Add-SPRoutingRule
@@ -37,11 +37,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### --------------EXAMPLE-------- 
 ```powershell
 $rm=Get-SPRequestManagementSettings -Identity $web
-
 Get-SPRoutingRule -RequestManagementSettings $rm
-
 $machines=Get-SPRoutingMachineInfo -RequestManagementSettings $rm
-
 Add-SPRoutingMachinePool -RequestManagementSettings $rm -Name <Name of Pool> -MachineTargets $machines
 ```
 

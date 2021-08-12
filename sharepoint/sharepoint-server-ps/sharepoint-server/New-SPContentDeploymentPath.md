@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.Publishing.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spcontentdeploymentpath
 applicable: SharePoint Server Subscription Edition
 title: New-SPContentDeploymentPath
@@ -34,9 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### -----------------EXAMPLE---------------------- 
 ```powershell
 $source = Get-SPSite "http://source/"
-
 $credentials=Get-Credential
-
 New-SPContentDeploymentPath -Name "Deployment Path" -SourceSPWebApplication $source.WebApplication -SourceSPSite $source DestinationCentralAdministrationURL "http://destination:8080" -DestinationSPWebApplication "http://destination" -DestinationSPSite "http://destination" -KeepTemporaryFilesOptions "Failure" -PathAccount $credentials -PathEnabled:$true
 ```
 

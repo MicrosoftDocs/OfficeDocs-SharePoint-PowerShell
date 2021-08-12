@@ -1,53 +1,57 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-databasefromavailabilitygroup
+module name: SharePointServer
+online version: https://docs.microsoft.com/powershell/module/sharepoint-server/add-spdatabasetoavailabilitygroup
 applicable: SharePoint Server Subscription Edition
-title: Remove-DatabaseFromAvailabilityGroup
+title: Add-SPDatabaseToAvailabilityGroup
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
-# Remove-DatabaseFromAvailabilityGroup
+# Add-SPDatabaseToAvailabilityGroup
 
 ## SYNOPSIS
-Removes one or more SharePoint databases from an availability group in SQL Server.
-
+Adds one or more SharePoint databases to a SQL Server Availability Group
 
 ## SYNTAX
 
 ### Default
 ```
-Remove-DatabaseFromAvailabilityGroup [-AGName] <String> [-AssignmentCollection <SPAssignmentCollection>]
- -DatabaseName <String> [-Force] [-KeepSecondaryData] [<CommonParameters>]
+Add-SPDatabaseToAvailabilityGroup [-AGName] <String> [-AssignmentCollection <SPAssignmentCollection>]
+ -DatabaseName <String> [-FileShare <String>] [<CommonParameters>]
 ```
 
 ### AllDatabases
 ```
-Remove-DatabaseFromAvailabilityGroup [-AGName] <String> [-AssignmentCollection <SPAssignmentCollection>]
- [-Force] [-KeepSecondaryData] [-ProcessAllDatabases] [<CommonParameters>]
+Add-SPDatabaseToAvailabilityGroup [-AGName] <String> [-AssignmentCollection <SPAssignmentCollection>]
+ [-FileShare <String>] [-ProcessAllDatabases] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet contains more than one parameter set. You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets. For more information about how to use parameter sets, see [https://msdn.microsoft.com/library/dd878348(VS.85).aspx](https://msdn.microsoft.com/library/dd878348(VS.85).aspx).
-
+Use the Add-SPDatabaseToAvailabilityGroup cmdlet to add an availability group to the farm.
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------
+### ------------Example 1 -----------
 ```powershell
-Remove-DatabaseFromAvailabilityGroup -AGName MyAvailabilityGroup -DatabaseName WSS_Content 
+Add-SPDatabaseToAvailabilityGroup -AGName MyAvailabilityGroup -DatabaseName WSS_Content -FileShare \\backup\share\ 
 ```
 
-This example removes the availability group named "MyAvailabilityGroup" from the WSS_Content database.
+This example adds the database WSS_Content to the availability group named "MyAvailabilityGroup".
 
+### ------------Example 2-----------
+```powershell
+Add-SPDatabaseToAvailabilityGroup -AGName MyAvailabilityGroup -ProcessAllDatabases -FileShare \\backup\share\ 
+```
+
+This example adds all SharePoint databases attached to the farm to the availability group named "MyAvailabilityGroup"
 
 ## PARAMETERS
 
 ### -AGName
-The name of the availability group from which the databases are being removed.
+The name of the availability group from which the databases are being added.
 
 ```yaml
 Type: String
@@ -65,7 +69,7 @@ Accept wildcard characters: False
 ### -AssignmentCollection
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
-When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+**NOTE:** When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur. 
 
 ```yaml
 Type: SPAssignmentCollection
@@ -81,9 +85,8 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
-The name of the database to be removed from the availability group. 
-
-NOTE: This parameter should not be used in conjunction with the ProcessAllDatabases parameter.
+The name of the database to be added to the availability group. 
+**Note:** This parameter should not be used in conjunction with the **ProcessAllDatabases** parameter.
 
 ```yaml
 Type: String
@@ -98,27 +101,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Force
-Forces a remove from the group.
+### -FileShare
+When a database is being added to the availability group, backup / restores are done from this location to propagate the database to all replicas.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -KeepSecondaryData
-Specifies that copies of the databases on the replicas in the availability group will not be deleted. Otherwise, those database copies will be dropped.
-
-```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
 Aliases: 
 Applicable: SharePoint Server Subscription Edition
@@ -131,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProcessAllDatabases
-Removes all databases from the current SharePoint farm into the availability group. 
+Adds all databases from the current SharePoint farm into the availability group.
 
 ```yaml
 Type: SwitchParameter
@@ -160,3 +147,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+

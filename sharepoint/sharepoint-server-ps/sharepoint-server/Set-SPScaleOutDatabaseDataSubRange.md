@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spscaleoutdatabasedatasubrange
 applicable: SharePoint Server Subscription Edition
 title: Set-SPScaleOutDatabaseDataSubRange
@@ -46,11 +46,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### --------------------EXAMPLE---------------------
 ```powershell
 $databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
-
 $database = $databases[0]
-
 $state = Get-SPScaleOutDatabaseDataState -Database $database
-
 Set-SPScaleOutDatabaseDataSubRange -Database $database -Range $state.Range -SubRangePoint $state.Range.RangeEnd -SubRangeMode ReadOnly -IsUpperSubRange $false
 ```
 

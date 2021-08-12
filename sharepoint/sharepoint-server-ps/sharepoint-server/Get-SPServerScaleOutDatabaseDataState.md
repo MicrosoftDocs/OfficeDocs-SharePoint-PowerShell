@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spserverscaleoutdatabasedatastate
 applicable: SharePoint Server Subscription Edition
 title: Get-SPServerScaleOutDatabaseDataState
@@ -50,9 +50,7 @@ The database state information includes total count of partitions, total weight 
 ### ----------------EXAMPLE-------------- 
 ```powershell
 $databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
-
 $database = $databases[0]
-
 Get-SPServerScaleOutDatabaseDataState -Database $database
 ```
 

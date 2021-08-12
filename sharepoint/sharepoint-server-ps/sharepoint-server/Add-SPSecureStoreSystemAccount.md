@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/add-spsecurestoresystemaccount
 applicable: SharePoint Server Subscription Edition
 title: Add-SPSecureStoreSystemAccount

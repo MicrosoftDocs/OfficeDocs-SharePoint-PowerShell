@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/disconnect-spconfigurationdatabase
 applicable: SharePoint Server Subscription Edition
 title: Disconnect-SPConfigurationDatabase

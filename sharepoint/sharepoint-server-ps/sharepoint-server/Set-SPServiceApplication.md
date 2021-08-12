@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spserviceapplication
 applicable: SharePoint Server Subscription Edition
 title: Set-SPServiceApplication
@@ -37,7 +37,6 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ---------------------EXAMPLE----------------
 ```powershell
 $serviceapp = Get-SPServiceApplication "My Service App"
-
 Set-SPServiceApplication $serviceapp -DefaultEndpoint https
 ```
 

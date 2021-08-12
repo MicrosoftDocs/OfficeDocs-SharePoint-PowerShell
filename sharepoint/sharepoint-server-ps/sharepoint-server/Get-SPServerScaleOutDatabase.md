@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
-module name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spserverscaleoutdatabase
 applicable: SharePoint Server Subscription Edition
 title: Get-SPServerScaleOutDatabase
@@ -40,7 +40,6 @@ For more information, see SharePoint Shared Service Database Scale Out Generic P
 ### ----------EXAMPLE-------------- 
 ```powershell
 $serviceApplication = Get-SPServiceApplication -Name "AppManagement"
-
 Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
 ```
 
