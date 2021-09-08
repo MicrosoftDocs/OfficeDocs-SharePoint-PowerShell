@@ -49,6 +49,9 @@
     "versions": {
       "sharepoint-server-ps": {
         "dest": "sharepoint-ps"
+      },
+      "sharepoint-ps": {
+        "dest": "sharepoint-ps"
       }
     },
     "overwrite": [],
