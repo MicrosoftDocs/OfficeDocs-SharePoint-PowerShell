@@ -5,7 +5,18 @@
         "referenceTocUrl": "/powershell/module/sharepoint-server-ps/toc.json",
         "packageRoot": "sharepoint-server-ps",
         "modules": {
-            "sharepoint-server": {}
+            "sharepoint-server-ps": {}
         }
-    }
+    },
+    "sharepoint-ps": {
+        "conceptualToc": "docs-conceptual/toc.yml",
+        "conceptualTocUrl": "/powershell/sharepoint/sharepoint-ps/toc.json",
+        "referenceTocUrl": "/powershell/module/sharepoint-ps/toc.json",
+        "packageRoot": "sharepoint-ps",
+        "modules": {
+            "sharepoint-online": {},
+            "sharepoint-server": {},
+            "sharepoint-pnp": {}
+        }
+    }   
 }
