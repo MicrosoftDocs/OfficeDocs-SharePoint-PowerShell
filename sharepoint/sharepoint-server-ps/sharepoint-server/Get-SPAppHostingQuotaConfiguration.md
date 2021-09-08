@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spapphostingquotaconfiguration
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Get-SPAppHostingQuotaConfiguration
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Get-SPAppHostingQuotaConfiguration
@@ -30,14 +27,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------EXAMPLE 1--------- 
-```
+```powershell
 Get-SPAppHostingQuotaConfiguration -Identity '586d4a32-98c3-42ce-80be-3c76c10c250c'
 ```
 
 This example returns the hosted app quota associated to SiteSubscriptionID "586d4a32-98c3-42ce-80be-3c76c10c250c".
 
 ### --------------EXAMPLE 1--------- 
-```
+```powershell
 Get-SPSiteSubscription | Get-SPAppHostingQuotaConfiguration -Identity $_
 ```
 
@@ -55,7 +52,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -72,7 +69,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -90,7 +87,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -108,7 +105,7 @@ The type must be a valid URL, in the form, https://server_name or a valid GUID (
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named

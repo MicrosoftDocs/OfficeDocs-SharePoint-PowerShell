@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchtopology
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Get-SPEnterpriseSearchTopology
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Get-SPEnterpriseSearchTopology
@@ -31,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------ 
-```
+```powershell
 $ssa = Get-SPEnterpriseSearchServiceApplication
 Get-SPEnterpriseSearchTopology -SearchApplication $ssa
 ```
@@ -39,7 +36,7 @@ Get-SPEnterpriseSearchTopology -SearchApplication $ssa
 This example retrieves all search topologies of the search service application referenced by $ssa.
 
 ### ------------------EXAMPLE 2------------------ 
-```
+```powershell
 $ssa = Get-SPEnterpriseSearchServiceApplication
 Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Active
 ```
@@ -47,7 +44,7 @@ Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Active
 This example retrieves the active search topology of the search service application referenced by $ssa.
 
 ### ------------------EXAMPLE 3------------------ 
-```
+```powershell
 $ssa = Get-SPEnterpriseSearchServiceApplication
 Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Identity '10fa59cb-4b32-4fe6-8f8d-065388df201e'
 ```
@@ -63,7 +60,7 @@ Specifies the search topology to retrieve.
 Type: SearchTopologyPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 1
@@ -81,7 +78,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -97,7 +94,7 @@ Specifies that the active search topology should be returned.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -114,7 +111,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

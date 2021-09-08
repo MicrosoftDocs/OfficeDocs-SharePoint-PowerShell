@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spenterprisesearchlinksdatabase
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Remove-SPEnterpriseSearchLinksDatabase
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer: 
 ---
 
 # Remove-SPEnterpriseSearchLinksDatabase
@@ -34,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE------------------
-```
+```powershell
 $ssa = Get-SPEnterpriseSearchServiceApplication
 $linksDatabase = $ssa | Get-SPEnterpriseSearchLinksDatabase Links2
 Remove-SPEnterpriseSearchLinksDatabase -Identity $linksDatabase
@@ -54,7 +51,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: LinksStorePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -72,7 +69,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -89,7 +86,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -106,7 +103,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -123,7 +120,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

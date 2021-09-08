@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spsiteadministration
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Get-SPSiteAdministration
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Get-SPSiteAdministration
@@ -59,7 +56,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------ 
-```
+```powershell
 Get-SPSiteAdministration | Select -Property Url, OwnerLoginName, @{Name="Storage";Expression={$_.Quota.StorageMaximumLevel}}
 ```
 
@@ -67,7 +64,7 @@ This example gets a subset of data from all of the sites in the content database
 This command uses the calculated property Storage to display the maximum storage value for the content database.
 
 ### ------------------EXAMPLE 2------------------ 
-```
+```powershell
 Start-SPAssignment -Global
 $s = Get-SPSiteAdministration -Identity https://MyApp/Sites/Site1
 $s.Url
@@ -80,8 +77,8 @@ This method is easier to use but grows quickly.
 Do not run a Get-SPSite command that returns many results while global assignment is on.
 
 ### ------------------EXAMPLE 3-------------------
-```
-C:\PS>$GC = Start-SPAssignment
+```powershell
+$GC = Start-SPAssignment
 $Sites = $GC | Get-SPSiteAdministration -Filter {$_.Owner -eq "DOMAIN\JDoe"} -Limit 50
 Stop-SPAssignment $GC
 ```
@@ -90,21 +87,21 @@ This example gets the first 50 sites owned by user DOMAIN\JDoe by using a server
 This command uses advanced assignment collection methods.
 
 ### ------------------EXAMPLE 4------------------ 
-```
+```powershell
 Get-SPWebApplication https://sitename | Get-SPSiteAdministration -Limit All |ForEach-Object {$sum=0}{ $sum+=$_.DiskUsed }{$sum}
 ```
 
 This command returns the sum of the disk space usage for all sites in the specified Web application.
 
 ### ------------------EXAMPLE 5------------------ 
-```
+```powershell
 Get-SPWebApplication https://sitename | Get-SPSiteAdministration -Limit ALL | Select URL
 ```
 
 This example gets the URLs for all site collections in a Web application.
 
 ### ------------------EXAMPLE 6------------------ 
-```
+```powershell
 Get-SPSiteAdministration -identity "https://localserver/(my|personal)/sites" -Regex
 ```
 
@@ -112,7 +109,7 @@ This example returns all sites that match the given regular expression.
 The quotation marks around the value specified for the Identity parameter are required when using the Regex flag.
 
 ### ------------------EXAMPLE 7------------------ 
-```
+```powershell
 Get-SPSite "https://sitename/sites/teams/*" -Limit 100
 ```
 
@@ -129,7 +126,7 @@ The type must be a valid URL, in the form https://server_name, or a GUID, in the
 Type: SPSiteAdministrationPipeBind
 Parameter Sets: AllSitesInIdentity
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -147,7 +144,7 @@ The type must be a valid URL, in the form https://server_name, or a GUID, in the
 Type: SPContentDatabasePipeBind
 Parameter Sets: AllSitesInContentDB
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -165,7 +162,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: AllSitesInSiteSubscription
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -187,7 +184,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -204,7 +201,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -222,7 +219,7 @@ The type must be a valid filter name and a value in the form { $_ PropertyName \
 Type: ScriptBlock
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -242,7 +239,7 @@ Provide ALL to return all site collections for the given scope.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -258,7 +255,7 @@ Enabling this switch causes the URL provided for the Identity parameter to be tr
 Type: SwitchParameter
 Parameter Sets: AllSitesInIdentity
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -276,7 +273,7 @@ The type must be a valid URL, in the form https://server_name; a valid GUID (for
 Type: SPWebApplicationPipeBind
 Parameter Sets: AllSitesInWebApplication
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -293,7 +290,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

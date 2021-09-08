@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchhostcontroller
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Get-SPEnterpriseSearchHostController
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Get-SPEnterpriseSearchHostController
@@ -32,14 +29,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------ 
-```
+```powershell
 Get-SPEnterpriseSearchHostController
 ```
 
 This example retrieves a list of all HostControllers in the farm with their status (primary/secondary) and repository version.
 
 ### ------------------EXAMPLE 2------------------ 
-```
+```powershell
 $ssi = Get-SPEnterpriseSearchServiceInstance -Local
 Get-SPEnterpriseSearchHostController -SearchServiceInstance $ssi
 ```
@@ -57,7 +54,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -73,7 +70,7 @@ The Search Service instance of the server from where the SearchHostController ob
 Type: SearchServiceInstancePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

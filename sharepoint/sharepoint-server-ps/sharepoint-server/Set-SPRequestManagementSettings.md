@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-sprequestmanagementsettings
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Set-SPRequestManagementSettings
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Set-SPRequestManagementSettings
@@ -32,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
-```
+```powershell
 $wa = Get-SPWebApplication https://webAppUrl
 $req = $wa | Get-SPRequestManagementSettings
 Set-SPRequestManagementSettings -Identity $req -ThrottlingEnabled:$false
@@ -49,7 +46,7 @@ Specifies the Request Manager object for which settings will be applied.
 Type: SPRequestManagementSettingsPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -67,7 +64,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -83,7 +80,7 @@ Specifies whether routing is enabled or disabled for the Request Manager object.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -105,7 +102,7 @@ The value is one of the following:
 Type: SPRoutingScheme
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -121,7 +118,7 @@ Specifies whether throttling is enabled or disabled for the Request Manager obje
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

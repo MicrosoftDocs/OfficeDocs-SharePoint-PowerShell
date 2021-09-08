@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.Office.TranslationServices.dll-Help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-sptranslationserviceapplicationproxy
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: New-SPTranslationServiceApplicationProxy
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer: 
 ---
 
 # New-SPTranslationServiceApplicationProxy
@@ -46,7 +43,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### -----------EXAMPLE---------
-```
+```powershell
 $sa = New-SPTranslationServiceApplication -Name TranslationService -ApplicationPool 'SharePoint Web Services Default' -DatabaseServer Server1 -DatabaseName TranslationServiceDatabase
 New-SPTranslationServiceApplicationProxy -Name TranslationServiceProxy -ServiceApplication $sa -DefaultProxyGroup
 ```
@@ -65,7 +62,7 @@ The name can be a maximum of 128 characters.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -83,7 +80,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: TranslationServiceApplicationPipeBind
 Parameter Sets: ConnectLocal
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -100,7 +97,7 @@ This value is required only if you plan to connect a Machine Translation Service
 Type: String
 Parameter Sets: ConnectRemote
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -122,7 +119,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -139,7 +136,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -155,7 +152,7 @@ Specifies that the Machine Translation Service application proxy be added to the
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -172,7 +169,7 @@ After the PartitionMode parameter is set and the service application is created,
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -189,7 +186,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

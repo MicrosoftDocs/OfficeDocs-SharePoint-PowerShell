@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/enable-spfeature
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Enable-SPFeature
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Enable-SPFeature
@@ -46,15 +43,15 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------EXAMPLE 1----------------- 
-```
+```powershell
 Enable-SPFeature -identity "MyCustom" -URL https://somesite
 ```
 
 This example enables the "MyCustom" site scoped SharePoint Feature at https://somesite.
 
 ### --------------EXAMPLE 2----------------- 
-```
-C:\PS>$w = Get-SPWeb https://somesite/myweb | ForEach{ $_.URL }
+```powershell
+$w = Get-SPWeb https://somesite/myweb | ForEach{ $_.URL }
 Get-SPFeature -Web $w |%{ Enable-SPFeature -Identity $_ -URL $w}
 ```
 
@@ -71,7 +68,7 @@ The type must be the name of the Feature folder located in the 14\Template\Featu
 Type: SPFeatureDefinitionPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -93,7 +90,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -110,7 +107,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -130,7 +127,7 @@ This causes any custom code associated with the Feature to rerun.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -146,7 +143,7 @@ If provided, the cmdlet outputs the Feature definition object after enable.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -164,7 +161,7 @@ The type must be a valid URL; for example, https://server_name.
 Type: String
 Parameter Sets: SiteFeature
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -181,7 +178,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -197,7 +194,7 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: FarmFeatureDefinition
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

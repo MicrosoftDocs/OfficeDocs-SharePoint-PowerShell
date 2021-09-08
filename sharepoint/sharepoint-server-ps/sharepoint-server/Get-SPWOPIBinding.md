@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spwopibinding
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Get-SPWOPIBinding
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Get-SPWOPIBinding
@@ -34,14 +31,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------EXAMPLE 1----------------- 
-```
+```powershell
 Get-SPWOPIBinding -Server "Server.corp.Contoso.com"
 ```
 
 This example returns a list of bindings that were created on the current SharePoint farm where this cmdlet is run for the WOPI application "Server.corp.Contoso.com."  The WOPI application may be the server that runs Office Web Apps Server.
 
 ### --------------EXAMPLE 2----------------- 
-```
+```powershell
 Get-SPWOPIZone | Get-SPWOPIBinding
 ```
 
@@ -56,7 +53,7 @@ Specifies the action to return bindings for.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -72,7 +69,7 @@ Specifies the application to return bindings for.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -94,7 +91,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -110,7 +107,7 @@ Specifies the file name extension to return bindings for.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -126,7 +123,7 @@ Specifies the programmatic identifier (ProgID) for an application to return bind
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -142,7 +139,7 @@ Specifies the name of WOPI application (such as a server that runs Office Web Ap
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -158,7 +155,7 @@ Specifies the zone to return bindings for.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

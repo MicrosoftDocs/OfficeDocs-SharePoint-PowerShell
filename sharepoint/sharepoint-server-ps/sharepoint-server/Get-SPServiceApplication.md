@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spserviceapplication
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Get-SPServiceApplication
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Get-SPServiceApplication
@@ -34,21 +31,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1---------------------- 
-```
+```powershell
 Get-SPServiceApplication
 ```
 
 This example returns all service applications in the farm.
 
 ### ------------------EXAMPLE 2---------------------- 
-```
+```powershell
 Get-SPServiceApplication -Identity e2c2be70-6382-4ce7-8a44-ae7dadff5597
 ```
 
 This example returns the service application that has the Identity "e2c2be70-6382-4ce7-8a44-ae7dadff5597".
 
 ### ------------------EXAMPLE 3---------------------- 
-```
+```powershell
 Get-SPServiceApplication -Name AccountingServiceApp
 ```
 
@@ -65,7 +62,7 @@ Specifies the GUID of the service application to get.
 Type: SPServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 1
@@ -87,7 +84,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -103,7 +100,7 @@ Specifies the friendly name of the new usage application.The type must be a vali
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

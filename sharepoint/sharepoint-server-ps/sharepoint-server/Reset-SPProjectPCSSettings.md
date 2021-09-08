@@ -1,13 +1,10 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/reset-spprojectpcssettings
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Reset-SPProjectPCSSettings
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer: 
 ---
 
 # Reset-SPProjectPCSSettings
@@ -33,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 ## EXAMPLES
 
 ### ----------------------EXAMPLE-----------------------
-```
+```powershell
 $sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Project Application Services'}
 Reset-SPProjectPCSSettings -ServiceApplication $sa
 ```

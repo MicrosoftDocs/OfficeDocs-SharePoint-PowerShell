@@ -1,13 +1,10 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spprojectwebinstancedata
 applicable: Project Server 2016, Project Server 2019
 title: Remove-SPProjectWebInstanceData
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer: 
 ---
 
 # Remove-SPProjectWebInstanceData
@@ -29,7 +26,7 @@ This cmdlet disassociates the Project Server instance from the specified Site Co
 ## EXAMPLES
 
 ### ----------------------EXAMPLE-----------------------
-```
+```powershell
 Remove-SPProjectWebInstanceData -SiteCollection https://contoso/sites/pwa
 ```
 

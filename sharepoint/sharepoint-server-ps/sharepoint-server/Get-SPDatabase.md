@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spdatabase
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Get-SPDatabase
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Get-SPDatabase
@@ -50,14 +47,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------------EXAMPLE 1--------------------- 
-```
+```powershell
 Get-SPDatabase | ?{$_.TypeName -eq 'Microsoft.Office.Server.Administration.ProfileDatabase'}
 ```
 
 This example gets the Profile database used by the User Profile Service Application.
 
 ### --------------------EXAMPLE 2--------------------- 
-```
+```powershell
 Get-SPDatabase -Name 'Profile DB'
 ```
 
@@ -74,7 +71,7 @@ The type must be a valid GUID, in the form 1234-3456-567kg.
 Type: SPDatabasePipeBind
 Parameter Sets: DefaultParameterSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 1
@@ -90,7 +87,7 @@ Specifies the name of the SQL instance that contains the database in either the 
 Type: SPDatabaseServiceInstancePipeBind
 Parameter Sets: ServerParameterSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -108,7 +105,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

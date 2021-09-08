@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/add-spdistributedcacheserviceinstance
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Add-SPDistributedCacheServiceInstance
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Add-SPDistributedCacheServiceInstance
@@ -47,8 +44,8 @@ Use the Add-SPDistributedCacheServiceInstance cmdlet to add an instance of the d
 
 ## EXAMPLES
 
-### Example 1 
-```
+### ------------Example 1 -----------
+```powershell
 Add-SPDistributedCacheServiceInstance
 ```
 
@@ -68,7 +65,7 @@ Manages objects for the purpose of proper disposal. Use of objects, such as SPWe
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

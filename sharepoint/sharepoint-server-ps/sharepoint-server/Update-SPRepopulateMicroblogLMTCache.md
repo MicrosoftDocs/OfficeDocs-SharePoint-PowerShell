@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/update-sprepopulatemicrobloglmtcache
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Update-SPRepopulateMicroblogLMTCache
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Update-SPRepopulateMicroblogLMTCache
@@ -33,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------EXAMPLE-----------
-```
+```powershell
 $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
 Update-SPRepopulateMicroblogLMTCache -ProfileServiceApplicationProxy $proxy
 ```
@@ -58,7 +55,7 @@ The type must be in one of the following forms:
 Type: SPServiceApplicationProxyPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -80,7 +77,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

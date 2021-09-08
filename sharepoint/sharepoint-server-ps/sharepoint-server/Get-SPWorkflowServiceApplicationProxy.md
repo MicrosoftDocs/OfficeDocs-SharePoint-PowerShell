@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.WorkflowServices.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spworkflowserviceapplicationproxy
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Get-SPWorkflowServiceApplicationProxy
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Get-SPWorkflowServiceApplicationProxy
@@ -27,8 +24,8 @@ Returns the Workflow Service Application Proxy.
 
 ## EXAMPLES
 
-### Example 1 
-```
+### ------------Example 1 -----------
+```powershell
 Get-SPWorkflowServiceApplicationProxy
 ```
 Returns the Workflow Service Application Proxy.
@@ -44,7 +41,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -60,7 +57,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -77,7 +74,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

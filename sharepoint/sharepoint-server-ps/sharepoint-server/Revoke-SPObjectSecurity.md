@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/revoke-spobjectsecurity
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Revoke-SPObjectSecurity
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer: 
 ---
 
 # Revoke-SPObjectSecurity
@@ -44,7 +41,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE------------------
-```
+```powershell
 $security = Get-SPServiceApplicationSecurity $serviceApp -Admin
 Revoke-SPObjectSecurity $security "domain\user"
 Set-SPServiceApplicationSecurity $serviceApp -Admin $security

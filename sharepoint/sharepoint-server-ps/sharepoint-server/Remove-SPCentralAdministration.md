@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spcentraladministration
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPCentralAdministration
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer: 
 ---
 
 # Remove-SPCentralAdministration
@@ -30,7 +27,7 @@ Removes the SharePoint Central Administration web site from the local server.
 ## EXAMPLES
 
 ### ------------------EXAMPLE------------------
-```
+```powershell
 Remove-SPCentralAdministration
 ```
 This example removes the Central Administration web site from the local server.

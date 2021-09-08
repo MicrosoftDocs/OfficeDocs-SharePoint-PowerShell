@@ -1,13 +1,10 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spprojecteventservicesettings
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Get-SPProjectEventServiceSettings
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Get-SPProjectEventServiceSettings
@@ -26,8 +23,8 @@ Returns the settings for the Microsoft Project Server Events Service. There is c
 
 ## EXAMPLES
 
-### Example 1 
-```
+### ------------Example 1 -----------
+```powershell
 Get-SPProjectEventServiceSettings
 ```
 

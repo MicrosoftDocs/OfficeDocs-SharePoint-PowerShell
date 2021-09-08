@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spmicrofeedoptions
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPMicrofeedOptions
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Get-SPMicrofeedOptions
@@ -28,8 +25,8 @@ Returns the feed cache settings for the current user profile application.
 
 ## EXAMPLES
 
-### Example 1 
-```
+### ------------Example 1 -----------
+```powershell
 $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
 Get-SPMicrofeedOptions -ProfileServiceApplicationProxy $proxy
 ```

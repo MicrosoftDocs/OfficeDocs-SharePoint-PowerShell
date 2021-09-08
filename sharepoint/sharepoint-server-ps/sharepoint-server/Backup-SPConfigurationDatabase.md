@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/backup-spconfigurationdatabase
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Backup-SPConfigurationDatabase
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Backup-SPConfigurationDatabase
@@ -50,14 +47,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### -------------------EXAMPLE 1-------------------- 
-```
+```powershell
 Backup-SPConfigurationDatabase -DatabaseName SharePoint_Config -DatabaseServer SqlServer1 -Directory \\server\share\Backup -ShowTree
 ```
 
 This example displays components that are available for inclusion in a configuration-only backup.
 
 ### -------------------EXAMPLE 2-------------------- 
-```
+```powershell
 Backup-SPConfigurationDatabase -DatabaseName SharePoint_Config -DatabaseServer SqlServer1 -Directory \\server\share\Backup -Verbose
 ```
 
@@ -85,7 +82,7 @@ The spbr* folders are automatically created.
 Type: String
 Parameter Sets: DefaultSet
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -107,7 +104,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -126,7 +123,7 @@ If Windows authentication is used to connect to the database, then this paramete
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -142,7 +139,7 @@ Specifies the configuration database name.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -161,7 +158,7 @@ The type must be a valid database server; for example, DS.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -182,7 +179,7 @@ If the Item parameter is not specified, the entire farm configuration is backed 
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -201,7 +198,7 @@ A backup will not be performed if the ShowTree parameter is present.
 Type: SwitchParameter
 Parameter Sets: ShowTree
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named

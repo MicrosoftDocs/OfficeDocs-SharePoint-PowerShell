@@ -59,7 +59,10 @@
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/OfficeDocs-SharePoint-powershell",
       "feedback_product_url": "https://github.com/MicrosoftDocs/OfficeDocs-SharePoint-powershell/issues",
-      "ms.devlang": "powershell"
+      "author": "techwriter40",
+      "ms.author": "pamgreen",
+      "ms.devlang": "powershell",
+      "ms.prod": "sharepoint-server-itpro"
     },
     "fileMetadata": {},
     "template": [],

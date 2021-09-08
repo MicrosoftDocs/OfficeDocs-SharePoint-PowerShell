@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.Office.TranslationServices.dll-Help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-sptranslationserviceapplicationproxy
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Set-SPTranslationServiceApplicationProxy
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Set-SPTranslationServiceApplicationProxy
@@ -29,7 +26,7 @@ Use the `Set-SPTranslationServiceApplicationProxy` cmdlet to set properties on a
 ## EXAMPLES
 
 ### -------------EXAMPLE---------
-```
+```powershell
 Set-SPTranslationServiceApplicationProxy TranslationServiceProxy -DefaultProxyGroup
 ```
 
@@ -46,7 +43,7 @@ The type must be a valid GUID in the form, 12345678-90ab-cdef-1234-567890bcdefgh
 Type: TranslationServiceApplicationProxyPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -68,7 +65,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -85,7 +82,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -101,7 +98,7 @@ Specifies that the Machine Translation Service application proxy be added to the
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -121,7 +118,7 @@ We do not recommend use of this parameter.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -141,7 +138,7 @@ We do not recommend use of this parameter.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -158,7 +155,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

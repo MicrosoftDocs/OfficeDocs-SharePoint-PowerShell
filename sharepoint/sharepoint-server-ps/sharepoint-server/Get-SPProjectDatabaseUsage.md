@@ -1,13 +1,10 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spprojectdatabaseusage
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Get-SPProjectDatabaseUsage
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Get-SPProjectDatabaseUsage
@@ -26,8 +23,8 @@ Returns an approximate size, in megabytes (MB) of the Project Web App data used 
 
 ## EXAMPLES
 
-### Example 1 
-```
+### ------------Example 1 -----------
+```powershell
 Get-SPProjectDatabaseUsage -Url  https://contoso.com/sites/pwa
 ```
 

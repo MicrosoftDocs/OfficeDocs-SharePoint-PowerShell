@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/export-sptagsandnotesdata
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Export-SPTagsAndNotesData
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Export-SPTagsAndNotesData
@@ -29,7 +26,7 @@ The tags and notes are written into separate files, and then the two are compres
 ## EXAMPLES
 
 ### ----------------EXAMPLE----------------- 
-```
+```powershell
 Export-SPTagsAndNotesData -Site https://site.contoso.com -FilePath C:\TagsAndNotes.zip
 ```
 

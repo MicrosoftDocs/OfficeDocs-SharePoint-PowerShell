@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spenterprisesearchtopology
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: New-SPEnterpriseSearchTopology
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer: 
 ---
 
 # New-SPEnterpriseSearchTopology
@@ -35,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
-```
+```powershell
 $ssa = Get-SPEnterpriseSearchServiceApplication
 New-SPEnterpriseSearchTopology -SearchApplication $ssa
 ```
@@ -44,7 +41,7 @@ This example creates a new, empty search topology in the search service applicat
 
 
 ### ------------------EXAMPLE 2------------------
-```
+```powershell
 $ssa = Get-SPEnterpriseSearchServiceApplication
 $topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa
 New-SPEnterpriseSearchTopology -SearchApplication $ssa -Clone -SearchTopology $topology
@@ -64,7 +61,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -81,7 +78,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -97,7 +94,7 @@ Specifies that the new search topology is to be created by cloning an existing s
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -113,7 +110,7 @@ Specifies that the new search topology is to be created by cloning an existing s
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -129,7 +126,7 @@ Specifies the existing search topology of which the new topology will be a clone
 Type: SearchTopologyPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -146,7 +143,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

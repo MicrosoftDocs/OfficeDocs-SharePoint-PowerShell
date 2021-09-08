@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-sproutingmachinepool
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Set-SPRoutingMachinePool
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Set-SPRoutingMachinePool
@@ -32,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
-```
+```powershell
 $wa = Get-SPWebApplication -Identity https://webAppUrl
 $rm = Get-SPRequestManagementSettings -Identity $wa
 $pool = Get-SPRoutingMachinePool -RequestManagementSettings $rm -Name 'MachinePool'
@@ -50,7 +47,7 @@ Specifies the name of the request management settings object to set.
 Type: SPRoutingMachinePoolPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -72,7 +69,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -88,7 +85,7 @@ Specifies the routing targets collection that the machine pool will contain.
 Type: SPRoutingRuleTargetPipeBind[]
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spmicrofeedoptions
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPMicrofeedOptions
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Set-SPMicrofeedOptions
@@ -32,7 +29,7 @@ Use the Set-SPMicrofeedOptions cmdlet to set the feed cache settings for the cur
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
-```
+```powershell
 $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
 Set-SPMicrofeedOptions -ProfileServiceApplicationProxy $proxy -MaxTags 4
 ```

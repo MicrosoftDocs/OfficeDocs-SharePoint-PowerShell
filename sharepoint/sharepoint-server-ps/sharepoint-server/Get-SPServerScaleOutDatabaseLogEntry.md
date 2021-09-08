@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spserverscaleoutdatabaselogentry
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Get-SPServerScaleOutDatabaseLogEntry
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Get-SPServerScaleOutDatabaseLogEntry
@@ -35,11 +32,9 @@ Use the Get-SPServerScaleOutDatabaseLogEntry cmdlet to query a scale-out databas
 ## EXAMPLES
 
 ### -------------EXAMPLE----------- 
-```
-C:\PS>$databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
-
-C:\PS>$database = $databases[0]
-
+```powershell
+$databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
+$database = $databases[0]
 Get-SPServerScaleOutDatabaseLogEntry -Database $database -Count 10 -MajorAction DataMove
 ```
 
@@ -60,7 +55,7 @@ Specifies the number of scale-out log entries to return.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -79,7 +74,7 @@ Specifies the scale-out database from which to return the scale-out logs
 Type: SPDatabasePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -105,7 +100,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -127,7 +122,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -147,7 +142,7 @@ Correlation id of the log entries that belong to the same major action are the s
 Type: Guid
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -172,7 +167,7 @@ Recovery -Any data recovery operation that is performed to recover from a failur
 Type: SPScaleOutDatabaseMajorAction
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -194,7 +189,7 @@ The range limit point has different meaning depending on the action that records
 Type: Byte[]
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -215,7 +210,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

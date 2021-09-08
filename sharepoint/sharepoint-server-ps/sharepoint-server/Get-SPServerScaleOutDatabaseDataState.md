@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spserverscaleoutdatabasedatastate
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Get-SPServerScaleOutDatabaseDataState
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Get-SPServerScaleOutDatabaseDataState
@@ -48,11 +45,9 @@ The database state information includes total count of partitions, total weight 
 ## EXAMPLES
 
 ### ----------------EXAMPLE-------------- 
-```
-C:\PS>$databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
-
-C:\PS>$database = $databases[0]
-
+```powershell
+$databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
+$database = $databases[0]
 Get-SPServerScaleOutDatabaseDataState -Database $database
 ```
 
@@ -73,7 +68,7 @@ Specifies the connection string for the scale-out database from which to return 
 Type: String
 Parameter Sets: UnattachedDatabase
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -92,7 +87,7 @@ Specifies the scale-out database for which the command returns state information
 Type: SPDatabasePipeBind
 Parameter Sets: AttachedDatabase
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -118,7 +113,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -137,7 +132,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -158,7 +153,7 @@ Specifies whether the state information of the scale-out database is in the form
 Type: SwitchParameter
 Parameter Sets: UnattachedDatabase
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -178,7 +173,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

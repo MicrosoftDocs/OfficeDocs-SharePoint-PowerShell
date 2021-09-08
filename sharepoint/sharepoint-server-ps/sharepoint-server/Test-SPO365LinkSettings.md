@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/test-spo365linksettings
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Test-SPO365LinkSettings
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Test-SPO365LinkSettings
@@ -27,7 +24,7 @@ Use the **Test-SPO365LinkSettings** cmdlet to validate a templated against a con
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### ------------EXAMPLE 1-----------
 ```powershell
 Test-SPO365LinkSettings -MySiteHostUrl https://contoso-my.sharepoint.com/
 ```
@@ -49,7 +46,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -57,6 +54,7 @@ Default value: None
 Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
+
 ### -MySiteHostUrl
 The root URL for the redirected pages
 
@@ -64,7 +62,7 @@ The root URL for the redirected pages
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named

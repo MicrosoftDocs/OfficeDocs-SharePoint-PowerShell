@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spsitemaster
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPSiteMaster
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer: 
 ---
 
 # Remove-SPSiteMaster
@@ -26,7 +23,7 @@ Use the Remove-SPSiteMaster cmdlet to remove a site master from the database.
 
 ## EXAMPLES
 ### -----------------------EXAMPLE-----------------------------
-```
+```powershell
 $master = Get-SPSiteMaster -ContentDatabase WSS_Content | Select -First 1
 Remove-SPSiteMaster -ContentDatabase WSS_Content -SiteId $master.SiteId
 ```

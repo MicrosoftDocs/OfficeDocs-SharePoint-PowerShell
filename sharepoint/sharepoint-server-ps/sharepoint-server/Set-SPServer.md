@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spserver
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPServer
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Set-SPServer
@@ -30,7 +27,7 @@ The Set-SPServer cmdlet changes the role of the server in the farm by using the 
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
-```
+```powershell
 Set-SPServer -Role SingleServerFarm
 ```
 

@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchrankingmodel
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Get-SPEnterpriseSearchRankingModel
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Get-SPEnterpriseSearchRankingModel
@@ -33,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------ 
-```
+```powershell
 $ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
 $owner = Get-SPEnterpriseSearchOwner -Level ssa
 Get-SPEnterpriseSearchRankingModel -Identity '8f6fd0bc-06f9-43cf-bbab-08c377e083f4' -SearchApplication $ssa -Owner $owner
@@ -42,7 +39,7 @@ Get-SPEnterpriseSearchRankingModel -Identity '8f6fd0bc-06f9-43cf-bbab-08c377e083
 This example retrieves the ranking model on the search service application level with the identity 8f6fd0bc-06f9-43cf-bbab-08c377e083f4 for the search application Search Service Application.
 
 ### ------------------EXAMPLE 2------------------ 
-```
+```powershell
 $ssa = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application"
 $owner = Get-SPEnterpriseSearchOwner -Level ssa
 Get-SPEnterpriseSearchRankingModel -SearchApplication $ssa -Owner $owner
@@ -61,7 +58,7 @@ The type must be a valid GUID in the form 8f6fd0bc-06f9-43cf-bbab-08c377e083f4, 
 Type: RankingModelPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 1
@@ -79,7 +76,7 @@ A ranking model can be available in multiple scopes.
 Type: SearchObjectOwner
 Parameter Sets: (All)
 Aliases: o
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -97,7 +94,7 @@ The type must be a valid GUID in the form 9bf36458-fc99-4f7b-b060-867e5a63adce, 
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -115,7 +112,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

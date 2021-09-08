@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/stop-spservice
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Stop-SPService
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Stop-SPService
@@ -30,7 +27,7 @@ The Stop-SPService cmdlet disables a service in the farm. Service instances for 
 ## EXAMPLES
 
 ### ---------------EXAMPLE--------------
-```
+```powershell
 Stop-SPService -Identity "Microsoft SharePoint Foundation Sandboxed Code Service"
 ```
 

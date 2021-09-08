@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.WorkflowServices.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/copy-spactivitiestoworkflowservice
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Copy-SPActivitiesToWorkflowService
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Copy-SPActivitiesToWorkflowService
@@ -30,8 +27,8 @@ Copies Workflow activities from SharePoint Server to Workflow Manager.
 
 ## EXAMPLES
 
-### Example 1 
-```
+### ------------Example 1 -----------
+```powershell
 $credential = [System.Net.CredentialCache]::DefaultNetworkCredentials
 $site = Get-SPSite <siteurl>
 $proxy = Get-SPWorkflowServiceApplicationProxy
@@ -53,7 +50,7 @@ Type: String
 Parameter Sets: (All)
 Aliases: 
 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 
 Required: False
@@ -72,7 +69,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -88,7 +85,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -104,7 +101,7 @@ The credential used to connect to Workflow Manager.
 Type: ICredentials
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -120,7 +117,7 @@ Forces a specific Activity to be copied to Workflow Manager.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -137,7 +134,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -154,7 +151,7 @@ The Workflow Manager farm endpoint URL.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

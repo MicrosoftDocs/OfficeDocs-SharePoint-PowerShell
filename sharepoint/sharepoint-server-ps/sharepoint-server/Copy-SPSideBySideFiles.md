@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/copy-spsidebysidefiles
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Copy-SPSideBySideFiles
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Copy-SPSideBySideFiles
@@ -27,8 +24,8 @@ In SharePoint Server 2016, zero down time in-place upgrade is available. If the 
 
 ## EXAMPLES
 
-### Example 1 
-```
+### ------------Example 1 -----------
+```powershell
 Copy-SPSideBySideFiles -LogFile "C:\CopySideBySideFiles.log"
 ```
 

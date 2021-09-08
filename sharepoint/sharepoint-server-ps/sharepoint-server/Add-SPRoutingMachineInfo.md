@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/add-sproutingmachineinfo
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Add-SPRoutingMachineInfo
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Add-SPRoutingMachineInfo
@@ -33,14 +30,10 @@ Use the Add-SPRoutingMachineInfo cmdlet to add a new routing target to the farm 
 ## EXAMPLES
 
 ### -------------EXAMPLE-------------- 
-```
-C:\PS>$web=Get-SPWebApplication -Identity <URL of web application>
-
-C:\PS>$rm=Get-SPRequestManagementSettings -Identity $web
-
-C:\PS>Add-SPRoutingMachineInfo -RequestManagementSettings $rm -Name <MachineName> -Availability Available
-
-C:\PS>
+```powershell
+$web=Get-SPWebApplication -Identity <URL of web application>
+$rm=Get-SPRequestManagementSettings -Identity $web
+Add-SPRoutingMachineInfo -RequestManagementSettings $rm -Name <MachineName> -Availability Available
 ```
 
 This example adds a routing target for a specified identity to the farm.
@@ -54,7 +47,7 @@ Specifies the name of the request management settings object to add to the routi
 Type: SPRequestManagementSettingsPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -70,7 +63,7 @@ Specifies the name of the computer to add to the route.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 2
@@ -92,7 +85,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -113,7 +106,7 @@ The valid values are:
 Type: SPRoutingMachineAvailability
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -129,7 +122,7 @@ Specifies the port used by Request Manager to make an outgoing connection.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -151,7 +144,7 @@ The valid values are:
 Type: SPRoutingOutgoingScheme
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -168,7 +161,7 @@ If the static weight is higher, more requests will be routed to the computer.
 Type: Double
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

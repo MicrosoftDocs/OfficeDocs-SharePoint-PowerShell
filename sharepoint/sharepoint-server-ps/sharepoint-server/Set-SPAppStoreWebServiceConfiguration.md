@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spappstorewebserviceconfiguration
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPAppStoreWebServiceConfiguration
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Set-SPAppStoreWebServiceConfiguration
@@ -34,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
-```
+```powershell
 Set-SPAppStoreWebServiceConfiguration -Client=SP -ProxyVersion=16.1
 ```
 

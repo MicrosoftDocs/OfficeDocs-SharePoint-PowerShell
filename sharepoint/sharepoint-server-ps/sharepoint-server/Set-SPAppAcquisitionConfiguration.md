@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spappacquisitionconfiguration
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Set-SPAppAcquisitionConfiguration
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Set-SPAppAcquisitionConfiguration
@@ -40,14 +37,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------------EXAMPLE 1---------------------
-```
+```powershell
 Set-SPAppAcquisitionConfiguration -WebApplication https://localhost -Enable:$false
 ```
 
 This example disabled app purchases for the specified Web Application.
 
 ### --------------------EXAMPLE 2---------------------
-```
+```powershell
 Set-SPAppAcquisitionConfiguration -SiteSubscription https://localhost/sites/SharePointOnlineAdmin1 -Enable:$false
 ```
 
@@ -64,7 +61,7 @@ Specifies whether acquisition is enabled or disabled.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -81,7 +78,7 @@ Specifies the site collection for which to set app acquisition settings.
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: MarketplaceSettingsInSiteSubscription
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -100,7 +97,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -117,7 +114,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -134,7 +131,7 @@ Specifies the web application for which acquisitions settings are to be set.
 Type: SPWebApplicationPipeBind
 Parameter Sets: MarketplaceSettingsInWebApplication
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -152,7 +149,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

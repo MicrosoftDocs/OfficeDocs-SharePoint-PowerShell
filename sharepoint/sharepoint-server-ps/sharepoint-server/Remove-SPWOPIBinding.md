@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spwopibinding
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Remove-SPWOPIBinding
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer: 
 ---
 
 # Remove-SPWOPIBinding
@@ -51,7 +48,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------EXAMPLE 1-----------------
-```
+```powershell
 Remove-SPWOPIBinding -Application "Excel"
 ```
 
@@ -59,7 +56,7 @@ This example removes all bindings for Excel on the current SharePoint farm where
 
 
 ### --------------EXAMPLE 2-----------------
-```
+```powershell
 Remove-SPWOPIBinding -All:$true
 ```
 
@@ -67,7 +64,7 @@ This example removes all bindings on the current SharePoint farm where this cmdl
 
 
 ### --------------EXAMPLE 3-----------------
-```
+```powershell
 Get-SPWOPIBinding -Action "MobileView" | Remove-SPWOPIBinding
 ```
 
@@ -83,7 +80,7 @@ Specifies the binding.
 Type: SPWopiBindingPipeBind
 Parameter Sets: Identity
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 1
@@ -102,7 +99,7 @@ If you specify some actions but not others, some features in SharePoint may not 
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -118,7 +115,7 @@ Removes all bindings.
 Type: SwitchParameter
 Parameter Sets: RemoveAll
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -135,7 +132,7 @@ Possible applications are as follows: "Word," "Excel," "PowerPoint," or "OneNote
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -157,7 +154,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -174,7 +171,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -191,7 +188,7 @@ Run `Get-SPWOPIBinding` to get the list of file name extensions.
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -209,7 +206,7 @@ You may only want to use this parameter to remove bindings for OneNote.
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -225,7 +222,7 @@ Specifies the name of WOPI application (like Office Web Apps Server) to remove b
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -242,7 +239,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -258,7 +255,7 @@ Specifies the zone to remove bindings for.
 Type: String
 Parameter Sets: Filter
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

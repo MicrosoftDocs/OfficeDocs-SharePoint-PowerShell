@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/clear-spcontentdatabasesyncdata
 applicable: SharePoint Server 2019
 title: Clear-SPContentDatabaseSyncData
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Clear-SPContentDatabaseSyncData
@@ -27,7 +24,7 @@ Use the **Clear-SPContentDatabaseSyncData** to clear synchronization information
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### ------------EXAMPLE 1-----------
 ```powershell
  Clear-SPContentDatabaseSyncData -DaysSinceLastProfileSync 12
 ```
@@ -66,7 +63,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 Required: False
 Position: Named
 Default value: None
@@ -81,7 +78,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 Required: False
 Position: Named
 Default value: None
@@ -97,7 +94,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 Required: False
 Position: Named
 Default value: None

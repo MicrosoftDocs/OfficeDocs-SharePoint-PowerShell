@@ -1,13 +1,10 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spprojectqueuesettings
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Set-SPProjectQueueSettings
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Set-SPProjectQueueSettings
@@ -35,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 ## EXAMPLES
 
 ### ----------------------EXAMPLE-----------------------
-```
+```powershell
 Set-SPProjectQueueSettings -ServiceApplication "Project Service Application" -MaxDegreeOfConcurrency 6
 ```
 

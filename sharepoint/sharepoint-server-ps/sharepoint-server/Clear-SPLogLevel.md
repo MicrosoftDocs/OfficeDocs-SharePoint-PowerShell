@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/clear-sploglevel
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Clear-SPLogLevel
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Clear-SPLogLevel
@@ -34,28 +31,28 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------EXAMPLE 1----------------- 
-```
+```powershell
 Clear-SPLogLevel -Identity Cat1
 ```
 
 This example resets the log levels for a single category.
 
 ### --------------EXAMPLE 2----------------- 
-```
+```powershell
 "Cat1", "Cat2", "Cat3" | Clear-SPLogLevel
 ```
 
 This example resets the log levels for multiple categories.
 
 ### --------------EXAMPLE 3----------------- 
-```
+```powershell
 Get-SPLogLevel | Clear-SPLogLevel
 ```
 
 This example resets the log levels for all categories.
 
 ### --------------EXAMPLE 4----------------- 
-```
+```powershell
 Clear-SPLogLevel -Identity "SharePoint Server:Database"
 ```
 
@@ -76,7 +73,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -95,7 +92,7 @@ Providing an invalid category is a non-terminating error and will be ignored.
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -113,7 +110,7 @@ The user can retrieve one or more categories from the Get-SPLogLevel cmdlet, mod
 Type: PSObject
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/disable-spappautoprovision
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Disable-SPAppAutoProvision
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Disable-SPAppAutoProvision
@@ -33,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ---------------EXAMPLE 1-------------- 
-```
+```powershell
 Disable-SPAppAutoProvision
 ```
 
@@ -42,9 +39,8 @@ The app auto provisioning is enabled by default.
 This setting overrides site subscription level setting.
 
 ### ---------------EXAMPLE 2-------------- 
-```
-C:\PS>$subscription = Get-SPSiteSubscription https://Contoso.com
-
+```powershell
+$subscription = Get-SPSiteSubscription https://Contoso.com
 Disable-SPAppAutoProvision -SiteSubscription $subscription
 ```
 
@@ -66,7 +62,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -82,7 +78,7 @@ Specifies the site collection for which auto provisioning is to be disabled.
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
