@@ -5,9 +5,6 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-server/c
 applicable: SharePoint Server Subscription Edition
 title: Clear-SPCertificateNotificationContact
 schema: 2.0.0
-author:
-ms.author:
-ms.reviewer:
 ---
 
 # Clear-SPCertificateNotificationContact

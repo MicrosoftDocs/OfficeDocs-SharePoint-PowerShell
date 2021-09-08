@@ -5,9 +5,6 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-server/u
 applicable: SharePoint Server Subscription Edition
 title: Update-SPInfoPathFormTemplate
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Update-SPInfoPathFormTemplate

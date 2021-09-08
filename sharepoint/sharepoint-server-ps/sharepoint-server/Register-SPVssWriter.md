@@ -5,9 +5,6 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-server/r
 applicable: SharePoint Server Subscription Edition
 title: Register-SPVssWriter
 schema: 2.0.0
-author:
-ms.author:
-ms.reviewer:
 ---
 
 # Register-SPVssWriter

@@ -5,9 +5,6 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-server/d
 applicable: SharePoint Server Subscription Edition
 title: Disconnect-SPConfigurationDatabase
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Disconnect-SPConfigurationDatabase

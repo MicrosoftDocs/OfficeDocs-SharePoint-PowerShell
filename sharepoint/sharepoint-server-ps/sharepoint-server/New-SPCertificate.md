@@ -5,9 +5,6 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-server/n
 applicable: SharePoint Server Subscription Edition
 title: New-SPCertificate
 schema: 2.0.0
-author:
-ms.author:
-ms.reviewer:
 ---
 
 # New-SPCertificate

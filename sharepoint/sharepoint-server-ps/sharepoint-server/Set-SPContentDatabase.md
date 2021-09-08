@@ -5,9 +5,6 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-server/s
 applicable: SharePoint Server Subscription Edition
 title: Set-SPContentDatabase
 schema: 2.0.0
-author: serdarsoysal
-ms.author: serdars
-ms.reviewer:
 ---
 
 # Set-SPContentDatabase

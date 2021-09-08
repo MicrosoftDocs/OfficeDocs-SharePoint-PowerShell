@@ -5,9 +5,6 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-server/r
 applicable: SharePoint Server Subscription Edition
 title: Rename-SPCertificate
 schema: 2.0.0
-author:
-ms.author:
-ms.reviewer:
 ---
 
 # Rename-SPCertificate

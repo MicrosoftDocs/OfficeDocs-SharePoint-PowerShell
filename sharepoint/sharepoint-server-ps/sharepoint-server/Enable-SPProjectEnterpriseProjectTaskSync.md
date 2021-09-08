@@ -5,9 +5,6 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-server/e
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Enable-SPProjectEnterpriseProjectTaskSync
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Enable-SPProjectEnterpriseProjectTaskSync

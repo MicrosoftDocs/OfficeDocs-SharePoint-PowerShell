@@ -5,9 +5,6 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-server/s
 applicable: SharePoint Server Subscription Edition
 title: Set-SPRemoteShareBlobStore
 schema: 2.0.0
-author:
-ms.author:
-ms.reviewer:
 ---
 
 # Set-SPRemoteShareBlobStore

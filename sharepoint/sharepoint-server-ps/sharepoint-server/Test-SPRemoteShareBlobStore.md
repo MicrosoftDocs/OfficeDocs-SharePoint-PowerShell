@@ -5,9 +5,6 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-server/t
 applicable: SharePoint Server Subscription Edition
 title: Test-SPRemoteShareBlobStore
 schema: 2.0.0
-author:
-ms.author:
-ms.reviewer:
 ---
 
 # Test-SPRemoteShareBlobStore

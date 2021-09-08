@@ -5,9 +5,6 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-server/u
 applicable: SharePoint Server Subscription Edition
 title: Update-SPAzureBlobConfigLocatorEx1
 schema: 2.0.0
-author:
-ms.author:
-ms.reviewer:
 ---
 
 # Update-SPAzureBlobConfigLocatorEx1

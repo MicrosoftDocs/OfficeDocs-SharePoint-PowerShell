@@ -5,9 +5,6 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-server/s
 applicable: SharePoint Server Subscription Edition
 title: Stop-SPCacheCluster
 schema: 2.0.0
-author:
-ms.author:
-ms.reviewer:
 ---
 
 # Stop-SPCacheCluster

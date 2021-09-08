@@ -5,9 +5,6 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-server/m
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Move-SPAppManagementData
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer: 
 ---
 
 # Move-SPAppManagementData

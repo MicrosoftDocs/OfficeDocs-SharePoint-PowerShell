@@ -5,9 +5,6 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-server/s
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Set-SPOfficeStoreAppsDefaultActivation
 schema: 2.0.0
-author: trent-green
-ms.author: trgreen
-ms.reviewer:
 ---
 
 # Set-SPOfficeStoreAppsDefaultActivation

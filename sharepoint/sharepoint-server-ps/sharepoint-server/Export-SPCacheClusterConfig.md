@@ -5,9 +5,6 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-server/e
 applicable: SharePoint Server Subscription Edition
 title: Export-SPCacheClusterConfig
 schema: 2.0.0
-author:
-ms.author:
-ms.reviewer:
 ---
 
 # Export-SPCacheClusterConfig

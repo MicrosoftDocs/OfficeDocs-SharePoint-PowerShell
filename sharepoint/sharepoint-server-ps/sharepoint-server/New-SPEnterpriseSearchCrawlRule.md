@@ -5,9 +5,6 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-server/n
 applicable: SharePoint Server Subscription Edition
 title: New-SPEnterpriseSearchCrawlRule
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer: 
 ---
 
 # New-SPEnterpriseSearchCrawlRule

@@ -5,9 +5,6 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-server/g
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPWebTemplatesEnabledForSiteMaster
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Get-SPWebTemplatesEnabledForSiteMaster
