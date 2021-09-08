@@ -4,7 +4,7 @@
       {
         "files": ["**/*.md", "**/*.yml"],
         "src": "docs-conceptual",
-        "version": "sharepoint-server-ps",
+        "version": "sharepoint-ps",
         "dest": "sharepoint",
         "exclude": [
           "**/obj/**",
@@ -17,21 +17,21 @@
       {
         "files": ["toc.yml"],
         "src": "docs-conceptual",
-        "version": "sharepoint-server-ps",
-        "dest": "sharepoint/sharepoint-server-ps"
+        "version": "sharepoint-ps",
+        "dest": "sharepoint/sharepoint-ps"
       },
       {
       "files": ["**/*.yml"],
       "exclude": ["toc.yml"],
-      "src": "sharepoint-server-ps",
-      "version": "sharepoint-server-ps",
+      "src": "sharepoint-ps",
+      "version": "sharepoint-ps",
       "dest": "module"
     },
     {
       "files": ["toc.yml"],
-      "src": "sharepoint-server-ps",
-      "version": "sharepoint-server-ps",
-      "dest": "module/sharepoint-server-ps"
+      "src": "sharepoint-ps",
+      "version": "sharepoint-ps",
+      "dest": "module/sharepoint-ps"
     }
     ],
     "resource": [
@@ -48,7 +48,7 @@
     ],
     "versions": {
       "sharepoint-server-ps": {
-        "dest": "sharepoint-server-ps"
+        "dest": "sharepoint-ps"
       }
     },
     "overwrite": [],
@@ -66,6 +66,6 @@
     },
     "fileMetadata": {},
     "template": [],
-    "dest": "sharepoint-server-ps"
+    "dest": "sharepoint-ps"
   }
 }
