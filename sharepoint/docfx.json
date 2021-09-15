@@ -14,25 +14,12 @@
           "LICENSE-CODE",
           "ThirdPartyNotices"]
       },
-      {
-        "files": ["toc.yml"],
-        "src": "docs-conceptual",
-        "version": "sharepoint-ps",
-        "dest": "sharepoint/sharepoint-ps"
-      },
-      {
-      "files": ["**/*.yml"],
-      "exclude": ["toc.yml"],
-      "src": "sharepoint-ps",
-      "version": "sharepoint-ps",
-      "dest": "module"
-    },
-    {
-      "files": ["toc.yml"],
-      "src": "sharepoint-ps",
-      "version": "sharepoint-ps",
-      "dest": "module/sharepoint-ps"
-    }
+      {"files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/sharepoint-ps", "version": "sharepoint-ps", "dest": "sharepoint/sharepointserver" },
+      {"files": ["**/*.yml"], "src": "sharepoint-ps", "version": "sharepoint-ps", "exclude": ["docs-conceptual/**"], "dest": "module"},
+
+      {"files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/sharepoint-server-ps", "version": "sharepoint-server-ps", "dest": "sharepoint/sharepointserver" },
+      {"files": ["**/*.yml"], "src": "sharepoint-server-ps", "version": "sharepoint-server-ps", "exclude": ["docs-conceptual/**"], "dest": "module"}
+
     ],
     "resource": [
       {
