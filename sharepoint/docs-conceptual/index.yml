@@ -41,9 +41,9 @@ landingContent:
       - linkListType: reference
         links:
           - text: Overview
-            url: /powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets         
+            url: /powershell/sharepoint/sharepointserver/sharepoint-server-cmdlets         
           - text: Cmdlet reference
-            url: /powershell/module/sharepoint-server
+            url: /powershell/module/sharepointserver
 
  # Card
   - title: SharePoint Patterns and Practices (PnP)

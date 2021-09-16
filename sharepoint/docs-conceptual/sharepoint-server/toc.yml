@@ -1,5 +1,5 @@
 items:
-- name: SharePoint PowerShell - sharepoint-server-ps
+- name: SharePoint PowerShell - sharepoint-server
   href: index.yml
 - name: SharePoint in Microsoft 365
   items:
@@ -10,5 +10,5 @@ items:
 - name: SharePoint PnP
   href: sharepoint-pnp/sharepoint-pnp-cmdlets.md
 - name: SharePoint Server
-  href: sharepoint-server/sharepoint-server-cmdlets.md
+  href: sharepointserver/sharepoint-server-cmdlets.md
 
