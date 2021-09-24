@@ -1,13 +1,10 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spprojectserviceapplication
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: New-SPProjectServiceApplication
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer: 
 ---
 
 # New-SPProjectServiceApplication
@@ -32,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1-----------------------
-```
+```powershell
 New-SPProjectServiceApplication -Name "PsiApplication" -ApplicationPool "PsiApplicationPool" -Proxy
 ```
 
@@ -40,7 +37,7 @@ This example creates a Project Server Service application with the name PsiAppli
 
 
 ### ------------------EXAMPLE 2-----------------------
-```
+```powershell
 Get-SPIisWebServiceApplicationPool "PsiApplicationPool" | New-SPProjectServiceApplication -Name "PsiApplication"
 ```
 

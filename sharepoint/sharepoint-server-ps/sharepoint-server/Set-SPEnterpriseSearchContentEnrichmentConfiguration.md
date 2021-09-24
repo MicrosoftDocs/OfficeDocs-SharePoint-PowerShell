@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spenterprisesearchcontentenrichmentconfiguration
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Set-SPEnterpriseSearchContentEnrichmentConfiguration
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Set-SPEnterpriseSearchContentEnrichmentConfiguration
@@ -35,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1 ------------------
-```
+```powershell
 $config = New-SPEnterpriseSearchContentEnrichmentConfiguration
 $config.Endpoint = "https://server/service"
 $config.InputProperties = "Title", "Url"
@@ -52,8 +49,8 @@ The SearchServiceApplication object is retrieved and used for storing the newly 
 
 
 ### ------------------EXAMPLE 2 ------------------
-```
-C:\PS>$config = New-SPEnterpriseSearchContentEnrichmentConfiguration
+```powershell
+$config = New-SPEnterpriseSearchContentEnrichmentConfiguration
 $config.Endpoint = "https://server/service"
 $config.InputProperties = "Title"
 $config.OutputProperties = "Title"
@@ -79,7 +76,7 @@ Specifies the ContentEnrichmentConfiguration that should be stored in the Search
 Type: ContentEnrichmentConfigurationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -95,7 +92,7 @@ Specifies the SearchServiceApplication that contains the ContentEnrichmentConfig
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -117,7 +114,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -134,7 +131,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -151,7 +148,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

@@ -1,13 +1,10 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spprojectenterpriseprojecttasksync
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Get-SPProjectEnterpriseProjectTaskSync
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Get-SPProjectEnterpriseProjectTaskSync
@@ -27,8 +24,8 @@ Returns whether the task list sync between Project Web App and project sites is 
 
 ## EXAMPLES
 
-### Example 1 
-```
+### ------------Example 1 -----------
+```powershell
 Get-SPProjectEnterpriseProjectTaskSync -Url https://contoso/sites/PWA
 ```
 

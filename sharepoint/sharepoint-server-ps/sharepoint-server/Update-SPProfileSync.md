@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/update-spprofilesync
 applicable: 
 title: Update-SPProfileSync
@@ -26,15 +26,15 @@ The Update-SPProfileSync cmdlet updates the configuration of the User Profile Sy
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
+### ------------EXAMPLE 1-----------
+```powershell
 Update-SPProfileSync -IgnoreIsActive:$false
 ```
 
 This example updates the User Profile Synchronization job marking it to sync all users irrespective of their activity, without prompting for user confirmation.
 
-### EXAMPLE 2
-```
+### ------------EXAMPLE 2-----------
+```powershell
 Update-SPProfileSync -SynchronizationTiming "every 15 minutes"
 ```
 

@@ -1,38 +1,13 @@
 {
   "build": {
     "content": [
-      {
-        "files": ["**/*.md", "**/*.yml"],
-        "src": "docs-conceptual",
-        "version": "sharepoint-server-ps",
-        "dest": "sharepoint",
-        "exclude": [
-          "**/obj/**",
-          "**/includes/**",
-          "README.md",
-          "LICENSE",
-          "LICENSE-CODE",
-          "ThirdPartyNotices"]
-      },
-      {
-        "files": ["toc.yml"],
-        "src": "docs-conceptual",
-        "version": "sharepoint-server-ps",
-        "dest": "sharepoint/sharepoint-server-ps"
-      },
-      {
-      "files": ["**/*.yml"],
-      "exclude": ["toc.yml"],
-      "src": "sharepoint-server-ps",
-      "version": "sharepoint-server-ps",
-      "dest": "module"
-    },
-    {
-      "files": ["toc.yml"],
-      "src": "sharepoint-server-ps",
-      "version": "sharepoint-server-ps",
-      "dest": "module/sharepoint-server-ps"
-    }
+
+      {"files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual", "dest": "sharepoint" },
+        
+      {"files": ["**/*.yml"], "src": "sharepoint-ps", "version": "sharepoint-ps", "exclude": ["docs-conceptual"], "dest": "module"},
+
+      {"files": ["**/*.yml"], "src": "sharepoint-server-ps", "version": "sharepoint-server-ps", "exclude": ["docs-conceptual"], "dest": "module"}
+
     ],
     "resource": [
       {
@@ -49,6 +24,9 @@
     "versions": {
       "sharepoint-server-ps": {
         "dest": "sharepoint-server-ps"
+      },
+      "sharepoint-ps": {
+        "dest": "sharepoint-ps"
       }
     },
     "overwrite": [],
@@ -59,10 +37,13 @@
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/OfficeDocs-SharePoint-powershell",
       "feedback_product_url": "https://github.com/MicrosoftDocs/OfficeDocs-SharePoint-powershell/issues",
-      "ms.devlang": "powershell"
+      "author": "techwriter40",
+      "ms.author": "pamgreen",
+      "ms.devlang": "powershell",
+      "ms.prod": "sharepoint-server-itpro"
     },
     "fileMetadata": {},
     "template": [],
-    "dest": "sharepoint-server-ps"
+    "dest": "sharepointps"
   }
 }

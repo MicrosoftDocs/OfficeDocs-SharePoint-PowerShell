@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-splogevent
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Get-SPLogEvent
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Get-SPLogEvent
@@ -48,42 +45,42 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------EXAMPLE 1----------------- 
-```
+```powershell
 Get-SPLogEvent -MinimumLevel "Warning"
 ```
 
 This example returns all log entries equal to or more severe than Warning from the default log directory.
 
 ### --------------EXAMPLE 2----------------- 
-```
+```powershell
 Get-SPLogEvent -Directory "C:\Logs" | Where-Object {$_.Level -eq "Warning"}
 ```
 
 This example returns all warning entries from log files in the C:\Logs directory.
 
 ### --------------EXAMPLE 3-----------------
-```
+```powershell
 Get-SPLogEvent -StartTime "12/04/2007 17:00" -EndTime "12/04/2007 18:00"
 ```
 
 This example returns error entries that occurred during a particular time range, which is culture-specific to the United States.
 
 ### --------------EXAMPLE 4----------------- 
-```
+```powershell
 Get-SPLogEvent -ContextKey @("UserName" ,"SiteName")
 ```
 
 This example returns the contents of the most recent log file and adds the specified context key data.
 
 ### --------------EXAMPLE 5----------------- 
-```
+```powershell
 Get-SPLogEvent | Where-Object {$_.Level -eq "Error" -and {$_.Area -eq "SharePoint Foundation "}
 ```
 
 This example returns all error entries related to SharePoint Foundation.
 
 ### --------------EXAMPLE 6----------------- 
-```
+```powershell
 Get-SPLogEvent -ContextKey @("Name") | %{$_.ToString() + "'t" + $_.Context["Name"]}
 ```
 
@@ -104,7 +101,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -120,7 +117,7 @@ Returns each record as a separate string
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -136,7 +133,7 @@ Specifies that context data should be added to the results for the specified Con
 Type: String[]
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -152,7 +149,7 @@ Lists log files from an alternate directory (any directory other than the config
 Type: String
 Parameter Sets: Directory
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -169,7 +166,7 @@ The valid values are Error or Warning.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -185,7 +182,7 @@ The type must be a valid DateTime format that is culture-specific to the adminis
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -201,7 +198,7 @@ Specifies a specific file to query records from.
 Type: String
 Parameter Sets: File
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -217,7 +214,7 @@ The type must be a valid DateTime format that is culture-specific to the adminis
 Type: DateTime
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

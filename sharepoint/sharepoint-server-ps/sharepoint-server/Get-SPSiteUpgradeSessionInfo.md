@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spsiteupgradesessioninfo
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Get-SPSiteUpgradeSessionInfo
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Get-SPSiteUpgradeSessionInfo
@@ -47,18 +44,16 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### -----------EXAMPLE 1---------- 
-```
-C:\PS>$db = Get-SPContentDatabase -Identity wss_content
-
+```powershell
+$db = Get-SPContentDatabase -Identity wss_content
 Get-SPSiteUpgradeSessionInfo -ContentDatabase $db
 ```
 
 This example returns siteupgradeinfo for every SPContentDatabase returned from Get-SPContentDatabase cmdlet.
 
 ### -----------EXAMPLE 2---------- 
-```
-C:\PS>$site=Get-SPSite -Identity https://localhost
-
+```powershell
+$site=Get-SPSite -Identity https://localhost
 Get-SPSiteUpgradeSessionInfo -Site $site
 ```
 
@@ -73,7 +68,7 @@ Specifies the GUID of the content database from which to list site collections.T
 Type: SPContentDatabasePipeBind
 Parameter Sets: ContentDB
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -87,7 +82,7 @@ Accept wildcard characters: False
 Type: SPSitePipeBind
 Parameter Sets: Site
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -109,7 +104,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -125,7 +120,7 @@ Specifies to hide site collections that upgrade has not started.
 Type: SwitchParameter
 Parameter Sets: ContentDB
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -141,7 +136,7 @@ Specifies to show site collections that has completed upgrade.
 Type: SwitchParameter
 Parameter Sets: ContentDB
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -157,7 +152,7 @@ Specifies to show site collections that have failed upgrade.
 Type: SwitchParameter
 Parameter Sets: ContentDB
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -173,7 +168,7 @@ Displays site collections that are in the process of being upgraded.
 Type: SwitchParameter
 Parameter Sets: ContentDB
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -189,7 +184,7 @@ Specifies to limit the result to site collections within the site subscription.
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: ContentDB
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchfileformat
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Get-SPEnterpriseSearchFileFormat
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Get-SPEnterpriseSearchFileFormat
@@ -38,15 +35,15 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### -------------EXAMPLE 1------------- 
-```
-C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
+```powershell
+$ssa = Get-SPEnterpriseSearchServiceApplication
 Get-SPEnterpriseSearchFileFormat -SearchApplication $ssa
 ```
 
 This example uses the Get-SPEnterpriseSearchFileFormat to retrieve all parseable file formats in the search service application referenced by $ssa.
 
 ### -------------EXAMPLE 2------------- 
-```
+```powershell
 $ssa = Get-SPEnterpriseSearchServiceApplication
 Get-SPEnterpriseSearchFileFormat -SearchApplication $ssa -Identity DOCX
 ```
@@ -62,7 +59,7 @@ Specifies the format ID for which to retrieve file format information.
 Type: DocumentParserFileFormatPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 1
@@ -81,7 +78,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -99,7 +96,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

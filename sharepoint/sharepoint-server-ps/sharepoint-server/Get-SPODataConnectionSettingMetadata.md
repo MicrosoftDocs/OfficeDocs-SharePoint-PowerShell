@@ -1,13 +1,10 @@
 ---
 external help file: sharepointonline.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spodataconnectionsettingmetadata
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Get-SPODataConnectionSettingMetadata
 schema: 2.0.0
-author: trent-green
-ms.author: trgreen
-ms.reviewer:
 ---
 
 # Get-SPODataConnectionSettingMetadata
@@ -36,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
-```
+```powershell
 Get-SPODataConnectionSettingMetadata -ServiceContext "http://contoso" -Name "ContosoServiceApp"
 ```
 

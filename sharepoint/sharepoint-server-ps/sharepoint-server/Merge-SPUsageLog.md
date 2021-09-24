@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/merge-spusagelog
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Merge-SPUsageLog
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer: 
 ---
 
 # Merge-SPUsageLog
@@ -34,8 +31,8 @@ This cmdlet requires PowerShell Remoting to be enabled.
 
 ## EXAMPLES
 
-### Example 1 
-```
+### ------------Example 1 -----------
+```powershell
 Merge-SPUsageLog -Identity 'Timer Jobs' -Servers SPSERVER1
 ```
 

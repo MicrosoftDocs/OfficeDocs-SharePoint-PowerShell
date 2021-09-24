@@ -1,13 +1,10 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/disable-projectserverlicense
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Disable-ProjectServerLicense
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Disable-ProjectServerLicense
@@ -26,8 +23,8 @@ Disables Project Server functionality across the farm.
 
 ## EXAMPLES
 
-### Example 1 
-```
+### ------------Example 1 -----------
+```powershell
  Disable-ProjectServerLicense
 ```
 

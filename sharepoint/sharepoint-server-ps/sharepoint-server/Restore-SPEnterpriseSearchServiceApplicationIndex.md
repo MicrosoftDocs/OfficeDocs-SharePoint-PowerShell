@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/restore-spenterprisesearchserviceapplicationindex
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Restore-SPEnterpriseSearchServiceApplicationIndex
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer: 
 ---
 
 # Restore-SPEnterpriseSearchServiceApplicationIndex
@@ -48,7 +45,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------
-```
+```powershell
 $ssa = Get-SPEnterpriseSearchServiceApplication
 $handle = Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -BackupFolder "\\sample\backup\spbr0000"
 Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -Handle $handle
@@ -58,7 +55,7 @@ This example starts a restore of the search index in the default search service 
 
 
 ### ------------------EXAMPLE 2------------------
-```
+```powershell
 $handle = Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -BackupFolder "\\sample\backup\spbr0000"
 Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication "Search Service Application" -Handle $handle
 ```
@@ -75,7 +72,7 @@ Specifies the search service application that contains the index files that shou
 Type: SearchServiceApplication
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -91,7 +88,7 @@ Specifies the full file path of the backup files.
 Type: String
 Parameter Sets: Restore
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 2
@@ -107,7 +104,7 @@ A handle returned from an initial call using Parameter set 1.
 Type: String
 Parameter Sets: RestoreProgress
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 2
@@ -123,7 +120,7 @@ Specifies a switch to restore all replicas, not just the primary.
 Type: SwitchParameter
 Parameter Sets: Restore
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 3
@@ -141,7 +138,7 @@ Moving may be faster than copying.
 Type: SwitchParameter
 Parameter Sets: Restore
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 4
@@ -157,7 +154,7 @@ Specifies the number of times to retry if temporary failure occurs.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 5
@@ -173,7 +170,7 @@ Seconds to pause between retries if temporary failure occurs.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 6
@@ -195,7 +192,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -212,7 +209,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -229,7 +226,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

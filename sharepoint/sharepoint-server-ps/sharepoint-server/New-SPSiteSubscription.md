@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spsitesubscription
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: New-SPSiteSubscription
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer: 
 ---
 
 # New-SPSiteSubscription
@@ -36,17 +33,15 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1-----------------------
-```
-
+```powershell
 $subscription = New-SPSiteSubscription
-
 ```
 
 This example creates a new site subscription.
 
 
 ### ------------------EXAMPLE 2-----------------------
-```
+```powershell
 $subscription = New-SPSiteSubscription
 Set-SPSite -Identity https://siteUrl -SiteSubscription $subscription
 ```
@@ -55,7 +50,7 @@ This example creates a new Site Subscription and sets it on the site collection 
 
 
 ### ------------------EXAMPLE 3-----------------------
-```
+```powershell
 New-SPSite -URL https://siteUrl -OwnerAlias "DOMAIN\JDow" -Language 1033 -SiteSubscription (New-SPSiteSubscription)
 ```
 
@@ -77,7 +72,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

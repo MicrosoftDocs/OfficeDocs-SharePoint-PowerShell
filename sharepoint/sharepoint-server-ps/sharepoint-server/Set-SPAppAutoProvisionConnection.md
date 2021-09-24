@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spappautoprovisionconnection
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Set-SPAppAutoProvisionConnection
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Set-SPAppAutoProvisionConnection
@@ -58,7 +55,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### --------------------EXAMPLE 1---------------------
-```
+```powershell
 Set-SpAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost -Password passname -Username <username>
 ```
 
@@ -66,9 +63,8 @@ This example configures remote web host to be used provision apps that use this 
 
 
 ### --------------------EXAMPLE 2---------------------
-```
-C:\PS>$subscription = Get-SPSiteSubscription https://Contoso.com
-
+```powershell
+$subscription = Get-SPSiteSubscription https://Contoso.com
 Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost -Password passname -Username <username> -SiteSubscription $subscription
 ```
 
@@ -76,7 +72,7 @@ This example configures remote web host to be used provision apps that use this 
 
 
 ### --------------------EXAMPLE 3---------------------
-```
+```powershell
 Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost
 ```
 
@@ -84,7 +80,7 @@ This example updates the endpoint of the already configured remote web host serv
 
 
 ### --------------------EXAMPLE 4---------------------
-```
+```powershell
 Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -Remove
 ```
 
@@ -100,7 +96,7 @@ Specifies the connection type to provision.
 Type: ConnectionTypes
 Parameter Sets: WebHostEndPoint, WebHostSetup, WebHostCredential
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -116,7 +112,7 @@ Specifies the end point of the provision connection.
 Type: String
 Parameter Sets: WebHostEndPoint, WebHostSetup
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -132,7 +128,7 @@ Specifies the password for the provision connection.
 Type: String
 Parameter Sets: WebHostSetup, WebHostCredential
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -148,7 +144,7 @@ Removes the auto provision connection of the app.
 Type: SwitchParameter
 Parameter Sets: Remove
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -164,7 +160,7 @@ Specifies the user name of the connection.
 Type: String
 Parameter Sets: WebHostSetup, WebHostCredential
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -186,7 +182,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -202,7 +198,7 @@ Specifies the site collection for which the provision connection is to be associ
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spappinstance
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Get-SPAppInstance
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Get-SPAppInstance
@@ -48,7 +45,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### -----------EXAMPLE 1----------- 
-```
+```powershell
 Get-SPAppInstance -Web https://localhost
 ```
 
@@ -56,7 +53,7 @@ This example returns a collection if more than one app is installed on https://l
 If only one app is installed, a single object is returned.
 
 ### -----------EXAMPLE 2----------- 
-```
+```powershell
 Get-SPAppInstance -AppInstanceId $instance.Id
 ```
 
@@ -71,7 +68,7 @@ Specifies the App instance for which to find metadata.
 Type: SPAppInstance
 Parameter Sets: IdentityParameterSet
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -89,7 +86,7 @@ Subsites are not included.
 Type: SPSitePipeBind
 Parameter Sets: SiteAndIdParameterSet
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -107,7 +104,7 @@ This parameter returns metadata for all instances of an app.
 Type: SPApp
 Parameter Sets: WebParameterSet
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -129,7 +126,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -145,7 +142,7 @@ Specifies the App Instance ID to display.
 Type: Guid
 Parameter Sets: SiteAndIdParameterSet
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -161,7 +158,7 @@ Specifies the SPWeb object.
 Type: SPWebPipeBind
 Parameter Sets: WebParameterSet
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named

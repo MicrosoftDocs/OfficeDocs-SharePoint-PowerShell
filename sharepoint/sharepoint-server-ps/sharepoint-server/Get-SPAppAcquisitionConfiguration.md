@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spappacquisitionconfiguration
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: Get-SPAppAcquisitionConfiguration
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Get-SPAppAcquisitionConfiguration
@@ -41,7 +38,7 @@ Use the `Get-SPAppAcquisitionConfiguration` cmdlet to return app acquisition set
 ## EXAMPLES
 
 ### ------------EXAMPLE 1------- 
-```
+```powershell
 Get-SPAppAcquisitionConfiguration -WebApplication https://localhost
 ```
 
@@ -49,7 +46,7 @@ This example returns app acquisition settings for the specified web application.
 
 
 ### ------------EXAMPLE 2------- 
-```
+```powershell
 Get-SPAppAcquisitionConfiguration -SiteSubscription https://localhost/sites/SharePointOnlineAdmin
 ```
 
@@ -65,7 +62,7 @@ Specifies the site collection for which app acquisition settings are to be retur
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: MarketplaceSettingsInSiteSubscription
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -84,7 +81,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -101,7 +98,7 @@ Specifies the web application for which app acquisition settings are to be retur
 Type: SPWebApplicationPipeBind
 Parameter Sets: MarketplaceSettingsInWebApplication
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named

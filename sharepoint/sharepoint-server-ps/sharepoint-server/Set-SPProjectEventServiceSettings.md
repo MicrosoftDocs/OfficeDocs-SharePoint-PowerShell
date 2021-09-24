@@ -1,13 +1,10 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spprojecteventservicesettings
 applicable: Project Server 2016, Project Server 2019
 title: Set-SPProjectEventServiceSettings
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Set-SPProjectEventServiceSettings
@@ -28,7 +25,7 @@ Allows you to change the Microsoft Project Server Events Service 2016 TCP port s
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
-```
+```powershell
 Set-SPProjectEventServiceSettings -NetTcpPort 16100
 ```
 

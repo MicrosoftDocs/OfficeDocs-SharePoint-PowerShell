@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spdiagnosticsperformancecounter
-applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+applicable: SharePoint Server Subscription Edition
 title: Get-SPDiagnosticsPerformanceCounter
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Get-SPDiagnosticsPerformanceCounter
@@ -39,21 +36,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ------------------EXAMPLE 1------------------ 
-```
+```powershell
 Get-SPDiagnosticsPerformanceCounter
 ```
 
 This example gets the performance counter settings for front end Web servers and database servers.
 
 ### ------------------EXAMPLE 2------------------ 
-```
+```powershell
 Get-SPDiagnosticsPerformanceCounter -WebFrontEnd
 ```
 
 This example gets the performance counter settings for front end Web servers.
 
 ### ------------------EXAMPLE 3------------------ 
-```
+```powershell
 Get-SPDiagnosticsPerformanceCounter -DatabaseServer
 ```
 
@@ -70,7 +67,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -86,7 +83,7 @@ Returns performance counters collected for the database servers in the farm.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -102,7 +99,7 @@ Returns performance counters collected for the front end Web servers in the farm
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

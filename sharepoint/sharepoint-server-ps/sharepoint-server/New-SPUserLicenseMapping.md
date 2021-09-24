@@ -1,13 +1,10 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spuserlicensemapping
-Applicable: SharePoint Server Subscription edition
+applicable: SharePoint Server Subscription Edition
 title: New-SPUserLicenseMapping
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer: 
 ---
 
 # New-SPUserLicenseMapping
@@ -62,7 +59,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### ----------------------- EXAMPLE---------------------------)
-```
+```powershell
 $a = New-SPUserLicenseMapping -SecurityGroup EntSecGroup -License Enterprise
 $a | Add-SPUserLicenseMapping
 ```
@@ -80,7 +77,7 @@ The value must be an authentic claims principal.
 Type: SPClaim
 Parameter Sets: TrustIdentity
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -97,7 +94,7 @@ The value must be an authentic name of a claim type.
 Type: String
 Parameter Sets: ClaimsValues
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -114,7 +111,7 @@ For the full list of supported licenses on a SharePoint farm, see the `Get-SPUse
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -131,7 +128,7 @@ The value must be the authentic name of an original issuer.
 Type: String
 Parameter Sets: ClaimsValues
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -148,7 +145,7 @@ The value must be an authentic name of a forms-based role.
 Type: String
 Parameter Sets: FormsAuth
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -165,7 +162,7 @@ The value must be an authentic name of a role provider.
 Type: String
 Parameter Sets: FormsAuth
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -182,7 +179,7 @@ The value must be a name of an Active Directory security group.
 Type: String
 Parameter Sets: WindowsAuth
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -199,7 +196,7 @@ The value must be an authentic claim value.
 Type: String
 Parameter Sets: ClaimsValues
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -221,7 +218,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -238,7 +235,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -255,7 +252,7 @@ The value must be an authentic name of a claim value type.
 Type: String
 Parameter Sets: ClaimsValues
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -274,7 +271,7 @@ The type must be an URL in the form http://server_name or http://server_name/sit
 Type: SPWebApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -291,7 +288,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription edition
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

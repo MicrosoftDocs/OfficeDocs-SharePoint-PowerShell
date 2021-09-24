@@ -1,13 +1,10 @@
 ---
 external help file: sharepointserver.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spofficestoreappsdefaultactivation
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Get-SPOfficeStoreAppsDefaultActivation
 schema: 2.0.0
-author: trent-green
-ms.author: trgreen
-ms.reviewer:
 ---
 
 # Get-SPOfficeStoreAppsDefaultActivation
@@ -44,14 +41,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
-```
+```powershell
 Get-SPOfficeStoreAppsDefaultActivation -WebApplication https://sphvm-8044
 ```
 
 This examples returns the setting for the web application https://sphvm-8044.
 
 ### -----------------------EXAMPLE 2-----------------------------
-```
+```powershell
 Get-SPOfficeStoreAppsDefaultActivation -SiteSubscription efca5b88-b3a3-448d-afbc-ef620f4744f1
 ```
 

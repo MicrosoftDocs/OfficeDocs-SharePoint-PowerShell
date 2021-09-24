@@ -1,13 +1,10 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spprojectisemailnotificationenabled
 applicable: Project Server 2016, Project Server 2019
 title: Get-SPProjectIsEmailNotificationEnabled
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer:
 ---
 
 # Get-SPProjectIsEmailNotificationEnabled
@@ -27,8 +24,8 @@ Returns the Project Web App site level setting for email notifications. True if 
 
 ## EXAMPLES
 
-### Example 1 
-```
+### ------------Example 1 -----------
+```powershell
 Get-SPProjectIsEmailNotificationEnabled -Url https://contoso/sites/pwa
 ```
 

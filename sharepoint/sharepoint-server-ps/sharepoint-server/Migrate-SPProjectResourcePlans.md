@@ -1,13 +1,10 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-Module Name: Microsoft.SharePoint.Powershell
+module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/migrate-spprojectresourceplans
 applicable: Project Server 2016, Project Server 2019
 title: Migrate-SPProjectResourcePlans
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
-ms.reviewer: 
 ---
 
 # Migrate-SPProjectResourcePlans
@@ -27,8 +24,8 @@ Migrates the published resource plan assignment data to engagements. Run after d
 
 ## EXAMPLES
 
-### Example 1 
-```
+### ------------Example 1 -----------
+```powershell
 Migrate-SPProjectResourcePlans -Url https://pwa_site
 ```
 Migrates the Project Resource Plans on the Project Web App site https://pwa_site.
