@@ -2,11 +2,11 @@
   "build": {
     "content": [
 
-      {"files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/sharepoint-ps", "version": "sharepoint-ps", "dest": "sharepoint" },
-      {"files": ["**/*.yml"], "src": "sharepoint-ps", "version": "sharepoint-ps", "exclude": ["docs-conceptual/**"], "dest": "module"},
+      {"files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual", "dest": "sharepoint" },
+        
+      {"files": ["**/*.yml"], "src": "sharepoint-ps", "version": "sharepoint-ps", "exclude": ["docs-conceptual"], "dest": "module"},
 
-      {"files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual/sharepoint-server-ps", "version": "sharepoint-server-ps", "dest": "sharepoint" },
-      {"files": ["**/*.yml"], "src": "sharepoint-server-ps", "version": "sharepoint-server-ps", "exclude": ["docs-conceptual/**"], "dest": "module"}
+      {"files": ["**/*.yml"], "src": "sharepoint-server-ps", "version": "sharepoint-server-ps", "exclude": ["docs-conceptual"], "dest": "module"}
 
     ],
     "resource": [
