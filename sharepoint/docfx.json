@@ -1,38 +1,13 @@
 {
   "build": {
     "content": [
-      {
-        "files": ["**/*.md", "**/*.yml"],
-        "src": "docs-conceptual",
-        "version": "sharepoint-ps",
-        "dest": "sharepoint",
-        "exclude": [
-          "**/obj/**",
-          "**/includes/**",
-          "README.md",
-          "LICENSE",
-          "LICENSE-CODE",
-          "ThirdPartyNotices"]
-      },
-      {
-        "files": ["toc.yml"],
-        "src": "docs-conceptual",
-        "version": "sharepoint-ps",
-        "dest": "sharepoint/sharepoint-ps"
-      },
-      {
-      "files": ["**/*.yml"],
-      "exclude": ["toc.yml"],
-      "src": "sharepoint-ps",
-      "version": "sharepoint-ps",
-      "dest": "module"
-    },
-    {
-      "files": ["toc.yml"],
-      "src": "sharepoint-ps",
-      "version": "sharepoint-ps",
-      "dest": "module/sharepoint-ps"
-    }
+
+      {"files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual", "dest": "sharepoint" },
+        
+      {"files": ["**/*.yml"], "src": "sharepoint-ps", "version": "sharepoint-ps", "exclude": ["docs-conceptual"], "dest": "module"},
+
+      {"files": ["**/*.yml"], "src": "sharepoint-server-ps", "version": "sharepoint-server-ps", "exclude": ["docs-conceptual"], "dest": "module"}
+
     ],
     "resource": [
       {
@@ -48,6 +23,9 @@
     ],
     "versions": {
       "sharepoint-server-ps": {
+        "dest": "sharepoint-server-ps"
+      },
+      "sharepoint-ps": {
         "dest": "sharepoint-ps"
       }
     },
@@ -66,6 +44,6 @@
     },
     "fileMetadata": {},
     "template": [],
-    "dest": "sharepoint-ps"
+    "dest": "sharepointps"
   }
 }

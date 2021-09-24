@@ -26,9 +26,9 @@ landingContent:
       - linkListType: reference
         links:
           - text: Intro to SharePoint Online Management Shell
-            url: sharepoint-online/introduction-sharepoint-online-management-shell.md
+            url: introduction-sharepoint-online-management-shell.md
           - text: Get started with SharePoint Online Management Shell
-            url: sharepoint-online/connect-sharepoint-online.md
+            url: connect-sharepoint-online.md
           - text: Cmdlet reference
             url: /powershell/module/sharepoint-online
 
@@ -38,7 +38,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Overview
-            url: sharepoint-server/sharepoint-server-sub-cmdlets.md         
+            url: ../sharepoint-server/sharepoint-server-sub-cmdlets.md         
           - text: Cmdlet reference
             url: /powershell/module/sharepoint-server
 
@@ -49,7 +49,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Overview
-            url: sharepoint-server/sharepoint-server-cmdlets.md         
+            url: ../sharepoint-server/sharepoint-server-cmdlets.md         
           - text: Cmdlet reference
             url: /powershell/module/sharepoint-server
 
@@ -59,7 +59,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Overview
-            url: sharepoint-pnp/sharepoint-pnp-cmdlets.md     
+            url: ../sharepoint-pnp/sharepoint-pnp-cmdlets.md     
           - text: Cmdlet reference
             url: /powershell/module/sharepoint-pnp
           - text: PowerShell Gallery
