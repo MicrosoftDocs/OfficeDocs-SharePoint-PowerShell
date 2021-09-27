@@ -3,7 +3,7 @@
     {
       "docset_name": "OfficeDocs-Sharepoint-PowerShell",
       "build_source_folder": "sharepoint",
-      "build_output_subfolder": "officeDocs-sharepoint-powershell",
+      "build_output_subfolder": "sharepointps",
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
