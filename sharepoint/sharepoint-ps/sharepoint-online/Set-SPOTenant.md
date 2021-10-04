@@ -1937,7 +1937,7 @@ Accept wildcard characters: False
 
 ### -AllowGuestUserShareToUsersNotInSiteCollection 
 
-The AllowGuestUserShareToUsersNotInSiteCollection settings (defaulted to false) will allow or prevent guests from sharing to users not in the site collection 
+The AllowGuestUserShareToUsersNotInSiteCollection settings (defaulted to false) will allow guests to share to users not in the site.
 
 The valid values are:  
 
