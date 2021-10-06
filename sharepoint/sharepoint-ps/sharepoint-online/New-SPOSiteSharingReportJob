@@ -19,7 +19,7 @@ Creates a new sharing report job
 ## SYNTAX
 
 ```powershell
-New-SPOSiteSharingReportJob -Site <SPOSitePipeBind> --ReportStorageWebUrl  <String> -ReportStorageFolderUrl <String> [<CommonParameters>]
+New-SPOSiteSharingReportJob [-Site] <SPOSitePipeBind> [-ReportStorageWebUrl] <String> [-ReportStorageFolderUrl] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
