@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
- [!IMPORTANT]
+> [!IMPORTANT]
 > - This feature is available only for customers who have been accepted into the Private Preview program. [Request to join the Private Preview](https://aka.ms/SPOTenantRenameNomination). Note that submitting a nomination does not guarantee acceptance into the program. We review the nominations on a case-by-case basis and will contact you if you're accepted.
 > - This feature is not available for organizations that have set up multi-geo.
 
@@ -35,7 +35,7 @@ This command gets the status of the job to rename the SharePoint domain name for
 ### EXAMPLE 1
 
 ```powershell
-Gett-SPOTenantRenameStatus
+Get-SPOTenantRenameStatus
 ```
 
 Gets the status of the job to rename your SharePoint domain name.
