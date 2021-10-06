@@ -55,7 +55,7 @@ Accept wildcard characters: False
 
 ### -ReportStorageWebUrl
 
-Report web storage URL 
+Report web storage URL.
 
 ```yaml
 Type: String[]
