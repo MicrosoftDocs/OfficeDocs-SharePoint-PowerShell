@@ -107,6 +107,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-BlockSendLabelMismatchEmail <Boolean>]
  [-DisableOutlookPSTVersionTrimming <Boolean>]
  [-ViewInFileExplorerEnabled <Boolean>]
+ [-AllowGuestUserShareToUsersNotInSiteCollection <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -1930,6 +1931,27 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowGuestUserShareToUsersNotInSiteCollection 
+
+The AllowGuestUserShareToUsersNotInSiteCollection settings (defaulted to false) will allow guests to share to users not in the site.
+
+The valid values are:  
+
+- False (default) – Guest users will only be able to share to users that exist within the current site. 
+- True – Guest users will be able to share to all users. 
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
