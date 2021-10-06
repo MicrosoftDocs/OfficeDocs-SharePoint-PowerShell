@@ -71,7 +71,7 @@ Accept wildcard characters: False
 
 ### -Site
 
-Specifies the site 
+Specifies the site.
 
 ```yaml
 Type: SpoSitePipeBind
