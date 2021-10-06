@@ -906,7 +906,10 @@ Accept wildcard characters: False
 
 Anonymous access links can allow recipients to only view or view and edit. The value can be set separately for folders and separately for files.
 
-PARAMVALUE: None | View | Edit
+The valid values are:
+
+- View
+- Edit
 
 ```yaml
 Type: AnonymousLinkType
@@ -940,7 +943,10 @@ Accept wildcard characters: False
 
 Anonymous access links can allow recipients to only view or view and edit.
 
-PARAMVALUE: None | View | Edit
+The valid values are:
+
+- View
+- Edit
 
 ```yaml
 Type: AnonymousLinkType
