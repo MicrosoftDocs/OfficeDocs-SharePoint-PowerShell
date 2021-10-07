@@ -119,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -NoCompression
-{{Fill NoCompression Description}}
+Specifies to not compress the data.
 
 ```yaml
 Type: SwitchParameter
