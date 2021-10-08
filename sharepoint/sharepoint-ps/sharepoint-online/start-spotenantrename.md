@@ -54,7 +54,7 @@ Specifies the domain name that the current SharePoint domain name will be rename
 
 ```yaml
 Type: String
-Parameter Sets: Default
+Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
 
