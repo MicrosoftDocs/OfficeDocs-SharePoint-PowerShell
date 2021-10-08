@@ -87,7 +87,7 @@ Simulation of what would happen if you run the script without modifying anything
 
 ```yaml
 Type: String
-Parameter Sets: UrlAndDestinationDataLocation, UrlAndDestinationUrl
+Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
 
