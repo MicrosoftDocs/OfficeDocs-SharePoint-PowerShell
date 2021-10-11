@@ -1,0 +1,87 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPWebhookSubscription.md to change this file.
+
+  Removes a Webhook subscription from the resource
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Remove-PnPWebhookSubscription [-Identity] <WebhookSubscriptionPipeBind> [-List <ListPipeBind>] [-Force]
+
+   [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Remove-PnPWebhookSubscription -List MyList -Identity ea1533a8-ff03-415b-a7b6-517ee50db8b6
+  description: |-
+    Removes the Webhook subscription with the specified id from the list MyList
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    $subscriptions = Get-PnPWebhookSubscriptions -List MyList
+    Remove-PnPWebhookSubscription -Identity $subscriptions[0] -List MyList
+  description: |-
+    Removes the first Webhook subscription from the list MyList
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    $subscriptions = Get-PnPWebhookSubscriptions -List MyList
+    $subscriptions[0] | Remove-PnPWebhookSubscription -List MyList
+  description: |-
+    Removes the first Webhook subscription from the list MyList
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Specifying the Force parameter will skip the confirmation question.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WebhookSubscriptionPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The identity of the Webhook subscription to remove
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ListPipeBind" data-throw-if-not-resolved="False" />
+  name: List
+  description: |+
+    The list object or name which the Webhook subscription will be removed from
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Remove-PnPWebhookSubscription
+name: Remove-PnPWebhookSubscription
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  title: Remove-PnPWebhookSubscription
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPWebhookSubscription.html

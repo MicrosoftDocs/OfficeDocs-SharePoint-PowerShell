@@ -1,0 +1,84 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPMinimalDownloadStrategy.md to change this file.
+
+  Activates or deactivates the minimal downloading strategy.
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Set-PnPMinimalDownloadStrategy [-On] [-Force] [-Connection <PnPConnection>]
+
+   [<CommonParameters>]
+- >-
+  Set-PnPMinimalDownloadStrategy [-Off] [-Force] [-Connection <PnPConnection>]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-PnPMinimalDownloadStrategy -Off
+  description: |-
+    Will deactivate minimal download strategy (MDS) for the current web.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Set-PnPMinimalDownloadStrategy -On
+  description: |-
+    Will activate minimal download strategy (MDS) for the current web.
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Specifies whether to overwrite (when activating) or continue (when deactivating) an existing feature with the same feature identifier. This parameter is ignored if there are no errors.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Off
+  isRequired: true
+  description: |+
+    Turn minimal download strategy off
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: On
+  isRequired: true
+  description: |+
+    Turn minimal download strategy on
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Set-PnPMinimalDownloadStrategy
+name: Set-PnPMinimalDownloadStrategy
+description: |-
+  Activates or deactivates the minimal download strategy feature of a site
+metadata:
+  Module Name: PnP.PowerShell
+  title: Set-PnPMinimalDownloadStrategy
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Set-PnPMinimalDownloadStrategy.html

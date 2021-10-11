@@ -1,0 +1,47 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets a SharePoint Site as a Home Site.
+module: SharePointOnlinePowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Set-SPOHomeSite [-HomeSiteUrl] <String> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Set-SPOHomeSite -HomeSiteUrl "https://contoso.sharepoint.com/sites/homesite"
+  description: |-
+    This example set the site collection at *<https://contoso.sharepoint.com/sites/homesite>* as SharePoint Online Home Site.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HomeSiteUrl
+  isRequired: true
+  description: |+
+    The Url of the site collection to be the home site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: SharePointOnlinePowerShell.Set-SPOHomeSite
+name: Set-SPOHomeSite
+description: |-
+  Use this cmdlet to set a SharePoint Site as a Home Site. A home site is a communication site that you create and set as the top landing page for all users in your intranet. For more information, see [Set up a home site for your organization](https://docs.microsoft.com/SharePoint/home-site)
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spohomesite
+  applicable: SharePoint Online
+  title: Set-SPOHomeSite
+  schema: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

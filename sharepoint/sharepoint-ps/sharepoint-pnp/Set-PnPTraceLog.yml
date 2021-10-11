@@ -1,0 +1,129 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPTraceLog.md to change this file.
+
+  Turn log tracing on or off
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Set-PnPTraceLog [-On] [-LogFile <String>] [-WriteToConsole] [-Level <LogLevel>] [-Delimiter <String>]
+
+   [-IndentSize <Int32>] [-AutoFlush <Boolean>] [<CommonParameters>]
+- Set-PnPTraceLog [-Off] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-PnPTraceLog -On -LogFile traceoutput.txt
+  description: |-
+    This turns on trace logging to the file 'traceoutput.txt' and will capture events of at least 'Information' level.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Set-PnPTraceLog -On -LogFile traceoutput.txt -Level Debug
+  description: |-
+    This turns on trace logging to the file 'traceoutput.txt' and will capture debug events.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Set-PnPTraceLog -On -LogFile traceoutput.txt -Level Debug -Delimiter ","
+  description: |-
+    This turns on trace logging to the file 'traceoutput.txt' and will write the entries as comma separated. Debug events are captured.
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    Set-PnPTraceLog -Off
+  description: |-
+    This turns off trace logging. It will flush any remaining messages to the log file.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AutoFlush
+  description: |+
+    Auto flush the trace log. Defaults to true.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Delimiter
+  description: |+
+    If specified the trace log entries will be delimited with this value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: IndentSize
+  description: |+
+    Indents in the tracelog will be with this amount of characters. Defaults to 4.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="LogLevel" data-throw-if-not-resolved="False" />
+  name: Level
+  description: |+
+    The level of events to capture. Possible values are 'Debug', 'Error', 'Warning', 'Information'. Defaults to 'Information'.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Debug, Error, Warning, Information
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogFile
+  description: |+
+    The path and filename of the file to write the trace log to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Off
+  isRequired: true
+  description: |+
+    Turn off tracing to log file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: On
+  isRequired: true
+  description: |+
+    Turn on tracing to log file
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WriteToConsole
+  description: |+
+    Turn on console trace output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Set-PnPTraceLog
+name: Set-PnPTraceLog
+description: |-
+  Defines if tracing should be turned on. PnP Core, which is the foundation of these cmdlets, uses the standard Trace functionality of .NET. With this cmdlet you can turn capturing of this trace to a log file on or off. Notice that basically only the Provisioning Engine writes to the tracelog which means that cmdlets related to the engine will produce output.
+metadata:
+  Module Name: PnP.PowerShell
+  title: Set-PnPTraceLog
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Set-PnPTraceLog.html

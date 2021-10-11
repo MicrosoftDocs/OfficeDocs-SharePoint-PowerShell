@@ -1,0 +1,80 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPTeamsTab.md to change this file.
+
+
+  **Required Permissions**
+
+    * Microsoft Graph API: Group.ReadWrite.All
+
+  Updates Teams Tab settings
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Set-PnPTeamsTab -Team <TeamsTeamPipeBind> -Channel <TeamsChannelPipeBind> [-Identity <TeamsTabPipeBind>]
+
+   [-DisplayName <String>]  [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-PnPTeamsTab -Team "MyTeam" -Channel "My Channel" -Identity "Wiki" -DisplayName "Channel Wiki"
+  description: |-
+    Updates the tab named 'Wiki' and changes the display name of the tab to 'Channel Wiki'
+  summary: ""
+parameters:
+- type: <xref href="TeamsChannelPipeBind" data-throw-if-not-resolved="False" />
+  name: Channel
+  isRequired: true
+  description: |+
+    Specify the channel id or display name of the channel to use.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  description: |+
+    The new name of the tab.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TeamsTabPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Identity of the tab.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TeamsTeamPipeBind" data-throw-if-not-resolved="False" />
+  name: Team
+  isRequired: true
+  description: |+
+    Specify the group id, mailNickname or display name of the team to use.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Set-PnPTeamsTab
+name: Set-PnPTeamsTab
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  title: Set-PnPTeamsTab
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Set-PnPTeamsTab.html

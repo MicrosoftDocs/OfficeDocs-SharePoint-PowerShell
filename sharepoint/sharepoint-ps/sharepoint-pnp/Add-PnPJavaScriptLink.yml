@@ -1,0 +1,89 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPJavaScriptLink.md to change this file.
+
+  Adds a link to a JavaScript file to a web or sitecollection, valid only for SharePoint classic site experience.
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Add-PnPJavaScriptLink -Name <String> -Url <String[]> [-Sequence <Int32>] [-Scope <CustomActionScope>]
+
+   [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Add-PnPJavaScriptLink -Name jQuery -Url https://code.jquery.com/jquery.min.js -Sequence 9999 -Scope Site
+  description: |-
+    Injects a reference to the latest v1 series jQuery library to all pages within the current site collection under the name jQuery and at order 9999
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Add-PnPJavaScriptLink -Name jQuery -Url https://code.jquery.com/jquery.min.js
+  description: |-
+    Injects a reference to the latest v1 series jQuery library to all pages within the current web under the name jQuery
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Name under which to register the JavaScriptLink
+
+  defaultValue: None
+  position: Named
+  aliases: Key
+  parameterValueGroup: ""
+- type: <xref href="CustomActionScope" data-throw-if-not-resolved="False" />
+  name: Scope
+  description: |+
+    Defines if this JavaScript file will be injected to every page within the current site collection or web. All is not allowed in for this command. Default is web.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Web, Site, All
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Sequence
+  description: |+
+    Sequence of this JavaScript being injected. Use when you have a specific sequence with which to have JavaScript files being added to the page. I.e. jQuery library first and then jQueryUI.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Url
+  isRequired: true
+  description: |+
+    URL to the JavaScript file to inject
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Add-PnPJavaScriptLink
+name: Add-PnPJavaScriptLink
+description: |-
+  Creates a custom action that refers to a JavaScript file
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Add-PnPJavaScriptLink.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Add-PnPJavaScriptLink

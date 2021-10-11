@@ -1,0 +1,91 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPTenantSite.md to change this file.
+
+
+  **Required Permissions**
+
+  * SharePoint: Access to the SharePoint Tenant Administration site
+
+  Removes a site collection
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Remove-PnPTenantSite [-Url] <String> [-SkipRecycleBin] [-Force] [-Connection <PnPConnection>]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Remove-PnPTenantSite -Url "https://tenant.sharepoint.com/sites/contoso"
+  description: |-
+    This will remove the site collection with the url 'https://tenant.sharepoint.com/sites/contoso'  and put it in the recycle bin.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Remove-PnPTenantSite -Url "https://tenant.sharepoint.com/sites/contoso" -Force -SkipRecycleBin
+  description: |-
+    This will remove the site collection with the url 'https://tenant.sharepoint.com/sites/contoso' with force and it will skip the recycle bin.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Remove-PnPTenantSite -Url "https://tenant.sharepoint.com/sites/contoso" -FromRecycleBin
+  description: |-
+    This will remove the site collection with the url 'https://tenant.sharepoint.com/sites/contoso' from the recycle bin.
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Do not ask for confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SkipRecycleBin
+  description: |+
+    Do not add to the tenant scoped recycle bin when selected.
+
+  defaultValue: None
+  position: Named
+  aliases: SkipTrash
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Url
+  isRequired: true
+  description: |+
+    Specifies the full URL of the site collection that needs to be deleted
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Remove-PnPTenantSite
+name: Remove-PnPTenantSite
+description: |-
+  Removes a site collection which is listed in your tenant administration site.
+metadata:
+  Module Name: PnP.PowerShell
+  title: Remove-PnPTenantSite
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPTenantSite.html

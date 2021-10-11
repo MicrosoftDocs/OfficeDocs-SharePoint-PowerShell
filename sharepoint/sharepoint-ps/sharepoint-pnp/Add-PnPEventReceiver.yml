@@ -1,0 +1,119 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPEventReceiver.md to change this file.
+
+  Adds a new remote event receiver
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Add-PnPEventReceiver [-List <ListPipeBind>] -Name <String> -Url <String> -EventReceiverType <EventReceiverType>
+
+   -Synchronization <EventReceiverSynchronization> [-SequenceNumber <Int32>] [-Force] 
+
+   [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Add-PnPEventReceiver -List "ProjectList" -Name "TestEventReceiver" -Url https://yourserver.azurewebsites.net/eventreceiver.svc -EventReceiverType ItemAdded -Synchronization Asynchronous
+  description: |-
+    This will add a new remote event receiver that is executed after an item has been added to the ProjectList list
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Add-PnPEventReceiver -Name "TestEventReceiver" -Url https://yourserver.azurewebsites.net/eventreceiver.svc -EventReceiverType WebAdding -Synchronization Synchronous
+  description: |-
+    This will add a new remote event receiver that is executed while a new subsite is being created
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="EventReceiverType" data-throw-if-not-resolved="False" />
+  name: EventReceiverType
+  isRequired: true
+  description: |+
+    The type of the event receiver like ItemAdded, ItemAdding. See https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.eventreceivertype.aspx for the full list of available types.
+
+  defaultValue: None
+  position: Named
+  aliases: Type
+  parameterValueGroup: ItemAdding, ItemUpdating, ItemDeleting, ItemCheckingIn, ItemCheckingOut, ItemUncheckingOut, ItemAttachmentAdding, ItemAttachmentDeleting, ItemFileMoving, ItemVersionDeleting, FieldAdding, FieldUpdating, FieldDeleting, ListAdding, ListDeleting, SiteDeleting, WebDeleting, WebMoving, WebAdding, SiteMovingFromGeoLocation, GroupAdding, GroupUpdating, GroupDeleting, GroupUserAdding, GroupUserDeleting, RoleDefinitionAdding, RoleDefinitionUpdating, RoleDefinitionDeleting, RoleAssignmentAdding, RoleAssignmentDeleting, InheritanceBreaking, InheritanceResetting, WorkflowStarting, ItemAdded, ItemUpdated, ItemDeleted, ItemCheckedIn, ItemCheckedOut, ItemUncheckedOut, ItemAttachmentAdded, ItemAttachmentDeleted, ItemFileMoved, ItemFileConverted, ItemVersionDeleted, FieldAdded, FieldUpdated, FieldDeleted, ListAdded, ListDeleted, SiteDeleted, WebDeleted, WebMoved, WebProvisioned, WebRestored, GroupAdded, GroupUpdated, GroupDeleted, GroupUserAdded, GroupUserDeleted, RoleDefinitionAdded, RoleDefinitionUpdated, RoleDefinitionDeleted, RoleAssignmentAdded, RoleAssignmentDeleted, InheritanceBroken, InheritanceReset, WorkflowStarted, WorkflowPostponed, WorkflowCompleted, EntityInstanceAdded, EntityInstanceUpdated, EntityInstanceDeleted, AppInstalled, AppUpgraded, AppUninstalling, EmailReceived, ContextEvent, InvalidReceiver
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Overwrites the output file if it exists.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ListPipeBind" data-throw-if-not-resolved="False" />
+  name: List
+  description: |+
+    The list object or name where the remote event receiver needs to be added. If omitted, the remote event receiver will be added to the web.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the remote event receiver
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: SequenceNumber
+  description: |+
+    The sequence number where this remote event receiver should be placed
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="EventReceiverSynchronization" data-throw-if-not-resolved="False" />
+  name: Synchronization
+  isRequired: true
+  description: |+
+    The synchronization type: Asynchronous or Synchronous
+
+  defaultValue: None
+  position: Named
+  aliases: Sync
+  parameterValueGroup: DefaultSynchronization, Synchronous, Asynchronous
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Url
+  isRequired: true
+  description: |+
+    The URL of the remote event receiver web service
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Add-PnPEventReceiver
+name: Add-PnPEventReceiver
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Add-PnPEventReceiver.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Add-PnPEventReceiver

@@ -1,0 +1,65 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPHideDefaultThemes.md to change this file.
+
+
+  **Required Permissions**
+
+  * SharePoint: Access to the SharePoint Tenant Administration site
+
+  Defines if the default / OOTB themes should be visible to users or not.
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- Set-PnPHideDefaultThemes -HideDefaultThemes <Boolean> [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-PnPHideDefaultThemes -HideDefaultThemes $true
+  description: |-
+    This example hides the default themes
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Set-PnPHideDefaultThemes -HideDefaultThemes $false
+  description: |-
+    This example shows the default themes
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: HideDefaultThemes
+  isRequired: true
+  description: |+
+    Defines if the default themes should be visible or hidden
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Set-PnPHideDefaultThemes
+name: Set-PnPHideDefaultThemes
+description: |-
+  Use this cmdlet to hide or show the default themes to users
+
+  You must be a SharePoint Online global administrator to run the cmdlet.
+metadata:
+  Module Name: PnP.PowerShell
+  title: Set-PnPHideDefaultThemes
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Set-PnPHideDefaultThemes.html

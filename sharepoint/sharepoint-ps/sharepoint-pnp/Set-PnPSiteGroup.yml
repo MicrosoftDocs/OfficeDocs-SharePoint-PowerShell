@@ -1,0 +1,106 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPSiteGroup.md to change this file.
+
+
+  Updates the SharePoint Online owner and permission levels on a group inside a site collection.
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Set-PnPSiteGroup -Identity <String> [-Name <String>] [-Owner <String>] [-PermissionLevelsToAdd <String[]>] 
+
+      [-PermissionLevelsToRemove <String[]>] [-Site <PipeBind>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-PnPSiteGroup -Site "https://contoso.sharepoint.com/sites/siteA" -Identity "ProjectViewers" -PermissionLevelsToRemove "Full Control" -PermissionLevelsToAdd "View Only"
+  description: |-
+    Example 1 changes permission level of the ProjectViewers group inside site collection https://contoso.sharepoint.com/sites/siteA from Full Control to View Only.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Set-PnPSiteGroup -Site "https://contoso.sharepoint.com| -Identity "ProjectViewers" -Owner user@domain.com
+  description: |-
+    Example 2 sets user@domain.com as the owner of the ProjectViewers group.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the name of the group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the new name of the group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Owner
+  description: |+
+    Specifies the owner (individual or a security group) of the group to be created.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PermissionLevelsToAdd
+  description: |+
+    Specifies the permission levels to grant to the group.
+
+    > [!NOTE]
+    > Permission levels are defined by SharePoint Online administrators from SharePoint Online Administration Center.  
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PermissionLevelsToRemove
+  description: |+
+    Specifies the permission levels to remove from the group.
+
+    > [!NOTE]
+    > Permission levels are defined by SharePoint Online administrators from SharePoint Online Administration Center.  
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SitePipeBind" data-throw-if-not-resolved="False" />
+  name: Site
+  description: |+
+    Specifies the site collection the group belongs to. If not defined, the currently connected site will be used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Set-PnPSiteGroup
+name: Set-PnPSiteGroup
+description: |-
+  For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+metadata:
+  Module Name: PnP.PowerShell
+  title: Set-PnPSiteGroup
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Set-PnPSiteGroup.html

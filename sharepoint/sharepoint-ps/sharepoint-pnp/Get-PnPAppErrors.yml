@@ -1,0 +1,76 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPAppErrors.md to change this file.
+
+
+  **Required Permissions**
+
+  * SharePoint: Access to the SharePoint Tenant Administration site
+
+  Returns application errors.
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- Get-PnPAppErrors -ProductId <Guid> [-StartTimeInUtc <DateTime>] [-EndTimeInUtc <DateTime>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Get-PnPAppErrors -ProductId a2681b0c-84fe-41bf-9a8e-d480ab81ba7b
+  description: |-
+    This example returns a collection of monitoring error messages for the application with the specified id.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Get-PnPAppErrors -ProductId a2681b0c-84fe-41bf-9a8e-d480ab81ba7b -StartTimeInUtc (Get-Date).AddHours(-1).ToUniversalTime()
+  description: |-
+    This example returns a collection of monitoring error messages for the last hour for the application with the specified id.
+  summary: ""
+parameters:
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: EndTimeInUtc
+  description: |+
+    Specifies the end time in UTC to search for monitoring errors. If not start time is given the current time is used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: ProductId
+  isRequired: true
+  description: |+
+    Specifies the application id
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: StartTimeInUtc
+  description: |+
+    Specifies the start time in UTC to search for monitoring errors. If not start time is given the default value of 72 hours before the current time is used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Get-PnPAppErrors
+name: Get-PnPAppErrors
+description: |-
+  The Get-PnPAppErrors cmdlet returns application monitoring errors (if available) for the application that is specified by ProductId between StartTimeInUtc in Coordinated Universal Time (UTC) and EndTimeInUtc in UTC.
+
+  Based on server configuration, errors are available for a limited time. The default is seven days. Older errors are purged. Date time values that are older than 50 years or later than 20 years from today are considered invalid
+
+  Each error includes the error message, time in UTC that error happened, the site where the error happened, and the error type. Values for error type are as follows: 0 - None, 1 - Install Error, 2 - Upgrade Error, 3 - Runtime Error.
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Get-PnPAppErrors.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Get-PnPAppErrors

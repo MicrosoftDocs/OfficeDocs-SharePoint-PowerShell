@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPWebPermission.md to change this file.
+
+  Sets a web permissions
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- Set-PnPWebPermission -User <String> [-Identity <WebPipeBind>]  [-AddRole <String[]>] [-RemoveRole <String[]>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-PnPWebPermission -User "user@contoso.com" -AddRole "Contribute"
+  description: |-
+    Adds the "Contribute" permission role to the specified user in the current web.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Set-PnPWebPermission -Group "Project Managers" -AddRole "Contribute"
+  description: |-
+    Adds the "Contribute" permission role to the "Project Managers" group in the current web.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Set-PnPWebPermission -Identity projectA -User "user@contoso.com" -AddRole "Contribute"
+  description: |-
+    Adds the "Contribute" permission role to the user "user@contoso.com" in the subweb of the current web with site relative url "projectA"
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    Set-PnPWebPermission -User "user@contoso.com" -AddRole "Custom Role 1","Custom Role 2"
+  description: |-
+    Adds the specified permission roles to the user "user@contoso.com" in the current web
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AddRole
+  description: |+
+    The name of the role to add to the specified user or group
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Group
+  isRequired: true
+  description: |+
+    The name of the group to modify
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The guid or site relative url of the web to use
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RemoveRole
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: User
+  isRequired: true
+  description: |+
+    The name of the user to modify
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Set-PnPWebPermission
+name: Set-PnPWebPermission
+description: ""
+metadata:
+  Module Name: ""
+  title: Set-PnPWebPermission
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Set-PnPWebPermission.html

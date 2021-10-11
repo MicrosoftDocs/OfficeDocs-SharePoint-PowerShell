@@ -1,0 +1,70 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Uninstall-PnPApp.md to change this file.
+
+  Uninstalls an available add-in from the site
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Uninstall-PnPApp [-Identity] <AppMetadataPipeBind> [-Scope <AppCatalogScope>] [-Connection <PnPConnection>]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Uninstall-PnPApp -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe
+  description: |-
+    This will uninstall the specified app from the current site.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Uninstall-PnPApp -Identity 99a00f6e-fb81-4dc7-8eac-e09c6f9132fe -Scope Site
+  description: |-
+    This will uninstall the specified app from the current site. Notice that the app was original installed from the site collection appcatalog.
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AppMetadataPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the Id of the Addin Instance
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AppCatalogScope" data-throw-if-not-resolved="False" />
+  name: Scope
+  description: |+
+    Defines which app catalog to use. Defaults to Tenant
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Tenant, Site
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Uninstall-PnPApp
+name: Uninstall-PnPApp
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  title: Uninstall-PnPApp
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Uninstall-PnPApp.html

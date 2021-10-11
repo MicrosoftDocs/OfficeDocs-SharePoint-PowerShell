@@ -1,0 +1,80 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPDefaultPageLayout.md to change this file.
+
+  Sets a specific page layout to be the default page layout for a publishing site
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Set-PnPDefaultPageLayout -Title <String> [-Connection <PnPConnection>]
+
+   [<CommonParameters>]
+- >-
+  Set-PnPDefaultPageLayout [-InheritFromParentSite] [-Connection <PnPConnection>]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-PnPDefaultPageLayout -Title projectpage.aspx
+  description: |-
+    Sets projectpage.aspx to be the default page layout for the current web
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Set-PnPDefaultPageLayout -Title test/testpage.aspx
+  description: |-
+    Sets a page layout in a folder in the Master Page & Page Layout gallery, such as _catalog/masterpage/test/testpage.aspx, to be the default page layout for the current web
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Set-PnPDefaultPageLayout -InheritFromParentSite
+  description: |-
+    Sets the default page layout to be inherited from the parent site
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: InheritFromParentSite
+  isRequired: true
+  description: |+
+    Set the default page layout to be inherited from the parent site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Title
+  isRequired: true
+  description: |+
+    Title of the page layout
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Set-PnPDefaultPageLayout
+name: Set-PnPDefaultPageLayout
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  title: Set-PnPDefaultPageLayout
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Set-PnPDefaultPageLayout.html

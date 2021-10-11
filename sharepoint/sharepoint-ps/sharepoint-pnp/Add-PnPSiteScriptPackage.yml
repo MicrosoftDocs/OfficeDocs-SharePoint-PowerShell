@@ -1,0 +1,75 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPSiteScriptPackage.md to change this file.
+
+
+  **Required Permissions**
+
+  * SharePoint: Access to the SharePoint Tenant Administration site
+
+  Creates a new Site Script Package on the current tenant. Site script packages can contain files in addition to the site scripts which can be used to upload files to sites om which a site design gets applied.
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- Add-PnPSiteScriptPackage -Title <String> [-Description <String>] -ContentPath <String> [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Add-PnPSiteScriptPackage -Title "My Site Script Package" -Description "A more detailed description" -ContentPath "c:\package.zip"
+  description: |-
+    Adds a new Site Script Package
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConContentPathtent
+  isRequired: true
+  description: |+
+    The full path to the locally stored Site Script Package to upload
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    The description of the site script package
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Title
+  isRequired: true
+  description: |+
+    The title of the site script package
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Add-PnPSiteScriptPackage
+name: Add-PnPSiteScriptPackage
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Add-PnPSiteScriptPackage.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Add-PnPSiteScriptPackage

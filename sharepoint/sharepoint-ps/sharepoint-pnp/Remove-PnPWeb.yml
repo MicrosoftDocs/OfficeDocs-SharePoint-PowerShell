@@ -1,0 +1,86 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPWeb.md to change this file.
+
+  Removes a subweb in the current web
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Remove-PnPWeb -Url <String> -Identity <WebPipeBind> [-Force] [-Connection <PnPConnection>]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Remove-PnPWeb -Url projectA
+  description: |-
+    Remove a web
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Remove-PnPWeb -Identity 5fecaf67-6b9e-4691-a0ff-518fc9839aa0
+  description: |-
+    Remove a web specified by its ID
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Get-PnPSubWebs | Remove-PnPWeb -Force
+  description: |-
+    Remove all subwebs and do not ask for confirmation
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Do not ask for confirmation to delete the subweb
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="WebPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Identity/Id/Web object to delete
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Url
+  isRequired: true
+  description: |+
+    The site relative url of the web, e.g. 'Subweb1'
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Remove-PnPWeb
+name: Remove-PnPWeb
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  title: Remove-PnPWeb
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPWeb.html

@@ -1,0 +1,125 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPNavigationNode.md to change this file.
+
+  Adds an item to a navigation element
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Add-PnPNavigationNode -Location <NavigationType> -Title <String> [-Url <String>] [-Parent <Int32>] [-First]
+
+   [-External] [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Add-PnPNavigationNode -Title "Contoso" -Url "http://contoso.sharepoint.com/sites/contoso/" -Location "QuickLaunch"
+  description: |-
+    Adds a navigation node to the quicklaunch. The navigation node will have the title "Contoso" and will link to the url "http://contoso.sharepoint.com/sites/contoso/"
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Add-PnPNavigationNode -Title "Contoso USA" -Url "http://contoso.sharepoint.com/sites/contoso/usa/" -Location "QuickLaunch" -Parent 2012
+  description: |-
+    Adds a navigation node to the quicklaunch. The navigation node will have the title "Contoso USA", will link to the url "http://contoso.sharepoint.com/sites/contoso/usa/" and will have the node with id 2012 as a parent navigation node.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Add-PnPNavigationNode -Title "Contoso" -Url "http://contoso.sharepoint.com/sites/contoso/" -Location "QuickLaunch" -First
+  description: |-
+    Adds a navigation node to the quicklaunch, as the first item. The navigation node will have the title "Contoso" and will link to the url "http://contoso.sharepoint.com/sites/contoso/"
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    Add-PnPNavigationNode -Title "Contoso Pharmaceuticals" -Url "http://contoso.sharepoint.com/sites/contosopharma/" -Location "QuickLaunch" -External
+  description: |-
+    Adds a navigation node to the quicklaunch. The navigation node will have the title "Contoso Pharmaceuticals" and will link to the external url "http://contoso.sharepoint.com/sites/contosopharma/"
+  summary: ""
+- title: EXAMPLE 5
+  code: |-
+    Add-PnPNavigationNode -Title "Wiki" -Location "QuickLaunch" -Url "wiki/"
+  description: |-
+    Adds a navigation node to the quicklaunch. The navigation node will have the title "Wiki" and will link to Wiki library on the selected Web.
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: External
+  description: |+
+    Indicates the destination URL is outside of the site collection
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: First
+  description: |+
+    Add the new menu item to beginning of the collection
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="NavigationType" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    The location where to add the navigation node to. Either TopNavigationBar, QuickLaunch, SearchNav or Footer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: TopNavigationBar, QuickLaunch, SearchNav, Footer
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Parent
+  description: |+
+    The key of the parent. Leave empty to add to the top level
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Title
+  isRequired: true
+  description: |+
+    The title of the node to add
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Url
+  description: |+
+    The url to navigate to when clicking the new menu item. This can either be absolute or relative to the Web. Fragments are not supported.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Add-PnPNavigationNode
+name: Add-PnPNavigationNode
+description: |-
+  Adds a menu item to either the quicklaunch, top navigation, search navigation or the footer
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Add-PnPNavigationNode.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Add-PnPNavigationNode

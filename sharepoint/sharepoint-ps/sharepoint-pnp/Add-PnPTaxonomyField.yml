@@ -1,0 +1,168 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPTaxonomyField.md to change this file.
+
+  Add a taxonomy field
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Add-PnPTaxonomyField [-List <ListPipeBind>] -DisplayName <String> -InternalName <String> -TermSetPath <String>
+
+   [-TermPathDelimiter <String>] [-Group <String>] [-Id <Guid>] [-AddToDefaultView] [-MultiValue]
+
+   [-Required] [-FieldOptions <AddFieldOptions>] [-Connection <PnPConnection>]
+
+   [<CommonParameters>]
+- >-
+  Add-PnPTaxonomyField [-List <ListPipeBind>] -DisplayName <String> -InternalName <String>
+
+   [-TaxonomyItemId <Guid>] [-Group <String>] [-Id <Guid>] [-AddToDefaultView] [-MultiValue]
+
+   [-Required] [-FieldOptions <AddFieldOptions>] [-Connection <PnPConnection>]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Add-PnPTaxonomyField -DisplayName "Test" -InternalName "Test" -TermSetPath "TestTermGroup|TestTermSet"
+  description: |-
+    Adds a new taxonomy field called "Test" that points to the TestTermSet which is located in the TestTermGroup
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AddToDefaultView
+  description: |+
+    Switch Parameter if this field must be added to the default view
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  isRequired: true
+  description: |+
+    The display name of the field
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AddFieldOptions" data-throw-if-not-resolved="False" />
+  name: FieldOptions
+  description: |+
+    Specifies the control settings while adding a field. See https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.addfieldoptions.aspx for details
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: DefaultValue, AddToDefaultContentType, AddToNoContentType, AddToAllContentTypes, AddFieldInternalNameHint, AddFieldToDefaultView, AddFieldCheckDisplayName
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Group
+  description: |+
+    The group name to where this field belongs to
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Id
+  description: |+
+    The ID for the field, must be unique
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InternalName
+  isRequired: true
+  description: |+
+    The internal name of the field
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ListPipeBind" data-throw-if-not-resolved="False" />
+  name: List
+  description: |+
+    The list object or name where this field needs to be added
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: MultiValue
+  description: |+
+    Switch Parameter if this Taxonomy field can hold multiple values
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Required
+  description: |+
+    Switch Parameter if the field is a required field
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: TaxonomyItemId
+  description: |+
+    The ID of the Taxonomy item
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TermPathDelimiter
+  description: |+
+    The path delimiter to be used, by default this is '|'
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TermSetPath
+  isRequired: true
+  description: |+
+    The path to the term that this needs to be bound
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Add-PnPTaxonomyField
+name: Add-PnPTaxonomyField
+description: |-
+  Adds a taxonomy/managed metadata field to a list or as a site column.
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Add-PnPTaxonomyField.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Add-PnPTaxonomyField

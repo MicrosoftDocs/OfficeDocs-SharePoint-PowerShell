@@ -1,0 +1,226 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPListInformationRightsManagement.md to change this file.
+
+  Get the site closure status of the site which has a site policy applied
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Set-PnPListInformationRightsManagement -List <ListPipeBind> [-Enable <Boolean>] [-EnableExpiration <Boolean>]
+
+   [-EnableRejection <Boolean>] [-AllowPrint <Boolean>] [-AllowScript <Boolean>] [-AllowWriteCopy <Boolean>]
+
+   [-DisableDocumentBrowserView <Boolean>] [-DocumentAccessExpireDays <Int32>]
+
+   [-DocumentLibraryProtectionExpireDate <DateTime>] [-EnableDocumentAccessExpire <Boolean>]
+
+   [-EnableDocumentBrowserPublishingView <Boolean>] [-EnableGroupProtection <Boolean>]
+
+   [-EnableLicenseCacheExpire <Boolean>] [-LicenseCacheExpireDays <Int32>] [-GroupName <String>]
+
+   [-PolicyDescription <String>] [-PolicyTitle <String>] [-TemplateId <String>] 
+
+   [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-PnPListInformationRightsManagement -List "Documents" -Enabled $true
+  description: |-
+    Enables Information Rights Management (IRM) on the list.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowPrint
+  description: |+
+    Sets a value indicating whether the viewer can print the downloaded document.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowScript
+  description: |+
+    Sets a value indicating whether the viewer can run a script on the downloaded document.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowWriteCopy
+  description: |+
+    Sets a value indicating whether the viewer can write on a copy of the downloaded document.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: DisableDocumentBrowserView
+  description: |+
+    Sets a value indicating whether to block Office Web Application Companion applications (WACs) from showing this document.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: DocumentAccessExpireDays
+  description: |+
+    Sets the number of days after which the downloaded document will expire.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: DocumentLibraryProtectionExpireDate
+  description: |+
+    Sets the date after which the Information Rights Management (IRM) protection of this document library will stop.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Enable
+  description: |+
+    Specifies whether Information Rights Management (IRM) is enabled for the list.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableDocumentAccessExpire
+  description: |+
+    Sets a value indicating whether the downloaded document will expire.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableDocumentBrowserPublishingView
+  description: |+
+    Sets a value indicating whether to enable Office Web Application Companion applications (WACs) to publishing view.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableExpiration
+  description: |+
+    Specifies whether Information Rights Management (IRM) expiration is enabled for the list.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableGroupProtection
+  description: |+
+    Sets a value indicating whether the permission of the downloaded document is applicable to a group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableLicenseCacheExpire
+  description: |+
+    Sets whether a user must verify their credentials after some interval.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableRejection
+  description: |+
+    Specifies whether Information Rights Management (IRM) rejection is enabled for the list.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GroupName
+  description: |+
+    Sets the group name (email address) that the permission is also applicable to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: LicenseCacheExpireDays
+  description: |+
+    Sets the number of days that the application that opens the document caches the IRM license. When these elapse, the application will connect to the IRM server to validate the license.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ListPipeBind" data-throw-if-not-resolved="False" />
+  name: List
+  isRequired: true
+  description: |+
+    The list to set Information Rights Management (IRM) settings for.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyDescription
+  description: |+
+    Sets the permission policy description.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyTitle
+  description: |+
+    Sets the permission policy title.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TemplateId
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Set-PnPListInformationRightsManagement
+name: Set-PnPListInformationRightsManagement
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  title: Set-PnPListInformationRightsManagement
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Set-PnPListInformationRightsManagement.html

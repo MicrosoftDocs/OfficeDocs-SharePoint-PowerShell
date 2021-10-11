@@ -1,0 +1,166 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPAADUser.md to change this file.
+
+
+  **Required Permissions**
+
+    * Microsoft Graph API : One of Directory.Read.All, Directory.ReadWrite.All, User.Read.All, User.ReadWrite.All
+
+  Retrieves users from Azure Active Directory. By default the following properties will be loaded: BusinessPhones, DisplayName, GivenName, JobTitle, Mail, MobilePhone, OfficeLocation, PreferredLanguage, Surname, UserPrincipalName, Id, AccountEnabled
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- Get-PnPAADUser [-Filter <String>] [-OrderBy <String>] [-Select <String[]>] [-StartIndex <Int32>] [-EndIndex<Int32>] [<CommonParameters>]
+- Get-PnPAADUser [-Identity <String>] [-Select <String[]>] [<CommonParameters>]
+- Get-PnPAADUser [-Filter <String>] [-OrderBy <String>] [-Select <String[]>] [-Delta] [-DeltaToken <String>] [-StartIndex <Int32>] [-EndIndex<Int32>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Get-PnPAADUser
+  description: |-
+    Retrieves the first 1000 users from Azure Active Directory
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Get-PnPAADUser -EndIndex $null
+  description: |-
+    Retrieves all users from Azure Active Directory
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Get-PnPAADUser -Identity 328c7693-5524-44ac-a946-73e02d6b0f98
+  description: |-
+    Retrieves the user from Azure Active Directory with the id 328c7693-5524-44ac-a946-73e02d6b0f98
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    Get-PnPAADUser -Identity john@contoso.com
+  description: |-
+    Retrieves the user from Azure Active Directory with the user principal name john@contoso.com
+  summary: ""
+- title: EXAMPLE 5
+  code: |-
+    Get-PnPAADUser -Identity john@contoso.com -Select "DisplayName","extension_3721d05137db455ad81aa442e3c2d4f9_extensionAttribute1"
+  description: |-
+    Retrieves only the DisplayName and extensionAttribute1 properties of the user from Azure Active Directory which has the user principal name john@contoso.com
+  summary: ""
+- title: EXAMPLE 6
+  code: |-
+    Get-PnPAADUser -Filter "accountEnabled eq false"
+  description: |-
+    Retrieves all the disabled users from Azure Active Directory
+  summary: ""
+- title: EXAMPLE 7
+  code: |-
+    Get-PnPAADUser -Filter "startswith(DisplayName, 'John')" -OrderBy "DisplayName"
+  description: |-
+    Retrieves all the users from Azure Active Directory of which their DisplayName starts with 'John' and sort the results by the DisplayName
+  summary: ""
+- title: EXAMPLE 8
+  code: |-
+    Get-PnPAADUser -Delta
+  description: |-
+    Retrieves all the users from Azure Active Directory and include a delta DeltaToken which can be used by providing -DeltaToken <token> to query for changes to users in Active Directory since this run
+  summary: ""
+- title: EXAMPLE 9
+  code: |-
+    Get-PnPAADUser -Delta -DeltaToken abcdef
+  description: |-
+    Retrieves all the users from Azure Active Directory which have had changes since the provided DeltaToken was given out
+  summary: ""
+- title: EXAMPLE 10
+  code: |-
+    Get-PnPAADUser -StartIndex 10 -EndIndex 20
+  description: |-
+    Retrieves the 10th through the 20th user from Azure Active Directory
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Delta
+  isRequired: true
+  description: |+
+    Retrieves all users and provides a SkipToken delta token to allow to query for changes since this run when querying again by adding -DeltaToken to the command
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DeltaToken
+  description: |+
+    The change token provided during the previous run with -Delta to query for the changes to user objects made in Azure Active Directory since that run
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: EndIndex
+  description: |+
+    Allows defining the last result to return. Useful for i.e. pagina. If omitted, it will use 999. If set to $null, it will return all users from Azure Active Directory.
+
+  defaultValue: "999"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Includes a filter to the retrieval of the users. Use OData instructions to construct the filter, i.e. "startswith(DisplayName, 'John')".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Returns the user with the provided user id
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OrderBy
+  description: |+
+    Includes a custom sorting instruction to the retrieval of the users. Use OData syntax to construct the orderby, i.e. "DisplayName desc".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Select
+  description: |+
+    Allows providing an array with the property names of specific properties to return. If not provided, the default properties will be returned.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: StartIndex
+  description: |+
+    Allows defining the first result to return. Useful for i.e. paging.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Get-PnPAADUser
+name: Get-PnPAADUser
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Get-PnPAADUser.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Get-PnPAADUser

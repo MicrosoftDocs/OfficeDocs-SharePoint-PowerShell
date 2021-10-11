@@ -1,0 +1,110 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPView.md to change this file.
+
+  Change view properties
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Set-PnPView [[-List] <ListPipeBind>] -Identity <ViewPipeBind> [-Values <Hashtable>] [-Fields <String[]>]
+
+   [-Aggregations <String>] [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-PnPView -List "Tasks" -Identity "All Tasks" -Values @{JSLink="hierarchytaskslist.js|customrendering.js";Title="My view"}
+  description: |-
+    Updates the "All Tasks" view on list "Tasks" to use hierarchytaskslist.js and customrendering.js for the JSLink and changes the title of the view to "My view"
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Get-PnPList -Identity "Tasks" | Get-PnPView | Set-PnPView -Values @{JSLink="hierarchytaskslist.js|customrendering.js"}
+  description: |-
+    Updates all views on list "Tasks" to use hierarchytaskslist.js and customrendering.js for the JSLink
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Set-PnPView -List "Documents" -Identity "Corporate Documents" -Fields "Title","Created"
+  description: |-
+    Updates the Corporate Documents view on the Documents library to have two fields
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    Set-PnPView -List "Documents" -Identity "Corporate Documents" -Fields "Title","Created" -Aggregations "<FieldRef Name='Title' Type='COUNT'/>"
+  description: |-
+    Updates the Corporate Documents view on the Documents library and sets the totals (aggregations) to Count on the Title field
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Aggregations
+  description: |+
+    A valid XML fragment containing one or more Aggregations
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Fields
+  description: |+
+    An array of fields to use in the view. Notice that specifying this value will remove the existing fields
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ViewPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The Id, Title or instance of the view
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ListPipeBind" data-throw-if-not-resolved="False" />
+  name: List
+  description: |+
+    The Id, Title or Url of the list
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: Values
+  description: |+
+    Hashtable of properties to update on the view. Use the syntax @{property1="value";property2="value"}.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Set-PnPView
+name: Set-PnPView
+description: |-
+  Sets one or more properties of an existing view, see here https://docs.microsoft.com/previous-versions/office/sharepoint-server/ee543328(v=office.15) for the list of view properties.
+metadata:
+  Module Name: PnP.PowerShell
+  title: Set-PnPView
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Set-PnPView.html

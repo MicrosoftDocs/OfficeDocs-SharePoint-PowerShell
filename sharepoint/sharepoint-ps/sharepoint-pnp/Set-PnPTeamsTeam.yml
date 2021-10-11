@@ -1,0 +1,270 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPTeamsTeam.md to change this file.
+
+
+  **Required Permissions**
+
+    * Microsoft Graph API: Group.ReadWrite.All
+
+  Updates an existing Team.
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Set-PnPTeamsTeam -Identity <TeamsTeamPipeBind> [-DisplayName <String>] [-Description <String>]
+
+   [-Visibility <TeamVisibility>] [-AllowAddRemoveApps <Boolean>] [-AllowChannelMentions <Boolean>]
+
+   [-AllowCreateUpdateChannels <Boolean>] [-AllowCreateUpdateRemoveConnectors <Boolean>]
+
+   [-AllowCreateUpdateRemoveTabs <Boolean>] [-AllowCustomMemes <Boolean>] [-AllowDeleteChannels <Boolean>]
+
+   [-AllowGiphy <Boolean>] [-AllowGuestCreateUpdateChannels <Boolean>] [-AllowGuestDeleteChannels <Boolean>]
+
+   [-AllowOwnerDeleteMessages <Boolean>] [-AllowStickersAndMemes <Boolean>] [-AllowTeamMentions <Boolean>]
+
+   [-AllowUserDeleteMessages <Boolean>] [-AllowUserEditMessages <Boolean>]
+
+   [-GiphyContentRating <TeamGiphyContentRating>] [-ShowInTeamsSearchAndSuggestions <Boolean>]
+
+   [-Classification <String>]  [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-PnPTeamsTeam -Identity 'MyTeam' -DisplayName 'My Team'
+  description: |-
+    Updates the team called 'MyTeam' to have the display name set to 'My Team'.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Set-PnPTeamsTeam -Identity "baba9192-55be-488a-9fb7-2e2e76edbef2" -Visibility Public
+  description: |-
+    Updates the team by using id to have the visibility Public.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Set-PnPTeamsTeam -Identity "My Team" -AllowTeamMentions $false -AllowChannelMentions $true -AllowDeleteChannels $false
+  description: |-
+    Updates the team 'My Team' to disallow Team @mentions, allow Channel @mentions and disallow members from deleting channels.
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    Set-PnPTeamsTeam -Identity "My Team" -GiphyContentRating Moderate
+  description: |-
+    Updates the team 'My Team' to make the have a Moderate level of sensitivity for giphy usage.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowAddRemoveApps
+  description: |+
+    Boolean value that determines whether or not members (not only owners) are allowed to add apps to the team.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowChannelMentions
+  description: |+
+    Boolean value that determines whether or not channels in the team can be @ mentioned so that all users who follow the channel are notified.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCreateUpdateChannels
+  description: |+
+    Setting that determines whether or not members (and not just owners) are allowed to create channels.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCreateUpdateRemoveConnectors
+  description: |+
+    Setting that determines whether or not members (and not only owners) can manage connectors in the team.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCreateUpdateRemoveTabs
+  description: |+
+    Setting that determines whether or not members (and not only owners) can manage tabs in channels.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowCustomMemes
+  description: |+
+    Setting that determines whether or not members can use the custom memes functionality in teams.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowDeleteChannels
+  description: |+
+    Setting that determines whether or not members (and not only owners) can delete channels in the team.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowGiphy
+  description: |+
+    Setting that determines whether or not giphy can be used in the team.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowGuestCreateUpdateChannels
+  description: |+
+    Setting that determines whether or not guests can create channels in the team.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowGuestDeleteChannels
+  description: |+
+    Setting that determines whether or not guests can delete in the team.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowOwnerDeleteMessages
+  description: |+
+    Setting that determines whether or not owners can delete messages that they or other members of the team have posted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowStickersAndMemes
+  description: |+
+    Setting that determines whether stickers and memes usage is allowed in the team.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowTeamMentions
+  description: |+
+    Setting that determines whether the entire team can be @ mentioned (which means that all users will be notified)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowUserDeleteMessages
+  description: |+
+    Setting that determines whether or not members can delete messages that they have posted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowUserEditMessages
+  description: |+
+    Setting that determines whether or not users can edit messages that they have posted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Classification
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Changes the description of the specified team.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  description: |+
+    Changes the display name of the specified team.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TeamGiphyContentRating" data-throw-if-not-resolved="False" />
+  name: GiphyContentRating
+  description: |+
+    Setting that determines the level of sensitivity of giphy usage that is allowed in the team. Accepted values are "Strict" or "Moderate"
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: moderate, strict
+- type: <xref href="TeamsTeamPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specify the group id, mailNickname or display name of the team to use.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ShowInTeamsSearchAndSuggestions
+  description: |+
+    Setting that determines whether or not private teams should be searchable from Teams clients for users who do not belong to that team. Set to $false to make those teams not discoverable from Teams clients.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TeamVisibility" data-throw-if-not-resolved="False" />
+  name: Visibility
+  description: |+
+    Changes the visibility of the specified team.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Private, Public
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Set-PnPTeamsTeam
+name: Set-PnPTeamsTeam
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  title: Set-PnPTeamsTeam
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Set-PnPTeamsTeam.html

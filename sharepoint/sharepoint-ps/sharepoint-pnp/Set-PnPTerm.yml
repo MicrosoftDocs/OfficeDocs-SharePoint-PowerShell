@@ -1,0 +1,181 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPTerm.md to change this file.
+
+  Updates a term
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Set-PnPTerm -Identity <Guid> [-Name <String>] [-Lcid <Int32>] [-Description <String>]
+
+   [-CustomProperties <Hashtable>] [-LocalCustomProperties <Hashtable>] [-DeleteAllCustomProperties]
+
+   [-DeleteAllLocalCustomProperties] [-Deprecated <bool>] [-TermStore <TaxonomyTermStorePipeBind>]
+
+   [<CommonParameters>]
+- >-
+  Set-PnPTerm -Identity <String> [-Name <String>] [-Lcid <Int32>] [-Description <String>]
+
+   [-CustomProperties <Hashtable>] [-LocalCustomProperties <Hashtable>] [-DeleteAllCustomProperties]
+
+   [-DeleteAllLocalCustomProperties] [-Deprecated <bool>] -TermSet <TaxonomyTermSetPipeBind> -TermGroup <TaxonomyTermGroupPipeBind>
+
+   [-TermStore <TaxonomyTermStorePipeBind>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Set-PnPTerm -Identity 3d9e60e8-d89c-4cd4-af61-a010cf93b380 -Name "New Name"
+  description: |-
+    Replaces the name of an existing term.
+  summary: ""
+- title: Example 2
+  code: |-
+    Set-PnPTerm -Identity "Marketing" -TermSet "Departments" -TermGroup "Corporate" -Name "Finance" -CustomProperties @{"IsCorporate"="True"}
+  description: |-
+    Adds a new custom property to an existing term.
+  summary: ""
+- title: Example 3
+  code: |-
+    Set-PnPTerm -Identity "Marketing" -TermSet "Departments" -TermGroup "Corporate" -Name "Finance" -DeleteAllCustomProperties -CustomProperties @{"IsCorporate"="True"}
+  description: |-
+    Removes all custom properties and adds a new custom property to an existing term.
+  summary: ""
+- title: Example 4
+  code: |-
+    Set-TermSet -Identity "Marketing" -TermSet "Departments" -TermGroup "Corporate" -Deprecated $true
+  description: |-
+    Marks an existing term as deprecated, hiding it from users.
+  summary: ""
+parameters:
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: CustomProperties
+  description: |+
+    Sets custom properties. 
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DeleteAllCustomProperties
+  description: |+
+    Removes all custom properties
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DeleteAllLocalCustomProperties
+  description: |+
+    Removes all local custom properties
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="boolean" data-throw-if-not-resolved="False" />
+  name: Deprecated
+  description: |+
+    Sets a term as deprecated or not.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Sets the description for a term.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TaxonomyTermPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Identity of term to update. Either a name or a GUID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Lcid
+  description: |+
+    Optional language code to use when setting the description. Defaults to the default term store language.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: LocalCustomProperties
+  description: |+
+    Sets local custom properties
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The new name for the term.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TaxonomyTermGroupPipeBind" data-throw-if-not-resolved="False" />
+  name: TermGroup
+  isRequired: true
+  description: |+
+    The term group to find the term in.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TaxonomyTermSetPipeBind" data-throw-if-not-resolved="False" />
+  name: TermSet
+  isRequired: true
+  description: |+
+    The termset to find the term in.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TaxonomyTermStorePipeBind" data-throw-if-not-resolved="False" />
+  name: TermStore
+  description: |+
+    The termstore to find the term in. If not specified the default term store is used.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Set-PnPTerm
+name: Set-PnPTerm
+description: |-
+  This cmdlet allows you to update an existing term.
+metadata:
+  Module Name: PnP.PowerShell
+  title: Set-PnPTerm
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Set-PnPTerm.html

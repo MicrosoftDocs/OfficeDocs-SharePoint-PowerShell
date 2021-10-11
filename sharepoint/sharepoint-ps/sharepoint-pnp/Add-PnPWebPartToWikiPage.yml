@@ -1,0 +1,113 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPWebPartToWikiPage.md to change this file.
+
+  Adds a web part to a wiki page in a specified table row and column
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Add-PnPWebPartToWikiPage -ServerRelativePageUrl <String> -Xml <String> -Row <Int32> -Column <Int32> [-AddSpace]
+
+   [-Connection <PnPConnection>] [<CommonParameters>]
+- >-
+  Add-PnPWebPartToWikiPage -ServerRelativePageUrl <String> -Path <String> -Row <Int32> -Column <Int32>
+
+   [-AddSpace] [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Add-PnPWebPartToWikiPage -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx" -Path "c:\myfiles\listview.webpart" -Row 1 -Column 1
+  description: |-
+    This will add the web part as defined by the XML in the listview.webpart file to the specified page in the first row and the first column of the HTML table present on the page
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Add-PnPWebPartToWikiPage -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx" -XML $webpart -Row 1 -Column 1
+  description: |-
+    This will add the web part as defined by the XML in the $webpart variable to the specified page in the first row and the first column of the HTML table present on the page
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AddSpace
+  description: |+
+    Must there be a extra space between the web part
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Column
+  isRequired: true
+  description: |+
+    Column number where the web part must be placed
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    A path to a web part file on a the file system.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Row
+  isRequired: true
+  description: |+
+    Row number where the web part must be placed
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ServerRelativePageUrl
+  isRequired: true
+  description: |+
+    Full server relative url of the web part page, e.g. /sites/demo/sitepages/home.aspx
+
+  defaultValue: None
+  position: Named
+  aliases: PageUrl
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Xml
+  isRequired: true
+  description: |+
+    A string containing the XML for the web part.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Add-PnPWebPartToWikiPage
+name: Add-PnPWebPartToWikiPage
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Add-PnPWebPartToWikiPage.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Add-PnPWebPartToWikiPage

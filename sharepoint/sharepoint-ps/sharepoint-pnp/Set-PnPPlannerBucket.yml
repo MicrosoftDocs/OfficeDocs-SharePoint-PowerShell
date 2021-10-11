@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPPlannerBucket.md to change this file.
+
+
+  **Required Permissions**
+
+    * Microsoft Graph API: Group.ReadWrite.All
+
+  Updates an existing Planner bucket
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Set-PnPPlannerBucket -Bucket <PlannerBucketPipeBind> -Group <PlannerGroupPipeBind> -Plan <PlannerPlanPipeBind>
+
+   -Name <String>  [<CommonParameters>]
+- >-
+  Set-PnPPlannerBucket -Bucket <PlannerBucketPipeBind> -PlanId <String> -Name <String> 
+
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Set-PnPPlannerBucket -Bucket "Todos" -Group "Marketing" -Plan "Conference Plan" -Name "Pre-conf Todos"
+  description: |-
+    This example renames the bucket called "Todos" to "Pre-conf Todos"
+  summary: ""
+parameters:
+- type: <xref href="PlannerBucketPipeBind" data-throw-if-not-resolved="False" />
+  name: Bucket
+  isRequired: true
+  description: |+
+    Specify the bucket or bucket id to update.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PlannerGroupPipeBind" data-throw-if-not-resolved="False" />
+  name: Group
+  isRequired: true
+  description: |+
+    Specify the group id or name of the group owning the plan.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specify the new name of the bucket
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PlannerPlanPipeBind" data-throw-if-not-resolved="False" />
+  name: Plan
+  isRequired: true
+  description: |+
+    Specify the name or id of the plan to retrieve the buckets for.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PlanId
+  isRequired: true
+  description: |+
+    The id of the plan to find the bucket in.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.set-pnpplannerbucket
+name: set-pnpplannerbucket
+description: |-
+  This cmdlet updates an existing Planner bucket.
+metadata:
+  Module Name: PnP.PowerShell
+  title: set-pnpplannerbucket
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Set-PnPPlannerBucket.html

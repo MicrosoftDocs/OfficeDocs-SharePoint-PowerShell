@@ -1,0 +1,165 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPGroup.md to change this file.
+
+  Updates a group
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Set-PnPGroup -Identity <GroupPipeBind> [-SetAssociatedGroup <AssociatedGroupType>] [-AddRole <String>]
+
+   [-RemoveRole <String>] [-Title <String>] [-Owner <String>] [-Description <String>]
+
+   [-AllowRequestToJoinLeave <Boolean>] [-AutoAcceptRequestToJoinLeave <Boolean>]
+
+   [-AllowMembersEditMembership <Boolean>] [-OnlyAllowMembersViewMembership <Boolean>]
+
+   [-RequestToJoinEmail <String>] [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-PnPGroup -Identity 'My Site Members' -SetAssociatedGroup Members
+  description: |-
+    Sets the SharePoint group with the name 'My Site Members' as the associated members group
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Set-PnPGroup -Identity 'My Site Members' -Owner 'site owners'
+  description: |-
+    Sets the SharePoint group with the name 'site owners' as the owner of the SharePoint group with the name 'My Site Members'
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AddRole
+  description: |+
+    Name of the permission set to add to this SharePoint group
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowMembersEditMembership
+  description: |+
+    A switch parameter that specifies whether group members can modify membership in the group
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowRequestToJoinLeave
+  description: |+
+    A switch parameter that specifies whether to allow users to request membership in the group and to allow users to request to leave the group
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AutoAcceptRequestToJoinLeave
+  description: |+
+    A switch parameter that specifies whether users are automatically added or removed when they make a request
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    The description for the group
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="GroupPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    A group object, an ID or a name of a group
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: OnlyAllowMembersViewMembership
+  description: |+
+    A switch parameter that specifies whether only group members are allowed to view the list of members in the group
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Owner
+  description: |+
+    The owner for the group, which can be a user or another group
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RemoveRole
+  description: |+
+    Name of the permission set to remove from this SharePoint group
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RequestToJoinEmail
+  description: |+
+    The e-mail address to which membership requests are sent
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AssociatedGroupType" data-throw-if-not-resolved="False" />
+  name: SetAssociatedGroup
+  description: |+
+    One of the associated group types (Visitors, Members, Owners
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Visitors, Members, Owners
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Title
+  description: |+
+    The title for the group
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Set-PnPGroup
+name: Set-PnPGroup
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  title: Set-PnPGroup
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Set-PnPGroup.html

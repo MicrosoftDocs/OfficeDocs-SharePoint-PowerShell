@@ -1,0 +1,111 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPPlannerTask.md to change this file.
+
+
+  **Required Permissions**
+
+    * Microsoft Graph API: Group.ReadWrite.All
+
+  Adds a new task to a planner bucket
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- Add-PnPPlannerTask -Group <PlannerGroupPipeBind> -Plan <PlannerPlanPipeBind> -Bucket <PlannerBucketPipeBind> -Title <String> [-AssignedTo <String[]>]
+- Add-PnPPlannerTask -Bucket <PlannerBucketPipeBind> -PlanId <String> -Title <String> [-AssignedTo <String[]>]
+examples:
+- title: Example 1
+  code: |-
+    Add-PnPPlannerTask -Group "Marketing" -Plan "Conference Plan" -Bucket "Todos" -Title "Design booth layout"
+  description: |-
+    This cmdlet adds a new task.
+  summary: ""
+- title: Example 2
+  code: |-
+    Add-PnPPlannerTask -PlanId "QvfkTd1mc02gwxHjHC_43JYABhAy" -Bucket "Todos" -Title "Design booth layout"
+  description: |-
+    This cmdlet adds a new task.
+  summary: ""
+- title: Example 3
+  code: |-
+    Add-PnPPlannerTask -Group "Marketing" -Plan "Conference Plan" -Bucket "Todos" -Title "Design booth layout" -AssignedTo "user@contoso.com","manager@contoso.com"
+  description: |-
+    This cmdlet adds a new task and assigns to user@contoso.com and manager@contoso.com
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AssignedTo
+  isRequired: true
+  description: |+
+    Specify the email(s) of the user to assign the task to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PlannerBucketPipeBind" data-throw-if-not-resolved="False" />
+  name: Bucket
+  isRequired: true
+  description: |+
+    The bucket to add the task too
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PlannerGroupPipeBind" data-throw-if-not-resolved="False" />
+  name: Group
+  isRequired: true
+  description: |+
+    Specify the group id or name of the group owning the plan.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PlannerPlanPipeBind" data-throw-if-not-resolved="False" />
+  name: Plan
+  isRequired: true
+  description: |+
+    Specify the id or name of the plan to add the tasks to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PlanId
+  isRequired: true
+  description: |+
+    Specify the id the plan to add the tasks to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Title
+  isRequired: true
+  description: |+
+    Specify the title of the task
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.add-pnpplannertask
+name: add-pnpplannertask
+description: |-
+  This cmdlet adds a new task to Planner bucket
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Add-PnPPlannerTask.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: add-pnpplannertask

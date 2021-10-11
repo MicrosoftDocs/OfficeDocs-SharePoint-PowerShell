@@ -1,0 +1,104 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPWebPartToWebPartPage.md to change this file.
+
+  Adds a web part to a web part page in a specified zone
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Add-PnPWebPartToWebPartPage -ServerRelativePageUrl <String> -Xml <String> -ZoneId <String> -ZoneIndex <Int32>
+
+   [-Connection <PnPConnection>] [<CommonParameters>]
+- >-
+  Add-PnPWebPartToWebPartPage -ServerRelativePageUrl <String> -Path <String> -ZoneId <String> -ZoneIndex <Int32>
+
+   [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Add-PnPWebPartToWebPartPage -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx" -Path "c:\myfiles\listview.webpart" -ZoneId "Header" -ZoneIndex 1
+  description: |-
+    This will add the web part as defined by the XML in the listview.webpart file to the specified page in the specified zone and with the order index of 1
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Add-PnPWebPartToWebPartPage -ServerRelativePageUrl "/sites/demo/sitepages/home.aspx" -XML $webpart -ZoneId "Header" -ZoneIndex 1
+  description: |-
+    This will add the web part as defined by the XML in the $webpart variable to the specified page in the specified zone and with the order index of 1
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    A path to a web part file on a the file system.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ServerRelativePageUrl
+  isRequired: true
+  description: |+
+    Server Relative Url of the page to add the web part to.
+
+  defaultValue: None
+  position: Named
+  aliases: PageUrl
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Xml
+  isRequired: true
+  description: |+
+    A string containing the XML for the web part.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ZoneId
+  isRequired: true
+  description: |+
+    The Zone Id where the web part must be placed
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ZoneIndex
+  isRequired: true
+  description: |+
+    The Zone Index where the web part must be placed
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Add-PnPWebPartToWebPartPage
+name: Add-PnPWebPartToWebPartPage
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Add-PnPWebPartToWebPartPage.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Add-PnPWebPartToWebPartPage

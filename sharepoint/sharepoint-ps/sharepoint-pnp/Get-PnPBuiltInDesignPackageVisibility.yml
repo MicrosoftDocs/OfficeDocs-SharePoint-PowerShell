@@ -1,0 +1,57 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPBuiltInDesignPackageVisibility.md to change this file.
+
+  Gets the visibility of the available built-in Design Packages.
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Get-PnPBuiltInDesignPackageVisibility [-DesignPackage <DesignPackageType>]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Get-PnPBuiltInDesignPackageVisibility -DesignPackage Showcase
+  description: |-
+    This example retrieves the current visibility state of Showcase built-in design package.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Get-PnPBuiltInDesignPackageVisibility
+  description: |-
+    This example retrieves the current visibility state of each built-in design package.
+  summary: ""
+parameters:
+- type: <xref href="DesignPackageType" data-throw-if-not-resolved="False" />
+  name: DesignPackage
+  isRequired: true
+  description: |+
+    Name of the design package, available names are
+
+    * Topic
+    * Showcase
+    * Blank
+    * TeamSite
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Get-PnPBuiltInDesignPackageVisibility
+name: Get-PnPBuiltInDesignPackageVisibility
+description: |-
+  Use this cmdlet to retrieve the current visibility state of each built-in design package.
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Get-PnPBuiltInDesignPackageVisibility.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Get-PnPBuiltInDesignPackageVisibility

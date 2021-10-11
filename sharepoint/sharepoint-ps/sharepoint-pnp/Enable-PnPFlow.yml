@@ -1,0 +1,69 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Enable-PnPFlow.md to change this file.
+
+  Enables a specific flow
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- Enable-PnPFlow -Environment <PowerAutomateEnvironmentPipeBind> -Identity <PowerAutomateFlowPipeBind> [-AsAdmin] [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    $environment = Get-PnPFlowEnvironment
+    Enable-PnPFlow -Environment $environment -Identity fba63225-baf9-4d76-86a1-1b42c917a182
+  description: |-
+    Enables the specified flow
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsAdmin
+  description: |+
+    Enable the flow as an adminstrator
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet.
+    Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PowerAutomateEnvironmentPipeBind" data-throw-if-not-resolved="False" />
+  name: Environment
+  isRequired: true
+  description: |+
+    The name of the environment or an Environment object to retrieve the available flows for.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PowerAutomateFlowPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Identity of the flow to enable
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: PnP.Powershell.Enable-PnPFlow
+name: Enable-PnPFlow
+description: |-
+  This cmdlet enables a specific flow
+metadata:
+  online version: https://pnp.github.io/powershell/cmdlets/Enable-PnPFlow.html
+  Module Name: PnP.PowerShell
+  external help file: PnP.PowerShell.dll-Help.xml
+  schema: 2.0.0

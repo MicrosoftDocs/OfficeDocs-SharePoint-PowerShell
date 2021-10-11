@@ -1,0 +1,81 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Clear-PnPDefaultColumnValues.md to change this file.
+
+  Clear default column values for a document library
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Clear-PnPDefaultColumnValues [-List] <ListPipeBind> -Field <FieldPipeBind> [-Folder <String>]
+
+   [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Clear-PnPDefaultColumnValues -List Documents -Field MyField
+  description: |-
+    Clears the default value for the field MyField on a library
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Clear-PnPDefaultColumnValues -List Documents -Field MyField -Folder A
+  description: |-
+    Clears the default value for the field MyField on the folder A on a library
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="FieldPipeBind" data-throw-if-not-resolved="False" />
+  name: Field
+  isRequired: true
+  description: |+
+    The internal name, id or a reference to a field
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Folder
+  description: |+
+    A library relative folder path, if not specified it will set the default column values on the root folder of the library ('/')
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ListPipeBind" data-throw-if-not-resolved="False" />
+  name: List
+  isRequired: true
+  description: |+
+    The ID, Name or Url of the list.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Clear-PnPDefaultColumnValues
+name: Clear-PnPDefaultColumnValues
+description: |-
+  Clear default column values for a document library, per folder, or for the root folder if the folder parameter has not been specified.
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Clear-PnPDefaultColumnValues.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Clear-PnPDefaultColumnValues

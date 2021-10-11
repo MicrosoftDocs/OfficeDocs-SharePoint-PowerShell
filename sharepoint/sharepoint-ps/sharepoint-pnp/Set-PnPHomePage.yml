@@ -1,0 +1,55 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPHomePage.md to change this file.
+
+  Sets the home page of the current web.
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Set-PnPHomePage [-RootFolderRelativeUrl] <String> [-Connection <PnPConnection>]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-PnPHomePage -RootFolderRelativeUrl SitePages/Home.aspx
+  description: |-
+    Sets the home page to the home.aspx file which resides in the SitePages library
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RootFolderRelativeUrl
+  isRequired: true
+  description: |+
+    The root folder relative url of the homepage, e.g. 'sitepages/home.aspx'
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: Path
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Set-PnPHomePage
+name: Set-PnPHomePage
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  title: Set-PnPHomePage
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Set-PnPHomePage.html

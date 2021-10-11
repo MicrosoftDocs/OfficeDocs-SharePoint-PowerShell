@@ -1,0 +1,3375 @@
+- name: Reference
+  items:
+  - name: PnP.Powershell
+    uid: PnP.Powershell
+    items:
+    - name: Add-PnPAlert
+      uid: PnP.Powershell.Add-PnPAlert
+    - name: Add-PnPApp
+      uid: PnP.Powershell.Add-PnPApp
+    - name: Add-PnPApplicationCustomizer
+      uid: PnP.Powershell.Add-PnPApplicationCustomizer
+    - name: Add-PnPAzureADGroupMember
+      uid: PnP.Powershell.Add-PnPAzureADGroupMember
+    - name: Add-PnPAzureADGroupOwner
+      uid: PnP.Powershell.Add-PnPAzureADGroupOwner
+    - name: Add-PnPContentType
+      uid: PnP.Powershell.Add-PnPContentType
+    - name: Add-PnPContentTypeToDocumentSet
+      uid: PnP.Powershell.Add-PnPContentTypeToDocumentSet
+    - name: Add-PnPContentTypeToList
+      uid: PnP.Powershell.Add-PnPContentTypeToList
+    - name: Add-PnPCustomAction
+      uid: PnP.Powershell.Add-PnPCustomAction
+    - name: Add-PnPDataRowsToSiteTemplate
+      uid: PnP.Powershell.Add-PnPDataRowsToSiteTemplate
+    - name: Add-PnPDocumentSet
+      uid: PnP.Powershell.Add-PnPDocumentSet
+    - name: Add-PnPEventReceiver
+      uid: PnP.Powershell.Add-PnPEventReceiver
+    - name: Add-PnPField
+      uid: PnP.Powershell.Add-PnPField
+    - name: Add-PnPFieldFromXml
+      uid: PnP.Powershell.Add-PnPFieldFromXml
+    - name: Add-PnPFieldToContentType
+      uid: PnP.Powershell.Add-PnPFieldToContentType
+    - name: Add-PnPFile
+      uid: PnP.Powershell.Add-PnPFile
+    - name: Add-PnPFileToSiteTemplate
+      uid: PnP.Powershell.Add-PnPFileToSiteTemplate
+    - name: Add-PnPFolder
+      uid: PnP.Powershell.Add-PnPFolder
+    - name: Add-PnPGroupMember
+      uid: PnP.Powershell.Add-PnPGroupMember
+    - name: Add-PnPHtmlPublishingPageLayout
+      uid: PnP.Powershell.Add-PnPHtmlPublishingPageLayout
+    - name: Add-PnPHubSiteAssociation
+      uid: PnP.Powershell.Add-PnPHubSiteAssociation
+    - name: Add-PnPHubToHubAssociation
+      uid: PnP.Powershell.Add-PnPHubToHubAssociation
+    - name: Add-PnPIndexedProperty
+      uid: PnP.Powershell.Add-PnPIndexedProperty
+    - name: Add-PnPJavaScriptBlock
+      uid: PnP.Powershell.Add-PnPJavaScriptBlock
+    - name: Add-PnPJavaScriptLink
+      uid: PnP.Powershell.Add-PnPJavaScriptLink
+    - name: Add-PnPListFoldersToSiteTemplate
+      uid: PnP.Powershell.Add-PnPListFoldersToSiteTemplate
+    - name: Add-PnPListItem
+      uid: PnP.Powershell.Add-PnPListItem
+    - name: Add-PnPMasterPage
+      uid: PnP.Powershell.Add-PnPMasterPage
+    - name: Add-PnPMicrosoft365GroupMember
+      uid: PnP.Powershell.Add-PnPMicrosoft365GroupMember
+    - name: Add-PnPMicrosoft365GroupOwner
+      uid: PnP.Powershell.Add-PnPMicrosoft365GroupOwner
+    - name: Add-PnPMicrosoft365GroupToSite
+      uid: PnP.Powershell.Add-PnPMicrosoft365GroupToSite
+    - name: Add-PnPNavigationNode
+      uid: PnP.Powershell.Add-PnPNavigationNode
+    - name: Add-PnPOrgAssetsLibrary
+      uid: PnP.Powershell.Add-PnPOrgAssetsLibrary
+    - name: Add-PnPOrgNewsSite
+      uid: PnP.Powershell.Add-PnPOrgNewsSite
+    - name: Add-PnPPage
+      uid: PnP.Powershell.Add-PnPPage
+    - name: Add-PnPPageSection
+      uid: PnP.Powershell.Add-PnPPageSection
+    - name: Add-PnPPageTextPart
+      uid: PnP.Powershell.Add-PnPPageTextPart
+    - name: Add-PnPPageWebPart
+      uid: PnP.Powershell.Add-PnPPageWebPart
+    - name: add-pnpplannerbucket
+      uid: PnP.Powershell.add-pnpplannerbucket
+    - name: add-pnpplannertask
+      uid: PnP.Powershell.add-pnpplannertask
+    - name: Add-PnPPublishingImageRendition
+      uid: PnP.Powershell.Add-PnPPublishingImageRendition
+    - name: Add-PnPPublishingPage
+      uid: PnP.Powershell.Add-PnPPublishingPage
+    - name: Add-PnPPublishingPageLayout
+      uid: PnP.Powershell.Add-PnPPublishingPageLayout
+    - name: Add-PnPRoleDefinition
+      uid: PnP.Powershell.Add-PnPRoleDefinition
+    - name: Add-PnPSiteClassification
+      uid: PnP.Powershell.Add-PnPSiteClassification
+    - name: Add-PnPSiteCollectionAdmin
+      uid: PnP.Powershell.Add-PnPSiteCollectionAdmin
+    - name: Add-PnPSiteCollectionAppCatalog
+      uid: PnP.Powershell.Add-PnPSiteCollectionAppCatalog
+    - name: Add-PnPSiteDesign
+      uid: PnP.Powershell.Add-PnPSiteDesign
+    - name: Add-PnPSiteDesignTask
+      uid: PnP.Powershell.Add-PnPSiteDesignTask
+    - name: Add-PnPSiteScript
+      uid: PnP.Powershell.Add-PnPSiteScript
+    - name: Add-PnPSiteScriptPackage
+      uid: PnP.Powershell.Add-PnPSiteScriptPackage
+    - name: Add-PnPSiteTemplate
+      uid: PnP.Powershell.Add-PnPSiteTemplate
+    - name: Add-PnPStoredCredential
+      uid: PnP.Powershell.Add-PnPStoredCredential
+    - name: Add-PnPTaxonomyField
+      uid: PnP.Powershell.Add-PnPTaxonomyField
+    - name: Add-PnPTeamsChannel
+      uid: PnP.Powershell.Add-PnPTeamsChannel
+    - name: Add-PnPTeamsTab
+      uid: PnP.Powershell.Add-PnPTeamsTab
+    - name: Add-PnPTeamsTeam
+      uid: PnP.Powershell.Add-PnPTeamsTeam
+    - name: Add-PnPTeamsUser
+      uid: PnP.Powershell.Add-PnPTeamsUser
+    - name: Add-PnPTenantCdnOrigin
+      uid: PnP.Powershell.Add-PnPTenantCdnOrigin
+    - name: Add-PnPTenantSequence
+      uid: PnP.Powershell.Add-PnPTenantSequence
+    - name: Add-PnPTenantSequenceSite
+      uid: PnP.Powershell.Add-PnPTenantSequenceSite
+    - name: Add-PnPTenantSequenceSubSite
+      uid: PnP.Powershell.Add-PnPTenantSequenceSubSite
+    - name: Add-PnPTenantTheme
+      uid: PnP.Powershell.Add-PnPTenantTheme
+    - name: Add-PnPTermToTerm
+      uid: PnP.Powershell.Add-PnPTermToTerm
+    - name: Add-PnPView
+      uid: PnP.Powershell.Add-PnPView
+    - name: Add-PnPWebhookSubscription
+      uid: PnP.Powershell.Add-PnPWebhookSubscription
+    - name: Add-PnPWebPartToWebPartPage
+      uid: PnP.Powershell.Add-PnPWebPartToWebPartPage
+    - name: Add-PnPWebPartToWikiPage
+      uid: PnP.Powershell.Add-PnPWebPartToWikiPage
+    - name: Add-PnPWikiPage
+      uid: PnP.Powershell.Add-PnPWikiPage
+    - name: Approve-PnPTenantServicePrincipalPermissionRequest
+      uid: PnP.Powershell.Approve-PnPTenantServicePrincipalPermissionRequest
+    - name: Clear-PnPAzureADGroupMember
+      uid: PnP.Powershell.Clear-PnPAzureADGroupMember
+    - name: Clear-PnPAzureADGroupOwner
+      uid: PnP.Powershell.Clear-PnPAzureADGroupOwner
+    - name: Clear-PnPDefaultColumnValues
+      uid: PnP.Powershell.Clear-PnPDefaultColumnValues
+    - name: Clear-PnPListItemAsRecord
+      uid: PnP.Powershell.Clear-PnPListItemAsRecord
+    - name: Clear-PnPMicrosoft365GroupMember
+      uid: PnP.Powershell.Clear-PnPMicrosoft365GroupMember
+    - name: Clear-PnPMicrosoft365GroupOwner
+      uid: PnP.Powershell.Clear-PnPMicrosoft365GroupOwner
+    - name: Clear-PnPRecycleBinItem
+      uid: PnP.Powershell.Clear-PnPRecycleBinItem
+    - name: Clear-PnPTenantAppCatalogUrl
+      uid: PnP.Powershell.Clear-PnPTenantAppCatalogUrl
+    - name: Clear-PnPTenantRecycleBinItem
+      uid: PnP.Powershell.Clear-PnPTenantRecycleBinItem
+    - name: Connect-PnPOnline
+      uid: PnP.Powershell.Connect-PnPOnline
+    - name: Convert-PnPFolderToSiteTemplate
+      uid: PnP.Powershell.Convert-PnPFolderToSiteTemplate
+    - name: Convert-PnPSiteTemplate
+      uid: PnP.Powershell.Convert-PnPSiteTemplate
+    - name: convert-pnpsitetemplatetomarkdown
+      uid: PnP.Powershell.convert-pnpsitetemplatetomarkdown
+    - name: ConvertTo-PnPClientSidePage
+      uid: PnP.Powershell.ConvertTo-PnPClientSidePage
+    - name: ConvertTo-PnPPage
+      uid: PnP.Powershell.ConvertTo-PnPPage
+    - name: Copy-PnPFile
+      uid: PnP.Powershell.Copy-PnPFile
+    - name: Copy-PnPItemProxy
+      uid: PnP.Powershell.Copy-PnPItemProxy
+    - name: Deny-PnPTenantServicePrincipalPermissionRequest
+      uid: PnP.Powershell.Deny-PnPTenantServicePrincipalPermissionRequest
+    - name: Disable-PnPFeature
+      uid: PnP.Powershell.Disable-PnPFeature
+    - name: Disable-PnPFlow
+      uid: PnP.Powershell.Disable-PnPFlow
+    - name: Disable-PnPPowerShellTelemetry
+      uid: PnP.Powershell.Disable-PnPPowerShellTelemetry
+    - name: Disable-PnPSharingForNonOwnersOfSite
+      uid: PnP.Powershell.Disable-PnPSharingForNonOwnersOfSite
+    - name: Disable-PnPSiteClassification
+      uid: PnP.Powershell.Disable-PnPSiteClassification
+    - name: Disable-PnPTenantServicePrincipal
+      uid: PnP.Powershell.Disable-PnPTenantServicePrincipal
+    - name: Disconnect-PnPOnline
+      uid: PnP.Powershell.Disconnect-PnPOnline
+    - name: Enable-PnPCommSite
+      uid: PnP.Powershell.Enable-PnPCommSite
+    - name: Enable-PnPFeature
+      uid: PnP.Powershell.Enable-PnPFeature
+    - name: Enable-PnPFlow
+      uid: PnP.Powershell.Enable-PnPFlow
+    - name: Enable-PnPPowerShellTelemetry
+      uid: PnP.Powershell.Enable-PnPPowerShellTelemetry
+    - name: Enable-PnPSiteClassification
+      uid: PnP.Powershell.Enable-PnPSiteClassification
+    - name: Enable-PnPTenantServicePrincipal
+      uid: PnP.Powershell.Enable-PnPTenantServicePrincipal
+    - name: Export-PnPFlow
+      uid: PnP.Powershell.Export-PnPFlow
+    - name: Export-PnPListToSiteTemplate
+      uid: PnP.Powershell.Export-PnPListToSiteTemplate
+    - name: Export-PnPPage
+      uid: PnP.Powershell.Export-PnPPage
+    - name: Export-PnPPageMapping
+      uid: PnP.Powershell.Export-PnPPageMapping
+    - name: Export-PnPTaxonomy
+      uid: PnP.Powershell.Export-PnPTaxonomy
+    - name: Export-PnPTermGroupToXml
+      uid: PnP.Powershell.Export-PnPTermGroupToXml
+    - name: Export-PnPUserInfo
+      uid: PnP.Powershell.Export-PnPUserInfo
+    - name: Export-PnPUserProfile
+      uid: PnP.Powershell.Export-PnPUserProfile
+    - name: Find-PnPFile
+      uid: PnP.Powershell.Find-PnPFile
+    - name: Get-PnPAADUser
+      uid: PnP.Powershell.Get-PnPAADUser
+    - name: Get-PnPAccessToken
+      uid: PnP.Powershell.Get-PnPAccessToken
+    - name: Get-PnPAlert
+      uid: PnP.Powershell.Get-PnPAlert
+    - name: Get-PnPApp
+      uid: PnP.Powershell.Get-PnPApp
+    - name: Get-PnPAppAuthAccessToken
+      uid: PnP.Powershell.Get-PnPAppAuthAccessToken
+    - name: Get-PnPAppErrors
+      uid: PnP.Powershell.Get-PnPAppErrors
+    - name: Get-PnPAppInfo
+      uid: PnP.Powershell.Get-PnPAppInfo
+    - name: Get-PnPApplicationCustomizer
+      uid: PnP.Powershell.Get-PnPApplicationCustomizer
+    - name: Get-PnPAuditing
+      uid: PnP.Powershell.Get-PnPAuditing
+    - name: Get-PnPAuthenticationRealm
+      uid: PnP.Powershell.Get-PnPAuthenticationRealm
+    - name: Get-PnPAvailableClientSideComponents
+      uid: PnP.Powershell.Get-PnPAvailableClientSideComponents
+    - name: Get-PnPAvailableLanguage
+      uid: PnP.Powershell.Get-PnPAvailableLanguage
+    - name: Get-PnPAzureADApp
+      uid: PnP.Powershell.Get-PnPAzureADApp
+    - name: Get-PnPAzureADAppPermission
+      uid: PnP.Powershell.Get-PnPAzureADAppPermission
+    - name: Get-PnPAzureADAppSitePermission
+      uid: PnP.Powershell.Get-PnPAzureADAppSitePermission
+    - name: Get-PnPAzureADGroup
+      uid: PnP.Powershell.Get-PnPAzureADGroup
+    - name: Get-PnPAzureADGroupMember
+      uid: PnP.Powershell.Get-PnPAzureADGroupMember
+    - name: Get-PnPAzureADGroupOwner
+      uid: PnP.Powershell.Get-PnPAzureADGroupOwner
+    - name: Get-PnPAzureCertificate
+      uid: PnP.Powershell.Get-PnPAzureCertificate
+    - name: Get-PnPBrowserIdleSignout
+      uid: PnP.Powershell.Get-PnPBrowserIdleSignout
+    - name: Get-PnPBuiltInDesignPackageVisibility
+      uid: PnP.Powershell.Get-PnPBuiltInDesignPackageVisibility
+    - name: Get-PnPChangeLog
+      uid: PnP.Powershell.Get-PnPChangeLog
+    - name: Get-PnPConnection
+      uid: PnP.Powershell.Get-PnPConnection
+    - name: Get-PnPContentType
+      uid: PnP.Powershell.Get-PnPContentType
+    - name: Get-PnPContentTypePublishingHubUrl
+      uid: PnP.Powershell.Get-PnPContentTypePublishingHubUrl
+    - name: Get-PnPContext
+      uid: PnP.Powershell.Get-PnPContext
+    - name: Get-PnPCustomAction
+      uid: PnP.Powershell.Get-PnPCustomAction
+    - name: Get-PnPDefaultColumnValues
+      uid: PnP.Powershell.Get-PnPDefaultColumnValues
+    - name: Get-PnPDeletedMicrosoft365Group
+      uid: PnP.Powershell.Get-PnPDeletedMicrosoft365Group
+    - name: Get-PnPDiagnostics
+      uid: PnP.Powershell.Get-PnPDiagnostics
+    - name: Get-PnPDisableSpacesActivation
+      uid: PnP.Powershell.Get-PnPDisableSpacesActivation
+    - name: Get-PnPDocumentSetTemplate
+      uid: PnP.Powershell.Get-PnPDocumentSetTemplate
+    - name: Get-PnPEventReceiver
+      uid: PnP.Powershell.Get-PnPEventReceiver
+    - name: Get-PnPException
+      uid: PnP.Powershell.Get-PnPException
+    - name: Get-PnPExternalUser
+      uid: PnP.Powershell.Get-PnPExternalUser
+    - name: Get-PnPFeature
+      uid: PnP.Powershell.Get-PnPFeature
+    - name: Get-PnPField
+      uid: PnP.Powershell.Get-PnPField
+    - name: Get-PnPFile
+      uid: PnP.Powershell.Get-PnPFile
+    - name: Get-PnPFileVersion
+      uid: PnP.Powershell.Get-PnPFileVersion
+    - name: Get-PnPFlow
+      uid: PnP.Powershell.Get-PnPFlow
+    - name: Get-PnPFlowEnvironment
+      uid: PnP.Powershell.Get-PnPFlowEnvironment
+    - name: Get-PnPFolder
+      uid: PnP.Powershell.Get-PnPFolder
+    - name: Get-PnPFolderItem
+      uid: PnP.Powershell.Get-PnPFolderItem
+    - name: Get-PnPFooter
+      uid: PnP.Powershell.Get-PnPFooter
+    - name: Get-PnPGraphAccessToken
+      uid: PnP.Powershell.Get-PnPGraphAccessToken
+    - name: Get-PnPGraphSubscription
+      uid: PnP.Powershell.Get-PnPGraphSubscription
+    - name: Get-PnPGroup
+      uid: PnP.Powershell.Get-PnPGroup
+    - name: Get-PnPGroupMember
+      uid: PnP.Powershell.Get-PnPGroupMember
+    - name: Get-PnPGroupPermissions
+      uid: PnP.Powershell.Get-PnPGroupPermissions
+    - name: Get-PnPHideDefaultThemes
+      uid: PnP.Powershell.Get-PnPHideDefaultThemes
+    - name: Get-PnPHomePage
+      uid: PnP.Powershell.Get-PnPHomePage
+    - name: Get-PnPHomeSite
+      uid: PnP.Powershell.Get-PnPHomeSite
+    - name: Get-PnPHubSite
+      uid: PnP.Powershell.Get-PnPHubSite
+    - name: Get-PnPHubSiteChild
+      uid: PnP.Powershell.Get-PnPHubSiteChild
+    - name: Get-PnPIndexedPropertyKeys
+      uid: PnP.Powershell.Get-PnPIndexedPropertyKeys
+    - name: Get-PnPInPlaceRecordsManagement
+      uid: PnP.Powershell.Get-PnPInPlaceRecordsManagement
+    - name: Get-PnPIsSiteAliasAvailable
+      uid: PnP.Powershell.Get-PnPIsSiteAliasAvailable
+    - name: Get-PnPJavaScriptLink
+      uid: PnP.Powershell.Get-PnPJavaScriptLink
+    - name: Get-PnPKnowledgeHubSite
+      uid: PnP.Powershell.Get-PnPKnowledgeHubSite
+    - name: Get-PnPLabel
+      uid: PnP.Powershell.Get-PnPLabel
+    - name: Get-PnPList
+      uid: PnP.Powershell.Get-PnPList
+    - name: Get-PnPListInformationRightsManagement
+      uid: PnP.Powershell.Get-PnPListInformationRightsManagement
+    - name: Get-PnPListItem
+      uid: PnP.Powershell.Get-PnPListItem
+    - name: Get-PnPListPermissions
+      uid: PnP.Powershell.Get-PnPListPermissions
+    - name: Get-PnPListRecordDeclaration
+      uid: PnP.Powershell.Get-PnPListRecordDeclaration
+    - name: Get-PnPMasterPage
+      uid: PnP.Powershell.Get-PnPMasterPage
+    - name: Get-PnPMicrosoft365Group
+      uid: PnP.Powershell.Get-PnPMicrosoft365Group
+    - name: Get-PnPMicrosoft365GroupMember
+      uid: PnP.Powershell.Get-PnPMicrosoft365GroupMember
+    - name: Get-PnPMicrosoft365GroupMembers
+      uid: PnP.Powershell.Get-PnPMicrosoft365GroupMembers
+    - name: Get-PnPMicrosoft365GroupOwner
+      uid: PnP.Powershell.Get-PnPMicrosoft365GroupOwner
+    - name: Get-PnPMicrosoft365GroupOwners
+      uid: PnP.Powershell.Get-PnPMicrosoft365GroupOwners
+    - name: Get-PnPNavigationNode
+      uid: PnP.Powershell.Get-PnPNavigationNode
+    - name: Get-PnPOffice365CurrentServiceStatus
+      uid: PnP.Powershell.Get-PnPOffice365CurrentServiceStatus
+    - name: Get-PnPOffice365HistoricalServiceStatus
+      uid: PnP.Powershell.Get-PnPOffice365HistoricalServiceStatus
+    - name: Get-PnPOffice365ServiceMessage
+      uid: PnP.Powershell.Get-PnPOffice365ServiceMessage
+    - name: Get-PnPOffice365Services
+      uid: PnP.Powershell.Get-PnPOffice365Services
+    - name: Get-PnPOrgAssetsLibrary
+      uid: PnP.Powershell.Get-PnPOrgAssetsLibrary
+    - name: Get-PnPOrgNewsSite
+      uid: PnP.Powershell.Get-PnPOrgNewsSite
+    - name: Get-PnPPage
+      uid: PnP.Powershell.Get-PnPPage
+    - name: Get-PnPPageComponent
+      uid: PnP.Powershell.Get-PnPPageComponent
+    - name: Get-PnPPersonalSite
+      uid: PnP.Powershell.Get-PnPPersonalSite
+    - name: get-pnpplannerbucket
+      uid: PnP.Powershell.get-pnpplannerbucket
+    - name: get-pnpplannerplan
+      uid: PnP.Powershell.get-pnpplannerplan
+    - name: get-pnpplannertask
+      uid: PnP.Powershell.get-pnpplannertask
+    - name: Get-PnPPowerShellTelemetryEnabled
+      uid: PnP.Powershell.Get-PnPPowerShellTelemetryEnabled
+    - name: Get-PnPProperty
+      uid: PnP.Powershell.Get-PnPProperty
+    - name: Get-PnPPropertyBag
+      uid: PnP.Powershell.Get-PnPPropertyBag
+    - name: Get-PnPPublishingImageRendition
+      uid: PnP.Powershell.Get-PnPPublishingImageRendition
+    - name: Get-PnPRecycleBinItem
+      uid: PnP.Powershell.Get-PnPRecycleBinItem
+    - name: Get-PnPRequestAccessEmails
+      uid: PnP.Powershell.Get-PnPRequestAccessEmails
+    - name: Get-PnPRoleDefinition
+      uid: PnP.Powershell.Get-PnPRoleDefinition
+    - name: Get-PnPSearchConfiguration
+      uid: PnP.Powershell.Get-PnPSearchConfiguration
+    - name: Get-PnPSearchCrawlLog
+      uid: PnP.Powershell.Get-PnPSearchCrawlLog
+    - name: Get-PnPSearchSettings
+      uid: PnP.Powershell.Get-PnPSearchSettings
+    - name: Get-PnPSharingForNonOwnersOfSite
+      uid: PnP.Powershell.Get-PnPSharingForNonOwnersOfSite
+    - name: Get-PnPSite
+      uid: PnP.Powershell.Get-PnPSite
+    - name: Get-PnPSiteClassification
+      uid: PnP.Powershell.Get-PnPSiteClassification
+    - name: Get-PnPSiteClosure
+      uid: PnP.Powershell.Get-PnPSiteClosure
+    - name: Get-PnPSiteCollectionAdmin
+      uid: PnP.Powershell.Get-PnPSiteCollectionAdmin
+    - name: Get-PnPSiteCollectionAppCatalogs
+      uid: PnP.Powershell.Get-PnPSiteCollectionAppCatalogs
+    - name: Get-PnPSiteCollectionTermStore
+      uid: PnP.Powershell.Get-PnPSiteCollectionTermStore
+    - name: Get-PnPSiteDesign
+      uid: PnP.Powershell.Get-PnPSiteDesign
+    - name: Get-PnPSiteDesignRights
+      uid: PnP.Powershell.Get-PnPSiteDesignRights
+    - name: Get-PnPSiteDesignRun
+      uid: PnP.Powershell.Get-PnPSiteDesignRun
+    - name: Get-PnPSiteDesignRunStatus
+      uid: PnP.Powershell.Get-PnPSiteDesignRunStatus
+    - name: Get-PnPSiteDesignTask
+      uid: PnP.Powershell.Get-PnPSiteDesignTask
+    - name: Get-PnPSiteGroup
+      uid: PnP.Powershell.Get-PnPSiteGroup
+    - name: Get-PnPSitePolicy
+      uid: PnP.Powershell.Get-PnPSitePolicy
+    - name: Get-PnPSiteScript
+      uid: PnP.Powershell.Get-PnPSiteScript
+    - name: Get-PnPSiteScriptFromList
+      uid: PnP.Powershell.Get-PnPSiteScriptFromList
+    - name: Get-PnPSiteScriptFromWeb
+      uid: PnP.Powershell.Get-PnPSiteScriptFromWeb
+    - name: Get-PnPSiteSearchQueryResults
+      uid: PnP.Powershell.Get-PnPSiteSearchQueryResults
+    - name: Get-PnPSiteTemplate
+      uid: PnP.Powershell.Get-PnPSiteTemplate
+    - name: Get-PnPSiteUserInvitations
+      uid: PnP.Powershell.Get-PnPSiteUserInvitations
+    - name: Get-PnPStorageEntity
+      uid: PnP.Powershell.Get-PnPStorageEntity
+    - name: Get-PnPStoredCredential
+      uid: PnP.Powershell.Get-PnPStoredCredential
+    - name: Get-PnPStructuralNavigationCacheSiteState
+      uid: PnP.Powershell.Get-PnPStructuralNavigationCacheSiteState
+    - name: Get-PnPStructuralNavigationCacheWebState
+      uid: PnP.Powershell.Get-PnPStructuralNavigationCacheWebState
+    - name: Get-PnPSubscribeSharePointNewsDigest
+      uid: PnP.Powershell.Get-PnPSubscribeSharePointNewsDigest
+    - name: Get-PnPSubWeb
+      uid: PnP.Powershell.Get-PnPSubWeb
+    - name: Get-PnPTaxonomyItem
+      uid: PnP.Powershell.Get-PnPTaxonomyItem
+    - name: Get-PnPTaxonomySession
+      uid: PnP.Powershell.Get-PnPTaxonomySession
+    - name: Get-PnPTeamsApp
+      uid: PnP.Powershell.Get-PnPTeamsApp
+    - name: Get-PnPTeamsChannel
+      uid: PnP.Powershell.Get-PnPTeamsChannel
+    - name: Get-PnPTeamsChannelMessage
+      uid: PnP.Powershell.Get-PnPTeamsChannelMessage
+    - name: Get-PnPTeamsTab
+      uid: PnP.Powershell.Get-PnPTeamsTab
+    - name: Get-PnPTeamsTeam
+      uid: PnP.Powershell.Get-PnPTeamsTeam
+    - name: Get-PnPTeamsUser
+      uid: PnP.Powershell.Get-PnPTeamsUser
+    - name: Get-PnPTemporarilyDisableAppBar
+      uid: PnP.Powershell.Get-PnPTemporarilyDisableAppBar
+    - name: Get-PnPTenant
+      uid: PnP.Powershell.Get-PnPTenant
+    - name: Get-PnPTenantAppCatalogUrl
+      uid: PnP.Powershell.Get-PnPTenantAppCatalogUrl
+    - name: Get-PnPTenantCdnEnabled
+      uid: PnP.Powershell.Get-PnPTenantCdnEnabled
+    - name: Get-PnPTenantCdnOrigin
+      uid: PnP.Powershell.Get-PnPTenantCdnOrigin
+    - name: Get-PnPTenantCdnPolicies
+      uid: PnP.Powershell.Get-PnPTenantCdnPolicies
+    - name: Get-PnPTenantId
+      uid: PnP.Powershell.Get-PnPTenantId
+    - name: Get-PnPTenantRecycleBinItem
+      uid: PnP.Powershell.Get-PnPTenantRecycleBinItem
+    - name: Get-PnPTenantSequence
+      uid: PnP.Powershell.Get-PnPTenantSequence
+    - name: Get-PnPTenantSequenceSite
+      uid: PnP.Powershell.Get-PnPTenantSequenceSite
+    - name: Get-PnPTenantServicePrincipal
+      uid: PnP.Powershell.Get-PnPTenantServicePrincipal
+    - name: Get-PnPTenantServicePrincipalPermissionGrants
+      uid: PnP.Powershell.Get-PnPTenantServicePrincipalPermissionGrants
+    - name: Get-PnPTenantServicePrincipalPermissionRequests
+      uid: PnP.Powershell.Get-PnPTenantServicePrincipalPermissionRequests
+    - name: Get-PnPTenantSite
+      uid: PnP.Powershell.Get-PnPTenantSite
+    - name: Get-PnPTenantSyncClientRestriction
+      uid: PnP.Powershell.Get-PnPTenantSyncClientRestriction
+    - name: Get-PnPTenantTemplate
+      uid: PnP.Powershell.Get-PnPTenantTemplate
+    - name: Get-PnPTenantTheme
+      uid: PnP.Powershell.Get-PnPTenantTheme
+    - name: Get-PnPTerm
+      uid: PnP.Powershell.Get-PnPTerm
+    - name: Get-PnPTermGroup
+      uid: PnP.Powershell.Get-PnPTermGroup
+    - name: Get-PnPTermLabel
+      uid: PnP.Powershell.Get-PnPTermLabel
+    - name: Get-PnPTermSet
+      uid: PnP.Powershell.Get-PnPTermSet
+    - name: Get-PnPTheme
+      uid: PnP.Powershell.Get-PnPTheme
+    - name: Get-PnPTimeZoneId
+      uid: PnP.Powershell.Get-PnPTimeZoneId
+    - name: Get-PnPUnifiedAuditLog
+      uid: PnP.Powershell.Get-PnPUnifiedAuditLog
+    - name: Get-PnPUPABulkImportStatus
+      uid: PnP.Powershell.Get-PnPUPABulkImportStatus
+    - name: Get-PnPUser
+      uid: PnP.Powershell.Get-PnPUser
+    - name: Get-PnPUserOneDriveQuota
+      uid: PnP.Powershell.Get-PnPUserOneDriveQuota
+    - name: Get-PnPUserProfileProperty
+      uid: PnP.Powershell.Get-PnPUserProfileProperty
+    - name: Get-PnPView
+      uid: PnP.Powershell.Get-PnPView
+    - name: Get-PnPWeb
+      uid: PnP.Powershell.Get-PnPWeb
+    - name: Get-PnPWebhookSubscriptions
+      uid: PnP.Powershell.Get-PnPWebhookSubscriptions
+    - name: Get-PnPWebPart
+      uid: PnP.Powershell.Get-PnPWebPart
+    - name: Get-PnPWebPartProperty
+      uid: PnP.Powershell.Get-PnPWebPartProperty
+    - name: Get-PnPWebPartXml
+      uid: PnP.Powershell.Get-PnPWebPartXml
+    - name: Get-PnPWebTemplates
+      uid: PnP.Powershell.Get-PnPWebTemplates
+    - name: Get-PnPWikiPageContent
+      uid: PnP.Powershell.Get-PnPWikiPageContent
+    - name: Grant-PnPAzureADAppSitePermission
+      uid: PnP.Powershell.Grant-PnPAzureADAppSitePermission
+    - name: Grant-PnPHubSiteRights
+      uid: PnP.Powershell.Grant-PnPHubSiteRights
+    - name: Grant-PnPSiteDesignRights
+      uid: PnP.Powershell.Grant-PnPSiteDesignRights
+    - name: Grant-PnPTenantServicePrincipalPermission
+      uid: PnP.Powershell.Grant-PnPTenantServicePrincipalPermission
+    - name: Import-PnPTaxonomy
+      uid: PnP.Powershell.Import-PnPTaxonomy
+    - name: Import-PnPTermGroupFromXml
+      uid: PnP.Powershell.Import-PnPTermGroupFromXml
+    - name: Import-PnPTermSet
+      uid: PnP.Powershell.Import-PnPTermSet
+    - name: Install-PnPApp
+      uid: PnP.Powershell.Install-PnPApp
+    - name: Invoke-PnPBatch
+      uid: PnP.Powershell.Invoke-PnPBatch
+    - name: Invoke-PnPQuery
+      uid: PnP.Powershell.Invoke-PnPQuery
+    - name: Invoke-PnPSiteDesign
+      uid: PnP.Powershell.Invoke-PnPSiteDesign
+    - name: Invoke-PnPSiteSwap
+      uid: PnP.Powershell.Invoke-PnPSiteSwap
+    - name: Invoke-PnPSiteTemplate
+      uid: PnP.Powershell.Invoke-PnPSiteTemplate
+    - name: Invoke-PnPSPRestMethod
+      uid: PnP.Powershell.Invoke-PnPSPRestMethod
+    - name: Invoke-PnPTenantTemplate
+      uid: PnP.Powershell.Invoke-PnPTenantTemplate
+    - name: Invoke-PnPWebAction
+      uid: PnP.Powershell.Invoke-PnPWebAction
+    - name: Measure-PnPList
+      uid: PnP.Powershell.Measure-PnPList
+    - name: Measure-PnPWeb
+      uid: PnP.Powershell.Measure-PnPWeb
+    - name: Move-PnPFile
+      uid: PnP.Powershell.Move-PnPFile
+    - name: Move-PnPFolder
+      uid: PnP.Powershell.Move-PnPFolder
+    - name: Move-PnPItemProxy
+      uid: PnP.Powershell.Move-PnPItemProxy
+    - name: Move-PnPListItemToRecycleBin
+      uid: PnP.Powershell.Move-PnPListItemToRecycleBin
+    - name: Move-PnPPageComponent
+      uid: PnP.Powershell.Move-PnPPageComponent
+    - name: Move-PnPRecycleBinItem
+      uid: PnP.Powershell.Move-PnPRecycleBinItem
+    - name: New-PnPAzureADGroup
+      uid: PnP.Powershell.New-PnPAzureADGroup
+    - name: New-PnPAzureCertificate
+      uid: PnP.Powershell.New-PnPAzureCertificate
+    - name: New-PnPBatch
+      uid: PnP.Powershell.New-PnPBatch
+    - name: New-PnPExtensibilityHandlerObject
+      uid: PnP.Powershell.New-PnPExtensibilityHandlerObject
+    - name: New-PnPGraphSubscription
+      uid: PnP.Powershell.New-PnPGraphSubscription
+    - name: New-PnPGroup
+      uid: PnP.Powershell.New-PnPGroup
+    - name: New-PnPList
+      uid: PnP.Powershell.New-PnPList
+    - name: New-PnPMicrosoft365Group
+      uid: PnP.Powershell.New-PnPMicrosoft365Group
+    - name: New-PnPPersonalSite
+      uid: PnP.Powershell.New-PnPPersonalSite
+    - name: new-pnpplannerplan
+      uid: PnP.Powershell.new-pnpplannerplan
+    - name: New-PnPSdnProvider
+      uid: PnP.Powershell.New-PnPSdnProvider
+    - name: New-PnPSite
+      uid: PnP.Powershell.New-PnPSite
+    - name: New-PnPSiteCollectionTermStore
+      uid: PnP.Powershell.New-PnPSiteCollectionTermStore
+    - name: New-PnPSiteGroup
+      uid: PnP.Powershell.New-PnPSiteGroup
+    - name: New-PnPSiteTemplate
+      uid: PnP.Powershell.New-PnPSiteTemplate
+    - name: New-PnPSiteTemplateFromFolder
+      uid: PnP.Powershell.New-PnPSiteTemplateFromFolder
+    - name: New-PnPTeamsApp
+      uid: PnP.Powershell.New-PnPTeamsApp
+    - name: New-PnPTeamsTeam
+      uid: PnP.Powershell.New-PnPTeamsTeam
+    - name: New-PnPTenantSequence
+      uid: PnP.Powershell.New-PnPTenantSequence
+    - name: New-PnPTenantSequenceCommunicationSite
+      uid: PnP.Powershell.New-PnPTenantSequenceCommunicationSite
+    - name: New-PnPTenantSequenceTeamNoGroupSite
+      uid: PnP.Powershell.New-PnPTenantSequenceTeamNoGroupSite
+    - name: New-PnPTenantSequenceTeamNoGroupSubSite
+      uid: PnP.Powershell.New-PnPTenantSequenceTeamNoGroupSubSite
+    - name: New-PnPTenantSequenceTeamSite
+      uid: PnP.Powershell.New-PnPTenantSequenceTeamSite
+    - name: New-PnPTenantSite
+      uid: PnP.Powershell.New-PnPTenantSite
+    - name: New-PnPTenantTemplate
+      uid: PnP.Powershell.New-PnPTenantTemplate
+    - name: New-PnPTerm
+      uid: PnP.Powershell.New-PnPTerm
+    - name: New-PnPTermGroup
+      uid: PnP.Powershell.New-PnPTermGroup
+    - name: New-PnPTermLabel
+      uid: PnP.Powershell.New-PnPTermLabel
+    - name: New-PnPTermSet
+      uid: PnP.Powershell.New-PnPTermSet
+    - name: New-PnPUPABulkImportJob
+      uid: PnP.Powershell.New-PnPUPABulkImportJob
+    - name: New-PnPUser
+      uid: PnP.Powershell.New-PnPUser
+    - name: New-PnPWeb
+      uid: PnP.Powershell.New-PnPWeb
+    - name: Publish-PnPApp
+      uid: PnP.Powershell.Publish-PnPApp
+    - name: Read-PnPSiteTemplate
+      uid: PnP.Powershell.Read-PnPSiteTemplate
+    - name: Read-PnPTenantTemplate
+      uid: PnP.Powershell.Read-PnPTenantTemplate
+    - name: Receive-PnPCopyMoveJobStatus
+      uid: PnP.Powershell.Receive-PnPCopyMoveJobStatus
+    - name: Register-PnPAppCatalogSite
+      uid: PnP.Powershell.Register-PnPAppCatalogSite
+    - name: Register-PnPAzureADApp
+      uid: PnP.Powershell.Register-PnPAzureADApp
+    - name: Register-PnPHubSite
+      uid: PnP.Powershell.Register-PnPHubSite
+    - name: Register-PnPManagementShellAccess
+      uid: PnP.Powershell.Register-PnPManagementShellAccess
+    - name: Remove-PnPAlert
+      uid: PnP.Powershell.Remove-PnPAlert
+    - name: Remove-PnPApp
+      uid: PnP.Powershell.Remove-PnPApp
+    - name: Remove-PnPApplicationCustomizer
+      uid: PnP.Powershell.Remove-PnPApplicationCustomizer
+    - name: Remove-PnPAzureADAppPermission
+      uid: PnP.Powershell.Remove-PnPAzureADAppPermission
+    - name: Remove-PnPAzureADGroup
+      uid: PnP.Powershell.Remove-PnPAzureADGroup
+    - name: Remove-PnPAzureADGroupMember
+      uid: PnP.Powershell.Remove-PnPAzureADGroupMember
+    - name: Remove-PnPAzureADGroupOwner
+      uid: PnP.Powershell.Remove-PnPAzureADGroupOwner
+    - name: Remove-PnPContentType
+      uid: PnP.Powershell.Remove-PnPContentType
+    - name: Remove-PnPContentTypeFromDocumentSet
+      uid: PnP.Powershell.Remove-PnPContentTypeFromDocumentSet
+    - name: Remove-PnPContentTypeFromList
+      uid: PnP.Powershell.Remove-PnPContentTypeFromList
+    - name: Remove-PnPCustomAction
+      uid: PnP.Powershell.Remove-PnPCustomAction
+    - name: Remove-PnPDeletedMicrosoft365Group
+      uid: PnP.Powershell.Remove-PnPDeletedMicrosoft365Group
+    - name: Remove-PnPEventReceiver
+      uid: PnP.Powershell.Remove-PnPEventReceiver
+    - name: Remove-PnPExternalUser
+      uid: PnP.Powershell.Remove-PnPExternalUser
+    - name: Remove-PnPField
+      uid: PnP.Powershell.Remove-PnPField
+    - name: Remove-PnPFieldFromContentType
+      uid: PnP.Powershell.Remove-PnPFieldFromContentType
+    - name: Remove-PnPFile
+      uid: PnP.Powershell.Remove-PnPFile
+    - name: Remove-PnPFileFromSiteTemplate
+      uid: PnP.Powershell.Remove-PnPFileFromSiteTemplate
+    - name: Remove-PnPFileVersion
+      uid: PnP.Powershell.Remove-PnPFileVersion
+    - name: Remove-PnPFlow
+      uid: PnP.Powershell.Remove-PnPFlow
+    - name: Remove-PnPFolder
+      uid: PnP.Powershell.Remove-PnPFolder
+    - name: Remove-PnPGraphSubscription
+      uid: PnP.Powershell.Remove-PnPGraphSubscription
+    - name: Remove-PnPGroup
+      uid: PnP.Powershell.Remove-PnPGroup
+    - name: Remove-PnPGroupMember
+      uid: PnP.Powershell.Remove-PnPGroupMember
+    - name: Remove-PnPHomeSite
+      uid: PnP.Powershell.Remove-PnPHomeSite
+    - name: Remove-PnPHubSiteAssociation
+      uid: PnP.Powershell.Remove-PnPHubSiteAssociation
+    - name: Remove-PnPHubToHubAssociation
+      uid: PnP.Powershell.Remove-PnPHubToHubAssociation
+    - name: Remove-PnPIndexedProperty
+      uid: PnP.Powershell.Remove-PnPIndexedProperty
+    - name: Remove-PnPJavaScriptLink
+      uid: PnP.Powershell.Remove-PnPJavaScriptLink
+    - name: Remove-PnPKnowledgeHubSite
+      uid: PnP.Powershell.Remove-PnPKnowledgeHubSite
+    - name: Remove-PnPList
+      uid: PnP.Powershell.Remove-PnPList
+    - name: Remove-PnPListItem
+      uid: PnP.Powershell.Remove-PnPListItem
+    - name: Remove-PnPMicrosoft365Group
+      uid: PnP.Powershell.Remove-PnPMicrosoft365Group
+    - name: Remove-PnPMicrosoft365GroupMember
+      uid: PnP.Powershell.Remove-PnPMicrosoft365GroupMember
+    - name: Remove-PnPMicrosoft365GroupOwner
+      uid: PnP.Powershell.Remove-PnPMicrosoft365GroupOwner
+    - name: Remove-PnPNavigationNode
+      uid: PnP.Powershell.Remove-PnPNavigationNode
+    - name: Remove-PnPOrgAssetsLibrary
+      uid: PnP.Powershell.Remove-PnPOrgAssetsLibrary
+    - name: Remove-PnPOrgNewsSite
+      uid: PnP.Powershell.Remove-PnPOrgNewsSite
+    - name: Remove-PnPPage
+      uid: PnP.Powershell.Remove-PnPPage
+    - name: Remove-PnPPageComponent
+      uid: PnP.Powershell.Remove-PnPPageComponent
+    - name: remove-pnpplannerbucket
+      uid: PnP.Powershell.remove-pnpplannerbucket
+    - name: remove-pnpplannerplan
+      uid: PnP.Powershell.remove-pnpplannerplan
+    - name: remove-pnpplannertask
+      uid: PnP.Powershell.remove-pnpplannertask
+    - name: Remove-PnPPropertyBagValue
+      uid: PnP.Powershell.Remove-PnPPropertyBagValue
+    - name: Remove-PnPPublishingImageRendition
+      uid: PnP.Powershell.Remove-PnPPublishingImageRendition
+    - name: Remove-PnPRoleDefinition
+      uid: PnP.Powershell.Remove-PnPRoleDefinition
+    - name: Remove-PnPSdnProvider
+      uid: PnP.Powershell.Remove-PnPSdnProvider
+    - name: Remove-PnPSearchConfiguration
+      uid: PnP.Powershell.Remove-PnPSearchConfiguration
+    - name: Remove-PnPSiteClassification
+      uid: PnP.Powershell.Remove-PnPSiteClassification
+    - name: Remove-PnPSiteCollectionAdmin
+      uid: PnP.Powershell.Remove-PnPSiteCollectionAdmin
+    - name: Remove-PnPSiteCollectionAppCatalog
+      uid: PnP.Powershell.Remove-PnPSiteCollectionAppCatalog
+    - name: Remove-PnPSiteCollectionTermStore
+      uid: PnP.Powershell.Remove-PnPSiteCollectionTermStore
+    - name: Remove-PnPSiteDesign
+      uid: PnP.Powershell.Remove-PnPSiteDesign
+    - name: Remove-PnPSiteDesignTask
+      uid: PnP.Powershell.Remove-PnPSiteDesignTask
+    - name: Remove-PnPSiteGroup
+      uid: PnP.Powershell.Remove-PnPSiteGroup
+    - name: Remove-PnPSiteScript
+      uid: PnP.Powershell.Remove-PnPSiteScript
+    - name: Remove-PnPSiteUserInvitations
+      uid: PnP.Powershell.Remove-PnPSiteUserInvitations
+    - name: Remove-PnPStorageEntity
+      uid: PnP.Powershell.Remove-PnPStorageEntity
+    - name: Remove-PnPStoredCredential
+      uid: PnP.Powershell.Remove-PnPStoredCredential
+    - name: Remove-PnPTaxonomyItem
+      uid: PnP.Powershell.Remove-PnPTaxonomyItem
+    - name: Remove-PnPTeamsApp
+      uid: PnP.Powershell.Remove-PnPTeamsApp
+    - name: Remove-PnPTeamsChannel
+      uid: PnP.Powershell.Remove-PnPTeamsChannel
+    - name: Remove-PnPTeamsTab
+      uid: PnP.Powershell.Remove-PnPTeamsTab
+    - name: Remove-PnPTeamsTeam
+      uid: PnP.Powershell.Remove-PnPTeamsTeam
+    - name: Remove-PnPTeamsUser
+      uid: PnP.Powershell.Remove-PnPTeamsUser
+    - name: Remove-PnPTenantCdnOrigin
+      uid: PnP.Powershell.Remove-PnPTenantCdnOrigin
+    - name: Remove-PnPTenantSite
+      uid: PnP.Powershell.Remove-PnPTenantSite
+    - name: Remove-PnPTenantSyncClientRestriction
+      uid: PnP.Powershell.Remove-PnPTenantSyncClientRestriction
+    - name: Remove-PnPTenantTheme
+      uid: PnP.Powershell.Remove-PnPTenantTheme
+    - name: Remove-PnPTerm
+      uid: PnP.Powershell.Remove-PnPTerm
+    - name: Remove-PnPTermGroup
+      uid: PnP.Powershell.Remove-PnPTermGroup
+    - name: Remove-PnPTermLabel
+      uid: PnP.Powershell.Remove-PnPTermLabel
+    - name: Remove-PnPUser
+      uid: PnP.Powershell.Remove-PnPUser
+    - name: Remove-PnPUserInfo
+      uid: PnP.Powershell.Remove-PnPUserInfo
+    - name: Remove-PnPUserProfile
+      uid: PnP.Powershell.Remove-PnPUserProfile
+    - name: Remove-PnPView
+      uid: PnP.Powershell.Remove-PnPView
+    - name: Remove-PnPWeb
+      uid: PnP.Powershell.Remove-PnPWeb
+    - name: Remove-PnPWebhookSubscription
+      uid: PnP.Powershell.Remove-PnPWebhookSubscription
+    - name: Remove-PnPWebPart
+      uid: PnP.Powershell.Remove-PnPWebPart
+    - name: Remove-PnPWikiPage
+      uid: PnP.Powershell.Remove-PnPWikiPage
+    - name: Rename-PnPFile
+      uid: PnP.Powershell.Rename-PnPFile
+    - name: Rename-PnPFolder
+      uid: PnP.Powershell.Rename-PnPFolder
+    - name: Repair-PnPSite
+      uid: PnP.Powershell.Repair-PnPSite
+    - name: Request-PnPAccessToken
+      uid: PnP.Powershell.Request-PnPAccessToken
+    - name: Request-PnPReIndexList
+      uid: PnP.Powershell.Request-PnPReIndexList
+    - name: Request-PnPReIndexWeb
+      uid: PnP.Powershell.Request-PnPReIndexWeb
+    - name: Reset-PnPFileVersion
+      uid: PnP.Powershell.Reset-PnPFileVersion
+    - name: Reset-PnPLabel
+      uid: PnP.Powershell.Reset-PnPLabel
+    - name: Reset-PnPMicrosoft365GroupExpiration
+      uid: PnP.Powershell.Reset-PnPMicrosoft365GroupExpiration
+    - name: Reset-PnPUserOneDriveQuotaToDefault
+      uid: PnP.Powershell.Reset-PnPUserOneDriveQuotaToDefault
+    - name: Resolve-PnPFolder
+      uid: PnP.Powershell.Resolve-PnPFolder
+    - name: Restore-PnPDeletedMicrosoft365Group
+      uid: PnP.Powershell.Restore-PnPDeletedMicrosoft365Group
+    - name: Restore-PnPFileVersion
+      uid: PnP.Powershell.Restore-PnPFileVersion
+    - name: Restore-PnPRecycleBinItem
+      uid: PnP.Powershell.Restore-PnPRecycleBinItem
+    - name: Restore-PnPTenantRecycleBinItem
+      uid: PnP.Powershell.Restore-PnPTenantRecycleBinItem
+    - name: Revoke-PnPAzureADAppSitePermission
+      uid: PnP.Powershell.Revoke-PnPAzureADAppSitePermission
+    - name: Revoke-PnPHubSiteRights
+      uid: PnP.Powershell.Revoke-PnPHubSiteRights
+    - name: Revoke-PnPSiteDesignRights
+      uid: PnP.Powershell.Revoke-PnPSiteDesignRights
+    - name: Revoke-PnPTenantServicePrincipalPermission
+      uid: PnP.Powershell.Revoke-PnPTenantServicePrincipalPermission
+    - name: Revoke-PnPUserSession
+      uid: PnP.Powershell.Revoke-PnPUserSession
+    - name: Save-PnPPageConversionLog
+      uid: PnP.Powershell.Save-PnPPageConversionLog
+    - name: Save-PnPSiteTemplate
+      uid: PnP.Powershell.Save-PnPSiteTemplate
+    - name: Save-PnPTenantTemplate
+      uid: PnP.Powershell.Save-PnPTenantTemplate
+    - name: Send-PnPMail
+      uid: PnP.Powershell.Send-PnPMail
+    - name: Set-PnPApplicationCustomizer
+      uid: PnP.Powershell.Set-PnPApplicationCustomizer
+    - name: Set-PnPAppSideLoading
+      uid: PnP.Powershell.Set-PnPAppSideLoading
+    - name: Set-PnPAuditing
+      uid: PnP.Powershell.Set-PnPAuditing
+    - name: Set-PnPAvailablePageLayouts
+      uid: PnP.Powershell.Set-PnPAvailablePageLayouts
+    - name: Set-PnPAzureADAppSitePermission
+      uid: PnP.Powershell.Set-PnPAzureADAppSitePermission
+    - name: Set-PnPAzureADGroup
+      uid: PnP.Powershell.Set-PnPAzureADGroup
+    - name: Set-PnPBrowserIdleSignout
+      uid: PnP.Powershell.Set-PnPBrowserIdleSignout
+    - name: Set-PnPBuiltInDesignPackageVisibility
+      uid: PnP.Powershell.Set-PnPBuiltInDesignPackageVisibility
+    - name: Set-PnPContext
+      uid: PnP.Powershell.Set-PnPContext
+    - name: Set-PnPDefaultColumnValues
+      uid: PnP.Powershell.Set-PnPDefaultColumnValues
+    - name: Set-PnPDefaultContentTypeToList
+      uid: PnP.Powershell.Set-PnPDefaultContentTypeToList
+    - name: Set-PnPDefaultPageLayout
+      uid: PnP.Powershell.Set-PnPDefaultPageLayout
+    - name: Set-PnPDisableSpacesActivation
+      uid: PnP.Powershell.Set-PnPDisableSpacesActivation
+    - name: Set-PnPDocumentSetField
+      uid: PnP.Powershell.Set-PnPDocumentSetField
+    - name: Set-PnPField
+      uid: PnP.Powershell.Set-PnPField
+    - name: Set-PnPFileCheckedIn
+      uid: PnP.Powershell.Set-PnPFileCheckedIn
+    - name: Set-PnPFileCheckedOut
+      uid: PnP.Powershell.Set-PnPFileCheckedOut
+    - name: Set-PnPFolderPermission
+      uid: PnP.Powershell.Set-PnPFolderPermission
+    - name: Set-PnPFooter
+      uid: PnP.Powershell.Set-PnPFooter
+    - name: Set-PnPGraphSubscription
+      uid: PnP.Powershell.Set-PnPGraphSubscription
+    - name: Set-PnPGroup
+      uid: PnP.Powershell.Set-PnPGroup
+    - name: Set-PnPGroupPermissions
+      uid: PnP.Powershell.Set-PnPGroupPermissions
+    - name: Set-PnPHideDefaultThemes
+      uid: PnP.Powershell.Set-PnPHideDefaultThemes
+    - name: Set-PnPHomePage
+      uid: PnP.Powershell.Set-PnPHomePage
+    - name: Set-PnPHomeSite
+      uid: PnP.Powershell.Set-PnPHomeSite
+    - name: Set-PnPHubSite
+      uid: PnP.Powershell.Set-PnPHubSite
+    - name: Set-PnPIndexedProperties
+      uid: PnP.Powershell.Set-PnPIndexedProperties
+    - name: Set-PnPInPlaceRecordsManagement
+      uid: PnP.Powershell.Set-PnPInPlaceRecordsManagement
+    - name: Set-PnPKnowledgeHubSite
+      uid: PnP.Powershell.Set-PnPKnowledgeHubSite
+    - name: Set-PnPLabel
+      uid: PnP.Powershell.Set-PnPLabel
+    - name: Set-PnPList
+      uid: PnP.Powershell.Set-PnPList
+    - name: Set-PnPListInformationRightsManagement
+      uid: PnP.Powershell.Set-PnPListInformationRightsManagement
+    - name: Set-PnPListItem
+      uid: PnP.Powershell.Set-PnPListItem
+    - name: Set-PnPListItemAsRecord
+      uid: PnP.Powershell.Set-PnPListItemAsRecord
+    - name: Set-PnPListItemPermission
+      uid: PnP.Powershell.Set-PnPListItemPermission
+    - name: Set-PnPListPermission
+      uid: PnP.Powershell.Set-PnPListPermission
+    - name: Set-PnPListRecordDeclaration
+      uid: PnP.Powershell.Set-PnPListRecordDeclaration
+    - name: Set-PnPMasterPage
+      uid: PnP.Powershell.Set-PnPMasterPage
+    - name: Set-PnPMicrosoft365Group
+      uid: PnP.Powershell.Set-PnPMicrosoft365Group
+    - name: Set-PnPMinimalDownloadStrategy
+      uid: PnP.Powershell.Set-PnPMinimalDownloadStrategy
+    - name: Set-PnPPage
+      uid: PnP.Powershell.Set-PnPPage
+    - name: Set-PnPPageTextPart
+      uid: PnP.Powershell.Set-PnPPageTextPart
+    - name: Set-PnPPageWebPart
+      uid: PnP.Powershell.Set-PnPPageWebPart
+    - name: set-pnpplannerbucket
+      uid: PnP.Powershell.set-pnpplannerbucket
+    - name: set-pnpplannerplan
+      uid: PnP.Powershell.set-pnpplannerplan
+    - name: set-pnpplannertask
+      uid: PnP.Powershell.set-pnpplannertask
+    - name: Set-PnPPropertyBagValue
+      uid: PnP.Powershell.Set-PnPPropertyBagValue
+    - name: Set-PnPRequestAccessEmails
+      uid: PnP.Powershell.Set-PnPRequestAccessEmails
+    - name: Set-PnPSearchConfiguration
+      uid: PnP.Powershell.Set-PnPSearchConfiguration
+    - name: Set-PnPSearchSettings
+      uid: PnP.Powershell.Set-PnPSearchSettings
+    - name: Set-PnPSite
+      uid: PnP.Powershell.Set-PnPSite
+    - name: Set-PnPSiteClosure
+      uid: PnP.Powershell.Set-PnPSiteClosure
+    - name: Set-PnPSiteDesign
+      uid: PnP.Powershell.Set-PnPSiteDesign
+    - name: Set-PnPSiteGroup
+      uid: PnP.Powershell.Set-PnPSiteGroup
+    - name: Set-PnPSitePolicy
+      uid: PnP.Powershell.Set-PnPSitePolicy
+    - name: Set-PnPSiteScript
+      uid: PnP.Powershell.Set-PnPSiteScript
+    - name: Set-PnPSiteScriptPackage
+      uid: PnP.Powershell.Set-PnPSiteScriptPackage
+    - name: Set-PnPSiteTemplateMetadata
+      uid: PnP.Powershell.Set-PnPSiteTemplateMetadata
+    - name: Set-PnPStorageEntity
+      uid: PnP.Powershell.Set-PnPStorageEntity
+    - name: Set-PnPStructuralNavigationCacheSiteState
+      uid: PnP.Powershell.Set-PnPStructuralNavigationCacheSiteState
+    - name: Set-PnPStructuralNavigationCacheWebState
+      uid: PnP.Powershell.Set-PnPStructuralNavigationCacheWebState
+    - name: Set-PnPSubscribeSharePointNewsDigest
+      uid: PnP.Powershell.Set-PnPSubscribeSharePointNewsDigest
+    - name: Set-PnPTaxonomyFieldValue
+      uid: PnP.Powershell.Set-PnPTaxonomyFieldValue
+    - name: set-pnpteamifyprompthidden
+      uid: PnP.Powershell.set-pnpteamifyprompthidden
+    - name: Set-PnPTeamsChannel
+      uid: PnP.Powershell.Set-PnPTeamsChannel
+    - name: Set-PnPTeamsTab
+      uid: PnP.Powershell.Set-PnPTeamsTab
+    - name: Set-PnPTeamsTeam
+      uid: PnP.Powershell.Set-PnPTeamsTeam
+    - name: Set-PnPTeamsTeamArchivedState
+      uid: PnP.Powershell.Set-PnPTeamsTeamArchivedState
+    - name: Set-PnPTeamsTeamPicture
+      uid: PnP.Powershell.Set-PnPTeamsTeamPicture
+    - name: Set-PnPTemporarilyDisableAppBar
+      uid: PnP.Powershell.Set-PnPTemporarilyDisableAppBar
+    - name: Set-PnPTenant
+      uid: PnP.Powershell.Set-PnPTenant
+    - name: Set-PnPTenantAppCatalogUrl
+      uid: PnP.Powershell.Set-PnPTenantAppCatalogUrl
+    - name: Set-PnPTenantCdnEnabled
+      uid: PnP.Powershell.Set-PnPTenantCdnEnabled
+    - name: Set-PnPTenantCdnPolicy
+      uid: PnP.Powershell.Set-PnPTenantCdnPolicy
+    - name: Set-PnPTenantSite
+      uid: PnP.Powershell.Set-PnPTenantSite
+    - name: Set-PnPTenantSyncClientRestriction
+      uid: PnP.Powershell.Set-PnPTenantSyncClientRestriction
+    - name: Set-PnPTerm
+      uid: PnP.Powershell.Set-PnPTerm
+    - name: Set-PnPTermGroup
+      uid: PnP.Powershell.Set-PnPTermGroup
+    - name: Set-PnPTermSet
+      uid: PnP.Powershell.Set-PnPTermSet
+    - name: Set-PnPTheme
+      uid: PnP.Powershell.Set-PnPTheme
+    - name: Set-PnPTraceLog
+      uid: PnP.Powershell.Set-PnPTraceLog
+    - name: Set-PnPUserOneDriveQuota
+      uid: PnP.Powershell.Set-PnPUserOneDriveQuota
+    - name: Set-PnPUserProfileProperty
+      uid: PnP.Powershell.Set-PnPUserProfileProperty
+    - name: Set-PnPView
+      uid: PnP.Powershell.Set-PnPView
+    - name: Set-PnPWeb
+      uid: PnP.Powershell.Set-PnPWeb
+    - name: Set-PnPWebhookSubscription
+      uid: PnP.Powershell.Set-PnPWebhookSubscription
+    - name: Set-PnPWebPartProperty
+      uid: PnP.Powershell.Set-PnPWebPartProperty
+    - name: Set-PnPWebPermission
+      uid: PnP.Powershell.Set-PnPWebPermission
+    - name: Set-PnPWebTheme
+      uid: PnP.Powershell.Set-PnPWebTheme
+    - name: Set-PnPWikiPageContent
+      uid: PnP.Powershell.Set-PnPWikiPageContent
+    - name: Submit-PnPSearchQuery
+      uid: PnP.Powershell.Submit-PnPSearchQuery
+    - name: Submit-PnPTeamsChannelMessage
+      uid: PnP.Powershell.Submit-PnPTeamsChannelMessage
+    - name: Sync-PnPAppToTeams
+      uid: PnP.Powershell.Sync-PnPAppToTeams
+    - name: Test-PnPListItemIsRecord
+      uid: PnP.Powershell.Test-PnPListItemIsRecord
+    - name: Test-PnPMicrosoft365GroupAliasIsUsed
+      uid: PnP.Powershell.Test-PnPMicrosoft365GroupAliasIsUsed
+    - name: Test-PnPSite
+      uid: PnP.Powershell.Test-PnPSite
+    - name: Test-PnPTenantTemplate
+      uid: PnP.Powershell.Test-PnPTenantTemplate
+    - name: Uninstall-PnPApp
+      uid: PnP.Powershell.Uninstall-PnPApp
+    - name: Unpublish-PnPApp
+      uid: PnP.Powershell.Unpublish-PnPApp
+    - name: Unregister-PnPHubSite
+      uid: PnP.Powershell.Unregister-PnPHubSite
+    - name: Update-PnPApp
+      uid: PnP.Powershell.Update-PnPApp
+    - name: Update-PnPSiteClassification
+      uid: PnP.Powershell.Update-PnPSiteClassification
+    - name: Update-PnPTeamsApp
+      uid: PnP.Powershell.Update-PnPTeamsApp
+    - name: Update-PnPUserType
+      uid: PnP.Powershell.Update-PnPUserType
+  - name: SharePointOnlinePowerShell
+    uid: SharePointOnlinePowerShell
+    items:
+    - name: Add-SPOGeoAdministrator
+      uid: SharePointOnlinePowerShell.Add-SPOGeoAdministrator
+    - name: Add-SPOHubSiteAssociation
+      uid: SharePointOnlinePowerShell.Add-SPOHubSiteAssociation
+    - name: Add-SPOHubToHubAssociation
+      uid: SharePointOnlinePowerShell.Add-SPOHubToHubAssociation
+    - name: Add-SPOOrgAssetsLibrary
+      uid: SharePointOnlinePowerShell.Add-SPOOrgAssetsLibrary
+    - name: Add-SPOSiteCollectionAppCatalog
+      uid: SharePointOnlinePowerShell.Add-SPOSiteCollectionAppCatalog
+    - name: Add-SPOSiteDesign
+      uid: SharePointOnlinePowerShell.Add-SPOSiteDesign
+    - name: Add-SPOSiteDesignTask
+      uid: SharePointOnlinePowerShell.Add-SPOSiteDesignTask
+    - name: Add-SPOSiteScript
+      uid: SharePointOnlinePowerShell.Add-SPOSiteScript
+    - name: Add-SPOTenantCdnOrigin
+      uid: SharePointOnlinePowerShell.Add-SPOTenantCdnOrigin
+    - name: Add-SPOTheme
+      uid: SharePointOnlinePowerShell.Add-SPOTheme
+    - name: Add-SPOUser
+      uid: SharePointOnlinePowerShell.Add-SPOUser
+    - name: Approve-SPOTenantServicePrincipalPermissionGrant
+      uid: SharePointOnlinePowerShell.Approve-SPOTenantServicePrincipalPermissionGrant
+    - name: Approve-SPOTenantServicePrincipalPermissionRequest
+      uid: SharePointOnlinePowerShell.Approve-SPOTenantServicePrincipalPermissionRequest
+    - name: Connect-SPOService
+      uid: SharePointOnlinePowerShell.Connect-SPOService
+    - name: ConvertTo-SPOMigrationEncryptedPackage
+      uid: SharePointOnlinePowerShell.ConvertTo-SPOMigrationEncryptedPackage
+    - name: ConvertTo-SPOMigrationTargetedPackage
+      uid: SharePointOnlinePowerShell.ConvertTo-SPOMigrationTargetedPackage
+    - name: Deny-SPOTenantServicePrincipalPermissionRequest
+      uid: SharePointOnlinePowerShell.Deny-SPOTenantServicePrincipalPermissionRequest
+    - name: Disable-SPOTenantServicePrincipal
+      uid: SharePointOnlinePowerShell.Disable-SPOTenantServicePrincipal
+    - name: Disconnect-SPOService
+      uid: SharePointOnlinePowerShell.Disconnect-SPOService
+    - name: Enable-SPOCommSite
+      uid: SharePointOnlinePowerShell.Enable-SPOCommSite
+    - name: Enable-SPOTenantServicePrincipal
+      uid: SharePointOnlinePowerShell.Enable-SPOTenantServicePrincipal
+    - name: Export-SPOQueryLogs
+      uid: SharePointOnlinePowerShell.Export-SPOQueryLogs
+    - name: Export-SPOUserInfo
+      uid: SharePointOnlinePowerShell.Export-SPOUserInfo
+    - name: Export-SPOUserProfile
+      uid: SharePointOnlinePowerShell.Export-SPOUserProfile
+    - name: Get-FileSensitivityLabelInfo
+      uid: SharePointOnlinePowerShell.Get-FileSensitivityLabelInfo
+    - name: Get-SPOAppErrors
+      uid: SharePointOnlinePowerShell.Get-SPOAppErrors
+    - name: Get-SPOAppInfo
+      uid: SharePointOnlinePowerShell.Get-SPOAppInfo
+    - name: Get-SPOBrowserIdleSignOut
+      uid: SharePointOnlinePowerShell.Get-SPOBrowserIdleSignOut
+    - name: Get-SPOBuiltInDesignPackageVisibility
+      uid: SharePointOnlinePowerShell.Get-SPOBuiltInDesignPackageVisibility
+    - name: Get-SPOCrossGeoMovedUsers
+      uid: SharePointOnlinePowerShell.Get-SPOCrossGeoMovedUsers
+    - name: Get-SPOCrossGeoMoveReport
+      uid: SharePointOnlinePowerShell.Get-SPOCrossGeoMoveReport
+    - name: Get-SPOCrossGeoUsers
+      uid: SharePointOnlinePowerShell.Get-SPOCrossGeoUsers
+    - name: Get-SPODataEncryptionPolicy
+      uid: SharePointOnlinePowerShell.Get-SPODataEncryptionPolicy
+    - name: Get-SPODeletedSite
+      uid: SharePointOnlinePowerShell.Get-SPODeletedSite
+    - name: Get-SPOExternalUser
+      uid: SharePointOnlinePowerShell.Get-SPOExternalUser
+    - name: Get-SPOGeoAdministrator
+      uid: SharePointOnlinePowerShell.Get-SPOGeoAdministrator
+    - name: Get-SPOGeoMoveCrossCompatibilityStatus
+      uid: SharePointOnlinePowerShell.Get-SPOGeoMoveCrossCompatibilityStatus
+    - name: Get-SPOGeoStorageQuota
+      uid: SharePointOnlinePowerShell.Get-SPOGeoStorageQuota
+    - name: Get-SPOHideDefaultThemes
+      uid: SharePointOnlinePowerShell.Get-SPOHideDefaultThemes
+    - name: Get-SPOHomeSite
+      uid: SharePointOnlinePowerShell.Get-SPOHomeSite
+    - name: Get-SPOHubSite
+      uid: SharePointOnlinePowerShell.Get-SPOHubSite
+    - name: Get-SPOMigrationJobProgress
+      uid: SharePointOnlinePowerShell.Get-SPOMigrationJobProgress
+    - name: Get-SPOMigrationJobStatus
+      uid: SharePointOnlinePowerShell.Get-SPOMigrationJobStatus
+    - name: Get-SPOMultiGeoCompanyAllowedDataLocation
+      uid: SharePointOnlinePowerShell.Get-SPOMultiGeoCompanyAllowedDataLocation
+    - name: Get-SPOMultiGeoExperience
+      uid: SharePointOnlinePowerShell.Get-SPOMultiGeoExperience
+    - name: Get-SPOOrgAssetsLibrary
+      uid: SharePointOnlinePowerShell.Get-SPOOrgAssetsLibrary
+    - name: Get-SPOOrgNewsSite
+      uid: SharePointOnlinePowerShell.Get-SPOOrgNewsSite
+    - name: Get-SPOPublicCdnOrigins
+      uid: SharePointOnlinePowerShell.Get-SPOPublicCdnOrigins
+    - name: Get-SPOSite
+      uid: SharePointOnlinePowerShell.Get-SPOSite
+    - name: Get-SPOSiteCollectionAppCatalogs
+      uid: SharePointOnlinePowerShell.Get-SPOSiteCollectionAppCatalogs
+    - name: Get-SPOSiteContentMoveState
+      uid: SharePointOnlinePowerShell.Get-SPOSiteContentMoveState
+    - name: Get-SPOSiteDataEncryptionPolicy
+      uid: SharePointOnlinePowerShell.Get-SPOSiteDataEncryptionPolicy
+    - name: Get-SPOSiteDesign
+      uid: SharePointOnlinePowerShell.Get-SPOSiteDesign
+    - name: Get-SPOSiteDesignRights
+      uid: SharePointOnlinePowerShell.Get-SPOSiteDesignRights
+    - name: Get-SPOSiteDesignRun
+      uid: SharePointOnlinePowerShell.Get-SPOSiteDesignRun
+    - name: Get-SPOSiteDesignRunStatus
+      uid: SharePointOnlinePowerShell.Get-SPOSiteDesignRunStatus
+    - name: Get-SPOSiteDesignTask
+      uid: SharePointOnlinePowerShell.Get-SPOSiteDesignTask
+    - name: Get-SPOSiteGroup
+      uid: SharePointOnlinePowerShell.Get-SPOSiteGroup
+    - name: Get-SPOSiteRenameState
+      uid: SharePointOnlinePowerShell.Get-SPOSiteRenameState
+    - name: Get-SPOSiteScript
+      uid: SharePointOnlinePowerShell.Get-SPOSiteScript
+    - name: Get-SPOSiteScriptFromList
+      uid: SharePointOnlinePowerShell.Get-SPOSiteScriptFromList
+    - name: Get-SPOSiteScriptFromWeb
+      uid: SharePointOnlinePowerShell.Get-SPOSiteScriptFromWeb
+    - name: Get-SPOSiteUserInvitations
+      uid: SharePointOnlinePowerShell.Get-SPOSiteUserInvitations
+    - name: Get-SPOStorageEntity
+      uid: SharePointOnlinePowerShell.Get-SPOStorageEntity
+    - name: Get-SPOStructuralNavigationCacheSiteState
+      uid: SharePointOnlinePowerShell.Get-SPOStructuralNavigationCacheSiteState
+    - name: Get-SPOStructuralNavigationCacheWebState
+      uid: SharePointOnlinePowerShell.Get-SPOStructuralNavigationCacheWebState
+    - name: Get-SPOTenant
+      uid: SharePointOnlinePowerShell.Get-SPOTenant
+    - name: Get-SPOTenantCdnEnabled
+      uid: SharePointOnlinePowerShell.Get-SPOTenantCdnEnabled
+    - name: Get-SPOTenantCdnOrigins
+      uid: SharePointOnlinePowerShell.Get-SPOTenantCdnOrigins
+    - name: Get-SPOTenantCdnPolicies
+      uid: SharePointOnlinePowerShell.Get-SPOTenantCdnPolicies
+    - name: Get-SPOTenantContentTypeReplicationParameters
+      uid: SharePointOnlinePowerShell.Get-SPOTenantContentTypeReplicationParameters
+    - name: Get-SPOTenantLogEntry
+      uid: SharePointOnlinePowerShell.Get-SPOTenantLogEntry
+    - name: Get-SPOTenantLogLastAvailableTimeInUtc
+      uid: SharePointOnlinePowerShell.Get-SPOTenantLogLastAvailableTimeInUtc
+    - name: Get-SPOTenantOrgRelation
+      uid: SharePointOnlinePowerShell.Get-SPOTenantOrgRelation
+    - name: Get-SPOTenantOrgRelationByPartner
+      uid: SharePointOnlinePowerShell.Get-SPOTenantOrgRelationByPartner
+    - name: Get-SPOTenantOrgRelationByScenario
+      uid: SharePointOnlinePowerShell.Get-SPOTenantOrgRelationByScenario
+    - name: Get-SPOTenantServicePrincipalPermissionGrants
+      uid: SharePointOnlinePowerShell.Get-SPOTenantServicePrincipalPermissionGrants
+    - name: Get-SPOTenantServicePrincipalPermissionRequests
+      uid: SharePointOnlinePowerShell.Get-SPOTenantServicePrincipalPermissionRequests
+    - name: Get-SPOTenantSyncClientRestriction
+      uid: SharePointOnlinePowerShell.Get-SPOTenantSyncClientRestriction
+    - name: Get-SPOTenantTaxonomyReplicationParameters
+      uid: SharePointOnlinePowerShell.Get-SPOTenantTaxonomyReplicationParameters
+    - name: Get-SPOTheme
+      uid: SharePointOnlinePowerShell.Get-SPOTheme
+    - name: Get-SPOUnifiedGroup
+      uid: SharePointOnlinePowerShell.Get-SPOUnifiedGroup
+    - name: Get-SPOUnifiedGroupMoveState
+      uid: SharePointOnlinePowerShell.Get-SPOUnifiedGroupMoveState
+    - name: Get-SPOUser
+      uid: SharePointOnlinePowerShell.Get-SPOUser
+    - name: Get-SPOUserAndContentMoveState
+      uid: SharePointOnlinePowerShell.Get-SPOUserAndContentMoveState
+    - name: Get-SPOUserOneDriveLocation
+      uid: SharePointOnlinePowerShell.Get-SPOUserOneDriveLocation
+    - name: Get-SPOWebTemplate
+      uid: SharePointOnlinePowerShell.Get-SPOWebTemplate
+    - name: Grant-SPOHubSiteRights
+      uid: SharePointOnlinePowerShell.Grant-SPOHubSiteRights
+    - name: Grant-SPOSiteDesignRights
+      uid: SharePointOnlinePowerShell.Grant-SPOSiteDesignRights
+    - name: Invoke-SPOMigrationEncryptUploadSubmit
+      uid: SharePointOnlinePowerShell.Invoke-SPOMigrationEncryptUploadSubmit
+    - name: Invoke-SPOSiteDesign
+      uid: SharePointOnlinePowerShell.Invoke-SPOSiteDesign
+    - name: Invoke-SPOSiteSwap
+      uid: SharePointOnlinePowerShell.Invoke-SPOSiteSwap
+    - name: New-SPODataConnectionSetting
+      uid: SharePointOnlinePowerShell.New-SPODataConnectionSetting
+    - name: New-SPOMigrationEncryptionParameters
+      uid: SharePointOnlinePowerShell.New-SPOMigrationEncryptionParameters
+    - name: New-SPOnlineApplicationPrincipalManagementServiceApplicationProxy
+      uid: SharePointOnlinePowerShell.New-SPOnlineApplicationPrincipalManagementServiceApplicationProxy
+    - name: New-SPOPublicCdnOrigin
+      uid: SharePointOnlinePowerShell.New-SPOPublicCdnOrigin
+    - name: New-SPOSdnProvider
+      uid: SharePointOnlinePowerShell.New-SPOSdnProvider
+    - name: New-SPOSite
+      uid: SharePointOnlinePowerShell.New-SPOSite
+    - name: New-SPOSiteGroup
+      uid: SharePointOnlinePowerShell.New-SPOSiteGroup
+    - name: New-SPOTenantOrgRelation
+      uid: SharePointOnlinePowerShell.New-SPOTenantOrgRelation
+    - name: Register-SPODataEncryptionPolicy
+      uid: SharePointOnlinePowerShell.Register-SPODataEncryptionPolicy
+    - name: Register-SPOHubSite
+      uid: SharePointOnlinePowerShell.Register-SPOHubSite
+    - name: Remove-SPODataConnectionSetting
+      uid: SharePointOnlinePowerShell.Remove-SPODataConnectionSetting
+    - name: Remove-SPODeletedSite
+      uid: SharePointOnlinePowerShell.Remove-SPODeletedSite
+    - name: Remove-SPOExternalUser
+      uid: SharePointOnlinePowerShell.Remove-SPOExternalUser
+    - name: Remove-SPOGeoAdministrator
+      uid: SharePointOnlinePowerShell.Remove-SPOGeoAdministrator
+    - name: Remove-SPOHomeSite
+      uid: SharePointOnlinePowerShell.Remove-SPOHomeSite
+    - name: Remove-SPOHubSiteAssociation
+      uid: SharePointOnlinePowerShell.Remove-SPOHubSiteAssociation
+    - name: Remove-SPOHubToHubAssociation
+      uid: SharePointOnlinePowerShell.Remove-SPOHubToHubAssociation
+    - name: Remove-SPOMigrationJob
+      uid: SharePointOnlinePowerShell.Remove-SPOMigrationJob
+    - name: Remove-SPOMultiGeoCompanyAllowedDataLocation
+      uid: SharePointOnlinePowerShell.Remove-SPOMultiGeoCompanyAllowedDataLocation
+    - name: Remove-SPOOrgAssetsLibrary
+      uid: SharePointOnlinePowerShell.Remove-SPOOrgAssetsLibrary
+    - name: Remove-SPOOrgNewsSite
+      uid: SharePointOnlinePowerShell.Remove-SPOOrgNewsSite
+    - name: Remove-SPOPublicCdnOrigin
+      uid: SharePointOnlinePowerShell.Remove-SPOPublicCdnOrigin
+    - name: Remove-SPOSdnProvider
+      uid: SharePointOnlinePowerShell.Remove-SPOSdnProvider
+    - name: Remove-SPOSite
+      uid: SharePointOnlinePowerShell.Remove-SPOSite
+    - name: Remove-SPOSiteCollectionAppCatalog
+      uid: SharePointOnlinePowerShell.Remove-SPOSiteCollectionAppCatalog
+    - name: Remove-SPOSiteCollectionAppCatalogById
+      uid: SharePointOnlinePowerShell.Remove-SPOSiteCollectionAppCatalogById
+    - name: Remove-SPOSiteDesign
+      uid: SharePointOnlinePowerShell.Remove-SPOSiteDesign
+    - name: Remove-SPOSiteDesignTask
+      uid: SharePointOnlinePowerShell.Remove-SPOSiteDesignTask
+    - name: Remove-SPOSiteGroup
+      uid: SharePointOnlinePowerShell.Remove-SPOSiteGroup
+    - name: Remove-SPOSiteScript
+      uid: SharePointOnlinePowerShell.Remove-SPOSiteScript
+    - name: Remove-SPOSiteUserInvitations
+      uid: SharePointOnlinePowerShell.Remove-SPOSiteUserInvitations
+    - name: Remove-SPOStorageEntity
+      uid: SharePointOnlinePowerShell.Remove-SPOStorageEntity
+    - name: Remove-SPOTenantCdnOrigin
+      uid: SharePointOnlinePowerShell.Remove-SPOTenantCdnOrigin
+    - name: Remove-SPOTenantOrgRelation
+      uid: SharePointOnlinePowerShell.Remove-SPOTenantOrgRelation
+    - name: Remove-SPOTenantSyncClientRestriction
+      uid: SharePointOnlinePowerShell.Remove-SPOTenantSyncClientRestriction
+    - name: Remove-SPOTheme
+      uid: SharePointOnlinePowerShell.Remove-SPOTheme
+    - name: Remove-SPOUser
+      uid: SharePointOnlinePowerShell.Remove-SPOUser
+    - name: Remove-SPOUserInfo
+      uid: SharePointOnlinePowerShell.Remove-SPOUserInfo
+    - name: Remove-SPOUserProfile
+      uid: SharePointOnlinePowerShell.Remove-SPOUserProfile
+    - name: Repair-SPOSite
+      uid: SharePointOnlinePowerShell.Repair-SPOSite
+    - name: Request-SPOPersonalSite
+      uid: SharePointOnlinePowerShell.Request-SPOPersonalSite
+    - name: Request-SPOUpgradeEvaluationSite
+      uid: SharePointOnlinePowerShell.Request-SPOUpgradeEvaluationSite
+    - name: Restore-SPODataEncryptionPolicy
+      uid: SharePointOnlinePowerShell.Restore-SPODataEncryptionPolicy
+    - name: Restore-SPODeletedSite
+      uid: SharePointOnlinePowerShell.Restore-SPODeletedSite
+    - name: Revoke-SPOHubSiteRights
+      uid: SharePointOnlinePowerShell.Revoke-SPOHubSiteRights
+    - name: Revoke-SPOSiteDesignRights
+      uid: SharePointOnlinePowerShell.Revoke-SPOSiteDesignRights
+    - name: Revoke-SPOTenantServicePrincipalPermission
+      uid: SharePointOnlinePowerShell.Revoke-SPOTenantServicePrincipalPermission
+    - name: Revoke-SPOUserSession
+      uid: SharePointOnlinePowerShell.Revoke-SPOUserSession
+    - name: Set-SPOBrowserIdleSignOut
+      uid: SharePointOnlinePowerShell.Set-SPOBrowserIdleSignOut
+    - name: Set-SPOBuiltInDesignPackageVisibility
+      uid: SharePointOnlinePowerShell.Set-SPOBuiltInDesignPackageVisibility
+    - name: Set-SPODataConnectionSetting
+      uid: SharePointOnlinePowerShell.Set-SPODataConnectionSetting
+    - name: Set-SPODataConnectionSettingMetadata
+      uid: SharePointOnlinePowerShell.Set-SPODataConnectionSettingMetadata
+    - name: Set-SPODisableSpacesActivation
+      uid: SharePointOnlinePowerShell.Set-SPODisableSpacesActivation
+    - name: Set-SPOGeoStorageQuota
+      uid: SharePointOnlinePowerShell.Set-SPOGeoStorageQuota
+    - name: Set-SPOHideDefaultThemes
+      uid: SharePointOnlinePowerShell.Set-SPOHideDefaultThemes
+    - name: Set-SPOHomeSite
+      uid: SharePointOnlinePowerShell.Set-SPOHomeSite
+    - name: Set-SPOHubSite
+      uid: SharePointOnlinePowerShell.Set-SPOHubSite
+    - name: Set-SPOMigrationPackageAzureSource
+      uid: SharePointOnlinePowerShell.Set-SPOMigrationPackageAzureSource
+    - name: Set-SPOMultiGeoCompanyAllowedDataLocation
+      uid: SharePointOnlinePowerShell.Set-SPOMultiGeoCompanyAllowedDataLocation
+    - name: Set-SPOMultiGeoExperience
+      uid: SharePointOnlinePowerShell.Set-SPOMultiGeoExperience
+    - name: Set-SPOOrgAssetsLibrary
+      uid: SharePointOnlinePowerShell.Set-SPOOrgAssetsLibrary
+    - name: Set-SPOOrgNewsSite
+      uid: SharePointOnlinePowerShell.Set-SPOOrgNewsSite
+    - name: Set-SPOSite
+      uid: SharePointOnlinePowerShell.Set-SPOSite
+    - name: Set-SPOSiteDesign
+      uid: SharePointOnlinePowerShell.Set-SPOSiteDesign
+    - name: Set-SPOSiteGroup
+      uid: SharePointOnlinePowerShell.Set-SPOSiteGroup
+    - name: Set-SPOSiteOffice365Group
+      uid: SharePointOnlinePowerShell.Set-SPOSiteOffice365Group
+    - name: Set-SPOSiteScript
+      uid: SharePointOnlinePowerShell.Set-SPOSiteScript
+    - name: Set-SPOStorageEntity
+      uid: SharePointOnlinePowerShell.Set-SPOStorageEntity
+    - name: Set-SPOStructuralNavigationCacheSiteState
+      uid: SharePointOnlinePowerShell.Set-SPOStructuralNavigationCacheSiteState
+    - name: Set-SPOStructuralNavigationCacheWebState
+      uid: SharePointOnlinePowerShell.Set-SPOStructuralNavigationCacheWebState
+    - name: Set-SPOTenant
+      uid: SharePointOnlinePowerShell.Set-SPOTenant
+    - name: Set-SPOTenantCdnEnabled
+      uid: SharePointOnlinePowerShell.Set-SPOTenantCdnEnabled
+    - name: Set-SPOTenantCdnPolicy
+      uid: SharePointOnlinePowerShell.Set-SPOTenantCdnPolicy
+    - name: Set-SPOTenantContentTypeReplicationParameters
+      uid: SharePointOnlinePowerShell.Set-SPOTenantContentTypeReplicationParameters
+    - name: Set-SPOTenantSyncClientRestriction
+      uid: SharePointOnlinePowerShell.Set-SPOTenantSyncClientRestriction
+    - name: Set-SPOTenantTaxonomyReplicationParameters
+      uid: SharePointOnlinePowerShell.Set-SPOTenantTaxonomyReplicationParameters
+    - name: Set-SPOUnifiedGroup
+      uid: SharePointOnlinePowerShell.Set-SPOUnifiedGroup
+    - name: Set-SPOUser
+      uid: SharePointOnlinePowerShell.Set-SPOUser
+    - name: Set-SPOWebTheme
+      uid: SharePointOnlinePowerShell.Set-SPOWebTheme
+    - name: Start-SPOSiteContentMove
+      uid: SharePointOnlinePowerShell.Start-SPOSiteContentMove
+    - name: Start-SPOSiteRename
+      uid: SharePointOnlinePowerShell.Start-SPOSiteRename
+    - name: Start-SPOUnifiedGroupMove
+      uid: SharePointOnlinePowerShell.Start-SPOUnifiedGroupMove
+    - name: Start-SPOUserAndContentMove
+      uid: SharePointOnlinePowerShell.Start-SPOUserAndContentMove
+    - name: Stop-SPOSiteContentMove
+      uid: SharePointOnlinePowerShell.Stop-SPOSiteContentMove
+    - name: Stop-SPOUserAndContentMove
+      uid: SharePointOnlinePowerShell.Stop-SPOUserAndContentMove
+    - name: Submit-SPOMigrationJob
+      uid: SharePointOnlinePowerShell.Submit-SPOMigrationJob
+    - name: Test-SPOSite
+      uid: SharePointOnlinePowerShell.Test-SPOSite
+    - name: Unlock-SensitivityLabelEncryptedFile
+      uid: SharePointOnlinePowerShell.Unlock-SensitivityLabelEncryptedFile
+    - name: Unregister-SPOHubSite
+      uid: SharePointOnlinePowerShell.Unregister-SPOHubSite
+    - name: Update-SPODataEncryptionPolicy
+      uid: SharePointOnlinePowerShell.Update-SPODataEncryptionPolicy
+    - name: Update-UserType
+      uid: SharePointOnlinePowerShell.Update-UserType
+    - name: Upgrade-SPOSite
+      uid: SharePointOnlinePowerShell.Upgrade-SPOSite
+    - name: Verify-SPOTenantOrgRelation
+      uid: SharePointOnlinePowerShell.Verify-SPOTenantOrgRelation
+  - name: SharePointServer
+    uid: SharePointServer
+    items:
+    - name: Add-DatabaseToAvailabilityGroup
+      uid: SharePointServer.Add-DatabaseToAvailabilityGroup
+    - name: Add-FASTSearchResource
+      uid: SharePointServer.Add-FASTSearchResource
+    - name: Add-FASTSearchSpelltuning
+      uid: SharePointServer.Add-FASTSearchSpelltuning
+    - name: Add-SPAppDeniedEndpoint
+      uid: SharePointServer.Add-SPAppDeniedEndpoint
+    - name: Add-SPClaimTypeMapping
+      uid: SharePointServer.Add-SPClaimTypeMapping
+    - name: Add-SPDiagnosticsPerformanceCounter
+      uid: SharePointServer.Add-SPDiagnosticsPerformanceCounter
+    - name: Add-SPDistributedCacheServiceInstance
+      uid: SharePointServer.Add-SPDistributedCacheServiceInstance
+    - name: Add-SPEduClassMember
+      uid: SharePointServer.Add-SPEduClassMember
+    - name: Add-SPEduUser
+      uid: SharePointServer.Add-SPEduUser
+    - name: Add-SPInfoPathUserAgent
+      uid: SharePointServer.Add-SPInfoPathUserAgent
+    - name: Add-SPPluggableSecurityTrimmer
+      uid: SharePointServer.Add-SPPluggableSecurityTrimmer
+    - name: Add-SPProfileLeader
+      uid: SharePointServer.Add-SPProfileLeader
+    - name: Add-SPProfileSyncConnection
+      uid: SharePointServer.Add-SPProfileSyncConnection
+    - name: Add-SPRoutingMachineInfo
+      uid: SharePointServer.Add-SPRoutingMachineInfo
+    - name: Add-SPRoutingMachinePool
+      uid: SharePointServer.Add-SPRoutingMachinePool
+    - name: Add-SPRoutingRule
+      uid: SharePointServer.Add-SPRoutingRule
+    - name: Add-SPScaleOutDatabase
+      uid: SharePointServer.Add-SPScaleOutDatabase
+    - name: Add-SPSecureStoreSystemAccount
+      uid: SharePointServer.Add-SPSecureStoreSystemAccount
+    - name: Add-SPServerScaleOutDatabase
+      uid: SharePointServer.Add-SPServerScaleOutDatabase
+    - name: Add-SPServiceApplicationProxyGroupMember
+      uid: SharePointServer.Add-SPServiceApplicationProxyGroupMember
+    - name: Add-SPShellAdmin
+      uid: SharePointServer.Add-SPShellAdmin
+    - name: Add-SPSiteSubscriptionFeaturePackMember
+      uid: SharePointServer.Add-SPSiteSubscriptionFeaturePackMember
+    - name: Add-SPSiteSubscriptionProfileConfig
+      uid: SharePointServer.Add-SPSiteSubscriptionProfileConfig
+    - name: Add-SPSolution
+      uid: SharePointServer.Add-SPSolution
+    - name: Add-SPThrottlingRule
+      uid: SharePointServer.Add-SPThrottlingRule
+    - name: Add-SPUserLicenseMapping
+      uid: SharePointServer.Add-SPUserLicenseMapping
+    - name: Add-SPUserSolution
+      uid: SharePointServer.Add-SPUserSolution
+    - name: Backup-SPConfigurationDatabase
+      uid: SharePointServer.Backup-SPConfigurationDatabase
+    - name: Backup-SPEnterpriseSearchServiceApplicationIndex
+      uid: SharePointServer.Backup-SPEnterpriseSearchServiceApplicationIndex
+    - name: Backup-SPFarm
+      uid: SharePointServer.Backup-SPFarm
+    - name: Backup-SPSite
+      uid: SharePointServer.Backup-SPSite
+    - name: Clear-FASTSearchContentCollection
+      uid: SharePointServer.Clear-FASTSearchContentCollection
+    - name: Clear-SPAppDeniedEndpointList
+      uid: SharePointServer.Clear-SPAppDeniedEndpointList
+    - name: Clear-SPBusinessDataCatalogEntityNotificationWeb
+      uid: SharePointServer.Clear-SPBusinessDataCatalogEntityNotificationWeb
+    - name: Clear-SPContentDatabaseSyncData
+      uid: SharePointServer.Clear-SPContentDatabaseSyncData
+    - name: Clear-SPDistributedCacheItem
+      uid: SharePointServer.Clear-SPDistributedCacheItem
+    - name: Clear-SPLogLevel
+      uid: SharePointServer.Clear-SPLogLevel
+    - name: Clear-SPMetadataWebServicePartitionData
+      uid: SharePointServer.Clear-SPMetadataWebServicePartitionData
+    - name: Clear-SPPerformancePointServiceApplicationTrustedLocation
+      uid: SharePointServer.Clear-SPPerformancePointServiceApplicationTrustedLocation
+    - name: Clear-SPScaleOutDatabaseDeletedDataSubRange
+      uid: SharePointServer.Clear-SPScaleOutDatabaseDeletedDataSubRange
+    - name: Clear-SPScaleOutDatabaseLog
+      uid: SharePointServer.Clear-SPScaleOutDatabaseLog
+    - name: Clear-SPScaleOutDatabaseTenantData
+      uid: SharePointServer.Clear-SPScaleOutDatabaseTenantData
+    - name: Clear-SPSecureStoreCredentialMapping
+      uid: SharePointServer.Clear-SPSecureStoreCredentialMapping
+    - name: Clear-SPSecureStoreDefaultProvider
+      uid: SharePointServer.Clear-SPSecureStoreDefaultProvider
+    - name: Clear-SPServerScaleOutDatabaseDeletedDataSubRange
+      uid: SharePointServer.Clear-SPServerScaleOutDatabaseDeletedDataSubRange
+    - name: Clear-SPServerScaleOutDatabaseLog
+      uid: SharePointServer.Clear-SPServerScaleOutDatabaseLog
+    - name: Clear-SPServerScaleOutDatabaseTenantData
+      uid: SharePointServer.Clear-SPServerScaleOutDatabaseTenantData
+    - name: Clear-SPSiteSubscriptionBusinessDataCatalogConfig
+      uid: SharePointServer.Clear-SPSiteSubscriptionBusinessDataCatalogConfig
+    - name: Connect-SPConfigurationDatabase
+      uid: SharePointServer.Connect-SPConfigurationDatabase
+    - name: Convert-SPWebApplication
+      uid: SharePointServer.Convert-SPWebApplication
+    - name: Copy-SPAccessServicesDatabaseCredentials
+      uid: SharePointServer.Copy-SPAccessServicesDatabaseCredentials
+    - name: Copy-SPActivitiesToWorkflowService
+      uid: SharePointServer.Copy-SPActivitiesToWorkflowService
+    - name: Copy-SPBusinessDataCatalogAclToChildren
+      uid: SharePointServer.Copy-SPBusinessDataCatalogAclToChildren
+    - name: Copy-SPContentTypes
+      uid: SharePointServer.Copy-SPContentTypes
+    - name: Copy-SPSideBySideFiles
+      uid: SharePointServer.Copy-SPSideBySideFiles
+    - name: Copy-SPSite
+      uid: SharePointServer.Copy-SPSite
+    - name: Copy-SPTaxonomyGroups
+      uid: SharePointServer.Copy-SPTaxonomyGroups
+    - name: Disable-ProjectServerLicense
+      uid: SharePointServer.Disable-ProjectServerLicense
+    - name: Disable-SPAppAutoProvision
+      uid: SharePointServer.Disable-SPAppAutoProvision
+    - name: Disable-SPBusinessDataCatalogEntity
+      uid: SharePointServer.Disable-SPBusinessDataCatalogEntity
+    - name: Disable-SPFeature
+      uid: SharePointServer.Disable-SPFeature
+    - name: Disable-SPHealthAnalysisRule
+      uid: SharePointServer.Disable-SPHealthAnalysisRule
+    - name: Disable-SPInfoPathFormTemplate
+      uid: SharePointServer.Disable-SPInfoPathFormTemplate
+    - name: Disable-SPProjectActiveDirectoryEnterpriseResourcePoolSync
+      uid: SharePointServer.Disable-SPProjectActiveDirectoryEnterpriseResourcePoolSync
+    - name: Disable-SPProjectEmailNotification
+      uid: SharePointServer.Disable-SPProjectEmailNotification
+    - name: Disable-SPProjectEnterpriseProjectTaskSync
+      uid: SharePointServer.Disable-SPProjectEnterpriseProjectTaskSync
+    - name: Disable-SPProjectQueueStatsMonitoring
+      uid: SharePointServer.Disable-SPProjectQueueStatsMonitoring
+    - name: Disable-SPSessionStateService
+      uid: SharePointServer.Disable-SPSessionStateService
+    - name: Disable-SPSingleSignOn
+      uid: SharePointServer.Disable-SPSingleSignOn
+    - name: Disable-SPTimerJob
+      uid: SharePointServer.Disable-SPTimerJob
+    - name: Disable-SPUserLicensing
+      uid: SharePointServer.Disable-SPUserLicensing
+    - name: Disable-SPUserSolutionAllowList
+      uid: SharePointServer.Disable-SPUserSolutionAllowList
+    - name: Disable-SPWebApplicationHttpThrottling
+      uid: SharePointServer.Disable-SPWebApplicationHttpThrottling
+    - name: Disable-SPWebTemplateForSiteMaster
+      uid: SharePointServer.Disable-SPWebTemplateForSiteMaster
+    - name: Disconnect-SPConfigurationDatabase
+      uid: SharePointServer.Disconnect-SPConfigurationDatabase
+    - name: Dismount-SPContentDatabase
+      uid: SharePointServer.Dismount-SPContentDatabase
+    - name: Dismount-SPSiteMapDatabase
+      uid: SharePointServer.Dismount-SPSiteMapDatabase
+    - name: Dismount-SPStateServiceDatabase
+      uid: SharePointServer.Dismount-SPStateServiceDatabase
+    - name: Enable-ProjectServerLicense
+      uid: SharePointServer.Enable-ProjectServerLicense
+    - name: Enable-SPAppAutoProvision
+      uid: SharePointServer.Enable-SPAppAutoProvision
+    - name: Enable-SPBusinessDataCatalogEntity
+      uid: SharePointServer.Enable-SPBusinessDataCatalogEntity
+    - name: Enable-SPFeature
+      uid: SharePointServer.Enable-SPFeature
+    - name: Enable-SPHealthAnalysisRule
+      uid: SharePointServer.Enable-SPHealthAnalysisRule
+    - name: Enable-SPInfoPathFormTemplate
+      uid: SharePointServer.Enable-SPInfoPathFormTemplate
+    - name: Enable-SPProjectActiveDirectoryEnterpriseResourcePoolSync
+      uid: SharePointServer.Enable-SPProjectActiveDirectoryEnterpriseResourcePoolSync
+    - name: Enable-SPProjectEmailNotification
+      uid: SharePointServer.Enable-SPProjectEmailNotification
+    - name: Enable-SPProjectEnterpriseProjectTaskSync
+      uid: SharePointServer.Enable-SPProjectEnterpriseProjectTaskSync
+    - name: Enable-SPProjectQueueStatsMonitoring
+      uid: SharePointServer.Enable-SPProjectQueueStatsMonitoring
+    - name: Enable-SPSessionStateService
+      uid: SharePointServer.Enable-SPSessionStateService
+    - name: Enable-SPTimerJob
+      uid: SharePointServer.Enable-SPTimerJob
+    - name: Enable-SPUserLicensing
+      uid: SharePointServer.Enable-SPUserLicensing
+    - name: Enable-SPUserSolutionAllowList
+      uid: SharePointServer.Enable-SPUserSolutionAllowList
+    - name: Enable-SPWebApplicationHttpThrottling
+      uid: SharePointServer.Enable-SPWebApplicationHttpThrottling
+    - name: Enable-SPWebTemplateForSiteMaster
+      uid: SharePointServer.Enable-SPWebTemplateForSiteMaster
+    - name: Export-SPAccessServicesDatabase
+      uid: SharePointServer.Export-SPAccessServicesDatabase
+    - name: Export-SPAppPackage
+      uid: SharePointServer.Export-SPAppPackage
+    - name: Export-SPBusinessDataCatalogModel
+      uid: SharePointServer.Export-SPBusinessDataCatalogModel
+    - name: Export-SPEnterpriseSearchTopology
+      uid: SharePointServer.Export-SPEnterpriseSearchTopology
+    - name: Export-SPInfoPathAdministrationFiles
+      uid: SharePointServer.Export-SPInfoPathAdministrationFiles
+    - name: Export-SPMetadataWebServicePartitionData
+      uid: SharePointServer.Export-SPMetadataWebServicePartitionData
+    - name: Export-SPPerformancePointContent
+      uid: SharePointServer.Export-SPPerformancePointContent
+    - name: Export-SPScaleOutDatabaseTenantData
+      uid: SharePointServer.Export-SPScaleOutDatabaseTenantData
+    - name: Export-SPServerScaleOutDatabaseTenantData
+      uid: SharePointServer.Export-SPServerScaleOutDatabaseTenantData
+    - name: Export-SPSiteSubscriptionBusinessDataCatalogConfig
+      uid: SharePointServer.Export-SPSiteSubscriptionBusinessDataCatalogConfig
+    - name: Export-SPSiteSubscriptionSettings
+      uid: SharePointServer.Export-SPSiteSubscriptionSettings
+    - name: Export-SPTagsAndNotesData
+      uid: SharePointServer.Export-SPTagsAndNotesData
+    - name: Export-SPWeb
+      uid: SharePointServer.Export-SPWeb
+    - name: Get-AvailabilityGroupStatus
+      uid: SharePointServer.Get-AvailabilityGroupStatus
+    - name: Get-FASTSearchContentCollection
+      uid: SharePointServer.Get-FASTSearchContentCollection
+    - name: Get-FASTSearchDocumentProcessingPipeline
+      uid: SharePointServer.Get-FASTSearchDocumentProcessingPipeline
+    - name: Get-FASTSearchMetadataCategory
+      uid: SharePointServer.Get-FASTSearchMetadataCategory
+    - name: Get-FASTSearchMetadataCrawledProperty
+      uid: SharePointServer.Get-FASTSearchMetadataCrawledProperty
+    - name: Get-FASTSearchMetadataCrawledPropertyMapping
+      uid: SharePointServer.Get-FASTSearchMetadataCrawledPropertyMapping
+    - name: Get-FASTSearchMetadataFullTextIndex
+      uid: SharePointServer.Get-FASTSearchMetadataFullTextIndex
+    - name: Get-FASTSearchMetadataFullTextIndexMapping
+      uid: SharePointServer.Get-FASTSearchMetadataFullTextIndexMapping
+    - name: Get-FASTSearchMetadataManagedProperty
+      uid: SharePointServer.Get-FASTSearchMetadataManagedProperty
+    - name: Get-FASTSearchMetadataRankProfile
+      uid: SharePointServer.Get-FASTSearchMetadataRankProfile
+    - name: Get-FASTSearchResource
+      uid: SharePointServer.Get-FASTSearchResource
+    - name: Get-FASTSearchSearchSettingGroup
+      uid: SharePointServer.Get-FASTSearchSearchSettingGroup
+    - name: Get-FASTSearchSecurityAliaser
+      uid: SharePointServer.Get-FASTSearchSecurityAliaser
+    - name: Get-FASTSearchSecurityCCTKServer
+      uid: SharePointServer.Get-FASTSearchSecurityCCTKServer
+    - name: Get-FASTSearchSecurityClaimsUserStore
+      uid: SharePointServer.Get-FASTSearchSecurityClaimsUserStore
+    - name: Get-FASTSearchSecurityCompleteGroupExpansion
+      uid: SharePointServer.Get-FASTSearchSecurityCompleteGroupExpansion
+    - name: Get-FASTSearchSecurityDecodedSid
+      uid: SharePointServer.Get-FASTSearchSecurityDecodedSid
+    - name: Get-FASTSearchSecurityDefaultUserStore
+      uid: SharePointServer.Get-FASTSearchSecurityDefaultUserStore
+    - name: Get-FASTSearchSecurityEncodedSid
+      uid: SharePointServer.Get-FASTSearchSecurityEncodedSid
+    - name: Get-FASTSearchSecurityGeneralSettings
+      uid: SharePointServer.Get-FASTSearchSecurityGeneralSettings
+    - name: Get-FASTSearchSecurityLogLevel
+      uid: SharePointServer.Get-FASTSearchSecurityLogLevel
+    - name: Get-FASTSearchSecurityLotusNotesUserStore
+      uid: SharePointServer.Get-FASTSearchSecurityLotusNotesUserStore
+    - name: Get-FASTSearchSecurityPublicFilter
+      uid: SharePointServer.Get-FASTSearchSecurityPublicFilter
+    - name: Get-FASTSearchSecurityRegexAliaser
+      uid: SharePointServer.Get-FASTSearchSecurityRegexAliaser
+    - name: Get-FASTSearchSecurityUserFilter
+      uid: SharePointServer.Get-FASTSearchSecurityUserFilter
+    - name: Get-FASTSearchSecurityUserStore
+      uid: SharePointServer.Get-FASTSearchSecurityUserStore
+    - name: Get-FASTSearchSecurityUserStoreGroupExpansion
+      uid: SharePointServer.Get-FASTSearchSecurityUserStoreGroupExpansion
+    - name: Get-FASTSearchSecurityWorkerNode
+      uid: SharePointServer.Get-FASTSearchSecurityWorkerNode
+    - name: Get-FASTSearchSecurityXMLAliaser
+      uid: SharePointServer.Get-FASTSearchSecurityXMLAliaser
+    - name: Get-FASTSearchSpelltuningStatus
+      uid: SharePointServer.Get-FASTSearchSpelltuningStatus
+    - name: Get-ProjectServerLicense
+      uid: SharePointServer.Get-ProjectServerLicense
+    - name: Get-SPAccessServiceApplication
+      uid: SharePointServer.Get-SPAccessServiceApplication
+    - name: Get-SPAccessServicesApplication
+      uid: SharePointServer.Get-SPAccessServicesApplication
+    - name: Get-SPAccessServicesDatabase
+      uid: SharePointServer.Get-SPAccessServicesDatabase
+    - name: Get-SPAccessServicesDatabaseServer
+      uid: SharePointServer.Get-SPAccessServicesDatabaseServer
+    - name: Get-SPAccessServicesDatabaseServerGroup
+      uid: SharePointServer.Get-SPAccessServicesDatabaseServerGroup
+    - name: Get-SPAccessServicesDatabaseServerGroupMapping
+      uid: SharePointServer.Get-SPAccessServicesDatabaseServerGroupMapping
+    - name: Get-SPAlternateURL
+      uid: SharePointServer.Get-SPAlternateURL
+    - name: Get-SPAppAcquisitionConfiguration
+      uid: SharePointServer.Get-SPAppAcquisitionConfiguration
+    - name: Get-SPAppAutoProvisionConnection
+      uid: SharePointServer.Get-SPAppAutoProvisionConnection
+    - name: Get-SPAppDeniedEndpointList
+      uid: SharePointServer.Get-SPAppDeniedEndpointList
+    - name: Get-SPAppDisablingConfiguration
+      uid: SharePointServer.Get-SPAppDisablingConfiguration
+    - name: Get-SPAppDomain
+      uid: SharePointServer.Get-SPAppDomain
+    - name: Get-SPAppHostingQuotaConfiguration
+      uid: SharePointServer.Get-SPAppHostingQuotaConfiguration
+    - name: Get-SPAppInstance
+      uid: SharePointServer.Get-SPAppInstance
+    - name: Get-SPAppPrincipal
+      uid: SharePointServer.Get-SPAppPrincipal
+    - name: Get-SPAppScaleProfile
+      uid: SharePointServer.Get-SPAppScaleProfile
+    - name: Get-SPAppSiteSubscriptionName
+      uid: SharePointServer.Get-SPAppSiteSubscriptionName
+    - name: Get-SPAppStateSyncLastRunTime
+      uid: SharePointServer.Get-SPAppStateSyncLastRunTime
+    - name: Get-SPAppStateUpdateInterval
+      uid: SharePointServer.Get-SPAppStateUpdateInterval
+    - name: Get-SPAppStoreConfiguration
+      uid: SharePointServer.Get-SPAppStoreConfiguration
+    - name: Get-SPAppStoreWebServiceConfiguration
+      uid: SharePointServer.Get-SPAppStoreWebServiceConfiguration
+    - name: Get-SPAuthenticationProvider
+      uid: SharePointServer.Get-SPAuthenticationProvider
+    - name: Get-SPAuthenticationRealm
+      uid: SharePointServer.Get-SPAuthenticationRealm
+    - name: Get-SPBackupHistory
+      uid: SharePointServer.Get-SPBackupHistory
+    - name: Get-SPBingMapsBlock
+      uid: SharePointServer.Get-SPBingMapsBlock
+    - name: Get-SPBingMapsKey
+      uid: SharePointServer.Get-SPBingMapsKey
+    - name: Get-SPBrowserCustomerExperienceImprovementProgram
+      uid: SharePointServer.Get-SPBrowserCustomerExperienceImprovementProgram
+    - name: Get-SPBusinessDataCatalogEntityNotificationWeb
+      uid: SharePointServer.Get-SPBusinessDataCatalogEntityNotificationWeb
+    - name: Get-SPBusinessDataCatalogMetadataObject
+      uid: SharePointServer.Get-SPBusinessDataCatalogMetadataObject
+    - name: Get-SPBusinessDataCatalogThrottleConfig
+      uid: SharePointServer.Get-SPBusinessDataCatalogThrottleConfig
+    - name: Get-SPCertificateAuthority
+      uid: SharePointServer.Get-SPCertificateAuthority
+    - name: Get-SPClaimProvider
+      uid: SharePointServer.Get-SPClaimProvider
+    - name: Get-SPClaimProviderManager
+      uid: SharePointServer.Get-SPClaimProviderManager
+    - name: Get-SPClaimTypeEncoding
+      uid: SharePointServer.Get-SPClaimTypeEncoding
+    - name: Get-SPConnectedServiceApplicationInformation
+      uid: SharePointServer.Get-SPConnectedServiceApplicationInformation
+    - name: Get-SPContentDatabase
+      uid: SharePointServer.Get-SPContentDatabase
+    - name: Get-SPContentDatabaseOrphanedData
+      uid: SharePointServer.Get-SPContentDatabaseOrphanedData
+    - name: Get-SPContentDeploymentJob
+      uid: SharePointServer.Get-SPContentDeploymentJob
+    - name: Get-SPContentDeploymentPath
+      uid: SharePointServer.Get-SPContentDeploymentPath
+    - name: Get-SPCustomLayoutsPage
+      uid: SharePointServer.Get-SPCustomLayoutsPage
+    - name: Get-SPDatabase
+      uid: SharePointServer.Get-SPDatabase
+    - name: Get-SPDataConnectionFile
+      uid: SharePointServer.Get-SPDataConnectionFile
+    - name: Get-SPDataConnectionFileDependent
+      uid: SharePointServer.Get-SPDataConnectionFileDependent
+    - name: Get-SPDeletedSite
+      uid: SharePointServer.Get-SPDeletedSite
+    - name: Get-SPDesignerSettings
+      uid: SharePointServer.Get-SPDesignerSettings
+    - name: Get-SPDiagnosticConfig
+      uid: SharePointServer.Get-SPDiagnosticConfig
+    - name: Get-SPDiagnosticsPerformanceCounter
+      uid: SharePointServer.Get-SPDiagnosticsPerformanceCounter
+    - name: Get-SPDiagnosticsProvider
+      uid: SharePointServer.Get-SPDiagnosticsProvider
+    - name: Get-SPDistributedCacheClientSetting
+      uid: SharePointServer.Get-SPDistributedCacheClientSetting
+    - name: Get-SPEduServiceSetting
+      uid: SharePointServer.Get-SPEduServiceSetting
+    - name: Get-SPEnterpriseSearchAdministrationComponent
+      uid: SharePointServer.Get-SPEnterpriseSearchAdministrationComponent
+    - name: Get-SPEnterpriseSearchComponent
+      uid: SharePointServer.Get-SPEnterpriseSearchComponent
+    - name: Get-SPEnterpriseSearchContentEnrichmentConfiguration
+      uid: SharePointServer.Get-SPEnterpriseSearchContentEnrichmentConfiguration
+    - name: Get-SPEnterpriseSearchCrawlContentSource
+      uid: SharePointServer.Get-SPEnterpriseSearchCrawlContentSource
+    - name: Get-SPEnterpriseSearchCrawlCustomConnector
+      uid: SharePointServer.Get-SPEnterpriseSearchCrawlCustomConnector
+    - name: Get-SPEnterpriseSearchCrawlDatabase
+      uid: SharePointServer.Get-SPEnterpriseSearchCrawlDatabase
+    - name: Get-SPEnterpriseSearchCrawlExtension
+      uid: SharePointServer.Get-SPEnterpriseSearchCrawlExtension
+    - name: Get-SPEnterpriseSearchCrawlLogReadPermission
+      uid: SharePointServer.Get-SPEnterpriseSearchCrawlLogReadPermission
+    - name: Get-SPEnterpriseSearchCrawlMapping
+      uid: SharePointServer.Get-SPEnterpriseSearchCrawlMapping
+    - name: Get-SPEnterpriseSearchCrawlRule
+      uid: SharePointServer.Get-SPEnterpriseSearchCrawlRule
+    - name: Get-SPEnterpriseSearchFileFormat
+      uid: SharePointServer.Get-SPEnterpriseSearchFileFormat
+    - name: Get-SPEnterpriseSearchHostController
+      uid: SharePointServer.Get-SPEnterpriseSearchHostController
+    - name: Get-SPEnterpriseSearchLanguageResourcePhrase
+      uid: SharePointServer.Get-SPEnterpriseSearchLanguageResourcePhrase
+    - name: Get-SPEnterpriseSearchLinguisticComponentsStatus
+      uid: SharePointServer.Get-SPEnterpriseSearchLinguisticComponentsStatus
+    - name: Get-SPEnterpriseSearchLinksDatabase
+      uid: SharePointServer.Get-SPEnterpriseSearchLinksDatabase
+    - name: Get-SPEnterpriseSearchMetadataCategory
+      uid: SharePointServer.Get-SPEnterpriseSearchMetadataCategory
+    - name: Get-SPEnterpriseSearchMetadataCrawledProperty
+      uid: SharePointServer.Get-SPEnterpriseSearchMetadataCrawledProperty
+    - name: Get-SPEnterpriseSearchMetadataManagedProperty
+      uid: SharePointServer.Get-SPEnterpriseSearchMetadataManagedProperty
+    - name: Get-SPEnterpriseSearchMetadataMapping
+      uid: SharePointServer.Get-SPEnterpriseSearchMetadataMapping
+    - name: Get-SPEnterpriseSearchOwner
+      uid: SharePointServer.Get-SPEnterpriseSearchOwner
+    - name: Get-SPEnterpriseSearchPropertyRule
+      uid: SharePointServer.Get-SPEnterpriseSearchPropertyRule
+    - name: Get-SPEnterpriseSearchPropertyRuleCollection
+      uid: SharePointServer.Get-SPEnterpriseSearchPropertyRuleCollection
+    - name: Get-SPEnterpriseSearchQueryAndSiteSettingsService
+      uid: SharePointServer.Get-SPEnterpriseSearchQueryAndSiteSettingsService
+    - name: Get-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance
+      uid: SharePointServer.Get-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance
+    - name: Get-SPEnterpriseSearchQueryAndSiteSettingsServiceProxy
+      uid: SharePointServer.Get-SPEnterpriseSearchQueryAndSiteSettingsServiceProxy
+    - name: Get-SPEnterpriseSearchQueryAuthority
+      uid: SharePointServer.Get-SPEnterpriseSearchQueryAuthority
+    - name: Get-SPEnterpriseSearchQueryDemoted
+      uid: SharePointServer.Get-SPEnterpriseSearchQueryDemoted
+    - name: Get-SPEnterpriseSearchQueryKeyword
+      uid: SharePointServer.Get-SPEnterpriseSearchQueryKeyword
+    - name: Get-SPEnterpriseSearchQueryScope
+      uid: SharePointServer.Get-SPEnterpriseSearchQueryScope
+    - name: Get-SPEnterpriseSearchQueryScopeRule
+      uid: SharePointServer.Get-SPEnterpriseSearchQueryScopeRule
+    - name: Get-SPEnterpriseSearchQuerySpellingCorrection
+      uid: SharePointServer.Get-SPEnterpriseSearchQuerySpellingCorrection
+    - name: Get-SPEnterpriseSearchQuerySuggestionCandidates
+      uid: SharePointServer.Get-SPEnterpriseSearchQuerySuggestionCandidates
+    - name: Get-SPEnterpriseSearchRankingModel
+      uid: SharePointServer.Get-SPEnterpriseSearchRankingModel
+    - name: Get-SPEnterpriseSearchResultItemType
+      uid: SharePointServer.Get-SPEnterpriseSearchResultItemType
+    - name: Get-SPEnterpriseSearchResultSource
+      uid: SharePointServer.Get-SPEnterpriseSearchResultSource
+    - name: Get-SPEnterpriseSearchSecurityTrimmer
+      uid: SharePointServer.Get-SPEnterpriseSearchSecurityTrimmer
+    - name: Get-SPEnterpriseSearchService
+      uid: SharePointServer.Get-SPEnterpriseSearchService
+    - name: Get-SPEnterpriseSearchServiceApplication
+      uid: SharePointServer.Get-SPEnterpriseSearchServiceApplication
+    - name: Get-SPEnterpriseSearchServiceApplicationBackupStore
+      uid: SharePointServer.Get-SPEnterpriseSearchServiceApplicationBackupStore
+    - name: Get-SPEnterpriseSearchServiceApplicationProxy
+      uid: SharePointServer.Get-SPEnterpriseSearchServiceApplicationProxy
+    - name: Get-SPEnterpriseSearchServiceInstance
+      uid: SharePointServer.Get-SPEnterpriseSearchServiceInstance
+    - name: Get-SPEnterpriseSearchSiteHitRule
+      uid: SharePointServer.Get-SPEnterpriseSearchSiteHitRule
+    - name: Get-SPEnterpriseSearchStatus
+      uid: SharePointServer.Get-SPEnterpriseSearchStatus
+    - name: Get-SPEnterpriseSearchTopology
+      uid: SharePointServer.Get-SPEnterpriseSearchTopology
+    - name: Get-SPEnterpriseSearchVssDataPath
+      uid: SharePointServer.Get-SPEnterpriseSearchVssDataPath
+    - name: Get-SPExcelBIServer
+      uid: SharePointServer.Get-SPExcelBIServer
+    - name: Get-SPExcelBlockedFileType
+      uid: SharePointServer.Get-SPExcelBlockedFileType
+    - name: Get-SPExcelDataConnectionLibrary
+      uid: SharePointServer.Get-SPExcelDataConnectionLibrary
+    - name: Get-SPExcelDataProvider
+      uid: SharePointServer.Get-SPExcelDataProvider
+    - name: Get-SPExcelFileLocation
+      uid: SharePointServer.Get-SPExcelFileLocation
+    - name: Get-SPExcelServiceApplication
+      uid: SharePointServer.Get-SPExcelServiceApplication
+    - name: Get-SPExcelUserDefinedFunction
+      uid: SharePointServer.Get-SPExcelUserDefinedFunction
+    - name: Get-SPFarm
+      uid: SharePointServer.Get-SPFarm
+    - name: Get-SPFarmConfig
+      uid: SharePointServer.Get-SPFarmConfig
+    - name: Get-SPFeature
+      uid: SharePointServer.Get-SPFeature
+    - name: Get-SPHealthAnalysisRule
+      uid: SharePointServer.Get-SPHealthAnalysisRule
+    - name: Get-SPHelpCollection
+      uid: SharePointServer.Get-SPHelpCollection
+    - name: Get-SPInfoPathFormsService
+      uid: SharePointServer.Get-SPInfoPathFormsService
+    - name: Get-SPInfoPathFormTemplate
+      uid: SharePointServer.Get-SPInfoPathFormTemplate
+    - name: Get-SPInfoPathUserAgent
+      uid: SharePointServer.Get-SPInfoPathUserAgent
+    - name: Get-SPInfoPathWebServiceProxy
+      uid: SharePointServer.Get-SPInfoPathWebServiceProxy
+    - name: Get-SPInsightsConfig
+      uid: SharePointServer.Get-SPInsightsConfig
+    - name: Get-SPInternalAppStateSyncLastRunTime
+      uid: SharePointServer.Get-SPInternalAppStateSyncLastRunTime
+    - name: Get-SPInternalAppStateUpdateInterval
+      uid: SharePointServer.Get-SPInternalAppStateUpdateInterval
+    - name: Get-SPIRMSettings
+      uid: SharePointServer.Get-SPIRMSettings
+    - name: Get-SPLogEvent
+      uid: SharePointServer.Get-SPLogEvent
+    - name: Get-SPLogLevel
+      uid: SharePointServer.Get-SPLogLevel
+    - name: Get-SPManagedAccount
+      uid: SharePointServer.Get-SPManagedAccount
+    - name: Get-SPManagedPath
+      uid: SharePointServer.Get-SPManagedPath
+    - name: Get-SPMetadataServiceApplication
+      uid: SharePointServer.Get-SPMetadataServiceApplication
+    - name: Get-SPMetadataServiceApplicationProxy
+      uid: SharePointServer.Get-SPMetadataServiceApplicationProxy
+    - name: Get-SPMicrofeedOptions
+      uid: SharePointServer.Get-SPMicrofeedOptions
+    - name: Get-SPMobileMessagingAccount
+      uid: SharePointServer.Get-SPMobileMessagingAccount
+    - name: Get-SPO365LinkSettings
+      uid: SharePointServer.Get-SPO365LinkSettings
+    - name: Get-SPODataConnectionSetting
+      uid: SharePointServer.Get-SPODataConnectionSetting
+    - name: Get-SPODataConnectionSettingMetadata
+      uid: SharePointServer.Get-SPODataConnectionSettingMetadata
+    - name: Get-SPOfficeStoreAppsDefaultActivation
+      uid: SharePointServer.Get-SPOfficeStoreAppsDefaultActivation
+    - name: Get-SPPendingUpgradeActions
+      uid: SharePointServer.Get-SPPendingUpgradeActions
+    - name: Get-SPPerformancePointServiceApplication
+      uid: SharePointServer.Get-SPPerformancePointServiceApplication
+    - name: Get-SPPerformancePointServiceApplicationTrustedLocation
+      uid: SharePointServer.Get-SPPerformancePointServiceApplicationTrustedLocation
+    - name: Get-SPPluggableSecurityTrimmer
+      uid: SharePointServer.Get-SPPluggableSecurityTrimmer
+    - name: Get-SPProcessAccount
+      uid: SharePointServer.Get-SPProcessAccount
+    - name: Get-SPProduct
+      uid: SharePointServer.Get-SPProduct
+    - name: Get-SPProfileLeader
+      uid: SharePointServer.Get-SPProfileLeader
+    - name: Get-SPProfileServiceApplicationSecurity
+      uid: SharePointServer.Get-SPProfileServiceApplicationSecurity
+    - name: Get-SPProjectDatabaseQuota
+      uid: SharePointServer.Get-SPProjectDatabaseQuota
+    - name: Get-SPProjectDatabaseUsage
+      uid: SharePointServer.Get-SPProjectDatabaseUsage
+    - name: Get-SPProjectEnterpriseProjectTaskSync
+      uid: SharePointServer.Get-SPProjectEnterpriseProjectTaskSync
+    - name: Get-SPProjectEventServiceSettings
+      uid: SharePointServer.Get-SPProjectEventServiceSettings
+    - name: Get-SPProjectIsEmailNotificationEnabled
+      uid: SharePointServer.Get-SPProjectIsEmailNotificationEnabled
+    - name: Get-SPProjectOdataConfiguration
+      uid: SharePointServer.Get-SPProjectOdataConfiguration
+    - name: Get-SPProjectPCSSettings
+      uid: SharePointServer.Get-SPProjectPCSSettings
+    - name: Get-SPProjectPermissionMode
+      uid: SharePointServer.Get-SPProjectPermissionMode
+    - name: Get-SPProjectQueueSettings
+      uid: SharePointServer.Get-SPProjectQueueSettings
+    - name: Get-SPProjectWebInstance
+      uid: SharePointServer.Get-SPProjectWebInstance
+    - name: Get-SPRequestManagementSettings
+      uid: SharePointServer.Get-SPRequestManagementSettings
+    - name: Get-SPRoutingMachineInfo
+      uid: SharePointServer.Get-SPRoutingMachineInfo
+    - name: Get-SPRoutingMachinePool
+      uid: SharePointServer.Get-SPRoutingMachinePool
+    - name: Get-SPRoutingRule
+      uid: SharePointServer.Get-SPRoutingRule
+    - name: Get-SPScaleOutDatabase
+      uid: SharePointServer.Get-SPScaleOutDatabase
+    - name: Get-SPScaleOutDatabaseDataState
+      uid: SharePointServer.Get-SPScaleOutDatabaseDataState
+    - name: Get-SPScaleOutDatabaseInconsistency
+      uid: SharePointServer.Get-SPScaleOutDatabaseInconsistency
+    - name: Get-SPScaleOutDatabaseLogEntry
+      uid: SharePointServer.Get-SPScaleOutDatabaseLogEntry
+    - name: Get-SPSecureStoreApplication
+      uid: SharePointServer.Get-SPSecureStoreApplication
+    - name: Get-SPSecureStoreSystemAccount
+      uid: SharePointServer.Get-SPSecureStoreSystemAccount
+    - name: Get-SPSecurityTokenServiceConfig
+      uid: SharePointServer.Get-SPSecurityTokenServiceConfig
+    - name: Get-SPServer
+      uid: SharePointServer.Get-SPServer
+    - name: Get-SPServerScaleOutDatabase
+      uid: SharePointServer.Get-SPServerScaleOutDatabase
+    - name: Get-SPServerScaleOutDatabaseDataState
+      uid: SharePointServer.Get-SPServerScaleOutDatabaseDataState
+    - name: Get-SPServerScaleOutDatabaseInconsistency
+      uid: SharePointServer.Get-SPServerScaleOutDatabaseInconsistency
+    - name: Get-SPServerScaleOutDatabaseLogEntry
+      uid: SharePointServer.Get-SPServerScaleOutDatabaseLogEntry
+    - name: Get-SPService
+      uid: SharePointServer.Get-SPService
+    - name: Get-SPServiceApplication
+      uid: SharePointServer.Get-SPServiceApplication
+    - name: Get-SPServiceApplicationEndpoint
+      uid: SharePointServer.Get-SPServiceApplicationEndpoint
+    - name: Get-SPServiceApplicationPool
+      uid: SharePointServer.Get-SPServiceApplicationPool
+    - name: Get-SPServiceApplicationProxy
+      uid: SharePointServer.Get-SPServiceApplicationProxy
+    - name: Get-SPServiceApplicationProxyGroup
+      uid: SharePointServer.Get-SPServiceApplicationProxyGroup
+    - name: Get-SPServiceApplicationSecurity
+      uid: SharePointServer.Get-SPServiceApplicationSecurity
+    - name: Get-SPServiceContext
+      uid: SharePointServer.Get-SPServiceContext
+    - name: Get-SPServiceHostConfig
+      uid: SharePointServer.Get-SPServiceHostConfig
+    - name: Get-SPServiceInstance
+      uid: SharePointServer.Get-SPServiceInstance
+    - name: Get-SPSessionStateService
+      uid: SharePointServer.Get-SPSessionStateService
+    - name: Get-SPShellAdmin
+      uid: SharePointServer.Get-SPShellAdmin
+    - name: Get-SPSite
+      uid: SharePointServer.Get-SPSite
+    - name: Get-SPSiteAdministration
+      uid: SharePointServer.Get-SPSiteAdministration
+    - name: Get-SPSiteMapDatabase
+      uid: SharePointServer.Get-SPSiteMapDatabase
+    - name: Get-SPSiteMaster
+      uid: SharePointServer.Get-SPSiteMaster
+    - name: Get-SPSiteSubscription
+      uid: SharePointServer.Get-SPSiteSubscription
+    - name: Get-SPSiteSubscriptionConfig
+      uid: SharePointServer.Get-SPSiteSubscriptionConfig
+    - name: Get-SPSiteSubscriptionEdiscoveryHub
+      uid: SharePointServer.Get-SPSiteSubscriptionEdiscoveryHub
+    - name: Get-SPSiteSubscriptionEdiscoverySearchScope
+      uid: SharePointServer.Get-SPSiteSubscriptionEdiscoverySearchScope
+    - name: Get-SPSiteSubscriptionFeaturePack
+      uid: SharePointServer.Get-SPSiteSubscriptionFeaturePack
+    - name: Get-SPSiteSubscriptionIRMConfig
+      uid: SharePointServer.Get-SPSiteSubscriptionIRMConfig
+    - name: Get-SPSiteSubscriptionMetadataConfig
+      uid: SharePointServer.Get-SPSiteSubscriptionMetadataConfig
+    - name: Get-SPSiteUpgradeSessionInfo
+      uid: SharePointServer.Get-SPSiteUpgradeSessionInfo
+    - name: Get-SPSiteURL
+      uid: SharePointServer.Get-SPSiteURL
+    - name: Get-SPSolution
+      uid: SharePointServer.Get-SPSolution
+    - name: Get-SPStateServiceApplication
+      uid: SharePointServer.Get-SPStateServiceApplication
+    - name: Get-SPStateServiceApplicationProxy
+      uid: SharePointServer.Get-SPStateServiceApplicationProxy
+    - name: Get-SPStateServiceDatabase
+      uid: SharePointServer.Get-SPStateServiceDatabase
+    - name: Get-SPTaxonomySession
+      uid: SharePointServer.Get-SPTaxonomySession
+    - name: Get-SPThrottlingRule
+      uid: SharePointServer.Get-SPThrottlingRule
+    - name: Get-SPTimerJob
+      uid: SharePointServer.Get-SPTimerJob
+    - name: Get-SPTopologyServiceApplication
+      uid: SharePointServer.Get-SPTopologyServiceApplication
+    - name: Get-SPTopologyServiceApplicationProxy
+      uid: SharePointServer.Get-SPTopologyServiceApplicationProxy
+    - name: Get-SPTranslationThrottlingSetting
+      uid: SharePointServer.Get-SPTranslationThrottlingSetting
+    - name: Get-SPTrustedIdentityTokenIssuer
+      uid: SharePointServer.Get-SPTrustedIdentityTokenIssuer
+    - name: Get-SPTrustedRootAuthority
+      uid: SharePointServer.Get-SPTrustedRootAuthority
+    - name: Get-SPTrustedSecurityTokenIssuer
+      uid: SharePointServer.Get-SPTrustedSecurityTokenIssuer
+    - name: Get-SPTrustedServiceTokenIssuer
+      uid: SharePointServer.Get-SPTrustedServiceTokenIssuer
+    - name: Get-SPUpgradeActions
+      uid: SharePointServer.Get-SPUpgradeActions
+    - name: Get-SPUsageApplication
+      uid: SharePointServer.Get-SPUsageApplication
+    - name: Get-SPUsageDefinition
+      uid: SharePointServer.Get-SPUsageDefinition
+    - name: Get-SPUsageService
+      uid: SharePointServer.Get-SPUsageService
+    - name: Get-SPUser
+      uid: SharePointServer.Get-SPUser
+    - name: Get-SPUserLicense
+      uid: SharePointServer.Get-SPUserLicense
+    - name: Get-SPUserLicenseMapping
+      uid: SharePointServer.Get-SPUserLicenseMapping
+    - name: Get-SPUserLicensing
+      uid: SharePointServer.Get-SPUserLicensing
+    - name: Get-SPUserSettingsProvider
+      uid: SharePointServer.Get-SPUserSettingsProvider
+    - name: Get-SPUserSettingsProviderManager
+      uid: SharePointServer.Get-SPUserSettingsProviderManager
+    - name: Get-SPUserSolution
+      uid: SharePointServer.Get-SPUserSolution
+    - name: Get-SPUserSolutionAllowList
+      uid: SharePointServer.Get-SPUserSolutionAllowList
+    - name: Get-SPVisioExternalData
+      uid: SharePointServer.Get-SPVisioExternalData
+    - name: Get-SPVisioPerformance
+      uid: SharePointServer.Get-SPVisioPerformance
+    - name: Get-SPVisioSafeDataProvider
+      uid: SharePointServer.Get-SPVisioSafeDataProvider
+    - name: Get-SPVisioServiceApplication
+      uid: SharePointServer.Get-SPVisioServiceApplication
+    - name: Get-SPVisioServiceApplicationProxy
+      uid: SharePointServer.Get-SPVisioServiceApplicationProxy
+    - name: Get-SPWeb
+      uid: SharePointServer.Get-SPWeb
+    - name: Get-SPWebApplication
+      uid: SharePointServer.Get-SPWebApplication
+    - name: Get-SPWebApplicationAppDomain
+      uid: SharePointServer.Get-SPWebApplicationAppDomain
+    - name: Get-SPWebApplicationHttpThrottlingMonitor
+      uid: SharePointServer.Get-SPWebApplicationHttpThrottlingMonitor
+    - name: Get-SPWebPartPack
+      uid: SharePointServer.Get-SPWebPartPack
+    - name: Get-SPWebTemplate
+      uid: SharePointServer.Get-SPWebTemplate
+    - name: Get-SPWebTemplatesEnabledForSiteMaster
+      uid: SharePointServer.Get-SPWebTemplatesEnabledForSiteMaster
+    - name: Get-SPWOPIBinding
+      uid: SharePointServer.Get-SPWOPIBinding
+    - name: Get-SPWOPISuppressionSetting
+      uid: SharePointServer.Get-SPWOPISuppressionSetting
+    - name: Get-SPWOPIZone
+      uid: SharePointServer.Get-SPWOPIZone
+    - name: Get-SPWorkflowConfig
+      uid: SharePointServer.Get-SPWorkflowConfig
+    - name: Get-SPWorkflowServiceApplicationProxy
+      uid: SharePointServer.Get-SPWorkflowServiceApplicationProxy
+    - name: Grant-SPBusinessDataCatalogMetadataObject
+      uid: SharePointServer.Grant-SPBusinessDataCatalogMetadataObject
+    - name: Grant-SPObjectSecurity
+      uid: SharePointServer.Grant-SPObjectSecurity
+    - name: Import-SPAccessServicesDatabase
+      uid: SharePointServer.Import-SPAccessServicesDatabase
+    - name: Import-SPAppPackage
+      uid: SharePointServer.Import-SPAppPackage
+    - name: Import-SPBusinessDataCatalogDotNetAssembly
+      uid: SharePointServer.Import-SPBusinessDataCatalogDotNetAssembly
+    - name: Import-SPBusinessDataCatalogModel
+      uid: SharePointServer.Import-SPBusinessDataCatalogModel
+    - name: Import-SPEnterpriseSearchCustomExtractionDictionary
+      uid: SharePointServer.Import-SPEnterpriseSearchCustomExtractionDictionary
+    - name: Import-SPEnterpriseSearchPopularQueries
+      uid: SharePointServer.Import-SPEnterpriseSearchPopularQueries
+    - name: Import-SPEnterpriseSearchThesaurus
+      uid: SharePointServer.Import-SPEnterpriseSearchThesaurus
+    - name: Import-SPEnterpriseSearchTopology
+      uid: SharePointServer.Import-SPEnterpriseSearchTopology
+    - name: Import-SPInfoPathAdministrationFiles
+      uid: SharePointServer.Import-SPInfoPathAdministrationFiles
+    - name: Import-SPMetadataWebServicePartitionData
+      uid: SharePointServer.Import-SPMetadataWebServicePartitionData
+    - name: Import-SPPerformancePointContent
+      uid: SharePointServer.Import-SPPerformancePointContent
+    - name: Import-SPScaleOutDatabaseTenantData
+      uid: SharePointServer.Import-SPScaleOutDatabaseTenantData
+    - name: Import-SPServerScaleOutDatabaseTenantData
+      uid: SharePointServer.Import-SPServerScaleOutDatabaseTenantData
+    - name: Import-SPSiteSubscriptionBusinessDataCatalogConfig
+      uid: SharePointServer.Import-SPSiteSubscriptionBusinessDataCatalogConfig
+    - name: Import-SPSiteSubscriptionSettings
+      uid: SharePointServer.Import-SPSiteSubscriptionSettings
+    - name: Import-SPWeb
+      uid: SharePointServer.Import-SPWeb
+    - name: Initialize-SPResourceSecurity
+      uid: SharePointServer.Initialize-SPResourceSecurity
+    - name: Initialize-SPStateServiceDatabase
+      uid: SharePointServer.Initialize-SPStateServiceDatabase
+    - name: Install-FASTSearchAdminDatabase
+      uid: SharePointServer.Install-FASTSearchAdminDatabase
+    - name: Install-SPApp
+      uid: SharePointServer.Install-SPApp
+    - name: Install-SPApplicationContent
+      uid: SharePointServer.Install-SPApplicationContent
+    - name: Install-SPDataConnectionFile
+      uid: SharePointServer.Install-SPDataConnectionFile
+    - name: Install-SPEduSites
+      uid: SharePointServer.Install-SPEduSites
+    - name: Install-SPFeature
+      uid: SharePointServer.Install-SPFeature
+    - name: Install-SPHelpCollection
+      uid: SharePointServer.Install-SPHelpCollection
+    - name: Install-SPInfoPathFormTemplate
+      uid: SharePointServer.Install-SPInfoPathFormTemplate
+    - name: Install-SPService
+      uid: SharePointServer.Install-SPService
+    - name: Install-SPSolution
+      uid: SharePointServer.Install-SPSolution
+    - name: Install-SPUserSolution
+      uid: SharePointServer.Install-SPUserSolution
+    - name: Install-SPWebPartPack
+      uid: SharePointServer.Install-SPWebPartPack
+    - name: Invoke-SPProjectActiveDirectoryEnterpriseResourcePoolSync
+      uid: SharePointServer.Invoke-SPProjectActiveDirectoryEnterpriseResourcePoolSync
+    - name: Invoke-SPProjectActiveDirectoryGroupSync
+      uid: SharePointServer.Invoke-SPProjectActiveDirectoryGroupSync
+    - name: Merge-SPLogFile
+      uid: SharePointServer.Merge-SPLogFile
+    - name: Merge-SPUsageLog
+      uid: SharePointServer.Merge-SPUsageLog
+    - name: Migrate-SPDatabase
+      uid: SharePointServer.Migrate-SPDatabase
+    - name: Migrate-SPProjectDatabase
+      uid: SharePointServer.Migrate-SPProjectDatabase
+    - name: Migrate-SPProjectResourcePlans
+      uid: SharePointServer.Migrate-SPProjectResourcePlans
+    - name: Mount-SPContentDatabase
+      uid: SharePointServer.Mount-SPContentDatabase
+    - name: Mount-SPSiteMapDatabase
+      uid: SharePointServer.Mount-SPSiteMapDatabase
+    - name: Mount-SPStateServiceDatabase
+      uid: SharePointServer.Mount-SPStateServiceDatabase
+    - name: Move-SPAppManagementData
+      uid: SharePointServer.Move-SPAppManagementData
+    - name: Move-SPBlobStorageLocation
+      uid: SharePointServer.Move-SPBlobStorageLocation
+    - name: Move-SPDeletedSite
+      uid: SharePointServer.Move-SPDeletedSite
+    - name: Move-SPEnterpriseSearchLinksDatabases
+      uid: SharePointServer.Move-SPEnterpriseSearchLinksDatabases
+    - name: Move-SPProfileManagedMetadataProperty
+      uid: SharePointServer.Move-SPProfileManagedMetadataProperty
+    - name: Move-SPSite
+      uid: SharePointServer.Move-SPSite
+    - name: Move-SPSocialComment
+      uid: SharePointServer.Move-SPSocialComment
+    - name: Move-SPUser
+      uid: SharePointServer.Move-SPUser
+    - name: New-FASTSearchContentCollection
+      uid: SharePointServer.New-FASTSearchContentCollection
+    - name: New-FASTSearchMetadataCategory
+      uid: SharePointServer.New-FASTSearchMetadataCategory
+    - name: New-FASTSearchMetadataCrawledProperty
+      uid: SharePointServer.New-FASTSearchMetadataCrawledProperty
+    - name: New-FASTSearchMetadataCrawledPropertyMapping
+      uid: SharePointServer.New-FASTSearchMetadataCrawledPropertyMapping
+    - name: New-FASTSearchMetadataFullTextIndex
+      uid: SharePointServer.New-FASTSearchMetadataFullTextIndex
+    - name: New-FASTSearchMetadataFullTextIndexMapping
+      uid: SharePointServer.New-FASTSearchMetadataFullTextIndexMapping
+    - name: New-FASTSearchMetadataManagedProperty
+      uid: SharePointServer.New-FASTSearchMetadataManagedProperty
+    - name: New-FASTSearchMetadataRankProfile
+      uid: SharePointServer.New-FASTSearchMetadataRankProfile
+    - name: New-FASTSearchSearchSettingGroup
+      uid: SharePointServer.New-FASTSearchSearchSettingGroup
+    - name: New-FASTSearchSecurityClaimsUserStore
+      uid: SharePointServer.New-FASTSearchSecurityClaimsUserStore
+    - name: New-FASTSearchSecurityLotusNotesUserStore
+      uid: SharePointServer.New-FASTSearchSecurityLotusNotesUserStore
+    - name: New-FASTSearchSecurityRegexAliaser
+      uid: SharePointServer.New-FASTSearchSecurityRegexAliaser
+    - name: New-FASTSearchSecurityRegexAliaserPattern
+      uid: SharePointServer.New-FASTSearchSecurityRegexAliaserPattern
+    - name: New-FASTSearchSecurityXMLAliaser
+      uid: SharePointServer.New-FASTSearchSecurityXMLAliaser
+    - name: New-SPAccessServiceApplication
+      uid: SharePointServer.New-SPAccessServiceApplication
+    - name: New-SPAccessServicesApplication
+      uid: SharePointServer.New-SPAccessServicesApplication
+    - name: New-SPAccessServicesApplicationProxy
+      uid: SharePointServer.New-SPAccessServicesApplicationProxy
+    - name: New-SPAccessServicesDatabaseServer
+      uid: SharePointServer.New-SPAccessServicesDatabaseServer
+    - name: New-SPAlternateURL
+      uid: SharePointServer.New-SPAlternateURL
+    - name: New-SPAppManagementServiceApplication
+      uid: SharePointServer.New-SPAppManagementServiceApplication
+    - name: New-SPAppManagementServiceApplicationProxy
+      uid: SharePointServer.New-SPAppManagementServiceApplicationProxy
+    - name: New-SPAuthenticationProvider
+      uid: SharePointServer.New-SPAuthenticationProvider
+    - name: New-SPAzureAccessControlServiceApplicationProxy
+      uid: SharePointServer.New-SPAzureAccessControlServiceApplicationProxy
+    - name: New-SPBECWebServiceApplicationProxy
+      uid: SharePointServer.New-SPBECWebServiceApplicationProxy
+    - name: New-SPBusinessDataCatalogServiceApplication
+      uid: SharePointServer.New-SPBusinessDataCatalogServiceApplication
+    - name: New-SPBusinessDataCatalogServiceApplicationProxy
+      uid: SharePointServer.New-SPBusinessDataCatalogServiceApplicationProxy
+    - name: New-SPCentralAdministration
+      uid: SharePointServer.New-SPCentralAdministration
+    - name: New-SPClaimProvider
+      uid: SharePointServer.New-SPClaimProvider
+    - name: New-SPClaimsPrincipal
+      uid: SharePointServer.New-SPClaimsPrincipal
+    - name: New-SPClaimTypeEncoding
+      uid: SharePointServer.New-SPClaimTypeEncoding
+    - name: New-SPClaimTypeMapping
+      uid: SharePointServer.New-SPClaimTypeMapping
+    - name: New-SPConfigurationDatabase
+      uid: SharePointServer.New-SPConfigurationDatabase
+    - name: New-SPContentDatabase
+      uid: SharePointServer.New-SPContentDatabase
+    - name: New-SPContentDeploymentJob
+      uid: SharePointServer.New-SPContentDeploymentJob
+    - name: New-SPContentDeploymentPath
+      uid: SharePointServer.New-SPContentDeploymentPath
+    - name: New-SPEduClass
+      uid: SharePointServer.New-SPEduClass
+    - name: New-SPEnterpriseSearchAdminComponent
+      uid: SharePointServer.New-SPEnterpriseSearchAdminComponent
+    - name: New-SPEnterpriseSearchAnalyticsProcessingComponent
+      uid: SharePointServer.New-SPEnterpriseSearchAnalyticsProcessingComponent
+    - name: New-SPEnterpriseSearchContentEnrichmentConfiguration
+      uid: SharePointServer.New-SPEnterpriseSearchContentEnrichmentConfiguration
+    - name: New-SPEnterpriseSearchContentProcessingComponent
+      uid: SharePointServer.New-SPEnterpriseSearchContentProcessingComponent
+    - name: New-SPEnterpriseSearchCrawlComponent
+      uid: SharePointServer.New-SPEnterpriseSearchCrawlComponent
+    - name: New-SPEnterpriseSearchCrawlContentSource
+      uid: SharePointServer.New-SPEnterpriseSearchCrawlContentSource
+    - name: New-SPEnterpriseSearchCrawlCustomConnector
+      uid: SharePointServer.New-SPEnterpriseSearchCrawlCustomConnector
+    - name: New-SPEnterpriseSearchCrawlDatabase
+      uid: SharePointServer.New-SPEnterpriseSearchCrawlDatabase
+    - name: New-SPEnterpriseSearchCrawlExtension
+      uid: SharePointServer.New-SPEnterpriseSearchCrawlExtension
+    - name: New-SPEnterpriseSearchCrawlMapping
+      uid: SharePointServer.New-SPEnterpriseSearchCrawlMapping
+    - name: New-SPEnterpriseSearchCrawlRule
+      uid: SharePointServer.New-SPEnterpriseSearchCrawlRule
+    - name: New-SPEnterpriseSearchFileFormat
+      uid: SharePointServer.New-SPEnterpriseSearchFileFormat
+    - name: New-SPEnterpriseSearchIndexComponent
+      uid: SharePointServer.New-SPEnterpriseSearchIndexComponent
+    - name: New-SPEnterpriseSearchLanguageResourcePhrase
+      uid: SharePointServer.New-SPEnterpriseSearchLanguageResourcePhrase
+    - name: New-SPEnterpriseSearchLinksDatabase
+      uid: SharePointServer.New-SPEnterpriseSearchLinksDatabase
+    - name: New-SPEnterpriseSearchMetadataCategory
+      uid: SharePointServer.New-SPEnterpriseSearchMetadataCategory
+    - name: New-SPEnterpriseSearchMetadataCrawledProperty
+      uid: SharePointServer.New-SPEnterpriseSearchMetadataCrawledProperty
+    - name: New-SPEnterpriseSearchMetadataManagedProperty
+      uid: SharePointServer.New-SPEnterpriseSearchMetadataManagedProperty
+    - name: New-SPEnterpriseSearchMetadataMapping
+      uid: SharePointServer.New-SPEnterpriseSearchMetadataMapping
+    - name: New-SPEnterpriseSearchQueryAuthority
+      uid: SharePointServer.New-SPEnterpriseSearchQueryAuthority
+    - name: New-SPEnterpriseSearchQueryDemoted
+      uid: SharePointServer.New-SPEnterpriseSearchQueryDemoted
+    - name: New-SPEnterpriseSearchQueryKeyword
+      uid: SharePointServer.New-SPEnterpriseSearchQueryKeyword
+    - name: New-SPEnterpriseSearchQueryProcessingComponent
+      uid: SharePointServer.New-SPEnterpriseSearchQueryProcessingComponent
+    - name: New-SPEnterpriseSearchQueryScope
+      uid: SharePointServer.New-SPEnterpriseSearchQueryScope
+    - name: New-SPEnterpriseSearchQueryScopeRule
+      uid: SharePointServer.New-SPEnterpriseSearchQueryScopeRule
+    - name: New-SPEnterpriseSearchRankingModel
+      uid: SharePointServer.New-SPEnterpriseSearchRankingModel
+    - name: New-SPEnterpriseSearchResultItemType
+      uid: SharePointServer.New-SPEnterpriseSearchResultItemType
+    - name: New-SPEnterpriseSearchResultSource
+      uid: SharePointServer.New-SPEnterpriseSearchResultSource
+    - name: New-SPEnterpriseSearchSecurityTrimmer
+      uid: SharePointServer.New-SPEnterpriseSearchSecurityTrimmer
+    - name: New-SPEnterpriseSearchServiceApplication
+      uid: SharePointServer.New-SPEnterpriseSearchServiceApplication
+    - name: New-SPEnterpriseSearchServiceApplicationProxy
+      uid: SharePointServer.New-SPEnterpriseSearchServiceApplicationProxy
+    - name: New-SPEnterpriseSearchSiteHitRule
+      uid: SharePointServer.New-SPEnterpriseSearchSiteHitRule
+    - name: New-SPEnterpriseSearchTopology
+      uid: SharePointServer.New-SPEnterpriseSearchTopology
+    - name: New-SPExcelBIServer
+      uid: SharePointServer.New-SPExcelBIServer
+    - name: New-SPExcelBlockedFileType
+      uid: SharePointServer.New-SPExcelBlockedFileType
+    - name: New-SPExcelDataConnectionLibrary
+      uid: SharePointServer.New-SPExcelDataConnectionLibrary
+    - name: New-SPExcelDataProvider
+      uid: SharePointServer.New-SPExcelDataProvider
+    - name: New-SPExcelFileLocation
+      uid: SharePointServer.New-SPExcelFileLocation
+    - name: New-SPExcelServiceApplication
+      uid: SharePointServer.New-SPExcelServiceApplication
+    - name: New-SPExcelUserDefinedFunction
+      uid: SharePointServer.New-SPExcelUserDefinedFunction
+    - name: New-SPLogFile
+      uid: SharePointServer.New-SPLogFile
+    - name: New-SPManagedAccount
+      uid: SharePointServer.New-SPManagedAccount
+    - name: New-SPManagedPath
+      uid: SharePointServer.New-SPManagedPath
+    - name: New-SPMarketplaceWebServiceApplicationProxy
+      uid: SharePointServer.New-SPMarketplaceWebServiceApplicationProxy
+    - name: New-SPMetadataServiceApplication
+      uid: SharePointServer.New-SPMetadataServiceApplication
+    - name: New-SPMetadataServiceApplicationProxy
+      uid: SharePointServer.New-SPMetadataServiceApplicationProxy
+    - name: New-SPPerformancePointServiceApplication
+      uid: SharePointServer.New-SPPerformancePointServiceApplication
+    - name: New-SPPerformancePointServiceApplicationProxy
+      uid: SharePointServer.New-SPPerformancePointServiceApplicationProxy
+    - name: New-SPPerformancePointServiceApplicationTrustedLocation
+      uid: SharePointServer.New-SPPerformancePointServiceApplicationTrustedLocation
+    - name: New-SPPowerPointConversionServiceApplication
+      uid: SharePointServer.New-SPPowerPointConversionServiceApplication
+    - name: New-SPPowerPointConversionServiceApplicationProxy
+      uid: SharePointServer.New-SPPowerPointConversionServiceApplicationProxy
+    - name: New-SPProfileServiceApplication
+      uid: SharePointServer.New-SPProfileServiceApplication
+    - name: New-SPProfileServiceApplicationProxy
+      uid: SharePointServer.New-SPProfileServiceApplicationProxy
+    - name: New-SPProjectServiceApplication
+      uid: SharePointServer.New-SPProjectServiceApplication
+    - name: New-SPProjectServiceApplicationProxy
+      uid: SharePointServer.New-SPProjectServiceApplicationProxy
+    - name: New-SPRequestManagementRuleCriteria
+      uid: SharePointServer.New-SPRequestManagementRuleCriteria
+    - name: New-SPSecureStoreApplication
+      uid: SharePointServer.New-SPSecureStoreApplication
+    - name: New-SPSecureStoreApplicationField
+      uid: SharePointServer.New-SPSecureStoreApplicationField
+    - name: New-SPSecureStoreServiceApplication
+      uid: SharePointServer.New-SPSecureStoreServiceApplication
+    - name: New-SPSecureStoreServiceApplicationProxy
+      uid: SharePointServer.New-SPSecureStoreServiceApplicationProxy
+    - name: New-SPSecureStoreTargetApplication
+      uid: SharePointServer.New-SPSecureStoreTargetApplication
+    - name: New-SPServiceApplicationPool
+      uid: SharePointServer.New-SPServiceApplicationPool
+    - name: New-SPServiceApplicationProxyGroup
+      uid: SharePointServer.New-SPServiceApplicationProxyGroup
+    - name: New-SPSite
+      uid: SharePointServer.New-SPSite
+    - name: New-SPSiteMaster
+      uid: SharePointServer.New-SPSiteMaster
+    - name: New-SPSiteSubscription
+      uid: SharePointServer.New-SPSiteSubscription
+    - name: New-SPSiteSubscriptionFeaturePack
+      uid: SharePointServer.New-SPSiteSubscriptionFeaturePack
+    - name: New-SPStateServiceApplication
+      uid: SharePointServer.New-SPStateServiceApplication
+    - name: New-SPStateServiceApplicationProxy
+      uid: SharePointServer.New-SPStateServiceApplicationProxy
+    - name: New-SPStateServiceDatabase
+      uid: SharePointServer.New-SPStateServiceDatabase
+    - name: New-SPSubscriptionSettingsServiceApplication
+      uid: SharePointServer.New-SPSubscriptionSettingsServiceApplication
+    - name: New-SPSubscriptionSettingsServiceApplicationProxy
+      uid: SharePointServer.New-SPSubscriptionSettingsServiceApplicationProxy
+    - name: New-SPTranslationServiceApplication
+      uid: SharePointServer.New-SPTranslationServiceApplication
+    - name: New-SPTranslationServiceApplicationProxy
+      uid: SharePointServer.New-SPTranslationServiceApplicationProxy
+    - name: New-SPTrustedIdentityTokenIssuer
+      uid: SharePointServer.New-SPTrustedIdentityTokenIssuer
+    - name: New-SPTrustedRootAuthority
+      uid: SharePointServer.New-SPTrustedRootAuthority
+    - name: New-SPTrustedSecurityTokenIssuer
+      uid: SharePointServer.New-SPTrustedSecurityTokenIssuer
+    - name: New-SPTrustedServiceTokenIssuer
+      uid: SharePointServer.New-SPTrustedServiceTokenIssuer
+    - name: New-SPUsageApplication
+      uid: SharePointServer.New-SPUsageApplication
+    - name: New-SPUsageLogFile
+      uid: SharePointServer.New-SPUsageLogFile
+    - name: New-SPUser
+      uid: SharePointServer.New-SPUser
+    - name: New-SPUserLicenseMapping
+      uid: SharePointServer.New-SPUserLicenseMapping
+    - name: New-SPUserSettingsProvider
+      uid: SharePointServer.New-SPUserSettingsProvider
+    - name: New-SPUserSolutionAllowList
+      uid: SharePointServer.New-SPUserSolutionAllowList
+    - name: New-SPVisioSafeDataProvider
+      uid: SharePointServer.New-SPVisioSafeDataProvider
+    - name: New-SPVisioServiceApplication
+      uid: SharePointServer.New-SPVisioServiceApplication
+    - name: New-SPVisioServiceApplicationProxy
+      uid: SharePointServer.New-SPVisioServiceApplicationProxy
+    - name: New-SPWeb
+      uid: SharePointServer.New-SPWeb
+    - name: New-SPWebApplication
+      uid: SharePointServer.New-SPWebApplication
+    - name: New-SPWebApplicationAppDomain
+      uid: SharePointServer.New-SPWebApplicationAppDomain
+    - name: New-SPWebApplicationExtension
+      uid: SharePointServer.New-SPWebApplicationExtension
+    - name: New-SPWOPIBinding
+      uid: SharePointServer.New-SPWOPIBinding
+    - name: New-SPWOPISuppressionSetting
+      uid: SharePointServer.New-SPWOPISuppressionSetting
+    - name: New-SPWordConversionServiceApplication
+      uid: SharePointServer.New-SPWordConversionServiceApplication
+    - name: New-SPWorkflowServiceApplicationProxy
+      uid: SharePointServer.New-SPWorkflowServiceApplicationProxy
+    - name: New-SPWorkManagementServiceApplication
+      uid: SharePointServer.New-SPWorkManagementServiceApplication
+    - name: New-SPWorkManagementServiceApplicationProxy
+      uid: SharePointServer.New-SPWorkManagementServiceApplicationProxy
+    - name: Pause-SPProjectWebInstance
+      uid: SharePointServer.Pause-SPProjectWebInstance
+    - name: Publish-SPServiceApplication
+      uid: SharePointServer.Publish-SPServiceApplication
+    - name: Receive-SPServiceApplicationConnectionInfo
+      uid: SharePointServer.Receive-SPServiceApplicationConnectionInfo
+    - name: Register-SPAppPrincipal
+      uid: SharePointServer.Register-SPAppPrincipal
+    - name: Register-SPWorkflowService
+      uid: SharePointServer.Register-SPWorkflowService
+    - name: Remove-DatabaseFromAvailabilityGroup
+      uid: SharePointServer.Remove-DatabaseFromAvailabilityGroup
+    - name: Remove-FASTSearchContentCollection
+      uid: SharePointServer.Remove-FASTSearchContentCollection
+    - name: Remove-FASTSearchMetadataCategory
+      uid: SharePointServer.Remove-FASTSearchMetadataCategory
+    - name: Remove-FASTSearchMetadataCrawledPropertyMapping
+      uid: SharePointServer.Remove-FASTSearchMetadataCrawledPropertyMapping
+    - name: Remove-FASTSearchMetadataFullTextIndex
+      uid: SharePointServer.Remove-FASTSearchMetadataFullTextIndex
+    - name: Remove-FASTSearchMetadataFullTextIndexMapping
+      uid: SharePointServer.Remove-FASTSearchMetadataFullTextIndexMapping
+    - name: Remove-FASTSearchMetadataManagedProperty
+      uid: SharePointServer.Remove-FASTSearchMetadataManagedProperty
+    - name: Remove-FASTSearchMetadataRankProfile
+      uid: SharePointServer.Remove-FASTSearchMetadataRankProfile
+    - name: Remove-FASTSearchResource
+      uid: SharePointServer.Remove-FASTSearchResource
+    - name: Remove-FASTSearchSearchSettingGroup
+      uid: SharePointServer.Remove-FASTSearchSearchSettingGroup
+    - name: Remove-FASTSearchSecurityAliaser
+      uid: SharePointServer.Remove-FASTSearchSecurityAliaser
+    - name: Remove-FASTSearchSecurityUserStore
+      uid: SharePointServer.Remove-FASTSearchSecurityUserStore
+    - name: Remove-FASTSearchSpelltuning
+      uid: SharePointServer.Remove-FASTSearchSpelltuning
+    - name: Remove-SPAccessServicesDatabaseServer
+      uid: SharePointServer.Remove-SPAccessServicesDatabaseServer
+    - name: Remove-SPActivityFeedItems
+      uid: SharePointServer.Remove-SPActivityFeedItems
+    - name: Remove-SPAlternateURL
+      uid: SharePointServer.Remove-SPAlternateURL
+    - name: Remove-SPAppDeniedEndpoint
+      uid: SharePointServer.Remove-SPAppDeniedEndpoint
+    - name: Remove-SPApplicationCredentialKey
+      uid: SharePointServer.Remove-SPApplicationCredentialKey
+    - name: Remove-SPAppPrincipalPermission
+      uid: SharePointServer.Remove-SPAppPrincipalPermission
+    - name: Remove-SPBusinessDataCatalogModel
+      uid: SharePointServer.Remove-SPBusinessDataCatalogModel
+    - name: Remove-SPCentralAdministration
+      uid: SharePointServer.Remove-SPCentralAdministration
+    - name: Remove-SPClaimProvider
+      uid: SharePointServer.Remove-SPClaimProvider
+    - name: Remove-SPClaimTypeMapping
+      uid: SharePointServer.Remove-SPClaimTypeMapping
+    - name: Remove-SPConfigurationDatabase
+      uid: SharePointServer.Remove-SPConfigurationDatabase
+    - name: Remove-SPContentDatabase
+      uid: SharePointServer.Remove-SPContentDatabase
+    - name: Remove-SPContentDeploymentJob
+      uid: SharePointServer.Remove-SPContentDeploymentJob
+    - name: Remove-SPContentDeploymentPath
+      uid: SharePointServer.Remove-SPContentDeploymentPath
+    - name: Remove-SPDeletedSite
+      uid: SharePointServer.Remove-SPDeletedSite
+    - name: Remove-SPDiagnosticsPerformanceCounter
+      uid: SharePointServer.Remove-SPDiagnosticsPerformanceCounter
+    - name: Remove-SPDistributedCacheServiceInstance
+      uid: SharePointServer.Remove-SPDistributedCacheServiceInstance
+    - name: Remove-SPEduClassMember
+      uid: SharePointServer.Remove-SPEduClassMember
+    - name: Remove-SPEnterpriseSearchComponent
+      uid: SharePointServer.Remove-SPEnterpriseSearchComponent
+    - name: Remove-SPEnterpriseSearchContentEnrichmentConfiguration
+      uid: SharePointServer.Remove-SPEnterpriseSearchContentEnrichmentConfiguration
+    - name: Remove-SPEnterpriseSearchCrawlContentSource
+      uid: SharePointServer.Remove-SPEnterpriseSearchCrawlContentSource
+    - name: Remove-SPEnterpriseSearchCrawlCustomConnector
+      uid: SharePointServer.Remove-SPEnterpriseSearchCrawlCustomConnector
+    - name: Remove-SPEnterpriseSearchCrawlDatabase
+      uid: SharePointServer.Remove-SPEnterpriseSearchCrawlDatabase
+    - name: Remove-SPEnterpriseSearchCrawlExtension
+      uid: SharePointServer.Remove-SPEnterpriseSearchCrawlExtension
+    - name: Remove-SPEnterpriseSearchCrawlLogReadPermission
+      uid: SharePointServer.Remove-SPEnterpriseSearchCrawlLogReadPermission
+    - name: Remove-SPEnterpriseSearchCrawlMapping
+      uid: SharePointServer.Remove-SPEnterpriseSearchCrawlMapping
+    - name: Remove-SPEnterpriseSearchCrawlRule
+      uid: SharePointServer.Remove-SPEnterpriseSearchCrawlRule
+    - name: Remove-SPEnterpriseSearchFileFormat
+      uid: SharePointServer.Remove-SPEnterpriseSearchFileFormat
+    - name: Remove-SPEnterpriseSearchLanguageResourcePhrase
+      uid: SharePointServer.Remove-SPEnterpriseSearchLanguageResourcePhrase
+    - name: Remove-SPEnterpriseSearchLinksDatabase
+      uid: SharePointServer.Remove-SPEnterpriseSearchLinksDatabase
+    - name: Remove-SPEnterpriseSearchMetadataCategory
+      uid: SharePointServer.Remove-SPEnterpriseSearchMetadataCategory
+    - name: Remove-SPEnterpriseSearchMetadataManagedProperty
+      uid: SharePointServer.Remove-SPEnterpriseSearchMetadataManagedProperty
+    - name: Remove-SPEnterpriseSearchMetadataMapping
+      uid: SharePointServer.Remove-SPEnterpriseSearchMetadataMapping
+    - name: Remove-SPEnterpriseSearchQueryAuthority
+      uid: SharePointServer.Remove-SPEnterpriseSearchQueryAuthority
+    - name: Remove-SPEnterpriseSearchQueryDemoted
+      uid: SharePointServer.Remove-SPEnterpriseSearchQueryDemoted
+    - name: Remove-SPEnterpriseSearchQueryKeyword
+      uid: SharePointServer.Remove-SPEnterpriseSearchQueryKeyword
+    - name: Remove-SPEnterpriseSearchQueryScope
+      uid: SharePointServer.Remove-SPEnterpriseSearchQueryScope
+    - name: Remove-SPEnterpriseSearchQueryScopeRule
+      uid: SharePointServer.Remove-SPEnterpriseSearchQueryScopeRule
+    - name: Remove-SPEnterpriseSearchRankingModel
+      uid: SharePointServer.Remove-SPEnterpriseSearchRankingModel
+    - name: Remove-SPEnterpriseSearchResultItemType
+      uid: SharePointServer.Remove-SPEnterpriseSearchResultItemType
+    - name: Remove-SPEnterpriseSearchResultSource
+      uid: SharePointServer.Remove-SPEnterpriseSearchResultSource
+    - name: Remove-SPEnterpriseSearchSecurityTrimmer
+      uid: SharePointServer.Remove-SPEnterpriseSearchSecurityTrimmer
+    - name: Remove-SPEnterpriseSearchServiceApplication
+      uid: SharePointServer.Remove-SPEnterpriseSearchServiceApplication
+    - name: Remove-SPEnterpriseSearchServiceApplicationProxy
+      uid: SharePointServer.Remove-SPEnterpriseSearchServiceApplicationProxy
+    - name: Remove-SPEnterpriseSearchServiceApplicationSiteSettings
+      uid: SharePointServer.Remove-SPEnterpriseSearchServiceApplicationSiteSettings
+    - name: Remove-SPEnterpriseSearchSiteHitRule
+      uid: SharePointServer.Remove-SPEnterpriseSearchSiteHitRule
+    - name: Remove-SPEnterpriseSearchTenantConfiguration
+      uid: SharePointServer.Remove-SPEnterpriseSearchTenantConfiguration
+    - name: Remove-SPEnterpriseSearchTenantSchema
+      uid: SharePointServer.Remove-SPEnterpriseSearchTenantSchema
+    - name: Remove-SPEnterpriseSearchTopology
+      uid: SharePointServer.Remove-SPEnterpriseSearchTopology
+    - name: Remove-SPExcelBIServer
+      uid: SharePointServer.Remove-SPExcelBIServer
+    - name: Remove-SPExcelBlockedFileType
+      uid: SharePointServer.Remove-SPExcelBlockedFileType
+    - name: Remove-SPExcelDataConnectionLibrary
+      uid: SharePointServer.Remove-SPExcelDataConnectionLibrary
+    - name: Remove-SPExcelDataProvider
+      uid: SharePointServer.Remove-SPExcelDataProvider
+    - name: Remove-SPExcelFileLocation
+      uid: SharePointServer.Remove-SPExcelFileLocation
+    - name: Remove-SPExcelUserDefinedFunction
+      uid: SharePointServer.Remove-SPExcelUserDefinedFunction
+    - name: Remove-SPInfoPathUserAgent
+      uid: SharePointServer.Remove-SPInfoPathUserAgent
+    - name: Remove-SPManagedAccount
+      uid: SharePointServer.Remove-SPManagedAccount
+    - name: Remove-SPManagedPath
+      uid: SharePointServer.Remove-SPManagedPath
+    - name: Remove-SPPerformancePointServiceApplication
+      uid: SharePointServer.Remove-SPPerformancePointServiceApplication
+    - name: Remove-SPPerformancePointServiceApplicationProxy
+      uid: SharePointServer.Remove-SPPerformancePointServiceApplicationProxy
+    - name: Remove-SPPerformancePointServiceApplicationTrustedLocation
+      uid: SharePointServer.Remove-SPPerformancePointServiceApplicationTrustedLocation
+    - name: Remove-SPPluggableSecurityTrimmer
+      uid: SharePointServer.Remove-SPPluggableSecurityTrimmer
+    - name: Remove-SPProfileLeader
+      uid: SharePointServer.Remove-SPProfileLeader
+    - name: Remove-SPProfileSyncConnection
+      uid: SharePointServer.Remove-SPProfileSyncConnection
+    - name: Remove-SPProjectWebInstanceData
+      uid: SharePointServer.Remove-SPProjectWebInstanceData
+    - name: Remove-SPRoutingMachineInfo
+      uid: SharePointServer.Remove-SPRoutingMachineInfo
+    - name: Remove-SPRoutingMachinePool
+      uid: SharePointServer.Remove-SPRoutingMachinePool
+    - name: Remove-SPRoutingRule
+      uid: SharePointServer.Remove-SPRoutingRule
+    - name: Remove-SPScaleOutDatabase
+      uid: SharePointServer.Remove-SPScaleOutDatabase
+    - name: Remove-SPSecureStoreApplication
+      uid: SharePointServer.Remove-SPSecureStoreApplication
+    - name: Remove-SPSecureStoreSystemAccount
+      uid: SharePointServer.Remove-SPSecureStoreSystemAccount
+    - name: Remove-SPServerScaleOutDatabase
+      uid: SharePointServer.Remove-SPServerScaleOutDatabase
+    - name: Remove-SPServiceApplication
+      uid: SharePointServer.Remove-SPServiceApplication
+    - name: Remove-SPServiceApplicationPool
+      uid: SharePointServer.Remove-SPServiceApplicationPool
+    - name: Remove-SPServiceApplicationProxy
+      uid: SharePointServer.Remove-SPServiceApplicationProxy
+    - name: Remove-SPServiceApplicationProxyGroup
+      uid: SharePointServer.Remove-SPServiceApplicationProxyGroup
+    - name: Remove-SPServiceApplicationProxyGroupMember
+      uid: SharePointServer.Remove-SPServiceApplicationProxyGroupMember
+    - name: Remove-SPShellAdmin
+      uid: SharePointServer.Remove-SPShellAdmin
+    - name: Remove-SPSite
+      uid: SharePointServer.Remove-SPSite
+    - name: Remove-SPSiteMaster
+      uid: SharePointServer.Remove-SPSiteMaster
+    - name: Remove-SPSiteSubscription
+      uid: SharePointServer.Remove-SPSiteSubscription
+    - name: Remove-SPSiteSubscriptionBusinessDataCatalogConfig
+      uid: SharePointServer.Remove-SPSiteSubscriptionBusinessDataCatalogConfig
+    - name: Remove-SPSiteSubscriptionFeaturePack
+      uid: SharePointServer.Remove-SPSiteSubscriptionFeaturePack
+    - name: Remove-SPSiteSubscriptionFeaturePackMember
+      uid: SharePointServer.Remove-SPSiteSubscriptionFeaturePackMember
+    - name: Remove-SPSiteSubscriptionMetadataConfig
+      uid: SharePointServer.Remove-SPSiteSubscriptionMetadataConfig
+    - name: Remove-SPSiteSubscriptionProfileConfig
+      uid: SharePointServer.Remove-SPSiteSubscriptionProfileConfig
+    - name: Remove-SPSiteSubscriptionSettings
+      uid: SharePointServer.Remove-SPSiteSubscriptionSettings
+    - name: Remove-SPSiteUpgradeSessionInfo
+      uid: SharePointServer.Remove-SPSiteUpgradeSessionInfo
+    - name: Remove-SPSiteURL
+      uid: SharePointServer.Remove-SPSiteURL
+    - name: Remove-SPSocialItemByDate
+      uid: SharePointServer.Remove-SPSocialItemByDate
+    - name: Remove-SPSolution
+      uid: SharePointServer.Remove-SPSolution
+    - name: Remove-SPSolutionDeploymentLock
+      uid: SharePointServer.Remove-SPSolutionDeploymentLock
+    - name: Remove-SPStateServiceDatabase
+      uid: SharePointServer.Remove-SPStateServiceDatabase
+    - name: Remove-SPThrottlingRule
+      uid: SharePointServer.Remove-SPThrottlingRule
+    - name: Remove-SPTranslationServiceJobHistory
+      uid: SharePointServer.Remove-SPTranslationServiceJobHistory
+    - name: Remove-SPTrustedIdentityTokenIssuer
+      uid: SharePointServer.Remove-SPTrustedIdentityTokenIssuer
+    - name: Remove-SPTrustedRootAuthority
+      uid: SharePointServer.Remove-SPTrustedRootAuthority
+    - name: Remove-SPTrustedSecurityTokenIssuer
+      uid: SharePointServer.Remove-SPTrustedSecurityTokenIssuer
+    - name: Remove-SPTrustedServiceTokenIssuer
+      uid: SharePointServer.Remove-SPTrustedServiceTokenIssuer
+    - name: Remove-SPUsageApplication
+      uid: SharePointServer.Remove-SPUsageApplication
+    - name: Remove-SPUser
+      uid: SharePointServer.Remove-SPUser
+    - name: Remove-SPUserLicenseMapping
+      uid: SharePointServer.Remove-SPUserLicenseMapping
+    - name: Remove-SPUserSettingsProvider
+      uid: SharePointServer.Remove-SPUserSettingsProvider
+    - name: Remove-SPUserSolution
+      uid: SharePointServer.Remove-SPUserSolution
+    - name: Remove-SPVisioSafeDataProvider
+      uid: SharePointServer.Remove-SPVisioSafeDataProvider
+    - name: Remove-SPWeb
+      uid: SharePointServer.Remove-SPWeb
+    - name: Remove-SPWebApplication
+      uid: SharePointServer.Remove-SPWebApplication
+    - name: Remove-SPWebApplicationAppDomain
+      uid: SharePointServer.Remove-SPWebApplicationAppDomain
+    - name: Remove-SPWOPIBinding
+      uid: SharePointServer.Remove-SPWOPIBinding
+    - name: Remove-SPWOPISuppressionSetting
+      uid: SharePointServer.Remove-SPWOPISuppressionSetting
+    - name: Remove-SPWordConversionServiceJobHistory
+      uid: SharePointServer.Remove-SPWordConversionServiceJobHistory
+    - name: Rename-SPServer
+      uid: SharePointServer.Rename-SPServer
+    - name: Repair-SPManagedAccountDeployment
+      uid: SharePointServer.Repair-SPManagedAccountDeployment
+    - name: Repair-SPProjectWebInstance
+      uid: SharePointServer.Repair-SPProjectWebInstance
+    - name: Repair-SPSite
+      uid: SharePointServer.Repair-SPSite
+    - name: Request-SPUpgradeEvaluationSite
+      uid: SharePointServer.Request-SPUpgradeEvaluationSite
+    - name: Reset-SPAccessServicesDatabasePassword
+      uid: SharePointServer.Reset-SPAccessServicesDatabasePassword
+    - name: Reset-SPProjectEventServiceSettings
+      uid: SharePointServer.Reset-SPProjectEventServiceSettings
+    - name: Reset-SPProjectPCSSettings
+      uid: SharePointServer.Reset-SPProjectPCSSettings
+    - name: Reset-SPProjectQueueSettings
+      uid: SharePointServer.Reset-SPProjectQueueSettings
+    - name: Reset-SPSites
+      uid: SharePointServer.Reset-SPSites
+    - name: Restart-SPAppInstanceJob
+      uid: SharePointServer.Restart-SPAppInstanceJob
+    - name: Restore-SPDeletedSite
+      uid: SharePointServer.Restore-SPDeletedSite
+    - name: Restore-SPEnterpriseSearchServiceApplication
+      uid: SharePointServer.Restore-SPEnterpriseSearchServiceApplication
+    - name: Restore-SPEnterpriseSearchServiceApplicationIndex
+      uid: SharePointServer.Restore-SPEnterpriseSearchServiceApplicationIndex
+    - name: Restore-SPFarm
+      uid: SharePointServer.Restore-SPFarm
+    - name: Restore-SPSite
+      uid: SharePointServer.Restore-SPSite
+    - name: Resume-SPEnterpriseSearchServiceApplication
+      uid: SharePointServer.Resume-SPEnterpriseSearchServiceApplication
+    - name: Resume-SPProjectWebInstance
+      uid: SharePointServer.Resume-SPProjectWebInstance
+    - name: Resume-SPStateServiceDatabase
+      uid: SharePointServer.Resume-SPStateServiceDatabase
+    - name: Revoke-SPBusinessDataCatalogMetadataObject
+      uid: SharePointServer.Revoke-SPBusinessDataCatalogMetadataObject
+    - name: Revoke-SPObjectSecurity
+      uid: SharePointServer.Revoke-SPObjectSecurity
+    - name: Set-FASTSearchConfiguration
+      uid: SharePointServer.Set-FASTSearchConfiguration
+    - name: Set-FASTSearchIPSec
+      uid: SharePointServer.Set-FASTSearchIPSec
+    - name: Set-FASTSearchMetadataCategory
+      uid: SharePointServer.Set-FASTSearchMetadataCategory
+    - name: Set-FASTSearchMetadataCrawledProperty
+      uid: SharePointServer.Set-FASTSearchMetadataCrawledProperty
+    - name: Set-FASTSearchMetadataCrawledPropertyMapping
+      uid: SharePointServer.Set-FASTSearchMetadataCrawledPropertyMapping
+    - name: Set-FASTSearchMetadataFullTextIndex
+      uid: SharePointServer.Set-FASTSearchMetadataFullTextIndex
+    - name: Set-FASTSearchMetadataFullTextIndexMapping
+      uid: SharePointServer.Set-FASTSearchMetadataFullTextIndexMapping
+    - name: Set-FASTSearchMetadataManagedProperty
+      uid: SharePointServer.Set-FASTSearchMetadataManagedProperty
+    - name: Set-FASTSearchMetadataRankProfile
+      uid: SharePointServer.Set-FASTSearchMetadataRankProfile
+    - name: Set-FASTSearchSecurityCCTKServer
+      uid: SharePointServer.Set-FASTSearchSecurityCCTKServer
+    - name: Set-FASTSearchSecurityClaimsUserStore
+      uid: SharePointServer.Set-FASTSearchSecurityClaimsUserStore
+    - name: Set-FASTSearchSecurityDefaultUserStore
+      uid: SharePointServer.Set-FASTSearchSecurityDefaultUserStore
+    - name: Set-FASTSearchSecurityLogLevel
+      uid: SharePointServer.Set-FASTSearchSecurityLogLevel
+    - name: Set-FASTSearchSecurityLotusNotesUserStore
+      uid: SharePointServer.Set-FASTSearchSecurityLotusNotesUserStore
+    - name: Set-FASTSearchSecurityPublicFilter
+      uid: SharePointServer.Set-FASTSearchSecurityPublicFilter
+    - name: Set-FASTSearchSecurityRegexAliaser
+      uid: SharePointServer.Set-FASTSearchSecurityRegexAliaser
+    - name: Set-FASTSearchSecurityXMLAliaser
+      uid: SharePointServer.Set-FASTSearchSecurityXMLAliaser
+    - name: Set-SPAccessServiceApplication
+      uid: SharePointServer.Set-SPAccessServiceApplication
+    - name: Set-SPAccessServicesApplication
+      uid: SharePointServer.Set-SPAccessServicesApplication
+    - name: Set-SPAccessServicesDatabaseServer
+      uid: SharePointServer.Set-SPAccessServicesDatabaseServer
+    - name: Set-SPAccessServicesDatabaseServerGroupMapping
+      uid: SharePointServer.Set-SPAccessServicesDatabaseServerGroupMapping
+    - name: Set-SPAlternateURL
+      uid: SharePointServer.Set-SPAlternateURL
+    - name: Set-SPAppAcquisitionConfiguration
+      uid: SharePointServer.Set-SPAppAcquisitionConfiguration
+    - name: Set-SPAppAutoProvisionConnection
+      uid: SharePointServer.Set-SPAppAutoProvisionConnection
+    - name: Set-SPAppDisablingConfiguration
+      uid: SharePointServer.Set-SPAppDisablingConfiguration
+    - name: Set-SPAppDomain
+      uid: SharePointServer.Set-SPAppDomain
+    - name: Set-SPAppHostingQuotaConfiguration
+      uid: SharePointServer.Set-SPAppHostingQuotaConfiguration
+    - name: Set-SPApplicationCredentialKey
+      uid: SharePointServer.Set-SPApplicationCredentialKey
+    - name: Set-SPAppManagementDeploymentId
+      uid: SharePointServer.Set-SPAppManagementDeploymentId
+    - name: Set-SPAppPrincipalPermission
+      uid: SharePointServer.Set-SPAppPrincipalPermission
+    - name: Set-SPAppScaleProfile
+      uid: SharePointServer.Set-SPAppScaleProfile
+    - name: Set-SPAppSiteDomain
+      uid: SharePointServer.Set-SPAppSiteDomain
+    - name: Set-SPAppSiteSubscriptionName
+      uid: SharePointServer.Set-SPAppSiteSubscriptionName
+    - name: Set-SPAppStateUpdateInterval
+      uid: SharePointServer.Set-SPAppStateUpdateInterval
+    - name: Set-SPAppStoreConfiguration
+      uid: SharePointServer.Set-SPAppStoreConfiguration
+    - name: Set-SPAppStoreWebServiceConfiguration
+      uid: SharePointServer.Set-SPAppStoreWebServiceConfiguration
+    - name: Set-SPAuthenticationRealm
+      uid: SharePointServer.Set-SPAuthenticationRealm
+    - name: Set-SPBingMapsBlock
+      uid: SharePointServer.Set-SPBingMapsBlock
+    - name: Set-SPBingMapsKey
+      uid: SharePointServer.Set-SPBingMapsKey
+    - name: Set-SPBrowserCustomerExperienceImprovementProgram
+      uid: SharePointServer.Set-SPBrowserCustomerExperienceImprovementProgram
+    - name: Set-SPBusinessDataCatalogEntityNotificationWeb
+      uid: SharePointServer.Set-SPBusinessDataCatalogEntityNotificationWeb
+    - name: Set-SPBusinessDataCatalogMetadataObject
+      uid: SharePointServer.Set-SPBusinessDataCatalogMetadataObject
+    - name: Set-SPBusinessDataCatalogServiceApplication
+      uid: SharePointServer.Set-SPBusinessDataCatalogServiceApplication
+    - name: Set-SPBusinessDataCatalogThrottleConfig
+      uid: SharePointServer.Set-SPBusinessDataCatalogThrottleConfig
+    - name: Set-SPCentralAdministration
+      uid: SharePointServer.Set-SPCentralAdministration
+    - name: Set-SPClaimProvider
+      uid: SharePointServer.Set-SPClaimProvider
+    - name: Set-SPContentDatabase
+      uid: SharePointServer.Set-SPContentDatabase
+    - name: Set-SPContentDeploymentJob
+      uid: SharePointServer.Set-SPContentDeploymentJob
+    - name: Set-SPContentDeploymentPath
+      uid: SharePointServer.Set-SPContentDeploymentPath
+    - name: Set-SPCustomLayoutsPage
+      uid: SharePointServer.Set-SPCustomLayoutsPage
+    - name: Set-SPDataConnectionFile
+      uid: SharePointServer.Set-SPDataConnectionFile
+    - name: Set-SPDefaultProfileConfig
+      uid: SharePointServer.Set-SPDefaultProfileConfig
+    - name: Set-SPDesignerSettings
+      uid: SharePointServer.Set-SPDesignerSettings
+    - name: Set-SPDiagnosticConfig
+      uid: SharePointServer.Set-SPDiagnosticConfig
+    - name: Set-SPDiagnosticsProvider
+      uid: SharePointServer.Set-SPDiagnosticsProvider
+    - name: Set-SPDistributedCacheClientSetting
+      uid: SharePointServer.Set-SPDistributedCacheClientSetting
+    - name: Set-SPEduServiceSetting
+      uid: SharePointServer.Set-SPEduServiceSetting
+    - name: Set-SPEnterpriseSearchAdministrationComponent
+      uid: SharePointServer.Set-SPEnterpriseSearchAdministrationComponent
+    - name: Set-SPEnterpriseSearchContentEnrichmentConfiguration
+      uid: SharePointServer.Set-SPEnterpriseSearchContentEnrichmentConfiguration
+    - name: Set-SPEnterpriseSearchCrawlContentSource
+      uid: SharePointServer.Set-SPEnterpriseSearchCrawlContentSource
+    - name: Set-SPEnterpriseSearchCrawlDatabase
+      uid: SharePointServer.Set-SPEnterpriseSearchCrawlDatabase
+    - name: Set-SPEnterpriseSearchCrawlLogReadPermission
+      uid: SharePointServer.Set-SPEnterpriseSearchCrawlLogReadPermission
+    - name: Set-SPEnterpriseSearchCrawlRule
+      uid: SharePointServer.Set-SPEnterpriseSearchCrawlRule
+    - name: Set-SPEnterpriseSearchFileFormatState
+      uid: SharePointServer.Set-SPEnterpriseSearchFileFormatState
+    - name: Set-SPEnterpriseSearchLinguisticComponentsStatus
+      uid: SharePointServer.Set-SPEnterpriseSearchLinguisticComponentsStatus
+    - name: Set-SPEnterpriseSearchLinksDatabase
+      uid: SharePointServer.Set-SPEnterpriseSearchLinksDatabase
+    - name: Set-SPEnterpriseSearchMetadataCategory
+      uid: SharePointServer.Set-SPEnterpriseSearchMetadataCategory
+    - name: Set-SPEnterpriseSearchMetadataCrawledProperty
+      uid: SharePointServer.Set-SPEnterpriseSearchMetadataCrawledProperty
+    - name: Set-SPEnterpriseSearchMetadataManagedProperty
+      uid: SharePointServer.Set-SPEnterpriseSearchMetadataManagedProperty
+    - name: Set-SPEnterpriseSearchMetadataMapping
+      uid: SharePointServer.Set-SPEnterpriseSearchMetadataMapping
+    - name: Set-SPEnterpriseSearchPrimaryHostController
+      uid: SharePointServer.Set-SPEnterpriseSearchPrimaryHostController
+    - name: Set-SPEnterpriseSearchQueryAuthority
+      uid: SharePointServer.Set-SPEnterpriseSearchQueryAuthority
+    - name: Set-SPEnterpriseSearchQueryKeyword
+      uid: SharePointServer.Set-SPEnterpriseSearchQueryKeyword
+    - name: Set-SPEnterpriseSearchQueryScope
+      uid: SharePointServer.Set-SPEnterpriseSearchQueryScope
+    - name: Set-SPEnterpriseSearchQueryScopeRule
+      uid: SharePointServer.Set-SPEnterpriseSearchQueryScopeRule
+    - name: Set-SPEnterpriseSearchQuerySpellingCorrection
+      uid: SharePointServer.Set-SPEnterpriseSearchQuerySpellingCorrection
+    - name: Set-SPEnterpriseSearchRankingModel
+      uid: SharePointServer.Set-SPEnterpriseSearchRankingModel
+    - name: Set-SPEnterpriseSearchResultItemType
+      uid: SharePointServer.Set-SPEnterpriseSearchResultItemType
+    - name: Set-SPEnterpriseSearchResultSource
+      uid: SharePointServer.Set-SPEnterpriseSearchResultSource
+    - name: Set-SPEnterpriseSearchService
+      uid: SharePointServer.Set-SPEnterpriseSearchService
+    - name: Set-SPEnterpriseSearchServiceApplication
+      uid: SharePointServer.Set-SPEnterpriseSearchServiceApplication
+    - name: Set-SPEnterpriseSearchServiceApplicationProxy
+      uid: SharePointServer.Set-SPEnterpriseSearchServiceApplicationProxy
+    - name: Set-SPEnterpriseSearchServiceInstance
+      uid: SharePointServer.Set-SPEnterpriseSearchServiceInstance
+    - name: Set-SPEnterpriseSearchTopology
+      uid: SharePointServer.Set-SPEnterpriseSearchTopology
+    - name: Set-SPExcelBIServer
+      uid: SharePointServer.Set-SPExcelBIServer
+    - name: Set-SPExcelDataConnectionLibrary
+      uid: SharePointServer.Set-SPExcelDataConnectionLibrary
+    - name: Set-SPExcelDataProvider
+      uid: SharePointServer.Set-SPExcelDataProvider
+    - name: Set-SPExcelFileLocation
+      uid: SharePointServer.Set-SPExcelFileLocation
+    - name: Set-SPExcelServiceApplication
+      uid: SharePointServer.Set-SPExcelServiceApplication
+    - name: Set-SPExcelUserDefinedFunction
+      uid: SharePointServer.Set-SPExcelUserDefinedFunction
+    - name: Set-SPFarmConfig
+      uid: SharePointServer.Set-SPFarmConfig
+    - name: Set-SPInfoPathFormsService
+      uid: SharePointServer.Set-SPInfoPathFormsService
+    - name: Set-SPInfoPathFormTemplate
+      uid: SharePointServer.Set-SPInfoPathFormTemplate
+    - name: Set-SPInfoPathWebServiceProxy
+      uid: SharePointServer.Set-SPInfoPathWebServiceProxy
+    - name: Set-SPInternalAppStateUpdateInterval
+      uid: SharePointServer.Set-SPInternalAppStateUpdateInterval
+    - name: Set-SPIRMSettings
+      uid: SharePointServer.Set-SPIRMSettings
+    - name: Set-SPLogLevel
+      uid: SharePointServer.Set-SPLogLevel
+    - name: Set-SPManagedAccount
+      uid: SharePointServer.Set-SPManagedAccount
+    - name: Set-SPMetadataServiceApplication
+      uid: SharePointServer.Set-SPMetadataServiceApplication
+    - name: Set-SPMetadataServiceApplicationProxy
+      uid: SharePointServer.Set-SPMetadataServiceApplicationProxy
+    - name: Set-SPMicrofeedOptions
+      uid: SharePointServer.Set-SPMicrofeedOptions
+    - name: Set-SPMobileMessagingAccount
+      uid: SharePointServer.Set-SPMobileMessagingAccount
+    - name: Set-SPO365LinkSettings
+      uid: SharePointServer.Set-SPO365LinkSettings
+    - name: Set-SPOfficeStoreAppsDefaultActivation
+      uid: SharePointServer.Set-SPOfficeStoreAppsDefaultActivation
+    - name: Set-SPPassPhrase
+      uid: SharePointServer.Set-SPPassPhrase
+    - name: Set-SPPerformancePointSecureDataValues
+      uid: SharePointServer.Set-SPPerformancePointSecureDataValues
+    - name: Set-SPPerformancePointServiceApplication
+      uid: SharePointServer.Set-SPPerformancePointServiceApplication
+    - name: Set-SPPowerPointConversionServiceApplication
+      uid: SharePointServer.Set-SPPowerPointConversionServiceApplication
+    - name: Set-SPProfileServiceApplication
+      uid: SharePointServer.Set-SPProfileServiceApplication
+    - name: Set-SPProfileServiceApplicationProxy
+      uid: SharePointServer.Set-SPProfileServiceApplicationProxy
+    - name: Set-SPProfileServiceApplicationSecurity
+      uid: SharePointServer.Set-SPProfileServiceApplicationSecurity
+    - name: Set-SPProjectDatabaseQuota
+      uid: SharePointServer.Set-SPProjectDatabaseQuota
+    - name: Set-SPProjectEventServiceSettings
+      uid: SharePointServer.Set-SPProjectEventServiceSettings
+    - name: Set-SPProjectOdataConfiguration
+      uid: SharePointServer.Set-SPProjectOdataConfiguration
+    - name: Set-SPProjectPCSSettings
+      uid: SharePointServer.Set-SPProjectPCSSettings
+    - name: Set-SPProjectPermissionMode
+      uid: SharePointServer.Set-SPProjectPermissionMode
+    - name: Set-SPProjectQueueSettings
+      uid: SharePointServer.Set-SPProjectQueueSettings
+    - name: Set-SPProjectServiceApplication
+      uid: SharePointServer.Set-SPProjectServiceApplication
+    - name: Set-SPProjectUserSync
+      uid: SharePointServer.Set-SPProjectUserSync
+    - name: Set-SPProjectUserSyncDisabledSyncThreshold
+      uid: SharePointServer.Set-SPProjectUserSyncDisabledSyncThreshold
+    - name: Set-SPProjectUserSyncFullSyncThreshold
+      uid: SharePointServer.Set-SPProjectUserSyncFullSyncThreshold
+    - name: Set-SPProjectUserSyncOffPeakSyncThreshold
+      uid: SharePointServer.Set-SPProjectUserSyncOffPeakSyncThreshold
+    - name: Set-SPRequestManagementSettings
+      uid: SharePointServer.Set-SPRequestManagementSettings
+    - name: Set-SPRoutingMachineInfo
+      uid: SharePointServer.Set-SPRoutingMachineInfo
+    - name: Set-SPRoutingMachinePool
+      uid: SharePointServer.Set-SPRoutingMachinePool
+    - name: Set-SPRoutingRule
+      uid: SharePointServer.Set-SPRoutingRule
+    - name: Set-SPScaleOutDatabaseDataRange
+      uid: SharePointServer.Set-SPScaleOutDatabaseDataRange
+    - name: Set-SPScaleOutDatabaseDataSubRange
+      uid: SharePointServer.Set-SPScaleOutDatabaseDataSubRange
+    - name: Set-SPSecureStoreApplication
+      uid: SharePointServer.Set-SPSecureStoreApplication
+    - name: Set-SPSecureStoreDefaultProvider
+      uid: SharePointServer.Set-SPSecureStoreDefaultProvider
+    - name: Set-SPSecureStoreServiceApplication
+      uid: SharePointServer.Set-SPSecureStoreServiceApplication
+    - name: Set-SPSecurityTokenServiceConfig
+      uid: SharePointServer.Set-SPSecurityTokenServiceConfig
+    - name: Set-SPServer
+      uid: SharePointServer.Set-SPServer
+    - name: Set-SPServerScaleOutDatabaseDataRange
+      uid: SharePointServer.Set-SPServerScaleOutDatabaseDataRange
+    - name: Set-SPServerScaleOutDatabaseDataSubRange
+      uid: SharePointServer.Set-SPServerScaleOutDatabaseDataSubRange
+    - name: Set-SPServiceApplication
+      uid: SharePointServer.Set-SPServiceApplication
+    - name: Set-SPServiceApplicationEndpoint
+      uid: SharePointServer.Set-SPServiceApplicationEndpoint
+    - name: Set-SPServiceApplicationPool
+      uid: SharePointServer.Set-SPServiceApplicationPool
+    - name: Set-SPServiceApplicationSecurity
+      uid: SharePointServer.Set-SPServiceApplicationSecurity
+    - name: Set-SPServiceHostConfig
+      uid: SharePointServer.Set-SPServiceHostConfig
+    - name: Set-SPSessionStateService
+      uid: SharePointServer.Set-SPSessionStateService
+    - name: Set-SPSite
+      uid: SharePointServer.Set-SPSite
+    - name: Set-SPSiteAdministration
+      uid: SharePointServer.Set-SPSiteAdministration
+    - name: Set-SPSiteSubscriptionConfig
+      uid: SharePointServer.Set-SPSiteSubscriptionConfig
+    - name: Set-SPSiteSubscriptionEdiscoveryHub
+      uid: SharePointServer.Set-SPSiteSubscriptionEdiscoveryHub
+    - name: Set-SPSiteSubscriptionIRMConfig
+      uid: SharePointServer.Set-SPSiteSubscriptionIRMConfig
+    - name: Set-SPSiteSubscriptionMetadataConfig
+      uid: SharePointServer.Set-SPSiteSubscriptionMetadataConfig
+    - name: Set-SPSiteSubscriptionProfileConfig
+      uid: SharePointServer.Set-SPSiteSubscriptionProfileConfig
+    - name: Set-SPSiteURL
+      uid: SharePointServer.Set-SPSiteURL
+    - name: Set-SPStateServiceApplication
+      uid: SharePointServer.Set-SPStateServiceApplication
+    - name: Set-SPStateServiceApplicationProxy
+      uid: SharePointServer.Set-SPStateServiceApplicationProxy
+    - name: Set-SPStateServiceDatabase
+      uid: SharePointServer.Set-SPStateServiceDatabase
+    - name: Set-SPSubscriptionSettingsServiceApplication
+      uid: SharePointServer.Set-SPSubscriptionSettingsServiceApplication
+    - name: Set-SPThrottlingRule
+      uid: SharePointServer.Set-SPThrottlingRule
+    - name: Set-SPTimerJob
+      uid: SharePointServer.Set-SPTimerJob
+    - name: Set-SPTopologyServiceApplication
+      uid: SharePointServer.Set-SPTopologyServiceApplication
+    - name: Set-SPTopologyServiceApplicationProxy
+      uid: SharePointServer.Set-SPTopologyServiceApplicationProxy
+    - name: Set-SPTranslationServiceApplication
+      uid: SharePointServer.Set-SPTranslationServiceApplication
+    - name: Set-SPTranslationServiceApplicationProxy
+      uid: SharePointServer.Set-SPTranslationServiceApplicationProxy
+    - name: Set-SPTranslationThrottlingSetting
+      uid: SharePointServer.Set-SPTranslationThrottlingSetting
+    - name: Set-SPTrustedIdentityTokenIssuer
+      uid: SharePointServer.Set-SPTrustedIdentityTokenIssuer
+    - name: Set-SPTrustedRootAuthority
+      uid: SharePointServer.Set-SPTrustedRootAuthority
+    - name: Set-SPTrustedSecurityTokenIssuer
+      uid: SharePointServer.Set-SPTrustedSecurityTokenIssuer
+    - name: Set-SPTrustedServiceTokenIssuer
+      uid: SharePointServer.Set-SPTrustedServiceTokenIssuer
+    - name: Set-SPUsageApplication
+      uid: SharePointServer.Set-SPUsageApplication
+    - name: Set-SPUsageDefinition
+      uid: SharePointServer.Set-SPUsageDefinition
+    - name: Set-SPUsageService
+      uid: SharePointServer.Set-SPUsageService
+    - name: Set-SPUser
+      uid: SharePointServer.Set-SPUser
+    - name: Set-SPVisioExternalData
+      uid: SharePointServer.Set-SPVisioExternalData
+    - name: Set-SPVisioPerformance
+      uid: SharePointServer.Set-SPVisioPerformance
+    - name: Set-SPVisioSafeDataProvider
+      uid: SharePointServer.Set-SPVisioSafeDataProvider
+    - name: Set-SPVisioServiceApplication
+      uid: SharePointServer.Set-SPVisioServiceApplication
+    - name: Set-SPWeb
+      uid: SharePointServer.Set-SPWeb
+    - name: Set-SPWebApplication
+      uid: SharePointServer.Set-SPWebApplication
+    - name: Set-SPWebApplicationHttpThrottlingMonitor
+      uid: SharePointServer.Set-SPWebApplicationHttpThrottlingMonitor
+    - name: Set-SPWOPIBinding
+      uid: SharePointServer.Set-SPWOPIBinding
+    - name: Set-SPWOPIZone
+      uid: SharePointServer.Set-SPWOPIZone
+    - name: Set-SPWordConversionServiceApplication
+      uid: SharePointServer.Set-SPWordConversionServiceApplication
+    - name: Set-SPWorkflowConfig
+      uid: SharePointServer.Set-SPWorkflowConfig
+    - name: Set-SPWorkManagementServiceApplication
+      uid: SharePointServer.Set-SPWorkManagementServiceApplication
+    - name: Set-SPWorkManagementServiceApplicationProxy
+      uid: SharePointServer.Set-SPWorkManagementServiceApplicationProxy
+    - name: Split-SPScaleOutDatabase
+      uid: SharePointServer.Split-SPScaleOutDatabase
+    - name: Split-SPServerScaleOutDatabase
+      uid: SharePointServer.Split-SPServerScaleOutDatabase
+    - name: Start-SPAdminJob
+      uid: SharePointServer.Start-SPAdminJob
+    - name: Start-SPAssignment
+      uid: SharePointServer.Start-SPAssignment
+    - name: Start-SPContentDeploymentJob
+      uid: SharePointServer.Start-SPContentDeploymentJob
+    - name: Start-SPDiagnosticsSession
+      uid: SharePointServer.Start-SPDiagnosticsSession
+    - name: Start-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance
+      uid: SharePointServer.Start-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance
+    - name: Start-SPEnterpriseSearchServiceInstance
+      uid: SharePointServer.Start-SPEnterpriseSearchServiceInstance
+    - name: Start-SPInfoPathFormTemplate
+      uid: SharePointServer.Start-SPInfoPathFormTemplate
+    - name: Start-SPProjectGenerateWsdl
+      uid: SharePointServer.Start-SPProjectGenerateWsdl
+    - name: Start-SPService
+      uid: SharePointServer.Start-SPService
+    - name: Start-SPServiceInstance
+      uid: SharePointServer.Start-SPServiceInstance
+    - name: Start-SPTimerJob
+      uid: SharePointServer.Start-SPTimerJob
+    - name: Stop-SPAssignment
+      uid: SharePointServer.Stop-SPAssignment
+    - name: Stop-SPContentTypeReplication
+      uid: SharePointServer.Stop-SPContentTypeReplication
+    - name: Stop-SPDiagnosticsSession
+      uid: SharePointServer.Stop-SPDiagnosticsSession
+    - name: Stop-SPDistributedCacheServiceInstance
+      uid: SharePointServer.Stop-SPDistributedCacheServiceInstance
+    - name: Stop-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance
+      uid: SharePointServer.Stop-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance
+    - name: Stop-SPEnterpriseSearchServiceInstance
+      uid: SharePointServer.Stop-SPEnterpriseSearchServiceInstance
+    - name: Stop-SPInfoPathFormTemplate
+      uid: SharePointServer.Stop-SPInfoPathFormTemplate
+    - name: Stop-SPService
+      uid: SharePointServer.Stop-SPService
+    - name: Stop-SPServiceInstance
+      uid: SharePointServer.Stop-SPServiceInstance
+    - name: Stop-SPTaxonomyReplication
+      uid: SharePointServer.Stop-SPTaxonomyReplication
+    - name: Suspend-SPEnterpriseSearchServiceApplication
+      uid: SharePointServer.Suspend-SPEnterpriseSearchServiceApplication
+    - name: Suspend-SPStateServiceDatabase
+      uid: SharePointServer.Suspend-SPStateServiceDatabase
+    - name: Sync-SPProjectPermissions
+      uid: SharePointServer.Sync-SPProjectPermissions
+    - name: Test-SPContentDatabase
+      uid: SharePointServer.Test-SPContentDatabase
+    - name: Test-SPInfoPathFormTemplate
+      uid: SharePointServer.Test-SPInfoPathFormTemplate
+    - name: Test-SPO365LinkSettings
+      uid: SharePointServer.Test-SPO365LinkSettings
+    - name: Test-SPProjectServiceApplication
+      uid: SharePointServer.Test-SPProjectServiceApplication
+    - name: Test-SPProjectWebInstance
+      uid: SharePointServer.Test-SPProjectWebInstance
+    - name: Test-SPSite
+      uid: SharePointServer.Test-SPSite
+    - name: Uninstall-FASTSearchAdminDatabase
+      uid: SharePointServer.Uninstall-FASTSearchAdminDatabase
+    - name: Uninstall-SPAppInstance
+      uid: SharePointServer.Uninstall-SPAppInstance
+    - name: Uninstall-SPDataConnectionFile
+      uid: SharePointServer.Uninstall-SPDataConnectionFile
+    - name: Uninstall-SPFeature
+      uid: SharePointServer.Uninstall-SPFeature
+    - name: Uninstall-SPHelpCollection
+      uid: SharePointServer.Uninstall-SPHelpCollection
+    - name: Uninstall-SPInfoPathFormTemplate
+      uid: SharePointServer.Uninstall-SPInfoPathFormTemplate
+    - name: Uninstall-SPSolution
+      uid: SharePointServer.Uninstall-SPSolution
+    - name: Uninstall-SPUserSolution
+      uid: SharePointServer.Uninstall-SPUserSolution
+    - name: Uninstall-SPWebPartPack
+      uid: SharePointServer.Uninstall-SPWebPartPack
+    - name: Unpublish-SPServiceApplication
+      uid: SharePointServer.Unpublish-SPServiceApplication
+    - name: Update-SPAppCatalogConfiguration
+      uid: SharePointServer.Update-SPAppCatalogConfiguration
+    - name: Update-SPAppInstance
+      uid: SharePointServer.Update-SPAppInstance
+    - name: Update-SPDistributedCacheSize
+      uid: SharePointServer.Update-SPDistributedCacheSize
+    - name: Update-SPFarmEncryptionKey
+      uid: SharePointServer.Update-SPFarmEncryptionKey
+    - name: Update-SPHelp
+      uid: SharePointServer.Update-SPHelp
+    - name: Update-SPInfoPathAdminFileUrl
+      uid: SharePointServer.Update-SPInfoPathAdminFileUrl
+    - name: Update-SPInfoPathFormTemplate
+      uid: SharePointServer.Update-SPInfoPathFormTemplate
+    - name: Update-SPInfoPathUserFileUrl
+      uid: SharePointServer.Update-SPInfoPathUserFileUrl
+    - name: Update-SPProfilePhotoStore
+      uid: SharePointServer.Update-SPProfilePhotoStore
+    - name: Update-SPProfileSync
+      uid: SharePointServer.Update-SPProfileSync
+    - name: Update-SPRepopulateMicroblogFeedCache
+      uid: SharePointServer.Update-SPRepopulateMicroblogFeedCache
+    - name: Update-SPRepopulateMicroblogLMTCache
+      uid: SharePointServer.Update-SPRepopulateMicroblogLMTCache
+    - name: Update-SPSecureStoreApplicationServerKey
+      uid: SharePointServer.Update-SPSecureStoreApplicationServerKey
+    - name: Update-SPSecureStoreCredentialMapping
+      uid: SharePointServer.Update-SPSecureStoreCredentialMapping
+    - name: Update-SPSecureStoreGroupCredentialMapping
+      uid: SharePointServer.Update-SPSecureStoreGroupCredentialMapping
+    - name: Update-SPSecureStoreMasterKey
+      uid: SharePointServer.Update-SPSecureStoreMasterKey
+    - name: Update-SPSolution
+      uid: SharePointServer.Update-SPSolution
+    - name: Update-SPUserSolution
+      uid: SharePointServer.Update-SPUserSolution
+    - name: Update-SPWOPIProofKey
+      uid: SharePointServer.Update-SPWOPIProofKey
+    - name: Upgrade-SPAppManagementServiceApplication
+      uid: SharePointServer.Upgrade-SPAppManagementServiceApplication
+    - name: Upgrade-SPContentDatabase
+      uid: SharePointServer.Upgrade-SPContentDatabase
+    - name: Upgrade-SPEnterpriseSearchServiceApplication
+      uid: SharePointServer.Upgrade-SPEnterpriseSearchServiceApplication
+    - name: Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings
+      uid: SharePointServer.Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings
+    - name: Upgrade-SPFarm
+      uid: SharePointServer.Upgrade-SPFarm
+    - name: Upgrade-SPProfileServiceApplication
+      uid: SharePointServer.Upgrade-SPProfileServiceApplication
+    - name: Upgrade-SPSingleSignOnDatabase
+      uid: SharePointServer.Upgrade-SPSingleSignOnDatabase
+    - name: Upgrade-SPSite
+      uid: SharePointServer.Upgrade-SPSite
+    - name: Upgrade-SPSiteMapDatabase
+      uid: SharePointServer.Upgrade-SPSiteMapDatabase

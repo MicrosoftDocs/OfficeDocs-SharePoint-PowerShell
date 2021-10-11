@@ -1,0 +1,73 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPContentTypeToList.md to change this file.
+
+  Adds a new content type to a list
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Add-PnPContentTypeToList -List <ListPipeBind> -ContentType <ContentTypePipeBind> [-DefaultContentType]
+
+   [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Add-PnPContentTypeToList -List "Documents" -ContentType "Project Document" -DefaultContentType
+  description: |-
+    This will add an existing content type to a list and sets it as the default content type
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ContentTypePipeBind" data-throw-if-not-resolved="False" />
+  name: ContentType
+  isRequired: true
+  description: |+
+    Specifies the content type that needs to be added to the list
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DefaultContentType
+  description: |+
+    Specify if the content type needs to be the default content type or not
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ListPipeBind" data-throw-if-not-resolved="False" />
+  name: List
+  isRequired: true
+  description: |+
+    Specifies the list to which the content type needs to be added
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Add-PnPContentTypeToList
+name: Add-PnPContentTypeToList
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Add-PnPContentTypeToList.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Add-PnPContentTypeToList

@@ -1,0 +1,55 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Update-PnPTeamsApp.md to change this file.
+
+
+  **Required Permissions**
+
+    * Microsoft Graph API: Group.ReadWrite.All
+
+  Updates an existing app in the Teams App Catalog.
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- Update-PnPTeamsApp -Identity <TeamsAppPipeBind> -Path <String>  [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Update-PnPTeamsApp -Identity 4efdf392-8225-4763-9e7f-4edeb7f721aa -Path c:\myapp.zip
+  description: |-
+    Updates the specified app in the teams app catalog with the contents of the referenced zip file.
+  summary: ""
+parameters:
+- type: <xref href="TeamsAppPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    The path pointing to the packaged/zip file containing the app
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Update-PnPTeamsApp
+name: Update-PnPTeamsApp
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  title: Update-PnPTeamsApp
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Update-PnPTeamsApp.html

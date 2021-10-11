@@ -1,0 +1,93 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPAzureADAppSitePermission.md to change this file.
+
+
+  **Required Permissions**
+
+    * Microsoft Graph API: Sites.FullControl.All
+
+  Returns Azure AD App permissions for a site
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- Get-PnPAzureADAppSitePermission [-PermissionId <String>] [-Site <SitePipeBind>]
+- Get-PnPAzureADAppSitePermission -PermissionId <String> [-Site <SitePipeBind>]
+- Get-PnPAzureADAppSitePermission -AppIdentity <String> [-Site <SitePipeBind>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Get-PnPAzureADAppSitePermission
+  description: |-
+    Returns the apps that have permissions for the currently connected to site. Notice that if PermissionId is not specified the Roles property is not populated. This is a current API limitation.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Get-PnPAzureADAppSitePermissions -Site https://contoso.sharepoint.com/sites/projects
+  description: |-
+    Returns the apps that have permissions for the site specified. Notice that you require to have the SharePoint Administrator role in your tenant to be able to use this.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Get-PnPAzureADAppSitePermission -PermissionId TowaS50fG1zLnNwLmV4dHwxYxNmI0OTI1
+  description: |-
+    Returns the specific app details given the permission id for the current site.
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    Get-PnPAzureADAppSitePermission -AppIdentity "Test App"
+  description: ""
+  summary: ""
+- title: EXAMPLE 5
+  code: |-
+    Get-PnPAzureADAppSitePermission -AppIdentity "14effc36-dc8b-4f68-8919-f6beb7d847b3"
+  description: |-
+    Returns the specific app details given the id of the app specified
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AppIdentity
+  isRequired: true
+  description: |+
+    You can specify either the Display Name or the AppId to specifically retrieve the permission for.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PermissionId
+  isRequired: true
+  description: |+
+    If specified the permission with that id specified will be retrieved
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SitePipeBind" data-throw-if-not-resolved="False" />
+  name: Site
+  isRequired: true
+  description: |+
+    Optional url to to a site to retrieve the permissions for. Defaults to the current site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Get-PnPAzureADAppSitePermission
+name: Get-PnPAzureADAppSitePermission
+description: |-
+  This cmdlet returns app permissions for either the current or a given site.
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Get-PnPAzureADAppSitePermission.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Get-PnPAzureADAppSitePermission

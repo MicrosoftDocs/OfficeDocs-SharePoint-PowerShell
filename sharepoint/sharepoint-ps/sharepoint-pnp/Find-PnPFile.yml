@@ -1,0 +1,92 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Find-PnPFile.md to change this file.
+
+  Finds a file in the virtual file system of the web.
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- Find-PnPFile [-Match] <String> [-Connection <PnPConnection>] [<CommonParameters>]
+- >-
+  Find-PnPFile [-Match] <String> -List <ListPipeBind> [-Connection <PnPConnection>]
+
+   [<CommonParameters>]
+- >-
+  Find-PnPFile [-Match] <String> -Folder <FolderPipeBind> [-Connection <PnPConnection>]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Find-PnPFile -Match *.master
+  description: |-
+    Will return all masterpages located in the current web.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Find-PnPFile -List "Documents" -Match *.pdf
+  description: |-
+    Will return all pdf files located in given list.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Find-PnPFile -Folder "Shared Documents/Sub Folder" -Match *.docx
+  description: |-
+    Will return all docx files located in given folder.
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="FolderPipeBind" data-throw-if-not-resolved="False" />
+  name: Folder
+  isRequired: true
+  description: |+
+    Folder object or relative url of a folder to query
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ListPipeBind" data-throw-if-not-resolved="False" />
+  name: List
+  isRequired: true
+  description: |+
+    List title, url or an actual List object to query
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Match
+  isRequired: true
+  description: |+
+    Wildcard query
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Find-PnPFile
+name: Find-PnPFile
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Find-PnPFile.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Find-PnPFile

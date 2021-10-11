@@ -1,0 +1,74 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPFieldFromXml.md to change this file.
+
+  Adds a field to a list or as a site column based upon a CAML/XML field definition
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+- text: Field CAML
+  href: http://msdn.microsoft.com/en-us/library/office/ms437580(v=office.15).aspx
+syntaxes:
+- >-
+  Add-PnPFieldFromXml [-List <ListPipeBind>] [-FieldXml] <String> 
+
+   [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    $xml = '<Field Type="Text" Name="PSCmdletTest" DisplayName="PSCmdletTest" ID="{27d81055-f208-41c9-a976-61c5473eed4a}" Group="Test" Required="FALSE" StaticName="PSCmdletTest" />'
+    Add-PnPFieldFromXml -FieldXml $xml
+  description: |-
+    Adds a field with the specified field CAML code to the site.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    $xml = '<Field Type="Text" Name="PSCmdletTest" DisplayName="PSCmdletTest" ID="{27d81055-f208-41c9-a976-61c5473eed4a}" Group="Test" Required="FALSE" StaticName="PSCmdletTest" />'
+    Add-PnPFieldFromXml -List "Demo List" -FieldXml $xml
+  description: |-
+    Adds a field with the specified field CAML code to the list "Demo List".
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FieldXml
+  isRequired: true
+  description: |+
+    CAML snippet containing the field definition. See http://msdn.microsoft.com/en-us/library/office/ms437580(v=office.15).aspx
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ListPipeBind" data-throw-if-not-resolved="False" />
+  name: List
+  description: |+
+    The name of the list, its ID or an actual list object where this field needs to be added
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Add-PnPFieldFromXml
+name: Add-PnPFieldFromXml
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Add-PnPFieldFromXml.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Add-PnPFieldFromXml

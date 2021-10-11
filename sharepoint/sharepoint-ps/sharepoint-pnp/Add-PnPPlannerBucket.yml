@@ -1,0 +1,76 @@
+### YamlMime:PowershellCmdlet
+summary: "> [!TIP]\r\n> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPPlannerBucket.md to change this file.\r\n\r\n\r\n**Required Permissions**\r\n\r\n  * Microsoft Graph API: Group.ReadWrite.All\r\n  \r\nAdds a new bucket to a Planner plan"
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- Add-PnPPlannerBucket -Group <PlannerGroupPipeBind> -Plan <PlannerPlanPipeBind> -Name <String> [<CommonParameters>]
+- Add-PnPPlannerBucket -PlanId <String> -Name <String> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Add-PnPPlannerBucket -Group "My Group" -Plan "My Plan" -Name "Project Todos"
+  description: |-
+    Adds a new bucket called "Project Todos" to the specified plans
+  summary: ""
+- title: Example 2
+  code: |-
+    Add-PnPPlannerBucket -PlanId "QvfkTd1mc02gwxHjHC_43JYABhAy" -Name "Project Todos"
+  description: |-
+    Adds a new bucket called "Project Todos" to the plan with the specified id.
+  summary: ""
+parameters:
+- type: <xref href="PlannerGroupPipeBind" data-throw-if-not-resolved="False" />
+  name: Group
+  isRequired: true
+  description: |+
+    Specify the group id or group name of the group owning the plan.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the bucket to add
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PlannerPlanPipeBind" data-throw-if-not-resolved="False" />
+  name: Plan
+  isRequired: true
+  description: |+
+    Specify the id or name of the plan to add the tasks to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PlanId
+  isRequired: true
+  description: |+
+    A plan id to add the bucket to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.add-pnpplannerbucket
+name: add-pnpplannerbucket
+description: |-
+  This cmdlets creates a new bucket for tasks in a Planner plan.
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Add-PnPPlannerBucket.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: add-pnpplannerbucket

@@ -1,0 +1,181 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPAuditing.md to change this file.
+
+  Set Auditing setting for a site
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Set-PnPAuditing [-EnableAll] [-RetentionTime <Int32>] [-TrimAuditLog] [-Connection <PnPConnection>]
+
+   [<CommonParameters>]
+- Set-PnPAuditing [-DisableAll] [-Connection <PnPConnection>] [<CommonParameters>]
+- >-
+  Set-PnPAuditing [-RetentionTime <Int32>] [-TrimAuditLog] [-EditItems] [-CheckOutCheckInItems] [-MoveCopyItems]
+
+   [-DeleteRestoreItems] [-EditContentTypesColumns] [-SearchContent] [-EditUsersPermissions]
+
+   [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-PnPAuditing -EnableAll
+  description: |-
+    Enables all auditing settings for the current site
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Set-PnPAuditing -DisableAll
+  description: |-
+    Disables all auditing settings for the current site
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Set-PnPAuditing -RetentionTime 7
+  description: |-
+    Sets the audit log trimming to 7 days, this also enables the automatic trimming of the audit log
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    Set-PnPAuditing -TrimAuditLog
+  description: |-
+    Enables the automatic trimming of the audit log
+  summary: ""
+- title: EXAMPLE 5
+  code: |-
+    Set-PnPAuditing -RetentionTime 7 -CheckOutCheckInItems -MoveCopyItems -SearchContent
+  description: |-
+    Sets the audit log trimming to 7 days, this also enables the automatic trimming of the audit log.
+
+    Do auditing for:
+    - Checking out or checking in items
+    - Moving or copying items to another location in the site
+    - Searching site content
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CheckOutCheckInItems
+  description: |+
+    Audit checking out or checking in items
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DeleteRestoreItems
+  description: |+
+    Audit deleting or restoring items
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableAll
+  isRequired: true
+  description: |+
+    Disable all audit flags
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EditContentTypesColumns
+  description: |+
+    Audit editing content types and columns
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EditItems
+  description: |+
+    Audit editing items
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EditUsersPermissions
+  description: |+
+    Audit editing users and permissions
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableAll
+  isRequired: true
+  description: |+
+    Enable all audit flags
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: MoveCopyItems
+  description: |+
+    Audit moving or copying items to another location in the site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: RetentionTime
+  description: |+
+    Set the retention time
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SearchContent
+  description: |+
+    Audit searching site content
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: TrimAuditLog
+  description: |+
+    Trim the audit log
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Set-PnPAuditing
+name: Set-PnPAuditing
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  title: Set-PnPAuditing
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Set-PnPAuditing.html

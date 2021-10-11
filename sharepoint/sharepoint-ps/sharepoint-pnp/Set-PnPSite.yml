@@ -1,0 +1,296 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPSite.md to change this file.
+
+  Sets Site Collection properties.
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Set-PnPSite [-Identity <String>] [-Classification <String>] [-DisableFlows] [-LogoFilePath <String>]
+
+   [-Sharing <SharingCapabilities>] [-StorageMaximumLevel <Int64>] [-StorageWarningLevel <Int64>]
+
+   [-AllowSelfServiceUpgrade] [-NoScriptSite] [-Owners <System.Collections.Generic.List`1[System.String]>]
+
+   [-CommentsOnSitePagesDisabled] [-DefaultLinkPermission <SharingPermissionType>]
+
+   [-DefaultSharingLinkType <SharingLinkType>] [-DefaultLinkToExistingAccess <Boolean>] [-DefaultLinkToExistingAccessReset] [-DisableAppViews <AppViewsPolicy>]
+
+   [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>] [-DisableSharingForNonOwners]
+
+   [-LocaleId <UInt32>] [-RestrictedToGeo <RestrictedToRegion>] [-SocialBarOnSitePagesDisabled]
+
+   [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy]
+
+   [-Connection <PnPConnection>] [<CommonParameters>]
+- >-
+  Set-PnPSite [-Identity <String>] [-Classification <String>] [-DisableFlows] [-LockState <SiteLockState>]
+
+   [-Wait] [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-PnPSite -Classification "HBI"
+  description: |-
+    Sets the current site classification to HBI
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Set-PnPSite -Classification $null
+  description: |-
+    Unsets the current site classification
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Set-PnPSite -DisableFlows
+  description: |-
+    Disables Microsoft Flow for this site, and also hides the Flow button from the ribbon
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    Set-PnPSite -DisableFlows:$false
+  description: |-
+    Enables Microsoft Flow for this site
+  summary: ""
+- title: EXAMPLE 5
+  code: |-
+    Set-PnPSite -LogoFilePath c:\images\mylogo.png
+  description: |-
+    Sets the logo if the site is a modern team site
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowSelfServiceUpgrade
+  description: |+
+    Specifies if the site administrator can upgrade the site collection
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: AnonymousLinkExpirationInDays
+  description: |+
+    {{ Fill AnonymousLinkExpirationInDays Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Classification
+  description: |+
+    The classification to set
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CommentsOnSitePagesDisabled
+  description: |+
+    Specifies if comments on site pages are enabled or disabled
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SharingPermissionType" data-throw-if-not-resolved="False" />
+  name: DefaultLinkPermission
+  description: |+
+    Specifies the default link permission for the site collection. None - Respect the organization default link permission. View - Sets the default link permission for the site to "view" permissions. Edit - Sets the default link permission for the site to "edit" permissions
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, View, Edit
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: DefaultLinkToExistingAccess
+  description: |+
+    When set to $true, the DefaultSharingLinkType will be overriden and the default sharing link will be All People with Existing Access link (which does not modify permissions). When set to $false (the default), the default sharing link type is controlled by the DefaultSharingLinkType parameter
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SharingLinkType" data-throw-if-not-resolved="False" />
+  name: DefaultSharingLinkType
+  description: |+
+    Specifies the default link type for the site collection. None - Respect the organization default sharing link type. AnonymousAccess - Sets the default sharing link for this site to an Anonymous Access or Anyone link. Internal - Sets the default sharing link for this site to the "organization" link or company shareable link. Direct - Sets the default sharing link for this site to the "Specific people" link
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Direct, Internal, AnonymousAccess
+- type: <xref href="AppViewsPolicy" data-throw-if-not-resolved="False" />
+  name: DisableAppViews
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Unknown, Disabled, NotDisabled
+- type: <xref href="CompanyWideSharingLinksPolicy" data-throw-if-not-resolved="False" />
+  name: DisableCompanyWideSharingLinks
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Unknown, Disabled, NotDisabled
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableFlows
+  description: |+
+    Disables Microsoft Flow for this site
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableSharingForNonOwners
+  description: |+
+    Specifies to prevent non-owners from inviting new users to the site
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: Url
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: LocaleId
+  description: |+
+    Specifies the language of this site collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SiteLockState" data-throw-if-not-resolved="False" />
+  name: LockState
+  description: |+
+    Sets the lockstate of a site
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Unlock, NoAccess, ReadOnly
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogoFilePath
+  description: |+
+    Sets the logo of the site if it concerns a modern team site. Provide a full path to a local image file on your disk which you want to use as the site logo. The logo will be uploaded automatically to SharePoint. If you want to set the logo for a classic site, use Set-PnPWeb -SiteLogoUrl.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoScriptSite
+  description: |+
+    Specifies if a site allows custom script or not. See https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f for more information.
+
+  defaultValue: None
+  position: Named
+  aliases: DenyAndAddCustomizePages
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: OverrideTenantAnonymousLinkExpirationPolicy
+  description: |+
+    {{ Fill OverrideTenantAnonymousLinkExpirationPolicy Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+  name: Owners
+  description: |+
+    Specifies owner(s) to add as site collection administrators. They will be added as additional site collection administrators. Existing administrators will stay. Can be both users and groups.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="RestrictedToRegion" data-throw-if-not-resolved="False" />
+  name: RestrictedToGeo
+  description: |+
+    Specifies the Geo/Region restrictions of this site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: NoRestriction, BlockMoveOnly, BlockFull, Unknown
+- type: <xref href="SharingCapabilities" data-throw-if-not-resolved="False" />
+  name: Sharing
+  description: |+
+    Specifies what the sharing capabilities are for the site. Possible values: Disabled, ExternalUserSharingOnly, ExternalUserAndGuestSharing, ExistingExternalUserSharingOnly
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Disabled, ExternalUserSharingOnly, ExternalUserAndGuestSharing, ExistingExternalUserSharingOnly
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SocialBarOnSitePagesDisabled
+  description: |+
+    Disables or enables the Social Bar for Site Collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int64" data-throw-if-not-resolved="False" />
+  name: StorageMaximumLevel
+  description: |+
+    Specifies the storage quota for this site collection in megabytes. This value must not exceed the company's available quota.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int64" data-throw-if-not-resolved="False" />
+  name: StorageWarningLevel
+  description: |+
+    Specifies the warning level for the storage quota in megabytes. This value must not exceed the values set for the StorageMaximumLevel parameter
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Wait
+  description: |+
+    Wait for the operation to complete
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Set-PnPSite
+name: Set-PnPSite
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  title: Set-PnPSite
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Set-PnPSite.html

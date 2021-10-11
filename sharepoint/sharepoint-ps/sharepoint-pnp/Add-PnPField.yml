@@ -1,0 +1,180 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPField.md to change this file.
+
+  Add a field
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Add-PnPField [-List <ListPipeBind>] -DisplayName <String> -InternalName <String> -Type <FieldType>
+
+   [-Id <Guid>] [-AddToDefaultView] [-Required] [-Group <String>] [-ClientSideComponentId <Guid>]
+
+   [-ClientSideComponentProperties <String>] [-Connection <PnPConnection>]
+
+   [<CommonParameters>]
+- >-
+  Add-PnPField -List <ListPipeBind> -Field <FieldPipeBind> [-Connection <PnPConnection>]
+
+   [<CommonParameters>]
+- >-
+  Add-PnPField -DisplayName <String> -InternalName <String> -Type <FieldType> [-Id <Guid>]
+
+   [-ClientSideComponentId <Guid>] [-ClientSideComponentProperties <String>] 
+
+   [-Connection <PnPConnection>] [<CommonParameters>]
+- >-
+  Add-PnPField [-AddToDefaultView] [-Required] [-Group <String>] 
+
+   [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Add-PnPField -Type Calculated -InternalName "C1" -DisplayName "C1" -Formula ="[Title]"
+  description: |-
+    Adds a new calculated site column with the formula specified
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Add-PnPField -List "Demo list" -DisplayName "Location" -InternalName "SPSLocation" -Type Choice -Group "Demo Group" -AddToDefaultView -Choices "Stockholm","Helsinki","Oslo"
+  description: |-
+    This will add a field of type Choice to the list "Demo List".
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Add-PnPField -List "Demo list" -DisplayName "Speakers" -InternalName "SPSSpeakers" -Type MultiChoice -Group "Demo Group" -AddToDefaultView -Choices "Obiwan Kenobi","Darth Vader", "Anakin Skywalker"
+  description: |-
+    This will add a field of type Multiple Choice to the list "Demo List". (you can pick several choices for the same item)
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AddToDefaultView
+  description: |+
+    Switch Parameter if this field must be added to the default view
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: ClientSideComponentId
+  description: |+
+    The Client Side Component Id to set to the field
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClientSideComponentProperties
+  description: |+
+    The Client Side Component Properties to set to the field
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  isRequired: true
+  description: |+
+    The display name of the field
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="FieldPipeBind" data-throw-if-not-resolved="False" />
+  name: Field
+  isRequired: true
+  description: |+
+    The name of the field, its ID or an actual field object that needs to be added
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Group
+  description: |+
+    The group name to where this field belongs to
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Id
+  description: |+
+    The ID of the field, must be unique
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InternalName
+  isRequired: true
+  description: |+
+    The internal name of the field
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ListPipeBind" data-throw-if-not-resolved="False" />
+  name: List
+  isRequired: true
+  description: |+
+    The name of the list, its ID or an actual list object where this field needs to be added
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Required
+  description: |+
+    Switch Parameter if the field is a required field
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="FieldType" data-throw-if-not-resolved="False" />
+  name: Type
+  isRequired: true
+  description: |+
+    The type of the field like Choice, Note, MultiChoice. For a complete list of field types visit https://docs.microsoft.com/dotnet/api/microsoft.sharepoint.client.fieldtype
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Invalid, Integer, Text, Note, DateTime, Counter, Choice, Lookup, Boolean, Number, Currency, URL, Computed, Threading, Guid, MultiChoice, GridChoice, Calculated, File, Attachments, User, Recurrence, CrossProjectLink, ModStat, Error, ContentTypeId, PageSeparator, ThreadIndex, WorkflowStatus, AllDayEvent, WorkflowEventType, Geolocation, OutcomeChoice, Location, Thumbnail, MaxItems
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Add-PnPField
+name: Add-PnPField
+description: |-
+  Adds a field (a column) to a list or as a site column. To add a column of type Managed Metadata use the Add-PnPTaxonomyField cmdlet.
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Add-PnPField.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Add-PnPField

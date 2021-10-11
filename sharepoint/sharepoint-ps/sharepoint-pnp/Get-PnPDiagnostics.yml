@@ -1,0 +1,32 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPDiagnostics.md to change this file.
+
+  Returns diagnostic information
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- Get-PnPDiagnostics [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Get-PnPDiagnostics
+  description: |-
+    Returns basic diagnostic information, including the last error, the stacktrace, if applicable, etc.
+  summary: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Get-PnPDiagnostics
+name: Get-PnPDiagnostics
+description: |-
+  This cmdlet returns diagnostic information which can help to determine issues with PnP PowerShell
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Get-PnPDiagnostics.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Get-PnPDiagnostics

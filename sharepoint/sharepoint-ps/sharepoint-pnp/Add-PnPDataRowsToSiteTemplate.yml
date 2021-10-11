@@ -1,0 +1,117 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPDataRowsToSiteTemplate.md to change this file.
+
+  Adds datarows to a list inside a PnP Provisioning Template
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Add-PnPDataRowsToSiteTemplate [-Path] <String> -List <ListPipeBind> [-Query <String>]
+
+   [-Fields <String[]>] [-IncludeSecurity] [[-TemplateProviderExtensions] <ITemplateProviderExtension[]>]
+
+   [-TokenizeUrls] [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Add-PnPDataRowsToSiteTemplate -Path template.pnp -List 'PnPTestList' -Query '<View></View>' -Fields 'Title','Choice'
+  description: |-
+    Adds datarows from the provided list to the PnP Provisioning Template at the provided location
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Add-PnPDataRowsToSiteTemplate -Path template.pnp -List 'PnPTestList' -Query '<View></View>' -Fields 'Title','Choice' -IncludeSecurity
+  description: |-
+    Adds datarows from the provided list to the PnP Provisioning Template at the provided location
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Fields
+  description: |+
+    The fields to retrieve. If not specified all fields will be loaded in the returned list object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeSecurity
+  description: |+
+    A switch to include ObjectSecurity information.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ListPipeBind" data-throw-if-not-resolved="False" />
+  name: List
+  isRequired: true
+  description: |+
+    The list to query
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Filename of the .PNP Open XML site template to read from, optionally including full path.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Query
+  description: |+
+    The CAML query to execute against the list. Defaults to all items.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ITemplateProviderExtension" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: TemplateProviderExtensions
+  description: |+
+    Allows you to specify ITemplateProviderExtension to execute while loading the template.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: TokenizeUrls
+  description: |+
+    If set, this switch will try to tokenize the values with web and site related tokens
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Add-PnPDataRowsToSiteTemplate
+name: Add-PnPDataRowsToSiteTemplate
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Add-PnPDataRowsToSiteTemplate.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Add-PnPDataRowsToSiteTemplate

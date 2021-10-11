@@ -1,0 +1,52 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPDeletedMicrosoft365Group.md to change this file.
+
+
+  **Required Permissions**
+
+    * Microsoft Graph API : One of Group.Read.All, Group.ReadWrite.All
+
+  Gets one deleted Microsoft 365 Group or a list of deleted Microsoft 365 Groups
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- Get-PnPDeletedMicrosoft365Group [-Identity <Microsoft365GroupPipeBind>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Get-PnPDeletedMicrosoft365Group
+  description: |-
+    Retrieves all deleted Microsoft 365 Groups
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Get-PnPDeletedMicrosoft365Group -Identity 38b32e13-e900-4d95-b860-fb52bc07ca7f
+  description: |-
+    Retrieves a specific deleted Microsoft 365 Group based on its ID
+  summary: ""
+parameters:
+- type: <xref href="Microsoft365GroupPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The Identity of the Microsoft 365 Group
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Get-PnPDeletedMicrosoft365Group
+name: Get-PnPDeletedMicrosoft365Group
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Get-PnPDeletedMicrosoft365Group.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Get-PnPDeletedMicrosoft365Group

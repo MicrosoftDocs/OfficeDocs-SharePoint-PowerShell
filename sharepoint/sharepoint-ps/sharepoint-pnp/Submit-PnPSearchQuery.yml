@@ -1,0 +1,306 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Submit-PnPSearchQuery.md to change this file.
+
+  Executes an arbitrary search query against the SharePoint search index
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Submit-PnPSearchQuery [-Query] <String> [-StartRow <Int32>] [-MaxResults <Int32>] [-TrimDuplicates <Boolean>]
+
+   [-Properties <Hashtable>] [-Refiners <String>] [-Culture <Int32>] [-QueryTemplate <String>]
+
+   [-SelectProperties <String[]>] [-RefinementFilters <String[]>] [-SortList <Hashtable>]
+
+   [-RankingModelId <String>] [-ClientType <String>] [-CollapseSpecification <String>]
+
+   [-HiddenConstraints <String>] [-TimeZoneId <Int32>] [-EnablePhonetic <Boolean>] [-EnableStemming <Boolean>]
+
+   [-EnableQueryRules <Boolean>] [-SourceId <Guid>] [-ProcessBestBets <Boolean>]
+
+   [-ProcessPersonalFavorites <Boolean>] [-RelevantResults] [-Connection <PnPConnection>]
+
+   [<CommonParameters>]
+- >-
+  Submit-PnPSearchQuery [-Query] <String> [-All] [-TrimDuplicates <Boolean>] [-Properties <Hashtable>]
+
+   [-Refiners <String>] [-Culture <Int32>] [-QueryTemplate <String>] [-SelectProperties <String[]>]
+
+   [-RefinementFilters <String[]>] [-SortList <Hashtable>] [-RankingModelId <String>] [-ClientType <String>]
+
+   [-CollapseSpecification <String>] [-HiddenConstraints <String>] [-TimeZoneId <Int32>]
+
+   [-EnablePhonetic <Boolean>] [-EnableStemming <Boolean>] [-EnableQueryRules <Boolean>] [-SourceId <Guid>]
+
+   [-ProcessBestBets <Boolean>] [-ProcessPersonalFavorites <Boolean>] [-RelevantResults] 
+
+   [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Submit-PnPSearchQuery -Query "finance"
+  description: |-
+    Returns the top 500 items with the term finance
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Submit-PnPSearchQuery -Query "Title:Intranet*" -MaxResults 10
+  description: |-
+    Returns the top 10 items indexed by SharePoint Search of which the title starts with the word Intranet
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Submit-PnPSearchQuery -Query "Title:Intranet*" -All
+  description: |-
+    Returns absolutely all items indexed by SharePoint Search of which the title starts with the word Intranet
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    Submit-PnPSearchQuery -Query "Title:Intranet*" -Refiners "contentclass,FileType(filter=6/0/*)"
+  description: |-
+    Returns absolutely all items indexed by SharePoint Search of which the title starts with the word Intranet, and return refiners for contentclass and FileType managed properties
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: All
+  description: |+
+    Automatically page results until the end to get more than 500. Use with caution!
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClientType
+  description: |+
+    Specifies the name of the client which issued the query.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CollapseSpecification
+  description: |+
+    Limit the number of items per the collapse specification. See https://docs.microsoft.com/en-us/sharepoint/dev/general-development/customizing-search-results-in-sharepoint#collapse-similar-search-results-using-the-collapsespecification-property for more information.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Culture
+  description: |+
+    The locale for the query.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnablePhonetic
+  description: |+
+    Specifies whether the phonetic forms of the query terms are used to find matches.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableQueryRules
+  description: |+
+    Specifies whether Query Rules are enabled for this query.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableStemming
+  description: |+
+    Specifies whether stemming is enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HiddenConstraints
+  description: |+
+    The keyword query's hidden constraints.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaxResults
+  description: |+
+    Maximum amount of search results to return. Default and max per page is 500 search results.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ProcessBestBets
+  description: |+
+    Determines whether Best Bets are enabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ProcessPersonalFavorites
+  description: |+
+    Determines whether personal favorites data is processed or not.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: Properties
+  description: |+
+    Extra query properties. Can for example be used for Office Graph queries.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Query
+  isRequired: true
+  description: |+
+    Search query in Keyword Query Language (KQL).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: QueryTemplate
+  description: |+
+    Specifies the query template that is used at run time to transform the query based on user input.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RankingModelId
+  description: |+
+    The identifier (ID) of the ranking model to use for the query.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RefinementFilters
+  description: |+
+    The set of refinement filters used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Refiners
+  description: |+
+    The list of refiners to be returned in a search result.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RelevantResults
+  description: |+
+    Specifies whether only relevant results are returned
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SelectProperties
+  description: |+
+    The list of properties to return in the search results.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: SortList
+  description: |+
+    The list of properties by which the search results are ordered.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: SourceId
+  description: |+
+    Specifies the identifier (ID or name) of the result source to be used to run the query.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: StartRow
+  description: |+
+    Search result item to start returning the results from. Useful for paging. Leave at 0 to return all results.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TimeZoneId
+  description: |+
+    The identifier for the search query time zone.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: TrimDuplicates
+  description: |+
+    Specifies whether near duplicate items should be removed from the search results.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Submit-PnPSearchQuery
+name: Submit-PnPSearchQuery
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  title: Submit-PnPSearchQuery
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Submit-PnPSearchQuery.html

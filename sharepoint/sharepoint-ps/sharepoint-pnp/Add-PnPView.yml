@@ -1,0 +1,152 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPView.md to change this file.
+
+  Adds a view to a list
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Add-PnPView [-List] <ListPipeBind> -Title <String> [-Query <String>] -Fields <String[]> [-ViewType <ViewType>]
+
+   [-RowLimit <UInt32>] [-Personal] [-SetAsDefault] [-Paged] [-Aggregations <String>] 
+
+   [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Add-PnPView -List "Demo List" -Title "Demo View" -Fields "Title","Address"
+  description: |-
+    Adds a view named "Demo view" to the "Demo List" list.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Add-PnPView -List "Demo List" -Title "Demo View" -Fields "Title","Address" -Paged
+  description: |-
+    Adds a view named "Demo view" to the "Demo List" list and makes sure there's paging on this view.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Add-PnPView -List "Demo List" -Title "Demo View" -Fields "Title","Address" -Aggregations "<FieldRef Name='Title' Type='COUNT'/>"
+  description: |-
+    Adds a view named "Demo view" to the "Demo List" list and sets the totals (aggregations) to Count on the Title field.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Aggregations
+  description: |+
+    A valid XML fragment containing one or more Aggregations
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Fields
+  isRequired: true
+  description: |+
+    A list of fields to add.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ListPipeBind" data-throw-if-not-resolved="False" />
+  name: List
+  isRequired: true
+  description: |+
+    The ID or Url of the list.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Paged
+  description: |+
+    If specified, the view will have paging.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Personal
+  description: |+
+    If specified, a personal view will be created.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Query
+  description: |+
+    A valid CAML Query.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: RowLimit
+  description: |+
+    The row limit for the view. Defaults to 30.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SetAsDefault
+  description: |+
+    If specified, the view will be set as the default view for the list.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Title
+  isRequired: true
+  description: |+
+    The title of the view.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ViewType" data-throw-if-not-resolved="False" />
+  name: ViewType
+  description: |+
+    The type of view to add.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Html, Grid, Recurrence, Chart, Calendar, Gantt
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Add-PnPView
+name: Add-PnPView
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Add-PnPView.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Add-PnPView

@@ -1,0 +1,118 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPDefaultColumnValues.md to change this file.
+
+  Sets default column values for a document library
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Set-PnPDefaultColumnValues [-List] <ListPipeBind> -Field <FieldPipeBind> -Value <String[]> [-Folder <String>]
+
+   [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-PnPDefaultColumnValues -List Documents -Field TaxKeyword -Value "Company|Locations|Stockholm"
+  description: |-
+    Sets a default value for the enterprise keywords field on a library to a term called "Stockholm", located in the "Locations" term set, which is part of the "Company" term group
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Set-PnPDefaultColumnValues -List Documents -Field TaxKeyword -Value "15c4c4e4-4b67-4894-a1d8-de5ff811c791"
+  description: |-
+    Sets a default value for the enterprise keywords field on a library to a term with the id "15c4c4e4-4b67-4894-a1d8-de5ff811c791". You need to ensure the term is valid for the field.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Set-PnPDefaultColumnValues -List Documents -Field MyTextField -Value "DefaultValue" -Folder "My folder"
+  description: |-
+    Sets a default value for the MyTextField text field on the folder "My folder" in a library to a value of "DefaultValue"
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    Set-PnPDefaultColumnValues -List Documents -Field MyPeopleField -Value "1;#Foo Bar"
+  description: |-
+    Sets a default value for the MyPeopleField people field on a library to a value of "Foo Bar" using the id from the user information list.
+  summary: ""
+- title: EXAMPLE 5
+  code: |-
+    $user = New-PnPUser -LoginName foobar@contoso.com
+    Set-PnPDefaultColumnValues -List Documents -Field MyPeopleField -Value "$($user.Id);#$($user.LoginName)"
+  description: |-
+    Sets a default value for the MyPeopleField people field on a library to a value of "Foo Bar" using the id from the user information list.
+  summary: ""
+- title: EXAMPLE 6
+  code: |-
+    $user1 = New-PnPUser -LoginName user1@contoso.com
+    $user2 = New-PnPUser -LoginName user2@contoso.com
+    Set-PnPDefaultColumnValues -List Documents -Field MyMultiPeopleField -Value "$($user1.Id);#$($user1.LoginName)","$($user2.Id);#$($user2.LoginName)"
+  description: |-
+    Sets a default value for the MyMultiPeopleField people field on a library to a value of "User 1" and "User 2" using the id from the user information list.
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="FieldPipeBind" data-throw-if-not-resolved="False" />
+  name: Field
+  isRequired: true
+  description: |+
+    The internal name, id or a reference to a field
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Folder
+  description: |+
+    A library relative folder path, if not specified it will set the default column values on the root folder of the library ('/')
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ListPipeBind" data-throw-if-not-resolved="False" />
+  name: List
+  isRequired: true
+  description: |+
+    The ID, Name or Url of the list.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Value
+  isRequired: true
+  description: |+
+    A list of values. In case of a text field the values will be concatenated, separated by a semi-colon. In case of a taxonomy field multiple values will added. In case of people field multiple values will be added.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Set-PnPDefaultColumnValues
+name: Set-PnPDefaultColumnValues
+description: |-
+  Sets default column values for a document library, per folder, or for the root folder if the folder parameter has not been specified. Supports both text and taxonomy fields.
+metadata:
+  Module Name: PnP.PowerShell
+  title: Set-PnPDefaultColumnValues
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Set-PnPDefaultColumnValues.html

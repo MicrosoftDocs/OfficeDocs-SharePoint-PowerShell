@@ -1,0 +1,115 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Export-PnPPageMapping.md to change this file.
+
+  Get's the built-in maping files or a custom mapping file for your publishing portal page layouts. These mapping files are used to tailor the page transformation experience.
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- "Export-PnPPageMapping [-BuiltInWebPartMapping [<SwitchParameter>]]\r\n                                [-BuiltInPageLayoutMapping [<SwitchParameter>]]\r\n                                [-CustomPageLayoutMapping [<SwitchParameter>]]\r\n                                [-PublishingPage <PagePipeBind>]\r\n                                [-AnalyzeOOBPageLayouts [<SwitchParameter>]]\r\n                                [-Folder <String>]\r\n                                [-Overwrite [<SwitchParameter>]]\r\n                                [-Logging [<SwitchParameter>]]\r\n                                \r\n                                [-Connection <PnPConnection>]"
+examples:
+- title: '------------------EXAMPLE 1------------------'
+  code: |-
+    Export-PnPPageMapping -BuiltInPageLayoutMapping -CustomPageLayoutMapping -Folder c:\\temp -Overwrite
+  description: |-
+    Exports the built in page layout mapping and analyzes the current site's page layouts and exports these to files in folder c:\temp
+  summary: ""
+- title: '------------------EXAMPLE 2------------------'
+  code: |-
+    Export-PnPPageMapping -CustomPageLayoutMapping -PublishingPage mypage.aspx -Folder c:\\temp -Overwrite
+  description: |-
+    Analyzes the page layout of page mypage.aspx and exports this to a file in folder c:\temp
+  summary: ""
+- title: '------------------EXAMPLE 3------------------'
+  code: |-
+    Export-PnPPageMapping -BuiltInWebPartMapping -Folder c:\\temp -Overwrite
+  description: |-
+    Exports the built in webpart mapping to a file in folder c:\temp. Use this a starting basis if you want to tailer the web part mapping behavior.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AnalyzeOOBPageLayouts
+  description: |+
+    Set this flag if you also want to analyze the OOB page layouts...typically these are covered via the default mapping, but if you've updated these page layouts you might want to analyze them again
+
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: BuiltInPageLayoutMapping
+  description: |+
+    Exports the builtin pagelayout mapping file (only needed for publishing page transformation)
+
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: BuiltInWebPartMapping
+  description: |+
+    Exports the builtin web part mapping file
+
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CustomPageLayoutMapping
+  description: |+
+    Analyzes the pagelayouts in the current publishing portal and exports them as a pagelayout mapping file
+
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Folder
+  description: |+
+    The folder to created the mapping file(s) in
+
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Logging
+  description: |+
+    Outputs analyser logging to the console
+
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Overwrite
+  description: |+
+    Overwrites existing mapping files
+
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PagePipeBind" data-throw-if-not-resolved="False" />
+  name: PublishingPage
+  description: |+
+    The name of the publishing page to export a page layout mapping file for
+
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Export-PnPPageMapping
+name: Export-PnPPageMapping
+metadata:
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Export-PnPPageMapping.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Export-PnPPageMapping

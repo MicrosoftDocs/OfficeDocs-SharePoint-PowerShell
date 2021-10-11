@@ -1,0 +1,81 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPFeature.md to change this file.
+
+  Returns all activated or a specific activated feature
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Get-PnPFeature [[-Identity] <FeaturePipeBind>] [-Scope <FeatureScope>] 
+
+   [-Connection <PnPConnection>] [-Includes <String[]>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Get-PnPFeature
+  description: |-
+    This will return all activated web scoped features
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Get-PnPFeature -Scope Site
+  description: |-
+    This will return all activated site scoped features
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Get-PnPFeature -Identity fb689d0e-eb99-4f13-beb3-86692fd39f22
+  description: |-
+    This will return a specific activated web scoped feature
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    Get-PnPFeature -Identity fb689d0e-eb99-4f13-beb3-86692fd39f22 -Scope Site
+  description: |-
+    This will return a specific activated site scoped feature
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="FeaturePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The feature ID or name to query for, Querying by name is not supported in version 15 of the Client Side Object Model
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="FeatureScope" data-throw-if-not-resolved="False" />
+  name: Scope
+  description: |+
+    The scope of the feature. Defaults to Web.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Web, Site
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Get-PnPFeature
+name: Get-PnPFeature
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Get-PnPFeature.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Get-PnPFeature

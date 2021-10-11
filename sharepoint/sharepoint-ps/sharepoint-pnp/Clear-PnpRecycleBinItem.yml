@@ -1,0 +1,113 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Clear-PnpRecycleBinItem.md to change this file.
+
+  Permanently deletes all or a specific recycle bin item
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Clear-PnPRecycleBinItem [-All] [-SecondStageOnly] [-Force] [-RowLimit <Int32>] [-Connection <PnPConnection>]
+
+   [<CommonParameters>]
+- >-
+  Clear-PnPRecycleBinItem -Identity <RecycleBinItemPipeBind> [-Force] [-Connection <PnPConnection>]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Get-PnPRecycleBinItem | Where-Object LeafName -like "*.docx" | Clear-PnpRecycleBinItem
+  description: |-
+    Permanently deletes all the items in the first and second stage recycle bins of which the file names have the .docx extension
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Clear-PnpRecycleBinItem -Identity 72e4d749-d750-4989-b727-523d6726e442
+  description: |-
+    Permanently deletes the recycle bin item with Id 72e4d749-d750-4989-b727-523d6726e442 from the recycle bin
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Clear-PnpRecycleBinItem -Identity $item -Force
+  description: |-
+    Permanently deletes the recycle bin item stored under variable $item from the recycle bin without asking for confirmation from the end user first
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    Clear-PnPRecycleBinItem -All -RowLimit 10000
+  description: |-
+    Permanently deletes up to 10,000 items in the recycle bin
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: All
+  description: |+
+    Clears all items
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    If provided, no confirmation will be asked to restore the recycle bin item
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="RecycleBinItemPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Id of the recycle bin item or the recycle bin item itself to permanently delete
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: RowLimit
+  description: |+
+    Limits deletion to specified number of items
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SecondStageOnly
+  description: |+
+    If provided, only all the items in the second stage recycle bin will be cleared
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Clear-PnPRecycleBinItem
+name: Clear-PnPRecycleBinItem
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Clear-PnpRecycleBinItem.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Clear-PnPRecycleBinItem

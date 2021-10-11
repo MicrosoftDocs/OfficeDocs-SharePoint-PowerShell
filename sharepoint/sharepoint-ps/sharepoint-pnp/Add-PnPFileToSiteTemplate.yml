@@ -1,0 +1,154 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPFileToSiteTemplate.md to change this file.
+
+  Adds a file to a PnP Provisioning Template
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Add-PnPFileToSiteTemplate [-Path] <String> [-Source] <String> [-Folder] <String>
+
+   [[-Container] <String>] [[-FileLevel] <FileLevel>] [-FileOverwrite]
+
+   [[-TemplateProviderExtensions] <ITemplateProviderExtension[]>] 
+
+   [-Connection <PnPConnection>] [<CommonParameters>]
+- >-
+  Add-PnPFileToSiteTemplate [-Path] <String> [-SourceUrl] <String> [[-Container] <String>]
+
+   [[-FileLevel] <FileLevel>] [-FileOverwrite] [[-TemplateProviderExtensions] <ITemplateProviderExtension[]>]
+
+   [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Add-PnPFileToSiteTemplate -Path template.pnp -Source $sourceFilePath -Folder $targetFolder
+  description: |-
+    Adds a file to a PnP Site Template
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Add-PnPFileToSiteTemplate -Path template.xml -Source $sourceFilePath -Folder $targetFolder
+  description: |-
+    Adds a file reference to a PnP Site XML Template
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Add-PnPFileToSiteTemplate -Path template.pnp -Source "./myfile.png" -Folder "folderinsite" -FileLevel Published -FileOverwrite:$false
+  description: |-
+    Adds a file to a PnP Site Template, specifies the level as Published and defines to not overwrite the file if it exists in the site.
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    Add-PnPFileToSiteTemplate -Path template.pnp -Source $sourceFilePath -Folder $targetFolder -Container $container
+  description: |-
+    Adds a file to a PnP Site Template with a custom container for the file
+  summary: ""
+- title: EXAMPLE 5
+  code: |-
+    Add-PnPFileToSiteTemplate -Path template.pnp -SourceUrl "Shared%20Documents/ProjectStatus.docs"
+  description: |-
+    Adds a file to a PnP Provisioning Template retrieved from the currently connected site. The url can be server relative or web relative. If specifying a server relative url has to start with the current site url.
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Container
+  description: |+
+    The target Container for the file to add to the in-memory template, optional argument.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="FileLevel" data-throw-if-not-resolved="False" />
+  name: FileLevel
+  description: |+
+    The level of the files to add. Defaults to Published
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: FileOverwrite
+  description: |+
+    Set to overwrite in site, Defaults to true
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Folder
+  isRequired: true
+  description: |+
+    The target Folder for the file to add to the in-memory template.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Filename of the .PNP Open XML site template to read from, optionally including full path.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Source
+  isRequired: true
+  description: |+
+    The file to add to the in-memory template, optionally including full path.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceUrl
+  isRequired: true
+  description: |+
+    The file to add to the in-memory template, specifying its url in the current connected Web.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ITemplateProviderExtension" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: TemplateProviderExtensions
+  description: |+
+    Allows you to specify ITemplateProviderExtension to execute while loading the template.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Add-PnPFileToSiteTemplate
+name: Add-PnPFileToSiteTemplate
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Add-PnPFileToSiteTemplate.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Add-PnPFileToSiteTemplate

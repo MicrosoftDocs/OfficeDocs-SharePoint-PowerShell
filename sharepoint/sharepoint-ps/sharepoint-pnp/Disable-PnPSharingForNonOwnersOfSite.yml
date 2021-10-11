@@ -1,0 +1,53 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Disable-PnPSharingForNonOwnersOfSite.md to change this file.
+
+  Configures the site to only allow sharing of the site and items in the site by owners
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Disable-PnPSharingForNonOwnersOfSite [-Identity <SitePipeBind>] [-Connection <PnPConnection>]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Disable-PnPSharingForNonOwnersOfSite
+  description: |-
+    Restricts sharing of the site and items in the site only to owners
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SitePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: ""
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: Url
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Disable-PnPSharingForNonOwnersOfSite
+name: Disable-PnPSharingForNonOwnersOfSite
+description: |-
+  Configures the site to only allow sharing of the site and items in the site by owners. At this point there is no interface available yet to undo this action through script. You will have to do so through the user interface of SharePoint.
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Disable-PnPSharingForNonOwnersOfSite.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Disable-PnPSharingForNonOwnersOfSite

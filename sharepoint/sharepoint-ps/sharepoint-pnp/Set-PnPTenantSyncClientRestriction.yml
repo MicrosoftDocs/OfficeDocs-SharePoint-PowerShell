@@ -1,0 +1,116 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPTenantSyncClientRestriction.md to change this file.
+
+
+  **Required Permissions**
+
+  * SharePoint: Access to the SharePoint Tenant Administration site
+
+  Sets organization-level sync client restriction properties
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Set-PnPTenantSyncClientRestriction [-BlockMacSync] [-DisableReportProblemDialog]
+
+   [-DomainGuids <System.Collections.Generic.List`1[System.Guid]>] [-Enable]
+
+   [-ExcludedFileExtensions <System.Collections.Generic.List`1[System.String]>]
+
+   [-GrooveBlockOption <GrooveBlockOption>] [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-PnPTenantSyncClientRestriction -BlockMacSync:$false
+  description: |-
+    This example blocks access to Mac sync clients for OneDrive file synchronization
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Set-PnPTenantSyncClientRestriction  -ExcludedFileExtensions "pptx;docx;xlsx"
+  description: |-
+    This example blocks syncing of PowerPoint, Word, and Excel file types using the new sync client (OneDrive.exe).
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: BlockMacSync
+  description: |+
+    Block Mac sync clients-- the Beta version and the new sync client (OneDrive.exe). The values for this parameter are $true and $false. The default value is $false.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableReportProblemDialog
+  description: |+
+    Specifies if the Report Problem Dialog is disabled or not.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Guid" data-throw-if-not-resolved="False" /><span>]</span>
+  name: DomainGuids
+  description: |+
+    Sets the domain GUID to add to the safe recipient list. Requires a minimum of 1 domain GUID. The maximum number of domain GUIDs allowed are 125. I.e. 634c71f6-fa83-429c-b77b-0dba3cb70b93,4fbc735f-0ac2-48ba-b035-b1ae3a480887.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Enable
+  description: |+
+    Enables the feature to block sync originating from domains that are not present in the safe recipients list.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.String" data-throw-if-not-resolved="False" /><span>]</span>
+  name: ExcludedFileExtensions
+  description: |+
+    Blocks certain file types from syncing with the new sync client (OneDrive.exe). Provide as one string separating the extensions using a semicolon (;). I.e. "docx;pptx"
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="GrooveBlockOption" data-throw-if-not-resolved="False" />
+  name: GrooveBlockOption
+  description: |+
+    Controls whether or not a tenant's users can sync OneDrive for Business libraries with the old OneDrive for Business sync client. The valid values are OptOut, HardOptin, and SoftOptin. GrooveBlockOption is planned to be deprecated. Please refrain from using the parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: OptOut, HardOptin, SoftOptin
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Set-PnPTenantSyncClientRestriction
+name: Set-PnPTenantSyncClientRestriction
+description: |-
+  Sets organization-level sync client restriction properties such as BlockMacSync, OptOutOfGroveBlock, and DisableReportProblemDialog.
+
+  You must have the SharePoint Online admin or Global admin role to run the cmdlet.
+metadata:
+  Module Name: PnP.PowerShell
+  title: Set-PnPTenantSyncClientRestriction
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Set-PnPTenantSyncClientRestriction.html

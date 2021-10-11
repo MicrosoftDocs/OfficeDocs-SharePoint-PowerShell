@@ -1,0 +1,105 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPPageSection.md to change this file.
+
+  Adds a new section to a page
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Add-PnPPageSection [-Page] <PagePipeBind> -SectionTemplate <CanvasSectionTemplate>
+
+   [-Order <Int32>] [-ZoneEmphasis <Int32>] [-Connection <PnPConnection>]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Add-PnPPageSection -Page "MyPage" -SectionTemplate OneColumn
+  description: |-
+    Adds a new one-column section to the page 'MyPage'
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Add-PnPPageSection -Page "MyPage" -SectionTemplate ThreeColumn -Order 10
+  description: |-
+    Adds a new Three columns section to the page 'MyPage' with an order index of 10
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    $page = Add-PnPPage -Name "MyPage"
+    PS> Add-PnPPageSection -Page $page -SectionTemplate OneColumn
+  description: |-
+    Adds a new one column section to the page 'MyPage'
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    $page = Add-PnPPage -Name "MyPage"
+    PS> Add-PnPPageSection -Page $page -SectionTemplate OneColumn -ZoneEmphasis 2
+  description: |-
+    Adds a new one column section to the page 'MyPage' and sets the background to 2 (0 is no background, 3 is highest emphasis)
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Order
+  description: |+
+    Sets the order of the section. (Default = 1)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PagePipeBind" data-throw-if-not-resolved="False" />
+  name: Page
+  isRequired: true
+  description: |+
+    The name of the page
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CanvasSectionTemplate" data-throw-if-not-resolved="False" />
+  name: SectionTemplate
+  isRequired: true
+  description: |+
+    Specifies the columns template to use for the section.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: OneColumn, OneColumnFullWidth, TwoColumn, ThreeColumn, TwoColumnLeft, TwoColumnRight, OneColumnVerticalSection, TwoColumnVerticalSection, ThreeColumnVerticalSection, TwoColumnLeftVerticalSection, TwoColumnRightVerticalSection
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ZoneEmphasis
+  description: |+
+    Sets the background of the section (default = 0)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Add-PnPPageSection
+name: Add-PnPPageSection
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Add-PnPPageSection.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Add-PnPPageSection

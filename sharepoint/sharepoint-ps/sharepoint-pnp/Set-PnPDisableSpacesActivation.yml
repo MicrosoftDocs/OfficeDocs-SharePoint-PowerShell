@@ -1,0 +1,77 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPDisableSpacesActivation.md to change this file.
+
+  Sets if SharePoint Spaces should be disabled
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- Set-PnPDisableSpacesActivation -Disable <SwitchParameter> [-Scope <String>] [-Identity <SitePipeBind>] [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-PnPDisableSpacesActivation -Disable $true -Scope Tenant
+  description: |-
+    Disables SharePoint Spaces on the entire tenant
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Set-PnPDisableSpacesActivation -Disable $true -Scope Site -Identity "https://contoso.sharepoint.com"
+  description: |-
+    Disables SharePoint Spaces on https://contoso.sharepoint.com
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Disable
+  isRequired: true
+  description: |+
+    Sets if SharePoint Spaces should be enabled or disabled
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SPOSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the URL of the SharePoint Site on which SharePoint Spaces should be disabled. Must be provided if Scope is set to Tenant.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DisableSpacesScope" data-throw-if-not-resolved="False" />
+  name: Scope
+  isRequired: true
+  description: |+
+    Defines if SharePoint Spaces should be disabled for the entire tenant or for a specific site collection
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Tenant, Site
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Set-PnPDisableSpacesActivation
+name: Set-PnPDisableSpacesActivation
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  title: Set-PnPDisableSpacesActivation
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Set-PnPDisableSpacesActivation.html

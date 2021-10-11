@@ -1,0 +1,131 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPHubSite.md to change this file.
+
+
+  **Required Permissions**
+
+  * SharePoint: Access to the SharePoint Tenant Administration site
+
+  Sets hub site properties
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Set-PnPHubSite [-Identity] <HubSitePipeBind> [-Title <String>] [-LogoUrl <String>] [-Description <String>]
+
+   [-SiteDesignId <Guid>] [-HideNameInNavigation] [-RequiresJoinApproval] [-Connection <PnPConnection>]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-PnPHubSite -Identity "https://tenant.sharepoint.com/sites/myhubsite" -Title "My New Title"
+  description: |-
+    Sets the title of the hub site
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Set-PnPHubSite -Identity "https://tenant.sharepoint.com/sites/myhubsite" -Description "My updated description"
+  description: |-
+    Sets the description of the hub site
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Set-PnPHubSite -Identity "https://tenant.sharepoint.com/sites/myhubsite" -SiteDesignId df8a3ef1-9603-44c4-abd9-541aea2fa745
+  description: |-
+    Sets the site design which should be applied to sites joining the the hub site
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    Set-PnPHubSite -Identity "https://tenant.sharepoint.com/sites/myhubsite" -LogoUrl "https://tenant.sharepoint.com/SiteAssets/Logo.png"
+  description: |-
+    Sets the logo of the hub site
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    {{ Fill Description Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: HideNameInNavigation
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="HubSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    {{ Fill Identity Description }}
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: HubSite
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogoUrl
+  description: |+
+    {{ Fill LogoUrl Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RequiresJoinApproval
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: SiteDesignId
+  description: |+
+    GUID of the SharePoint Site Design which should be applied when a site joins the hub site
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Title
+  description: |+
+    {{ Fill Title Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Set-PnPHubSite
+name: Set-PnPHubSite
+description: |-
+  Allows configuring a hub site
+metadata:
+  Module Name: PnP.PowerShell
+  title: Set-PnPHubSite
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Set-PnPHubSite.html

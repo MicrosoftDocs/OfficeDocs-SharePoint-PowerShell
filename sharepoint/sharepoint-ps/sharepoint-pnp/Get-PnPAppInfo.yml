@@ -1,0 +1,68 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPAppInfo.md to change this file.
+
+  Returns information about installed apps.
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- Get-PnPAppInfo -ProductId <Guid>
+- Get-PnPAppInfo -Name <String>
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Get-PnPAppInfo -Name "Excel Service"
+  description: |-
+    This will return all installed apps from the external marketplace or from the App Catalog that contain "Excel Service" in the application name.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Get-PnPAppInfo -ProductId 2646ccc3-6a2b-46ef-9273-81411cbbb60f
+  description: |-
+    This will return the installed application info for the app with the given product id.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Get-PnPAppInfo -Name " " | Sort -Property Name
+  description: |-
+    Returns all installed apps that have a space in the name and sorts them by name in ascending order.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the application's name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: ProductId
+  isRequired: true
+  description: |+
+    Specifies the id of an application
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Get-PnPAppInfo
+name: Get-PnPAppInfo
+description: |-
+  The Get-PnPAppInfo cmdlet gets all the installed applications from an external marketplace or from the App Catalog that contain `Name` in their application names or the installed application with mentioned `ProductId`.
+
+  The returned collection of installed applications contains Product ID (GUID), Product name and Source.
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Get-PnPAppInfo.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Get-PnPAppInfo

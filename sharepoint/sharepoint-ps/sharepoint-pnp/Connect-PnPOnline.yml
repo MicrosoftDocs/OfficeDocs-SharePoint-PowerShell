@@ -1,0 +1,428 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Connect-PnPOnline.md to change this file.
+
+  Connect to a SharePoint site
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Connect-PnPOnline [-ReturnConnection] [-Url] <String> [-Credentials <CredentialPipeBind>] [-CurrentCredentials]
+
+   [-CreateDrive] [-DriveName <String>] [-ClientId <String>] [-RedirectUri <String>]
+
+   [-AzureEnvironment <AzureEnvironment>] [-TenantAdminUrl <String>]
+
+   [-TransformationOnPrem] [<CommonParameters>]
+- >-
+  Connect-PnPOnline [-ReturnConnection] [-Url] <String> [-Realm <String>] -ClientSecret <String> [-CreateDrive]
+
+   [-DriveName <String>] -ClientId <String> [-AzureEnvironment <AzureEnvironment>] [-TenantAdminUrl <String>]
+
+   [<CommonParameters>]
+- >-
+  Connect-PnPOnline [-ReturnConnection] [-Url] <String> [-CreateDrive] [-DriveName <String>] -ClientId <String>
+
+   -Tenant <String> [-CertificatePath <String>] [-CertificateBase64Encoded <String>]
+
+   [-CertificatePassword <SecureString>] [-AzureEnvironment <AzureEnvironment>] [-TenantAdminUrl <String>]
+
+   [<CommonParameters>]
+- >-
+  Connect-PnPOnline [-ReturnConnection] [-Url] <String> [-CreateDrive] [-DriveName <String>] -ClientId <String>
+
+   -Tenant <String> -Thumbprint <String> [-AzureEnvironment <AzureEnvironment>] [-TenantAdminUrl <String>]
+
+   [<CommonParameters>]
+- >-
+  Connect-PnPOnline [-ReturnConnection] [-Url] <String> [-CreateDrive] [-DriveName <String>] [-DeviceLogin]
+
+   [-LaunchBrowser] [-ClientId <String>] [-AzureEnvironment <AzureEnvironment>] 
+
+   [<CommonParameters>]
+- >-
+  Connect-PnPOnline [-ReturnConnection] [-Url] <String> [-CreateDrive] [-DriveName <String>]
+
+   [-TenantAdminUrl <String>] [-UseWebLogin] [-ForceAuthentication]
+
+   [<CommonParameters>]
+- >-
+  Connect-PnPOnline -Interactive [-ReturnConnection] -Url <String> [-CreateDrive] [-DriveName <String>] [-LaunchBrowser]
+
+   [-ClientId <String>] [-AzureEnvironment <AzureEnvironment>] [-TenantAdminUrl <String>] [-ForceAuthentication]  [<CommonParameters>]
+- Connect-PnPOnline -Url <String> -TransformationOnPrem [-CurrentCredential]
+- Connect-PnPOnline [-ReturnConnection] [-Url] <String> [-AzureEnvironment <AzureEnvironment>] -AccessToken <String> [<CommonParameters>]
+- Connect-PnPOnline [-NoTelemetry] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Connect-PnPOnline -Url "https://contoso.sharepoint.com"
+  description: |-
+    Connect to SharePoint prompting for the username and password.
+    When a generic credential is added to the Windows Credential Manager with https://contoso.sharepoint.com, PowerShell will not prompt for username and password and use those stored credentials instead.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Connect-PnPOnline -Url "https://contoso.sharepoint.com" -Credentials (Get-Credential)
+  description: |-
+    Connect to SharePoint prompting for the username and password to use to authenticate
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Connect-PnPOnline -Url "https://contoso.sharepoint.de" -ClientId 344b8aab-389c-4e4a-8fa1-4c1ae2c0a60d -ClientSecret $clientSecret
+  description: |-
+    This will authenticate you to the site using Legacy ACS authentication
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    Connect-PnPOnline -Url "https://contoso.sharepoint.com" -DeviceLogin
+  description: |-
+    This will authenticate you using the PnP Management Shell Multi-Tenant application.
+    A browser window will have to be opened where you have to enter a code that is shown in your PowerShell window.
+  summary: ""
+- title: EXAMPLE 5
+  code: |-
+    Connect-PnPOnline -Url "https://contoso.sharepoint.com" -DeviceLogin -LaunchBrowser
+  description: |-
+    This will authenticate you using the PnP Management Shell Multi-Tenant application.
+    A browser window will automatically open and the code you need to enter will be automatically copied to your clipboard.
+  summary: ""
+- title: EXAMPLE 6
+  code: |-
+    $password = (ConvertTo-SecureString -AsPlainText 'myprivatekeypassword' -Force)
+    Connect-PnPOnline -Url "https://contoso.sharepoint.com" -ClientId 6c5c98c7-e05a-4a0f-bcfa-0cfc65aa1f28 -CertificatePath 'c:\mycertificate.pfx' -CertificatePassword $password  -Tenant 'contoso.onmicrosoft.com'
+  description: |-
+    Connects using an Azure Active Directory registered application using a locally available certificate containing a private key.
+    See https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/security-apponly-azuread for a sample on how to get started.
+  summary: ""
+- title: EXAMPLE 7
+  code: |-
+    Connect-PnPOnline -Url "https://contoso.sharepoint.com" -ClientId 6c5c98c7-e05a-4a0f-bcfa-0cfc65aa1f28 -Tenant 'contoso.onmicrosoft.com' -Thumbprint 34CFAA860E5FB8C44335A38A097C1E41EEA206AA
+  description: |-
+    Connects to SharePoint using app-only tokens via an app's declared permission scopes.
+    See https://github.com/SharePoint/PnP-PowerShell/tree/master/Samples/SharePoint.ConnectUsingAppPermissions for a sample on how to get started.
+    Ensure you have imported the private key certificate, typically the .pfx file, into the Windows Certificate Store for the certificate with the provided thumbprint.
+  summary: ""
+- title: EXAMPLE 8
+  code: |-
+    Connect-PnPOnline -Url "https://contoso.sharepoint.com" -ClientId 6c5c98c7-e05a-4a0f-bcfa-0cfc65aa1f28 -CertificateBase64Encoded $base64encodedstring -Tenant 'contoso.onmicrosoft.com'
+  description: |-
+    Connects using an Azure Active Directory registered application using a certificate with a private key that has been base64 encoded.
+    See https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/security-apponly-azuread for a sample on how to get started.
+  summary: ""
+- title: EXAMPLE 9
+  code: |-
+    Connect-PnPOnline -Url "https://contoso.sharepoint.com" -UseWebLogin
+  description: |-
+    Note: See Example 10 as this is a preferred option over using -UseWebLogin.
+
+    Connects to SharePoint using legacy cookie based authentication.
+    Notice this type of authentication is limited in its functionality.
+    We will for instance not be able to acquire an access token for the Graph, and as a result none of the Graph related cmdlets will work.
+    Also some of the functionality of the provisioning engine (Get-PnPSiteTemplate, Get-PnPTenantTemplate, Invoke-PnPSiteTemplate, Invoke-PnPTenantTemplate) will not work because of this reason.
+    The cookies will in general expire within a few days and if you use -UseWebLogin within that time popup window will appear that will dissappear immediately, this is expected.
+    Use -ForceAuthentication to reset the authentication cookies and force a new login.
+    See example 10 for a full support for interactive logins using MFA and the ability to acquire Graph tokens.
+  summary: ""
+- title: EXAMPLE 10
+  code: |-
+    Connect-PnPOnline -Url "https://contoso.sharepoint.com" -Interactive
+  description: |-
+    Connects to the Azure AD, acquires an access token and allows PnP PowerShell to access both SharePoint and the Microsoft Graph.
+    By default it will use the PnP Management Shell multi-tenant application behind the scenes, so make sure to run \`Register-PnPManagementShellAccess\` first.
+  summary: ""
+- title: EXAMPLE 11
+  code: |-
+    Connect-PnPOnline -Url "https://portal.contoso.com" -TransformationOnPrem -CurrentCredential
+  description: |-
+    Connects to on-premises SharePoint 2013, 2016 or 2019 site with the current user's on-premises Windows credential (e.g.
+    domain\user).
+    This option is only supported for being able to transform on-premises classic wiki, webpart, blog and publishing pages into modern pages in a SharePoint Online site.
+    Although other PnP cmdlets might work as well, they're officially not supported for being used in an on-premises context.
+    See http://aka.ms/sharepoint/modernization/pages for more details on page transformation.
+  summary: ""
+- title: EXAMPLE 12
+  code: |-
+    Connect-PnPOnline -ManagedIdentity
+    Get-PnPTeamsTeam
+  description: |-
+    Using this way of connecting only works with environments that support managed identies: Azure Functions and the Azure Cloud Shell.
+    You cannot access SharePoint artifacts using this connection method: only the cmdlets that use the Microsoft Graph or Azure AD resources behind the scenes will work: Teams cmdlets, Flow cmdlets, Planner cmdlets and the Microsoft 365 Group cmdlets.
+  summary: ""
+- title: EXAMPLE 13
+  code: |-
+    Connect-PnPOnline -Url https://contoso.sharepoint.com -AccessToken $token
+  description: |-
+    This method assumes you have acquired a valid OAuth2 access token from Azure AD with the correct audience and permissions set.
+    Using this method PnP PowerShell will not acquire tokens dynamically and if the token expires (typically after 1 hour) cmdlets will fail to work using this method.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AccessToken
+  isRequired: true
+  description: |+
+    Using this parameter you can provide your own access token.
+    Notice that it is recommend to use one of the other connection methods as this will limits the offered functionality on PnP PowerShell.
+    For instance if the token expires (typically after 1 hour) will not be able to acquire a new valid token, which the other connection methods do allow.
+    You are fully responsible for providing your own valid token, for the correct audience, with the correct permissions scopes.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AzureEnvironment" data-throw-if-not-resolved="False" />
+  name: AzureEnvironment
+  description: |+
+    The Azure environment to use for authentication, the defaults to 'Production' which is the main Azure environment.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Production, PPE, China, Germany, USGovernment, USGovernmentHigh, USGovernmentDoD
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificateBase64Encoded
+  description: |+
+    Specify a base64 encoded string as representing the private certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: CertificatePassword
+  description: |+
+    Password to the certificate (*.pfx)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CertificatePath
+  description: |+
+    Path to the certificate containing the private key (*.pfx)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClientId
+  isRequired: true
+  description: |+
+    The Client ID of the Azure AD Application
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClientSecret
+  isRequired: true
+  description: |+
+    The client secret to use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CreateDrive
+  description: |+
+    If you want to create a PSDrive connected to the URL
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CredentialPipeBind" data-throw-if-not-resolved="False" />
+  name: Credentials
+  description: |+
+    Credentials of the user to connect with.
+    Either specify a PSCredential object or a string.
+    In case of a string value a lookup will be done to the Generic Credentials section of the Windows Credentials in the Windows Credential Manager for the correct credentials.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DeviceLogin
+  isRequired: true
+  description: |+
+    Log in using the Device Code flow.
+    By default it will use the PnP Management Shell multi-tenant Azure AD application registration.
+    You will be asked to consent to:
+
+    * Read and write managed metadata
+    * Have full control of all site collections
+    * Read user profiles
+    * Invite guest users to the organization
+    * Read and write all groups
+    * Read and write directory data
+    * Read and write identity providers
+    * Access the directory as you
+
+  defaultValue: "False"
+  position: Named
+  aliases: PnPManagementShell, PnPO365ManagementShell
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DriveName
+  description: |+
+    Name of the PSDrive to create (default: SPO)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ForceAuthentication
+  description: |+
+    Will clear the stored authentication information when using -UseWebLogin (Windows Only) or -Interactive (all platforms) and allows you to authenticate again towards a site with different credentials.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Interactive
+  isRequired: true
+  description: |+
+    Connects to the Azure AD using interactive login, allowing you to authenticate using multi-factor authentication.
+    This parameter has preference over \`-UseWebLogin\`.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LaunchBrowser
+  description: |+
+    Launch a browser automatically and copy the code to enter to the clipboard
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ManagedIdentity
+  description: |+
+    For use with Azure Functions (if configured to use a managed identity) or Azure Cloud Shell only.
+    This method will acquire a token using the built-in endpoints in the Azure Cloud Shell and Azure Functions.
+    Notice that using this connection method will not allow you to access SharePoint artifacts due to limitations of token acquisition.
+    It will however allow you to use the Teams cmdlets, Flow cmdlets, Planner cmdlets and Microsoft 365 Group cmdlets.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Realm
+  description: |+
+    Authentication realm.
+    If not specified will be resolved from the url specified.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RedirectUri
+  description: |+
+    The Redirect URI of the Azure AD Application
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ReturnConnection
+  description: |+
+    Returns the connection for use with the -Connection parameter on cmdlets.
+
+  defaultValue: "False"
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Tenant
+  isRequired: true
+  description: |+
+    The Azure AD Tenant name,e.g.
+    mycompany.onmicrosoft.com
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TenantAdminUrl
+  description: |+
+    The url to the Tenant Admin site.
+    If not specified, the cmdlets will assume to connect automatically to https://\[tenantname\]-admin.sharepoint.com where appropriate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Thumbprint
+  isRequired: true
+  description: |+
+    The thumbprint of the certificate containing the private key registered with the application in Azure Active Directory
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: TransformationOnPrem
+  description: |+
+    If you want to the use page transformation cmdlets, setting this switch will allow you to connect to an on-prem server.
+    Notice that this -only- applies to Transformation cmdlets.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Url
+  isRequired: true
+  description: |+
+    The Url of the site collection to connect to
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseWebLogin
+  isRequired: true
+  description: |+
+    Windows only: Connects to SharePoint using legacy cookie based authentication.
+    Notice this type of authentication is limited in its functionality.
+    We will for instance not be able to acquire an access token for the Graph, and as a result none of the Graph related cmdlets will work.
+    Also some of the functionality of the provisioning engine (Get-PnPSiteTemplate, Get-PnPTenantTemplate, Invoke-PnPSiteTemplate, Invoke-PnPTenantTemplate) will not work because of this reason.
+    The cookies will in general expire within a few days and if you use -UseWebLogin within that time popup window will appear that will dissappear immediately, this is expected.
+    Use -ForceAuthentication to reset the authentication cookies and force a new login.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: PnP.Powershell.Connect-PnPOnline
+name: Connect-PnPOnline
+description: |-
+  Connects to a SharePoint site or another API and creates a context that is required for the other PnP Cmdlets.
+  See https://pnp.github.io/powershell/articles/connecting.html for more information on the options to connect.
+metadata:
+  external help file: PnP.PowerShell.dll-Help.xml
+  Module Name: PnP.PowerShell
+  online version: https://pnp.github.io/powershell/cmdlets/connect-pnponline.html
+  schema: 2.0.0

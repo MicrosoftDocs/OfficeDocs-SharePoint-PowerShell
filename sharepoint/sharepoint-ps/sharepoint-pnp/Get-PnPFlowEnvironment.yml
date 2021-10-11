@@ -1,0 +1,39 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPFlowEnvironment.md to change this file.
+
+  Retrieves the Microsoft Flow environments for the current tenant.
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- Get-PnPFlowEnvironment [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-PnPFlowEnvironment
+  description: |-
+    This cmdlets returns the flow environments for the current tenant.
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet.
+    Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: PnP.Powershell.Get-PnPFlowEnvironment
+name: Get-PnPFlowEnvironment
+description: |-
+  This cmdlet retrieves the Microsoft Flow environments for the current tenant
+metadata:
+  online version: https://pnp.github.io/powershell/cmdlets/Get-PnPFlowEnvironment.html
+  Module Name: PnP.PowerShell
+  external help file: PnP.PowerShell.dll-Help.xml
+  schema: 2.0.0

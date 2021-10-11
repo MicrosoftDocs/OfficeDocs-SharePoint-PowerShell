@@ -1,0 +1,82 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPFolder.md to change this file.
+
+  Return a folder object
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp)[Resolve-PnPFolder](https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/sharepoint/sharepoint-ps/sharepoint-pnp/Resolve-PnPFolder.md
+syntaxes:
+- >-
+  Get-PnPFolder [-Url] <String> [-Connection <PnPConnection>] [-Includes <String[]>]
+
+   [<CommonParameters>]
+- >-
+  Get-PnPFolder [-List] <ListPipeBind> [-Connection <PnPConnection>] [-Includes <String[]>]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Get-PnPFolder -Url "Shared Documents"
+  description: |-
+    Returns the folder called 'Shared Documents' which is located in the root of the current web
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Get-PnPFolder -Url "/sites/demo/Shared Documents"
+  description: |-
+    Returns the folder called 'Shared Documents' which is located in the root of the current web
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Get-PnPFolder -List "Shared Documents"
+  description: |-
+    Returns the folder(s) residing inside a folder called 'Shared Documents'
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ListPipeBind" data-throw-if-not-resolved="False" />
+  name: List
+  isRequired: true
+  description: |+
+    Name, ID or instance of a list or document library to retrieve the folders residing in it for.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Url
+  isRequired: true
+  description: |+
+    Site or server relative URL of the folder to retrieve. In the case of a server relative url, make sure that the url starts with the managed path as the current web.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: RelativeUrl
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Get-PnPFolder
+name: Get-PnPFolder
+description: |-
+  Retrieves a folder if it exists or all folders inside a provided list or library. Use Resolve-PnPFolder to create the folder if it does not exist.
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Get-PnPFolder.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Get-PnPFolder

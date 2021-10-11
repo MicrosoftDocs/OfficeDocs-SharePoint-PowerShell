@@ -1,0 +1,111 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPApplicationCustomizer.md to change this file.
+
+  Adds a SharePoint Framework client side extension application customizer
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Add-PnPApplicationCustomizer [-Title <String>] [-Description <String>] [-Sequence <Int32>]
+
+   [-Scope <CustomActionScope>] -ClientSideComponentId <Guid> [-ClientSideComponentProperties <String>]
+
+   [-ClientSideHostProperties <String>] [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Add-PnPApplicationCustomizer -Title "CollabFooter" -ClientSideComponentId c0ab3b94-8609-40cf-861e-2a1759170b43 -ClientSideComponentProperties "{`"sourceTermSet`":`"PnP-CollabFooter-SharedLinks`",`"personalItemsStorageProperty`":`"PnP-CollabFooter-MyLinks`"}
+  description: |-
+    Adds a new application customizer to the current web. This requires that a SharePoint Framework solution has been deployed containing the application customizer specified in its manifest. Be sure to run Install-PnPApp before trying this cmdlet on a site.
+  summary: ""
+parameters:
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: ClientSideComponentId
+  isRequired: true
+  description: |+
+    The Client Side Component Id of the SharePoint Framework client side extension application customizer found in the manifest
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClientSideComponentProperties
+  description: |+
+    The Client Side Component Properties of the application customizer. Specify values as a json string : "{Property1 : 'Value1', Property2: 'Value2'}"
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClientSideHostProperties
+  description: |+
+    The Client Side Host Properties of the application customizer. Specify values as a json string : "{'preAllocatedApplicationCustomizerTopHeight': '50', 'preAllocatedApplicationCustomizerBottomHeight': '50'}"
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    The description of the application customizer
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CustomActionScope" data-throw-if-not-resolved="False" />
+  name: Scope
+  description: |+
+    The scope of the CustomAction to add to. Either Web or Site; defaults to Web. 'All' is not valid for this command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Web, Site, All
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Sequence
+  description: |+
+    Sequence of this application customizer being injected. Use when you have a specific sequence with which to have multiple application customizers being added to the page.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Title
+  description: |+
+    The title of the application customizer
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Add-PnPApplicationCustomizer
+name: Add-PnPApplicationCustomizer
+description: |-
+  Adds a SharePoint Framework client side extension application customizer by registering a user custom action to a web or sitecollection
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Add-PnPApplicationCustomizer.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Add-PnPApplicationCustomizer

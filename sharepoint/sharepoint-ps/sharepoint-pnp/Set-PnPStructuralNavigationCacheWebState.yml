@@ -1,0 +1,58 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPStructuralNavigationCacheWebState.md to change this file.
+
+  Enable or disable caching for all webs in a site collection.
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- Set-PnPStructuralNavigationCacheWebState -IsEnabled <Boolean> [-WebUrl <String>]
+examples:
+- title: Example 1
+  code: |-
+    Set-PnPStructuralNavigationCacheWebState -IsEnabled $true -WebUrl "https://contoso.sharepoint.com/sites/product/electronics"
+  description: |-
+    This example enables caching for the web https://contoso.sharepoint.com/sites/product/electronics.
+  summary: ""
+- title: Example 1
+  code: |-
+    Set-PnPStructuralNavigationCacheSiteState -IsEnabled $false -SiteUrl "https://contoso.sharepoint.com/sites/product/electronics"
+  description: |-
+    This example disabled caching for all webs in the web https://contoso.sharepoint.com/sites/product/electronics.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsEnabled
+  isRequired: true
+  description: |+
+    $true to enable caching, $false to disable caching.. 
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SiteUrl
+  description: |+
+    Specifies the absolute URL for the web that needs its caching state set.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Set-PnPStructuralNavigationCacheWebState
+name: Set-PnPStructuralNavigationCacheWebState
+description: |-
+  The Set-PnPStructuralNavigationCacheWebtate cmdlet can be used to enable or disable caching for a webs in a site collection. If the WebUrl parameter has not been specified the currently connected to site will be used.
+metadata:
+  Module Name: PnP.PowerShell
+  title: Set-PnPStructuralNavigationCacheWebState
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Set-PnPStructuralNavigationCacheWebState.html

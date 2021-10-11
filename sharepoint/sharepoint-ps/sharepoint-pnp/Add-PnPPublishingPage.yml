@@ -1,0 +1,97 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPPublishingPage.md to change this file.
+
+  Adds a publishing page
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Add-PnPPublishingPage -PageName <String> [-FolderPath <String>] -PageTemplateName <String> [-Title <String>]
+
+   [-Publish] [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Add-PnPPublishingPage -PageName 'OurNewPage' -Title 'Our new page' -PageTemplateName 'ArticleLeft'
+  description: |-
+    Creates a new page based on the pagelayout 'ArticleLeft'
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Add-PnPPublishingPage -PageName 'OurNewPage' -Title 'Our new page' -PageTemplateName 'ArticleLeft' -Folder '/Pages/folder'
+  description: |-
+    Creates a new page based on the pagelayout 'ArticleLeft' with a site relative folder path
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FolderPath
+  description: |+
+    The site relative folder path of the page to be added
+
+  defaultValue: None
+  position: Named
+  aliases: Folder
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PageName
+  isRequired: true
+  description: |+
+    The name of the page to be added as an aspx file
+
+  defaultValue: None
+  position: Named
+  aliases: Name
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PageTemplateName
+  isRequired: true
+  description: |+
+    The name of the page layout you want to use. Specify without the .aspx extension. So 'ArticleLeft' or 'BlankWebPartPage'
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Publish
+  description: |+
+    Publishes the page. Also Approves it if moderation is enabled on the Pages library.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Title
+  description: |+
+    The title of the page
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Add-PnPPublishingPage
+name: Add-PnPPublishingPage
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Add-PnPPublishingPage.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Add-PnPPublishingPage

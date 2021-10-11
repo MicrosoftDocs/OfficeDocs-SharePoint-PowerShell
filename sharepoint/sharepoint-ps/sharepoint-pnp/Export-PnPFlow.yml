@@ -1,0 +1,135 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Export-PnPFlow.md to change this file.
+
+  Exports the Flow
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Export-PnPFlow -Environment <PowerAutomateEnvironmentPipeBind> -Identity <PowerAutomateFlowPipeBind>
+
+   [-AsZipPackage] [-PackageDisplayName <String>] [-PackageDescription <String>] [-PackageCreatedBy <String>]
+
+   [-PackageSourceEnvironment <String>] [-OutPath <String>] [-Force] [-Connection <PnPConnection>]
+
+   [<CommonParameters>]
+- >-
+  Export-PnPFlow -Environment <PowerAutomateEnvironmentPipeBind> -Identity <PowerAutomateFlowPipeBind>
+
+   [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    $environment = Get-PnPFlowEnvironment
+    Export-PnPFlow -Environment $environment -Identity fba63225-baf9-4d76-86a1-1b42c917a182
+  description: |-
+    This will export the specified flow as an output to the current output of PowerShell
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AsZipPackage
+  isRequired: true
+  description: |+
+    If specified the flow will be exported as a zip package
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet.
+    Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PowerAutomateEnvironmentPipeBind" data-throw-if-not-resolved="False" />
+  name: Environment
+  isRequired: true
+  description: |+
+    The environment which contains the flow.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    If specified and the file exported already exists it will be overwritten without confirmation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PowerAutomateFlowPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The name/id of flow or a flow object to export
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OutPath
+  description: |+
+    Optional file name of the file to export to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PackageCreatedBy
+  description: |+
+    The name of the person to be used as the creator of the exported package
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PackageDescription
+  description: |+
+    The description to use in the exported package
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PackageDisplayName
+  description: |+
+    The display name to use in the exported package
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PackageSourceEnvironment
+  description: |+
+    The name of the source environment from which the exported package was taken
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: PnP.Powershell.Export-PnPFlow
+name: Export-PnPFlow
+description: |-
+  This cmdlet exports a flow either as a json file or as a zip package.
+metadata:
+  online version: https://pnp.github.io/powershell/cmdlets/Export-PnPFlow.html
+  Module Name: PnP.PowerShell
+  external help file: PnP.PowerShell.dll-Help.xml
+  schema: 2.0.0

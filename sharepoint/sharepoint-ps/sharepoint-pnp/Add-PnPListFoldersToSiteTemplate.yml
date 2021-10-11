@@ -1,0 +1,105 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPListFoldersToSiteTemplate.md to change this file.
+
+  Adds folders to a list in a PnP Provisioning Template
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Add-PnPListFoldersToSiteTemplate [-Path] <String> [-List] <ListPipeBind> [-Recursive]
+
+   [-IncludeSecurity] [[-TemplateProviderExtensions] <ITemplateProviderExtension[]>] 
+
+   [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Add-PnPListFoldersToSiteTemplate -Path template.pnp -List 'PnPTestList'
+  description: |-
+    Adds top level folders from a list to an existing template and returns an in-memory PnP Site Template
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Add-PnPListFoldersToSiteTemplate -Path template.pnp -List 'PnPTestList' -Recursive
+  description: |-
+    Adds all folders from a list to an existing template and returns an in-memory PnP Site Template
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Add-PnPListFoldersToSiteTemplate -Path template.pnp -List 'PnPTestList' -Recursive -IncludeSecurity
+  description: |-
+    Adds all folders from a list with unique permissions to an in-memory PnP Site Template
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeSecurity
+  description: |+
+    A switch to include ObjectSecurity information.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ListPipeBind" data-throw-if-not-resolved="False" />
+  name: List
+  isRequired: true
+  description: |+
+    The list to query
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Filename of the .PNP Open XML site template to read from, optionally including full path.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Recursive
+  description: |+
+    A switch parameter to include all folders in the list, or just top level folders.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ITemplateProviderExtension" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: TemplateProviderExtensions
+  description: |+
+    Allows you to specify ITemplateProviderExtension to execute while loading the template.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Add-PnPListFoldersToSiteTemplate
+name: Add-PnPListFoldersToSiteTemplate
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Add-PnPListFoldersToSiteTemplate.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Add-PnPListFoldersToSiteTemplate

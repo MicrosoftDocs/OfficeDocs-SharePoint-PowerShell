@@ -1,0 +1,157 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPListItemPermission.md to change this file.
+
+  Sets list item permissions. Use Get-PnPRoleDefinition to retrieve all available roles you can add or remove using this cmdlet.
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Set-PnPListItemPermission [-List] <ListPipeBind> -Identity <ListItemPipeBind> -User <String>
+
+   [-AddRole <String>] [-RemoveRole <String>] [-ClearExisting] [-SystemUpdate] 
+
+   [-Connection <PnPConnection>] [<CommonParameters>]
+- >-
+  Set-PnPListItemPermission [-List] <ListPipeBind> -Identity <ListItemPipeBind> -Group <GroupPipeBind>
+
+   [-AddRole <String>] [-RemoveRole <String>] [-ClearExisting] [-SystemUpdate] 
+
+   [-Connection <PnPConnection>] [<CommonParameters>]
+- >-
+  Set-PnPListItemPermission [-List] <ListPipeBind> -Identity <ListItemPipeBind> [-InheritPermissions]
+
+   [-SystemUpdate] [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-PnPListItemPermission -List 'Documents' -Identity 1 -User 'user@contoso.com' -AddRole 'Contribute'
+  description: |-
+    Adds the 'Contribute' permission to the user 'user@contoso.com' for listitem with id 1 in the list 'Documents'
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Set-PnPListItemPermission -List 'Documents' -Identity 1 -User 'user@contoso.com' -RemoveRole 'Contribute'
+  description: |-
+    Removes the 'Contribute' permission to the user 'user@contoso.com' for listitem with id 1 in the list 'Documents'
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Set-PnPListItemPermission -List 'Documents' -Identity 1 -User 'user@contoso.com' -AddRole 'Contribute' -ClearExisting
+  description: |-
+    Adds the 'Contribute' permission to the user 'user@contoso.com' for listitem with id 1 in the list 'Documents' and removes all other permissions
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    Set-PnPListItemPermission -List 'Documents' -Identity 1 -InheritPermissions
+  description: |-
+    Resets permissions for listitem with id 1 to inherit permissions from the list 'Documents'
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AddRole
+  description: |+
+    The role that must be assigned to the group or user
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ClearExisting
+  description: |+
+    Clear all existing permissions
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="GroupPipeBind" data-throw-if-not-resolved="False" />
+  name: Group
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ListItemPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The ID of the listitem, or actual ListItem object
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: InheritPermissions
+  description: |+
+    Inherit permissions from the list, removing unique permissions
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ListPipeBind" data-throw-if-not-resolved="False" />
+  name: List
+  isRequired: true
+  description: |+
+    The ID, Title or Url of the list.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RemoveRole
+  description: |+
+    The role that must be removed from the group or user
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SystemUpdate
+  description: |+
+    Update the item permissions without creating a new version or triggering MS Flow.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: User
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Set-PnPListItemPermission
+name: Set-PnPListItemPermission
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  title: Set-PnPListItemPermission
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Set-PnPListItemPermission.html

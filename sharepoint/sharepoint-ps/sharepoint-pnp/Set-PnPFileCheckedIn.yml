@@ -1,0 +1,88 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPFileCheckedIn.md to change this file.
+
+  Checks in a file
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Set-PnPFileCheckedIn [-Url] <String> [-CheckinType <CheckinType>] [-Comment <String>] [-Approve]
+
+   [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-PnPFileCheckedIn -Url "/Documents/Contract.docx"
+  description: |-
+    Checks in the file "Contract.docx" in the "Documents" library
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Set-PnPFileCheckedIn -Url "/Documents/Contract.docx" -CheckinType MinorCheckin -Comment "Smaller changes"
+  description: |-
+    Checks in the file "Contract.docx" in the "Documents" library as a minor version and adds the check in comment "Smaller changes"
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Approve
+  description: |+
+    Approve file
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CheckinType" data-throw-if-not-resolved="False" />
+  name: CheckinType
+  description: |+
+    The check in type to use. Defaults to Major
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: MinorCheckIn, MajorCheckIn, OverwriteCheckIn
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Comment
+  description: |+
+    The check in comment
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Url
+  isRequired: true
+  description: |+
+    The server relative url of the file to check in
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Set-PnPFileCheckedIn
+name: Set-PnPFileCheckedIn
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  title: Set-PnPFileCheckedIn
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Set-PnPFileCheckedIn.html

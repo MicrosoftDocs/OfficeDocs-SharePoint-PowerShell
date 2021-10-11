@@ -1,0 +1,57 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Reset-PnPUserOneDriveQuotaToDefault.md to change this file.
+
+
+  **Required Permissions**
+
+  * SharePoint: Access to the SharePoint Tenant Administration site
+
+  Resets the current quota set on the OneDrive for Business site for a specific user to the tenant default
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- Reset-PnPUserOneDriveQuotaToDefault [-Account] <String> [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Reset-PnPUserOneDriveQuotaToDefault -Account 'user@domain.com'
+  description: |-
+    Resets the quota set on the OneDrive for Business site for the specified user to the tenant default
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Account
+  isRequired: true
+  description: |+
+    The account of the user, formatted either as a login name, or as a claims identity, e.g. i:0#.f|membership|user@domain.com
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Reset-PnPUserOneDriveQuotaToDefault
+name: Reset-PnPUserOneDriveQuotaToDefault
+description: |-
+  This command allows you to reset the quota set on the OneDrive for Business site of a specific user to the default as set on the tenant. You must connect to the tenant admin website (https://:<tenant>-admin.sharepoint.com) with Connect-PnPOnline in order to use this cmdlet.
+metadata:
+  Module Name: PnP.PowerShell
+  title: Reset-PnPUserOneDriveQuotaToDefault
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Reset-PnPUserOneDriveQuotaToDefault.html

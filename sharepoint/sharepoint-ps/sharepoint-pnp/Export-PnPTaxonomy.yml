@@ -1,0 +1,154 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Export-PnPTaxonomy.md to change this file.
+
+  Exports a taxonomy to either the output or to a file.
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Export-PnPTaxonomy [-TermSetId <Guid>] [-IncludeID] [-Path <String>] [-TermStoreName <String>] [-Force]
+
+   [-Delimiter <String>] [-Lcid <Int32>] [-Encoding <Encoding>] [-Connection <PnPConnection>] 
+
+    [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Export-PnPTaxonomy
+  description: |-
+    Exports the full taxonomy to the standard output
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Export-PnPTaxonomy -Path c:\output.txt
+  description: |-
+    Exports the full taxonomy the file output.txt
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Export-PnPTaxonomy -Path c:\output.txt -TermSetId f6f43025-7242-4f7a-b739-41fa32847254
+  description: |-
+    Exports the term set with the specified id
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    Export-PnPTaxonomy -Path c:\output.txt -TermSetId f6f43025-7242-4f7a-b739-41fa32847254 -Lcid 1044
+  description: |-
+    Exports the term set with the specified id using Norwegian labels
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Delimiter
+  description: |+
+    The path delimiter to be used, by default this is '|'
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Encoding" data-throw-if-not-resolved="False" />
+  name: Encoding
+  description: |+
+    Defaults to Unicode
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Unicode, ASCII, BigEndianUnicode, UTF32, UTF7, UTF8
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Overwrites the output file if it exists.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeID
+  description: |+
+    If specified will include the ids of the taxonomy items in the output. Format: &lt;label&gt;;#&lt;guid&gt;
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Lcid
+  description: |+
+    Specify the language code for the exported terms
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    File to export the data to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: TermSetId
+  description: |+
+    If specified, will export the specified termset only
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TermStoreName
+  description: |+
+    Term store to export; if not specified the default term store is used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Export-PnPTaxonomy
+name: Export-PnPTaxonomy
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Export-PnPTaxonomy.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Export-PnPTaxonomy

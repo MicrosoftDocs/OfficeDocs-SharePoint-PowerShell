@@ -1,0 +1,59 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPTeamsTeamPicture.md to change this file.
+
+
+  **Required Permissions**
+
+    * Microsoft Graph API: Group.ReadWrite.All
+
+  Sets the picture of an existing team.
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- Set-PnPTeamsTeamPicture -Team <TeamsTeamPipeBind> -Path <String>  [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-PnPTeamsTeamPicture -Team "MyTeam" -Path "c:\myimage.jpg"
+  description: |-
+    Updates the channel called 'MyChannel' to have the display name set to 'My Channel'
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    The path to the image file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="TeamsTeamPipeBind" data-throw-if-not-resolved="False" />
+  name: Team
+  isRequired: true
+  description: |+
+    Specify the group id, mailNickname or display name of the team to use.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Set-PnPTeamsTeamPicture
+name: Set-PnPTeamsTeamPicture
+description: |-
+  Notice that this cmdlet will immediately return but it can take a few hours before the changes are reflected in Microsoft Teams.
+metadata:
+  Module Name: PnP.PowerShell
+  title: Set-PnPTeamsTeamPicture
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Set-PnPTeamsTeamPicture.html

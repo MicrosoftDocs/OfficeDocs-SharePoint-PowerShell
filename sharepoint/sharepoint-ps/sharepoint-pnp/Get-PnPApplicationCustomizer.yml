@@ -1,0 +1,120 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPApplicationCustomizer.md to change this file.
+
+  Returns all SharePoint Framework client side extension application customizers
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Get-PnPApplicationCustomizer [-Identity <Guid>] [-Scope <CustomActionScope>]
+
+   [-ThrowExceptionIfCustomActionNotFound] [-Connection <PnPConnection>] 
+
+    [-Includes <String[]>] [<CommonParameters>]
+- >-
+  Get-PnPApplicationCustomizer -ClientSideComponentId <Guid> [-Scope <CustomActionScope>]
+
+   [-ThrowExceptionIfCustomActionNotFound] [-Connection <PnPConnection>] 
+
+    [-Includes <String[]>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Get-PnPApplicationCustomizer
+  description: |-
+    Returns the custom action representing the SharePoint Framework client side extension registrations registered on the current site collection and web.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Get-PnPApplicationCustomizer -Identity aa66f67e-46c0-4474-8a82-42bf467d07f2
+  description: |-
+    Returns the custom action representing the SharePoint Framework client side extension registration with the id 'aa66f67e-46c0-4474-8a82-42bf467d07f2'.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Get-PnPApplicationCustomizer -ClientSideComponentId aa66f67e-46c0-4474-8a82-42bf467d07f2 -Scope Web
+  description: |-
+    Returns the custom action(s) being registered for a SharePoint Framework solution having the id 'aa66f67e-46c0-4474-8a82-42bf467d07f2' in its manifest from the current web.
+  summary: ""
+parameters:
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: ClientSideComponentId
+  isRequired: true
+  description: |+
+    The Client Side Component Id of the SharePoint Framework client side extension application customizer found in the manifest for which existing custom action(s) should be removed
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Identity of the SharePoint Framework client side extension application customizer to return. Omit to return all SharePoint Frameworkclient side extension application customizer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CustomActionScope" data-throw-if-not-resolved="False" />
+  name: Scope
+  description: |+
+    Scope of the SharePoint Framework client side extension application customizer, either Web, Site or All to return both (all is the default)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Web, Site, All
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ThrowExceptionIfCustomActionNotFound
+  description: |+
+    Switch parameter if an exception should be thrown if the requested SharePoint Frameworkclient side extension application customizer does not exist (true) or if omitted, nothing will be returned in case the SharePoint Framework client side extension application customizer does not exist
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Get-PnPApplicationCustomizer
+name: Get-PnPApplicationCustomizer
+description: |-
+  Returns all SharePoint Framework client side extension application customizers registered on the current web and/or site
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Get-PnPApplicationCustomizer.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Get-PnPApplicationCustomizer

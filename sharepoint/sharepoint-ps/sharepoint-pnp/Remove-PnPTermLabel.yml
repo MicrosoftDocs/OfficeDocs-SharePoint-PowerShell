@@ -1,0 +1,156 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPTermLabel.md to change this file.
+
+  Removes a single label/translation from a term.
+module: PnP.Powershell
+syntaxes:
+- >-
+  Remove-PnPTermLabel 
+
+      -Label <String> 
+
+      -Term <Guid> 
+
+      -Lcid <Int32> 
+
+      [-TermStore <Guid>]
+
+      [-Connection <PnPConnection>] 
+
+      [-WhatIf] 
+
+      [-Confirm] 
+
+      [<CommonParameters>]
+- >-
+  Remove-PnPTermLabel 
+
+      -Label <String> 
+
+      -Term <String> 
+
+      -Lcid <Int32> 
+
+      -TermSet <Name|Guid> 
+
+      -TermGroup <Name|Guid> 
+
+      [-TermStore <Guid>]
+
+      [-Connection <PnPConnection>] 
+
+      [-WhatIf] 
+
+      [-Confirm] 
+
+      [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-PnPTermLabel -Label "Marknadsföring" -Lcid 1053 -Term 2d1f298b-804a-4a05-96dc-29b667adec62
+  description: |-
+    Removes the Swedish label from the specified term
+  summary: ""
+- title: Example 2
+  code: |-
+    Remove-PnPTermLabel -Label "Marknadsföring" -Lcid 1053 -Term "Marketing" -TermSet "Departments" -TermGroup "Corporate"
+  description: |-
+    Removes the Swedish label from the specified term
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Label
+  isRequired: true
+  description: |+
+    The label to remove.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Lcid
+  isRequired: true
+  description: |+
+    {{ Fill Lcid Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Term
+  isRequired: true
+  description: |+
+    {{ Fill Term Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid or String" data-throw-if-not-resolved="False" />
+  name: TermGroup
+  isRequired: true
+  description: |+
+    The Term Group containing the Term Set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid or String" data-throw-if-not-resolved="False" />
+  name: TermSet
+  isRequired: true
+  description: |+
+    The Term Set containing the Term
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: TermStore
+  description: |+
+    The Term Store containing the Term Group.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Remove-PnPTermLabel
+name: Remove-PnPTermLabel
+description: |-
+  This cmdlet removes a label/translation from a term.
+metadata:
+  Module Name: PnP.PowerShell
+  title: Remove-PnPTermLabel
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPTermLabel.html

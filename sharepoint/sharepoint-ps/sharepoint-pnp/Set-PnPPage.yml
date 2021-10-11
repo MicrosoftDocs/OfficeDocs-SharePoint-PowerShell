@@ -1,0 +1,179 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPPage.md to change this file.
+
+  Sets parameters of a page
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Set-PnPPage [-Identity] <PagePipeBind> [-Name <String>] [-Title <String>]
+
+   [-LayoutType <PageLayoutType>] [-PromoteAs <PagePromoteType>] [-CommentsEnabled]
+
+   [-Publish] [-HeaderType <PageHeaderType>] [-HeaderLayoutType <PageHeaderLayoutType>] [-ContentType <ContentTypePipeBind>]
+
+   [-ThumbnailUrl <String>] [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-PnPPage -Identity "MyPage" -LayoutType Home -Title "My Page"
+  description: |-
+    Updates the properties of the page named 'MyPage'
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Set-PnPPage -Identity "MyPage" -CommentsEnabled
+  description: |-
+    Enables the comments on the page named 'MyPage'
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Set-PnPPage -Identity "MyPage" -CommentsEnabled:$false
+  description: |-
+    Disables the comments on the page named 'MyPage'
+  summary: ""
+- title: EXAMPLE 4
+  code: |-
+    Set-PnPPage -Identity "MyPage" -HeaderType Default
+  description: |-
+    Sets the header of the page to the default header
+  summary: ""
+- title: EXAMPLE 5
+  code: |-
+    Set-PnPPage -Identity "MyPage" -HeaderType None
+  description: |-
+    Removes the header of the page
+  summary: ""
+- title: EXAMPLE 6
+  code: |-
+    Set-PnPPage -Identity "MyPage" -HeaderType Custom -ServerRelativeImageUrl "/sites/demo1/assets/myimage.png" -TranslateX 10.5 -TranslateY 11.0
+  description: |-
+    Sets the header of the page to custom header, using the specified image and translates the location of the image in the header given the values specified
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CommentsEnabled
+  description: |+
+    Enables or Disables the comments on the page
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ContentTypePipeBind" data-throw-if-not-resolved="False" />
+  name: ContentType
+  description: |+
+    Specify either the name, ID or an actual content type.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PageHeaderLayoutType" data-throw-if-not-resolved="False" />
+  name: HeaderLayoutType
+  description: |+
+    Sets the page header layout type
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Default, Custom
+- type: <xref href="PageHeaderType" data-throw-if-not-resolved="False" />
+  name: HeaderType
+  description: |+
+    Sets the page header type
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Default, Custom
+- type: <xref href="PagePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The name/identity of the page
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PageLayoutType" data-throw-if-not-resolved="False" />
+  name: LayoutType
+  description: |+
+    Sets the layout type of the page. (Default = Article)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Article, Home, SingleWebPartAppPage, RepostPage, HeaderlessSearchResults, Spaces, Topic
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Sets the name of the page.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PagePromoteType" data-throw-if-not-resolved="False" />
+  name: PromoteAs
+  description: |+
+    Allows to promote the page for a specific purpose (None | HomePage | NewsArticle | Template)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, HomePage, NewsArticle, Template
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Publish
+  description: |+
+    Publishes the page once it is saved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ThumbnailUrl
+  description: |+
+    Thumbnail Url
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Title
+  description: |+
+    Sets the title of the page.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Set-PnPPage
+name: Set-PnPPage
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  title: Set-PnPPage
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Set-PnPPage.html

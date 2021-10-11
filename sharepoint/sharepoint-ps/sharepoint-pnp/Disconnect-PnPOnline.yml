@@ -1,0 +1,44 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Disconnect-PnPOnline.md to change this file.
+
+  Disconnects the context.
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- Disconnect-PnPOnline [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Disconnect-PnPOnline
+  description: |-
+    This will clear out all active tokens
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Connection to be used by cmdlet
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Disconnect-PnPOnline
+name: Disconnect-PnPOnline
+description: |-
+  >Note: in general it is not recommended nor needed to use this cmdlet.
+
+  Disconnects the current context and requires you to build up a new connection in order to use the Cmdlets again. Using Connect-PnPOnline to connect to a different site has the same effect and it's rarely needed to use Disconnect-PnPOnline. Notice that if you use Disconnect-PnPOnline the internal access token cache will be cleared too. This means that if you loop through many Connect-PnPOnline and subsequent Disconnect-PnPOnline statements a full request to the Azure AD is being made to acquire a token. This will cause throttling to occur and the script will stop.
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Disconnect-PnPOnline.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Disconnect-PnPOnline

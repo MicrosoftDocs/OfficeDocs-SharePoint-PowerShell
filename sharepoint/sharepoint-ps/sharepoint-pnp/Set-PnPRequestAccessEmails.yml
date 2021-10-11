@@ -1,0 +1,75 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPRequestAccessEmails.md to change this file.
+
+  Sets Request Access Email on a web
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Set-PnPRequestAccessEmails [-Emails <String[]>] [-Disabled] [-Connection <PnPConnection>]
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-PnPRequestAccessEmails -Emails someone@example.com
+  description: |-
+    This will enable requesting access and send the requests to the provided e-mail address
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Set-PnPRequestAccessEmails -Disabled
+  description: |-
+    This will disable the ability to request access to the site
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Set-PnPRequestAccessEmails -Disabled:$false
+  description: |-
+    This will enable the ability to request access to the site and send the requests to the default owners of the site
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Disabled
+  description: |+
+    Enables or disables access to be requested
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Emails
+  description: |+
+    Email address to send the access requests to
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Set-PnPRequestAccessEmails
+name: Set-PnPRequestAccessEmails
+description: |-
+  Enables or disables access requests to be sent and configures which e-mail address should receive these requests. The web you apply this on must have unique rights.
+metadata:
+  Module Name: PnP.PowerShell
+  title: Set-PnPRequestAccessEmails
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Set-PnPRequestAccessEmails.html

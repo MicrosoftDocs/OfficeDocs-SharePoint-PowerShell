@@ -1,0 +1,139 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Set-PnPAadGroup.md to change this file.
+
+
+  **Required Permissions**
+
+    * Microsoft Graph API: Group.ReadWrite.All
+
+  Sets the properties of a specicic Azure Active Directory group. This can be a security, distribution or Microsoft 365 group.
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp)[Documentation](https://docs.microsoft.com/graph/api/group-update
+syntaxes:
+- >-
+  Set-PnPAzureADGroup -Identity <AzureADGroupPipeBind> [-DisplayName <String>] [-Description <String>]
+
+   [-Owners <String[]>] [-Members <String[]>] [-SecurityEnabled] [-MailEnabled] 
+
+   [-HideFromAddressLists <Boolean>] [-HideFromOutlookClients <Boolean>] 
+
+   [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-PnPAzureADGroup -Identity $group -DisplayName "My Displayname"
+  description: |-
+    Sets the display name of the group where $group is a Group entity
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Set-PnPAzureADGroup -Identity $groupId -Descriptions "My Description" -DisplayName "My DisplayName"
+  description: |-
+    Sets the display name and description of a group based upon its ID
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Set-PnPAzureADGroup -Identity $group -Owners demo@contoso.com
+  description: |-
+    Sets demo@contoso.com as owner of the group
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    The Description of the group to set
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  description: |+
+    The DisplayName of the group to set
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: HideFromAddressLists
+  description: |+
+    Controls whether the group is hidden or shown in the Global Address List (GAL).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: HideFromOutlookClients
+  description: |+
+    Controls whether the group shows in the Outlook left-hand navigation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="AzureADGroupPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The Identity of the Azure Active Directory group
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: MailEnabled
+  description: |+
+    Sets the Azure Active Directory group to be allowed to be used for sreceiving e-mail
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Members
+  description: |+
+    The array UPN values of members to set to the group. Note: Will replace members.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Owners
+  description: |+
+    The array UPN values of owners to set to the group. Note: Will replace owners.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SecurityEnabled
+  description: |+
+    Sets the Azure Active Directory group to be allowed to be used for setting permissions
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Set-PnPAzureADGroup
+name: Set-PnPAzureADGroup
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  title: Set-PnPAzureADGroup
+  schema: 2.0.0
+  applicable: SharePoint Online
+  external help file: PnP.PowerShell.dll-Help.xml
+  online version: https://pnp.github.io/powershell/cmdlets/Set-PnPAzureADGroup.html

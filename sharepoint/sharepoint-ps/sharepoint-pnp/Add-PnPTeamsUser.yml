@@ -1,0 +1,73 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPTeamsUser.md to change this file.
+
+
+  **Required Permissions**
+
+    * Microsoft Graph API: Group.ReadWrite.All
+
+  Adds a user to an existing Microsoft Teams instance.
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- Add-PnPTeamsUser -Team <TeamsTeamPipeBind> -User <String> -Role <String> [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Add-PnPTeamsUser -Team MyTeam -User john@doe.com -Role Owner
+  description: |-
+    Adds a user as an owner to the team
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Add-PnPTeamsUser -Team MyTeam -User john@doe.com -Role Member
+  description: |-
+    Adds a user as a member to the team
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Role
+  isRequired: true
+  description: |+
+    Specify the role of the user
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Owner, Member
+- type: <xref href="TeamsTeamPipeBind" data-throw-if-not-resolved="False" />
+  name: Team
+  isRequired: true
+  description: |+
+    Specify the group id, mailNickname or display name of the team to use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: User
+  isRequired: true
+  description: |+
+    Specify the UPN (e.g. john@doe.com)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Add-PnPTeamsUser
+name: Add-PnPTeamsUser
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Add-PnPTeamsUser.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Add-PnPTeamsUser

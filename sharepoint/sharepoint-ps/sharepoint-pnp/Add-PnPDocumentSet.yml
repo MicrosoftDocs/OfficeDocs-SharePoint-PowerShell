@@ -1,0 +1,74 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Add-PnPDocumentSet.md to change this file.
+
+  Creates a new document set in a library.
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp
+syntaxes:
+- >-
+  Add-PnPDocumentSet -List <ListPipeBind> -Name <String> -ContentType <ContentTypePipeBind> 
+
+   [-Connection <PnPConnection>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Add-PnPDocumentSet -List "Documents" -ContentType "Test Document Set" -Name "Test"
+  description: |-
+    This will add a new document set based upon the 'Test Document Set' content type to a list called 'Documents'. The document set will be named 'Test'
+  summary: ""
+parameters:
+- type: <xref href="PnPConnection" data-throw-if-not-resolved="False" />
+  name: Connection
+  description: |+
+    Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ContentTypePipeBind" data-throw-if-not-resolved="False" />
+  name: ContentType
+  isRequired: true
+  description: |+
+    The name of the content type, its ID or an actual content object referencing to the document set
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ListPipeBind" data-throw-if-not-resolved="False" />
+  name: List
+  isRequired: true
+  description: |+
+    The name of the list, its ID or an actual list object from where the document set needs to be added
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the document set
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Add-PnPDocumentSet
+name: Add-PnPDocumentSet
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Add-PnPDocumentSet.html
+  external help file: PnP.PowerShell.dll-Help.xml
+  title: Add-PnPDocumentSet

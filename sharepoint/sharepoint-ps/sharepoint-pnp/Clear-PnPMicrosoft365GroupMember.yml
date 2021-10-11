@@ -1,0 +1,48 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!TIP]
+  > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Clear-PnPMicrosoft365GroupMember.md to change this file.
+
+
+  **Required Permissions**
+
+    * Microsoft Graph API : One of Directory.ReadWrite.All, Group.ReadWrite.All, GroupMember.ReadWrite.All
+
+  Removes all current members from a particular Microsoft 365 Group
+module: PnP.Powershell
+links:
+- text: Microsoft 365 Patterns and Practices
+  href: https://aka.ms/m365pnp)[Documentation](https://docs.microsoft.com/graph/api/group-delete-members
+syntaxes:
+- Clear-PnPMicrosoft365GroupMember -Identity <Microsoft365GroupPipeBind> [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Clear-PnPMicrosoft365GroupMember -Identity "Project Team"
+  description: |-
+    Removes all the current members from the Microsoft 365 Group named "Project Team"
+  summary: ""
+parameters:
+- type: <xref href="Microsoft365GroupPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The Identity of the Microsoft 365 Group to remove all members from
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: PnP.Powershell.Clear-PnPMicrosoft365GroupMember
+name: Clear-PnPMicrosoft365GroupMember
+description: ""
+metadata:
+  Module Name: PnP.PowerShell
+  schema: 2.0.0
+  applicable: SharePoint Online
+  online version: https://pnp.github.io/powershell/cmdlets/Clear-PnPMicrosoft365GroupMember.html
+  external help file: PnP.PowerShell.dll-help.xml
+  title: Clear-PnPMicrosoft365GroupMember
