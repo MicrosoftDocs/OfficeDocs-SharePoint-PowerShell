@@ -470,7 +470,7 @@ Specifies if the upgrade process is to be deferred and manually completed.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

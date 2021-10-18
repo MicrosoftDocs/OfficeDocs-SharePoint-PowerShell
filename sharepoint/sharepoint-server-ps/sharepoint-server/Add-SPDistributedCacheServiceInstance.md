@@ -83,7 +83,7 @@ If this parameter is not specified, the default value will be used.
 Type: Int32
 Parameter Sets: CacheSizeSet
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -108,7 +108,7 @@ Type: SPServerRole
 Parameter Sets: LocalServerRoleSet
 Aliases: 
 Accepted values: DistributedCache, SingleServerFarm, WebFrontEndWithDistributedCache
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

@@ -2,7 +2,7 @@
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/revoke-spobjectsecurity
-applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 title: Revoke-SPObjectSecurity
 schema: 2.0.0
 ---
@@ -61,7 +61,7 @@ You can use the `Get-SPServiceApplicationSecurity` cmdlet to get a SPObjectSecur
 Type: SPObjectSecurity
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -79,7 +79,7 @@ The type must a valid name a principal; for example, Full Control.
 Type: SPClaim
 Parameter Sets: RevokeOne
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 2
@@ -97,7 +97,7 @@ The type must a valid array of strings that represents the rights of the princip
 Type: String[]
 Parameter Sets: RevokeOne
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 3
@@ -113,7 +113,7 @@ Specifies that all security principals are removed from the specified SPObjectSe
 Type: SwitchParameter
 Parameter Sets: RevokeAll
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -135,7 +135,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

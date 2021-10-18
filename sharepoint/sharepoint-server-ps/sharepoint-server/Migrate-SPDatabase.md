@@ -2,7 +2,7 @@
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/migrate-spdatabase
-applicable: SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 title: Migrate-SPDatabase
 schema: 2.0.0
 ---
@@ -52,7 +52,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -68,7 +68,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -84,7 +84,7 @@ Do not use.
 Type: SPContentDatabasePipeBind
 Parameter Sets: SiteSubscription
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -100,7 +100,7 @@ Do not use.
 Type: SPDatabasePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 0
@@ -116,7 +116,7 @@ Do not use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 4
@@ -133,7 +133,7 @@ Type: ServiceExtensionType
 Parameter Sets: (All)
 Aliases: 
 Accepted values: DefaultDatabase, Project, UserProfile, SiteSubscription, BDC, Securityobjects, Taxonomy, AppManagement, All
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 3
@@ -149,7 +149,7 @@ Do not use.
 Type: SPSitePipeBind
 Parameter Sets: SiteCollection
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 2
@@ -165,7 +165,7 @@ Do not use.
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: SiteSubscription
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 2
@@ -181,7 +181,7 @@ Do not use.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 5
@@ -198,7 +198,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

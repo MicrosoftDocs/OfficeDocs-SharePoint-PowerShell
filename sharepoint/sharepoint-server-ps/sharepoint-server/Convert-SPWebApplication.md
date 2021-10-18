@@ -279,7 +279,7 @@ Specifies a directory where verbose logs about the results of the migration will
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

@@ -2,7 +2,7 @@
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/sync-spprojectpermissions
-applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 title: Sync-SPProjectPermissions
 schema: 2.0.0
 ---
@@ -53,7 +53,7 @@ The type must be a valid URL, in the form https://pwa_site.
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -71,7 +71,7 @@ This parameter is used with Project Server permission mode.
 Type: SwitchParameter
 Parameter Sets: PSMode
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 2
@@ -93,7 +93,7 @@ Full, Incremental, AllGroups
 Type: SharePointPermissionModeSyncType
 Parameter Sets: SPMode
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 2
@@ -111,7 +111,7 @@ This parameter is used with Project Server permission mode.
 Type: SwitchParameter
 Parameter Sets: PSMode
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 3
@@ -130,7 +130,7 @@ This parameter is used with Project Server permission mode.
 Type: SwitchParameter
 Parameter Sets: PSMode
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 4
@@ -152,7 +152,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

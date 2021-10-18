@@ -2,7 +2,7 @@
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/copy-spsidebysidefiles
-applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 title: Copy-SPSideBySideFiles
 schema: 2.0.0
 ---
@@ -42,7 +42,7 @@ Manages objects for the purpose of proper disposal. Use of objects, such as SPWe
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -58,7 +58,7 @@ Specifies the fully-qualified logfile name of SideBySide copy operation. If LogF
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

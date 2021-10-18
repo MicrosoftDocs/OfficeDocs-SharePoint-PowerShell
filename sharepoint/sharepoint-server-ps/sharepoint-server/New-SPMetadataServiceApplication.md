@@ -407,7 +407,7 @@ Disables partition quotas.
 Type: SwitchParameter
 Parameter Sets: NoQuota
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -423,7 +423,7 @@ Sets the maximum number of Term Groups per partition.
 Type: Int32
 Parameter Sets: Quota
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -439,7 +439,7 @@ Sets the maximum number of Labels per partition.
 Type: Int32
 Parameter Sets: Quota
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -455,7 +455,7 @@ Sets the maximum number of Properties per partition.
 Type: Int32
 Parameter Sets: Quota
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -471,7 +471,7 @@ Sets the maximum number of Term Sets per partition.
 Type: Int32
 Parameter Sets: Quota
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -486,7 +486,7 @@ Sets the maximum number of Terms per partition.
 Type: Int32
 Parameter Sets: Quota
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -502,7 +502,7 @@ Specifies if the upgrade process is to be deferred and manually completed.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
