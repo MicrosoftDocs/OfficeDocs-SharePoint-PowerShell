@@ -1951,7 +1951,7 @@ The valid values are:
 - False (default) – Guest users will only be able to share to users that exist within the current site. 
 - True – Guest users will be able to find user accounts in the directory by typing in the exact email address match. 
 
-Note: When the value is set to True, you will also need to enable [SharePoint and OneDrive integration with Azure AD B2B](https://docs.microsoft.com/sharepoint/sharepoint-azureb2b-integration) for the functionality to work.
+Note: When the value is set to True, you will also need to enable [SharePoint and OneDrive integration with Azure AD B2B](/sharepoint/sharepoint-azureb2b-integration) for the functionality to work.
 
 ```yaml
 Type: Boolean
