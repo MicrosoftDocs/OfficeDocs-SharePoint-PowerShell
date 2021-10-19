@@ -41,7 +41,7 @@ This command schedules a rename of the SharePoint domain name for your organizat
 Start-SPOTenantRename -DomainName "fabrikam" -ScheduledDateTime "2021-12-31T10:25:00"
 ```
 
-Starts the rename of the SharePoint domain name to fabrikam that is scheduled for 31st December 2021 at 10:25:00am.
+Starts the rename of the SharePoint domain name to Fabrikam which is scheduled for December 31, 2021, at 10:25:00 am.
 
 ## PARAMETERS
 
