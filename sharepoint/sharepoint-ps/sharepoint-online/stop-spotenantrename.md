@@ -21,7 +21,7 @@ ms.reviewer:
 Cancels the scheduled job to change the SharePoint domain name for your organization in Microsoft 365. 
 
 > [!NOTE]
-> If the job to change the SharePoint domain name is already in progress, then it can not be canceled or stopped.  
+> If the job to change the SharePoint domain name is already in progress, then it cannot be canceled or stopped.
 
 ## SYNTAX
 
