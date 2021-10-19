@@ -67,7 +67,7 @@ Accept wildcard characters: False
 
 ### -ScheduledDateTime
 
-Specifies the date time that the job will be started. This should be at least 24 hours in the future, but no more that 30-days.
+Specifies the date-time that the job will be started. This should be at least 24 hours in the future, but no more than 30 days.
 
 ```yaml
 Type: DateTime
