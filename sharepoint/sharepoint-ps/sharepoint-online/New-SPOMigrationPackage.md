@@ -12,8 +12,8 @@ ms.reviewer:
 
 # New-SPOMigrationPackage
 
-> [!NOTE]
-> This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](/sharepointmigration/overview-spmt-ps-cmdlets).
+> [!TIP]
+> This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](/sharepointmigration/overview-spmt-ps-cmdlets)
 
 ## SYNOPSIS
 
