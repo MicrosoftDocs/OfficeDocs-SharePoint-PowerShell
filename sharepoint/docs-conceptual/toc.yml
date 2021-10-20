@@ -7,10 +7,15 @@ items:
     href: sharepoint-online/introduction-sharepoint-online-management-shell.md
   - name: Get started with SharePoint Online Management Shell
     href: sharepoint-online/connect-sharepoint-online.md
+  - name: Cmdlet reference
+    href: /powershell/module/sharepoint-online/?view=sharepoint-ps
 - name: SharePoint PnP
-  href: sharepoint-pnp/sharepoint-pnp-cmdlets.md
+  items:
+  - name: Overview
+    href: sharepoint-pnp/sharepoint-pnp-cmdlets.md
+  - name: Cmdlet reference
+    href: /powershell/module/sharepoint-pnp/?view=sharepoint-ps
 - name: SharePoint Server
   href: sharepoint-server/sharepoint-server-cmdlets.md
-- name: SharePoint Server Subscription
-  href: sharepoint-server/sharepoint-server-sub-cmdlets.md
+
 
