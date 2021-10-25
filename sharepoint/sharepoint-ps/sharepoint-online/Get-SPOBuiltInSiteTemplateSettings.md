@@ -64,4 +64,4 @@ Applies to: SharePoint Online
 
 ## RELATED LINKS
 
-[Apply and customize SharePoint sites](support.microsoft.com/office/apply-and-customize-sharepoint-site-templates-39382463-0e45-4d1b-be27-0e96aeec8398?ui=en-US&rs=en-US&ad=US)
+[Apply and customize SharePoint sites](support.microsoft.com/office/apply-and-customize-sharepoint-site-templates-39382463-0e45-4d1b-be27-0e96aeec8398)
