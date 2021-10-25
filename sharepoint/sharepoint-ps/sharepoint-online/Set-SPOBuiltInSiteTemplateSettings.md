@@ -36,6 +36,7 @@ All site templates are displayed by default.
 | Training and development team     | 64aaa31e-7a1e-4337-b646-0b700aa9a52c | 
 | Team collaboration     | 6b96e7b1-035f-430b-92ca-31511c51ca72  | 
 
+<br>
 
 | Communication site templates | Template ID                 | 
 | :------------------- | :------------------- |
