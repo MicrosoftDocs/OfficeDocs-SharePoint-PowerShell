@@ -85,7 +85,6 @@ Set-SPOBuiltInSiteTemplateSettings -Identity "00000000-0000-0000-0000-0000000000
 ```
 
 
-
 ## PARAMETERS
 
 ### -Identity
@@ -96,4 +95,6 @@ Specifies the ID for the site template you wish to change.
  
 Specifies whether the site template is hidden ($true) or displayed ($false). All site templates are displayed by default.
 
+## RELATED LINKS
 
+[Apply and customize SharePoint sites](support.microsoft.com/office/apply-and-customize-sharepoint-site-templates-39382463-0e45-4d1b-be27-0e96aeec8398)
