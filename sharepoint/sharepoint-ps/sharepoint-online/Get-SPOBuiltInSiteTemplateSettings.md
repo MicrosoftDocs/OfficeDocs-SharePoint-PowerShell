@@ -55,4 +55,6 @@ Specifies the ID for the site template if you'd like to filter results.
 
 ## RELATED LINKS
 
+[Set-SPOBuiltInSiteTemplateSettings](Set-SPOBuiltInSiteTemplateSettings.md)
+
 [Apply and customize SharePoint sites](https://support.microsoft.com/office/apply-and-customize-sharepoint-site-templates-39382463-0e45-4d1b-be27-0e96aeec8398)
