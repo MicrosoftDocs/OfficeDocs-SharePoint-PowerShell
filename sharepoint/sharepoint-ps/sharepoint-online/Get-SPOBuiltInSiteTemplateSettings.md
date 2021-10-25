@@ -48,7 +48,7 @@ Get-SPOBuiltInSiteTemplateSettings
 
 ## PARAMETERS
 
-#### -Identity
+### -Identity
  
 Specifies the ID for the site template if you'd like to filter results. 
 
