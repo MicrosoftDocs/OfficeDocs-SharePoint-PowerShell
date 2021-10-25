@@ -39,7 +39,7 @@ Get-SPOBuiltInSiteTemplateSettings
 Set-SPOBuiltInSiteTemplateSettings
 
 
-## EXAMPLES - Get-SPOBuiltInSiteTemplateSettings 
+## EXAMPLE - Get-SPOBuiltInSiteTemplateSettings 
 
 **Example 1:** This example checks what Microsoft-provided SharePoint site templates are currently hidden from the site template gallery. 
 
@@ -50,7 +50,6 @@ Get-SPOBuiltInSiteTemplateSettings
 > If a site template has never been hidden, it will not show up in the list. If a site template has been hidden, then changed back to displayed (i.e. currently set to True), then it will show up in the list. 
 
 
-
 ### PARAMETERS
 
 #### -Identity
@@ -58,103 +57,6 @@ Get-SPOBuiltInSiteTemplateSettings
 Specifies the ID for the site template if you'd like to filter results. 
 
 
+## MORE RESOURCES
 
-
-
-
-
-Example 1 returns all the site templates in the language of the administrator site.
-
-### -----------------------EXAMPLE 2-----------------------------
-
-```powershell
-Get-SPOWebTemplate -LocaleID 1036
-```
-
-Example 2 returns a list of all the French site templates.
-
-## PARAMETERS
-
-### -CompatibilityLevel
-
-Specifies the compatibility level of the site template.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LocaleId
-
-Specifies the Locale ID of the site template.
-
-```yaml
-Type: UInt32
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-
-Specifies the name of the site template.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Title
-
-Specifies the Locale ID of the site template.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### CommonParameters
-
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
-
-## INPUTS
-
-### None
-
-## OUTPUTS
-
-### System.Object
-
-## NOTES
-
-## RELATED LINKS
+[Apply and customize SharePoint sites](support.microsoft.com/office/apply-and-customize-sharepoint-site-templates-39382463-0e45-4d1b-be27-0e96aeec8398?ui=en-US&rs=en-US&ad=US)
