@@ -1,46 +1,82 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spotenantrenamestatus
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/stop-spotenantrename
 applicable: SharePoint Online
-title: Get-SPOTenantRenameStatus
+title: Stop-SPOTenantRename
 schema: 2.0.0
 author: WayneEwington
 ms.author: waynewin
 ms.reviewer:
 ---
 
-# Get-SPOTenantRenameStatus
+# Stop-SPOTenantRename
 
 ## SYNOPSIS
 
- [!IMPORTANT]
+> [!IMPORTANT]
 > - This feature is available only for customers who have been accepted into the Private Preview program. [Request to join the Private Preview](https://aka.ms/SPOTenantRenameNomination). Note that submitting a nomination does not guarantee acceptance into the program. We review the nominations on a case-by-case basis and will contact you if you're accepted.
 > - This feature is not available for organizations that have set up multi-geo.
 
-Get the status of the job to change the SharePoint domain name for your organization in Microsoft 365.
+Cancels the scheduled job to change the SharePoint domain name for your organization in Microsoft 365. 
+
+> [!NOTE]
+> If the job to change the SharePoint domain name is already in progress, then it cannot be canceled or stopped.
 
 ## SYNTAX
 
 ```Powershell
-Get-SPOTenantRenameStatus [<CommonParameters>]
+Stop-SPOTenantRename -Reason <string> [-Comment <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-This command gets the status of the job to rename the SharePoint domain name for your organization.
+This command cancels a scheduled rename of the SharePoint domain name for your organization.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 
 ```powershell
-Gett-SPOTenantRenameStatus
+Stop-SPOTenantRename -Reason "Rescheduling"
 ```
 
-Gets the status of the job to rename your SharePoint domain name.
+Cancels the rename of the SharePoint domain name with the reason "Rescheduling".
 
 ## PARAMETERS
+
+### -Reason
+
+Specifies the reason why the job is being canceled.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Comment
+
+Specifies an additional comment why the job is being canceled.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Applicable: SharePoint Online
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### CommonParameters
 
