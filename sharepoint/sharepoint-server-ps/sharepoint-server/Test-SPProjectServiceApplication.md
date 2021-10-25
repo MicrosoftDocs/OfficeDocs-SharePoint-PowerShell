@@ -2,7 +2,7 @@
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/test-spprojectserviceapplication
-applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 title: Test-SPProjectServiceApplication
 schema: 2.0.0
 ---
@@ -44,7 +44,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -60,7 +60,7 @@ The name of the Project Service Application to test against.
 Type: PsiServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 0
@@ -89,7 +89,7 @@ Type: ProjectServiceApplicationHealthRuleName
 Parameter Sets: (All)
 Aliases: 
 Accepted values: All, QueueServiceInternalState, QueueInFlightJobs, CalcServiceWorkerState, DatabasePermissions
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 1

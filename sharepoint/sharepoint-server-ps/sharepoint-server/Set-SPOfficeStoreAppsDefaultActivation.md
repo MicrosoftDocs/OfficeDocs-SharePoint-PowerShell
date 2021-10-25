@@ -2,7 +2,7 @@
 external help file: sharepointserver.xml
 module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spofficestoreappsdefaultactivation
-applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 title: Set-SPOfficeStoreAppsDefaultActivation
 schema: 2.0.0
 ---
@@ -56,7 +56,7 @@ Specifies whether the apps for Office from the Office Store should be started.
 Type: Boolean
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -72,7 +72,7 @@ Specifies the Site Group to which the settings apply.
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: AppsForOfficeSettingsInSiteSubscription
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -88,7 +88,7 @@ Specifies the URL, GUID, or name of the web application to which the setting app
 Type: SPWebApplicationPipeBind
 Parameter Sets: AppsForOfficeSettingsInWebApplication
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -110,7 +110,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -127,7 +127,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -144,7 +144,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

@@ -95,7 +95,7 @@ Specifies to use a SharePoint multi-tenancy features when registering Workflow M
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

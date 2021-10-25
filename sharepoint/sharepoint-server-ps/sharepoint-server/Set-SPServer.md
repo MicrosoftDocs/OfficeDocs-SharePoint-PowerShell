@@ -2,7 +2,7 @@
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spserver
-applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 title: Set-SPServer
 schema: 2.0.0
 ---
@@ -45,7 +45,7 @@ Manages objects for the purpose of proper disposal. Use of objects, such as SPWe
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -61,7 +61,7 @@ Specifies the name of the server in the farm.
 Type: SPServerPipeBind
 Parameter Sets: (All)
 Aliases: Address
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 0
@@ -90,7 +90,7 @@ Type: SPServerRole
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Application, ApplicationWithSearch, Custom, DistributedCache, Search, SingleServerFarm, WebFrontEnd, WebFrontEndWithDistributedCache
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -107,7 +107,7 @@ Type: SPObjectStatus
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Online, Disabled, Offline, Unprovisioning, Provisioning, Upgrading, Patching
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

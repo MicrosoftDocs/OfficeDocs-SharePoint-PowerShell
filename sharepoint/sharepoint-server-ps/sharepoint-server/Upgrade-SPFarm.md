@@ -99,7 +99,7 @@ Specifies to only upgrade local server.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -115,7 +115,7 @@ Specifies to not upgrade databases and their child objects when performing upgra
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -131,7 +131,7 @@ Specifies to not upgrade all site objects when performing upgrade.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: NoB2BSiteUpgrade
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

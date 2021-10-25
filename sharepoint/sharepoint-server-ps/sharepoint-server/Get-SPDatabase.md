@@ -121,7 +121,7 @@ Specifies the name of the database.
 Type: String
 Parameter Sets: NameParameterSet
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named

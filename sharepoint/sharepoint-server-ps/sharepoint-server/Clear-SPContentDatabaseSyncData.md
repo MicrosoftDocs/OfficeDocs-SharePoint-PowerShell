@@ -2,7 +2,7 @@
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/clear-spcontentdatabasesyncdata
-applicable: SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 title: Clear-SPContentDatabaseSyncData
 schema: 2.0.0
 ---
@@ -42,7 +42,7 @@ The default value of this parameter is 0.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 Required: False
 Position: 1
 Default value: None
