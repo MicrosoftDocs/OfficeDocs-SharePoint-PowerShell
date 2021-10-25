@@ -35,7 +35,7 @@ The `Get-SPOBuiltInSiteTemplateSettings` cmdlet displays the current state of Mi
 
 ## EXAMPLE 
 
-### Check which Microsoft templates are hidden
+### ------------ Example 1 --------------------
 This example checks what Microsoft-provided SharePoint site templates are currently hidden from the site template gallery. 
 
 ```powershell
