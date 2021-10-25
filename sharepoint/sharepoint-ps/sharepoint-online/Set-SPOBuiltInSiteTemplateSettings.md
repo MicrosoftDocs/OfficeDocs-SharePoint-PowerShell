@@ -58,28 +58,39 @@ You can hide all templates by specifying an empty ID of "00000000-0000-0000-0000
 > - For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
 
-## COMMANDS
+## EXAMPLES 
 
-Get-SPOBuiltInSiteTemplateSettings
-Set-SPOBuiltInSiteTemplateSettings
-
-
-## EXAMPLE - Get-SPOBuiltInSiteTemplateSettings 
-
-**Example 1:** This example checks what Microsoft-provided SharePoint site templates are currently hidden from the site template gallery. 
+**Example 1:** This example hides the Department template from the site template gallery.  
 
 ```powershell
-Get-SPOBuiltInSiteTemplateSettings 
+Set-SPOBuiltInSiteTemplateSettings -Identity "73495f08-0140-499b-8927-dd26a546f26a" -IsHidden $true
 ```
->[!NOTE]
-> If a site template has never been hidden, it will not show up in the list. If a site template has been hidden, then changed back to displayed (i.e. currently set to True), then it will show up in the list. 
+
+**Example 2:** This example displays the Department template in the site template gallery. Note all site templates are displayed by default, so this is most relevant if a template has been hidden before.   
+
+```powershell
+Set-SPOBuiltInSiteTemplateSettings -Identity "73495f08-0140-499b-8927-dd26a546f26a" -IsHidden $false
+```
+
+
+**Example 3:** This example hides all built-in templates from the site template gallery.  
+
+```powershell
+Set-SPOBuiltInSiteTemplateSettings -Identity "00000000-0000-0000-0000-000000000000" -IsHidden $true
+```
+
 
 
 ### PARAMETERS
 
 #### -Identity
  
-Specifies the ID for the site template if you'd like to filter results. 
+Specifies the ID for the site template you wish to change. 
+ 
+#### -IsHidden
+ 
+Specifies whether the site template is hidden ($true) or displayed ($false). All site templates are displayed by default.
+
 
 
 ## MORE RESOURCES
