@@ -52,15 +52,6 @@ Get-SPOBuiltInSiteTemplateSettings
  
 Specifies the ID for the site template if you'd like to filter results. 
 
-```yaml
-Type: String
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-Applies to: SharePoint Online
-```
 
 ## RELATED LINKS
 
