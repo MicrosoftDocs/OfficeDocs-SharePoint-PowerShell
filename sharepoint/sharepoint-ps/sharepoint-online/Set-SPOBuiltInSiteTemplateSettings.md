@@ -48,6 +48,8 @@ All site templates are displayed by default.
 | Topic     | a30fef54-a4e5-4beb-a8b5-962c528d753a   | 
 | Blank    | 665da395-e0f9-4c92-b35c-773d8c292f2d  | 
 
+You can hide all templates by specifying an empty ID of "00000000-0000-0000-0000-000000000000". Settings specified for a specific template will take precedence over the "all templates" setting. You can hide all templates and then selectively make specific templates visible. [Learn more about SharePoint site templates](support.microsoft.com/office/apply-and-customize-sharepoint-site-templates-39382463-0e45-4d1b-be27-0e96aeec8398).
+
 
 >[!NOTE]
 > - All site templates are displayed by default. [Learn more](support.microsoft.com/office/apply-and-customize-sharepoint-site-templates-39382463-0e45-4d1b-be27-0e96aeec8398?ui=en-US&rs=en-US&ad=US) about SharePoint site templates
