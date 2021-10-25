@@ -2,7 +2,7 @@
 external help file: sharepointonline.xml
 module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spodataconnectionsetting
-applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 title: Get-SPODataConnectionSetting
 schema: 2.0.0
 ---
@@ -60,7 +60,7 @@ An example of a service context value is an identifier from the ID field, a stri
 Type: SPServiceContextPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -83,7 +83,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -100,7 +100,7 @@ Specifies the name of the Business Connectivity Services connection object.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

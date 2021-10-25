@@ -244,7 +244,7 @@ Determines whether the content databases should upgrade to the latest user inter
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -262,7 +262,7 @@ This parameter has no effect when a version-to-version upgrade is specified.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -329,7 +329,7 @@ Specifies the credential that belong to SPDataAccess role.
 Type: PSCredential
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -345,7 +345,7 @@ Specifies the name of the database server to be mirrored.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -361,7 +361,7 @@ Specifies to not upgrade all site objects when performing upgrade.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: NoB2BSiteUpgrade
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -381,7 +381,7 @@ The default value is False.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
