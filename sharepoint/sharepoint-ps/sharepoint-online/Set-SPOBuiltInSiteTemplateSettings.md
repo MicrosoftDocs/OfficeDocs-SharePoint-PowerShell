@@ -72,7 +72,6 @@ Set-SPOBuiltInSiteTemplateSettings -Identity "73495f08-0140-499b-8927-dd26a546f2
 Set-SPOBuiltInSiteTemplateSettings -Identity "73495f08-0140-499b-8927-dd26a546f26a" -IsHidden $false
 ```
 
-
 **Example 3:** This example hides all built-in templates from the site template gallery.  
 
 ```powershell
@@ -96,3 +95,4 @@ Specifies whether the site template is hidden ($true) or displayed ($false). All
 ## MORE RESOURCES
 
 [Apply and customize SharePoint sites](support.microsoft.com/office/apply-and-customize-sharepoint-site-templates-39382463-0e45-4d1b-be27-0e96aeec8398?ui=en-US&rs=en-US&ad=US)
+
