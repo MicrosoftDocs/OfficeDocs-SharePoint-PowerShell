@@ -5,8 +5,8 @@ online version: https://docs.microsoft.com/powershell/module/sharepoint-online/i
 applicable: SharePoint Online
 title: Invoke-SPOListDesign
 schema: 2.0.0
-author: 
-ms.author: 
+author: reshmee011
+ms.author: reshmee011
 ms.reviewer:
 ---
 
