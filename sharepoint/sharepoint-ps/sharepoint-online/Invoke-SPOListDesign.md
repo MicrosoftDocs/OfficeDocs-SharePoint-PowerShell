@@ -2,7 +2,7 @@
 
 ## SYNOPSIS
 
-Applies a published list design to a specified site collection target. This allows a list design to be applied to an existing site collection. The supported list templates you can apply a list design to include: "modern" team site (with O365 group), "modern" team site (without an O365 group); communication site; classic team site; and classic publishing site.
+Applies a published list design to a specified site collection target. This allows a list design to be applied to an existing site collection. The supported list templates you can apply a list design to include: "modern" team site (with m365 group), "modern" team site (without an m365 group); communication site; classic team site; and classic publishing site.
 
 ## SYNTAX
 
@@ -11,8 +11,8 @@ Invoke-SPOListDesign
   [-Identity]
   -WebUrl <string>
   [<CommonParameters>]
-```
 
+```
 ## DESCRIPTION
 
 Applies a published list design to a specified site collection target. This allows a list design to be applied to an existing site collection.
@@ -26,6 +26,9 @@ This example applies a list design whose script creates one list with content ty
 ```powershell
 Invoke-SPOListDesign -Identity 5b38e500-0fab-4da7-b011-ad7113228920 -WebUrl "https://contoso.sharepoint.com/sites/testgo"
 
+```
+### OUTPUT
+```yaml
 Title                                        OutcomeText Outcome
 -----                                        ----------- -------
 Create site column WorkAddress through XML               Success
@@ -67,6 +70,7 @@ Add content type "test_11"                               Success
 Add view "All Documents"                                 Success
 Add view "All Documents sorted"                          Success
 
+```
 
 ## PARAMETERS
 
@@ -84,6 +88,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+
 ```
 
 ### -WebUrl
