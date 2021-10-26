@@ -2,7 +2,7 @@
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spprojectwebinstancedata
-applicable: Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 title: Remove-SPProjectWebInstanceData
 schema: 2.0.0
 ---
@@ -44,7 +44,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -60,7 +60,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -76,7 +76,7 @@ The site collection to disassociate from the Project Server instance.
 Type: SPSitePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -93,7 +93,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

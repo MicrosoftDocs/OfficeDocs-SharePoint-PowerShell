@@ -186,7 +186,7 @@ Specifies the name of the mirror server for failover.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

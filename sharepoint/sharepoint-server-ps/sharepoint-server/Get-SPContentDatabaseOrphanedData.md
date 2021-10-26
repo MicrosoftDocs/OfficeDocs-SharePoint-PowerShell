@@ -2,7 +2,7 @@
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spcontentdatabaseorphaneddata
-applicable: SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 title: Get-SPContentDatabaseOrphanedData
 schema: 2.0.0
 ---
@@ -41,7 +41,7 @@ Specifies the GUID of the content database to get.
 Type: SPContentDatabasePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 Required: True
 Position: 1
 Default value: None

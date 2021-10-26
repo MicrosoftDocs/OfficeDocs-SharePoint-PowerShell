@@ -2,7 +2,7 @@
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spprojectdatabasequota
-applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 title: Set-SPProjectDatabaseQuota
 schema: 2.0.0
 ---
@@ -52,7 +52,7 @@ Microsoft internal use only.
 Type: ProjectDatabaseQuotaSettings
 Parameter Sets: settings
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 2
@@ -68,7 +68,7 @@ Microsoft internal use only.
 Type: SwitchParameter
 Parameter Sets: options
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -84,7 +84,7 @@ Microsoft internal use only.
 Type: Int32
 Parameter Sets: options
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -100,7 +100,7 @@ Microsoft internal use only.
 Type: Int32
 Parameter Sets: options
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -116,7 +116,7 @@ Microsoft internal use only.
 Type: Int32
 Parameter Sets: options
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -132,7 +132,7 @@ Microsoft internal use only.
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -148,7 +148,7 @@ Microsoft internal use only.
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

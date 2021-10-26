@@ -2,7 +2,7 @@
 external help file: sharepointserver.xml
 module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spofficestoreappsdefaultactivation
-applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 title: Get-SPOfficeStoreAppsDefaultActivation
 schema: 2.0.0
 ---
@@ -64,7 +64,7 @@ Specifies the Site Group to which the settings apply.
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: AppsForOfficeSettingsInSiteSubscription
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -81,7 +81,7 @@ Specifies the URL, GUID, or name of the web application to which the setting app
 Type: SPWebApplicationPipeBind
 Parameter Sets: AppsForOfficeSettingsInWebApplication
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -104,7 +104,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

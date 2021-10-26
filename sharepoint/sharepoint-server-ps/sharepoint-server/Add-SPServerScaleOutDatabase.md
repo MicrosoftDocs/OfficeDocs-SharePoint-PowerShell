@@ -192,7 +192,7 @@ Specifies whether upgrade actions are deferred duringi an Upgrade process.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

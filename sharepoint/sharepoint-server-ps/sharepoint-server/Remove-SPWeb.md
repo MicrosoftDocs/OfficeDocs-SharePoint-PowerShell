@@ -63,7 +63,7 @@ Specifies if compliance flags are enabled.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable:  SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 Required: False
 Position: Named
 Default value: None
