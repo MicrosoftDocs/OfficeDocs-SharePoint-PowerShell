@@ -320,7 +320,7 @@ Accept wildcard characters: False
 
 ### -Owner
 
-Specifies the owner of the site collection.
+Specifies the owner of the site collection. Changing the Owner of a OneDrive is not supported and causes many experiences to break.
 
 ```yaml
 Type: String
