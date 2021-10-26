@@ -1,3 +1,15 @@
+---
+external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://docs.microsoft.com/powershell/module/sharepoint-online/invoke-spolistdesign
+applicable: SharePoint Online
+title: Invoke-SPOListDesign
+schema: 2.0.0
+author: 
+ms.author: 
+ms.reviewer:
+---
+
 # Invoke-SPOListDesign
 
 ## SYNOPSIS
