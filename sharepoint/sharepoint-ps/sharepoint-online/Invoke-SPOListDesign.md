@@ -15,7 +15,7 @@ Invoke-SPOListDesign
 ```
 ## DESCRIPTION
 
-Applies a published list design to a specified site collection target. This allows a list design to be applied to an existing site collection.
+Applies a published list design to a specified site collection.
 
 ## EXAMPLES
 
