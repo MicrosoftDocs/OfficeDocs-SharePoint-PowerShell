@@ -2,7 +2,7 @@
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spprojectpcssettings
-applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 title: Set-SPProjectPCSSettings
 schema: 2.0.0
 ---
@@ -49,7 +49,7 @@ The Project Server service application for which the settings are to be read.
 Type: PsiServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: sa
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -71,7 +71,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -87,7 +87,7 @@ The maximum length of time before the Project Calculation Engine can begin to re
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -103,7 +103,7 @@ The maximum length of time that a user can be idle in a Project Calculation Engi
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -119,7 +119,7 @@ The maximum number of idle Project Calculation Engine sessions available at a gi
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -135,7 +135,7 @@ The maximum size of a project that can be opened by the Project Calculation Engi
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -151,7 +151,7 @@ The maximum number of sessions that a user is allowed to open.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -167,7 +167,7 @@ The maximum number of Project Calculation Engine sessions that can be created.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -183,7 +183,7 @@ The minimum memory required before launching a new Project Calculation Engine se
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -199,7 +199,7 @@ The maximum allowable time for a request to the Project Calculation Engine to co
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -215,7 +215,7 @@ The TCP port to use with the PCS service.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

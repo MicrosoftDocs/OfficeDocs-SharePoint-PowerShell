@@ -2,7 +2,7 @@
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spapplicationcredentialkey
-applicable: SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 title: Set-SPApplicationCredentialKey
 schema: 2.0.0
 ---
@@ -46,7 +46,7 @@ Avoid reusing the farm passphrase or service account passwords for the applicati
 Type: SecureString
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 Required: True
 Position: 1
 Default value: None

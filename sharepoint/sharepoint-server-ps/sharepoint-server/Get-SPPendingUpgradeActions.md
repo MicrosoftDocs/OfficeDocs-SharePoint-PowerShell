@@ -95,7 +95,7 @@ Specifies to not include pending upgrade actions for all child objects of a cont
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

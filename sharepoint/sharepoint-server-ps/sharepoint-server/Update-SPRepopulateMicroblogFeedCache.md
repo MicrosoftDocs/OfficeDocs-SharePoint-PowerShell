@@ -205,7 +205,7 @@ The ListId of the FollowableList.
 Type: Guid
 Parameter Sets: FollowableList
 Aliases:
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -222,7 +222,7 @@ The RootFolderUrl of the FollowableList.
 Type: String
 Parameter Sets: FollowableList
 Aliases:
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -239,7 +239,7 @@ The SiteId containing the FollowableList.
 Type: Guid
 Parameter Sets: FollowableList
 Aliases:
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -256,7 +256,7 @@ The WebId containing the FollowableList.
 Type: Guid
 Parameter Sets: FollowableList
 Aliases:
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named

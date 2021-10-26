@@ -2,7 +2,7 @@
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/enable-spprojectactivedirectoryenterpriseresourcepoolsync
-applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 title: Enable-SPProjectActiveDirectoryEnterpriseResourcePoolSync
 schema: 2.0.0
 ---
@@ -62,7 +62,7 @@ Specifies the URL of the Project Web App instance to enable Active Directory Ent
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -78,7 +78,7 @@ The Active Directory Group GUID to synchronize the Enterprise Resource Pool with
 Type: System.Collections.Generic.IEnumerable`1[System.Guid]
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 2
@@ -100,7 +100,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

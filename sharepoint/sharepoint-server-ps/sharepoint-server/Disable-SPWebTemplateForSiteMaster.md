@@ -2,7 +2,7 @@
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/disable-spwebtemplateforsitemaster
-applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 title: Disable-SPWebTemplateForSiteMaster
 schema: 2.0.0
 ---
@@ -42,7 +42,7 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -60,7 +60,7 @@ When this parameter is not specified, the CompatibilityLevel parameter will defa
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -76,7 +76,7 @@ Specifies the name of the template. For example, SPSPERS#2.
 Type: SPWebTemplatePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named

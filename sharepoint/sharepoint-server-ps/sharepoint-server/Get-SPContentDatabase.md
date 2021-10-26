@@ -242,7 +242,7 @@ The valid values are True or False. The default value is False.
 Type: SwitchParameter
 Parameter Sets: DefaultSet, AllContentDatabasesInWebApplication
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
