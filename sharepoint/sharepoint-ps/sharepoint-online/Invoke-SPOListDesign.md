@@ -2,7 +2,7 @@
 
 ## SYNOPSIS
 
-Applies a published list design to a specified site collection target. This allows a list design to be applied to an existing site collection. The supported list templates you can apply a list design to include: "modern" team site (with m365 group), "modern" team site (without an m365 group); communication site; classic team site; and classic publishing site.
+Applies a published list design to a specified site collection. The supported list templates you can apply a list design to include: "modern" team site with M365 group, "modern" team site without an M365 group, communication site, classic team site, and classic publishing site.
 
 ## SYNTAX
 
