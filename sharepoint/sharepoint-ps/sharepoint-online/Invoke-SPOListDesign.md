@@ -20,7 +20,7 @@ Applies a published list design to a specified site collection. The supported li
 
 ```powershell
 Invoke-SPOListDesign
-  [-Identity]
+  [-Identity] <SPOListDesignPipeBind>
   -WebUrl <string>
   [<CommonParameters>]
 
