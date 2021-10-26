@@ -304,7 +304,7 @@ Prevents database schema update during restore. Do not use.
 Type: SwitchParameter
 Parameter Sets: Full
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

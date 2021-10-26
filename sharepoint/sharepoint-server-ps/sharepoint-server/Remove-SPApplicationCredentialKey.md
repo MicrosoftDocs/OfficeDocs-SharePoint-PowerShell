@@ -2,7 +2,7 @@
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spapplicationcredentialkey
-applicable: SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 title: Remove-SPApplicationCredentialKey
 schema: 2.0.0
 ---

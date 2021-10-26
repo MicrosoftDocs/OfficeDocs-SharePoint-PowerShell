@@ -2,7 +2,7 @@
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 module name: SharePointServer
 online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spprojectqueuesettings
-applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 title: Get-SPProjectQueueSettings
 schema: 2.0.0
 ---
@@ -57,7 +57,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefg;
 Type: PsiServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: sa
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -79,7 +79,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

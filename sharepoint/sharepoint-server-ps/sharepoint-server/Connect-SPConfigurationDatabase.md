@@ -167,7 +167,7 @@ Specifies the Database Mirroring partner for a SQL Server instance.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -183,7 +183,7 @@ Specifies the MinRole assigned to the local server.
 Type: SPServerRole
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

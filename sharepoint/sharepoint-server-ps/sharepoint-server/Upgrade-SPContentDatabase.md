@@ -192,7 +192,7 @@ Specifies to not upgrade all child objects when performing a build-to-build upgr
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -279,7 +279,7 @@ Lets the upgrade process to proceed on a content database which is not currently
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -295,7 +295,7 @@ Specifies to not upgrade databases and their child objects when performing upgra
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: NoB2BSiteUpgrade
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

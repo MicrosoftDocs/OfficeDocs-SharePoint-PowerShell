@@ -69,7 +69,7 @@ This applies when in AD DS account creation mode and the value of this parameter
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable:  SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 Required: False
 Position: Named
 Default value: None
@@ -84,7 +84,7 @@ Specifies if compliance flags are enabled.
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable:  SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 Required: False
 Position: Named
 Default value: None

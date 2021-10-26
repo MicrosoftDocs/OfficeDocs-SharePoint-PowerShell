@@ -358,7 +358,7 @@ The valid values are True and False.
 Type: SwitchParameter
 Parameter Sets: AllSitesInContentDB
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

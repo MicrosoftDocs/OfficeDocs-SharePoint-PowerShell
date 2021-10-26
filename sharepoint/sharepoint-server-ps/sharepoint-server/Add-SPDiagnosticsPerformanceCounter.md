@@ -266,7 +266,7 @@ Accept wildcard characters: False
 Type: String[]
 Parameter Sets: AddMultipleCounters
 Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
