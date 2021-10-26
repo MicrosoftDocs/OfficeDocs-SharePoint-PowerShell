@@ -21,7 +21,7 @@ Applies a published list design to a specified site collection.
 
 ### Example 1
 
-This example applies a list design whose script creates one list with content types, views and fields
+This example applies a list design whose script creates one list with content types, views and fields.
 
 ```powershell
 Invoke-SPOListDesign -Identity 5b38e500-0fab-4da7-b011-ad7113228920 -WebUrl "https://contoso.sharepoint.com/sites/testgo"
