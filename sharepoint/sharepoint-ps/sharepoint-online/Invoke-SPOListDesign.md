@@ -118,3 +118,21 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+## CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://docs.microsoft.com/en-gb/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-7.1).
+
+
+# INPUTS
+
+## Microsoft.Online.SharePoint.PowerShell.SPOListDesignPipeBind
+
+# OUTPUTS
+
+### System.Object
+
+# NOTES
+
+# RELATED LINKS
+
+Getting started with [SharePoint Online Management Shell](https://docs.microsoft.com/en-gb/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps).
