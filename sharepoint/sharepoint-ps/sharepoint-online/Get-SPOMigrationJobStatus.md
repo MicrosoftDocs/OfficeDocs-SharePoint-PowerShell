@@ -12,6 +12,8 @@ ms.reviewer:
 
 # Get-SPOMigrationJobStatus
 
+This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](/sharepointmigration/overview-spmt-ps-cmdlets).
+
 ## SYNOPSIS
 
 Use this cmdlet to monitor the status of a submitted SharePoint Online migration job.

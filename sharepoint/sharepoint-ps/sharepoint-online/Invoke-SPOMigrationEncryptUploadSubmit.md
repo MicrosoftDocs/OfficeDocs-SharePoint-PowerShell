@@ -12,6 +12,8 @@ ms.reviewer:
 
 # Invoke-SPOMigrationEncryptUploadSubmit
 
+This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](/sharepointmigration/overview-spmt-ps-cmdlets).
+
 ## SYNOPSIS
 
 Creates a new migration job in the target site collection

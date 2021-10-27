@@ -12,6 +12,8 @@ ms.reviewer:
 
 # Submit-SPOMigrationJob
 
+This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](/sharepointmigration/overview-spmt-ps-cmdlets).
+
 ## SYNOPSIS
 
 Cmdlet to submit a new migration job referenced to a previously uploaded package in Azure Blob storage into to a site collection.
