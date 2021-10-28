@@ -16,7 +16,8 @@ ms.reviewer:
 
 Creates a new migration job in the target site collection
 
-This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](https://docs.microsoft.com/sharepointmigration/overview-spmt-ps-cmdlets).
+> [!NOTE]
+> This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](https://docs.microsoft.com/sharepointmigration/overview-spmt-ps-cmdlets).
 
 ## SYNTAX
 
