@@ -35,7 +35,7 @@ This command gets the status of the job to rename the SharePoint domain name for
 ### EXAMPLE 1
 
 ```powershell
-Gett-SPOTenantRenameStatus
+Get-SPOTenantRenameStatus
 ```
 
 Gets the status of the job to rename your SharePoint domain name.
