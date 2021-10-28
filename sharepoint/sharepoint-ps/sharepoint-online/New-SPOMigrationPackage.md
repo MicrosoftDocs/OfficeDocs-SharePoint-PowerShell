@@ -12,9 +12,10 @@ ms.reviewer:
 
 # New-SPOMigrationPackage
 
-This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](https://docs.microsoft.com/sharepointmigration/overview-spmt-ps-cmdlets)
-
 ## SYNOPSIS
+
+> [!NOTE]
+> This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](https://docs.microsoft.com/sharepointmigration/overview-spmt-ps-cmdlets)
 
 Cmdlet to create a new migration package based on source files in a local or network shared folder.
 
