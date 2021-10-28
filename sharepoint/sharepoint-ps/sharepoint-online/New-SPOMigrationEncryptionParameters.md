@@ -14,10 +14,9 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Creates a new random encryption key for a migration job or package.
+**Note**: This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](https://docs.microsoft.com/sharepointmigration/overview-spmt-ps-cmdlets).
 
-> [!NOTE]
-> This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](https://docs.microsoft.com/sharepointmigration/overview-spmt-ps-cmdlets).
+Creates a new random encryption key for a migration job or package.
 
 ## SYNTAX
 
