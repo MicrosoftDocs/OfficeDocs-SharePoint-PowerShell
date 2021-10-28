@@ -16,6 +16,9 @@ ms.reviewer:
 
 Cmdlet to submit a new migration job referenced to a previously uploaded package in Azure Blob storage into to a site collection.
 
+> [!NOTE]
+> This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](https://docs.microsoft.com/sharepointmigration/overview-spmt-ps-cmdlets).
+
 ## SYNTAX
 
 ### AzureLocationsInline
