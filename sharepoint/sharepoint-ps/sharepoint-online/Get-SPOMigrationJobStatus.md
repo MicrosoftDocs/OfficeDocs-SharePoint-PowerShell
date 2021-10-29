@@ -14,6 +14,8 @@ ms.reviewer:
 
 ## SYNOPSIS
 
+**Note**: This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](https://docs.microsoft.com/sharepointmigration/overview-spmt-ps-cmdlets).
+
 Use this cmdlet to monitor the status of a submitted SharePoint Online migration job.
 
 ## SYNTAX
