@@ -25,6 +25,10 @@ Get-SPOGeoMoveCrossCompatibilityStatus [<CommonParameters>]
 ## DESCRIPTION
 
 This cmdlet returns the compatibility between sites and locations for a move in a multi-geo SharePoint Online tenant.
+The following statuses can be returned:
+- **Compatible** - The sites and locations are currently compatible and a move can be performed.
+- **Incompatible** - The sites or locations are currently not compatible and a move cannot be performed at this point in time.
+- **Warning** - The sites or locations are currently not compatible. Although a move can be performed, it is recommended to postpone until they are compatible.
 
 ## EXAMPLES
 
