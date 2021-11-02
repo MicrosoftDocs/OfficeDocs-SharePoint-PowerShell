@@ -88,4 +88,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Rename your SharePoint domain](https://aka.ms/SPOTenantRename)
 
+[Get-SPOTenantRenameStatus](Get-SPOTenantRenameStatus.md)
+
+[Start-SPOTenantRename](Start-SPOTenantRename.md)
+
 [Get-SPOSiteRenameState](Get-SPOSiteRenameState.md)
