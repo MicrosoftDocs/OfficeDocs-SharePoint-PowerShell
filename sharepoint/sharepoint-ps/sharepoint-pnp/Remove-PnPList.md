@@ -14,7 +14,10 @@ online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPList.html
 > [!TIP]
 > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPList.md to change this file.
 
-Deletes a list
+Remove-PnPList deletes a list.
+
+###Exceeding the list view threshold
+The command cannot delete a list exceeding the list view threshold. Attempting to delete a list exceeding the list view threshold returns the error: 'The attempted operation is prohibited because it exceeds the list view threshold.'
 
 ## SYNTAX
 
