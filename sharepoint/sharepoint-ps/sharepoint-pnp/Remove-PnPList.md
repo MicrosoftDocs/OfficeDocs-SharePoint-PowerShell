@@ -43,7 +43,7 @@ Removes the list named 'Announcements' without asking for confirmation.
 
 ### EXAMPLE 3
 ```powershell
-Remove-PnPList -Title Announcements -Recycle
+Remove-PnPList -Identity Announcements -Recycle
 ```
 
 Removes the list named 'Announcements' and saves to the Recycle Bin
