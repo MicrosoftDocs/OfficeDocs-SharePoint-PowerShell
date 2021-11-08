@@ -15,7 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 
 > [!IMPORTANT]
-> This feature is is in preview and currently available to organizations that have no more than 1000 total SharePoint sites and OneDrive accounts combined.
+> This feature is in preview and currently available to organizations that have no more than 1,000 total SharePoint sites and OneDrive accounts combined.
 
 Get the status of the job to change the SharePoint domain name for your organization in Microsoft 365.
 
