@@ -17,9 +17,17 @@ Creates a new SharePoint Central Administration Web application.
 
 ## SYNTAX
 
+### SetIisWebSiteBinding
 ```
-New-SPCentralAdministration [[-Port] <Int32>] [[-WindowsAuthProvider] <String>]
- [-AssignmentCollection <SPAssignmentCollection>] [-SecureSocketsLayer] [<CommonParameters>]
+New-SPCentralAdministration [-Port] <Int32> [[-WindowsAuthProvider] <String>] [-SecureSocketsLayer]
+ [[-HostHeader] <String>] [-Certificate <SPServerCertificatePipeBind>] [-UseServerNameIndication]
+ [-AllowLegacyEncryption] [-Url <String>] [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+```
+
+### SetAuthProvider
+```
+New-SPCentralAdministration [[-WindowsAuthProvider] <String>] [-AssignmentCollection <SPAssignmentCollection>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -40,49 +48,30 @@ This example creates the Central Administration site at port 8080 on the local f
 
 ### ------------------EXAMPLE 2----------------------- 
 ```powershell
-New-SPCentralAdministration -WindowsAuthProvider Kerberos -Port 443 -SecureSocketsLayer
+New-SPCentralAdministration -WindowsAuthProvider Kerberos -Port 443 -SecureSocketsLayer -HostHeader centraladmin.example.com
 ```
 
-This example creates the Central Administration site using SSL on port 443 with Kerberos authentication.
-
+This example creates the Central Administration site using SSL on port 443 with the host header centraladmin.example.com and Kerberos authentication.
 
 ## PARAMETERS
 
-### -Port
-Specifies the port number for Central Administration.
-If no port is specified, a nonconflicting port number is auto-generated.
+### -AllowLegacyEncryption
+Specifies that older SSL and TLS protocol versions and cipher suites are allowed to be used with this IIS web site.
+Legacy encryption is weaker than modern encryption and is not recommended.
 
-The type must be a valid port number.
+This feature requires Windows Server 2022 or higher.
+This feature is not available when SharePoint is deployed with earlier versions of Windows Server.
 
-If you specify a port number that has already been assigned, IIS does not start the new site until you change either the port number of the new site or the port number of the old site.
+This parameter is only valid when used with the SecureSocketsLayer parameter.
 
 ```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases: 
+Type: SwitchParameter
+Parameter Sets: SetIisWebSiteBinding
+Aliases:
 Applicable: SharePoint Server Subscription Edition
 
 Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -WindowsAuthProvider
-Specifies the authorization provider for this Web application.
-If no authentication provider is specified, the default value NTLM is used.
-
-The type must be one of two values: Kerberos or NTLM.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
-
-Required: False
-Position: 2
+Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
@@ -110,8 +99,66 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -Certificate
+Specifies the certificate that will be used for the Secure Sockets Layer (SSL) binding of this IIS web site.
+This parameter is only valid when used with the SecureSocketsLayer parameter.
+
+```yaml
+Type: SPServerCertificatePipeBind
+Parameter Sets: SetIisWebSiteBinding
+Aliases:
+Applicable: SharePoint Server Subscription Edition
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -HostHeader
+The host header of the Central Administration IIS web site.
+
+If this parameter is omitted there will be no host header binding and the URL of the Central Administration site will be based on the name of this server.
+
+```yaml
+Type: String
+Parameter Sets: SetIisWebSiteBinding
+Aliases: Host
+Applicable: SharePoint Server Subscription Edition
+
+Required: False
+Position: 4
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -Port
+Specifies the port number for Central Administration.
+If no port is specified, a nonconflicting port number is auto-generated.
+
+The type must be a valid port number.
+
+If you specify a port number that has already been assigned, IIS does not start the new site until you change either the port number of the new site or the port number of the old site.
+
+```yaml
+Type: Int32
+Parameter Sets: SetIisWebSiteBinding
+Aliases:
+Applicable: SharePoint Server Subscription Edition
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
 ### -SecureSocketsLayer
-Enables Secure Socket Layer (SSL) encryption for the specified port. If you choose to use SSL, you must assign a server certificate to the Central Administration IIS web site by using the IIS administration tools. The Central Administration web application won't be accessible until you do this.
+Enables Secure Sockets Layer (SSL) encryption for the Central Administration IIS web site.
+If you choose to use SSL, you must import a server certificate to SharePoint and assign it to the Central Administration IIS web site.
+The Central Administration web application won't be accessible until you do this.
 
 The default value is False.
 
@@ -119,12 +166,65 @@ If this parameter is omitted or set to False the Central Administration site wil
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: SetIisWebSiteBinding
+Aliases:
+Applicable: SharePoint Server Subscription Edition
+
+Required: False
+Position: 3
+Default value: False
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -Url
+Specifies the load-balanced URL for Central Administration.
+
+```yaml
+Type: String
+Parameter Sets: SetIisWebSiteBinding
+Aliases:
 Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -UseServerNameIndication
+Specifies that the Secure Sockets Layer (SSL) binding of this IIS web site should use Server Name Indication (SNI).
+Server Name Indication allows multiple IIS web sites with unique host headers and unique server certificates to share the same SSL port.
+If Server Name Indication isn't used, all IIS web sites sharing the same SSL port must share the same server certificate.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: SetIisWebSiteBinding
+Aliases:
+Applicable: SharePoint Server Subscription Edition
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -WindowsAuthProvider
+Specifies the authentication provider for this Web application.
+If no authentication provider is specified, the default value NTLM is used.
+
+The type must be one of two values: Kerberos or NTLM.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Server Subscription Edition
+
+Required: False
+Position: 2
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
