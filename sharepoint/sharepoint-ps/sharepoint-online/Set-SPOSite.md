@@ -563,6 +563,8 @@ Accept wildcard characters: False
 
 ### -DisableAppViews
 
+**Note**: This parameter has been retired and no longer functions.
+
 Disables the Power Apps button.
 Possible values:
 
@@ -603,6 +605,9 @@ Accept wildcard characters: False
 ```
 
 ### -DisableFlows
+
+**Note**: This parameter has been retired and no longer functions.
+
 Disables the Power Automate button.
 Possible values
 
