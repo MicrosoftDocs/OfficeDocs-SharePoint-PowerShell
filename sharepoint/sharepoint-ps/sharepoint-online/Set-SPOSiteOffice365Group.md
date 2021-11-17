@@ -43,7 +43,7 @@ If the site doesn't exist, this cmdlet returns a "File not found" error.
 
 ### Example 1
 
-This example creates a new Microsoft 365 Group named "site1group" and connects site collection <https://contoso.sharepoint.com/sites/site1> to it.  The group will privacy set to "Private" and Classification set to "Highly Confidential".
+This example creates a new Microsoft 365 Group named "site1group" and connects site collection <https://contoso.sharepoint.com/sites/site1> to it.  The group will have its privacy set to "Private" and Classification set to "Highly Confidential".
 
 ```powershell
 Set-SPOSiteOffice365Group -Site https://contoso.sharepoint.com/sites/site1 -DisplayName "site1group" -Alias "site1group" -Classification "Highly Confidential"
