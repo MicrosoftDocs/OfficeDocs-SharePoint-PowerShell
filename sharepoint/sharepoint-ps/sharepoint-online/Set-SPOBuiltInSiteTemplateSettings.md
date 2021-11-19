@@ -35,6 +35,7 @@ All site templates are displayed by default.
 | Training and courses        | 695e52c9-8af7-4bd3-b7a5-46aca95e1c7e  | 
 | Training and development team     | 64aaa31e-7a1e-4337-b646-0b700aa9a52c | 
 | Team collaboration     | 6b96e7b1-035f-430b-92ca-31511c51ca72  | 
+| Retail Management     | e4ec393e-da09-4816-b6b2-195393656edd  | 
 
 <br>
 
@@ -46,6 +47,9 @@ All site templates are displayed by default.
 | Learning central       | b8ef3134-92a2-4c9d-bca6-c2f14e79fe98  | 
 | New employee onboarding      | 2a23fa44-52b0-4814-baba-06fef1ab931e   | 
 | Showcase  | 89f21161-0892-497a-91cb-5783eeb1f5f2   | 
+| Healthcare  | 5215c092-152f-4912-a12a-7e1efdcc6878   | 
+| Store collaboration  | 811ecf9a-b33f-44e6-81bd-da77729906dc   | 
+| Volunteer center  | b6e04a41-1535-4313-a856-6f3515d31999   | 
 | Topic     | a30fef54-a4e5-4beb-a8b5-962c528d753a   | 
 | Blank    | 665da395-e0f9-4c92-b35c-773d8c292f2d  | 
 
