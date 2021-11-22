@@ -35,7 +35,7 @@ All site templates are displayed by default.
 | Training and courses        | 695e52c9-8af7-4bd3-b7a5-46aca95e1c7e  | 
 | Training and development team     | 64aaa31e-7a1e-4337-b646-0b700aa9a52c | 
 | Team collaboration     | 6b96e7b1-035f-430b-92ca-31511c51ca72  | 
-| Retail Management     | e4ec393e-da09-4816-b6b2-195393656edd  | 
+| Retail management     | e4ec393e-da09-4816-b6b2-195393656edd  | 
 
 <br>
 
