@@ -10,7 +10,7 @@ schema: 2.0.0
 # Set-SPServiceHostConfig
 
 ## SYNOPSIS
-Configures one or more common settings for all Web services.
+Configures one or more common settings for all web services.
 
 
 ## SYNTAX
@@ -42,7 +42,7 @@ This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see [Cmdlet parameter sets](https://docs.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
 
-The `Set- SPServiceHostConfig` cmdlet configures one or more common settings for all Web services.
+The `Set- SPServiceHostConfig` cmdlet configures one or more common settings for all web services.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
@@ -54,13 +54,13 @@ For permissions and the most current information about Windows PowerShell for Sh
 Set-SPServiceHostConfig -Port 12345
 ```
 
-This example sets the HTTP port for the Web services.
+This example sets the HTTP port for the web services.
 
 
 ## PARAMETERS
 
 ### -AllowLegacyEncryption
-Specifies that older SSL and TLS protocol versions and cipher suites are allowed to be used with this IIS web site.
+Specifies that older SSL and TLS protocol versions and cipher suites are allowed to be used with this IIS website.
 Legacy encryption is weaker than modern encryption and is not recommended.
 
 This feature requires Windows Server 2022 or higher.
@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -HttpPort
-Specifies the new port for the Web service.
+Specifies the new port for the web service.
 
 ```yaml
 Type: Int32
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -HttpsPort
-Specifies the new secure port for the Web service.
+Specifies the new secure port for the web service.
 
 ```yaml
 Type: Int32
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Specifies the identity of the Web service application to configure.
+Specifies the identity of the web service application to configure.
 
 ```yaml
 Type: SPIisWebServiceSettings
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetTcpPort
-Sets the TCP port for the Web service.
+Sets the TCP port for the web service.
 
 ```yaml
 Type: Int32
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunInProcess
-Specifies to update the Web service application configuration using the current process instead of a SharePoint Timer job.
+Specifies to update the web service application configuration using the current process instead of a SharePoint Timer job.
 
 ```yaml
 Type: SwitchParameter

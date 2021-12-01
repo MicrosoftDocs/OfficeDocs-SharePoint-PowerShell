@@ -10,7 +10,7 @@ schema: 2.0.0
 # Set-SPCentralAdministration
 
 ## SYNOPSIS
-Sets the IIS web site binding for the SharePoint Central Administration site.
+Sets the IIS website binding for the SharePoint Central Administration site.
 
 
 ## SYNTAX
@@ -22,7 +22,7 @@ Set-SPCentralAdministration -Port <Int32> [-SecureSocketsLayer] [-HostHeader <St
 ```
 
 ## DESCRIPTION
-The `Set-SPCentralAdministration` cmdlet sets the IIS web site binding for the SharePoint Central Administration site.
+The `Set-SPCentralAdministration` cmdlet sets the IIS website binding for the SharePoint Central Administration site.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [https://go.microsoft.com/fwlink/p/?LinkId=251831](https://go.microsoft.com/fwlink/p/?LinkId=251831).
 
@@ -40,7 +40,7 @@ This example sets the port for the Central Administration web application on the
 ## PARAMETERS
 
 ### -AllowLegacyEncryption
-Specifies that older SSL and TLS protocol versions and cipher suites are allowed to be used with this IIS web site.
+Specifies that older SSL and TLS protocol versions and cipher suites are allowed to be used with this IIS website.
 Legacy encryption is weaker than modern encryption and is not recommended.
 
 This feature requires Windows Server 2022 or higher.
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Certificate
-Specifies the certificate that will be used for the Secure Sockets Layer (SSL) binding of this IIS web site.
+Specifies the certificate that will be used for the Secure Sockets Layer (SSL) binding of this IIS website.
 This parameter is only valid when used with the SecureSocketsLayer parameter.
 
 ```yaml
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -HostHeader
-The host header of the Central Administration IIS web site.
+The host header of the Central Administration IIS website.
 
 If this parameter is omitted, there will be no host header binding and the URL of the Central Administration site will be based on the name of this server.
 
@@ -137,8 +137,8 @@ Accept wildcard characters: False
 ```
 
 ### -SecureSocketsLayer
-Enables Secure Sockets Layer (SSL) encryption for the Central Administration IIS web site.
-If you choose to use SSL, you must import a server certificate to SharePoint and assign it to the Central Administration IIS web site for this web application.
+Enables Secure Sockets Layer (SSL) encryption for the Central Administration IIS website.
+If you choose to use SSL, you must import a server certificate to SharePoint and assign it to the Central Administration IIS website for this web application.
 The Central Administration web application won't be accessible until you do this.
 
 The default value is False.
@@ -175,9 +175,9 @@ Accept wildcard characters: False
 ```
 
 ### -UseServerNameIndication
-Specifies that the Secure Sockets Layer (SSL) binding of this IIS web site should use Server Name Indication (SNI).
-Server Name Indication allows multiple IIS web sites with unique host headers and unique server certificates to share the same SSL port.
-If Server Name Indication isn't used, all IIS web sites sharing the same SSL port must share the same server certificate.
+Specifies that the Secure Sockets Layer (SSL) binding of this IIS website should use Server Name Indication (SNI).
+Server Name Indication allows multiple IIS websites with unique host headers and unique server certificates to share the same SSL port.
+If Server Name Indication isn't used, all IIS websites sharing the same SSL port must share the same server certificate.
 
 ```yaml
 Type: SwitchParameter
@@ -227,7 +227,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters] (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

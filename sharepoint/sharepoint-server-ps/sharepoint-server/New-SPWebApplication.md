@@ -43,14 +43,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 New-SPWebApplication -Name "Contoso Internet Site" -Port 80 -HostHeader sharepoint.contoso.com -URL "http://www.contoso.com" -ApplicationPool "ContosoAppPool" -ApplicationPoolAccount (Get-SPManagedAccount "DOMAIN\wa")
 ```
 
-This example creates a new Web application by using an internal host header of sharepoint.contoso.com and a public URL of https://www.contoso.com.
+This example creates a new web application by using an internal host header of sharepoint.contoso.com and a public URL of http://www.contoso.com.
 
 ### ------------------EXAMPLE 2-----------------------
 ```powershell
 New-SPWebApplication -Name "Contoso Internet Site" -Port 443 -SecureSocketsLayer -HostHeader sharepoint.contoso.com -URL "https://www.contoso.com:443" -ApplicationPool "ContosoAppPool" -ApplicationPoolAccount (Get-SPManagedAccount "DOMAIN\wa")
 ```
 
-This example creates a new SSL enabled Web application by using an internal host header of sharepoint.contoso.com and a public URL of https://www.contoso.com.
+This example creates a new SSL enabled web application by using an internal host header of sharepoint.contoso.com and a public URL of https://www.contoso.com.
 
 ### ------------------EXAMPLE 3-----------------------
 ```powershell
@@ -66,7 +66,7 @@ Creates a Windows Claims web application at the URL https://www.contoso.com usin
 ## PARAMETERS
 
 ### -AdditionalClaimProvider
-Adds a specific claim provider to the defined Web application.
+Adds a specific claim provider to the defined web application.
 
 ```yaml
 Type: SPClaimProviderPipeBind[]
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowAnonymousAccess
-Allows anonymous access to the Web application.
+Allows anonymous access to the web application.
 
 ```yaml
 Type: SwitchParameter
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowLegacyEncryption
-Specifies that older SSL and TLS protocol versions and cipher suites are allowed to be used with this IIS web site.
+Specifies that older SSL and TLS protocol versions and cipher suites are allowed to be used with this IIS website.
 Legacy encryption is weaker than modern encryption and is not recommended.
 
 This feature requires Windows Server 2022 or higher.
@@ -210,7 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### -Certificate
-Specifies the certificate that will be used for the Secure Sockets Layer (SSL) binding of this IIS web site.
+Specifies the certificate that will be used for the Secure Sockets Layer (SSL) binding of this IIS website.
 This parameter is only valid when used with the SecureSocketsLayer parameter.
 
 ```yaml
@@ -281,10 +281,10 @@ Accept wildcard characters: False
 
 ### -HostHeader
 Specifies the host header binding for this IIS web site.
-A host header binding allows multiple IIS web sites to share the same port number.
-Web requests sent to a shared port number are routed to the correct IIS web site based on the value of the HTTP host header sent by the client.
+A host header binding allows multiple IIS websites to share the same port number.
+Web requests sent to a shared port number are routed to the correct IIS website based on the value of the HTTP host header sent by the client.
 
-If no host header binding is specified, then all web requests sent to this port number will be routed to this IIS web site unless another IIS web site has a host header binding that matches the HTTP host header sent by the client.
+If no host header binding is specified, then all web requests sent to this port number will be routed to this IIS website unless another IIS website has a host header binding that matches the HTTP host header sent by the client.
 
 ```yaml
 Type: String
@@ -300,7 +300,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the new Web application.
+Specifies the name of the new web application.
 
 ```yaml
 Type: String
@@ -316,7 +316,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-Specifies the physical directory for the new Web application in the virtual directories folder.
+Specifies the physical directory for the new web application in the virtual directories folder.
 The type is a valid path, in the form C:\Inetpub\wwwroot\MyWebApplication.
 If no value is specified, the value %wwwroot%\wss\VirtualDirectories\\\<portnumber\> is applied.
 
@@ -355,12 +355,12 @@ Accept wildcard characters: False
 
 ### -SecureSocketsLayer
 Enables Secure Sockets Layer (SSL) encryption for this Web application.
-If you choose to use SSL, you must import a server certificate to SharePoint and assign it to the IIS web site for this web application.
-Until this is done, the Web application will be inaccessible from this IIS Web site.
+If you choose to use SSL, you must import a server certificate to SharePoint and assign it to the IIS website for this web application.
+Until this is done, the Web application will be inaccessible from this IIS website.
 
 The default value is False.
 
-If this parameter is omitted or set to False, this Web application will use HTTP for the specified port.
+If this parameter is omitted or set to False, this web application will use HTTP for the specified port.
 
 ```yaml
 Type: SwitchParameter
@@ -458,9 +458,9 @@ Accept wildcard characters: False
 ```
 
 ### -UseServerNameIndication
-Specifies that the Secure Sockets Layer (SSL) binding of this IIS web site should use Server Name Indication (SNI).
-Server Name Indication allows multiple IIS web sites with unique host headers and unique server certificates to share the same SSL port.
-If Server Name Indication isn't used, all IIS web sites sharing the same SSL port must share the same server certificate.
+Specifies that the Secure Sockets Layer (SSL) binding of this IIS website should use Server Name Indication (SNI).
+Server Name Indication allows multiple IIS websites with unique host headers and unique server certificates to share the same SSL port.
+If Server Name Indication isn't used, all IIS websites sharing the same SSL port must share the same server certificate.
 
 ```yaml
 Type: SwitchParameter

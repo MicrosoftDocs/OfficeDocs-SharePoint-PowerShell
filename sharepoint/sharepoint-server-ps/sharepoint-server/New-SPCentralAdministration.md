@@ -56,7 +56,7 @@ This example creates the Central Administration site using SSL on port 443 with 
 ## PARAMETERS
 
 ### -AllowLegacyEncryption
-Specifies that older SSL and TLS protocol versions and cipher suites are allowed to be used with this IIS web site.
+Specifies that older SSL and TLS protocol versions and cipher suites are allowed to be used with this IIS website.
 Legacy encryption is weaker than modern encryption and is not recommended.
 
 This feature requires Windows Server 2022 or higher.
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Certificate
-Specifies the certificate that will be used for the Secure Sockets Layer (SSL) binding of this IIS web site.
+Specifies the certificate that will be used for the Secure Sockets Layer (SSL) binding of this IIS website.
 This parameter is only valid when used with the SecureSocketsLayer parameter.
 
 ```yaml
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -HostHeader
-The host header of the Central Administration IIS web site.
+Specifies the host header of the Central Administration IIS website.
 
 If this parameter is omitted there will be no host header binding and the URL of the Central Administration site will be based on the name of this server.
 
@@ -156,8 +156,8 @@ Accept wildcard characters: False
 ```
 
 ### -SecureSocketsLayer
-Enables Secure Sockets Layer (SSL) encryption for the Central Administration IIS web site.
-If you choose to use SSL, you must import a server certificate to SharePoint and assign it to the Central Administration IIS web site.
+Enables Secure Sockets Layer (SSL) encryption for the Central Administration IIS website.
+If you choose to use SSL, you must import a server certificate to SharePoint and assign it to the Central Administration IIS website.
 The Central Administration web application won't be accessible until you do this.
 
 The default value is False.
@@ -194,9 +194,9 @@ Accept wildcard characters: False
 ```
 
 ### -UseServerNameIndication
-Specifies that the Secure Sockets Layer (SSL) binding of this IIS web site should use Server Name Indication (SNI).
-Server Name Indication allows multiple IIS web sites with unique host headers and unique server certificates to share the same SSL port.
-If Server Name Indication isn't used, all IIS web sites sharing the same SSL port must share the same server certificate.
+Specifies that the Secure Sockets Layer (SSL) binding of this IIS website should use Server Name Indication (SNI).
+Server Name Indication allows multiple IIS websites with unique host headers and unique server certificates to share the same SSL port.
+If Server Name Indication isn't used, all IIS websites sharing the same SSL port must share the same server certificate.
 
 ```yaml
 Type: SwitchParameter
@@ -212,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsAuthProvider
-Specifies the authentication provider for this Web application.
+Specifies the authentication provider for this web application.
 If no authentication provider is specified, the default value NTLM is used.
 
 The type must be one of two values: Kerberos or NTLM.
@@ -231,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters] (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
