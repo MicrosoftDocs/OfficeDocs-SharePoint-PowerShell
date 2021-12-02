@@ -19,7 +19,7 @@ Adds a user to the SharePoint_Shell_Access role for the specified database.
 
 ```
 Add-SPShellAdmin [-UserName] <String> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
- [-database <SPDatabasePipeBind>] [-WhatIf] [<CommonParameters>]
+ [-Database <SPDatabasePipeBind>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -132,7 +132,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -database
+### -Database
 Specifies the GUID of the database or the Database object that includes the SharePoint_Shell_Access role to which you want to add the user.
 If the database parameter is not specified, the configuration database is used.
 The farm configuration database is always included, even if you specify another database.

@@ -16,15 +16,17 @@ Creates a new Web application within the local farm.
 ## SYNTAX
 
 ```
-New-SPWebApplication -ApplicationPool <String> -Name <String>
- [-AdditionalClaimProvider <SPClaimProviderPipeBind[]>] [-AllowAnonymousAccess]
- [-ApplicationPoolAccount <SPProcessAccountPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
- [-AuthenticationMethod <String>] [-AuthenticationProvider <SPAuthenticationProviderPipeBind[]>] [-Confirm]
- [-DatabaseCredentials <PSCredential>] [-DatabaseName <String>] [-DatabaseServer <String>]
- [-HostHeader <String>] [-Path <String>] [-Port <UInt32>] [-SecureSocketsLayer]
- [-ServiceApplicationProxyGroup <SPServiceApplicationProxyGroupPipeBind>]
- [-SignInRedirectProvider <SPTrustedIdentityTokenIssuerPipeBind>] [-SignInRedirectURL <String>] [-Url <String>]
- [-UserSettingsProvider <SPUserSettingsProviderPipeBind>] [-WhatIf] [<CommonParameters>]
+New-SPWebApplication -Name <String> -ApplicationPool <String>
+ [-ApplicationPoolAccount <SPProcessAccountPipeBind>]
+ [-ServiceApplicationProxyGroup <SPServiceApplicationProxyGroupPipeBind>] [-SecureSocketsLayer]
+ [-HostHeader <String>] [-Certificate <SPServerCertificatePipeBind>] [-UseServerNameIndication]
+ [-AllowLegacyEncryption] [-Port <UInt32>] [-AllowAnonymousAccess] [-Path <String>] [-Url <String>]
+ [-AuthenticationMethod <String>] [-AuthenticationProvider <SPAuthenticationProviderPipeBind[]>]
+ [-AdditionalClaimProvider <SPClaimProviderPipeBind[]>] [-SignInRedirectURL <String>]
+ [-SignInRedirectProvider <SPTrustedIdentityTokenIssuerPipeBind>]
+ [-UserSettingsProvider <SPUserSettingsProviderPipeBind>] [-DatabaseCredentials <PSCredential>]
+ [-DatabaseServer <String>] [-DatabaseName <String>] [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,14 +43,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 New-SPWebApplication -Name "Contoso Internet Site" -Port 80 -HostHeader sharepoint.contoso.com -URL "http://www.contoso.com" -ApplicationPool "ContosoAppPool" -ApplicationPoolAccount (Get-SPManagedAccount "DOMAIN\wa")
 ```
 
-This example creates a new Web application by using an internal host header of sharepoint.contoso.com and a public URL of http://www.contoso.com.
+This example creates a new web application by using an internal host header of sharepoint.contoso.com and a public URL of http://www.contoso.com.
 
 ### ------------------EXAMPLE 2-----------------------
 ```powershell
 New-SPWebApplication -Name "Contoso Internet Site" -Port 443 -SecureSocketsLayer -HostHeader sharepoint.contoso.com -URL "https://www.contoso.com:443" -ApplicationPool "ContosoAppPool" -ApplicationPoolAccount (Get-SPManagedAccount "DOMAIN\wa")
 ```
 
-This example creates a new SSL enabled Web application by using an internal host header of sharepoint.contoso.com and a public URL of https://www.contoso.com.
+This example creates a new SSL enabled web application by using an internal host header of sharepoint.contoso.com and a public URL of https://www.contoso.com.
 
 ### ------------------EXAMPLE 3-----------------------
 ```powershell
@@ -63,42 +65,8 @@ Creates a Windows Claims web application at the URL https://www.contoso.com usin
 
 ## PARAMETERS
 
-### -ApplicationPool
-Specifies the name of an application pool to use; for example, SharePoint - 1213.
-If an application pool with the name provided does not exist, the ApplicationPoolAccount parameter must be provided and a new application pool will be created.
-If no value is specified, the default application pool will be used.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the new Web application.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -AdditionalClaimProvider
-Adds a specific claim provider to the defined Web application.
+Adds a specific claim provider to the defined web application.
 
 ```yaml
 Type: SPClaimProviderPipeBind[]
@@ -114,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowAnonymousAccess
-Allows anonymous access to the Web application.
+Allows anonymous access to the web application.
 
 ```yaml
 Type: SwitchParameter
@@ -123,6 +91,46 @@ Aliases:
 Applicable: SharePoint Server Subscription Edition
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowLegacyEncryption
+Specifies that older SSL and TLS protocol versions and cipher suites are allowed to be used with this IIS website.
+Legacy encryption is weaker than modern encryption and is not recommended.
+
+This feature requires Windows Server 2022 or higher.
+This feature is not available when SharePoint is deployed with earlier versions of Windows Server.
+
+This parameter is only valid when used with the SecureSocketsLayer parameter.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Server Subscription Edition
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplicationPool
+Specifies the name of an application pool to use; for example, SharePoint - 1213.
+If an application pool with the name provided does not exist, the ApplicationPoolAccount parameter must be provided and a new application pool will be created.
+If no value is specified, the default application pool will be used.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Server Subscription Edition
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -201,20 +209,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before executing the command.
-For more information, type the following command: `get-help about_commonparameters`
+### -Certificate
+Specifies the certificate that will be used for the Secure Sockets Layer (SSL) binding of this IIS website.
+This parameter is only valid when used with the SecureSocketsLayer parameter.
 
 ```yaml
-Type: SwitchParameter
+Type: SPServerCertificatePipeBind
 Parameter Sets: (All)
-Aliases: cf
+Aliases:
 Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -272,10 +280,11 @@ Accept wildcard characters: False
 ```
 
 ### -HostHeader
-Specifies a valid URL assigned to the Web application that must correlate to the alternate access mapping configuration, in the form server_name.
+Specifies the host header binding for this IIS web site.
+A host header binding allows multiple IIS websites to share the same port number.
+Web requests sent to a shared port number are routed to the correct IIS website based on the value of the HTTP host header sent by the client.
 
-When the HostHeader parameter is present, the value of this field is the internal URL for the Web application.
-The Url parameter is used to specify the public URL.If no value is specified, the value is left blank.
+If no host header binding is specified, then all web requests sent to this port number will be routed to this IIS website unless another IIS website has a host header binding that matches the HTTP host header sent by the client.
 
 ```yaml
 Type: String
@@ -290,8 +299,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Name
+Specifies the name of the new web application.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Server Subscription Edition
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
 ### -Path
-Specifies the physical directory for the new Web application in the virtual directories folder.
+Specifies the physical directory for the new web application in the virtual directories folder.
 The type is a valid path, in the form C:\Inetpub\wwwroot\MyWebApplication.
 If no value is specified, the value %wwwroot%\wss\VirtualDirectories\\\<portnumber\> is applied.
 
@@ -330,8 +355,12 @@ Accept wildcard characters: False
 
 ### -SecureSocketsLayer
 Enables Secure Sockets Layer (SSL) encryption for this Web application.
-If you choose to use SSL, you must add the certificate on each server by using the IIS administration tools.
-Until this is done, the Web application will be inaccessible from this IIS Web site.
+If you choose to use SSL, you must import a server certificate to SharePoint and assign it to the IIS website for this web application.
+Until this is done, the Web application will be inaccessible from this IIS website.
+
+The default value is False.
+
+If this parameter is omitted or set to False, this web application will use HTTP for the specified port.
 
 ```yaml
 Type: SwitchParameter
@@ -419,6 +448,41 @@ Provides access to external user settings provider.
 Type: SPUserSettingsProviderPipeBind
 Parameter Sets: (All)
 Aliases: 
+Applicable: SharePoint Server Subscription Edition
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseServerNameIndication
+Specifies that the Secure Sockets Layer (SSL) binding of this IIS website should use Server Name Indication (SNI).
+Server Name Indication allows multiple IIS websites with unique host headers and unique server certificates to share the same SSL port.
+If Server Name Indication isn't used, all IIS websites sharing the same SSL port must share the same server certificate.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Server Subscription Edition
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before executing the command.
+For more information, type the following command: `get-help about_commonparameters`
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 Applicable: SharePoint Server Subscription Edition
 
 Required: False

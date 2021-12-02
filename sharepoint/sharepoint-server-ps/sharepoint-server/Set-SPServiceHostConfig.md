@@ -10,23 +10,31 @@ schema: 2.0.0
 # Set-SPServiceHostConfig
 
 ## SYNOPSIS
-Configures one or more common settings for all Web services.
+Configures one or more common settings for all web services.
 
 
 ## SYNTAX
 
-### SslCertificateReference
+### SslCertificateImport (Default)
 ```
-Set-SPServiceHostConfig [-Identity] <SPIisWebServiceSettings> -SslCertificateThumbprint <String>
- [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-HttpPort <Int32>] [-HttpsPort <Int32>]
- [-NetTcpPort <Int32>] [-NoWait] [-SslCertificateStoreName <String>] [-WhatIf] [<CommonParameters>]
+Set-SPServiceHostConfig [-Identity] <SPIisWebServiceSettings> [-HttpPort <Int32>] [-HttpsPort <Int32>]
+ [-NetTcpPort <Int32>] [-ImportSslCertificate <X509Certificate2>] [-AllowLegacyEncryption] [-NoWait]
+ [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### SslCertificateImport
+### SslCertificateReference
 ```
-Set-SPServiceHostConfig [-Identity] <SPIisWebServiceSettings> [-AssignmentCollection <SPAssignmentCollection>]
- [-Confirm] [-HttpPort <Int32>] [-HttpsPort <Int32>] [-ImportSslCertificate <X509Certificate2>]
- [-NetTcpPort <Int32>] [-NoWait] [-WhatIf] [<CommonParameters>]
+Set-SPServiceHostConfig [-Identity] <SPIisWebServiceSettings> [-HttpPort <Int32>] [-HttpsPort <Int32>]
+ [-NetTcpPort <Int32>] -SslCertificateThumbprint <String> [-SslCertificateStoreName <String>]
+ [-AllowLegacyEncryption] [-NoWait] [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+### SslCertificateReferenceRunInProcess
+```
+Set-SPServiceHostConfig [-Identity] <SPIisWebServiceSettings> -SslCertificateThumbprint <String>
+ [-SslCertificateStoreName <String>] [-RunInProcess] [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,7 +42,7 @@ This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see [Cmdlet parameter sets](https://docs.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
 
-The `Set- SPServiceHostConfig` cmdlet configures one or more common settings for all Web services.
+The `Set- SPServiceHostConfig` cmdlet configures one or more common settings for all web services.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
@@ -46,37 +54,27 @@ For permissions and the most current information about Windows PowerShell for Sh
 Set-SPServiceHostConfig -Port 12345
 ```
 
-This example sets the HTTP port for the Web services.
+This example sets the HTTP port for the web services.
 
 
 ## PARAMETERS
 
-### -Identity
-Specifies the identity of the Web service application to configure.
+### -AllowLegacyEncryption
+Specifies that older SSL and TLS protocol versions and cipher suites are allowed to be used with this IIS website.
+Legacy encryption is weaker than modern encryption and is not recommended.
+
+This feature requires Windows Server 2022 or higher.
+This feature is not available when SharePoint is deployed with earlier versions of Windows Server.
+
+This parameter is only valid when used with the SecureSocketsLayer parameter.
 
 ```yaml
-Type: SPIisWebServiceSettings
-Parameter Sets: (All)
-Aliases: 
+Type: SwitchParameter
+Parameter Sets: SslCertificateImport, SslCertificateReference
+Aliases:
 Applicable: SharePoint Server Subscription Edition
 
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -SslCertificateThumbprint
-Specifies the thumbprint of the SSL certificate to retrieve for secure protocols.
-
-```yaml
-Type: String
-Parameter Sets: SslCertificateReference
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
-
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -105,29 +103,12 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before executing the command.
-For more information, type the following command: `get-help about_commonparameters`
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Applicable: SharePoint Server Subscription Edition
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -HttpPort
-Specifies the new port for the Web service.
+Specifies the new port for the web service.
 
 ```yaml
 Type: Int32
-Parameter Sets: (All)
+Parameter Sets: SslCertificateImport, SslCertificateReference
 Aliases: Port
 Applicable: SharePoint Server Subscription Edition
 
@@ -139,11 +120,11 @@ Accept wildcard characters: False
 ```
 
 ### -HttpsPort
-Specifies the new secure port for the Web service.
+Specifies the new secure port for the web service.
 
 ```yaml
 Type: Int32
-Parameter Sets: (All)
+Parameter Sets: SslCertificateImport, SslCertificateReference
 Aliases: SecurePort
 Applicable: SharePoint Server Subscription Edition
 
@@ -151,6 +132,22 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+Specifies the identity of the web service application to configure.
+
+```yaml
+Type: SPIisWebServiceSettings
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Server Subscription Edition
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
@@ -171,12 +168,12 @@ Accept wildcard characters: False
 ```
 
 ### -NetTcpPort
-Sets the TCP port for the Web service.
+Sets the TCP port for the web service.
 
 ```yaml
 Type: Int32
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: SslCertificateImport, SslCertificateReference
+Aliases:
 Applicable: SharePoint Server Subscription Edition
 
 Required: False
@@ -191,8 +188,8 @@ For more information, see TechNet.
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
+Parameter Sets: SslCertificateImport, SslCertificateReference
+Aliases:
 Applicable: SharePoint Server Subscription Edition
 
 Required: False
@@ -202,18 +199,67 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RunInProcess
+Specifies to update the web service application configuration using the current process instead of a SharePoint Timer job.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: SslCertificateReferenceRunInProcess
+Aliases:
+Applicable: SharePoint Server Subscription Edition
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SslCertificateStoreName
-Specifies the thumbprint of the SSL certificate to retrieve for secure protocols.
+Specifies the name of the certificate store containing the SSL certificate to retrieve for secure protocols.
 
 ```yaml
 Type: String
-Parameter Sets: SslCertificateReference
-Aliases: 
+Parameter Sets: SslCertificateReference, SslCertificateReferenceRunInProcess
+Aliases:
 Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SslCertificateThumbprint
+Specifies the thumbprint of the SSL certificate to retrieve for secure protocols.
+
+```yaml
+Type: String
+Parameter Sets: SslCertificateReference, SslCertificateReferenceRunInProcess
+Aliases:
+Applicable: SharePoint Server Subscription Edition
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before executing the command.
+For more information, type the following command: \`get-help about_commonparameters\`
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: SharePoint Server Subscription Edition
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
