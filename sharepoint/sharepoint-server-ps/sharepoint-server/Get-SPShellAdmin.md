@@ -18,7 +18,7 @@ Returns the names of all users who have the SharePoint_Shell_Access role.
 ## SYNTAX
 
 ```
-Get-SPShellAdmin [[-database] <SPDatabasePipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
+Get-SPShellAdmin [[-Database] <SPDatabasePipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
  [<CommonParameters>]
 ```
 
@@ -38,7 +38,7 @@ This example returns the name of each user who has the SharePoint_Shell_Access r
 
 ## PARAMETERS
 
-### -database
+### -Database
 Specifies the GUID of the database or the Database Object that includes the SharePoint_Shell_Access role whose user names you want to display.
 If the database parameter is not specified, the configuration database is used.
 

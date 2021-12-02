@@ -17,7 +17,7 @@ Removes a user from the SharePoint_Shell_Access role.
 
 ```
 Remove-SPShellAdmin [-UserName] <String> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
- [-database <SPDatabasePipeBind>] [-WhatIf] [<CommonParameters>]
+ [-Database <SPDatabasePipeBind>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -100,7 +100,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -database
+### -Database
 Specifies the GUID of the database or the Database Object that includes the SharePoint_Shell_Access role from which the user is to be removed.
 If the database parameter is not specified, the configuration database is used.
 

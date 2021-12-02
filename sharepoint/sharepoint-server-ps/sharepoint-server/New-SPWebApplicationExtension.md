@@ -17,12 +17,13 @@ Creates a new zone instance for the Web application.
 
 ```
 New-SPWebApplicationExtension [-Identity] <SPWebApplicationPipeBind> -Name <String> -Zone <SPUrlZone>
- [-AdditionalClaimProvider <SPClaimProviderPipeBind[]>] [-AllowAnonymousAccess]
- [-AssignmentCollection <SPAssignmentCollection>] [-AuthenticationMethod <String>]
- [-AuthenticationProvider <SPAuthenticationProviderPipeBind[]>] [-Confirm] [-HostHeader <String>]
- [-Path <String>] [-Port <UInt32>] [-SecureSocketsLayer]
- [-SignInRedirectProvider <SPTrustedIdentityTokenIssuerPipeBind>] [-SignInRedirectURL <String>] [-Url <String>]
- [-WhatIf] [<CommonParameters>]
+ [-Port <UInt32>] [-HostHeader <String>] [-Certificate <SPServerCertificatePipeBind>]
+ [-UseServerNameIndication] [-AllowLegacyEncryption] [-Path <String>] [-Url <String>]
+ [-AuthenticationMethod <String>] [-AllowAnonymousAccess] [-SecureSocketsLayer]
+ [-AuthenticationProvider <SPAuthenticationProviderPipeBind[]>]
+ [-AdditionalClaimProvider <SPClaimProviderPipeBind[]>] [-SignInRedirectURL <String>]
+ [-SignInRedirectProvider <SPTrustedIdentityTokenIssuerPipeBind>]
+ [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,59 +45,8 @@ This example extends the given Web application at http://sitename to the Extrane
 
 ## PARAMETERS
 
-### -Identity
-Specifies the Web application to extend.
-
-```yaml
-Type: SPWebApplicationPipeBind
-Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
-### -Name
-Specifies the name of the new IIS Web site in the Web application.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Zone
-Specifies one of the five zones with which the internal URL of this new extension is to be associated.
-This zone cannot already be in use.
-
-The type must be any one of the following values: Default, Intranet, Internet, Extranet, or Custom
-
-```yaml
-Type: SPUrlZone
-Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AdditionalClaimProvider
-Adds a specific claim provider to the defined Web application.
+Adds a specific claim provider to the defined web application.
 
 ```yaml
 Type: SPClaimProviderPipeBind[]
@@ -112,12 +62,34 @@ Accept wildcard characters: False
 ```
 
 ### -AllowAnonymousAccess
-Allows anonymous access to the Web application zone.
+Allows anonymous access to the web application zone.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+Applicable: SharePoint Server Subscription Edition
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowLegacyEncryption
+Specifies that older SSL and TLS protocol versions and cipher suites are allowed to be used with this IIS website.
+Legacy encryption is weaker than modern encryption and is not recommended.
+
+This feature requires Windows Server 2022 or higher.
+This feature is not available when SharePoint is deployed with earlier versions of Windows Server.
+
+This parameter is only valid when used with the SecureSocketsLayer parameter.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 Applicable: SharePoint Server Subscription Edition
 
 Required: False
@@ -181,28 +153,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
-Prompts you for confirmation before executing the command.
-For more information, type the following command: `get-help about_commonparameters`
+### -Certificate
+Specifies the certificate that will be used for the Secure Sockets Layer (SSL) binding of this IIS website.
+This parameter is only valid when used with the SecureSocketsLayer parameter.
 
 ```yaml
-Type: SwitchParameter
+Type: SPServerCertificatePipeBind
 Parameter Sets: (All)
-Aliases: cf
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
 ### -HostHeader
-Specifies a valid URL assigned to the Web application by that must correlate to the alternate access mapping configuration, in the form http://server_name.
+Specifies the host header binding for this IIS website.
+A host header binding allows multiple IIS websites to share the same port number.
+Web requests sent to a shared port number are routed to the correct IIS website based on the value of the HTTP host header sent by the client.
 
-When the HostHeader parameter is present, the value of this field is the internal URL for the Web application.
-The Url parameter is used to specify the public URL.
+If no host header binding is specified, then all web requests sent to this port number will be routed to this IIS website unless another IIS website has a host header binding that matches the HTTP host header sent by the client.
 
 ```yaml
 Type: String
@@ -217,8 +189,40 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Identity
+Specifies the Web application to extend.
+
+```yaml
+Type: SPWebApplicationPipeBind
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Server Subscription Edition
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Name
+Specifies the name of the new IIS website in the web application.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Server Subscription Edition
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Path
-Specifies the physical directory for the new Web site (in the virtual directories folder).
+Specifies the physical directory for the new website (in the virtual directories folder).
 The type is a valid path, in the form C:\Inetpub\wwwroot\MyWebApplication.
 
 ```yaml
@@ -257,8 +261,12 @@ Accept wildcard characters: False
 
 ### -SecureSocketsLayer
 Enables Secure Sockets Layer (SSL) encryption for this Web application.
-If you use SSL, you must add the certificate on each server by using the IIS administration tools. 
-Until this is done, the Web application is inaccessible from this IIS Web site.
+If you choose to use SSL, you must import a server certificate to SharePoint and assign it to the IIS website for this web application.
+Until this is done, the web application will be inaccessible from this IIS website.
+
+The default value is False.
+
+If this parameter is omitted or set to False, this web application will use HTTP for the specified port.
 
 ```yaml
 Type: SwitchParameter
@@ -312,6 +320,60 @@ Specifies the load-balanced URL for the Web application zone.
 Type: String
 Parameter Sets: (All)
 Aliases: 
+Applicable: SharePoint Server Subscription Edition
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseServerNameIndication
+Specifies that the Secure Sockets Layer (SSL) binding of this IIS website should use Server Name Indication (SNI).
+Server Name Indication allows multiple IIS websites with unique host headers and unique server certificates to share the same SSL port.
+If Server Name Indication isn't used, all IIS websites sharing the same SSL port must share the same server certificate.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Server Subscription Edition
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Zone
+Specifies one of the five zones with which the internal URL of this new extension is to be associated.
+This zone cannot already be in use.
+
+The type must be any one of the following values: Default, Intranet, Internet, Extranet, or Custom
+
+```yaml
+Type: SPUrlZone
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Server Subscription Edition
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before executing the command.
+For more information, type the following command: `get-help about_commonparameters`
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 Applicable: SharePoint Server Subscription Edition
 
 Required: False

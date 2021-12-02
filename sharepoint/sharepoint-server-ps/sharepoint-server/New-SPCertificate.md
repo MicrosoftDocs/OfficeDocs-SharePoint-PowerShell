@@ -61,12 +61,12 @@ The private key of this certificate will be exportable.
 
 ### ------------EXAMPLE2-----------
 ```powershell
-New-SPCertificate -FriendlyName "Sites Certificate" -CommonName sharepoint.contoso.com -AlternativeNames extranet.contoso.com, onedrive.contoso.com
+New-SPCertificate -FriendlyName "Team Sites Certificate" -CommonName sharepoint.contoso.com -AlternativeNames extranet.contoso.com, onedrive.contoso.com
 ```
 
 This example creates a new certificate signing request, using the farm's default organizational information, key algorithm, and size.
 The private key of this certificate will not be exportable.
-The certificate signing request file is stored in Central Administration..
+The certificate signing request file is stored in Central Administration.
 
 ## PARAMETERS
 
