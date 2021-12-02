@@ -15,8 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 
 > [!IMPORTANT]
-> - This feature is available only for customers who have been accepted into the Private Preview program. [Request to join the Private Preview](https://aka.ms/SPOTenantRenameNomination). Note that submitting a nomination does not guarantee acceptance into the program. We review the nominations on a case-by-case basis and will contact you if you're accepted.
-> - This feature is not available for organizations that have set up multi-geo.
+> This feature is in preview and currently available to organizations that have no more than 1,000 total SharePoint sites and OneDrive accounts combined.
 
 Starts a job to change the SharePoint domain name for your organization in Microsoft 365. For example, if the name of your organization changes from "Contoso" to "Fabrikam," you can change contoso.sharepoint.com to fabrikam.sharepoint.com.
 
@@ -124,5 +123,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Rename your SharePoint domain](https://aka.ms/SPOTenantRename)
+
+[Get-SPOTenantRenameStatus](Get-SPOTenantRenameStatus.md)
+
+[Stop-SPOTenantRename](Stop-SPOTenantRename.md)
 
 [Get-SPOSiteRenameState](Get-SPOSiteRenameState.md)

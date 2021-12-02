@@ -320,7 +320,7 @@ Accept wildcard characters: False
 
 ### -Owner
 
-Specifies the owner of the site collection.
+Specifies the owner of the site collection. Changing the Owner of a OneDrive is not supported and causes many experiences to break.
 
 ```yaml
 Type: String
@@ -563,6 +563,8 @@ Accept wildcard characters: False
 
 ### -DisableAppViews
 
+**Note**: This parameter has been retired and no longer functions.
+
 Disables the Power Apps button.
 Possible values:
 
@@ -603,6 +605,9 @@ Accept wildcard characters: False
 ```
 
 ### -DisableFlows
+
+**Note**: This parameter has been retired and no longer functions.
+
 Disables the Power Automate button.
 Possible values
 

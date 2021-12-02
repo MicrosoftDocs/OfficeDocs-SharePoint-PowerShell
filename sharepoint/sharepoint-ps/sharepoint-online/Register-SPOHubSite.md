@@ -62,7 +62,7 @@ Accept wildcard characters: False
 
 ### -Principals
 
-Specifies One or more principles (user or group) to be granted rights to the specified HubSite. Can be used to filter who can associate sites to this hub site.
+Specifies one or more principals (user or group) to be granted rights to the specified HubSite. Can be used to filter who can associate sites to this hub site.
 
 ```yaml
 Type: string[]
