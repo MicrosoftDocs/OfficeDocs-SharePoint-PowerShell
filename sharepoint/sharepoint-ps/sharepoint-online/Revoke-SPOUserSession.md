@@ -46,13 +46,21 @@ The cmdlet will be available in the future, but it isn't ready for use in your o
 
 ## EXAMPLES
 
-### ----------------------EXAMPLE-----------------------
+### EXAMPLE 1
 
 ```powershell
 Revoke-SPOUserSession -User user1@contoso.com
 ```
 
 This example signs out user1 in the contoso tenancy from all devices.
+
+### EXAMPLE 2
+
+```powershell
+Revoke-SPOUserSession -User user1@contoso.com -Confirm:$false
+```
+
+This example signs out user1 in the contoso tenancy from all devices without prompting for confirmation.  
 
 ## PARAMETERS
 
