@@ -60,7 +60,7 @@ This example signs out user1 in the Contoso tenancy from all devices.
 Revoke-SPOUserSession -User user1@contoso.com -Confirm:$false
 ```
 
-This example signs out user1 in the contoso tenancy from all devices without prompting for confirmation.  
+This example signs out user1 in the Contoso tenancy from all devices without prompting for confirmation.  
 
 ## PARAMETERS
 
