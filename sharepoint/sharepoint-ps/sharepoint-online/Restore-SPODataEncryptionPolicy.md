@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-CmdLet to restore customer encryption status for your geo tenant when in recovery mode.
+Cmdlet to restore customer encryption status for your geo tenant when in recovery mode.
 For more information, see [Controlling your data in Office 365 using Customer Key](https://docs.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key)
 
 ## SYNTAX
@@ -25,7 +25,7 @@ Restore-SPODataEncryptionPolicy -PrimaryKeyVaultName <string>  -PrimaryKeyName <
 
 ## DESCRIPTION
 
-Use the cmdLet to restore customer encryption status for your geo tenant when in recovery mode.
+Use the cmdlet to restore customer encryption status for your geo tenant when in recovery mode.
 For more information, see [Controlling your data in Office 365 using Customer Key](https://docs.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key)
 
 ## EXAMPLES

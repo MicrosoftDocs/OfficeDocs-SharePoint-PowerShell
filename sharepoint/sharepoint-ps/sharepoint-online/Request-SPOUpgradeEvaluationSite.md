@@ -28,7 +28,7 @@ Request-SPOUpgradeEvaluationSite [-Confirm] -Identity <SpoSitePipeBind> [-NoEmai
 The `Request-SPOUpgradeEvaluationSite` cmdlet lets the SharePoint Online administrator request a copy of an existing site collection for the purposes of validating the effects of upgrade without affecting the original site.
 
 A request for an upgrade evaluation site is not automatically processed.
-Instead, it is scheduled to occur on the background when it causes the least effect on the service.
+Instead, it is scheduled to occur in the background when it causes the least effect on the service.
 
 You must be a SharePoint Online administrator or Global Administrator to run the cmdlet.
 
