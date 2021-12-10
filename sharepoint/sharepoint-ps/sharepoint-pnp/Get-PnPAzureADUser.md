@@ -96,7 +96,7 @@ Retrieves all the users from Azure Active Directory of which their DisplayName s
 Get-PnPAzureADUser -Delta
 ```
 
-Retrieves all the users from Azure Active Directory and include a delta DeltaToken which can be used by providing -DeltaToken <token> to query for changes to users in Active Directory since this run
+Retrieves all the users from Azure Active Directory and include a delta DeltaToken which can be used by providing -DeltaToken `<token>` to query for changes to users in Active Directory since this run
 
 ### EXAMPLE 9
 ```powershell
