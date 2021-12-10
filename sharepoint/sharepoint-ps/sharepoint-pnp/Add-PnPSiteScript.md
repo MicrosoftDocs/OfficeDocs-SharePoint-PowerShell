@@ -19,7 +19,7 @@ title: Add-PnPSiteScript
 
 * SharePoint: Access to the SharePoint Tenant Administration site
 
-Creates a new Site Script on the current tenant.
+Creates a new Site Script on the current tenant
 
 ## SYNTAX
 
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Content
-A JSON string containing the site script
+A JSON string containing the site script. See https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-json-schema for documentation on how to create such a JSON schema.
 
 ```yaml
 Type: String
@@ -129,5 +129,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
-
-

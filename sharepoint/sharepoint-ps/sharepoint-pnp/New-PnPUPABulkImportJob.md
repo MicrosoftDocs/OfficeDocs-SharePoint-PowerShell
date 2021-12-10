@@ -29,6 +29,12 @@ New-PnPUPABulkImportJob [-Folder] <String> [-Path] <String> [-UserProfilePropert
  [<CommonParameters>]
 ```
 
+```powershell
+New-PnPUPABulkImportJob -Url <String> [-UserProfilePropertyMapping] <Hashtable>
+ [-IdProperty] <String> [[-IdType] <ImportProfilePropertiesUserIdType>] [-Connection <PnPConnection>]
+ [<CommonParameters>]
+```
+
 ## DESCRIPTION
 See https://docs.microsoft.com/sharepoint/dev/solution-guidance/bulk-user-profile-update-api-for-sharepoint-online for information on the API and how the bulk import process works.
 
@@ -54,7 +60,14 @@ See https://docs.microsoft.com/sharepoint/dev/solution-guidance/bulk-user-profil
 New-PnPUPABulkImportJob -Folder "Shared Documents" -Path profiles.json -IdProperty "IdName" -UserProfilePropertyMapping @{"Department"="Department"}
 ```
 
-This will submit a new user profile bulk import job to SharePoint Online.
+This will submit a new user profile bulk import job to SharePoint Online using a local file.
+
+### EXAMPLE 2
+```powershell
+New-PnPUPABulkImportJob -Url "https://{tenant}.sharepoint.com/Shared Documents/profiles.json" -IdProperty "IdName" -UserProfilePropertyMapping @{"Department"="Department"}
+```
+
+This will submit a new user profile bulk import job to SharePoint Online using an already uploaded file.
 
 ## PARAMETERS
 
@@ -77,7 +90,7 @@ Site or server relative URL of the folder to where you want to store the import 
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Submit up a new user profile bulk import job from local file
 
 Required: True
 Position: 0
@@ -110,7 +123,7 @@ Accepted values: Email, CloudId, PrincipalName
 
 Required: False
 Position: 4
-Default value: None
+Default value: Email
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -120,10 +133,24 @@ The local file path.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Submit up a new user profile bulk import job from local file
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Url
+The url of the file saved in SharePoint.
+
+```yaml
+Type: String
+Parameter Sets: Submit up a new user profile bulk import job job from url
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -146,4 +173,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
-

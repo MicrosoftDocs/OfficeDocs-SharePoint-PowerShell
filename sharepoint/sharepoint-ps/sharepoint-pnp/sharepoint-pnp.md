@@ -32,6 +32,9 @@ The following cmdlet references are for PnP PowerShell
 ### [Add-PnPContentType](Add-PnPContentType.md)
 {{Manually Enter Add-PnPContentType Description Here}}
 
+### [Add-PnPContentTypesFromContentTypeHub](Add-PnPContentTypesFromContentTypeHub.md)
+{{Manually Enter Add-PnPContentTypesFromContentTypeHub Description Here}}
+
 ### [Add-PnPContentTypeToDocumentSet](Add-PnPContentTypeToDocumentSet.md)
 {{Manually Enter Add-PnPContentTypeToDocumentSet Description Here}}
 
@@ -131,6 +134,12 @@ The following cmdlet references are for PnP PowerShell
 ### [Add-PnPPlannerBucket](Add-PnPPlannerBucket.md)
 {{Manually Enter Add-PnPPlannerBucket Description Here}}
 
+### [Add-PnPPlannerRoster](Add-PnPPlannerRoster.md)
+{{Manually Enter Add-PnPPlannerRoster Description Here}}
+
+### [Add-PnPPlannerRosterMember](Add-PnPPlannerRosterMember.md)
+{{Manually Enter Add-PnPPlannerRosterMember Description Here}}
+
 ### [Add-PnPPlannerTask](Add-PnPPlannerTask.md)
 {{Manually Enter Add-PnPPlannerTask Description Here}}
 
@@ -157,6 +166,9 @@ The following cmdlet references are for PnP PowerShell
 
 ### [Add-PnPSiteDesign](Add-PnPSiteDesign.md)
 {{Manually Enter Add-PnPSiteDesign Description Here}}
+
+### [Add-PnPSiteDesignFromWeb](Add-PnPSiteDesignFromWeb.md)
+{{Manually Enter Add-PnPSiteDesignFromWeb Description Here}}
 
 ### [Add-PnPSiteDesignTask](Add-PnPSiteDesignTask.md)
 {{Manually Enter Add-PnPSiteDesignTask Description Here}}
@@ -272,8 +284,14 @@ The following cmdlet references are for PnP PowerShell
 ### [Copy-PnPFile](Copy-PnPFile.md)
 {{Manually Enter Copy-PnPFile Description Here}}
 
+### [Copy-PnPFolder](Copy-PnPFolder.md)
+{{Manually Enter Copy-PnPFolder Description Here}}
+
 ### [Copy-PnPItemProxy](Copy-PnPItemProxy.md)
 {{Manually Enter Copy-PnPItemProxy Description Here}}
+
+### [Copy-PnPList](Copy-PnPList.md)
+{{Manually Enter Copy-PnPList Description Here}}
 
 ### [Deny-PnPTenantServicePrincipalPermissionRequest](Deny-PnPTenantServicePrincipalPermissionRequest.md)
 {{Manually Enter Deny-PnPTenantServicePrincipalPermissionRequest Description Here}}
@@ -283,6 +301,9 @@ The following cmdlet references are for PnP PowerShell
 
 ### [Disable-PnPFlow](Disable-PnPFlow.md)
 {{Manually Enter Disable-PnPFlow Description Here}}
+
+### [Disable-PnPPageScheduling](Disable-PnPPageScheduling.md)
+{{Manually Enter Disable-PnPPageScheduling Description Here}}
 
 ### [Disable-PnPPowerShellTelemetry](Disable-PnPPowerShellTelemetry.md)
 {{Manually Enter Disable-PnPPowerShellTelemetry Description Here}}
@@ -307,6 +328,9 @@ The following cmdlet references are for PnP PowerShell
 
 ### [Enable-PnPFlow](Enable-PnPFlow.md)
 {{Manually Enter Enable-PnPFlow Description Here}}
+
+### [Enable-PnPPageScheduling](Enable-PnPPageScheduling.md)
+{{Manually Enter Enable-PnPPageScheduling Description Here}}
 
 ### [Enable-PnPPowerShellTelemetry](Enable-PnPPowerShellTelemetry.md)
 {{Manually Enter Enable-PnPPowerShellTelemetry Description Here}}
@@ -343,9 +367,6 @@ The following cmdlet references are for PnP PowerShell
 
 ### [Find-PnPFile](Find-PnPFile.md)
 {{Manually Enter Find-PnPFile Description Here}}
-
-### [Get-PnPAADUser](Get-PnPAADUser.md)
-{{Manually Enter Get-PnPAADUser Description Here}}
 
 ### [Get-PnPAccessToken](Get-PnPAccessToken.md)
 {{Manually Enter Get-PnPAccessToken Description Here}}
@@ -398,6 +419,9 @@ The following cmdlet references are for PnP PowerShell
 ### [Get-PnPAzureADGroupOwner](Get-PnPAzureADGroupOwner.md)
 {{Manually Enter Get-PnPAzureADGroupOwner Description Here}}
 
+### [Get-PnPAzureADUser](Get-PnPAzureADUser.md)
+{{Manually Enter Get-PnPAzureADUser Description Here}}
+
 ### [Get-PnPAzureCertificate](Get-PnPAzureCertificate.md)
 {{Manually Enter Get-PnPAzureCertificate Description Here}}
 
@@ -406,6 +430,9 @@ The following cmdlet references are for PnP PowerShell
 
 ### [Get-PnPBuiltInDesignPackageVisibility](Get-PnPBuiltInDesignPackageVisibility.md)
 {{Manually Enter Get-PnPBuiltInDesignPackageVisibility Description Here}}
+
+### [Get-PnPBuiltInSiteTemplateSettings](Get-PnPBuiltInSiteTemplateSettings.md)
+{{Manually Enter Get-PnPBuiltInSiteTemplateSettings Description Here}}
 
 ### [Get-PnPChangeLog](Get-PnPChangeLog.md)
 {{Manually Enter Get-PnPChangeLog Description Here}}
@@ -463,9 +490,6 @@ The following cmdlet references are for PnP PowerShell
 
 ### [Get-PnPFlow](Get-PnPFlow.md)
 {{Manually Enter Get-PnPFlow Description Here}}
-
-### [Get-PnPFlowEnvironment](Get-PnPFlowEnvironment.md)
-{{Manually Enter Get-PnPFlowEnvironment Description Here}}
 
 ### [Get-PnPFolder](Get-PnPFolder.md)
 {{Manually Enter Get-PnPFolder Description Here}}
@@ -542,6 +566,9 @@ The following cmdlet references are for PnP PowerShell
 ### [Get-PnPMasterPage](Get-PnPMasterPage.md)
 {{Manually Enter Get-PnPMasterPage Description Here}}
 
+### [Get-PnPMessageCenterAnnouncement](Get-PnPMessageCenterAnnouncement.md)
+{{Manually Enter Get-PnPMessageCenterAnnouncement Description Here}}
+
 ### [Get-PnPMicrosoft365Group](Get-PnPMicrosoft365Group.md)
 {{Manually Enter Get-PnPMicrosoft365Group Description Here}}
 
@@ -581,11 +608,26 @@ The following cmdlet references are for PnP PowerShell
 ### [Get-PnPPlannerBucket](Get-PnPPlannerBucket.md)
 {{Manually Enter Get-PnPPlannerBucket Description Here}}
 
+### [Get-PnPPlannerConfiguration](Get-PnPPlannerConfiguration.md)
+{{Manually Enter Get-PnPPlannerConfiguration Description Here}}
+
 ### [Get-PnPPlannerPlan](Get-PnPPlannerPlan.md)
 {{Manually Enter Get-PnPPlannerPlan Description Here}}
 
+### [Get-PnPPlannerRosterMember](Get-PnPPlannerRosterMember.md)
+{{Manually Enter Get-PnPPlannerRosterMember Description Here}}
+
+### [Get-PnPPlannerRosterPlan](Get-PnPPlannerRosterPlan.md)
+{{Manually Enter Get-PnPPlannerRosterPlan Description Here}}
+
 ### [Get-PnPPlannerTask](Get-PnPPlannerTask.md)
 {{Manually Enter Get-PnPPlannerTask Description Here}}
+
+### [Get-PnPPlannerUserPolicy](Get-PnPPlannerUserPolicy.md)
+{{Manually Enter Get-PnPPlannerUserPolicy Description Here}}
+
+### [Get-PnPPowerPlatformEnvironment](Get-PnPPowerPlatformEnvironment.md)
+{{Manually Enter Get-PnPPowerPlatformEnvironment Description Here}}
 
 ### [Get-PnPPowerShellTelemetryEnabled](Get-PnPPowerShellTelemetryEnabled.md)
 {{Manually Enter Get-PnPPowerShellTelemetryEnabled Description Here}}
@@ -616,6 +658,12 @@ The following cmdlet references are for PnP PowerShell
 
 ### [Get-PnPSearchSettings](Get-PnPSearchSettings.md)
 {{Manually Enter Get-PnPSearchSettings Description Here}}
+
+### [Get-PnPServiceCurrentHealth](Get-PnPServiceCurrentHealth.md)
+{{Manually Enter Get-PnPServiceCurrentHealth Description Here}}
+
+### [Get-PnPServiceHealthIssue](Get-PnPServiceHealthIssue.md)
+{{Manually Enter Get-PnPServiceHealthIssue Description Here}}
 
 ### [Get-PnPSharingForNonOwnersOfSite](Get-PnPSharingForNonOwnersOfSite.md)
 {{Manually Enter Get-PnPSharingForNonOwnersOfSite Description Here}}
@@ -695,6 +743,12 @@ The following cmdlet references are for PnP PowerShell
 ### [Get-PnPSubWeb](Get-PnPSubWeb.md)
 {{Manually Enter Get-PnPSubWeb Description Here}}
 
+### [Get-PnPSyntexModel](Get-PnPSyntexModel.md)
+{{Manually Enter Get-PnPSyntexModel Description Here}}
+
+### [Get-PnPSyntexModelPublication](Get-PnPSyntexModelPublication.md)
+{{Manually Enter Get-PnPSyntexModelPublication Description Here}}
+
 ### [Get-PnPTaxonomyItem](Get-PnPTaxonomyItem.md)
 {{Manually Enter Get-PnPTaxonomyItem Description Here}}
 
@@ -737,8 +791,14 @@ The following cmdlet references are for PnP PowerShell
 ### [Get-PnPTenantCdnPolicies](Get-PnPTenantCdnPolicies.md)
 {{Manually Enter Get-PnPTenantCdnPolicies Description Here}}
 
+### [Get-PnPTenantDeletedSite](Get-PnPTenantDeletedSite.md)
+{{Manually Enter Get-PnPTenantDeletedSite Description Here}}
+
 ### [Get-PnPTenantId](Get-PnPTenantId.md)
 {{Manually Enter Get-PnPTenantId Description Here}}
+
+### [Get-PnPTenantInstance](Get-PnPTenantInstance.md)
+{{Manually Enter Get-PnPTenantInstance Description Here}}
 
 ### [Get-PnPTenantRecycleBinItem](Get-PnPTenantRecycleBinItem.md)
 {{Manually Enter Get-PnPTenantRecycleBinItem Description Here}}
@@ -809,6 +869,9 @@ The following cmdlet references are for PnP PowerShell
 ### [Get-PnPWeb](Get-PnPWeb.md)
 {{Manually Enter Get-PnPWeb Description Here}}
 
+### [Get-PnPWebHeader](Get-PnPWebHeader.md)
+{{Manually Enter Get-PnPWebHeader Description Here}}
+
 ### [Get-PnPWebhookSubscriptions](Get-PnPWebhookSubscriptions.md)
 {{Manually Enter Get-PnPWebhookSubscriptions Description Here}}
 
@@ -859,6 +922,9 @@ The following cmdlet references are for PnP PowerShell
 
 ### [Invoke-PnPSiteDesign](Invoke-PnPSiteDesign.md)
 {{Manually Enter Invoke-PnPSiteDesign Description Here}}
+
+### [Invoke-PnPSiteScript](Invoke-PnPSiteScript.md)
+{{Manually Enter Invoke-PnPSiteScript Description Here}}
 
 ### [Invoke-PnPSiteSwap](Invoke-PnPSiteSwap.md)
 {{Manually Enter Invoke-PnPSiteSwap Description Here}}
@@ -998,6 +1064,12 @@ The following cmdlet references are for PnP PowerShell
 ### [Publish-PnPApp](Publish-PnPApp.md)
 {{Manually Enter Publish-PnPApp Description Here}}
 
+### [Publish-PnPCompanyApp](Publish-PnPCompanyApp.md)
+{{Manually Enter Publish-PnPCompanyApp Description Here}}
+
+### [Publish-PnPSyntexModel](Publish-PnPSyntexModel.md)
+{{Manually Enter Publish-PnPSyntexModel Description Here}}
+
 ### [Read-PnPSiteTemplate](Read-PnPSiteTemplate.md)
 {{Manually Enter Read-PnPSiteTemplate Description Here}}
 
@@ -1019,15 +1091,6 @@ The following cmdlet references are for PnP PowerShell
 ### [Register-PnPManagementShellAccess](Register-PnPManagementShellAccess.md)
 {{Manually Enter Register-PnPManagementShellAccess Description Here}}
 
-### [Remove-PnPAadGroup](Remove-PnPAadGroup.md)
-{{Manually Enter Remove-PnPAadGroup Description Here}}
-
-### [Remove-PnPAadGroupMember](Remove-PnPAadGroupMember.md)
-{{Manually Enter Remove-PnPAadGroupMember Description Here}}
-
-### [Remove-PnPAadGroupOwner](Remove-PnPAadGroupOwner.md)
-{{Manually Enter Remove-PnPAadGroupOwner Description Here}}
-
 ### [Remove-PnPAlert](Remove-PnPAlert.md)
 {{Manually Enter Remove-PnPAlert Description Here}}
 
@@ -1042,6 +1105,15 @@ The following cmdlet references are for PnP PowerShell
 
 ### [Remove-PnPAzureADAppSitePermission](Remove-PnPAzureADAppSitePermission.md)
 {{Manually Enter Remove-PnPAzureADAppSitePermission Description Here}}
+
+### [Remove-PnPAzureADGroup](Remove-PnPAzureADGroup.md)
+{{Manually Enter Remove-PnPAzureADGroup Description Here}}
+
+### [Remove-PnPAzureADGroupMember](Remove-PnPAzureADGroupMember.md)
+{{Manually Enter Remove-PnPAzureADGroupMember Description Here}}
+
+### [Remove-PnPAzureADGroupOwner](Remove-PnPAzureADGroupOwner.md)
+{{Manually Enter Remove-PnPAzureADGroupOwner Description Here}}
 
 ### [Remove-PnPContentType](Remove-PnPContentType.md)
 {{Manually Enter Remove-PnPContentType Description Here}}
@@ -1148,6 +1220,12 @@ The following cmdlet references are for PnP PowerShell
 ### [Remove-PnPPlannerPlan](Remove-PnPPlannerPlan.md)
 {{Manually Enter Remove-PnPPlannerPlan Description Here}}
 
+### [Remove-PnPPlannerRoster](Remove-PnPPlannerRoster.md)
+{{Manually Enter Remove-PnPPlannerRoster Description Here}}
+
+### [Remove-PnPPlannerRosterMember](Remove-PnPPlannerRosterMember.md)
+{{Manually Enter Remove-PnPPlannerRosterMember Description Here}}
+
 ### [Remove-PnPPlannerTask](Remove-PnPPlannerTask.md)
 {{Manually Enter Remove-PnPPlannerTask Description Here}}
 
@@ -1220,6 +1298,9 @@ The following cmdlet references are for PnP PowerShell
 ### [Remove-PnPTenantCdnOrigin](Remove-PnPTenantCdnOrigin.md)
 {{Manually Enter Remove-PnPTenantCdnOrigin Description Here}}
 
+### [Remove-PnPTenantDeletedSite](Remove-PnPTenantDeletedSite.md)
+{{Manually Enter Remove-PnPTenantDeletedSite Description Here}}
+
 ### [Remove-PnPTenantSite](Remove-PnPTenantSite.md)
 {{Manually Enter Remove-PnPTenantSite Description Here}}
 
@@ -1283,6 +1364,9 @@ The following cmdlet references are for PnP PowerShell
 ### [Request-PnPReIndexWeb](Request-PnPReIndexWeb.md)
 {{Manually Enter Request-PnPReIndexWeb Description Here}}
 
+### [Request-PnPSyntexClassifyAndExtract](Request-PnPSyntexClassifyAndExtract.md)
+{{Manually Enter Request-PnPSyntexClassifyAndExtract Description Here}}
+
 ### [Reset-PnPFileVersion](Reset-PnPFileVersion.md)
 {{Manually Enter Reset-PnPFileVersion Description Here}}
 
@@ -1306,6 +1390,9 @@ The following cmdlet references are for PnP PowerShell
 
 ### [Restore-PnPRecycleBinItem](Restore-PnPRecycleBinItem.md)
 {{Manually Enter Restore-PnPRecycleBinItem Description Here}}
+
+### [Restore-PnPTenantDeletedSite](Restore-PnPTenantDeletedSite.md)
+{{Manually Enter Restore-PnPTenantDeletedSite Description Here}}
 
 ### [Restore-PnPTenantRecycleBinItem](Restore-PnPTenantRecycleBinItem.md)
 {{Manually Enter Restore-PnPTenantRecycleBinItem Description Here}}
@@ -1334,9 +1421,6 @@ The following cmdlet references are for PnP PowerShell
 ### [Send-PnPMail](Send-PnPMail.md)
 {{Manually Enter Send-PnPMail Description Here}}
 
-### [Set-PnPAadGroup](Set-PnPAadGroup.md)
-{{Manually Enter Set-PnPAadGroup Description Here}}
-
 ### [Set-PnPApplicationCustomizer](Set-PnPApplicationCustomizer.md)
 {{Manually Enter Set-PnPApplicationCustomizer Description Here}}
 
@@ -1352,11 +1436,17 @@ The following cmdlet references are for PnP PowerShell
 ### [Set-PnPAzureADAppSitePermission](Set-PnPAzureADAppSitePermission.md)
 {{Manually Enter Set-PnPAzureADAppSitePermission Description Here}}
 
+### [Set-PnPAzureADGroup](Set-PnPAzureADGroup.md)
+{{Manually Enter Set-PnPAzureADGroup Description Here}}
+
 ### [Set-PnPBrowserIdleSignout](Set-PnPBrowserIdleSignout.md)
 {{Manually Enter Set-PnPBrowserIdleSignout Description Here}}
 
 ### [Set-PnPBuiltInDesignPackageVisibility](Set-PnPBuiltInDesignPackageVisibility.md)
 {{Manually Enter Set-PnPBuiltInDesignPackageVisibility Description Here}}
+
+### [Set-PnPBuiltInSiteTemplateSettings](Set-PnPBuiltInSiteTemplateSettings.md)
+{{Manually Enter Set-PnPBuiltInSiteTemplateSettings Description Here}}
 
 ### [Set-PnPContext](Set-PnPContext.md)
 {{Manually Enter Set-PnPContext Description Here}}
@@ -1466,17 +1556,26 @@ The following cmdlet references are for PnP PowerShell
 ### [Set-PnPPlannerBucket](Set-PnPPlannerBucket.md)
 {{Manually Enter Set-PnPPlannerBucket Description Here}}
 
+### [Set-PnPPlannerConfiguration](Set-PnPPlannerConfiguration.md)
+{{Manually Enter Set-PnPPlannerConfiguration Description Here}}
+
 ### [Set-PnPPlannerPlan](Set-PnPPlannerPlan.md)
 {{Manually Enter Set-PnPPlannerPlan Description Here}}
 
 ### [Set-PnPPlannerTask](Set-PnPPlannerTask.md)
 {{Manually Enter Set-PnPPlannerTask Description Here}}
 
+### [Set-PnPPlannerUserPolicy](Set-PnPPlannerUserPolicy.md)
+{{Manually Enter Set-PnPPlannerUserPolicy Description Here}}
+
 ### [Set-PnPPropertyBagValue](Set-PnPPropertyBagValue.md)
 {{Manually Enter Set-PnPPropertyBagValue Description Here}}
 
 ### [Set-PnPRequestAccessEmails](Set-PnPRequestAccessEmails.md)
 {{Manually Enter Set-PnPRequestAccessEmails Description Here}}
+
+### [Set-PnPRoleDefinition](Set-PnPRoleDefinition.md)
+{{Manually Enter Set-PnPRoleDefinition Description Here}}
 
 ### [Set-PnPSearchConfiguration](Set-PnPSearchConfiguration.md)
 {{Manually Enter Set-PnPSearchConfiguration Description Here}}
@@ -1589,6 +1688,9 @@ The following cmdlet references are for PnP PowerShell
 ### [Set-PnPWeb](Set-PnPWeb.md)
 {{Manually Enter Set-PnPWeb Description Here}}
 
+### [Set-PnPWebHeader](Set-PnPWebHeader.md)
+{{Manually Enter Set-PnPWebHeader Description Here}}
+
 ### [Set-PnPWebhookSubscription](Set-PnPWebhookSubscription.md)
 {{Manually Enter Set-PnPWebhookSubscription Description Here}}
 
@@ -1613,6 +1715,9 @@ The following cmdlet references are for PnP PowerShell
 ### [Sync-PnPAppToTeams](Sync-PnPAppToTeams.md)
 {{Manually Enter Sync-PnPAppToTeams Description Here}}
 
+### [Sync-PnPSharePointUserProfilesFromAzureActiveDirectory](Sync-PnPSharePointUserProfilesFromAzureActiveDirectory.md)
+{{Manually Enter Sync-PnPSharePointUserProfilesFromAzureActiveDirectory Description Here}}
+
 ### [Test-PnPListItemIsRecord](Test-PnPListItemIsRecord.md)
 {{Manually Enter Test-PnPListItemIsRecord Description Here}}
 
@@ -1631,6 +1736,9 @@ The following cmdlet references are for PnP PowerShell
 ### [Unpublish-PnPApp](Unpublish-PnPApp.md)
 {{Manually Enter Unpublish-PnPApp Description Here}}
 
+### [Unpublish-PnPSyntexModel](Unpublish-PnPSyntexModel.md)
+{{Manually Enter Unpublish-PnPSyntexModel Description Here}}
+
 ### [Unregister-PnPHubSite](Unregister-PnPHubSite.md)
 {{Manually Enter Unregister-PnPHubSite Description Here}}
 
@@ -1639,6 +1747,9 @@ The following cmdlet references are for PnP PowerShell
 
 ### [Update-PnPSiteClassification](Update-PnPSiteClassification.md)
 {{Manually Enter Update-PnPSiteClassification Description Here}}
+
+### [Update-PnPSiteDesignFromWeb](Update-PnPSiteDesignFromWeb.md)
+{{Manually Enter Update-PnPSiteDesignFromWeb Description Here}}
 
 ### [Update-PnPTeamsApp](Update-PnPTeamsApp.md)
 {{Manually Enter Update-PnPTeamsApp Description Here}}

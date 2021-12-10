@@ -14,7 +14,7 @@ title: Get-PnPFileVersion
 > [!TIP]
 > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPFileVersion.md to change this file.
 
-Retrieves all versions of a file.
+Retrieves the previous versions of a file. Does not retrieve the current version of the file. 
 
 ## SYNTAX
 
@@ -23,6 +23,7 @@ Get-PnPFileVersion -Url <String> [-Connection <PnPConnection>] [<CommonParameter
 ```
 
 ## DESCRIPTION
+Retrieves the version history of a file, not including its current version. To get the current version use the MajorVersion and MinorVersion properties returned from Get-PnPFile.
 
 ## EXAMPLES
 
@@ -32,6 +33,13 @@ Get-PnPFileVersion -Url Documents/MyDocument.docx
 ```
 
 Retrieves the file version information for the specified file.
+
+### EXAMPLE 2
+```powershell
+Get-PnPFileVersion -Url "/sites/blah/Shared Documents/MyDocument.docx"
+```
+
+Retrieves the file version information for the specified file by specifying the path to the site and the document library's URL.
 
 ## PARAMETERS
 

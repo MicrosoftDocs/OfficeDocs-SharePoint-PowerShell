@@ -19,7 +19,7 @@ Returns registered alerts for a user.
 ## SYNTAX
 
 ```powershell
-Get-PnPAlert [[-List] <ListPipeBind>] [-User <UserPipeBind>] [-Title <String>] 
+Get-PnPAlert [[-List] <ListPipeBind>] [-User <UserPipeBind>] [-Title <String>] [-AllUsers]
  [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
@@ -32,7 +32,7 @@ Get-PnPAlert [[-List] <ListPipeBind>] [-User <UserPipeBind>] [-Title <String>]
 Get-PnPAlert
 ```
 
-Returns all registered alerts for the current user
+Returns all registered alerts for the current user.
 
 ### EXAMPLE 2
 ```powershell
@@ -54,6 +54,20 @@ Get-PnPAlert -Title "Demo Alert"
 ```
 
 Returns all alerts with the given title for the current user. Title comparison is case sensitive.
+
+### EXAMPLE 5
+```powershell
+Get-PnPAlert -AllUsers
+```
+
+Returns all alerts that exist in the current site, regardless of the user or list it belongs to.
+
+### EXAMPLE 6
+```powershell
+Get-PnPAlert -List "Demo List" -AllUsers
+```
+
+Returns all alerts that exist in the current site for the list "Demo List", regardless of the user it belongs to.
 
 ## PARAMETERS
 
@@ -104,7 +118,7 @@ User to retrieve the alerts for (User ID, login name or actual User object). Ski
 
 ```yaml
 Type: UserPipeBind
-Parameter Sets: (All)
+Parameter Sets: Alerts for a specific user
 
 Required: False
 Position: Named
@@ -113,6 +127,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllUsers
+Retrieves alerts for all users in the current site
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Alerts for all users
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 
 ## RELATED LINKS
