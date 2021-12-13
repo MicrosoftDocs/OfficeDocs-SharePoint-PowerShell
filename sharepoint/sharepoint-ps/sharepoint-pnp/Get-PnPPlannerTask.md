@@ -69,7 +69,7 @@ This retrieves all tasks for a specific plan, takes the first task and prints th
 
 ### Example 3
 ```powershell
-Get-PnPPlannerTask -Group "Marketing" -PlanId "QvfkTd1mc02gwxHjHC_43JYABhAy"
+Get-PnPPlannerTask -PlanId "QvfkTd1mc02gwxHjHC_43JYABhAy"
 ```
 
 This returns all tasks for the specified plan.

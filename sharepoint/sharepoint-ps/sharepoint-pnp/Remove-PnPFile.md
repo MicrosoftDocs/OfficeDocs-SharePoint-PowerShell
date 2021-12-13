@@ -57,21 +57,6 @@ Removes the file company.spcolor and saves it to the Recycle Bin
 
 ## PARAMETERS
 
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Connection
 Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.
 
@@ -87,6 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+If provided, no confirmation will be asked to remove the file, but instead it will silently be removed.
 
 ```yaml
 Type: SwitchParameter
@@ -140,8 +126,6 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-
-
 ### -WhatIf
 Shows what would happen if the cmdlet runs. The cmdlet is not run.
 
@@ -160,4 +144,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
-

@@ -219,5 +219,5 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)[Documentation](https://docs.microsoft.com/graph/api/group-post-groups)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)[Documentation](/graph/api/group-post-groups)
 

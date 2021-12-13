@@ -14,7 +14,7 @@ title: Get-PnPAccessToken
 > [!TIP]
 > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPAccessToken.md to change this file.
 
-Returns the current OAuth Access token
+Returns the current Microsoft Graph OAuth Access token
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ Get-PnPAccessToken [-Decoded] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Gets the OAuth 2.0 Access Token to consume the Microsoft Graph API. Doesn't work with all Connect-PnPOnline options.
+Gets the OAuth 2.0 Access Token to consume the Microsoft Graph API. Doesn't work with all Connect-PnPOnline options. To retrieve the SharePoint Online access token, instead use `Get-PnPAppAuthAccessToken`.
 
 ## EXAMPLES
 
@@ -53,5 +53,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
-
-

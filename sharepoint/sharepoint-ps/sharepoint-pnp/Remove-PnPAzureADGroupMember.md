@@ -12,7 +12,7 @@ online version: https://pnp.github.io/powershell/cmdlets/Remove-PnPAzureADGroupM
 ## SYNOPSIS
 
 > [!TIP]
-> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPAadGroupMember.md to change this file.
+> We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Remove-PnPAzureADGroupMember.md to change this file.
 
 
 **Required Permissions**
@@ -70,5 +70,5 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)[Documentation](https://docs.microsoft.com/graph/api/group-delete-members)
+[Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)[Documentation](/graph/api/group-delete-members)
 
