@@ -24,7 +24,7 @@ Registers a site as a hubsite
 ## SYNTAX
 
 ```powershell
-Register-PnPHubSite -Site <SitePipeBind> [-Connection <PnPConnection>] [<CommonParameters>]
+Register-PnPHubSite -Site <SitePipeBind> [-Principals <String[][]>] [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,6 +38,13 @@ Register-PnPHubSite -Site "https://tenant.sharepoint.com/sites/myhubsite"
 ```
 
 This example registers the specified site as a hubsite
+
+### EXAMPLE 2
+```powershell
+Register-PnPHubSite -Site "https://tenant.sharepoint.com/sites/myhubsite" -Principals "user@contoso.com"
+```
+
+This example registers the specified site as a hubsite and specifies that 'user@contoso.com' be granted rights to the hub site.
 
 ## PARAMETERS
 
@@ -60,6 +67,20 @@ The site to register as a hubsite
 
 ```yaml
 Type: SitePipeBind
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Principals
+Specifies One or more principles (user or group) to be granted rights to the specified HubSite. Can be used to filter who can associate sites to this hub site.
+
+```yaml
+Type: String[]
 Parameter Sets: (All)
 
 Required: True

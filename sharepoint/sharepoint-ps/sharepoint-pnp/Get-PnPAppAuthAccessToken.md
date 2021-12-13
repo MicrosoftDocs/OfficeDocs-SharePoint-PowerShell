@@ -14,7 +14,7 @@ title: Get-PnPAppAuthAccessToken
 > [!TIP]
 > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPAppAuthAccessToken.md to change this file.
 
-Returns the access token
+Returns the access token for SharePoint Online
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ Get-PnPAppAuthAccessToken [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Returns the access token from the current client context (only works with App-Only authentication)
+Returns the SharePoint Online access token from the current client context. This will only work in the App authentication flow (App+user or App-Only). For the Microsoft Graph access token, use `Get-PnPAccessToken` instead.
 
 ## EXAMPLES
 
@@ -32,7 +32,7 @@ Returns the access token from the current client context (only works with App-On
 $accessToken = Get-PnPAppAuthAccessToken
 ```
 
-This will put the access token from current context in the $accessToken variable. Will only work in App authentication flow (App+user or App-Only)
+This will put the SharePoint Online access token from current context in the $accessToken variable
 
 ## PARAMETERS
 
@@ -53,5 +53,3 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp)
-
-

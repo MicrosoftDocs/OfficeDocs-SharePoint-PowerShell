@@ -18,6 +18,7 @@ online version: https://pnp.github.io/powershell/cmdlets/Get-PnPTeamsUser.html
 **Required Permissions**
 
   * Microsoft Graph API : One of Group.Read.All, Group.ReadWrite.All
+  * Microsoft Graph API : Directory.Read.All
 
 Returns owners, members or guests from a team.
 

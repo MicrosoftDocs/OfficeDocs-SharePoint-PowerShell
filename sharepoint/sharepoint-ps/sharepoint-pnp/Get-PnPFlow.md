@@ -12,12 +12,18 @@ schema: 2.0.0
 > [!TIP]
 > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPFlow.md to change this file.
 
+
+**Required Permissions**
+
+* Azure: management.azure.com
+
 Returns the flows for a given environment
 
 ## SYNTAX
 
-```
-Get-PnPFlow -Environment <PowerAutomateEnvironmentPipeBind> [-AsAdmin] [-Identity <PowerAutomateFlowPipeBind>] [-Connection <PnPConnection>] [<CommonParameters>]
+```powershell
+Get-PnPFlow -Environment <PowerAutomateEnvironmentPipeBind> [-AsAdmin] [-Identity <PowerPlatformPipeBind>] 
+[-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -27,19 +33,49 @@ This cmdlets returns the flows for a given enviroment.
 
 ### Example 1
 ```powershell
-$environment = Get-PnPFlowEnvironment
+$environment = Get-PnPPowerPlatformEnvironment
 Get-PnPFlow -Environment $environment
 ```
-This returns all the flows for a given environment
+This returns all the flows for a given power platform environment
 
 ### Example 2
 ```powershell
-$environment = Get-PnPFlowEnvironment
+$environment = Get-PnPPowerPlatformEnvironment
 Get-PnPFlow -Environment $environment -Identity fba63225-baf9-4d76-86a1-1b42c917a182
 ```
 This returns specific flow
 
 ## PARAMETERS
+
+### -Environment
+The name of the Power Platform environment or an Environment object to retrieve the available flows for.
+
+```yaml
+Type: PowerAutomateEnvironmentPipeBind
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+The Name/Id of the flow to retrieve.
+
+```yaml
+Type: PowerPlatformPipeBind
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AsAdmin
 If specified returns all the flows as admin. If not specified only the flows for the current user will be returned.
@@ -62,36 +98,6 @@ Retrieve the value for this parameter by either specifying -ReturnConnection on 
 
 ```yaml
 Type: PnPConnection
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Environment
-The name of the environment or an Environment object to retrieve the available flows for.
-
-```yaml
-Type: PowerAutomateEnvironmentPipeBind
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-The Name/Id of the flow to retrieve.
-
-```yaml
-Type: PowerAutomateFlowPipeBind
 Parameter Sets: (All)
 Aliases:
 
