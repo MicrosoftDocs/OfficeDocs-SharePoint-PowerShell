@@ -13,6 +13,9 @@ ms.reviewer:
 
 # Export-SPOQueryLogs
 
+> [!NOTE]
+> Beginning February 2022, we'll be removing the Export-SPOQueryLogs command from SharePoint in Microsoft 365. We encourage users to instead download their Microsoft Search query history logs from the [My Account privacy portal](https://myaccount.microsoft.com/settingsandprivacy/privacy).
+
 ## SYNOPSIS
 
 Export query logs for a user in an Office 365 tenant.
