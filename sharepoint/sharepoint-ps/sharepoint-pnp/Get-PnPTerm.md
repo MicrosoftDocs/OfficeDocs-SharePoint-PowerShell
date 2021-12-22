@@ -39,7 +39,7 @@ Get-PnPTerm
 
 ## DESCRIPTION
 
-Retries a Term Store Term.
+Retrieves a Term Store Term.
 ## EXAMPLES
 
 ### EXAMPLE 1
@@ -47,7 +47,7 @@ Retries a Term Store Term.
 Get-PnPTerm -TermSet "Departments" -TermGroup "Corporate"
 ```
 
-Returns all term in the termset "Departments" which is in the group "Corporate" from the site collection termstore
+Returns all terms in the termset "Departments" which is in the group "Corporate" from the site collection termstore
 
 ### EXAMPLE 2
 ```powershell
@@ -61,7 +61,7 @@ Returns the term named "Finance" in the termset "Departments" from the termgroup
 Get-PnPTerm -Identity ab2af486-e097-4b4a-9444-527b251f1f8d -TermSet "Departments" -TermGroup "Corporate"
 ```
 
-Returns the term named with the given id, from the "Departments" termset in a term group called "Corporate" from the site collection termstore
+Returns the term with the given id, from the "Departments" termset in a term group called "Corporate" from the site collection termstore
 
 ### EXAMPLE 4
 ```powershell
