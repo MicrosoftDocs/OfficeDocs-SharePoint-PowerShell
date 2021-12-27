@@ -54,6 +54,7 @@ Set-PnPTenant [-SpecialCharactersStateInFileFolderNames <SpecialCharactersState>
  [-DisabledWebPartIds <Guid[]>] [-EnableAIPIntegration <Boolean>] [-DisableCustomAppAuthentication <Boolean>] 
  [-EnableAutoNewsDigest <Boolean>] [-CommentsOnListItemsDisabled <Boolean>] [-CommentsOnFilesDisabled <Boolean>]
  [-DisableBackToClassic <Boolean>] [-InformationBarriersSuspension <Boolean>]
+ [-AllowFilesWithKeepLabelToBeDeletedODB <Boolean>] [-AllowFilesWithKeepLabelToBeDeletedSPO <Boolean>]
  [-Connection <PnPConnection>] [<CommonParameters>]
 ```
 
@@ -1215,7 +1216,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SetAllowFilesWithKeepLabelToBeDeletedSPO
+### -AllowFilesWithKeepLabelToBeDeletedSPO
 Allows configuration on if files located on SharePoint Online having retention labels on them blocking them from deletion ($false) or if they can be deleted which will move the file to the preservation hold library ($true)
 
 ```yaml
@@ -1229,7 +1230,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SetAllowFilesWithKeepLabelToBeDeletedODB
+### -AllowFilesWithKeepLabelToBeDeletedODB
 Allows configuration on if files located on OneDrive for Business having retention labels on them blocking them from deletion ($false) or if they can be deleted which will move the file to the preservation hold library ($true)
 
 ```yaml
