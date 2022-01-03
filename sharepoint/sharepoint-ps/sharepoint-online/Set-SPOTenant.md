@@ -802,7 +802,7 @@ Accept wildcard characters: False
 
 Lets administrators choose the default permission of the link in the sharing dialog box in OneDrive for Business and SharePoint Online. This applies to anonymous access, internal and direct links.
 
-The valid values are None (non settable), View and Edit.
+The valid values are View and Edit (default).
 
 ```yaml
 Type: SharingPermissionType
@@ -811,7 +811,7 @@ Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
-Default value: None
+Default value: Edit
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
