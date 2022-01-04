@@ -22,7 +22,7 @@ Sets or updates one or more properties' values for a site collection.
 
 ```powershell
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [-Confirm]
- [-DenyAddAndCustomizePages <Boolean>] [-LocaleId <UInt32>] [-LockState <String>] [-MediaTranscription <Enum>] [-NoWait] [-Owner <String>]
+ [-DenyAddAndCustomizePages <Boolean>] [-LocaleId <UInt32>] [-LockState <String>] [-MediaTranscription <MediaTranscriptionPolicyType>] [-NoWait] [-Owner <String>]
  [-ResourceQuota <Double>] [-ResourceQuotaWarningLevel <Double>]
  [-SandboxedCodeActivationCapability <SandboxedCodeActivationCapabilities>]
  [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>]
