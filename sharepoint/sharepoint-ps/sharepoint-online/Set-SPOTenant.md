@@ -61,6 +61,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-IPAddressEnforcement <Boolean>]
  [-IPAddressWACTokenLifetime <Int32>]
  [-LegacyAuthProtocolsEnabled <Boolean>]
+ [-MediaTranscription <MediaTranscriptionPolicyType>]
  [-NotificationsInOneDriveForBusinessEnabled <Boolean>]
  [-NotificationsInSharePointEnabled <Boolean>]
  [-NotifyOwnersWhenInvitationsAccepted <Boolean>]
@@ -802,7 +803,7 @@ Accept wildcard characters: False
 
 Lets administrators choose the default permission of the link in the sharing dialog box in OneDrive for Business and SharePoint Online. This applies to anonymous access, internal and direct links.
 
-The valid values are None (non settable), View and Edit.
+The valid values are View and Edit (default).
 
 ```yaml
 Type: SharingPermissionType
@@ -811,7 +812,7 @@ Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
-Default value: None
+Default value: Edit
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1040,6 +1041,26 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MediaTranscription
+
+When the feature is enabled, videos can have transcripts generated on demand or generated automatically in certain scenarios. This is the default because the policy is default on. If a video owner decides they don’t want the transcript, they can always hide or delete it from that video. 
+Possible values:
+
+- Enabled
+- Disabled
+
+```yaml
+Type: MediaTranscriptionPolicyType
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
