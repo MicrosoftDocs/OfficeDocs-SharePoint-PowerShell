@@ -36,12 +36,6 @@ Set-SPOTenantSyncClientRestriction -DisableReportProblemDialog <Boolean> [<Commo
 Set-SPOTenantSyncClientRestriction [-ExcludedFileExtensions <String>] [<CommonParameters>]
 ```
 
-### GrooveBlockOptions
-
-```powershell
-Set-SPOTenantSyncClientRestriction [-GrooveBlockOption <String>] [<CommonParameters>]
-```
-
 ## DESCRIPTION
 
 This cmdlet contains more than one parameter set. You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets. For more information about how to use parameter sets, see [Cmdlet Parameter Sets](https://msdn.microsoft.com/library/dd878348(VS.85).aspx).
