@@ -77,6 +77,14 @@ Connect-SPOService -Url https://contoso-admin.sharepoint.com
 
 Prompts for credentials. This is required if the account is using multi-factor authentication.
 
+### -----------------------EXAMPLE 4-----------------------------
+
+```powershell
+Connect-SPOService -Url https://contoso-admin.sharepoint.com -Region ITAR
+```
+
+Connects to a SharePoint Online Administration Center specifying the region.
+
 ## PARAMETERS
 
 ### -AuthenticationUrl
@@ -137,7 +145,7 @@ The valid values are: Default | ITAR | Germany | China
 The default value is "default".
 
 > [!NOTE]
-> The ITAR value is for United States Government cloud tenancies only.  
+> The ITAR value is for GCC High and DoD tenancies only.  
 
 ```yaml
 Type: AADCrossTenantAuthenticationLocation
