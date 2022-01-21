@@ -144,7 +144,6 @@ The valid values are: Default | ITAR | Germany | China
 
 The default value is "default".
 
-> [!NOTE]
 **Note**: The ITAR value is for GCC High and DoD tenancies only.
 
 ```yaml
