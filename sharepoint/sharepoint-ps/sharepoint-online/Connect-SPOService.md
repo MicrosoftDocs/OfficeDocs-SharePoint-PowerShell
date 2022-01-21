@@ -145,7 +145,7 @@ The valid values are: Default | ITAR | Germany | China
 The default value is "default".
 
 > [!NOTE]
-> The ITAR value is for GCC High and DoD tenancies only.  
+**Note**: The ITAR value is for GCC High and DoD tenancies only.
 
 ```yaml
 Type: AADCrossTenantAuthenticationLocation
