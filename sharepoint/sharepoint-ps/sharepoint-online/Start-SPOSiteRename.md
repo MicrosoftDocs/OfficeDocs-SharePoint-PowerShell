@@ -17,7 +17,7 @@ ms.reviewer:
 > [!NOTE]
 > This Feature is part of the Admin Center Preview. If your tenant is not part of the Admin Center Preview, you will get an error when trying to run this cmdlet.
 
-Starts a job to rename a site. You can change the title, the URL or both of a particular site on a SharePoint Online collection
+Starts a job to rename a site. You can change the URL, and optionally the site title along with changing the URL, of a particular site on a SharePoint Online collection
 
 ## SYNTAX
 
@@ -29,7 +29,7 @@ Start-SPOSiteRename [-Identity] <SpoSitePipeBind> [-NewSiteUrl] <string> [[-NewS
 
 ## DESCRIPTION
 
-This command starts a rename of a site on a SharePoint Online site into a new title, name and url. Also allows you to simulate the run using the -WhatIf parameter as well as -SuppressWorkflow2013Check and SuppressMarketplaceAppCheck switch parameters.
+This command starts a rename of a site on a SharePoint Online site. You can change the URL, and optionally the site title along with changing the URL. Also allows you to simulate the run using the -WhatIf parameter as well as -SuppressWorkflow2013Check and SuppressMarketplaceAppCheck switch parameters.
 
 ## EXAMPLES
 
