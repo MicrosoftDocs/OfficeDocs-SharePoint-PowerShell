@@ -13,6 +13,8 @@ online version: https://pnp.github.io/powershell/cmdlets/Get-PnPWebPart.html
 
 > [!TIP]
 > We encourage you to make improvements to this documentation. Please navigate to https://github.com/pnp/powershell/blob/dev/documentation/Get-PnPWebPart.md to change this file.
+> [!TIP]
+> This command only returns webparts from Classic Pages
 
 Returns a web part definition object
 
