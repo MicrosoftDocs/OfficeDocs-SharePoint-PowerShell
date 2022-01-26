@@ -24,7 +24,7 @@ Set-PnPWebTheme [[-Theme] <ThemePipeBind>] [-WebUrl <String>]
 ```
 
 ## DESCRIPTION
-Sets the theme of the current web. * Requires Tenant Administration Rights *
+Sets the theme of the current web. * Requires SharePoint Administration Rights *
 
 ## EXAMPLES
 
