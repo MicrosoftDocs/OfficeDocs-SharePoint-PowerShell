@@ -3,8 +3,6 @@ Module Name: PnP.Powershell
 Module Guid: 0b0430ce-d799-4f3b-a565-f0dca1f31e17
 title: sharepoint-pnp
 author: erwinvanhunen
-ms.author:
-ms.reviewer:
 ---
 # PnP.PowerShell
 
