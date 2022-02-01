@@ -24,7 +24,7 @@ Update-SPODataEncryptionPolicy [-KeyVaultName] <String> [-KeyName] <String> [-Ke
 
 ## DESCRIPTION
 
-Use the Update-DataEncryptionPolicy cmdlet to update customer encryption status for your geo tenant.
+Use the Update -SPODataEncryptionPolicy cmdlet to update customer encryption status for your geo tenant.
 For more information, see [Controlling your data in Office 365 using Customer Key](https://docs.microsoft.com/en-us/microsoft-365/compliance/controlling-your-data-using-customer-key)
 
 ## EXAMPLES
