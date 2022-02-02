@@ -54,7 +54,7 @@ Get-Command -Module PnP.PowerShell
 ```
 
 ### Set and configure credentials ##
-See this [page](https://pnp.github.io/powershell/) for more information on how to use PnP PowerShell and setup various things like the use of a Credential Manager.
+See this [page](https://pnp.github.io/powershell/) for more information on how to use PnP PowerShell and to set up various things like the use of a credential manager.
 
 
 
