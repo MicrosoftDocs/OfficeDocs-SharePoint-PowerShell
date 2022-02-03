@@ -870,7 +870,7 @@ Accept wildcard characters: False
 
 ### -DisabledWebPartIds
 
-Allows administrators to prevent certain web parts from being added to pages or rendering on pages on which they were previously added. Currently, only the folling web parts can be disabled in such a manner:
+Allows administrators to prevent certain web parts from being added to pages or rendering on pages on which they were previously added. Currently, only the following web parts can be disabled in such a manner:
 
 - Amazon Kindle: 46698648-fcd5-41fc-9526-c7f7b2ace919
 - YouTube: 544dd15b-cf3c-441b-96da-004d5a8cea1d
