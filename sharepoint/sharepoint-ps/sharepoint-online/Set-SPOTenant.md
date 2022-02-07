@@ -725,6 +725,8 @@ Accept wildcard characters: False
 ```
 
 ### -UsePersistentCookiesForExplorerView
+> [!NOTE]
+> This setting is not used anymore with IE retired and the parameter would be removed soon. "Keep Me Signed In" need to be selected for "View in File Explorer" to work with Microsoft Edge. 
 
 Lets SharePoint issue a special cookie that will allow this feature to work even when "Keep Me Signed In" is not selected.
 
