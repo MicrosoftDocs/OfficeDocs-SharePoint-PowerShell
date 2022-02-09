@@ -19,8 +19,7 @@ Sets properties on the SharePoint Online organization.
 ## SYNTAX
 
 ```powershell
-Set-SPOTenant
- [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
+Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-BccExternalSharingInvitations <Boolean>]
  [-BccExternalSharingInvitationsList <String>]
  [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>]
@@ -204,8 +203,6 @@ Set-SPOTenant -ShowPeoplePickerSuggestionsForGuestUsers $true
 This example enable the option to search for existing guest users at Tenant Level.
 
 ## PARAMETERS
-
-```
 
 ### -ApplyAppEnforcedRestrictionsToAdHocRecipients
 
