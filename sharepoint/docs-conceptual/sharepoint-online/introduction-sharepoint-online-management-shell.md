@@ -28,7 +28,7 @@ If you are new to Microsoft 365 and SharePoint Online and you have not done much
 After you get familiar with SharePoint sites and users, try using SharePoint Online PowerShell commands, especially when you want to manage lots of site collections or users.
 
 > [!NOTE]
-> For the complete list of SharePoint Online cmdlets, see [SharePoint Online PowerShell](../sharepoint-ps/sharepoint-online/sharepoint-online.md)
+> For the complete list of SharePoint Online cmdlets, see [SharePoint Online PowerShell](/powershell/module/sharepoint-online/?view=sharepoint-ps)
 
 ## How do I get permissions and set up the environment?
 
