@@ -1,6 +1,5 @@
 ---
 title: PnP PowerShell Overview
-ms.service: sharepoint-powershell
 description: "SharePoint PnP PowerShell Overview"
 ---
 
