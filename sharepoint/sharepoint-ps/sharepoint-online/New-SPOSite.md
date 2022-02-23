@@ -20,7 +20,7 @@ Creates a new SharePoint Online site collection for the current company.
 
 ```powershell
 New-SPOSite [-CompatibilityLevel <Int32>] [-LocaleId <UInt32>] [-NoWait] -Owner <String>
- [-ResourceQuota <Double>] -StorageQuota <Int64> [-Template <String>] [-TimeZoneId <Int32>] [-Title <String>]
+  -StorageQuota <Int64> [-Template <String>] [-TimeZoneId <Int32>] [-Title <String>]
  -Url <UrlCmdletPipeBind> [<CommonParameters>]
 ```
 
@@ -46,18 +46,18 @@ Example 1 creates a new site collection for the current company with specified s
 ### -----------------------EXAMPLE 2-----------------------------
 
 ```powershell
-New-SPOSite -Url https://contoso.sharepoint.com/sites/mynewsite -Owner joe.healy@contoso.com -StorageQuota 1000 -CompatibilityLevel 15 -LocaleID 1033 -ResourceQuota 300 -Template "STS#0" -TimeZoneId 13 -Title "My new site collection"
+New-SPOSite -Url https://contoso.sharepoint.com/sites/mynewsite -Owner joe.healy@contoso.com -StorageQuota 1000 -CompatibilityLevel 15 -LocaleID 1033 -Template "STS#0" -TimeZoneId 13 -Title "My new site collection"
 ```
 
-Example 2 creates a new site collection for the current company with specified site URL, title, owner and template. The storage quota is set to 1000 megabytes and the resource quota is set to 300 megabytes. The template compatibility level is set to 15 which means that the site collection only supports the SharePoint 2013 template. The language is set to English - United States (LocaleID = 1033) and the time zone is set to (GMT-08:00) Pacific Time (US and Canada) (TimeZone = 13).
+Example 2 creates a new site collection for the current company with specified site URL, title, owner and template. The storage quota is set to 1000 megabytes. The template compatibility level is set to 15 which means that the site collection only supports the SharePoint 2013 template. The language is set to English - United States (LocaleID = 1033) and the time zone is set to (GMT-08:00) Pacific Time (US and Canada) (TimeZone = 13).
 
 ### -----------------------EXAMPLE 3-----------------------------
 
 ```powershell
-New-SPOSite -Url https://contoso.sharepoint.com/sites/accounting -Owner admin@contoso.com -StorageQuota 100 -NoWait -ResourceQuota 50 -Template STS#0
+New-SPOSite -Url https://contoso.sharepoint.com/sites/accounting -Owner admin@contoso.com -StorageQuota 100 -NoWait -Template STS#0
 ```
 
-Example 3 creates a new site collection for the current company with specified site URL, owner and template. The storage quota is set to 100 megabytes and the resource quota is set to 50 megabytes. This cmdlet is executed immediately without delay.
+Example 3 creates a new site collection for the current company with specified site URL, owner and template. The storage quota is set to 100 megabytes. This cmdlet is executed immediately without delay.
 
 ## PARAMETERS
 
@@ -129,22 +129,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ResourceQuota
-
-Specifies the quota for this site collection in Sandboxed Solutions units. This value must not exceed the company's aggregate available Sandboxed Solutions quota. The default value is 0. For more information, see [Resource Usage Limits on Sandboxed Solutions in SharePoint](https://docs.microsoft.com/previous-versions/office/developer/sharepoint-2010/gg615462(v=office.14)). Note that this parameter is now obsolete and has been deprecated.
-
-```yaml
-Type: Double
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -StorageQuota
 
