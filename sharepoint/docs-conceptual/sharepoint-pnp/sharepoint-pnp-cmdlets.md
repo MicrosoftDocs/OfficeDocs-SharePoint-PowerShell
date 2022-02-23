@@ -6,7 +6,7 @@ description: "SharePoint PnP PowerShell Overview"
 
 # PnP PowerShell overview
 
-SharePoint Patterns and Practices (PnP) contains a library of PowerShell commands (PnP PowerShell) that allows you to perform complex provisioning and artifact management actions towards SharePoint. The commands uses CSOM and works against SharePoint Online.
+SharePoint Patterns and Practices (PnP) contains a library of PowerShell commands (PnP PowerShell) that allows you to perform complex provisioning and artifact management actions towards SharePoint. The commands use CSOM and work against SharePoint Online.
 
 ![SharePoint Patterns and Practices](https://devofficecdn.azureedge.net/media/Default/PnP/sppnp.png)
 
