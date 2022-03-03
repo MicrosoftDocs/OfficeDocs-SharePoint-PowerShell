@@ -6,9 +6,13 @@ description: "SharePoint PnP PowerShell Overview"
 
 # PnP PowerShell overview
 
-SharePoint Patterns and Practices (PnP) contains a library of PowerShell commands (PnP PowerShell) that allows you to perform complex provisioning and artifact management actions toward SharePoint. The commands use CSOM and work against SharePoint Online.
+PnP PowerShell is a .NET Core 3.1 / .NET Framework 4.6.1 based PowerShell Module providing over 600 cmdlets that work with Microsoft 365 environments and more specifically SharePoint Online and Microsoft Teams.
 
-![SharePoint Patterns and Practices](https://devofficecdn.azureedge.net/media/Default/PnP/sppnp.png)
+For more information about installing or upgrading to this module, please refer to the documentation at https://pnp.github.io/powershell/articles/index.html
+
+## Supportability and SLA for PnP PowerShell cmdlets
+
+This library is open-source and community provided library with active community providing support for it. This is not Microsoft provided module so there's no SLA or direct support for this open-source component from Microsoft. Please report any issues using the [issues list in GitHub](https://github.com/pnp/powershell/issues).
 
 _**Applies to:** SharePoint Online_
 
