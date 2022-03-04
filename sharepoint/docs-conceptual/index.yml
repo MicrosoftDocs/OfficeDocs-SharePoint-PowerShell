@@ -54,7 +54,7 @@ landingContent:
             url: /powershell/module/sharepoint-server
 
  # Card
-  - title: SharePoint Patterns and Practices (PnP)
+  - title: PnP PowerShell
     linkLists:
       - linkListType: reference
         links:
