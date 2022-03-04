@@ -9,12 +9,12 @@ items:
     href: sharepoint-online/connect-sharepoint-online.md
   - name: Cmdlet reference
     href: /powershell/module/sharepoint-online/?view=sharepoint-ps
-- name: SharePoint PnP
+- name: PnP PowerShell
   items:
   - name: Overview
     href: sharepoint-pnp/sharepoint-pnp-cmdlets.md
   - name: Cmdlet reference
-    href: /powershell/module/sharepoint-pnp/?view=sharepoint-ps
+    href: https://pnp.github.io/powershell/
 - name: SharePoint Server
   href: sharepoint-server/sharepoint-server-cmdlets.md
 
