@@ -61,7 +61,7 @@ landingContent:
           - text: Overview
             url: sharepoint-pnp-cmdlets.md     
           - text: Cmdlet reference
-            url: /powershell/module/sharepoint-pnp
+            url: https://pnp.github.io/powershell/
           - text: PowerShell Gallery
             url: https://www.powershellgallery.com/
 
