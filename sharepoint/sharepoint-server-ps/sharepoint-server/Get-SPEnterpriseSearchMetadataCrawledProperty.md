@@ -48,7 +48,7 @@ $crawledProp = Get-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication 
 $crawledProp.GetMappedManagedProperties()
 ```
 
-This example returns the mappings of an specific crawled property in the PeopleSearch_Scope metadata category for the default search service application.
+This example returns the mappings of a specific crawled property in the PeopleSearch_Scope metadata category for the default search service application.
 
 ## PARAMETERS
 
