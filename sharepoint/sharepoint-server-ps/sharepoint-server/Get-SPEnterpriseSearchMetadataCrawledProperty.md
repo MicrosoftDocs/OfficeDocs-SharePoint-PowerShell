@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ 
+### Example 1
 ```powershell
 $ssa = Get-SPEnterpriseSearchServiceApplication
 $cat = Get-SPEnterpriseSearchMetadataCategory -SearchApplication $ssa -Identity People
@@ -39,6 +39,16 @@ Get-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $ssa -Category 
 ```
 
 This example returns the first crawled property in the PeopleSearch_Scope metadata category for the default search service application.
+
+### Example 2
+```powershell
+$ssa = Get-SPEnterpriseSearchServiceApplication
+$cat = Get-SPEnterpriseSearchMetadataCategory -SearchApplication $ssa -Identity People
+$crawledProp = Get-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $ssa -Category $cat -Name urn:schemas-microsoft-com:sharepoint:portal:profile:CellPhone
+$crawledProp.GetMappedManagedProperties()
+```
+
+This example returns the mappings of a specific crawled property in the PeopleSearch_Scope metadata category for the default search service application.
 
 ## PARAMETERS
 
