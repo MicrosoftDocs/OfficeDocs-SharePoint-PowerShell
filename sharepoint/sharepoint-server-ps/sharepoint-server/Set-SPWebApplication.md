@@ -58,7 +58,7 @@ The `Set-SPWebApplication` cmdlet configures the web application specified by th
 For any settings that are zone-specific (for the Zone parameter set), the zone to configure must be provided.
 The provided zone must already exist.
 
-All IIS binding settings should be respecified when updating the binding of an IIS web site via the Set-SPWebApplication cmdlet. This includes the URL, secure sockets layer setting, the port number, the host header, and the certificate. If a binding setting isn't respecified, it will revert to its default value.
+All IIS binding settings should be respecified when updating the binding of an IIS website via the `Set-SPWebApplication` cmdlet. This includes the URL, secure sockets layer setting, the port number, the host header, and the certificate. If a binding setting isn't respecified, it will revert to its default value.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
