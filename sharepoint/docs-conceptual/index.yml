@@ -54,14 +54,14 @@ landingContent:
             url: /powershell/module/sharepoint-server
 
  # Card
-  - title: SharePoint Patterns and Practices (PnP)
+  - title: PnP PowerShell
     linkLists:
       - linkListType: reference
         links:
           - text: Overview
             url: sharepoint-pnp/sharepoint-pnp-cmdlets.md     
           - text: Cmdlet reference
-            url: /powershell/module/sharepoint-pnp
+            url: https://pnp.github.io/powershell/
           - text: PowerShell Gallery
             url: https://www.powershellgallery.com/
 
