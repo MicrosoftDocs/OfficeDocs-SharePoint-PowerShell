@@ -91,7 +91,7 @@ Example 1 updates the owner of site collection <https://contoso.sharepoint.com/s
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -StorageQuota 1024
 ```
 
-Example 2 updates the settings of site collection <https://contoso.sharepoint.com/sites/site1.> The storage quota is updated to 1024 megabytes (1 GB) and the resource quota is updated to 0 megabytes.
+Example 2 updates the settings of site collection <https://contoso.sharepoint.com/sites/site1.> The storage quota is updated to 1024 megabytes (1 GB).
 
 ### -----------------------EXAMPLE 3-----------------------------
 
