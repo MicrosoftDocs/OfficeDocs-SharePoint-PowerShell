@@ -109,6 +109,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-DisableOutlookPSTVersionTrimming <Boolean>]
  [-ViewInFileExplorerEnabled <Boolean>]
  [-AllowGuestUserShareToUsersNotInSiteCollection <Boolean>]
+ [-DisableCustomAppAuthentication <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -879,6 +880,24 @@ Accept wildcard characters: False
 Prevents the Download button from being displayed on the Virus Found warning page.
 
 Accepts a value of true (enabled) to hide the Download button or false (disabled) to display the Download button. By default this feature is set to false.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableCustomAppAuthentication
+
+Prevents apps using an Azure Access Control (ACS) app-only access token to access SharePoint. ACS, a service of Azure Active Directory (Azure AD), has been retired on November 7, 2018. This retirement does not impact the SharePoint add-in model, which uses the https://accounts.accesscontrol.windows.net hostname (which is not impacted by this retirement). For new tenants, apps using an ACS app-only access token are disabled by default. We recommend using the Azure AD app-only model which is modern and more secure.
+
+Accepts a value of true or false. By default this feature is set to true.
 
 ```yaml
 Type: Boolean

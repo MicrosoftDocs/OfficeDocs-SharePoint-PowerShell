@@ -23,7 +23,7 @@ Sets or updates one or more properties' values for a site collection.
 ```powershell
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [-Confirm]
  [-DenyAddAndCustomizePages <Boolean>] [-LocaleId <UInt32>] [-LockState <String>] [-MediaTranscription <MediaTranscriptionPolicyType>] [-NoWait] [-Owner <String>]
- [-ResourceQuota <Double>] [-ResourceQuotaWarningLevel <Double>]
+ [-ResourceQuotaWarningLevel <Double>]
  [-SandboxedCodeActivationCapability <SandboxedCodeActivationCapabilities>]
  [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>]
  [-SharingCapability <SharingCapabilities>] [-StorageQuota <Int64>] [-StorageQuotaWarningLevel <Int64>]
@@ -57,7 +57,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-Confirm] [-DisableSharingForNonOwner
 ```powershell
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [-Confirm]
  [-DenyAddAndCustomizePages <Boolean>] [-LocaleId <UInt32>] [-LockState <String>] [-NoWait] [-Owner <String>]
- [-ResourceQuota <Double>] [-ResourceQuotaWarningLevel <Double>]
+ [-ResourceQuotaWarningLevel <Double>]
  [-SandboxedCodeActivationCapability <SandboxedCodeActivationCapabilities>]
  [-SharingCapability <SharingCapabilities>] [-StorageQuota <Int64>] [-StorageQuotaWarningLevel <Int64>]
  [<CommonParameters>]
@@ -88,10 +88,10 @@ Example 1 updates the owner of site collection <https://contoso.sharepoint.com/s
 ### -----------------------EXAMPLE 2-----------------------------
 
 ```powershell
-Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -ResourceQuota 0 -StorageQuota 1024
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -StorageQuota 1024
 ```
 
-Example 2 updates the settings of site collection <https://contoso.sharepoint.com/sites/site1.> The storage quota is updated to 1024 megabytes (1 GB) and the resource quota is updated to 0 megabytes.
+Example 2 updates the settings of site collection <https://contoso.sharepoint.com/sites/site1.> The storage quota is updated to 1024 megabytes (1 GB).
 
 ### -----------------------EXAMPLE 3-----------------------------
 
@@ -344,24 +344,6 @@ Specifies the owner of the site collection. Changing the Owner of a OneDrive is 
 
 ```yaml
 Type: String
-Parameter Sets: ParamSet1
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResourceQuota
-
-Specifies the resource quota in megabytes of the site collection.
-The default value is 0.
-For more information, see [Resource Usage Limits on Sandboxed Solutions in SharePoint](https://msdn.microsoft.com/library/gg615462.aspx).
-
-```yaml
-Type: Double
 Parameter Sets: ParamSet1
 Aliases:
 Applicable: SharePoint Online
