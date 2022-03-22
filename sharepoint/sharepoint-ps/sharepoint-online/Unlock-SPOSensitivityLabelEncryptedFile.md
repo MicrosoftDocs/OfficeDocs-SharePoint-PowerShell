@@ -38,7 +38,7 @@ For permissions and the most current information about Windows PowerShell for Sh
  Unlock-SPOSensitivityLabelEncryptedFile -FileUrl "https://contoso.com/sites/Marketing/Shared Documents/Doc1.docx" -JustificationText "Need to recover this file"
 ```
 
-This example will remove a regular label with admin dedined encryption from the file Doc1.docx and also make an entry in audit logs. 
+This example will remove a regular label with admin defined encryption from the file Doc1.docx and also make an entry in audit logs. 
 
 ## PARAMETERS
 
