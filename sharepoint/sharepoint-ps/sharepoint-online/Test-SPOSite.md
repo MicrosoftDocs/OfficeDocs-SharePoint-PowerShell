@@ -80,7 +80,7 @@ Accept wildcard characters: False
 
 ### -RunAlways
 
-Displays a message that states the effect of the command instead of executing the command.
+Forces a rule to run even if a health check was run.
 
 ```yaml
 Type: SwitchParameter
