@@ -39,7 +39,7 @@ Start-SPOSiteContentMove [-SourceSiteUrl] <String> [-DestinationUrl] <String> [[
 
 UrlAndDestinationDataLocation: These parameters allow a SharePoint administrator to validate a geo move before scheduling it.
 
-UrlAndDestinationUrl: These parameters allow a SharePoint administrator to move and (optionally) rename a site as part of the geo move operation by specifying a new site name in the destrination URL.
+UrlAndDestinationUrl: These parameters allow a SharePoint administrator to move and (optionally) rename a site as part of the geo move operation by specifying a new site name in the destination URL.
 
 ## EXAMPLES
 
