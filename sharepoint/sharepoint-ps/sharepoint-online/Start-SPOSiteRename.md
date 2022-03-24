@@ -153,7 +153,7 @@ Accept wildcard characters: False
 
 ### -Reserved
 
-Reserved for Microsoft Internal use.
+Reserved for Microsoft internal use.
 
 ```yaml
 Type: String
