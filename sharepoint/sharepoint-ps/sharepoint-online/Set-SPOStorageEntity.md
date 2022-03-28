@@ -24,7 +24,7 @@ Set-SPOStorageEntity -Site <SpoSitePipeBind> -Key <string> -Value <string> -Comm
 
 ## DESCRIPTION
 
-This cmdLet is used to set a value in the property bag.
+This cmdlet is used to set a value in the property bag.
 
 ## EXAMPLES
 
@@ -56,7 +56,7 @@ Accept wildcard characters: False
 
 ### -Key
 
-The key in the property bag that should be removed.
+The key in the property bag that should be added or updated.
 
 ```yaml
 Type: String
