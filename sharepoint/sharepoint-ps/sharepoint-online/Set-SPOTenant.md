@@ -110,6 +110,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-ViewInFileExplorerEnabled <Boolean>]
  [-AllowGuestUserShareToUsersNotInSiteCollection <Boolean>]
  [-DisableCustomAppAuthentication <Boolean>]
+ [-ShowOpenInDesktopOptionForSyncedFiles <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -2005,6 +2006,26 @@ Type: Boolean
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShowOpenInDesktopOptionForSyncedFiles
+
+The ShowOpenInDesktopOptionForSyncedFiles setting (defaulted to false) enables opening a file locally in the desktop from the file item menu of SharePoint sites or OneDrive for Business Web, with the prerequisite that the file is being synced locally by the OneDrive client.
+
+The valid values are:  
+
+- False (default) – Open In Desktop is disabled and the option is not shown in the file context menu. 
+- True – Open In Desktop is enabled and the option for opening synced files locally from the web appears in the context menu. 
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
 Required: False
 Position: Named
 Default value: False
