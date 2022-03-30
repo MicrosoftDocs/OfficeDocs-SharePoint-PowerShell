@@ -26,7 +26,7 @@ Get-SPOGeoStorageQuota [-AllLocations] [<CommonParameters>]
 
 This cmdlet shows the storage on the current location or all locations in a multi-geo tenant.
 
-This Cmdlet requires a connection to a multi-geo tenant to run correctly. You must be a SharePoint Online global Administrator to get the storage on current location or all locations in a multi-geo SPO tenant.
+This cmdlet requires a connection to a multi-geo tenant to run correctly. You must be a SharePoint Online global Administrator to get the storage on current location or all locations in a multi-geo SPO tenant.
 
 ## EXAMPLES
 
