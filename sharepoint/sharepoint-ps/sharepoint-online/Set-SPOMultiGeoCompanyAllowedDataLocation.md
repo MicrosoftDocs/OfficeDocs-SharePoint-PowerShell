@@ -56,7 +56,7 @@ Accept wildcard characters: False
 
 ### -InitialDomain
 
-Sets the initial domain to assocate with the specified data location.
+Sets the initial domain to associate with the specified data location.
 
 ```yaml
 Type: String
