@@ -2015,12 +2015,12 @@ Accept wildcard characters: False
 
 ### -ShowOpenInDesktopOptionForSyncedFiles
 
-The ShowOpenInDesktopOptionForSyncedFiles setting (defaulted to false) enables opening a file locally in the desktop from the file item menu of SharePoint sites or OneDrive for Business Web, with the prerequisite that the file is being synced locally by the OneDrive client.
+The ShowOpenInDesktopOptionForSyncedFiles setting (set to false by default) displays the “Open in desktop” option when users go to SharePoint or OneDrive on the web and open the shortcut menu for a file that they’re syncing with the OneDrive sync app.
 
 The valid values are:
 
-- False (default) – Open in desktop is disabled and the option is not shown in the file context menu.
-- True – Open in desktop is enabled and the option for opening synced files locally from the web appears in the context menu.
+- False (default) – “Open in desktop” is disabled and not shown on the shortcut menu.
+- True – “Open in desktop” is enabled and the option to open synced files locally appears on the shortcut menu.
 
 ```yaml
 Type: Boolean
