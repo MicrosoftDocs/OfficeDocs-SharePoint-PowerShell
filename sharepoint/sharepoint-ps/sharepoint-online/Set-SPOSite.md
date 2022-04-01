@@ -214,7 +214,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-PARAMVALUE: SwitchParameter
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
