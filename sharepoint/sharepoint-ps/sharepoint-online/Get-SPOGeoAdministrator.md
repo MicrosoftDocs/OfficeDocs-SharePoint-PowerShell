@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-This cmdlet returns the SharePoint Online user or security group accounts with global administrative privileges in the current multi-geo tenant.
+This cmdlet returns the SharePoint Online user or security group accounts with Global Admin privileges in the current multi-geo tenant.
 
 ## SYNTAX
 
