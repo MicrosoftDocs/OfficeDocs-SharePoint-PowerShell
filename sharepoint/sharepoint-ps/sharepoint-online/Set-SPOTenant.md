@@ -2019,8 +2019,8 @@ The ShowOpenInDesktopOptionForSyncedFiles setting (set to false by default) disp
 
 The valid values are:
 
-- False (default) – “Open in desktop” is disabled and not shown on the shortcut menu.
-- True – “Open in desktop” is enabled and the option to open synced files locally appears on the shortcut menu.
+- False (default) – "Open in desktop" is disabled and not shown on the shortcut menu.
+- True – "Open in desktop" is enabled and the option to open synced files locally appears on the shortcut menu.
 
 ```yaml
 Type: Boolean
