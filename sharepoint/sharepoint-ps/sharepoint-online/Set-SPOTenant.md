@@ -2015,7 +2015,7 @@ Accept wildcard characters: False
 
 ### -ShowOpenInDesktopOptionForSyncedFiles
 
-The ShowOpenInDesktopOptionForSyncedFiles setting (set to false by default) displays the "Open in desktop" option when users go to SharePoint or OneDrive on the web and open the shortcut menu for a file that they’re syncing with the OneDrive sync app.
+The ShowOpenInDesktopOptionForSyncedFiles setting (set to false by default) displays the "Open in desktop" option when users go to SharePoint or OneDrive on the web and open the shortcut menu for a file that they're syncing with the OneDrive sync app.
 
 The valid values are:
 
