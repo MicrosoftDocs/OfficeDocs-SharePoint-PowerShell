@@ -2021,7 +2021,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ### -ReduceTempTokenLifetimeEnabled 
-Enables reduced session timeout for temporary URLs used by apps for document download scenarios. Reduction occurs when app’s redeeming IP address does not match the original requesting IP. Default value is 15 minutes if ReduceTempTokenLifetimeValue is not set.
+Enables reduced session timeout for temporary URLs used by apps for document download scenarios. Reduction occurs when an app redeeming an IP address does not match the original requesting IP. The default value is 15 minutes if ReduceTempTokenLifetimeValue is not set.
 
 > [!NOTE]
 > Reducing this value may bring degradation in end user experience by requiring frequent authentication prompts to users. 
