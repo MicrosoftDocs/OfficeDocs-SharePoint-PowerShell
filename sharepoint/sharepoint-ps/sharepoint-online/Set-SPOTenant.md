@@ -2030,6 +2030,7 @@ Aliases:
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: FalseAccept wildcard characters: False
 ```
 
 ### -OneDriveLoopSharingCapability
