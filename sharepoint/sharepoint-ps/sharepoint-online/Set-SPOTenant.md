@@ -2030,7 +2030,7 @@ Aliases:
 Required: False
 Position: Named
 Default value: False
-Accept pipeline input: FalseAccept
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
