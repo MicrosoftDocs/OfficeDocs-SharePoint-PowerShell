@@ -2031,7 +2031,7 @@ Required: False
 Position: Named
 Default value: False
 Accept pipeline input: FalseAccept
-Wildcard characters: False
+Accept wildcard characters: False
 ```
 
 ### -OneDriveLoopSharingCapability
