@@ -20,7 +20,7 @@ Revokes a permission that was previously granted to the "SharePoint Online Clien
 ### Default
 
 ```powershell
-Revoke-SPOTenantServicePrincipalPermission -ObjectId <String>
+Revoke-SPOTenantServicePrincipalPermission [-ObjectId] <String> [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
