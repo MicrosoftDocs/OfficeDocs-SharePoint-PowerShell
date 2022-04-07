@@ -203,7 +203,7 @@ This example enables tenant admins to enable ODB and SPO to respect Exchange sup
 Set-SPOTenant -ShowPeoplePickerSuggestionsForGuestUsers $true
 ```
 
-This example enable the option to search for existing guest users at Tenant Level.
+This example enables the option to search for existing guest users at Tenant Level.
 
 ## PARAMETERS
 
