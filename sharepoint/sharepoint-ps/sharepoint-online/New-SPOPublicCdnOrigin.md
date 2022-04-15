@@ -24,7 +24,7 @@ New-SPOPublicCdnOrigin [-Url] <String> [-Confirm] [-WhatIf] [<CommonParameters>]
 
 ## DESCRIPTION
 
-This Cmdlet creates a new Public CDN Origin in your SPO Tenant
+This cmdlet creates a new Public CDN Origin in your SPO Tenant
 
 ## EXAMPLES
 
