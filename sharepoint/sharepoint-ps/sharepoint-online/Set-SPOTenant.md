@@ -2025,7 +2025,6 @@ Enables reduced session timeout for temporary URLs used by apps for document dow
 
 **Note**: Reducing this value may bring degradation in end-user experience by requiring frequent authentication prompts to users. 
 
-PARAMVALUE: $true | $false
 
 ```yaml
 Type: Boolean
