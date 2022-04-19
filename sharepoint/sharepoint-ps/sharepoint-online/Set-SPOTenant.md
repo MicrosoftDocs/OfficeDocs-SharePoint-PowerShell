@@ -2041,7 +2041,6 @@ Accept wildcard characters: False
 
 Optional parameter to set the session timeout value for temporary URLs. The value can be set between 5 and 15 minutes and the default value is 15 minutes.
  
-PARAMVALUE: Int32
 
 ```yaml
 Type: Int32
