@@ -62,7 +62,7 @@ Accept wildcard characters: False
 
 ### -Principals
 
-One or more principles to add permissions for.
+One or more principals to add permissions for.
 
 ```yaml
 Type: String[]
