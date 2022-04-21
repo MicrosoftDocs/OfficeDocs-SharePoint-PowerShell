@@ -40,7 +40,7 @@ Get the current location the user's OneDrive location, url, and site ID.
 
 ### -UserPrincipalName
 
-PARAMVALUE: String
+UserPrincipalName or UPN defined for the specific user on the SPO tenant.
 
 ```yaml
 Type: String
