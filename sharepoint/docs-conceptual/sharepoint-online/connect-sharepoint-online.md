@@ -37,6 +37,12 @@ To open the SharePoint Online Management Shell command prompt, from the **Start*
 
 > [!VIDEO https://www.youtube.com/embed/TMzHAWEQjlk]
 
+In PowerShell on macOS, Linux, or Azure CLI, after installing the module, run the following command to enable the SharePoint Online cmdlets:
+
+   ```powershell
+   Import-Module Microsoft.Online.SharePoint.Powershell
+   ```
+
 ## To connect with a user name and password
 
 1. Run the following command at the SharePoint Online Management Shell command prompt:
