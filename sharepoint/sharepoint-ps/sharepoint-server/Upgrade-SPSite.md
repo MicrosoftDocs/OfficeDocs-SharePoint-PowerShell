@@ -43,7 +43,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 Upgrade-SPSite https://<site name>/sites/testsite
 ```
 
-This example upgrades the existing https://\<site name\>/sites/testsite site collection by using only available build-to-build upgrade actions that are associated with the current site collection operating mode the SPSite.CompatibilityLevel will not be changed by this operation.
+This example upgrades the existing https://\<site name\>/sites/testsite site collection by using only available build-to-build upgrade actions that are associated with the current site collection operating mode. The SPSite.CompatibilityLevel will not be changed by this operation.
 
 ### -------------EXAMPLE 2----------
 ```
