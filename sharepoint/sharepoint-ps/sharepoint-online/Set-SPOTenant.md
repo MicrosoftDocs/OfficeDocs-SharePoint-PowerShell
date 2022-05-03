@@ -112,6 +112,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-DisableCustomAppAuthentication <Boolean>]
  [-ReduceTempTokenLifetimeEnabled <Boolean>]
  [-ReduceTempTokenLifetimeValue <Int32>]
+ [-ShowPeoplePickerGroupSuggestionsForIB <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -2097,6 +2098,22 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: 15
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShowPeoplePickerGroupSuggestionsForIB
+
+The ShowPeoplePickerGroupSuggestionsForIB setting (defaulted to false) will allow to show group suggestions for IB in the people picker.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
