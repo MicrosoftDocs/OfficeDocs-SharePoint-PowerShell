@@ -2104,7 +2104,7 @@ Accept wildcard characters: False
 
 ### -ShowPeoplePickerGroupSuggestionsForIB
 
-The ShowPeoplePickerGroupSuggestionsForIB setting (defaulted to false) will allow to show group suggestions for IB in the people picker.
+The ShowPeoplePickerGroupSuggestionsForIB setting (defaulted to false) allows showing group suggestions for information barriers (IBs) in the People Picker.
 
 ```yaml
 Type: Boolean
