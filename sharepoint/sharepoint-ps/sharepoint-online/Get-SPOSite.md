@@ -61,7 +61,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 > [!NOTE]
 > If the Limit or Filter parameters are provided then the following site collection properties will not be populated and may contain a default value:
-> AllowDownloadingNonWebViewableFiles, AllowEditing, AllowSelfServiceUpgrade, AnonymousLinkExpirationInDays, ConditionalAccessPolicy, DefaultLinkPermission, DefaultLinkToExistingAccess, DefaultSharingLinkType, DenyAddAndCustomizePages, DisableCompanyWideSharingLinks, ExternalUserExpirationInDays, LimitedAccessFileType, OverrideTenantAnonymousLinkExpirationPolicy, OverrideTenantExternalUserExpirationPolicy, PWAEnabled, SandboxedCodeActivationCapability, SensitivityLabel, SharingAllowedDomainList, SharingBlockedDomainList, SharingCapability, SharingDomainRestrictionMode.
+> AllowDownloadingNonWebViewableFiles, AllowEditing, AllowSelfServiceUpgrade, AnonymousLinkExpirationInDays, ConditionalAccessPolicy, DefaultLinkPermission, DefaultLinkToExistingAccess, DefaultSharingLinkType, DenyAddAndCustomizePages, DisableCompanyWideSharingLinks, ExternalUserExpirationInDays, InformationSegment, LimitedAccessFileType, OverrideTenantAnonymousLinkExpirationPolicy, OverrideTenantExternalUserExpirationPolicy, PWAEnabled, SandboxedCodeActivationCapability, SensitivityLabel, SharingAllowedDomainList, SharingBlockedDomainList, SharingCapability, SharingDomainRestrictionMode.
 
 ## EXAMPLES
 
