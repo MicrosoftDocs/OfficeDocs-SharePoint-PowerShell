@@ -112,6 +112,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-DisableCustomAppAuthentication <Boolean>]
  [-ReduceTempTokenLifetimeEnabled <Boolean>]
  [-ReduceTempTokenLifetimeValue <Int32>]
+ [-ShowPeoplePickerGroupSuggestionsForIB <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -2040,7 +2041,8 @@ When sharing a whiteboard in a Teams meeting, Whiteboard creates a sharing link 
 
 There’s an additional capability for temporary collaboration by external and shared device accounts during a meeting. This allows these users to temporarily view and collaborate on whiteboards when they’re shared in a Teams meeting, similar to PowerPoint Live sharing.
 
-If you have the external sharing for ODB allowed, no further action is required. If you have external sharing disabled, you can leave it disabled but you must enable this new setting. For more information, see [Enable Microsoft Whiteboard for your organization](https://support.microsoft.com/office/enable-microsoft-whiteboard-for-your-organization-1caaa2e2-5c18-4bdf-b878-2d98f1da4b24).
+If you have the external sharing for OneDrive for Business allowed, no further action is required. If you have external sharing for OneDrive for Business disabled, you can leave it disabled but you must enable this new setting. The setting will not take effect until the SharingCapability 'ExternalUserAndGuestSharing' is also enabled at Tenant level. For more information, see [Enable Microsoft Whiteboard for your organization](https://support.microsoft.com/office/enable-microsoft-whiteboard-for-your-organization-1caaa2e2-5c18-4bdf-b878-2d98f1da4b24).
+
 
 The valid values are:  
 
@@ -2097,6 +2099,22 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: 15
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShowPeoplePickerGroupSuggestionsForIB
+
+The ShowPeoplePickerGroupSuggestionsForIB setting (defaulted to false) allows showing group suggestions for information barriers (IBs) in the People Picker.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
