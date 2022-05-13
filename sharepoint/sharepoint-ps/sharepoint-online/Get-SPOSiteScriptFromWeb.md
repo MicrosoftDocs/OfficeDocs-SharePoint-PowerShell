@@ -68,7 +68,8 @@ Accept wildcard characters: False
 ### -IncludedLists
 
 An array of one or more lists. Each is identified by the list url.
-Note: Navigation nodes are not being currently exported.
+
+Note: Currently, navigation nodes are not exported.
 
 ```yaml
 Type: string[]
