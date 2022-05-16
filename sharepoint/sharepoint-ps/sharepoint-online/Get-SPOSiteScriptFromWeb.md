@@ -69,6 +69,8 @@ Accept wildcard characters: False
 
 An array of one or more lists. Each is identified by the list url.
 
+Note: Currently, navigation nodes are not exported.
+
 ```yaml
 Type: string[]
 Parameter Sets: (All)
