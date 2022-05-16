@@ -1,5 +1,5 @@
 ---
-Module Name: SharePoint Online PowerShell
+Module Name: Microsoft.Online.SharePoint.PowerShell
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: sharepoint-online
 author: trent-green
