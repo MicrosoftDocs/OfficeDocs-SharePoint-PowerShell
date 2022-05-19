@@ -33,10 +33,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE 1-----------------------
 ```
-Remove-SPAlternateURL -WebApplication https://sitename -Zone Extranet
+Remove-SPAlternateURL -Identity http://sitename
 ```
 
-This example deletes the extranet URL for the given Web application.
+This example deletes the http://sitename alternate URL from the farm.
 
 
 ### ------------------EXAMPLE 2-----------------------
