@@ -147,6 +147,15 @@ Get-SPOSite -Limit ALL -GroupIdDefined $true
 This example uses server-side filtering to return all sites that have an associated Microsoft 365 Group.
 
 
+### -----------------------EXAMPLE 11-----------------------------
+
+```powershell
+$userUPN="joe.healy@contoso.com"
+Get-SPOSite -Filter "Owner -like '$($userUPN)'"
+```
+This example retrieves all sites filtering by the specified owner using a variable.
+
+
 ## PARAMETERS
 
 ### -Detailed
