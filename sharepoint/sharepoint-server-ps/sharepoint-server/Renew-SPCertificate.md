@@ -1,9 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
-module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/renew-spcertificate
-applicable: SharePoint Server Subscription Edition
-title: Renew-SPCertificate
+Module Name: SharePointServer
+online version:
 schema: 2.0.0
 ---
 
@@ -55,9 +53,9 @@ This tells SharePoint to automatically replace the certificate assignments of th
 
 ## EXAMPLES
 
-### ------------EXAMPLE-----------
-```powershell
-Renew-SPCertificate -Identity "Sites Certificate (2020)" -FriendlyName "Sites Certificate (2021)" -Exportable -Path "\\server\fileshare\Team Sites Certificate Signing Request.txt"
+### EXAMPLE
+```
+Renew-SPCertificate -Identity "Team Sites Certificate (2020)" -FriendlyName "Team Sites Certificate (2021)" -Exportable -Path "\\server\fileshare\Team Sites Certificate Signing Request.txt"
 ```
 
 This example renews a certificate and creates a certificate signing request.
@@ -67,6 +65,7 @@ This example renews a certificate and creates a certificate signing request.
 ### -AlternativeNames
 Additional DNS domain names or IP addresses that this certificate will be assigned to.
 Fully Qualified Domain Names (FQDNs) are recommended.
+If this parameter is not specified, the alternative names of the certificate to be renewed will be used.
 
 ```yaml
 Type: String[]
@@ -81,13 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-Manages objects for the purpose of proper disposal.
-Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
-Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
-When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
-
-When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+{{ Fill AssignmentCollection Description }}
 
 ```yaml
 Type: SPAssignmentCollection
@@ -104,6 +97,7 @@ Accept wildcard characters: False
 ### -CommonName
 The primary DNS domain name or IP address that this certificate will be assigned to.
 Fully Qualified Domain Names (FQDNs) are recommended.
+If this parameter is not specified, the common name of the certificate to be renewed will be used.
 
 ```yaml
 Type: String
@@ -120,7 +114,8 @@ Accept wildcard characters: False
 ### -Country
 The 2 letter country code where your organization is legally located.
 This must be an ISO 3166-1 alpha-2 country code.
-If this parameter is not specified, the default country of the farm will be used.
+If this parameter is not specified, the country of the certificate to be renewed will be used.
+If a country can't be found in the certificate to be renewed, the default country of the farm will be used.
 
 ```yaml
 Type: String
@@ -141,7 +136,8 @@ Larger elliptic curves provide more cryptographic strength than smaller elliptic
 Select nistP256 if you're unsure which elliptic curve to use.
 Elliptic curves larger than nistP384 are not recommended.
 
-If neither this parameter nor the KeySize parameter is specified, the default key algorithm and key size / elliptic curve of the farm will be used.
+If neither this parameter nor the KeySize parameter is specified, the key algorithm and key size / elliptic curve of the certificate to be renewed will be used.
+If a key algorithm and key size / elliptic curve can't be found in the certificate to be renewed, the default key algorithm and key size / elliptic curve of the farm will be used.
 
 ```yaml
 Type: EllipticCurveType
@@ -211,7 +207,8 @@ Larger hash algorithms provide more cryptographic strength than smaller hash alg
 Select SHA256 if you're unsure which hash algorithm to use.
 Hash algorithms larger than SHA384 are not recommended.
 
-If this parameter is not specified, the default hash algorithm of the farm will be used.
+If this parameter is not specified, the hash algorithm of the certificate to be renewed will be used.
+If a supported hash algorithm can't be found in the certificate to be renewed, the default hash algorithm of the farm will be used.
 
 ```yaml
 Type: String
@@ -248,7 +245,8 @@ Larger key sizes provide more cryptographic strength than smaller key sizes, but
 Select 2048 if you're unsure which key size to use.
 Key sizes larger than 4096 are not recommended.
 
-If neither this parameter nor the EllipticCurve parameter is specified, the default key algorithm and key size / elliptic curve of the farm will be used.
+If neither this parameter nor the EllipticCurve parameter is specified, the key algorithm and key size / elliptic curve of the certificate to be renewed will be used.
+If a key algorithm and key size / elliptic curve can't be found in the certificate to be renewed, the default key algorithm and key size / elliptic curve of the farm will be used.
 
 ```yaml
 Type: Int32
@@ -266,7 +264,8 @@ Accept wildcard characters: False
 ### -Locality
 The name of the city or locality where your organization is legally located.
 Do not abbreviate the name.
-If this parameter is not specified, the default locality of the farm will be used.
+If this parameter is not specified, the locality of the certificate to be renewed will be used.
+If a locality can't be found in the certificate to be renewed, the default locality of the farm will be used.
 
 ```yaml
 Type: String
@@ -282,7 +281,8 @@ Accept wildcard characters: False
 
 ### -Organization
 The legally registered name of your organization or company.
-If this parameter is not specified, the default organization of the farm will be used.
+If this parameter is not specified, the organization of the certificate to be renewed will be used.
+If an organization can't be found in the certificate to be renewed, the default organization of the farm will be used.
 
 ```yaml
 Type: String
@@ -298,7 +298,8 @@ Accept wildcard characters: False
 
 ### -OrganizationalUnit
 The name of your department within your organization or company.
-If this parameter is not specified, the default organizational unit of the farm will be used.
+If this parameter is not specified, the organizational unit of the certificate to be renewed will be used.
+If an organizational unit can't be found in the certificate to be renewed, the default organizational unit of the farm will be used.
 
 ```yaml
 Type: String
@@ -330,7 +331,7 @@ Accept wildcard characters: False
 ### -State
 The name of the state or province where your organization is legally located.
 Do not abbreviate the name.
-If this parameter is not specified, the default state of the farm will be used.
+If a state can't be found in the certificate to be renewed, the default state of the farm will be used.
 
 ```yaml
 Type: String
@@ -376,7 +377,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
