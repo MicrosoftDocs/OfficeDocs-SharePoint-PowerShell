@@ -111,7 +111,7 @@ This example gets quota details for a Group Site.
 Get-SPOSite -Identity https://contoso.sharepoint.com/sites/research | Select InformationSegment
 ```
 
-This example returns the InformationSegments associated to the site. It is applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read https://docs.microsoft.com/microsoft-365/compliance/information-barriers documentation to understand Information barriers in SharePoint Online.
+This example returns the InformationSegments associated with the site. It is applicable for tenants who have enabled Microsoft 365 Information barriers capability. Read [Learn about information barriers](/microsoft-365/compliance/information-barriers) to understand Information barriers in SharePoint Online.
 
 **Note**: This property is available only in SharePoint Online Management Shell Version 16.0.19927.12000 or later.
 
