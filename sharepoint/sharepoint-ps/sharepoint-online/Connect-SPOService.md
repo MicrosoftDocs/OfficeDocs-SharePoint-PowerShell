@@ -38,7 +38,7 @@ Connect-SPOService [-ClientTag <String>] [-Credential <CredentialCmdletPipeBind>
 The `Connect-SPOService` cmdlet connects a SharePoint Online administrator or Global Administrator to the SharePoint Online Administration Center.
 
 Only a single SharePoint Online service connection is maintained from any single Windows PowerShell session.
-In other words, this is a per-organization administrator connection.
+In other words, this is a per-geo within an organization administrator connection.
 Running the `Connect-SPOService` cmdlet twice implicitly disconnects the previous connection.
 The Windows PowerShell session will be set to serve the new SharePoint Online administrator specified.
 
