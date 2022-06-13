@@ -96,9 +96,33 @@ Set-SPOBuiltInSiteTemplateSettings -Identity "00000000-0000-0000-0000-0000000000
  
 Specifies the ID for the site template you wish to change. 
  
+ ```yaml
+Type: 
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -IsHidden
  
 Specifies whether the site template is hidden ($true) or displayed ($false). All site templates are displayed by default.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ## RELATED LINKS
 
