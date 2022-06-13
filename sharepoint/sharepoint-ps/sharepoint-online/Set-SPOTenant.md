@@ -1931,8 +1931,8 @@ Accept wildcard characters: False
 
 ### -DisableOutlookPSTVersionTrimming
 
-This parameter has no effect and it was used to opt-out of PST files retention policy changes as communicated in MC256835 (May ’21).
-Starting August 16th 2021 the service started retaining 30 days worth of versions for any PST files stored in OneDrive for Business and SharePoint Online team site document libraries. This change was introduced to prevent cases of previous versions of PST files quickly consuming available storage. The change only impacts previous versions of PST files stored in your document library storage. As a best practice, PST files should not be uploaded on OneDrive for Business and SharePoint Online team site document libraries due to the impact on storage and network bandwidth.
+This parameter has no effect and it was used to opt-out of PST files retention policy changes as communicated in MC256835 (May 2021).
+Starting August 16, 2021, the service started retaining 30 days worth of versions for any PST files stored in OneDrive for Business and SharePoint Online team site document libraries. This change was introduced to prevent cases of previous versions of PST files quickly consuming available storage. The change only impacts previous versions of PST files stored in your document library storage. As a best practice, PST files should not be uploaded on OneDrive for Business and SharePoint Online team site document libraries due to the impact on storage and network bandwidth.
 
 PARAMVALUE: $true | $false
 
