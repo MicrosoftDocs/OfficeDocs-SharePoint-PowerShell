@@ -59,7 +59,7 @@ Tenant admin can also reset to replicate all the groups.
 
 ### -ReplicateAllGroups
 
-The parameter specifies whether all groups should be replicated.
+This parameter specifies whether all groups should be replicated.
 
 ```yaml
 Type: SwitchParameter
