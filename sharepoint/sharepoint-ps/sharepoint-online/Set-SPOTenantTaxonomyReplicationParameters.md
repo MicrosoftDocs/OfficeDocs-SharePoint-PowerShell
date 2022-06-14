@@ -75,7 +75,7 @@ Accept wildcard characters: False
 
 ### -ReplicatedGroups
 
-Specifies a comma separated list of groups that should be replicated.
+Specifies a comma-separated list of groups that should be replicated.
 
 ```yaml
 Type: String[]
