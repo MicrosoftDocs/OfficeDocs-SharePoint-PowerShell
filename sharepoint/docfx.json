@@ -42,6 +42,15 @@
       "ms.author": "pamgreen",
       "ms.devlang": "powershell",
       "ms.prod": "sharepoint-server-itpro"
+      "contributors_to_exclude": [ 
+        "rjagiewich", 
+        "traya1", 
+        "rmca14", 
+        "claydetels19", 
+        "jborsecnik",
+        "tiburd",
+        "garycentric"
+      ]
     },
     "fileMetadata": {},
     "template": [],
