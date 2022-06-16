@@ -41,7 +41,7 @@
       "author": "techwriter40",
       "ms.author": "pamgreen",
       "ms.devlang": "powershell",
-      "ms.prod": "sharepoint-server-itpro"
+      "ms.prod": "sharepoint-server-itpro",
       "contributors_to_exclude": [ 
         "rjagiewich", 
         "traya1", 
