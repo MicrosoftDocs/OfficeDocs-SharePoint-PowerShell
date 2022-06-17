@@ -61,7 +61,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 > [!NOTE]
 > If the Limit or Filter parameters are provided then the following site collection properties will not be populated and may contain a default value:
-> AllowDownloadingNonWebViewableFiles, AllowEditing, AllowSelfServiceUpgrade, AnonymousLinkExpirationInDays, ConditionalAccessPolicy, DefaultLinkPermission, DefaultLinkToExistingAccess, DefaultSharingLinkType, DenyAddAndCustomizePages, DisableCompanyWideSharingLinks, ExternalUserExpirationInDays, LimitedAccessFileType, OverrideTenantAnonymousLinkExpirationPolicy, OverrideTenantExternalUserExpirationPolicy, PWAEnabled, SandboxedCodeActivationCapability, SensitivityLabel, SharingAllowedDomainList, SharingBlockedDomainList, SharingCapability, SharingDomainRestrictionMode.
+> AllowDownloadingNonWebViewableFiles, AllowEditing, AllowSelfServiceUpgrade, AnonymousLinkExpirationInDays, ConditionalAccessPolicy, DefaultLinkPermission, DefaultLinkToExistingAccess, DefaultSharingLinkType, DenyAddAndCustomizePages, DisableCompanyWideSharingLinks, ExternalUserExpirationInDays, InformationSegment, LimitedAccessFileType, OverrideTenantAnonymousLinkExpirationPolicy, OverrideTenantExternalUserExpirationPolicy, PWAEnabled, SandboxedCodeActivationCapability, SensitivityLabel, SharingAllowedDomainList, SharingBlockedDomainList, SharingCapability, SharingDomainRestrictionMode.
 
 ## EXAMPLES
 
@@ -111,7 +111,9 @@ This example gets quota details for a Group Site.
 Get-SPOSite -Identity https://contoso.sharepoint.com/sites/research | Select InformationSegment
 ```
 
-This example returns the InformationSegments associated to the site.
+This example returns the InformationSegments associated with the site. It is applicable for tenants who have enabled Microsoft 365 Information barriers capability. Read [Learn about information barriers](/microsoft-365/compliance/information-barriers) to understand Information barriers in SharePoint Online.
+
+**Note**: This property is available only in SharePoint Online Management Shell Version 16.0.19927.12000 or later.
 
 ### -----------------------EXAMPLE 7-----------------------------
 
@@ -145,6 +147,15 @@ This example uses client-side filtering to return a list of sites connected to a
 Get-SPOSite -Limit ALL -GroupIdDefined $true
 ```
 This example uses server-side filtering to return all sites that have an associated Microsoft 365 Group.
+
+
+### -----------------------EXAMPLE 11-----------------------------
+
+```powershell
+$userUPN="joe.healy@contoso.com"
+Get-SPOSite -Filter "Owner -like '$($userUPN)'"
+```
+This example retrieves all sites filtering by the specified owner using a variable.
 
 
 ## PARAMETERS
@@ -299,21 +310,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-```
-
-### InformationSegment
-This parameter displays the segments associated with a site. 
-
-It is applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read https://docs.microsoft.com/microsoft-365/compliance/information-barriers documentation to understand Information barriers in SharePoint Online.
-
-**Note**: This parameter is available only in SharePoint Online Management Shell Version 16.0.19927.12000 or later.
-
-```yaml
-Type: Collection of GUIDs
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: None
 ```
 
 ### -GroupIdDefined

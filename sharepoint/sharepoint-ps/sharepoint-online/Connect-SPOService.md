@@ -38,7 +38,7 @@ Connect-SPOService [-ClientTag <String>] [-Credential <CredentialCmdletPipeBind>
 The `Connect-SPOService` cmdlet connects a SharePoint Online administrator or Global Administrator to the SharePoint Online Administration Center.
 
 Only a single SharePoint Online service connection is maintained from any single Windows PowerShell session.
-In other words, this is a per-organization administrator connection.
+In other words, this is a per-geo within an organization administrator connection.
 Running the `Connect-SPOService` cmdlet twice implicitly disconnects the previous connection.
 The Windows PowerShell session will be set to serve the new SharePoint Online administrator specified.
 
@@ -76,6 +76,14 @@ Connect-SPOService -Url https://contoso-admin.sharepoint.com
 ```
 
 Prompts for credentials. This is required if the account is using multi-factor authentication.
+
+### -----------------------EXAMPLE 4-----------------------------
+
+```powershell
+Connect-SPOService -Url https://contoso-admin.sharepoint.com -Region ITAR
+```
+
+Connects to a SharePoint Online Administration Center specifying the region.
 
 ## PARAMETERS
 
@@ -136,8 +144,7 @@ The valid values are: Default | ITAR | Germany | China
 
 The default value is "default".
 
-> [!NOTE]
-> The ITAR value is for United States Government cloud tenancies only.  
+**Note**: The ITAR value is for GCC High and DoD tenancies only.
 
 ```yaml
 Type: AADCrossTenantAuthenticationLocation

@@ -41,7 +41,7 @@ This example disables the "MyCustom" Web site scoped feature at   https://somesi
 ### --------------EXAMPLE 2----------------- 
 ```powershell
 $w = Get-SPWeb https://somesite/myweb | ForEach{ $_.URL }
-Get-SPFeature -Web $w |%{ Disable-SPFeature -Identity $_ -URL $w}
+Get-SPFeature -Web $w | ForEach-Object { Disable-SPFeature -Identity $_ -URL $w}
 ```
 
 This example disables all features in the subsite at https://somesite/myweb.
@@ -53,7 +53,7 @@ You do not need to use the SPAssignment cmdlets in this case because the Web obj
 ### -Identity
 Specifies the name of the Feature or GUID to disable.
 
-The type must be the name of the Feature folder located in the 14\Template\Features folder or GUID, in the format 21d186e1-7036-4092-a825-0eb6709e9281.
+The type must be the name of the Feature folder located in the "$env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\[14|15|16]\Template\Features" folder or GUID, in the format 21d186e1-7036-4092-a825-0eb6709e9281.
 
 ```yaml
 Type: SPFeatureDefinitionPipeBind

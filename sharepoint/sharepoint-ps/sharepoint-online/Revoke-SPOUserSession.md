@@ -28,7 +28,7 @@ You must be a SharePoint Online administrator or Global Administrator to run the
 
 Requires a valid `Connect-SPOService` context to identify the tenant. For information about how to connect to the tenant, see `Connect-SPOService`.
 
-When the cmdlet is ran the following will occur:
+When the cmdlet is run the following will occur:
 
 User will be signed out of browser, desktop and mobile applications accessing Office 365 resources across all devices.
 

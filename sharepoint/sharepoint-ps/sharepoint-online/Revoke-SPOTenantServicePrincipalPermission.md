@@ -20,7 +20,7 @@ Revokes a permission that was previously granted to the "SharePoint Online Clien
 ### Default
 
 ```powershell
-Revoke-SPOTenantServicePrincipalPermission -ObjectId <String>
+Revoke-SPOTenantServicePrincipalPermission [-ObjectId] <String> [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -57,3 +57,23 @@ Required: True
 Position: Named
 Accept pipeline input: False
 ```
+
+### -Confirm
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).

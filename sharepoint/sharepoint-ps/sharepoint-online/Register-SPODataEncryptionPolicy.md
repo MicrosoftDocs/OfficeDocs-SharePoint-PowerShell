@@ -25,7 +25,7 @@ Register-SPODataEncryptionPolicy -PrimaryKeyVaultName <string> -PrimaryKeyName <
 
 ## DESCRIPTION
 
-Use the Update-DataEncryptionPolicy cmdlet to register customer encryption status for your geo tenant.
+Use the Register-DataEncryptionPolicy cmdlet to register customer encryption status for your geo tenant.
 For more information, see [Controlling your data in Office 365 using Customer Key](https://docs.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key)
 
 ## EXAMPLES

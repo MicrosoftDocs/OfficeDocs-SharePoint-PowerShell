@@ -61,6 +61,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-IPAddressEnforcement <Boolean>]
  [-IPAddressWACTokenLifetime <Int32>]
  [-LegacyAuthProtocolsEnabled <Boolean>]
+ [-MediaTranscription <MediaTranscriptionPolicyType>]
  [-NotificationsInOneDriveForBusinessEnabled <Boolean>]
  [-NotificationsInSharePointEnabled <Boolean>]
  [-NotifyOwnersWhenInvitationsAccepted <Boolean>]
@@ -108,6 +109,10 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-DisableOutlookPSTVersionTrimming <Boolean>]
  [-ViewInFileExplorerEnabled <Boolean>]
  [-AllowGuestUserShareToUsersNotInSiteCollection <Boolean>]
+ [-DisableCustomAppAuthentication <Boolean>]
+ [-ReduceTempTokenLifetimeEnabled <Boolean>]
+ [-ReduceTempTokenLifetimeValue <Int32>]
+ [-ShowPeoplePickerGroupSuggestionsForIB <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -199,7 +204,7 @@ This example enables tenant admins to enable ODB and SPO to respect Exchange sup
 Set-SPOTenant -ShowPeoplePickerSuggestionsForGuestUsers $true
 ```
 
-This example enable the option to search for existing guest users at Tenant Level.
+This example enables the option to search for existing guest users at Tenant Level.
 
 ## PARAMETERS
 
@@ -701,6 +706,8 @@ Accept wildcard characters: False
 ```
 
 ### -UsePersistentCookiesForExplorerView
+> [!NOTE]
+> This setting is not used anymore with Internet Explorer (IE) retired and the parameter would be removed soon. Users need to select "Yes" when prompted for "Stay signed in?" at the time of sign-in for "View in File Explorer" to work with Microsoft Edge. 
 
 Lets SharePoint issue a special cookie that will allow this feature to work even when "Keep Me Signed In" is not selected.
 
@@ -802,7 +809,7 @@ Accept wildcard characters: False
 
 Lets administrators choose the default permission of the link in the sharing dialog box in OneDrive for Business and SharePoint Online. This applies to anonymous access, internal and direct links.
 
-The valid values are None (non settable), View and Edit.
+The valid values are View and Edit (default).
 
 ```yaml
 Type: SharingPermissionType
@@ -811,7 +818,7 @@ Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
-Default value: None
+Default value: Edit
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -846,11 +853,16 @@ Accept wildcard characters: False
 
 ### -DisabledWebPartIds
 
-Allows administrators prevent certain, specific web parts from being added to pages or rendering on pages on which they were previously added. Currently, only Amazon Kindle, YouTube and Twitter web parts can be disabled in such a manner.
+Allows administrators to prevent certain web parts from being added to pages or rendering on pages on which they were previously added. Currently, only the following web parts can be disabled in such a manner:
 
-To disable a specific web part you need to enter its GUID as the parameter: Amazon Kindle (46698648-fcd5-41fc-9526-c7f7b2ace919), YouTube (544dd15b-cf3c-441b-96da-004d5a8cea1d), Twitter (f6fdf4f8-4a24-437b-a127-32e66a5dd9b4). If you are looking for a GUID for any other web part, easiest way to achieve is to place the web part on a SharePoint page and move to maintenance mode. See more details around the [web part maintenance mode from Microsoft Support](https://support.office.com/en-us/article/Open-and-use-the-Web-Part-Maintenance-Page-EFF9CE22-D04A-44DD-AE83-AC29A5E396C2).
+- Amazon Kindle: 46698648-fcd5-41fc-9526-c7f7b2ace919
+- YouTube: 544dd15b-cf3c-441b-96da-004d5a8cea1d
+- Twitter: f6fdf4f8-4a24-437b-a127-32e66a5dd9b4
+- Embed: 490d7c76-1824-45b2-9de3-676421c997fa
+- Microsoft Bookings: d24a7165-c455-4d43-8bc8-fedb04d6c1b5
+- Stream: 275c0095-a77e-4f6d-a2a0-6a7626911518
 
-You can enter in multiple GUIDs by using a comma to separate them, for example Set-SPOTenant -DisabledWebPartIds 46698648-fcd5-41fc-9526-c7f7b2ace919,544dd15b-cf3c-441b-96da-004d5a8cea1d. To view a list of disabled web parts, use Get-SPOTenant to get DisabledWebPartIds.
+To disable a specific web part, you need to enter its GUID as the parameter. You can enter multiple GUIDs by using a comma to separate them, for example Set-SPOTenant -DisabledWebPartIds 46698648-fcd5-41fc-9526-c7f7b2ace919,544dd15b-cf3c-441b-96da-004d5a8cea1d. To view a list of disabled web parts, use Get-SPOTenant to get DisabledWebPartIds.
 
 To re-enable some disabled web parts, use the Set-SPOTenant with the -DisabledWebPartIds parameter and corresponding GUIDs that you still want to keep disabling. To re-enable all disabled web parts, use Set-SPOTenant -DisabledWebPartIds @().
 
@@ -871,6 +883,24 @@ Accept wildcard characters: False
 Prevents the Download button from being displayed on the Virus Found warning page.
 
 Accepts a value of true (enabled) to hide the Download button or false (disabled) to display the Download button. By default this feature is set to false.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableCustomAppAuthentication
+
+Prevents apps using an Azure Access Control (ACS) app-only access token to access SharePoint. ACS, a service of Azure Active Directory (Azure AD), has been retired on November 7, 2018. This retirement does not impact the SharePoint add-in model, which uses the https://accounts.accesscontrol.windows.net hostname (which is not impacted by this retirement). For new tenants, apps using an ACS app-only access token are disabled by default. We recommend using the Azure AD app-only model which is modern and more secure.
+
+Accepts a value of true or false. By default this feature is set to true.
 
 ```yaml
 Type: Boolean
@@ -1040,6 +1070,26 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MediaTranscription
+
+When the feature is enabled, videos can have transcripts generated on demand or generated automatically in certain scenarios. This is the default because the policy is default on. If a video owner decides they don’t want the transcript, they can always hide or delete it from that video. 
+Possible values:
+
+- Enabled
+- Disabled
+
+```yaml
+Type: MediaTranscriptionPolicyType
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1881,9 +1931,8 @@ Accept wildcard characters: False
 
 ### -DisableOutlookPSTVersionTrimming
 
-As communicated in MC256835 (May ’21), starting August 16th 2021 the service will start retaining 30 days worth of versions for any PST files stored in OneDrive for Business and SharePoint Online team site document libraries. This change will prevent cases of previous versions of PST files quickly consuming available storage. The change only impacts previous versions of PST files stored in your document library storage. As a best practice, PST files should not be uploaded on OneDrive for Business and SharePoint Online team site document libraries due to the impact on storage and network bandwidth.
-
-If you wish to opt-out of this policy change, you can use the parameter provided below. You will have until August 13th 2021, to opt-out. This is a one time opt-out operation. If you don’t opt-out by the deadline, the new behavior will automatically be enabled. The opt-out option for the cmdlet will have no effect after the deadline. Opt-out only applies to existing document libraries and does not apply to new doclibs created after August 13th 2021.
+This parameter has no effect and it was used to opt-out of PST files retention policy changes as communicated in MC256835 (May 2021).
+Starting August 16, 2021, the service started retaining 30 days worth of versions for any PST files stored in OneDrive for Business and SharePoint Online team site document libraries. This change was introduced to prevent cases of previous versions of PST files quickly consuming available storage. The change only impacts previous versions of PST files stored in your document library storage. As a best practice, PST files should not be uploaded on OneDrive for Business and SharePoint Online team site document libraries due to the impact on storage and network bandwidth.
 
 PARAMVALUE: $true | $false
 
@@ -1965,11 +2014,109 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ShowOpenInDesktopOptionForSyncedFiles
+
+The ShowOpenInDesktopOptionForSyncedFiles setting (set to false by default) displays the "Open in desktop" option when users go to SharePoint or OneDrive on the web and open the shortcut menu for a file that they're syncing with the OneDrive sync app.
+
+The valid values are:
+
+- False (default) – "Open in desktop" is disabled and not shown on the shortcut menu.
+- True – "Open in desktop" is enabled and the option to open synced files locally appears on the shortcut menu.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveLoopSharingCapability
+
+When sharing a whiteboard in a Teams meeting, Whiteboard creates a sharing link that’s accessible by anyone within the organization and automatically shares the whiteboard with any in-tenant users in the meeting.
+
+There’s an additional capability for temporary collaboration by external and shared device accounts during a meeting. This allows these users to temporarily view and collaborate on whiteboards when they’re shared in a Teams meeting, similar to PowerPoint Live sharing.
+
+If you have the external sharing for OneDrive for Business allowed, no further action is required. If you have external sharing for OneDrive for Business disabled, you can leave it disabled but you must enable this new setting. The setting will not take effect until the SharingCapability 'ExternalUserAndGuestSharing' is also enabled at Tenant level. For more information, see [Enable Microsoft Whiteboard for your organization](https://support.microsoft.com/office/enable-microsoft-whiteboard-for-your-organization-1caaa2e2-5c18-4bdf-b878-2d98f1da4b24).
+
+
+The valid values are:  
+
+- Disabled
+- ExternalUserSharingOnly
+- ExternalUserAndGuestSharing
+- ExistingExternalUserSharingOnly
+
+```yaml
+Type: SharingCapabilities
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 
 For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+### -ReduceTempTokenLifetimeEnabled 
+Enables reduced session timeout for temporary URLs used by apps for document download scenarios. Reduction occurs when an app redeeming an IP address does not match the original requesting IP. The default value is 15 minutes if ReduceTempTokenLifetimeValue is not set.
+
+**Note**: Reducing this value may bring degradation in end-user experience by requiring frequent authentication prompts to users. 
+
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -ReduceTempTokenLifetimeValue
+
+Optional parameter to set the session timeout value for temporary URLs. The value can be set between 5 and 15 minutes and the default value is 15 minutes.
+ 
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: 15
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShowPeoplePickerGroupSuggestionsForIB
+
+The ShowPeoplePickerGroupSuggestionsForIB setting (defaulted to false) allows showing group suggestions for information barriers (IBs) in the People Picker.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ## RELATED LINKS
 
