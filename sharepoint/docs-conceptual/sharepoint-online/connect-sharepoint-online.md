@@ -1,6 +1,5 @@
 ---
 title: Get started with the SharePoint Online Management Shell
-ms.service: sharepoint-powershell
 ---
 
 # Get started with SharePoint Online Management Shell #
