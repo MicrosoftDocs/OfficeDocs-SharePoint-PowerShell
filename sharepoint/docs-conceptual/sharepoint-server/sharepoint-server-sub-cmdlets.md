@@ -1,6 +1,5 @@
 ---
 title: SharePoint Server Cmdlets
-ms.service: sharepoint-powershell
 ---
 
 # SharePoint Server Cmdlets
