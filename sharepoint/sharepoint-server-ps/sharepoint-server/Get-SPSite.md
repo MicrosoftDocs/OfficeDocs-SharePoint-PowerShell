@@ -60,7 +60,7 @@ All site collections that match this partial URL for the specified scope are ret
 Additionally, if the Regex parameter is provided, the Identity parameter is treated as a regular expression and any site collection with a URL provided in the given scope that matches the expression is returned.
 
 The Filter parameter is a server-side filter for certain site collection properties that are stored in the content database; without the Filter parameter, filtering on these properties is a slow process.
-These site collection properties are Owner, SecondaryOwner, and LockState.
+These site collection properties are Owner, SecondaryContact, and LockState.
 The Filter parameter is a script block that uses the same syntax as a Where-Object statement, but is run on the server for faster results.
 
 Valid values for LockState are: Unlock, NoAdditions, ReadOnly, NoAccess.
@@ -81,7 +81,7 @@ This example gets the collection of subweb titles in site collection at https://
 
 ### ------------------EXAMPLE 2--------------------- 
 ```powershell
-Get-SPSite -ContentDatabase "b399a366-d899-4cff-8a9b-8c0594ee755f" | Format-Table -Property Url, Owner, SecondaryOwner
+Get-SPSite -ContentDatabase "b399a366-d899-4cff-8a9b-8c0594ee755f" | Format-Table -Property Url, Owner, SecondaryContact
 ```
 
 This example gets a subset of data from all sites in the content database b399a366-d899-4cff-8a9b-8c0594ee755f.
