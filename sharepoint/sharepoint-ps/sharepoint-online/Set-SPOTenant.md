@@ -27,7 +27,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-EnableAIPIntegration <Boolean>]
  [-EnableAutoNewsDigest <Boolean>]
  [-EnableMinimumVersionRequirement <Boolean>]
- [-EnablePromotedFileHandlers <Boolean>]
+ [-EnablePromotedFileHandl ers <Boolean>]
  [-ExternalServicesEnabled <Boolean>]
  [-MarkNewFilesSensitiveByDefault <SensitiveByDefaultState>]
  [-MaxCompatibilityLevel <Int32>]
@@ -83,7 +83,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>]
  [-SpecialCharactersStateInFileFolderNames <SpecialCharactersState>]
- [-SyncPrivacyProfileProperties <Boolean>]
+ [-ReSyncTenantPrivacyProfile <Boolean>]
  [-UseFindPeopleInPeoplePicker <Boolean>]
  [-UserVoiceForFeedbackEnabled <Boolean>]
  [-ContentTypeSyncSiteTemplatesList [String[]]]
@@ -1507,11 +1507,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SyncPrivacyProfileProperties
+### -ReSyncTenantPrivacyProfile 
+Parameter 'SyncPrivacyProfileProperties' is obsolete and renamed to ReSyncTenantPrivacyProfile
 
 This parameter enables the synchronization of privacy profile properties.
 
-SyncPrivacyProfileProperties sets whether or not the synced tenant properties will be updated on the next request. The request will cause Azure Active Directory to grab the tenant's current display name (TenantDisplayName) and privacy profile URL (PrivacyProfileUrl) . 
+ReSyncTenantPrivacyProfile sets whether or not the synced tenant properties will be updated on the next request. The request will cause Azure Active Directory to grab the tenant's current display name (TenantDisplayName) and privacy profile URL (PrivacyProfileUrl) . 
 
 ```yaml
 Type: Boolean
