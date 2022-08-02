@@ -1508,7 +1508,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReSyncTenantPrivacyProfile 
-Parameter 'SyncPrivacyProfileProperties' is obsolete and renamed to ReSyncTenantPrivacyProfile
+The 'SyncPrivacyProfileProperties' parameter is obsolete and renamed ReSyncTenantPrivacyProfile.
 
 This parameter enables the synchronization of privacy profile properties.
 
