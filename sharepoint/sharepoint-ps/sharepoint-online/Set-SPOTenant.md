@@ -1512,7 +1512,7 @@ The 'SyncPrivacyProfileProperties' parameter is obsolete and renamed ReSyncTenan
 
 This parameter enables the synchronization of privacy profile properties.
 
-ReSyncTenantPrivacyProfile sets whether or not the synced tenant properties will be updated on the next request. The request will cause Azure Active Directory to grab the tenant's current display name (TenantDisplayName) and privacy profile URL (PrivacyProfileUrl) . 
+ReSyncTenantPrivacyProfile sets whether or not the synced tenant properties will be updated on the next request. The request will cause Azure Active Directory to grab the tenant's current display name (TenantDisplayName) and privacy profile URL (PrivacyProfileUrl). 
 
 ```yaml
 Type: Boolean
