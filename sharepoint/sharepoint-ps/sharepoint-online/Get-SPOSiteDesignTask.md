@@ -79,7 +79,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-SPOSiteDesignTask](Get-SPOSiteDesignTask.md)
+[Add-SPOSiteDesignTask](Add-SPOSiteDesignTask.md)
 
 [Get-SPOSiteDesignRun](Get-SPOSiteDesignRun.md)
 
