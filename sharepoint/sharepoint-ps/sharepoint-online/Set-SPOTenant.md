@@ -113,6 +113,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-ReduceTempTokenLifetimeEnabled <Boolean>]
  [-ReduceTempTokenLifetimeValue <Int32>]
  [-ShowPeoplePickerGroupSuggestionsForIB <Boolean>]
+ [-ViewersCanCommentOnMediaDisabled <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -2118,9 +2119,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ViewersCanCommentOnMediaDisabled
+
+Controls whether viewers commenting on media items is disabled or not.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
 
 [Upgrade-SPOSite](Upgrade-SPOSite.md)
 
