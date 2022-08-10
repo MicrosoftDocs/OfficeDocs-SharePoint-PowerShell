@@ -83,7 +83,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>]
  [-SpecialCharactersStateInFileFolderNames <SpecialCharactersState>]
- [-SyncPrivacyProfileProperties <Boolean>]
+ [-ReSyncTenantPrivacyProfile]
  [-UseFindPeopleInPeoplePicker <Boolean>]
  [-UserVoiceForFeedbackEnabled <Boolean>]
  [-ContentTypeSyncSiteTemplatesList [String[]]]
@@ -113,6 +113,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-ReduceTempTokenLifetimeEnabled <Boolean>]
  [-ReduceTempTokenLifetimeValue <Int32>]
  [-ShowPeoplePickerGroupSuggestionsForIB <Boolean>]
+ [-ViewersCanCommentOnMediaDisabled <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -1507,20 +1508,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SyncPrivacyProfileProperties
+### -ReSyncTenantPrivacyProfile 
+The 'SyncPrivacyProfileProperties' parameter is obsolete and renamed ReSyncTenantPrivacyProfile.
 
 This parameter enables the synchronization of privacy profile properties.
 
-SyncPrivacyProfileProperties sets whether or not the synced tenant properties will be updated on the next request. The request will cause Azure Active Directory to grab the tenant's current display name (TenantDisplayName) and privacy profile URL (PrivacyProfileUrl) . 
+ReSyncTenantPrivacyProfile sets whether or not the synced tenant properties will be updated on the next request. The request will cause Azure Active Directory to grab the tenant's current display name (TenantDisplayName) and privacy profile URL (PrivacyProfileUrl). 
 
 ```yaml
-Type: Boolean
+Type: 
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
-Default value: True
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -2118,9 +2120,25 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ViewersCanCommentOnMediaDisabled
+
+Controls whether viewers commenting on media items is disabled or not.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
 
 [Upgrade-SPOSite](Upgrade-SPOSite.md)
 
