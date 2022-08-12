@@ -28,7 +28,7 @@ The service application proxy is instantiated on the front-end web server and ac
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------
+### Example
 ```powershell
 New-SPPowerPointConversionServiceApplicationProxy -Name "PowerPoint Conversion Service application proxy" -ServiceApplication "PowerPoint Conversion Service Application" -AddtoDefaultGroup
 ```
