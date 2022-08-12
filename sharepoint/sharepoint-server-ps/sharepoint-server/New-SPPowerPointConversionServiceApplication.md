@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------
+### Example
 ```powershell
 New-SPPowerPointConversionServiceApplication -Name "PowerPoint Conversion Service Application" -ApplicationPool "SharePoint Web Services Default"
 ```
