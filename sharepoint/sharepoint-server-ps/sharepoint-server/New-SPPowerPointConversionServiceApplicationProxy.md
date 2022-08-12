@@ -33,7 +33,7 @@ The service application proxy is instantiated on the front-end web server and ac
 New-SPPowerPointConversionServiceApplicationProxy -Name "PowerPoint Conversion Service application proxy" -ServiceApplication "PowerPoint Conversion Service Application" -AddtoDefaultGroup
 ```
 
-This example creates a new instance of the PowerPoint Conversion Service application proxy named _PowerPoint Conversion Service application proxy_, binds it to the _PowerPoint Conversion Service Application_ service application and then adds it to the default service application proxy group
+This example creates a new instance of the PowerPoint Conversion Service application proxy named _PowerPoint Conversion Service application proxy_, binds it to the _PowerPoint Conversion Service Application_ service application, and then adds it to the default service application proxy group
 
 
 ## PARAMETERS
