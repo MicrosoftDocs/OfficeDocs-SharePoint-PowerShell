@@ -2184,7 +2184,7 @@ Accept wildcard characters: False
 
 ### -CoreRequestFilesLinkEnabled
 
-Enable or Disable request files link on OneDrive partition for all SharePoint sites (Not OneDrive Sites). If this value is not set, Request Files will only show for OneDrives with Anyone Links enabled. 
+Enable or disable the Request files link on the OneDrive partition for all SharePoint sites (not including OneDrive sites). If this value is not set, Request files will only show for OneDrives with Anyone links enabled. 
 
 ```yaml
 Type: Boolean
