@@ -2218,7 +2218,7 @@ Accept wildcard characters: False
 
 ### -CoreRequestFilesLinkExpirationInDays
 
-Specifies the number of days before an Request files link expires for all SharePoint sites (Not OneDrive sites)
+Specifies the number of days before a Request files link expires for all SharePoint sites (not including OneDrive sites).
 
 Value can be from 0 to 730 days.
 
