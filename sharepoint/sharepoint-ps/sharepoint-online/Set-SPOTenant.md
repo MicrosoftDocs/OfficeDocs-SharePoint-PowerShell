@@ -2202,7 +2202,7 @@ Accept wildcard characters: False
 
 Specifies the number of days before an Request files link expires for all OneDrive Sites. 
 
-Value can be from 0 to 730 days.
+The value can be from 0 to 730 days.
 
 ```yaml
 Type: Int32
