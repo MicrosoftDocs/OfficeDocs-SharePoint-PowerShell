@@ -2143,7 +2143,7 @@ Accept wildcard characters: False
 
 ### -CoreSharingCapability
 
-Determines what level of sharing is available for the SharePoint Sites (Does not include OneDrive sites)
+Determines what level of sharing is available for SharePoint sites (not including OneDrive sites).
 
 The valid values are:  
 
