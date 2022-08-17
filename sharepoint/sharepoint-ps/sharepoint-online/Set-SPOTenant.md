@@ -2220,7 +2220,7 @@ Accept wildcard characters: False
 
 Specifies the number of days before a Request files link expires for all SharePoint sites (not including OneDrive sites).
 
-Value can be from 0 to 730 days.
+The value can be from 0 to 730 days.
 
 ```yaml
 Type: Int32
