@@ -2168,7 +2168,7 @@ Accept wildcard characters: False
 
 ### -OneDriveRequestFilesLinkEnabled
 
-Enable or Disable request files link on OneDrive partition for all OneDrive sites. If this value is not set, Request Files will only show for OneDrives with Anyone Links enabled. 
+Enable or disable the Request files link on the OneDrive partition for all OneDrive sites. If this value is not set, the Request files link will only show for OneDrives with Anyone links enabled. 
 
 ```yaml
 Type: Boolean
