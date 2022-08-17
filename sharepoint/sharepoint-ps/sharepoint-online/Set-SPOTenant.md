@@ -2200,7 +2200,7 @@ Accept wildcard characters: False
 
 ### -OneDriveRequestFilesLinkExpirationInDays
 
-Specifies the number of days before an Request files link expires for all OneDrive Sites. 
+Specifies the number of days before a Request files link expires for all OneDrive sites. 
 
 The value can be from 0 to 730 days.
 
