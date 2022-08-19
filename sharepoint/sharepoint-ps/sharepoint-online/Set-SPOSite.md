@@ -35,7 +35,9 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset]
  [-DefaultSharingLinkType] [-DefaultLinkPermission] [-DefaultLinkToExistingAccess]
- [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-AuthenticationContextName <String>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>]  [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [-OverrideTenantExternalUserExpirationPolicy <Boolean>] [-ExternalUserExpirationInDays <Int32>] [-SensitivityLabel <String>] 
+ [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-AuthenticationContextName <String>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>]  [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [-OverrideTenantExternalUserExpirationPolicy <Boolean>]  [-ExternalUserExpirationInDays <Int32>] [-SensitivityLabel <String>] 
+ [-RequestFilesLinkExpirationInDays <Int32>] [-SensitivityLabel <String>] 
+ [-RequestFilesLinkEnabled <Boolean>]
  [-RemoveLabel] [<CommonParameters>]
 ```
 
@@ -876,6 +878,41 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequestFilesLinkEnabled
+
+Enables or disables Request Files link on the site.
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequestFilesLinkExpirationInDays
+
+Specifies the number of days before an Request files link expires for for the site.
+
+Value can be from 0 to 730 days.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: -1
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
