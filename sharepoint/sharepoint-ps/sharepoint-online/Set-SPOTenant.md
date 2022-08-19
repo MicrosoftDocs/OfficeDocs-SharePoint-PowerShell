@@ -114,6 +114,11 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-ReduceTempTokenLifetimeValue <Int32>]
  [-ShowPeoplePickerGroupSuggestionsForIB <Boolean>]
  [-ViewersCanCommentOnMediaDisabled <Boolean>]
+ [-CoreSharingCapability <SharingCapabilities>]
+ [-OneDriveRequestFilesLinkEnabled <Boolean>]
+ [-CoreRequestFilesLinkEnabled <Boolean>]
+ [-OneDriveRequestFilesLinkExpirationInDays <Int32>]
+ [-CoreRequestFilesLinkExpirationInDays <Int32>]
  [<CommonParameters>]
 ```
 
@@ -2132,6 +2137,99 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CoreSharingCapability
+
+Determines what level of sharing is available for SharePoint sites (not including OneDrive sites).
+
+The valid values are:  
+
+- ExternalUserAndGuestSharing (default) - External user sharing (share by email) and guest link sharing are both enabled.
+- Disabled - External user sharing (share by email) and guest link sharing are both disabled.
+- ExternalUserSharingOnly - External user sharing (share by email) is enabled, but guest link sharing is disabled.
+- ExistingExternalUserSharingOnly - Only guests already in your organization's directory.
+
+For more information about sharing, see [Manage sharing settings](/sharepoint/turn-external-sharing-on-or-off) for your SharePoint online environment.
+
+```yaml
+Type: SharingCapabilities
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: ExternalUserAndGuestSharing
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveRequestFilesLinkEnabled
+
+Enable or disable the Request files link on the OneDrive partition for all OneDrive sites. If this value is not set, the Request files link will only show for OneDrives with Anyone links enabled. 
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CoreRequestFilesLinkEnabled
+
+Enable or disable the Request files link on the OneDrive partition for all SharePoint sites (not including OneDrive sites). If this value is not set, Request files will only show for OneDrives with Anyone links enabled. 
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveRequestFilesLinkExpirationInDays
+
+Specifies the number of days before a Request files link expires for all OneDrive sites. 
+
+The value can be from 0 to 730 days.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: -1
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CoreRequestFilesLinkExpirationInDays
+
+Specifies the number of days before a Request files link expires for all SharePoint sites (not including OneDrive sites).
+
+The value can be from 0 to 730 days.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: -1
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
