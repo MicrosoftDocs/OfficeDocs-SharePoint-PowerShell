@@ -901,7 +901,7 @@ Accept wildcard characters: False
 
 ### -RequestFilesLinkExpirationInDays
 
-Specifies the number of days before an Request files link expires for for the site.
+Specifies the number of days before a Request Files link expires for the site.
 
 Value can be from 0 to 730 days.
 
