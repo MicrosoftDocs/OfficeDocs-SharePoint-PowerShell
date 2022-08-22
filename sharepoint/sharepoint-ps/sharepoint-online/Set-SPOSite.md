@@ -884,7 +884,7 @@ Accept wildcard characters: False
 
 ### -RequestFilesLinkEnabled
 
-Enables or disables Request Files link on the site.
+Enables or disables the Request Files link on the site.
 
 ```yaml
 Type: Boolean
