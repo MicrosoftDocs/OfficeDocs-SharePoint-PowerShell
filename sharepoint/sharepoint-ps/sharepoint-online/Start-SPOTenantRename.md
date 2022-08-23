@@ -15,7 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 
 > [!IMPORTANT]
-> This feature is in preview and currently available to organizations that have no more than 1,000 total SharePoint sites and OneDrive accounts combined.
+> This feature is in preview and currently available to organizations that have no more than 10,000 total SharePoint sites and OneDrive accounts combined.
 
 Starts a job to change the SharePoint domain name for your organization in Microsoft 365. For example, if the name of your organization changes from "Contoso" to "Fabrikam," you can change contoso.sharepoint.com to fabrikam.sharepoint.com.
 
