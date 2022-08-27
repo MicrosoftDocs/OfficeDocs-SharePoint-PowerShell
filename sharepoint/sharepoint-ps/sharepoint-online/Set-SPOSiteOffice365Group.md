@@ -34,9 +34,6 @@ Set-SPOSiteOffice365Group
 
 Connects a top-level SPO site collection to a new Microsoft 365 Group.  You must be a SharePoint Online administrator or Global Administrator to run the cmdlet.
 
-> [!IMPORTANT]
-> This cmdlet is currently in preview and is subject to change. It is not currently supported for use in production environments.
-
 If the site doesn't exist, this cmdlet returns a "File not found" error.
 
 ## EXAMPLES
