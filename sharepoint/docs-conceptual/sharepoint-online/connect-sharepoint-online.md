@@ -49,6 +49,14 @@ To open the SharePoint Online Management Shell command prompt, from the **Start*
 
 To assign a user the SharePoint admin role, see [Assign admin roles](https://docs.microsoft.com/microsoft-365/admin/add-users/assign-admin-roles) or [Assign admin roles to Microsoft 365 user accounts with PowerShell](https://docs.microsoft.com/microsoft-365/enterprise/assign-roles-to-user-accounts-with-microsoft-365-powershell).
 
+> [!NOTE]
+>
+> - If you encounter issues trying to connect or recieve and error such as 'Error message: Could not connect to SharePoint Online' you may need to use Modern Authentcation. Please see the following example below: 
+
+  ```powershell
+  Connect-SPOService -Credential $creds -Url https://tenant-admin.sharepoint.com -ModernAuth $true -AuthenticationUrl https://login.microsoftonline.com/organizations
+   ```
+
 ## To connect with multifactor authentication (MFA)
 
 1. Run the following command at the SharePoint Online Management Shell command prompt:
@@ -64,7 +72,5 @@ To assign a user the SharePoint admin role, see [Assign admin roles](https://doc
 You are now ready to use SharePoint Online commands.
 
 > [!NOTE]
->
-> - If you encounter issues trying to connect using MFA, please see [Cannot force Modern Authentication when using Connect-SPOService cmdlet in SharePoint Online Management Shell](https://docs.microsoft.com/sharepoint/troubleshoot/security/cannot-force-modern-authentication).
 >
 > - There is a known issue between the SharePoint Online Management Shell module and SharePoint Client Components SDK where the module will fail to load if both are installed on the same computer. If you encounter this issue, uninstall the SharePoint Client Components SDK.
