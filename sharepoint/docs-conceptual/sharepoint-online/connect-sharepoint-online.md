@@ -47,7 +47,7 @@ To open the SharePoint Online Management Shell command prompt, from the **Start*
 
 2. When prompted with the Windows PowerShell credential request dialog box, type the password for the SharePoint admin account.
 
-To assign a user the SharePoint admin role, see [Assign admin roles](https://docs.microsoft.com/microsoft-365/admin/add-users/assign-admin-roles) or [Assign admin roles to Microsoft 365 user accounts with PowerShell](https://docs.microsoft.com/microsoft-365/enterprise/assign-roles-to-user-accounts-with-microsoft-365-powershell).
+To assign a user the SharePoint admin role, see [Assign admin roles](/microsoft-365/admin/add-users/assign-admin-roles) or [Assign admin roles to Microsoft 365 user accounts with PowerShell](/microsoft-365/enterprise/assign-roles-to-user-accounts-with-microsoft-365-powershell).
 
 > [!NOTE]
 >
