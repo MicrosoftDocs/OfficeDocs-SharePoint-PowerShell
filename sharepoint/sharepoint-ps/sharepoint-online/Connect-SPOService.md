@@ -180,7 +180,7 @@ Accept wildcard characters: False
 
  Ensures that SharePoint Online tenant administration cmdlets can connect to the service using modern TLS protocols.
 
-To use it you also need to provide the AuthenticationUrl parameter.
+To use it you also need to provide the **AuthenticationUrl** parameter.
 
 Example:
 $creds = Get-Credential
