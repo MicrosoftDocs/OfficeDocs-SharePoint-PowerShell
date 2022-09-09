@@ -183,8 +183,12 @@ Accept wildcard characters: False
 To use it you also need to provide the **AuthenticationUrl** parameter.
 
 Example:
+
 $creds = Get-Credential
+
+ ```powershell
 Connect-SPOService -Credential $creds -Url https://tenant-admin.sharepoint.com -ModernAuth $true -AuthenticationUrl https://login.microsoftonline.com/organizations
+    ```
 
 ```yaml
 Type: Boolean
