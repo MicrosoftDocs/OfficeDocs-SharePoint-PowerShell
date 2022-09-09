@@ -190,6 +190,14 @@ $creds = Get-Credential
 Connect-SPOService -Credential $creds -Url https://tenant-admin.sharepoint.com -ModernAuth $true -AuthenticationUrl https://login.microsoftonline.com/organizations
     ```
 
+Example for MFA Accounts:
+
+$creds = Get-Credential
+
+ ```powershell
+Connect-SPOService -Url https://tenant-admin.sharepoint.com -ModernAuth $true -AuthenticationUrl https://login.microsoftonline.com/organizations
+    ```
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
