@@ -50,8 +50,7 @@ To open the SharePoint Online Management Shell command prompt, from the **Start*
 To assign a user the SharePoint admin role, see [Assign admin roles](/microsoft-365/admin/add-users/assign-admin-roles) or [Assign admin roles to Microsoft 365 user accounts with PowerShell](/microsoft-365/enterprise/assign-roles-to-user-accounts-with-microsoft-365-powershell).
 
 > [!NOTE]
->
-> - If you encounter issues trying to connect or recieve and error such as 'Error message: Could not connect to SharePoint Online' you may need to use Modern Authentcation. Please see the following example below: 
+> If you encounter issues trying to connect or receive an error such as 'Error message: Could not connect to SharePoint Online', you may need to use Modern Authentication. See the following example: 
 
   ```powershell
   Connect-SPOService -Credential $creds -Url https://tenant-admin.sharepoint.com -ModernAuth $true -AuthenticationUrl https://login.microsoftonline.com/organizations
