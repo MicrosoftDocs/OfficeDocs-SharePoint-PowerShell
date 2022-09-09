@@ -178,7 +178,7 @@ Accept wildcard characters: False
 
 ### -ModernAuth
 
- Ensure SPO tenant administration cmdlets can connect to the service using modern TLS protocols.
+ Ensures that SharePoint Online tenant administration cmdlets can connect to the service using modern TLS protocols.
 
 To use it you also need to provide the AuthenticationUrl parameter.
 
