@@ -91,6 +91,24 @@ Connects to a SharePoint Online Administration Center specifying the region.
 
 Location for AAD Cross-Tenant Authentication service. Can be optionally used if non-default Cross-Tenant Authentication Service is used.
 
+### -----------------------EXAMPLE 5-----------------------------
+Connecting to SPO Service with ModerAuth Flag.
+
+$creds = Get-Credential
+
+ ```powershell
+Connect-SPOService -Credential $creds -Url https://tenant-admin.sharepoint.com -ModernAuth $true -AuthenticationUrl https://login.microsoftonline.com/organizations
+    ```
+
+Connecting to SPO Service with ModerAuth Flag for an MFA Account:
+
+$creds = Get-Credential
+
+ ```powershell
+Connect-SPOService -Url https://tenant-admin.sharepoint.com -ModernAuth $true -AuthenticationUrl https://login.microsoftonline.com/organizations
+    ```
+
+
 ```yaml
 Type: String
 Parameter Sets: AuthenticationUrl
@@ -181,22 +199,6 @@ Accept wildcard characters: False
  Ensures that SharePoint Online tenant administration cmdlets can connect to the service using modern TLS protocols.
 
 To use it you also need to provide the **AuthenticationUrl** parameter.
-
-Example:
-
-$creds = Get-Credential
-
- ```powershell
-Connect-SPOService -Credential $creds -Url https://tenant-admin.sharepoint.com -ModernAuth $true -AuthenticationUrl https://login.microsoftonline.com/organizations
-    ```
-
-Example for MFA Accounts:
-
-$creds = Get-Credential
-
- ```powershell
-Connect-SPOService -Url https://tenant-admin.sharepoint.com -ModernAuth $true -AuthenticationUrl https://login.microsoftonline.com/organizations
-    ```
 
 ```yaml
 Type: Boolean
