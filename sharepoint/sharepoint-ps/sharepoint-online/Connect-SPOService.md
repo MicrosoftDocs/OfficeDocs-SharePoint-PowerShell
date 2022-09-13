@@ -23,7 +23,7 @@ This cmdlet must be run before any other SharePoint Online cmdlets can run.
 
 ```powershell
 Connect-SPOService -AuthenticationUrl <String> [-ClientTag <String>] [-Credential <CredentialCmdletPipeBind>]
- -Url <UrlCmdletPipeBind> [<CommonParameters>]
+ -Url <UrlCmdletPipeBind> -ModernAuth <Boolean> [<CommonParameters>] 
 ```
 
 ### AuthenticationLocation
@@ -92,21 +92,11 @@ Connects to a SharePoint Online Administration Center specifying the region.
 Location for AAD Cross-Tenant Authentication service. Can be optionally used if non-default Cross-Tenant Authentication Service is used.
 
 ### -----------------------EXAMPLE 5-----------------------------
-Connecting to SPO Service with ModerAuth Flag.
-
-$creds = Get-Credential
 
  ```powershell
 Connect-SPOService -Credential $creds -Url https://tenant-admin.sharepoint.com -ModernAuth $true -AuthenticationUrl https://login.microsoftonline.com/organizations
-    ```
 
-Connecting to SPO Service with ModerAuth Flag for an MFA Account:
-
-$creds = Get-Credential
-
- ```powershell
-Connect-SPOService -Url https://tenant-admin.sharepoint.com -ModernAuth $true -AuthenticationUrl https://login.microsoftonline.com/organizations
-    ```
+Connecting to SPO Service with ModerAuth Flag.
 
 
 ```yaml
