@@ -85,18 +85,18 @@ Connect-SPOService -Url https://contoso-admin.sharepoint.com -Region ITAR
 
 Connects to a SharePoint Online Administration Center specifying the region.
 
-## PARAMETERS
-
-### -AuthenticationUrl
-
-Location for AAD Cross-Tenant Authentication service. Can be optionally used if non-default Cross-Tenant Authentication Service is used.
-
 ### -----------------------EXAMPLE 5-----------------------------
 
  ```powershell
 Connect-SPOService -Credential $creds -Url https://tenant-admin.sharepoint.com -ModernAuth $true -AuthenticationUrl https://login.microsoftonline.com/organizations
 
 Connecting to SPO Service with ModerAuth Flag.
+
+## PARAMETERS
+
+### -AuthenticationUrl
+
+Location for AAD Cross-Tenant Authentication service. Can be optionally used if non-default Cross-Tenant Authentication Service is used.
 
 
 ```yaml
