@@ -50,7 +50,7 @@ The example removes a CDN from a site level.
 Remove-SPOTenantCdnOrigin -CdnType Private -OriginUrl /sites/branding/Assets
 ```
 
-This example removes a recently-removed organizational assets library from CDN.
+This example removes a recently-removed organizational assets library from a CDN.
 
 ## PARAMETERS
 
