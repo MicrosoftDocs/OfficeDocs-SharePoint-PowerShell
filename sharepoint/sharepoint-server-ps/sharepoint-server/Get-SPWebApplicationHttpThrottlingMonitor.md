@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```powershell
-$s = get-SPWebApplicationHTTPThrottlingMonitors https://sharepoint
+$s = get-SPWebApplicationHTTPThrottlingMonitor https://sharepoint
 ```
 
 This example gets all performance counters that are being read in the network throttling monitor for the https://sharepoint Web application.
