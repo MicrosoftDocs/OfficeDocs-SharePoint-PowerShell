@@ -28,7 +28,7 @@ Removes a new origin from the Public or Private content delivery network (CDN).
 
 ## EXAMPLES
 
-### -----------------------EXAMPLE 1-----------------------------
+### EXAMPLE 1
 
 ```powershell
 Remove-SPOTenantCdnOrigin -CdnType Public -OriginUrl sites/pubsite/siteassets/subfolder
@@ -36,13 +36,21 @@ Remove-SPOTenantCdnOrigin -CdnType Public -OriginUrl sites/pubsite/siteassets/su
 
 The example removes a CDN from a tenant level.
 
-### -----------------------EXAMPLE 2-----------------------------
+### EXAMPLE 2
 
 ```powershell
 Remove-SPOTenantCdnOrigin -CdnType Public -OriginScope Site  -Site https://contoso.sharepoint.com/sites/pubsite -OriginUrl siteassets/subfolder
 ```
 
 The example removes a CDN from a site level.
+
+### EXAMPLE 3
+
+```powershell
+Remove-SPOTenantCdnOrigin -CdnType Private -OriginUrl /sites/branding/Assets
+```
+
+This example removes a recently-removed organizational assets library from a CDN.
 
 ## PARAMETERS
 
