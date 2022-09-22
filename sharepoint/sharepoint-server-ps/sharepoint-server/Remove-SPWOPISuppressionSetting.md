@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spwopisuppressionsetting
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spwopisuppressionsetting
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPWOPISuppressionSetting
 schema: 2.0.0
@@ -30,7 +30,7 @@ Remove-SPWOPISuppressionSetting [-AssignmentCollection <SPAssignmentCollection>]
 ## DESCRIPTION
 The `Remove-SPWOPISuppressionSetting` cmdlet removes the suppression settings for a file name extension or programmatic indentifier (ProgID) and action on the current SharePoint farm where this cmdlet is run.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/move-spsocialcomment
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/move-spsocialcomment
 applicable: SharePoint Server Subscription Edition
 title: Move-SPSocialComment
 schema: 2.0.0
@@ -174,4 +174,3 @@ Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 ## NOTES
 
 ## RELATED LINKS
-

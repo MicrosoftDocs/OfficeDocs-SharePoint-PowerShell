@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-sppeoplepickersearchaddomain
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-sppeoplepickersearchaddomain
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPPeoplePickerSearchADDomain
 schema: 2.0.0

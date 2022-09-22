@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spsitesubscriptionbusinessdatacatalogconfig
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spsitesubscriptionbusinessdatacatalogconfig
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPSiteSubscriptionBusinessDataCatalogConfig
 schema: 2.0.0
@@ -24,7 +24,7 @@ Remove-SPSiteSubscriptionBusinessDataCatalogConfig -ServiceContext <SPServiceCon
 The `Remove-SPSiteSubscriptionBusinessDataCatalogConfig` cmdlet removes the Business Data Connectivity Metadata Store and all associated data for a specified partition.
 To completely remove a partition and the data that it contains, run the `Clear-SPSiteSubscriptionBusinessDataCatalogConfig` cmdlet to remove the data from the Business Data Connectivity Metadata Store and then run the `Remove-SPSiteSubscriptionBusinessDataCatalogConfig` cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spwebapplicationextension
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spwebapplicationextension
 applicable: SharePoint Server Subscription Edition
 title: New-SPWebApplicationExtension
 schema: 2.0.0
@@ -30,7 +30,7 @@ New-SPWebApplicationExtension [-Identity] <SPWebApplicationPipeBind> -Name <Stri
 The `New-SPWebApplicationExtension` cmdlet creates a new zone instance for the Web application.
 This is also known as extending a Web application and allows alternate permissions to be configured for the same content that is available in the existing Web application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

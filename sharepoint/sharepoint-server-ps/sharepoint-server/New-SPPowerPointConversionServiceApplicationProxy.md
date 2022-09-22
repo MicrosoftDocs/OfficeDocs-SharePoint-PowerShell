@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Powerpoint.dll-Help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-sppowerpointconversionserviceapplicationproxy
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-sppowerpointconversionserviceapplicationproxy
 applicable: SharePoint Server Subscription Edition
 title: New-SPPowerPointConversionServiceApplicationProxy
 schema: 2.0.0

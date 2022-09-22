@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Visio.Server.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spvisiosafedataprovider
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spvisiosafedataprovider
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPVisioSafeDataProvider
 schema: 2.0.0
@@ -24,7 +24,7 @@ Remove-SPVisioSafeDataProvider -DataProviderId <String> -DataProviderType <Int32
 ## DESCRIPTION
 The `Remove-SPVisioSafeDataProvider` cmdlet deletes the safe data provider that is specified in the DataProviderID parameter.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

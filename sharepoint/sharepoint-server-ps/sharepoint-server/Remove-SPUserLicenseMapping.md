@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spuserlicensemapping
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spuserlicensemapping
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPUserLicenseMapping
 schema: 2.0.0
@@ -23,7 +23,7 @@ Remove-SPUserLicenseMapping -Identity <System.Collections.Generic.List`1[System.
 ## DESCRIPTION
 The `Remove-SPUserLicenseMapping` cmdlet uses the Identity parameter to remove a claim-to-SharePoint user license mapping.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

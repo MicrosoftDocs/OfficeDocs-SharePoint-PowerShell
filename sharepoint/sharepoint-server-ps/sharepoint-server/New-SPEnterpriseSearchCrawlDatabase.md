@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spenterprisesearchcrawldatabase
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spenterprisesearchcrawldatabase
 applicable: SharePoint Server Subscription Edition
 title: New-SPEnterpriseSearchCrawlDatabase
 schema: 2.0.0
@@ -25,7 +25,7 @@ New-SPEnterpriseSearchCrawlDatabase -DatabaseName <String>
 The New-SPEnterpriseSearchCrawlDatabase cmdlet is used during initial configuration and farm scale-out to create a new crawl database, which can be added to a search service application.
 A crawl database stores crawl history for a search application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -207,5 +207,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-

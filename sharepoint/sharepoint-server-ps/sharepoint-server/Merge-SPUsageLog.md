@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/merge-spusagelog
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/merge-spusagelog
 Applicable: SharePoint Server Subscription Edition
 title: Merge-SPUsageLog
 schema: 2.0.0
@@ -199,4 +199,3 @@ Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 ## NOTES
 
 ## RELATED LINKS
-
