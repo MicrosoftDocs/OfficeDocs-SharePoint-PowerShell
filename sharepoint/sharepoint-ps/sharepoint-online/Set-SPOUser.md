@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spouser
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spouser
 applicable: SharePoint Online
 title: Set-SPOUser
 schema: 2.0.0
@@ -29,7 +29,7 @@ That is, to add or remove a user as a SharePoint Online site collection administ
 
 You must have the SharePoint Online Administrator or Global Administrator role to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
 ## EXAMPLES
 
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 
 ### -UpdateUserTypeFromAzureAD
 If the UserType property of an existing user is changed in Azure AD from Member to Guest or vice-versa, this parameter can be used to update it in SharePoint Online.
-For more information, see [Convert UserType](https://docs.microsoft.com/azure/active-directory/b2b/user-properties#convert-usertype).
+For more information, see [Convert UserType](https://learn.microsoft.com/azure/active-directory/b2b/user-properties#convert-usertype).
 
 ```yaml
 Type: SwitchParameter
@@ -119,6 +119,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Get-SPOUser](Get-SPOUser.md)

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spazureaccesscontrolserviceapplicationproxy
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spazureaccesscontrolserviceapplicationproxy
 applicable: SharePoint Server Subscription Edition
 title: New-SPAzureAccessControlServiceApplicationProxy
 schema: 2.0.0
@@ -26,7 +26,7 @@ New-SPAzureAccessControlServiceApplicationProxy -MetadataServiceEndpointUri <Str
 ## DESCRIPTION
 Use the New-SPAzureAccessContrlServiceApplicationProxy cmdlet to create a new service application proxy group for the Azure Control service application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -155,4 +155,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

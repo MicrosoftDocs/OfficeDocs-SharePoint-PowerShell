@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.WorkManagement.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spworkmanagementserviceapplication
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spworkmanagementserviceapplication
 applicable: SharePoint Server 2013
 title: New-SPWorkManagementServiceApplication
 schema: 2.0.0
@@ -26,7 +26,7 @@ New-SPWorkManagementServiceApplication -ApplicationPool <SPIisWebServiceApplicat
 ## DESCRIPTION
 Use the `New-SPWorkManagementServiceApplication` cmdlet to create a new Work Management Service application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 Note: This functionality has been removed from SharePoint Server 2016, SharePoint Server 2019, but the cmdlet is still present in the product.
 

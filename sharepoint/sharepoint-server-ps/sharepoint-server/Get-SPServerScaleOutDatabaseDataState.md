@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spserverscaleoutdatabasedatastate
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spserverscaleoutdatabasedatastate
 applicable: SharePoint Server Subscription Edition
 title: Get-SPServerScaleOutDatabaseDataState
 schema: 2.0.0
@@ -34,7 +34,7 @@ Get-SPServerScaleOutDatabaseDataState -Database <SPDatabasePipeBind>
 
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see [Cmdlet parameter sets](https://docs.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
 
 Use the Get-SPServerScaleOutDatabaseDataState cmdlet to return state information about the specified scale-out database or about the database which will be connected with the specified connection string.
 The database state information includes total count of partitions, total weight of the partitions, the range and the subranges of the database.
@@ -197,4 +197,3 @@ Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 ## NOTES
 
 ## RELATED LINKS
-

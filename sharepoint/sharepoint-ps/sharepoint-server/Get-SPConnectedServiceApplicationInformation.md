@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spconnectedserviceapplicationinformation
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spconnectedserviceapplicationinformation
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPConnectedServiceApplicationInformation
 schema: 2.0.0
@@ -95,4 +95,3 @@ Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 ## NOTES
 
 ## RELATED LINKS
-

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/update-spinfopathadminfileurl
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/update-spinfopathadminfileurl
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Update-SPInfoPathAdminFileUrl
 schema: 2.0.0
@@ -28,7 +28,7 @@ This allows for InfoPath data connections that reference the current farm to be 
 This cmdlet cannot update any references to URLs that exist in form template business logic (code).
 Typically, this cmdlet is used with the `Import-SPInfoPathAdministratorFiles` cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

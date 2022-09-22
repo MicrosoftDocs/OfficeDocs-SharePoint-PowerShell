@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/uninstall-spusersolution
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/uninstall-spusersolution
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Uninstall-SPUserSolution
 schema: 2.0.0
@@ -27,7 +27,7 @@ Uninstall-SPUserSolution [-Identity] <SPUserSolutionPipeBind> -Site <SPSitePipeB
 The `Uninstall-SPUserSolution` cmdlet deactivates a sandboxed solution in a site collection so that you can delete it by using the `Remove-SPUserSolution` cmdlet.
 A user solution is a sandboxed solution.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

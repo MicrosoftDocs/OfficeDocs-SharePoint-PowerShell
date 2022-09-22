@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spcachehostconfig
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spcachehostconfig
 applicable: SharePoint Server Subscription Edition
 title: Get-SPCacheHostConfig
 schema: 2.0.0

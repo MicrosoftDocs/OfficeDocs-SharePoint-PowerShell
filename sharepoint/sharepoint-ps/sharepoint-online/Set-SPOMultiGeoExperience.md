@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spomultigeoexperience
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spomultigeoexperience
 applicable: SharePoint Online
 title: Set-SPOMultiGeoExperience
 schema: 2.0.0
@@ -24,7 +24,7 @@ Used to set a geo location into SPO mode.
 
 ## DESCRIPTION
 
-Use this cmdlet to set a geo location into SPO mode. This upgrade action is not reversible. For more information see [Enabling SharePoint Multi-Geo in your satellite geo location](https://docs.microsoft.com/office365/enterprise/enabling-sp-multigeo-satellite-geolocation)
+Use this cmdlet to set a geo location into SPO mode. This upgrade action is not reversible. For more information see [Enabling SharePoint Multi-Geo in your satellite geo location](https://learn.microsoft.com/office365/enterprise/enabling-sp-multigeo-satellite-geolocation)
 
 ## EXAMPLES
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchtopology
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchtopology
 applicable: SharePoint Server Subscription Edition
 title: Get-SPEnterpriseSearchTopology
 schema: 2.0.0
@@ -23,7 +23,7 @@ Get-SPEnterpriseSearchTopology [[-Identity] <SearchTopologyPipeBind>]
 ## DESCRIPTION
 This cmdlet retrieves a given search topology, the active search topology, or all search topologies that belong to a given search service application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -136,4 +136,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-SPEnterpriseSearchTopology](Set-SPEnterpriseSearchTopology.md)
 
 [Remove-SPEnterpriseSearchTopology](Remove-SPEnterpriseSearchTopology.md)
-

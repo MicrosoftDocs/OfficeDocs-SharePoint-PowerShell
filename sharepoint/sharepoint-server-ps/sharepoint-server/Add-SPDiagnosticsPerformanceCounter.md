@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/add-spdiagnosticsperformancecounter
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/add-spdiagnosticsperformancecounter
 applicable: SharePoint Server Subscription Edition
 title: Add-SPDiagnosticsPerformanceCounter
 schema: 2.0.0
@@ -41,7 +41,7 @@ Add-SPDiagnosticsPerformanceCounter [-Category] <String> [-Instance <String>] [-
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see [Cmdlet parameter sets](https://docs.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
 
 The Add-SPDiagnosticsPerformanceCounter cmdlet adds a performance counter to a front end Web server or a database server.
 A performance counter is read and recorded in the usage database.
@@ -285,4 +285,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

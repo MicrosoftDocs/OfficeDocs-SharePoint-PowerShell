@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/add-spserverscaleoutdatabase
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/add-spserverscaleoutdatabase
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Add-SPServerScaleOutDatabase
 schema: 2.0.0
@@ -224,4 +224,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-SPServerScaleOutDatabase](Remove-SPServerScaleOutDatabase.md)
 
 [Split-SPServerScaleOutDatabase](Split-SPServerScaleOutDatabase.md)
-

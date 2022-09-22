@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/install-spfeature
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/install-spfeature
 applicable: SharePoint Server Subscription Edition
 title: Install-SPFeature
 schema: 2.0.0
@@ -38,7 +38,7 @@ Install-SPFeature [-ScanForFeatures] [-AssignmentCollection <SPAssignmentCollect
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see [Cmdlet parameter sets](https://docs.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
 
 The Install-SPFeature cmdlet installs a specific SPFeature by providing, in the Identity parameter, the relative path from the version-specific common FEATURES folder to the feature.
 The version-specific FEATURES folder is "$env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\14\TEMPLATE\FEATURES\" if the site collection is in 14 mode, and "$env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\15\TEMPLATE\FEATURES\" if the site collection is in 15 mode.
@@ -47,7 +47,7 @@ The SharePoint Feature's files must already be put in the proper directory, eith
 If the value of the AllExistingFeatures parameter is true, the file system is scanned and all new features that are in both FEATURES folders are installed.
 This is generally only used during deployment and upgrade.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -254,4 +254,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

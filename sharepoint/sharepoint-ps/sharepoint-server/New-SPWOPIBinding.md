@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spwopibinding
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spwopibinding
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPWOPIBinding
 schema: 2.0.0
@@ -33,7 +33,7 @@ To use a WOPI application, such as a server that runs Office Web Apps Server, fo
 
 If you run `New-SPWOPIBinding` for an application or file name extension where the binding (or association) already exists, the cmdlet will fail.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

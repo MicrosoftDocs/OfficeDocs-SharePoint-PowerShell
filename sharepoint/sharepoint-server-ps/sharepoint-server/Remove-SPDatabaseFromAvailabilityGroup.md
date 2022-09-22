@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spdatabasefromavailabilitygroup
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spdatabasefromavailabilitygroup
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPDatabaseFromAvailabilityGroup
 schema: 2.0.0

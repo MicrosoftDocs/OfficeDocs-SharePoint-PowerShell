@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchlinksdatabase
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchlinksdatabase
 applicable: SharePoint Server Subscription Edition
 title: Get-SPEnterpriseSearchLinksDatabase
 schema: 2.0.0
@@ -25,7 +25,7 @@ The Get-SPEnterpriseSearchLinksDatabase cmdlet returns a LinksStore object for u
 A links database stores query logging and search analytics data for a search service application.
 If the Identity parameter is not specified, this cmdlet returns all links databases for the specified search application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -110,4 +110,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-SPEnterpriseSearchLinksDatabase](Remove-SPEnterpriseSearchLinksDatabase.md)
 
 [Move-SPEnterpriseSearchLinksDatabases](Move-SPEnterpriseSearchLinksDatabases.md)
-

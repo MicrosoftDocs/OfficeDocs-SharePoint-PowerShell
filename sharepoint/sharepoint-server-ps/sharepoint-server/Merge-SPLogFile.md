@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/merge-splogfile
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/merge-splogfile
 applicable: SharePoint Server Subscription Edition
 title: Merge-SPLogFile
 schema: 2.0.0
@@ -31,7 +31,7 @@ If no results are returned, a warning is written to the Windows PowerShell conso
 We recommend that you filter by using the StartTime and EndTime parameters to optimize performance of this cmdlet.
 Some filtering parameters such as Process, Area, Category, EventID and Message support wildcards.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -388,4 +388,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

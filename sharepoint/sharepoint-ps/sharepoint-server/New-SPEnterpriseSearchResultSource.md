@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spenterprisesearchresultsource
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spenterprisesearchresultsource
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPEnterpriseSearchResultSource
 schema: 2.0.0
@@ -32,7 +32,7 @@ Use result sources to scope search results and federate queries to external sour
 After defining a result source, configure search web parts and query rule actions to use it.
 Result Sources replace Search Scopes, which are now deprecated.
 This cmdlet supports the same create operations as are supported through the "Manage Result Sources" page in Central Administration, except the operations "Form Authentication" and "Cookie Authentication".
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

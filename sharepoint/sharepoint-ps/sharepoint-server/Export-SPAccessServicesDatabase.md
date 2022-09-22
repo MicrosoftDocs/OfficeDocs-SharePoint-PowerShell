@@ -1,7 +1,7 @@
 ---
 external help file: microsoft.office.access.server.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/export-spaccessservicesdatabase
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/export-spaccessservicesdatabase
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Export-SPAccessServicesDatabase
 schema: 2.0.0
@@ -29,7 +29,7 @@ EN\x86\DacFramework.msi
 
 Note: The x86 package is required. The x64 package is not compatible with this cmdlet.
 
-See more information about Data-Tier Framework at [Data-tier Applications](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications).
+See more information about Data-Tier Framework at [Data-tier Applications](https://learn.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications).
 
 ## EXAMPLES
 
@@ -110,4 +110,3 @@ Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 ## NOTES
 
 ## RELATED LINKS
-

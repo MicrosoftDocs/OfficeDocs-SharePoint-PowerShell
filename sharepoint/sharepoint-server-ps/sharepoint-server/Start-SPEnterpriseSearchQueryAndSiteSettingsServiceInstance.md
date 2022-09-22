@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/start-spenterprisesearchqueryandsitesettingsserviceinstance
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/start-spenterprisesearchqueryandsitesettingsserviceinstance
 applicable: SharePoint Server Subscription Edition
 title: Start-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance
 schema: 2.0.0
@@ -23,7 +23,7 @@ Start-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance
 ## DESCRIPTION
 The `Start-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance` cmdlet starts the query and site settings service instance on the server instance in the same farm as the search service application to host the query object model (OM), Windows Communication Foundation (WCF) endpoint and query processor for the search service application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

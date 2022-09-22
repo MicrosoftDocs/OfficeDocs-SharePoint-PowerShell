@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/stop-sptaxonomyreplication
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/stop-sptaxonomyreplication
 applicable: SharePoint Server Subscription Edition
 title: Stop-SPTaxonomyReplication
 schema: 2.0.0

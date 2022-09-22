@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/export-spouserprofile
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/export-spouserprofile
 applicable: SharePoint Online
 title: Export-SPOUserProfile
 schema: 2.0.0
@@ -26,7 +26,7 @@ Export-SPOUserProfile -LoginName <String> -OutputFolder <String> [<CommonParamet
 
 Export user profile data to csv file.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
 ## EXAMPLES
 

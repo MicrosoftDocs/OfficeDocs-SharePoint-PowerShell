@@ -1,7 +1,7 @@
 ---
 external help file: sharepointserver.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spexcelblockedfiletype
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spexcelblockedfiletype
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: New-SPExcelBlockedFileType
 schema: 2.0.0
@@ -28,7 +28,7 @@ The `New-SPExcelBlockedFileType` cmdlet adds an entry to the list of file types 
 Excel Services Application does not load any files that correspond to a file type that is on this list.
 The specified file type is prevented from loading by all instances of Excel Services Application for the specified Excel Services Application Web service application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

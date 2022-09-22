@@ -1,7 +1,7 @@
 ---
 external help file: sharepointserver.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spexcelserviceapplication
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spexcelserviceapplication
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Set-SPExcelServiceApplication
 schema: 2.0.0
@@ -50,7 +50,7 @@ Set-SPExcelServiceApplication [[-Identity] <SPExcelServiceApplicationPipeBind>]
 The `Set-ExcelServiceApplication` cmdlet changes global runtime properties for Excel Services Application. 
 Changes to properties that are made by using this cmdlet affect all machines in the farm that are running an instance of the specified Excel Services Application Web service application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.WorkManagement.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spworkmanagementserviceapplicationproxy
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spworkmanagementserviceapplicationproxy
 applicable: SharePoint Server 2013
 title: New-SPWorkManagementServiceApplicationProxy
 schema: 2.0.0
@@ -27,7 +27,7 @@ New-SPWorkManagementServiceApplicationProxy -Name <String> [-AssignmentCollectio
 ## DESCRIPTION
 Use the `New-SPWorkManagementServiceApplicationProxy` cmdlet to create a new Work Management Service application proxy object.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 Note: This functionality has been removed from SharePoint Server 2016, SharePoint Server 2019, but the cmdlet is still present in the product.
 

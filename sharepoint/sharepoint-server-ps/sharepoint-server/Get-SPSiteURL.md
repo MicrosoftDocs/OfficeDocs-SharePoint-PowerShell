@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spsiteurl
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spsiteurl
 applicable: SharePoint Server Subscription Edition
 title: Get-SPSiteURL
 schema: 2.0.0
@@ -28,7 +28,7 @@ Use the Get-SPSiteUrl cmdlet to display all the URL mappings of the site by usin
 The Get-SPSiteUrl cmdlet only applies to the root site collection for a host name, that is https://www.contoso.com.
 This cmdlet cannot be directly run against a managed path site collection underneath the root, that is, https://www.contoso.com/sites/test.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -129,4 +129,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-SPSiteUrl](Remove-SPSiteUrl.md)
 
 [Set-SPSiteUrl](Set-SPSiteUrl.md)
-

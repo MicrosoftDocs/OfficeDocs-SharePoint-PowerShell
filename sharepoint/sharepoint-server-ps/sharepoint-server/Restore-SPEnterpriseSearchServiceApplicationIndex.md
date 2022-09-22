@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/restore-spenterprisesearchserviceapplicationindex
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/restore-spenterprisesearchserviceapplicationindex
 applicable: SharePoint Server Subscription Edition
 title: Restore-SPEnterpriseSearchServiceApplicationIndex
 schema: 2.0.0
@@ -32,14 +32,14 @@ Restore-SPEnterpriseSearchServiceApplicationIndex [-SearchApplication] <SearchSe
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see [Cmdlet parameter sets](https://docs.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
 
 This cmdlet will clear the complete search index for a specified search service application and replace it with the search index from the specified backup files.
 
 This cmdlet supports parameter sets.
 The first set of parameters is for Application Configuration Attach mode and the second set of parameters is for Search Application Attach mode.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

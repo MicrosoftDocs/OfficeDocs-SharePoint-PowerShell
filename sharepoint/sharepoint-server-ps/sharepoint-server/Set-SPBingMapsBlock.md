@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spbingmapsblock
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spbingmapsblock
 applicable: SharePoint Server Subscription Edition
 title: Set-SPBingMapsBlock
 schema: 2.0.0
@@ -26,7 +26,7 @@ Bing Maps will be displayed only in non-restricted locales if this property is n
 The default value is 0 (not blocked).
 Use a value of 1 to block in all locales.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

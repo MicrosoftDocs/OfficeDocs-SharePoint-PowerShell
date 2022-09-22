@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spsitemaster
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spsitemaster
 Applicable: SharePoint Server Subscription Edition
 title: Remove-SPSiteMaster
 schema: 2.0.0

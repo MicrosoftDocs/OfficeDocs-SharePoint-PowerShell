@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/clear-spmetadatawebservicepartitiondata
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/clear-spmetadatawebservicepartitiondata
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Clear-SPMetadataWebServicePartitionData
 schema: 2.0.0
@@ -34,7 +34,7 @@ Clear-SPMetadataWebServicePartitionData [-ServiceProxy] <SPMetadataServiceProxyC
 ## DESCRIPTION
 Use the Clear-SPMetadataWebServicePartitionData cmdlet to clear all data for a site subscription on a metadata Web service application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -163,4 +163,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

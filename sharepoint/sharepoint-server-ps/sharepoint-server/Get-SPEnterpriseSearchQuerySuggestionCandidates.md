@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchquerysuggestioncandidates
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchquerysuggestioncandidates
 applicable: SharePoint Server Subscription Edition
 title: Get-SPEnterpriseSearchQuerySuggestionCandidates
 schema: 2.0.0
@@ -24,7 +24,7 @@ Get-SPEnterpriseSearchQuerySuggestionCandidates -Owner <SearchObjectOwner>
 Use the Get-SPEnterpriseSearchQuerySuggestionCandidates cmdlet to return a list of popular queries that can be displayed in a related queries Web Part.
 The list gives the administrator a chance to review potential queries and add some of them to the related queries list.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -123,5 +123,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-

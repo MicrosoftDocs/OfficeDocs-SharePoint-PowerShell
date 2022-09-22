@@ -1,7 +1,7 @@
 ---
 external help file: sharepointserver.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchresultitemtype
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchresultitemtype
 applicable: SharePoint Server Subscription Edition
 title: Get-SPEnterpriseSearchResultItemType
 schema: 2.0.0
@@ -36,7 +36,7 @@ Example use cases:
 - Change the look of results from a particular author.
 - Add a result action to results from a particular result source as part of a custom search application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 
@@ -161,4 +161,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-SPEnterpriseSearchResultItemType](Remove-SPEnterpriseSearchResultItemType.md)
 
 [Get-SPEnterpriseSearchOwner](Get-SPEnterpriseSearchOwner.md)
-

@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spounifiedgroup
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spounifiedgroup
 applicable: SharePoint Online
 title: Set-SPOUnifiedGroup
 schema: 2.0.0
@@ -78,6 +78,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPOUnifiedGroup](https://docs.microsoft.com/powershell/module/sharepoint-online/get-spounifiedgroup)
+[Get-SPOUnifiedGroup](https://learn.microsoft.com/powershell/module/sharepoint-online/get-spounifiedgroup)
 
-[Move a SharePoint site to a different geo location](https://docs.microsoft.com/office365/enterprise/move-sharepoint-between-geo-locations)
+[Move a SharePoint site to a different geo location](https://learn.microsoft.com/office365/enterprise/move-sharepoint-between-geo-locations)

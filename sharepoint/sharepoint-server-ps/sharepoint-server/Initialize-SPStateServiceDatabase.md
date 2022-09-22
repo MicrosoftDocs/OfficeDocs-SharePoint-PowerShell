@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/initialize-spstateservicedatabase
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/initialize-spstateservicedatabase
 applicable: SharePoint Server Subscription Edition
 title: Initialize-SPStateServiceDatabase
 schema: 2.0.0
@@ -23,7 +23,7 @@ Initialize-SPStateServiceDatabase [-Identity] <SPStateDatabasePipeBind>
 The Initialize-SPStateServiceDatabase cmdlet installs the session state database schema in an empty state service database.
 The current user's credentials are used to create the state database schema.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -121,4 +121,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spwopibinding
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spwopibinding
 applicable: SharePoint Server Subscription Edition
 title: Set-SPWOPIBinding
 schema: 2.0.0
@@ -25,7 +25,7 @@ The `Set-SPWOPIBinding` cmdlet updates the default click action for an applicati
 For example, you can set the default click action to view for a Word document in a SharePoint library.
 To do this, you set the default action to true for the "view"-"Word" bindings.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

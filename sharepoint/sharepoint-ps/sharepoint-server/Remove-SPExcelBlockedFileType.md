@@ -1,7 +1,7 @@
 ---
 external help file: sharepointserver.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spexcelblockedfiletype
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spexcelblockedfiletype
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Remove-SPExcelBlockedFileType
 schema: 2.0.0
@@ -28,7 +28,7 @@ Remove-SPExcelBlockedFileType [-Identity] <SPExcelBlockedFileTypePipeBind>
 The `Remove-SPExcelBlockedExcelFileType` cmdlet removes an entry from the list of file types that are prevented from loading on an Excel Services Application Web service application. 
 Excel Services Application does not load any file types that correspond to a file type that is on this list.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

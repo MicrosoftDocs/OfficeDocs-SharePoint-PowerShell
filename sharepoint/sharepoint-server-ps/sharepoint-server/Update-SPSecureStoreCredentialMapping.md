@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/update-spsecurestorecredentialmapping
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/update-spsecurestorecredentialmapping
 applicable: SharePoint Server Subscription Edition
 title: Update-SPSecureStoreCredentialMapping
 schema: 2.0.0
@@ -23,7 +23,7 @@ Update-SPSecureStoreCredentialMapping -Identity <SPSecureStoreApplication> -Prin
 ## DESCRIPTION
 The `Update-SPSecureStoreCredentialMapping` cmdlet sets a new credential mapping for a Secure Store Service application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

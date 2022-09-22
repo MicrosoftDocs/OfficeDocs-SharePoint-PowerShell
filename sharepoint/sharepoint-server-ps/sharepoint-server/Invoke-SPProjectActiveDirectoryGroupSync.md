@@ -1,7 +1,7 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/invoke-spprojectactivedirectorygroupsync
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/invoke-spprojectactivedirectorygroupsync
 Applicable: SharePoint Server Subscription Edition
 title: Invoke-SPProjectActiveDirectoryGroupSync
 schema: 2.0.0
@@ -90,4 +90,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-SPProjectPermissionMode](Get-SPProjectPermissionMode.md)
 
 [Set-SPProjectPermissionMode](Set-SPProjectPermissionMode.md)
-

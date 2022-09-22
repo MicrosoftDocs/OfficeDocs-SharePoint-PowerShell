@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/enable-sptimerjob
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/enable-sptimerjob
 applicable: SharePoint Server Subscription Edition
 title: Enable-SPTimerJob
 schema: 2.0.0
@@ -26,7 +26,7 @@ Enable-SPTimerJob [-Identity] <SPTimerJobPipeBind> [-AssignmentCollection <SPAss
 The Enable-SPTimerJob cmdlet enables a timer job.
 A timer job must be enabled before it can be started.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -123,4 +123,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

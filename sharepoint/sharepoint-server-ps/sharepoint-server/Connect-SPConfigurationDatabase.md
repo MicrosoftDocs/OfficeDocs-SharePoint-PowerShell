@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/connect-spconfigurationdatabase
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/connect-spconfigurationdatabase
 applicable: SharePoint Server Subscription Edition
 title: Connect-SPConfigurationDatabase
 schema: 2.0.0
@@ -33,7 +33,7 @@ If the current computer cannot be connected to a farm, the following error messa
 "This machine is already connected to a SharePoint farm.
 See: Dismount-SPConfigurationDatabase"
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -202,4 +202,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

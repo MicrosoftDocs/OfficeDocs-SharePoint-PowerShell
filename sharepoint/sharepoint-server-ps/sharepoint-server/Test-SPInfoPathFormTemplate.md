@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/test-spinfopathformtemplate
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/test-spinfopathformtemplate
 applicable: SharePoint Server Subscription Edition
 title: Test-SPInfoPathFormTemplate
 schema: 2.0.0
@@ -22,7 +22,7 @@ Test-SPInfoPathFormTemplate [-Path] <String> [-AssignmentCollection <SPAssignmen
 ## DESCRIPTION
 The `Test-SPInfoPathFormTemplate` cmdlet validates that an InfoPath form template can be browser-enabled.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

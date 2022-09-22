@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/import-spapppackage
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/import-spapppackage
 applicable: SharePoint Server Subscription Edition
 title: Import-SPAppPackage
 schema: 2.0.0
@@ -23,7 +23,7 @@ Import-SPAppPackage -Path <String> -Source <SPAppSource> [-AssignmentCollection 
 ## DESCRIPTION
 Use the Import-SPAppPackage cmdlet to import an app package from the content database and create an app inside the site collection by using the SiteCollection parameter.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -197,4 +197,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Export-SPAppPackage](Export-SPAppPackage.md)
-

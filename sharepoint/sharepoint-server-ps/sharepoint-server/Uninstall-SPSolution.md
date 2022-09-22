@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/uninstall-spsolution
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/uninstall-spsolution
 applicable: SharePoint Server Subscription Edition
 title: Uninstall-SPSolution
 schema: 2.0.0
@@ -32,13 +32,13 @@ Uninstall-SPSolution [-Identity] <SPSolutionPipeBind> -WebApplication <SPWebAppl
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see [Cmdlet parameter sets](https://docs.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
 
 The `Uninstall-SPSolution` cmdlet retracts a deployed SharePoint solution in preparation for removing it from the farm entirely.
 This cmdlet removes files from the front-end Web server.
 Use the `Remove-SPSolution` cmdlet to delete the solution package from the solution store of the farm; be sure to use the `Remove-SPSolution` cmdlet only after you have run `Uninstall-SPSolution`.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

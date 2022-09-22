@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spobuiltindesignpackagevisibility
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spobuiltindesignpackagevisibility
 applicable: SharePoint Online
 title: Set-SPOBuiltInDesignPackageVisibility
 schema: 2.0.0
@@ -24,7 +24,7 @@ Set-SPOBuiltInDesignPackageVisibility [-IsVisible] <Boolean> [-DesignPackage] <D
 
 ## DESCRIPTION
 
-Sets the visibility of the available built-in Design Packages. For more information, see [Moving from Publishing sites to Communication sites](https://docs.microsoft.com/sharepoint/publishing-sites-classic-to-modern-experience)
+Sets the visibility of the available built-in Design Packages. For more information, see [Moving from Publishing sites to Communication sites](https://learn.microsoft.com/sharepoint/publishing-sites-classic-to-modern-experience)
 
 ## EXAMPLES
 

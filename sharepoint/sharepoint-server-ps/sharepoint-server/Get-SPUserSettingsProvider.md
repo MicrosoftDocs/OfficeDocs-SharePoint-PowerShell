@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spusersettingsprovider
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spusersettingsprovider
 applicable: SharePoint Server Subscription Edition
 title: Get-SPUserSettingsProvider
 schema: 2.0.0
@@ -27,7 +27,7 @@ Use the Get-SPUserSettingsProvider cmdlet to return a list of User Settings Prov
 To return a list of a specific user setting provider, use the Identity parameter.
 Otherwise, the list for the entire farm is returned.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -98,4 +98,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-SPUserSettingsProvider](Remove-SPUserSettingsProvider.md)
 
 [Get-SPUserSettingsProviderManager](Get-SPUserSettingsProviderManager.md)
-

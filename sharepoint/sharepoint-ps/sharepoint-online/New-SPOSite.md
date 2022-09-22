@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/new-sposite
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/new-sposite
 applicable: SharePoint Online
 title: New-SPOSite
 schema: 2.0.0
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 
 ### -ResourceQuota
 
-Specifies the quota for this site collection in Sandboxed Solutions units. This value must not exceed the company's aggregate available Sandboxed Solutions quota. The default value is 0. For more information, see [Resource Usage Limits on Sandboxed Solutions in SharePoint](https://docs.microsoft.com/previous-versions/office/developer/sharepoint-2010/gg615462(v=office.14)). Note that this parameter is now obsolete and has been deprecated.
+Specifies the quota for this site collection in Sandboxed Solutions units. This value must not exceed the company's aggregate available Sandboxed Solutions quota. The default value is 0. For more information, see [Resource Usage Limits on Sandboxed Solutions in SharePoint](https://learn.microsoft.com/previous-versions/office/developer/sharepoint-2010/gg615462(v=office.14)). Note that this parameter is now obsolete and has been deprecated.
 
 ```yaml
 Type: Double
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 
 ### -TimeZoneId
 
-Specifies the time zone of the site collection. For more information, see [SPRegionalSettings.TimeZones Property](https://docs.microsoft.com/dotnet/api/microsoft.sharepoint.spregionalsettings.timezones).
+Specifies the time zone of the site collection. For more information, see [SPRegionalSettings.TimeZones Property](https://learn.microsoft.com/dotnet/api/microsoft.sharepoint.spregionalsettings.timezones).
 
 ```yaml
 Type: Int32
@@ -243,7 +243,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Get-SPOSite](Get-SPOSite.md)
 

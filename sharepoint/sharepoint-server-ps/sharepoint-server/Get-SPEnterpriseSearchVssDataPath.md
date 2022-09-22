@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchvssdatapath
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchvssdatapath
 applicable: SharePoint Server Subscription Edition
 title: Get-SPEnterpriseSearchVssDataPath
 schema: 2.0.0
@@ -24,7 +24,7 @@ This cmdlet retrieves the index paths for all active index components on the cur
 This list is required as input by the Search VSS Writer in order to perform VSS backup of the current server. 
 This cmdlet will typically be called from a VSS script, and rarely used directly.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 
@@ -71,5 +71,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-

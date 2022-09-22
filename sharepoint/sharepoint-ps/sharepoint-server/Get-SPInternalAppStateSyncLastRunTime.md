@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spinternalappstatesynclastruntime
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spinternalappstatesynclastruntime
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPInternalAppStateSyncLastRunTime
 schema: 2.0.0
@@ -28,7 +28,7 @@ Get-SPInternalAppStateSyncLastRunTime [-AssignmentCollection <SPAssignmentCollec
 Use the Get-SPInternalAppStateSyncLastRunTime cmdlet to return the latest time the internal app state update job was invoked.
 The internal app state update job gets app upgrades from the internal app directory and sets them on app instances.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -73,4 +73,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

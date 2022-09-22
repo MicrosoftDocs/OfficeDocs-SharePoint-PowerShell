@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Visio.Server.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spvisiosafedataprovider
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spvisiosafedataprovider
 applicable: SharePoint Server Subscription Edition
 title: New-SPVisioSafeDataProvider
 schema: 2.0.0
@@ -24,7 +24,7 @@ New-SPVisioSafeDataProvider -DataProviderId <String> -DataProviderType <Int32>
 ## DESCRIPTION
 The `New-SPVisioSafeDataProvider` cmdlet adds a new data provider to the list of safe data providers for a Visio Services application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

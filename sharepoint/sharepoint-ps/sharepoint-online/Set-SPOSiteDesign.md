@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spositedesign
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spositedesign
 applicable: SharePoint Online
 title: Set-SPOSiteDesign
 schema: 2.0.0
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 
 ### -IsDefault
 
-A switch that if provided, applies the site design to the default site template. For more information, see [Customize a default site design](https://docs.microsoft.com/sharepoint/dev/declarative-customization/customize-default-site-design).
+A switch that if provided, applies the site design to the default site template. For more information, see [Customize a default site design](https://learn.microsoft.com/sharepoint/dev/declarative-customization/customize-default-site-design).
 
 ```yaml
 Type: SwitchParameter

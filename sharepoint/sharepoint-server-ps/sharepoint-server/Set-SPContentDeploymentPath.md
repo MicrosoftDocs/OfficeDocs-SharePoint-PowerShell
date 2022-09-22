@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.Publishing.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spcontentdeploymentpath
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spcontentdeploymentpath
 applicable: SharePoint Server Subscription Edition
 title: Set-SPContentDeploymentPath
 schema: 2.0.0
@@ -27,7 +27,7 @@ Set-SPContentDeploymentPath [-Identity] <SPContentDeploymentPathPipeBind>
 ## DESCRIPTION
 The `Set-SPContentDeploymentPath` cmdlet sets the properties of a content deployment path for a content deployment job.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

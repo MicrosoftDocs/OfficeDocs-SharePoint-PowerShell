@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/resume-spstateservicedatabase
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/resume-spstateservicedatabase
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Resume-SPStateServiceDatabase
 schema: 2.0.0
@@ -26,7 +26,7 @@ Resume-SPStateServiceDatabase [-Identity] <SPStateDatabasePipeBind>
 ## DESCRIPTION
 The `Resume-SPStateServiceDatabase` cmdlet resumes a paused state service database, an operation that adds the state service database to the set of databases that can receive new data as required by SharePoint Server applications.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spo365linksettings
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spo365linksettings
 applicable: SharePoint Server Subscription Edition
 title: Set-SPO365LinkSettings
 schema: 2.0.0
@@ -129,5 +129,3 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 [Get-SPO365LinkSettings](Get-SPO365LinkSettings.md)
 
 [Test-SPO365LinkSettings](Test-SPO365LinkSettings.md)
-
-

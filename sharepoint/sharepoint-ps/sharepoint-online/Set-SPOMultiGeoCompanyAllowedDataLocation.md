@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spomultigeocompanyalloweddatalocation
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spomultigeocompanyalloweddatalocation
 applicable: SharePoint Online
 title: Set-SPOMultiGeoCompanyAllowedDataLocation
 schema: 2.0.0
@@ -112,4 +112,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-SPOMultiGeoCompanyAllowedDataLocation](https://docs.microsoft.com/powershell/module/sharepoint-online/remove-spomultigeocompanyalloweddatalocation)
+[Remove-SPOMultiGeoCompanyAllowedDataLocation](https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spomultigeocompanyalloweddatalocation)

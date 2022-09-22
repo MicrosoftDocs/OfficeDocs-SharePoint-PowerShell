@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spweb
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spweb
 applicable: SharePoint Server Subscription Edition
 title: New-SPWeb
 schema: 2.0.0
@@ -28,7 +28,7 @@ If no language is specified, the site is created with the same language that was
 You can create a site from a specific template by specifying the Template parameter.
 If no template is specified, the site is created and the template can be provided later or by the first user to log on.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

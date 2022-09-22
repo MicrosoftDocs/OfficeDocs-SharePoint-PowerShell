@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spdataconnectionfiledependent
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spdataconnectionfiledependent
 applicable: SharePoint Server Subscription Edition
 title: Get-SPDataConnectionFileDependent
 schema: 2.0.0
@@ -22,7 +22,7 @@ Get-SPDataConnectionFileDependent [-Identity] <SPDataConnectionFilePipeBind>
 ## DESCRIPTION
 The Get-SPDataConnectionFileDependent returns all administrator deployed forms that depend on a specified universal data connection (.udc) file located in the central data connection store.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -81,4 +81,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

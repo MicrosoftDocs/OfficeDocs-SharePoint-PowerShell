@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-sphealthanalysisrule
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-sphealthanalysisrule
 applicable: SharePoint Server Subscription Edition
 title: Get-SPHealthAnalysisRule
 schema: 2.0.0
@@ -25,7 +25,7 @@ Get-SPHealthAnalysisRule [-Identity] <SPHealthAnalysisRuleInstancePipeBind>
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see [Cmdlet parameter sets](https://docs.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
 
 Use the Get-SPHealthAnalysisRule cmdlet to return a list of a health analyzer rules.
 To return a specify health analyzer rule, use the Identity parameter; otherwise, all health analyzer rules will be returned.
@@ -35,7 +35,7 @@ The SPHealthAnalysisRule cmdlets were first introduced in the February 2011 Cumu
 --Description of the SharePoint Foundation Cumulative Update Server Hotfix Package (SharePoint Foundation server-package) (https://support.microsoft.com/kb/2475880)
 --Description of the SharePoint Server Cumulative Update Server Hotfix Package (MOSS server-package (https://support.microsoft.com/kb/2475878)
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -98,4 +98,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

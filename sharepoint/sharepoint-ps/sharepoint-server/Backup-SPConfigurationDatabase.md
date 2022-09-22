@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/backup-spconfigurationdatabase
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/backup-spconfigurationdatabase
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Backup-SPConfigurationDatabase
 schema: 2.0.0
@@ -37,7 +37,7 @@ Backup-SPConfigurationDatabase [-AssignmentCollection <SPAssignmentCollection>]
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see [Cmdlet parameter sets](https://docs.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
 
 The Backup-SPConfigurationDatabase cmdlet performs a configuration-only backup of the current farm or a configuration-only backup of a separate configuration database which is not attached to the current farm.
 If you wish to perform a configuration-only backup of the current farm, there is no need to specify the DatabaseServer and DatabaseName parameters.
@@ -220,4 +220,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

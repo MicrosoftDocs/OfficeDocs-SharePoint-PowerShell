@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/uninstall-spappinstance
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/uninstall-spappinstance
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Uninstall-SPAppInstance
 schema: 2.0.0
@@ -27,7 +27,7 @@ Uninstall-SPAppInstance -Identity <SPAppInstance> [-AssignmentCollection <SPAssi
 Use the `Uninstall-SPAppInstance` cmdlet to uninstall an instance of an app.
 This cmdlet is required to be run before a migration process.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

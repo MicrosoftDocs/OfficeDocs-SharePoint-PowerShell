@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spenterprisesearchtenantconfiguration
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spenterprisesearchtenantconfiguration
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPEnterpriseSearchTenantConfiguration
 schema: 2.0.0
@@ -27,7 +27,7 @@ The removed settings are: query Rules, result types, result sources, managed met
 Use this cmdlet when removing tenants and in conjunction with moving tenants.
 When moving a tenant, copy the tenant configuration from the source to the destination and then use this cmdlet to remove the tenant configuration from the source farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

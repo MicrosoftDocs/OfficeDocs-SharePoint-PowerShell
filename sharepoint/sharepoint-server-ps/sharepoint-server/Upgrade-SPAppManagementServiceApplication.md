@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/upgrade-spappmanagementserviceapplication
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/upgrade-spappmanagementserviceapplication
 Applicable: SharePoint Server Subscription Edition
 title: Upgrade-SPAppManagementServiceApplication
 schema: 2.0.0

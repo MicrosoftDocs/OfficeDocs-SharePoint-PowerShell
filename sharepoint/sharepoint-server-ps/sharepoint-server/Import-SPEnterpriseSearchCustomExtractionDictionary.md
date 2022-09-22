@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/import-spenterprisesearchcustomextractiondictionary
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/import-spenterprisesearchcustomextractiondictionary
 applicable: SharePoint Server Subscription Edition
 title: Import-SPEnterpriseSearchCustomExtractionDictionary
 schema: 2.0.0
@@ -25,7 +25,7 @@ Import-SPEnterpriseSearchCustomExtractionDictionary -DictionaryName <String> -Fi
 
 This cmdlet imports a custom extraction dictionary from a .cvs file and deploys it to the extraction sub flow.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -162,5 +162,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-

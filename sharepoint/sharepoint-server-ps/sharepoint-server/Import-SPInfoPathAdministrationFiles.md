@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/import-spinfopathadministrationfiles
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/import-spinfopathadministrationfiles
 applicable: SharePoint Server Subscription Edition
 title: Import-SPInfoPathAdministrationFiles
 schema: 2.0.0
@@ -23,7 +23,7 @@ Import-SPInfoPathAdministrationFiles [-Path] <String> [-AssignmentCollection <SP
 The Import-SPInfoPathAdministrationFiles cmdlet imports InfoPath form templates (.xsn files) and universal data connections (.udcx files) that are located on the SharePoint Central Administration Web site into the specified InfoPath Forms Services service.
 This cmdlet imports from a backup package that includes all workflow forms in InfoPath that were deployed by an administrator and not included with SharePoint Foundation, and browser forms that were deployed by an administrator.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -138,4 +138,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

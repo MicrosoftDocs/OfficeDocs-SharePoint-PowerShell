@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spomultigeoexperience
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spomultigeoexperience
 applicable: SharePoint Online
 title: Get-SPOMultiGeoExperience
 schema: 2.0.0
@@ -24,7 +24,7 @@ Get-SPOMultiGeoExperience [<CommonParameters>]
 
 ## DESCRIPTION
 
-Use this cmdlet to get the multi geo experience mode.  For more information see [Enabling SharePoint Multi-Geo in your satellite geo location](https://docs.microsoft.com/office365/enterprise/enabling-sp-multigeo-satellite-geolocation)
+Use this cmdlet to get the multi geo experience mode.  For more information see [Enabling SharePoint Multi-Geo in your satellite geo location](https://learn.microsoft.com/office365/enterprise/enabling-sp-multigeo-satellite-geolocation)
 
 ## EXAMPLES
 
