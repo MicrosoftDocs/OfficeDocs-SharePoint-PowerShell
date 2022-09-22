@@ -1,7 +1,7 @@
 ---
 external help file: sharepointserver.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spexceldataconnectionlibrary
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spexceldataconnectionlibrary
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Set-SPExcelDataConnectionLibrary
 schema: 2.0.0
@@ -34,7 +34,7 @@ Data connection libraries enable you to reuse and share data connections.
 Data connections can be loaded by using information from the workbook file.
 However, using a data connection library to load data connections provides an additional layer for data connections so that they can be managed separately from workbooks.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

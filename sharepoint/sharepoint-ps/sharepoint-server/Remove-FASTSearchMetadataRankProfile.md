@@ -1,7 +1,7 @@
 ---
 external help file: sharepointserver.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-fastsearchmetadatarankprofile
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-fastsearchmetadatarankprofile
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 author: techwriter40
@@ -161,4 +161,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-FASTSearchMetadataRankProfile](Set-FASTSearchMetadataRankProfile.md)
 
 [Get-FASTSearchMetadataRankProfile](Get-FASTSearchMetadataRankProfile.md)
-

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spfarmconfig
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spfarmconfig
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPFarmConfig
 schema: 2.0.0
@@ -37,7 +37,7 @@ Modify the PSCustomObject object and pass it to the `Set-SPFarmConfig` cmdlet to
 The properties collected in the PSCustomObject object must be farm-wide settings and must be configurable only once for the entire farm.
 The parameter name added to the PSCustomObject object must match exactly the input parameter name for the `Set-SPFarmConfig` cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

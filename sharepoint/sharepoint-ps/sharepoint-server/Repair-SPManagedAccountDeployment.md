@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/repair-spmanagedaccountdeployment
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/repair-spmanagedaccountdeployment
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Repair-SPManagedAccountDeployment
 schema: 2.0.0
@@ -28,7 +28,7 @@ Use the `Repair-SPManagedAccountDeployment` cmdlet to repair the local deploymen
 It re-deploys each local service and Web applications credentials and also determines if the passphrase is not correct on the server and repairs provides warnings accordingly.
 The `Repair-SPManagedAccountDeployment` cmdlet should not be used as part of the regular credential update process, but should be one of the first troubleshooting steps, specifically if a servers' services are failing to start when other servers' services are working correctly.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

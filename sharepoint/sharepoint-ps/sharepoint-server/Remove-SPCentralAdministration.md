@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spcentraladministration
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spcentraladministration
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPCentralAdministration
 schema: 2.0.0
