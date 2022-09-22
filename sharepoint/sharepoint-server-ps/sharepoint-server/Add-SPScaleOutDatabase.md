@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/add-spscaleoutdatabase
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/add-spscaleoutdatabase
 applicable: SharePoint Server Subscription Edition
 title: Add-SPScaleOutDatabase
 schema: 2.0.0
@@ -27,7 +27,7 @@ Add-SPScaleOutDatabase -DatabaseName <String> -ServiceApplication <SPServiceAppl
 ## DESCRIPTION
 Use the Add-SPScaleOutDatabase cmdlet to add an existing scale-out database to the specified service application by using the ServiceApplication parameter or creates a new scale-out database and adds it to the specified service application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -210,4 +210,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-SPScaleOutDatabase](Remove-SPScaleOutDatabase.md)
 
 [Split-SPScaleOutDatabase](Split-SPScaleOutDatabase.md)
-

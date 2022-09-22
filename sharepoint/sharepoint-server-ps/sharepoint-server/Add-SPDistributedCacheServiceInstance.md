@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/add-spdistributedcacheserviceinstance
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/add-spdistributedcacheserviceinstance
 applicable: SharePoint Server Subscription Edition
 title: Add-SPDistributedCacheServiceInstance
 schema: 2.0.0
@@ -133,4 +133,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Remove-SPDistributedCacheServiceInstance](Remove-SPDistributedCacheServiceInstance.md)
-

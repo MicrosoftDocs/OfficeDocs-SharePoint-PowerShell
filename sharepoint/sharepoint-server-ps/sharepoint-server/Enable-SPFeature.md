@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/enable-spfeature
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/enable-spfeature
 applicable: SharePoint Server Subscription Edition
 title: Enable-SPFeature
 schema: 2.0.0
@@ -38,7 +38,7 @@ If you try to use the Url parameter on a farm-scoped feature, you receive the fo
 
 The feature '\<feature name\>' applies to the entire farm; the Url parameter cannot be used with farm-scoped features.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -213,4 +213,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spappacquisitionconfiguration
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spappacquisitionconfiguration
 applicable: SharePoint Server Subscription Edition
 title: Get-SPAppAcquisitionConfiguration
 schema: 2.0.0
@@ -125,4 +125,3 @@ Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 ## RELATED LINKS
 
 [Set-SPAppAcquisitionConfiguration](Set-SPAppAcquisitionConfiguration.md)
-

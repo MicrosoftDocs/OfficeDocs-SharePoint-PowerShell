@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/update-spsolution
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/update-spsolution
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Update-SPSolution
 schema: 2.0.0
@@ -29,7 +29,7 @@ The `Update-SPSolution` cmdlet upgrades a deployed SharePoint solution in the fa
 Use this cmdlet only if a new solution contains the same set of files and features as the deployed solution.
 If files and features are different, the solution must be retracted and redeployed by using the `Uninstall-SPSolution` and `Install-SPSolution` cmdlets, respectively.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

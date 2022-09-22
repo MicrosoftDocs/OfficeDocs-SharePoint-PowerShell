@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spsecuritytokenserviceconfig
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spsecuritytokenserviceconfig
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPSecurityTokenServiceConfig
 schema: 2.0.0
@@ -75,7 +75,7 @@ Set-SPSecurityTokenServiceConfig [-AssignmentCollection <SPAssignmentCollection>
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see [Cmdlet parameter sets](https://docs.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
 
 The `Set-SPSecurityTokenServiceConfig` cmdlet updates the settings of the SharePoint security token service (STS) identity provider.
 If a certificate file is used, the certificate must be an X509 certificate with private keys, otherwise an exception is raised.
@@ -83,7 +83,7 @@ If a certificate file is used, the certificate must be an X509 certificate with 
 This cmdlet operates only with certificates that can be exported.
 To create a certificate which can be used in this cmdlet specify the X509KeyStorageFlags.Exportable bit in the keyStorageFlags parameter of the x509Certificate2 object constructor.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

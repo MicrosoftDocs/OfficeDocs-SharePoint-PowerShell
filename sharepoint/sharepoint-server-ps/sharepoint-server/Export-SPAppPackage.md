@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/export-spapppackage
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/export-spapppackage
 applicable: SharePoint Server Subscription Edition
 title: Export-SPAppPackage
 schema: 2.0.0
@@ -23,7 +23,7 @@ Export-SPAppPackage -App <SPApp> -Path <String> [-AssignmentCollection <SPAssign
 ## DESCRIPTION
 Use the Export-SPAppPackage cmdlet to export an app package from the content database.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -103,4 +103,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Import-SPAppPackage](Import-SPAppPackage.md)
-

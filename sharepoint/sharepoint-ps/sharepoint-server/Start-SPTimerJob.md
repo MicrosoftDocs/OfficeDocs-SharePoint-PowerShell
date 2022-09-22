@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/start-sptimerjob
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/start-sptimerjob
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Start-SPTimerJob
 schema: 2.0.0
@@ -26,7 +26,7 @@ Start-SPTimerJob [-Identity] <SPTimerJobPipeBind> [-AssignmentCollection <SPAssi
 ## DESCRIPTION
 The `Start-SPTimerJob` cmdlet runs a timer job once on each front-end Web server where the parent service is provisioned.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
