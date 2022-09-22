@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spalternateurl
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spalternateurl
 applicable: SharePoint Server Subscription Edition
 title: Set-SPAlternateURL
 schema: 2.0.0
@@ -24,7 +24,7 @@ Set-SPAlternateURL [-Identity] <SPAlternateUrlPipeBind> [-Url <String>] [-Zone <
 The `Set-SPAlternateUrl` cmdlet changes the URL or zone of the alternate URL specified by the Identity parameter.
 This cmdlet can be used to change only the zone of internal URLs and cannot be used to change the zone of public URLs.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

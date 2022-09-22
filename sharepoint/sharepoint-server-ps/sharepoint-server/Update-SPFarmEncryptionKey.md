@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/update-spfarmencryptionkey
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/update-spfarmencryptionkey
 applicable: SharePoint Server Subscription Edition
 title: Update-SPFarmEncryptionKey
 schema: 2.0.0
@@ -24,7 +24,7 @@ Update-SPFarmEncryptionKey [-AssignmentCollection <SPAssignmentCollection>] [-Co
 The `Update-SPFarmEncryptionKey` cmdlet changes the farm encryption key to a new randomly generated value.
 When the new key is used, all the data is re-encrypted.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

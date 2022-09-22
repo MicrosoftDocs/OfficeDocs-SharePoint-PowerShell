@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spdistributedcacheclientsetting
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spdistributedcacheclientsetting
 applicable: SharePoint Server Subscription Edition
 title: Set-SPDistributedCacheClientSetting
 schema: 2.0.0
@@ -25,7 +25,7 @@ Set-SPDistributedCacheClientSetting [-ContainerType] <SPDistributedCacheContaine
 Use the `Set-SPDistributedCacheClientSettings` cmdlet to set the distributed cache service based on usage.
 Usage can be any type of cache that the ContainerType parameter specifies.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

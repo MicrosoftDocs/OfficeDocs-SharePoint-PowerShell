@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spinfopathformtemplate
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spinfopathformtemplate
 applicable: SharePoint Server Subscription Edition
 title: Set-SPInfoPathFormTemplate
 schema: 2.0.0
@@ -24,7 +24,7 @@ Set-SPInfoPathFormTemplate [-Identity] <SPFormTemplatePipeBind>
 ## DESCRIPTION
 The `Set-SPInfoPathFormsTemplate` cmdlet modifies the category of an InfoPath form template or to specify the browser streams for the form template.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

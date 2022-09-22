@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/stop-spenterprisesearchserviceinstance
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/stop-spenterprisesearchserviceinstance
 applicable: SharePoint Server Subscription Edition
 title: Stop-SPEnterpriseSearchServiceInstance
 schema: 2.0.0

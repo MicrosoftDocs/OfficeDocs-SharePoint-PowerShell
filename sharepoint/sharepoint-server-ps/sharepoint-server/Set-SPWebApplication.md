@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spwebapplication
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spwebapplication
 applicable: SharePoint Server Subscription Edition
 title: Set-SPWebApplication
 schema: 2.0.0
@@ -52,7 +52,7 @@ Set-SPWebApplication [-Identity] <SPWebApplicationPipeBind> -SMTPServer <String>
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see [Cmdlet parameter sets](https://docs.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
 
 The `Set-SPWebApplication` cmdlet configures the web application specified by the Identity parameter.
 For any settings that are zone-specific (for the Zone parameter set), the zone to configure must be provided.
@@ -60,7 +60,7 @@ The provided zone must already exist.
 
 All IIS binding settings should be respecified when updating the binding of an IIS website via the `Set-SPWebApplication` cmdlet. This includes the URL, secure sockets layer setting, the port number, the host header, and the certificate. If a binding setting isn't respecified, it will revert to its default value.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

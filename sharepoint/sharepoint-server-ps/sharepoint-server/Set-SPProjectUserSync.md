@@ -1,7 +1,7 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spprojectusersync
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spprojectusersync
 Applicable: SharePoint Server Subscription Edition
 title: Set-SPProjectUserSync
 schema: 2.0.0

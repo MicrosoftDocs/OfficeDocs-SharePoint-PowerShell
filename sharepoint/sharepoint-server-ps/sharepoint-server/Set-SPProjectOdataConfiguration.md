@@ -1,7 +1,7 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spprojectodataconfiguration
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spprojectodataconfiguration
 Applicable: SharePoint Server Subscription Edition
 title: Set-SPProjectOdataConfiguration
 schema: 2.0.0

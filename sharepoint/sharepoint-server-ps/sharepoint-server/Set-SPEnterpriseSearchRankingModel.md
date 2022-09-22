@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spenterprisesearchrankingmodel
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spenterprisesearchrankingmodel
 applicable: SharePoint Server Subscription Edition
 title: Set-SPEnterpriseSearchRankingModel
 schema: 2.0.0
@@ -26,7 +26,7 @@ This cmdlet updates properties of a ranking model for a search service applicati
 The name, description, and identifier (ID) for a ranking model are contained in the .xml file specified in RankingModelXML.
 If the Identity parameter is not specified or the identity does not match any of the ranking models in the collection, an exception is thrown and the default ranking model is used.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

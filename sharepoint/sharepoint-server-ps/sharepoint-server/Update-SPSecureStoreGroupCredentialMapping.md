@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/update-spsecurestoregroupcredentialmapping
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/update-spsecurestoregroupcredentialmapping
 applicable: SharePoint Server Subscription Edition
 title: Update-SPSecureStoreGroupCredentialMapping
 schema: 2.0.0
@@ -25,7 +25,7 @@ Group credentials are a set of credentials that are associated with multiple ide
 Target applications will get credentials for a Secure Store application by using the current user.
 If the current user meets the authorization rule defined in the Secure Store application for the group credentials, then the data is provided.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

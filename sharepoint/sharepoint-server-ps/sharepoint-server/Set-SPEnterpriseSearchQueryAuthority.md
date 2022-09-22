@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spenterprisesearchqueryauthority
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spenterprisesearchqueryauthority
 applicable: SharePoint Server Subscription Edition
 title: Set-SPEnterpriseSearchQueryAuthority
 schema: 2.0.0
@@ -24,7 +24,7 @@ Set-SPEnterpriseSearchQueryAuthority [-AssignmentCollection <SPAssignmentCollect
 The `Set-SPEnterpriseSearchQueryAuthority` cmdlet updates properties of an authoritative page and adjusts the query rank of an authoritative page.
 SPEnterpriseSearchQueryAuthority represents authoritative sites that rank higher in relevance than demoted sites, which are de-emphasized in relevance.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

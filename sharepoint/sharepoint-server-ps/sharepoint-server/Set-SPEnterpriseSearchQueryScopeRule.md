@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spenterprisesearchqueryscoperule
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spenterprisesearchqueryscoperule
 applicable: SharePoint Server Subscription Edition
 title: Set-SPEnterpriseSearchQueryScopeRule
 schema: 2.0.0
@@ -34,7 +34,7 @@ However, you can convert local scopes to result sources, which serve a similar p
 The `Set-SPEnterpriseSearchQueryScopeRule` cmdlet updates the properties of a query scope.
 SPEnterpriseSearchQueryScopeRule represents a query results scope rule that can be applied to a scope.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

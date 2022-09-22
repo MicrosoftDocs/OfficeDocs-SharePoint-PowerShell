@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-sptrustedrootauthority
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-sptrustedrootauthority
 applicable: SharePoint Server Subscription Edition
 title: Set-SPTrustedRootAuthority
 schema: 2.0.0
@@ -33,7 +33,7 @@ Set-SPTrustedRootAuthority [-Identity] <SPTrustedRootAuthorityPipeBind>
 The `Set-SPTrustedRootAuthority` cmdlet creates a new trusted root authority.
 If a certificate file is used, the certificate must be an X509 certificate without private keys, otherwise an exception is raised.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

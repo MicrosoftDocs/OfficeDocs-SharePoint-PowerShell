@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/stop-spdiagnosticssession
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/stop-spdiagnosticssession
 applicable: SharePoint Server Subscription Edition
 title: Stop-SPDiagnosticsSession
 schema: 2.0.0
@@ -22,7 +22,7 @@ Stop-SPDiagnosticsSession [-AssignmentCollection <SPAssignmentCollection>] [<Com
 ## DESCRIPTION
 Use the `Stop-SPDiagnosticsSession` cmdlet to stop a diagnostic session.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
