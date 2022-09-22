@@ -1,7 +1,7 @@
 ---
 external help file: sharepointserver.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spexceldataconnectionlibrary
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spexceldataconnectionlibrary
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Get-SPExcelDataConnectionLibrary
 schema: 2.0.0
@@ -27,7 +27,7 @@ Get-SPExcelDataConnectionLibrary [[-Identity] <SPExcelDCLPipeBind>]
 The Get-SPExcelDataConnectionLibrary cmdlet gets a library of data connection files that Excel Services Application and the Excel client use to connect to an external data source. 
 Excel Services Application loads data connection files only if they are stored in a data connection library that is in the list of trusted data connection libraries.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -116,4 +116,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -1,7 +1,7 @@
 ---
 external help file: sharepointserver.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-fastsearchspelltuningstatus
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-fastsearchspelltuningstatus
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 author: techwriter40
@@ -49,4 +49,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-FASTSearchSpelltuning](Add-FASTSearchSpelltuning.md)
 
 [Remove-FASTSearchSpelltuning](Remove-FASTSearchSpelltuning.md)
-

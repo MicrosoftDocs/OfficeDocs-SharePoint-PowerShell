@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/export-spmetadatawebservicepartitiondata
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/export-spmetadatawebservicepartitiondata
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Export-SPMetadataWebServicePartitionData
 schema: 2.0.0
@@ -26,7 +26,7 @@ Export-SPMetadataWebServicePartitionData [-Identity] <SPSiteSubscriptionPipeBind
 ## DESCRIPTION
 Use the Export-SPMetadataWebServicePartitionData cmdlet to export the data from a metadata Web service that is associated with the specified site subscription.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -144,4 +144,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

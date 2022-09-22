@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchfileformat
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchfileformat
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPEnterpriseSearchFileFormat
 schema: 2.0.0
@@ -31,7 +31,7 @@ Get-SPEnterpriseSearchFileFormat [[-Identity] <DocumentParserFileFormatPipeBind>
 The Get-SPEnterpriseSearchFileFormat cmdlet returns the file format information for a given format ID.
 If no format ID is provided, the cmdlet returns all the parseable file formats.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 
@@ -124,4 +124,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-SPEnterpriseSearchFileFormatState](Set-SPEnterpriseSearchFileFormatState.md)
 
 [Remove-SPEnterpriseSearchFileFormat](Remove-SPEnterpriseSearchFileFormat.md)
-
