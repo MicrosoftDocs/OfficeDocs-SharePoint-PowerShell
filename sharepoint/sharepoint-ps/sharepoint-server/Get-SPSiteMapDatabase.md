@@ -1,7 +1,7 @@
 ---
 external help file: sharepointserver.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spsitemapdatabase
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spsitemapdatabase
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPSiteMapDatabase
 schema: 2.0.0
@@ -99,4 +99,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spmetadataserviceapplication
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spmetadataserviceapplication
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPMetadataServiceApplication
 schema: 2.0.0
@@ -44,7 +44,7 @@ New-SPMetadataServiceApplication -Name <String> [-AdministratorAccount <String>]
 ## DESCRIPTION
 Use the `New-SPMetadataServiceApplication` cmdlet to create a new managed metadata service application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

@@ -1,7 +1,7 @@
 ---
 external help file: sharepointserver.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spexcelserviceapplication
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spexcelserviceapplication
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: New-SPExcelServiceApplication
 schema: 2.0.0
@@ -50,7 +50,7 @@ New-SPExcelServiceApplication -ApplicationPool <SPIisWebServiceApplicationPoolPi
 The `New-SPExcelServiceApplication` cmdlet creates a new Excel Services Application Web service application with new settings. 
 After you create a new Excel Services Application Web service application, you can use the `Set-SPExcelServiceApplication` cmdlet to modify the global settings of the new application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
