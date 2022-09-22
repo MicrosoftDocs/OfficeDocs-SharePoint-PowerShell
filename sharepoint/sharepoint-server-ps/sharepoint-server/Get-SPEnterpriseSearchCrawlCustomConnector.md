@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchcrawlcustomconnector
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchcrawlcustomconnector
 applicable: SharePoint Server Subscription Edition
 title: Get-SPEnterpriseSearchCrawlCustomConnector
 schema: 2.0.0
@@ -23,7 +23,7 @@ Get-SPEnterpriseSearchCrawlCustomConnector -SearchApplication <SearchServiceAppl
 The Identity parameter displays a custom connector for a specified Web application.
 If no parameters are specified, all the objects of the CustomConnector object type are returned.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -97,5 +97,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-

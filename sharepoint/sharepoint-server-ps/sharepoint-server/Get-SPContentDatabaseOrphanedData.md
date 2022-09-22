@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spcontentdatabaseorphaneddata
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spcontentdatabaseorphaneddata
 Applicable: SharePoint Server Subscription Edition
 title: Get-SPContentDatabaseOrphanedData
 schema: 2.0.0
@@ -76,7 +76,3 @@ For more information, see about_CommonParameters (https://go.microsoft.com/fwlin
 
 
 ## RELATED LINKS
-
-
-
-

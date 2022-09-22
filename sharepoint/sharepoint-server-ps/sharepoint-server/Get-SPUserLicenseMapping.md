@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spuserlicensemapping
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spuserlicensemapping
 applicable: SharePoint Server Subscription Edition
 title: Get-SPUserLicenseMapping
 schema: 2.0.0
@@ -30,7 +30,7 @@ Getting the mappings for the entire farm does not retrieve any specific mappings
 If you specify no parameters, the license mappings for the entire farm are returned.
 To display the license mappings for a specific web application, use the WebApplication parameter.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -110,4 +110,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-SPUserLicenseMapping](Add-SPUserLicenseMapping.md)
 
 [Remove-SPUserLicenseMapping](Remove-SPUserLicenseMapping.md)
-

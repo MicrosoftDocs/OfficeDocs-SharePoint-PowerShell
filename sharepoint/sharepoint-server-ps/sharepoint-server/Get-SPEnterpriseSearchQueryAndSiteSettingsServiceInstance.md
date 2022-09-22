@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchqueryandsitesettingsserviceinstance
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchqueryandsitesettingsserviceinstance
 applicable: SharePoint Server Subscription Edition
 title: Get-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance
 schema: 2.0.0
@@ -23,7 +23,7 @@ Get-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance
 ## DESCRIPTION
 The Get-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance cmdlet returns the service manager service instance when a search manager service is started or stopped.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -109,5 +109,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spmicrofeedoptions
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spmicrofeedoptions
 Applicable: SharePoint Server Subscription Edition
 title: Get-SPMicrofeedOptions
 schema: 2.0.0
@@ -101,4 +101,3 @@ Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 ## NOTES
 
 ## RELATED LINKS
-

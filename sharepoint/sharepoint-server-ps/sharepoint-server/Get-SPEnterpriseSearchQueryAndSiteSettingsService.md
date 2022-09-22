@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchqueryandsitesettingsservice
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchqueryandsitesettingsservice
 applicable: SharePoint Server Subscription Edition
 title: Get-SPEnterpriseSearchQueryAndSiteSettingsService
 schema: 2.0.0
@@ -23,7 +23,7 @@ Get-SPEnterpriseSearchQueryAndSiteSettingsService [-AssignmentCollection <SPAssi
 The Get-SPEnterpriseSearchQueryAndSiteSettingsService cmdlet returns a manager service.
 A manager service is the endpoint for the search service application to process queries and site administration requests from the search service application proxy.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -68,5 +68,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-

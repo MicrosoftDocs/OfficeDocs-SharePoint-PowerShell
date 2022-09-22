@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.WorkflowServices.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spworkflowserviceapplicationproxy
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spworkflowserviceapplicationproxy
 applicable: SharePoint Server Subscription Edition
 title: Get-SPWorkflowServiceApplicationProxy
 schema: 2.0.0
@@ -97,4 +97,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
