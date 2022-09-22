@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/add-sppluggablesecuritytrimmer
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/add-sppluggablesecuritytrimmer
 applicable: SharePoint Server Subscription Edition
 title: Add-SPPluggableSecurityTrimmer
 schema: 2.0.0
@@ -23,7 +23,7 @@ Add-SPPluggableSecurityTrimmer -UserProfileApplicationProxyId <Guid> -PlugInId <
 ## DESCRIPTION
 Use the Add-SPPluggableSecurityTrimmer cmdlet to add a specified pluggable security trimmer to a User Profile service application proxy.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -171,4 +171,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/add-spthrottlingrule
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/add-spthrottlingrule
 applicable: SharePoint Server Subscription Edition
 title: Add-SPThrottlingRule
 schema: 2.0.0
@@ -26,7 +26,7 @@ Add-SPThrottlingRule [-RequestManagementSettings] <SPRequestManagementSettingsPi
 ## DESCRIPTION
 The Add-SPThrottlingRule cmdlet adds a new throttling rule for the farm by using the Name and RequestManagementSettings parameters.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -161,4 +161,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-SPThrottlingRule](Remove-SPThrottlingRule.md)
 
 [Set-SPThrottlingRule](Set-SPThrottlingRule.md)
-

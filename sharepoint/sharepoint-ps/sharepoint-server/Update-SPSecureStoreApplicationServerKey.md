@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/update-spsecurestoreapplicationserverkey
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/update-spsecurestoreapplicationserverkey
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Update-SPSecureStoreApplicationServerKey
 schema: 2.0.0
@@ -32,7 +32,7 @@ Updating a server key is required when:
 --The key stored in the server is not the key required for the current Secure Store service database (because of server or networking issues).
 --The master key is updated but during propagation of the new key, this process fails on one or more of the servers.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

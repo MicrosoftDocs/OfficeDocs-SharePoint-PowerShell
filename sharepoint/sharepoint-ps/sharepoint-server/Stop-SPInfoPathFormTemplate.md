@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/stop-spinfopathformtemplate
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/stop-spinfopathformtemplate
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Stop-SPInfoPathFormTemplate
 schema: 2.0.0
@@ -27,7 +27,7 @@ The `Stop-SPInfoPathFormTemplate` cmdlet quiesces, or disables, an InfoPath form
 Before a form is updated it is quiesced, which disables access to the form.
 Use `Start-SPIPFormTemplate` to unquiesce, or activate, a form template after the form is upgraded.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/disable-spbusinessdatacatalogentity
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/disable-spbusinessdatacatalogentity
 applicable: SharePoint Server Subscription Edition
 title: Disable-SPBusinessDataCatalogEntity
 schema: 2.0.0
@@ -25,7 +25,7 @@ Disable-SPBusinessDataCatalogEntity -Identity <Entity> [-AssignmentCollection <S
 ## DESCRIPTION
 The Disable-SPBusinessDataCatalogEntity cmdlet deactivates an External Content type in the Business Data Connectivity Metadata Store.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -122,4 +122,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

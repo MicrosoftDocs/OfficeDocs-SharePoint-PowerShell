@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/add-spprofileleader
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/add-spprofileleader
 applicable: SharePoint Server Subscription Edition
 title: Add-SPProfileLeader
 schema: 2.0.0
@@ -159,4 +159,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

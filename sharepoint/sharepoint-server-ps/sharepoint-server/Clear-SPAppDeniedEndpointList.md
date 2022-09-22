@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/clear-spappdeniedendpointlist
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/clear-spappdeniedendpointlist
 applicable: SharePoint Server Subscription Edition
 title: Clear-SPAppDeniedEndpointList
 schema: 2.0.0
@@ -24,7 +24,7 @@ Clear-SPAppDeniedEndpointList [-AssignmentCollection <SPAssignmentCollection>] [
 
 Use the Clear-SPAppDeniedEndpoint cmdlet to remove all app-denied endpoints in the farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 
@@ -125,4 +125,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-SPAppDeniedEndpointList](Get-SPAppDeniedEndpointList.md)
-

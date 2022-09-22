@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/clear-sploglevel
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/clear-sploglevel
 applicable: SharePoint Server Subscription Edition
 title: Clear-SPLogLevel
 schema: 2.0.0
@@ -26,7 +26,7 @@ Clear-SPLogLevel [-AssignmentCollection <SPAssignmentCollection>] [-Identity <St
 The Clear-SPLogLevel cmdlet resets the Windows event logging and trace logging levels for the specified categories to the default values.
 If the Identity parameter is not provided, all categories are affected.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -129,4 +129,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

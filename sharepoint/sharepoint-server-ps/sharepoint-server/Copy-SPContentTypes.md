@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/copy-spcontenttypes
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/copy-spcontenttypes
 applicable: SharePoint Server Subscription Edition
 title: Copy-SPContentTypes
 schema: 2.0.0
@@ -182,4 +182,3 @@ Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 ## NOTES
 
 ## RELATED LINKS
-
