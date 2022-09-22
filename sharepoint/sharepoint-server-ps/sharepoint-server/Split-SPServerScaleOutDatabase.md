@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/split-spserverscaleoutdatabase
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/split-spserverscaleoutdatabase
 applicable: SharePoint Server Subscription Edition
 title: Split-SPServerScaleOutDatabase
 schema: 2.0.0

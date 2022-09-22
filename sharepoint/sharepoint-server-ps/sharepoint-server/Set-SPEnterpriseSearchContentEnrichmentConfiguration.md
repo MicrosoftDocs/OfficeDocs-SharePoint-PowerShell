@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spenterprisesearchcontentenrichmentconfiguration
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spenterprisesearchcontentenrichmentconfiguration
 applicable: SharePoint Server Subscription Edition
 title: Set-SPEnterpriseSearchContentEnrichmentConfiguration
 schema: 2.0.0
@@ -26,7 +26,7 @@ Set-SPEnterpriseSearchContentEnrichmentConfiguration
 This cmdlet validates the ContentEntrichmentConfiguration object and stores the provided configuration in the SearchServiceApplication.
 Both a ContentEnrichmentConfiguration and a SearchServiceApplication object have to be provided.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

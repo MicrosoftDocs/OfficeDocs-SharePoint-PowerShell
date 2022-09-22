@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/unpublish-spserviceapplication
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/unpublish-spserviceapplication
 applicable: SharePoint Server Subscription Edition
 title: Unpublish-SPServiceApplication
 schema: 2.0.0
@@ -23,7 +23,7 @@ Unpublish-SPServiceApplication [-Identity] <SPServiceApplicationPipeBind>
 ## DESCRIPTION
 Use the `Unpublish-SPServiceApplication` cmdlet to stop publishing the service application, specified by the Identity parameter, outside the farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

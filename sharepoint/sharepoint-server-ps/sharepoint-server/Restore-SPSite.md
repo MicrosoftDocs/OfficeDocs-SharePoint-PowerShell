@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/restore-spsite
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/restore-spsite
 applicable: SharePoint Server Subscription Edition
 title: Restore-SPSite
 schema: 2.0.0
@@ -32,7 +32,7 @@ Restore-SPSite [-Identity] <String> -Path <String> [-AssignmentCollection <SPAss
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see [Cmdlet parameter sets](https://docs.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
 
 The `Restore-SPSite` cmdlet performs a restoration of the site collection to a location specified by the Identity parameter.
 A content database may only contain one copy of a site collection.

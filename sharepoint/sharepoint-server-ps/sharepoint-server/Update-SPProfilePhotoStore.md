@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/update-spprofilephotostore
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/update-spprofilephotostore
 applicable: SharePoint Server Subscription Edition
 title: Update-SPProfilePhotoStore
 schema: 2.0.0
@@ -33,7 +33,7 @@ You just need to specify the starting portion of the URL that has changed from o
 
 For example, OldBaseUri: https://server1/my/ProfilePhotos; NewBaseUri: https://server1/my/NewLocation/ProfilePhotos
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

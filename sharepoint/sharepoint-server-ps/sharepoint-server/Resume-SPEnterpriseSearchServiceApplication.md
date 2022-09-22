@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/resume-spenterprisesearchserviceapplication
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/resume-spenterprisesearchserviceapplication
 applicable: SharePoint Server Subscription Edition
 title: Resume-SPEnterpriseSearchServiceApplication
 schema: 2.0.0
@@ -22,7 +22,7 @@ Resume-SPEnterpriseSearchServiceApplication [-Identity] <SearchServiceApplicatio
 ## DESCRIPTION
 This cmdlet reads the SearchServiceApplication object and moves it from the Paused for: External Request status to the Resumed status.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
