@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/New-SPOTenantOrgRelation
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/New-SPOTenantOrgRelation
 applicable: SharePoint Online
 title: New-SPOTenantOrgRelation
 schema: 2.0.0

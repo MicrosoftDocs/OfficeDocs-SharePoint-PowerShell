@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/connect-sposervice
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/connect-sposervice
 applicable: SharePoint Online
 title: Connect-SPOService
 schema: 2.0.0
@@ -46,7 +46,7 @@ A delegated partner administrator has to swap connections for different organiza
 
 You must be a SharePoint Online administrator or Global Administrator to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
 ## EXAMPLES
 
@@ -190,6 +190,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Introduction to the SharePoint Online management shell](https://support.office.com/en-us/article/introduction-to-the-sharepoint-online-management-shell-c16941c3-19b4-4710-8056-34c034493429)
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Disconnect-SPOService](Disconnect-SPOService.md)

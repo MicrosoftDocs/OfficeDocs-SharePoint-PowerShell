@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/add-spogeoadministrator
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/add-spogeoadministrator
 applicable: SharePoint Online
 title: Add-SPOGeoAdministrator
 schema: 2.0.0
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 
 ### -ObjectId
 
-Not all security groups have a group alias. If you want to add a security group that does not have an alias, run Get-MsolGroup to retrieve a list of groups, find your security group's ObjectID, and then use this parameter. For more information, see [Add or remove a geo administrator in Microsoft 365 Multi-Geo](https://docs.microsoft.com/office365/enterprise/add-a-sharepoint-geo-admin).
+Not all security groups have a group alias. If you want to add a security group that does not have an alias, run Get-MsolGroup to retrieve a list of groups, find your security group's ObjectID, and then use this parameter. For more information, see [Add or remove a geo administrator in Microsoft 365 Multi-Geo](https://learn.microsoft.com/office365/enterprise/add-a-sharepoint-geo-admin).
 
 ```yaml
 Type: Guid
@@ -113,7 +113,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
 

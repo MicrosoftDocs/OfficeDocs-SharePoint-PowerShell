@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/request-spopersonalsite
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/request-spopersonalsite
 applicable: SharePoint Online
 title: Request-SPOPersonalSite
 schema: 2.0.0

@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spositegroup
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spositegroup
 applicable: SharePoint Online
 title: Get-SPOSiteGroup
 schema: 2.0.0
@@ -28,7 +28,7 @@ Use the `Get-SPOSiteGroup` cmdlet to get all the groups on the specified site co
 
 You must be a SharePoint Online administrator and a site collection administrator to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [SharePoint Online PowerShell](https://docs.microsoft.com/powershell/module/sharepoint-online/index).
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [SharePoint Online PowerShell](https://learn.microsoft.com/powershell/module/sharepoint-online/index).
 
 ## EXAMPLES
 
@@ -105,7 +105,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Set-SPOSiteGroup](Set-SPOSiteGroup.md)
 

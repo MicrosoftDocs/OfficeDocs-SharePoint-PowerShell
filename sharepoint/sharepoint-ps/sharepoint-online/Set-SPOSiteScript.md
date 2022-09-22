@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spositescript
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spositescript
 applicable: SharePoint Online
 title: Set-SPOSiteScript
 schema: 2.0.0
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 
 ### -Content
 
-The JSON value that describes the script. For more information, see the [JSON reference](https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-json-schema).
+The JSON value that describes the script. For more information, see the [JSON reference](https://learn.microsoft.com/sharepoint/dev/declarative-customization/site-design-json-schema).
 
 ```yaml
 Type: String

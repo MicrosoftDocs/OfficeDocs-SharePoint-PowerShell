@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/submit-spomigrationjob
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/submit-spomigrationjob
 applicable: SharePoint Online
 title: Submit-SPOMigrationJob
 schema: 2.0.0
@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-**Note**: This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](https://docs.microsoft.com/sharepointmigration/overview-spmt-ps-cmdlets).
+**Note**: This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](https://learn.microsoft.com/sharepointmigration/overview-spmt-ps-cmdlets).
 
 Cmdlet to submit a new migration job referenced to a previously uploaded package in Azure Blob storage into to a site collection.
 
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 
 ### -EncryptionParameters
 
-An EncryptionParameters object. See [New-SPOMigrationEncryptionParameters](https://docs.microsoft.com/powershell/module/sharepoint-online/new-spomigrationencryptionparameters) for more information.
+An EncryptionParameters object. See [New-SPOMigrationEncryptionParameters](https://learn.microsoft.com/powershell/module/sharepoint-online/new-spomigrationencryptionparameters) for more information.
 
 ```yaml
 Type: EncryptionParameters
