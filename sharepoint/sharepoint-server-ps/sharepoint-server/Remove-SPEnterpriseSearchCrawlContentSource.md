@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spenterprisesearchcrawlcontentsource
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spenterprisesearchcrawlcontentsource
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPEnterpriseSearchCrawlContentSource
 schema: 2.0.0
@@ -24,7 +24,7 @@ Remove-SPEnterpriseSearchCrawlContentSource [-Identity] <ContentSourcePipeBind>
 ## DESCRIPTION
 The `Remove-SPEnterpriseSearchCrawlContentSource` cmdlet deletes a specified crawl content source from a service application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

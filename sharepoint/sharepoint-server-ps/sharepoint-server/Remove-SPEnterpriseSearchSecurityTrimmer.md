@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spenterprisesearchsecuritytrimmer
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spenterprisesearchsecuritytrimmer
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPEnterpriseSearchSecurityTrimmer
 schema: 2.0.0
@@ -25,7 +25,7 @@ Remove-SPEnterpriseSearchSecurityTrimmer [[-Identity] <SecurityTrimmerPipeBind>]
 This cmdlet deletes the customized security trimmer that is used for a search application's query results.
 A custom security trimmer trims search results before the results are returned to the user.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

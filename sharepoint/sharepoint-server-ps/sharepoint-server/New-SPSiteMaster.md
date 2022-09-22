@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spsitemaster
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spsitemaster
 Applicable: SharePoint Server Subscription Edition
 title: New-SPSiteMaster
 schema: 2.0.0

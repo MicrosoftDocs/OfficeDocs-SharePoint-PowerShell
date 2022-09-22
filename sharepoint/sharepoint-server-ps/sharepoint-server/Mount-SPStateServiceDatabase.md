@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/mount-spstateservicedatabase
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/mount-spstateservicedatabase
 applicable: SharePoint Server Subscription Edition
 title: Mount-SPStateServiceDatabase
 schema: 2.0.0
@@ -24,7 +24,7 @@ Mount-SPStateServiceDatabase [-Name] <String> [-AssignmentCollection <SPAssignme
 The Mount-SPStateServiceDatabase cmdlet attaches an existing state service database to the farm.
 If the session state database schema is not installed in the state service database, use the Initialize-SPStateServiceDatabase cmdlet to install the schema after the state service database has been mounted.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -171,4 +171,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

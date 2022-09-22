@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spenterprisesearchquerydemoted
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spenterprisesearchquerydemoted
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPEnterpriseSearchQueryDemoted
 schema: 2.0.0
@@ -25,7 +25,7 @@ Remove-SPEnterpriseSearchQueryDemoted [-Identity] <DemotedPipeBind> -Owner <Sear
 The `Remove-SPEnterpriseSearchQueryDemoted` cmdlet adjusts query rank by deleting a demoted site rule from the demoted site collection.
 Query demoted sites are de-emphasized in relevance.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

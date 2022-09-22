@@ -1,7 +1,7 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/migrate-spprojectresourceplans
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/migrate-spprojectresourceplans
 Applicable: SharePoint Server Subscription Edition
 title: Migrate-SPProjectResourcePlans
 schema: 2.0.0
@@ -80,4 +80,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

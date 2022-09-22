@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spsitesubscriptionsettings
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spsitesubscriptionsettings
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPSiteSubscriptionSettings
 schema: 2.0.0
@@ -32,7 +32,7 @@ Remove-SPSiteSubscriptionSettings [-Identity] <SPServiceApplicationPipeBind> -Si
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see [Cmdlet parameter sets](https://docs.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
 
 The `Remove-SPSiteSubscriptionSettings` cmdlet deletes site subscription stored data for the specified site subscription.
 If the FindAllOrphans parameter is specified, this cmdlet locates any data in the service application that does not exist in the list of local site subscriptions or the alternate list of subscriptions.
@@ -41,7 +41,7 @@ The set of site subscriptions can be specified directly, or discovered by compar
 
 If this cmdlet is run on a federated service application without specifying the complete list of site subscription IDs for the AlternativeSiteSubscriptions parameter, data loss can result.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

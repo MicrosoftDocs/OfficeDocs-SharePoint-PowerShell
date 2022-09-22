@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/register-spappprincipal
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/register-spappprincipal
 applicable: SharePoint Server Subscription Edition
 title: Register-SPAppPrincipal
 schema: 2.0.0

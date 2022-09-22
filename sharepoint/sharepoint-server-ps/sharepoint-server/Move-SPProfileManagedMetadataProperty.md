@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/move-spprofilemanagedmetadataproperty
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/move-spprofilemanagedmetadataproperty
 applicable: SharePoint Server Subscription Edition
 title: Move-SPProfileManagedMetadataProperty
 schema: 2.0.0
@@ -28,7 +28,7 @@ Any new values you add to the property after running the cmdlet will be moved in
 
 After a user profile application has been upgraded from Office SharePoint Server, single-string and multiple-string value properties are not available for use unless the Move-SPProfileManagedMetadataProperty cmdlet is run to map them to term sets within Managed Metadata Service.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -175,4 +175,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
