@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/enable-spocommsite
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/enable-spocommsite
 applicable: SharePoint Online
 title: Enable-SPOCommSite
 schema: 2.0.0
@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Enables the  communication site experience on an existing classic team site. Please read instructions in [modernize classic team site](https://docs.microsoft.com/en-us/sharepoint/modernize-classic-team-site) before attempting to execute this cmdlet.
+Enables the  communication site experience on an existing classic team site. Please read instructions in [modernize classic team site](https://learn.microsoft.com/sharepoint/modernize-classic-team-site) before attempting to execute this cmdlet.
 
 ## SYNTAX
 
@@ -67,7 +67,7 @@ If the site URL input points to a site that does not exist, you will see the fol
 
 **Error case 4: Classic publishing feature is currently enabled**
 
-We do not support sites that currently have or have had in the past enabled the classic publishing features. If you see this error, your site is not eligible for this feature enablement. Please check [requirements for this feature](https://docs.microsoft.com/sharepoint/modernize-classic-team-site).
+We do not support sites that currently have or have had in the past enabled the classic publishing features. If you see this error, your site is not eligible for this feature enablement. Please check [requirements for this feature](https://learn.microsoft.com/sharepoint/modernize-classic-team-site).
 
 >*Enable-SPOCommSite : The operation cannot be performed because the Publishing feature is enabled on the site.*
 

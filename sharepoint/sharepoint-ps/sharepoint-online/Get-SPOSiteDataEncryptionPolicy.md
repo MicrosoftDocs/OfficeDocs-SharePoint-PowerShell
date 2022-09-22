@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spositedataencryptionpolicy
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spositedataencryptionpolicy
 applicable: SharePoint Online
 title: Get-SPOSiteDataEncryptionPolicy
 schema: 2.0.0
@@ -80,8 +80,8 @@ The encryption status for the geo. Possible states include:
 
 ## RELATED LINKS
 
-[Register-SPODataEncryptionPolicy](https://docs.microsoft.com/powershell/module/sharepoint-online/register-spodataencryptionpolicy)
+[Register-SPODataEncryptionPolicy](https://learn.microsoft.com/powershell/module/sharepoint-online/register-spodataencryptionpolicy)
 
-[Controlling your data in Office 365 using Customer Key](https://docs.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key)
+[Controlling your data in Office 365 using Customer Key](https://learn.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key)
 
-[Office 365: Setting up Customer Key for SharePoint Online and OneDrive for Business](https://docs.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key#office-365-setting-up-customer-key-for-sharepoint-online-and-onedrive-for-business)
+[Office 365: Setting up Customer Key for SharePoint Online and OneDrive for Business](https://learn.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key#office-365-setting-up-customer-key-for-sharepoint-online-and-onedrive-for-business)

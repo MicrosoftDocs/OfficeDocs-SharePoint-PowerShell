@@ -1,7 +1,7 @@
 ---
 external help file:
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/approve-spotenantserviceprincipalpermissiongrant
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/approve-spotenantserviceprincipalpermissiongrant
 applicable: SharePoint Online
 title: Approve-SPOTenantServicePrincipalPermissionGrant
 schema: 2.0.0

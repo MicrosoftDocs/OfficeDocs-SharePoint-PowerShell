@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/Get-SPOTenantOrgRelation
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Get-SPOTenantOrgRelation
 applicable: SharePoint Online
 title: Get-SPOTenantOrgRelation
 schema: 2.0.0

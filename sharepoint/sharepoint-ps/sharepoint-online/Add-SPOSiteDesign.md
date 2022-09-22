@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/add-spositedesign
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/add-spositedesign
 applicable: SharePoint Online
 title: Add-SPOSiteDesign
 schema: 2.0.0
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ### -WebTemplate
 
 Identifies which base template to add the design to. Use the value **64** for the Team site template, and the value **68** for the Communication site template.
-For more information, visit [SharePoint site design and site script overview](https://docs.microsoft.com/sharepoint/dev/declarative-customization/site-design-overview).
+For more information, visit [SharePoint site design and site script overview](https://learn.microsoft.com/sharepoint/dev/declarative-customization/site-design-overview).
 
 ```yaml
 Type: String
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 
 ### -IsDefault
 
-A switch that if provided, applies the site design to the default site template. For more information, see [Customize a default site design](https://docs.microsoft.com/sharepoint/dev/declarative-customization/customize-default-site-design).
+A switch that if provided, applies the site design to the default site template. For more information, see [Customize a default site design](https://learn.microsoft.com/sharepoint/dev/declarative-customization/customize-default-site-design).
 
 ```yaml
 Type: SwitchParameter
