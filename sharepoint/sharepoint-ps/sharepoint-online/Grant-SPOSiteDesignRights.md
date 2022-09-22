@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/grant-spositedesignrights
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/grant-spositedesignrights
 applicable: SharePoint Online
 title: Grant-SPOSiteDesignRights
 schema: 2.0.0

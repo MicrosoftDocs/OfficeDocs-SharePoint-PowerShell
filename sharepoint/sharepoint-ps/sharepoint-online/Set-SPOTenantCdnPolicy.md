@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spotenantcdnpolicy
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spotenantcdnpolicy
 applicable: SharePoint Online
 title: Set-SPOTenantCdnPolicy
 schema: 2.0.0

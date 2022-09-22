@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spohomesite
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spohomesite
 applicable: SharePoint Online
 title: Set-SPOHomeSite
 schema: 2.0.0
@@ -24,7 +24,7 @@ Set-SPOHomeSite [-HomeSiteUrl] <String> [<CommonParameters>]
 
 ## DESCRIPTION
 
-Use this cmdlet to set a SharePoint Site as a Home Site. A home site is a communication site that you create and set as the top landing page for all users in your intranet. For more information, see [Set up a home site for your organization](https://docs.microsoft.com/SharePoint/home-site)
+Use this cmdlet to set a SharePoint Site as a Home Site. A home site is a communication site that you create and set as the top landing page for all users in your intranet. For more information, see [Set up a home site for your organization](https://learn.microsoft.com/SharePoint/home-site)
 
 ## EXAMPLES
 

@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/new-spomigrationpackage
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/new-spomigrationpackage
 applicable: SharePoint Online
 title: New-SPOMigrationPackage
 schema: 2.0.0
@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-**Note**: This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](https://docs.microsoft.com/sharepointmigration/overview-spmt-ps-cmdlets).
+**Note**: This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](https://learn.microsoft.com/sharepointmigration/overview-spmt-ps-cmdlets).
 
 Cmdlet to create a new migration package based on source files in a local or network shared folder.
 

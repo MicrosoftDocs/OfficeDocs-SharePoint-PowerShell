@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/restore-spodataencryptionpolicy
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/restore-spodataencryptionpolicy
 applicable: SharePoint Online
 title: Restore-SPODataEncryptionPolicy
 schema: 2.0.0
@@ -15,7 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 
 Cmdlet to restore customer encryption status for your geo tenant when in recovery mode.
-For more information, see [Controlling your data in Office 365 using Customer Key](https://docs.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key)
+For more information, see [Controlling your data in Office 365 using Customer Key](https://learn.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key)
 
 ## SYNTAX
 
@@ -26,7 +26,7 @@ Restore-SPODataEncryptionPolicy -PrimaryKeyVaultName <string>  -PrimaryKeyName <
 ## DESCRIPTION
 
 Use the cmdlet to restore customer encryption status for your geo tenant when in recovery mode.
-For more information, see [Controlling your data in Office 365 using Customer Key](https://docs.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key)
+For more information, see [Controlling your data in Office 365 using Customer Key](https://learn.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key)
 
 ## EXAMPLES
 

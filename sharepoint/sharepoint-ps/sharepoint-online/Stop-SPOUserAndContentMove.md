@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/stop-spouserandcontentmove
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/stop-spouserandcontentmove
 applicable: SharePoint Online
 title: Stop-SPOUserAndContentMove
 schema: 2.0.0

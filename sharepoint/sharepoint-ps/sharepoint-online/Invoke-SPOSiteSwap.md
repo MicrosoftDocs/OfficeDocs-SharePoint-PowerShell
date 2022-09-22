@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/invoke-spositeswap
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/invoke-spositeswap
 applicable: SharePoint Online
 title: Invoke-SPOSiteSwap
 schema: 2.0.0
@@ -208,7 +208,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
-[Modernize your root site](https://docs.microsoft.com/sharepoint/modern-root-site)
-[Manage site redirects](https://docs.microsoft.com/sharepoint/manage-site-redirects)
-[Page Diagnostic Tool](https://docs.microsoft.com/office365/enterprise/page-diagnostics-for-spo)
+[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Modernize your root site](https://learn.microsoft.com/sharepoint/modern-root-site)
+[Manage site redirects](https://learn.microsoft.com/sharepoint/manage-site-redirects)
+[Page Diagnostic Tool](https://learn.microsoft.com/office365/enterprise/page-diagnostics-for-spo)

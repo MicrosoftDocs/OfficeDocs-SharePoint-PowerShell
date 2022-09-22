@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/remove-spoorgassetslibrary
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spoorgassetslibrary
 applicable: SharePoint Online
 title: Remove-SPOOrgAssetsLibrary
 author: Maralesfahanpoor
@@ -81,8 +81,8 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Add-SPOOrgAssetsLibrary](https://docs.microsoft.com/powershell/module/sharepoint-online/add-spoorgassetslibrary?view=sharepoint-ps)
+[Add-SPOOrgAssetsLibrary](https://learn.microsoft.com/powershell/module/sharepoint-online/add-spoorgassetslibrary?view=sharepoint-ps)
 
-[Set-SPOOrgAssetsLibrary](https://docs.microsoft.com/powershell/module/sharepoint-online/set-spoorgassetslibrary?view=sharepoint-ps)
+[Set-SPOOrgAssetsLibrary](https://learn.microsoft.com/powershell/module/sharepoint-online/set-spoorgassetslibrary?view=sharepoint-ps)
 
-[Get-SPOOrgAssetsLibrary](https://docs.microsoft.com/powershell/module/sharepoint-online/get-spoorgassetslibrary?view=sharepoint-ps)
+[Get-SPOOrgAssetsLibrary](https://learn.microsoft.com/powershell/module/sharepoint-online/get-spoorgassetslibrary?view=sharepoint-ps)

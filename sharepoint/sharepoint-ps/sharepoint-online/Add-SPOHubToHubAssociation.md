@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/add-spohubtohubassociation
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/add-spohubtohubassociation
 applicable: SharePoint Online
 title: Add-SPOHubToHubAssociation
 schema: 2.0.0

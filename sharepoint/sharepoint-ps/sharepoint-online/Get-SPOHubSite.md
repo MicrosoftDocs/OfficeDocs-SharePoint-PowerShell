@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spohubsite
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spohubsite
 applicable: SharePoint Online
 title: Get-SPOHubSite
 schema: 2.0.0
@@ -30,7 +30,7 @@ Lists all hub sites found on the SharePoint tenant. If you provide **-Identity**
 If the hub site doesn't exist, this cmdlet returns a "File not found" error.
 
 > [!NOTE]
-> If a deleted hub site appears in the output of this cmdlet you may not have run [Unregister-SPOHubSite](https://docs.microsoft.com/powershell/module/sharepoint-online/unregister-spohubsite) on the deleted hub site.
+> If a deleted hub site appears in the output of this cmdlet you may not have run [Unregister-SPOHubSite](https://learn.microsoft.com/powershell/module/sharepoint-online/unregister-spohubsite) on the deleted hub site.
 
 ## EXAMPLES
 

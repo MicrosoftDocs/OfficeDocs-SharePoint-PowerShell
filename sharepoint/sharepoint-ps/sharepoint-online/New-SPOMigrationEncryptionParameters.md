@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/new-spomigrationencryptionparameters
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/new-spomigrationencryptionparameters
 applicable: SharePoint Online
 title: New-SPOMigrationEncryptionParameters
 schema: 2.0.0
@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-**Note**: This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](https://docs.microsoft.com/sharepointmigration/overview-spmt-ps-cmdlets).
+**Note**: This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](https://learn.microsoft.com/sharepointmigration/overview-spmt-ps-cmdlets).
 
 Creates a new random encryption key for a migration job or package.
 
@@ -48,7 +48,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### System.Byte
 
-EncryptionKey: The randomly generated encryption key using [System.Security.Cryptography.AesCryptoServiceProvider](https://docs.microsoft.com/dotnet/api/system.security.cryptography.aescryptoserviceprovider) class.
+EncryptionKey: The randomly generated encryption key using [System.Security.Cryptography.AesCryptoServiceProvider](https://learn.microsoft.com/dotnet/api/system.security.cryptography.aescryptoserviceprovider) class.
 
 ### Microsoft.Online.SharePoint.Migration.SPMigrationJobEncryptionMethod
 
@@ -65,4 +65,3 @@ EncryptionMethod: The encryption algorithm used to generate the EncryptionKey. C
 [Introduction to the SharePoint Online management shell](https://support.office.com/en-us/article/introduction-to-the-sharepoint-online-management-shell-c16941c3-19b4-4710-8056-34c034493429)
 
 [SharePoint Online Management Shell Download](https://www.microsoft.com/en-US/download/details.aspx?id=35588)
-

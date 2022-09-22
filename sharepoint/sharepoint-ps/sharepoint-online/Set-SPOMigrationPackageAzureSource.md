@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spomigrationpackageazuresource
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spomigrationpackageazuresource
 applicable: SharePoint Online
 title: Set-SPOMigrationPackageAzureSource
 schema: 2.0.0
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 
 ### -EncryptionParameters
 
-An EncryptionParameters object. See [New-SPOMigrationEncryptionParameters](https://docs.microsoft.com/powershell/module/sharepoint-online/new-spomigrationencryptionparameters) for more information.
+An EncryptionParameters object. See [New-SPOMigrationEncryptionParameters](https://learn.microsoft.com/powershell/module/sharepoint-online/new-spomigrationencryptionparameters) for more information.
 
 ```yaml
 Type: EncryptionParameters

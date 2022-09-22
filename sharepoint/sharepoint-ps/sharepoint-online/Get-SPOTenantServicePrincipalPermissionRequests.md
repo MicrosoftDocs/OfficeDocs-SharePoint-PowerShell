@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spotenantserviceprincipalpermissionrequests
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spotenantserviceprincipalpermissionrequests
 applicable: SharePoint Online
 title: Get-SPOTenantServicePrincipalPermissionRequests
 schema: 2.0.0

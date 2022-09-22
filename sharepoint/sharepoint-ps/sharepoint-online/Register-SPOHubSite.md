@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/register-spohubsite
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/register-spohubsite
 applicable: SharePoint Online
 title: Register-SPOHubSite
 schema: 2.0.0
@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Enables the hub site feature on a site to make it a hub site. For more information visit [SharePoint hub sites overview](https://docs.microsoft.com/sharepoint/dev/features/hub-site/hub-site-overview).
+Enables the hub site feature on a site to make it a hub site. For more information visit [SharePoint hub sites overview](https://learn.microsoft.com/sharepoint/dev/features/hub-site/hub-site-overview).
 
 ## SYNTAX
 

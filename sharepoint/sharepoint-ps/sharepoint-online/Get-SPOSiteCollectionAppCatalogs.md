@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spositecollectionappcatalogs
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spositecollectionappcatalogs
 applicable: SharePoint Online
 title: Get-SPOSiteCollectionAppCatalogs
 schema: 2.0.0
@@ -24,7 +24,7 @@ Use this cmdlet to get the Site Collection App Catalog.
 
 ## DESCRIPTION
 
-Use this cmdlet to get the Site Collection App Catalog. For more information, see [Use the App Catalog to make custom business apps available for your SharePoint environment](https://docs.microsoft.com/sharepoint/use-app-catalog)
+Use this cmdlet to get the Site Collection App Catalog. For more information, see [Use the App Catalog to make custom business apps available for your SharePoint environment](https://learn.microsoft.com/sharepoint/use-app-catalog)
 
 ## EXAMPLES
 

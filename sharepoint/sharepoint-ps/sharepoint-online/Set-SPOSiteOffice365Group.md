@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spositeoffice365group
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spositeoffice365group
 applicable: SharePoint Online
 title: Set-SPOSiteOffice365Group
 schema: 2.0.0

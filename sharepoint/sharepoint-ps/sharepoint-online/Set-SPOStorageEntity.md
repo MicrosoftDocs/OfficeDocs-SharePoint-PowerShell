@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spostorageentity
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spostorageentity
 applicable: SharePoint Online
 title: Set-SPOStorageEntity
 schema: 2.0.0
