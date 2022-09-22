@@ -1,7 +1,7 @@
 ---
 external help file: microsoft.office.access.services.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spaccessserviceapplication
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spaccessserviceapplication
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPAccessServiceApplication
 schema: 2.0.0
@@ -31,7 +31,7 @@ New-SPAccessServiceApplication [-Name <String>] -ApplicationPool <SPIisWebServic
 The New-SPAccessServiceApplication cmdlet creates a new instance of an Access Services application in SharePoint Server 2010, SharePoint Server 2013.
 After you create a new Access Services application, use the Set-SPAccessServiceApplication cmdlet to modify its global settings.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -472,4 +472,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

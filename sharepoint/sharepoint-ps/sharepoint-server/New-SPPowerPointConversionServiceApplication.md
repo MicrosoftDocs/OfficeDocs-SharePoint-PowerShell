@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Powerpoint.dll-Help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-sppowerpointconversionserviceapplication
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-sppowerpointconversionserviceapplication
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPPowerPointConversionServiceApplication
 schema: 2.0.0
@@ -30,7 +30,7 @@ Use the `New-SPPowerPointConversionServiceApplication` cmdlet to create a new in
 
 After the PowerPoint Conversion Service application is created, you can convert PowerPoint presentations to various formats.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

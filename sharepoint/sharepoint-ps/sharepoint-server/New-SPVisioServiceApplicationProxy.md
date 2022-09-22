@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Visio.Server.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spvisioserviceapplicationproxy
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spvisioserviceapplicationproxy
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPVisioServiceApplicationProxy
 schema: 2.0.0
@@ -26,7 +26,7 @@ New-SPVisioServiceApplicationProxy -ServiceApplication <String>
 ## DESCRIPTION
 The `New-SPVisioServiceApplicationProxy` cmdlet adds a new Visio Services application proxy to a farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

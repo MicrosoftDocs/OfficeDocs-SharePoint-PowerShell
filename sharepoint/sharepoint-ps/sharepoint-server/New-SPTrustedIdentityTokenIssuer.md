@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-sptrustedidentitytokenissuer
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-sptrustedidentitytokenissuer
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPTrustedIdentityTokenIssuer
 schema: 2.0.0
@@ -50,7 +50,7 @@ The specified claim type cannot be NTLM, Classic NTLM, Negotiate, or Classic Neg
 For ASP.NET Membership provider or Role providers, no objects are persisted.
 For security token service (STS) identity providers, this cmdlet creates and persists the identity provider object in the SPFarm object.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
