@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spenterprisesearchserviceapplication
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spenterprisesearchserviceapplication
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchServiceApplication
 schema: 2.0.0
@@ -33,7 +33,7 @@ This cmdlet updates properties of a search service application.
 SPEnterpriseSearchServiceApplication represents a self-contained aggregation of indexed content and properties available for search and provides an anchor class for setting global search properties.
 A search application can include multiple search service applications.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

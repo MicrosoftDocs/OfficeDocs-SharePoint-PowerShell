@@ -1,7 +1,7 @@
 ---
 external help file: microsoft.office.access.services.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spaccessserviceapplication
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spaccessserviceapplication
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPAccessServiceApplication
 schema: 2.0.0
@@ -32,7 +32,7 @@ Set-SPAccessServiceApplication [-Identity] <SPAccessServiceApplicationPipeBind>
 The `Set-SPAccessServiceApplication` cmdlet sets the global runtime properties of an existing Access Services application in SharePoint Server.
 The changes made to the properties by using this cmdlet affect all machines in the farm on which this Access Services application runs.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spenterprisesearchcrawlcustomconnector
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spenterprisesearchcrawlcustomconnector
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPEnterpriseSearchCrawlCustomConnector
 schema: 2.0.0
@@ -27,7 +27,7 @@ Remove-SPEnterpriseSearchCrawlCustomConnector -Identity <SPCustomConnectorPipeBi
 ## DESCRIPTION
 The `Get-SPEnterpriseSearchCrawlCustomConnector` selects the custom connector or connectors and then pipes them to the `Remove-SPEnterpriseSearchCrawlCustomConnector` cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

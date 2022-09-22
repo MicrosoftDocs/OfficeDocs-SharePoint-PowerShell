@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-sppassphrase
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-sppassphrase
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPPassPhrase
 schema: 2.0.0
@@ -33,7 +33,7 @@ Set-SPPassPhrase [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-W
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see [Cmdlet parameter sets](https://docs.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
 
 The `Set-SPPassPhrase` cmdlet sets the Passphrase to a new Passphrase value.
 If the LocalServerOnly parameter is not used, the farm encryption key is re-encrypted with the new value and attempts to propagate this value to all other servers in the farm.
@@ -41,7 +41,7 @@ If the LocalServerOnly parameter is used, this is updated on the local machine o
 The Passphrase value must be the same on all servers in the farm if the farm is to function correctly.
 So if the Passphrase fails to propagate to all servers, the LocalServerOnly parameter can be used to set the remaining servers to the new Passphrase value manually.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
