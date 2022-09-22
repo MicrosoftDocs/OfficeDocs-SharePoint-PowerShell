@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spauthenticationrealm
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spauthenticationrealm
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPAuthenticationRealm
 schema: 2.0.0
@@ -26,7 +26,7 @@ Get-SPAuthenticationRealm [[-ServiceContext] <SPServiceContextPipeBind>]
 ## DESCRIPTION
 Use the Get-SPAuthenticationRealm cmdlet to display the authentication realms of the farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -90,4 +90,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-SPAuthenticationRealm](Set-SPAuthenticationRealm.md)
-

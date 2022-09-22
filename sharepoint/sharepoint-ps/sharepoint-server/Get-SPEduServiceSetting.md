@@ -1,7 +1,7 @@
 ---
 external help file: sharepointserver.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-speduservicesetting
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-speduservicesetting
 applicable: SharePoint Server 2013
 title: Get-SPEduServiceSetting
 schema: 2.0.0
@@ -100,4 +100,3 @@ Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 ## NOTES
 
 ## RELATED LINKS
-

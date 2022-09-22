@@ -1,7 +1,7 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/enable-projectserverlicense
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/enable-projectserverlicense
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Enable-ProjectServerLicense
 schema: 2.0.0
@@ -84,4 +84,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

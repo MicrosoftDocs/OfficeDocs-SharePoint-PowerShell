@@ -1,7 +1,7 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/enable-spprojectemailnotification
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/enable-spprojectemailnotification
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Enable-SPProjectEmailNotification
 schema: 2.0.0
@@ -83,4 +83,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -1,7 +1,7 @@
 ---
 external help file: sharepointserver.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spexcelfilelocation
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spexcelfilelocation
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Get-SPExcelFileLocation
 schema: 2.0.0
@@ -30,7 +30,7 @@ Properties of trusted file locations control how workbooks can be used when load
 Excel Services Application always enforces the properties that are defined by the trusted file location from which a workbook was loaded.
 The properties of the trusted file location to use are determined through comparison of the file path for the workbook with the address of the trusted file location.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -127,4 +127,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
