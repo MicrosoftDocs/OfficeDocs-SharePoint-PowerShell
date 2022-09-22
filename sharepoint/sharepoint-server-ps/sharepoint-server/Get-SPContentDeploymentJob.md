@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.Publishing.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spcontentdeploymentjob
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spcontentdeploymentjob
 applicable: SharePoint Server Subscription Edition
 title: Get-SPContentDeploymentJob
 schema: 2.0.0
@@ -24,7 +24,7 @@ Get-SPContentDeploymentJob [[-Identity] <SPContentDeploymentJobPipeBind>]
 The Get-SPContentDeploymentJob cmdlet reads the specified content deployment job.
 If the Identity parameter is not specified, this cmdlet returns the collection of content deployment jobs on the farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -105,4 +105,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

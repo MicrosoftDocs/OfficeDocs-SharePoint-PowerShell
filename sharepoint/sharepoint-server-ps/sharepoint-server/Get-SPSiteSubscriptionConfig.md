@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spsitesubscriptionconfig
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spsitesubscriptionconfig
 applicable: SharePoint Server Subscription Edition
 title: Get-SPSiteSubscriptionConfig
 schema: 2.0.0
@@ -25,7 +25,7 @@ Get-SPSiteSubscriptionConfig [-Identity] <SPSiteSubscriptionPipeBind>
 ## DESCRIPTION
 The Get-SPSiteSubscriptionConfig cmdlet returns the configuration properties of a site subscription.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -88,4 +88,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

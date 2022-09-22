@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spserviceapplication
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spserviceapplication
 applicable: SharePoint Server Subscription Edition
 title: Get-SPServiceApplication
 schema: 2.0.0
@@ -26,7 +26,7 @@ Get-SPServiceApplication [[-Identity] <SPServiceApplicationPipeBind>]
 The Get-SPServiceApplication cmdlet returns the service application specified by the Identity parameter.
 If no parameter is specified, the cmdlet returns all service applications in the farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -119,4 +119,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

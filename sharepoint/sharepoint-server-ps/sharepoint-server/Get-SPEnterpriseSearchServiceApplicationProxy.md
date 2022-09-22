@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchserviceapplicationproxy
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchserviceapplicationproxy
 applicable: SharePoint Server Subscription Edition
 title: Get-SPEnterpriseSearchServiceApplicationProxy
 schema: 2.0.0
@@ -23,7 +23,7 @@ Get-SPEnterpriseSearchServiceApplicationProxy [[-Identity] <SearchServiceApplica
 This cmdlet reads the SearchServiceApplicationProxy object when the search service application proxy is created updated or deleted.
 If the Identity parameter is not specified, this cmdlet returns the search service application proxy collection for the farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -82,5 +82,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-

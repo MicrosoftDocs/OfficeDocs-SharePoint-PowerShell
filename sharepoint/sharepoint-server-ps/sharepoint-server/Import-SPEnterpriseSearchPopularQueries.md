@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/import-spenterprisesearchpopularqueries
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/import-spenterprisesearchpopularqueries
 applicable: SharePoint Server Subscription Edition
 title: Import-SPEnterpriseSearchPopularQueries
 schema: 2.0.0
@@ -52,7 +52,7 @@ For example, Company store,100,80,1033.
 For suggestions to appear in the search box, the Click Count value must be more than five.
 The search box ranks query suggestions by their Click Count values (approximately).
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -205,5 +205,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spdeletedsite
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spdeletedsite
 applicable: SharePoint Server Subscription Edition
 title: Get-SPDeletedSite
 schema: 2.0.0
@@ -27,19 +27,19 @@ Get-SPDeletedSite [-Identity] <SPDeletedSitePipeBind> [-AssignmentCollection <SP
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see [Cmdlet parameter sets](https://docs.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
 
 This cmdlet was introduced in SharePoint Server with Service Pack 1 (SP1) and SharePoint Foundation with Service Pack 1 (SP1).
 
 Use the Get-SPDeletedSite cmdlet to display a list of deleted site collections by using the Identity parameter.
-If no parameter is specified, then all deleted site collections in the farm are displayed. Deleted Sites are sites in the process of gradual delete. For more information on gradual delete, see [Remove-SPSite](https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spsite?view=sharepoint-ps).
+If no parameter is specified, then all deleted site collections in the farm are displayed. Deleted Sites are sites in the process of gradual delete. For more information on gradual delete, see [Remove-SPSite](https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spsite?view=sharepoint-ps).
 
 Unlike the Get-SPSite cmdlet that uses the host name and scheme for the Identity parameter (that is, https://server_name), the value of the identity parameter for all SPDeletedSite cmdlets use a server-relative URL.
 Typically, the forward slash character (/) begins the relative URL and also denotes the root site.
 
 For additional information about a server-relative URL or understanding general concepts about absolute and relative URLs, see Server-relative URL Property (https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spsite.serverrelativeurl.aspx) or Understanding Absolute and Relative URL Addresses (https://msdn.microsoft.com/en-us/library/bb208688(office.12).aspx).
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -257,4 +257,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
