@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchquerykeyword
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchquerykeyword
 applicable: SharePoint Server Subscription Edition
 title: Get-SPEnterpriseSearchQueryKeyword
 schema: 2.0.0
@@ -27,7 +27,7 @@ If the Identity parameter is not specified, this cmdlet returns the query keywor
 You can use this cmdlet for keywords in site collections that are in SharePoint Server mode.
 You cannot use this cmdlet after a site collection is upgraded to SharePoint Server mode because keywords and Best Bets are automatically migrated to query rules.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -108,5 +108,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-

@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/update-usertype
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/update-usertype
 applicable: SharePoint Online
 title: Update-UserType
 schema: 2.0.0
@@ -71,4 +71,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Properties of an Azure Active Directory B2B collaboration user](https://docs.microsoft.com/azure/active-directory/b2b/user-properties)
+[Properties of an Azure Active Directory B2B collaboration user](https://learn.microsoft.com/azure/active-directory/b2b/user-properties)

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/import-spsitesubscriptionbusinessdatacatalogconfig
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/import-spsitesubscriptionbusinessdatacatalogconfig
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Import-SPSiteSubscriptionBusinessDataCatalogConfig
 schema: 2.0.0
@@ -29,7 +29,7 @@ Import-SPSiteSubscriptionBusinessDataCatalogConfig -Path <String> -ServiceContex
 ## DESCRIPTION
 Use the Import-SPSiteSubscriptionBusinessDataCatalogConfig cmdlet to import a data file that contains Business Data Connecitivity models and all data associated with the Business Data Connectivity Metadata Store for a given partition.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -228,4 +228,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/export-spscaleoutdatabasetenantdata
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/export-spscaleoutdatabasetenantdata
 applicable: SharePoint Server Subscription Edition
 title: Export-SPScaleOutDatabaseTenantData
 schema: 2.0.0
@@ -26,7 +26,7 @@ Export-SPScaleOutDatabaseTenantData -FilePath <String> -ServiceApplication <SPSe
 ## DESCRIPTION
 Use the Export-SPScaleOutDatabaseTenantData cmdlet to export the data of the specified subscription id to the specified file from the specified service application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -173,4 +173,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Clear-SPScaleOutDatabaseTenantData](Clear-SPScaleOutDatabaseTenantData.md)
 
 [Import-SPScaleOutDatabaseTenantData](Import-SPScaleOutDatabaseTenantData.md)
-

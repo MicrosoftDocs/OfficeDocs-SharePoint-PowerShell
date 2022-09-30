@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/migrate-spdatabase
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/migrate-spdatabase
 Applicable: SharePoint Server Subscription Edition
 title: Migrate-SPDatabase
 schema: 2.0.0
@@ -222,4 +222,3 @@ Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 ## NOTES
 
 ## RELATED LINKS
-

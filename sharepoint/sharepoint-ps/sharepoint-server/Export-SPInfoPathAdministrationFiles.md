@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/export-spinfopathadministrationfiles
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/export-spinfopathadministrationfiles
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Export-SPInfoPathAdministrationFiles
 schema: 2.0.0
@@ -27,7 +27,7 @@ The Export-SPInfoPathAdministrationFiles cmdlet saves all InfoPath form template
 The backup package includes all workflow forms in InfoPath that were deployed by an administrator and not included with SharePoint Server, and includes browser forms that were deployed by an administrator.
 The backup package is output to the specified .cab file.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -142,4 +142,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -1,7 +1,7 @@
 ---
 external help file: sharepointserver.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-fastsearchmetadatamanagedproperty
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-fastsearchmetadatamanagedproperty
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 author: techwriter40
@@ -144,4 +144,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-FASTSearchMetadataManagedProperty](Set-FASTSearchMetadataManagedProperty.md)
 
 [Remove-FASTSearchMetadataManagedProperty](Remove-FASTSearchMetadataManagedProperty.md)
-

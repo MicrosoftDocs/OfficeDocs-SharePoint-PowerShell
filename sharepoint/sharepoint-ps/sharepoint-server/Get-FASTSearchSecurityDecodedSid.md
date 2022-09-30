@@ -1,7 +1,7 @@
 ---
 external help file: sharepointserver.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-fastsearchsecuritydecodedsid
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-fastsearchsecuritydecodedsid
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 author: techwriter40
@@ -65,4 +65,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-FASTSearchSecurityEncodedSid](Get-FASTSearchSecurityEncodedSid.md)
-

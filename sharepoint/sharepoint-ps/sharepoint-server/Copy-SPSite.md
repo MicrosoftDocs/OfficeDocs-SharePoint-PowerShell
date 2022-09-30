@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/copy-spsite
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/copy-spsite
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Copy-SPSite
 schema: 2.0.0
@@ -33,7 +33,7 @@ The copy of the site collection has a new URL and a new SiteID.
 When you have database snapshot capabilities on a computer runningSQL Server, a temporary snapshot of the source database is created for the duration of the copy to prevent any data changes during the copy process.
 If you do not have database snapshot capabilities on the server running SQL Server, you can back up the source and restore it to the destination to get the same result.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -165,4 +165,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Test-SPSite](Test-SPSite.md)
 
 [Repair-SPSite](Repair-SPSite.md)
-

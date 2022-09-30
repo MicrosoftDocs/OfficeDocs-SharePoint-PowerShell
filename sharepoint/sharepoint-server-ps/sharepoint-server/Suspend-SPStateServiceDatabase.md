@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/suspend-spstateservicedatabase
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/suspend-spstateservicedatabase
 applicable: SharePoint Server Subscription Edition
 title: Suspend-SPStateServiceDatabase
 schema: 2.0.0
@@ -23,7 +23,7 @@ Suspend-SPStateServiceDatabase [-Identity] <SPStateDatabasePipeBind>
 The `Suspend-SPStateServiceDatabase` cmdlet pauses a state database.
 This cmdlet updates the state database object that is specified in the Identity parameter.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

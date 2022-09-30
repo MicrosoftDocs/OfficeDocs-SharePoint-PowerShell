@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/clear-spserverscaleoutdatabasedeleteddatasubrange
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/clear-spserverscaleoutdatabasedeleteddatasubrange
 applicable: SharePoint Server Subscription Edition
 title: Clear-SPServerScaleOutDatabaseDeletedDataSubRange
 schema: 2.0.0
@@ -173,4 +173,3 @@ Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 ## RELATED LINKS
 
 [Set-SPServerScaleOutDatabaseDataSubRange](Set-SPServerScaleOutDatabaseDataSubRange.md)
-

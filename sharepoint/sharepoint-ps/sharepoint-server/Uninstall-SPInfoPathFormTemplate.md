@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/uninstall-spinfopathformtemplate
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/uninstall-spinfopathformtemplate
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Uninstall-SPInfoPathFormTemplate
 schema: 2.0.0
@@ -25,7 +25,7 @@ Uninstall-SPInfoPathFormTemplate [-Identity] <SPFormTemplatePipeBind>
 ## DESCRIPTION
 The `Uninstall-SPInfoPathFormTemplate` cmdlet removes a specified InfoPath form template from a farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

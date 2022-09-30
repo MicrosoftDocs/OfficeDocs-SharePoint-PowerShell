@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spuser
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spuser
 applicable: SharePoint Server Subscription Edition
 title: New-SPUser
 schema: 2.0.0
@@ -29,7 +29,7 @@ The user account must already exist in the user directory.
 If your environment is in Active Directory mode, the user must already exist in Active Directory Domain Services (AD DS) and only the UserAlias parameter is required; all other fields are pulled from AD DS.
 If only an alias is given and the farm is in Active Directory Account Create mode, the Email parameter is also required.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

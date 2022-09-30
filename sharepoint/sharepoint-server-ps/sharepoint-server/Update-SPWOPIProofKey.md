@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/update-spwopiproofkey
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/update-spwopiproofkey
 applicable: SharePoint Server Subscription Edition
 title: Update-SPWOPIProofKey
 schema: 2.0.0
@@ -25,7 +25,7 @@ The `Update-SPWOPIProofKey` cmdlet updates the public key that is used to connec
 You may want to use this cmdlet if the keys become unsynchronized between the SharePoint farm and the WOPI application.
 If the keys are unsynchronized, documents may not open in the browser and messages such as "Invalid Proof Signature for file..." or "Invalid Proof Signature for folder..." are found in the Unified Logging System (ULS) logs.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

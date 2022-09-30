@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/start-spenterprisesearchserviceinstance
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/start-spenterprisesearchserviceinstance
 applicable: SharePoint Server Subscription Edition
 title: Start-SPEnterpriseSearchServiceInstance
 schema: 2.0.0
@@ -22,7 +22,7 @@ Start-SPEnterpriseSearchServiceInstance [-Identity] <SearchServiceInstancePipeBi
 ## DESCRIPTION
 This cmdlet starts an instance of a search service on a farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 If you run this cmdlet on a running search service instance, the associated search components are also restarted.
 This may lead to a short downtime for queries.

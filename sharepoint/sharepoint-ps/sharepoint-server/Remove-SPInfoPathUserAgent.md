@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spinfopathuseragent
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spinfopathuseragent
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPInfoPathUserAgent
 schema: 2.0.0
@@ -26,7 +26,7 @@ Remove-SPInfoPathUserAgent [-Identity] <SPUserAgentPipeBind> [-AssignmentCollect
 ## DESCRIPTION
 The `Remove-SPIPUserAgent` cmdlet removes a specified user agent from the user agent collection on a farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/register-spodataencryptionpolicy
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/register-spodataencryptionpolicy
 applicable: SharePoint Online
 title: Register-SPODataEncryptionPolicy
 schema: 2.0.0
@@ -15,7 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 
 Cmdlet to register customer encryption status for your geo tenant.
-For more information, see [Controlling your data in Office 365 using Customer Key](https://docs.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key)
+For more information, see [Controlling your data in Office 365 using Customer Key](https://learn.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key)
 
 ## SYNTAX
 
@@ -26,7 +26,7 @@ Register-SPODataEncryptionPolicy -PrimaryKeyVaultName <string> -PrimaryKeyName <
 ## DESCRIPTION
 
 Use the Register-DataEncryptionPolicy cmdlet to register customer encryption status for your geo tenant.
-For more information, see [Controlling your data in Office 365 using Customer Key](https://docs.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key)
+For more information, see [Controlling your data in Office 365 using Customer Key](https://learn.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key)
 
 ## EXAMPLES
 

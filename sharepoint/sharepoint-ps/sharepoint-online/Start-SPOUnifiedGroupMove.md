@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/start-spounifiedgroupmove
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/start-spounifiedgroupmove
 applicable: SharePoint Online
 title: Start-SPOUnifiedGroupMove
 schema: 2.0.0
@@ -230,4 +230,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Move a SharePoint site to a different geo location](https://docs.microsoft.com/office365/enterprise/move-sharepoint-between-geo-locations)
+[Move a SharePoint site to a different geo location](https://learn.microsoft.com/office365/enterprise/move-sharepoint-between-geo-locations)

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/remove-spbusinessdatacatalogmodel
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spbusinessdatacatalogmodel
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPBusinessDataCatalogModel
 schema: 2.0.0
@@ -26,7 +26,7 @@ Remove-SPBusinessDataCatalogModel -Identity <MetadataObject> [-AssignmentCollect
 ## DESCRIPTION
 The `Remove-SPBusinessDataCatalogModel` cmdlet deletes a Business Data Connectivity Model.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

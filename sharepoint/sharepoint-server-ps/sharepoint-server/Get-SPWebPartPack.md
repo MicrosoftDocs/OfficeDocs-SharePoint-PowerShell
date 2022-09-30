@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spwebpartpack
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spwebpartpack
 applicable: SharePoint Server Subscription Edition
 title: Get-SPWebPartPack
 schema: 2.0.0
@@ -28,7 +28,7 @@ The scope of results can be narrowed by using the optional WebApplication parame
 The scope does not include any Web Part packages installed in the global assembly cache (GAC) unless the GlobalOnly parameter is used.
 If this parameter is used, only Web Part packages that have been installed in the GAC are returned.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -124,4 +124,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

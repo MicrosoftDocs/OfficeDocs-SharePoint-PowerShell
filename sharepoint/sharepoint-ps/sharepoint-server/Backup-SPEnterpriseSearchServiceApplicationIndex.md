@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/backup-spenterprisesearchserviceapplicationindex
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/backup-spenterprisesearchserviceapplicationindex
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Backup-SPEnterpriseSearchServiceApplicationIndex
 schema: 2.0.0
@@ -39,7 +39,7 @@ The cmdlet has to be run in two phases.
 Phase one will take a backup of what is present in the index at the time that the backup cmdlet is run. 
 Phase two will take a differential backup of what was added to the index after you started the first phase index backup.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 
@@ -267,5 +267,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-

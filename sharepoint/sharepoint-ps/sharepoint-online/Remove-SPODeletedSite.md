@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/remove-spodeletedsite
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spodeletedsite
 applicable: SharePoint Online
 title: Remove-SPODeletedSite
 schema: 2.0.0
@@ -28,7 +28,7 @@ The `Remove-SPODeletedSite` cmdlet permanently removes a SharePoint Online delet
 
 You must be a SharePoint Administrator or Global Administrator to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
 **Note**: As of today, the modern admin center UI does not allow permanent deletion of group connected site. The use of this cmdlet does allow the deletion, but when this occurs it does not delete the associated group, just the site.
 
@@ -125,7 +125,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Remove-SPOSite](Remove-SPOSite.md)
 

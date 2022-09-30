@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/install-spwebpartpack
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/install-spwebpartpack
 applicable: SharePoint Server Subscription Edition
 title: Install-SPWebPartPack
 schema: 2.0.0
@@ -32,7 +32,7 @@ Install-SPWebPartPack [-Name] <String> [-AssignmentCollection <SPAssignmentColle
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see [Cmdlet parameter sets](https://docs.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
 
 The Install-SPWebPartPack cmdlet installs the Web Part package, at the LiteralPath parameter location, in the local farm.
 The Web Part package can be installed in a specific Web application by using the WebApplication parameter.
@@ -45,7 +45,7 @@ Assemblies in the GAC are granted FullTrust permission, which gives this package
 
 Use the Force parameter to install the package to overwrite any existing Web Part package with the same name or installed in the same location.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -238,4 +238,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

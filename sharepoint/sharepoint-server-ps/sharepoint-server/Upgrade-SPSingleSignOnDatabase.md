@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/upgrade-spsinglesignondatabase
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/upgrade-spsinglesignondatabase
 applicable: SharePoint Server Subscription Edition
 title: Upgrade-SPSingleSignOnDatabase
 schema: 2.0.0
@@ -25,7 +25,7 @@ Use the `Upgrade-SPSingleSignOn` cmdlet to convert an SSO database to a Secure S
 SSO is a SharePoint Server feature.
 SSO functionality is performed by the Secure Store Service in SharePoint Server.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

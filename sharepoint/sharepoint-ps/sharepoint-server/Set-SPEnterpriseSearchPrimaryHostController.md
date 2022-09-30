@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spenterprisesearchprimaryhostcontroller
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spenterprisesearchprimaryhostcontroller
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPEnterpriseSearchPrimaryHostController
 schema: 2.0.0
@@ -25,7 +25,7 @@ Set-SPEnterpriseSearchPrimaryHostController [-SearchServiceInstance] <SearchServ
 ## DESCRIPTION
 This cmdlet sets the primary SearchHostController for the farm to the defined SearchHostController.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

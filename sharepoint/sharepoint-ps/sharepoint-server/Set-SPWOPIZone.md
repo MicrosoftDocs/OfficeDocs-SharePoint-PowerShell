@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spwopizone
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spwopizone
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPWOPIZone
 schema: 2.0.0
@@ -31,7 +31,7 @@ The zone for the URL of the WOPI application page is determined by this setting.
 If you do not set the zone, the default is "internal-HTTPS." If you select a zone that is not supported by the WOPI application, Office Web Apps will not work.
 Only use HTTP when you are on a fully secure network that uses IPSEC (full encryption) or in a test environment that does not contain sensitive data.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

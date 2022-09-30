@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/backup-spfarm
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/backup-spfarm
 applicable: SharePoint Server Subscription Edition
 title: Backup-SPFarm
 schema: 2.0.0
@@ -33,7 +33,7 @@ Backup-SPFarm [-ShowTree] [-AssignmentCollection <SPAssignmentCollection>] [-Con
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see [Cmdlet parameter sets](https://docs.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
 
 The Backup-SPFarm cmdlet creates a backup for the entire farm or individual components within the farm.
 It can also be used to back up just the configuration settings of a farm to be used as a farm template for other SharePoint farms.
@@ -41,7 +41,7 @@ If you want to back up a single site collection, use the Backup-SPSite cmdlet.
 
 To see the available objects to backup, use the `-ShowTree` parameter set.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -322,4 +322,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

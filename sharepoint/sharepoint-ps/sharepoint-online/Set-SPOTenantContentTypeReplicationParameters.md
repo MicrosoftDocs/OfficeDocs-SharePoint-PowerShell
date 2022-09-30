@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spotenantcontenttypereplicationparameters
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spotenantcontenttypereplicationparameters
 applicable: SharePoint Online
 title: Set-SPOTenantContentTypeReplicationParameters
 schema: 2.0.0

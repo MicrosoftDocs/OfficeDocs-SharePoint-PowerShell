@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spappstateupdateinterval
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spappstateupdateinterval
 applicable: SharePoint Server Subscription Edition
 title: Set-SPAppStateUpdateInterval
 schema: 2.0.0
@@ -24,7 +24,7 @@ Set-SPAppStateUpdateInterval -AppStateSyncHours <Int32> -FastAppRevocationHours 
 Use the `Set-SPAppStateUpdateInterval` cmdlet to set the interval in hours between updates of the app state update job.
 The app state update job updates the app states, including app updates, in SharePoint based on information in the SharePoint Store.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

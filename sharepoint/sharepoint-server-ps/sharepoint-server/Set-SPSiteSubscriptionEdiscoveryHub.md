@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.Publishing.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spsitesubscriptionediscoveryhub
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spsitesubscriptionediscoveryhub
 applicable: SharePoint Server Subscription Edition
 title: Set-SPSiteSubscriptionEdiscoveryHub
 schema: 2.0.0
@@ -23,7 +23,7 @@ Set-SPSiteSubscriptionEdiscoveryHub -Site <SPSitePipeBind> [-AssignmentCollectio
 ## DESCRIPTION
 The `Set-SPSiteSubscriptionEdiscoveryHub` cmdlet sets global properties and settings for the Ediscovery hub.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

@@ -1,7 +1,7 @@
 ---
 external help file: sharepointserver.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/migrate-spprojectdatabase
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/migrate-spprojectdatabase
 applicable: Project Server 2016
 title: Migrate-SPProjectDatabase
 schema: 2.0.0
@@ -201,4 +201,3 @@ Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 ## NOTES
 
 ## RELATED LINKS
-

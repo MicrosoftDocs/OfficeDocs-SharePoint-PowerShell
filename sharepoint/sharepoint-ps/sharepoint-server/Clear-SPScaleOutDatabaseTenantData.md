@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/clear-spscaleoutdatabasetenantdata
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/clear-spscaleoutdatabasetenantdata
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Clear-SPScaleOutDatabaseTenantData
 schema: 2.0.0
@@ -29,7 +29,7 @@ Clear-SPScaleOutDatabaseTenantData -ServiceApplication <SPServiceApplicationPipe
 ## DESCRIPTION
 Use the Clear-SPScaleOutDatabaseTenantData cmdlet removes all data related to the specified site subscription from the specified service application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -144,4 +144,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Export-SPScaleOutDatabaseTenantData](Export-SPScaleOutDatabaseTenantData.md)
 
 [Import-SPScaleOutDatabaseTenantData](Import-SPScaleOutDatabaseTenantData.md)
-

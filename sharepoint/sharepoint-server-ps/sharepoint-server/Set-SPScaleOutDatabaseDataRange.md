@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spscaleoutdatabasedatarange
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spscaleoutdatabasedatarange
 applicable: SharePoint Server Subscription Edition
 title: Set-SPScaleOutDatabaseDataRange
 schema: 2.0.0
@@ -24,7 +24,7 @@ Set-SPScaleOutDatabaseDataRange -Database <SPDatabasePipeBind> -IsUpperSubRange 
 ## DESCRIPTION
 Use the `Set-SPScaleOutDatabaseDataRange` cmdlet to extend the range of a specified scale-out database towards a specified direction.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

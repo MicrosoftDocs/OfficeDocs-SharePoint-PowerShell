@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/request-spupgradeevaluationsite
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/request-spupgradeevaluationsite
 applicable: SharePoint Server Subscription Edition
 title: Request-SPUpgradeEvaluationSite
 schema: 2.0.0
@@ -24,7 +24,7 @@ Request-SPUpgradeEvaluationSite [-Identity] <SPSitePipeBind> [-AssignmentCollect
 Use the `Request-SPUpgradeEvaluationSite` cmdlet to initiate a request to create temporary copy of a site collection at an auto-generated URL and upgrade the site collection to a newer experience.
 Users can view the site to see how their site will work in the new experience.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

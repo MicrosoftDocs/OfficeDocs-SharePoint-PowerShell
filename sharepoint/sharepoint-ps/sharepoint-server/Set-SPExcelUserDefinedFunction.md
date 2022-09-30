@@ -1,7 +1,7 @@
 ---
 external help file: sharepointserver.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spexceluserdefinedfunction
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spexceluserdefinedfunction
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Set-SPExcelUserDefinedFunction
 schema: 2.0.0
@@ -32,7 +32,7 @@ User-defined functions are managed code assemblies that can be called from an Ex
 The assemblies can perform custom logic or other actions, such as refresh data.
 Windows PowerShell cmdlets operate on the entries in the user-defined function list and do not operate on the assemblies.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

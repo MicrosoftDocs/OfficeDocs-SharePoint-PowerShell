@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-sptrustedsecuritytokenissuer
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-sptrustedsecuritytokenissuer
 applicable: SharePoint Server Subscription Edition
 title: Get-SPTrustedSecurityTokenIssuer
 schema: 2.0.0
@@ -27,7 +27,7 @@ Use the Get-SPTrustedSecurityTokenService cmdlet to return the trusted security 
 This cmdlet returns the T:Microsoft.SharePoint.Administration.Claims.SPSecurityTokenServiceManager object.
 The properties on this object can be set by using the Set-SPTrustedSecurityTokenIssuer cmdlet and then updated back to the object.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -95,4 +95,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-SPTrustedSecurityTokenIssuer](Remove-SPTrustedSecurityTokenIssuer.md)
 
 [Set-SPTrustedSecurityTokenIssuer](Set-SPTrustedSecurityTokenIssuer.md)
-

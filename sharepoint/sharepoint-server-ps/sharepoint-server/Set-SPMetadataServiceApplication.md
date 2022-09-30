@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/set-spmetadataserviceapplication
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spmetadataserviceapplication
 applicable: SharePoint Server Subscription Edition
 title: Set-SPMetadataServiceApplication
 schema: 2.0.0
@@ -41,7 +41,7 @@ Set-SPMetadataServiceApplication [-Identity] <SPMetadataServiceCmdletPipeBind> [
 ## DESCRIPTION
 Use the `Set-SPMetadataServiceApplication` cmdlet to set the properties of a managed metadata service application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

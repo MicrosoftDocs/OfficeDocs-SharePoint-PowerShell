@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/Unlock-SPOSensitivityLabelEncryptedFile
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Unlock-SPOSensitivityLabelEncryptedFile
 applicable: SharePoint Online
 title: Unlock-SPOSensitivityLabelEncryptedFile
 schema: 2.0.0
@@ -28,7 +28,7 @@ The `Unlock-SPOSensitivityLabelEncryptedFile` cmdlet runs on a single office onl
 
 You must be a SharePoint Online administrator or Global Administrator to run the `Unlock-SPOSensitivityLabelEncryptedFile` cmdlet. Note, this cmdlet do not work on files that have labels with custom permission or user defined permission or double key encryption.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
 ## EXAMPLES
 
@@ -80,6 +80,6 @@ Default value: None
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)

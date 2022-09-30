@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchcrawllogreadpermission
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchcrawllogreadpermission
 applicable: SharePoint Server Subscription Edition
 title: Get-SPEnterpriseSearchCrawlLogReadPermission
 schema: 2.0.0
@@ -25,7 +25,7 @@ Only the Search Service Application administrator can use the Get-SPEnterpriseSe
 The Search Service Application administrator uses the cmdlet to retrieve a list of users with permission to view the crawl log information.
 The administrator can choose to limit this list to users with permission to view crawl log information from a particular tenant.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -105,4 +105,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-SPEnterpriseSearchCrawlLogReadPermission](Set-SPEnterpriseSearchCrawlLogReadPermission.md)
 
 [Remove-SPEnterpriseSearchCrawlLogReadPermission](Remove-SPEnterpriseSearchCrawlLogReadPermission.md)
-

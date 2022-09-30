@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spmetadataserviceapplicationproxy
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spmetadataserviceapplicationproxy
 applicable: SharePoint Server Subscription Edition
 title: New-SPMetadataServiceApplicationProxy
 schema: 2.0.0
@@ -26,7 +26,7 @@ New-SPMetadataServiceApplicationProxy -Name <String> [-AssignmentCollection <SPA
 ## DESCRIPTION
 Use the `New-SPMetadataServiceApplicationProxy` cmdlet to create a new connection to a managed metadata service application.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

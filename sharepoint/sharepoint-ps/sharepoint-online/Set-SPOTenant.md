@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/set-spotenant
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spotenant
 applicable: SharePoint Online
 title: Set-SPOTenant
 schema: 2.0.0
@@ -119,6 +119,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-CoreRequestFilesLinkEnabled <Boolean>]
  [-OneDriveRequestFilesLinkExpirationInDays <Int32>]
  [-CoreRequestFilesLinkExpirationInDays <Int32>]
+ [-AllowAnonymousMeetingParticipantsToAccessWhiteboards <SharingState>]
  [<CommonParameters>]
 ```
 
@@ -375,7 +376,7 @@ Possible values are
 - BlockExternalSharing: Prevents guests from accessing newly added files until at least one Office DLP policy scans the content of the file.
 - AllowExternalSharing: Disables this feature.
 
-For more information see [Mark new files as sensitive by default](https://docs.microsoft.com/sharepoint/sensitive-by-default).
+For more information see [Mark new files as sensitive by default](https://learn.microsoft.com/sharepoint/sensitive-by-default).
 
 ```yaml
 Type: SensitiveByDefaultState
@@ -1627,7 +1628,7 @@ Accept wildcard characters: False
 
 ### -ConditionalAccessPolicy
 
-Please read [Control access from unmanaged devices](https://docs.microsoft.com/sharepoint/control-access-from-unmanaged-devices ) documentation here to understand Conditional Access Policy usage in SharePoint Online.
+Please read [Control access from unmanaged devices](https://learn.microsoft.com/sharepoint/control-access-from-unmanaged-devices ) documentation here to understand Conditional Access Policy usage in SharePoint Online.
 
 PARAMVALUE: AllowFullAccess | AllowLimitedAccess | BlockAccess
 
@@ -1876,7 +1877,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncAadB2BManagementPolicy
-Syncs Azure B2B Management Policies. For more information, see [SharePoint and OneDrive integration with Azure AD B2B](https://docs.microsoft.com/sharepoint/sharepoint-azureb2b-integration-preview).
+Syncs Azure B2B Management Policies. For more information, see [SharePoint and OneDrive integration with Azure AD B2B](https://learn.microsoft.com/sharepoint/sharepoint-azureb2b-integration-preview).
 
 ```yaml
 Type: Boolean
@@ -1977,7 +1978,7 @@ Accept wildcard characters: False
 Enables or disables the ability to use View in Explorer in Microsoft Edge (93) or above. 
 
 > [!NOTE]
-> When the value is set the View In Explorer command will become visible in UX for all users using Edge browser version 93 or above however those users still need [ConfigureViewInFileExplorer](https://docs.microsoft.com/deployedge/microsoft-edge-policies#configureviewinfileexplorer) Edge policy enabled for the functionality to work.
+> When the value is set the View In Explorer command will become visible in UX for all users using Edge browser version 93 or above however those users still need [ConfigureViewInFileExplorer](https://learn.microsoft.com/deployedge/microsoft-edge-policies#configureviewinfileexplorer) Edge policy enabled for the functionality to work.
 > 
 > Minimum Module Version Required: 16.0.21610.12000 
 
@@ -2230,6 +2231,29 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: -1
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowAnonymousMeetingParticipantsToAccessWhiteboards
+When you share a whiteboard in a Teams meeting, Whiteboard creates a sharing link. This link is accessible by anyone within the organization. The whiteboard is also shared with any in-tenant users in the meeting. Whiteboards are shared using company-shareable links, regardless of the default setting. Support for the default sharing link type is planned.
+
+There's more capability for temporary collaboration by external and shared device accounts during a Teams meeting. Users can temporarily view and collaborate on whiteboards that are shared in a meeting, in a similar way to PowerPoint Live sharing.
+
+In this case, Whiteboard provides temporary viewing and collaboration on the whiteboard during the Teams meeting only. A share link isn't created and Whiteboard doesn't grant access to the file.
+
+If you have external sharing enabled for OneDrive for Business, no further action is required.
+
+If you restrict external sharing for OneDrive for Business, you can keep it restricted, and just enable this new setting in order for external and shared device accounts to work. For more information, see [Manage sharing for Microsoft Whiteboard](/microsoft-365/whiteboard/manage-sharing-organizations).
+
+```yaml
+Type: SharingState
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

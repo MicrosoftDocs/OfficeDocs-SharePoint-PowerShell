@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/install-spapplicationcontent
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/install-spapplicationcontent
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Install-SPApplicationContent
 schema: 2.0.0
@@ -29,7 +29,7 @@ The Install-SPApplicationContent cmdlet copies shared application data to existi
 
 This cmdlet does not take any parameters.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -76,4 +76,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 During a Cummulative Update installation if you face a situation where the full PSConfig cannot run then this cmdlet should be executed on all SharePoint servers to keep the Farm in a supported state. 
 
 ## RELATED LINKS
-

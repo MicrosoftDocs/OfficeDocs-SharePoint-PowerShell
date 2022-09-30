@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spenterprisesearchsecuritytrimmer
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spenterprisesearchsecuritytrimmer
 applicable: SharePoint Server Subscription Edition
 title: New-SPEnterpriseSearchSecurityTrimmer
 schema: 2.0.0
@@ -26,7 +26,7 @@ New-SPEnterpriseSearchSecurityTrimmer [-Id] <Int32> [-RulePath <String>]
 This cmdlet creates a new object to configure the security trimmer.
 SPEnterpriseSearchSecurityTrimmer represents a security trimmer that performs customized security trimming of search results at query time, when the results are returned to the user.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

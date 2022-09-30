@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/clear-spserverscaleoutdatabaselog
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/clear-spserverscaleoutdatabaselog
 applicable: SharePoint Server Subscription Edition
 title: Clear-SPServerScaleOutDatabaseLog
 schema: 2.0.0
@@ -149,4 +149,3 @@ Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 ## NOTES
 
 ## RELATED LINKS
-

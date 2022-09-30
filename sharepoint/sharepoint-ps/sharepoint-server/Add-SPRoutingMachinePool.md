@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/add-sproutingmachinepool
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/add-sproutingmachinepool
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Add-SPRoutingMachinePool
 schema: 2.0.0
@@ -29,7 +29,7 @@ Add-SPRoutingMachinePool [-RequestManagementSettings] <SPRequestManagementSettin
 ## DESCRIPTION
 Use the Add-SPRoutingMachinePool cmdlet to add a machine pool by using the RequestManagementSettings and Name parameters.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -132,4 +132,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-SPRoutingMachinePool](Remove-SPRoutingMachinePool.md)
 
 [Set-SPRoutingMachinePool](Set-SPRoutingMachinePool.md)
-

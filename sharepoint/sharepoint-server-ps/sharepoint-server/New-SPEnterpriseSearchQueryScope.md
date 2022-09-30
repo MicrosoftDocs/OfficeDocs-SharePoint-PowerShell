@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spenterprisesearchqueryscope
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spenterprisesearchqueryscope
 applicable: SharePoint Server Subscription Edition
 title: New-SPEnterpriseSearchQueryScope
 schema: 2.0.0
@@ -33,7 +33,7 @@ However, you can convert local scopes to result sources, which serve a similar p
 Use the `New-SPEnterpriseSearchQueryScope` cmdlet to create a new shared scope.
 SPEnterpriseSearchQueryScope represents a query results scope used by all shared search applications on the farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

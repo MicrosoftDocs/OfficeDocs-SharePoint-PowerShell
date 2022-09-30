@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.TranslationServices.dll-Help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-sptranslationserviceapplication
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-sptranslationserviceapplication
 applicable: SharePoint Server Subscription Edition
 title: New-SPTranslationServiceApplication
 schema: 2.0.0
@@ -25,7 +25,7 @@ New-SPTranslationServiceApplication [-Name] <String> -ApplicationPool <SPIisWebS
 ## DESCRIPTION
 Use the `New-SPTranslationServiceApplication` cmdlet to provision a new instance of the Machine Translation service on the farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

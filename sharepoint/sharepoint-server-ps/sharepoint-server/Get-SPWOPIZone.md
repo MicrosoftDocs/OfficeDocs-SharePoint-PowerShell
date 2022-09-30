@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spwopizone
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spwopizone
 applicable: SharePoint Server Subscription Edition
 title: Get-SPWOPIZone
 schema: 2.0.0
@@ -24,7 +24,7 @@ Get-SPWOPIZone [-AssignmentCollection <SPAssignmentCollection>] [<CommonParamete
 ## DESCRIPTION
 The Get-SPWOPIZone returns the zone that is configured on the current SharePoint farm for the WOPI application (such as a server that runs Office Web Apps Server) to use.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -76,4 +76,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Use Office Web Apps with SharePoint 2013]()
 
 [Set-SPWOPIZone](Set-SPWOPIZone.md)
-

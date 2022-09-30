@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spounifiedgroupmovestate
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spounifiedgroupmovestate
 applicable: SharePoint Online
 title: Get-SPOUnifiedGroupMoveState
 schema: 2.0.0
@@ -110,4 +110,4 @@ You can also apply the `-Verbose` option to see additional information about the
 
 ## RELATED LINKS
 
-[Move a SharePoint site to a different geo location](https://docs.microsoft.com/office365/enterprise/move-sharepoint-between-geo-locations)
+[Move a SharePoint site to a different geo location](https://learn.microsoft.com/office365/enterprise/move-sharepoint-between-geo-locations)

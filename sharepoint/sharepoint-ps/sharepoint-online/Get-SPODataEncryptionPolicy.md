@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/get-spodataencryptionpolicy
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spodataencryptionpolicy
 applicable: SharePoint Online
 title: Get-SPODataEncryptionPolicy
 schema: 2.0.0
@@ -26,7 +26,7 @@ Get-SPODataEncryptionPolicy
 
 Use the Get-DataEncryptionPolicy cmdlet to view customer encryption status for your geo tenant.
 
-For more information, see [Controlling your data in Office 365 using Customer Key](https://docs.microsoft.com/en-us/microsoft-365/compliance/controlling-your-data-using-customer-key)
+For more information, see [Controlling your data in Office 365 using Customer Key](https://learn.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key)
 
 ## EXAMPLES
 

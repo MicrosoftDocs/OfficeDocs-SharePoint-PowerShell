@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/new-spusagelogfile
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spusagelogfile
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPUsageLogFile
 schema: 2.0.0
@@ -26,7 +26,7 @@ New-SPUsageLogFile [-AssignmentCollection <SPAssignmentCollection>] [<CommonPara
 The `New-SPUsageLogFile` cmdlet starts a new usage log file on the current server computer.
 The usage data in memory is flushed to the current usage log file before the new log file is created.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES

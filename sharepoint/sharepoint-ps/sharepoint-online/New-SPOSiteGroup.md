@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/new-spositegroup
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/new-spositegroup
 applicable: SharePoint Online
 title: New-SPOSiteGroup
 schema: 2.0.0
@@ -29,7 +29,7 @@ SharePoint groups enable you to manage sets of users instead of individual users
 
 You must be a SharePoint Online administrator or Global Administrator and be a site collection administrator to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
 ## EXAMPLES
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 Specifies the permission levels to grant to the newly created group. It can be any permission level that exists on the site collection on which the group is being created.
 
 > [!NOTE]
-> Permission Levels, are defined on the top-level site of the site collection, please see [How to create and edit permission levels](https://docs.microsoft.com/sharepoint/how-to-create-and-edit-permission-levels) for more information.
+> Permission Levels, are defined on the top-level site of the site collection, please see [How to create and edit permission levels](https://learn.microsoft.com/sharepoint/how-to-create-and-edit-permission-levels) for more information.
 
 ```yaml
 Type: String[]
@@ -117,6 +117,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://docs.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [New-SPOSite](New-SPOSite.md)

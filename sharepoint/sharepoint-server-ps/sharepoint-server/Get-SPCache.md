@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/get-spcache
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spcache
 applicable: SharePoint Server Subscription Edition
 title: Get-SPCache
 schema: 2.0.0

@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/remove-spotenantcdnorigin
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spotenantcdnorigin
 applicable: SharePoint Online
 title: Remove-SPOTenantCdnOrigin
 schema: 2.0.0

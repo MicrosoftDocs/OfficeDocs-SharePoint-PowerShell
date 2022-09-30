@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
-online version: https://docs.microsoft.com/powershell/module/sharepoint-server/install-spservice
+online version: https://learn.microsoft.com/powershell/module/sharepoint-server/install-spservice
 applicable: SharePoint Server Subscription Edition
 title: Install-SPService
 schema: 2.0.0
@@ -26,7 +26,7 @@ The Install-SPService cmdlet installs and optionally provisions services on a fa
 This cmdlet installs all services, service instances, and service proxies specified in the registry on the local server computer.
 Use this cmdlet in a script that you build to install and deploy a SharePoint farm or to install a custom developed service.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://docs.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
@@ -87,4 +87,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
