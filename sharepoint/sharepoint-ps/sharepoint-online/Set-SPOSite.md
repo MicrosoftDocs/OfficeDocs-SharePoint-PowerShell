@@ -249,7 +249,7 @@ Accept wildcard characters: False
 
 ### -DisableSharingForNonOwners
 
-This parameter prevents non-owners from invited new users to the site.
+This parameter prevents non-owners from inviting new users to the site.
 
 This parameter is available only in SharePoint Online Management Shell Version 16.0.4613.1211 or later.
 
