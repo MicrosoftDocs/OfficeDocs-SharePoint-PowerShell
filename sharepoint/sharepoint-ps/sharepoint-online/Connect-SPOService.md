@@ -23,7 +23,7 @@ This cmdlet must be run before any other SharePoint Online cmdlets can run.
 
 ```powershell
 Connect-SPOService -AuthenticationUrl <String> [-ClientTag <String>] [-Credential <CredentialCmdletPipeBind>]
- -Url <UrlCmdletPipeBind> [<CommonParameters>]
+ -Url <UrlCmdletPipeBind> -ModernAuth <Boolean> [<CommonParameters>] 
 ```
 
 ### AuthenticationLocation
@@ -85,11 +85,19 @@ Connect-SPOService -Url https://contoso-admin.sharepoint.com -Region ITAR
 
 Connects to a SharePoint Online Administration Center specifying the region.
 
+### -----------------------EXAMPLE 5-----------------------------
+
+ ```powershell
+Connect-SPOService -Credential $creds -Url https://tenant-admin.sharepoint.com -ModernAuth $true -AuthenticationUrl https://login.microsoftonline.com/organizations
+```
+Connecting to SPO Service with ModerAuth Flag.
+
 ## PARAMETERS
 
 ### -AuthenticationUrl
 
 Location for AAD Cross-Tenant Authentication service. Can be optionally used if non-default Cross-Tenant Authentication Service is used.
+
 
 ```yaml
 Type: String
@@ -173,6 +181,24 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -ModernAuth
+
+ Ensures that SharePoint Online tenant administration cmdlets can connect to the service using modern TLS protocols.
+
+To use it you also need to provide the **AuthenticationUrl** parameter.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
