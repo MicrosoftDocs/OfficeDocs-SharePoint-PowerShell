@@ -70,4 +70,4 @@ To assign a user the SharePoint admin role, see [Assign admin roles](/microsoft-
 You are now ready to use SharePoint Online commands.
 
 > [!NOTE]
-> There is a known issue between the SharePoint Online Management Shell module and SharePoint Client Components SDK where the module will fail to load if both are installed on the same computer. If you encounter this issue, uninstall the SharePoint Client Components SDK.
+> There is a known issue between the SharePoint Online Management Shell module and SharePoint Client Components SDK where the module will fail to load if both are installed on the same computer. If you encounter this issue, and you are not trying to use the SharePoint Online Management Shell module in a SharePoint Server, uninstall the SharePoint Client Components SDK.
