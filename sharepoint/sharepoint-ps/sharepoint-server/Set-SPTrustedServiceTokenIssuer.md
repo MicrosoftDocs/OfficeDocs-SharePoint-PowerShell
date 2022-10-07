@@ -44,7 +44,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### ------------------EXAMPLE 1------------------
 ```
 C:\PS>$cert = Get-PfxCertificate C:\LiveIDSigningCert.pfx
-Set-SPTrustedServiceTokenIssuer "WFEFarm1" - Description "WFE Farm 1" - ImportTrustCertificate $cert
+Set-SPTrustedServiceTokenIssuer "WFEFarm1" - Description "WFE Farm 1" -Certificate $cert
 ```
 
 This example updates a SharePoint Farm trust using the trust certificate from a file.
