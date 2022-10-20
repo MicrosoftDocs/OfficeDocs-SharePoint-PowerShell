@@ -14,7 +14,7 @@ First you can check if you have already installed the SharePoint Online Manageme
 Get-Module -Name Microsoft.Online.SharePoint.PowerShell -ListAvailable | Select Name,Version
 ```
 
-If your operating system is using PowerShell 5 or newer, you can also install the SharePoint Online Management Shell by running the following command in administrative mode:
+If your operating system is using PowerShell 5, you can also install the SharePoint Online Management Shell by running the following command in administrative mode:
 
 ```powershell
 Install-Module -Name Microsoft.Online.SharePoint.PowerShell
