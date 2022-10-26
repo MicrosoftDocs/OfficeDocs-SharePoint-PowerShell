@@ -79,7 +79,7 @@ For Groups site collection, the only valid parameters  are Identity, AllowSelfSe
 
 ## EXAMPLES
 
-### -----------------------EXAMPLE 1-----------------------------
+### Example 1
 
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -Owner joe.healy@contoso.com -NoWait
@@ -87,7 +87,7 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -Owner joe.heal
 
 Example 1 updates the owner of site collection <https://contoso.sharepoint.com/sites/site1> to the person whose email address is joe.healy@contoso.com. This cmdlet is executed immediately without delay.
 
-### -----------------------EXAMPLE 2-----------------------------
+### Example 2
 
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -StorageQuota 1024
@@ -95,7 +95,7 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -StorageQuota 1
 
 Example 2 updates the settings of site collection <https://contoso.sharepoint.com/sites/site1.> The storage quota is updated to 1024 megabytes (1 GB).
 
-### -----------------------EXAMPLE 3-----------------------------
+### Example 3
 
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com -StorageQuota 1500 -StorageQuotaWarningLevel 1400
@@ -103,7 +103,7 @@ Set-SPOSite -Identity https://contoso.sharepoint.com -StorageQuota 1500 -Storage
 
 This example updates the settings of site collection <https://contoso.sharepoint.com.> The storage quota is updated to 1500 megabytes and the storage quota warning level is updated to 1400 megabytes.
 
-### -----------------------EXAMPLE 4-----------------------------
+### Example 4
 
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com -DisableSharingForNonOwners
@@ -111,7 +111,7 @@ Set-SPOSite -Identity https://contoso.sharepoint.com -DisableSharingForNonOwners
 
 Example 4 prevents non-owners of a site from inviting new users to the site.
 
-### -----------------------EXAMPLE 5-----------------------------
+### Example 5
 
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/groupname -StorageQuota 3000 -StorageQuotaWarningLevel 2000
@@ -122,7 +122,7 @@ This example sets the quota for the site.
 > [!NOTE]
 > If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.  
 
-### -----------------------EXAMPLE 6-----------------------------
+### Example 6
 
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnablePWA $true
@@ -130,7 +130,7 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnablePWA $tru
 
 Example 6 enables the site "site1" to create  Project Web Applications (PWA).
 
-### -----------------------EXAMPLE 7-----------------------------
+### Example 7
 
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -SharingCapability ExternalUserSharingOnly
@@ -139,7 +139,7 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -SharingDomainR
 
 Example 7 sets the Sharing Capability to allow external users who accept sharing invitations and sign in as authenticated users, and then specifies an email domain that is allowed for sharing with the external collaborators.
 
-### -----------------------EXAMPLE 8-----------------------------
+### Example 8
 
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/research -AddInformationSegment a17efb47-e3c9-4d85-a188-1cd59c83de32
@@ -147,7 +147,7 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/research -AddInformat
 
 This example adds InformationSegment 'a17efb47-e3c9-4d85-a188-1cd59c83de32' to the site. 
 
-### -----------------------EXAMPLE 9-----------------------------
+### Example 9
 
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/research -RemoveInformationSegment a17efb47-e3c9-4d85-a188-1cd59c83de32
@@ -155,7 +155,7 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/research -RemoveInfor
 
 In example, InformationSegment 'a17efb47-e3c9-4d85-a188-1cd59c83de32' is removed from the site.
 
-### -----------------------EXAMPLE 10-----------------------------
+### Example 10
 
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/research -ConditionalAccessPolicy AuthenticationContext -AuthenticationContextName "MFA"
