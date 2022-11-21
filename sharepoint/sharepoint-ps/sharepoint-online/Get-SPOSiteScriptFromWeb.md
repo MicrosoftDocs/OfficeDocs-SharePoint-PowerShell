@@ -40,7 +40,7 @@ C:\> $extracted = Get-SPOSiteScriptFromWeb `
     -IncludeRegionalSettings `
     -IncludeSiteExternalSharingCapability `
     -IncludeLinksToExportedItems `
-    -IncludedLists ("Shared Documents", "Lists/Project Activities")
+    -IncludedLists ("Shared%20Documents", "Lists/Project%20Activities")
 C:\> Add-SPOSiteScript `
     -Title "Contoso template site" `
     -Description "This is a copy of a site collection." `
