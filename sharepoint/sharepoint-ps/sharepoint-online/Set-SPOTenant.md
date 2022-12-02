@@ -120,6 +120,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-OneDriveRequestFilesLinkExpirationInDays <Int32>]
  [-CoreRequestFilesLinkExpirationInDays <Int32>]
  [-AllowAnonymousMeetingParticipantsToAccessWhiteboards <SharingState>]
+ [-LabelMismatchEmailHelpLink <String>]
  [<CommonParameters>]
 ```
 
@@ -1933,6 +1934,23 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: false
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LabelMismatchEmailHelpLink
+This parameter allows tenant admins to customize the "Help Link" in email with the subject "Incompatible sensitivity label detected." When a sensitivity label mismatch occurs between the label on the document uploaded and the label on the site, SharePoint Online captures an audit record and sends an Incompatible sensitivity label detected email notification to the person who uploaded the document and the site owner. The notification contains details of the document which caused the problem and the label assigned to the document and to the site. The comparison happens between the priority of these two labels. 
+
+The value can be any valid URL.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
