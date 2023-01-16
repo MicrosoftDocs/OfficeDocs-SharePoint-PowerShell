@@ -39,7 +39,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 Set-SPOUser -Site https://contoso.sharepoint.com/sites/marketing -LoginName melissa.kerr@contoso.com -IsSiteCollectionAdmin $true
 ```
 
-This example makes melissa.kerr@contoso.com a SharePoint Online site collection administrator on <https://contoso.sharepoint.com/sites/marketing.>
+This example makes melissa.kerr@contoso.com a SharePoint Online site collection administrator on <https://contoso.sharepoint.com/sites/marketing>.
 
 ### Example 2
 
@@ -47,7 +47,7 @@ This example makes melissa.kerr@contoso.com a SharePoint Online site collection 
 Set-SPOUser -Site https://contoso.sharepoint.com/sites/benefits -LoginName adelev_fabrikam.onmicrosoft.com#ext#@contoso.onmicrosoft.com -IsSiteCollectionAdmin $true
 ```
 
-This example makes guest user adelev_fabrikam.onmicrosoft.com a SharePoint Online site collection administrator on <https://contoso.sharepoint.com/sites/benefits.>
+This example makes guest user adelev_fabrikam.onmicrosoft.com a SharePoint Online site collection administrator on <https://contoso.sharepoint.com/sites/benefits>.
 
 ## PARAMETERS
 
