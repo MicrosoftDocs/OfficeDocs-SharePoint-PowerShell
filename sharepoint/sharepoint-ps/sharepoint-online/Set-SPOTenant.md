@@ -906,7 +906,7 @@ Accept wildcard characters: False
 
 ### -DisableCustomAppAuthentication
 
-Prevents apps using an Azure Access Control (ACS) app-only access token to access SharePoint. ACS, a service of Azure Active Directory (Azure AD), has been retired on November 7, 2018. This retirement does not impact the SharePoint add-in model, which uses the https://accounts.accesscontrol.windows.net hostname (which is not impacted by this retirement). For new tenants, apps using an ACS app-only access token are disabled by default. We recommend using the Azure AD app-only model which is modern and more secure. Note that marking this property to $true doesn't prevent creating apps in SharePoint that uses Azure Access Control (ACS) app-only access token. Marking this property to $true only ensures that such apps can't access SharePoint anymore.
+Prevents apps using an Azure Access Control (ACS) app-only access token to access SharePoint. ACS, a service of Azure Active Directory (Azure AD), has been retired on November 7, 2018. This retirement does not impact the SharePoint add-in model, which uses the https://accounts.accesscontrol.windows.net hostname (which is not impacted by this retirement). For new tenants, apps using an ACS app-only access token are disabled by default. We recommend using the Azure AD app-only model which is modern and more secure. Note that marking this property to $true doesn't prevent creating apps in SharePoint that use an Azure Access Control (ACS) app-only access token. Marking this property to $true only ensures that such apps can't access SharePoint anymore.
 
 Accepts a value of true or false. By default this feature is set to true.
 
