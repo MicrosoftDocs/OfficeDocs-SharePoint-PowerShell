@@ -29,6 +29,9 @@ Get-SPOTenantRenameStatus [<CommonParameters>]
 
 This command gets the status of the job to rename the SharePoint domain name for your organization.
 
+> [!NOTE] 
+> If you receive AccessDenied exceptions after the rename operation has started, try connecting to the new domain in PowerShell and try again.
+
 ## EXAMPLES
 
 ### EXAMPLE 1
