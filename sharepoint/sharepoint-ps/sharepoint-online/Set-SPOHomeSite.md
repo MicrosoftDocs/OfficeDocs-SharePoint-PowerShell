@@ -48,7 +48,7 @@ Sets the home site to the provided site collection url and keeps the Viva Connec
 
 ### -HomeSiteUrl
 
-The Url of the site collection to be the home site.
+Sets the URL of the site collection to be the home site.
 
 ### -VivaConnectionsDefaultStart
 When set to $true, the VivaConnectionsDefaultStart parameter will keep the Viva Connections landing experience to the SharePoint home site. If set to $false, the Viva Connections home experience will be used. 
