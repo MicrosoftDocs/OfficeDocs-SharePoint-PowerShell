@@ -19,7 +19,7 @@ Sets a SharePoint Site as a Home Site.
 ## SYNTAX
 
 ```powershell
-Set-SPOHomeSite -HomeSiteUrl <String> [-VivaConnectionsDefaultStart <bool>] [<CommonParameters>]
+Set-SPOHomeSite -HomeSiteUrl <String> [-VivaConnectionsDefaultStart <SwitchParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,14 +47,25 @@ Sets the home site to the provided site collection url and keeps the Viva Connec
 
 Sets the URL of the site collection to be the home site.
 
-### -VivaConnectionsDefaultStart
-When set to $true, the VivaConnectionsDefaultStart parameter will keep the Viva Connections landing experience to the SharePoint home site. If set to $false, the Viva Connections home experience will be used. 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VivaConnectionsDefaultStart
+When set to $true, the VivaConnectionsDefaultStart parameter will keep the Viva Connections landing experience to the SharePoint home site. If set to $false, the Viva Connections home experience will be used. 
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
