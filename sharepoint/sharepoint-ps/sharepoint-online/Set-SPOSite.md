@@ -848,7 +848,7 @@ Accept wildcard characters: False
 
 ### -LoopOverrideSharingCapability
 
-Choose whether to override the Loop sharing capability on this site
+Choose whether to override the Loop sharing capability on this site.
 
 PARAMVALUE: None | False | True
 
