@@ -824,7 +824,7 @@ Accept wildcard characters: False
 ### -LoopSharingCapability
 
 Gets or sets collaboration type for fluid on the site.
-Only applies if LoopOverrideSharingCapability is set to true.
+This only applies if LoopOverrideSharingCapability is set to true.
 
 
 The valid values are:  
