@@ -30,15 +30,34 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-Title <String>] [-WhatIf] [-AllowDownloadingNonWebViewableFiles <Boolean>]
  [-CommentsOnSitePagesDisabled <Boolean>] [-SocialBarOnSitePagesDisabled <Boolean>]
  [-DisableAppViews <AppViewsPolicy>]
- [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>] [-DisableFlows <FlowsPolicy>]
- [-RestrictedToGeo <RestrictedToRegion>] [-SharingAllowedDomainList <String>]
- [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
- [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-StorageQuotaReset]
- [-DefaultSharingLinkType] [-DefaultLinkPermission] [-DefaultLinkToExistingAccess]
- [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-AuthenticationContextName <String>] [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>]  [-AnonymousLinkExpirationInDays <Int32>] [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [-OverrideTenantExternalUserExpirationPolicy <Boolean>]  [-ExternalUserExpirationInDays <Int32>] [-SensitivityLabel <String>] 
- [-RequestFilesLinkExpirationInDays <Int32>] [-SensitivityLabel <String>] 
+ [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>] 
+ [-DisableFlows <FlowsPolicy>]
+ [-LoopSharingCapability <String>]
+ [-LoopOverrideSharingCapability <Boolean>] 
+ [-LoopDefaultSharingLinkScope <String>]
+ [-LoopDefaultSharingLinkRole <String>]
+ [-RestrictedToGeo <RestrictedToRegion>] 
+ [-SharingAllowedDomainList <String>]
+ [-SharingBlockedDomainList <String>] 
+ [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
+ [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] 
+ [-StorageQuotaReset]
+ [-DefaultSharingLinkType]
+ [-DefaultLinkPermission] 
+ [-DefaultLinkToExistingAccess]
+ [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>]
+ [-AuthenticationContextName <String>]
+ [-LimitedAccessFileType <SPOLimitedAccessFileType>] 
+ [-AllowEditing <Boolean>]  
+ [-AnonymousLinkExpirationInDays <Int32>] 
+ [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>]
+ [-OverrideTenantExternalUserExpirationPolicy <Boolean>] 
+ [-ExternalUserExpirationInDays <Int32>]
+ [-SensitivityLabel <String>] 
+ [-RequestFilesLinkExpirationInDays <Int32>] 
  [-RequestFilesLinkEnabled <Boolean>]
- [-RemoveLabel] [<CommonParameters>]
+ [-RemoveLabel] 
+ [<CommonParameters>]
 ```
 
 ### ParamSet2
@@ -793,6 +812,104 @@ PARAMVALUE: None | View | Edit
 ```yaml
 Type: SharingPermissionType
 Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LoopSharingCapability
+
+Gets or sets collaboration type for fluid on the site.
+This only applies if LoopOverrideSharingCapability is set to true.
+
+
+The valid values are:  
+
+- Disabled
+- ExternalUserSharingOnly
+- ExternalUserAndGuestSharing
+- ExistingExternalUserSharingOnly
+
+```yaml
+Type: SharingCapabilities
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LoopOverrideSharingCapability
+
+Choose whether to override the Loop sharing capability on this site.
+
+PARAMVALUE: None | False | True
+
+- None - Respect the organization-level policy for Loop sharing capability
+- False - Respect the organization-level policy for Loop sharing capability
+- True - Override the organization-level policy for Loop sharing capability (can be more or less restrictive)
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LoopDefaultSharingLinkScope
+
+Gets or sets default share link scope for fluid on the site.
+
+The valid values are:  
+
+- Anyone
+- Organization
+- SpecificPeople
+- Uninitialized
+
+```yaml
+Type: SharingCapabilities
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: Uninitialized
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LoopDefaultSharingLinkRole
+
+Gets or sets default share link role for fluid on the site
+
+The valid values are:  
+
+- Edit
+- LimitedEdit
+- LimitedView
+- ManageList
+- None
+- Owner
+- RestrictedView
+- Review
+- Submit
+
+```yaml
+Type: SharingCapabilities
+Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
 Required: False
