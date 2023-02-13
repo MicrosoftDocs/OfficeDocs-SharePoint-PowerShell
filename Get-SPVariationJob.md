@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-SPVariationJob
 
 ## SYNOPSIS
-Displays current status of Variations Propagate Page Job Definition and Variations Propagate Site Job Definition timer jobs that are located on the Timer Job Status page of the SharePoint Central Administration Web site.
+Displays the current status of Variations Propagate Page Job Definition and Variations Propagate Site Job Definition timer jobs that are located on the Timer Job Status page of the SharePoint Central Administration website.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Get-SPVariationJob -Identity <SPWebPipeBind> [-AssignmentCollection <SPAssignmen
 ```
 
 ## DESCRIPTION
-The command displays current status of Variations Propagate Page Job Definition and Variations Propagate Site Job Definition timer jobs that are located on the Timer Job Status page of the SharePoint Central Administration Web site.
+The command displays the current status of Variations Propagate Page Job Definition and Variations Propagate Site Job Definition timer jobs that are located on the Timer Job Status page of the SharePoint Central Administration website.
 
 ## EXAMPLES
 
@@ -27,12 +27,14 @@ The command displays current status of Variations Propagate Page Job Definition 
 C:\PS> Get-SPVariationJob -Identity https://server/sites/pub/vhome/source/newsub
 ```
 
-The example is to display the current status of Variations Propagate Page Job Definition and Variations Propagate Site Job Definition timer jobs that are located on the Timer Job Status page of the SharePoint Central Administration Web site.
+This example displays the current status of Variations Propagate Page Job Definition and Variations Propagate Site Job Definition timer jobs that are located on the Timer Job Status page of the SharePoint Central Administration website.
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{ Fill AssignmentCollection Description }}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -93,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
