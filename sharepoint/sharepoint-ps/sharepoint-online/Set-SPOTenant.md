@@ -119,6 +119,12 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-CoreRequestFilesLinkEnabled <Boolean>]
  [-OneDriveRequestFilesLinkExpirationInDays <Int32>]
  [-CoreRequestFilesLinkExpirationInDays <Int32>]
+ [-OneDriveLoopSharingCapability <String>]
+ [-OneDriveLoopDefaultSharingLinkScope <String>]
+ [-OneDriveLoopDefaultSharingLinkRole <String>]
+ [-CoreLoopSharingCapability <String>]
+ [-CoreLoopDefaultSharingLinkScope <String>]
+ [-CoreLoopDefaultSharingLinkRole <String>]
  [-AllowAnonymousMeetingParticipantsToAccessWhiteboards <SharingState>]
  [-LabelMismatchEmailHelpLink <String>]
  [<CommonParameters>]
@@ -2087,7 +2093,128 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -OneDriveLoopDefaultSharingLinkScope
 
+Gets or sets default share link scope for fluid on OneDrive sites. 
+
+The valid values are:  
+
+- Anyone
+- Organization
+- SpecificPeople
+- Uninitialized
+
+```yaml
+Type: SharingCapabilities
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: Uninitialized
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveLoopDefaultSharingLinkRole
+
+Gets or sets default share link role for fluid on OneDrive sites.
+
+The valid values are:  
+
+- Edit
+- LimitedEdit
+- LimitedView
+- ManageList
+- None
+- Owner
+- RestrictedView
+- Review
+- Submit
+
+```yaml
+Type: SharingCapabilities
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -CoreLoopSharingCapability
+
+Gets or sets collaboration type for fluid on core partition
+
+The valid values are:  
+
+- Disabled
+- ExternalUserSharingOnly
+- ExternalUserAndGuestSharing
+- ExistingExternalUserSharingOnly
+
+```yaml
+Type: SharingCapabilities
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -CoreLoopDefaultSharingLinkScope
+
+Gets or sets default share link scope for fluid on SharePoint sites. 
+
+The valid values are:  
+
+- Anyone
+- Organization
+- SpecificPeople
+- Uninitialized
+
+```yaml
+Type: SharingCapabilities
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: Uninitialized
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CoreLoopDefaultSharingLinkRole
+
+Gets or sets default share link role for fluid on SharePoint sites.
+
+The valid values are:  
+
+- Edit
+- LimitedEdit
+- LimitedView
+- ManageList
+- None
+- Owner
+- RestrictedView
+- Review
+- Submit
+
+```yaml
+Type: SharingCapabilities
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
