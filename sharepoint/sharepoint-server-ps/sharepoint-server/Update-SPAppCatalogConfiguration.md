@@ -104,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipWebTemplateChecking
-Specifies whether to skip checking if the template of the site is APCATALOG#0.
+Specifies whether to skip checking if the template of the site is APPCATALOG#0.
 
 ```yaml
 Type: SwitchParameter
