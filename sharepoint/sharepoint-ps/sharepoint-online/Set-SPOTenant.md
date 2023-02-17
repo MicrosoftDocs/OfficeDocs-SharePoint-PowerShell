@@ -1406,6 +1406,8 @@ Accept wildcard characters: False
 
 Specifies all anonymous links that have been created (or will be created) will expire after the set number of days.
 
+The value can be from 0 to 730 days.
+
 To remove the expiration requirement, set the value to zero (0).
 
 ```yaml
@@ -1527,6 +1529,8 @@ The 'SyncPrivacyProfileProperties' parameter is obsolete and renamed ReSyncTenan
 This parameter enables the synchronization of privacy profile properties.
 
 ReSyncTenantPrivacyProfile sets whether or not the synced tenant properties will be updated on the next request. The request will cause Azure Active Directory to grab the tenant's current display name (TenantDisplayName) and privacy profile URL (PrivacyProfileUrl). 
+
+Running 'Set-SPOTenant - ReSyncTenantPrivacyProfile' will force to a sync from Azure Active Directory privacy profile url to SharePoint Online immediately. There is a 1 day synchronization time window. Whenever SharePoint online gets the privacy profile url, it checks whether last sync time is out of the sync time window. If it is, it syncs from AAD to SPO.
 
 ```yaml
 Type: SwitchParameter
@@ -2350,6 +2354,8 @@ Specifies the number of days before a Request files link expires for all OneDriv
 
 The value can be from 0 to 730 days.
 
+To remove the expiration requirement, set the value to zero (0).
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -2367,6 +2373,8 @@ Accept wildcard characters: False
 Specifies the number of days before a Request files link expires for all SharePoint sites (not including OneDrive sites).
 
 The value can be from 0 to 730 days.
+
+To remove the expiration requirement, set the value to zero (0).
 
 ```yaml
 Type: Int32
