@@ -1530,7 +1530,7 @@ This parameter enables the synchronization of privacy profile properties.
 
 ReSyncTenantPrivacyProfile sets whether or not the synced tenant properties will be updated on the next request. The request will cause Azure Active Directory to grab the tenant's current display name (TenantDisplayName) and privacy profile URL (PrivacyProfileUrl). 
 
-Running 'Set-SPOTenant - ReSyncTenantPrivacyProfile' will force to a sync from Azure Active Directory privacy profile url to SharePoint Online immediately. There is a 1 day synchronization time window. Whenever SharePoint online gets the privacy profile url, it checks whether last sync time is out of the sync time window. If it is, it syncs from AAD to SPO.
+Running 'Set-SPOTenant - ReSyncTenantPrivacyProfile' will force a sync from the Azure Active Directory privacy profile URL to SharePoint Online immediately. There is a one-day synchronization time window. Whenever SharePoint Online gets the privacy profile URL, it checks whether the last sync time is out of the sync time window. If it is, it syncs from Azure Active Directory to SharePoint Online.
 
 ```yaml
 Type: SwitchParameter
