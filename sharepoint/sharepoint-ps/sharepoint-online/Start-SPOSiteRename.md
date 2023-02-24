@@ -23,7 +23,7 @@ Starts a job to rename a site. You can change the URL, and optionally the site t
 
 ```Powershell
 Start-SPOSiteRename [-Identity] <SpoSitePipeBind> [-NewSiteUrl] <string> [[-NewSiteTitle] <string>]
-    [[-SuppressMarketplaceAppCheck]] [[-SuppressWorkflow2013Check]] [[-Reserved] <string>] [-WhatIf] [-Confirm]
+    [[-SuppressMarketplaceAppCheck]] [[-SuppressWorkflow2013Check]] [-ValidationOnly] [[-Reserved] <string>] [-WhatIf] [-Confirm]
     [<CommonParameters>]
 ```
 
@@ -137,6 +137,23 @@ Accept wildcard characters: False
 ### -SuppressWorkflow2013Check
 
 Suppress checking compatibility of SharePoint 2013 Workflows deployed to the associated site.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+
+Required: False
+Position: 5
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ValidationOnly
+
+Specify to verify that the site address can be changed.
 
 ```yaml
 Type: SwitchParameter
