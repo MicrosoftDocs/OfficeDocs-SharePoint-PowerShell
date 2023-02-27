@@ -2414,7 +2414,7 @@ Accept wildcard characters: False
 
 ### -DisableBackToClassic
 
-Enable or disable the link "Return to classic SharePoint", on modern SharePoint list and library pages.
+Enables or disables the link "Return to classic SharePoint" on modern SharePoint list and library pages.
 
 ```yaml
 Type: Boolean
