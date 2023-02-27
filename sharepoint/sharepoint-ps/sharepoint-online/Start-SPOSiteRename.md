@@ -153,7 +153,7 @@ Accept wildcard characters: False
 
 ### -ValidationOnly
 
-Specify to verify that the site address can be changed.
+Verifies that the site address can be changed.
 
 ```yaml
 Type: SwitchParameter
