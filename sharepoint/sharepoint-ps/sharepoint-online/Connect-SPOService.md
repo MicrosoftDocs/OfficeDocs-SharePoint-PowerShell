@@ -90,7 +90,7 @@ Connects to a SharePoint Online Administration Center specifying the region.
  ```powershell
 Connect-SPOService -Credential $creds -Url https://tenant-admin.sharepoint.com -ModernAuth $true -AuthenticationUrl https://login.microsoftonline.com/organizations
 ```
-Connecting to SPO Service with ModerAuth Flag.
+Connecting to SPO Service with ModernAuth Flag.
 
 ## PARAMETERS
 
