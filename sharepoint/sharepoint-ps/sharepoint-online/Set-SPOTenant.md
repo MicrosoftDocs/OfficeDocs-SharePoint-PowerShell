@@ -127,6 +127,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-CoreLoopDefaultSharingLinkRole <String>]
  [-AllowAnonymousMeetingParticipantsToAccessWhiteboards <SharingState>]
  [-LabelMismatchEmailHelpLink <String>]
+ [-DisableBackToClassic <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -2404,6 +2405,22 @@ Type: SharingState
 Parameter Sets: (All)
 Aliases:
 
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableBackToClassic
+
+Enables or disables the link "Return to classic SharePoint" on modern SharePoint list and library pages.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
