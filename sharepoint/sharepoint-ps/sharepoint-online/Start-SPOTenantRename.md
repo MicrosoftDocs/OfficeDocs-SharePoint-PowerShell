@@ -25,7 +25,7 @@ Starts a job to change the SharePoint domain name for your organization in Micro
 ## SYNTAX
 
 ```Powershell
-Start-SPOTenantRename -DomainName <string> -ScheduledDateTime <datetime> [-WhatIf] [-Confirm] [<CommonParameters>]
+Start-SPOTenantRename -DomainName <string> -ScheduledDateTime <datetime> [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -75,23 +75,6 @@ Applicable: SharePoint Online
 
 Required: True
 Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-
-Simulation of what would happen if you run the script without modifying anything.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-
-Required: True
-Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
