@@ -82,20 +82,8 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Simulation of what would happen if you run the script without modifying anything.
+This parameter is not supported for this cmdlet.
 
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Confirm
 
