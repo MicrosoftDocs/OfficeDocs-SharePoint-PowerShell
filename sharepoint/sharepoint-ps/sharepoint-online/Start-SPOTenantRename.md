@@ -82,7 +82,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-This parameter is not supported for this cmdlet.
+Not supported for this cmdlet.
 
 
 ### -Confirm
