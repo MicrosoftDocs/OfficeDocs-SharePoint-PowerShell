@@ -128,6 +128,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-AllowAnonymousMeetingParticipantsToAccessWhiteboards <SharingState>]
  [-LabelMismatchEmailHelpLink <String>]
  [-DisableBackToClassic <Boolean>]
+ [-IsEnableAppAuthPopUpEnabled <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -2415,6 +2416,22 @@ Accept wildcard characters: False
 ### -DisableBackToClassic
 
 Enables or disables the link "Return to classic SharePoint" on modern SharePoint list and library pages.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsEnableAppAuthPopUpEnabled
+
+Enables or disables users in the tenancy to authenticate into SharePoint applications using popups. 
 
 ```yaml
 Type: Boolean
