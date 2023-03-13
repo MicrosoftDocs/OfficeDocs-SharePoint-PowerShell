@@ -82,14 +82,13 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-Simulation of what would happen if you run the script without modifying anything.
+Not supported for this cmdlet.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
-
 Required: True
 Position: 0
 Default value: None
