@@ -2431,7 +2431,7 @@ Accept wildcard characters: False
 
 ### -IsEnableAppAuthPopUpEnabled
 
-Enables or disables users in the tenancy to authenticate into SharePoint applications using popups. 
+Enables or disables users in the organization to authenticate SharePoint applications using popups. 
 
 ```yaml
 Type: Boolean
