@@ -2433,6 +2433,8 @@ Accept wildcard characters: False
 
 Enables or disables users in the organization to authenticate SharePoint applications using popups. 
 
+This parameter affects the way code in SharePoint interacts with Azure AD to get tokens to access APIs. In scenarios where third party cookies are disabled (e.g. Safari browsers with ITP feature enabled), any code that requires a token to access an API automatically triggers a full page refresh. When IsEnableAppAuthPopUpEnabled is set to $true, SharePoint will instead surface a popup in this scenario.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
