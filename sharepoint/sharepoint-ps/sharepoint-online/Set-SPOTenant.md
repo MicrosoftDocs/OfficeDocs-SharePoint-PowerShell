@@ -128,6 +128,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-AllowAnonymousMeetingParticipantsToAccessWhiteboards <SharingState>]
  [-LabelMismatchEmailHelpLink <String>]
  [-DisableBackToClassic <Boolean>]
+ [-IsEnableAppAuthPopUpEnabled <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -2415,6 +2416,24 @@ Accept wildcard characters: False
 ### -DisableBackToClassic
 
 Enables or disables the link "Return to classic SharePoint" on modern SharePoint list and library pages.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsEnableAppAuthPopUpEnabled
+
+Enables or disables users in the organization to authenticate SharePoint applications using popups. 
+
+This parameter affects the way code in SharePoint interacts with Azure AD to get tokens to access APIs. In scenarios where third-party cookies are disabled (such as Safari browsers with ITP feature enabled), any code that requires a token to access an API automatically triggers a full page refresh. When IsEnableAppAuthPopUpEnabled is set to $true, SharePoint will instead surface a popup in this scenario.
 
 ```yaml
 Type: Boolean
