@@ -2449,7 +2449,6 @@ Accept wildcard characters: False
 
 ### -DisableDocumentLibraryDefaultLabeling
 
-
 If you need to, you can turn off this feature that supports a default sensitivity label for SharePoint document libraries. This is a tenant-level setting that requires you to use the Set-SPOTenant cmdlet with the DisableDocumentLibraryDefaultLabeling parameter set to True.
 
 After you run this command, you won't see the option to configure Default sensitivity labels for a document library. You won't be able to select a default sensitivity label for new or existing libraries.
@@ -2457,9 +2456,8 @@ After you run this command, you won't see the option to configure Default sensit
 For document libraries that were previously configured for a default sensitivity label:
 
 1. The label selection for the document library remains but is deactivated so new files won't have the selected sensitivity label applied.
-2. Sensitivity labels that were applied as a default label aren't removed.
+2. Sensitivity labels that were applied as a default label aren't removed. 
 
-As with all tenant-level configuration changes for SharePoint, it takes about 15 minutes for the change to take effect.
 
 ```yaml
 Type: Boolean
