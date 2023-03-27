@@ -129,6 +129,8 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-LabelMismatchEmailHelpLink <String>]
  [-DisableBackToClassic <Boolean>]
  [-IsEnableAppAuthPopUpEnabled <Boolean>]
+ [-DisableDocumentLibraryDefaultLabeling]
+ [-BlockDownloadFileTypePolicy]
  [<CommonParameters>]
 ```
 
