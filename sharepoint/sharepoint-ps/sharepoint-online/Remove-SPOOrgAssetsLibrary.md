@@ -25,7 +25,7 @@ Remove-SPOOrgAssetsLibrary [-LibraryUrl <String>] [-ListId <Guid>] [<CommonParam
 
 ## DESCRIPTION
 
-The Remove-SPOOrgAssetsLibrary cmdlet removes a library that was designated as a central location for organization assets across the tenant. Once this cmdlet is run, this library will no longer be accessible from the "Your organization" tab in the file picker, (it can take up to 24 hours before the change applies). When running the cmdlet, either the library URL or library ID (not both) needs to be indicated.
+The Remove-SPOOrgAssetsLibrary cmdlet removes a library that was designated as a central location for organization assets across the tenant. Once this cmdlet is run, this library will no longer be accessible from the "Your organization" tab in the file picker (it might take up to 24 hours before the change applies). When running the cmdlet, either the library URL or library ID (not both) needs to be indicated.
 
 Once the library is removed, CDN will still be enabled for this library. To disable CDN for this library, use Remove-SPOTenantCdnOrigin with the server relative URL (example: /sites/branding/assets).
 
