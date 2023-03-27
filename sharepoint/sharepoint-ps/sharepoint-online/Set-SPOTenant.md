@@ -2457,7 +2457,7 @@ After the policy is turned on, any new Teams meeting recording files created by 
 
 Because this policy affects meeting recordings stored in OneDrive and SharePoint, you must be a SharePoint administrator to configure it.
 
-Note that this policy doesn't apply to manually uploaded meeting recording files. For more details, see [Block the download of Teams meeting recording files from SharePoint or OneDrive](https://learn.microsoft.com/microsoftteams/block-download-meeting-recording).
+Note that this policy doesn't apply to manually uploaded meeting recording files. For more details, see [Block the download of Teams meeting recording files from SharePoint or OneDrive](/microsoftteams/block-download-meeting-recording).
 
 ```yaml
 Type: Boolean 
