@@ -49,10 +49,10 @@ All site templates are displayed by default.
 | Human resources| b8ef3134-92a2-4c9d-bca6-c2f14e79fe98|
 | Leadership connection    | cd4c26b2-b231-419a-8bb4-9b1d9b83aef6 |
 | Learning central       | b8ef3134-92a2-4c9d-bca6-c2f14e79fe98  |
-| New employee onboarding      | 2a23fa44-52b0-4814-baba-06fef1ab931e   |
-| Showcase  | 89f21161-0892-497a-91cb-5783eeb1f5f2   |
-| Store collaboration  | 811ecf9a-b33f-44e6-81bd-da77729906dc   |
-| Volunteer center  | b6e04a41-1535-4313-a856-6f3515d31999   |
+| New employee onboarding| 2a23fa44-52b0-4814-baba-06fef1ab931e   |
+| Organization home| 6da87011-20ac-4123-a6b8-44c8e4c99d91|
+| Showcase| 89f21161-0892-497a-91cb-5783eeb1f5f2|
+| Volunteer center| b6e04a41-1535-4313-a856-6f3515d31999   |
 | Topic     | a30fef54-a4e5-4beb-a8b5-962c528d753a   |
 | Blank    | 665da395-e0f9-4c92-b35c-773d8c292f2d  |
 
