@@ -28,14 +28,20 @@ The `Set-SPOBuiltInSiteTemplateSettings` cmdlet sets a specific Microsoft-provid
 
 All site templates are displayed by default.
 
-| Team site templates  | Template ID                 | 
+| Team site templates  | Template ID                 |
 | :------------------- | :------------------- |
-| Event planning  | 9522236e-6802-4972-a10d-e98dc74b3344 | 
-| Project management              | f0a3abf4-afe8-4409-b7f3-484113dee93e| 
-| Training and courses        | 695e52c9-8af7-4bd3-b7a5-46aca95e1c7e  | 
-| Training and development team     | 64aaa31e-7a1e-4337-b646-0b700aa9a52c | 
-| Team collaboration     | 6b96e7b1-035f-430b-92ca-31511c51ca72  | 
-| Retail management     | e4ec393e-da09-4816-b6b2-195393656edd  | 
+| Accounts payable| 403ffe4e-12d4-41a2-8153-208069eaf2b8|
+| Crisis communication team| fb513aef-c06f-4dc3-b08c-963a2d2360c1|
+| Contracts management| 2a7dd756-75f6-4f0f-a06a-a672939ea2a3|
+| Employee onboarding team| af9037eb-09ef-4217-80fe-465d37511b33|
+| Event planning| 9522236e-6802-4972-a10d-e98dc74b3344 |
+| IT help desk|71308406-f31d-445f-85c7-b31942d1508c|
+| Project management              | f0a3abf4-afe8-4409-b7f3-484113dee93e|
+| Retail management| e4ec393e-da09-4816-b6b2-195393656edd|
+| Store collaboration| 811ecf9a-b33f-44e6-81bd-da77729906dc|
+| Team collaboration| 6b96e7b1-035f-430b-92ca-31511c51ca72  |
+| Training and courses        | 695e52c9-8af7-4bd3-b7a5-46aca95e1c7e  |
+| Training and development team     | 64aaa31e-7a1e-4337-b646-0b700aa9a52c |
 
 <br>
 
@@ -56,11 +62,13 @@ All site templates are displayed by default.
 You can hide all templates by specifying an empty ID of "00000000-0000-0000-0000-000000000000". Settings specified for a specific template will take precedence over the "all templates" setting. You can hide all templates and then selectively make specific templates visible. [Learn more about SharePoint site templates](https://support.microsoft.com/office/apply-and-customize-sharepoint-site-templates-39382463-0e45-4d1b-be27-0e96aeec8398).
 
 
+
 >[!NOTE]
 > - All site templates are displayed by default. [Learn more](https://support.microsoft.com/office/apply-and-customize-sharepoint-site-templates-39382463-0e45-4d1b-be27-0e96aeec8398) about SharePoint site templates
 > - You must have SharePoint admin credentials (or higher) to use SharePoint PowerShell.
 > - The minimum SharePoint PowerShell version required is 16.0.21610.12000.
 > - For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+
 
 
 ## EXAMPLES 
@@ -90,13 +98,14 @@ Set-SPOBuiltInSiteTemplateSettings -Identity "00000000-0000-0000-0000-0000000000
 ```
 
 
+
 ## PARAMETERS
 
 ### -Identity
  
 Specifies the ID for the site template you wish to change. 
  
- ```yaml
+```yaml
 Type: 
 Parameter Sets: (All)
 Aliases:
@@ -129,3 +138,4 @@ Accept wildcard characters: False
 [Get-SPOBuiltInSiteTemplateSettings](Get-SPOBuiltInSiteTemplateSettings.md)
 
 [Apply and customize SharePoint sites](https://support.microsoft.com/office/apply-and-customize-sharepoint-site-templates-39382463-0e45-4d1b-be27-0e96aeec8398)
+
