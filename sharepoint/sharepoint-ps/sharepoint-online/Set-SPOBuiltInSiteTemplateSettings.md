@@ -45,11 +45,12 @@ All site templates are displayed by default.
 | Crisis management| 905bb0b4-01e8-4f55-b73c-f07f08aee3a4 |
 | Department| 73495f08-0140-499b-8927-dd26a546f26a   |
 | Event| 3e4352aa-0cff-44aa-87c9-fefba31f1434|
+| Healthcare| 5215c092-152f-4912-a12a-7e1efdcc6878   |
+| Human resources| b8ef3134-92a2-4c9d-bca6-c2f14e79fe98|
 | Leadership connection    | cd4c26b2-b231-419a-8bb4-9b1d9b83aef6 |
 | Learning central       | b8ef3134-92a2-4c9d-bca6-c2f14e79fe98  |
 | New employee onboarding      | 2a23fa44-52b0-4814-baba-06fef1ab931e   |
 | Showcase  | 89f21161-0892-497a-91cb-5783eeb1f5f2   |
-| Healthcare  | 5215c092-152f-4912-a12a-7e1efdcc6878   |
 | Store collaboration  | 811ecf9a-b33f-44e6-81bd-da77729906dc   |
 | Volunteer center  | b6e04a41-1535-4313-a856-6f3515d31999   |
 | Topic     | a30fef54-a4e5-4beb-a8b5-962c528d753a   |
