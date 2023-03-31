@@ -28,18 +28,14 @@ The `Set-SPOBuiltInSiteTemplateSettings` cmdlet sets a specific Microsoft-provid
 
 All site templates are displayed by default.
 
-| Team site templates  | Template ID                 |
+| Team site templates  | Template ID                 | 
 | :------------------- | :------------------- |
-| Accounts payable| 403ffe4e-12d4-41a2-8153-208069eaf2b8|
-| Contracts management| 2a7dd756-75f6-4f0f-a06a-a672939ea2a3|
-| Crisis communication team| fb513aef-c06f-4dc3-b08c-963a2d2360c1|
-| Employee onboarding team| af9037eb-09ef-4217-80fe-465d37511b33|
-| Event planning| 9522236e-6802-4972-a10d-e98dc74b3344 |
-| Project management              | f0a3abf4-afe8-4409-b7f3-484113dee93e|
-| Training and courses        | 695e52c9-8af7-4bd3-b7a5-46aca95e1c7e  |
-| Training and development team     | 64aaa31e-7a1e-4337-b646-0b700aa9a52c |
-| Team collaboration     | 6b96e7b1-035f-430b-92ca-31511c51ca72  |
-| Retail management     | e4ec393e-da09-4816-b6b2-195393656edd  |
+| Event planning  | 9522236e-6802-4972-a10d-e98dc74b3344 | 
+| Project management              | f0a3abf4-afe8-4409-b7f3-484113dee93e| 
+| Training and courses        | 695e52c9-8af7-4bd3-b7a5-46aca95e1c7e  | 
+| Training and development team     | 64aaa31e-7a1e-4337-b646-0b700aa9a52c | 
+| Team collaboration     | 6b96e7b1-035f-430b-92ca-31511c51ca72  | 
+| Retail management     | e4ec393e-da09-4816-b6b2-195393656edd  | 
 
 <br>
 
