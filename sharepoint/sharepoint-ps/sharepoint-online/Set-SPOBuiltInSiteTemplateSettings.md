@@ -45,7 +45,6 @@ All site templates are displayed by default.
 | Crisis management| 905bb0b4-01e8-4f55-b73c-f07f08aee3a4 |
 | Department| 73495f08-0140-499b-8927-dd26a546f26a   |
 | Event| 3e4352aa-0cff-44aa-87c9-fefba31f1434|
-| Healthcare| 5215c092-152f-4912-a12a-7e1efdcc6878   |
 | Human resources| b8ef3134-92a2-4c9d-bca6-c2f14e79fe98|
 | Leadership connection    | cd4c26b2-b231-419a-8bb4-9b1d9b83aef6 |
 | Learning central       | b8ef3134-92a2-4c9d-bca6-c2f14e79fe98  |
