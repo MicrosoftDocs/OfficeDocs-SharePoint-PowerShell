@@ -2449,6 +2449,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+
 ### -DisableDocumentLibraryDefaultLabeling
 
 If you need to, you can turn off this feature that supports a default sensitivity label for SharePoint document libraries. This is a tenant-level setting that requires you to use the Set-SPOTenant cmdlet with the DisableDocumentLibraryDefaultLabeling parameter set to True.
@@ -2464,14 +2465,31 @@ For document libraries that were previously configured for a default sensitivity
 ```yaml
 Type: Boolean
 
+=======
+### -BlockDownloadFileTypePolicy 
+
+You can block the download of Teams meeting recording files from SharePoint or OneDrive. This allows users to remain productive while addressing the risk of accidental data loss. Users have browser-only access to play the meeting recordings with no ability to download or sync files or access them through apps.
+
+This policy applies to new meeting recordings across the entire organization. You can exempt people who are members of specified security groups from the policy. This allows you to specify governance or compliance specialists who should have download access to meeting recordings.
+
+After the policy is turned on, any new Teams meeting recording files created by the Teams service and saved in SharePoint and OneDrive are blocked from download.
+
+Because this policy affects meeting recordings stored in OneDrive and SharePoint, you must be a SharePoint administrator to configure it.
+
+Note that this policy doesn't apply to manually uploaded meeting recording files. For more details, see [Block the download of Teams meeting recording files from SharePoint or OneDrive](/microsoftteams/block-download-meeting-recording).
+
+```yaml
+Type: Boolean 
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+```
+
 
 ## RELATED LINKS
 
