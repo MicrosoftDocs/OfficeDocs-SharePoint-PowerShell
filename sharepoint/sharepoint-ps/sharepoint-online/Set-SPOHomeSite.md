@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -VivaConnectionsDefaultStart
-When set to $true, the VivaConnectionsDefaultStart parameter will keep the Viva Connections landing experience to the SharePoint home site. If set to $false, the Viva Connections home experience will be used. 
+When set to $true, the VivaConnectionsDefaultStart parameter will keep the Viva Connections landing experience to the SharePoint home site for the desktop experience. If set to $false, the Viva Connections home experience will be used. This command doesn't impact the mobile experience. 
 
 ```yaml
 Type: SwitchParameter
