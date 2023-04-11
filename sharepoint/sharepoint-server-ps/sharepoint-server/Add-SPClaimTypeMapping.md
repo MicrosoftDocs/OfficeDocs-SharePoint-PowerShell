@@ -32,7 +32,15 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ------------------EXAMPLE------------------ 
 ```powershell
-Get-SPTrustedIdentityProvider -Name "LiveIDSTS" | Add-SPClaimTypeMapping -IncomingClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier" -IncomingClaimTypeDisplayName "PUID" -LocalClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/thumbprint"
+$trustedIdentityTokenIssuer = Get-SPTrustedIdentityTokenIssuer -Name "LiveIDSTS"
+
+$trustedIdentityTokenIssuer.ClaimTypes.Add("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier")  
+
+$trustedIdentityTokenIssuer.Update()  
+
+$mapping = New-SPClaimTypeMapping -IncomingClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier" -IncomingClaimTypeDisplayName "PUID" -LocalClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/thumbprint"
+
+$mapping | Add-SPClaimTypeMapping -TrustedIdentityTokenIssuer $trustedIdentityTokenIssuer
 ```
 
 This example adds a claim mapping to a trusted identity token issuer.
