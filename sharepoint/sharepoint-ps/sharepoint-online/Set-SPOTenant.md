@@ -110,6 +110,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-ViewInFileExplorerEnabled <Boolean>]
  [-AllowGuestUserShareToUsersNotInSiteCollection <Boolean>]
  [-DisableCustomAppAuthentication <Boolean>]
+ [-SiteOwnerManageLegacyServicePrincipalEnabled <Boolean>]
  [-ReduceTempTokenLifetimeEnabled <Boolean>]
  [-ReduceTempTokenLifetimeValue <Int32>]
  [-ShowPeoplePickerGroupSuggestionsForIB <Boolean>]
@@ -927,6 +928,24 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteOwnerManageLegacyServicePrincipalEnabled
+
+Allow or disallow the site owner to manage the Azure Access Control (ACS) service principal.
+
+When the value is set to false, only tenant admins can create or update the Azure Access Control (ACS) service principal from the admin center. If the value is set to True, both tenant admins and site owners can create or update the ACS service principal.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
