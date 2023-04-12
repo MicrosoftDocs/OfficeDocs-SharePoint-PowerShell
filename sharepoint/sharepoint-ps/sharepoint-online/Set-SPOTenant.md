@@ -936,7 +936,7 @@ Accept wildcard characters: False
 
 Allows or disallows the site owner to manage the Azure Access Control (ACS) service principal.
 
-When the value is set to false, only tenant admins can create or update the ACS service principal from the admin center. If the value is set to True, both tenant admins and site owners can create or update the ACS service principal.
+When the value is set to false, only tenant admins can create or update the ACS service principal from the admin center. If the value is set to true, both tenant admins and site owners can create or update the ACS service principal.
 
 ```yaml
 Type: Boolean
