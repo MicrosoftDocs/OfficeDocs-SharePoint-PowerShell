@@ -1726,7 +1726,7 @@ Accept wildcard characters: False
 
 ### -EnableAzureADB2BIntegration  
 
-Enables OneDrive and SharePoint integration with Azure AD B2B. For more information see <http://aka.ms/spo-b2b-integration>
+Enables OneDrive and SharePoint integration with Azure AD B2B. For more information, see [SharePoint and OneDrive integration with Azure AD B2B](/sharepoint/sharepoint-azureb2b-integration).
 
 PARAMVALUE: $true | $false
 
