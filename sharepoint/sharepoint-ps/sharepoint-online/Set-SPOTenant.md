@@ -102,7 +102,6 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-EmailAttestationReAuthDays <Int32>]
  [-BlockUserInfoVisibility]
  [-IncludeAtAGlanceInShareEmails]
- [-SyncAadB2BManagementPolicy <Boolean>]
  [-StopNew2010Workflows <Boolean>]
  [-StopNew2013Workflows <Boolean>]
  [-BlockSendLabelMismatchEmail <Boolean>]
@@ -119,10 +118,8 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-CoreRequestFilesLinkEnabled <Boolean>]
  [-OneDriveRequestFilesLinkExpirationInDays <Int32>]
  [-CoreRequestFilesLinkExpirationInDays <Int32>]
- [-OneDriveLoopSharingCapability <String>]
  [-OneDriveLoopDefaultSharingLinkScope <String>]
  [-OneDriveLoopDefaultSharingLinkRole <String>]
- [-CoreLoopSharingCapability <String>]
  [-CoreLoopDefaultSharingLinkScope <String>]
  [-CoreLoopDefaultSharingLinkRole <String>]
  [-AllowAnonymousMeetingParticipantsToAccessWhiteboards <SharingState>]
@@ -1890,21 +1887,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SyncAadB2BManagementPolicy
-Syncs Azure B2B Management Policies. For more information, see [SharePoint and OneDrive integration with Azure AD B2B](https://learn.microsoft.com/sharepoint/sharepoint-azureb2b-integration-preview).
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -StopNew2010Workflows
 Prevents creation of new SharePoint 2010 classic workflows.
 
@@ -2073,33 +2055,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OneDriveLoopSharingCapability
-
-When sharing a whiteboard in a Teams meeting, Whiteboard creates a sharing link that’s accessible by anyone within the organization and automatically shares the whiteboard with any in-tenant users in the meeting.
-
-There’s an additional capability for temporary collaboration by external and shared device accounts during a meeting. This allows these users to temporarily view and collaborate on whiteboards when they’re shared in a Teams meeting, similar to PowerPoint Live sharing.
-
-If you have the external sharing for OneDrive for Business allowed, no further action is required. If you have external sharing for OneDrive for Business disabled, you can leave it disabled but you must enable this new setting. The setting will not take effect until the SharingCapability 'ExternalUserAndGuestSharing' is also enabled at Tenant level. For more information, see [Enable Microsoft Whiteboard for your organization](https://support.microsoft.com/office/enable-microsoft-whiteboard-for-your-organization-1caaa2e2-5c18-4bdf-b878-2d98f1da4b24).
-
-
-The valid values are:  
-
-- Disabled
-- ExternalUserSharingOnly
-- ExternalUserAndGuestSharing
-- ExistingExternalUserSharingOnly
-
-```yaml
-Type: SharingCapabilities
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 ### -OneDriveLoopDefaultSharingLinkScope
 
 Gets or sets default share link scope for fluid on OneDrive sites. 
@@ -2150,28 +2105,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-### -CoreLoopSharingCapability
 
-Gets or sets collaboration type for fluid on core partition
-
-The valid values are:  
-
-- Disabled
-- ExternalUserSharingOnly
-- ExternalUserAndGuestSharing
-- ExistingExternalUserSharingOnly
-
-```yaml
-Type: SharingCapabilities
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 ### -CoreLoopDefaultSharingLinkScope
 
 Gets or sets default share link scope for fluid on SharePoint sites. 
