@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
 title: Get-FileSensitivityLabelInfo
 schema: 2.0.0
-author: Sanjoyanm
+author: SanjoyanM
 ms.author: samust
 ms.reviewer:
 ---
