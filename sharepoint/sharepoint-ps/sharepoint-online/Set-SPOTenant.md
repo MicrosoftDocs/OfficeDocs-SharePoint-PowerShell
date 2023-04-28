@@ -2441,7 +2441,7 @@ When Version History Limits are managed Automatically, SharePoint employs an alg
 The valid values are: 
 
 - True – Version History Limits for new versions created on all new Document Libraries in your organization will be managed Automatically.  
-- False – Version History Limits for new Versions created on all new Document Libraries in your organization will be managed Manually by setting limits to the number of major versions (MajorVersionLimit) and time set (ExpireVersionsAfterDays).  Review the documentation of both parameters to manage your organization version limits manually.  
+- False – Version History Limits for new Versions created on all new Document Libraries in your organization will be managed Manually by setting limits to the number of major versions (MajorVersionLimit) and time set (ExpireVersionsAfterDays).  Review the documentation of both parameters to manage your organization's version limits Manually.  
 
 > [!NOTE]
 > When Version History Limits are managed Manually (EnableAutoExpirationVersionTrim $false), MajorVersionLimits and ExpireVersionsAfterDays are both required parameters with the following acceptable values:<br/>
