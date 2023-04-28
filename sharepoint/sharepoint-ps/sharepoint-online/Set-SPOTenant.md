@@ -2446,7 +2446,7 @@ The valid values are:
 > [!NOTE]
 > When Version History Limits are managed Manually (EnableAutoExpirationVersionTrim $false), MajorVersionLimits and ExpireVersionsAfterDays are both required parameters with the following acceptable values:<br/>
 > a. MajorVersionLimits that will accept values between 100 and 50,000 and<br/>
-> b. ExpireVersionsAfterDays will accept values 0 to Never Expire or values >= 30 to delete versions that exceed that time period.<br/><br/>
+> b. ExpireVersionsAfterDays will accept values of 0 to Never Expire or values >= 30 to delete versions that exceed that time period.<br/><br/>
 > When Version History Limits are managed Automatically (EnableAutoExpirationVersionTrim $true), setting MajorVersionLimits or ExpireVersionsAfterDays will result in an error as the count limits are set by the service.
 
 PARAMVALUE: $true | $false
