@@ -127,6 +127,9 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-DisableBackToClassic <Boolean>]
  [-IsEnableAppAuthPopUpEnabled <Boolean>]
  [-BlockDownloadFileTypePolicy <Boolean>]
+ [-EnableAutoExpirationVersionTrim <Boolean>]
+ [-MajorVersionLimit <int>]
+ [-ExpireVersionsAfterDays <int>]
  [<CommonParameters>]
 ```
 
@@ -219,6 +222,30 @@ Set-SPOTenant -ShowPeoplePickerSuggestionsForGuestUsers $true
 ```
 
 This example enables the option to search for existing guest users at Tenant Level.
+
+### EXAMPLE 11
+
+```powershell
+Set-SPOTenant -EnableAutoExpirationVersionTrim $true
+```
+
+This example sets Automatic Version Storge Limits on all new document libraries at Tenant Level.
+
+### EXAMPLE 12
+
+```powershell
+Set-SPOTenant -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 30
+```
+
+This example sets Manual Version Storage Limits on all new document libraries at Tenant Level by limiting the number of major versions and the time (in days) versions are kept. 
+
+### EXAMPLE 13
+
+```powershell
+Set-SPOTenant -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 0
+```
+
+This example sets Manual Version Storage Limits on all new document libraries at Tenant Level by limiting the number of major versions with no time limits.
 
 ## PARAMETERS
 
@@ -2396,6 +2423,70 @@ Note that this policy doesn't apply to manually uploaded meeting recording files
 
 ```yaml
 Type: Boolean 
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableAutoExpirationVersionTrim
+Global and SharePoint admins in Microsoft 365 can set Organization-level Version History Limit settings that universally apply to new versions created on all new Document Libraries created in your organization. 
+
+When Version History Limits are managed Automatically, SharePoint employs an algorithm behind the scenes that deletes (thins out) intermittent older versions that are least likely to be needed, while preserving sufficient high-value versions - more versions in the recent past and fewer farther back in time - in case restores are required.
+
+The valid values are: 
+
+- True – Version History Limits for new versions created on all new Document Libraries in your organization will be managed Automatically.  
+- False – Version History Limits for new Versions created on all new Document Libraries in your organization will be managed Manually by setting limits to the number of major versions (MajorVersionLimit) and time set (ExpireVersionsAfterDays).  Review the documentation of both parameters to manage your organization's version limits Manually.  
+
+> [!NOTE]
+> When Version History Limits are managed Manually (EnableAutoExpirationVersionTrim $false), MajorVersionLimits and ExpireVersionsAfterDays are both required parameters with the following acceptable values:<br/>
+> a. MajorVersionLimits that will accept values between 100 and 50,000 and<br/>
+> b. ExpireVersionsAfterDays will accept values of 0 to Never Expire or values >= 30 to delete versions that exceed that time period.<br/><br/>
+> When Version History Limits are managed Automatically (EnableAutoExpirationVersionTrim $true), setting MajorVersionLimits or ExpireVersionsAfterDays will result in an error as the count limits are set by the service.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MajorVersionLimit
+When Version History Limits are managed Manually (EnableAutoExpirationVersionTrim $false), admins will need to set the limits to the number of major versions (MajorVersionLimit) and the time period the versions are stored (ExpireVersionsAfterDays). Please check the description of EnableAutoExpirationVersionTrim for more details.
+
+PARAMVALUE: Int32
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExpireVersionsAfterDays
+When Version History Limits are managed Manually (EnableAutoExpirationVersionTrim $false), admins will need to set the limits to the number of major versions (MajorVersionLimit) and the time period the versions are stored (ExpireVersionsAfterDays). Please check the description of EnableAutoExpirationVersionTrim for more details.
+
+PARAMVALUE: Int32
+
+```yaml
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
