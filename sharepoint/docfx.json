@@ -34,7 +34,7 @@
     "externalReference": [],
     "globalMetadata": {
       "uhfHeaderId": "MSDocsHeader-M365-IT",
-      "breadcrumb_path": "/powershell/breadcrumb/toc.json",
+      "breadcrumb_path": "/sharepoint/breadcrumb/toc.json",
       "extendBreadcrumb": true,
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/OfficeDocs-SharePoint-powershell",
