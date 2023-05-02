@@ -1111,7 +1111,7 @@ Accept wildcard characters: False
 
 ### -MediaTranscriptionAutomaticFeatures
 
-When the feature is enabled, videos can have transcript generated automatically on upload. The policy is default on. If a tenant admin decides to disable the feature, he can do so by disabling the policy at tenant level. This feature can not be enabled/disabled at site level.
+When the feature is enabled, videos can have transcripts generated automatically on upload. The policy is default on. If a tenant admin decides to disable the feature, he can do so by disabling the policy at tenant level. This feature can not be enabled or disabled at site level.
 Possible values:
 
 - Enabled
