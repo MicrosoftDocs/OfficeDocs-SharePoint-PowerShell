@@ -47,7 +47,7 @@ This example enables a ASP.NET session state on a SharePoint Server farm that us
 
 ### --------------EXAMPLE 2----------------- 
 ```powershell
-Enable-SPSessionStateService -DatabaseName "Session State Database" -DatabaseServer "localhost" -SessionTimeout 120
+Enable-SPSessionStateService -DatabaseName "SessionStateDatabase" -DatabaseServer "localhost" -SessionTimeout 120
 ```
 
 This example enables a ASP.NET session state on a SharePoint Server farm that uses a custom database name, database server, session time-out of 120 minutes, and Windows credentials (due to the lack of a DatabaseCredentials parameter).
@@ -58,6 +58,7 @@ This example enables a ASP.NET session state on a SharePoint Server farm that us
 Specifies the name of the database for the session state service.
 
 The type must be a valid name of a SQL Server database; for example, SessionStateDB1.
+Avoid using spaces in the DatabaseName. Using a file name like 'Session State Database' will cause problems adding new servers to the SharePoint farm.
 
 ```yaml
 Type: String
