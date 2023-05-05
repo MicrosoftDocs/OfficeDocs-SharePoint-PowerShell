@@ -307,6 +307,10 @@ The following cmdlet references are for SharePoint Online.
 
 {{Manually Enter New-SPOSiteGroup Description Here}}
 
+### [New-SPOSiteSharingReportJob](New-SPOSiteSharingReportJob.md)
+
+{{Manually Enter New-SPOSiteSharingReportJob Description Here}}
+
 ### [Register-SPOHubSite](Register-SPOHubSite.md)
 
 {{Manually Enter Register-SPOHubSite Description Here}}
