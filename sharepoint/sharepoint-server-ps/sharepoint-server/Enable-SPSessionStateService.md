@@ -58,7 +58,8 @@ This example enables a ASP.NET session state on a SharePoint Server farm that us
 Specifies the name of the database for the session state service.
 
 The type must be a valid name of a SQL Server database; for example, SessionStateDB1.
-Avoid using spaces in the DatabaseName. Using a file name like 'Session State Database' will cause problems adding new servers to the SharePoint farm.
+
+Avoid using spaces in the database name. Using a file name like 'Session State Database' will cause problems adding new servers to the SharePoint farm.
 
 ```yaml
 Type: String
