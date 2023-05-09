@@ -309,7 +309,7 @@ The following cmdlet references are for SharePoint Online.
 
 ### [New-SPOSiteSharingReportJob](New-SPOSiteSharingReportJob.md)
 
-{{Manually Enter New-SPOSiteSharingReportJob Description Here}}
+This cmdlet is not currently active in Production and may be removed in the future. You will receive the error, "Site collection sharing report feature has not been enabled", if you run this cmdlet which is currently by design. 
 
 ### [Register-SPOHubSite](Register-SPOHubSite.md)
 
