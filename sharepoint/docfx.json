@@ -33,6 +33,7 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "ms.service": "sharepoint-server-itpro",
       "uhfHeaderId": "MSDocsHeader-M365-IT",
       "breadcrumb_path": "/sharepoint/breadcrumb/toc.json",
       "extendBreadcrumb": true,
@@ -43,7 +44,6 @@
       "ms.author": "pamgreen",
       "ms.devlang": "powershell",
       "ms.date": "09/08/2021",
-      "ms.prod": "sharepoint-server-itpro",
       "contributors_to_exclude": [ 
         "rjagiewich", 
         "traya1", 
