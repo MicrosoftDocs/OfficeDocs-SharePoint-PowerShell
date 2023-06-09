@@ -230,7 +230,7 @@ This example enables the option to search for existing guest users at Tenant Lev
 Set-SPOTenant -EnableAutoExpirationVersionTrim $true
 ```
 
-This example sets Automatic Version Storge Limits on all new document libraries at Tenant Level.
+This example sets Automatic Version Storage Limits on all new document libraries at Tenant Level.
 
 ### EXAMPLE 12
 
@@ -2465,10 +2465,10 @@ The valid values are:
 - False – Version History Limits for new Versions created on all new Document Libraries in your organization will be managed Manually by setting limits to the number of major versions (MajorVersionLimit) and time set (ExpireVersionsAfterDays).  Review the documentation of both parameters to manage your organization's version limits Manually.  
 
 > [!NOTE]
-> When Version History Limits are managed Manually (EnableAutoExpirationVersionTrim $false), MajorVersionLimits and ExpireVersionsAfterDays are both required parameters with the following acceptable values:<br/>
-> a. MajorVersionLimits that will accept values between 100 and 50,000 and<br/>
-> b. ExpireVersionsAfterDays will accept values of 0 to Never Expire or values >= 30 to delete versions that exceed that time period.<br/><br/>
-> When Version History Limits are managed Automatically (EnableAutoExpirationVersionTrim $true), setting MajorVersionLimits or ExpireVersionsAfterDays will result in an error as the count limits are set by the service.
+> When Version History Limits are managed Manually (EnableAutoExpirationVersionTrim $false), MajorVersionLimit and ExpireVersionsAfterDays are both required parameters with the following acceptable values:<br/>
+> a. MajorVersionLimit accepts values from 1 through 50,000 (inclusive).<br/>
+> b. ExpireVersionsAfterDays accepts values of 0 to Never Expire or values >= 30 to delete versions that exceed that time period.<br/><br/>
+> When Version History Limits are managed Automatically (EnableAutoExpirationVersionTrim $true), setting MajorVersionLimit or ExpireVersionsAfterDays will result in an error as the count limits are set by the service.
 
 PARAMVALUE: $true | $false
 
