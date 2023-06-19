@@ -40,7 +40,7 @@ This example updates a site script package as a zip file containing a manifest.j
 
 Run the following command:
 ```powershell
-PS C:\> Set-SPOSiteScriptPackage -Identity edaec4ec-71e2-4026-ac1e-6686bb30190e -Title "Install Contoso flow" -Description "Installs the new Contoso flow in a list" -ContentPath "c:\scripts\site-script-package.zip" -Version 2
+Set-SPOSiteScriptPackage -Identity edaec4ec-71e2-4026-ac1e-6686bb30190e -Title "Install Contoso flow" -Description "Installs the new Contoso flow in a list" -ContentPath "c:\scripts\site-script-package.zip" -Version 2
 ```
 
 ## PARAMETERS
