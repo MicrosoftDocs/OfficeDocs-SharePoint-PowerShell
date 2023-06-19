@@ -23,11 +23,7 @@ Updates a previously uploaded site script package. The package file must be a zi
 ## EXAMPLES
 
 ### Example
-This example updates a site script package as a zip file containing a manifest.json script and an updated Dataverse solution zip file.
-
-File site-script-package-v2.zip contains:
-manifest.json:
-
+This example updates a site script package as a zip file containing a manifest.json script and an updated Dataverse solution zip file. The content of manifest.json is as follows:
 ```json
 {
   "$schema": "schema.json",
@@ -38,12 +34,11 @@ manifest.json:
         "solutionRelativeFilePath": "solution.zip"
       }
   ],
-	"version": 2
+  "version": 2
 }
 ```
 
-solution.zip
-
+Run the following command:
 ```powershell
 PS C:\> Set-SPOSiteScriptPackage -Identity edaec4ec-71e2-4026-ac1e-6686bb30190e -Title "Install Contoso flow" -Description "Installs the new Contoso flow in a list" -ContentPath "c:\scripts\site-script-package.zip" -Version 2
 ```
