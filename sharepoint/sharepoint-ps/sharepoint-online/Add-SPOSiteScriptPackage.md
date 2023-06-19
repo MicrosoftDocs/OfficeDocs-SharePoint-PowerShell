@@ -38,7 +38,7 @@ This example adds a site script package as a zip file containing a manifest.json
 
 Run the following command:
 ```powershell
-PS C:\> Add-SPOSiteScriptPackage -Title "Install Contoso flow" -Description "Installs the new Contoso flow in a list" -ContentPath "c:\scripts\site-script-package.zip"
+Add-SPOSiteScriptPackage -Title "Install Contoso flow" -Description "Installs the new Contoso flow in a list" -ContentPath "c:\scripts\site-script-package.zip"
 ```
 
 ## PARAMETERS
