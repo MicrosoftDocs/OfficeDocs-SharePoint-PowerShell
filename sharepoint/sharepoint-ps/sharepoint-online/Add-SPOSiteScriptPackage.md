@@ -8,7 +8,7 @@ schema: 2.0.0
 # Add-SPOSiteScriptPackage
 
 ## SYNOPSIS
-Uploads a new site script package for use either directly or in a site design. The package file must be a zip archive containing all the files necessary for the site script. A file called “manifest.json” with script actions must be present in this zip file.
+Uploads a new site script package for use either directly or in a site design.
 
 ## SYNTAX
 
@@ -22,10 +22,7 @@ Uploads a new site script package for use either directly or in a site design. T
 ## EXAMPLES
 
 ### Example
-This example adds a site script package as a zip file containing a manifest.json script, as well as a Dataverse solution zip file with a Power Automate flow definition.
-
-File site-script-package.zip contains:
-manifest.json:
+This example adds a site script package as a zip file containing a manifest.json script, as well as a Dataverse solution zip file with a Power Automate flow definition. The content of manifest.json is as follows:
 ```json
 {
   "$schema": "schema.json",
@@ -39,8 +36,7 @@ manifest.json:
 }
 ```
 
-solution.zip
-
+Run the following command:
 ```powershell
 PS C:\> Add-SPOSiteScriptPackage -Title "Install Contoso flow" -Description "Installs the new Contoso flow in a list" -ContentPath "c:\scripts\site-script-package.zip"
 ```
