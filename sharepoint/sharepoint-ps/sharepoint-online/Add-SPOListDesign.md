@@ -8,7 +8,7 @@ schema: 2.0.0
 # Add-SPOListDesign
 
 ## SYNOPSIS
-Creates a new list design available to users when they create a new list from the SharePoint home page, the Microsoft Lists app, Microsoft Teams or Office.com.
+Creates a new list design available to users when they create a new list from the SharePoint home page, the Microsoft Lists app, Microsoft Teams, or Office.com.
 
 ## SYNTAX
 
