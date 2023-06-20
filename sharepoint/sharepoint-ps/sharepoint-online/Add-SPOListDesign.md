@@ -24,9 +24,6 @@ Creates a new list design available to users when they create a new list from th
 ## EXAMPLES
 
 ### Example 1
-
-This example creates a new list design 
-
 ```powershell
 Add-SPOListDesign
     -Title "Contoso customer tracking"  
@@ -36,6 +33,8 @@ Add-SPOListDesign
     -ListIcon BullseyeTarget  
     -Thumbnail "https://contoso.sharepoint.com/SiteAssets/site-thumbnail.png" }}
 ```
+
+This example creates a new list design 
 
 ## PARAMETERS
 
@@ -55,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -ListColor
-Default color associated with the list, when creating the list.
+Default color associated with the list when creating the list.
 
 ```yaml
 Type: SPOListDesignColor
@@ -71,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -ListIcon
-Default icon associated with the list, when creating the list.
+Default icon associated with the list when creating the list.
 
 ```yaml
 Type: SPOListDesignIcon
@@ -102,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -TemplateFeatures
-Set of features that the template comes with. It is displayed as a bulleted list, when user is looking at the template preview in the list creation dialog.
+Set of features that the template comes with. It is displayed as a bulleted list when the user is looking at the template preview in the list creation dialog.
 
 ```yaml
 Type: String[]
@@ -132,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -Title
-The display name of the list design 
+The display name of the list design.
 
 ```yaml
 Type: String
@@ -147,15 +146,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### None
+None
 
 ## OUTPUTS
 
-### System.Object
+System.Object
+
 ## NOTES
 
 ## RELATED LINKS
