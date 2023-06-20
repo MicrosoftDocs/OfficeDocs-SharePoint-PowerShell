@@ -22,7 +22,6 @@ Gets details about list designs that are on the SharePoint tenant. You can speci
 ## EXAMPLES
 
 ### Example 1
-This example and sample response show how to get list design details. 
 
 ```powershell
 Get-SPOListDesign 44252d09-62c4-4913-9eb0-a2a8b8d7f863 
@@ -34,6 +33,8 @@ Description: Tracks key customer data in a list
 ListColor: Orange 
 ListIcon: BullseyeTarget
 ```
+
+This example and sample response show how to get list design details. 
 
 ## PARAMETERS
 
@@ -53,15 +54,16 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### Microsoft.Online.SharePoint.PowerShell.SPOListDesignPipeBind
+Microsoft.Online.SharePoint.PowerShell.SPOListDesignPipeBind
 
 ## OUTPUTS
 
-### System.Object
+System.Object
+
 ## NOTES
 
 ## RELATED LINKS
