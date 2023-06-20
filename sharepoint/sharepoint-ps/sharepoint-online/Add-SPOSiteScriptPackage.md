@@ -22,7 +22,7 @@ Uploads a new site script package for use either directly or in a site design. T
 ## EXAMPLES
 
 ### Example
-This example adds a site script package as a zip file containing a manifest.json script, as well as a Dataverse solution zip file with a Power Automate flow definition. The content of manifest.json is as follows:
+
 ```json
 {
   "$schema": "schema.json",
@@ -40,6 +40,8 @@ This example adds a site script package as a zip file containing a manifest.json
 Add-SPOSiteScriptPackage -Title "Install Contoso flow" -Description "Installs the new Contoso flow in a list" -ContentPath "c:\scripts\site-script-package.zip"
 ```
 
+This example adds a site script package as a zip file containing a manifest.json with script actions as exemplified above, as well as a Dataverse solution zip file with a Power Automate flow definition.
+ 
 ## PARAMETERS
 
 ### -ContentPath
