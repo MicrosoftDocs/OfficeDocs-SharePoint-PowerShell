@@ -81,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The id of the site script.
+The ID of the site script.
 
 ```yaml
 Type: SPOSiteScriptPipeBind
