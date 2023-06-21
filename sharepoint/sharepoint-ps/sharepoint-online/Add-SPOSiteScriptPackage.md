@@ -23,7 +23,8 @@ Uploads a new site script package for use either directly or in a site design. T
 
 ### Example
 
-```json
+```powershell
+$manifestContent = @'
 {
   "$schema": "schema.json",
   "actions": [
@@ -33,10 +34,14 @@ Uploads a new site script package for use either directly or in a site design. T
         "solutionRelativeFilePath": "solution.zip"
       }
   ]
+}'@;
+Set-Content "manifest.json" $manifestContent
+$compress = @{
+  Path = ".\manifest.json", ".\solution.zip"
+  DestinationPath = "c:\scripts\site-script-package.zip"
 }
-```
+Compress-Archive @compress
 
-```powershell
 Add-SPOSiteScriptPackage -Title "Install Contoso flow" -Description "Installs the new Contoso flow in a list" -ContentPath "c:\scripts\site-script-package.zip"
 ```
 
