@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-A version number of the site script.
+The version number of the site script.
 
 ```yaml
 Type: Int32
