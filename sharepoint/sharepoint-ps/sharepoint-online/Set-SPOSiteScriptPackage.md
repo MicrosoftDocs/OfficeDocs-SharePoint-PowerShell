@@ -22,8 +22,9 @@ Updates a previously uploaded site script package. The package file must be a zi
 
 ## EXAMPLES
 
-### Example
-```json
+### Example 1
+```powershell
+$manifestContent = @'
 {
   "$schema": "schema.json",
   "actions": [
@@ -34,19 +35,23 @@ Updates a previously uploaded site script package. The package file must be a zi
       }
   ],
   "version": 2
+}'@;
+Set-Content "manifest.json" $manifestContent
+$compress = @{
+  Path = ".\manifest.json", ".\solution.zip"
+  DestinationPath = "c:\scripts\site-script-package-v2.zip"
 }
+Compress-Archive @compress
+
+Set-SPOSiteScriptPackage -Identity edaec4ec-71e2-4026-ac1e-6686bb30190e -Title "Install Contoso flow" -Description "Installs the new Contoso flow in a list" -ContentPath "c:\scripts\site-script-package-v2.zip" -Version 2
 ```
 
-```powershell
-Set-SPOSiteScriptPackage -Identity edaec4ec-71e2-4026-ac1e-6686bb30190e -Title "Install Contoso flow" -Description "Installs the new Contoso flow in a list" -ContentPath "c:\scripts\site-script-package.zip" -Version 2
-```
-
-This example updates a site script package as a zip file containing a manifest.json with script actions as exemplified above and an updated Dataverse solution zip file.
+This example updates a site script package with ID 'edaec4ec-71e2-4026-ac1e-6686bb30190e' as a zip file containing a manifest.json with script actions as exemplified previously and an updated Dataverse solution zip file.
 
 ## PARAMETERS
 
 ### -ContentPath
-The path to a zip archive file containing the content of the new site script package.
+The absolute path to a zip archive file containing the content of the new site script package.
 
 ```yaml
 Type: String
@@ -130,6 +135,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
