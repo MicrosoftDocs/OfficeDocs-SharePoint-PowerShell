@@ -21,7 +21,7 @@ Uploads a new site script package for use either directly or in a site design. T
 
 ## EXAMPLES
 
-### Example
+### Example 1
 
 ```powershell
 $manifestContent = @'
