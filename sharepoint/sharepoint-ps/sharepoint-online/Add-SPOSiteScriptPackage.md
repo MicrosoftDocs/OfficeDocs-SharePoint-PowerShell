@@ -45,7 +45,7 @@ Compress-Archive @compress
 Add-SPOSiteScriptPackage -Title "Install Contoso flow" -Description "Installs the new Contoso flow in a list" -ContentPath "c:\scripts\site-script-package.zip"
 ```
 
-This example adds a site script package as a zip file containing a manifest.json with script actions as exemplified above, as well as a Dataverse solution zip file with a Power Automate flow definition.
+This example adds a site script package as a zip file containing a manifest.json with script actions as exemplified previously, as well as a Dataverse solution zip file with a Power Automate flow definition.
  
 ## PARAMETERS
 
