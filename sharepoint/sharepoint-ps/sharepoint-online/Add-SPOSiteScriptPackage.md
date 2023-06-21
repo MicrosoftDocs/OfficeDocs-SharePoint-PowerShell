@@ -50,7 +50,7 @@ This example adds a site script package as a zip file containing a manifest.json
 ## PARAMETERS
 
 ### -ContentPath
-The path to a zip archive file containing the content of the new site script package.
+The absolute path to a zip archive file containing the content of the new site script package.
 
 ```yaml
 Type: String
