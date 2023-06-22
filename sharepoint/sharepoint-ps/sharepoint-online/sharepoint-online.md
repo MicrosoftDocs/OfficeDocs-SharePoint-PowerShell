@@ -39,6 +39,10 @@ The following cmdlet references are for SharePoint Online.
 
 {{Manually Enter Add-SPOSiteScript Description Here}}
 
+### [Add-SPOSiteScriptPackage](Add-SPOSiteScriptPackage.md)
+
+{{Manually Enter Add-SPOSiteScriptPackage Description Here}}
+
 ### [Add-SPOTenantCdnOrigin](Add-SPOTenantCdnOrigin.md)
 
 {{Manually Enter Add-SPOTenantCdnOrigin Description Here}}
@@ -462,6 +466,10 @@ This cmdlet is not currently active in production and may be removed in the futu
 ### [Set-SPOSiteScript](Set-SPOSiteScript.md)
 
 {{Manually Enter Set-SPOSiteScript Description Here}}
+
+### [Set-SPOSiteScriptPackage](Set-SPOSiteScriptPackage.md)
+
+{{Manually Enter Set-SPOSiteScriptPackage Description Here}}
 
 ### [Set-SPOStructuralNavigationCacheSiteState](Set-SPOStructuralNavigationCacheSiteState.md)
 
