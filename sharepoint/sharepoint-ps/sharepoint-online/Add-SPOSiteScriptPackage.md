@@ -34,7 +34,8 @@ $manifestContent = @'
         "solutionRelativeFilePath": "solution.zip"
       }
   ]
-}'@;
+}
+'@;
 Set-Content "manifest.json" $manifestContent
 $compress = @{
   Path = ".\manifest.json", ".\solution.zip"
