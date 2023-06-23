@@ -19,7 +19,7 @@ Add-SPOListDesign -Title <String> -SiteScripts <SPOSiteScriptPipeBind[]> [-Descr
 ```
 
 ## DESCRIPTION
-Creates a new list design available to users when they create a new list from the SharePoint home page, the Microsoft Lists app, Microsoft Teams or Office.com.
+Creates a new list design available to users when they create a new list from the SharePoint home page, the Microsoft Lists app, Microsoft Teams, or Office.com.
 
 ## EXAMPLES
 
