@@ -24,6 +24,7 @@ Creates a new list design available to users when they create a new list from th
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 Add-SPOListDesign
     -Title "Contoso customer tracking"  
@@ -31,7 +32,7 @@ Add-SPOListDesign
     -SiteScripts "<ID>"  
     -ListColor Orange  
     -ListIcon BullseyeTarget  
-    -Thumbnail "https://contoso.sharepoint.com/SiteAssets/site-thumbnail.png" }}
+    -Thumbnail "https://contoso.sharepoint.com/SiteAssets/site-thumbnail.png"
 ```
 
 This example creates a new list design 
