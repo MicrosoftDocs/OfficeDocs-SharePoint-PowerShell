@@ -23,7 +23,7 @@ Gets details about list designs that are on the SharePoint tenant. You can speci
 
 ### Example 1
 
-```powershell
+```output
 Get-SPOListDesign 44252d09-62c4-4913-9eb0-a2a8b8d7f863 
 
 Id: 44252d09-62c4-4913-9eb0-a2a8b8d7f863  
@@ -58,11 +58,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-Microsoft.Online.SharePoint.PowerShell.SPOListDesignPipeBind
+### Microsoft.Online.SharePoint.PowerShell.SPOListDesignPipeBind
 
 ## OUTPUTS
 
-System.Object
+### System.Object
 
 ## NOTES
 
