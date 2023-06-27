@@ -1,10 +1,11 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version:
+online version: https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/add-spolistdesign
 schema: 2.0.0
 author: SaladiHarini
 ms.author: hasaladi
+ms.reviewer:
 ---
 
 # Add-SPOListDesign
