@@ -3,6 +3,8 @@ external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version:
 schema: 2.0.0
+author: SaladiHarini
+ms.author: hasaladi
 ---
 
 # Add-SPOListDesign
