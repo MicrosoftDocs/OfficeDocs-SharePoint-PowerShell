@@ -5,6 +5,7 @@ online version:
 schema: 2.0.0
 author: SaladiHarini
 ms.author: hasaladi
+ms.reviewer:
 ---
 
 # Remove-SPOListDesign
@@ -24,13 +25,11 @@ Removes a list design. It no longer appears in the UI for creating a new list.
 ## EXAMPLES
 
 ### Example 1
-This example shows how to remove a list design. 
 
 ```powershell
-Remove-SPOListDesign 44252d09-62c4-4913-9eb0-a2a8b8d7f863
+Remove-SPOListDesign -Identity 44252d09-62c4-4913-9eb0-a2a8b8d7f863
 ```
-
-{{ Add example description here }}
+This example shows how to remove a list design. 
 
 ## PARAMETERS
 
@@ -59,6 +58,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
