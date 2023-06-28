@@ -6,6 +6,7 @@ schema: 2.0.0
 author: SaladiHarini
 ms.author: hasaladi
 ms.reviewer:
+title: Add-SPOListDesign
 ---
 
 # Add-SPOListDesign
