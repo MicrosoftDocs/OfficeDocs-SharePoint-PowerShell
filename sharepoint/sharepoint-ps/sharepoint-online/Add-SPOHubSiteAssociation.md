@@ -57,7 +57,7 @@ Accept wildcard characters: False
 
 ### -HubSite
 
-URL of the hub site.
+URL or Site ID of the hub site.
 
 ```yaml
 Type: SpoSitePipeBind
