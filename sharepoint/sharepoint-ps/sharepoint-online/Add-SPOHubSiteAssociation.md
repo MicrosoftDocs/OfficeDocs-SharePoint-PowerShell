@@ -57,7 +57,7 @@ Accept wildcard characters: False
 
 ### -HubSite
 
-URL of the hub site.
+URL or Site ID of the hub site.
 
 ```yaml
 Type: SpoSitePipeBind
@@ -81,3 +81,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 If the site or hub site doesn't exist, this cmdlet returns a "File not found" error.
 
 If the site is already a hub site, this cmdlet returns a "This site is already a HubSite" error.
+
+In multi-geo situations, when assigning a hub that is across geo locations, you must pass the site ID of the hub site to the HubSite parameter as a URL will fail.
