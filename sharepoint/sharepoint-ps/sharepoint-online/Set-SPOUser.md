@@ -31,6 +31,8 @@ You must have the SharePoint Online Administrator or Global Administrator role t
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
+This cmdlet is not supported for use with granular delegated admin privileges (GDAP).
+
 ## EXAMPLES
 
 ### Example 1
