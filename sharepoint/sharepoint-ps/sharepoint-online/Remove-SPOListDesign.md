@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/remove-spolistdesign
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spolistdesign
 schema: 2.0.0
 author: SaladiHarini
 ms.author: hasaladi
@@ -28,7 +28,7 @@ Removes a list design. It no longer appears in the UI for creating a new list.
 ### Example 1
 
 ```powershell
-Remove-SPOListDesign -Identity 44252d09-62c4-4913-9eb0-a2a8b8d7f863
+PS > Remove-SPOListDesign -Identity 44252d09-62c4-4913-9eb0-a2a8b8d7f863
 ```
 This example shows how to remove a list design. 
 
