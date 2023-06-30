@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/add-spolistdesign
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/add-spolistdesign
 schema: 2.0.0
 author: SaladiHarini
 ms.author: hasaladi
@@ -30,7 +30,7 @@ Creates a new list design available to users when they create a new list from th
 ### Example 1
 
 ```powershell
-Add-SPOListDesign
+PS > Add-SPOListDesign
     -Title "Contoso customer tracking"  
     -Description "Tracks key customer data in a list"  
     -SiteScripts "<ID>"  
@@ -39,7 +39,7 @@ Add-SPOListDesign
     -Thumbnail "https://contoso.sharepoint.com/SiteAssets/site-thumbnail.png"
 ```
 
-This example creates a new list design 
+This example creates a new list design.
 
 ## PARAMETERS
 
