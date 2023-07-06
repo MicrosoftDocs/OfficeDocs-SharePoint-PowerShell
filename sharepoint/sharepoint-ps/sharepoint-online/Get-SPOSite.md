@@ -51,7 +51,7 @@ The Detailed parameter has been deprecated. It will continue to work with earlie
 
 > [!NOTE]
 > Site collections in the Recycle Bin will not be retrieved by using the `Get-SPOSite` cmdlet.
-
+>
 > Site redirects, like the ones created after [changing the SharePoint domain name](/sharepoint/change-your-sharepoint-domain-name) will be retrieved by using this cmdlet.
 
 You need to be a SharePoint Online administrator or Global Administrator and be a site collection administrator to run the cmdlet.
