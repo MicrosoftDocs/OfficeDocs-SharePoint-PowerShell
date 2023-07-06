@@ -23,6 +23,10 @@ The following cmdlet references are for SharePoint Online.
 
 {{Manually Enter Add-SPOHubSiteAssociation Description Here}}
 
+### [Add-SPOListDesign](Add-SPOListDesign.md)
+
+{{Manually Enter Add-SPOListDesign Description Here}}
+
 ### [Add-SPOOrgAssetsLibrary](Add-SPOOrgAssetsLibrary.md)
 
 {{Manually Enter Add-SPOOrgAssetsLibrary Description Here}}
@@ -130,6 +134,10 @@ The following cmdlet references are for SharePoint Online.
 ### [Get-SPOHubSite](Get-SPOHubSite.md)
 
 {{Manually Enter Get-SPOHubSite Description Here}}
+
+### [Get-SPOListDesign](Get-SPOListDesign.md)
+
+{{Manually Enter Get-SPOListDesign Description Here}}
 
 ### [Get-SPOMigrationJobProgress](Get-SPOMigrationJobProgress.md)
 
@@ -338,6 +346,10 @@ This cmdlet is not currently active in production and may be removed in the futu
 ### [Remove-SPOHubSiteAssociation](Remove-SPOHubSiteAssociation.md)
 
 {{Manually Enter Remove-SPOHubSiteAssociation Description Here}}
+
+### [Remove-SPOListDesign](Remove-SPOListDesign.md)
+
+{{Manually Enter Remove-SPOListDesign Description Here}}
 
 ### [Remove-SPOMigrationJob](Remove-SPOMigrationJob.md)
 
