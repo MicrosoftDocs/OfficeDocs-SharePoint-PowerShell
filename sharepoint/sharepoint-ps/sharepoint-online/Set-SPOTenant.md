@@ -2470,6 +2470,8 @@ The valid values are:
 > a. MajorVersionLimit accepts values from 1 through 50,000 (inclusive).<br/>
 > b. ExpireVersionsAfterDays accepts values of 0 to Never Expire or values >= 30 to delete versions that exceed that time period.<br/><br/>
 > When Version History Limits are managed Automatically (EnableAutoExpirationVersionTrim $true), setting MajorVersionLimit or ExpireVersionsAfterDays will result in an error as the count limits are set by the service.
+>
+> This parameter is currently under private preview use.
 
 PARAMVALUE: $true | $false
 
