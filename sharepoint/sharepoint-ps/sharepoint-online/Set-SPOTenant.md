@@ -132,6 +132,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-MajorVersionLimit <int>]
  [-ExpireVersionsAfterDays <int>]
  [-MassDeleteNotificationDisabled <Boolean>]
+ [-EnableSensitivityLabelforPDF <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -1821,6 +1822,31 @@ Note: Once the policy is enabled, expiration values will be set on external user
 The valid values are:
 True - Enables the Policy.
 False (default) - Disables the policy.
+
+```yaml
+Type: Boolean
+
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -EnableSensitivityLabelforPDF
+
+Tenant admin can turn on support for PDFs with sensitivity labels for the following scenarios:
+
+1. Applying a sensitivity label in Office on the web
+2. Uploading a labeled document, and then extracting and displaying that sensitivity label
+3. Search, eDiscovery, and data loss prevention
+4. Auto-labeling policies and default sensitivity labels for SharePoint document libraries
+
+The valid values are:
+True - Enables the support for PDF.
+False (default) - Disables the support for PDF.
 
 ```yaml
 Type: Boolean
