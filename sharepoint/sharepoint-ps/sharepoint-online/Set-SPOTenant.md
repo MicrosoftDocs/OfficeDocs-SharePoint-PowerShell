@@ -2131,9 +2131,12 @@ Accept wildcard characters: False
 
 Gets or sets default share link role for fluid on OneDrive sites.
 
+Note: Although the values below may be viewable in Powershell, only View OR Edit may be set at this time. 
+
 The valid values are:  
 
 - Edit
+- View
 - LimitedEdit
 - LimitedView
 - ManageList
@@ -2182,9 +2185,12 @@ Accept wildcard characters: False
 
 Gets or sets default share link role for fluid on SharePoint sites.
 
+Note: Although the values below may be viewable in Powershell, only View OR Edit may be set at this time. 
+
 The valid values are:  
 
 - Edit
+- View
 - LimitedEdit
 - LimitedView
 - ManageList
