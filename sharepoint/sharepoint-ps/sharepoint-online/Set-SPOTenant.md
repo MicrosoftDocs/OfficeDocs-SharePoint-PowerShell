@@ -1845,9 +1845,9 @@ Allows tenant admins to turn on support for PDFs with sensitivity labels for the
 - Auto-labeling policies and default sensitivity labels for SharePoint document libraries.
 
 The valid values are:
-True - Enables support for PDFs.
 
-False (default) - Disables support for PDFs.
+- True - Enables support for PDFs.
+- False (default) - Disables support for PDFs.
 
 ```yaml
 Type: Boolean
