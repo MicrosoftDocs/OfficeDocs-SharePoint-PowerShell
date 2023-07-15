@@ -1837,7 +1837,7 @@ Accept wildcard characters: False
 ```
 ### -EnableSensitivityLabelforPDF
 
-Tenant admin can turn on support for PDFs with sensitivity labels for the following scenarios:
+Allows tenant admins to turn on support for PDFs with sensitivity labels for the following scenarios:
 
 1. Applying a sensitivity label in Office on the web
 2. Uploading a labeled document, and then extracting and displaying that sensitivity label
