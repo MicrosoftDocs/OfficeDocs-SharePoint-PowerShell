@@ -1839,10 +1839,10 @@ Accept wildcard characters: False
 
 Allows tenant admins to turn on support for PDFs with sensitivity labels for the following scenarios:
 
-1. Applying a sensitivity label in Office on the web
-2. Uploading a labeled document, and then extracting and displaying that sensitivity label
-3. Search, eDiscovery, and data loss prevention
-4. Auto-labeling policies and default sensitivity labels for SharePoint document libraries
+- Applying a sensitivity label in Office for the web.
+- Uploading a labeled document, and then extracting and displaying that sensitivity label.
+- Search, eDiscovery, and data loss prevention.
+- Auto-labeling policies and default sensitivity labels for SharePoint document libraries.
 
 The valid values are:
 True - Enables the support for PDF.
