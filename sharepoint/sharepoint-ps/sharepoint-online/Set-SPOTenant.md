@@ -1857,7 +1857,7 @@ Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
-Default value: True
+Default value: false
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
