@@ -1617,7 +1617,7 @@ Accept wildcard characters: False
 This switch allows tenant admins to disable the capability of configuring a default sensitivity label for a document library.
 
 > [!NOTE]
-> When set to $true, users aren't able to apply a default sensitivity label for a document library. Default value is false.  
+> When set to $true, users aren't able to apply a default sensitivity label for a document library. The default value is false.  
 
 ```yaml
 Type: Boolean
