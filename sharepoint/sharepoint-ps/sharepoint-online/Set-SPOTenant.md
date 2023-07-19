@@ -133,6 +133,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-ExpireVersionsAfterDays <int>]
  [-MassDeleteNotificationDisabled <Boolean>]
  [-DisableDocumentLibraryDefaultLabeling <Boolean>]
+ [-EnableSensitivityLabelforPDF <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -1850,7 +1851,33 @@ Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
-Default value: True
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -EnableSensitivityLabelforPDF
+
+Allows tenant admins to turn on support for PDFs with sensitivity labels for the following scenarios:
+
+- Applying a sensitivity label in Office for the web.
+- Uploading a labeled document, and then extracting and displaying that sensitivity label.
+- Search, eDiscovery, and data loss prevention.
+- Auto-labeling policies and default sensitivity labels for SharePoint document libraries.
+
+The valid values are:
+
+- True - Enables support for PDFs.
+- False (default) - Disables support for PDFs.
+
+```yaml
+Type: Boolean
+
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: false
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
