@@ -132,6 +132,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-MajorVersionLimit <int>]
  [-ExpireVersionsAfterDays <int>]
  [-MassDeleteNotificationDisabled <Boolean>]
+ [-DisableDocumentLibraryDefaultLabeling <Boolean>]
  [-EnableSensitivityLabelforPDF <Boolean>]
  [<CommonParameters>]
 ```
@@ -1612,6 +1613,25 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -DisableDocumentLibraryDefaultLabeling
+
+This switch allows tenant admins to disable the capability of configuring a default sensitivity label for a document library.
+
+> [!NOTE]
+> When set to $true, users aren't able to apply a default sensitivity label for a document library. The default value is false.  
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: false
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -UserVoiceForFeedbackEnabled
 
