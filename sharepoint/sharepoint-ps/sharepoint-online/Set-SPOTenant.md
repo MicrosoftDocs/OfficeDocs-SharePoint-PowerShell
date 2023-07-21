@@ -251,6 +251,22 @@ Set-SPOTenant -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -Ex
 
 This example sets Manual Version Storage Limits on all new document libraries at Tenant Level by limiting the number of major versions with no time limits.
 
+### EXAMPLE 14
+
+```powershell
+Set-SPOTenant -SharingDomainRestrictionMode "AllowList" -SharingAllowedDomainList "contoso.com"
+```
+
+This example sets that users will be able to share with external collaborators coming only from that email domain.
+
+### EXAMPLE 15
+
+```powershell
+Set-SPOTenant -SharingDomainRestrictionMode "BlockList" -SharingBlockedDomainList "contoso.com"
+```
+
+This example sets that users will be able to share with all external collaborators apart from the ones on the BlockedDomainList.
+
 ## PARAMETERS
 
 ### -ApplyAppEnforcedRestrictionsToAdHocRecipients
