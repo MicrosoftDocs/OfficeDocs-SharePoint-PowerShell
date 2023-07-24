@@ -265,7 +265,7 @@ This example enables users to share with external collaborators from that email 
 Set-SPOTenant -SharingDomainRestrictionMode "BlockList" -SharingBlockedDomainList "contoso.com"
 ```
 
-This example sets that users will be able to share with all external collaborators apart from the ones on the BlockedDomainList.
+This example enables users to share with all external collaborators except for those on the BlockedDomainList.
 
 ## PARAMETERS
 
