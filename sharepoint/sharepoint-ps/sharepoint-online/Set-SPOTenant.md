@@ -254,7 +254,7 @@ This example sets Manual Version Storage Limits on all new document libraries at
 ### EXAMPLE 14
 
 ```powershell
-Set-SPOTenant -SharingDomainRestrictionMode "AllowList" -SharingAllowedDomainList "contoso.com"
+C:\PS> Set-SPOTenant -SharingDomainRestrictionMode "AllowList" -SharingAllowedDomainList "contoso.com"
 ```
 
 This example enables users to share with external collaborators from that email domain only.
@@ -262,7 +262,7 @@ This example enables users to share with external collaborators from that email 
 ### EXAMPLE 15
 
 ```powershell
-Set-SPOTenant -SharingDomainRestrictionMode "BlockList" -SharingBlockedDomainList "contoso.com"
+C:\PS> Set-SPOTenant -SharingDomainRestrictionMode "BlockList" -SharingBlockedDomainList "contoso.com"
 ```
 
 This example enables users to share with all external collaborators except for those on the BlockedDomainList.
