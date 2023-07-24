@@ -257,7 +257,7 @@ This example sets Manual Version Storage Limits on all new document libraries at
 Set-SPOTenant -SharingDomainRestrictionMode "AllowList" -SharingAllowedDomainList "contoso.com"
 ```
 
-This example sets that users will be able to share with external collaborators coming only from that email domain.
+This example enables users to share with external collaborators from that email domain only.
 
 ### EXAMPLE 15
 
