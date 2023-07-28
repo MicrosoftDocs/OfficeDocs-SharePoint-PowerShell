@@ -15,7 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 
 > [!IMPORTANT]
-> This feature is currently available to organizations that have no more than 10,000 total SharePoint sites and OneDrive accounts combined.  Additionally, tenant rename capability is not available for GCC, GCC High & DoD.
+> This feature is currently available to organizations that have no more than 10,000 total SharePoint sites and OneDrive accounts combined.  Additionally, tenant renaming capability is not available for GCC, GCC High, and DoD.
 
 Starts a job to change the SharePoint domain name for your organization in Microsoft 365. For example, if the name of your organization changes from "Contoso" to "Fabrikam," you can change contoso.sharepoint.com to fabrikam.sharepoint.com.
 
