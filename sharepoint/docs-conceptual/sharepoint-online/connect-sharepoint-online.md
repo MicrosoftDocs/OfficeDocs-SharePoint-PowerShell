@@ -40,6 +40,7 @@ To open the SharePoint Online Management Shell command prompt, from the **Start*
 > The SharePoint Online Management Shell primarily targets PowerShell 5.x, which means it might not be compatible with PowerShell 7 due to the significant changes in the underlying architecture between the two versions. To use it in PowerShell 7, consider importing the module using the Windows PowerShell Compatibility feature:
 >   ```powershell
 >   Import-Module Microsoft.Online.SharePoint.PowerShell -UseWindowsPowerShell
+>   ```
 
 ## To connect with a user name and password
 
