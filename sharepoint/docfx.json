@@ -54,7 +54,11 @@
         "garycentric"
       ]
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "ms.collection": {
+        "sharepoint-server-ps/sharepoint-server/**/*.md": "must-keep"
+      }
+    },
     "template": [],
     "dest": "sharepointps"
   }
