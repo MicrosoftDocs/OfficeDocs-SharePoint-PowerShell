@@ -2335,7 +2335,7 @@ Accept wildcard characters: False
 
 ### -IBImplicitGroupBased
 
-The IBImplicitGroupBased setting enables Microsoft 365 group-membership based access and sharing control for all Implicit mode sites.
+The IBImplicitGroupBased setting enables Microsoft 365 Groups membership-based access and sharing control for all Implicit mode sites.
 
 ```yaml
 Type: Boolean
