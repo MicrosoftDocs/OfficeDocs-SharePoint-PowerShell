@@ -2319,7 +2319,7 @@ Accept wildcard characters: False
 
 ### -InformationBarriersSuspension
 
-The InformationBarriersSuspension setting enables information barriers in SharePoint and OneDrive when set to $false, or disables information barriers when set to $true.
+When InformationBarriersSuspension parameter is set to $false, information barriers in SharePoint and OneDrive is enabled, when set to $true, it is disabled.
 
 ```yaml
 Type: Boolean
