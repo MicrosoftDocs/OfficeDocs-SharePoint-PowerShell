@@ -2361,7 +2361,7 @@ The valid values are:
 - OwnerModerated
 - Mixed
 
-For more information about information barriers, see [Use information barriers with SharePoint](/purview/information-barriers-sharepoint) for your SharePoint online environment.
+For more information about information barriers, see [Use information barriers with SharePoint](/purview/information-barriers-sharepoint) for your SharePoint Online environment.
   
 ```yaml
 Type: String
