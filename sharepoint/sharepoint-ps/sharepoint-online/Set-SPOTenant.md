@@ -113,6 +113,9 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-ReduceTempTokenLifetimeEnabled <Boolean>]
  [-ReduceTempTokenLifetimeValue <Int32>]
  [-ShowPeoplePickerGroupSuggestionsForIB <Boolean>]
+ [-InformationBarriersSuspension <Boolean>]
+ [-IBImplicitGroupBased <Boolean>]
+ [-DefaultOneDriveInformationBarrierMode <String>]
  [-ViewersCanCommentOnMediaDisabled <Boolean>]
  [-CoreSharingCapability <SharingCapabilities>]
  [-OneDriveRequestFilesLinkEnabled <Boolean>]
@@ -550,7 +553,7 @@ The valid values are:
 - False - No folder is created when the site and OneDrive for Business document library is created.
 
 The default behavior of the Shared with Everyone folder changed in August 2015.  
-For additional information about the change, see Provision the Shared with Everyone folder in OneDrive for Business (<https://support.office.com/en-us/article/Provision-the-Shared-with-Everyone-folder-in-OneDrive-for-Business-6bb02c91-fd0b-42ba-9457-3921cb6dc5b2?ui=en-US&rs=en-US&ad=US)>
+For additional information about the change, see [Provision the Shared with Everyone folder in OneDrive for Business](https://support.office.com/article/Provision-the-Shared-with-Everyone-folder-in-OneDrive-for-Business-6bb02c91-fd0b-42ba-9457-3921cb6dc5b2).
 
 ```yaml
 Type: Boolean
@@ -2320,6 +2323,64 @@ The ShowPeoplePickerGroupSuggestionsForIB setting (defaulted to false) allows sh
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationBarriersSuspension
+
+When InformationBarriersSuspension parameter is set to $false, information barriers in SharePoint and OneDrive is enabled, when set to $true, it is disabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IBImplicitGroupBased
+
+The IBImplicitGroupBased setting enables Microsoft 365 Groups membership-based access and sharing control for all Implicit mode sites.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultOneDriveInformationBarrierMode
+
+The DefaultOneDriveInformationBarrierMode sets the information barrier mode for all OneDrive sites.
+
+The valid values are:
+
+- Open
+- Explicit
+- Implicit
+- OwnerModerated
+- Mixed
+
+For more information about information barriers, see [Use information barriers with SharePoint](/purview/information-barriers-sharepoint) for your SharePoint Online environment.
+  
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
