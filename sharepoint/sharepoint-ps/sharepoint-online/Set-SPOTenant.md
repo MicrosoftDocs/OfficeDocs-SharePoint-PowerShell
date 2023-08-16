@@ -934,9 +934,9 @@ Accept wildcard characters: False
 
 ### -SiteOwnerManageLegacyServicePrincipalEnabled
 
-Allows or disallows the site owner to manage the Azure Access Control (ACS) service principal.
+Allows or disallows the site collection admins to manage the Azure Access Control (ACS) service principal.
 
-When the value is set to false, only tenant admins can create or update the ACS service principal from the admin center. If the value is set to true, both tenant admins and site owners can create or update the ACS service principal.
+When the value is set to false, only SharePoint tenant admins can create or update the ACS service principal from the admin center. If the value is set to true, both SharePoint tenant admins and site collection admins can create or update the ACS service principal.
 
 ```yaml
 Type: Boolean
