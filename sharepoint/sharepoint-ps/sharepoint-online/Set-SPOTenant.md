@@ -936,7 +936,7 @@ Accept wildcard characters: False
 
 Allows or disallows the site collection admins to manage the Azure Access Control (ACS) service principal.
 
-When the value is set to false, the service principal can only be created or updated by the SharePoint tenant admin. If the value is set to true,both the SharePoint tenant admin and site collection admin will be able to create or update the service principal through SharePoint.
+When the value is set to false, the service principal can only be created or updated by the SharePoint tenant admin. If the value is set to true, both the SharePoint tenant admin and site collection admin will be able to create or update the service principal through SharePoint.
 
 ```yaml
 Type: Boolean
