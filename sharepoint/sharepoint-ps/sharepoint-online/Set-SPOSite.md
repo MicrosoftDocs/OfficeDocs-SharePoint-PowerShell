@@ -32,8 +32,6 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-DisableAppViews <AppViewsPolicy>]
  [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>] 
  [-DisableFlows <FlowsPolicy>]
- [-LoopSharingCapability <String>]
- [-LoopOverrideSharingCapability <Boolean>] 
  [-LoopDefaultSharingLinkScope <String>]
  [-LoopDefaultSharingLinkRole <String>]
  [-RestrictedToGeo <RestrictedToRegion>] 
@@ -811,53 +809,6 @@ PARAMVALUE: None | View | Edit
 
 ```yaml
 Type: SharingPermissionType
-Parameter Sets: ParamSet1
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LoopSharingCapability
-
-Gets or sets collaboration type for fluid on the site.
-This only applies if LoopOverrideSharingCapability is set to true.
-
-
-The valid values are:  
-
-- Disabled
-- ExternalUserSharingOnly
-- ExternalUserAndGuestSharing
-- ExistingExternalUserSharingOnly
-
-```yaml
-Type: SharingCapabilities
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LoopOverrideSharingCapability
-
-Choose whether to override the Loop sharing capability on this site.
-
-PARAMVALUE: None | False | True
-
-- None - Respect the organization-level policy for Loop sharing capability
-- False - Respect the organization-level policy for Loop sharing capability
-- True - Override the organization-level policy for Loop sharing capability (can be more or less restrictive)
-
-```yaml
-Type: Boolean
 Parameter Sets: ParamSet1
 Aliases:
 Applicable: SharePoint Online

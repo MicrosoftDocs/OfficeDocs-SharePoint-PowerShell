@@ -61,6 +61,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-IPAddressEnforcement <Boolean>]
  [-IPAddressWACTokenLifetime <Int32>]
  [-LegacyAuthProtocolsEnabled <Boolean>]
+ [-MediaTranscriptionAutomaticFeatures <MediaTranscriptionAutomaticFeaturesPolicyType>]
  [-MediaTranscription <MediaTranscriptionPolicyType>]
  [-NotificationsInOneDriveForBusinessEnabled <Boolean>]
  [-NotificationsInSharePointEnabled <Boolean>]
@@ -102,7 +103,6 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-EmailAttestationReAuthDays <Int32>]
  [-BlockUserInfoVisibility]
  [-IncludeAtAGlanceInShareEmails]
- [-SyncAadB2BManagementPolicy <Boolean>]
  [-StopNew2010Workflows <Boolean>]
  [-StopNew2013Workflows <Boolean>]
  [-BlockSendLabelMismatchEmail <Boolean>]
@@ -114,16 +114,17 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-ReduceTempTokenLifetimeEnabled <Boolean>]
  [-ReduceTempTokenLifetimeValue <Int32>]
  [-ShowPeoplePickerGroupSuggestionsForIB <Boolean>]
+ [-InformationBarriersSuspension <Boolean>]
+ [-IBImplicitGroupBased <Boolean>]
+ [-DefaultOneDriveInformationBarrierMode <String>]
  [-ViewersCanCommentOnMediaDisabled <Boolean>]
  [-CoreSharingCapability <SharingCapabilities>]
  [-OneDriveRequestFilesLinkEnabled <Boolean>]
  [-CoreRequestFilesLinkEnabled <Boolean>]
  [-OneDriveRequestFilesLinkExpirationInDays <Int32>]
  [-CoreRequestFilesLinkExpirationInDays <Int32>]
- [-OneDriveLoopSharingCapability <String>]
  [-OneDriveLoopDefaultSharingLinkScope <String>]
  [-OneDriveLoopDefaultSharingLinkRole <String>]
- [-CoreLoopSharingCapability <String>]
  [-CoreLoopDefaultSharingLinkScope <String>]
  [-CoreLoopDefaultSharingLinkRole <String>]
  [-AllowAnonymousMeetingParticipantsToAccessWhiteboards <SharingState>]
@@ -131,6 +132,12 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-DisableBackToClassic <Boolean>]
  [-IsEnableAppAuthPopUpEnabled <Boolean>]
  [-BlockDownloadFileTypePolicy <Boolean>]
+ [-EnableAutoExpirationVersionTrim <Boolean>]
+ [-MajorVersionLimit <int>]
+ [-ExpireVersionsAfterDays <int>]
+ [-MassDeleteNotificationDisabled <Boolean>]
+ [-DisableDocumentLibraryDefaultLabeling <Boolean>]
+ [-EnableSensitivityLabelforPDF <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -223,6 +230,46 @@ Set-SPOTenant -ShowPeoplePickerSuggestionsForGuestUsers $true
 ```
 
 This example enables the option to search for existing guest users at Tenant Level.
+
+### EXAMPLE 11
+
+```powershell
+Set-SPOTenant -EnableAutoExpirationVersionTrim $true
+```
+
+This example sets Automatic Version Storage Limits on all new document libraries at Tenant Level.
+
+### EXAMPLE 12
+
+```powershell
+Set-SPOTenant -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 30
+```
+
+This example sets Manual Version Storage Limits on all new document libraries at Tenant Level by limiting the number of major versions and the time (in days) versions are kept. 
+
+### EXAMPLE 13
+
+```powershell
+Set-SPOTenant -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 0
+```
+
+This example sets Manual Version Storage Limits on all new document libraries at Tenant Level by limiting the number of major versions with no time limits.
+
+### EXAMPLE 14
+
+```powershell
+PS > Set-SPOTenant -SharingDomainRestrictionMode "AllowList" -SharingAllowedDomainList "contoso.com fabrikam.com"
+```
+
+This example enables users to share with external collaborators from those domains only.
+
+### EXAMPLE 15
+
+```powershell
+PS > Set-SPOTenant -SharingDomainRestrictionMode "BlockList" -SharingBlockedDomainList "contoso.com"
+```
+
+This example enables users to share with all external collaborators except for those on the BlockedDomainList.
 
 ## PARAMETERS
 
@@ -507,7 +554,7 @@ The valid values are:
 - False - No folder is created when the site and OneDrive for Business document library is created.
 
 The default behavior of the Shared with Everyone folder changed in August 2015.  
-For additional information about the change, see Provision the Shared with Everyone folder in OneDrive for Business (<https://support.office.com/en-us/article/Provision-the-Shared-with-Everyone-folder-in-OneDrive-for-Business-6bb02c91-fd0b-42ba-9457-3921cb6dc5b2?ui=en-US&rs=en-US&ad=US)>
+For additional information about the change, see [Provision the Shared with Everyone folder in OneDrive for Business](https://support.office.com/article/Provision-the-Shared-with-Everyone-folder-in-OneDrive-for-Business-6bb02c91-fd0b-42ba-9457-3921cb6dc5b2).
 
 ```yaml
 Type: Boolean
@@ -1130,6 +1177,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MediaTranscriptionAutomaticFeatures
+
+When the feature is enabled, videos can have transcripts generated automatically on upload. The policy is default on. If a tenant admin decides to disable the feature, he can do so by disabling the policy at tenant level. This feature can not be enabled or disabled at site level.
+Possible values:
+
+- Enabled
+- Disabled
+
+```yaml
+Type: MediaTranscriptionAutomaticFeaturesPolicyType
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -NotificationsInOneDriveForBusinessEnabled
 
 Enables or disables notifications in OneDrive for Business.
@@ -1584,6 +1651,25 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -DisableDocumentLibraryDefaultLabeling
+
+This switch allows tenant admins to disable the capability of configuring a default sensitivity label for a document library.
+
+> [!NOTE]
+> When set to $true, users aren't able to apply a default sensitivity label for a document library. The default value is false.  
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: false
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -UserVoiceForFeedbackEnabled
 
@@ -1745,7 +1831,7 @@ Accept wildcard characters: False
 
 ### -EnableAzureADB2BIntegration  
 
-Enables the preview for OneDrive and SharePoint integration with Azure AD B2B. For more information see <http://aka.ms/spo-b2b-integration>
+Enables OneDrive and SharePoint integration with Azure AD B2B. For more information, see [SharePoint and OneDrive integration with Azure AD B2B](/sharepoint/sharepoint-azureb2b-integration).
 
 PARAMVALUE: $true | $false
 
@@ -1803,7 +1889,33 @@ Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
-Default value: True
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -EnableSensitivityLabelforPDF
+
+Allows tenant admins to turn on support for PDFs with sensitivity labels for the following scenarios:
+
+- Applying a sensitivity label in Office for the web.
+- Uploading a labeled document, and then extracting and displaying that sensitivity label.
+- Search, eDiscovery, and data loss prevention.
+- Auto-labeling policies and default sensitivity labels for SharePoint document libraries.
+
+The valid values are:
+
+- True - Enables support for PDFs.
+- False (default) - Disables support for PDFs.
+
+```yaml
+Type: Boolean
+
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: false
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1905,21 +2017,6 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: True
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SyncAadB2BManagementPolicy
-Syncs Azure B2B Management Policies. For more information, see [SharePoint and OneDrive integration with Azure AD B2B](https://learn.microsoft.com/sharepoint/sharepoint-azureb2b-integration-preview).
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -2092,33 +2189,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OneDriveLoopSharingCapability
-
-When sharing a whiteboard in a Teams meeting, Whiteboard creates a sharing link that’s accessible by anyone within the organization and automatically shares the whiteboard with any in-tenant users in the meeting.
-
-There’s an additional capability for temporary collaboration by external and shared device accounts during a meeting. This allows these users to temporarily view and collaborate on whiteboards when they’re shared in a Teams meeting, similar to PowerPoint Live sharing.
-
-If you have the external sharing for OneDrive for Business allowed, no further action is required. If you have external sharing for OneDrive for Business disabled, you can leave it disabled but you must enable this new setting. The setting will not take effect until the SharingCapability 'ExternalUserAndGuestSharing' is also enabled at Tenant level. For more information, see [Enable Microsoft Whiteboard for your organization](https://support.microsoft.com/office/enable-microsoft-whiteboard-for-your-organization-1caaa2e2-5c18-4bdf-b878-2d98f1da4b24).
-
-
-The valid values are:  
-
-- Disabled
-- ExternalUserSharingOnly
-- ExternalUserAndGuestSharing
-- ExistingExternalUserSharingOnly
-
-```yaml
-Type: SharingCapabilities
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 ### -OneDriveLoopDefaultSharingLinkScope
 
 Gets or sets default share link scope for fluid on OneDrive sites. 
@@ -2146,9 +2216,12 @@ Accept wildcard characters: False
 
 Gets or sets default share link role for fluid on OneDrive sites.
 
+Note: Although the values below may be viewable in Powershell, only View OR Edit may be set at this time. 
+
 The valid values are:  
 
 - Edit
+- View
 - LimitedEdit
 - LimitedView
 - ManageList
@@ -2169,28 +2242,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-### -CoreLoopSharingCapability
 
-Gets or sets collaboration type for fluid on core partition
-
-The valid values are:  
-
-- Disabled
-- ExternalUserSharingOnly
-- ExternalUserAndGuestSharing
-- ExistingExternalUserSharingOnly
-
-```yaml
-Type: SharingCapabilities
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 ### -CoreLoopDefaultSharingLinkScope
 
 Gets or sets default share link scope for fluid on SharePoint sites. 
@@ -2218,9 +2270,12 @@ Accept wildcard characters: False
 
 Gets or sets default share link role for fluid on SharePoint sites.
 
+Note: Although the values below may be viewable in Powershell, only View OR Edit may be set at this time. 
+
 The valid values are:  
 
 - Edit
+- View
 - LimitedEdit
 - LimitedView
 - ManageList
@@ -2287,6 +2342,64 @@ The ShowPeoplePickerGroupSuggestionsForIB setting (defaulted to false) allows sh
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationBarriersSuspension
+
+When InformationBarriersSuspension parameter is set to $false, information barriers in SharePoint and OneDrive is enabled, when set to $true, it is disabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IBImplicitGroupBased
+
+The IBImplicitGroupBased setting enables Microsoft 365 Groups membership-based access and sharing control for all Implicit mode sites.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultOneDriveInformationBarrierMode
+
+The DefaultOneDriveInformationBarrierMode sets the information barrier mode for all OneDrive sites.
+
+The valid values are:
+
+- Open
+- Explicit
+- Implicit
+- OwnerModerated
+- Mixed
+
+For more information about information barriers, see [Use information barriers with SharePoint](/purview/information-barriers-sharepoint) for your SharePoint Online environment.
+  
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
@@ -2487,6 +2600,89 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableAutoExpirationVersionTrim
+Global and SharePoint admins in Microsoft 365 can set Organization-level Version History Limit settings that universally apply to new versions created on all new Document Libraries created in your organization. 
+
+When Version History Limits are managed Automatically, SharePoint employs an algorithm behind the scenes that deletes (thins out) intermittent older versions that are least likely to be needed, while preserving sufficient high-value versions - more versions in the recent past and fewer farther back in time - in case restores are required.
+
+The valid values are: 
+
+- True – Version History Limits for new versions created on all new Document Libraries in your organization will be managed Automatically.  
+- False – Version History Limits for new Versions created on all new Document Libraries in your organization will be managed Manually by setting limits to the number of major versions (MajorVersionLimit) and time set (ExpireVersionsAfterDays).  Review the documentation of both parameters to manage your organization's version limits Manually.  
+
+> [!NOTE]
+> When Version History Limits are managed Manually (EnableAutoExpirationVersionTrim $false), MajorVersionLimit and ExpireVersionsAfterDays are both required parameters with the following acceptable values:
+> a. MajorVersionLimit accepts values from 1 through 50,000 (inclusive).
+> b. ExpireVersionsAfterDays accepts values of 0 to Never Expire or values >= 30 to delete versions that exceed that time period.
+> When Version History Limits are managed Automatically (EnableAutoExpirationVersionTrim $true), setting MajorVersionLimit or ExpireVersionsAfterDays will result in an error as the count limits are set by the service.
+>
+> This parameter is currently under private preview.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MajorVersionLimit
+When Version History Limits are managed Manually (EnableAutoExpirationVersionTrim $false), admins will need to set the limits to the number of major versions (MajorVersionLimit) and the time period the versions are stored (ExpireVersionsAfterDays). Please check the description of EnableAutoExpirationVersionTrim for more details.
+
+PARAMVALUE: Int32
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExpireVersionsAfterDays
+When Version History Limits are managed Manually (EnableAutoExpirationVersionTrim $false), admins will need to set the limits to the number of major versions (MajorVersionLimit) and the time period the versions are stored (ExpireVersionsAfterDays). Please check the description of EnableAutoExpirationVersionTrim for more details.
+
+PARAMVALUE: Int32
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MassDeleteNotificationDisabled
+Enables or disables the mass delete detection feature. When MassDeleteNotificationDisabled is set to $true, tenant admins can perform mass deletion operations without triggering notifications.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

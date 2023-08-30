@@ -23,6 +23,10 @@ The following cmdlet references are for SharePoint Online.
 
 {{Manually Enter Add-SPOHubSiteAssociation Description Here}}
 
+### [Add-SPOListDesign](Add-SPOListDesign.md)
+
+{{Manually Enter Add-SPOListDesign Description Here}}
+
 ### [Add-SPOOrgAssetsLibrary](Add-SPOOrgAssetsLibrary.md)
 
 {{Manually Enter Add-SPOOrgAssetsLibrary Description Here}}
@@ -38,6 +42,10 @@ The following cmdlet references are for SharePoint Online.
 ### [Add-SPOSiteScript](Add-SPOSiteScript.md)
 
 {{Manually Enter Add-SPOSiteScript Description Here}}
+
+### [Add-SPOSiteScriptPackage](Add-SPOSiteScriptPackage.md)
+
+{{Manually Enter Add-SPOSiteScriptPackage Description Here}}
 
 ### [Add-SPOTenantCdnOrigin](Add-SPOTenantCdnOrigin.md)
 
@@ -126,6 +134,10 @@ The following cmdlet references are for SharePoint Online.
 ### [Get-SPOHubSite](Get-SPOHubSite.md)
 
 {{Manually Enter Get-SPOHubSite Description Here}}
+
+### [Get-SPOListDesign](Get-SPOListDesign.md)
+
+{{Manually Enter Get-SPOListDesign Description Here}}
 
 ### [Get-SPOMigrationJobProgress](Get-SPOMigrationJobProgress.md)
 
@@ -307,6 +319,10 @@ The following cmdlet references are for SharePoint Online.
 
 {{Manually Enter New-SPOSiteGroup Description Here}}
 
+### [New-SPOSiteSharingReportJob](New-SPOSiteSharingReportJob.md)
+
+This cmdlet is not currently active in production and may be removed in the future. You will receive the error "Site collection sharing report feature has not been enabled" if you run this cmdlet, which is by design. 
+
 ### [Register-SPOHubSite](Register-SPOHubSite.md)
 
 {{Manually Enter Register-SPOHubSite Description Here}}
@@ -330,6 +346,10 @@ The following cmdlet references are for SharePoint Online.
 ### [Remove-SPOHubSiteAssociation](Remove-SPOHubSiteAssociation.md)
 
 {{Manually Enter Remove-SPOHubSiteAssociation Description Here}}
+
+### [Remove-SPOListDesign](Remove-SPOListDesign.md)
+
+{{Manually Enter Remove-SPOListDesign Description Here}}
 
 ### [Remove-SPOMigrationJob](Remove-SPOMigrationJob.md)
 
@@ -458,6 +478,10 @@ The following cmdlet references are for SharePoint Online.
 ### [Set-SPOSiteScript](Set-SPOSiteScript.md)
 
 {{Manually Enter Set-SPOSiteScript Description Here}}
+
+### [Set-SPOSiteScriptPackage](Set-SPOSiteScriptPackage.md)
+
+{{Manually Enter Set-SPOSiteScriptPackage Description Here}}
 
 ### [Set-SPOStructuralNavigationCacheSiteState](Set-SPOStructuralNavigationCacheSiteState.md)
 
