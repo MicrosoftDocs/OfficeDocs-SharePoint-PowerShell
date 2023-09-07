@@ -132,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecureSocketsLayer
-Whether the new added forest or domain should enable Secure LDAP (LDAPS).
+Specifies whether the newly added forest or domain should enable Secure LDAP (LDAPS).
 
 ```yaml
 Type: SwitchParameter
