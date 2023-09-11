@@ -169,7 +169,7 @@ Accept wildcard characters: False
 
 ### -DomainGuids
 
-Sets the domain GUID to add to the safe recipient list. Requires a minimum of 1 domain GUID. The maximum number of domain GUIDs allowed are 125.
+Sets the [domain GUID](/powershell/module/activedirectory/get-addomain) of the computer domain membership to add to the safe recipient list. Requires a minimum of 1 domain GUID. The maximum number of domain GUIDs allowed are 125.
 
 ```yaml
 Type: String
