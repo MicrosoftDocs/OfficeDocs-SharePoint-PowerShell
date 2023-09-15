@@ -55,6 +55,12 @@
       ]
     },
     "fileMetadata": {
+      "ms.topic": {
+        "sharepoint-server-ps/sharepoint-server/**/*.md": "reference"
+      }
+    },
+    },
+    "fileMetadata": {
       "ms.collection": {
         "sharepoint-server-ps/sharepoint-server/**/*.md": "must-keep"
       }
