@@ -8,6 +8,7 @@ schema: 2.0.0
 author: trent-green
 ms.author: trgreen
 ms.reviewer:
+ms.custom: has-azure-ad-ps-ref
 ---
 
 # Request-SPOPersonalSite
