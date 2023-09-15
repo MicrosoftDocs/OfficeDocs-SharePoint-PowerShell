@@ -44,6 +44,7 @@
       "ms.author": "pamgreen",
       "ms.devlang": "powershell",
       "ms.date": "09/08/2021",
+      "ms.topic": "reference",
       "contributors_to_exclude": [ 
         "rjagiewich", 
         "traya1", 
@@ -53,12 +54,6 @@
         "tiburd",
         "garycentric"
       ]
-    },
-    "fileMetadata": {
-      "ms.topic": {
-        "sharepoint-server-ps/sharepoint-server/**/*.md": "reference"
-      }
-    },
     },
     "fileMetadata": {
       "ms.collection": {
