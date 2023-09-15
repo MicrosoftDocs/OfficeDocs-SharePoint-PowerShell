@@ -17,5 +17,5 @@ items:
     href: https://pnp.github.io/powershell/
 - name: SharePoint Server
   href: sharepoint-server/sharepoint-server-cmdlets.md
-
-
+metadata:
+  universal_ref_toc: /powershell/module/sharepoint-ps/toc.json

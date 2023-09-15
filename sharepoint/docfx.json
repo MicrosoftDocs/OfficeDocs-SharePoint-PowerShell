@@ -59,7 +59,12 @@
         "sharepoint-server-ps/sharepoint-server/**/*.md": "must-keep"
       }
     },
+    },
+    "fileMetadata": {
+      "ms.topic": {
+        "sharepoint-server-ps/sharepoint-server/**/*.md": "reference"
+      }
+    },   
     "template": [],
     "dest": "sharepointps"
-  }
 }
