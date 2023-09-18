@@ -54,7 +54,8 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-SensitivityLabel <String>] 
  [-RequestFilesLinkExpirationInDays <Int32>] 
  [-RequestFilesLinkEnabled <Boolean>]
- [-RemoveLabel] 
+ [-RemoveLabel]
+ [-BlockDownloadPolicy <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -1099,6 +1100,26 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockDownloadPolicy
+
+As a SharePoint administrator or global administrator in Microsoft 365, you can block the download of files from SharePoint sites or OneDrive. This feature does not need Azure Active Directory conditional access policies. This feature can be set for individual sites but not at the organization level.
+
+Blocking the download of files allows users to remain productive while addressing the risk of accidental data loss. Users have browser-only access with no ability to download, print, or sync files. They also won't be able to access content through apps, including the Microsoft Office desktop apps. When web access is limited, users will see the following message at the top of sites: "Your organization doesn't allow you to download, print, or sync from this site. For help contact your IT department." Read the full documentation for advanced capabilities at [Block download policy for SharePoint sites and OneDrive](https://learn.microsoft.com/sharepoint/block-download-from-sites).
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
