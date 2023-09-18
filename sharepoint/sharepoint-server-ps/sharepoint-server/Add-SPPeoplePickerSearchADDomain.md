@@ -16,8 +16,8 @@ This cmdlet adds a forest or domain to the list that the People Picker uses when
 
 ```
 Add-SPPeoplePickerSearchADDomain -WebApplication <SPWebApplicationPipeBind> -DomainName <String> [-IsForest]
- [-Index <Int32>] [-Credential <PSCredential>] [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-Index <Int32>] [-Credential <PSCredential>] [-AssignmentCollection <SPAssignmentCollection>] [-SecureSocketsLayer]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -117,6 +117,22 @@ Accept wildcard characters: False
 
 ### -IsForest
 Whether the name specified by the DomainName parameter is an active directory forest or an Active Directory domain.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Server Subscription Edition
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SecureSocketsLayer
+Specifies whether the newly added forest or domain should enable Secure LDAP (LDAPS).
 
 ```yaml
 Type: SwitchParameter
