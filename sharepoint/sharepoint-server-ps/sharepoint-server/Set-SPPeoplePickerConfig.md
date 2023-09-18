@@ -19,6 +19,7 @@ Set-SPPeoplePickerConfig -WebApplication <SPWebApplicationPipeBind> [-ActiveDire
  [-ActiveDirectoryCustomQuery <String>] [-ActiveDirectorySearchTimeout <Int32>]
  [-PeopleEditorOnlyResolveWithinSiteCollection] [-OnlySearchWithinSiteCollection]
  [-NoWindowsAccountsForNonWindowsAuthenticationMode] [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf]
+ [-SecureSocketsLayer]
  [-Confirm] [<CommonParameters>]
 ```
 
@@ -30,6 +31,7 @@ This Set-SPPeoplePickerConfig cmdlet sets the following settings of People Picke
         4) Whether the People Picker control should only return the site collection users when clicking the "Check Names" button.
         5) Whether the People Picker control should only return the site collection users when using the "Select People and Groups" dialog box.
         6) Whether return only non-Active Directory users when the Web application uses form-based authentication.
+        7) Whether to enable Secure LDAP (LDAPS) for secure communication.
 
 ## EXAMPLES
 
@@ -152,6 +154,22 @@ Accept wildcard characters: False
 
 ### -PeopleEditorOnlyResolveWithinSiteCollection
 Specifies the People Picker control should only return the site collection users when click the "Check Names" button.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Server Subscription Edition
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SecureSocketsLayer
+Specifies whether to enable Secure LDAP (LDAPS) for secure communication in the SharePoint People Picker.
 
 ```yaml
 Type: SwitchParameter
