@@ -1,0 +1,70 @@
+---
+external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spositearchivestate
+applicable: SharePoint Online
+title: Set-SPOSiteArchiveState
+schema: 2.0.0
+author: aditi-gangwar
+ms.author: adigan
+ms.reviewer:
+---
+
+# Set-SPOSiteArchiveState
+
+## SYNOPSIS
+
+Sets the archive state of the file. Can be used to archive, reactivate sites.
+
+## SYNTAX
+
+```powershell
+Set-SPOSiteArchiveState [-Identity] <SpoHubSitePipeBind> -ArchiveState <String> [-Confirm] [-WhatIf] [<CommonParameters>]
+```
+
+## DESCRIPTION
+
+Use this cmdlet to change the archive status of the file. You must be a SharePoint Online administrator or Global Administrator and be a site collection administrator to run the cmdlet.
+Microsoft 365 Archive needs to be enabled for the tenant to be able to use the feature.
+
+## EXAMPLES
+
+### Example 1
+
+```powershell
+Set-SiteArchiveState https://contoso.sharepoint.com/sites/Marketing `
+-ArchiveState Archived
+```
+
+This example marks the site as Archived. For 7 days after the operation, the site will remain in "RecentlyArchived" state, where any reactivations will be free and instantaneous. If a site is reactivated after 7 days, any reactivations will be charged and will take time.
+
+### Example 2
+
+```powershell
+Set-SiteArchiveState https://contoso.sharepoint.com/sites/Marketing `
+-ArchiveState Active
+```
+
+This example triggers reactivation of a site. If the site is reactivated from Recently Archived state, it will become available instantaneously. If the site is reactivated from "FullyArchived" state, it may take time for it to be reactivated.
+
+## PARAMETERS
+
+### -ArchiveState
+
+Sets the archive state of the site. Valid values are Archived, Active.
+
+```yaml
+Type: String
+Applicable: SharePoint Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
