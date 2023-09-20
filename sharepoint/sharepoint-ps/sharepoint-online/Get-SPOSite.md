@@ -28,7 +28,7 @@ Get-SPOSite [[-Identity] <SpoSitePipeBind>] [-Detailed] [-Limit <String>] [<Comm
 
 ```powershell
 Get-SPOSite [-Detailed] [-Filter <String>] [-IncludePersonalSite <Boolean>] [-Limit <String>]
- [-Template <String>] [-GroupIdDefined] [<CommonParameters>]
+ [-Template <String>] [-GroupIdDefined] [-ArchiveStatus <String>] [<CommonParameters>]
 ```
 
 ### ParamSet3
@@ -300,6 +300,23 @@ Accept wildcard characters: False
 ### -Template
 
 Displays sites of a specific template. For example, STS, STS#0, STS#1, STS#3, GROUP#0, SRCHCEN#0 or SITEPAGEPUBLISHING#0.
+
+```yaml
+Type: String
+Parameter Sets: ParamSet2
+Aliases:
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ArchiveStatus
+
+Displays sites of a specific archive status. For example, NotArchived, RecentlyArchived, FullyArchived, Archived, or Reactivating.
 
 ```yaml
 Type: String
