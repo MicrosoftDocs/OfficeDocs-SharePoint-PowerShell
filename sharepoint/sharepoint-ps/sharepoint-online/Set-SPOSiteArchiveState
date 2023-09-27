@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Sets the archive state of the site. Can be used to archive, reactivate sites.
+Sets the archived state of the site. Can be used to archive and reactivate sites.
 
 ## SYNTAX
 
@@ -24,8 +24,8 @@ Set-SPOSiteArchiveState [-Identity] <SpoHubSitePipeBind> -ArchiveState <String> 
 
 ## DESCRIPTION
 
-Use this cmdlet to change the archive status of the site. You must be a SharePoint Online administrator or Global Administrator and be a site collection administrator to run the cmdlet.
-Microsoft 365 Archive needs to be enabled for the tenant to be able to use the feature.
+Use this cmdlet to change the archive status of the site. You must be a SharePoint Online administrator or Global administrator and be a site collection administrator to run the cmdlet.
+Microsoft 365 Archive needs to be enabled for the organization to be able to use the feature.
 
 ## EXAMPLES
 
@@ -35,7 +35,7 @@ Microsoft 365 Archive needs to be enabled for the tenant to be able to use the f
 Set-SiteArchiveState https://contoso.sharepoint.com/sites/Marketing -ArchiveState Archived
 ```
 
-This example marks the site as Archived. For 7 days after the operation, the site will remain in "RecentlyArchived" state, where any reactivations will be free and instantaneous. If a site is reactivated after 7 days, any reactivations will be charged and will take time.
+This example marks the site as Archived. For seven days after the operation, the site will remain in a "RecentlyArchived" state, where any reactivations will be free and instantaneous. If a site is reactivated after seven days, any reactivations will be charged and will take time.
 
 ### Example 2
 
@@ -43,13 +43,13 @@ This example marks the site as Archived. For 7 days after the operation, the sit
 Set-SiteArchiveState https://contoso.sharepoint.com/sites/Marketing -ArchiveState Active
 ```
 
-This example triggers reactivation of a site. If the site is reactivated from Recently Archived state, it will become available instantaneously. If the site is reactivated from "FullyArchived" state, it may take time for it to be reactivated.
+This example triggers the reactivation of a site. If the site is reactivated from the "RecentlyArchived" state, it will become available instantaneously. If the site is reactivated from the "FullyArchived" state, it may take time for it to be reactivated.
 
 ## PARAMETERS
 
 ### -ArchiveState
 
-Sets the archive state of the site. Valid values are Archived, Active.
+Sets the archived state of the site. Valid values are Archived, Active.
 
 ```yaml
 Type: String
