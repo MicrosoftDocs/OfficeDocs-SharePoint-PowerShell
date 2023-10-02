@@ -182,7 +182,7 @@ Accept wildcard characters: False
 
 ### -TimeZoneId
 
-Specifies the time zone of the site collection. For more information, see [SPRegionalSettings.TimeZones Property](https://learn.microsoft.com/dotnet/api/microsoft.sharepoint.spregionalsettings.timezones).
+Specifies the time zone of the site collection. For more information, see [RegionalSettings.TimeZones property](/previous-versions/office/sharepoint-csom/jj171282(v=office.15)).
 
 ```yaml
 Type: Int32
