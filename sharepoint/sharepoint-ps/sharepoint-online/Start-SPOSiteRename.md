@@ -36,8 +36,8 @@ This command starts a rename of a site on a SharePoint Online site. You can chan
 ### EXAMPLE 1
 
 ```powershell
-$url="https://<tenant>.sharepoint.com/site/samplesite"
-$NewSiteUrl="https://<tenant>.sharepoint.com/site/renamed"
+$url="https://<tenant>.sharepoint.com/sites/samplesite"
+$NewSiteUrl="https://<tenant>.sharepoint.com/sites/renamed"
 Start-SPOSiteRename -Identity $url -NewSiteUrl $NewSiteUrl
 ```
 
@@ -46,8 +46,8 @@ Starts the rename of the SPO site with name "samplesite" to "renamed" without mo
 ### EXAMPLE 2
 
 ```powershell
-$url="https://<tenant>.sharepoint.com/site/samplesite"
-$NewSiteUrl="https://<tenant>.sharepoint.com/site/renamed"
+$url="https://<tenant>.sharepoint.com/sites/samplesite"
+$NewSiteUrl="https://<tenant>.sharepoint.com/sites/renamed"
 $newTitle="New Title"
 Start-SPOSiteRename -Identity $url -NewSiteUrl $NewSiteUrl -NewSiteTitle $newTitle
 ```
@@ -57,8 +57,8 @@ Starts the rename of the SPO site with name "samplesite" to "renamed" modifying 
 ### EXAMPLE 3
 
 ```powershell
-$url="https://<tenant>.sharepoint.com/site/samplesite"
-$NewSiteUrl="https://<tenant>.sharepoint.com/site/renamed"
+$url="https://<tenant>.sharepoint.com/sites/samplesite"
+$NewSiteUrl="https://<tenant>.sharepoint.com/sites/renamed"
 $newTitle="New Title"
 Start-SPOSiteRename -Identity $url -NewSiteUrl $NewSiteUrl -NewSiteTitle $newTitle -SuppressMarketplaceAppCheck -SuppressWorkflow2013Check -WhatIf
 ```
