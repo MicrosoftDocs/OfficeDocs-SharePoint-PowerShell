@@ -50,6 +50,8 @@ Add-SPOOrgAssetsLibrary -LibraryURL https://contoso.sharepoint.com/sites/brandin
 
 Specifies the CDN type. The valid values are public or private.
 
+Note: The manually configured Private CDN is in the process of being deprecated. For more information, see [Use the Office 365 Content Delivery Network (CDN) with SharePoint Online](/microsoft-365/enterprise/use-microsoft-365-cdn-with-spo).
+
 ```yaml
 Type: SPOTenantCdnType
 Parameter Sets: (All)
