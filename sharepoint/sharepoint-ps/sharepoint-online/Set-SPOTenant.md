@@ -23,6 +23,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-BccExternalSharingInvitations <Boolean>]
  [-BccExternalSharingInvitationsList <String>]
  [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>]
+ [-BusinessConnectivityServiceDisabled <Boolean>]
  [-DisplayStartASiteOption <Boolean>]
  [-EnableAIPIntegration <Boolean>]
  [-EnableAutoNewsDigest <Boolean>]
@@ -354,6 +355,21 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: WebPreviewableFiles
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BusinessConnectivityServiceDisabled
+Prevents access to features that depend on the Business Connectivity Service (BCS), including external lists, external columns, and external content types.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
