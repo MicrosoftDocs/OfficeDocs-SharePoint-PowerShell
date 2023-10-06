@@ -2006,6 +2006,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BlockUserInfoVisibilityInOneDrive
+
+Blocks users from accessing User Info if they have Limited Access permission only to the OneDrive. The policy applies to all OneDrives in the tenant. 
+
+The valid values are: 
+
+- ApplyToNoUsers (default) – No users are prevented from accessing User Info when they have Limited Access permission only 
+
+- ApplyToAllUsers – All users (internal or external) are prevented from accessing User Info if they have Limited Access permission only 
+
+- ApplyToGuestAndExternalUsers – Only external or guest users are prevented from accessing User Info if they have Limited Access permission only 
+
+- ApplyToInternalUsers – Only internal users are prevented from accessing User Info if they have Limited Access permission only 
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: ApplyToNoUsers
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableAutoNewsDigest
 
 Enable or disable auto news digest. [Documentation](https://aka.ms/autonewsdigest) for auto news digest.
