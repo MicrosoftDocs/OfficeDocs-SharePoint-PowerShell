@@ -46,7 +46,7 @@ $finalPackages = ConvertTo-SPOMigrationTargetedPackage -ParallelImport -SourceFi
 
 ### -AzureADUserCredentials
 
-Receives Microsoft Entra user Credentials
+Receives Microsoft Entra User Credentials
 
 ```yaml
 Type: CredentialCmdletPipeBind
