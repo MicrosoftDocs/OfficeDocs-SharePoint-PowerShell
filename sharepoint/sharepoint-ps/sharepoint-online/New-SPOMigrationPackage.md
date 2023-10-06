@@ -104,7 +104,7 @@ Accept wildcard characters: False
 
 ### -NoAzureADLookup
 
-Switch to not lookup local user accounts in Azure Active Directory.
+Switch to not lookup local user accounts in Microsoft Entra ID.
 
 ```yaml
 Type: SwitchParameter

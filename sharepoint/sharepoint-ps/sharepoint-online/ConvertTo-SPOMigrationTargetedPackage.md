@@ -46,7 +46,7 @@ $finalPackages = ConvertTo-SPOMigrationTargetedPackage -ParallelImport -SourceFi
 
 ### -AzureADUserCredentials
 
-Receives Azure Active Directory User Credentials
+Receives Microsoft Entra user Credentials
 
 ```yaml
 Type: CredentialCmdletPipeBind
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 
 ### -NoAzureADLookup
 
-Switch parameter that says if the command should or should not look up for Azure AD.
+Switch parameter that says if the command should or should not look up for Microsoft Entra ID.
 
 ```yaml
 Type: SwitchParameter

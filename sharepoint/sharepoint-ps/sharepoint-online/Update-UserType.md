@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Updates the specified user's UserType value from Azure AD.
+Updates the specified user's UserType value from Microsoft Entra ID.
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ Update-UserType [-LoginName] <String> [<CommonParameters>]
 
 ## DESCRIPTION
 
-This cmdlet retrieves the UserType value of the specified user and updates the UserType across all SharePoint Online sites in the Office 365 tenant. This can be used, for example, to convert a Guest user to a standard (Member) user if the user's UserType was previously updated in Azure AD.
+This cmdlet retrieves the UserType value of the specified user and updates the UserType across all SharePoint Online sites in the Office 365 tenant. This can be used, for example, to convert a Guest user to a standard (Member) user if the user's UserType was previously updated in Microsoft Entra ID.
 
 ## EXAMPLES
 
@@ -34,7 +34,7 @@ This cmdlet retrieves the UserType value of the specified user and updates the U
 Update-UserType -LoginName jdoe@contoso.com
 ```
 
-Updates the jdoe@contoso.com's UserType on all SharePoint Online sites in the tenant based on the UserType value in Azure AD.
+Updates the jdoe@contoso.com's UserType on all SharePoint Online sites in the tenant based on the UserType value in Microsoft Entra ID.
 
 ## PARAMETERS
 
@@ -71,4 +71,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Properties of an Azure Active Directory B2B collaboration user](https://learn.microsoft.com/azure/active-directory/b2b/user-properties)
+[Properties of a Microsoft Entra B2B collaboration user](https://learn.microsoft.com/azure/active-directory/b2b/user-properties)

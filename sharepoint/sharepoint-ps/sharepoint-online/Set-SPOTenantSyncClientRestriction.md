@@ -85,7 +85,7 @@ When the feature is enabled the following will occur:
 * The latest OneDrive for Business sync client can be downloaded from [Download OneDrive for Windows](https://go.microsoft.com/fwlink/?LinkID=404119&clcid=0x409) or [How to install OneDrive for Business for SharePoint and SharePoint Online](https://go.microsoft.com/fwlink/?LinkID=321300&amp;clcid=0x409).
 
 > [!IMPORTANT]
-> This capability doesn't support Microsoft Azure Active Directory (AD) Joined or Workplace Joined devices.
+> This capability doesn't support Microsoft Entra joined or Workplace joined devices.
 
 For additional information about how to troubleshoot the OneDrive for Business sync client, see [How to switch from an MSI installation of OneDrive for Business (formerly SkyDrive Pro) standalone to a Click-To-Run installation of OneDrive for Business (formerly SkyDrive Pro) standalone](https://go.microsoft.com/fwlink/?LinkId=526386&clcid=0x409).
 

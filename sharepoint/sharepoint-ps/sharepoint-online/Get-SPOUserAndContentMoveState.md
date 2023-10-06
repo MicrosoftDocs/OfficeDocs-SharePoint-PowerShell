@@ -208,7 +208,7 @@ Accept wildcard characters: False
 
 ### -UserPrincipalName
 
-User Principal name is the unique property on Azure AD for each user.
+User Principal name is the unique property on Microsoft Entra ID for each user.
 
 ```yaml
 Type: String
