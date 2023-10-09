@@ -174,6 +174,8 @@ Accept wildcard characters: False
 ```
 
 ### -MetadataEndPoint
+Specifies the Uri of the metadata endpoint.
+
 ```yaml
 Type: Uri
 Parameter Sets: MetadataEndPointParameterSet
