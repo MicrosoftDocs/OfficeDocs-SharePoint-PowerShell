@@ -87,7 +87,6 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-SpecialCharactersStateInFileFolderNames <SpecialCharactersState>]
  [-ReSyncTenantPrivacyProfile]
  [-UseFindPeopleInPeoplePicker <Boolean>]
- [-UserVoiceForFeedbackEnabled <Boolean>]
  [-ContentTypeSyncSiteTemplatesList [String[]]]
  [-ExcludeSiteTemplate]
  [-CustomizedExternalSharingServiceUrl <String>]
@@ -1686,28 +1685,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
-### -UserVoiceForFeedbackEnabled
-
-Enables or disables the User Voice Feedback button.
-
-PARAMVALUE: $true | $false
-
-When set to $true, the "Feedback" link will be shown at the bottom of all modern SharePoint Online pages. The "Feedback" link will allow the end user to fill out a feedback form inside SharePoint Online which will then create an entry in the public SharePoint UserVoice topic.
-
-When set to $false, feedback link will not be shown anymore. It may take up to an hour for a change of this property to be reflected consistently throughout your tenant.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: $true
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -CustomizedExternalSharingServiceUrl
 
