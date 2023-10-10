@@ -598,7 +598,7 @@ The valid values are:
 - True - User must accept this invitation with bob@contoso.com.
 
 > [!NOTE]
-> If this functionality is turned off (value is False), it is possible for the external/guest users you invite to your Azure AD, to log in using their personal, non-work accounts either on purpose, or by accident (they might have a pre-existing, signed in session already active in the browser window they use to accept your invitation).
+> If this functionality is turned off (value is False), it is possible for the external/guest users you invite to your Microsoft Entra ID, to log in using their personal, non-work accounts either on purpose, or by accident (they might have a pre-existing, signed in session already active in the browser window they use to accept your invitation).
 > [!NOTE]
 > Even though setting the value is instant (if you first run **Set-SPOTenant -RequireAcceptingAccountMatchInvitedAccount $True**, and then **Get-SPOTenant -RequireAcceptingAccountMatchInvitedAccount**, True should be returned), the functionality isn't turned on immediately. It may take up to 24 hours to take effect.
 
@@ -666,7 +666,7 @@ Accept wildcard characters: False
 
 Enables the administrator to hide the All Users claim groups in People Picker.
 
-When users share an item with "All Users (x)", it is accessible to all organization members in the tenant's Azure Active Directory who have authenticated with via this method. When users share an item with "All Users (x)" it is accessible to all organization members in the tenant that used NTLM to authentication with SharePoint.
+When users share an item with "All Users (x)", it is accessible to all organization members in the tenant's Microsoft Entra ID who have authenticated with via this method. When users share an item with "All Users (x)" it is accessible to all organization members in the tenant that used NTLM to authentication with SharePoint.
 
 Note, the All Users (authenticated) group is equivalent to the Everyone claim, and shows as Everyone.
 To change this, see -ShowEveryoneClaim.
@@ -691,7 +691,7 @@ Accept wildcard characters: False
 ### -ShowEveryoneClaim
 
 Enables the administrator to hide the Everyone claim in the People Picker.  
-When users share an item with Everyone, it is accessible to all authenticated users in the tenant's Azure Active Directory, including any active external users who have previously accepted invitations.
+When users share an item with Everyone, it is accessible to all authenticated users in the tenant's Microsoft Entra ID, including any active external users who have previously accepted invitations.
 
 Note, that some SharePoint system resources such as templates and pages are required to be shared to Everyone and this type of sharing does not expose any user data or metadata.
 
@@ -715,7 +715,7 @@ Accept wildcard characters: False
 ### -ShowEveryoneExceptExternalUsersClaim
 
 Enables the administrator to hide the "Everyone except external users" claim in the People Picker.  
-When users share an item with "Everyone except external users", it is accessible to all organization members in the tenant's Azure Active Directory, but not to any users who have previously accepted invitations.
+When users share an item with "Everyone except external users", it is accessible to all organization members in the tenant's Microsoft Entra ID, but not to any users who have previously accepted invitations.
 
 The valid values are:  
 
@@ -737,10 +737,10 @@ Accept wildcard characters: False
 
 ### -SignInAccelerationDomain
 
-Specifies the home realm discovery value to be sent to Azure Active Directory (AAD) during the user sign-in process.
+Specifies the home realm discovery value to be sent to Microsoft Entra ID during the user sign-in process.
 
-When the organization uses a third-party identity provider, this prevents the user from seeing the Azure Active Directory Home Realm Discovery web page and ensures the user only sees their company's Identity Provider's portal.
-This value can also be used with Azure Active Directory Premium to customize the Azure Active Directory login page.
+When the organization uses a third-party identity provider, this prevents the user from seeing the Microsoft Entra Home Realm Discovery web page and ensures the user only sees their company's Identity Provider's portal.
+This value can also be used with Microsoft Entra ID P1 or P2 to customize the Microsoft Entra sign-in page.
 
 Acceleration will not occur on site collections that are shared externally.
 
@@ -979,7 +979,7 @@ Accept wildcard characters: False
 
 ### -DisableCustomAppAuthentication
 
-Prevents apps using an Azure Access Control (ACS) app-only access token to access SharePoint. ACS, a service of Azure Active Directory (Azure AD), has been retired on November 7, 2018. This retirement does not impact the SharePoint add-in model, which uses the https://accounts.accesscontrol.windows.net hostname (which is not impacted by this retirement). For new tenants, apps using an ACS app-only access token are disabled by default. We recommend using the Azure AD app-only model which is modern and more secure. Note that marking this property to $true doesn't prevent creating apps in SharePoint that use an Azure Access Control (ACS) app-only access token. Marking this property to $true only ensures that such apps can't access SharePoint anymore.
+Prevents apps using an Azure Access Control (ACS) app-only access token to access SharePoint. ACS, a service of Microsoft Entra ID, has been retired on November 7, 2018. This retirement does not impact the SharePoint add-in model, which uses the https://accounts.accesscontrol.windows.net hostname (which is not impacted by this retirement). For new tenants, apps using an ACS app-only access token are disabled by default. We recommend using the Microsoft Entra app-only model which is modern and more secure. Note that marking this property to $true doesn't prevent creating apps in SharePoint that use an Azure Access Control (ACS) app-only access token. Marking this property to $true only ensures that such apps can't access SharePoint anymore.
 
 Accepts a value of true or false. By default this feature is set to true.
 
@@ -1633,9 +1633,9 @@ The 'SyncPrivacyProfileProperties' parameter is obsolete and renamed ReSyncTenan
 
 This parameter enables the synchronization of privacy profile properties.
 
-ReSyncTenantPrivacyProfile sets whether or not the synced tenant properties will be updated on the next request. The request will cause Azure Active Directory to grab the tenant's current display name (TenantDisplayName) and privacy profile URL (PrivacyProfileUrl). 
+ReSyncTenantPrivacyProfile sets whether or not the synced tenant properties will be updated on the next request. The request will cause Microsoft Entra ID to grab the tenant's current display name (TenantDisplayName) and privacy profile URL (PrivacyProfileUrl).
 
-Running 'Set-SPOTenant - ReSyncTenantPrivacyProfile' will force a sync from the Azure Active Directory privacy profile URL to SharePoint Online. The sync may take up to 24 hours to complete. Whenever SharePoint Online gets the privacy profile URL, it checks whether the last sync time is out of the sync time window. If it is, it syncs from Azure Active Directory to SharePoint Online.
+Running 'Set-SPOTenant - ReSyncTenantPrivacyProfile' will force a sync from the Microsoft Entra privacy profile URL to SharePoint Online. The sync may take up to 24 hours to complete. Whenever SharePoint Online gets the privacy profile URL, it checks whether the last sync time is out of the sync time window. If it is, it syncs from Microsoft Entra ID to SharePoint Online.
 
 ```yaml
 Type: SwitchParameter
@@ -1847,7 +1847,7 @@ Accept wildcard characters: False
 
 ### -EnableAzureADB2BIntegration  
 
-Enables OneDrive and SharePoint integration with Azure AD B2B. For more information, see [SharePoint and OneDrive integration with Azure AD B2B](/sharepoint/sharepoint-azureb2b-integration).
+Enables OneDrive and SharePoint integration with Microsoft Entra B2B. For more information, see [SharePoint and OneDrive integration with Microsoft Entra B2B](/sharepoint/sharepoint-azureb2b-integration).
 
 PARAMVALUE: $true | $false
 
@@ -2171,7 +2171,7 @@ The valid values are:
 - False (default) – Guest users will only be able to share to users that exist within the current site. 
 - True – Guest users will be able to find user accounts in the directory by typing in the exact email address match. 
 
-Note: When the value is set to True, you will also need to enable [SharePoint and OneDrive integration with Azure AD B2B](/sharepoint/sharepoint-azureb2b-integration) for the functionality to work.
+Note: When the value is set to True, you will also need to enable [SharePoint and OneDrive integration with Microsoft Entra B2B](/sharepoint/sharepoint-azureb2b-integration) for the functionality to work.
 
 ```yaml
 Type: Boolean
@@ -2582,7 +2582,7 @@ Accept wildcard characters: False
 
 Enables or disables users in the organization to authenticate SharePoint applications using popups. 
 
-This parameter affects the way code in SharePoint interacts with Azure AD to get tokens to access APIs. In scenarios where third-party cookies are disabled (such as Safari browsers with ITP feature enabled), any code that requires a token to access an API automatically triggers a full page refresh. When IsEnableAppAuthPopUpEnabled is set to $true, SharePoint will instead surface a popup in this scenario.
+This parameter affects the way code in SharePoint interacts with Microsoft Entra ID to get tokens to access APIs. In scenarios where third-party cookies are disabled (such as Safari browsers with ITP feature enabled), any code that requires a token to access an API automatically triggers a full page refresh. When IsEnableAppAuthPopUpEnabled is set to $true, SharePoint will instead surface a popup in this scenario.
 
 ```yaml
 Type: Boolean
