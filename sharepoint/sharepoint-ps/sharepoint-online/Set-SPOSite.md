@@ -995,7 +995,7 @@ Possible values:
 - AllowFullAccess: Allows full access from desktop apps, mobile apps, and the web.
 - AllowLimitedAccess: Allows limited, web-only access.
 - BlockAccess: Blocks Access.
-- AuthenticationContext: Assign an Azure AD authentication context. Must add the AuthenticationContextName. Please read [Configure authentication contexts](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps#configure-authentication-contexts).
+- AuthenticationContext: Assign a Microsoft Entra authentication context. Must add the AuthenticationContextName. Please read [Configure authentication contexts](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps#configure-authentication-contexts).
 
 
 ```yaml
@@ -1107,7 +1107,7 @@ Accept wildcard characters: False
 
 ### -BlockDownloadPolicy
 
-As a SharePoint administrator or global administrator in Microsoft 365, you can block the download of files from SharePoint sites or OneDrive. This feature does not need Azure Active Directory conditional access policies. This feature can be set for individual sites but not at the organization level.
+As a SharePoint administrator or global administrator in Microsoft 365, you can block the download of files from SharePoint sites or OneDrive. This feature does not need Microsoft Entra Conditional Access policies. This feature can be set for individual sites but not at the organization level.
 
 Blocking the download of files allows users to remain productive while addressing the risk of accidental data loss. Users have browser-only access with no ability to download, print, or sync files. They also won't be able to access content through apps, including the Microsoft Office desktop apps. When web access is limited, users will see the following message at the top of sites: "Your organization doesn't allow you to download, print, or sync from this site. For help contact your IT department." Read the full documentation for advanced capabilities at [Block download policy for SharePoint sites and OneDrive](https://learn.microsoft.com/sharepoint/block-download-from-sites).
 
