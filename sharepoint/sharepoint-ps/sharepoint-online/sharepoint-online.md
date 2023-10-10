@@ -107,6 +107,14 @@ The following cmdlet references are for SharePoint Online.
 
 {{Manually Enter Get-SPOCrossGeoUsers Description Here}}
 
+### [Get-SPOCrossTenantCompatibilityStatus](Get-SPOCrossTenantCompatibilityStatus.md)
+
+{{Manually Enter Get-SPOCrossTenantCompatibilityStatus Description Here}}
+
+### [Get-SPOCrossTenantHostUrl](Get-SPOCrossTenantHostUrl.md)
+
+{{Manually Enter Get-SPOCrossTenantHostUrl Description Here}}
+
 ### [Get-SPODeletedSite](Get-SPODeletedSite.md)
 
 {{Manually Enter Get-SPODeletedSite Description Here}}
@@ -434,6 +442,10 @@ This cmdlet is not currently active in production and may be removed in the futu
 ### [Revoke-SPOUserSession](Revoke-SPOUserSession.md)
 
 {{Manually Enter Revoke-SPOUserSession Description Here}}
+
+### [Set-SPOCrossTenantRelationship](Set-SPOCrossTenantRelationship.md)
+
+{{Manually Enter Set-SPOCrossTenantRelationship Description Here}}
 
 ### [Set-SPODataConnectionSetting](Set-SPODataConnectionSetting.md)
 
