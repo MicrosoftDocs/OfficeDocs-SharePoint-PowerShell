@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Determines the compatibility of the partner tenant.
+Determines the compatibility with the partner tenant.
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ Get-SPOCrossTenantCompatibilityStatus -PartnerCrossTenantHostUrl <String> [<Comm
 
 ## DESCRIPTION
 
-This cmdlet allows you to determine the compatibility of the partner tenant before cross-tenant migration. You must be a SharePoint Online Administrator or Global Administrator to run it.
+This cmdlet allows you to determine the compatibility with the partner tenant before cross-tenant migration. You must be a SharePoint Online Administrator or Global Administrator to run it.
 
 ## EXAMPLES
 
@@ -40,7 +40,7 @@ Gets the compatibility status with the partner tenant Contoso.
 ## PARAMETERS
 
 ### -PartnerCrossTenantHostUrl
-The cross tenant url of the partner tenant. You can retrieve this value using `Get-SPOCrossTenantHostUrl` cmdlet.
+The cross tenant url of the partner tenant. The partner tenant can determine this for you by running `Get-SPOCrossTenantHostUrl` on each of the tenants.
 
 ```yaml
 Type: String
