@@ -49,7 +49,7 @@ Starts the rename of the SharePoint domain name to Fabrikam which is scheduled f
 Specifies the domain name that the current SharePoint domain name will be renamed to. This is the part before "sharepoint.com" or "onmicrosoft.com".
 
 > [!NOTE]
-> The domain name must already have been successfully added to Azure AD as per the instructions at [Step 1:Add the new domain name](https://aka.ms/SPOTenantRename#step-1-add-the-new-domain-name). If the domain name does not exist or was not successfully added, then this cmdlet will return an error.
+> The domain name must already have been successfully added to Microsoft Entra ID as per the instructions at [Step 1: Add the new domain name](https://aka.ms/SPOTenantRename#step-1-add-the-new-domain-name). If the domain name does not exist or was not successfully added, then this cmdlet will return an error.
 
 ```yaml
 Type: String

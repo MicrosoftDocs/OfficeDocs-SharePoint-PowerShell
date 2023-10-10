@@ -96,8 +96,7 @@ Connecting to SPO Service with ModernAuth Flag.
 
 ### -AuthenticationUrl
 
-Location for AAD Cross-Tenant Authentication service. Can be optionally used if non-default Cross-Tenant Authentication Service is used.
-
+Location for Microsoft Entra Cross-Tenant Authentication service. Can be optionally used if non-default Cross-Tenant Authentication Service is used.
 
 ```yaml
 Type: String

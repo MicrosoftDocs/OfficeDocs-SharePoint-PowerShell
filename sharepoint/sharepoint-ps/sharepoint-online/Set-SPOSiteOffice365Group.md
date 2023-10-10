@@ -145,7 +145,7 @@ Accept wildcard characters: False
 
 Specifies the classification value, if classifications are set for the organization. If no value is provided, the default classification will be set, if one is configured.
 
-See [Azure Active Directory cmdlets for configuring group settings](https://go.microsoft.com/fwlink/?LinkID=827484) and follow the steps in the Create settings at the directory level to define the classification for Office 365 groups.
+See [Microsoft Entra cmdlets for configuring group settings](https://go.microsoft.com/fwlink/?LinkID=827484) and follow the steps in the Create settings at the directory level to define the classification for Office 365 groups.
 
 See [Manage Office 365 Groups with PowerShell](https://support.office.com/en-us/article/Manage-Office-365-Groups-with-PowerShell-aeb669aa-1770-4537-9de2-a82ac11b0540) for more information.
 
