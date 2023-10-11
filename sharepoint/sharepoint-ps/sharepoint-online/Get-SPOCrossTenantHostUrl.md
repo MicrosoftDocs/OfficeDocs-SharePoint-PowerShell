@@ -28,7 +28,7 @@ Use this cmdlet to retrieve the cross tenant host url. You must be a SharePoint 
 
 ## EXAMPLES
 
-### ------------ Example 1 --------------------
+### Example 1
 
 ```powershell
 Get-SPOCrossTenantHostUrl
