@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Returns cross tenant host url.
+Returns the cross-tenant host URL.
 
 ## SYNTAX
 
