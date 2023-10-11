@@ -39,7 +39,7 @@ This cmdlet sends a trust request to the Contoso tenant.
 ## PARAMETERS
 
 ### -PartnerCrossTenantHostUrl
-The cross tenant url of the partner tenant. The partner tenant can determine this for you by running `Get-SPOCrossTenantHostUrl` on each of the tenants.
+The cross-tenant URL of the partner tenant. The partner tenant can determine this for you by running `Get-SPOCrossTenantHostUrl` on each of the tenants.
 
 ```yaml
 Type: String
