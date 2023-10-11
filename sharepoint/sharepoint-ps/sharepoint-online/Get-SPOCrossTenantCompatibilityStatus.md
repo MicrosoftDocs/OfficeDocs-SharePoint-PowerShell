@@ -36,7 +36,6 @@ Get-SPOCrossTenantCompatibilityStatus -PartnerCrossTenantHostUrl https://contoso
 
 Gets the compatibility status with the partner tenant Contoso.
 
-
 ## PARAMETERS
 
 ### -PartnerCrossTenantHostUrl
