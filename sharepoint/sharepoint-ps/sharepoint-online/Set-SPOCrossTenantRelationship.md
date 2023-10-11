@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartnerRole
-Roles of the partner tenant you're establishing trust with. Use *source* if partner tenant is the source of the OneDrive migrations, and *target* if the partner tenant is the Destination.
+Roles of the partner tenant you're establishing trust with. Use *source* if the partner tenant is the source of the OneDrive migrations, and *target* if the partner tenant is the destination.
 
 ```yaml
 Type: OrgRelationRole
