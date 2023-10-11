@@ -34,7 +34,7 @@ Use this cmdlet to send a trust request to the tenant with whom you want to esta
 Set-SPOCrossTenantRelationship -Scenario MnA -PartnerRole Target -PartnerCrossTenantHostUrl https://contoso-my.sharepoint.com
 ```
 
-This cmdlet sends a trust request to Contoso tenant.
+This cmdlet sends a trust request to the Contoso tenant.
 
 ## PARAMETERS
 
