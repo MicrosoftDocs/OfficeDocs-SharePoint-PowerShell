@@ -39,7 +39,7 @@ Gets the compatibility status with the partner tenant Contoso.
 ## PARAMETERS
 
 ### -PartnerCrossTenantHostUrl
-The cross tenant url of the partner tenant. The partner tenant can determine this for you by running `Get-SPOCrossTenantHostUrl` on each of the tenants.
+The cross-tenant URL of the partner tenant. The partner tenant can determine this for you by running `Get-SPOCrossTenantHostUrl` on each of the tenants.
 
 ```yaml
 Type: String
