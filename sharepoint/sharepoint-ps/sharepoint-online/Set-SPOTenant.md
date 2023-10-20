@@ -2064,9 +2064,9 @@ Allow organization level policy for Block User Info Visibility to be overridden 
 
 The valid values are:
 
-- False (default) – Do not allow the Block User Info Visibility policy to be overridden for a SharePoint site or OneDrive 
+- False (default) – Do not allow the Block User Info Visibility policy to be overridden for a SharePoint site or OneDrive.
 
-- True – Allow the Block User Info Visibility policy to be overridden for a SharePoint site or OneDrive 
+- True – Allow the Block User Info Visibility policy to be overridden for a SharePoint site or OneDrive.
 
 ```yaml
 Type: Boolean
