@@ -2034,17 +2034,17 @@ Accept wildcard characters: False
 
 ### -BlockUserInfoVisibilityInSharePoint
 
-Blocks users from accessing User Info if they have Limited Access permission only to a SharePoint site. Policy applies to all SharePoint sites in the tenant. 
+Blocks users from accessing User Info if they have Limited Access permission only to a SharePoint site. The policy applies to all SharePoint sites in the organization.
 
 The valid values are: 
 
-- ApplyToNoUsers (default) – No users are prevented from accessing User Info when they have Limited Access permission only to a SharePoint site 
+- ApplyToNoUsers (default) – No users are prevented from accessing User Info when they have Limited Access permission only to a SharePoint site.
 
-- ApplyToAllUsers – All users (internal or external) are prevented from accessing User Info if they have Limited Access permission only to a SharePoint site 
+- ApplyToAllUsers – All users (internal or external) are prevented from accessing User Info if they have Limited Access permission only to a SharePoint site.
 
-- ApplyToGuestAndExternalUsers – Only external or guest users are prevented from accessing User Info if they have Limited Access permission only to a SharePoint site 
+- ApplyToGuestAndExternalUsers – Only external or guest users are prevented from accessing User Info if they have Limited Access permission only to a SharePoint site.
 
-- ApplyToInternalUsers – Only internal users are prevented from accessing User Info if they have Limited Access permission only to a SharePoint site 
+- ApplyToInternalUsers – Only internal users are prevented from accessing User Info if they have Limited Access permission only to a SharePoint site.
 
 ```yaml
 Type: String
