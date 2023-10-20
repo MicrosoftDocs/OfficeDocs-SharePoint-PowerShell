@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
 title: Set-SPOSiteArchiveState
 schema: 2.0.0
-author: aditi-gangwar
+author: AdiGanMSFT
 ms.author: adigan
 ms.reviewer:
 ---

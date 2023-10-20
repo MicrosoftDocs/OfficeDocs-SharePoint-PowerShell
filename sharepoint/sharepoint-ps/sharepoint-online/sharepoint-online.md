@@ -479,6 +479,10 @@ This cmdlet is not currently active in production and may be removed in the futu
 
 {{Manually Enter Set-SPOSite Description Here}}
 
+### [Set-SPOSiteArchiveState](Set-SPOSiteArchiveState.md)
+
+{{Manually Enter Set-SPOSiteArchiveState Description Here}}
+
 ### [Set-SPOSiteDesign](Set-SPOSiteDesign.md)
 
 {{Manually Enter Set-SPOSiteDesign Description Here}}
