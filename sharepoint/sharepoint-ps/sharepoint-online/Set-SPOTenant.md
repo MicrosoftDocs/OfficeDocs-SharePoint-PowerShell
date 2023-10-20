@@ -2008,17 +2008,17 @@ Accept wildcard characters: False
 
 ### -BlockUserInfoVisibilityInOneDrive
 
-Blocks users from accessing User Info if they have Limited Access permission only to the OneDrive. The policy applies to all OneDrives in the tenant. 
+Blocks users from accessing User Info if they have Limited Access permission only to the OneDrive. The policy applies to all OneDrives in the organization. 
 
 The valid values are: 
 
-- ApplyToNoUsers (default) – No users are prevented from accessing User Info when they have Limited Access permission only 
+- ApplyToNoUsers (default) – No users are prevented from accessing User Info when they have Limited Access permission only.
 
-- ApplyToAllUsers – All users (internal or external) are prevented from accessing User Info if they have Limited Access permission only 
+- ApplyToAllUsers – All users (internal or external) are prevented from accessing User Info if they have Limited Access permission only.
 
-- ApplyToGuestAndExternalUsers – Only external or guest users are prevented from accessing User Info if they have Limited Access permission only 
+- ApplyToGuestAndExternalUsers – Only external or guest users are prevented from accessing User Info if they have Limited Access permission only.
 
-- ApplyToInternalUsers – Only internal users are prevented from accessing User Info if they have Limited Access permission only 
+- ApplyToInternalUsers – Only internal users are prevented from accessing User Info if they have Limited Access permission only.
 
 ```yaml
 Type: String
