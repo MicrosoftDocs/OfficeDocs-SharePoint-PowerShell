@@ -1131,15 +1131,15 @@ Choose whether to override the Block User Info Visibility policy on this site.
 
 PARAMVALUE: 
 
-- OrganizationDefault (default) - Respect the organization-level Block User Info Visibility policy 
+- OrganizationDefault (default) - Respect the organization-level Block User Info Visibility policy.
 
-- ApplyToNoUsers  – No users are prevented from accessing User Info when they have Limited Access permission only on the site 
+- ApplyToNoUsers  – No users are prevented from accessing User Info when they have Limited Access permission only on the site.
 
-- ApplyToAllUsers – All users (internal or external) are prevented from accessing User Info if they have Limited Access permission only on the site 
+- ApplyToAllUsers – All users (internal or external) are prevented from accessing User Info if they have Limited Access permission only on the site.
 
-- ApplyToGuestAndExternalUsers – Only external or guest users are prevented from accessing User Info if they have Limited Access permission only on the site 
+- ApplyToGuestAndExternalUsers – Only external or guest users are prevented from accessing User Info if they have Limited Access permission only on the site.
 
-- ApplyToInternalUsers – Only internal users are prevented from accessing User Info if they have Limited Access permission only on the site 
+- ApplyToInternalUsers – Only internal users are prevented from accessing User Info if they have Limited Access permission only on the site.
 
 ```yaml
 Type: String
