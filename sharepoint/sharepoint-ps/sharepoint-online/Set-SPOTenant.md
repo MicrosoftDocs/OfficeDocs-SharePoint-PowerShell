@@ -102,6 +102,9 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-EmailAttestationRequired <Boolean>]
  [-EmailAttestationReAuthDays <Int32>]
  [-BlockUserInfoVisibility]
+ [-BlockUserInfoVisibilityInOneDrive]
+ [-BlockUserInfoVisibilityInSharePoint]
+ [-AllowOverrideForBlockUserInfoVisibility]
  [-IncludeAtAGlanceInShareEmails]
  [-StopNew2010Workflows <Boolean>]
  [-StopNew2013Workflows <Boolean>]
@@ -1976,6 +1979,80 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockUserInfoVisibilityInOneDrive
+
+Blocks users from accessing User Info if they have Limited Access permission only to the OneDrive. The policy applies to all OneDrives in the organization. 
+
+The valid values are: 
+
+- ApplyToNoUsers (default) – No users are prevented from accessing User Info when they have Limited Access permission only.
+
+- ApplyToAllUsers – All users (internal or external) are prevented from accessing User Info if they have Limited Access permission only.
+
+- ApplyToGuestAndExternalUsers – Only external or guest users are prevented from accessing User Info if they have Limited Access permission only.
+
+- ApplyToInternalUsers – Only internal users are prevented from accessing User Info if they have Limited Access permission only.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: ApplyToNoUsers
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockUserInfoVisibilityInSharePoint
+
+Blocks users from accessing User Info if they have Limited Access permission only to a SharePoint site. The policy applies to all SharePoint sites in the organization.
+
+The valid values are: 
+
+- ApplyToNoUsers (default) – No users are prevented from accessing User Info when they have Limited Access permission only to a SharePoint site.
+
+- ApplyToAllUsers – All users (internal or external) are prevented from accessing User Info if they have Limited Access permission only to a SharePoint site.
+
+- ApplyToGuestAndExternalUsers – Only external or guest users are prevented from accessing User Info if they have Limited Access permission only to a SharePoint site.
+
+- ApplyToInternalUsers – Only internal users are prevented from accessing User Info if they have Limited Access permission only to a SharePoint site.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: ApplyToNoUsers
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowOverrideForBlockUserInfoVisibility
+
+Allow organization level policy for Block User Info Visibility to be overridden for a SharePoint site or OneDrive. Use Set-SPOSite to override the policy for a SharePoint site or OneDrive. 
+
+The valid values are:
+
+- False (default) – Do not allow the Block User Info Visibility policy to be overridden for a SharePoint site or OneDrive.
+
+- True – Allow the Block User Info Visibility policy to be overridden for a SharePoint site or OneDrive.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
