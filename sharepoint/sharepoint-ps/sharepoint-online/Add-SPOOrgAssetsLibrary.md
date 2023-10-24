@@ -25,13 +25,13 @@ Add-SPOOrgAssetsLibrary -LibraryUrl <String> [-ThumbnailUrl <String>] [-OrgAsset
 
 ## DESCRIPTION
 
-The Add-SPOOrgAssetsLibrary cmdlet designates a library to be a central location for organization assets across the tenant. Once this cmdlet is run, assets stored within this library are available to sites across the tenant.  The name publicly displayed for the library will be the name of the library on the SharePoint site. Note that it may take from a couple of hours to a day for changes to be reflected.
+The Add-SPOOrgAssetsLibrary cmdlet designates a library to be a central location for organization assets across the tenant. Once this cmdlet is run, assets stored within this library are available to sites across the tenant.  The name publicly displayed for the library will be the Organization's name. Note that it may take from a couple of hours to a day for changes to be reflected.
 
 ## EXAMPLES
 
 ### Example 1
 
-This example adds https://contoso.sharepoint.com/sites/branding/Assets as a designated library for organization assets. Assets is the name of the SharePoint library added and will be the name publicly displayed for the library. The thumbnail publicly displayed for the library is contosologo.jpg, from that same library.
+This example adds https://contoso.sharepoint.com/sites/branding/Assets as a designated library for organization assets. Assets is the name of the SharePoint library added. The thumbnail publicly displayed for the library is contosologo.jpg, from that same library.
 
 ```powershell
 Add-SPOOrgAssetsLibrary -LibraryURL https://contoso.sharepoint.com/sites/branding/Assets -ThumbnailURL https://contoso.sharepoint.com/sites/branding/Assets/contosologo.jpg
