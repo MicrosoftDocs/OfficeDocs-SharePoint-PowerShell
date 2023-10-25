@@ -25,7 +25,7 @@ Add-SPOOrgAssetsLibrary -LibraryUrl <String> [-ThumbnailUrl <String>] [-OrgAsset
 
 ## DESCRIPTION
 
-The Add-SPOOrgAssetsLibrary cmdlet designates a library to be a central location for organization assets across the tenant. Once this cmdlet is run, assets stored within this library are available to sites across the tenant.  The name publicly displayed for the library will be the Organization's name. Note that it may take from a couple of hours to a day for changes to be reflected.
+The Add-SPOOrgAssetsLibrary cmdlet designates a library to be a central location for organization assets across the tenant. Once this cmdlet is run, assets stored within this library are available to sites across the tenant.  The name publicly displayed for the library will be the organization's name. Note that it may take from a couple of hours to a day for changes to be reflected.
 
 ## EXAMPLES
 
