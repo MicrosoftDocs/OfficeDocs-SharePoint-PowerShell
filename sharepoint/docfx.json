@@ -35,8 +35,7 @@
     "globalMetadata": {
       "ms.service": "sharepoint-server-itpro",
       "uhfHeaderId": "MSDocsHeader-M365-IT",
-      "breadcrumb_path": "/sharepoint/breadcrumb/toc.json",
-      "extendBreadcrumb": true,
+      "breadcrumb_path": "/powershell/breadcrumb/toc.json",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/OfficeDocs-SharePoint-powershell",
       "feedback_product_url": "https://github.com/MicrosoftDocs/OfficeDocs-SharePoint-powershell/issues",
