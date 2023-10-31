@@ -58,7 +58,7 @@ Example 1 returns all applications associated with the logged in tenant
 Get-SPOApplication -OwningApplicationId <OwningApplicationId>
 ```
 
-Example 2 lists the owning application details corresponding to the owning application id provided
+Example 2 lists the owning application details corresponding to the owning application id provided 
 
 ### -----------------------EXAMPLE 3-----------------------------
 
