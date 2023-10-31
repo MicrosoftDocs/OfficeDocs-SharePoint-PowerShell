@@ -4,7 +4,7 @@ Module Name: Microsoft.Online.SharePoint.PowerShell
 online version:
 # online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
-title: Get-SPOSContainer
+title: Get-SPOContainer
 schema: 2.0.0
 author: cindy-lay
 ms.author: cindylay
