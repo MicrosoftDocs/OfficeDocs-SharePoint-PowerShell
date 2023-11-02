@@ -6,7 +6,7 @@ applicable: SharePoint Online
 title: Get-SPOCrossTenantCompatibilityStatus
 schema: 2.0.0
 author: trent-green
-ms.author: 
+ms.author: trgreen
 ms.reviewer:
 ---
 
