@@ -5,8 +5,8 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
 title: Set-SPOCrossTenantRelationship
 schema: 2.0.0
-author: 
-ms.author: 
+author: trent-green
+ms.author: trgreen
 ms.reviewer:
 ---
 
