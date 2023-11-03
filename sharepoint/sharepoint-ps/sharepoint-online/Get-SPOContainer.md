@@ -22,7 +22,7 @@ Returns one or more SharePoint Embedded containers.
 ### ParamSet1
 
 ```powershell
-Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [<commonParameters] 
+Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] | FT
 ```
 
 
@@ -40,8 +40,9 @@ Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [[-Identity] <Cont
 
 ## DESCRIPTION
 
-The `Get-SPOContainer` cmdlet retrieves and returns a list of containers and the properties of the containers present under a SharePoint Embedded application. This command is available only in SharePoint Online Management Shell Version <> or later. You need to be a SharePoint Online administrator or Global Administrator and be a site collection administrator to run the cmdlet.  
-
+The `Get-SPOContainer` cmdlet retrieves and returns a list of containers and details of an individual container created under a SharePOint Embedded application. This command is available only in SharePoint Online Management Shell version 16.0.24211.12000 or higher to run this cmdlet.
+ 
+You need to be a SharePoint Online administrator or Global Administrator to run the cmdlet.
 
 
 > [!NOTE]  
@@ -98,7 +99,7 @@ Example 3 gives the detailed properties of a container using site URL of a conta
 
 ### -Paged
 
-Specifies the maximum number of site collections to return. It can be any number. To retrieve all site collections, use ALL. The default value is 5000. If this parameter is provided, then some site collection properties will not be populated and may contain a default value.
+This parameter can be used when there are more than 5000 containers in a given application. `-Paged` provides a `<Paging Token>` that will display 5000 containers at a time.
 
 ```yaml
 Type: String
@@ -114,9 +115,42 @@ Accept wildcard characters: False
 ```
 
 
-### CommonParameters
+```powershell
+Get-SPOContainer -OwningApplicationID <OwningApplicationId> -Identity <ContainerId> -Paged | FT
+```
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+If there are no more containers to display, the commandlet output will return the message `End of containers view.` Otherwise, the commandlet will return a `<Paging Token>` to retrieve the next set of 5000 containers.
+
+## Using the Paging Token
+
+### -PagingToken
+
+Use the <Paging Token> 
+
+```yaml
+Type: String
+Parameter Sets: <Paging Token
+Aliases:
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```powershell
+Get-SPOContainer -OwningApplicationID <OwningApplicationId> -Identity <ContainerId> -Paged -PagingToken <Token String> | FT 
+```
+
+
+
+
+
+<!-- ### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216). -->
 
 ## INPUTS
 
