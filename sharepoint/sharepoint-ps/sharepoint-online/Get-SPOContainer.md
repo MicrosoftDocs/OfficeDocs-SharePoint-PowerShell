@@ -18,6 +18,11 @@ ms.reviewer:
 Returns one or more SharePoint Embedded containers. 
 
 ## SYNTAX
+<!-- 
+Get-SPOSite [-Detailed] [-Filter <String>] [-IncludePersonalSite <Boolean>] [-Limit <String>]
+ [-Template <String>] [-GroupIdDefined] [-ArchiveStatus <String>] [<CommonParameters>] -->
+
+## List of Containers 
 
 ### ParamSet1
 
@@ -25,14 +30,26 @@ Returns one or more SharePoint Embedded containers.
 Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] | FT
 ```
 
-
 ### ParamSet2
-
 ```powershell
-Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [[-Identity] <ContainerId>]  
+Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [-Paged] | FT
 ```
 
 ### ParamSet3
+```powershell
+Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [-Paged] [-PagingToken <Token String>] | FT
+```
+
+## Container Details
+
+### ParamSet4
+
+```powershell
+Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [[-Identity] <ContainerId>]
+```
+
+
+### ParamSet5
 
 ```powershell
 Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [[-Identity] <ContainerSiteURL>]  
@@ -95,6 +112,41 @@ Example 3 gives the detailed properties of a container using site URL of a conta
 
 
 ## PARAMETERS
+
+### -OwningApplicationId
+
+This parameter specifies the ID of the SharePoint Embedded Application. Use `Get-SPOApplication` command to retrive OwningApplicationID
+ 
+```yaml
+Type: String
+Parameter Sets: ParamSet1, ParamSet2, ParamSet3, ParamSet4, ParamSet5
+Aliases:
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+### -Identity
+
+Use this parameter to specify the Container in the given OwningApplicationId
+ 
+```yaml
+Type: String
+Parameter Sets: ParamSet4, ParamSet5
+Aliases:
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 
 ### -Paged
