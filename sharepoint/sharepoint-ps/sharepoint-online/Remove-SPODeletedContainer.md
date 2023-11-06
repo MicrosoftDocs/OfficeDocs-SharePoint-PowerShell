@@ -13,8 +13,6 @@ ms.reviewer:
 
 # Remove-SPODeletedContainer
 
- –Identity <ContainerID>​
-
 
 
 ## SYNOPSIS
