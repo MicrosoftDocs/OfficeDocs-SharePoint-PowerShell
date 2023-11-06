@@ -10,18 +10,11 @@ ms.author: cindylay
 ms.reviewer:
 ---
 
-# Restore-SPODeletedContainer
-
-Restore-SPODeletedContainer –Identity <ContainerID>​
-
-Restore-SPODeletedContainer –Identity <ContainerURL>​
-
-Restore-SPODeletedContainer –Identity <ContainerSiteURL>​
-
+# Restore-SPODeletedContainer​
 
 ## SYNOPSIS
 
-Restores the specified SharePoint Embedded container previously placed in the Recycle Bin. 
+Recovers the specified SharePoint Embedded container from the Recycle Bin. 
 
 ## SYNTAX
 
@@ -44,7 +37,7 @@ Restore-SPODeletedContainer [–Identity <ContainerSiteURL>] | FT
 
 ## DESCRIPTION
 
-The `Restore-SPODeletedContainer` cmdlet removes a container and puts it in the recycle bin. You need to be a SharePoint Online administrator or Global Administrator to run the cmdlet.
+The `Restore-SPODeletedContainer` cmdlet recovers a container from the recycle bin. You need to be a SharePoint Online administrator or Global Administrator to run the cmdlet.
 
 
 > [!NOTE]  
@@ -177,11 +170,9 @@ Remove-SPOContainer -OwningApplicationID <OwningApplicationId> -Identity <Contai
 
 
 
+### CommonParameters
 
-
-<!-- ### CommonParameters
-
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216). -->
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

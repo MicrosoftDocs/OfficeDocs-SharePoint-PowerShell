@@ -14,33 +14,26 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-<!-- Returns one or more site collections. -->
+Returns a list of applications in the logged in tenant.
 
 ## SYNTAX
 
 ### ParamSet1
 
 ```powershell
-Get-SPOApplication [[-OwningApplicationId] <OwningApplicationid>] [[-ApplicationId] <ApplicationId>]
+Get-SPOApplication [[-OwningApplicationId] <OwningApplicationid>]
 ```
 
-<!-- 
-### ParamSet3
+### ParamSet2
 
 ```powershell
-Get-SPOSite [-Identity] <SpoSitePipeBind> [-DisableSharingForNonOwnersStatus] [<CommonParameters>]
-```  -->
+Get-SPOApplication [[-OwningApplicationId] <OwningApplicationid>] [[-ApplicationId] <ApplicationId>]
+``` 
 
 ## DESCRIPTION
 
-The `Get-SPOApplication` cmdlet retrieves and returns applications all third party applications registered on a tenant site that match the given criteria. You need to be a SharePoint Online administrator or Global Administrator and be a site collection administrator to run the cmdlet. For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps). 
+The `Get-SPOApplication` cmdlet retrieves and returns all third party applications registered on a tenant site that match the given criteria. You need to be a SharePoint Online administrator or Global Administrator to run the cmdlet. For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps). 
 
-  
-
-<!-- 
-> [!NOTE]
-> If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.
- -->
 
 ## EXAMPLES
 
@@ -58,7 +51,7 @@ Example 1 returns all applications associated with the logged in tenant
 Get-SPOApplication -OwningApplicationId <OwningApplicationId>
 ```
 
-Example 2 lists the owning application details corresponding to the owning application id provided 
+Example 2 lists the owning app details "registered" in their tenant
 
 ### -----------------------EXAMPLE 3-----------------------------
 
@@ -82,7 +75,7 @@ The following details are returned:
 
 - OwningApplicationName
 
-- Storag
+- Storage
 
 - Applications (by id)
 
@@ -102,7 +95,7 @@ Accept wildcard characters: False
 
 ### -ApplicationId
 
-Enumerate permissions that "owning" applications registered in the logged in tenant
+Enumerate permissions that "owning" applications registered in the logged in tenant have.
 
 ```yaml
 Type: String
@@ -117,8 +110,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
  
- 
-<!-- TODO: double check the below -->
 
 ### CommonParameters
 

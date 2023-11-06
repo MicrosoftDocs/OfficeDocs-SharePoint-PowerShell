@@ -19,7 +19,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Permanently deletes the specified SharePoint Embedded container. This action cannot be undone.
+Permanently deletes the specified SharePoint Embedded container from the recycle bin. This action cannot be undone.
 
 ## SYNTAX
 
@@ -29,18 +29,19 @@ Permanently deletes the specified SharePoint Embedded container. This action can
 ### ParamSet1
 
 ```powershell
-Remove-SPODeletedContainer [–Identity <ContainerURL>] | FT
+Remove-SPODeletedContainer [–Identity <ContainerID] | FT
 ```
 
 ### ParamSet2
 ```powershell
-Remove-SPODeletedContainer [–Identity <ContainerSiteURL>] | FT
+Remove-SPODeletedContainer [–Identity <ContainerURL>] | FT
 ```
 
 ### ParamSet3
 ```powershell
-Remove-SPOContainer [-OwningApplicationId <OwningApplicationId>] [-Paged] [-PagingToken <Token String>] | FT
+Remove-SPODeletedContainer [–Identity <ContainerSiteURL>] | FT
 ```
+
 
 ## Container Details
 

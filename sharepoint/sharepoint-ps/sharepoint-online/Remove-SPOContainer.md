@@ -15,7 +15,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Moves the specified SharePoint Embedded container to the Recycle Bin. 
+Soft-deletes​ the specified SharePoint Embedded container and moves it to the Recycle Bin. 
 
 ## SYNTAX
 
