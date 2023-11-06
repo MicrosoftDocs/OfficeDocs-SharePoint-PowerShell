@@ -22,119 +22,80 @@ Permanently deletes the specified SharePoint Embedded container from the recycle
 ## SYNTAX
 
 
-## List of Containers 
 
 ### ParamSet1
 
 ```powershell
-Remove-SPODeletedContainer [–Identity <ContainerID] | FT
+Remove-SPODeletedContainer [–Identity <ContainerID>] [<CommonParameters>]
 ```
 
 ### ParamSet2
 ```powershell
-Remove-SPODeletedContainer [–Identity <ContainerURL>] | FT
+Remove-SPODeletedContainer [–Identity <ContainerURL>] [<CommonParameters>]
 ```
 
 ### ParamSet3
 ```powershell
-Remove-SPODeletedContainer [–Identity <ContainerSiteURL>] | FT
+Remove-SPODeletedContainer [–Identity <ContainerSiteURL>] [<CommonParameters>]
 ```
 
 
-## Container Details
-
-### ParamSet4
-
-```powershell
-Remove-SPOContainer [-OwningApplicationId <OwningApplicationId>] [[-Identity] <ContainerId>]
-```
-
-
-### ParamSet5
-
-```powershell
-Remove-SPOContainer [-OwningApplicationId <OwningApplicationId>] [[-Identity] <ContainerSiteURL>]  
-```
 
 ## DESCRIPTION
 
-The `Remove-SPOContainer` cmdlet removes a container and puts it in the recycle bin. You need to be a SharePoint Online administrator or Global Administrator to run the cmdlet.
+The `Remove-SPODeletedContainer` cmdlet permanently removes a SharePoint Embedded deleted container from the Recycle Bin.
+
+You must be a SharePoint Administrator or Global Administrator to run the cmdlet.
+
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
 
-> [!NOTE]  
-> OwningApplicationID for Microsoft Loop is a187e399-0c36-4b98-8f04-1edc167a0996
 
-> OwningApplicationID for Microsoft Designer is 5e2795e3-ce8c-4cfb-b302-35fe5cd01597
- 
- 
-<!-- > [!NOTE]  
-> Containers in the Recycle Bin will not be retrieved by using the Remove-SPOContainer cmdlet.  -->
 
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
 
 ```powershell
-Remove-SPOContainer -OwningApplicationID 423poi45-jikl-9bnm-b302-1234ghy56789 | FT 
+Remove-SPODeletedContainer –Identity ADD_ID_HERE!!
 ``````
 
-Example 1 returns a tabular list of containers created under SharePoint Embedded application  
+This example removes a SharePoint Embedded deleted container with the ContainerID from the Recycle Bin and deletes it permanently.
 
-To retrieve containers for the Loop app, use OwningApplicationId: a187e399-0c36-4b98-8f04-1edc167a0996 
-
-To retrieve containers for the Designer app, use OwningApplicationId: 5e2795e3-ce8c-4cfb-b302-35fe5cd01597 
-
-To retrieve ApplicationID of other SharePoint Embedded applications registered your tenant, use Remove-SPOApplication command. 
 
 ### -----------------------EXAMPLE 2-----------------------------
 
 ```powershell
-Remove-SPOContainer -OwningApplicationID 423poi45-jikl-9bnm-b302-1234ghy56789 -Identity b66f5b2e-4cbd-4754-9ad3-8291c2c81ade 
-```
+Remove-SPODeletedContainer –Identity ADD_URL_HERE!!
+``````
 
-Example 2 gives the detailed properties of a container using the Identity of the container.  
+This example removes a SharePoint Embedded deleted container with the ContainerURL from the Recycle Bin and deletes it permanently.
 
- 
-### -----------------------EXAMPLE 3-----------------------------
+
+### -----------------------EXAMPLE 1-----------------------------
 
 ```powershell
-Remove-SPOContainer -OwningApplicationID 423poi45-jikl-9bnm-b302-1234ghy56789 -Identity https://contoso.sharepoint.com/storageContainers/CSP_b66f5b2e-4cbd-4754-9ad3-8291c2c81ade 
-```
+Remove-SPODeletedContainer –Identity ADD_SiteURL_HERE!!
+``````
 
-Example 3 gives the detailed properties of a container using site URL of a container.
+This example removes a SharePoint Embedded deleted container with the ContainerSiteURL from the Recycle Bin and deletes it permanently.
+
 
 
 ## PARAMETERS
 
-### -OwningApplicationId
-
-This parameter specifies the ID of the SharePoint Embedded Application. Use `Remove-SPOApplication` command to retrive OwningApplicationID
- 
-```yaml
-Type: String
-Parameter Sets: ParamSet1, ParamSet2, ParamSet3, ParamSet4, ParamSet5
-Aliases:
-Applicable: SharePoint Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 
 ### -Identity
 
-Use this parameter to specify the Container in the given OwningApplicationId
+Specifies the `<ContainerID>`, `<ContainerURL>`, or `<ContainerSiteURL>` of the Container to be permanently deleted.
  
 ```yaml
 Type: String
-Parameter Sets: ParamSet4, ParamSet5
+Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -142,60 +103,10 @@ Accept wildcard characters: False
 ```
 
 
-### -Paged
+### CommonParameters
 
-This parameter can be used when there are more than 5000 containers in a given application. `-Paged` provides a `<Paging Token>` that will display 5000 containers at a time.
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-```yaml
-Type: String
-Parameter Sets: ParamSet1, ParamSet2, ParamSet3
-Aliases:
-Applicable: SharePoint Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-
-```powershell
-Remove-SPOContainer -OwningApplicationID <OwningApplicationId> -Identity <ContainerId> -Paged | FT
-```
-
-If there are no more containers to display, the commandlet output will return the message `End of containers view.` Otherwise, the commandlet will return a `<Paging Token>` to retrieve the next set of 5000 containers.
-
-## Using the Paging Token
-
-### -PagingToken
-
-Use the <Paging Token> 
-
-```yaml
-Type: String
-Parameter Sets: <Paging Token
-Aliases:
-Applicable: SharePoint Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```powershell
-Remove-SPOContainer -OwningApplicationID <OwningApplicationId> -Identity <ContainerId> -Paged -PagingToken <Token String> | FT 
-```
-
-
-
-
-
-<!-- ### CommonParameters
-
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216). -->
 
 ## INPUTS
 
@@ -208,4 +119,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+
+[Remove-SPOContainer](Remove-SPOContainer.md)
 
