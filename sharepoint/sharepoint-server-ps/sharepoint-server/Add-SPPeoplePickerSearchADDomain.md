@@ -34,7 +34,7 @@ This example adds forest corp.contoso.com to the People Picker search Active Dir
 
 ### -------------EXAMPLE 2------------- 
 ```powershell
-Add-SPPeoplePickerSearchADDomain -WebApplication http://MyOfficeApp1 -DomainName "corp.contoso.com" -Credential (NewObject System.Management.Automation.PSCredential "contoso\user", (ConvertTo-SecureString "password" -AsPlainText -Force))
+Add-SPPeoplePickerSearchADDomain -WebApplication http://MyOfficeApp1 -DomainName "corp.contoso.com" -Credential (New-Object System.Management.Automation.PSCredential "contoso\user", (ConvertTo-SecureString "password" -AsPlainText -Force))
 ```
 
 This example adds domain corp.contoso.com to the People Picker search Active Directory domain list of the Web application MyOfficeApp1, with login name user and password password.
