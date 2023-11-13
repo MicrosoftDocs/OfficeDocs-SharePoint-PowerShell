@@ -42,6 +42,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-ShowAllUsersClaim <Boolean>]
  [-ShowEveryoneClaim <Boolean>]
  [-ShowEveryoneExceptExternalUsersClaim <Boolean>]
+ [-AllowEveryoneExceptExternalUsersClaimInPrivateSite <Boolean>]
  [-SignInAccelerationDomain <String>]
  [-StartASiteFormUrl <String>]
  [-UsePersistentCookiesForExplorerView <Boolean>]
@@ -733,6 +734,27 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowEveryoneExceptExternalUsersClaimInPrivateSite
+
+When this parameter is true, the "Everyone except external users" claim is available in the People Picker of a private site. Set it to false to disable this feature.
+
+The valid values are:  
+
+- True - The "Everyone except external users" claim is available in People Picker of a private site.  
+- False (default) - The "Everyone except external users" claim is not available in People Picker of a private site.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
