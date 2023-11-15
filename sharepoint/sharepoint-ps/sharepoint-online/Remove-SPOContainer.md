@@ -14,8 +14,8 @@ ms.reviewer:
 # Remove-SPOContainer
 
 ## SYNOPSIS
+When admins delete a Container, it is moved into the deleted container collection. A deleted container can be restored from the collection within 93 days. If a container is deleted from the collection, or it exceeds the 93-day retention period, it is permanently deleted.Deleting a container deletes everything within it, including all documents and files.
 
-Soft-deletes​ the specified SharePoint Embedded container and moves it to the Recycle Bin. 
 
 ## SYNTAX
 
