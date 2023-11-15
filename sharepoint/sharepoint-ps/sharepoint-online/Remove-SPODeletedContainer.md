@@ -3,7 +3,7 @@ external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version: 
 applicable: SharePoint Online
-title: Remove-SPOContainerDeletedContainer
+title: Remove-SPODeletedContainer
 schema: 2.0.0
 author: akanksha-rakesh, cindy-lay
 ms.author: arakesh, cindylay
