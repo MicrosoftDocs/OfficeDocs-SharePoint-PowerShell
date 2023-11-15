@@ -15,7 +15,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Returns one or more SharePoint Embedded containers. 
+Returns one or more SharePoint repository services containers. 
 
 ## SYNTAX
 <!-- 
@@ -27,17 +27,17 @@ Get-SPOSite [-Detailed] [-Filter <String>] [-IncludePersonalSite <Boolean>] [-Li
 ### ParamSet1
 
 ```powershell
-Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] | FT
+Get-SPOContainer [-OwningApplicationId <OwningApplicationId>]
 ```
 
 ### ParamSet2
 ```powershell
-Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [-Paged] | FT
+Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [-Paged]
 ```
 
 ### ParamSet3
 ```powershell
-Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [-Paged] [-PagingToken <Token String>] | FT
+Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [-Paged] [-PagingToken <Token String>]
 ```
 
 ## Container Details
