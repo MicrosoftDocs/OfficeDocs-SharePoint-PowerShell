@@ -43,9 +43,9 @@ The `Restore-SPODeletedContainer` cmdlet recovers a container from the recycle b
 
 
 > [!NOTE]  
-> OwningApplicationID for Microsoft Loop is a187e399-0c36-4b98-8f04-1edc167a0996
+> OwningApplicationId for Microsoft Loop is a187e399-0c36-4b98-8f04-1edc167a0996
 
-> OwningApplicationID for Microsoft Designer is 5e2795e3-ce8c-4cfb-b302-35fe5cd01597
+> OwningApplicationId for Microsoft Designer is 5e2795e3-ce8c-4cfb-b302-35fe5cd01597
  
  
 <!-- > [!NOTE]  
