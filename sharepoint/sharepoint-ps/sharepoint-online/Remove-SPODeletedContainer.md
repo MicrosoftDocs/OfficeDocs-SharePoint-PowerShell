@@ -51,10 +51,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### -----------------------EXAMPLE 1-----------------------------
 
 ```powershell
-Remove-SPODeletedContainer –Identity ADD_ID_HERE!!
-``````
+Remove-SPODeletedContainer –Identity b66f5b2e-4cbd-4754-9ad3-8291c2c81ade
+```
 
-This example removes a SharePoint repository services deleted container with the `ContainerId` from the Recycle Bin and deletes it permanently.
+This example removes a SharePoint repository services deleted container with the `ContainerId` b66f5b2e-4cbd-4754-9ad3-8291c2c81ade from the Recycle Bin and deletes it permanently.
 
 
 
