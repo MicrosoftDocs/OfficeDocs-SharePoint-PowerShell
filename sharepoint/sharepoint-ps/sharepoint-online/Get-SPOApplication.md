@@ -21,7 +21,7 @@ Returns a list of applications in the logged in tenant.
 ### ParamSet1
 
 ```powershell
-Get-SPOApplication [[-OwningApplicationId] <OwningApplicationid>]
+Get-SPOApplication [[-OwningApplicationId] <OwningApplicationid>] [<CommonParameters>]
 ```
 
 ### ParamSet2
