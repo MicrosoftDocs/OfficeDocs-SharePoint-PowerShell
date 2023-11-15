@@ -57,7 +57,7 @@ Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [[-Identity] <Cont
 
 ## DESCRIPTION
 
-The `Get-SPOContainer` cmdlet retrieves and returns a list of containers and details of an individual container created under a SharePOint Embedded application. This command is available only in SharePoint Online Management Shell version 16.0.24211.12000 or higher to run this cmdlet.
+The `Get-SPOContainer` cmdlet retrieves and returns a list of containers and details of an individual container created under a SharePOint repository services application. This command is available only in SharePoint Online Management Shell version 16.0.24211.12000 or higher to run this cmdlet.
  
 You need to be a SharePoint Online administrator or Global Administrator to run the cmdlet.
 
@@ -79,13 +79,13 @@ You need to be a SharePoint Online administrator or Global Administrator to run 
 Get-SPOContainer -OwningApplicationID 423poi45-jikl-9bnm-b302-1234ghy56789 | FT 
 ``````
 
-Example 1 returns a tabular list of containers created under SharePoint Embedded application  
+Example 1 returns a tabular list of containers created under SharePoint repository services application  
 
 To retrieve containers for the Loop app, use OwningApplicationId: a187e399-0c36-4b98-8f04-1edc167a0996 
 
 To retrieve containers for the Designer app, use OwningApplicationId: 5e2795e3-ce8c-4cfb-b302-35fe5cd01597 
 
-To retrieve ApplicationID of other SharePoint Embedded applications registered your tenant, use Get-SPOApplication command. 
+To retrieve ApplicationID of other SharePoint repository services applications registered your tenant, use Get-SPOApplication command. 
 
 ### -----------------------EXAMPLE 2-----------------------------
 
@@ -109,7 +109,7 @@ Example 3 gives the detailed properties of a container using site URL of a conta
 
 ### -OwningApplicationId
 
-This parameter specifies the ID of the SharePoint Embedded Application. Use `Get-SPOApplication` command to retrive OwningApplicationID
+This parameter specifies the ID of the SharePoint repository services Application. Use `Get-SPOApplication` command to retrive OwningApplicationID
  
 ```yaml
 Type: String
