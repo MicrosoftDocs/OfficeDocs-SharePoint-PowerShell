@@ -75,7 +75,7 @@ You need to be a SharePoint Online administrator or Global Administrator to run 
 
 ```powershell
 Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 | FT 
-``````
+```
 
 Example 1 returns a tabular list of containers created under the SharePoint repository services application.
 
