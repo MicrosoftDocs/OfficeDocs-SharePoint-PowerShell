@@ -55,7 +55,7 @@ The `Get-SPOContainer` cmdlet retrieves and returns a list of containers and det
 You need to be a SharePoint Online administrator or Global Administrator to run this cmdlet.
 
 > [!NOTE]  
-> Containers in the Recycle Bin will not be retrieved by using the [`Get-SPOContainer`](./Get-SPOContainer.md) cmdlet. 
+> Containers in the Recycle Bin will not be retrieved by using the `Get-SPOContainer` cmdlet. 
 
 
 > [!NOTE]
