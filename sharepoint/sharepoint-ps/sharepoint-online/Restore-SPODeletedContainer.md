@@ -5,8 +5,10 @@ online version:
 applicable: SharePoint Online
 title: Restore-SPOContainer
 schema: 2.0.0
-author: akanksha-rakesh, cindy-lay
-ms.author: arakesh, cindylay
+author: cindylay
+ms.author: 
+- arakesh
+- cindylay
 ms.reviewer:
 ---
 
