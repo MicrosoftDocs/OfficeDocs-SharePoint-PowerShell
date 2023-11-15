@@ -53,24 +53,6 @@ Remove-SPODeletedContainer –Identity ADD_ID_HERE!!
 This example removes a SharePoint repository services deleted container with the ContainerID from the Recycle Bin and deletes it permanently.
 
 
-### -----------------------EXAMPLE 2-----------------------------
-
-```powershell
-Remove-SPODeletedContainer –Identity ADD_URL_HERE!!
-``````
-
-This example removes a SharePoint repository services deleted container with the ContainerURL from the Recycle Bin and deletes it permanently.
-
-
-### -----------------------EXAMPLE 1-----------------------------
-
-```powershell
-Remove-SPODeletedContainer –Identity ADD_SiteURL_HERE!!
-``````
-
-This example removes a SharePoint repository services deleted container with the ContainerSiteURL from the Recycle Bin and deletes it permanently.
-
-
 
 ## PARAMETERS
 
