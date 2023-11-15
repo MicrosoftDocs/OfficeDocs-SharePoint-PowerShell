@@ -11,7 +11,7 @@ ms.reviewer:
 ---
 
 
-# Remove-SPODeletedContainer
+# Get-SPODeletedContainer
 
 
 ## SYNOPSIS
