@@ -105,6 +105,22 @@ Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -Iden
 Example 3 gives the detailed properties of a container using site URL of a container.
 
 
+### -----------------------EXAMPLE 4-----------------------------
+
+```powershell
+Get-SPOContainer -OwningApplicationId <OwningApplicationId> -Identity <ContainerId> -Paged | FT
+```
+
+Example 4 Uses the `-Paged` command to retrieve a paging token
+
+### -----------------------EXAMPLE 5-----------------------------
+
+```powershell
+Get-SPOContainer -OwningApplicationId <OwningApplicationId> -Identity <ContainerId> -Paged -PagingToken <Token String> | FT 
+```
+
+Example 5 uses the `PagingToken` to view more containers
+
 ## PARAMETERS
 
 ### -OwningApplicationId
@@ -161,10 +177,6 @@ Accept wildcard characters: False
 ```
 
 
-```powershell
-Get-SPOContainer -OwningApplicationId <OwningApplicationId> -Identity <ContainerId> -Paged | FT
-```
-
 If there are no more containers to display, the commandlet output will return the message `End of containers view.` Otherwise, the commandlet will return a `<Paging Token>` to retrieve the next set of 5000 containers.
 
 ## Using the Paging Token
@@ -184,10 +196,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-```
-
-```powershell
-Get-SPOContainer -OwningApplicationId <OwningApplicationId> -Identity <ContainerId> -Paged -PagingToken <Token String> | FT 
 ```
 
 
