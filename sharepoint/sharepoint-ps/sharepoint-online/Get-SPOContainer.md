@@ -11,7 +11,7 @@ ms.author: cindylay
 ms.reviewer:
 ---
 
-# Get-SPOContainer-testing
+# Get-SPOContainer
 
 ## SYNOPSIS
 
