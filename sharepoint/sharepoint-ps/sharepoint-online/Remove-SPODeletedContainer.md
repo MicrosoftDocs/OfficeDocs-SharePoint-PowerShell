@@ -35,7 +35,7 @@ Remove-SPODeletedContainer [–Identity <ContainerId>] [<CommonParameters>]
 
 The `Remove-SPODeletedContainer` cmdlet permanently removes a SharePoint repository services deleted container from the Recycle Bin. A permanently deleted container cannot be recovered.
 
-| :exclamation:  Permanently deleting containers is generally NOT recommended  |
+| :exclamation:  **Please Note** Permanently deleting containers is generally NOT recommended  |
 |-----------------------------------------|  
  
 
