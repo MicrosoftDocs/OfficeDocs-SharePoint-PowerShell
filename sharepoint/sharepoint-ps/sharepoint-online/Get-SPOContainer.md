@@ -19,8 +19,6 @@ Returns one or more containers in the SharePoint repository services application
 ## SYNTAX
 
 
-## List of Containers 
-
 ### ParamSet1
 
 ```powershell
@@ -36,8 +34,6 @@ Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [-Paged]
 ```powershell
 Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [-Paged] [-PagingToken <Token String>]
 ```
-
-## Container Details
 
 ### ParamSet4
 
