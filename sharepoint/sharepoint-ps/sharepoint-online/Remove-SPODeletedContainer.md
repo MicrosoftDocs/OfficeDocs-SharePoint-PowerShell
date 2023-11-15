@@ -17,7 +17,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Permanently deletes the specified SharePoint Embedded container from the recycle bin. This action cannot be undone.
+Permanently deletes the specified SharePoint repository services container from the recycle bin. This action cannot be undone.
 
 ## SYNTAX
 
@@ -43,7 +43,7 @@ Remove-SPODeletedContainer [–Identity <ContainerSiteURL>] [<CommonParameters>]
 
 ## DESCRIPTION
 
-The `Remove-SPODeletedContainer` cmdlet permanently removes a SharePoint Embedded deleted container from the Recycle Bin.
+The `Remove-SPODeletedContainer` cmdlet permanently removes a SharePoint repository services deleted container from the Recycle Bin.
 
 You must be a SharePoint Administrator or Global Administrator to run the cmdlet.
 
@@ -60,7 +60,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 Remove-SPODeletedContainer –Identity ADD_ID_HERE!!
 ``````
 
-This example removes a SharePoint Embedded deleted container with the ContainerID from the Recycle Bin and deletes it permanently.
+This example removes a SharePoint repository services deleted container with the ContainerID from the Recycle Bin and deletes it permanently.
 
 
 ### -----------------------EXAMPLE 2-----------------------------
@@ -69,7 +69,7 @@ This example removes a SharePoint Embedded deleted container with the ContainerI
 Remove-SPODeletedContainer –Identity ADD_URL_HERE!!
 ``````
 
-This example removes a SharePoint Embedded deleted container with the ContainerURL from the Recycle Bin and deletes it permanently.
+This example removes a SharePoint repository services deleted container with the ContainerURL from the Recycle Bin and deletes it permanently.
 
 
 ### -----------------------EXAMPLE 1-----------------------------
@@ -78,7 +78,7 @@ This example removes a SharePoint Embedded deleted container with the ContainerU
 Remove-SPODeletedContainer –Identity ADD_SiteURL_HERE!!
 ``````
 
-This example removes a SharePoint Embedded deleted container with the ContainerSiteURL from the Recycle Bin and deletes it permanently.
+This example removes a SharePoint repository services deleted container with the ContainerSiteURL from the Recycle Bin and deletes it permanently.
 
 
 
