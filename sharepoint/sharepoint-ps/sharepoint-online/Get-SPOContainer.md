@@ -15,7 +15,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Returns one or more SharePoint repository services containers. 
+Returns one or more SharePoint repository services containers within the relevant tenant. 
 
 ## SYNTAX
 <!-- 
