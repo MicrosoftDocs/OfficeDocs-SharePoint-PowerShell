@@ -5,8 +5,8 @@ online version:
 applicable: SharePoint Online
 title: Remove-SPOContainerDeletedContainer
 schema: 2.0.0
-author: cindy-lay
-ms.author: cindylay
+author: akanksha-rakesh, cindy-lay
+ms.author: arakesh, cindylay
 ms.reviewer:
 ---
 
@@ -54,7 +54,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 Remove-SPODeletedContainer –Identity b66f5b2e-4cbd-4754-9ad3-8291c2c81ade
 ```
 
-This example removes a SharePoint repository services deleted container with the `ContainerId` b66f5b2e-4cbd-4754-9ad3-8291c2c81ade from the Recycle Bin and deletes it permanently.
+This example removes a SharePoint repository services deleted container with the `ContainerId` `b66f5b2e-4cbd-4754-9ad3-8291c2c81ade` from the Recycle Bin and deletes it permanently.
 
 
 

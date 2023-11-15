@@ -5,8 +5,8 @@ online version:
 applicable: SharePoint Online
 title: Remove-SPOContainer
 schema: 2.0.0
-author: cindy-lay
-ms.author: cindylay
+author: akanksha-rakesh, cindy-lay
+ms.author: arakesh, cindylay
 ms.reviewer:
 ---
 
@@ -58,11 +58,11 @@ Use this parameter to provide the `ContainerId` of the Container to be deleted.
  
 ```yaml
 Type: String
-Parameter Sets: ParamSet4, ParamSet5
+Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

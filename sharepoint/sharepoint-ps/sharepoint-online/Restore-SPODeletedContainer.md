@@ -3,10 +3,10 @@ external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version: 
 applicable: SharePoint Online
-title: Recover-SPOContainer
+title: Restore-SPOContainer
 schema: 2.0.0
-author: cindy-lay
-ms.author: cindylay
+author: akanksha-rakesh, cindy-lay
+ms.author: arakesh, cindylay
 ms.reviewer:
 ---
 
@@ -52,7 +52,7 @@ Use this parameter to specify the `ContainerId` of the deleted container to be r
  
 ```yaml
 Type: String
-Parameter Sets: ParamSet41
+Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
 

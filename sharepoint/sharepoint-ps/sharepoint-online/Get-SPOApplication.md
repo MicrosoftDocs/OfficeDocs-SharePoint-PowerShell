@@ -82,7 +82,7 @@ The following details are returned:
   
 ```yaml
 Type: String
-Parameter Sets: ParamSet1
+Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
 

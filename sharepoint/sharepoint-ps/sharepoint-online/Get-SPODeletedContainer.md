@@ -3,10 +3,10 @@ external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version: 
 applicable: SharePoint Online
-title: GET-SPOContainerDeletedContainer
+title: Get-SPOContainerDeletedContainer
 schema: 2.0.0
-author: cindy-lay
-ms.author: cindylay
+author: akanksha-rakesh, cindy-lay
+ms.author: arakesh, cindylay
 ms.reviewer:
 ---
 

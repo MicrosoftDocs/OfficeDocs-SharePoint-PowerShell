@@ -127,11 +127,11 @@ This parameter specifies the ID of the SharePoint repository services Applicatio
  
 ```yaml
 Type: String
-Parameter Sets: ParamSet1, ParamSet2, ParamSet3, ParamSet4, ParamSet5
+Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -149,7 +149,7 @@ Parameter Sets: ParamSet4, ParamSet5
 Aliases:
 Applicable: SharePoint Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
