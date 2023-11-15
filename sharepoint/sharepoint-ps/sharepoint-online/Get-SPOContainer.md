@@ -149,7 +149,7 @@ This parameter can be used when there are more than 5000 containers in a given a
 
 ```yaml
 Type: String
-Parameter Sets: ParamSet1, ParamSet2, ParamSet3
+Parameter Sets: ParamSet2, ParamSet3
 Aliases:
 Applicable: SharePoint Online
 
@@ -175,7 +175,7 @@ Use the <Paging Token>
 
 ```yaml
 Type: String
-Parameter Sets: ParamSet4
+Parameter Sets: ParamSet2, ParamSet3
 Aliases:
 Applicable: SharePoint Online
 
