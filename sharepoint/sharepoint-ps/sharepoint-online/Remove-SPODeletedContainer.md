@@ -29,16 +29,6 @@ Permanently deletes the specified SharePoint repository services container from 
 Remove-SPODeletedContainer [–Identity <ContainerID>] [<CommonParameters>]
 ```
 
-### ParamSet2
-```powershell
-Remove-SPODeletedContainer [–Identity <ContainerURL>] [<CommonParameters>]
-```
-
-### ParamSet3
-```powershell
-Remove-SPODeletedContainer [–Identity <ContainerSiteURL>] [<CommonParameters>]
-```
-
 
 
 ## DESCRIPTION
