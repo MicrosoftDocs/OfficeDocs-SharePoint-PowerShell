@@ -13,25 +13,30 @@ ms.reviewer:
 
 # Remove-SPOContainer
 
+
 ## SYNOPSIS
-When admins delete a Container, it is moved into the deleted container collection. A deleted container can be restored from the collection within 93 days. If a container is deleted from the collection, or it exceeds the 93-day retention period, it is permanently deleted.Deleting a container deletes everything within it, including all documents and files.
+Sends a SharePoint repository services container to the Recycle Bin.
 
 
 ## SYNTAX
 
 
-## List of Containers 
 
 ### ParamSet1
 
 ```powershell
-Remove-SPOContainer [–Identity <ContainerID>​]
+Remove-SPOContainer [–Identity <ContainerID>​] [<CommonParameters>]
 ```
 
 
 ## DESCRIPTION
 
-The `Remove-SPOContainer` cmdlet removes a container and puts it in the recycle bin. You need to be a SharePoint Online administrator or Global Administrator to run the cmdlet.
+The `Remove-SPOContainer` cmdlet deletes a container and puts it in the Recycle Bin. A container that is deleted will no longer be retrieved by the [`Get-SPOContainer`](./Get-SPOContainer.md) cmdlet.
+
+When admins delete a Container, it is moved into the Recycle Bin. A deleted container can be [restored](./Restore-SPODeletedContainer.md) from the Recycle Bin within 93 days. If a container is deleted from the Recycle Bin, or it exceeds the 93-day retention period, it is permanently deleted. Deleting a container deletes everything within it, including all documents and files. You can view all deleted containers in the Recycle Bin with the [`Get-SPODeletedContainer`](./Get-SPODeletedContainer.md) cmdlet.
+
+You need to be a SharePoint Online administrator or Global Administrator to run this cmdlet.
+
 
 
 ## EXAMPLES
@@ -39,40 +44,17 @@ The `Remove-SPOContainer` cmdlet removes a container and puts it in the recycle 
 ### -----------------------EXAMPLE 1-----------------------------
 
 ```powershell
-Remove-SPOContainer -OwningApplicationID 423poi45-jikl-9bnm-b302-1234ghy56789 | FT 
-``````
-
-Example 1 returns a tabular list of containers created under SharePoint repository services application  
-
-To retrieve containers for the Loop app, use OwningApplicationId: a187e399-0c36-4b98-8f04-1edc167a0996 
-
-To retrieve containers for the Designer app, use OwningApplicationId: 5e2795e3-ce8c-4cfb-b302-35fe5cd01597 
-
-To retrieve ApplicationID of other SharePoint repository services applications registered your tenant, use Remove-SPOApplication command. 
-
-### -----------------------EXAMPLE 2-----------------------------
-
-```powershell
-Remove-SPOContainer -OwningApplicationID 423poi45-jikl-9bnm-b302-1234ghy56789 -Identity b66f5b2e-4cbd-4754-9ad3-8291c2c81ade 
+Remove-SPOContainer -Identity 423poi45-jikl-9bnm-b302-1234ghy56789
 ```
 
-Example 2 gives the detailed properties of a container using the Identity of the container.  
-
+Example 1 places the SharePoint repository services container with the `ContainerId` `423poi45-jikl-9bnm-b302-1234ghy56789` into the Recycle Bin. The Container will be permanently deleted from the Recycle Bin after 93 days unless the deleted container is [restored](./Restore-SPODeletedContainer.md) before permanent deletion. 
  
-### -----------------------EXAMPLE 3-----------------------------
-
-```powershell
-Remove-SPOContainer -Identity 423poi45-jikl-9bnm-b302-1234ghy56789 -Identity https://contoso.sharepoint.com/storageContainers/CSP_b66f5b2e-4cbd-4754-9ad3-8291c2c81ade 
-```
-
-Example 3 gives the detailed properties of a container using site URL of a container.
-
 
 ## PARAMETERS
 
 ### -Identity
 
-Use this parameter to specify the Container in the given tenant
+Use this parameter to provide the `ContainerId` of the Container to be deleted.
  
 ```yaml
 Type: String
@@ -97,5 +79,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+[Get-SPODeletedContainer](./Get-SPODeletedContainer.md)
+
 [Restore-SPODeletedContainer](./Restore-SPODeletedContainer.md)
+
 [Remove-SPODeletedContainer](./Remove-SPODeletedContainer.md)

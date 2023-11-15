@@ -1,12 +1,12 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: # https://learn.microsoft.com/powershell/module/sharepoint-online/get-sposite
+online version: 
 applicable: SharePoint Online
 title: Get-SPOApplication
 schema: 2.0.0
-author: cindy-lay
-ms.author: cindylay
+author: akanksha-rakesh, cindy-lay
+ms.author: arakesh, cindylay
 ms.reviewer:
 ---
 
@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Returns a list of applications in the logged in tenant.
+Returns a list of SharePoint repository services applications in the specified tenant.
 
 ## SYNTAX
 
@@ -43,7 +43,7 @@ The `Get-SPOApplication` cmdlet retrieves and returns all third party applicatio
 Get-SPOApplication
 ```
 
-Example 1 returns all applications associated with the logged in tenant
+Example 1 returns all applications registered in the specified tenant.
 
 ### -----------------------EXAMPLE 2-----------------------------
 
@@ -51,7 +51,7 @@ Example 1 returns all applications associated with the logged in tenant
 Get-SPOApplication -OwningApplicationId <OwningApplicationId>
 ```
 
-Example 2 lists the owning app details "registered" in their tenant
+Example 2 lists the details of the owning applications "registered" in the specified tenant.
 
 ### -----------------------EXAMPLE 3-----------------------------
 
@@ -59,7 +59,7 @@ Example 2 lists the owning app details "registered" in their tenant
 Get-SPOApplication -OwningApplicationId <OwningApplicationId> -ApplicationId <ApplicationId>
 ```
 
-Example 3 enumerates permissions that "owning" applications registered in the specified tenant have
+Example 3 enumerates permissions of the owning applications registered in the specified tenant.
 
  
 
@@ -67,7 +67,7 @@ Example 3 enumerates permissions that "owning" applications registered in the sp
 
 ### -OwningApplicationId
 
-Use this parameter to get details about apps registered in the specific tenant
+Use this parameter to get details about apps registered in the specified tenant
 
 The following details are returned:
 
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 
 ### -ApplicationId
 
-Enumerate permissions that "owning" applications registered in the logged in tenant have.
+Use this parameter to enumerate permissions of the "owning" applications registered in the specified tenant.
 
 ```yaml
 Type: String
@@ -119,3 +119,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-SPOContainer](./Get-SPOContainer.md)

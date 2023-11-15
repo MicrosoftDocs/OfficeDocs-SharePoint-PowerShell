@@ -2,12 +2,11 @@
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version:
-# online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
 title: Get-SPOContainer
 schema: 2.0.0
-author: cindy-lay
-ms.author: cindylay
+author: akanksha-rakesh, cindy-lay
+ms.author: arakesh, cindylay
 ms.reviewer:
 ---
 
@@ -15,12 +14,10 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Returns one or more SharePoint repository services containers within the relevant tenant. 
+Returns one or more containers in the SharePoint repository services application. 
 
 ## SYNTAX
-<!-- 
-Get-SPOSite [-Detailed] [-Filter <String>] [-IncludePersonalSite <Boolean>] [-Limit <String>]
- [-Template <String>] [-GroupIdDefined] [-ArchiveStatus <String>] [<CommonParameters>] -->
+
 
 ## List of Containers 
 
@@ -58,18 +55,19 @@ Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [[-Identity] <Cont
 ## DESCRIPTION
 
 The `Get-SPOContainer` cmdlet retrieves and returns a list of containers and details of an individual container created under a SharePoint repository services application. This command is available only in SharePoint Online Management Shell version 16.0.24211.12000 or higher to run this cmdlet.
- 
-You need to be a SharePoint Online administrator or Global Administrator to run the cmdlet.
 
+You need to be a SharePoint Online administrator or Global Administrator to run this cmdlet.
 
 > [!NOTE]  
-> OwningApplicationID for Microsoft Loop is a187e399-0c36-4b98-8f04-1edc167a0996
+> Containers in the Recycle Bin will not be retrieved by using the Get-SPOContainer cmdlet. 
 
-> OwningApplicationID for Microsoft Designer is 5e2795e3-ce8c-4cfb-b302-35fe5cd01597
+
+> [!NOTE]
+> The OwningApplicationId for Microsoft Loop is `a187e399-0c36-4b98-8f04-1edc167a0996`
+
+> The OwningApplicationId for Microsoft Designer is `5e2795e3-ce8c-4cfb-b302-35fe5cd01597`
  
  
-<!-- > [!NOTE]  
-> Containers in the Recycle Bin will not be retrieved by using the Get-SPOContainer cmdlet.  -->
 
 ## EXAMPLES
 
@@ -79,11 +77,11 @@ You need to be a SharePoint Online administrator or Global Administrator to run 
 Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 | FT 
 ``````
 
-Example 1 returns a tabular list of containers created under SharePoint repository services application  
+Example 1 returns a tabular list of containers created under the SharePoint repository services application.
 
-To retrieve containers for the Loop app, use OwningApplicationId: a187e399-0c36-4b98-8f04-1edc167a0996 
+To retrieve containers for the Loop app, use OwningApplicationId: `a187e399-0c36-4b98-8f04-1edc167a0996`. 
 
-To retrieve containers for the Designer app, use OwningApplicationId: 5e2795e3-ce8c-4cfb-b302-35fe5cd01597 
+To retrieve containers for the Designer app, use OwningApplicationId: `5e2795e3-ce8c-4cfb-b302-35fe5cd01597`.
 
 To retrieve ApplicationID of other SharePoint repository services applications registered your tenant, use Get-SPOApplication command. 
 
@@ -93,7 +91,7 @@ To retrieve ApplicationID of other SharePoint repository services applications r
 Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -Identity b66f5b2e-4cbd-4754-9ad3-8291c2c81ade 
 ```
 
-Example 2 gives the detailed properties of a container using the Identity of the container.  
+Example 2 returns the detailed properties of the container with associated `ContainerId`.
 
  
 ### -----------------------EXAMPLE 3-----------------------------
@@ -111,7 +109,7 @@ Example 3 gives the detailed properties of a container using site URL of a conta
 Get-SPOContainer -OwningApplicationId <OwningApplicationId> -Identity <ContainerId> -Paged | FT
 ```
 
-Example 4 Uses the `-Paged` command to retrieve a paging token
+Example 4 Uses the `-Paged` command to retrieve a paging token.
 
 ### -----------------------EXAMPLE 5-----------------------------
 
@@ -119,13 +117,13 @@ Example 4 Uses the `-Paged` command to retrieve a paging token
 Get-SPOContainer -OwningApplicationId <OwningApplicationId> -Identity <ContainerId> -Paged -PagingToken <Token String> | FT 
 ```
 
-Example 5 uses the `PagingToken` to view more containers
+Example 5 uses the `PagingToken` to view more containers.
 
 ## PARAMETERS
 
 ### -OwningApplicationId
 
-This parameter specifies the ID of the SharePoint repository services Application. Use `Get-SPOApplication` command to retrive OwningApplicationID
+This parameter specifies the ID of the SharePoint repository services Application. Use `Get-SPOApplication` command to retrive OwningApplicationID.
  
 ```yaml
 Type: String
@@ -143,7 +141,7 @@ Accept wildcard characters: False
 
 ### -Identity
 
-Use this parameter to specify the Container in the given OwningApplicationId
+Use this parameter to specify the Container in the given OwningApplicationId.
  
 ```yaml
 Type: String
