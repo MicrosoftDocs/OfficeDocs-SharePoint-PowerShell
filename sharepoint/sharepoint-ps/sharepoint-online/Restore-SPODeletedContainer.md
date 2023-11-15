@@ -25,6 +25,7 @@ Recovers the specified SharePoint repository services container from the Recycle
 Restore-SPODeletedContainer [–Identity <ContainerID>​] [<CommonParameters>]
 ```
 
+<!--
 ### ParamSet2
 ```powershell
 Restore-SPODeletedContainer [-Identity <ContainerURL>]
@@ -34,6 +35,7 @@ Restore-SPODeletedContainer [-Identity <ContainerURL>]
 ```powershell
 Restore-SPODeletedContainer [–Identity <ContainerSiteURL>]
 ```
+-->
 
 ## DESCRIPTION
 
