@@ -110,11 +110,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
-
-## OUTPUTS
-
-### System.Object
 
 ## NOTES
 
@@ -122,5 +117,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
-[Remove-SPOContainer](Remove-SPOContainer.md)
+[Remove-SPOContainer](./Remove-SPOContainer.md)
 

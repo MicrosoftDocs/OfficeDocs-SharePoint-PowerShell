@@ -176,15 +176,8 @@ Remove-SPOContainer -OwningApplicationID <OwningApplicationId> -Identity <Contai
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
-
-### Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
-
-## OUTPUTS
-
-### System.Object
 
 ## NOTES
 
 ## RELATED LINKS
-
+[Get-SPODeletedContainer](./Get-SPODeletedContainer.md)
