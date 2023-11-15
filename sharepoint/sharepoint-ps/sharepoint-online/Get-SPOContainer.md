@@ -123,7 +123,7 @@ Example 5 uses the `PagingToken` to view more containers.
 
 ### -OwningApplicationId
 
-This parameter specifies the ID of the SharePoint repository services Application. Use `Get-SPOApplication` command to retrive OwningApplicationID.
+This parameter specifies the ID of the SharePoint repository services Application. Use `Get-SPOApplication` command to retrive OwningApplicationId.
  
 ```yaml
 Type: String
