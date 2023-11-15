@@ -27,7 +27,7 @@ Get-SPOSite [-Detailed] [-Filter <String>] [-IncludePersonalSite <Boolean>] [-Li
 ### ParamSet1
 
 ```powershell
-Get-SPOContainer [-OwningApplicationId <OwningApplicationId>][<CommonParameters>]
+Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [<CommonParameters>]
 ```
 
 ### ParamSet2
