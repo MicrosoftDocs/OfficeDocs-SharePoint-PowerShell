@@ -90,7 +90,7 @@ To retrieve ApplicationID of other SharePoint repository services applications r
 ### -----------------------EXAMPLE 2-----------------------------
 
 ```powershell
-Get-SPOContainer -OwningApplicationID 423poi45-jikl-9bnm-b302-1234ghy56789 -Identity b66f5b2e-4cbd-4754-9ad3-8291c2c81ade 
+Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -Identity b66f5b2e-4cbd-4754-9ad3-8291c2c81ade 
 ```
 
 Example 2 gives the detailed properties of a container using the Identity of the container.  
@@ -99,7 +99,7 @@ Example 2 gives the detailed properties of a container using the Identity of the
 ### -----------------------EXAMPLE 3-----------------------------
 
 ```powershell
-Get-SPOContainer -OwningApplicationID 423poi45-jikl-9bnm-b302-1234ghy56789 -Identity https://contoso.sharepoint.com/storageContainers/CSP_b66f5b2e-4cbd-4754-9ad3-8291c2c81ade 
+Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -Identity https://contoso.sharepoint.com/storageContainers/CSP_b66f5b2e-4cbd-4754-9ad3-8291c2c81ade 
 ```
 
 Example 3 gives the detailed properties of a container using site URL of a container.
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 
 
 ```powershell
-Get-SPOContainer -OwningApplicationID <OwningApplicationId> -Identity <ContainerId> -Paged | FT
+Get-SPOContainer -OwningApplicationId <OwningApplicationId> -Identity <ContainerId> -Paged | FT
 ```
 
 If there are no more containers to display, the commandlet output will return the message `End of containers view.` Otherwise, the commandlet will return a `<Paging Token>` to retrieve the next set of 5000 containers.
@@ -175,7 +175,7 @@ Use the <Paging Token>
 
 ```yaml
 Type: String
-Parameter Sets: <Paging Token
+Parameter Sets: ParamSet4
 Aliases:
 Applicable: SharePoint Online
 
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ```powershell
-Get-SPOContainer -OwningApplicationID <OwningApplicationId> -Identity <ContainerId> -Paged -PagingToken <Token String> | FT 
+Get-SPOContainer -OwningApplicationId <OwningApplicationId> -Identity <ContainerId> -Paged -PagingToken <Token String> | FT 
 ```
 
 
@@ -196,13 +196,6 @@ Get-SPOContainer -OwningApplicationID <OwningApplicationId> -Identity <Container
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
-
-### Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
-
-## OUTPUTS
-
-### System.Object
 
 ## NOTES
 
