@@ -17,7 +17,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Permanently deletes the specified SharePoint repository services container from the recycle bin. This action cannot be undone.
+Permanently deletes the specified SharePoint repository services container from the Recycle Bin. This action cannot be undone.
 
 ## SYNTAX
 
