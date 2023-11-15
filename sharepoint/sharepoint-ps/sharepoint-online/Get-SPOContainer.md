@@ -57,7 +57,7 @@ Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [[-Identity] <Cont
 
 ## DESCRIPTION
 
-The `Get-SPOContainer` cmdlet retrieves and returns a list of containers and details of an individual container created under a SharePOint repository services application. This command is available only in SharePoint Online Management Shell version 16.0.24211.12000 or higher to run this cmdlet.
+The `Get-SPOContainer` cmdlet retrieves and returns a list of containers and details of an individual container created under a SharePoint repository services application. This command is available only in SharePoint Online Management Shell version 16.0.24211.12000 or higher to run this cmdlet.
  
 You need to be a SharePoint Online administrator or Global Administrator to run the cmdlet.
 
