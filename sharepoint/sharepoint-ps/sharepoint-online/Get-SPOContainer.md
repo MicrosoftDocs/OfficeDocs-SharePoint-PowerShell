@@ -155,7 +155,7 @@ Accept wildcard characters: False
 
 ### -Paged
 
-This parameter can be used when there are more than 5000 containers in a given application. `-Paged` provides a `<Paging Token>` that will display 5000 containers at a time.
+This parameter can be used when there are more than 5000 containers in a given application. Using `-Paged` will provide a `<Paging Token>` that will display the next 5000 containers.
 
 ```yaml
 Type: String
@@ -171,13 +171,9 @@ Accept wildcard characters: False
 ```
 
 
-If there are no more containers to display, the commandlet output will return the message `End of containers view.` Otherwise, the commandlet will return a `<Paging Token>` to retrieve the next set of 5000 containers.
-
-## Using the Paging Token
-
 ### -PagingToken
 
-Use the <Paging Token> 
+Use the this parameter to provide the `<Paging Token>` provided to view remaining containers as shown in example 5. If there are no more containers to display, the commandlet output will return the message `End of containers view.` Otherwise, use the given `<Paging Token>` to retrieve the next batch of up to 5000 containers.
 
 ```yaml
 Type: String
