@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Recovers a SharePoint repository services deleted container from the Recycle Bin. 
+Recovers a deleted container from the Recycle Bin. 
 
 ## SYNTAX
 

@@ -17,7 +17,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Permanently deletes the specified SharePoint repository services container from the Recycle Bin. This action cannot be undone.
+Permanently deletes the specified container from the Recycle Bin. This action cannot be undone.
 
 ## SYNTAX
 
@@ -33,7 +33,7 @@ Remove-SPODeletedContainer [–Identity <ContainerId>] [<CommonParameters>]
 
 ## DESCRIPTION
 
-The `Remove-SPODeletedContainer` cmdlet permanently removes a SharePoint repository services deleted container from the Recycle Bin. A permanently deleted container cannot be recovered. You must be a SharePoint Administrator or Global Administrator to run the cmdlet.
+The `Remove-SPODeletedContainer` cmdlet permanently removes a deleted container from the Recycle Bin. A permanently deleted container cannot be recovered. You must be a SharePoint Administrator or Global Administrator to run the cmdlet.
 
 :warning:  **Please Note:**  Permanently deleting containers is generally NOT recommended
 
@@ -54,7 +54,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 Remove-SPODeletedContainer –Identity b66f5b2e-4cbd-4754-9ad3-8291c2c81ade
 ```
 
-This example removes a SharePoint repository services deleted container with the `ContainerId` `b66f5b2e-4cbd-4754-9ad3-8291c2c81ade` from the Recycle Bin and deletes it permanently.
+This example removes a deleted container with the `ContainerId` `b66f5b2e-4cbd-4754-9ad3-8291c2c81ade` from the Recycle Bin and deletes it permanently.
 
 
 

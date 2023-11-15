@@ -16,7 +16,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Returns all deleted SharePoint repository services containers in the Recycle Bin.
+Returns all deleted containers in the Recycle Bin.
 
 ## SYNTAX
 

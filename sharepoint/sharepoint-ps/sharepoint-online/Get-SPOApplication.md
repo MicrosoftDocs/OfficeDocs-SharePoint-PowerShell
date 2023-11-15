@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Returns a list of SharePoint repository services applications in the specified tenant.
+Returns a list of applications in the specified tenant.
 
 ## SYNTAX
 

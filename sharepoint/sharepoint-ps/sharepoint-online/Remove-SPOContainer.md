@@ -15,7 +15,7 @@ ms.reviewer:
 
 
 ## SYNOPSIS
-Sends a SharePoint repository services container to the Recycle Bin.
+Sends a container to the Recycle Bin.
 
 
 ## SYNTAX
@@ -47,7 +47,7 @@ You need to be a SharePoint Online administrator or Global Administrator to run 
 Remove-SPOContainer -Identity 423poi45-jikl-9bnm-b302-1234ghy56789
 ```
 
-Example 1 places the SharePoint repository services container with the `ContainerId` `423poi45-jikl-9bnm-b302-1234ghy56789` into the Recycle Bin. The Container will be permanently deleted from the Recycle Bin after 93 days unless the deleted container is [restored](./Restore-SPODeletedContainer.md) before permanent deletion. 
+Example 1 places the container with the `ContainerId` `423poi45-jikl-9bnm-b302-1234ghy56789` into the Recycle Bin. The Container will be permanently deleted from the Recycle Bin after 93 days unless the deleted container is [restored](./Restore-SPODeletedContainer.md) before permanent deletion. 
  
 
 ## PARAMETERS
