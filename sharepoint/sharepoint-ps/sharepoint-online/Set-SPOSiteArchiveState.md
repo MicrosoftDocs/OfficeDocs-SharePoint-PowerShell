@@ -32,7 +32,7 @@ Microsoft 365 Archive needs to be enabled for the organization to be able to use
 ### Example 1
 
 ```powershell
-Set-SiteArchiveState https://contoso.sharepoint.com/sites/Marketing -ArchiveState Archived
+Set-SPOSiteArchiveState https://contoso.sharepoint.com/sites/Marketing -ArchiveState Archived
 ```
 
 This example marks the site as Archived. For seven days after the operation, the site will remain in a "RecentlyArchived" state, where any reactivations will be free and instantaneous. If a site is reactivated after seven days, any reactivations will be charged and will take time.
@@ -40,7 +40,7 @@ This example marks the site as Archived. For seven days after the operation, the
 ### Example 2
 
 ```powershell
-Set-SiteArchiveState https://contoso.sharepoint.com/sites/Marketing -ArchiveState Active
+Set-SPOSiteArchiveState https://contoso.sharepoint.com/sites/Marketing -ArchiveState Active
 ```
 
 This example triggers the reactivation of a site. If the site is reactivated from the "RecentlyArchived" state, it will become available instantaneously. If the site is reactivated from the "FullyArchived" state, it may take time for it to be reactivated.
