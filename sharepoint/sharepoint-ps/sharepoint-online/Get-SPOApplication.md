@@ -6,9 +6,7 @@ applicable: SharePoint Online
 title: Get-SPOApplication
 schema: 2.0.0
 author: cindylay
-ms.author: 
-- arakesh
-- cindylay
+ms.author: cindylay
 ms.reviewer:
 ---
 
