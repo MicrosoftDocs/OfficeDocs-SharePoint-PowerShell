@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Returns one or more containers in the application. 
+Returns one or more Containers in a SharePoint repository services application. 
 
 ## SYNTAX
 
@@ -50,7 +50,7 @@ Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [[-Identity] <Cont
 
 ## DESCRIPTION
 
-The `Get-SPOContainer` cmdlet retrieves and returns a list of containers and details of an individual container created under a application. This command is available only in Syntex Online Management Shell version 16.0.24211.12000 or higher to run this cmdlet.
+The `Get-SPOContainer` cmdlet retrieves and returns a list of Containers and details of an individual Container created under a SharePoint repository services application. This command is available only in SharePoint Online Management Shell version 16.0.24211.12000 or higher to run this cmdlet.
 
 You need to be a SharePoint Online administrator or Global Administrator to run this cmdlet.
 
@@ -73,13 +73,13 @@ You need to be a SharePoint Online administrator or Global Administrator to run 
 Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 | FT 
 ```
 
-Example 1 returns a tabular list of containers created under the application.
+Example 1 returns a tabular list of Containers created under the SharePoint repository services application with the `OwningApplicationId` of  `423poi45-jikl-9bnm-b302-1234ghy56789`.
 
-To retrieve containers for the Microsoft Loop app, use OwningApplicationId: `a187e399-0c36-4b98-8f04-1edc167a0996`. 
+To retrieve Containers for the Microsoft Loop app, use OwningApplicationId: `a187e399-0c36-4b98-8f04-1edc167a0996`. 
 
-To retrieve containers for the Microsoft Designer app, use OwningApplicationId: `5e2795e3-ce8c-4cfb-b302-35fe5cd01597`.
+To retrieve Containers for the Microsoft Designer app, use OwningApplicationId: `5e2795e3-ce8c-4cfb-b302-35fe5cd01597`.
 
-<!-- To retrieve the ApplicationId of other applications registered within your tenant, use Get-SPOApplication command.  -->
+
 
 ### -----------------------EXAMPLE 2-----------------------------
 
@@ -87,7 +87,7 @@ To retrieve containers for the Microsoft Designer app, use OwningApplicationId: 
 Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -Identity b66f5b2e-4cbd-4754-9ad3-8291c2c81ade 
 ```
 
-Example 2 returns the detailed properties of the container with associated `ContainerId`.
+Example 2 returns the detailed properties of the Container with associated `ContainerId`.
 
  
 ### -----------------------EXAMPLE 3-----------------------------
@@ -113,13 +113,13 @@ Example 4 Uses the `-Paged` command to retrieve a paging token.
 Get-SPOContainer -OwningApplicationId <OwningApplicationId> -Identity <ContainerId> -Paged -PagingToken <Token String> | FT 
 ```
 
-Example 5 uses the `PagingToken` to view more containers.
+Example 5 uses the `PagingToken` to view more Containers.
 
 ## PARAMETERS
 
 ### -OwningApplicationId
 
-This parameter specifies the ID of the application. Use `Get-SPOApplication` command to retrive OwningApplicationId.
+This parameter specifies the ID of the SharePoint repository services application. Use `Get-SPOApplication` command to retrive the OwningApplicationId.
  
 ```yaml
 Type: String
@@ -137,7 +137,7 @@ Accept wildcard characters: False
 
 ### -Identity
 
-Use this parameter to specify the container in the given OwningApplicationId.
+Use this parameter to specify the Container in the given OwningApplicationId.
  
 ```yaml
 Type: String
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 
 ### -Paged
 
-This parameter can be used when there are more than 5000 containers in a given application. Using `-Paged` will provide a `<Paging Token>` that will display the next 5000 containers.
+This parameter can be used when there are more than 5000 Containers in a given SharePoint repository services application. Using `-Paged` will provide a `<Paging Token>` that will display the next 5000 Containers.
 
 ```yaml
 Type: String
@@ -173,7 +173,7 @@ Accept wildcard characters: False
 
 ### -PagingToken
 
-Use the this parameter to provide the `<Paging Token>` provided to view remaining containers as shown in example 5. If there are no more containers to display, the commandlet output will return the message `End of containers view.` Otherwise, use the given `<Paging Token>` to retrieve the next batch of up to 5000 containers.
+Use the this parameter to provide the `<Paging Token>` provided to view remaining Containers as shown in example 5. If there are no more Containers to display, the commandlet output will return the message `End of Containers view.` Otherwise, use the given `<Paging Token>` to retrieve the next batch of up to 5000 Containers.
 
 ```yaml
 Type: String
@@ -199,5 +199,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 

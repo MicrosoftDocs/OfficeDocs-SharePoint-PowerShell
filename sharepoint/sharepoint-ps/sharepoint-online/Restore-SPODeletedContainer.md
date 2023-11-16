@@ -3,7 +3,7 @@ external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version: 
 applicable: SharePoint Online
-title: Restore-SPOContainer
+title: Restore-SPODeletedContainer
 schema: 2.0.0
 author: cindylay
 ms.author: cindylay
@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Recovers a deleted container from the Recycle Bin. 
+Recovers a deleted Container from the Recycle Bin. 
 
 ## SYNTAX
 
@@ -28,7 +28,7 @@ Restore-SPODeletedContainer [–Identity <ContainerId>​] [<CommonParameters>]
 
 ## DESCRIPTION
 
-The `Restore-SPODeletedContainer` cmdlet recovers a previously deleted container from the Recycle Bin. Restored containers will be retrieved by the [`Get-SPOContainer`](./Get-SPOContainer.md) cmdlet. You need to be a SharePoint Online administrator or Global Administrator to run this cmdlet.
+The `Restore-SPODeletedContainer` cmdlet recovers a previously deleted Container from the Recycle Bin. Restored Containers will be retrieved by the [`Get-SPOContainer`](./Get-SPOContainer.md) cmdlet. You need to be a SharePoint Online administrator or Global Administrator to run this cmdlet.
 
 
 
@@ -74,6 +74,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Get-SPODeletedContainer](./Get-SPODeletedContainer.md)

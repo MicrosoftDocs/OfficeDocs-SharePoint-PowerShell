@@ -16,7 +16,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Returns all deleted containers in the Recycle Bin.
+Returns all deleted Containers in the Recycle Bin.
 
 ## SYNTAX
 
@@ -32,11 +32,11 @@ Get-SPODeletedContainer [<CommonParameters>]
 
 ## DESCRIPTION
 
-The `Get-SPODeletedContainer` cmdlet returns a list of all deleted containers in the Recycle Bin. There is no `Identity` parameter needed. The list includes the `ContainerId`, `ContainerName`, and `CreatedDate`. Deleted containers in the Recycle Bin are permanently deleted after 93 days. More details in [`Remove-SPOContainer`](./Remove-SPOContainer.md). You can restore a deleted container with the cmdlet [`Restore-SPODeletedContainer`](./Restore-SPODeletedContainer.md).
+The `Get-SPODeletedContainer` cmdlet returns a list of all deleted Containers in the Recycle Bin. There is no `Identity` parameter needed. The list includes the `ContainerId`, `ContainerName`, and `CreatedDate`. Deleted Containers in the Recycle Bin are permanently deleted after 93 days. More details in [`Remove-SPOContainer`](./Remove-SPOContainer.md). You can restore a deleted Container with the cmdlet [`Restore-SPODeletedContainer`](./Restore-SPODeletedContainer.md).
 
 You must be a SharePoint Administrator or Global Administrator to run this cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
 
 
@@ -49,7 +49,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 Get-SPODeletedContainer
 ```
 
-This example returns a list of the `ContainerId`, `ContainerName`, and `CreatedDate` of all deleted containers in the Recycle Bin. 
+This example returns a list of the `ContainerId`, `ContainerName`, and `CreatedDate` of all deleted Containers in the Recycle Bin. 
 
 
 ## PARAMETERS

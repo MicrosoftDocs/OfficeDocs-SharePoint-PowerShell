@@ -15,7 +15,7 @@ ms.reviewer:
 
 
 ## SYNOPSIS
-Sends a container to the Recycle Bin.
+Sends a Container to the Recycle Bin.
 
 
 ## SYNTAX
@@ -31,9 +31,9 @@ Remove-SPOContainer [–Identity <ContainerID>​] [<CommonParameters>]
 
 ## DESCRIPTION
 
-The `Remove-SPOContainer` cmdlet deletes a container and puts it in the Recycle Bin. A container that is deleted will no longer be retrieved by the [`Get-SPOContainer`](./Get-SPOContainer.md) cmdlet.
+The `Remove-SPOContainer` cmdlet deletes a Container and puts it in the Recycle Bin. A Container that is deleted will no longer be retrieved by the [`Get-SPOContainer`](./Get-SPOContainer.md) cmdlet.
 
-When admins delete a Container, it is moved into the Recycle Bin. A deleted container can be [restored](./Restore-SPODeletedContainer.md) from the Recycle Bin within 93 days. If a container is deleted from the Recycle Bin, or it exceeds the 93-day retention period, it is permanently deleted. Deleting a container deletes everything within it, including all documents and files. You can view all deleted containers in the Recycle Bin with the [`Get-SPODeletedContainer`](./Get-SPODeletedContainer.md) cmdlet.
+When admins delete a Container, it is moved into the Recycle Bin. A deleted Container can be [restored](./Restore-SPODeletedContainer.md) from the Recycle Bin within 93 days. If a Container is deleted from the Recycle Bin, or it exceeds the 93-day retention period, it is permanently deleted. Deleting a Container deletes everything within it, including all documents and files. You can view all deleted Containers in the Recycle Bin with the [`Get-SPODeletedContainer`](./Get-SPODeletedContainer.md) cmdlet.
 
 You need to be a SharePoint Online administrator or Global Administrator to run this cmdlet.
 
@@ -47,7 +47,7 @@ You need to be a SharePoint Online administrator or Global Administrator to run 
 Remove-SPOContainer -Identity 423poi45-jikl-9bnm-b302-1234ghy56789
 ```
 
-Example 1 places the container with the `ContainerId` `423poi45-jikl-9bnm-b302-1234ghy56789` into the Recycle Bin. The Container will be permanently deleted from the Recycle Bin after 93 days unless the deleted container is [restored](./Restore-SPODeletedContainer.md) before permanent deletion. 
+Example 1 places the Container with the `ContainerId` `423poi45-jikl-9bnm-b302-1234ghy56789` into the Recycle Bin. The Container will be permanently deleted from the Recycle Bin after 93 days unless the deleted Container is [restored](./Restore-SPODeletedContainer.md) before permanent deletion. 
  
 
 ## PARAMETERS
