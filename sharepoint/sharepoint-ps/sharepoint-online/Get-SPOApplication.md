@@ -37,7 +37,7 @@ The `Get-SPOApplication` cmdlet retrieves and returns all third party SharePoint
 
 ## EXAMPLES
 
-### -----------------------EXAMPLE 1-----------------------------
+### Example 1
 
 ```powershell
 Get-SPOApplication
