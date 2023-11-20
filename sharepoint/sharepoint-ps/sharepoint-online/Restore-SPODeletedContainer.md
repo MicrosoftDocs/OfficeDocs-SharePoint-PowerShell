@@ -18,7 +18,6 @@ Recovers a deleted Container from the Recycle Bin.
 
 ## SYNTAX
 
-
 ### ParamSet1
 
 ```powershell
