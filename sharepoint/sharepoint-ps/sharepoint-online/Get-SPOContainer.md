@@ -83,10 +83,10 @@ Example 2 returns the detailed properties of the Container with associated `Cont
 ### Example 3
 
 ```powershell
-Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -Identity https://contoso.sharepoint.com/storageContainers/CSP_b66f5b2e-4cbd-4754-9ad3-8291c2c81ade 
+Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -Identity https://contoso.sharepoint.com/storagecontainers/CSP_b66f5b2e-4cbd-4754-9ad3-8291c2c81ade 
 ```
 
-Example 3 gives the detailed properties of a container using the site URL of a container.
+Example 3 gives the detailed properties of a Container using the site URL of a Container.
 
 ### Example 4
 
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 
 ### -Paged
 
-This parameter can be used when there are more than 5,000 containers in a given SharePoint repository services application. Using `-Paged` will provide a `<Paging Token>` that will display the next 5,000 Containers.
+This parameter can be used when there are more than 5,000 Containers in a given SharePoint repository services application. Using `-Paged` will provide a `<Paging Token>` that will display the next 5,000 Containers.
 
 ```yaml
 Type: String
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 
 ### -PagingToken
 
-Use this parameter to provide the `<Paging Token>` provided to view the remaining containers as shown in Example 5. If there are no more containers to display, the commandlet output will return the message `End of Containers view.` Otherwise, use the given `<Paging Token>` to retrieve the next batch of up to 5,000 containers.
+Use this parameter to provide the `<Paging Token>` provided to view the remaining Containers as shown in Example 5. If there are no more Containers to display, the commandlet output will return the message `End of Containers view.` Otherwise, use the given `<Paging Token>` to retrieve the next batch of up to 5,000 ontainers.
 
 ```yaml
 Type: String
