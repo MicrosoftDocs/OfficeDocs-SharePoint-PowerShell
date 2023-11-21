@@ -32,7 +32,7 @@ Get-SPOApplication [[-OwningApplicationId] <OwningApplicationid>] [[-Application
 
 ## DESCRIPTION
 
-The `Get-SPOApplication` cmdlet retrieves and returns all third party SharePoint repository services applications registered on a tenant site that match the given criteria. You need to be a SharePoint Online administrator or Global Administrator to run the cmdlet. For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps). 
+The `Get-SPOApplication` cmdlet retrieves and returns all third-party SharePoint repository services applications registered in a tenant site that match the given criteria. You must be a SharePoint Online Administrator or Global Administrator to run the cmdlet. For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps). 
 
 
 ## EXAMPLES
