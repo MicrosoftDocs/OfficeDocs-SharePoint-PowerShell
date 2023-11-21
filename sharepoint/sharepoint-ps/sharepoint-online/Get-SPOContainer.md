@@ -99,7 +99,7 @@ Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -Iden
 Example 3 gives the detailed properties of a container using site URL of a container.
 
 
-### -----------------------EXAMPLE 4-----------------------------
+### Example 4
 
 ```powershell
 Get-SPOContainer -OwningApplicationId <OwningApplicationId> -Identity <ContainerId> -Paged | FT
