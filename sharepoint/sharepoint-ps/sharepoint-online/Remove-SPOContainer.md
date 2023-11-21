@@ -39,7 +39,7 @@ You must be a SharePoint Online Administrator or Global Administrator to run thi
 Remove-SPOContainer -Identity 423poi45-jikl-9bnm-b302-1234ghy56789
 ```
 
-Example 1 places the container with the `ContainerId` `423poi45-jikl-9bnm-b302-1234ghy56789` into the Recycle Bin. The container will be permanently deleted from the Recycle Bin after 93 days unless the deleted container is [restored](./Restore-SPODeletedContainer.md) before permanent deletion. 
+Example 1 places the Container with the `ContainerId` `423poi45-jikl-9bnm-b302-1234ghy56789` into the Recycle Bin. The Container will be permanently deleted from the Recycle Bin after 93 days unless the deleted Container is [restored](./Restore-SPODeletedContainer.md) before permanent deletion. 
 
 ## PARAMETERS
 
