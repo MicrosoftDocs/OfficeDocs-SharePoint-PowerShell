@@ -96,7 +96,7 @@ Get-SPOContainer -OwningApplicationId <OwningApplicationId> -Identity <Container
 
 Example 4 uses the `-Paged` command to retrieve a paging token.
 
-### -----------------------EXAMPLE 5-----------------------------
+### Example 5
 
 ```powershell
 Get-SPOContainer -OwningApplicationId <OwningApplicationId> -Identity <ContainerId> -Paged -PagingToken <Token String> | FT 

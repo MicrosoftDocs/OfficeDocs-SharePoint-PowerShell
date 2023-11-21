@@ -32,7 +32,7 @@ The `Restore-SPODeletedContainer` cmdlet recovers a previously deleted Container
 
 ## EXAMPLES
 
-### -----------------------EXAMPLE 1-----------------------------
+### Example 1
 
 ```powershell
 Restore-SPODeletedContainer -Identity b66f5b2e-4cbd-4754-9ad3-8291c2c81ade

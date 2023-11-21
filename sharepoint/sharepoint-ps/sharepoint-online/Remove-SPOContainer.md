@@ -33,7 +33,7 @@ You must be a SharePoint Online Administrator or Global Administrator to run thi
 
 ## EXAMPLES
 
-### -----------------------EXAMPLE 1-----------------------------
+### Example 1
 
 ```powershell
 Remove-SPOContainer -Identity 423poi45-jikl-9bnm-b302-1234ghy56789

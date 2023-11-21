@@ -40,7 +40,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -----------------------EXAMPLE 1-----------------------------
+### Example 1
 
 ```powershell
 Remove-SPODeletedContainer –Identity b66f5b2e-4cbd-4754-9ad3-8291c2c81ade
