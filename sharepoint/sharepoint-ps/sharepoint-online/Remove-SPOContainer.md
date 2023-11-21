@@ -20,7 +20,7 @@ Sends a Container to the Recycle Bin.
 ### ParamSet1
 
 ```powershell
-Remove-SPOContainer [–Identity <ContainerID>​] [<CommonParameters>]
+Remove-SPOContainer [–Identity <ContainerId>​] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
