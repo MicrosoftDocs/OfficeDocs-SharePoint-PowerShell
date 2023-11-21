@@ -34,7 +34,6 @@ Get-SPOApplication [[-OwningApplicationId] <OwningApplicationid>] [[-Application
 
 The `Get-SPOApplication` cmdlet retrieves and returns all third-party SharePoint repository services applications registered in a tenant site that match the given criteria. You must be a SharePoint Online Administrator or Global Administrator to run the cmdlet. For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps). 
 
-
 ## EXAMPLES
 
 ### Example 1
@@ -51,9 +50,9 @@ Example 1 returns all SharePoint repository services applications registered in 
 Get-SPOApplication -OwningApplicationId <OwningApplicationId>
 ```
 
-Example 2 lists the details of the owning applications "registered" in the specified tenant.
+Example 2 lists the details of the owning applications registered in the specified tenant.
 
-### -----------------------EXAMPLE 3-----------------------------
+### Example 3
 
 ```powershell
 Get-SPOApplication -OwningApplicationId <OwningApplicationId> -ApplicationId <ApplicationId>
@@ -61,13 +60,11 @@ Get-SPOApplication -OwningApplicationId <OwningApplicationId> -ApplicationId <Ap
 
 Example 3 enumerates permissions of the owning applications registered in the specified tenant.
 
- 
-
 ## PARAMETERS
 
 ### -OwningApplicationId
 
-Use this parameter to get details about apps registered in the specified tenant
+Use this parameter to get details about apps registered in the specified tenant.
 
 The following details are returned:
 
@@ -78,7 +75,6 @@ The following details are returned:
 - Storage
 
 - Applications (by id)
-
   
 ```yaml
 Type: String
@@ -95,7 +91,7 @@ Accept wildcard characters: False
 
 ### -ApplicationId
 
-Use this parameter to enumerate permissions of the "owning" applications registered in the specified tenant.
+Use this parameter to enumerate permissions of the owning applications registered in the specified tenant.
 
 ```yaml
 Type: String
@@ -114,7 +110,6 @@ Accept wildcard characters: False
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
-
 
 ## NOTES
 

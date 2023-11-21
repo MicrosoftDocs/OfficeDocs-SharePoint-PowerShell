@@ -41,7 +41,6 @@ Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [-Paged] [-PagingT
 Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [[-Identity] <ContainerId>]
 ```
 
-
 ### ParamSet5
 
 ```powershell
@@ -56,18 +55,12 @@ You need to be a SharePoint Online administrator or Global Administrator to run 
 
 > [!NOTE]  
 > Containers in the Recycle Bin will not be retrieved by using the `Get-SPOContainer` cmdlet. 
-
-
-> [!NOTE]
 > The OwningApplicationId for Microsoft Loop is `a187e399-0c36-4b98-8f04-1edc167a0996`.
-> 
 > The OwningApplicationId for Microsoft Designer is `5e2795e3-ce8c-4cfb-b302-35fe5cd01597`.
- 
- 
 
 ## EXAMPLES
 
-### -----------------------EXAMPLE 1-----------------------------
+### Example 1
 
 ```powershell
 Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 | FT 
@@ -81,7 +74,7 @@ To retrieve Containers for the Microsoft Designer app, use OwningApplicationId: 
 
 
 
-### -----------------------EXAMPLE 2-----------------------------
+### Example 2
 
 ```powershell
 Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -Identity b66f5b2e-4cbd-4754-9ad3-8291c2c81ade 
@@ -90,14 +83,13 @@ Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -Iden
 Example 2 returns the detailed properties of the Container with associated `ContainerId`.
 
  
-### -----------------------EXAMPLE 3-----------------------------
+### Example 3
 
 ```powershell
 Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -Identity https://contoso.sharepoint.com/storageContainers/CSP_b66f5b2e-4cbd-4754-9ad3-8291c2c81ade 
 ```
 
-Example 3 gives the detailed properties of a container using site URL of a container.
-
+Example 3 gives the detailed properties of a container using the site URL of a container.
 
 ### Example 4
 
@@ -105,7 +97,7 @@ Example 3 gives the detailed properties of a container using site URL of a conta
 Get-SPOContainer -OwningApplicationId <OwningApplicationId> -Identity <ContainerId> -Paged | FT
 ```
 
-Example 4 Uses the `-Paged` command to retrieve a paging token.
+Example 4 uses the `-Paged` command to retrieve a paging token.
 
 ### -----------------------EXAMPLE 5-----------------------------
 
@@ -134,7 +126,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -Identity
 
 Use this parameter to specify the Container in the given OwningApplicationId.
@@ -152,10 +143,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -Paged
 
-This parameter can be used when there are more than 5000 Containers in a given SharePoint repository services application. Using `-Paged` will provide a `<Paging Token>` that will display the next 5000 Containers.
+This parameter can be used when there are more than 5,000 containers in a given SharePoint repository services application. Using `-Paged` will provide a `<Paging Token>` that will display the next 5,000 Containers.
 
 ```yaml
 Type: String
@@ -173,7 +163,7 @@ Accept wildcard characters: False
 
 ### -PagingToken
 
-Use the this parameter to provide the `<Paging Token>` provided to view remaining Containers as shown in example 5. If there are no more Containers to display, the commandlet output will return the message `End of Containers view.` Otherwise, use the given `<Paging Token>` to retrieve the next batch of up to 5000 Containers.
+Use this parameter to provide the `<Paging Token>` provided to view the remaining containers as shown in Example 5. If there are no more containers to display, the commandlet output will return the message `End of Containers view.` Otherwise, use the given `<Paging Token>` to retrieve the next batch of up to 5,000 containers.
 
 ```yaml
 Type: String
@@ -188,12 +178,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
-
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
-
 
 ## NOTES
 

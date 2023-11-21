@@ -10,10 +10,7 @@ ms.author: cindylay
 ms.reviewer:
 ---
 
-
 # Remove-SPODeletedContainer
-
-
 
 ## SYNOPSIS
 
@@ -40,9 +37,6 @@ The `Remove-SPODeletedContainer` cmdlet permanently removes a deleted Container 
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
-
-
-
 ## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
@@ -56,7 +50,6 @@ This example removes a deleted Container with the `ContainerId` `b66f5b2e-4cbd-4
 
 
 ## PARAMETERS
-
 
 ### -Identity
 
