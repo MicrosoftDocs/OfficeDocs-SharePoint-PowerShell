@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: 
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spoapplication
 applicable: SharePoint Online
 title: Get-SPOApplication
 schema: 2.0.0

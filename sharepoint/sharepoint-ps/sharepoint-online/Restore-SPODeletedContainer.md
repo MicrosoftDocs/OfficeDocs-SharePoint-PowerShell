@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: 
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/restore-spodeletedcontainer
 applicable: SharePoint Online
 title: Restore-SPODeletedContainer
 schema: 2.0.0
