@@ -18,7 +18,6 @@ Returns one or more Containers in a SharePoint repository services application.
 
 ## SYNTAX
 
-
 ### ParamSet1
 
 ```powershell
@@ -51,7 +50,7 @@ Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [[-Identity] <Cont
 
 The `Get-SPOContainer` cmdlet retrieves and returns a list of Containers and details of an individual Container created under a SharePoint repository services application. This command is available only in SharePoint Online Management Shell version 16.0.24211.12000 or higher to run this cmdlet.
 
-You need to be a SharePoint Online administrator or Global Administrator to run this cmdlet.
+You must be a SharePoint Online Administrator or Global Administrator to run this cmdlet.
 
 > [!NOTE]  
 > Containers in the Recycle Bin will not be retrieved by using the `Get-SPOContainer` cmdlet. 
@@ -71,8 +70,6 @@ Example 1 returns a tabular list of Containers created under the SharePoint repo
 To retrieve Containers for the Microsoft Loop app, use OwningApplicationId: `a187e399-0c36-4b98-8f04-1edc167a0996`. 
 
 To retrieve Containers for the Microsoft Designer app, use OwningApplicationId: `5e2795e3-ce8c-4cfb-b302-35fe5cd01597`.
-
-
 
 ### Example 2
 
