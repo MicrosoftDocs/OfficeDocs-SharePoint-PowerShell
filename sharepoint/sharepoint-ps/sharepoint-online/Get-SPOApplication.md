@@ -45,7 +45,7 @@ Get-SPOApplication
 
 Example 1 returns all SharePoint repository services applications registered in the specified tenant.
 
-### -----------------------EXAMPLE 2-----------------------------
+### Example 2
 
 ```powershell
 Get-SPOApplication -OwningApplicationId <OwningApplicationId>
