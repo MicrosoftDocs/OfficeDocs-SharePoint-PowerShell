@@ -6,7 +6,7 @@ Applicable: SharePoint Embedded
 title: Set-SPOContainer
 schema: 2.0.0
 author: Abi Suresh
-ms.author: abisuresh
+ms.author: abiramisuresh
 ms.reviewer:
 ---
 
