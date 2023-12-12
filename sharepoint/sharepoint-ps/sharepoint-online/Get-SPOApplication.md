@@ -42,7 +42,7 @@ The `Get-SPOApplication` cmdlet retrieves and returns all third-party SharePoint
 Get-SPOApplication
 ```
 
-Example 1 returns all SharePoint Embedded applications registered in the specified tenant.
+Example 1 returns all SharePoint Embedded applications registered in the specified tenant by their `OwningApplicationId` and `OwningApplicationName`.
 
 ### Example 2
 
@@ -50,7 +50,7 @@ Example 1 returns all SharePoint Embedded applications registered in the specifi
 Get-SPOApplication -OwningApplicationId <OwningApplicationId>
 ```
 
-Example 2 lists the details of the owning applications registered in the specified tenant.
+Example 2 lists the details of the owning application corresponding to the `OwningApplicationId` registered in the specified tenant.
 
 ### Example 3
 
