@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-SPOSiteScriptPackage
 
 ## SYNOPSIS
-Updates a previously uploaded site script package. The package file must be a zip archive containing all the files necessary for the site script. A file called “manifest.json” with script actions must be present in this zip file.
+Updates a previously uploaded site script package. The package file must be a zip archive containing all the files necessary for the site script. A file called "manifest.json" with script actions must be present in this zip file.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Set-SPOSiteScriptPackage -Identity <SPOSiteScriptPipeBind> [-Title <String>] [-C
 ```
 
 ## DESCRIPTION
-Updates a previously uploaded site script package. The package file must be a zip archive containing all the files necessary for the site script. A file called “manifest.json” with script actions must be present in this zip file.
+Updates a previously uploaded site script package. The package file must be a zip archive containing all the files necessary for the site script. A file called "manifest.json" with script actions must be present in this zip file.
 
 ## EXAMPLES
 
