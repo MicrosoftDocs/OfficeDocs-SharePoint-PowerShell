@@ -1020,6 +1020,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SharePointAddInsDisabled
+
+Allows or disallows disable the SharePoint add-ins app.
+
+When the value is set to false, the SharePoint add-ins app can still be used. If the value is set to true, sharepoint will no longer support any features related to add-ins.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SiteOwnerManageLegacyServicePrincipalEnabled
 
 Allows or disallows the site collection admins to manage the Azure Access Control (ACS) service principal.
