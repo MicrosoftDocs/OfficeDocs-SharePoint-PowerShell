@@ -142,7 +142,7 @@ Accept wildcard characters: False
 
 ### -Paged
 
-This parameter can be used when there are more than 5,000 Containers in a given SharePoint repository services application. Using `-Paged` will provide a `<Paging Token>` that will display the next 200 Containers.
+This parameter can be used when there are more than 200 Containers in a given SharePoint repository services application. Using `-Paged` will provide a `<Paging Token>` that will display the next 200 Containers.
 
 ```yaml
 Type: String
