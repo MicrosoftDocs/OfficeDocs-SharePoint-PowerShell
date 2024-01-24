@@ -12,7 +12,7 @@ title: Add-SPOListDesign
 # Add-SPOListDesign
 
 ## SYNOPSIS
-Creates a new list design available to users when they create a new list from the SharePoint home page, the Microsoft Lists app, Microsoft Teams, or Office.com.
+Creates a new list or document library design available to users when they create a new list or document library from Site Contents, certain site home pages, the SharePoint home page, the Microsoft Lists app, Microsoft Teams, or Office.com.
 
 ## SYNTAX
 
@@ -23,7 +23,11 @@ Add-SPOListDesign -Title <String> -SiteScripts <SPOSiteScriptPipeBind[]> [-Descr
 ```
 
 ## DESCRIPTION
-Creates a new list design available to users when they create a new list from the SharePoint home page, the Microsoft Lists app, Microsoft Teams, or Office.com.
+Creates a new list or document library design available to users when they create a new list or document library from the SharePoint home page, the Microsoft Lists app, Microsoft Teams, or Office.com.
+
+List designs will be available in UI where lists are created, and document library designs will be available in UI where document librraries are created.  The difference is based on the "templateType" of the site design used.  "templateType" 100 is for Lists, "templateType" 101 is for document libraries.
+
+Note that in early 2024, a change will be rolling out which will put document library templates into the document library creation UI and list templates into the list creation UI.  Prior to this change, all designs added through this cmdlet would have appeared in the list creation UI.  Those existing designs will not automatically get moved to document library UI.  To move them to the correct location, you'll need to remove the design and add it again.
 
 ## EXAMPLES
 
@@ -39,12 +43,12 @@ PS > Add-SPOListDesign
     -Thumbnail "https://contoso.sharepoint.com/SiteAssets/site-thumbnail.png"
 ```
 
-This example creates a new list design.
+This example creates a new list or document library design.
 
 ## PARAMETERS
 
 ### -Description
-The display description of the list design.
+The display description of the list or document library design.
 
 ```yaml
 Type: String
@@ -106,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -TemplateFeatures
-Set of features that the template comes with. It is displayed as a bulleted list when the user is looking at the template preview in the list creation dialog.
+Set of features that the template comes with. It is displayed as a bulleted list when the user is looking at the template preview in the list or document library creation dialog.
 
 ```yaml
 Type: String[]
@@ -136,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -Title
-The display name of the list design.
+The display name of the list or document library design.
 
 ```yaml
 Type: String
