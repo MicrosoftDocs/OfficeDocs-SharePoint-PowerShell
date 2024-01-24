@@ -10,7 +10,7 @@ ms.author: cindylay
 ms.reviewer:
 ---
 
-# Restore-SPODeletedContainer​
+# Restore-SPODeletedContainer
 
 ## SYNOPSIS
 
@@ -21,7 +21,7 @@ Recovers a deleted Container from the Recycle Bin.
 ### ParamSet1
 
 ```powershell
-Restore-SPODeletedContainer [–Identity <ContainerId>​] [<CommonParameters>]
+Restore-SPODeletedContainer [-Identity <ContainerId>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION

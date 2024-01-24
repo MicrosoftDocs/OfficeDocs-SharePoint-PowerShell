@@ -59,7 +59,7 @@ If the Publishing feature has previously been activated or is currently activate
 Invoke-SPOSiteSwap -SourceUrl https://contoso.sharepoint.com/sites/CommunicationSite -TargetUrl https://contoso.sharepoint.com -ArchiveUrl https://contoso.sharepoint.com/sites/Archive
 ```
 
-Archives the existing site at <https://contoso.sharepoint.com> to <https://contoso.sharepoint.com/sites/Archive> and moves <https://contoso.sharepoint.com/sites/CommunicationSite> to <https://contoso.sharepoint.com.> A site redirect will be created at <https://contoso.sharepoint.com/sites/CommunicationSite> that will redirect any requests to <https://contoso.sharepoint.com.>
+Archives the existing site at <https://contoso.sharepoint.com> to <https://contoso.sharepoint.com/sites/Archive> and moves <https://contoso.sharepoint.com/sites/CommunicationSite> to <https://contoso.sharepoint.com.> A site redirect will be created at <https://contoso.sharepoint.com/sites/CommunicationSite> that will redirect any requests to <https://contoso.sharepoint.com.>
 
 ### EXAMPLE 2
 
@@ -67,7 +67,7 @@ Archives the existing site at <https://contoso.sharepoint.com> to <https://cont
 Invoke-SPOSiteSwap -SourceUrl https://contoso.sharepoint.com/sites/SearchSite -TargetUrl https://contoso.sharepoint.com/search -ArchiveUrl https://contoso.sharepoint.com/sites/Archive
 ```
 
-Archives the existing Search Center site at <https://contoso.sharepoint.com/search> to <https://contoso.sharepoint.com/sites/Archive> and moves the <https://contoso.sharepoint.com/sites/SearchSite> to <https://contoso.sharepoint.com/search.> A site redirect be created at <https://contoso.sharepoint.com/sites/SearchSite> that will redirect any requests to <https://contoso.sharepoint.com/search.>
+Archives the existing Search Center site at <https://contoso.sharepoint.com/search> to <https://contoso.sharepoint.com/sites/Archive> and moves the <https://contoso.sharepoint.com/sites/SearchSite> to <https://contoso.sharepoint.com/search.> A site redirect be created at <https://contoso.sharepoint.com/sites/SearchSite> that will redirect any requests to <https://contoso.sharepoint.com/search.>
 
 ### EXAMPLE 3
 
@@ -75,7 +75,7 @@ Archives the existing Search Center site at <https://contoso.sharepoint.com/sear
 Invoke-SPOSiteSwap -SourceUrl https://contoso.sharepoint.com/sites/CommunicationSite -TargetUrl https://contoso.sharepoint.com -ArchiveUrl https://contoso.sharepoint.com/sites/Archive -DisableRedirection
 ```
 
-Archives the existing site at <https://contoso.sharepoint.com> to <https://contoso.sharepoint.com/sites/Archive> and moves <https://contoso.sharepoint.com/sites/CommunicationSite> to <https://contoso.sharepoint.com.> A site redirect will not be created at <https://contoso.sharepoint.com/sites/CommunicationSite.>
+Archives the existing site at <https://contoso.sharepoint.com> to <https://contoso.sharepoint.com/sites/Archive> and moves <https://contoso.sharepoint.com/sites/CommunicationSite> to <https://contoso.sharepoint.com.> A site redirect will not be created at <https://contoso.sharepoint.com/sites/CommunicationSite.>
 
 ### EXAMPLE 4
 
@@ -83,7 +83,7 @@ Archives the existing site at <https://contoso.sharepoint.com> to <https://cont
 Invoke-SPOSiteSwap -SourceUrl https://contoso.sharepoint.com/sites/SearchSite -TargetUrl https://contoso.sharepoint.com/search -ArchiveUrl https://contoso.sharepoint.com/sites/Archive -Force
 ```
 
-Archives the existing Search Center site at <https://contoso.sharepoint.com/search> to <https://contoso.sharepoint.com/sites/Archive> and moves the <https://contoso.sharepoint.com/sites/SearchSite> to <https://contoso.sharepoint.com/search.> A site redirect be created at <https://contoso.sharepoint.com/sites/SearchSite> that will redirect any requests to <https://contoso.sharepoint.com/search.> Any warnings identified by the Page Diagnostic Tool will be ignored and the swap will be initiated. However, any errors identified by the Page Diagnostic Tool will still prevent the swap from being initiated.
+Archives the existing Search Center site at <https://contoso.sharepoint.com/search> to <https://contoso.sharepoint.com/sites/Archive> and moves the <https://contoso.sharepoint.com/sites/SearchSite> to <https://contoso.sharepoint.com/search.> A site redirect be created at <https://contoso.sharepoint.com/sites/SearchSite> that will redirect any requests to <https://contoso.sharepoint.com/search.> Any warnings identified by the Page Diagnostic Tool will be ignored and the swap will be initiated. However, any errors identified by the Page Diagnostic Tool will still prevent the swap from being initiated.
 
 ## PARAMETERS
 
