@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Returns one or more Containers in a SharePoint repository services application. 
+Returns one or more Containers in a SharePoint Embedded application. 
 
 ## SYNTAX
 
@@ -48,7 +48,7 @@ Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [[-Identity] <Cont
 
 ## DESCRIPTION
 
-The `Get-SPOContainer` cmdlet retrieves and returns a list of Containers and details of an individual Container created under a SharePoint repository services application. This command is available only in SharePoint Online Management Shell version 16.0.24211.12000 or higher to run this cmdlet.
+The `Get-SPOContainer` cmdlet retrieves and returns a list of Containers and details of an individual Container created under a SharePoint Embedded application. This command is available only in SharePoint Online Management Shell version 16.0.24211.12000 or higher to run this cmdlet.
 
 You must be a SharePoint Online Administrator or Global Administrator to run this cmdlet.
 
@@ -65,7 +65,7 @@ You must be a SharePoint Online Administrator or Global Administrator to run thi
 Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 | FT 
 ```
 
-Example 1 returns a tabular list of Containers created under the SharePoint repository services application with the `OwningApplicationId` of  `423poi45-jikl-9bnm-b302-1234ghy56789`.
+Example 1 returns a tabular list of Containers created under the SharePoint Embedded application with the `OwningApplicationId` of  `423poi45-jikl-9bnm-b302-1234ghy56789`.
 
 To retrieve Containers for the Microsoft Loop app, use OwningApplicationId: `a187e399-0c36-4b98-8f04-1edc167a0996`. 
 
@@ -108,7 +108,7 @@ Example 5 uses the `PagingToken` to view more Containers.
 
 ### -OwningApplicationId
 
-This parameter specifies the ID of the SharePoint repository services application. Use the `Get-SPOApplication` command to retrieve the OwningApplicationId.
+This parameter specifies the ID of the SharePoint Embedded application. Use the `Get-SPOApplication` command to retrieve the OwningApplicationId.
  
 ```yaml
 Type: String
