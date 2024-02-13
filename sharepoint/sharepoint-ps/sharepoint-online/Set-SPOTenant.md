@@ -2790,7 +2790,7 @@ The valid values are:
 
 > [!NOTE]
 > This setting affects all sites. There are no options to preserve changes to custom script settings only on some specific sites. This parameter will be available until May 2024. After that time, administrators can still allow custom scripts on specific sites, but that change will be revoked automatically after up to 24 hours.
-For more information, see [Allow or prevent custom script](https://learn.microsoft.com/en-us/sharepoint/allow-or-prevent-custom-script)
+For more information, see [Allow or prevent custom script](/sharepoint/allow-or-prevent-custom-script).
 
 ```yaml
 Type: Boolean
