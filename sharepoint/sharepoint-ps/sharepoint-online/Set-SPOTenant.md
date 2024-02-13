@@ -2786,7 +2786,7 @@ This parameter controls how SharePoint will deal with sites where custom scripts
 The valid values are:
 
 * False (default) - for site collections where administrators enabled the ability to add custom script, SharePoint will revoke that ability within 24 hours from the last time this setting was changed.
-* True - All changes performed by administrators to custom script settings are preserved. When the value is set to true, a banner shows in the active sites list of the SharePoint tenant admin center informing that changes to custom scripts are permanent.
+* True - All changes performed by administrators to custom script settings are preserved. When the value is set to true, a banner shows in the active sites list of the SharePoint admin center informing that changes to custom scripts are permanent.
 
 > [!NOTE]
 > This setting affects all sites. There are no options to preserve changes to custom script settings only on some specific sites. This parameter will be available until May 2024. After that time, administrators can still allow custom scripts on specific sites, but that change will be revoked automatically after up to 24 hours.
