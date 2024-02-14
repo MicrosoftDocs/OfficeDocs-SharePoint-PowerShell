@@ -23,12 +23,12 @@ Permanently deletes the specified Container from the Recycle Bin. This action ca
 ### ParamSet1
 
 ```powershell
-Remove-SPODeletedContainer [–Identity <ContainerId>] [<CommonParameters>]
+Remove-SPODeletedContainer [-Identity <ContainerId>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The `Remove-SPODeletedContainer` cmdlet permanently removes a deleted Container from the Recycle Bin. A permanently deleted Container cannot be recovered. You must be a SharePoint Administrator or Global Administrator to run the cmdlet.
+The `Remove-SPODeletedContainer` cmdlet permanently removes a deleted File Storage Container from the Recycle Bin. A permanently deleted Container cannot be recovered. You must be a SharePoint Administrator or Global Administrator to run the cmdlet.
 
 > [!IMPORTANT]
 > We do not generally recommend that you permanently delete Containers.
@@ -43,7 +43,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### Example 1
 
 ```powershell
-Remove-SPODeletedContainer –Identity b66f5b2e-4cbd-4754-9ad3-8291c2c81ade
+Remove-SPODeletedContainer -Identity b66f5b2e-4cbd-4754-9ad3-8291c2c81ade
 ```
 
 This example removes a deleted Container with the `ContainerId` `b66f5b2e-4cbd-4754-9ad3-8291c2c81ade` from the Recycle Bin and deletes it permanently.

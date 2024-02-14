@@ -20,12 +20,12 @@ Sends a Container to the Recycle Bin.
 ### ParamSet1
 
 ```powershell
-Remove-SPOContainer [–Identity <ContainerId>​] [<CommonParameters>]
+Remove-SPOContainer [-Identity <ContainerId>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The `Remove-SPOContainer` cmdlet deletes a Container and puts it in the Recycle Bin. A Container that is deleted will no longer be retrieved by the [`Get-SPOContainer`](./Get-SPOContainer.md) cmdlet.
+The `Remove-SPOContainer` cmdlet deletes a File Storage Container and puts it in the Recycle Bin. A Container that is deleted will no longer be retrieved by the [`Get-SPOContainer`](./Get-SPOContainer.md) cmdlet.
 
 When admins delete a Container, it is moved into the Recycle Bin. A deleted Container can be [restored](./Restore-SPODeletedContainer.md) from the Recycle Bin within 93 days. If a Container is deleted from the Recycle Bin, or it exceeds the 93-day retention period, it is permanently deleted. Deleting a Container deletes everything within it, including all documents and files. You can view all deleted Containers in the Recycle Bin with the [`Get-SPODeletedContainer`](./Get-SPODeletedContainer.md) cmdlet.
 

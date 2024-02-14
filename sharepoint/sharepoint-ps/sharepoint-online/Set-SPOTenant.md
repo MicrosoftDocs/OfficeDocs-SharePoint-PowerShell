@@ -1200,7 +1200,7 @@ Accept wildcard characters: False
 
 ### -MediaTranscription
 
-When the feature is enabled, videos can have transcripts generated on demand or generated automatically in certain scenarios. This is the default because the policy is default on. If a video owner decides they don’t want the transcript, they can always hide or delete it from that video. 
+When the feature is enabled, videos can have transcripts generated on demand or generated automatically in certain scenarios. This is the default because the policy is default on. If a video owner decides they don't want the transcript, they can always hide or delete it from that video. 
 Possible values:
 
 - Enabled
