@@ -142,6 +142,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-MassDeleteNotificationDisabled <Boolean>]
  [-DisableDocumentLibraryDefaultLabeling <Boolean>]
  [-EnableSensitivityLabelforPDF <Boolean>]
+ [-IsDataAccessInCardDesignerEnabled <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -2766,6 +2767,29 @@ Accept wildcard characters: False
 Enables or disables the mass delete detection feature. When MassDeleteNotificationDisabled is set to $true, tenant admins can perform mass deletion operations without triggering notifications.
 
 PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsDataAccessInCardDesignerEnabled 
+
+The IsDataAccessInCardDesignerEnabled settings (defaulted to false) will allow Viva Connections Dashboard operators to access SharePoint and Graph API's in the Card Designer card.
+
+The valid values are:  
+
+- False (default) – SharePoint and Graph API's cannot be accessed in the Card Designer card.
+- True – Users with edit permissions on the Dashboard will be able to access SharePoint and Graph API's in the Card Designer card. 
+
+Note: Further documentation on this feature is available [here](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/viva/features/card-designer/card-designer-api-support).
 
 ```yaml
 Type: Boolean
