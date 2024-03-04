@@ -2284,7 +2284,7 @@ Accept wildcard characters: False
 
 ### -OneDriveLoopDefaultSharingLinkScope
 
-Gets or sets default share link scope for fluid on OneDrive sites. 
+Gets or sets default share link scope for Loop and Whiteboard files on OneDrive sites. 
 
 The valid values are:  
 
@@ -2307,7 +2307,7 @@ Accept wildcard characters: False
 
 ### -OneDriveLoopDefaultSharingLinkRole
 
-Gets or sets default share link role for fluid on OneDrive sites.
+Gets or sets default share link role for Loop and Whiteboard files on OneDrive sites.
 
 Note: Although the values below may be viewable in Powershell, only View OR Edit may be set at this time. 
 
@@ -2338,7 +2338,7 @@ Accept wildcard characters: False
 
 ### -CoreLoopDefaultSharingLinkScope
 
-Gets or sets default share link scope for fluid on SharePoint sites. 
+Gets or sets default share link scope for Loop and Whiteboard files on SharePoint sites. 
 
 The valid values are:  
 
@@ -2361,7 +2361,7 @@ Accept wildcard characters: False
 
 ### -CoreLoopDefaultSharingLinkRole
 
-Gets or sets default share link role for fluid on SharePoint sites.
+Gets or sets default share link role for Loop and Whiteboard files on SharePoint sites.
 
 Note: Although the values below may be viewable in Powershell, only View OR Edit may be set at this time. 
 
