@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Get-spotenantrestrictedsearchallowedlist
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spotenantrestrictedsearchallowedlist
 applicable: SharePoint Online
 title: Get-SPOTenantRestrictedSearchAllowedList
 schema: 2.0.0
