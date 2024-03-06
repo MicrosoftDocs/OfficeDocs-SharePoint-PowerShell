@@ -14,8 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Restricted SharePoint Search gives Global/Tenant and SharePoint admins the ability to enable/disable organization-wide search. The Get-SPOTenantRestrictedSearchMode cmdlet will return the current mode that is set in the tenant.
-
+Get the current mode of Restricted Search setting.
 
 ## SYNTAX
 
@@ -25,7 +24,7 @@ Get-SPOTenantRestrictedSearchMode
 
 ## DESCRIPTION
 
-Restricted SharePoint Search gives Global/Tenant and SharePoint admins the ability to enable/disable organization-wide search. The Get-SPOTenantRestrictedSearchMode cmdlet will return the current mode that is set in the tenant.
+Restricted SharePoint Search gives Global and SharePoint Administrators the ability to enable or disable organization-wide search. The Get-SPOTenantRestrictedSearchMode cmdlet will return the current mode that is set in the tenant.
 
 ## EXAMPLES
 
@@ -35,7 +34,7 @@ Restricted SharePoint Search gives Global/Tenant and SharePoint admins the abili
 Get-SPOTenantRestrictedSearchMode
 ```
 
-This example lets the admin get the existing allowed list in the tenant. Result can be ‘Enabled’ or ‘Disabled’ based on the current setting.
+This example lets the administrator get the existing allowed list in the tenant. Result can be 'Enabled' or 'Disabled' based on the current setting.
 
 ## RELATED LINKS
 

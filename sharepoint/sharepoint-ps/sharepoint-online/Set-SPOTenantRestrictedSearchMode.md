@@ -14,8 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Enable or disabled the Restricted Search setting with the default being disabled. The first time when the setting is enabled the allow list is empty.
-
+Set the mode for Restricted Search setting.
 
 ## SYNTAX
 
@@ -25,7 +24,7 @@ Set-SPOTenantRestrictedSearchMode -Mode {Disabled | Enabled} [<CommonParameters>
 
 ## DESCRIPTION
 
-Enable or disabled the Restricted Search setting with the default being disabled. The first time when the setting is enabled the allow list is empty.
+Enable or disable the restricted search setting with the default being disabled. The first time when the setting is enabled the allow list is empty.
 
 ## EXAMPLES
 

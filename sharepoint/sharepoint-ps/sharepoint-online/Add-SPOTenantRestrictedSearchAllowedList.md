@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-This command lets the admin add the sites to the allowed list.
+Add a list of sites to the allowed list.
 
 ## SYNTAX
 
@@ -28,17 +28,17 @@ Add-SPOTenantRestrictedSearchAllowedList -SitesListFileUrl <string> [-ContainsHe
 
 ## DESCRIPTION
 
-Restricted SharePoint Search gives Global/Tenant and SharePoint admins the ability to enable/disable organization-wide search. When enabled, this control offers up to 100 sites to be included in organization-wide search, including user's previously accessed files and content from user's frequent sites. The allow list is a set of curated sites where the customer has reviewed the permissions and applied data governance to them. The allow list supports Site Collections, Hub, and Communication sites.
+Restricted SharePoint Search gives Global and SharePoint Administrators the ability to enable or disable organization-wide search. When enabled, this control offers up to 100 sites to be included in organization-wide search, including user's previously accessed files and content from user's frequent sites. The allow list is a set of curated sites where the administrator has reviewed the permissions and applied data governance to them. The allow list supports sites, hub sites and communication sites.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 
 ```powershell
-Add-SPOTenantRestrictedSearchAllowedList-SitesList @(“https://contoso.sharepoint.com/sites/Marketing”, “https://contoso.sharepoint.com/sites/Benefits”)
+Add-SPOTenantRestrictedSearchAllowedList-SitesList @("https://contoso.sharepoint.com/sites/Marketing", "https://contoso.sharepoint.com/sites/Benefits")
 ```
 
-This example lets the admin add the sites to the allowed list.
+This example lets the administrator add the sites to the allowed list.
 
 ### EXAMPLE 2
 
@@ -46,8 +46,7 @@ This example lets the admin add the sites to the allowed list.
 Add-SPOTenantRestrictedSearchAllowedList -SitesListFileUrl .\AllowList.csv
 ```
 
-This example lets the admin add the sites to the allowed list by giving a CSV file. Add the list of site URL’s in URL column.
-
+This example lets the administrator add the sites to the allowed list by giving a CSV file containing the list of site URLs.
 ## PARAMETERS
 
 ### -SitesList
@@ -68,7 +67,7 @@ Accept wildcard characters: False
 
 ### -SitesListFileUrl
 
-File that has list of sites URLs that can be added to an allowed list when the tenant is set to Restricted Tenant Search Mode.
+File that has list of site URLs that can be added to an allowed list when the tenant is set to restricted tenant search mode.
 
 ```yaml
 Type: String
@@ -84,7 +83,7 @@ Accept wildcard characters: False
 
 ### -ContainsHeader
 
-Indicate whether CSV file contains header. If set to True, first row in file will be treated as header and will be skipped.
+Indicate whether CSV file contains header. If set to True, the first row in file will be treated as header and will be skipped.
 
 ```yaml
 Type: Boolean
