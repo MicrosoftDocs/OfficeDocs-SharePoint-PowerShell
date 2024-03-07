@@ -81,6 +81,15 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+Below is a sample input file containing site URLs without header.
+
+```console
+https://contosomarketing.sharepoint.com/sites/CommunicationSite
+https://contosomarketing.sharepoint.com/sites/Finance
+https://contosomarketing.sharepoint.com/sites/Marketing
+https://contosomarketing.sharepoint.com/sites/TestSite
+```
+
 ### -ContainsHeader
 
 Indicate whether CSV file contains header. If set to True, the first row in file will be treated as header and will be skipped.

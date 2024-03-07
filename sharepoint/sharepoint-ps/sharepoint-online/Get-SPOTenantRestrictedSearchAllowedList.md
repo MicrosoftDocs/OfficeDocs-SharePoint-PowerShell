@@ -28,7 +28,7 @@ Restricted SharePoint Search gives an ability to Global and SharePoint Administr
 
 The Get-SPOTenantRestrictedSearchAllowedList cmdlet will return all the sites that are in the allowed list in the tenant.  
 
-You must be a SharePoint Online or global administrator to run the Get-SPOTenantRestrictedSearchAllowedList cmdlet.
+You must be a SharePoint Administrator or Global Administrator to run the Get-SPOTenantRestrictedSearchAllowedList cmdlet.
 
 ## EXAMPLES
 
