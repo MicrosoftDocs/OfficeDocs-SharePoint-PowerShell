@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Set the mode for Restricted Search setting.
+Set the mode for the restricted search setting.
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ Set-SPOTenantRestrictedSearchMode -Mode {Disabled | Enabled} [<CommonParameters>
 
 ## DESCRIPTION
 
-Enable or disable the restricted search setting with the default being disabled. The first time when the setting is enabled the allow list is empty.
+Enable or disable the restricted search setting for the tenant. When the cmdlet is run for the first time, the allow list will be empty.
 
 ## EXAMPLES
 
@@ -34,7 +34,7 @@ Enable or disable the restricted search setting with the default being disabled.
 Set-SPOTenantRestrictedSearchMode -Mode Enabled
 ```
 
-This example sets or enables the Restricted Tenant Search mode for the tenant.
+This example enables the restricted search mode for the tenant.
 
 ### EXAMPLE 2
 
@@ -42,13 +42,13 @@ This example sets or enables the Restricted Tenant Search mode for the tenant.
 Set-SPOTenantRestrictedSearchMode -Mode Disabled
 ```
 
-This example disables the Restricted Tenant Search mode for the tenant.
+This example disables the restricted search mode for the tenant.
 
 ## PARAMETERS
 
 ### -Mode
 
-Sets the mode for the Restricted Tenant Search.
+The restricted search mode to set for the tenant.
 
 ```yaml
 Type: String
@@ -65,3 +65,6 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Get-SPOTenantRestrictedSearchMode](Get-SPOTenantRestrictedSearchMode.md)
+[Get-SPOTenantRestrictedSearchAllowedList](Get-SPOTenantRestrictedSearchAllowedList.md)
+[Add-SPOTenantRestrictedSearchAllowedList](Add-SPOTenantRestrictedSearchAllowedList.md)
+[Remove-SPOTenantRestrictedSearchAllowedList](Remove-SPOTenantRestrictedSearchAllowedList.md)

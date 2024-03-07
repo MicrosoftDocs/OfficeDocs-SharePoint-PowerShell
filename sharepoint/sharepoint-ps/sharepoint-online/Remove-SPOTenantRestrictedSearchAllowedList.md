@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Remove a list of sites from the allowed list.
+Removes a list of sites from the allowed list.
 
 ## SYNTAX
 
@@ -28,17 +28,17 @@ Remove-SPOTenantRestrictedSearchAllowedList -SitesListFileUrl <string> [-Contain
 
 ## DESCRIPTION
 
-Restricted SharePoint Search gives an ability to Global and SharePoint Administrators to enable or disable organization wide search. This control, when enabled offers up to 100 sites to be allowed in organization wide search, includes user's previously accessed files and includes content from user's frequent sites. Allow list is a set of curated sites where the administrator has reviewed the permissions and has applied data governance on them. Allow list will support sites, hub sites and communication sites. This command gives the ability to remove sites from existing allowed list so they can be removed from organization wider search.  
+This cmdlet removes the given sites from existing allowed list so they can be removed from organization wider search.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 
 ```powershell
-Remove-SPOTenantRestrictedSearchAllowedList-SitesList @("https://contoso.sharepoint.com/sites/Marketing", "https://contoso.sharepoint.com/sites/Benefits")
+Remove-SPOTenantRestrictedSearchAllowedList -SitesList @("https://contoso.sharepoint.com/sites/Marketing", "https://contoso.sharepoint.com/sites/Benefits")
 ```
 
-This example lets the administrator remove the sites to the allowed list.
+This example removes the given sites from restricted search allowed list.
 
 ### EXAMPLE 2
 
@@ -46,13 +46,13 @@ This example lets the administrator remove the sites to the allowed list.
 Remove-SPOTenantRestrictedSearchAllowedList -SitesListFileUrl .\AllowList.csv
 ```
 
-This example lets the administrator remove the sites from the allowed list by giving a CSV file containing the list of site URLs.
+This example removes the given sites from the restricted search allowed list by giving a CSV file containing the list of site URLs.
 
 ## PARAMETERS
 
 ### -SitesList
 
-Site list for allowed list.
+List of sites to be removed from the allowed list.
 
 ```yaml
 Type: String[]
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 
 ### -SitesListFileUrl
 
-File that has list of site URLs that can be added to an allowed list when the tenant is set to restricted tenant search mode.
+File that has the list of site URLs to be removed from restricted search allowed list when the tenant is set to restricted tenant search mode.
 
 ```yaml
 Type: String
@@ -93,7 +93,7 @@ https://contosomarketing.sharepoint.com/sites/TestSite
 
 ### -ContainsHeader
 
-Indicate whether CSV file contains header. If set to True, the first row in file will be treated as header and will be skipped.
+Indicates whether the given CSV file contains header. If set to True, the first row in the file will be treated as the header and will be skipped.
 
 ```yaml
 Type: Boolean
@@ -109,5 +109,7 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Add-SPOTenantRestrictedSearchAllowedList](Add-SPOTenantRestrictedSearchAllowedList.md)
+[Get-SPOTenantRestrictedSearchMode](Get-SPOTenantRestrictedSearchMode.md)
+[Set-SPOTenantRestrictedSearchMode](Set-SPOTenantRestrictedSearchMode.md)
 [Get-SPOTenantRestrictedSearchAllowedList](Get-SPOTenantRestrictedSearchAllowedList.md)
+[Add-SPOTenantRestrictedSearchAllowedList](Add-SPOTenantRestrictedSearchAllowedList.md)
