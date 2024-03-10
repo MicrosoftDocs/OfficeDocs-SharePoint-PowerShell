@@ -43,6 +43,9 @@ This gets the existing restricted search allowed list.
 ## RELATED LINKS
 
 [Get-SPOTenantRestrictedSearchMode](Get-SPOTenantRestrictedSearchMode.md)
+
 [Set-SPOTenantRestrictedSearchMode](Set-SPOTenantRestrictedSearchMode.md)
+
 [Add-SPOTenantRestrictedSearchAllowedList](Add-SPOTenantRestrictedSearchAllowedList.md)
+
 [Remove-SPOTenantRestrictedSearchAllowedList](Remove-SPOTenantRestrictedSearchAllowedList.md)

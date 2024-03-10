@@ -65,6 +65,9 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Get-SPOTenantRestrictedSearchMode](Get-SPOTenantRestrictedSearchMode.md)
+
 [Get-SPOTenantRestrictedSearchAllowedList](Get-SPOTenantRestrictedSearchAllowedList.md)
+
 [Add-SPOTenantRestrictedSearchAllowedList](Add-SPOTenantRestrictedSearchAllowedList.md)
+
 [Remove-SPOTenantRestrictedSearchAllowedList](Remove-SPOTenantRestrictedSearchAllowedList.md)

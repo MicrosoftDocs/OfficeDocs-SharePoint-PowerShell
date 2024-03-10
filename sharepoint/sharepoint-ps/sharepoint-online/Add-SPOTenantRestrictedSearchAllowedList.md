@@ -46,7 +46,15 @@ This example lets the administrator add the given sites to the allowed list.
 Add-SPOTenantRestrictedSearchAllowedList -SitesListFileUrl .\AllowList.csv
 ```
 
-This example lets the administrator add sites to the allowed list by giving a CSV file containing the list of site URLs.
+This example lets the administrator add sites to the allowed list by giving a CSV file containing the list of site URLs. Below is a sample input file containing site URLs without header.
+
+```console
+https://contosomarketing.sharepoint.com/sites/CommunicationSite
+https://contosomarketing.sharepoint.com/sites/Finance
+https://contosomarketing.sharepoint.com/sites/Marketing
+https://contosomarketing.sharepoint.com/sites/TestSite
+```
+
 ## PARAMETERS
 
 ### -SitesList
@@ -81,15 +89,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-Below is a sample input file containing site URLs without header.
-
-```console
-https://contosomarketing.sharepoint.com/sites/CommunicationSite
-https://contosomarketing.sharepoint.com/sites/Finance
-https://contosomarketing.sharepoint.com/sites/Marketing
-https://contosomarketing.sharepoint.com/sites/TestSite
-```
-
 ### -ContainsHeader
 
 Indicates whether the given CSV file contains header. If set to True, the first row in the file will be treated as the header and will be skipped.
@@ -109,6 +108,9 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Get-SPOTenantRestrictedSearchMode](Get-SPOTenantRestrictedSearchMode.md)
+
 [Set-SPOTenantRestrictedSearchMode](Set-SPOTenantRestrictedSearchMode.md)
+
 [Get-SPOTenantRestrictedSearchAllowedList](Get-SPOTenantRestrictedSearchAllowedList.md)
+
 [Remove-SPOTenantRestrictedSearchAllowedList](Remove-SPOTenantRestrictedSearchAllowedList.md)

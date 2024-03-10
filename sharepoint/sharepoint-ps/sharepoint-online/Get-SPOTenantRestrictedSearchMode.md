@@ -39,6 +39,9 @@ This example gets the existing restricted search mode in the tenant. Result can 
 ## RELATED LINKS
 
 [Set-SPOTenantRestrictedSearchMode](Set-SPOTenantRestrictedSearchMode.md)
+
 [Get-SPOTenantRestrictedSearchAllowedList](Get-SPOTenantRestrictedSearchAllowedList.md)
+
 [Add-SPOTenantRestrictedSearchAllowedList](Add-SPOTenantRestrictedSearchAllowedList.md)
+
 [Remove-SPOTenantRestrictedSearchAllowedList](Remove-SPOTenantRestrictedSearchAllowedList.md)

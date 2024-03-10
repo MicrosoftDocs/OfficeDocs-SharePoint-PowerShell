@@ -68,7 +68,15 @@ Accept wildcard characters: False
 
 ### -SitesListFileUrl
 
-File that has the list of site URLs to be removed from restricted search allowed list when the tenant is set to restricted tenant search mode.
+File that has the list of site URLs to be removed from restricted search allowed list when the tenant is set to restricted tenant search mode. Below is a sample input file containing site URLs without header.
+
+```console
+https://contosomarketing.sharepoint.com/sites/CommunicationSite
+https://contosomarketing.sharepoint.com/sites/Finance
+https://contosomarketing.sharepoint.com/sites/Marketing
+https://contosomarketing.sharepoint.com/sites/TestSite
+```
+
 
 ```yaml
 Type: String
@@ -80,15 +88,6 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-```
-
-Below is a sample input file containing site URLs without header.
-
-```console
-https://contosomarketing.sharepoint.com/sites/CommunicationSite
-https://contosomarketing.sharepoint.com/sites/Finance
-https://contosomarketing.sharepoint.com/sites/Marketing
-https://contosomarketing.sharepoint.com/sites/TestSite
 ```
 
 ### -ContainsHeader
@@ -110,6 +109,9 @@ Accept wildcard characters: False
 ## RELATED LINKS
 
 [Get-SPOTenantRestrictedSearchMode](Get-SPOTenantRestrictedSearchMode.md)
+
 [Set-SPOTenantRestrictedSearchMode](Set-SPOTenantRestrictedSearchMode.md)
+
 [Get-SPOTenantRestrictedSearchAllowedList](Get-SPOTenantRestrictedSearchAllowedList.md)
+
 [Add-SPOTenantRestrictedSearchAllowedList](Add-SPOTenantRestrictedSearchAllowedList.md)
