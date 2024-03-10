@@ -35,7 +35,7 @@ Restricted SharePoint search gives Global and SharePoint Administrators the abil
 ### EXAMPLE 1
 
 ```powershell
-Add-SPOTenantRestrictedSearchAllowedList-SitesList @("https://contoso.sharepoint.com/sites/Marketing", "https://contoso.sharepoint.com/sites/Benefits")
+Add-SPOTenantRestrictedSearchAllowedList -SitesList @("https://contoso.sharepoint.com/sites/Marketing", "https://contoso.sharepoint.com/sites/Benefits")
 ```
 
 This example lets the administrator add the given sites to the allowed list.
