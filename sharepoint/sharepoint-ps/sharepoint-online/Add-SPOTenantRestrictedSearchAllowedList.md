@@ -46,14 +46,7 @@ This example lets the administrator add the given sites to the allowed list.
 Add-SPOTenantRestrictedSearchAllowedList -SitesListFileUrl .\AllowList.csv
 ```
 
-This example lets the administrator add sites to the allowed list by giving a CSV file containing the list of site URLs. Below is a sample input file containing site URLs without header.
-
-```console
-https://contosomarketing.sharepoint.com/sites/CommunicationSite
-https://contosomarketing.sharepoint.com/sites/Finance
-https://contosomarketing.sharepoint.com/sites/Marketing
-https://contosomarketing.sharepoint.com/sites/TestSite
-```
+This example lets the administrator add sites to the allowed list by giving a CSV file containing the list of site URLs.
 
 ## PARAMETERS
 
@@ -75,7 +68,14 @@ Accept wildcard characters: False
 
 ### -SitesListFileUrl
 
-File that has the list of site URLs that can be added to an allowed list when the tenant is set to restricted tenant search mode.
+File that has the list of site URLs that can be added to an allowed list when the tenant is set to restricted tenant search mode. Below is a sample input file containing site URLs without header.
+
+```console
+https://contosomarketing.sharepoint.com/sites/CommunicationSite
+https://contosomarketing.sharepoint.com/sites/Finance
+https://contosomarketing.sharepoint.com/sites/Marketing
+https://contosomarketing.sharepoint.com/sites/TestSite
+```
 
 ```yaml
 Type: String

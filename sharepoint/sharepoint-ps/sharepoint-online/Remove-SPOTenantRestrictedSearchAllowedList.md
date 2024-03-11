@@ -77,7 +77,6 @@ https://contosomarketing.sharepoint.com/sites/Marketing
 https://contosomarketing.sharepoint.com/sites/TestSite
 ```
 
-
 ```yaml
 Type: String
 Parameter Sets: SitesListFileUrl
