@@ -15,7 +15,7 @@ ms.topic: reference
 # Set-SPOTenantRenameSitePrioritization
 
 ## SYNOPSIS
-This cmdlet allows prioritization of a site for early execution, as part of [Advanced Tenant Rename](https://aka.ms/advancedtenantrename).
+Allows prioritization of a site for early execution, as part of [Advanced Tenant Rename](/sharepoint/change-your-sharepoint-domain-name#advanced-tenant-rename-preview).
 
 ## SYNTAX
 
@@ -24,21 +24,22 @@ Set-SPOTenantRenameSitePrioritization -SiteUrl <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-As part of [Advanced Tenant Rename](https://aka.ms/advancedtenantrename), organizations can prioritize up to 4,000 sites in their scheduled rename.
+Allows for the specified site to be prioritized. 
 
-Prioritizing a site means that it will be queued for initial execution among all other sites in your organization as part of the overall rename operation.
+As part of [Advanced Tenant Rename](/sharepoint/change-your-sharepoint-domain-name#advanced-tenant-rename-preview), organizations can prioritize up to 4,000 sites for initial execution among all other sites in your organization as part of the overall rename operation.
 
-To run this cmdlet, you need SharePoint admin permissions. Also, it is possible to start prioritizing sites only once the rename operation has been scheduled using the [Start-SPOTenantRename](https://learn.microsoft.com/powershell/module/sharepoint-online/start-spotenantrename?view=sharepoint-ps) cmdlet.
+It is possible to start prioritizing sites only once the rename operation has been scheduled using the [Start-SPOTenantRename](/start-spotenantrename?view=sharepoint-ps) cmdlet.
 
 Please note that prioritizing a site is not a guarantee that it will complete first. There are several factors that can affect processing times, and multiple site renames are processed in parallel. Prioritized sites have a much higher chance of completing first.
+
+You must be a SharePoint or Global Administrator to run this cmdlet.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Set-SPOTenantRenameSitePrioritization -SiteUrl https://contoso.sharepoint.com/sites/projectx
+Set-SPOTenantRenameSitePrioritization -SiteUrl https://contoso.sharepoint.com/sites/projectx
 ```
-
 This example prioritizes the 'projectx' site within the Advanced Tenant Rename. 	
 
 ## PARAMETERS
