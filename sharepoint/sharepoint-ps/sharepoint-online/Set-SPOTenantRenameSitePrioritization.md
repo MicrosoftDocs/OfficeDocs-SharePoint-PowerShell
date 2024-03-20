@@ -24,7 +24,7 @@ Allows for the specified site to be prioritized.
 
 As part of [Advanced Tenant Rename](/sharepoint/change-your-sharepoint-domain-name#advanced-tenant-rename-preview), organizations can prioritize up to 4,000 sites for initial execution among all other sites in your organization as part of the overall rename operation.
 
-It is possible to start prioritizing sites only once the rename operation has been scheduled using the [Start-SPOTenantRename](Start-SPOTenantRename.md?view=sharepoint-ps) cmdlet.
+It is possible to start prioritizing sites only once the rename operation has been scheduled using the [Start-SPOTenantRename](Start-SPOTenantRename.md) cmdlet.
 
 Please note that prioritizing a site is not a guarantee that it will complete first. There are several factors that can affect processing times, and multiple site renames are processed in parallel. Prioritized sites have a much higher chance of completing first.
 
