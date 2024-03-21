@@ -114,6 +114,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-ViewInFileExplorerEnabled <Boolean>]
  [-AllowGuestUserShareToUsersNotInSiteCollection <Boolean>]
  [-DisableCustomAppAuthentication <Boolean>]
+ [-IsSharePointAddInsDisabled <Boolean>]
  [-SiteOwnerManageLegacyServicePrincipalEnabled <Boolean>]
  [-ReduceTempTokenLifetimeEnabled <Boolean>]
  [-ReduceTempTokenLifetimeValue <Int32>]
@@ -1007,6 +1008,27 @@ Accept wildcard characters: False
 Prevents apps using an Azure Access Control (ACS) app-only access token to access SharePoint. ACS, a service of Microsoft Entra ID, has been retired on November 7, 2018. This retirement does not impact the SharePoint add-in model, which uses the https://accounts.accesscontrol.windows.net hostname (which is not impacted by this retirement). For new tenants, apps using an ACS app-only access token are disabled by default. We recommend using the Microsoft Entra app-only model which is modern and more secure. Note that marking this property to $true doesn't prevent creating apps in SharePoint that use an Azure Access Control (ACS) app-only access token. Marking this property to $true only ensures that such apps can't access SharePoint anymore.
 
 Accepts a value of true or false. By default this feature is set to true.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsSharePointAddInsDisabled
+
+When the feature is enabled, all the add-ins features will be disabled.
+
+The valid values are:  
+
+- False (default) - All the add-ins features are supported.  
+- True - All the add-ins features will be disabled.
 
 ```yaml
 Type: Boolean
