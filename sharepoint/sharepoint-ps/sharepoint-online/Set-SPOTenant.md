@@ -1026,7 +1026,7 @@ When the feature is enabled, all the add-ins features will be disabled.
 
 The valid values are:  
 
-- False (default) - Support for add-ins features at this stage.  
+- False (default) - All the add-ins features are supported.  
 - True - All the add-ins features will be disabled.
 
 ```yaml
