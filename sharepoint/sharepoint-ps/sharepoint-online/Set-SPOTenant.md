@@ -114,7 +114,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-ViewInFileExplorerEnabled <Boolean>]
  [-AllowGuestUserShareToUsersNotInSiteCollection <Boolean>]
  [-DisableCustomAppAuthentication <Boolean>]
- [-SharePointAddInsDisabled <Boolean>]
+ [-IsSharePointAddInsDisabled <Boolean>]
  [-SiteOwnerManageLegacyServicePrincipalEnabled <Boolean>]
  [-ReduceTempTokenLifetimeEnabled <Boolean>]
  [-ReduceTempTokenLifetimeValue <Int32>]
@@ -1020,11 +1020,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SharePointAddInsDisabled
+### -IsSharePointAddInsDisabled
 
-Allows or disallows disable the SharePoint add-ins app.
+When the feature is enabled, all the add-ins feature will be disabled.
 
-When the value is set to false, the SharePoint add-ins app can still be used. If the value is set to true, sharepoint will no longer support any features related to add-ins.
+The valid values are:  
+
+- False (default) - Support for add-ins feature at this stage.  
+- True - All the add-ins feature will be disabled.
 
 ```yaml
 Type: Boolean
@@ -1033,7 +1036,7 @@ Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
