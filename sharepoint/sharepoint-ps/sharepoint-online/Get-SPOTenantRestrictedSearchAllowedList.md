@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-The Get-SPOTenantRestrictedSearchAllowedList cmdlet returns all the sites that are in the restricted search allowed list.
+Returns all the sites that are in the restricted search allowed list.
 
 ## SYNTAX
 
