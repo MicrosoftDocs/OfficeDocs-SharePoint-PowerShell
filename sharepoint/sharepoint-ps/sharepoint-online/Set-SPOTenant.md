@@ -1022,12 +1022,12 @@ Accept wildcard characters: False
 
 ### -IsSharePointAddInsDisabled
 
-When the feature is enabled, all the add-ins feature will be disabled.
+When the feature is enabled, all the add-ins features will be disabled.
 
 The valid values are:  
 
-- False (default) - Support for add-ins feature at this stage.  
-- True - All the add-ins feature will be disabled.
+- False (default) - Support for add-ins features at this stage.  
+- True - All the add-ins features will be disabled.
 
 ```yaml
 Type: Boolean
