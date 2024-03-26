@@ -26,7 +26,7 @@ Get-SPOTenantRestrictedSearchAllowedList
 
 Restricted SharePoint search allows Global and SharePoint Administrators to enable or disable organization wide search. This control, when enabled offers up to 100 sites to be allowed in organization wide search, includes user's previously accessed files and includes content from user's frequent sites. Allow list is a set of curated sites where the administrator has reviewed the permissions and has applied data governance on them. Allow list will support sites, hub sites and communication sites.
 
-This Get-SPOTenantRestrictedSearchAllowedList cmdlet returns all the sites that are in the restricted search allowed list.
+This cmdlet returns all the sites that are in the restricted search allowed list.
 
 You must be a SharePoint or Global Administrator to run this cmdlet.
 
