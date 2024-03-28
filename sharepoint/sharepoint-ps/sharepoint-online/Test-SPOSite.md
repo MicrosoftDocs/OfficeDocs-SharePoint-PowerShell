@@ -24,7 +24,7 @@ Test-SPOSite -Identity <SpoSitePipeBind> [-RuleId <Guid>] [-RunAlways] [<CommonP
 
 ## DESCRIPTION
 
-The `Test-SPOSite` cmdlet runs one or all site collection health checks on the site collection and its contents.
+The `Test-SPOSite` cmdlet runs one or all health checks on the site collection and its contents.
 Tests are intended not to make any changes except in repair mode, which can be initiated by running the `Repair-SPOSite` cmdlet.
 This cmdlet reports the rules together with a summary of the results.
 
