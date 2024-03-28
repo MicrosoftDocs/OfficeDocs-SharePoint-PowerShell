@@ -1,28 +1,28 @@
 {
     "redirections": [
       {
-        "source_path": "/powershell/module/sharepoint-online/add-spotenantrestrictedsearchallowedlist",
-        "redirect_url": "/powershell/module/sharepoint-online",
+        "source_path": "powershell/module/sharepoint-online/add-spotenantrestrictedsearchallowedlist.md",
+        "redirect_url": "powershell/module/sharepoint-online",
         "redirect_document_id": true
       },
       {
-        "source_path": "/powershell/module/sharepoint-online/get-spotenantrestrictedsearchallowedlist",
-        "redirect_url": "/powershell/module/sharepoint-online",
+        "source_path": "powershell/module/sharepoint-online/get-spotenantrestrictedsearchallowedlist.md",
+        "redirect_url": "powershell/module/sharepoint-online",
         "redirect_document_id": false
       },
       {
-        "source_path": "/powershell/module/sharepoint-online/get-spotenantrestrictedsearchmode",
-        "redirect_url": "/powershell/module/sharepoint-online",
+        "source_path": "powershell/module/sharepoint-online/get-spotenantrestrictedsearchmode.md",
+        "redirect_url": "powershell/module/sharepoint-online",
         "redirect_document_id": false
       },
       {
-        "source_path": "/powershell/module/sharepoint-online/remove-spotenantrestrictedsearchallowedlist",
-        "redirect_url": "/powershell/module/sharepoint-online",
+        "source_path": "powershell/module/sharepoint-online/remove-spotenantrestrictedsearchallowedlist.md",
+        "redirect_url": "powershell/module/sharepoint-online",
         "redirect_document_id": false
       },
       {
-        "source_path": "/powershell/module/sharepoint-online/set-spotenantrestrictedsearchmode",
-        "redirect_url": "/powershell/module/sharepoint-online",
+        "source_path": "powershell/module/sharepoint-online/set-spotenantrestrictedsearchmode.md",
+        "redirect_url": "powershell/module/sharepoint-online",
         "redirect_document_id": false
       }
     ]
