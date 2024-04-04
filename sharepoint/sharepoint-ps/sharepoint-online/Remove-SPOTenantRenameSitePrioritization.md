@@ -14,13 +14,13 @@ ms.topic: reference
 
 # Remove-SPOTenantRenameSitePrioritization
 ## SYNOPSIS
-Allows you to remove the prioritization previously assigned to a site for early execution, as part of Advanced Tenant Rename.
+Allows removal of the prioritization previously assigned to a site for early execution, as part of [Advanced Tenant Rename](/sharepoint/change-your-sharepoint-domain-name#advanced-tenant-rename-preview).
 ## SYNTAX
 ```
 Remove-SPOTenantRenameSitePrioritization -SiteUrl <String> [<CommonParameters>]
 ```
 ## DESCRIPTION
-This cmdlet can be used to remove priority previously assigned to a site as part of Advanced Tenant Rename.
+This cmdlet can be used to remove priority previously assigned to a site as part of [Advanced Tenant Rename](/sharepoint/change-your-sharepoint-domain-name#advanced-tenant-rename-preview).
 
 Removing prioritization from a site means that it will be not be queued for initial execution as part of the overall rename operation. The site will still be queued for processing subsequently like any other unprioritized site, and does not get skipped from the rename.
 
