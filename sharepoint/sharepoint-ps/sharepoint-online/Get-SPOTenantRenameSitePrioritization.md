@@ -14,15 +14,15 @@ ms.topic: reference
 
 # Get-SPOTenantRenameSitePrioritization
 ## SYNOPSIS
-Returns the list of sites that are prioritized for early execution, as part of Advanced Tenant Rename.
+Returns the list of sites that are prioritized for early execution, as part of [Advanced Tenant Rename](/sharepoint/change-your-sharepoint-domain-name#advanced-tenant-rename-preview).
 ## SYNTAX
 ```
 Get-SPOTenantRenameSitePrioritization [<CommonParameters>]
 ```
 ## DESCRIPTION
-This cmdlet can be used to view the currently prioritized sites, as part of Advanced Tenant Rename. 
+This cmdlet can be used to view the currently prioritized sites, as part of [Advanced Tenant Rename](/sharepoint/change-your-sharepoint-domain-name#advanced-tenant-rename-preview).
 
-The output is a list of all site URLs, one per row. If desired, the output can be downloaded using the standard PowerShell Out-File option. If you want just the count of prioritized sites, you can use the standard Measure option.
+The output is a list of all site URLs, one per row. If desired, the output can be downloaded using the standard PowerShell Out-File option. If you want just the count of prioritized sites, you can use the standard Measure-Object option.
 
 You must be a SharePoint or Global Administrator to run this cmdlet.
 ## EXAMPLES
@@ -33,14 +33,14 @@ Get-SPOTenantRenameSitePrioritization
 This example will return the list of sites prioritized for the Advanced Tenant Rename scheduled in the tenant, if one exists. 
 ### Example 2
 ```powershell
-Get-SPOTenantRenameSitePrioritization | measure
+Get-SPOTenantRenameSitePrioritization | Measure-Object
 ```
 This example will return the count of prioritized sites.
 ### Example 3
 ```powershell
-Get-SPOTenantRenameSitePrioritization | Out-File -FilePath <path>
+Get-SPOTenantRenameSitePrioritization | Out-File -FilePath .\sites.txt
 ```
-This example will download the list of prioritized sites to the specified path. 
+This example will download the list of prioritized sites and saves it as file 'sites.txt' in the current directory. 
 ## PARAMETERS
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
