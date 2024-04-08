@@ -399,6 +399,10 @@ This cmdlet is not currently active in production and may be removed in the futu
 
 {{Manually Enter Remove-SPOTenantCdnOrigin Description Here}}
 
+### [Remove-SPOTenantRenameSitePrioritization](Remove-SPOTenantRenameSitePrioritization.md)
+
+{{Manually Enter Get-SPOTenantRenameSitePrioritization Description Here}}
+
 ### [Remove-SPOTenantSyncClientRestriction](Remove-SPOTenantSyncClientRestriction.md)
 
 {{Manually Enter Remove-SPOTenantSyncClientRestriction Description Here}}
