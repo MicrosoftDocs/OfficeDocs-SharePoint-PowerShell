@@ -114,6 +114,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-ViewInFileExplorerEnabled <Boolean>]
  [-AllowGuestUserShareToUsersNotInSiteCollection <Boolean>]
  [-DisableCustomAppAuthentication <Boolean>]
+ [-IsSharePointAddInsDisabled <Boolean>]
  [-SiteOwnerManageLegacyServicePrincipalEnabled <Boolean>]
  [-ReduceTempTokenLifetimeEnabled <Boolean>]
  [-ReduceTempTokenLifetimeValue <Int32>]
@@ -142,6 +143,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-MassDeleteNotificationDisabled <Boolean>]
  [-DisableDocumentLibraryDefaultLabeling <Boolean>]
  [-EnableSensitivityLabelforPDF <Boolean>]
+ [-DelayDenyAddAndCustomizePagesEnforcement <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -1006,6 +1008,27 @@ Accept wildcard characters: False
 Prevents apps using an Azure Access Control (ACS) app-only access token to access SharePoint. ACS, a service of Microsoft Entra ID, has been retired on November 7, 2018. This retirement does not impact the SharePoint add-in model, which uses the https://accounts.accesscontrol.windows.net hostname (which is not impacted by this retirement). For new tenants, apps using an ACS app-only access token are disabled by default. We recommend using the Microsoft Entra app-only model which is modern and more secure. Note that marking this property to $true doesn't prevent creating apps in SharePoint that use an Azure Access Control (ACS) app-only access token. Marking this property to $true only ensures that such apps can't access SharePoint anymore.
 
 Accepts a value of true or false. By default this feature is set to true.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsSharePointAddInsDisabled
+
+When the feature is enabled, all the add-ins features will be disabled.
+
+The valid values are:  
+
+- False (default) - All the add-ins features are supported.  
+- True - All the add-ins features will be disabled.
 
 ```yaml
 Type: Boolean
@@ -2283,7 +2306,7 @@ Accept wildcard characters: False
 
 ### -OneDriveLoopDefaultSharingLinkScope
 
-Gets or sets default share link scope for fluid on OneDrive sites. 
+Gets or sets default share link scope for Loop and Whiteboard files on OneDrive sites. 
 
 The valid values are:  
 
@@ -2306,7 +2329,7 @@ Accept wildcard characters: False
 
 ### -OneDriveLoopDefaultSharingLinkRole
 
-Gets or sets default share link role for fluid on OneDrive sites.
+Gets or sets default share link role for Loop and Whiteboard files on OneDrive sites.
 
 Note: Although the values below may be viewable in Powershell, only View OR Edit may be set at this time. 
 
@@ -2337,7 +2360,7 @@ Accept wildcard characters: False
 
 ### -CoreLoopDefaultSharingLinkScope
 
-Gets or sets default share link scope for fluid on SharePoint sites. 
+Gets or sets default share link scope for Loop and Whiteboard files on SharePoint sites. 
 
 The valid values are:  
 
@@ -2360,7 +2383,7 @@ Accept wildcard characters: False
 
 ### -CoreLoopDefaultSharingLinkRole
 
-Gets or sets default share link role for fluid on SharePoint sites.
+Gets or sets default share link role for Loop and Whiteboard files on SharePoint sites.
 
 Note: Although the values below may be viewable in Powershell, only View OR Edit may be set at this time. 
 
@@ -2766,6 +2789,30 @@ Accept wildcard characters: False
 Enables or disables the mass delete detection feature. When MassDeleteNotificationDisabled is set to $true, tenant admins can perform mass deletion operations without triggering notifications.
 
 PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DelayDenyAddAndCustomizePagesEnforcement
+This parameter controls how SharePoint will deal with sites where custom scripts are allowed.
+
+The valid values are:
+
+* False (default) - for site collections where administrators enabled the ability to add custom script, SharePoint will revoke that ability within 24 hours from the last time this setting was changed.
+* True - All changes performed by administrators to custom script settings are preserved. When the value is set to true, a banner shows in the active sites list of the SharePoint admin center informing that changes to custom scripts are permanent.
+
+> [!NOTE]
+> This setting affects all sites. There are no options to preserve changes to custom script settings only on some specific sites. This parameter will be available until November 2024. After that time, administrators can still allow custom scripts on specific sites, but that change will be revoked automatically after up to 24 hours.
+For more information, see [Allow or prevent custom script](/sharepoint/allow-or-prevent-custom-script).
 
 ```yaml
 Type: Boolean
