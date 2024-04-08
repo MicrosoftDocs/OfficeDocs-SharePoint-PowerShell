@@ -239,6 +239,10 @@ The following cmdlet references are for SharePoint Online.
 
 {{Manually Enter Get-SPOTenantLogLastAvailableTimeInUtc Description Here}}
 
+### [Get-SPOTenantRenameSitePrioritization](Get-SPOTenantRenameSitePrioritization.md)
+
+{{Manually Enter Get-SPOTenantLogLastAvailableTimeInUtc Description Here}}
+
 ### [Get-SPOTenantServicePrincipalPermissionGrants](Get-SPOTenantServicePrincipalPermissionGrants.md)
 
 {{Manually Enter Get-SPOTenantServicePrincipalPermissionGrants Description Here}}
