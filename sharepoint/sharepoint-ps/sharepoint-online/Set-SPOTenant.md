@@ -2782,12 +2782,12 @@ Accept wildcard characters: False
 
 ### -IsDataAccessInCardDesignerEnabled 
 
-The IsDataAccessInCardDesignerEnabled settings (defaulted to false) will allow Viva Connections Dashboard operators to access SharePoint and Graph API's in the Card Designer card.
+The IsDataAccessInCardDesignerEnabled settings (defaulted to false) will allow Viva Connections Dashboard operators to access SharePoint and Graph APIs in the Card Designer card.
 
-The valid values are:  
+The valid values are:
 
-- False (default) – SharePoint and Graph API's cannot be accessed in the Card Designer card.
-- True – Users with edit permissions on the Dashboard will be able to access SharePoint and Graph API's in the Card Designer card. 
+- False (default) – SharePoint and Graph APIs cannot be accessed in the Card Designer card.
+- True – Users with edit permissions on the Dashboard will be able to access SharePoint and Graph APIs in the Card Designer card.
 
 For more information on this feature, see [Overview of Viva Connections Card Designer advance API features](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/viva/features/card-designer/card-designer-api-support).
 
