@@ -401,7 +401,7 @@ This cmdlet is not currently active in production and may be removed in the futu
 
 ### [Remove-SPOTenantRenameSitePrioritization](Remove-SPOTenantRenameSitePrioritization.md)
 
-{{Manually Enter Get-SPOTenantRenameSitePrioritization Description Here}}
+{{Manually Enter Remove-SPOTenantRenameSitePrioritization Description Here}}
 
 ### [Remove-SPOTenantSyncClientRestriction](Remove-SPOTenantSyncClientRestriction.md)
 
