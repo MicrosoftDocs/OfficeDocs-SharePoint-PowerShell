@@ -6,9 +6,11 @@
       
       {"files": ["**/toc.yml"], "src": "sharepoint-ps", "version": "sharepoint-ps", "exclude": ["docs-conceptual"], "dest": "module/sharepoint-ps"},
       {"files": ["**/*.yml"], "src": "sharepoint-ps", "version": "sharepoint-ps", "exclude": ["docs-conceptual"], "dest": "module"},
+      {"files": ["**/*.md"], "src": "virtual-folder", "version": "sharepoint-ps", "dest": "module" },
       
       {"files": ["**/toc.yml"], "src": "sharepoint-server-ps", "version": "sharepoint-server-ps", "exclude": ["docs-conceptual"], "dest": "module/sharepoint-ps"},
-      {"files": ["**/*.yml"], "src": "sharepoint-server-ps", "version": "sharepoint-server-ps", "exclude": ["docs-conceptual"], "dest": "module"}
+      {"files": ["**/*.yml"], "src": "sharepoint-server-ps", "version": "sharepoint-server-ps", "exclude": ["docs-conceptual"], "dest": "module"},
+      {"files": ["**/*.md"], "src": "virtual-folder", "version": "sharepoint-server-ps", "dest": "module" }
     ],
     "resource": [
       {
@@ -42,6 +44,7 @@
       "ms.author": "pamgreen",
       "ms.devlang": "powershell",
       "ms.date": "09/08/2021",
+      "ms.topic": "reference",
       "contributors_to_exclude": [ 
         "rjagiewich", 
         "traya1", 
