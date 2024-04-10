@@ -239,6 +239,10 @@ The following cmdlet references are for SharePoint Online.
 
 {{Manually Enter Get-SPOTenantLogLastAvailableTimeInUtc Description Here}}
 
+### [Get-SPOTenantRenameSitePrioritization](Get-SPOTenantRenameSitePrioritization.md)
+
+{{Manually Enter Get-SPOTenantRenameSitePrioritization Description Here}}
+
 ### [Get-SPOTenantServicePrincipalPermissionGrants](Get-SPOTenantServicePrincipalPermissionGrants.md)
 
 {{Manually Enter Get-SPOTenantServicePrincipalPermissionGrants Description Here}}
@@ -398,6 +402,10 @@ This cmdlet is not currently active in production and may be removed in the futu
 ### [Remove-SPOTenantCdnOrigin](Remove-SPOTenantCdnOrigin.md)
 
 {{Manually Enter Remove-SPOTenantCdnOrigin Description Here}}
+
+### [Remove-SPOTenantRenameSitePrioritization](Remove-SPOTenantRenameSitePrioritization.md)
+
+{{Manually Enter Remove-SPOTenantRenameSitePrioritization Description Here}}
 
 ### [Remove-SPOTenantSyncClientRestriction](Remove-SPOTenantSyncClientRestriction.md)
 
