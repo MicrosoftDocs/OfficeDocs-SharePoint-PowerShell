@@ -144,6 +144,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-DisableDocumentLibraryDefaultLabeling <Boolean>]
  [-EnableSensitivityLabelforPDF <Boolean>]
  [-DelayDenyAddAndCustomizePagesEnforcement <Boolean>]
+ [-IsDataAccessInCardDesignerEnabled <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -2813,6 +2814,29 @@ The valid values are:
 > [!NOTE]
 > This setting affects all sites. There are no options to preserve changes to custom script settings only on some specific sites. This parameter will be available until November 2024. After that time, administrators can still allow custom scripts on specific sites, but that change will be revoked automatically after up to 24 hours.
 For more information, see [Allow or prevent custom script](/sharepoint/allow-or-prevent-custom-script).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsDataAccessInCardDesignerEnabled 
+
+The IsDataAccessInCardDesignerEnabled settings (defaulted to false) will allow Viva Connections Dashboard operators to access SharePoint and Graph APIs in the Card Designer card.
+
+The valid values are:
+
+- False (default) – SharePoint and Graph APIs cannot be accessed in the Card Designer card.
+- True – Users with edit permissions on the Dashboard will be able to access SharePoint and Graph APIs in the Card Designer card.
+
+For more information on this feature, see [Overview of Viva Connections Card Designer advance API features](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/viva/features/card-designer/card-designer-api-support).
 
 ```yaml
 Type: Boolean
