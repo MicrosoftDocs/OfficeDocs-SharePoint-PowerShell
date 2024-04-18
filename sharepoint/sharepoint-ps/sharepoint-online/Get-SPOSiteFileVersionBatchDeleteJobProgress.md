@@ -3,14 +3,15 @@ external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spositefileversionbatchdeletejobprogress
 applicable: SharePoint Online
-title: Get-SPOSiteFileVersionExpirationReportJobProgress
+title: Get-SPOSiteFileVersionBatchDeleteJobProgress
 schema: 2.0.0
 author: msjennywu
 ms.author: jennywu
 ms.reviewer:
+manager: seanmc
 ---
 
-# Get-SPOSiteFileVersionExpirationReportJobProgress
+# Get-SPOSiteFileVersionBatchDeleteJobProgress
 
 ## SYNOPSIS
 
@@ -19,7 +20,7 @@ Gets the progress of a file version batch trim job for a site collection.
 ## SYNTAX
 
 ```powershell
-Get-SPOSiteFileVersionExpirationReportJobProgress [-Identity] <SpoSitePipeBind>
+Get-SPOSiteFileVersionBatchDeleteJobProgress [-Identity] <SpoSitePipeBind>
  [<CommonParameters>]
 ```
 
@@ -32,7 +33,7 @@ Gets the progress of a file version batch trim job for a site collection.
 ### EXAMPLE 1
 
 ```powershell
-Get-SPOSiteFileVersionExpirationReportJobProgress -Identity https://contoso.sharepoint.com/sites/site1
+Get-SPOSiteFileVersionBatchDeleteJobProgress -Identity https://contoso.sharepoint.com/sites/site1
 ```
 
 Example 1 gets the progress of a file version batch trim job for a site collection.

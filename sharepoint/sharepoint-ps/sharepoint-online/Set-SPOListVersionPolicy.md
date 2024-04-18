@@ -8,6 +8,7 @@ schema: 2.0.0
 author: msjennywu
 ms.author: jennywu
 ms.reviewer:
+manager: seanmc
 ---
 
 # Set-SPOListVersionPolicy
