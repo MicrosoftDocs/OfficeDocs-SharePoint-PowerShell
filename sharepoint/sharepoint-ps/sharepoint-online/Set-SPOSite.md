@@ -84,6 +84,19 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [<CommonParameters>]
 ```
 
+### SetSiteFileVersionPolicy
+```powershell
+Set-SPOSite [-Identity] <SpoSitePipeBind>
+ [-EnableAutoExpirationVersionTrim <Boolean>]
+ [-MajorVersionLimit <int>]
+ [-MajorWithMinorVersionsLimit <int>]
+ [-ExpireVersionsAfterDays <int>]
+ [-ApplyToNewDocumentLibraries]
+ [-ApplyToExistingDocumentLibraries]
+ [-InheritVersionPolicyFromTenant]
+ [<CommonParameters>]
+```
+
 ## DESCRIPTION
 
 For any parameters that are passed in, the `Set-SPOSite` cmdlet sets or updates the setting for the site collection identified by parameter Identity.
@@ -181,6 +194,79 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/research -Conditional
 ```
 
 In this example, an authentication context called MFA is attached to the site.
+
+### Example 11
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $true
+```
+Example 11 sets Automatic version Storage Limits at Site Level. The new document libraries will use this version setting. Also it creates a job to set the Automatic version setting for existing document libraries that enabled versioning.
+
+### EXAMPLE 12
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -MajorWithMinorVersionsLimit 20 -ExpireVersionsAfterDays 30
+```
+
+Example 12 sets Manual Version Storage Limits at Site Level by limiting the number of versions and the time (in days) versions are kept. The new document libraries will use this version setting. Also it creates a job to set this manual version setting for existing document libraries that enabled versioning.
+
+### EXAMPLE 13
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -MajorWithMinorVersionsLimit 20 -ExpireVersionsAfterDays 0
+```
+
+Example 13 sets Manual Version Storage Limits at Site Level by limiting the number of versions with no time limits. The new document libraries will use this version setting. Also it creates a job to set this manual version setting for existing document libraries that enabled versioning.
+
+### Example 14
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $true -ApplyToNewDocumentLibraries
+```
+Example 14 sets Automatic version Storage Limits at Site Level. The new document libraries will use this version setting.
+
+### EXAMPLE 15
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 30 -ApplyToNewDocumentLibraries
+```
+
+Example 15 sets Manual Version Storage Limits at Site Level by limiting the number of versions and the time (in days) versions are kept. The new document libraries will use this version setting.
+
+### EXAMPLE 16
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 0 -ApplyToNewDocumentLibraries
+```
+
+Example 16 sets Manual Version Storage Limits at Site Level by limiting the number of versions with no time limits. The new document libraries will use this version setting.
+
+### Example 17
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $true -ApplyToExistingDocumentLibraries
+```
+Example 17 creates a job to set Automatic version Storage Limits for existing document libraries that enabled versioning.
+
+### EXAMPLE 18
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -MajorWithMinorVersionsLimit 20 -ExpireVersionsAfterDays 30 -ApplyToExistingDocumentLibraries
+```
+
+Example 18 creates a job to set Manual Version Storage Limits that limits the number of versions and the time (in days) versions are kept for existing document libraries that enabled versioning.
+
+### EXAMPLE 19
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -MajorWithMinorVersionsLimit 20 -ExpireVersionsAfterDays 0 -ApplyToExistingDocumentLibraries
+```
+
+Example 19 creates a request to set Manual Version Storage Limits that limits the number of versions with no time limits for existing document libraries that enabled versioning.
+
+### EXAMPLE 20
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -InheritVersionPolicyFromTenant
+```
+
+Example 20 clears the file version setting at Site Level. The new document libraries will use the Tenant Level setting. It won't impact the existing document libraries.
 
 ## PARAMETERS
 
@@ -1149,6 +1235,135 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: OrganizationDefault
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableAutoExpirationVersionTrim
+Global and SharePoint admins in Microsoft 365 can set Site-level Version History Limit settings that universally apply to new versions created on all new Document Libraries created on the site. Also can create request to set the version setting for existing libraries that enabled versioning.
+
+When Version History Limits are managed Automatically, SharePoint employs an algorithm behind the scenes that deletes (thins out) intermittent older versions that are least likely to be needed, while preserving sufficient high-value versions - more versions in the recent past and fewer farther back in time - in case restores are required.
+
+The valid values are:
+
+- True - Version History Limits for new versions created on new/existing Document Libraries in the site will be managed Automatically.
+- False - Version History Limits for new Versions created on new/existing Document Libraries in the site will be managed Manually by setting limits to the number of major versions (MajorVersionLimit), number of major with minor versions (MajorWithMinorVersionsLimit) and time set (ExpireVersionsAfterDays).  Review the documentation of both parameters to manage your organization's version limits Manually.  
+
+> [!NOTE]
+> When Version History Limits are managed Manually (EnableAutoExpirationVersionTrim $false), MajorVersionLimit and ExpireVersionsAfterDays are both required parameters, MajorWithMinorVersionsLimit is also required for creating request for setting existing document libraries with the following acceptable values:
+> a. MajorVersionLimit accepts values from 1 through 50,000 (inclusive).
+> b. MajorWithMinorVersionsLimit accepts values from 0 through 50,000 (inclusive).
+> c. ExpireVersionsAfterDays accepts values of 0 to Never Expire or values >= 30 to delete versions that exceed that time period.
+> When Version History Limits are managed Automatically (EnableAutoExpirationVersionTrim $true), setting MajorVersionLimit or ExpireVersionsAfterDays will result in an error as the count limits are set by the service.
+>
+> This parameter is currently under public preview.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: SetSiteFileVersionPolicy
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MajorVersionLimit
+When Version History Limits are managed Manually (EnableAutoExpirationVersionTrim $false), admins will need to set the limits to the number of major versions (MajorVersionLimit) and the time period the versions are stored (ExpireVersionsAfterDays). Please check the description of EnableAutoExpirationVersionTrim for more details.
+
+PARAMVALUE: Int32
+
+```yaml
+Type: Int32
+Parameter Sets: SetSiteFileVersionPolicy
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MajorWithMinorVersionsLimit
+When Version History Limits are managed Manually (EnableAutoExpirationVersionTrim $false), admins will need to set the limits to the number of major versions (MajorVersionLimit), the number of major with minor versions (MajorWithMinorVersionsLimit) and the time period the versions are stored (ExpireVersionsAfterDays). Please check the description of EnableAutoExpirationVersionTrim for more details.
+
+PARAMVALUE: Int32
+
+```yaml
+Type: Int32
+Parameter Sets: SetSiteFileVersionPolicy
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExpireVersionsAfterDays
+When Version History Limits are managed Manually (EnableAutoExpirationVersionTrim $false), admins will need to set the limits to the number of major versions (MajorVersionLimit), the number of major with minor versions (MajorWithMinorVersionsLimit) and the time period the versions are stored (ExpireVersionsAfterDays). Please check the description of EnableAutoExpirationVersionTrim for more details.
+
+PARAMVALUE: Int32
+
+```yaml
+Type: Int32
+Parameter Sets: SetSiteFileVersionPolicy
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyToNewDocumentLibraries
+Apply the version history limits setting to new document libraries.
+
+```yaml
+Type: Int32
+Parameter Sets: SetSiteFileVersionPolicy
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyToExistingDocumentLibraries
+Create a job to apply the version history limits setting to existing document libraries.
+
+```yaml
+Type: Int32
+Parameter Sets: SetSiteFileVersionPolicy
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InheritVersionPolicyFromTenant
+Clear the file version setting at Site Level. The new document libraries will use the Tenant Level setting. It won't impact the existing document libraries.
+
+```yaml
+Type: Int32
+Parameter Sets: SetSiteFileVersionPolicy
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
