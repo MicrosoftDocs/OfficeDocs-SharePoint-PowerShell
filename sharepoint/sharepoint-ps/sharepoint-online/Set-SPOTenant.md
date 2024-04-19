@@ -145,6 +145,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-EnableSensitivityLabelforPDF <Boolean>]
  [-DelayDenyAddAndCustomizePagesEnforcement <Boolean>]
  [-IsDataAccessInCardDesignerEnabled <Boolean>]
+ [-EnableVersionExpirationSetting <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -277,6 +278,14 @@ PS > Set-SPOTenant -SharingDomainRestrictionMode "BlockList" -SharingBlockedDoma
 ```
 
 This example enables users to share with all external collaborators except for those on the BlockedDomainList.
+
+### EXAMPLE 16
+
+```powershell
+PS > Set-SPOTenant -EnableVersionExpirationSetting $true
+```
+
+This example enables file version expiration setting.
 
 ## PARAMETERS
 
@@ -2846,6 +2855,22 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableVersionExpirationSetting
+
+The EnableVersionExpirationSetting will allow to opt-in the file version expration feature, including setting version history limits on on organization level, site level, library level, creating job to trim existing versions on site/library, etc.  
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
