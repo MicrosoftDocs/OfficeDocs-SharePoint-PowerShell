@@ -15,18 +15,15 @@ manager: seanmc
 
 ## SYNOPSIS
 
+> [!NOTE]
+> This feature is part of the Version history controls Preview. If your tenant is not part of the Preview or the feature has not rolled out to your tenant, you will get an error when trying to run this cmdlet.
+
 Starts a file version batch trim job targeting all document libraries in a site collection.
 
 ## SYNTAX
 
 ```powershell
-New-SPOListFileVersionBatchDeleteJob [-Site] <SpoSitePipeBind>
- [List] <SpoListPipeBind>
- [-Automatic]
- [-DeleteBeforeDays <Int32>]
- [-MajorVersionLimit <Int32>]
- [-MajorWithMinorVersionsLimit <Int32>]
- [<CommonParameters>]
+New-SPOListFileVersionBatchDeleteJob [-Site] <SpoSitePipeBind> [-List] <SpoListPipeBind> [-Automatic] [-DeleteBeforeDays <Int32>] [-MajorVersionLimit <Int32>] [-MajorWithMinorVersionsLimit <Int32>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,7 +38,7 @@ Starts a file version batch trim job for a document library.
 New-SPOListFileVersionBatchDeleteJob -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -DeleteBeforeDays 360
 ```
 
-Example 1 starts a file version batch trim job that will delete all file versions that are over 360 days old in the document library.
+Example 1 starts a file version batch trim job that will delete all file versions that are over 360 days old in the document library called "Documents".
 
 ### EXAMPLE 2
 
@@ -49,7 +46,7 @@ Example 1 starts a file version batch trim job that will delete all file version
 New-SPOListFileVersionBatchDeleteJob -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -Automatic
 ```
 
-Example 2 starts a file version batch trim job that will delete file versions that expiread and set version expiration time for the ones not expired in the document library based on the backend algorithm.
+Example 2 starts a file version batch trim job that will delete file versions that expiread and set version expiration time for the ones not expired in the document library called "Documents" based on the backend algorithm.
 
 ### EXAMPLE 3
 
@@ -57,7 +54,7 @@ Example 2 starts a file version batch trim job that will delete file versions th
 New-SPOListFileVersionBatchDeleteJob -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -MajorVersionLimit 30 -MajorWithMinorVersionsLimit 10
 ```
 
-Example 3 starts a file version batch trim job that will delete file versions in the document library based on the version count limits.
+Example 3 starts a file version batch trim job that will delete file versions in the document library called "Documents" based on the version count limits.
 
 ## PARAMETERS
 
@@ -153,8 +150,6 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
-
-[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Get-SPOListFileVersionBatchDeleteJobProgress](Get-SPOListFileVersionBatchDeleteJobProgress.md)
 

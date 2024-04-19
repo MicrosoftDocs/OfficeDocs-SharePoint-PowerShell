@@ -20,9 +20,7 @@ Gets the version policy setting on the cocument library.
 ## SYNTAX
 
 ```powershell
-Get-SPOListVersionPolicy [-Site] <SpoSitePipeBind>
- [-List] <SpoListPipeBind>
- [<CommonParameters>]
+Get-SPOListVersionPolicy [-Site] <SpoSitePipeBind> [-List] <SpoListPipeBind> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,7 +35,7 @@ Gets the version policy setting on the document library.
 Get-SPOListVersionPolicy -Site https://contoso.sharepoint.com/sites/site1 -List "Documents"
 ```
 
-Example 1 gets the version policy setting on the document library.
+Example 1 gets the version policy setting on the document library called "Documents".
 
 ## PARAMETERS
 
@@ -77,7 +75,5 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
-
-[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Set-SPOListVersionPolicy](Set-SPOListVersionPolicy.md)

@@ -15,20 +15,20 @@ manager: seanmc
 
 ## SYNOPSIS
 
-Gets the status for a file version usage report generation job for a document libray.
+> [!NOTE]
+> This feature is part of the Version history controls Preview. If your tenant is not part of the Preview or the feature has not rolled out to your tenant, you will get an error when trying to run this cmdlet.
+
+Gets the status for a file version expiration report generation job for a document library.
 
 ## SYNTAX
 
 ```powershell
-Get-SPOListFileVersionExpirationReportJobProgress [-Site] <SpoSitePipeBind>
- [List] <SpoListPipeBind>
- [-ReportUrl <String>]
- [<CommonParameters>]
+Get-SPOListFileVersionExpirationReportJobProgress [-Site] <SpoSitePipeBind> [-List] <SpoListPipeBind> [-ReportUrl <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Gets the status for a file version usage report generation job for a document libray.
+Gets the status for a file version expiration report generation job for a document library.
 
 ## EXAMPLES
 
@@ -38,7 +38,7 @@ Gets the status for a file version usage report generation job for a document li
 Get-SPOListFileVersionExpirationReportJobProgress -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -ReportUrl "https://contoso.sharepoint.com/sites/sites1/reports/MyReports/VersionReport.csv"
 ```
 
-Example 1 gets the status for a file version usage report generation job for a document libray.
+Example 1 gets the status for a file version expiration report generation job for a document library called "Documents".
 
 ## PARAMETERS
 
@@ -93,7 +93,5 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
-
-[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [New-SPOListFileVersionExpirationReportJob](New-SPOListFileVersionExpirationReportJob.md)

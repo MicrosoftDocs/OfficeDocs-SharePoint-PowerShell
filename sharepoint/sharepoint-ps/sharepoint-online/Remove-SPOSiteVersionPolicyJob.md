@@ -15,17 +15,19 @@ manager: seanmc
 
 ## SYNOPSIS
 
+> [!NOTE]
+> This feature is part of the Version history controls Preview. If your tenant is not part of the Preview or the feature has not rolled out to your tenant, you will get an error when trying to run this cmdlet.
+
 Cancels further processing of setting version policy job for existing document libraries on the site collection.
 
 ## SYNTAX
 ```powershell
-Remove-SPOSiteVersionPolicyJob [-Identity] <SpoSitePipeBind>
- [<CommonParameters>]
+Remove-SPOSiteVersionPolicyJob [-Identity] <SpoSitePipeBind> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Set-SPOSite using ApplyToExistingDocumentLibraries will create a job to set version policy for existing document libraries on the site collection. Remove-SPOSiteVersionPolicyJob is to remove the job. This will stop updating the new version policy on existing libraries. The version policy already applied on existing libraries will not be reverted.
+`Set-SPOSite` cmdlet using `ApplyToExistingDocumentLibraries` will create a job to set version policy for existing document libraries on the site collection. This cmdlet removes the job, which stops updating the new version policy on existing libraries. The version policy already applied on existing libraries will not be reverted.
 
 ## EXAMPLES
 
@@ -60,8 +62,6 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
-
-[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Set-SPOSite](Set-SPOSite.md)
 

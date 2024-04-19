@@ -15,13 +15,15 @@ manager: seanmc
 
 ## SYNOPSIS
 
+> [!NOTE]
+> This feature is part of the Version history controls Preview. If your tenant is not part of the Preview or the feature has not rolled out to your tenant, you will get an error when trying to run this cmdlet.
+
 Gets the progress of a file version batch trim job for a site collection.
 
 ## SYNTAX
 
 ```powershell
-Get-SPOSiteFileVersionBatchDeleteJobProgress [-Identity] <SpoSitePipeBind>
- [<CommonParameters>]
+Get-SPOSiteFileVersionBatchDeleteJobProgress [-Identity] <SpoSitePipeBind> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,8 +63,6 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
-
-[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Remove-SPOSiteFileVersionBatchDeleteJob](Remove-SPOSiteFileVersionBatchDeleteJob.md)
 

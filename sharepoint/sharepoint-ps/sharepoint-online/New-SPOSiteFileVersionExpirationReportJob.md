@@ -15,19 +15,20 @@ manager: seanmc
 
 ## SYNOPSIS
 
-Starts generating file version usage report for a site collection.
+> [!NOTE]
+> This feature is part of the Version history controls Preview. If your tenant is not part of the Preview or the feature has not rolled out to your tenant, you will get an error when trying to run this cmdlet.
+
+Starts generating file version expiration report for a site collection.
 
 ## SYNTAX
 
 ```powershell
-New-SPOSiteFileVersionExpirationReportJob [-Identity] <SpoSitePipeBind>
- [-ReportUrl <String>]
- [<CommonParameters>]
+New-SPOSiteFileVersionExpirationReportJob [-Identity] <SpoSitePipeBind> [-ReportUrl <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Starts generating file version usage report for a site collection.
+Starts generating file version expiration report for a site collection.
 
 ## EXAMPLES
 
@@ -37,7 +38,7 @@ Starts generating file version usage report for a site collection.
 New-SPOSiteFileVersionExpirationReportJob -Identity https://contoso.sharepoint.com/sites/site1 -ReportUrl "https://contoso.sharepoint.com/sites/sites1/reports/MyReports/VersionReport.csv"
 ```
 
-Example 1 starts generating file version usage report on for the site collection, saving the result to a csv file within the site collection.
+Example 1 starts generating file version expiration report on for the site collection, saving the result to a csv file within the site collection.
 
 ## PARAMETERS
 
@@ -77,7 +78,5 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
-
-[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
 [Get-SPOSiteFileVersionExpirationReportJobProgress](Get-SPOSiteFileVersionExpirationReportJobProgress.md)
