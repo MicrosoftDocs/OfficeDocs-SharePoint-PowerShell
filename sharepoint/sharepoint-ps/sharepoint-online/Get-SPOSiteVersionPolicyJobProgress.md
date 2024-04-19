@@ -16,7 +16,7 @@ manager: seanmc
 ## SYNOPSIS
 
 > [!NOTE]
-> This feature is part of the Version history controls Preview. If your tenant is not part of the Preview or the feature has not rolled out to your tenant, you will get an error when trying to run this cmdlet.
+> This feature is part of the version history controls preview. If your tenant is not part of the preview or the feature has not rolled out to your tenant, you will get an error when trying to run this cmdlet.
 
 Gets the progress of setting version policy for existing document libraries on the site collection.
 
@@ -27,7 +27,7 @@ Get-SPOSiteVersionPolicyJobProgress [-Identity] <SpoSitePipeBind> [<CommonParame
 
 ## DESCRIPTION
 
-`Set-SPOSite` using `ApplyToExistingDocumentLibraries` will create a job to set version policy for existing document libraries on the site collection. This cmdlet then gets the progress of the job.
+`Set-SPOSite` cmdlet using `ApplyToExistingDocumentLibraries` will create a job to set version policy for existing document libraries on the site collection. This cmdlet then gets the progress of the job.
 
 ## EXAMPLES
 

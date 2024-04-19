@@ -16,7 +16,7 @@ manager: seanmc
 ## SYNOPSIS
 
 > [!NOTE]
-> This feature is part of the Version history controls Preview. If your tenant is not part of the Preview or the feature has not rolled out to your tenant, you will get an error when trying to run this cmdlet.
+> This feature is part of the version history controls preview. If your tenant is not part of the preview or the feature has not rolled out to your tenant, you will get an error when trying to run this cmdlet.
 
 Gets the progress of a file version batch trim job for a site collection.
 
