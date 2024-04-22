@@ -18,7 +18,7 @@ manager: seanmc
 > [!NOTE]
 > This feature is part of the version history controls preview. If your tenant is not part of the preview or the feature has not rolled out to your tenant, you will get an error when trying to run this cmdlet.
 
-Starts a file version batch trim job targeting all document libraries in a site collection.
+Queue a job to trim versions from a document library.
 
 ## SYNTAX
 
@@ -28,7 +28,9 @@ New-SPOListFileVersionBatchDeleteJob [-Site] <SpoSitePipeBind> [-List] <SpoListP
 
 ## DESCRIPTION
 
-Starts a file version batch trim job for a document library.
+Queue a job to trim versions from a document library.
+
+Caution: Versions trimmed using this command will be permanently deleted and cannot be recovered from the recycle bin.
 
 ## EXAMPLES
 
@@ -118,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -MajorVersionLimit
-Trim file version using version count limits. Need to specify MajorWithMinorVersionsLimit as well.
+Trim file version using version count limits. Need to specify `MajorWithMinorVersionsLimit` as well.
 
 ```yaml
 Type: int
@@ -132,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -MajorWithMinorVersionsLimit
-Trim file version using version count limits. Need to specify MajorVersionLimit as well.
+Trim file version using version count limits. Need to specify `MajorVersionLimit` as well.
 
 ```yaml
 Type: int

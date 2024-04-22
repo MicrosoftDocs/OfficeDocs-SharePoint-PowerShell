@@ -18,7 +18,7 @@ manager: seanmc
 > [!NOTE]
 > This feature is part of the version history controls preview. If your tenant is not part of the preview or the feature has not rolled out to your tenant, you will get an error when trying to run this cmdlet.
 
-Starts a file version batch trim job targeting all document libraries in a site collection.
+Queues a job to trim versions for all document libraries in a site collection.
 
 ## SYNTAX
 
@@ -28,7 +28,9 @@ New-SPOSiteFileVersionBatchDeleteJob [-Identity] <SpoSitePipeBind> [-Automatic] 
 
 ## DESCRIPTION
 
-Starts a file version batch trim job targeting all document libraries in a site collection.
+Queues a job to trim versions for all document libraries in a site collection.
+
+Caution: Versions deleted using this cmdlet will be permanently deleted and cannot be recovered from the recycle bin.
 
 ## EXAMPLES
 
@@ -46,7 +48,7 @@ Example 1 starts a file version batch trim job that will delete all file version
 New-SPOSiteFileVersionBatchDeleteJob -Identity https://contoso.sharepoint.com/sites/site1 -Automatic
 ```
 
-Example 2 starts a file version batch trim job that will delete file versions that expiread and set version expiration time for the ones not expired in the site collection based on the backend algorithm.
+Example 2 starts a file version batch trim job that will delete file versions that expired and set version expiration time for the ones not expired in the site collection based on the backend algorithm.
 
 ### EXAMPLE 3
 
@@ -103,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -MajorVersionLimit
-Trim file version using version count limits. Need to specify MajorWithMinorVersionsLimit as well.
+Trim file version using version count limits. Need to specify `MajorWithMinorVersionsLimit` as well.
 
 ```yaml
 Type: int
@@ -117,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -MajorWithMinorVersionsLimit
-Trim file version using version count limits. Need to specify MajorVersionLimit as well.
+Trim file version using version count limits. Need to specify `MajorVersionLimit` as well.
 
 ```yaml
 Type: int

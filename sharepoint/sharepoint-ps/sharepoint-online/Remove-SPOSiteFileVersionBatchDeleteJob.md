@@ -18,7 +18,7 @@ manager: seanmc
 > [!NOTE]
 > This feature is part of the version history controls preview. If your tenant is not part of the preview or the feature has not rolled out to your tenant, you will get an error when trying to run this cmdlet.
 
-Cancels further processing of a file version batch trim job for a site collection.
+Stops further processing of site level trim job that is in-progress.
 
 ## SYNTAX
 
@@ -28,7 +28,9 @@ Remove-SPOSiteFileVersionBatchDeleteJob [-Identity] <SpoSitePipeBind> [<CommonPa
 
 ## DESCRIPTION
 
-Cancels further processing of a file version batch trim job for a site collection. This will stop the ongoing version deletion trim job and no further deletions will happen. Stopping a trim job will not impact versions that have already been permanently deleted when the job was in progress.
+Stops further processing of site level trim job that is in-progress.
+
+Once the cmdlet executes successfully, all new asynchronous version deletion will be stopped. Stopping a trim job will not impact versions that have already been permanently deleted when the job was in progress.
 
 ## EXAMPLES
 

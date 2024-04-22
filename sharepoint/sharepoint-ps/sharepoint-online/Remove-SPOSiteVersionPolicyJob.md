@@ -18,7 +18,7 @@ manager: seanmc
 > [!NOTE]
 > This feature is part of the version history controls preview. If your tenant is not part of the preview or the feature has not rolled out to your tenant, you will get an error when trying to run this cmdlet.
 
-Cancels further processing of setting version policy job for existing document libraries on the site collection.
+Cancels further processing of version settings update on existing document libraries on the site collection.
 
 ## SYNTAX
 ```powershell

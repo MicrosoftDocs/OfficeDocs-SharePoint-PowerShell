@@ -1240,14 +1240,14 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAutoExpirationVersionTrim
-Global and SharePoint Administrators in Microsoft 365 can set site-level version history limit settings that universally apply to new versions created on all new document libraries created on the site. Also can create request to set the version setting for existing libraries that enabled versioning.
+Global and SharePoint Administrators can set site-level version history limit settings that universally apply to new versions created on all new document libraries created on the site. Also can create request to set the version setting for existing libraries that enabled versioning.
 
 When version history limits are managed automatically, SharePoint employs an algorithm behind the scenes that deletes (thins out) intermittent older versions that are least likely to be needed, while preserving sufficient high-value versions - more versions in the recent past and fewer farther back in time - in case restores are required.
 
 The valid values are:
 
 - True - Version history limits for new versions created on new/existing document libraries in the site will be managed automatically.
-- False - Version history limits for new Versions created on new/existing document libraries in the site will be managed manually by setting limits to the number of major versions (`MajorVersionLimit`), number of major with minor versions (`MajorWithMinorVersionsLimit`) and time set (`ExpireVersionsAfterDays`).  Review the documentation of both parameters to manage your organization's version limits manually.  
+- False - Version history limits for new Versions created on new/existing document libraries in the site will be managed manually by setting limits to the number of major versions (`MajorVersionLimit`), number of major with minor versions (`MajorWithMinorVersionsLimit`) and time set (`ExpireVersionsAfterDays`). Review the documentation of both parameters to manage your organization's version limits manually.
 
 > [!NOTE]
 > When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), `MajorVersionLimit` and `ExpireVersionsAfterDays` are both required parameters, `MajorWithMinorVersionsLimit` is also required for creating request for setting existing document libraries with the following acceptable values:
@@ -1307,7 +1307,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpireVersionsAfterDays
-When Version History Limits are managed manually (`EnableAutoExpirationVersionTrim $false`), admins will need to set the limits to the number of major versions (`MajorVersionLimit`), the number of major with minor versions (`MajorWithMinorVersionsLimit`) and the time period the versions are stored (`ExpireVersionsAfterDays`). Please check the description of `EnableAutoExpirationVersionTrim` for more details.
+When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), admins will need to set the limits to the number of major versions (`MajorVersionLimit`), the number of major with minor versions (`MajorWithMinorVersionsLimit`) and the time period the versions are stored (`ExpireVersionsAfterDays`). Please check the description of `EnableAutoExpirationVersionTrim` for more details.
 
 PARAMVALUE: Int32
 

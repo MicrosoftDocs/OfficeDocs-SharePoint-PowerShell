@@ -2734,14 +2734,14 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAutoExpirationVersionTrim
-Global and SharePoint Administrators in Microsoft 365 can set organization-level version history limits settings that universally apply to new versions created on all new document libraries created in your organization. 
+Global and SharePoint Administrators can set organization-level version history limits settings that universally apply to new versions created on all new document libraries created in your organization. 
 
 When version history limits are managed automatically, SharePoint employs an algorithm behind the scenes that deletes (thins out) intermittent older versions that are least likely to be needed, while preserving sufficient high-value versions - more versions in the recent past and fewer farther back in time - in case restores are required.
 
 The valid values are: 
 
-- True – Version history limits for new versions created on all new document libraries in your organization will be managed automatically.  
-- False – Version history limits for new Versions created on all new document libraries in your organization will be managed manually by setting limits to the number of major versions (`MajorVersionLimit`) and time set (`ExpireVersionsAfterDays`).  Review the documentation of both parameters to manage your organization's version limits manually.  
+- True – Version history limits for new versions created on all new document libraries in your organization will be managed automatically.
+- False – Version history limits for new Versions created on all new document libraries in your organization will be managed manually by setting limits to the number of major versions (`MajorVersionLimit`) and time set (`ExpireVersionsAfterDays`). Review the documentation of both parameters to manage your organization's version limits manually.
 
 > [!NOTE]
 > When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), `MajorVersionLimit` and `ExpireVersionsAfterDays` are both required parameters with the following acceptable values:
@@ -2865,9 +2865,9 @@ Accept wildcard characters: False
 
 ### -EnableVersionExpirationSetting
 
-Use the EnableVersionExpirationSetting parameter to opt your tenant into public preview of Improved Version History controls feature Microsoft 365 Public Roadmap under ID [145802](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=145802).
+Use the `EnableVersionExpirationSetting` parameter to opt your tenant into public preview of Improved Version History controls feature Microsoft 365 Public Roadmap under ID [145802](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=145802).
 
-When set to true and feature roll out to your tenant has completed, Admin Version history controls at Organization, Site and Library levels will be available. When set to false, the feature will be disabled for your tenant. You will be able to toggle the value within the duration of the preview.
+When set to true and feature roll out to your tenant has completed, admin version history controls at organization, site and library levels will be available. When set to false, the feature will be disabled for your tenant. You will be able to toggle the value within the duration of the preview.
 
 ```yaml
 Type: Boolean
