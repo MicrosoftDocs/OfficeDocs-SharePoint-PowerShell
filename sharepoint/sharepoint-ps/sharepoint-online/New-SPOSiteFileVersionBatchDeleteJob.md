@@ -40,7 +40,7 @@ Caution: Versions deleted using this cmdlet will be permanently deleted and cann
 New-SPOSiteFileVersionBatchDeleteJob -Identity https://contoso.sharepoint.com/sites/site1 -DeleteBeforeDays 360
 ```
 
-Example 1 starts a file version batch trim job that will delete all file versions that are over 360 days old in all document libraries in the site collection.
+Example 1 starts a trim job that will delete all file versions that are over 360 days old in all document libraries in the site collection.
 
 ### EXAMPLE 2
 
@@ -48,7 +48,7 @@ Example 1 starts a file version batch trim job that will delete all file version
 New-SPOSiteFileVersionBatchDeleteJob -Identity https://contoso.sharepoint.com/sites/site1 -Automatic
 ```
 
-Example 2 starts a file version batch trim job that will delete file versions that expired and set version expiration time for the ones not expired in the site collection based on the backend algorithm.
+Example 2 starts a trim job that will delete file versions that expired and set version expiration time for the ones not expired in the site collection based on the backend algorithm.
 
 ### EXAMPLE 3
 
@@ -56,7 +56,7 @@ Example 2 starts a file version batch trim job that will delete file versions th
 New-SPOSiteFileVersionBatchDeleteJob -Identity https://contoso.sharepoint.com/sites/site1 -MajorVersionLimit 30 -MajorWithMinorVersionsLimit 10
 ```
 
-Example 3 starts a file version batch trim job that will delete file versions in the site collection based on the version count limits.
+Example 3 starts a trim job that will delete file versions in the site collection based on the version count limits.
 
 ## PARAMETERS
 

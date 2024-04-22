@@ -40,7 +40,7 @@ Once the cmdlet executes successfully, all new asynchronous version deletion wil
 Remove-SPOSiteFileVersionBatchDeleteJob -Identity https://contoso.sharepoint.com/sites/site1
 ```
 
-Example 1 cancels further processing of the file version batch trim job for the site collection.
+Example 1 cancels further processing of the trim job for the site collection.
 
 ## PARAMETERS
 

@@ -18,7 +18,7 @@ manager: seanmc
 > [!NOTE]
 > This feature is part of the version history controls preview. If your tenant is not part of the preview or the feature has not rolled out to your tenant, you will get an error when trying to run this cmdlet.
 
-Gets the progress of a file version batch trim job for a site collection.
+Gets the progress of a trim job for a site collection.
 
 ## SYNTAX
 
@@ -28,7 +28,7 @@ Get-SPOListFileVersionBatchDeleteJobProgress [-Site] <SpoSitePipeBind> [-List] <
 
 ## DESCRIPTION
 
-Gets the progress of a file version batch trim job for a document library.
+Gets the progress of a trim job for a document library.
 
 ## EXAMPLES
 
@@ -38,7 +38,7 @@ Gets the progress of a file version batch trim job for a document library.
 Get-SPOListFileVersionBatchDeleteJobProgress -Site https://contoso.sharepoint.com/sites/site1 -List "Documents"
 ```
 
-Example 1 gets the progress of a file version batch trim job for a document library called "Documents".
+Example 1 gets the progress of a trim job for a document library called "Documents".
 
 ## PARAMETERS
 
