@@ -2867,7 +2867,12 @@ Accept wildcard characters: False
 
 Use the `EnableVersionExpirationSetting` parameter to opt your tenant into public preview of Improved Version History controls feature Microsoft 365 Public Roadmap under ID [145802](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=145802).
 
-When set to true and feature roll out to your tenant has completed, admin version history controls at organization, site and library levels will be available. When set to false, the feature will be disabled for your tenant. You will be able to toggle the value within the duration of the preview.
+The valid values are:
+
+- True - When set to true and feature roll out to your tenant has completed, admin version history controls at organization, site and library levels will be available.
+- False (default) - When set to false, the feature will be disabled for your tenant.
+
+Note: Disabling the feature after previously enabling it, does not revert changes made when the feature was enabled.
 
 ```yaml
 Type: Boolean
