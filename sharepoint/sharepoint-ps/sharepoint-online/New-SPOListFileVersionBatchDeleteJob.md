@@ -18,7 +18,7 @@ manager: seanmc
 > [!NOTE]
 > This feature is part of the version history controls preview. If your tenant is not part of the preview or the feature has not rolled out to your tenant, you will get an error when trying to run this cmdlet.
 
-Queue a job to trim versions from a document library.
+Queues a job to trim versions from a document library.
 
 ## SYNTAX
 
@@ -28,7 +28,7 @@ New-SPOListFileVersionBatchDeleteJob [-Site] <SpoSitePipeBind> [-List] <SpoListP
 
 ## DESCRIPTION
 
-Queue a job to trim versions from a document library.
+Queues a job to trim versions from a document library.
 
 Caution: Versions trimmed using this command will be permanently deleted and cannot be recovered from the recycle bin.
 

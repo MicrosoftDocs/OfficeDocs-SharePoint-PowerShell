@@ -18,7 +18,7 @@ manager: seanmc
 > [!NOTE]
 > This feature is part of the version history controls preview. If your tenant is not part of the preview or the feature has not rolled out to your tenant, you will get an error when trying to run this cmdlet.
 
-Generate a version storage usage report for a site collection. This report can be used to understand current version storage footprint of the site.
+Generates a version storage usage report for a site collection. This report can be used to understand current version storage footprint of the site.
 
 ## SYNTAX
 
@@ -28,7 +28,7 @@ New-SPOSiteFileVersionExpirationReportJob [-Identity] <SpoSitePipeBind> [-Report
 
 ## DESCRIPTION
 
-Generate a version storage usage report for a site collection. This report can be used to understand current version storage footprint of the site.
+Generates a version storage usage report for a site collection. This report can be used to understand current version storage footprint of the site.
 
 ## EXAMPLES
 
