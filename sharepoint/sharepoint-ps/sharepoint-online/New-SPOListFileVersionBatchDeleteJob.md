@@ -48,7 +48,7 @@ Example 1 starts a trim job that will delete all file versions that are over 360
 New-SPOListFileVersionBatchDeleteJob -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -Automatic
 ```
 
-Example 2 starts a trim job that will delete file versions that expiread and set version expiration time for the ones not expired in the document library called "Documents" based on the backend algorithm.
+Example 2 starts a trim job that will delete file versions that expired and set version expiration time for the ones not expired in the document library called "Documents" based on the automatic backend algorithm.
 
 ### EXAMPLE 3
 
