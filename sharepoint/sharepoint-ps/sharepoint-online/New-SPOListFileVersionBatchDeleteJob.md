@@ -92,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Automatic
-Trim file version using automatic trim.
+Trim file versions using automatic version history limit algorithm.
 
 ```yaml
 Type: SwitchParameter
