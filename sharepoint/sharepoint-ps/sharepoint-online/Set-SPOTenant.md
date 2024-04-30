@@ -144,6 +144,8 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-DisableDocumentLibraryDefaultLabeling <Boolean>]
  [-EnableSensitivityLabelforPDF <Boolean>]
  [-DelayDenyAddAndCustomizePagesEnforcement <Boolean>]
+ [-IsDataAccessInCardDesignerEnabled <Boolean>]
+ [-EnableVersionExpirationSetting <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -243,7 +245,7 @@ This example enables the option to search for existing guest users at Tenant Lev
 Set-SPOTenant -EnableAutoExpirationVersionTrim $true
 ```
 
-This example sets Automatic Version Storage Limits on all new document libraries at Tenant Level.
+This example sets automatic version history limits on all new document libraries at tenant level.
 
 ### EXAMPLE 12
 
@@ -251,7 +253,7 @@ This example sets Automatic Version Storage Limits on all new document libraries
 Set-SPOTenant -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 30
 ```
 
-This example sets Manual Version Storage Limits on all new document libraries at Tenant Level by limiting the number of major versions and the time (in days) versions are kept. 
+This example sets manual version history limits on all new document libraries at tenant level by limiting the number of major versions and the time (in days) versions are kept. 
 
 ### EXAMPLE 13
 
@@ -259,7 +261,7 @@ This example sets Manual Version Storage Limits on all new document libraries at
 Set-SPOTenant -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 0
 ```
 
-This example sets Manual Version Storage Limits on all new document libraries at Tenant Level by limiting the number of major versions with no time limits.
+This example sets manual version history limits on all new document libraries at tenant level by limiting the number of major versions with no time limits.
 
 ### EXAMPLE 14
 
@@ -276,6 +278,18 @@ PS > Set-SPOTenant -SharingDomainRestrictionMode "BlockList" -SharingBlockedDoma
 ```
 
 This example enables users to share with all external collaborators except for those on the BlockedDomainList.
+
+### EXAMPLE 16
+
+```powershell
+PS > Set-SPOTenant -EnableVersionExpirationSetting $true
+```
+
+This example opts your tenant into public preview of Improved Version History controls feature. This feature is being tracked on the Microsoft 365 Public Roadmap under ID [145802](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=145802).
+
+Visit [http://aka.ms/versioning-overview](http://aka.ms/versioning-overview) to learn more about Admin configurations available to manage versions.
+
+By opting in, you are accepting the terms of service for version history limits. [Read the terms of service](https://aka.ms/versioning-termsofservice).
 
 ## PARAMETERS
 
@@ -2284,26 +2298,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ShowOpenInDesktopOptionForSyncedFiles
-
-The ShowOpenInDesktopOptionForSyncedFiles setting (set to false by default) displays the "Open in desktop" option when users go to SharePoint or OneDrive on the web and open the shortcut menu for a file that they're syncing with the OneDrive sync app.
-
-The valid values are:
-
-- False (default) – "Open in desktop" is disabled and not shown on the shortcut menu.
-- True – "Open in desktop" is enabled and the option to open synced files locally appears on the shortcut menu.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -OneDriveLoopDefaultSharingLinkScope
 
 Gets or sets default share link scope for Loop and Whiteboard files on OneDrive sites. 
@@ -2720,22 +2714,22 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAutoExpirationVersionTrim
-Global and SharePoint admins in Microsoft 365 can set Organization-level Version History Limit settings that universally apply to new versions created on all new Document Libraries created in your organization. 
+Global and SharePoint Administrators can set organization-level version history limits settings that universally apply to new versions created on all new document libraries created in your organization. 
 
-When Version History Limits are managed Automatically, SharePoint employs an algorithm behind the scenes that deletes (thins out) intermittent older versions that are least likely to be needed, while preserving sufficient high-value versions - more versions in the recent past and fewer farther back in time - in case restores are required.
+When version history limits are managed automatically, SharePoint employs an algorithm behind the scenes that deletes (thins out) intermittent older versions that are least likely to be needed, while preserving sufficient high-value versions - more versions in the recent past and fewer farther back in time - in case restores are required.
 
 The valid values are: 
 
-- True – Version History Limits for new versions created on all new Document Libraries in your organization will be managed Automatically.  
-- False – Version History Limits for new Versions created on all new Document Libraries in your organization will be managed Manually by setting limits to the number of major versions (MajorVersionLimit) and time set (ExpireVersionsAfterDays).  Review the documentation of both parameters to manage your organization's version limits Manually.  
+- True – Version history limits for new versions created on all new document libraries in your organization will be managed automatically.
+- False – Version history limits for new Versions created on all new document libraries in your organization will be managed manually by setting limits to the number of major versions (`MajorVersionLimit`) and time set (`ExpireVersionsAfterDays`). Review the documentation of both parameters to manage your organization's version limits manually.
 
 > [!NOTE]
-> When Version History Limits are managed Manually (EnableAutoExpirationVersionTrim $false), MajorVersionLimit and ExpireVersionsAfterDays are both required parameters with the following acceptable values:
-> a. MajorVersionLimit accepts values from 1 through 50,000 (inclusive).
-> b. ExpireVersionsAfterDays accepts values of 0 to Never Expire or values >= 30 to delete versions that exceed that time period.
-> When Version History Limits are managed Automatically (EnableAutoExpirationVersionTrim $true), setting MajorVersionLimit or ExpireVersionsAfterDays will result in an error as the count limits are set by the service.
+> When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), `MajorVersionLimit` and `ExpireVersionsAfterDays` are both required parameters with the following acceptable values:
+> a. `MajorVersionLimit` accepts values from 1 through 50,000 (inclusive).
+> b. `ExpireVersionsAfterDays` accepts values of 0 to Never Expire or values >= 30 to delete versions that exceed that time period.
+> When version history limits are managed automatically (`EnableAutoExpirationVersionTrim $true`), setting `MajorVersionLimit` or `ExpireVersionsAfterDays` will result in an error as the count limits are set by the service.
 >
-> This parameter is currently under private preview.
+> This parameter is currently under public preview.
 
 PARAMVALUE: $true | $false
 
@@ -2752,7 +2746,7 @@ Accept wildcard characters: False
 ```
 
 ### -MajorVersionLimit
-When Version History Limits are managed Manually (EnableAutoExpirationVersionTrim $false), admins will need to set the limits to the number of major versions (MajorVersionLimit) and the time period the versions are stored (ExpireVersionsAfterDays). Please check the description of EnableAutoExpirationVersionTrim for more details.
+When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), admins will need to set the limits to the number of major versions (`MajorVersionLimit`) and the time period the versions are stored (`ExpireVersionsAfterDays`). Please check the description of `EnableAutoExpirationVersionTrim` for more details.
 
 PARAMVALUE: Int32
 
@@ -2769,7 +2763,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpireVersionsAfterDays
-When Version History Limits are managed Manually (EnableAutoExpirationVersionTrim $false), admins will need to set the limits to the number of major versions (MajorVersionLimit) and the time period the versions are stored (ExpireVersionsAfterDays). Please check the description of EnableAutoExpirationVersionTrim for more details.
+When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), admins will need to set the limits to the number of major versions (`MajorVersionLimit`) and the time period the versions are stored (`ExpireVersionsAfterDays`). Please check the description of `EnableAutoExpirationVersionTrim` for more details.
 
 PARAMVALUE: Int32
 
@@ -2822,6 +2816,52 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsDataAccessInCardDesignerEnabled 
+
+The IsDataAccessInCardDesignerEnabled settings (defaulted to false) will allow Viva Connections Dashboard operators to access SharePoint and Graph APIs in the Card Designer card.
+
+The valid values are:
+
+- False (default) – SharePoint and Graph APIs cannot be accessed in the Card Designer card.
+- True – Users with edit permissions on the Dashboard will be able to access SharePoint and Graph APIs in the Card Designer card.
+
+For more information on this feature, see [Overview of Viva Connections Card Designer advance API features](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/viva/features/card-designer/card-designer-api-support).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableVersionExpirationSetting
+
+Use the `EnableVersionExpirationSetting` parameter to opt your tenant into public preview of Improved Version History controls feature Microsoft 365 Public Roadmap under ID [145802](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=145802).
+
+The valid values are:
+
+- True - When set to true and feature roll out to your tenant has completed, admin version history controls at organization, site and library levels will be available.
+- False (default) - When set to false, the feature will be disabled for your tenant.
+
+Note: Disabling the feature after previously enabling it, does not revert changes made when the feature was enabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
