@@ -2037,7 +2037,7 @@ Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
-Default value: None
+Default value: ExternalPeopleInOD
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -2048,11 +2048,11 @@ Blocks users from accessing User Info if they have Limited Access permission onl
 
 The valid values are: 
 
-- ApplyToNoUsers (default) – No users are prevented from accessing User Info when they have Limited Access permission only.
+- ApplyToNoUsers – No users are prevented from accessing User Info when they have Limited Access permission only.
 
 - ApplyToAllUsers – All users (internal or external) are prevented from accessing User Info if they have Limited Access permission only.
 
-- ApplyToGuestAndExternalUsers – Only external or guest users are prevented from accessing User Info if they have Limited Access permission only.
+- ApplyToGuestAndExternalUsers (default) – Only external or guest users are prevented from accessing User Info if they have Limited Access permission only.
 
 - ApplyToInternalUsers – Only internal users are prevented from accessing User Info if they have Limited Access permission only.
 
@@ -2063,7 +2063,7 @@ Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
-Default value: ApplyToNoUsers
+Default value: ApplyToGuestAndExternalUsers
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
