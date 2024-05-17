@@ -2884,12 +2884,12 @@ The valid values are:
 - ExistingExternalUserSharingOnly - Only guests already in your organization's directory.
 
 ```yaml
-Type: SharingScope
+Type: SharingCapabilities
 Parameter Sets: (All)
 Applicable: SharePoint Online
 Required: False
 Position: Named
-Default value: Uninitialized
+Default value: ExternalUserAndGuestSharing
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
