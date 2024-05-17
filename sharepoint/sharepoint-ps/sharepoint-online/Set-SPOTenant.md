@@ -2874,7 +2874,7 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveSharingCapability
-Determines what level of sharing is available for OneDrive sites. It corresponds to the `SharingScope` for OneDrive sites.
+Determines what level of sharing is available for OneDrive sites. It corresponds to the `SharingCapabilities` for OneDrive sites.
 
 The valid values are:  
 
