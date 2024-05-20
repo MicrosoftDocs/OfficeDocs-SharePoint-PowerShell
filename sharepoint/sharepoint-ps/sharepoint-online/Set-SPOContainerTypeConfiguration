@@ -6,7 +6,7 @@ applicable: SharePoint Online
 title: Set-SPOContainerTypeConfiguration
 schema: 2.0.0
 author: FarreltinF
-ms.author: FarreltinF
+ms.author: Fan.Yi.
 ms.reviewer:
 ---
 
@@ -79,3 +79,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 Applies to: SharePoint Embedded
 ```
+
+## RELATED LINKS
+
+[Get-SPOContainerTypeConfiguration](/powershell/sharepoint/sharepoint-online/Get-SPOContainerTypeConfiguration)
