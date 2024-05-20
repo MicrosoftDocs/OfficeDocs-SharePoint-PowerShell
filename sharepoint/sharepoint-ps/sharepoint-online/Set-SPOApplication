@@ -98,6 +98,6 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Get-SPOApplication](Get-SPOApplication.md)
 
 [Set-SPOTenant](set-spotenant.md)
