@@ -82,4 +82,4 @@ Applies to: SharePoint Embedded
 
 ## RELATED LINKS
 
-[Get-SPOContainerTypeConfiguration](/powershell/sharepoint/sharepoint-online/Get-SPOContainerTypeConfiguration)
+[Get-SPOContainerTypeConfiguration](Get-SPOContainerTypeConfiguration.md)
