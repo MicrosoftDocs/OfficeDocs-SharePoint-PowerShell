@@ -5,8 +5,8 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 Applicable: SharePoint Embedded
 title: Set-SPOApplication
 schema: 2.0.0
-author: fanyi
-ms.author: fanyi
+author: FarreltinF
+ms.author: FarreltinF
 ms.reviewer:
 ---
 
@@ -29,9 +29,9 @@ Set-SPOApplication
 
 ## DESCRIPTION
 
-`Set-SPOApplication` djusts the sharing settings at the SharePoint Embedded application level, determining if the application’s files can be shared with external guests.
+`Set-SPOApplication` adjusts the sharing settings at the SharePoint Embedded application level, determining if this SharePoint Embedded application content can be shared with external guests.
 
-You must be a SharePoint Embedded administrator or Global Administrator to run the cmdlet.
+You must be a SharePoint Embedded Administrator or Global Administrator to run the cmdlet.
 > [!NOTE]   
 > The OwningApplicationId for Microsoft Loop is `a187e399-0c36-4b98-8f04-1edc167a0996`.
 > The OwningApplicationId for Microsoft Designer is `5e2795e3-ce8c-4cfb-b302-35fe5cd01597`.
@@ -66,7 +66,7 @@ The valid values are:
 - ExternalUserSharingOnly - External user sharing (share by email) is enabled, but guest link sharing is disabled.
 - ExistingExternalUserSharingOnly - Only guests already in your organization's directory.
 
-The default setting is None, meaning the application follows the SharePoint Online tenant-level sharing settings. Use the 'Get-SPOTenant' cmdlet to view these settings.
+The default setting is None, meaning the application follows the SharePoint Online tenant-level sharing settings. Use the `Get-SPOTenant` cmdlet to view these settings.
 
 ```yaml
 Type: SharingCapabilities
@@ -83,7 +83,6 @@ Accept wildcard characters: False
 ### -OverrideTenantSharingCapability
 This setting allows the application to independently set its sharing capabilities, overriding the tenant-level settings of SharePoint Online. Options:
 
-
 - False (default) - The application follows the tenant-level sharing capability
 - True - The application's sharing settings are independent of the tenant level sharing capability
 
@@ -96,8 +95,6 @@ Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-
 
 ## RELATED LINKS
 
