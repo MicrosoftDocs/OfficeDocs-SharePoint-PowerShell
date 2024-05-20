@@ -61,5 +61,5 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
-[Set-SPOContainerTypeConfiguration](/powershell/sharepoint/sharepoint-online/Set-SPOContainerTypeConfiguration)
+[Set-SPOContainerTypeConfiguration](Set-SPOContainerTypeConfiguration.md)
 
