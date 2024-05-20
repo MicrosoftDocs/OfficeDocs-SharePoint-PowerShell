@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
 title: Get-SPOContainerTypeConfiguration
 schema: 2.0.0
-author: Fan.Yi.
+author: FarreltinF
 ms.author: Fan.Yi.
 ms.reviewer:
 ---
