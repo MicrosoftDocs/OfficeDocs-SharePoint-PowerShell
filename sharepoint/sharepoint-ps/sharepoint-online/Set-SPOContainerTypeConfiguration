@@ -35,7 +35,7 @@ You must be a SharePoint Administrator or Global Administrator to run this cmdle
 Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -DiscoverabilityDisabled $false
 ```
 
-Example 1 turns on discoverability for this container type. All content created within this container type will be discoverable in the Microsoft 365 experience, including on office.com, onedrive, recommended sections, and other intelligent discovery experiences.
+Example 1 turns on discoverability for this container type. All content created within this container type will be discoverable in the Microsoft 365 experience, including on office.com, onedrive.com, recommended files, and other intelligent discovery experiences.
 
 ### Example 2
 
