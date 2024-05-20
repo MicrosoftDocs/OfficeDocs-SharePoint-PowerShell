@@ -5,8 +5,8 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
 title: Get-SPOContainertypeConfiguration
 schema: 2.0.0
-author: fanyi
-ms.author: fanyi
+author: FarreltinF
+ms.author: FarreltinF
 ms.reviewer:
 ---
 
@@ -28,7 +28,7 @@ Get-SPOContainertypeConfiguration [-ContainerTypeId <ContainerTypeId>]
 
 The `Get-SPOContainertypeConfiguration` cmdlet retrieves and returns configuration settings set on a container type created under a SharePoint Embedded application. 
 
-You must be a SharePoint Online Administrator or Global Administrator to run this cmdlet.
+You must be a SharePoint Administrator or Global Administrator to run this cmdlet.
 
 ## EXAMPLES
 
@@ -58,9 +58,5 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-## NOTES
-
-## RELATED LINKS
 
 [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
