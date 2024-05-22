@@ -2317,7 +2317,7 @@ The valid values are:
 - Uninitialized
 
 ```yaml
-Type: SharingCapabilities
+Type: SharingScope
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
@@ -2338,17 +2338,12 @@ The valid values are:
 
 - Edit
 - View
-- LimitedEdit
-- LimitedView
-- ManageList
 - None
-- Owner
-- RestrictedView
 - Review
-- Submit
+- RestrictedView
 
 ```yaml
-Type: SharingCapabilities
+Type: SharingRole
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
@@ -2371,7 +2366,7 @@ The valid values are:
 - Uninitialized
 
 ```yaml
-Type: SharingCapabilities
+Type: SharingScope
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
@@ -2392,17 +2387,12 @@ The valid values are:
 
 - Edit
 - View
-- LimitedEdit
-- LimitedView
-- ManageList
 - None
-- Owner
-- RestrictedView
 - Review
-- Submit
+- RestrictedView
 
 ```yaml
-Type: SharingCapabilities
+Type: SharingRole
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
