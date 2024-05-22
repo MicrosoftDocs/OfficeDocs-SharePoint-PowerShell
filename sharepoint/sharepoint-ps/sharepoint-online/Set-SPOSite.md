@@ -32,8 +32,8 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-DisableAppViews <AppViewsPolicy>]
  [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>] 
  [-DisableFlows <FlowsPolicy>]
- [-LoopDefaultSharingLinkScope <String>]
- [-LoopDefaultSharingLinkRole <String>]
+ [-LoopDefaultSharingLinkScope <SharingScope>]
+ [-LoopDefaultSharingLinkRole <SharingRole>]
  [-RestrictedToGeo <RestrictedToRegion>] 
  [-SharingAllowedDomainList <String>]
  [-SharingBlockedDomainList <String>] 
@@ -57,6 +57,9 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-RemoveLabel]
  [-BlockDownloadPolicy <Boolean>]
  [-OverrideBlockUserInfoVisibility <String>]
+ [-OverrideSharingCapability <Boolean>]
+ [-DefaultShareLinkScope <SharingScope>]
+ [-DefaultShareLinkRole <SharingRole>]
  [<CommonParameters>]
 ```
 
@@ -919,7 +922,7 @@ The valid values are:
 - Uninitialized
 
 ```yaml
-Type: SharingCapabilities
+Type: SharingScope
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
@@ -937,17 +940,13 @@ Gets or sets default share link role for fluid on the site
 The valid values are:  
 
 - Edit
-- LimitedEdit
-- LimitedView
-- ManageList
 - None
-- Owner
 - RestrictedView
 - Review
-- Submit
+- View
 
 ```yaml
-Type: SharingCapabilities
+Type: SharingRole
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
@@ -1359,6 +1358,69 @@ Clear the file version setting at site level. The new document libraries will us
 ```yaml
 Type: Int32
 Parameter Sets: SetSiteFileVersionPolicy
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -OverrideSharingCapability
+
+Determines whether it should override the sharing capability on its partition. For example, if the tenant sharing capability is `ExternalUserAndGuestSharing`, the core partition sharing capability is `Disabled`, and the side-defined sharing capability is also `ExternalUserAndGuestSharing`, the effective site sharing capability should be `Disabled` (the most restrictive one among tenant, partition, and site) if `OverrideSharingCapability` is `false`. If `OverrideSharingCapability` is `true`, it skips checking partition sharing capability and sets the site sharing capability to `ExternalUserAndGuestSharing`.
+
+PARAMVALUE: False | True
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultShareLinkScope
+
+The default share link scope on the site. It replaces `DefaultSharingLinkType`.
+
+The valid values are:  
+
+- Anyone
+- Organization
+- SpecificPeople
+- Uninitialized
+
+```yaml
+Type: SharingScope
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: Uninitialized
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -DefaultShareLinkRole
+
+The default share link role for the site collection. It replaces `DefaultLinkPermission`.
+
+The valid values are:  
+
+- Edit
+- None
+- RestrictedView
+- Review
+- View
+
+```yaml
+Type: SharingRole
+Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
 Required: False
