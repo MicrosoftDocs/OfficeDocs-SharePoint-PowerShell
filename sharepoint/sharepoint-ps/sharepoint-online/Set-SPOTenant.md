@@ -146,6 +146,13 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-DelayDenyAddAndCustomizePagesEnforcement <Boolean>]
  [-IsDataAccessInCardDesignerEnabled <Boolean>]
  [-EnableVersionExpirationSetting <Boolean>]
+ [-OneDriveSharingCapability <SharingCapabilities>]
+ [-OneDriveDefaultShareLinkScope <SharingScope>]
+ [-OneDriveDefaultShareLinkRole <SharingRole>]
+ [-OneDriveDefaultLinkToExistingAccess <Boolean>]
+ [-CoreDefaultShareLinkScope <SharingScope>]
+ [-CoreDefaultShareLinkRole <SharingRole>]
+ [-CoreDefaultLinkToExistingAccess <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -2862,6 +2869,129 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveSharingCapability
+Determines what level of sharing is available for OneDrive sites. It corresponds to the `SharingCapabilities` for OneDrive sites.
+
+The valid values are:  
+
+- ExternalUserAndGuestSharing (default) - External user sharing (share by email) and guest link sharing are both enabled.
+- Disabled - External user sharing (share by email) and guest link sharing are both disabled.
+- ExternalUserSharingOnly - External user sharing (share by email) is enabled, but guest link sharing is disabled.
+- ExistingExternalUserSharingOnly - Only guests already in your organization's directory.
+
+```yaml
+Type: SharingCapabilities
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: ExternalUserAndGuestSharing
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveDefaultShareLinkScope
+This parameter sets the default share link scope on OneDrive sites. It replaces the `DefaultSharingLinkType`. The valid values are:
+- `Anyone`: Anyone with the link can access the content.
+- `Organization`: Only people within the organization can access the content.
+- `SpecificPeople`: Only specific individuals (specified by the user) can access the content.
+- `Uninitialized`: The default value, indicating that the default share link scope is not explicitly set.
+
+```yaml
+Type: SharingScope
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: Uninitialized
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveDefaultShareLinkRole
+This parameter sets the default share link role on OneDrive sites. It replaces the `DefaultLinkPermission`. The valid values are:
+- `None`: No permissions granted.
+- `View`: View-only permissions.
+- `Edit`: Edit permissions.
+- `Review`: Review permissions.
+- `RestrictedView`: Restricted view permissions.
+
+```yaml
+Type: SharingRole
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveDefaultLinkToExistingAccess
+When set to `True`, the default sharing link will be a "People with Existing Access" link (which does not modify permissions) for OneDrive sites. When set to `False` (the default), the default sharing link type is controlled by the `OneDriveDefaultShareLinkScope` parameter.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CoreDefaultShareLinkScope
+This parameter sets the default share link scope on SharePoint sites. It replaces the `DefaultSharingLinkType`. The valid values are:
+- `Anyone`: Anyone with the link can access the content.
+- `Organization`: Only people within the organization can access the content.
+- `SpecificPeople`: Only specific individuals (specified by the user) can access the content.
+- `Uninitialized`: The default value, indicating that the default share link scope is not explicitly set.
+
+```yaml
+Type: SharingScope
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: Uninitialized
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CoreDefaultShareLinkRole
+This parameter sets the default share link role on SharePoint sites. It replaces the `DefaultLinkPermission`. The valid values are:
+- `None`: No permissions granted.
+- `View`: View-only permissions.
+- `Edit`: Edit permissions.
+- `Review`: Review permissions.
+- `RestrictedView`: Restricted view permissions.
+
+```yaml
+Type: SharingRole
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CoreDefaultLinkToExistingAccess
+When set to `True`, the default sharing link will be a "People with Existing Access" link (which does not modify permissions) for SharePoint sites. When set to `False` (the default), the default sharing link type is controlled by the `CoreDefaultShareLinkScope` parameter.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
