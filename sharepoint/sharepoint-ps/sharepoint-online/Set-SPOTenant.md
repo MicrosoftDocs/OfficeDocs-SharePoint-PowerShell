@@ -153,6 +153,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-CoreDefaultShareLinkScope <SharingScope>]
  [-CoreDefaultShareLinkRole <SharingRole>]
  [-CoreDefaultLinkToExistingAccess <Boolean>]
+ [-SelfServiceSiteCreationDisabled <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -2974,6 +2975,20 @@ Accept wildcard characters: False
 
 ### -CoreDefaultLinkToExistingAccess
 When set to `True`, the default sharing link will be a "People with Existing Access" link (which does not modify permissions) for SharePoint sites. When set to `False` (the default), the default sharing link type is controlled by the `CoreDefaultShareLinkScope` parameter.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SelfServiceSiteCreationDisabled
+When set to `True`, users cannot create sites from SharePoint, OneDrive, the PnP PowerShell cmdlet, and the REST API. When set to `False` (the default), users can create sites from SharePoint, OneDrive, the PnP PowerShell cmdlet, and the REST API.
 
 ```yaml
 Type: Boolean
