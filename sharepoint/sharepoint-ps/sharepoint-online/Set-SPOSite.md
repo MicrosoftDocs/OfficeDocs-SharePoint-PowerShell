@@ -854,7 +854,7 @@ Accept wildcard characters: False
 
 ### -DefaultSharingLinkType
 
-The default link type for the site collection.
+The default link type for the site collection. To be replaced by DefaultShareLinkScope.
 
 PARAMVALUE: None | AnonymousAccess | Internal | Direct
 
@@ -897,7 +897,7 @@ Accept wildcard characters: False
 
 ### -DefaultLinkPermission
 
-The default link permission for the site collection.
+The default link permission for the site collection. To be replaced by DefaultShareLinkRole.
 
 PARAMVALUE: None | View | Edit
 
@@ -988,7 +988,7 @@ Accept wildcard characters: False
 
 ### -AnonymousLinkExpirationInDays
 
-Specifies all anonymous/anyone links to be created will expire after the set number of days. This change won't be applied onto existing anonymous/anyone links. Only applies if OverrideTenantAnonymousLinkExpirationPolicy is set to true.
+Specifies all anonymous/anyone links that have been created (or will be created) will expire after the set number of days. Only applies if OverrideTenantAnonymousLinkExpirationPolicy is set to true.
 
 The valid number should be between 1 and 730. To remove the expiration requirement, set the value to zero (0).
 
