@@ -615,7 +615,7 @@ Accept wildcard characters: False
 
 ### -RequireAcceptingAccountMatchInvitedAccount
 
-This paramater has been deprecated since SharePoint Online legacy invitation flow has been switched to Entra B2B invitation flow.
+This paramater has been deprecated since SharePoint Online legacy invitation flow switched to Entra B2B invitation flow.
 
 Ensures that an external user can only accept an external sharing invitation with an account matching the invited email address.
 
@@ -1324,7 +1324,7 @@ Accept wildcard characters: False
 
 ### -NotifyOwnersWhenInvitationsAccepted
 
-This paramater has been deprecated since SharePoint Online legacy invitation flow has been switched to Entra B2B invitation flow.
+This paramater has been deprecated since SharePoint Online legacy invitation flow switched to Entra B2B invitation flow.
 
 When this parameter is set to $true and when an external user accepts an invitation to a resource in a user's OneDrive for Business, the OneDrive for Business owner is notified by e-mail.
 
