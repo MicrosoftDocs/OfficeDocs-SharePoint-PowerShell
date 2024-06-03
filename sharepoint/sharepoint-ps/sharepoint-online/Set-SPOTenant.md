@@ -19,7 +19,8 @@ Sets properties on the SharePoint Online organization.
 ## SYNTAX
 
 ```powershell
-Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
+Set-SPOTenant
+ [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-BccExternalSharingInvitations <Boolean>]
  [-BccExternalSharingInvitationsList <String>]
  [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>]
@@ -154,6 +155,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-CoreDefaultShareLinkRole <SharingRole>]
  [-CoreDefaultLinkToExistingAccess <Boolean>]
  [-SelfServiceSiteCreationDisabled <Boolean>]
+ [-SyncAadB2BManagementPolicy <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -613,6 +615,8 @@ Accept wildcard characters: False
 
 ### -RequireAcceptingAccountMatchInvitedAccount
 
+This paramater has been deprecated since SharePoint Online legacy invitation flow switched to Entra B2B invitation flow.
+
 Ensures that an external user can only accept an external sharing invitation with an account matching the invited email address.
 
 Administrators who desire increased control over external collaborators should consider enabling this feature.
@@ -666,7 +670,7 @@ Accept wildcard characters: False
 
 ### -SharingCapability
 
-Determines what level of sharing is available for the site.
+Determines what level of sharing is available for OneDrive and SharePoint sites.
 
 The valid values are:  
 
@@ -954,7 +958,7 @@ Accept wildcard characters: False
 
 ### -DefaultSharingLinkType
 
-Lets administrators choose what type of link appears is selected in the "Get a link" sharing dialog box in OneDrive for Business and SharePoint Online.
+Lets administrators choose the default link type in the sharing dialog box in OneDrive for Business and SharePoint Online.
 
 For additional information about how to change the default link type, see Change the default link type when users get links for sharing.
 
@@ -1103,7 +1107,7 @@ Accept wildcard characters: False
 
 ### -FileAnonymousLinkType
 
-Anonymous access links can allow recipients to only view or view and edit. The value can be set separately for folders and separately for files.
+Anonymous access links can allow recipients to only view or view and edit. The value can be set separately for folders and files.
 
 The valid values are:
 
@@ -1320,6 +1324,8 @@ Accept wildcard characters: False
 
 ### -NotifyOwnersWhenInvitationsAccepted
 
+This paramater has been deprecated since SharePoint Online legacy invitation flow switched to Entra B2B invitation flow.
+
 When this parameter is set to $true and when an external user accepts an invitation to a resource in a user's OneDrive for Business, the OneDrive for Business owner is notified by e-mail.
 
 For additional information about how to configure notifications for external sharing, see Configure notifications for external sharing for OneDrive for Business.
@@ -1485,7 +1491,7 @@ Accept wildcard characters: False
 
 ### -OwnerAnonymousNotification
 
-Enables or disables owner anonymous notification. If enabled, an email notification will be sent to the OneDrive for Business owners when an anonymous links are created or changed.
+Enables or disables owner anonymous notification. If enabled, an email notification will be sent to the OneDrive for Business owners when anonymous links are created or changed.
 
 PARAMVALUE: $true | $false
 
@@ -1598,7 +1604,7 @@ Accept wildcard characters: False
 
 ### -SharingAllowedDomainList
 
-Specifies a list of email domains that is allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
+Specifies a list of email domains that are allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
 For additional information about how to restrict a domain sharing, see [Restricted Domains Sharing in Office 365 SharePoint Online and OneDrive for Business](https://support.office.com/en-US/article/Restricted-Domains-Sharing-in-Office-365-SharePoint-Online-and-OneDrive-for-Business-5d7589cd-0997-4a00-a2ba-2320ec49c4e9).
 
@@ -1616,7 +1622,7 @@ Accept wildcard characters: False
 
 ### -SharingBlockedDomainList
 
-Specifies a list of email domains that is blocked or prohibited for sharing with the external collaborators. Use space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
+Specifies a list of email domains that are blocked or prohibited for sharing with the external collaborators. Use space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
 For additional information about how to restrict a domain sharing, see [Restricted Domains Sharing in Office 365 SharePoint Online and OneDrive for Business](https://support.office.com/en-US/article/Restricted-Domains-Sharing-in-Office-365-SharePoint-Online-and-OneDrive-for-Business-5d7589cd-0997-4a00-a2ba-2320ec49c4e9).
 
@@ -1754,7 +1760,6 @@ Default value: false
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -CustomizedExternalSharingServiceUrl
 
@@ -2331,9 +2336,7 @@ Accept wildcard characters: False
 
 ### -OneDriveLoopDefaultSharingLinkRole
 
-Gets or sets default share link role for Loop and Whiteboard files on OneDrive sites.
-
-Note: Although the values below may be viewable in Powershell, only View OR Edit may be set at this time. 
+This parameter sets the default share link role for Loop and Whiteboard files on OneDrive sites.
 
 The valid values are:  
 
@@ -2357,7 +2360,7 @@ Accept wildcard characters: False
 
 ### -CoreLoopDefaultSharingLinkScope
 
-Gets or sets default share link scope for Loop and Whiteboard files on SharePoint sites. 
+This parameter sets the default share link scope for Loop and Whiteboard files on SharePoint sites. 
 
 The valid values are:  
 
@@ -2380,9 +2383,7 @@ Accept wildcard characters: False
 
 ### -CoreLoopDefaultSharingLinkRole
 
-Gets or sets default share link role for Loop and Whiteboard files on SharePoint sites.
-
-Note: Although the values below may be viewable in Powershell, only View OR Edit may be set at this time. 
+This parameter sets the default share link role for Loop and Whiteboard files on SharePoint sites.
 
 The valid values are:  
 
@@ -2865,6 +2866,7 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveSharingCapability
+
 Determines what level of sharing is available for OneDrive sites. It corresponds to the `SharingCapabilities` for OneDrive sites.
 
 The valid values are:  
@@ -2886,7 +2888,10 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveDefaultShareLinkScope
-This parameter sets the default share link scope on OneDrive sites. It replaces the `DefaultSharingLinkType`. The valid values are:
+
+This parameter sets the default share link scope on OneDrive sites. It replaces the `DefaultSharingLinkType`.
+
+The valid values are:
 - `Anyone`: Anyone with the link can access the content.
 - `Organization`: Only people within the organization can access the content.
 - `SpecificPeople`: Only specific individuals (specified by the user) can access the content.
@@ -2904,7 +2909,10 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveDefaultShareLinkRole
-This parameter sets the default share link role on OneDrive sites. It replaces the `DefaultLinkPermission`. The valid values are:
+
+This parameter sets the default share link role on OneDrive sites. It replaces the `DefaultLinkPermission`.
+
+The valid values are:
 - `None`: No permissions granted.
 - `View`: View-only permissions.
 - `Edit`: Edit permissions.
@@ -2923,6 +2931,7 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveDefaultLinkToExistingAccess
+
 When set to `True`, the default sharing link will be a "People with Existing Access" link (which does not modify permissions) for OneDrive sites. When set to `False` (the default), the default sharing link type is controlled by the `OneDriveDefaultShareLinkScope` parameter.
 
 ```yaml
@@ -2937,7 +2946,10 @@ Accept wildcard characters: False
 ```
 
 ### -CoreDefaultShareLinkScope
-This parameter sets the default share link scope on SharePoint sites. It replaces the `DefaultSharingLinkType`. The valid values are:
+
+This parameter sets the default share link scope on SharePoint sites. It replaces the `DefaultSharingLinkType`.
+
+The valid values are:
 - `Anyone`: Anyone with the link can access the content.
 - `Organization`: Only people within the organization can access the content.
 - `SpecificPeople`: Only specific individuals (specified by the user) can access the content.
@@ -2955,7 +2967,10 @@ Accept wildcard characters: False
 ```
 
 ### -CoreDefaultShareLinkRole
-This parameter sets the default share link role on SharePoint sites. It replaces the `DefaultLinkPermission`. The valid values are:
+
+This parameter sets the default share link role on SharePoint sites. It replaces the `DefaultLinkPermission`.
+
+The valid values are:
 - `None`: No permissions granted.
 - `View`: View-only permissions.
 - `Edit`: Edit permissions.
@@ -2974,6 +2989,7 @@ Accept wildcard characters: False
 ```
 
 ### -CoreDefaultLinkToExistingAccess
+
 When set to `True`, the default sharing link will be a "People with Existing Access" link (which does not modify permissions) for SharePoint sites. When set to `False` (the default), the default sharing link type is controlled by the `CoreDefaultShareLinkScope` parameter.
 
 ```yaml
@@ -2988,7 +3004,23 @@ Accept wildcard characters: False
 ```
 
 ### -SelfServiceSiteCreationDisabled
+
 When set to `True`, users cannot create sites from SharePoint, OneDrive, the PnP PowerShell cmdlet, and the REST API. When set to `False` (the default), users can create sites from SharePoint, OneDrive, the PnP PowerShell cmdlet, and the REST API.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncAadB2BManagementPolicy
+
+This feature allows SharePoint Online to synchronize several Entra B2B collaboration settings [Guest user access restriction and collaboration restriction](https://learn.microsoft.com/en-us/entra/external-id/external-collaboration-settings-configure#configure-settings-in-the-portal), and store them on SharePoint Online tenant store. On sharing, SharePoint checks whether those synchronized settings are blocking sharing before sending invitation requests to Entra B2B invitation manager. The sync might take up to 24 hours to complete if you change those Entra B2B collaboration settings. To make the change effective on SharePoint Online immediately, run 'Set-SPOTenant -SyncAadB2BManagementPolicy $true' and it forces a sync from Microsoft Entra.
 
 ```yaml
 Type: Boolean
