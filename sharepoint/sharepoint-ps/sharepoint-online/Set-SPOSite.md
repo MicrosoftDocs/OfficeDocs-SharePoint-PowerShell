@@ -877,7 +877,7 @@ Accept wildcard characters: False
 
 ### -DefaultLinkToExistingAccess
 
-When set to TRUE, the DefaultSharingLinkType will be overriden and the default sharing link will a People with Existing Access link (which does not modify permissions). When set to FALSE (the default),  DefaultSharingLinkType parameter controls the the default sharing link type.
+When set to TRUE, the DefaultSharingLinkType will be overriden and the default sharing link will a People with Existing Access link (which does not modify permissions). When set to FALSE (the default), the DefaultSharingLinkType parameter controls the the default sharing link type.
 
 PARAMVALUE: $true | $false
 
