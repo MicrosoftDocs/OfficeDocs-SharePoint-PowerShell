@@ -9,7 +9,7 @@ ms.author: anfra
 ms.reviewer: anushmag
 manager: anushmag
 schema: 2.0.0
-ms.topic: reference
+
 ---
 
 # Get-SPOTenantRenameSitePrioritization
