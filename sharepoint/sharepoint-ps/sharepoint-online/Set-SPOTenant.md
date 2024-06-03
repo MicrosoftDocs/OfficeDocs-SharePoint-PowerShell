@@ -3020,7 +3020,7 @@ Accept wildcard characters: False
 
 ### -SyncAadB2BManagementPolicy
 
-This feature allows SharePoint Online to synchronize several Entra B2B collaboration settings [Guest user access restriction and collaboration restriction](https://learn.microsoft.com/en-us/entra/external-id/external-collaboration-settings-configure#configure-settings-in-the-portal), and store them on SharePoint Online tenant store. On sharing, SharePoint checks whether sharing is blocked by those synchronized settings before sending invitation requests to Entra B2B invitation manager. The sync may take up to 24 hours to complete if those Entra B2B collaboration settings are changed. To make the change effective on SharePoint Online immediately, please run 'Set-SPOTenant -SyncAadB2BManagementPolicy $true' and it will force a sync from Microsoft Entra.
+This feature allows SharePoint Online to synchronize several Entra B2B collaboration settings [Guest user access restriction and collaboration restriction](https://learn.microsoft.com/en-us/entra/external-id/external-collaboration-settings-configure#configure-settings-in-the-portal), and store them on SharePoint Online tenant store. On sharing, SharePoint checks whether those synchronized settings are blocking sharing before sending invitation requests to Entra B2B invitation manager. The sync might take up to 24 hours to complete if you change those Entra B2B collaboration settings. To make the change effective on SharePoint Online immediately, run 'Set-SPOTenant -SyncAadB2BManagementPolicy $true' and it forces a sync from Microsoft Entra.
 
 ```yaml
 Type: Boolean
