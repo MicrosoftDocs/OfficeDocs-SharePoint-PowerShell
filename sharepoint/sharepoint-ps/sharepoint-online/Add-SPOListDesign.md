@@ -6,7 +6,6 @@ schema: 2.0.0
 author: reedpamsft
 ms.author: reedpa
 ms.reviewer:
-ms.topic: List Templates
 title: Add-SPOListDesign
 ---
 
