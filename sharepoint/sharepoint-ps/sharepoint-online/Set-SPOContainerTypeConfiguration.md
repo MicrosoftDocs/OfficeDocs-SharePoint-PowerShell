@@ -56,6 +56,7 @@ PARAMVALUE: $true | $false
 
 ```yaml
 Type: Boolean
+Applicable: SharePoint Embedded
 Position: Named
 Required: False
 Default value: True
@@ -71,6 +72,7 @@ PARAMVALUE: $true | $false
 
 ```yaml
 Type: Boolean
+Applicable: SharePoint Embedded
 Position: Named
 Required: False
 Default value: True
