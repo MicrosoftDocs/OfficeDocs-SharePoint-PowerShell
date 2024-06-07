@@ -61,7 +61,7 @@ Required: False
 Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
-Applies to: SharePoint Embedded
+Applies to: SharePoint Online
 ```
 
 ### -SharingRestricted
@@ -77,7 +77,7 @@ Required: False
 Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
-Applies to: SharePoint Embedded
+Applies to: SharePoint Online
 ```
 
 ## RELATED LINKS
