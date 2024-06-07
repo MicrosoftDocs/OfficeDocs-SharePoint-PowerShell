@@ -56,12 +56,12 @@ PARAMVALUE: $true | $false
 
 ```yaml
 Type: Boolean
+Applicable: SharePoint Embedded
 Position: Named
 Required: False
 Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
-Applies to: SharePoint Embedded
 ```
 
 ### -SharingRestricted
@@ -72,12 +72,12 @@ PARAMVALUE: $true | $false
 
 ```yaml
 Type: Boolean
+Applicable: SharePoint Embedded
 Position: Named
 Required: False
 Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
-Applies to: SharePoint Embedded
 ```
 
 ## RELATED LINKS
