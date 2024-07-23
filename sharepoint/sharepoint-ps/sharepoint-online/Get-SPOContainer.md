@@ -37,13 +37,13 @@ Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [-Paged] [-PagingT
 ### ParamSet4
 
 ```powershell
-Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [[-Identity] <ContainerId>]
+Get-SPOContainer [[-Identity] <ContainerId>]
 ```
 
 ### ParamSet5
 
 ```powershell
-Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [[-Identity] <ContainerSiteURL>]  
+Get-SPOContainer [[-Identity] <ContainerSiteURL>]  
 ```
 
 ## DESCRIPTION
