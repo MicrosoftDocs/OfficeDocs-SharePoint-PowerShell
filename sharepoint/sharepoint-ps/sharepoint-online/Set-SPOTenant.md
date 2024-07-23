@@ -615,7 +615,7 @@ Accept wildcard characters: False
 
 ### -RequireAcceptingAccountMatchInvitedAccount
 
-This paramater has been deprecated since SharePoint Online legacy invitation flow switched to Entra B2B invitation flow.
+This parameter has been deprecated since SharePoint Online legacy invitation flow switched to Entra B2B invitation flow.
 
 ### -SearchResolveExactEmailOrUPN
 
@@ -1296,7 +1296,7 @@ Accept wildcard characters: False
 
 ### -NotifyOwnersWhenInvitationsAccepted
 
-This paramater has been deprecated since SharePoint Online legacy invitation flow switched to Entra B2B invitation flow.
+This parameter has been deprecated since SharePoint Online legacy invitation flow switched to Entra B2B invitation flow.
 
 ### -NotifyOwnersWhenItemsReshared
 
@@ -1803,7 +1803,7 @@ Accept wildcard characters: False
 
 ### -AllowDownloadingNonWebViewableFiles  
 
-This paramater has been deprecated.
+This parameter has been deprecated.
 
 ```yaml
 Type: Boolean
