@@ -617,34 +617,6 @@ Accept wildcard characters: False
 
 This paramater has been deprecated since SharePoint Online legacy invitation flow switched to Entra B2B invitation flow.
 
-Ensures that an external user can only accept an external sharing invitation with an account matching the invited email address.
-
-Administrators who desire increased control over external collaborators should consider enabling this feature.
-
-Note, this only applies to new external users accepting new sharing invitations. Also, the resource owner must share with an organizational or Microsoft account or the external user will be unable to access the resource.
-
-The valid values are:  
-
-- False (default) - When a document is shared with an external user, bob@contoso.com, it can be accepted by any user with access to the invitation link in the original e-mail.  
-- True - User must accept this invitation with bob@contoso.com.
-
-> [!NOTE]
-> If this functionality is turned off (value is False), it is possible for the external/guest users you invite to your Microsoft Entra ID, to log in using their personal, non-work accounts either on purpose, or by accident (they might have a pre-existing, signed in session already active in the browser window they use to accept your invitation).
-> [!NOTE]
-> Even though setting the value is instant (if you first run **Set-SPOTenant -RequireAcceptingAccountMatchInvitedAccount $True**, and then **Get-SPOTenant -RequireAcceptingAccountMatchInvitedAccount**, True should be returned), the functionality isn't turned on immediately. It may take up to 24 hours to take effect.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SearchResolveExactEmailOrUPN
 
 Removes the search capability from People Picker. Note, recently resolved names will still appear in the list until browser cache is cleared or expired. This also does not allow SharePoint users to search for security groups or SharePoint groups.
@@ -1325,24 +1297,6 @@ Accept wildcard characters: False
 ### -NotifyOwnersWhenInvitationsAccepted
 
 This paramater has been deprecated since SharePoint Online legacy invitation flow switched to Entra B2B invitation flow.
-
-When this parameter is set to $true and when an external user accepts an invitation to a resource in a user's OneDrive for Business, the OneDrive for Business owner is notified by e-mail.
-
-For additional information about how to configure notifications for external sharing, see Configure notifications for external sharing for OneDrive for Business.
-
-The valid values are $true and $false.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -NotifyOwnersWhenItemsReshared
 
