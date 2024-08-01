@@ -20,7 +20,7 @@ Returns  billing policies asscoiated with the application
 
 ```powershell
 
-Get-SPOAppBillingPolicies [[-ApplicationId] <ApplicationId>] 
+Get-SPOAppBillingPolicies
 ```
 
 ## DESCRIPTION
@@ -35,25 +35,23 @@ This cmdlet will return both active and inactive billing policies for the applic
 
 ```powershell
 
-Get-SPOAppBillingPolicies -ApplicationId 1653hhd-87100luhw-786265gk-00asa00
+Get-SPOAppBillingPolicies
 
 ```
 
-This cmdlet returns billing policies including 
+This cmdlet returns billing policies with information such as : 
 
 - Application id : Application Identifier
 
 - Azure subscription Id : Subscription ID associated with the appplication
 
-- Resource Group : Resource group associated with the appplication
+- Resource Group : Resource group associated with the Azure Subscription 
 
-- Azure Region: Region 
+- Azure Region: Azure Region associated with the Azure Subscription 
 
-- Subscription State: State of the subscription - Valid or Invalid
+- Subscription State: Describes whether billing policy is valid or invalid
 
-- UsageCharges: Who is charged for the usage - Application owner or consuming tenant
-
-- Type ID :
+- UsageCharges: Who should be billed for Application Usage. Values are : AppOwnerIsCharged or ConsumingTenantOfTheAppIsCharged
 
 ## RELATED LINKS
 
