@@ -27,6 +27,13 @@ Remove-SPOAppBillingPolicy [[-ApplicationId] <ApplicationId>]
 
 Remove-SPOAppBillingPolicy removes the billing policy associated with the application. 
 
+> [!NOTE]
+> To sign into SharePoint Online PowerShell Module use the below cmdlet for authentication
+> 
+```powershell
+Connect-SPOService -Url https://contoso-admin.sharepoint.com
+```
+This cmdlet will prompt for credentials. This is required if the account is using multi-factor authentication.
 
 ## EXAMPLES
 
