@@ -33,7 +33,7 @@ Remove-SPOAppBillingPolicy removes the billing policy associated with the applic
 ```powershell
 Connect-SPOService -Url https://contoso-admin.sharepoint.com
 ```
-This cmdlet will prompt for credentials. This is required if the account is using multi-factor authentication.
+>This cmdlet will prompt for credentials. This is required if the account is using multi-factor authentication.
 
 ## EXAMPLES
 
@@ -43,6 +43,24 @@ This cmdlet will prompt for credentials. This is required if the account is usin
 
 Remove-SPOAppBillingPolicy -ApplicationId 1653hhd-87100luhw-786265gk-00asa00
 
+```
+## PARAMETERS
+
+### -ApplicationID
+
+This parameter specifies the ID of the  application.
+ 
+```yaml
+Type: GUID
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
