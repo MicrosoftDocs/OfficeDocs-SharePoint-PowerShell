@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Creates a new billing policy for an application
+Creates a new billing policy for an application owned by the tenant.
 
 ## SYNTAX
 
@@ -30,7 +30,17 @@ New-SPOAppBillingPolicy
 
 ## DESCRIPTION
 
-This cmdlet creates a new billing policy for an application that wants to use services using the pay-as-you-go billign model. 
+This cmdlet creates a new billing policy for an application that is owned by the tenant running the cmdlet. 
+
+You must be a SharePoint Online Administrator or Global Administrator to run this cmdlet.
+
+> [!NOTE]
+> To sign into SharePoint Online PowerShell Module use the below cmdlet for authentication
+> 
+```powershell
+Connect-SPOService -Url https://contoso-admin.sharepoint.com
+```
+This cmdlet will prompt for credentials. This is required if the account is using multi-factor authentication.
 
 ## EXAMPLES
 
@@ -120,10 +130,12 @@ Accept wildcard characters: False
 
 ### -UsageCharges
 
-Which entity is charged for the usage - AppOwnerIsCharged or ConsumingTenantoftheAppischarged
+This parameters determined who is charged for the usage of the application. This parameter supports two values  - AppOwnerIsCharged or ConsumingTenantoftheAppischarged.
+- AppOwnerIsCharged : The tenant owning the application is charged for the usage
+- ConsumingTenantoftheAppischarged : The tenant using the application is charged for the usage.
  
 ```yaml
-Type: String
+Type: Switch
 Parameter Sets: All
 Aliases:
 Applicable: SharePoint Online
@@ -138,4 +150,3 @@ Accept wildcard characters: False
 
 [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
-[Syntex pay-as-you-go services](https://learn.microsoft.com/en-us/microsoft-365/syntex/syntex-pay-as-you-go-services)
