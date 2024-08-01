@@ -55,7 +55,7 @@ Get-SPOAppBillingPolicies -ApplicationId 50785fde-3082-47ac-a36d-06282ac5c7da  -
 This parameter specifies the ID of the  application.
  
 ```yaml
-Type: String
+Type: GUID
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 The unique identifier of the Azure Active Directory profile (Microsoft Entra ID) for billing purposes.
  
 ```yaml
-Type: String
+Type: GUID
 Parameter Sets: Standard
 Aliases:
 Applicable: SharePoint Online
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 
 ### -ResourceGroup
 
-The resource group of the Application
+Resource Group Name associated with the Azure Subscription
  
 ```yaml
 Type: String
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 
 ### -AzureRegion
 
-The region of the application.
+The region of the Azure Subscription.
  
 ```yaml
 Type: String
