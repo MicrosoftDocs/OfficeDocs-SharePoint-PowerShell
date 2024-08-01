@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Returns billing policies athat are owned by the tenant.
+Returns billing policies that are owned by the tenant.
 
 ## SYNTAX
 
@@ -25,9 +25,9 @@ Get-SPOAppBillingPolicies
 
 ## DESCRIPTION
 
-Get-SPOAppBillingPolicies returns billing policies athat are owned by the tenant. If the tenant has no billing policies associated, the cmdlet will produce no output. 
+Get-SPOAppBillingPolicies returns a list of billing policies that are owned by the tenant. If the tenant has no billing policies associated, the cmdlet will produce no output. 
 
-The output will include information about the billing policies available in the tenant such as Application Id, Azure subscription ID, Resource Group, Region, State of the subscription and which tenant is charged.
+Each billing policy will include information such as Application Id, Azure subscription ID, Resource Group, Region, State of the subscription and the usage charging model.
 
 You must be a SharePoint Online Administrator or Global Administrator to run this cmdlet.
 
@@ -37,7 +37,7 @@ You must be a SharePoint Online Administrator or Global Administrator to run thi
 ```powershell
 Connect-SPOService -Url https://contoso-admin.sharepoint.com
 ```
-This cmdlet will prompt for credentials. This is required if the account is using multi-factor authentication.
+>This cmdlet will prompt for credentials. This is required if the account is using multi-factor authentication.
 
 ## EXAMPLES
 
@@ -49,20 +49,97 @@ Get-SPOAppBillingPolicies
 
 ```
 
-This cmdlet returns billing policies with information such as : 
+## PARAMETERS
 
-- Application id : Application Identifier
+### -ApplicationID
 
-- UsageCharges: Who should be billed for Application Usage. Values are : AppOwnerIsCharged or ConsumingTenantOfTheAppIsCharged
+This parameter specifies the ID of the  application.
+ 
+```yaml
+Type: GUID
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
-- Azure subscription Id : Subscription ID associated with the appplication
+### -AzureRegion
 
-- Resource Group : Resource group associated with the Azure Subscription 
+The region of the Azure Subscription.
+ 
+```yaml
+Type: String
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -IsActivated
 
-- Azure Region: Azure Region associated with the Azure Subscription 
+Statement if the billing policy is active
+ 
+```yaml
+Type: String
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
-- Subscription State: Describes whether billing policy is valid or invalid
+### -ResourceGroup
 
+Resource Group Name associated with the Azure Subscription
+ 
+```yaml
+Type: String
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -AzureSubscriptionId
+
+The unique identifier of the Azure subscription for billing purposes.
+ 
+```yaml
+Type: GUID
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SubscriptionState
+
+Describes whether billing policy is valid or invalid
+ 
+```yaml
+Type: String
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -UsageCharges
+
+This parameters determines who is charged for the usage of the application. This parameter supports two values  - AppOwnerIsCharged or ConsumingTenantoftheAppischarged.
+- AppOwnerIsCharged : The tenant owning the application is charged for the usage
+- ConsumingTenantoftheAppischarged : The tenant using the application is charged for the usage.
+ 
+```yaml
+Type: String
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ## RELATED LINKS
 
 [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
