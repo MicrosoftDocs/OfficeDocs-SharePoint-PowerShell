@@ -40,7 +40,7 @@ You must be a SharePoint Online Administrator or Global Administrator to run thi
 ```powershell
 Connect-SPOService -Url https://contoso-admin.sharepoint.com
 ```
-This cmdlet will prompt for credentials. This is required if the account is using multi-factor authentication.
+>This cmdlet will prompt for credentials. This is required if the account is using multi-factor authentication.
 
 ## EXAMPLES
 
