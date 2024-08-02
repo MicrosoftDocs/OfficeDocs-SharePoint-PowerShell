@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spocontainer
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Get-SPOAppBillingPolicies
 applicable: SharePoint Online
 title: Get-SPOAppBillingPolicies
 schema: 2.0.0
@@ -27,17 +27,19 @@ Get-SPOAppBillingPolicies
 
 Get-SPOAppBillingPolicies returns a list of billing policies that are owned by the tenant. If the tenant has no billing policies associated, the cmdlet will produce no output. 
 
-Each billing policy will include information such as Application Id, Azure subscription ID, Resource Group, Region, State of the subscription and the usage charging model.
+The output of this cmdlet will include information related to the billing policy such as Application Id, Azure subscription ID, Resource Group, Region, State of the subscription and the usage charging model.
 
-You must be a SharePoint Online Administrator or Global Administrator to run this cmdlet.
+You must be a SharePoint Administrator or Global Administrator to run this cmdlet.
 
 > [!NOTE]
-> To sign into SharePoint Online PowerShell Module use the below cmdlet for authentication
+> To use the Get-SPOAppBillingPolicies cmdlet, an admin must authenticate to SharePoint Online using modern authentication.
+>
+> Use the **Connect-SPOService** cmdlet shown below, which will prompt you to enter your credentials. If multi-factor authentication (MFA) is enabled, you will need to complete the MFA process (e.g., entering a verification code sent to your phone).
 > 
-```powershell
-Connect-SPOService -Url https://contoso-admin.sharepoint.com
-```
->This cmdlet will prompt for credentials. This is required if the account is using multi-factor authentication.
+>```powershell
+> Connect-SPOService -Url https://(your-tenant)-admin.sharepoint.com
+>```
+> Replace (your-tenant) with your actual SharePoint Online domain. E.g. https://contoso-admin.sharepoint.com
 
 ## EXAMPLES
 
