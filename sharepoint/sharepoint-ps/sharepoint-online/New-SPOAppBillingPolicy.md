@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spocontainer
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/New-SPOAppBillingPolicy
 applicable: SharePoint Online
 title: New-SPOAppBillingPolicy
 schema: 2.0.0
@@ -32,15 +32,17 @@ New-SPOAppBillingPolicy
 
 This cmdlet creates a new billing policy for an application that is owned by the tenant running the cmdlet. 
 
-You must be a SharePoint Online Administrator or Global Administrator to run this cmdlet.
+You must be a SharePoint Administrator or Global Administrator to run this cmdlet.
 
 > [!NOTE]
-> To sign into SharePoint Online PowerShell Module use the below cmdlet for authentication
+> To use the New-SPOAppBillingPolicy cmdlet, an admin must authenticate to SharePoint Online using modern authentication.
+>
+> Use the **Connect-SPOService** cmdlet shown below, which will prompt you to enter your credentials. If multi-factor authentication (MFA) is enabled, you will need to complete the MFA process (e.g., entering a verification code sent to your phone).
 > 
-```powershell
-Connect-SPOService -Url https://contoso-admin.sharepoint.com
-```
->This cmdlet will prompt for credentials. This is required if the account is using multi-factor authentication.
+>```powershell
+> Connect-SPOService -Url https://(your-tenant)-admin.sharepoint.com
+>```
+> Replace (your-tenant) with your actual SharePoint Online domain. E.g. https://contoso-admin.sharepoint.com
 
 ## EXAMPLES
 
@@ -48,14 +50,14 @@ Connect-SPOService -Url https://contoso-admin.sharepoint.com
 
 ```powershell
 
-Get-SPOAppBillingPolicies -ApplicationId 50785fde-3082-47ac-a36d-06282ac5c7da  -AzureSubscriptionId c7170373-eb8d-4984-8cc9-59bcc88c65a0 -ResouceGroup "SPOPAYG" -AzureRegion "Uk-South" -UsageCharges AppOwnerIsCharged
+New-SPOAppBillingPolicy -ApplicationId 50785fde-3082-47ac-a36d-06282ac5c7da  -AzureSubscriptionId c7170373-eb8d-4984-8cc9-59bcc88c65a0 -ResouceGroup "SPOPAYG" -AzureRegion "Uk-South" -UsageCharges AppOwnerIsCharged
 
 ```
 ### Example 2
 
 ```powershell
 
-Get-SPOAppBillingPolicies -ApplicationId 50785fde-3082-47ac-a36d-06282ac5c7da  -AzureSubscriptionId c7170373-eb8d-4984-8cc9-59bcc88c65a0 -ResouceGroup "SPOPAYG" -AzureRegion "Uk-South" -UsageCharges ConsumingTenantOfTheAppisCharged
+New-SPOAppBillingPolicy -ApplicationId 50785fde-3082-47ac-a36d-06282ac5c7da  -AzureSubscriptionId c7170373-eb8d-4984-8cc9-59bcc88c65a0 -ResouceGroup "SPOPAYG" -AzureRegion "Uk-South" -UsageCharges ConsumingTenantOfTheAppisCharged
 
 ```
 ## PARAMETERS
