@@ -39,7 +39,7 @@ You must be a SharePoint Administrator or Global Administrator to run this cmdle
 >```powershell
 > Connect-SPOService -Url https://(your-tenant)-admin.sharepoint.com
 >```
-, e.g.
+Replace (your-tenant) with your actual SharePoint Online domain, e.g. https://contoso-admin.sharepoint.com. 
 
 ## EXAMPLES
 
