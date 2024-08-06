@@ -107,6 +107,14 @@ The following cmdlet references are for SharePoint Online.
 
 {{Manually Enter Get-SPOCrossGeoUsers Description Here}}
 
+### [Get-SPOCrossTenantCompatibilityStatus](Get-SPOCrossTenantCompatibilityStatus.md)
+
+{{Manually Enter Get-SPOCrossTenantCompatibilityStatus Description Here}}
+
+### [Get-SPOCrossTenantHostUrl](Get-SPOCrossTenantHostUrl.md)
+
+{{Manually Enter Get-SPOCrossTenantHostUrl Description Here}}
+
 ### [Get-SPODeletedSite](Get-SPODeletedSite.md)
 
 {{Manually Enter Get-SPODeletedSite Description Here}}
@@ -138,6 +146,18 @@ The following cmdlet references are for SharePoint Online.
 ### [Get-SPOListDesign](Get-SPOListDesign.md)
 
 {{Manually Enter Get-SPOListDesign Description Here}}
+
+### [Get-SPOListFileVersionBatchDeleteJobProgress](Get-SPOListFileVersionBatchDeleteJobProgress.md)
+
+{{Manually Enter Get-SPOListFileVersionBatchDeleteJobProgress Description Here}}
+
+### [Get-SPOListFileVersionExpirationReportJobProgress](Get-SPOListFileVersionExpirationReportJobProgress.md)
+
+{{Manually Enter Get-SPOListFileVersionExpirationReportJobProgress Description Here}}
+
+### [Get-SPOListVersionPolicy](Get-SPOListVersionPolicy.md)
+
+{{Manually Enter Get-SPOListVersionPolicy Description Here}}
 
 ### [Get-SPOMigrationJobProgress](Get-SPOMigrationJobProgress.md)
 
@@ -183,6 +203,14 @@ The following cmdlet references are for SharePoint Online.
 
 {{Manually Enter Add-SPOSiteDesign Description Here}}
 
+### [Get-SPOSiteFileVersionBatchDeleteJobProgress](Get-SPOSiteFileVersionBatchDeleteJobProgress.md)
+
+{{Manually Enter Get-SPOSiteFileVersionBatchDeleteJobProgress Description Here}}
+
+### [Get-SPOSiteFileVersionExpirationReportJobProgress](Get-SPOSiteFileVersionExpirationReportJobProgress.md)
+
+{{Manually Enter Get-SPOSiteFileVersionExpirationReportJobProgress Description Here}}
+
 ### [Get-SPOSiteGroup](Get-SPOSiteGroup.md)
 
 {{Manually Enter Get-SPOSiteGroup Description Here}}
@@ -194,6 +222,10 @@ The following cmdlet references are for SharePoint Online.
 ### [Get-SPOSiteScriptFromList](Get-SPOSiteScriptFromList.md)
 
 {{Manually Enter Get-SPOSiteScript Description Here}}
+
+### [Get-SPOSiteVersionPolicyJobProgress](Get-SPOSiteVersionPolicyJobProgress.md)
+
+{{Manually Enter Get-SPOSiteVersionPolicyJobProgress Description Here}}
 
 ### [Get-SPOStructuralNavigationCacheSiteState](Get-SPOStructuralNavigationCacheSiteState.md)
 
@@ -230,6 +262,10 @@ The following cmdlet references are for SharePoint Online.
 ### [Get-SPOTenantLogLastAvailableTimeInUtc](Get-SPOTenantLogLastAvailableTimeInUtc.md)
 
 {{Manually Enter Get-SPOTenantLogLastAvailableTimeInUtc Description Here}}
+
+### [Get-SPOTenantRenameSitePrioritization](Get-SPOTenantRenameSitePrioritization.md)
+
+{{Manually Enter Get-SPOTenantRenameSitePrioritization Description Here}}
 
 ### [Get-SPOTenantServicePrincipalPermissionGrants](Get-SPOTenantServicePrincipalPermissionGrants.md)
 
@@ -291,6 +327,14 @@ The following cmdlet references are for SharePoint Online.
 
 {{Manually Enter New-SPODataConnectionSetting Description Here}}
 
+### [New-SPOListFileVersionBatchDeleteJob](New-SPOListFileVersionBatchDeleteJob.md)
+
+{{Manually Enter New-SPOListFileVersionBatchDeleteJob Description Here}}
+
+### [New-SPOListFileVersionExpirationReportJob](New-SPOListFileVersionExpirationReportJob.md)
+
+{{Manually Enter New-SPOListFileVersionExpirationReportJob Description Here}}
+
 ### [New-SPOMigrationEncryptionParameters](New-SPOMigrationEncryptionParameters.md)
 
 {{Manually Enter New-SPOMigrationEncryptionParameters Description Here}}
@@ -314,6 +358,15 @@ The following cmdlet references are for SharePoint Online.
 ### [New-SPOSite](New-SPOSite.md)
 
 {{Manually Enter New-SPOSite Description Here}}
+
+### [New-SPOSiteFileVersionBatchDeleteJob](New-SPOSiteFileVersionBatchDeleteJob.md)
+
+{{Manually Enter New-SPOSiteFileVersionBatchDeleteJob Description Here}}
+
+### [New-SPOSiteFileVersionExpirationReportJob](New-SPOSiteFileVersionExpirationReportJob.md)
+
+{{Manually Enter New-SPOSiteFileVersionExpirationReportJob Description Here}}
+
 
 ### [New-SPOSiteGroup](New-SPOSiteGroup.md)
 
@@ -351,6 +404,10 @@ This cmdlet is not currently active in production and may be removed in the futu
 
 {{Manually Enter Remove-SPOListDesign Description Here}}
 
+### [Remove-SPOListFileVersionBatchDeleteJob](Remove-SPOListFileVersionBatchDeleteJob.md)
+
+{{Manually Enter Remove-SPOListFileVersionBatchDeleteJob Description Here}}
+
 ### [Remove-SPOMigrationJob](Remove-SPOMigrationJob.md)
 
 {{Manually Enter Remove-SPOMigrationJob Description Here}}
@@ -379,6 +436,10 @@ This cmdlet is not currently active in production and may be removed in the futu
 
 {{Manually Enter Remove-SPOSiteDesign Description Here}}
 
+### [Remove-SPOSiteFileVersionBatchDeleteJob](Remove-SPOSiteFileVersionBatchDeleteJob.md)
+
+{{Manually Enter Remove-SPOSiteFileVersionBatchDeleteJob Description Here}}
+
 ### [Remove-SPOSiteGroup](Remove-SPOSiteGroup.md)
 
 {{Manually Enter Remove-SPOSiteGroup Description Here}}
@@ -387,9 +448,17 @@ This cmdlet is not currently active in production and may be removed in the futu
 
 {{Manually Enter Remove-SPOSiteScript Description Here}}
 
+### [Remove-SPOSiteVersionPolicyJob](Remove-SPOSiteVersionPolicyJob.md)
+
+{{Manually Enter Remove-SPOSiteVersionPolicyJob Description Here}}
+
 ### [Remove-SPOTenantCdnOrigin](Remove-SPOTenantCdnOrigin.md)
 
 {{Manually Enter Remove-SPOTenantCdnOrigin Description Here}}
+
+### [Remove-SPOTenantRenameSitePrioritization](Remove-SPOTenantRenameSitePrioritization.md)
+
+{{Manually Enter Remove-SPOTenantRenameSitePrioritization Description Here}}
 
 ### [Remove-SPOTenantSyncClientRestriction](Remove-SPOTenantSyncClientRestriction.md)
 
@@ -435,6 +504,10 @@ This cmdlet is not currently active in production and may be removed in the futu
 
 {{Manually Enter Revoke-SPOUserSession Description Here}}
 
+### [Set-SPOCrossTenantRelationship](Set-SPOCrossTenantRelationship.md)
+
+{{Manually Enter Set-SPOCrossTenantRelationship Description Here}}
+
 ### [Set-SPODataConnectionSetting](Set-SPODataConnectionSetting.md)
 
 {{Manually Enter Set-SPODataConnectionSetting Description Here}}
@@ -454,6 +527,10 @@ This cmdlet is not currently active in production and may be removed in the futu
 ### [Set-SPOHubSite](Set-SPOHubSite.md)
 
 {{Manually Enter Set-SPOHubSite Description Here}}
+
+### [Set-SPOListVersionPolicy](Set-SPOListVersionPolicy.md)
+
+{{Manually Enter Set-SPOListVersionPolicy Description Here}}
 
 ### [Set-SPOMigrationPackageAzureSource](Set-SPOMigrationPackageAzureSource.md)
 

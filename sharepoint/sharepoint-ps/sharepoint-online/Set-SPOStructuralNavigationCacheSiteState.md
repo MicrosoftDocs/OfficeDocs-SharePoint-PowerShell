@@ -29,14 +29,14 @@ The Set-SPOStructuralNavigationCacheSiteState cmdlet can be used to enable or di
 
 ### Example 1
 ```powershell
-PS C:\> Set-SPOStructuralNavigationCacheSiteState –IsEnabled $true -SiteUrl "https://contoso.sharepoint.com/sites/product/" 
+PS C:\> Set-SPOStructuralNavigationCacheSiteState -IsEnabled $true -SiteUrl "https://contoso.sharepoint.com/sites/product/" 
 ```
 
 This example enables caching for all webs in the site collection https://contoso.sharepoint.com/sites/product/. 
 
 ### Example 2
 ```powershell
-PS C:\> Set-SPOStructuralNavigationCacheSiteState –IsEnabled $false -SiteUrl "https://contoso.sharepoint.com/sites/product/"  
+PS C:\> Set-SPOStructuralNavigationCacheSiteState -IsEnabled $false -SiteUrl "https://contoso.sharepoint.com/sites/product/"  
 ```
 
 This example disables caching for all webs in the site collection https://contoso.sharepoint.com/sites/product/. 

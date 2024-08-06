@@ -58,6 +58,13 @@ New-SPWebApplication https://contoso.com -IdentityProvider $ip
 This example sets the identity provider using the .ASPNetMembership and Role parameters.
 When these parameters are used, a variable must be set; otherwise, the values do not take effect.
 
+### -------------------------EXAMPLE 3----------------------
+```powershell
+$cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2('C:\MyCert.cer')
+Set-SPTrustedIdentityTokenIssuer "LiveIDSTS" -ImportTrustCertificate $cert
+```
+
+This example updates the certificate used by the identity provider.
 
 ## PARAMETERS
 

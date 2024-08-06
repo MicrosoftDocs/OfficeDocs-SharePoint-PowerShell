@@ -30,39 +30,43 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-Title <String>] [-WhatIf] [-AllowDownloadingNonWebViewableFiles <Boolean>]
  [-CommentsOnSitePagesDisabled <Boolean>] [-SocialBarOnSitePagesDisabled <Boolean>]
  [-DisableAppViews <AppViewsPolicy>]
- [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>] 
+ [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>]
  [-DisableFlows <FlowsPolicy>]
- [-LoopDefaultSharingLinkScope <String>]
- [-LoopDefaultSharingLinkRole <String>]
- [-RestrictedToGeo <RestrictedToRegion>] 
+ [-LoopDefaultSharingLinkScope <SharingScope>]
+ [-LoopDefaultSharingLinkRole <SharingRole>]
+ [-RestrictedToGeo <RestrictedToRegion>]
  [-SharingAllowedDomainList <String>]
- [-SharingBlockedDomainList <String>] 
+ [-SharingBlockedDomainList <String>]
  [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
- [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] 
+ [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>]
  [-StorageQuotaReset]
  [-DefaultSharingLinkType]
- [-DefaultLinkPermission] 
+ [-DefaultLinkPermission]
  [-DefaultLinkToExistingAccess]
  [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>]
  [-AuthenticationContextName <String>]
- [-LimitedAccessFileType <SPOLimitedAccessFileType>] 
- [-AllowEditing <Boolean>]  
- [-AnonymousLinkExpirationInDays <Int32>] 
+ [-LimitedAccessFileType <SPOLimitedAccessFileType>]
+ [-AllowEditing <Boolean>]
+ [-AnonymousLinkExpirationInDays <Int32>]
  [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>]
- [-OverrideTenantExternalUserExpirationPolicy <Boolean>] 
+ [-OverrideTenantExternalUserExpirationPolicy <Boolean>]
  [-ExternalUserExpirationInDays <Int32>]
- [-SensitivityLabel <String>] 
- [-RequestFilesLinkExpirationInDays <Int32>] 
+ [-SensitivityLabel <String>]
+ [-RequestFilesLinkExpirationInDays <Int32>]
  [-RequestFilesLinkEnabled <Boolean>]
  [-RemoveLabel]
  [-BlockDownloadPolicy <Boolean>]
+ [-OverrideBlockUserInfoVisibility <String>]
+ [-OverrideSharingCapability <Boolean>]
+ [-DefaultShareLinkScope <SharingScope>]
+ [-DefaultShareLinkRole <SharingRole>]
  [<CommonParameters>]
 ```
 
 ### ParamSet2
 
 ```powershell
-Set-SPOSite [-Identity] <SpoSitePipeBind> -EnablePWA <Boolean> [-Confirm] [-WhatIf] [<CommonParameters>]
+Set-SPOSite [-Identity] <SpoSitePipeBind> [-EnablePWA <Boolean>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### ParamSet3
@@ -80,6 +84,19 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-ResourceQuotaWarningLevel <Double>]
  [-SandboxedCodeActivationCapability <SandboxedCodeActivationCapabilities>]
  [-SharingCapability <SharingCapabilities>] [-StorageQuota <Int64>] [-StorageQuotaWarningLevel <Int64>]
+ [<CommonParameters>]
+```
+
+### SetSiteFileVersionPolicy
+```powershell
+Set-SPOSite [-Identity] <SpoSitePipeBind>
+ [-EnableAutoExpirationVersionTrim <Boolean>]
+ [-MajorVersionLimit <int>]
+ [-MajorWithMinorVersionsLimit <int>]
+ [-ExpireVersionsAfterDays <int>]
+ [-ApplyToNewDocumentLibraries]
+ [-ApplyToExistingDocumentLibraries]
+ [-InheritVersionPolicyFromTenant]
  [<CommonParameters>]
 ```
 
@@ -181,6 +198,79 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/research -Conditional
 
 In this example, an authentication context called MFA is attached to the site.
 
+### Example 11
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $true
+```
+Example 11 sets automatic version history limits at site level. Automatic setting will be applied to all new document libraries created in the site and a background request will be created to asynchronously process the update on existing document libraries that have versioning enabled.
+
+### EXAMPLE 12
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -MajorWithMinorVersionsLimit 20 -ExpireVersionsAfterDays 30
+```
+
+Example 12 sets manual version history limits at site level by limiting the number of versions and the time (in days) versions are kept. The new document libraries will use this version setting. Also it creates a job to set this manual version setting for existing document libraries that enabled versioning.
+
+### EXAMPLE 13
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -MajorWithMinorVersionsLimit 20 -ExpireVersionsAfterDays 0
+```
+
+Example 13 sets manual version history limits at site level by limiting the number of versions with no time limits. The new document libraries will use this version setting. Also it creates a job to set this manual version setting for existing document libraries that enabled versioning.
+
+### Example 14
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $true -ApplyToNewDocumentLibraries
+```
+Example 14 sets automatic version history limits at site level. The new document libraries will use this version setting.
+
+### EXAMPLE 15
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 30 -ApplyToNewDocumentLibraries
+```
+
+Example 15 sets manual version history limits at site level by limiting the number of versions and the time (in days) versions are kept. The new document libraries will use this version setting.
+
+### EXAMPLE 16
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 0 -ApplyToNewDocumentLibraries
+```
+
+Example 16 sets manual version history limits at site level by limiting the number of versions with no time limits. The new document libraries will use this version setting.
+
+### Example 17
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $true -ApplyToExistingDocumentLibraries
+```
+Example 17 creates a job to set automatic version history limits for existing document libraries that enabled versioning.
+
+### EXAMPLE 18
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -MajorWithMinorVersionsLimit 20 -ExpireVersionsAfterDays 30 -ApplyToExistingDocumentLibraries
+```
+
+Example 18 creates a job to set manual version history limits that limits the number of versions and the time (in days) versions are kept for existing document libraries that enabled versioning.
+
+### EXAMPLE 19
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -MajorWithMinorVersionsLimit 20 -ExpireVersionsAfterDays 0 -ApplyToExistingDocumentLibraries
+```
+
+Example 19 creates a request to set manual version history limits that limits the number of versions with no time limits for existing document libraries that enabled versioning.
+
+### EXAMPLE 20
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -InheritVersionPolicyFromTenant
+```
+
+Example 20 clears the file version setting at site level. The new document libraries will use the Tenant Level setting. It won't impact the existing document libraries.
+
 ## PARAMETERS
 
 ### -EnablePWA
@@ -269,8 +359,6 @@ Accept wildcard characters: False
 
 This parameter prevents non-owners from inviting new users to the site.
 
-This parameter is available only in SharePoint Online Management Shell Version 16.0.4613.1211 or later.
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ParamSet3
@@ -324,7 +412,7 @@ Accept wildcard characters: False
 
 ### -MediaTranscription
 
-When the feature is enabled, videos can have transcripts generated on demand or generated automatically in certain scenarios. This is the default because the policy is default on. If a video owner decides they don’t want the transcript, they can always hide or delete it from that video. 
+When the feature is enabled, videos can have transcripts generated on demand or generated automatically in certain scenarios. This is the default because the policy is default on. If a video owner decides they don't want the transcript, they can always hide or delete it from that video. 
 Possible values:
 
 - Enabled
@@ -448,7 +536,13 @@ Accept wildcard characters: False
 ### -SharingCapability
 
 Determines what level of sharing is available for the site.
-The possible values are: Disabled - don't allow sharing outside your organization, ExistingExternalUserSharingOnly - Allow sharing only with the external users that already exist in your organization's directory, ExternalUserSharingOnly - allow external users who accept sharing invitations and sign in as authenticated users, or ExternalUserAndGuestSharing - allow sharing with all external users, and by using anonymous access links.
+
+The valid values are:  
+
+- Disabled - Sharing outside your organization is disabled.
+- ExistingExternalUserSharingOnly - Allow sharing only with the external users that already exist in your organization's directory.
+- ExternalUserSharingOnly - External user sharing (share by email) is enabled, but anonymous link sharing is disabled.
+- ExternalUserAndGuestSharing - External user sharing (share by email) and anonymous link sharing are both enabled.
 
 For more information about sharing, see Turn external sharing on or off for SharePoint Online (<https://learn.microsoft.com/sharepoint/turn-external-sharing-on-or-off>).
 
@@ -607,7 +701,9 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCompanyWideSharingLinks
+
 Disables People in your organization links. For more information, see [People in your organization sharing links](https://learn.microsoft.com/microsoft-365/solutions/microsoft-365-limit-sharing#people-in-your-organization-sharing-links).
+
 Possible values
 
 - Disabled
@@ -666,7 +762,7 @@ Accept wildcard characters: False
 
 ### -SharingAllowedDomainList
 
-Specifies a list of email domains that is allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
+Specifies a list of email domains that are allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
 For additional information about how to restrict a domain sharing, see [Restrict sharing of SharePoint and OneDrive content by domain](https://learn.microsoft.com/sharepoint/restricted-domains-sharing).
 
@@ -684,7 +780,7 @@ Accept wildcard characters: False
 
 ### -SharingBlockedDomainList
 
-Specifies a list of email domains that is blocked or prohibited for sharing with the external collaborators. Use space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
+Specifies a list of email domains that are blocked or prohibited for sharing with the external collaborators. Use space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
 For additional information about how to restrict a domain sharing, see [Restrict sharing of SharePoint and OneDrive content by domain](https://learn.microsoft.com/sharepoint/restricted-domains-sharing).
 
@@ -705,9 +801,10 @@ Accept wildcard characters: False
 Specifies the sharing mode for external domains.
 
 Possible values are:
+
 - None - Do not restrict sharing by domain
-- AllowList - Sharing is allowed only with external users that have account on domains specified within -SharingAllowedDomainList
-- BlockList - Sharing is allowed with external users in all domains except in domains specified within -SharingBlockedDomainList
+- AllowList - Sharing is allowed only with external users that have account on domains specified with -SharingAllowedDomainList
+- BlockList - Sharing is allowed with external users in all domains except in domains specified with -SharingBlockedDomainList
 
 For additional information about how to restrict a domain sharing, see [Restrict sharing of SharePoint and OneDrive content by domain](https://learn.microsoft.com/sharepoint/restricted-domains-sharing).
 
@@ -725,7 +822,7 @@ Accept wildcard characters: False
 
 ### -ShowPeoplePickerSuggestionsForGuestUsers
 
-To enable the option to search for existing guest users at Site Collection Level, set this parameter to $true.
+To enable the option to search for existing guest users at site collection level, set this parameter to $true.
 
 ```yaml
 Type: Boolean
@@ -757,7 +854,7 @@ Accept wildcard characters: False
 
 ### -DefaultSharingLinkType
 
-The default link type for the site collection
+The default link type for the site collection. To be replaced by DefaultShareLinkScope.
 
 PARAMVALUE: None | AnonymousAccess | Internal | Direct
 
@@ -780,7 +877,7 @@ Accept wildcard characters: False
 
 ### -DefaultLinkToExistingAccess
 
-When set to TRUE, the DefaultSharingLinkType will be overriden and the default sharing link will a People with Existing Access link (which does not modify permissions). When set to FALSE (the default), the default sharing link type is controlled by the DefaultSharingLinkType parameter
+When set to TRUE, the DefaultSharingLinkType will be overriden and the default sharing link will a People with Existing Access link (which does not modify permissions). When set to FALSE (the default), the DefaultSharingLinkType parameter controls the default sharing link type.
 
 PARAMVALUE: $true | $false
 
@@ -800,7 +897,7 @@ Accept wildcard characters: False
 
 ### -DefaultLinkPermission
 
-The default link permission for the site collection
+The default link permission for the site collection. To be replaced by DefaultShareLinkRole.
 
 PARAMVALUE: None | View | Edit
 
@@ -832,7 +929,7 @@ The valid values are:
 - Uninitialized
 
 ```yaml
-Type: SharingCapabilities
+Type: SharingScope
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
@@ -845,22 +942,18 @@ Accept wildcard characters: False
 
 ### -LoopDefaultSharingLinkRole
 
-Gets or sets default share link role for fluid on the site
+Gets or sets default share link role for fluid on the site.
 
 The valid values are:  
 
 - Edit
-- LimitedEdit
-- LimitedView
-- ManageList
 - None
-- Owner
 - RestrictedView
 - Review
-- Submit
+- View
 
 ```yaml
-Type: SharingCapabilities
+Type: SharingRole
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
@@ -873,7 +966,7 @@ Accept wildcard characters: False
 
 ### -OverrideTenantAnonymousLinkExpirationPolicy
 
-Choose whether to override the anonymous or anyone link expiration policy on this site
+Choose whether to override the anonymous or anyone link expiration policy on this site.
 
 PARAMVALUE: None | False | True
 
@@ -897,7 +990,7 @@ Accept wildcard characters: False
 
 Specifies all anonymous/anyone links that have been created (or will be created) will expire after the set number of days. Only applies if OverrideTenantAnonymousLinkExpirationPolicy is set to true.
 
-To remove the expiration requirement, set the value to zero (0).
+The valid number should be between 1 and 730. To remove the expiration requirement, set the value to zero (0).
 
 ```yaml
 Type: Int32
@@ -913,7 +1006,7 @@ Accept wildcard characters: False
 
 ### -OverrideTenantExternalUserExpirationPolicy
 
-Choose whether to override the external user expiration policy on this site
+Choose whether to override the external user expiration policy on this site.
 
 Possible values:
 
@@ -937,7 +1030,7 @@ Accept wildcard characters: False
 
 Specifies all external user expiration which will expire after the set number of days. Only applies if OverrideTenantExternalUserExpirationPolicy is set to true.
 
-To remove the expiration requirement, set the value to zero (0).
+The maximum value is 730. To remove the expiration requirement, set the value to zero (0).
 
 ```yaml
 Type: Int32
@@ -1124,6 +1217,225 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OverrideBlockUserInfoVisibility
+
+Choose whether to override the Block User Info Visibility policy on this site.
+
+PARAMVALUE: 
+
+- OrganizationDefault (default) - Respect the organization-level Block User Info Visibility policy.
+
+- ApplyToNoUsers  – No users are prevented from accessing User Info when they have Limited Access permission only on the site.
+
+- ApplyToAllUsers – All users (internal or external) are prevented from accessing User Info if they have Limited Access permission only on the site.
+
+- ApplyToGuestAndExternalUsers – Only external or guest users are prevented from accessing User Info if they have Limited Access permission only on the site.
+
+- ApplyToInternalUsers – Only internal users are prevented from accessing User Info if they have Limited Access permission only on the site.
+
+```yaml
+Type: String
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: OrganizationDefault
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableAutoExpirationVersionTrim
+Global and SharePoint Administrators can set site-level version history limit settings that universally apply to new versions created on all new document libraries created on the site. Also can create request to set the version setting for existing libraries that enabled versioning.
+
+When version history limits are managed automatically, SharePoint employs an algorithm behind the scenes that deletes (thins out) intermittent older versions that are least likely to be needed, while preserving sufficient high-value versions - more versions in the recent past and fewer farther back in time - in case restores are required.
+
+The valid values are:
+
+- True - Version history limits for new versions created on new/existing document libraries in the site will be managed automatically.
+- False - Version history limits for new Versions created on new/existing document libraries in the site will be managed manually by setting limits to the number of major versions (`MajorVersionLimit`), number of major with minor versions (`MajorWithMinorVersionsLimit`) and time set (`ExpireVersionsAfterDays`). Review the documentation of both parameters to manage your organization's version limits manually.
+
+> [!NOTE]
+> When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), `MajorVersionLimit` and `ExpireVersionsAfterDays` are both required parameters, `MajorWithMinorVersionsLimit` is also required for creating request for setting existing document libraries with the following acceptable values:
+> a. `MajorVersionLimit` accepts values from 1 through 50,000 (inclusive).
+> b. `MajorWithMinorVersionsLimit` accepts values from 0 through 50,000 (inclusive).
+> c. `ExpireVersionsAfterDays` accepts values of 0 to Never Expire or values >= 30 to delete versions that exceed that time period.
+> When version history limits are managed automatically (`EnableAutoExpirationVersionTrim $true`), setting `MajorVersionLimit` or `ExpireVersionsAfterDays` will result in an error as the count limits are set by the service.
+>
+> This parameter is currently under public preview.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: SetSiteFileVersionPolicy
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MajorVersionLimit
+When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), admins will need to set the limits to the number of major versions (`MajorVersionLimit`) and the time period the versions are stored (`ExpireVersionsAfterDays`). Please check the description of `EnableAutoExpirationVersionTrim` for more details.
+
+PARAMVALUE: Int32
+
+```yaml
+Type: Int32
+Parameter Sets: SetSiteFileVersionPolicy
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MajorWithMinorVersionsLimit
+When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), admins will need to set the limits to the number of major versions (`MajorVersionLimit`), the number of major with minor versions (`MajorWithMinorVersionsLimit`) and the time period the versions are stored (`ExpireVersionsAfterDays`). Please check the description of `EnableAutoExpirationVersionTrim` for more details.
+
+PARAMVALUE: Int32
+
+```yaml
+Type: Int32
+Parameter Sets: SetSiteFileVersionPolicy
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExpireVersionsAfterDays
+When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), admins will need to set the limits to the number of major versions (`MajorVersionLimit`), the number of major with minor versions (`MajorWithMinorVersionsLimit`) and the time period the versions are stored (`ExpireVersionsAfterDays`). Please check the description of `EnableAutoExpirationVersionTrim` for more details.
+
+PARAMVALUE: Int32
+
+```yaml
+Type: Int32
+Parameter Sets: SetSiteFileVersionPolicy
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyToNewDocumentLibraries
+Apply the version history limits setting to new document libraries.
+
+```yaml
+Type: Int32
+Parameter Sets: SetSiteFileVersionPolicy
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplyToExistingDocumentLibraries
+Create a job to apply the version history limits setting to existing document libraries.
+
+```yaml
+Type: Int32
+Parameter Sets: SetSiteFileVersionPolicy
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InheritVersionPolicyFromTenant
+Clear the file version setting at site level. The new document libraries will use the Tenant Level setting. It won't impact the existing document libraries.
+
+```yaml
+Type: Int32
+Parameter Sets: SetSiteFileVersionPolicy
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -OverrideSharingCapability
+
+Determines whether it should override the sharing capability on its partition. For example, if the tenant sharing capability is `ExternalUserAndGuestSharing`, the core partition sharing capability is `Disabled`, and the sharing capability defined on the site collection is `ExternalUserAndGuestSharing`, the effective site sharing capability should be `Disabled` (the most restrictive one among tenant, partition, and site collecction) if `OverrideSharingCapability` is `false`. If `OverrideSharingCapability` is `true`, it skips checking partition sharing capability and the effective site sharing capability should be `ExternalUserAndGuestSharing`.
+
+PARAMVALUE: False | True
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultShareLinkScope
+
+The default share link scope on the site. It replaces `DefaultSharingLinkType`.
+
+The valid values are:  
+
+- Anyone
+- Organization
+- SpecificPeople
+- Uninitialized
+
+```yaml
+Type: SharingScope
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: Uninitialized
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -DefaultShareLinkRole
+
+The default share link role for the site collection. It replaces `DefaultLinkPermission`.
+
+The valid values are:  
+
+- Edit
+- None
+- RestrictedView
+- Review
+- View
+
+```yaml
+Type: SharingRole
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).

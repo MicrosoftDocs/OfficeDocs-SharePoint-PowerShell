@@ -1,3 +1,13 @@
-- name: Docs
-  tocHref: /
-  topicHref: /
+- name: SharePoint
+  tocHref: /powershell/module/
+  topicHref: /sharepoint/index
+  items:
+  - name: SharePoint PowerShell
+    tocHref: /powershell/module/sharepoint-server/
+    topicHref: /powershell/sharepoint/index
+- name: SharePoint
+  tocHref: /powershell/sharepoint/
+  topicHref: /sharepoint/index
+  - name: SharePoint PowerShell
+    tocHref: /powershell/sharepoint/
+    topicHref: /powershell/sharepoint/index

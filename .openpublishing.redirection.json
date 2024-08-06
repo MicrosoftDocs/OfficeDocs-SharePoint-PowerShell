@@ -1,0 +1,29 @@
+{
+    "redirections": [
+      {
+        "source_path": "sharepoint/virtual-folder/sharepoint-online/Add-SPOTenantRestrictedSearchAllowedList.md",
+        "redirect_url": "/powershell/module/sharepoint-online",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "sharepoint/virtual-folder/sharepoint-online/Get-SPOTenantRestrictedSearchAllowedList.md",
+        "redirect_url": "/powershell/module/sharepoint-online",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "sharepoint/virtual-folder/sharepoint-online/Get-SPOTenantRestrictedSearchMode.md",
+        "redirect_url": "/powershell/module/sharepoint-online",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "sharepoint/virtual-folder/sharepoint-online/Remove-SPOTenantRestrictedSearchAllowedList.md",
+        "redirect_url": "/powershell/module/sharepoint-online",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "sharepoint/virtual-folder/sharepoint-online/Set-SPOTenantRestrictedSearchMode.md",
+        "redirect_url": "/powershell/module/sharepoint-online",
+        "redirect_document_id": false
+      }
+    ]
+}

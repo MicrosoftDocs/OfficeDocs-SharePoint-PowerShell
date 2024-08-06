@@ -19,7 +19,8 @@ Sets properties on the SharePoint Online organization.
 ## SYNTAX
 
 ```powershell
-Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
+Set-SPOTenant
+ [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-BccExternalSharingInvitations <Boolean>]
  [-BccExternalSharingInvitationsList <String>]
  [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>]
@@ -42,6 +43,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-ShowAllUsersClaim <Boolean>]
  [-ShowEveryoneClaim <Boolean>]
  [-ShowEveryoneExceptExternalUsersClaim <Boolean>]
+ [-AllowEveryoneExceptExternalUsersClaimInPrivateSite <Boolean>]
  [-SignInAccelerationDomain <String>]
  [-StartASiteFormUrl <String>]
  [-UsePersistentCookiesForExplorerView <Boolean>]
@@ -102,6 +104,9 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-EmailAttestationRequired <Boolean>]
  [-EmailAttestationReAuthDays <Int32>]
  [-BlockUserInfoVisibility]
+ [-BlockUserInfoVisibilityInOneDrive]
+ [-BlockUserInfoVisibilityInSharePoint]
+ [-AllowOverrideForBlockUserInfoVisibility]
  [-IncludeAtAGlanceInShareEmails]
  [-StopNew2010Workflows <Boolean>]
  [-StopNew2013Workflows <Boolean>]
@@ -110,6 +115,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-ViewInFileExplorerEnabled <Boolean>]
  [-AllowGuestUserShareToUsersNotInSiteCollection <Boolean>]
  [-DisableCustomAppAuthentication <Boolean>]
+ [-IsSharePointAddInsDisabled <Boolean>]
  [-SiteOwnerManageLegacyServicePrincipalEnabled <Boolean>]
  [-ReduceTempTokenLifetimeEnabled <Boolean>]
  [-ReduceTempTokenLifetimeValue <Int32>]
@@ -138,6 +144,18 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-MassDeleteNotificationDisabled <Boolean>]
  [-DisableDocumentLibraryDefaultLabeling <Boolean>]
  [-EnableSensitivityLabelforPDF <Boolean>]
+ [-DelayDenyAddAndCustomizePagesEnforcement <Boolean>]
+ [-IsDataAccessInCardDesignerEnabled <Boolean>]
+ [-EnableVersionExpirationSetting <Boolean>]
+ [-OneDriveSharingCapability <SharingCapabilities>]
+ [-OneDriveDefaultShareLinkScope <SharingScope>]
+ [-OneDriveDefaultShareLinkRole <SharingRole>]
+ [-OneDriveDefaultLinkToExistingAccess <Boolean>]
+ [-CoreDefaultShareLinkScope <SharingScope>]
+ [-CoreDefaultShareLinkRole <SharingRole>]
+ [-CoreDefaultLinkToExistingAccess <Boolean>]
+ [-SelfServiceSiteCreationDisabled <Boolean>]
+ [-SyncAadB2BManagementPolicy <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -237,7 +255,7 @@ This example enables the option to search for existing guest users at Tenant Lev
 Set-SPOTenant -EnableAutoExpirationVersionTrim $true
 ```
 
-This example sets Automatic Version Storage Limits on all new document libraries at Tenant Level.
+This example sets automatic version history limits on all new document libraries at tenant level.
 
 ### EXAMPLE 12
 
@@ -245,7 +263,7 @@ This example sets Automatic Version Storage Limits on all new document libraries
 Set-SPOTenant -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 30
 ```
 
-This example sets Manual Version Storage Limits on all new document libraries at Tenant Level by limiting the number of major versions and the time (in days) versions are kept. 
+This example sets manual version history limits on all new document libraries at tenant level by limiting the number of major versions and the time (in days) versions are kept. 
 
 ### EXAMPLE 13
 
@@ -253,7 +271,7 @@ This example sets Manual Version Storage Limits on all new document libraries at
 Set-SPOTenant -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 0
 ```
 
-This example sets Manual Version Storage Limits on all new document libraries at Tenant Level by limiting the number of major versions with no time limits.
+This example sets manual version history limits on all new document libraries at tenant level by limiting the number of major versions with no time limits.
 
 ### EXAMPLE 14
 
@@ -270,6 +288,18 @@ PS > Set-SPOTenant -SharingDomainRestrictionMode "BlockList" -SharingBlockedDoma
 ```
 
 This example enables users to share with all external collaborators except for those on the BlockedDomainList.
+
+### EXAMPLE 16
+
+```powershell
+PS > Set-SPOTenant -EnableVersionExpirationSetting $true
+```
+
+This example opts your tenant into public preview of Improved Version History controls feature. This feature is being tracked on the Microsoft 365 Public Roadmap under ID [145802](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=145802).
+
+Visit [http://aka.ms/versioning-overview](http://aka.ms/versioning-overview) to learn more about Admin configurations available to manage versions.
+
+By opting in, you are accepting the terms of service for version history limits. [Read the terms of service](https://aka.ms/versioning-termsofservice).
 
 ## PARAMETERS
 
@@ -585,33 +615,7 @@ Accept wildcard characters: False
 
 ### -RequireAcceptingAccountMatchInvitedAccount
 
-Ensures that an external user can only accept an external sharing invitation with an account matching the invited email address.
-
-Administrators who desire increased control over external collaborators should consider enabling this feature.
-
-Note, this only applies to new external users accepting new sharing invitations. Also, the resource owner must share with an organizational or Microsoft account or the external user will be unable to access the resource.
-
-The valid values are:  
-
-- False (default) - When a document is shared with an external user, bob@contoso.com, it can be accepted by any user with access to the invitation link in the original e-mail.  
-- True - User must accept this invitation with bob@contoso.com.
-
-> [!NOTE]
-> If this functionality is turned off (value is False), it is possible for the external/guest users you invite to your Microsoft Entra ID, to log in using their personal, non-work accounts either on purpose, or by accident (they might have a pre-existing, signed in session already active in the browser window they use to accept your invitation).
-> [!NOTE]
-> Even though setting the value is instant (if you first run **Set-SPOTenant -RequireAcceptingAccountMatchInvitedAccount $True**, and then **Get-SPOTenant -RequireAcceptingAccountMatchInvitedAccount**, True should be returned), the functionality isn't turned on immediately. It may take up to 24 hours to take effect.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+This parameter has been deprecated since SharePoint Online legacy invitation flow switched to Entra B2B invitation flow.
 
 ### -SearchResolveExactEmailOrUPN
 
@@ -638,7 +642,7 @@ Accept wildcard characters: False
 
 ### -SharingCapability
 
-Determines what level of sharing is available for the site.
+Determines what level of sharing is available for OneDrive and SharePoint sites.
 
 The valid values are:  
 
@@ -730,6 +734,27 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowEveryoneExceptExternalUsersClaimInPrivateSite
+
+When this parameter is true, the "Everyone except external users" claim is available in the People Picker of a private site. Set it to false to disable this feature.
+
+The valid values are:  
+
+- True - The "Everyone except external users" claim is available in People Picker of a private site.  
+- False (default) - The "Everyone except external users" claim is not available in People Picker of a private site.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -905,7 +930,7 @@ Accept wildcard characters: False
 
 ### -DefaultSharingLinkType
 
-Lets administrators choose what type of link appears is selected in the "Get a link" sharing dialog box in OneDrive for Business and SharePoint Online.
+Lets administrators choose the default link type in the sharing dialog box in OneDrive for Business and SharePoint Online.
 
 For additional information about how to change the default link type, see Change the default link type when users get links for sharing.
 
@@ -994,6 +1019,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IsSharePointAddInsDisabled
+
+When the feature is enabled, all the add-ins features will be disabled.
+
+The valid values are:  
+
+- False (default) - All the add-ins features are supported.  
+- True - All the add-ins features will be disabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SiteOwnerManageLegacyServicePrincipalEnabled
 
 Allows or disallows the site collection admins to manage the Azure Access Control (ACS) service principal.
@@ -1033,7 +1079,7 @@ Accept wildcard characters: False
 
 ### -FileAnonymousLinkType
 
-Anonymous access links can allow recipients to only view or view and edit. The value can be set separately for folders and separately for files.
+Anonymous access links can allow recipients to only view or view and edit. The value can be set separately for folders and files.
 
 The valid values are:
 
@@ -1174,7 +1220,7 @@ Accept wildcard characters: False
 
 ### -MediaTranscription
 
-When the feature is enabled, videos can have transcripts generated on demand or generated automatically in certain scenarios. This is the default because the policy is default on. If a video owner decides they don’t want the transcript, they can always hide or delete it from that video. 
+When the feature is enabled, videos can have transcripts generated on demand or generated automatically in certain scenarios. This is the default because the policy is default on. If a video owner decides they don't want the transcript, they can always hide or delete it from that video. 
 Possible values:
 
 - Enabled
@@ -1250,23 +1296,7 @@ Accept wildcard characters: False
 
 ### -NotifyOwnersWhenInvitationsAccepted
 
-When this parameter is set to $true and when an external user accepts an invitation to a resource in a user's OneDrive for Business, the OneDrive for Business owner is notified by e-mail.
-
-For additional information about how to configure notifications for external sharing, see Configure notifications for external sharing for OneDrive for Business.
-
-The valid values are $true and $false.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+This parameter has been deprecated since SharePoint Online legacy invitation flow switched to Entra B2B invitation flow.
 
 ### -NotifyOwnersWhenItemsReshared
 
@@ -1415,7 +1445,7 @@ Accept wildcard characters: False
 
 ### -OwnerAnonymousNotification
 
-Enables or disables owner anonymous notification. If enabled, an email notification will be sent to the OneDrive for Business owners when an anonymous links are created or changed.
+Enables or disables owner anonymous notification. If enabled, an email notification will be sent to the OneDrive for Business owners when anonymous links are created or changed.
 
 PARAMVALUE: $true | $false
 
@@ -1528,7 +1558,7 @@ Accept wildcard characters: False
 
 ### -SharingAllowedDomainList
 
-Specifies a list of email domains that is allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
+Specifies a list of email domains that are allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
 For additional information about how to restrict a domain sharing, see [Restricted Domains Sharing in Office 365 SharePoint Online and OneDrive for Business](https://support.office.com/en-US/article/Restricted-Domains-Sharing-in-Office-365-SharePoint-Online-and-OneDrive-for-Business-5d7589cd-0997-4a00-a2ba-2320ec49c4e9).
 
@@ -1546,7 +1576,7 @@ Accept wildcard characters: False
 
 ### -SharingBlockedDomainList
 
-Specifies a list of email domains that is blocked or prohibited for sharing with the external collaborators. Use space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
+Specifies a list of email domains that are blocked or prohibited for sharing with the external collaborators. Use space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
 For additional information about how to restrict a domain sharing, see [Restricted Domains Sharing in Office 365 SharePoint Online and OneDrive for Business](https://support.office.com/en-US/article/Restricted-Domains-Sharing-in-Office-365-SharePoint-Online-and-OneDrive-for-Business-5d7589cd-0997-4a00-a2ba-2320ec49c4e9).
 
@@ -1685,7 +1715,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -CustomizedExternalSharingServiceUrl
 
 Specifies a URL that will be appended to the error message that is surfaced when a user is blocked from sharing externally by policy. This URL can be used to direct users to internal portals to request help or to inform them about your organization's policies. An example value is "<https://www.contoso.com/sharingpolicies".>
@@ -1774,7 +1803,7 @@ Accept wildcard characters: False
 
 ### -AllowDownloadingNonWebViewableFiles  
 
-This paramater has been deprecated.
+This parameter has been deprecated.
 
 ```yaml
 Type: Boolean
@@ -1975,7 +2004,81 @@ Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
-Default value: None
+Default value: ExternalPeopleInOD
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockUserInfoVisibilityInOneDrive
+
+Blocks users from accessing User Info if they have Limited Access permission only to the OneDrive. The policy applies to all OneDrives in the organization. 
+
+The valid values are: 
+
+- ApplyToNoUsers – No users are prevented from accessing User Info when they have Limited Access permission only.
+
+- ApplyToAllUsers – All users (internal or external) are prevented from accessing User Info if they have Limited Access permission only.
+
+- ApplyToGuestAndExternalUsers (default) – Only external or guest users are prevented from accessing User Info if they have Limited Access permission only.
+
+- ApplyToInternalUsers – Only internal users are prevented from accessing User Info if they have Limited Access permission only.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: ApplyToGuestAndExternalUsers
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockUserInfoVisibilityInSharePoint
+
+Blocks users from accessing User Info if they have Limited Access permission only to a SharePoint site. The policy applies to all SharePoint sites in the organization.
+
+The valid values are: 
+
+- ApplyToNoUsers (default) – No users are prevented from accessing User Info when they have Limited Access permission only to a SharePoint site.
+
+- ApplyToAllUsers – All users (internal or external) are prevented from accessing User Info if they have Limited Access permission only to a SharePoint site.
+
+- ApplyToGuestAndExternalUsers – Only external or guest users are prevented from accessing User Info if they have Limited Access permission only to a SharePoint site.
+
+- ApplyToInternalUsers – Only internal users are prevented from accessing User Info if they have Limited Access permission only to a SharePoint site.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: ApplyToNoUsers
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowOverrideForBlockUserInfoVisibility
+
+Allow organization level policy for Block User Info Visibility to be overridden for a SharePoint site or OneDrive. Use Set-SPOSite to override the policy for a SharePoint site or OneDrive. 
+
+The valid values are:
+
+- False (default) – Do not allow the Block User Info Visibility policy to be overridden for a SharePoint site or OneDrive.
+
+- True – Allow the Block User Info Visibility policy to be overridden for a SharePoint site or OneDrive.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -2162,29 +2265,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ShowOpenInDesktopOptionForSyncedFiles
-
-The ShowOpenInDesktopOptionForSyncedFiles setting (set to false by default) displays the "Open in desktop" option when users go to SharePoint or OneDrive on the web and open the shortcut menu for a file that they're syncing with the OneDrive sync app.
-
-The valid values are:
-
-- False (default) – "Open in desktop" is disabled and not shown on the shortcut menu.
-- True – "Open in desktop" is enabled and the option to open synced files locally appears on the shortcut menu.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -OneDriveLoopDefaultSharingLinkScope
 
-Gets or sets default share link scope for fluid on OneDrive sites. 
+Gets or sets default share link scope for Loop and Whiteboard files on OneDrive sites. 
 
 The valid values are:  
 
@@ -2194,7 +2277,7 @@ The valid values are:
 - Uninitialized
 
 ```yaml
-Type: SharingCapabilities
+Type: SharingScope
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
@@ -2207,25 +2290,18 @@ Accept wildcard characters: False
 
 ### -OneDriveLoopDefaultSharingLinkRole
 
-Gets or sets default share link role for fluid on OneDrive sites.
-
-Note: Although the values below may be viewable in Powershell, only View OR Edit may be set at this time. 
+This parameter sets the default share link role for Loop and Whiteboard files on OneDrive sites.
 
 The valid values are:  
 
 - Edit
 - View
-- LimitedEdit
-- LimitedView
-- ManageList
 - None
-- Owner
-- RestrictedView
 - Review
-- Submit
+- RestrictedView
 
 ```yaml
-Type: SharingCapabilities
+Type: SharingRole
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
@@ -2238,7 +2314,7 @@ Accept wildcard characters: False
 
 ### -CoreLoopDefaultSharingLinkScope
 
-Gets or sets default share link scope for fluid on SharePoint sites. 
+This parameter sets the default share link scope for Loop and Whiteboard files on SharePoint sites. 
 
 The valid values are:  
 
@@ -2248,7 +2324,7 @@ The valid values are:
 - Uninitialized
 
 ```yaml
-Type: SharingCapabilities
+Type: SharingScope
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
@@ -2261,25 +2337,18 @@ Accept wildcard characters: False
 
 ### -CoreLoopDefaultSharingLinkRole
 
-Gets or sets default share link role for fluid on SharePoint sites.
-
-Note: Although the values below may be viewable in Powershell, only View OR Edit may be set at this time. 
+This parameter sets the default share link role for Loop and Whiteboard files on SharePoint sites.
 
 The valid values are:  
 
 - Edit
 - View
-- LimitedEdit
-- LimitedView
-- ManageList
 - None
-- Owner
-- RestrictedView
 - Review
-- Submit
+- RestrictedView
 
 ```yaml
-Type: SharingCapabilities
+Type: SharingRole
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
@@ -2598,22 +2667,22 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAutoExpirationVersionTrim
-Global and SharePoint admins in Microsoft 365 can set Organization-level Version History Limit settings that universally apply to new versions created on all new Document Libraries created in your organization. 
+Global and SharePoint Administrators can set organization-level version history limits settings that universally apply to new versions created on all new document libraries created in your organization. 
 
-When Version History Limits are managed Automatically, SharePoint employs an algorithm behind the scenes that deletes (thins out) intermittent older versions that are least likely to be needed, while preserving sufficient high-value versions - more versions in the recent past and fewer farther back in time - in case restores are required.
+When version history limits are managed automatically, SharePoint employs an algorithm behind the scenes that deletes (thins out) intermittent older versions that are least likely to be needed, while preserving sufficient high-value versions - more versions in the recent past and fewer farther back in time - in case restores are required.
 
 The valid values are: 
 
-- True – Version History Limits for new versions created on all new Document Libraries in your organization will be managed Automatically.  
-- False – Version History Limits for new Versions created on all new Document Libraries in your organization will be managed Manually by setting limits to the number of major versions (MajorVersionLimit) and time set (ExpireVersionsAfterDays).  Review the documentation of both parameters to manage your organization's version limits Manually.  
+- True – Version history limits for new versions created on all new document libraries in your organization will be managed automatically.
+- False – Version history limits for new Versions created on all new document libraries in your organization will be managed manually by setting limits to the number of major versions (`MajorVersionLimit`) and time set (`ExpireVersionsAfterDays`). Review the documentation of both parameters to manage your organization's version limits manually.
 
 > [!NOTE]
-> When Version History Limits are managed Manually (EnableAutoExpirationVersionTrim $false), MajorVersionLimit and ExpireVersionsAfterDays are both required parameters with the following acceptable values:
-> a. MajorVersionLimit accepts values from 1 through 50,000 (inclusive).
-> b. ExpireVersionsAfterDays accepts values of 0 to Never Expire or values >= 30 to delete versions that exceed that time period.
-> When Version History Limits are managed Automatically (EnableAutoExpirationVersionTrim $true), setting MajorVersionLimit or ExpireVersionsAfterDays will result in an error as the count limits are set by the service.
+> When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), `MajorVersionLimit` and `ExpireVersionsAfterDays` are both required parameters with the following acceptable values:
+> a. `MajorVersionLimit` accepts values from 1 through 50,000 (inclusive).
+> b. `ExpireVersionsAfterDays` accepts values of 0 to Never Expire or values >= 30 to delete versions that exceed that time period.
+> When version history limits are managed automatically (`EnableAutoExpirationVersionTrim $true`), setting `MajorVersionLimit` or `ExpireVersionsAfterDays` will result in an error as the count limits are set by the service.
 >
-> This parameter is currently under private preview.
+> This parameter is currently under public preview.
 
 PARAMVALUE: $true | $false
 
@@ -2630,7 +2699,7 @@ Accept wildcard characters: False
 ```
 
 ### -MajorVersionLimit
-When Version History Limits are managed Manually (EnableAutoExpirationVersionTrim $false), admins will need to set the limits to the number of major versions (MajorVersionLimit) and the time period the versions are stored (ExpireVersionsAfterDays). Please check the description of EnableAutoExpirationVersionTrim for more details.
+When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), admins will need to set the limits to the number of major versions (`MajorVersionLimit`) and the time period the versions are stored (`ExpireVersionsAfterDays`). Please check the description of `EnableAutoExpirationVersionTrim` for more details.
 
 PARAMVALUE: Int32
 
@@ -2647,7 +2716,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpireVersionsAfterDays
-When Version History Limits are managed Manually (EnableAutoExpirationVersionTrim $false), admins will need to set the limits to the number of major versions (MajorVersionLimit) and the time period the versions are stored (ExpireVersionsAfterDays). Please check the description of EnableAutoExpirationVersionTrim for more details.
+When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), admins will need to set the limits to the number of major versions (`MajorVersionLimit`) and the time period the versions are stored (`ExpireVersionsAfterDays`). Please check the description of `EnableAutoExpirationVersionTrim` for more details.
 
 PARAMVALUE: Int32
 
@@ -2672,6 +2741,244 @@ PARAMVALUE: $true | $false
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DelayDenyAddAndCustomizePagesEnforcement
+This parameter controls how SharePoint will deal with sites where custom scripts are allowed.
+
+The valid values are:
+
+* False (default) - for site collections where administrators enabled the ability to add custom script, SharePoint will revoke that ability within 24 hours from the last time this setting was changed.
+* True - All changes performed by administrators to custom script settings are preserved.
+
+> [!NOTE]
+> This setting affects all sites. There are no options to preserve changes to custom script settings only on some specific sites. This parameter will be available until November 2024. After that time, administrators can still allow custom scripts on specific sites, but that change will be revoked automatically after up to 24 hours.
+For more information, see [Allow or prevent custom script](/sharepoint/allow-or-prevent-custom-script).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsDataAccessInCardDesignerEnabled 
+
+The IsDataAccessInCardDesignerEnabled settings (defaulted to false) will allow Viva Connections Dashboard operators to access SharePoint and Graph APIs in the Card Designer card.
+
+The valid values are:
+
+- False (default) – SharePoint and Graph APIs cannot be accessed in the Card Designer card.
+- True – Users with edit permissions on the Dashboard will be able to access SharePoint and Graph APIs in the Card Designer card.
+
+For more information on this feature, see [Overview of Viva Connections Card Designer advance API features](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/viva/features/card-designer/card-designer-api-support).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableVersionExpirationSetting
+
+Use the `EnableVersionExpirationSetting` parameter to opt your tenant into public preview of Improved Version History controls feature Microsoft 365 Public Roadmap under ID [145802](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=145802).
+
+The valid values are:
+
+- True - When set to true and feature roll out to your tenant has completed, admin version history controls at organization, site and library levels will be available.
+- False (default) - When set to false, the feature will be disabled for your tenant.
+
+Note: Disabling the feature after previously enabling it, does not revert changes made when the feature was enabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveSharingCapability
+
+Determines what level of sharing is available for OneDrive sites. It corresponds to the `SharingCapabilities` for OneDrive sites.
+
+The valid values are:  
+
+- ExternalUserAndGuestSharing (default) - External user sharing (share by email) and guest link sharing are both enabled.
+- Disabled - External user sharing (share by email) and guest link sharing are both disabled.
+- ExternalUserSharingOnly - External user sharing (share by email) is enabled, but guest link sharing is disabled.
+- ExistingExternalUserSharingOnly - Only guests already in your organization's directory.
+
+```yaml
+Type: SharingCapabilities
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: ExternalUserAndGuestSharing
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveDefaultShareLinkScope
+
+This parameter sets the default share link scope on OneDrive sites. It replaces the `DefaultSharingLinkType`.
+
+The valid values are:
+- `Anyone`: Anyone with the link can access the content.
+- `Organization`: Only people within the organization can access the content.
+- `SpecificPeople`: Only specific individuals (specified by the user) can access the content.
+- `Uninitialized`: The default value, indicating that the default share link scope is not explicitly set.
+
+```yaml
+Type: SharingScope
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: Uninitialized
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveDefaultShareLinkRole
+
+This parameter sets the default share link role on OneDrive sites. It replaces the `DefaultLinkPermission`.
+
+The valid values are:
+- `None`: No permissions granted.
+- `View`: View-only permissions.
+- `Edit`: Edit permissions.
+- `Review`: Review permissions.
+- `RestrictedView`: Restricted view permissions.
+
+```yaml
+Type: SharingRole
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveDefaultLinkToExistingAccess
+
+When set to `True`, the default sharing link will be a "People with Existing Access" link (which does not modify permissions) for OneDrive sites. When set to `False` (the default), the default sharing link type is controlled by the `OneDriveDefaultShareLinkScope` parameter.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CoreDefaultShareLinkScope
+
+This parameter sets the default share link scope on SharePoint sites. It replaces the `DefaultSharingLinkType`.
+
+The valid values are:
+- `Anyone`: Anyone with the link can access the content.
+- `Organization`: Only people within the organization can access the content.
+- `SpecificPeople`: Only specific individuals (specified by the user) can access the content.
+- `Uninitialized`: The default value, indicating that the default share link scope is not explicitly set.
+
+```yaml
+Type: SharingScope
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: Uninitialized
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CoreDefaultShareLinkRole
+
+This parameter sets the default share link role on SharePoint sites. It replaces the `DefaultLinkPermission`.
+
+The valid values are:
+- `None`: No permissions granted.
+- `View`: View-only permissions.
+- `Edit`: Edit permissions.
+- `Review`: Review permissions.
+- `RestrictedView`: Restricted view permissions.
+
+```yaml
+Type: SharingRole
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CoreDefaultLinkToExistingAccess
+
+When set to `True`, the default sharing link will be a "People with Existing Access" link (which does not modify permissions) for SharePoint sites. When set to `False` (the default), the default sharing link type is controlled by the `CoreDefaultShareLinkScope` parameter.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SelfServiceSiteCreationDisabled
+
+When set to `True`, users cannot create sites from SharePoint, OneDrive, the PnP PowerShell cmdlet, and the REST API. When set to `False` (the default), users can create sites from SharePoint, OneDrive, the PnP PowerShell cmdlet, and the REST API.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncAadB2BManagementPolicy
+
+This feature allows SharePoint Online to synchronize several Entra B2B collaboration settings [Guest user access restriction and collaboration restriction](https://learn.microsoft.com/en-us/entra/external-id/external-collaboration-settings-configure#configure-settings-in-the-portal), and store them on SharePoint Online tenant store. On sharing, SharePoint checks whether those synchronized settings are blocking sharing before sending invitation requests to Entra B2B invitation manager. The sync might take up to 24 hours to complete if you change those Entra B2B collaboration settings. To make the change effective on SharePoint Online immediately, run 'Set-SPOTenant -SyncAadB2BManagementPolicy $true' and it forces a sync from Microsoft Entra.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
 Applicable: SharePoint Online
 Required: False
 Position: Named

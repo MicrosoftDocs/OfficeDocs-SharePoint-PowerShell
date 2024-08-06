@@ -208,7 +208,7 @@ Accept wildcard characters: False
 This parameter prevents non-owners from sharing.
 
 > [!NOTE]
-> This parameter is available only in SharePoint Online Management Shell Version 16.0.4613.1211 or later. DisableSharingForNonOwnersStatus is not a persisted setting but rather an analysis of the state of the site collection. The purpose of this is to get this setting, and it’s not guaranteed that other settings returned are correct. To get other settings and values, use the Get-SPOSite without this parameter to ensure everything is displayed correctly.
+> This parameter is available only in SharePoint Online Management Shell Version 16.0.4613.1211 or later. DisableSharingForNonOwnersStatus is not a persisted setting but rather an analysis of the state of the site collection. The purpose of this is to get this setting, and it's not guaranteed that other settings returned are correct. To get other settings and values, use the Get-SPOSite without this parameter to ensure everything is displayed correctly.
 
 ```yaml
 Type: SwitchParameter

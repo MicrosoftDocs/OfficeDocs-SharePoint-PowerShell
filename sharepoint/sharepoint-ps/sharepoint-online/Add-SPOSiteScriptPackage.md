@@ -17,7 +17,7 @@ Add-SPOSiteScriptPackage -Title <String> -ContentPath <String> [-Description <St
 ```
 
 ## DESCRIPTION
-Uploads a new site script package for use either directly or in a site design. The package file must be a zip archive containing all the files necessary for the site script. A file called “manifest.json” with script actions must be present in this zip file.
+Uploads a new site script package for use either directly or in a site design. The package file must be a zip archive containing all the files necessary for the site script. A file called "manifest.json" with script actions must be present in this zip file.
 
 ## EXAMPLES
 
