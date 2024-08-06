@@ -1,14 +1,3 @@
----
-external help file: sharepointonline.xml
-Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Get-SPOAppBillingPolicies
-applicable: SharePoint Online
-title: Get-SPOAppBillingPolicies
-schema: 2.0.0
-author: arakesh
-ms.author: arakesh
-ms.reviewer:
----
 
 # Get-SPOAppBillingPolicies
 
@@ -19,7 +8,6 @@ Returns billing policies that are owned by the tenant.
 ## SYNTAX
 
 ```powershell
-
 Get-SPOAppBillingPolicies
 ```
 
