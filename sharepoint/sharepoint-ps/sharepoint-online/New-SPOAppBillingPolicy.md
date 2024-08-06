@@ -1,9 +1,6 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/New-SPOAppBillingPolicy
-applicable: SharePoint Online
-title: New-SPOAppBillingPolicy
 schema: 2.0.0
 author: arakesh
 ms.author: arakesh
