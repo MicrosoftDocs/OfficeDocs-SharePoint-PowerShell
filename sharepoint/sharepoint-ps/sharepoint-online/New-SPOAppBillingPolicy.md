@@ -1,12 +1,3 @@
----
-external help file: sharepointonline.xml
-Module Name: Microsoft.Online.SharePoint.PowerShell
-schema: 2.0.0
-author: arakesh
-ms.author: arakesh
-ms.reviewer:
----
-
 # New-SPOAppBillingPolicy
 
 ## SYNOPSIS
