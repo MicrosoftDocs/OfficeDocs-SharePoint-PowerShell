@@ -33,9 +33,9 @@ You must be a SharePoint Administrator or Global Administrator to run this cmdle
 >
 > Use the **Connect-SPOService** cmdlet shown below, which will prompt you to enter your credentials. If multi-factor authentication (MFA) is enabled, you will need to complete the MFA process (e.g., entering a verification code sent to your phone).
 > 
->```powershell
-> Connect-SPOService -Url https://(your-tenant)-admin.sharepoint.com
->```
+>
+> `Connect-SPOService -Url https://(your-tenant)-admin.sharepoint.com`
+>
 Replace (your-tenant) with your actual SharePoint Online domain, e.g. https://contoso-admin.sharepoint.com. 
 
 ## EXAMPLES
