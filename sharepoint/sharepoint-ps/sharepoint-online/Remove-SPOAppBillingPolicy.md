@@ -26,7 +26,7 @@ Remove-SPOAppBillingPolicy [[-ApplicationId] <ApplicationId>]
 
 Remove-SPOAppBillingPolicy removes the billing policy associated with the application. 
 
-You must be a SharePoint Administrator or Global Administrator to run this cmdlet.
+You must be a SharePoint Administrator to run this cmdlet.
 
 > [!NOTE]
 > To use the Remove-SPOAppBillingPolicy cmdlet, an admin must authenticate to SharePoint Online using modern authentication.
