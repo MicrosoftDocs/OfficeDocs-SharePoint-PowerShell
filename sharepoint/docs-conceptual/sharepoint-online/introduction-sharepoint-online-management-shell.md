@@ -11,7 +11,7 @@ SharePoint Online PowerShell commands can be very efficient for batch operations
 
 ## Getting Started with SharePoint Online PowerShell
 
-To use SharePoint Online PowerShell commands, you must have the SharePoint Admin role or Global Administrator role in Microsoft 365.
+To use SharePoint Online PowerShell commands, you must have the SharePoint Admin role in Microsoft 365.
 
 You must install the SharePoint Online Management Shell module and connect to the SharePoint Online service. For more information, see [Connect SharePoint Online](connect-sharepoint-online.md).
 

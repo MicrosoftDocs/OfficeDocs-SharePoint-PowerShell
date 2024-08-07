@@ -104,7 +104,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind>
 
 For any parameters that are passed in, the `Set-SPOSite` cmdlet sets or updates the setting for the site collection identified by parameter Identity.
 
-You must be a SharePoint Online administrator or Global Administrator and be a site collection administrator to run the cmdlet.
+You must be a SharePoint Online administrator and be a site collection administrator to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
@@ -1199,7 +1199,7 @@ Accept wildcard characters: False
 
 ### -BlockDownloadPolicy
 
-As a SharePoint administrator or global administrator in Microsoft 365, you can block the download of files from SharePoint sites or OneDrive. This feature does not need Microsoft Entra Conditional Access policies. This feature can be set for individual sites but not at the organization level.
+As a SharePoint administrator in Microsoft 365, you can block the download of files from SharePoint sites or OneDrive. This feature does not need Microsoft Entra Conditional Access policies. This feature can be set for individual sites but not at the organization level.
 
 Blocking the download of files allows users to remain productive while addressing the risk of accidental data loss. Users have browser-only access with no ability to download, print, or sync files. They also won't be able to access content through apps, including the Microsoft Office desktop apps. When web access is limited, users will see the following message at the top of sites: "Your organization doesn't allow you to download, print, or sync from this site. For help contact your IT department." Read the full documentation for advanced capabilities at [Block download policy for SharePoint sites and OneDrive](https://learn.microsoft.com/sharepoint/block-download-from-sites).
 
@@ -1246,7 +1246,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAutoExpirationVersionTrim
-Global and SharePoint Administrators can set site-level version history limit settings that universally apply to new versions created on all new document libraries created on the site. Also can create request to set the version setting for existing libraries that enabled versioning.
+SharePoint Administrators can set site-level version history limit settings that universally apply to new versions created on all new document libraries created on the site. Also can create request to set the version setting for existing libraries that enabled versioning.
 
 When version history limits are managed automatically, SharePoint employs an algorithm behind the scenes that deletes (thins out) intermittent older versions that are least likely to be needed, while preserving sufficient high-value versions - more versions in the recent past and fewer farther back in time - in case restores are required.
 
