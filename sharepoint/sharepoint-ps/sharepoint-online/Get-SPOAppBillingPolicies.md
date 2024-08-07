@@ -27,7 +27,7 @@ Get-SPOAppBillingPolicies returns a list of billing policies that are owned by t
 
 The output of this cmdlet will include information related to the billing policy such as Application Id, Azure subscription ID, Resource Group, Region, State of the subscription and the usage charging model.
 
-You must be a SharePoint Administrator or Global Administrator to run this cmdlet.
+You must be a SharePoint Administrator to run this cmdlet.
 
 > [!NOTE]
 > To use the Get-SPOAppBillingPolicies cmdlet, an admin must authenticate to SharePoint Online using modern authentication.
