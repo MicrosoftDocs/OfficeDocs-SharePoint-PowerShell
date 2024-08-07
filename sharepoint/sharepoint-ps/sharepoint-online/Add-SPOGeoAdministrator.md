@@ -37,7 +37,7 @@ Add-SPOGeoAdministrator [-ObjectId] <Guid> [<CommonParameters>]
 ## DESCRIPTION
 
 This cmdlet requires a connection to a multi-geo tenant to run correctly.
-You must be a SharePoint Online administrator or Global Administrator to run this cmdlet.
+You must be a SharePoint Online administrator to run this cmdlet.
 
 ## EXAMPLES
 
