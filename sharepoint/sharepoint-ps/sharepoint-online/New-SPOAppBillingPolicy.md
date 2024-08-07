@@ -31,7 +31,7 @@ New-SPOAppBillingPolicy
 
 This cmdlet creates a new billing policy for an application that is owned by the tenant running the cmdlet. 
 
-You must be a SharePoint Administrator or Global Administrator to run this cmdlet.
+You must be a SharePoint Administrator to run this cmdlet.
 
 > [!NOTE]
 > To use the New-SPOAppBillingPolicy cmdlet, an admin must authenticate to SharePoint Online using modern authentication.
