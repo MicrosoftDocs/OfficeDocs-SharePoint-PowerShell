@@ -41,7 +41,7 @@ You must be a SharePoint Administrator or Global Administrator to run this cmdle
 >
 > `Connect-SPOService -Url https://(your-tenant)-admin.sharepoint.com`
 >
-Replace (your-tenant) with your actual SharePoint Online domain, e.g. https://contoso-admin.sharepoint.com. 
+> Replace (your-tenant) with your actual SharePoint Online domain, e.g. `https://contoso-admin.sharepoint.com.` 
 
 ## EXAMPLES
 
