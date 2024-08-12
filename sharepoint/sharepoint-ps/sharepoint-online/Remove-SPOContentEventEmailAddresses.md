@@ -20,7 +20,7 @@ Removes the email addresses associated with the specified category of content ev
 ## SYNTAX
 
 ```powershell
-Remove-SPOContentEventEmailAddresses [-Category] <ContentEventCategory> [-EmailAddresses] <List of comma seperated email addresses>
+Remove-SPOContentEventEmailAddresses [-Category] <ContentEventCategory> [-EmailAddresses] <string[]>
 ```
 
 ## DESCRIPTION
@@ -74,3 +74,7 @@ Accept wildcard characters: False
 
 
 ## RELATED LINKS
+
+[Get-SPOContentEventEmailAddresses](Get-SPOContentEventEmailAddresses.md)
+
+[Set-SPOContentEventEmailAddresses](Set-SPOContentEventEmailAddresses.md)
