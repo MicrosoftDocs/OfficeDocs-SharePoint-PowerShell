@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spocontainertype
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spocontainertype
 applicable: SharePoint Online
 title: Remove-SPOContainerType
 schema: 2.0.0
