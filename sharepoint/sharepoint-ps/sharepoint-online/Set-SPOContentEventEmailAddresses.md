@@ -41,7 +41,7 @@ In Example 1, the email addresses joe.doe@contoso.com and john.dow@contoso.com h
 
 ### -Category
 
-Specifies the Content event category.
+Specifies the content event category.
 
 ```yaml
 Type: ContentEventCategory

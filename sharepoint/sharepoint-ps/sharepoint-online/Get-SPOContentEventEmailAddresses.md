@@ -41,7 +41,7 @@ In Example 1, the system will display the email addresses categorized under rans
 
 ### -Category
 
-Specifies the Content event category.
+Specifies the content event category.
 
 ```yaml
 Type: ContentEventCategory
