@@ -52,6 +52,8 @@ Get-SPOApplication -OwningApplicationId <OwningApplicationId>
 
 Example 2 lists the details of the owning application corresponding to the `OwningApplicationId` registered in the specified tenant.
 
+TODO: add portion about viewing active 1P app Ids in this cmdlet
+
 ### Example 3
 
 ```powershell
@@ -59,6 +61,8 @@ Get-SPOApplication -OwningApplicationId <OwningApplicationId> -ApplicationId <Ap
 ```
 
 Example 3 enumerates permissions of the owning applications registered in the specified tenant.
+
+TODO: Add portion about viewing guest app permissions in this cmdlet (1P guest app perms)
 
 ## PARAMETERS
 
