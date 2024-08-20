@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Adds a guest app permission of the specified permission type to a SharePoint Embedded owning application.
+Adds permissions for a guest application to access a SharePoint Embedded application.
 
 ## SYNTAX
 
@@ -59,7 +59,7 @@ Set-SPOApplicationPermission
 -PermissionDelegated None
 ```
 
-Example 2 gives the Guest App with ID `12345678-1234-1234-abcd-abcdefghijkl` app-only Read, Write, and Delete permissions to access the Owning Application Microsoft Designer of ID `a187e399-0c36-4b98-8f04-1edc167a0996`. Notice that delegated permissions are not supported at this time and are set to `None`.
+Example 2 gives the Guest App with ID `12345678-1234-1234-abcd-abcdefghijkl` app-only Read, Write, and Delete permissions to access the Owning Application Microsoft Designer of ID `a187e399-0c36-4b98-8f04-1edc167a0996`. Notice that delegated permissions are not supported at this time and are default set to `None`.
 
 
 
@@ -67,7 +67,7 @@ Example 2 gives the Guest App with ID `12345678-1234-1234-abcd-abcdefghijkl` app
 
 ### -OwningApplicationId
 
-Use this parameter to specify the Owning Application to grant permissions to.
+Use this parameter to specify the Owning Application where guest application access is granted.
 
 ```yaml
 Type: String
@@ -84,7 +84,41 @@ Accept wildcard characters: False
 
 ### -ApplicationId
 
-Use this parameter to specify the Guest Application ID. A guest app is any application within the tenant's enterprise applications.
+Use this parameter to specify the guest application ID. A guest application is any application within the tenant's enterprise applications.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PermissionAppOnly
+
+Use this parameter to specify the app-only permissions of the guest application.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+``` 
+
+### -PermissionDelegated
+
+This parameter specifies delegated permissions which are not supported for guest applications at this time.
 
 ```yaml
 Type: String
@@ -97,8 +131,9 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-```
- 
+``` 
+
+
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
