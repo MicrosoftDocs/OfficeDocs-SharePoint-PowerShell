@@ -3023,7 +3023,7 @@ Accept wildcard characters: False
 
 ### -DocumentUnderstandingModelSelectedSitesList
 
-This parameter allows administrators to pass a list of SharePoint site URLs to modify the document understanding model and [unstructurted document processesing](https://docs.microsoft.com/en-US/microsoft-365/syntex/document-understanding-overview?WT.mc_id=365AdminCSH_inproduct) premium feature's selected sites list. By default this parameter overwrites the existing list with the user input list. The `-DocumentUnderstandingModelSelectedSitesListOperation` parameter can be used to specify a different operation. This parameter can only be called if the document understanding model's scope is set to "SelectedSites". The inputted list of site URLs cannot exceed 100 items.
+This parameter allows administrators to pass a list of SharePoint site URLs to modify the document understanding model and [unstructurted document processesing](https://docs.microsoft.com/en-US/microsoft-365/syntex/document-understanding-overview?WT.mc_id=365AdminCSH_inproduct) premium feature's selected sites list. By default this parameter overwrites the existing list with the user input list. Additionally, the `DocumentUnderstandingModelSelectedSitesListOperation` parameter can be used to specify a different operation. This parameter can only be called if the document understanding model's scope is set to "SelectedSites". The inputted list of site URLs cannot exceed 100 items.
 
 > [!NOTE]
 > Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](https://learn.microsoft.com/en-us/microsoft-365/syntex/syntex-licensing).
@@ -3040,7 +3040,8 @@ Accept wildcard characters: False
 
 ### -DocumentUnderstandingModelSelectedSitesListOperation
 
-This parameter allows administrators to specify the operation to perform on the document understanding model and [unstructurted document processesing](https://docs.microsoft.com/en-US/microsoft-365/syntex/document-understanding-overview?WT.mc_id=365AdminCSH_inproduct) premium feature's current selected sites list using the list of site URLs passed to the `-DocumentUnderstandingModelSelectedSitesList` parameter.
+This parameter allows administrators to specify the operation to perform on the document understanding model and [unstructurted document processesing](https://docs.microsoft.com/en-US/microsoft-365/syntex/document-understanding-overview?WT.mc_id=365AdminCSH_inproduct) premium feature's current selected sites list using the list of site URLs passed to the \
+`DocumentUnderstandingModelSelectedSitesList` parameter.
 
 The valid values are:
 
@@ -3050,7 +3051,7 @@ The valid values are:
 
 > [!NOTE]
 > Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](https://learn.microsoft.com/en-us/microsoft-365/syntex/syntex-licensing).
-> Calling this parameter without `-DocumentUnderstandingModelSelectedSitesList` has no effect.
+> Calling this parameter without `DocumentUnderstandingModelSelectedSitesList` has no effect.
 
 ```yaml
 Type: SelectedSitesListOperations
@@ -3088,7 +3089,7 @@ Accept wildcard characters: False
 
 ### -AIBuilderModelSelectedSitesList
 
-This parameter allows administrators to pass a list of SharePoint site URLs to modify the AI builder model and [structured and freeform document processing](https://learn.microsoft.com/en-US/microsoft-365/syntex/form-processing-overview) premium feature's selected sites list. By default this parameter overwrites the existing list with the user input list. The `-AIBuilderModelSelectedSitesListOperation` parameter can be used to specify a different operation. This parameter can only be called if the AI builder model's scope is set to "SelectedSites". The inputted list of site URLs cannot exceed 100 items.
+This parameter allows administrators to pass a list of SharePoint site URLs to modify the AI builder model and [structured and freeform document processing](https://learn.microsoft.com/en-US/microsoft-365/syntex/form-processing-overview) premium feature's selected sites list. By default this parameter overwrites the existing list with the user input list. Additionally, the `AIBuilderModelSelectedSitesListOperation` parameter can be used to specify a different operation. This parameter can only be called if the AI builder model's scope is set to "SelectedSites". The inputted list of site URLs cannot exceed 100 items.
 
 > [!NOTE]
 > Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](https://learn.microsoft.com/en-us/microsoft-365/syntex/syntex-licensing).
@@ -3105,7 +3106,7 @@ Accept wildcard characters: False
 
 ### -AIBuilderModelSelectedSitesListOperation
 
-This parameter allows administrators to specify the operation to perform on the AI builder model and [structured and freeform document processing](https://learn.microsoft.com/en-US/microsoft-365/syntex/form-processing-overview) premium feature's current selected sites list using the list of site URLs passed to the `-AIBuilderModelSelectedSitesList` parameter.
+This parameter allows administrators to specify the operation to perform on the AI builder model and [structured and freeform document processing](https://learn.microsoft.com/en-US/microsoft-365/syntex/form-processing-overview) premium feature's current selected sites list using the list of site URLs passed to the `AIBuilderModelSelectedSitesList` parameter.
 
 The valid values are:
 
@@ -3115,7 +3116,7 @@ The valid values are:
 
 > [!NOTE]
 > Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](https://learn.microsoft.com/en-us/microsoft-365/syntex/syntex-licensing).
-> Calling this parameter without `-AIBuilderModelSelectedSitesList` has no effect.
+> Calling this parameter without `AIBuilderModelSelectedSitesList` has no effect.
 
 ```yaml
 Type: SelectedSitesListOperations
@@ -3170,7 +3171,7 @@ Accept wildcard characters: False
 
 ### -PrebuiltModelSelectedSitesList
 
-This parameter allows administrators to pass a list of SharePoint site URLs to modify the prebuilt model and [prebuilt document processing](https://docs.microsoft.com/en-US/microsoft-365/syntex/prebuilt-overview) premium feature's selected sites list. By default this parameter overwrites the existing list with the user input list. The `-PrebuiltModelSelectedSitesListOperation` parameter can be used to specify a different operation. This parameter can only be called if the prebuilt model's scope is set to "SelectedSites". The inputted list of site URLs cannot exceed 100 items.
+This parameter allows administrators to pass a list of SharePoint site URLs to modify the prebuilt model and [prebuilt document processing](https://docs.microsoft.com/en-US/microsoft-365/syntex/prebuilt-overview) premium feature's selected sites list. By default this parameter overwrites the existing list with the user input list. Additionally, the `PrebuiltModelSelectedSitesListOperation` parameter can be used to specify a different operation. This parameter can only be called if the prebuilt model's scope is set to "SelectedSites". The inputted list of site URLs cannot exceed 100 items.
 
 > [!NOTE]
 > Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](https://learn.microsoft.com/en-us/microsoft-365/syntex/syntex-licensing).
@@ -3187,7 +3188,7 @@ Accept wildcard characters: False
 
 ### -PrebuiltModelSelectedSitesListOperation
 
-This parameter allows administrators to specify the operation to perform on the prebuilt model and [prebuilt document processing](https://docs.microsoft.com/en-US/microsoft-365/syntex/prebuilt-overview) premium feature's current selected sites list using the list of site URLs passed to the `-PrebuiltModelSelectedSitesList` parameter.
+This parameter allows administrators to specify the operation to perform on the prebuilt model and [prebuilt document processing](https://docs.microsoft.com/en-US/microsoft-365/syntex/prebuilt-overview) premium feature's current selected sites list using the list of site URLs passed to the `PrebuiltModelSelectedSitesList` parameter.
 
 The valid values are:
 
@@ -3197,7 +3198,7 @@ The valid values are:
 
 > [!NOTE]
 > Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](https://learn.microsoft.com/en-us/microsoft-365/syntex/syntex-licensing).
-> Calling this parameter without `-PrebuiltModelSelectedSitesList` has no effect.
+> Calling this parameter without `PrebuiltModelSelectedSitesList` has no effect.
 
 ```yaml
 Type: SelectedSitesListOperations
