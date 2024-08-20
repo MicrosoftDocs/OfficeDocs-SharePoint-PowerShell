@@ -3130,7 +3130,7 @@ Accept wildcard characters: False
 
 ### -AIBuilderModelSelectedSitesIncludesContentCenters
 
-This parameter allows administrators to chose whether or not the AI builder model and [structured and freeform document processing](https://learn.microsoft.com/en-US/microsoft-365/syntex/form-processing-overview) premium feature is available on all content center sites when the feature's scope is "SelectedSites" even if they are not explicitly included within the selected sites list. This parameter can only be called if the AI builder model's scope is set to "SelectedSites".
+This parameter allows administrators to choose whether or not the AI builder model and [structured and freeform document processing](https://learn.microsoft.com/en-US/microsoft-365/syntex/form-processing-overview) premium feature is available on all content center sites when the feature's scope is "SelectedSites" even if they are not explicitly included within the selected sites list. This parameter can only be called if the AI builder model's scope is set to "SelectedSites".
 
 > [!NOTE]
 > Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](https://learn.microsoft.com/en-us/microsoft-365/syntex/syntex-licensing).
