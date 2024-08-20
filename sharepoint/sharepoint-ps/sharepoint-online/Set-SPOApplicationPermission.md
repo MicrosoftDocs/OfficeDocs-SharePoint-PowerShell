@@ -1,9 +1,9 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spoapplication
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spoapplicationpermission
 applicable: SharePoint Online
-title: Get-SPOApplication
+title: Set-SPOApplicationPermission
 schema: 2.0.0
 author: cindylay
 ms.author: cindylay
