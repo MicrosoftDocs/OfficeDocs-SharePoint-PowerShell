@@ -317,7 +317,7 @@ By opting in, you are accepting the terms of service for version history limits.
 PS > Set-SPOTenant -PrebuiltModelScope SelectedSites -PrebuiltModelSelectedSitesList "https://contoso.sharepoint.com/sites/site1","https://contoso.sharepoint.com/sites/site2" -PrebuiltModelSelectedSitesListOperation Append
 ```
 
-This example sets the scope of the prebuilt model and [prebuilt document processing](https://docs.microsoft.com/en-US/microsoft-365/syntex/prebuilt-overview) premium feature to "SelectedSites", which limits the feature to only sites included in the selected sites list. This example also appends a two sites to the feature's selected sites list.
+This example sets the scope of the prebuilt model and [prebuilt document processing](https://docs.microsoft.com/en-US/microsoft-365/syntex/prebuilt-overview) premium feature to "SelectedSites", which limits the feature to only sites included in the selected sites list. This example also appends two sites to the feature's selected sites list.
 
 Use of these parameters require the tenant to either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](https://learn.microsoft.com/en-us/microsoft-365/syntex/syntex-licensing)
 
