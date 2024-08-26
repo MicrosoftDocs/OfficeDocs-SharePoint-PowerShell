@@ -23,9 +23,13 @@ This cmdlet command enables you to relocate existing SharePoint pages by utilizi
 
 | Source | Destination |
 | :------------------- | :---------- | 
-| SharePoint MySite    | SharePoint MySite | 
-| SharePoint MySite    | SharePoint Site | 
-| SharePoint Site    | SharePoint Site | 
+| SharePoint pages library in OneDrive  | SharePoint pages library in OneDrive | 
+| SharePoint pages library in OneDrive | SharePoint site | 
+| SharePoint site    | SharePoint site | 
+
+### How do I query the code status? 
+
+
 
 ## SYNTAX
 
@@ -43,7 +47,7 @@ Copy-SPOPersonalSitePage -SourceSite <SpoSitePipeBind> -DestinationSite <SpoSite
 
 ## DESCRIPTION
 
-The `Copy-SPOPersonalSitePage` cmdlet enables SharePoint Online tenant administrators to copy one or more site pages from a source personal site to a specified destination site. If the `-DeleteSourcePage` parameter is set to `$true`, the source page(s) will be deleted after the copy operation, effectively moving the page(s).
+The Copy-SPOPersonalSitePage cmdlet allows a SharePoint Online administrator to copy one or more SharePoint pages from a selected source to a chosen destination SharePoint site. If the -DeleteSourcePage parameter is set to $true, the source page(s) will be deleted after the copy operation, effectively moving the page(s).
 
 > [!NOTE]
 > This cmdlet may not be available in all tenants as the feature rollout could be in progress. If the feature has not been enabled in your tenant, attempting to run this cmdlet will result in an error.
@@ -56,7 +60,7 @@ The `Copy-SPOPersonalSitePage` cmdlet enables SharePoint Online tenant administr
 Copy-SPOPersonalSitePage -SourceSite 'https://prepspo-my.spgrid.com/personal/testuser_onmicrosoft_com' -DestinationSite 'https://prepspo.spgrid.com/sites/testsite' -PageName 'TestPage.aspx' -DeleteSourcePage $false -Confirm 
 ```
 
-Example 1 demonstrates how a SharePoint Online administrator can copy the site page named `TestPage.aspx` from `testuser`'s personal site to the `testsite` site with confirmation. The source page will not be deleted.
+Example 1 demonstrates how a SharePoint Online administrator can copy the SharePoint page named `TestPage.aspx` from `testuser`'s SharePoint pages library in OneDrive to the `testsite` SharePoint site with confirmation. The source page will not be deleted.
 
 ### -----------------------EXAMPLE 2-----------------------------
 
@@ -64,7 +68,7 @@ Example 1 demonstrates how a SharePoint Online administrator can copy the site p
 Copy-SPOPersonalSitePage -SourceSite 'https://prepspo-my.spgrid.com/personal/testuser_onmicrosoft_com' -DestinationSite 'https://prepspo.spgrid.com/sites/testsite' -PageName 'TestPage.aspx' -DeleteSourcePage $true
 ```
 
-Example 2 demonstrates how a SharePoint Online administrator can move the site page named `TestPage.aspx` from `testuser`'s personal site to the `testsite` site. The source page will be deleted after the copy operation.
+Example 2 demonstrates how a SharePoint Online administrator can move the SharePoint page named `TestPage.aspx` from `testuser`'s SharePoint pages library in OneDrive to the `testsite` SharePoint site. The source page will be deleted after the copy operation.
 
 ### -----------------------EXAMPLE 3-----------------------------
 
@@ -72,13 +76,13 @@ Example 2 demonstrates how a SharePoint Online administrator can move the site p
 Copy-SPOPersonalSitePage -SourceSite 'https://prepspo-my.spgrid.com/personal/testuser_onmicrosoft_com' -DestinationSite 'https://prepspo.spgrid.com/sites/testsite' -AllPages -DeleteSourcePage $true -Confirm
 ```
 
-Example 3 demonstrates how a SharePoint Online administrator can copy all site pages from `testuser`'s personal site to the `testsite` site with confirmation. All source pages will be deleted after the copy operation.
+Example 3 demonstrates how a SharePoint Online administrator can copy all SharePoint pages from `testuser`'s SharePoint pages library in OneDrive to the `testsite` SharePoint site with confirmation. All source pages will be deleted after the copy operation.
 
 ## PARAMETERS
 
 ### -SourceSite
 
-Specifies the URL of the source site containing the site pages to be copied.
+Specifies the URL of the source SharePoint site containing the SharePoint pages to copy.
 
 ```yaml
 Type: SpoSitePipeBind
@@ -95,7 +99,7 @@ Accept wildcard characters: False
 
 ### -DestinationSite
 
-Specifies the URL of the destination site where the site pages will be copied to.
+Specifies the URL of the destination SharePoint site where the SharePoint pages will be copied to.
 
 ```yaml
 Type: SpoSitePipeBind
@@ -112,7 +116,7 @@ Accept wildcard characters: False
 
 ### -PageName
 
-Specifies the name of the site page to be copied. This parameter is required when not using the `-AllPages` switch.
+Specifies the name of the SharePoint page to copy. This parameter is required when not using the `-AllPages` switch.
 
 ```yaml
 Type: String
@@ -129,7 +133,7 @@ Accept wildcard characters: False
 
 ### -DeleteSourcePage
 
-Indicates whether to delete the source site page(s) after copying. If set to `$true`, the operation will move the page(s) instead of copying.
+Indicates whether to delete the source SharePoint page(s) after copying. If set to $true, the operation will move the SharePoint page(s) instead of copying.
 
 ```yaml
 Type: Boolean
@@ -146,7 +150,7 @@ Accept wildcard characters: False
 
 ### -AllPages
 
-Indicates that all site pages from the source site should be copied. This switch is required when copying all pages.
+Indicates that all SharePoint pages from the source SharePoint site are to be copied. This switch is required when copying all pages.
 
 ```yaml
 Type: SwitchParameter
@@ -163,7 +167,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-Prompts you for confirmation before executing the command.
+Prompts for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
