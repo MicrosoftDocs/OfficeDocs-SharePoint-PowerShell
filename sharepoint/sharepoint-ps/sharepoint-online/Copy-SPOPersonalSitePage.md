@@ -29,7 +29,7 @@ This cmdlet command enables you to relocate existing SharePoint pages by utilizi
 
 ### How do I query the code status? 
 
-
+<>
 
 ## SYNTAX
 
@@ -77,6 +77,12 @@ Copy-SPOPersonalSitePage -SourceSite 'https://prepspo-my.spgrid.com/personal/tes
 ```
 
 Example 3 demonstrates how a SharePoint Online administrator can copy all SharePoint pages from `testuser`'s SharePoint pages library in OneDrive to the `testsite` SharePoint site with confirmation. All source pages will be deleted after the copy operation.
+
+### -----------------------EXAMPLE 4-----------------------------
+
+<>
+
+Example 4 demonstrates how a SharePoint Online administrator can copy all SharePoint pages from `XXX`'s SharePoint site to the `testsite` SharePoint site with confirmation. All source pages will be deleted after the copy operation.
 
 ## PARAMETERS
 
