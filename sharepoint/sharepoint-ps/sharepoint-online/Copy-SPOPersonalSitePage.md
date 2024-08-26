@@ -6,7 +6,7 @@ applicable: SharePoint Online
 title: Copy-SPOPersonalSitePage
 schema: 2.0.0
 author: xuyangzou
-ms.author: xuyangzou
+ms.author: xuyangzou, spodeanu
 ms.reviewer:
 ---
 
@@ -15,14 +15,14 @@ ms.reviewer:
 ## SYNOPSIS
 
 ### What does this command do?
-This cmdlet command enables you to relocate existing SharePoint pages by utilizing an existing copy operation. We offer two methods for relocating pages:
+This cmdlet command enables you to relocate existing SharePoint pages by utilizing an existing copy operation. We will also copy any assets associated with the SharePoint pages to the new destination. We offer two methods for relocating pages:
 - Copy: This method keeps the original page intact while creating a duplicate at the new location.
 - Move: This method creates a new copy at the new location and deletes the original page from the source.
 
-### Where can I move the page(s) to and from?
+### Where can I move the existing page(s) to and from?
 
 | Source | Destination |
-| :------------------- | :----------: | 
+| :------------------- | :---------- | 
 | SharePoint MySite    | SharePoint MySite | 
 | SharePoint MySite    | SharePoint Site | 
 | SharePoint Site    | SharePoint Site | 
@@ -188,5 +188,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+
+### Will SharePoint pages retain their version history after the move?
+Currently, only the latest published version will be transferred.
+
+### Can recipients of SharePoint pages I shared continue to access them after the move?
+All permissions will be removed once the pages are moved.
 
 ## RELATED LINKS
