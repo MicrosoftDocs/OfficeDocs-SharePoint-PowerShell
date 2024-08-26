@@ -3025,7 +3025,7 @@ The valid values are:
 Type: SyntexFeatureScopeValue
 Parameter Sets: (All)
 Required: False
-Position: Names
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -3091,7 +3091,7 @@ The valid values are:
 Type: SyntexFeatureScopeValue
 Parameter Sets: (All)
 Required: False
-Position: Names
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -3173,7 +3173,7 @@ The valid values are:
 Type: SyntexFeatureScopeValue
 Parameter Sets: (All)
 Required: False
-Position: Names
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
