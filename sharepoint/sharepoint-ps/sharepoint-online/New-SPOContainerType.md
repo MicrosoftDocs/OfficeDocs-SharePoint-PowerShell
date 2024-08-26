@@ -1,4 +1,3 @@
-
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
@@ -15,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-This cmdlet creates a new containertype of standard or trial status. The standard containertype can be created with the regular billing structure or direct to customer billing structure.
+This cmdlet creates a new container type of standard or trial status. The standard container type can be created with the regular billing structure or direct to customer billing structure.
 
 ## SYNTAX
 
@@ -38,15 +37,14 @@ New-SPOContainerType –TrialContainerType -ContainerTypeName <ContainerTypeName
 
 ## DESCRIPTION
 
-The New-SPOContainerType cmdlet creates a new containertype of the standard or trial status. A trial containertype does not have a billing profile associated with it and have a validity of 30 days. A standard containertype has a billing profile associated with it. With the use of -IsPassThroughBilling, we can create a direct to customer billed containertype.
-This command is available only in SharePoint Online Management Shell version 16.0.24211.12000 or higher to run this cmdlet.
+The New-SPOContainerType cmdlet creates a new container type of the standard or trial status. A trial container type does not have a billing profile associated with it and has a validity of 30 days. A standard container type has a billing profile associated with it. With the use of -IsPassThroughBilling, we can create a direct to customer billed container type.
 
-You must be a SharePoint Online Administrator or Global Administrator to run this cmdlet.
+You must be a SharePoint Embedded Administrator to run this cmdlet.
 
 
 ## EXAMPLES
 
-### Example 2
+### Example 1
 
 ```powershell
 New-SPOContainerType -ContainerTypeName ContosoLegal -OwningApplicationId a735e4af-b86e-0000-93ba-1faded6c39e1 -AzureSubscriptionId 564e9025-f7f5-xxx9-9ddd-4cdxxxx1755 -ResourceGroup prod-resources -Region EastUS
@@ -67,7 +65,7 @@ CreationDate        : 7/2/2024
 ExpiryDate          : 
 ```
 
-Example 2  
+### Example 2  
 ```powershell
 New-SPOContainerType –TrialContainerType - ContosoLegal -OwningApplicationId a735e4af-b86e-0000-93ba-1faded6c39e1
 ```
@@ -87,7 +85,7 @@ ContainerTypeId                              ContainerTypeName          OwningAp
 
 ## PARAMETERS
 
-### -ContainerTypeName <!-- TODO -->
+### -ContainerTypeName
 
 This parameter names your ContainerType for your SharePoint Embedded Application
 
@@ -104,13 +102,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OwningApplicationId <!-- TODO -->
+### -OwningApplicationId
 
-Use this parameter to specify the Container in the given OwningApplicationId.
+This parameter specifies the ID of the SharePoint Embedded application.  
 
 ```yaml
 Type: String
-Parameter Sets: ParamSet4, ParamSet5
+Parameter Sets: 
 Aliases:
 Applicable: SharePoint Online
 
@@ -121,9 +119,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AzureSubscriptionId <!-- TODO -->
+### -AzureSubscriptionId
 
-This parameter can be used when there are more than 5,000 Containers in a given SharePoint Embedded application. Using `-Paged` will provide a `<Paging Token>` that will display the next 5,000 Containers.
+This parameter describes the Azure subscription ID to which the container type needs to be associated.
+
+```yaml
+Type: String
+Parameter Sets: 
+Aliases:
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+### -ResourceGroup
+
+THis parameter describes the resource group to be used for the associated container type
+
+```yaml
+Type: String
+Parameter Sets: 
+Aliases:
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Region
+
+This parameter describes the region to which the billing profile of the container type is associated with
 
 ```yaml
 Type: String
@@ -138,14 +171,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
-### -ResourceGroup <!-- TODO -->
-
-Use this parameter to provide the `<Paging Token>` provided to view the remaining Containers as shown in Example 5. If there are no more Containers to display, the commandlet output will return the message `End of Containers view.` Otherwise, use the given `<Paging Token>` to retrieve the next batch of up to 5,000 ontainers.
+###  –TrialContainerType
+This token is used to specify that the cmdlet is used to create a trial container type and thereby the billing profile need not be provided
 
 ```yaml
 Type: String
-Parameter Sets: ParamSet2, ParamSet3
+Parameter Sets:
 Aliases:
 Applicable: SharePoint Online
 
@@ -156,44 +187,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Region <!-- TODO -->
-
-Use this parameter to provide the `<Paging Token>` provided to view the remaining Containers as shown in Example 5. If there are no more Containers to display, the commandlet output will return the message `End of Containers view.` Otherwise, use the given `<Paging Token>` to retrieve the next batch of up to 5,000 ontainers.
-
-```yaml
-Type: String
-Parameter Sets: ParamSet2, ParamSet3
-Aliases:
-Applicable: SharePoint Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-###  –TrialContainerType <!-- TODO -->
-Use this parameter to provide the `<Paging Token>` provided to view the remaining Containers as shown in Example 5. If there are no more Containers to display, the commandlet output will return the message `End of Containers view.` Otherwise, use the given `<Paging Token>` to retrieve the next batch of up to 5,000 ontainers.
-
-```yaml
-Type: String
-Parameter Sets: ParamSet2, ParamSet3
-Aliases:
-Applicable: SharePoint Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-###  –IsPassThroughBilling <!-- TODO -->
+###  –IsPassThroughBilling
 Use this parameter to provide create a direct to customer billed containertype
 ```yaml
 Type: String
-Parameter Sets: ParamSet2, ParamSet3
+Parameter Sets:
 Aliases:
 Applicable: SharePoint Online
 
