@@ -14,7 +14,18 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Copies a SharePoint Online personal site page or pages to a target site.
+### What does this command do?
+This cmdlet command enables you to relocate existing SharePoint pages by utilizing an existing copy operation. We offer two methods for relocating pages:
+- Copy: This method keeps the original page intact while creating a duplicate at the new location.
+- Move: This method creates a new copy at the new location and deletes the original page from the source.
+
+### Where can I move the page(s) to and from?
+
+| Source | Destination |
+| :------------------- | :----------: | 
+| SharePoint MySite    | SharePoint MySite | 
+| SharePoint MySite    | SharePoint Site | 
+| SharePoint Site    | SharePoint Site | 
 
 ## SYNTAX
 
