@@ -156,6 +156,7 @@ Set-SPOTenant
  [-CoreDefaultLinkToExistingAccess <Boolean>]
  [-SelfServiceSiteCreationDisabled <Boolean>]
  [-SyncAadB2BManagementPolicy <Boolean>]
+ [-ContentSecurityPolicyConfigSynced <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -2975,6 +2976,21 @@ Accept wildcard characters: False
 ### -SyncAadB2BManagementPolicy
 
 This feature allows SharePoint Online to synchronize several Entra B2B collaboration settings [Guest user access restriction and collaboration restriction](https://learn.microsoft.com/en-us/entra/external-id/external-collaboration-settings-configure#configure-settings-in-the-portal), and store them on SharePoint Online tenant store. On sharing, SharePoint checks whether those synchronized settings are blocking sharing before sending invitation requests to Entra B2B invitation manager. The sync might take up to 24 hours to complete if you change those Entra B2B collaboration settings. To make the change effective on SharePoint Online immediately, run 'Set-SPOTenant -SyncAadB2BManagementPolicy $true' and it forces a sync from Microsoft Entra.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContentSecurityPolicyConfigurationSynced
+
+When set to `False` a job will be run in up to 24 hours to populate the Content Security Policy configuration with existing third-party apps in the App Catalog.
 
 ```yaml
 Type: Boolean
