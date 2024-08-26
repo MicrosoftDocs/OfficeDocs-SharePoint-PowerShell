@@ -22,7 +22,6 @@ This cmdlet removes the containertype specified from the tenant.
 ```powershell
 Remove-SPOContainerType -ContainerTypeId <ContainerTypeId>
 ```
-<!-- TODO -->
  
 ## DESCRIPTION
  
