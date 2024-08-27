@@ -15,45 +15,26 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Removes an entry to the Content Security Policy configuration.
+Removes entries from the Content Security Policy configuration.
 
 ## SYNTAX
 
 ### Default
 
 ```powershell
-Remove-SPOContentSecurityPolicy [-Url] <String> [-Directive] <String> 
+Remove-SPOContentSecurityPolicy [-Url] <String>
 ```
 
 ## DESCRIPTION
 
-Removes an entry to the Content Security Policy configuration. 
-The url in each entry will be added to the corresponding directive during construction of the Content-Security-Policy header.
+Removes all entries associated with the given url from the Content Security Policy configuration. 
 In multi-geo environments Content Security Policy entries are unique to each geo.
-Entries with a "*" directive will be applied to all directives.
 
 ## PARAMETERS
 
 ### -Url
 
-Url of the Content Security Policy entry to be removed.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Directive
-
-Directive of the Content Security Policy entry to be removed.
+Url of the Content Security Policy entries to be removed.
 
 ```yaml
 Type: String
