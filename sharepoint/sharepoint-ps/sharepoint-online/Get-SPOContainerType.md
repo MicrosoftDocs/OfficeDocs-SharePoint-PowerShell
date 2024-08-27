@@ -44,76 +44,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 Get-SPOContainerType 
 ```
 
-Example output of the Get-SPOContainerType cmdlet 
-
-```powershell
-ContainerTypeId     : 40f7cbcf-5db4-46a6-c99b-acdae53d1ce1 
-
-ContainerTypeName   : Contoso_Payroll 
-
-OwningApplicationId : 27e1e2e5-eb75-4909-9c52-65f9fe9a51e0 
-
-Classification      : Standard 
-
-AzureSubscriptionId : f4fce63c-3b6f-4ced-97c6-f96734c3674b 
-
-ResourceGroup       : prod-resources 
-
- 
-
-ContainerTypeId     : 36a2cb87-e16e-5595-b368-66c740e4c95b 
-
-ContainerTypeName   : Contoso_HR 
-
-OwningApplicationId : aa3d7440-3eaf-76a9-8c5a-4fae28b6316f 
-
-Classification      : Standard 
-
-AzureSubscriptionId : f4fce63c-3b6f-4ced-97c6-f69734c3674a 
-
-ResourceGroup       : prod-resources 
-
- 
-
-ContainerTypeId     : 4f0af585-8dcc-0000-223d-661eb2c604e4 
-
-ContainerTypeName   : ContosoLegal 
-
-OwningApplicationId : a735e4af-b86e-0000-93ba-1faded6c39e1 
-
-Classification      : Standard 
-
-AzureSubscriptionId : 564e9025-f7f5-xxx9-9ddd-4cdxxxx1755 
-
-ResourceGroup       : prod-resources 
-```
+Example 1 retrieves all the container types present in the tenant and displays information such as Container Type Id, Container Type Name, Owning Application ID, billing details, creation date, expiry date.
 
 ### Example 2
 
 ```powershell
 Get-SPOContainerType -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 
 ```
-Example output of the Get-SPOContainerType cmdlet 
-
-```powershell
-ContainerTypeId     : 4f0af585-8dcc-0000-223d-661eb2c604e4 
-
-ContainerTypeName   : ContosoLegal 
-
-OwningApplicationId : a735e4af-b86e-0000-93ba-1faded6c39e1 
-
-AzureSubscriptionId : 564e9025-f7f5-xxx9-9ddd-4cdxxxx1755 
-
-ResourceGroup       : prod-resources 
-
-Region              : EastUS 
-
-Classification      : Standard 
-
-CreationDate           : 7/2/2024 
-
-ExpiryDate             :  
-```
+Example 2 returns the detailed properties of container type 4f0af585-8dcc-0000-223d-661eb2c604e4 
 
 ## PARAMETERS
 
