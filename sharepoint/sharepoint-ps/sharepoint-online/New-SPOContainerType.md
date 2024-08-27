@@ -27,7 +27,7 @@ New-SPOContainerType –ContainerTypeName <ContainerTypeName> -OwningApplication
 ### ParamSet2
 
 ```powershell
-New-SPOContainerType -ContainerTypeName <ContainerTypeName> -OwningApplicationId <OwningApplicationId> -IsPassThroughBilling
+New-SPOContainerType -ContainerTypeName <ContainerTypeName> -OwningApplicationId <OwningApplicationId> '-IsPassThroughBilling'
 ```
 
 ### ParamSet3
@@ -49,7 +49,7 @@ You must be a SharePoint Embedded Administrator to run this cmdlet.
 ```powershell
 New-SPOContainerType -ContainerTypeName ContosoLegal -OwningApplicationId a735e4af-b86e-0000-93ba-1faded6c39e1 -AzureSubscriptionId 564e9025-f7f5-xxx9-9ddd-4cdxxxx1755 -ResourceGroup prod-resources -Region EastUS
 ```
-Example output of the New-SPOContainerType cmdlet
+Example output of the New-SPOContainerType cmdlet.
 ```powershell
 Are you sure you want to perform this action?
 Performing the operation "New-SPOContainerType".
@@ -70,7 +70,7 @@ ExpiryDate          :
 New-SPOContainerType –TrialContainerType - ContosoLegal -OwningApplicationId a735e4af-b86e-0000-93ba-1faded6c39e1
 ```
 
-Example output of the New-SPOContainerType cmdlet
+Example output of the New-SPOContainerType cmdlet.
 
 ```powershell
 Are you sure you want to perform this action?
@@ -87,7 +87,7 @@ ContainerTypeId                              ContainerTypeName          OwningAp
 
 ### -ContainerTypeName
 
-This parameter names your ContainerType for your SharePoint Embedded Application
+This parameter names your ContainerType for your SharePoint Embedded Application.
 
 ```yaml
 Type: String
@@ -139,7 +139,7 @@ Accept wildcard characters: False
 
 ### -ResourceGroup
 
-THis parameter describes the resource group to be used for the associated container type
+This parameter describes the resource group to be used for the associated container type.
 
 ```yaml
 Type: String
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 
 ### -Region
 
-This parameter describes the region to which the billing profile of the container type is associated with
+This parameter describes the region to which the billing profile of the container type is associated with.
 
 ```yaml
 Type: String
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ###  –TrialContainerType
-This token is used to specify that the cmdlet is used to create a trial container type and thereby the billing profile need not be provided
+This token is used to specify that the cmdlet is used to create a trial container type and thereby the billing profile need not be provided.
 
 ```yaml
 Type: String
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ###  –IsPassThroughBilling
-Use this parameter to provide create a direct to customer billed containertype
+Use this parameter to provide create a direct to customer billed container type.
 ```yaml
 Type: String
 Parameter Sets:
