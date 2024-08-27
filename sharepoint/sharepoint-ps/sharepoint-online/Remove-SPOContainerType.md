@@ -13,7 +13,7 @@ ms.reviewer:
 # Remove-SPOContainerType
  
 ## SYNOPSIS
-This cmdlet removes the containertype specified from the tenant.
+This cmdlet removes the container type specified from the tenant.
  
 ## SYNTAX
  
