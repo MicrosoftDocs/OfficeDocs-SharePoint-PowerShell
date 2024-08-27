@@ -14,12 +14,12 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-### What does this command do?
+**What does this command do?**
 This cmdlet command allows you to relocate existing SharePoint pages by utilizing an existing copy operation. We will also copy any assets associated with the SharePoint pages to the new destination. We offer two methods for relocating pages:
 - Copy: This method keeps the original page intact while creating a duplicate at the new location.
 - Move: This method creates a new copy at the new location and deletes the original page from the source.
 
-### Where can I move the existing page(s) to and from?
+**Where can I move the existing page(s) to and from?**
 
 | Source | Destination |
 | :------------------- | :---------- | 
@@ -27,7 +27,7 @@ This cmdlet command allows you to relocate existing SharePoint pages by utilizin
 | SharePoint pages library in OneDrive | SharePoint site | 
 | SharePoint site    | SharePoint site | 
 
-### How do I query the code status? 
+**How do I query the code status?**
 
 After the copy is finished, you'll see the status of the code. If the copy was successful, we'll provide the URL for the new page
 
