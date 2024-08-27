@@ -15,7 +15,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Adds an entry to the Content Security Policy configuration.
+Adds an entry to the **Content Security Policy** configuration.
 
 ## SYNTAX
 
@@ -27,16 +27,16 @@ Add-SPOContentSecurityPolicy [-Url] <String> [-Directive] <String>
 
 ## DESCRIPTION
 
-Adds an entry to the Content Security Policy configuration. 
+Adds an entry to the **Content Security Policy** configuration. 
 The url in each entry will be added to the corresponding directive during construction of the Content-Security-Policy header.
-In multi-geo environments Content Security Policy entries are unique to each geo.
+In multi-geo environments **Content Security Policy** entries are unique to each geo.
 Entries with a "*" directive will be applied to all directives.
 
 ## PARAMETERS
 
 ### -Url
 
-Url to allow as part of this Content Security Policy entry.
+Url to allow as part of this **Content Security Policy** entry.
 
 ```yaml
 Type: String
@@ -53,7 +53,7 @@ Accept wildcard characters: False
 
 ### -Directive
 
-Directive to allow as part of this Content Security Policy entry.
+Directive to allow as part of this **Content Security Policy** entry.
 Currently allowed values are "*", "script-src" and "worker-src".
 
 ```yaml

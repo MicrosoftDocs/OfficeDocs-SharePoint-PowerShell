@@ -15,7 +15,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Returns the all entries in the current Content Security Policy configuration.
+Returns all entries in the current **Content Security Policy** configuration.
 
 ## SYNTAX
 
@@ -27,8 +27,8 @@ Get-SPOContentSecurityPolicy
 
 ## DESCRIPTION
 
-Returns all entries in the current Content Security Policy configuration.
-The url in each entry will be added to the corresponding directive during construction of the Content-Security-Policy header.
+Returns all entries in the current **Content Security Policy** configuration.
+The url in each entry will be added to the corresponding directive during construction of the `Content-Security-Policy` header.
 
 ## RELATED LINKS
 

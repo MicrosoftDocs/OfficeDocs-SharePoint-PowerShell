@@ -15,7 +15,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Removes entries from the Content Security Policy configuration.
+Removes entries from the **Content Security Policy** configuration.
 
 ## SYNTAX
 
@@ -27,14 +27,14 @@ Remove-SPOContentSecurityPolicy [-Url] <String>
 
 ## DESCRIPTION
 
-Removes all entries associated with the given url from the Content Security Policy configuration. 
-In multi-geo environments Content Security Policy entries are unique to each geo.
+Removes all entries associated with the given url from the **Content Security Policy** configuration. 
+In multi-geo environments, **Content Security Policy** entries are unique to each geo.
 
 ## PARAMETERS
 
 ### -Url
 
-Url of the Content Security Policy entries to be removed.
+Url of the **Content Security Policy** entries to be removed.
 
 ```yaml
 Type: String
