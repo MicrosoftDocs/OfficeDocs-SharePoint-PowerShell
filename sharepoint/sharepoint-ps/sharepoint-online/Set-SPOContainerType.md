@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spocontainer
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spocontainertype
 applicable: SharePoint Online
 title: Set-SPOContainerType
 schema: 2.0.0
@@ -107,7 +107,7 @@ ContainerTypeName   : Blue Container Type
 
 ### -ContainerTypeName
 
-This parameter names your ContainerType for your SharePoint Embedded Application
+This parameter names your ContainerType for your SharePoint Embedded Application.
 
 ```yaml
 Type: String
@@ -124,11 +124,11 @@ Accept wildcard characters: False
 
 ### -OwningApplicationId
 
-Use this parameter to specify the Container in the given OwningApplicationId.
+This parameter specifies the ID of the SharePoint Embedded application.  
 
 ```yaml
 Type: String
-Parameter Sets: ParamSet4, ParamSet5
+Parameter Sets: 
 Aliases:
 Applicable: SharePoint Online
 
@@ -141,11 +141,11 @@ Accept wildcard characters: False
 
 ### -AzureSubscriptionId
 
-This parameter can be used when there are more than 5,000 Containers in a given SharePoint Embedded application. Using `-Paged` will provide a `<Paging Token>` that will display the next 5,000 Containers.
+This parameter describes the Azure subscription ID to which the container type needs to be associated.
 
 ```yaml
 Type: String
-Parameter Sets: ParamSet2, ParamSet3
+Parameter Sets: 
 Aliases:
 Applicable: SharePoint Online
 
@@ -159,11 +159,11 @@ Accept wildcard characters: False
 
 ### -ResourceGroup
 
-Use this parameter to provide the `<Paging Token>` provided to view the remaining Containers as shown in Example 5. If there are no more Containers to display, the commandlet output will return the message `End of Containers view.` Otherwise, use the given `<Paging Token>` to retrieve the next batch of up to 5,000 ontainers.
+This parameter describes the resource group to be used for the associated container type.
 
 ```yaml
 Type: String
-Parameter Sets: ParamSet2, ParamSet3
+Parameter Sets: 
 Aliases:
 Applicable: SharePoint Online
 
