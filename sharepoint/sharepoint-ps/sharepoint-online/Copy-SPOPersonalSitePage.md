@@ -15,7 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 
 ### What does this command do?
-This cmdlet command enables you to relocate existing SharePoint pages by utilizing an existing copy operation. We will also copy any assets associated with the SharePoint pages to the new destination. We offer two methods for relocating pages:
+This cmdlet command allows you to relocate existing SharePoint pages by utilizing an existing copy operation. We will also copy any assets associated with the SharePoint pages to the new destination. We offer two methods for relocating pages:
 - Copy: This method keeps the original page intact while creating a duplicate at the new location.
 - Move: This method creates a new copy at the new location and deletes the original page from the source.
 
@@ -29,11 +29,13 @@ This cmdlet command enables you to relocate existing SharePoint pages by utilizi
 
 ### How do I query the code status? 
 
-If the copy process is completed, a message indicating the progress will be displayed. If the copy is successful, the URL of the new page will be shown. Otherwise, an error message will appear.
+After the copy is finished, you'll see the status of the code. If the copy was successful, we'll provide the URL for the new page
 
-If the copy is still in progress, a message with a URL will be displayed. The URL will look like this: 'https://contoso.microsoft.com/sites/testsite/_api/sitepages/pages/CopyToStatus('243925c7-cea7-4430-bb90-299ed9122d0b')'. Pasting this link into a browser will send an API request to check the status of the copy job. The JobState property will contain a number indicating the job's status.
+If the copy is still in progress, you'll get a message with a URL. You can paste this link into your browser to check the status of the copy job. The JobState property will show a number indicating the job's status.
 
-
+```powershell
+https://contoso.microsoft.com/sites/testsite/_api/sitepages/pages/CopyToStatus('243925c7-cea7-4430-bb90-299ed9122d0b').
+```
 
 ## SYNTAX
 
@@ -41,12 +43,6 @@ If the copy is still in progress, a message with a URL will be displayed. The UR
 
 ```powershell
 Copy-SPOPersonalSitePage -SourceSite <SpoSitePipeBind> -DestinationSite <SpoSitePipeBind> -PageName <String> -DeleteSourcePage <Boolean> [-Confirm] [<CommonParameters>]
-```
-
-### CopyAllPages
-
-```powershell
-Copy-SPOPersonalSitePage -SourceSite <SpoSitePipeBind> -DestinationSite <SpoSitePipeBind> -AllPages -DeleteSourcePage <Boolean> -Confirm [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -77,16 +73,10 @@ Example 2 demonstrates how a SharePoint Online administrator can move the ShareP
 ### -----------------------EXAMPLE 3-----------------------------
 
 ```powershell
-Copy-SPOPersonalSitePage -SourceSite 'https://prepspo-my.spgrid.com/personal/testuser_onmicrosoft_com' -DestinationSite 'https://prepspo.spgrid.com/sites/testsite' -AllPages -DeleteSourcePage $true -Confirm
+Copy-SPOPersonalSitePage -SourceSite 'https://contoso.microsoft.com/sites/sourcesite' -DestinationSite 'https://contoso.microsoft.com/sites/testsite' -PageName 'TestPage.aspx' -DeleteSourcePage $true -Confirm
 ```
 
-Example 3 demonstrates how a SharePoint Online administrator can copy all SharePoint pages from `testuser`'s SharePoint pages library in OneDrive to the `testsite` SharePoint site with confirmation. All source pages will be deleted after the copy operation.
-
-### -----------------------EXAMPLE 4-----------------------------
-
-<>
-
-Example 4 demonstrates how a SharePoint Online administrator can copy all SharePoint pages from `XXX`'s SharePoint site to the `testsite` SharePoint site with confirmation. All source pages will be deleted after the copy operation.
+Example 4 demonstrates how a SharePoint Online administrator can copy the SharePoint page named `TestPage.aspx` from a SharePoint site name `sourcesite` to the `testsite` SharePoint site with confirmation. The source page will be deleted after the copy operation.
 
 ## PARAMETERS
 
@@ -147,23 +137,6 @@ Indicates whether to delete the source SharePoint page(s) after copying. If set 
 
 ```yaml
 Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllPages
-
-Indicates that all SharePoint pages from the source SharePoint site are to be copied. This switch is required when copying all pages.
-
-```yaml
-Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
