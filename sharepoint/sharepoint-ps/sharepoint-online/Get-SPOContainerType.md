@@ -1,9 +1,9 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spocontainer
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spocontainertype
 applicable: SharePoint Online
-title: Set-SPOContainerType
+title: Get-SPOContainerType
 schema: 2.0.0
 author: ShreyasSar26
 ms.author: ShreyasSar26
@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Returns one or more containertypes created in the tenant. 
+Returns one or more container types created in the tenant. 
 
 ## SYNTAX
 
@@ -30,7 +30,7 @@ Get-SPOContainerType [-ContainerTypeId <ContainerTypeId>]
 
 ## DESCRIPTION
 
-This
+The Get-SPOContainerType cmdlet returns all the container types present in the tenant or details of a specific container type when paired with the containertype Id parameter. 
 
 You must be a SharePoint Embedded administrator to run the cmdlet.
 
