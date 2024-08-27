@@ -2988,9 +2988,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ContentSecurityPolicyConfigurationSynced
+### -ResyncContentSecurityPolicyConfigurationEntries
 
-When set to `False` a job will be run in up to 24 hours to populate the Content Security Policy configuration with existing third-party apps in the App Catalog.
+When set to `True` forces a sync of Content Security Policy entries for SharePoint framework component in the tenant application catalog.
+New entries will be added to the configuration if not already present based on the `cdnBasedPath` property under a solution's `.config/write-manifests.json` if present.
+The sync may take up to 24 hours to complete.
+In multi-geo environments Content Security Policy entries are unique to each geo.
+
 
 ```yaml
 Type: Boolean

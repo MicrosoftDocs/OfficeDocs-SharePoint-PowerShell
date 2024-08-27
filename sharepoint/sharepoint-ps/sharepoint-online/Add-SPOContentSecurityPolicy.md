@@ -29,6 +29,7 @@ Add-SPOContentSecurityPolicy [-Url] <String> [-Directive] <String>
 
 Adds an entry to the Content Security Policy configuration. 
 The url in each entry will be added to the corresponding directive during construction of the Content-Security-Policy header.
+In multi-geo environments Content Security Policy entries are unique to each geo.
 Entries with a "*" directive will be applied to all directives.
 
 ## PARAMETERS
