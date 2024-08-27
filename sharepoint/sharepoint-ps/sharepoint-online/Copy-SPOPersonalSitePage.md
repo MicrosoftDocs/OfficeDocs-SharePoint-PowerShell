@@ -76,7 +76,7 @@ Example 2 demonstrates how a SharePoint Online administrator can move the ShareP
 Copy-SPOPersonalSitePage -SourceSite 'https://contoso.microsoft.com/sites/sourcesite' -DestinationSite 'https://contoso.microsoft.com/sites/testsite' -PageName 'TestPage.aspx' -DeleteSourcePage $true -Confirm
 ```
 
-Example 4 demonstrates how a SharePoint Online administrator can copy the SharePoint page named `TestPage.aspx` from a SharePoint site name `sourcesite` to the `testsite` SharePoint site with confirmation. The source page will be deleted after the copy operation.
+Example 3 demonstrates how a SharePoint Online administrator can copy the SharePoint page named `TestPage.aspx` from a SharePoint site name `sourcesite` to the `testsite` SharePoint site with confirmation. The source page will be deleted after the copy operation.
 
 ## PARAMETERS
 
