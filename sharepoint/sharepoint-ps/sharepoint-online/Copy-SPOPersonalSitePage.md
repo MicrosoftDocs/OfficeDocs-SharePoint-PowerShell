@@ -149,7 +149,7 @@ Accept wildcard characters: False
 Indicates whether to delete the source SharePoint page(s) after copying. If set to `$true`, the operation will move the SharePoint page(s) instead of copying.
 
 ```yaml
-Type: Boolean
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
