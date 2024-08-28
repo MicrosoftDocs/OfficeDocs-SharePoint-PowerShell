@@ -156,6 +156,7 @@ Set-SPOTenant
  [-CoreDefaultLinkToExistingAccess <Boolean>]
  [-SelfServiceSiteCreationDisabled <Boolean>]
  [-SyncAadB2BManagementPolicy <Boolean>]
+ [-ContentSecurityPolicyConfigSynced <Boolean>]
  [-DocumentUnderstandingModelScope <SyntexFeatureScopeValue>]
  [-DocumentUnderstandingModelSelectedSitesList [String[]]]
  [-DocumentUnderstandingModelSelectedSitesListOperation <SelectedSitesListOperations>]
@@ -3007,6 +3008,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ResyncContentSecurityPolicyConfigurationEntries
+
+When set to `True`, forces a sync of **Content Security Policy** entries for SharePoint framework component in the tenant application catalog.
+New entries will be added to the configuration, if not already present, based on the `cdnBasedPath` property under a solution's `.config/write-manifests.json` if present.
+The sync may take up to 24 hours to complete.
+In multi-geo environments, **Content Security Policy** entries are unique to each geo.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DocumentUnderstandingModelScope
 
 This parameter allows administrators to limit which SharePoint sites the document understanding model and [unstructurted document processesing](/microsoft-365/syntex/document-understanding-overview) premium feature is available on.
@@ -3024,6 +3043,7 @@ The valid values are:
 ```yaml
 Type: SyntexFeatureScopeValue
 Parameter Sets: (All)
+Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
@@ -3041,6 +3061,7 @@ This parameter allows administrators to pass a list of SharePoint site URLs to m
 ```yaml
 Type: String[]
 Parameter Sets: (All)
+Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
@@ -3065,6 +3086,7 @@ The valid values are:
 ```yaml
 Type: SelectedSitesListOperations
 Parameter Sets: (All)
+Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: Overwrite
@@ -3089,6 +3111,7 @@ The valid values are:
 ```yaml
 Type: SyntexFeatureScopeValue
 Parameter Sets: (All)
+Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
@@ -3106,6 +3129,7 @@ This parameter allows administrators to pass a list of SharePoint site URLs to m
 ```yaml
 Type: String[]
 Parameter Sets: (All)
+Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
@@ -3130,6 +3154,7 @@ The valid values are:
 ```yaml
 Type: SelectedSitesListOperations
 Parameter Sets: (All)
+Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: Overwrite
@@ -3147,6 +3172,7 @@ This parameter allows administrators to choose whether or not the AI builder mod
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
+Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
@@ -3171,6 +3197,7 @@ The valid values are:
 ```yaml
 Type: SyntexFeatureScopeValue
 Parameter Sets: (All)
+Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
@@ -3188,6 +3215,7 @@ This parameter allows administrators to pass a list of SharePoint site URLs to m
 ```yaml
 Type: String[]
 Parameter Sets: (All)
+Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
@@ -3212,6 +3240,7 @@ The valid values are:
 ```yaml
 Type: SelectedSitesListOperations
 Parameter Sets: (All)
+Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: Overwrite
