@@ -33,7 +33,7 @@ The Copy-SPOPersonalSitePage cmdlet allows a SharePoint Administrator to copy on
 > [!NOTE]
 > The Copy-SPOPersonalSitePage cmdlet may not be available in all tenants as the feature rollout could be in progress. If the feature has not been enabled in your tenant, attempting to run this cmdlet will result in an error.
 
-**Where can I move the existing page(s) to and from?**
+### Where can I move the existing page(s) to and from?
 
 | Source | Destination |
 | :------------------- | :---------- | 
@@ -43,27 +43,38 @@ The Copy-SPOPersonalSitePage cmdlet allows a SharePoint Administrator to copy on
 
 ### How do I query the status of my copy operation?
 
-After the cmdlet is executed, you'll see the status code of the copy operation. If the copy was successful, we'll provide the URL for the new page.
+After the Copy-SPOPersonalSitePage cmdlet is executed, you'll receive the following information:
 
-If the copy is still in progress, you'll get a message with a URL. You can paste this link into your browser to check the status of the copy job. The `JobState` property will show a number indicating the job's status.
+| Property | Description |
+| :------- | :---------- |
+| ErrorMessage | We will show the corresponding error message, if any error occurs. |
+| JobState | The current state of the job. |
+| NewPageUrl | 	The URL of the new page if the copy operation has completed. |
+| SourcePageName | The name of the source page to be copied. |
+| StatusMessage | A message describing the current status. |
+| WorkItemId | The work item ID used to track the status of the copy job. If the copy operation is complete, this will be `00000000-0000-0000-0000-000000000000`. |
+
+- If the copy is successful, the URL for the new page will be provided.
+- If the copy is still in progress, you will receive the work item ID. You can use the provided command to check the status of the URL.
 
 ```powershell
-https://contoso.sharepoint.com/sites/testsite/_api/sitepages/pages/CopyToStatus('243925c7-cea7-4430-bb90-299ed9122d0b').
+Get-SPOPersonalSitePageCopyProgress -DestinationSite <SpoSitePipeBind> -WorkItemId <Guid> [<CommonParameters>]
 ```
-The following table explains the meaning of each number that indicates the job’s status:
-| Number | Code status | Explanation |
-| :----- | :---------- | :---------- | 
-| 0 | Queued | The copy operation was queued for execution. |
-| 1 | CreateAssetsFolderStart | We’ve started creating a folder to place all associated assets used on this page. |
-| 2 | CreateAssetsFolderEnd | We’ve finished creating a folder to place all associated assets used on this page. |
-| 3 | CopyAssetsStart | We’ve started copying associated assets used on this page. |
-| 4 | CopyAssetsEnd | We’ve finished copying associated assets used on this page. |
-| 5 | CreatePageStart | We’ve started creating a new page. |
-| 6 | CreatePageEnd | We’ve finished creating a new page. |
-| 7 | Succeeded | The copy operation was successful. |
-| 8 | Deleting | The copy operation was deleted. |
-| 9 | Failed | The copy operation failed. |
-| 10 | JobNotFound | The copy operation wasn’t found. |
+The following table explains the copy job's state:
+
+| Status | Explanation |
+| :---------- | :---------- | 
+| Queued | The copy operation was queued for execution. |
+| CreateAssetsFolderStart | We’ve started creating a folder to place all associated assets used on this page. |
+| CreateAssetsFolderEnd | We’ve finished creating a folder to place all associated assets used on this page. |
+| CopyAssetsStart | We’ve started copying associated assets used on this page. |
+| CopyAssetsEnd | We’ve finished copying associated assets used on this page. |
+| CreatePageStart | We’ve started creating a new page. |
+| CreatePageEnd | We’ve finished creating a new page. |
+| Succeeded | The copy operation was successful. |
+| Deleting | The copy operation was deleted. |
+| Failed | The copy operation failed. |
+| JobNotFound | The copy operation wasn’t found. |
 
 ## EXAMPLES
 
@@ -90,6 +101,14 @@ Copy-SPOPersonalSitePage -SourceSite 'https://contoso.sharepoint.com/sites/sourc
 ```
 
 Example 3 demonstrates how a SharePoint Administrator can copy the SharePoint page named `TestPage.aspx` from a SharePoint site name `sourcesite` to the `testsite` SharePoint site with confirmation. The source page will be deleted after the copy operation.
+
+### -----------------------EXAMPLE 4-----------------------------
+
+```powershell
+Copy-SPOPersonalSitePage -SourceSite 'https://contoso-my.sharepoint.com/personal/testuser1_onmicrosoft_com' -DestinationSite 'https://contoso-my.sharepoint.com/personal/testuser2_onmicrosoft_com' -PageName 'TestPage.aspx' -DeleteSourcePage -Confirm
+```
+
+Example 4 demonstrates how a SharePoint Administrator can move the SharePoint page named `TestPage.aspx` from `testuser1`'s SharePoint pages library in OneDrive for Business to `testuser2`'s SharePoint pages library in OneDrive for Business with confirmation. The source page will be deleted after the copy operation.
 
 ## PARAMETERS
 
