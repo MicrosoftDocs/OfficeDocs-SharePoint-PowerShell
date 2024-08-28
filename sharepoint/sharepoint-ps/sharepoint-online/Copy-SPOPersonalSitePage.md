@@ -23,7 +23,7 @@ This cmdlet command allows you to relocate existing SharePoint pages by utilizin
 ### CopySinglePage
 
 ```powershell
-Copy-SPOPersonalSitePage -SourceSite <SpoSitePipeBind> -DestinationSite <SpoSitePipeBind> -PageName <String> -DeleteSourcePage <Boolean> [-Confirm] [<CommonParameters>]
+Copy-SPOPersonalSitePage -SourceSite <SpoSitePipeBind> -DestinationSite <SpoSitePipeBind> -PageName <String> -DeleteSourcePage <SwitchParameter> [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -73,12 +73,12 @@ The following table explains the meaning of each number that indicates the jobâ€
 Copy-SPOPersonalSitePage -SourceSite 'https://contoso-my.sharepoint.com/personal/testuser_onmicrosoft_com' -DestinationSite 'https://contoso.sharepoint.com/sites/testsite' -PageName 'TestPage.aspx' -Confirm 
 ```
 
-Example 1 demonstrates how a SharePoint Administrator can copy the SharePoint page named `TestPage.aspx` from `testuser`'s SharePoint pages library in OneDrive to the `testsite` SharePoint site with confirmation. The source page will not be deleted.
+Example 1 demonstrates how a SharePoint Administrator can copy the SharePoint page named `TestPage.aspx` from `testuser`'s SharePoint pages library in OneDrive for Business to the `testsite` SharePoint site with confirmation. The source page will not be deleted.
 
 ### -----------------------EXAMPLE 2-----------------------------
 
 ```powershell
-Copy-SPOPersonalSitePage -SourceSite 'https://contoso-my.sharepoint.com/personal/testuser_onmicrosoft_com' -DestinationSite 'https://contoso.sharepoint.com/sites/testsite' -PageName 'TestPage.aspx' -DeleteSourcePage $true
+Copy-SPOPersonalSitePage -SourceSite 'https://contoso-my.sharepoint.com/personal/testuser_onmicrosoft_com' -DestinationSite 'https://contoso.sharepoint.com/sites/testsite' -PageName 'TestPage.aspx' -DeleteSourcePage
 ```
 
 Example 2 demonstrates how a SharePoint Administrator can move the SharePoint page named `TestPage.aspx` from `testuser`'s SharePoint pages library in OneDrive for Business to the `testsite` SharePoint site. The source page will be deleted after the copy operation.
@@ -86,7 +86,7 @@ Example 2 demonstrates how a SharePoint Administrator can move the SharePoint pa
 ### -----------------------EXAMPLE 3-----------------------------
 
 ```powershell
-Copy-SPOPersonalSitePage -SourceSite 'https://contoso.sharepoint.com/sites/sourcesite' -DestinationSite 'https://contoso.sharepoint.com/sites/testsite' -PageName 'TestPage.aspx' -DeleteSourcePage $true -Confirm
+Copy-SPOPersonalSitePage -SourceSite 'https://contoso.sharepoint.com/sites/sourcesite' -DestinationSite 'https://contoso.sharepoint.com/sites/testsite' -PageName 'TestPage.aspx' -DeleteSourcePage -Confirm
 ```
 
 Example 3 demonstrates how a SharePoint Administrator can copy the SharePoint page named `TestPage.aspx` from a SharePoint site name `sourcesite` to the `testsite` SharePoint site with confirmation. The source page will be deleted after the copy operation.
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 
 ### -DeleteSourcePage
 
-Indicates whether to delete the source SharePoint page(s) after copying. If set to `$true`, the operation will move the SharePoint page(s) instead of copying.
+Indicates whether to delete the source SharePoint page(s) after copying. If specified, the operation will move the SharePoint page(s) instead of copying.
 
 ```yaml
 Type: SwitchParameter
