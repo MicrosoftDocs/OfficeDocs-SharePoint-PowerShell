@@ -40,19 +40,19 @@ You must be a SharePoint Online Administrator to run this cmdlet. For permission
 ### Example 1
 
 ```powershell
-Set-SPOApplicationPermission -OwningApplicationId a187e399-0c36-4b98-8f04-1edc167a0996 -ApplicationId 12345678-1234-1234-abcd-abcdefghijkl -PermissionAppOnly Read
+Set-SPOApplicationPermission -OwningApplicationId a187e399-0c36-4b98-8f04-1edc167a0996 -ApplicationId 12345678-1234-1234-abcd-abcdefghijkl -PermissionAppOnly Read, Write
 ```
 
 
-Example 1 gives the guest app with ID `12345678-1234-1234-abcd-abcdefghijkl` app-only Read permissions to access the owning application Microsoft Loop of ID `a187e399-0c36-4b98-8f04-1edc167a0996`.
+Example 1 gives the guest app with ID `12345678-1234-1234-abcd-abcdefghijkl` app-only Read, Write permissions to access the owning application Microsoft Loop of ID `a187e399-0c36-4b98-8f04-1edc167a0996`.
 
 ### Example 2
 
 ```powershell
-Set-SPOApplicationPermission -OwningApplicationId 5e2795e3-ce8c-4cfb-b302-35fe5cd01597 -ApplicationId 12345678-1234-1234-abcd-abcdefghijkl -PermissionAppOnly ReadContent -PermissionDelegated None
+Set-SPOApplicationPermission -OwningApplicationId 5e2795e3-ce8c-4cfb-b302-35fe5cd01597 -ApplicationId 12345678-1234-1234-abcd-abcdefghijkl -PermissionAppOnly ReadContent, WriteContent -PermissionDelegated None
 ```
 
-Example 2 gives the guest app with ID `12345678-1234-1234-abcd-abcdefghijkl` app-only ReadContent permissions to access the owning application Microsoft Designer of ID `a187e399-0c36-4b98-8f04-1edc167a0996`. Notice that delegated permissions are not supported at this time and are default set to `None`.
+Example 2 gives the guest app with ID `12345678-1234-1234-abcd-abcdefghijkl` app-only ReadContent, WriteContent permissions to access the owning application Microsoft Designer of ID `a187e399-0c36-4b98-8f04-1edc167a0996`. Notice that delegated permissions are not supported at this time and are default set to `None`.
 
 ### Example 3
 
