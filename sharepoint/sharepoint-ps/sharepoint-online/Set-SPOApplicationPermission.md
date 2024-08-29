@@ -32,8 +32,8 @@ The `Set-SPOApplicationPermission` cmdlet manages permissions for a guest applic
 
 You must be a SharePoint Administrator to run this cmdlet. For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps). 
 
-> ![NOTE]
-> Only app-only permissions are supported for guest applications accessing SharePoint Embedded applications. Delegated permissions are not supported and are default set to `None`
+> [!NOTE]
+> Only app-only permissions are supported for guest applications accessing SharePoint Embedded applications. Delegated permissions are not supported and are default set to `None`.
 
 ## EXAMPLES
 
