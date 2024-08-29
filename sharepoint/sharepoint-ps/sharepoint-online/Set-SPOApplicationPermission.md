@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Adds permissions for a guest application to access a SharePoint Embedded application.
+Manages permissions for a guest application to access a SharePoint Embedded application.
 
 ## SYNTAX
 
@@ -31,37 +31,36 @@ Set-SPOApplicationPermission
 
 ## DESCRIPTION
 
-The `Set-SPOApplicationPermission` cmdlet adds a guest app permission to a SharePoint Embedded application. Currently only app-only permissions are supported at this time. Delegated permissions are not support for guest applications. A guest application is defined as any application within the enterprise applications of the owning tenant. 
+The `Set-SPOApplicationPermission` cmdlet manages permissions for a guest app's access to a SharePoint Embedded application. This includes adding, updating, and deleting guest app permissions. Currently only app-only permissions are supported at this time. Delegated permissions are not supported for guest applications. A guest application is defined as any application within the enterprise applications of the owning tenant. 
 
-You must be a SharePoint Online Administrator or Global Administrator to run this cmdlet. For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps). 
+You must be a SharePoint Online Administrator to run this cmdlet. For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps). 
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-Set-SPOApplicationPermission
--OwningApplicationId a187e399-0c36-4b98-8f04-1edc167a0996 
--ApplicationId 12345678-1234-1234-abcd-abcdefghijkl
--PermissionAppOnly Read, Write, Delete
+Set-SPOApplicationPermission -OwningApplicationId a187e399-0c36-4b98-8f04-1edc167a0996 -ApplicationId 12345678-1234-1234-abcd-abcdefghijkl -PermissionAppOnly Read
 ```
 
 
-Example 1 gives the Guest App with ID `12345678-1234-1234-abcd-abcdefghijkl` app-only Read, Write, and Delete permissions to access the Owning Application Microsoft Loop of ID `a187e399-0c36-4b98-8f04-1edc167a0996`.
+Example 1 gives the guest app with ID `12345678-1234-1234-abcd-abcdefghijkl` app-only Read permissions to access the owning application Microsoft Loop of ID `a187e399-0c36-4b98-8f04-1edc167a0996`.
 
 ### Example 2
 
 ```powershell
-Set-SPOApplicationPermission
--OwningApplicationId 5e2795e3-ce8c-4cfb-b302-35fe5cd01597 
--ApplicationId 12345678-1234-1234-abcd-abcdefghijkl>
--PermissionAppOnly ReadContent, WriteContent
--PermissionDelegated None
+Set-SPOApplicationPermission -OwningApplicationId 5e2795e3-ce8c-4cfb-b302-35fe5cd01597 -ApplicationId 12345678-1234-1234-abcd-abcdefghijkl -PermissionAppOnly ReadContent -PermissionDelegated None
 ```
 
-Example 2 gives the Guest App with ID `12345678-1234-1234-abcd-abcdefghijkl` app-only Read, Write, and Delete permissions to access the Owning Application Microsoft Designer of ID `a187e399-0c36-4b98-8f04-1edc167a0996`. Notice that delegated permissions are not supported at this time and are default set to `None`.
+Example 2 gives the guest app with ID `12345678-1234-1234-abcd-abcdefghijkl` app-only ReadContent permissions to access the owning application Microsoft Designer of ID `a187e399-0c36-4b98-8f04-1edc167a0996`. Notice that delegated permissions are not supported at this time and are default set to `None`.
 
+### Example 3
 
+```powershell
+Set-SPOApplicationPermission -OwningApplicationId 5e2795e3-ce8c-4cfb-b302-35fe5cd01597 -ApplicationId 12345678-1234-1234-abcd-abcdefghijkl -PermissionAppOnly None -PermissionDelegated None
+```
+
+Example 3 sets guest application permissions to None for the guest app with ID `12345678-1234-1234-abcd-abcdefghijkl`. This has deleted previous permissions for that guest app to access owning application of `a187e399-0c36-4b98-8f04-1edc167a0996`. Notice that delegated permissions are not supported at this time and are default set to `None`.
 
 ## PARAMETERS
 

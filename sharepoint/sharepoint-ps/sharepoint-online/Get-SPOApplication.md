@@ -32,7 +32,7 @@ Get-SPOApplication [[-OwningApplicationId] <OwningApplicationid>] [[-Application
 
 ## DESCRIPTION
 
-The `Get-SPOApplication` cmdlet retrieves and returns all third-party SharePoint Embedded applications registered in a tenant that match the given criteria. You must be a SharePoint Online Administrator or Global Administrator to run the cmdlet. For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps). 
+The `Get-SPOApplication` cmdlet retrieves and returns SharePoint Embedded applications of all publishers registered in a tenant that match the given criteria. You must be a SharePoint Online Administrator or Global Administrator to run the cmdlet. For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps). 
 
 ## EXAMPLES
 
@@ -50,9 +50,8 @@ Example 1 returns all SharePoint Embedded applications registered in the specifi
 Get-SPOApplication -OwningApplicationId <OwningApplicationId>
 ```
 
-Example 2 lists the details of the owning application corresponding to the `OwningApplicationId` registered in the specified tenant.
+Example 2 lists the details of the owning application corresponding to the `OwningApplicationId` registered in the specified tenant. This returns `Applications` which specifies the list of guest applications IDs with current access permissions to the owning application, `SharingCapability` settings, and `OverrideTenantSharingCapability` status.
 
-TODO: add portion about viewing active 1P app Ids in this cmdlet
 
 ### Example 3
 
@@ -60,9 +59,7 @@ TODO: add portion about viewing active 1P app Ids in this cmdlet
 Get-SPOApplication -OwningApplicationId <OwningApplicationId> -ApplicationId <ApplicationId>
 ```
 
-Example 3 enumerates permissions of the owning applications registered in the specified tenant.
-
-TODO: Add portion about viewing guest app permissions in this cmdlet (1P guest app perms)
+Example 3 list details of the guest application specified in `ApplicationId`. This inclues the list of guest application access permissions. Note that only app-only permissions are supported.
 
 ## PARAMETERS
 
@@ -76,9 +73,11 @@ The following details are returned:
 
 - OwningApplicationName
 
-- Storage
-
 - Applications (by id)
+
+- SharingCapability
+
+- OverrideTenantSharingCapability
   
 ```yaml
 Type: String
@@ -95,7 +94,7 @@ Accept wildcard characters: False
 
 ### -ApplicationId
 
-Use this parameter to enumerate permissions of the owning applications registered in the specified tenant.
+Use this parameter to enumerate app-only permissions of the guest application id with access to the specified owning application.
 
 ```yaml
 Type: String
@@ -118,4 +117,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-SPOContainer](./Get-SPOContainer.md)
-[Set-SPOApplication] (Set-SPOApplication.md)
+[Set-SPOApplication](./Set-SPOApplication.md)
