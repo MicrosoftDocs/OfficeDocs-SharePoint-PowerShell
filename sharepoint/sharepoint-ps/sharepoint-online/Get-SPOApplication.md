@@ -2,7 +2,7 @@
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spoapplication
-applicable: SharePoint Online
+applicable: SharePoint
 title: Get-SPOApplication
 schema: 2.0.0
 author: cindylay
@@ -34,7 +34,6 @@ Get-SPOApplication [[-OwningApplicationId] <OwningApplicationid>] [[-Application
 
 The `Get-SPOApplication` cmdlet retrieves and returns SharePoint Embedded applications of all publishers registered in a tenant that match the given criteria. You must be a SharePoint Administrator to run the cmdlet. For permissions and the most current information about Windows PowerShell, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps). 
 
-
 ## EXAMPLES
 
 ### Example 1
@@ -51,7 +50,7 @@ Example 1 returns all SharePoint Embedded applications registered in the specifi
 Get-SPOApplication -OwningApplicationId <OwningApplicationId>
 ```
 
-Example 2 provides details about the owning application in the specified tenant. It returns `Applications`, which includes the list of guest application IDs with permissions to the owning application, as well as the `SharingCapability` settings and the OverrideTenantSharingCapability status
+Example 2 provides details about the owning application in the specified tenant. It returns Applications, which includes the list of guest application IDs with permissions to the owning application, as well as the SharingCapability settings and the OverrideTenantSharingCapability status
 
 ### Example 3
 
