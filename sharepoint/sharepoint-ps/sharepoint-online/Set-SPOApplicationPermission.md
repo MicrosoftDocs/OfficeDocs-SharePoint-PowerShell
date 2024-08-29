@@ -71,7 +71,7 @@ Use this parameter to specify the Owning Application where guest application acc
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+Applicable: SharePoint
 
 Required: True
 Position: Named
@@ -88,7 +88,7 @@ Use this parameter to specify the guest application ID. A guest application is a
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+Applicable: SharePoint
 
 Required: True
 Position: Named
@@ -105,7 +105,7 @@ Use this parameter to specify the app-only permissions of the guest application.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+Applicable: SharePoint
 
 Required: True
 Position: Named
@@ -122,7 +122,7 @@ This parameter specifies delegated permissions which are not supported for guest
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+Applicable: SharePoint
 
 Required: False
 Position: Named

@@ -81,7 +81,7 @@ The following details are returned:
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+Applicable: SharePoint
 
 Required: False
 Position: Named
