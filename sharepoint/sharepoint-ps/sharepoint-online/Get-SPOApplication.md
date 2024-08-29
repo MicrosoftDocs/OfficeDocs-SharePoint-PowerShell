@@ -32,7 +32,8 @@ Get-SPOApplication [[-OwningApplicationId] <OwningApplicationid>] [[-Application
 
 ## DESCRIPTION
 
-The `Get-SPOApplication` cmdlet retrieves and returns SharePoint Embedded applications of all publishers registered in a tenant that match the given criteria. You must be a SharePoint Online Administrator or Global Administrator to run the cmdlet. For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps). 
+The `Get-SPOApplication` cmdlet retrieves and returns SharePoint Embedded applications of all publishers registered in a tenant that match the given criteria. You must be a SharePoint Administrator to run the cmdlet. For permissions and the most current information about Windows PowerShell, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps). 
+
 
 ## EXAMPLES
 
@@ -50,8 +51,7 @@ Example 1 returns all SharePoint Embedded applications registered in the specifi
 Get-SPOApplication -OwningApplicationId <OwningApplicationId>
 ```
 
-Example 2 lists the details of the owning application corresponding to the `OwningApplicationId` registered in the specified tenant. This returns `Applications` which specifies the list of guest applications IDs with current access permissions to the owning application, `SharingCapability` settings, and `OverrideTenantSharingCapability` status.
-
+Example 2 provides details about the owning application in the specified tenant. It returns `Applications`, which includes the list of guest application IDs with permissions to the owning application, as well as the `SharingCapability` settings and the OverrideTenantSharingCapability status
 
 ### Example 3
 
@@ -59,13 +59,12 @@ Example 2 lists the details of the owning application corresponding to the `Owni
 Get-SPOApplication -OwningApplicationId <OwningApplicationId> -ApplicationId <ApplicationId>
 ```
 
-Example 3 list details of the guest application specified in `ApplicationId`. This inclues the list of guest application access permissions. Note that only app-only permissions are supported.
-
+Example 3 enumerates app-only permissions of the guest application specified in `ApplicationId`.
 ## PARAMETERS
 
 ### -OwningApplicationId
 
-Use this parameter to get details about apps registered in the specified tenant.
+Use this parameter to get details about applications registered in the specified tenant.
 
 The following details are returned:
 
@@ -100,7 +99,7 @@ Use this parameter to enumerate app-only permissions of the guest application id
 Type: String
 Parameter Sets: ParamSet2
 Aliases:
-Applicable: SharePoint Online
+Applicable: SharePoint
 
 Required: False
 Position: Named

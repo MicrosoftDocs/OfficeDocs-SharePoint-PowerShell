@@ -23,17 +23,17 @@ Manages permissions for a guest application to access a SharePoint Embedded appl
 
 ```powershell
 Set-SPOApplicationPermission 
-[[-OwningApplicationId] <OwningApplicationid>] 
-[[-ApplicationId] <ApplicationId>]
-[[-PermissionAppOnly] <AppOnlyPermission>]
-[[-PermissionDelegated] <DelegatedPermission>]
+[[-OwningApplicationId] <OwningApplicationid>] [[-ApplicationId] <ApplicationId>] [[-PermissionAppOnly] <AppOnlyPermission>] [[-PermissionDelegated] <DelegatedPermission>]
 ``` 
 
 ## DESCRIPTION
 
-The `Set-SPOApplicationPermission` cmdlet manages permissions for a guest app's access to a SharePoint Embedded application. This includes adding, updating, and deleting guest app permissions. Currently only app-only permissions are supported at this time. Delegated permissions are not supported for guest applications. A guest application is defined as any application within the enterprise applications of the owning tenant. 
+The `Set-SPOApplicationPermission` cmdlet manages permissions for a guest application's access to a SharePoint Embedded application. This includes adding, updating, and deleting guest application permissions. A guest application is defined as any application within the enterprise applications of the owning tenant. 
 
-You must be a SharePoint Online Administrator to run this cmdlet. For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps). 
+You must be a SharePoint Administrator to run this cmdlet. For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps). 
+
+> ![NOTE]
+> Only app-only permissions are supported for guest applications accessing SharePoint Embedded applications. Delegated permissions are not supported and are default set to `None`
 
 ## EXAMPLES
 
@@ -44,7 +44,7 @@ Set-SPOApplicationPermission -OwningApplicationId a187e399-0c36-4b98-8f04-1edc16
 ```
 
 
-Example 1 gives the guest app with ID `12345678-1234-1234-abcd-abcdefghijkl` app-only Read, Write permissions to access the owning application Microsoft Loop of ID `a187e399-0c36-4b98-8f04-1edc167a0996`.
+Example 1 gives the guest application with ID `12345678-1234-1234-abcd-abcdefghijkl` app-only Read, Write permissions to access the owning application Microsoft Loop of ID `a187e399-0c36-4b98-8f04-1edc167a0996`.
 
 ### Example 2
 
@@ -52,15 +52,14 @@ Example 1 gives the guest app with ID `12345678-1234-1234-abcd-abcdefghijkl` app
 Set-SPOApplicationPermission -OwningApplicationId 5e2795e3-ce8c-4cfb-b302-35fe5cd01597 -ApplicationId 12345678-1234-1234-abcd-abcdefghijkl -PermissionAppOnly ReadContent, WriteContent -PermissionDelegated None
 ```
 
-Example 2 gives the guest app with ID `12345678-1234-1234-abcd-abcdefghijkl` app-only ReadContent, WriteContent permissions to access the owning application Microsoft Designer of ID `a187e399-0c36-4b98-8f04-1edc167a0996`. Notice that delegated permissions are not supported at this time and are default set to `None`.
-
+Example 2 gives the guest application with ID `12345678-1234-1234-abcd-abcdefghijkl` app-only ReadContent, WriteContent permissions to access the owning application Microsoft Designer of ID `a187e399-0c36-4b98-8f04-1edc167a0996`.
 ### Example 3
 
 ```powershell
 Set-SPOApplicationPermission -OwningApplicationId 5e2795e3-ce8c-4cfb-b302-35fe5cd01597 -ApplicationId 12345678-1234-1234-abcd-abcdefghijkl -PermissionAppOnly None -PermissionDelegated None
 ```
 
-Example 3 sets guest application permissions to None for the guest app with ID `12345678-1234-1234-abcd-abcdefghijkl`. This has deleted previous permissions for that guest app to access owning application of `a187e399-0c36-4b98-8f04-1edc167a0996`. Notice that delegated permissions are not supported at this time and are default set to `None`.
+Example 3 sets guest application permissions to None for the guest application with ID `12345678-1234-1234-abcd-abcdefghijkl`. This has deleted previous permissions for that guest application to access owning application of `a187e399-0c36-4b98-8f04-1edc167a0996`. 
 
 ## PARAMETERS
 
@@ -141,4 +140,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-SPOApplication](./Get-SPOApplication.md)
-[Set-SPOApplication] (Set-SPOApplication.md)
+[Set-SPOApplication](./Set-SPOApplication.md)
