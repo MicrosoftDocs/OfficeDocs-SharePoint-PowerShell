@@ -207,8 +207,10 @@ Accept wildcard characters: False
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## NOTES
 
 ## RELATED LINKS
 
 [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Get-SPOContainerType](https://learn.microsoft.com/powershell/module/sharepoint-online/get-spocontainertype)
+[Set-SPOContainerType](https://learn.microsoft.com/powershell/module/sharepoint-online/set-spocontainertype)
+[Remove-SPOContainerType](https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spocontainertype)
