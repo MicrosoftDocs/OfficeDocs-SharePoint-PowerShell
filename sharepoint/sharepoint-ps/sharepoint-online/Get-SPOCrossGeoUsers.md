@@ -24,7 +24,7 @@ Get-SPOCrossGeoUsers -ValidDataLocation <Boolean> [<CommonParameters>]
 
 ## DESCRIPTION
 
-The Get-SPOCrossGeoUsers cmdlet is used to return the SharePoint Online users that match a given criteria. The ValidDataLocation parameter is a switch used to validate the location of the data. This cmdlet requires a connection to a multi-geo tenant to run correctly. You must have the SharePoint Online Admin role or Global Administrator role to execute this cmdlet.
+The Get-SPOCrossGeoUsers cmdlet is used to return the SharePoint Online users that match a given criteria. The ValidDataLocation parameter is a switch used to validate the location of the data. This cmdlet requires a connection to a multi-geo tenant to run correctly. You must have the SharePoint Online Admin role to execute this cmdlet.
 
 ## EXAMPLES
 
