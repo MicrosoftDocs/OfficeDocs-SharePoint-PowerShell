@@ -6,7 +6,7 @@ applicable: SharePoint Online
 title: Copy-SPOPersonalSitePage
 schema: 2.0.0
 author: xuyangzou
-ms.author: xuyangzou, spodeanu
+ms.author: xuyangzou
 ms.reviewer:
 ---
 
