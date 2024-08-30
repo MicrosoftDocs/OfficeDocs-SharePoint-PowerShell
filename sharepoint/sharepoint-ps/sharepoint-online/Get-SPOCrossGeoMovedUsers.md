@@ -24,7 +24,7 @@ Get-SPOCrossGeoMovedUsers -Direction <String> [<CommonParameters>]
 
 ## DESCRIPTION
 
-This cmdlet allows you to get the moved users out and in the current SPO Site. It requires a connection to a multi-geo tenant to run correctly. You must be a SharePoint Online Administrator or Global Administrator to get the moved users out and in the current SPO site.
+This cmdlet allows you to get the moved users out and in the current SPO Site. It requires a connection to a multi-geo tenant to run correctly. You must be a SharePoint Online Administrator to get the moved users out and in the current SPO site.
 
 ## EXAMPLES
 

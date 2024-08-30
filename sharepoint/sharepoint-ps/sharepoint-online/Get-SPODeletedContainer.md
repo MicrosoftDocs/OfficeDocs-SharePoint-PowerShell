@@ -28,7 +28,7 @@ Get-SPODeletedContainer [<CommonParameters>]
 
 The `Get-SPODeletedContainer` cmdlet returns a list of all deleted File Storage Containers in the Recycle Bin. There is no `Identity` parameter needed. The list includes the `ContainerId`, `ContainerName`, and `CreatedDate`. Deleted Containers in the Recycle Bin are permanently deleted after 93 days. More details in [`Remove-SPOContainer`](./Remove-SPOContainer.md). You can restore a deleted Container with the cmdlet [`Restore-SPODeletedContainer`](./Restore-SPODeletedContainer.md).
 
-You must be a SharePoint Administrator or Global Administrator to run this cmdlet.
+You must be a SharePoint Administrator to run this cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
