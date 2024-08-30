@@ -65,16 +65,16 @@ The following table explains the copy job's state:
 | Status | Explanation |
 | :---------- | :---------- | 
 | Queued | The copy operation was queued for execution. |
-| CreateAssetsFolderStart | We’ve started creating a folder to place all associated assets used on this page. |
-| CreateAssetsFolderEnd | We’ve finished creating a folder to place all associated assets used on this page. |
-| CopyAssetsStart | We’ve started copying associated assets used on this page. |
-| CopyAssetsEnd | We’ve finished copying associated assets used on this page. |
-| CreatePageStart | We’ve started creating a new page. |
-| CreatePageEnd | We’ve finished creating a new page. |
+| CreateAssetsFolderStart | We've started creating a folder to place all associated assets used on this page. |
+| CreateAssetsFolderEnd | We've finished creating a folder to place all associated assets used on this page. |
+| CopyAssetsStart | We've started copying associated assets used on this page. |
+| CopyAssetsEnd | We've finished copying associated assets used on this page. |
+| CreatePageStart | We've started creating a new page. |
+| CreatePageEnd | We've finished creating a new page. |
 | Succeeded | The copy operation was successful. |
 | Deleting | The copy operation was deleted. |
 | Failed | The copy operation failed. |
-| JobNotFound | The copy operation wasn’t found. |
+| JobNotFound | The copy operation wasn't found. |
 
 ## EXAMPLES
 
