@@ -2,7 +2,7 @@
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spoapplication
-applicable: SharePoint Online
+applicable: SharePoint
 title: Get-SPOApplication
 schema: 2.0.0
 author: cindylay
@@ -32,7 +32,7 @@ Get-SPOApplication [[-OwningApplicationId] <OwningApplicationid>] [[-Application
 
 ## DESCRIPTION
 
-The `Get-SPOApplication` cmdlet retrieves and returns all third-party SharePoint Embedded applications registered in a tenant that match the given criteria. You must be a SharePoint Online Administrator or Global Administrator to run the cmdlet. For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps). 
+The `Get-SPOApplication` cmdlet retrieves and returns SharePoint Embedded applications of all publishers registered in a tenant that match the given criteria. You must be a SharePoint Administrator to run the cmdlet. For permissions and the most current information about Windows PowerShell, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps). 
 
 ## EXAMPLES
 
@@ -50,7 +50,7 @@ Example 1 returns all SharePoint Embedded applications registered in the specifi
 Get-SPOApplication -OwningApplicationId <OwningApplicationId>
 ```
 
-Example 2 lists the details of the owning application corresponding to the `OwningApplicationId` registered in the specified tenant.
+Example 2 provides details about the owning application in the specified tenant. It returns Applications, which includes the list of guest application IDs with permissions to the owning application, as well as the SharingCapability settings and the OverrideTenantSharingCapability status
 
 ### Example 3
 
@@ -58,13 +58,12 @@ Example 2 lists the details of the owning application corresponding to the `Owni
 Get-SPOApplication -OwningApplicationId <OwningApplicationId> -ApplicationId <ApplicationId>
 ```
 
-Example 3 enumerates permissions of the owning applications registered in the specified tenant.
-
+Example 3 enumerates app-only permissions of the guest application specified in `ApplicationId`.
 ## PARAMETERS
 
 ### -OwningApplicationId
 
-Use this parameter to get details about apps registered in the specified tenant.
+Use this parameter to get details about applications registered in the specified tenant.
 
 The following details are returned:
 
@@ -72,15 +71,17 @@ The following details are returned:
 
 - OwningApplicationName
 
-- Storage
-
 - Applications (by id)
+
+- SharingCapability
+
+- OverrideTenantSharingCapability
   
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+Applicable: SharePoint
 
 Required: False
 Position: Named
@@ -91,13 +92,13 @@ Accept wildcard characters: False
 
 ### -ApplicationId
 
-Use this parameter to enumerate permissions of the owning applications registered in the specified tenant.
+Use this parameter to enumerate app-only permissions of the guest application id with access to the specified owning application.
 
 ```yaml
 Type: String
 Parameter Sets: ParamSet2
 Aliases:
-Applicable: SharePoint Online
+Applicable: SharePoint
 
 Required: False
 Position: Named
@@ -114,4 +115,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-SPOContainer](./Get-SPOContainer.md)
-[Set-SPOApplication] (Set-SPOApplication.md)
+[Set-SPOApplication](./Set-SPOApplication.md)
