@@ -1,9 +1,9 @@
 ---
-title: SharePoint Server Cmdlets
+title: SharePoint Server Sub Cmdlets
 ms.service: sharepoint-powershell
 ---
 
-# SharePoint Server Cmdlets
+# SharePoint Server Sub Cmdlets
 
 For a listing of the SharePoint Server cmdlets, see [SharePoint Server cmdlets](xref:SharePointServer)
 
