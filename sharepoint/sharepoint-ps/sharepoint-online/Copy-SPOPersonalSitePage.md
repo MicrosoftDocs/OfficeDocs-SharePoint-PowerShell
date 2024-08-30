@@ -20,8 +20,6 @@ This cmdlet command allows you to relocate existing SharePoint pages by utilizin
 
 ## SYNTAX
 
-**CopySinglePage**
-
 ```powershell
 Copy-SPOPersonalSitePage -SourceSite <SpoSitePipeBind> -DestinationSite <SpoSitePipeBind> -PageName <String> -DeleteSourcePage <SwitchParameter> [-Confirm] [<CommonParameters>]
 ```
