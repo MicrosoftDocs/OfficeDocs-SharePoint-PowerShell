@@ -31,7 +31,7 @@ Copy-SPOPersonalSitePage -SourceSite <SpoSitePipeBind> -DestinationSite <SpoSite
 The Copy-SPOPersonalSitePage cmdlet allows a SharePoint Administrator to copy one or more SharePoint pages from a selected source to a chosen destination SharePoint site. If the `-DeleteSourcePage` parameter is set to `$true`, the source page(s) will be deleted after the copy operation, effectively moving the page(s).
 
 > [!NOTE]
-> The Copy-SPOPersonalSitePage cmdlet may not be available in all tenants as the feature rollout could be in progress. If the feature has not been enabled in your tenant, attempting to run this cmdlet will result in an error.
+> This cmdlet may not be available in all tenants as the feature rollout could be in progress. If the feature has not been enabled in your tenant, attempting to run this cmdlet will result in an error.
 
 ### Where can I move the existing page(s) to and from?
 
@@ -43,7 +43,7 @@ The Copy-SPOPersonalSitePage cmdlet allows a SharePoint Administrator to copy on
 
 ### How do I query the status of my copy operation?
 
-After the Copy-SPOPersonalSitePage cmdlet is executed, you'll receive the following information:
+After this cmdlet is executed, you'll receive the following information:
 
 | Property | Description |
 | :------- | :---------- |
