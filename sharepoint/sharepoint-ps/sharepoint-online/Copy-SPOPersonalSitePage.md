@@ -18,6 +18,14 @@ This cmdlet command allows you to relocate existing SharePoint pages by utilizin
 - Copy: This method keeps the original page intact while creating a duplicate at the new location.
 - Move: This method creates a new copy at the new location and deletes the original page from the source.
 
+## SYNTAX
+
+**CopySinglePage**
+
+```powershell
+Copy-SPOPersonalSitePage -SourceSite <SpoSitePipeBind> -DestinationSite <SpoSitePipeBind> -PageName <String> -DeleteSourcePage <SwitchParameter> [-Confirm] [<CommonParameters>]
+```
+
 ## DESCRIPTION
 
 The Copy-SPOPersonalSitePage cmdlet allows a SharePoint Administrator to copy one or more SharePoint pages from a selected source to a chosen destination SharePoint site. If the `-DeleteSourcePage` parameter is set to `$true`, the source page(s) will be deleted after the copy operation, effectively moving the page(s).
@@ -196,10 +204,12 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 
 ## NOTES
 
-### Will SharePoint pages retain their version history after the move?
+**Will SharePoint pages retain their version history after the move?**
+
 Currently, only the latest published version will be transferred.
 
-### Can recipients of SharePoint pages I shared with continue to access them after the move?
+**Can recipients of SharePoint pages I shared with continue to access them after the move?**
+
 All permissions will be removed once the pages are moved.
 
 ## RELATED LINKS
