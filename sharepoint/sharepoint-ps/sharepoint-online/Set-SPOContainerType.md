@@ -29,7 +29,7 @@ Set-SPOContainerType -ContainerTypeId <ContainerTypeId> -AzureSubscriptionId <Az
 ```
  
 ## DESCRIPTION
-The Set-SPOContainertype cmdlet is used to reset the parameters associated with a container type - both trial and standard. The cmdlet can be used to change the container type name or the associated billing profile of the contianer type.
+This cmdlet is used to reset the parameters associated with a container type - both trial and standard. The cmdlet can be used to change the container type name or the associated billing profile of the contianer type.
 ## EXAMPLES
  
 ### Example 1
