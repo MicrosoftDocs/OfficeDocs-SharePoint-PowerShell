@@ -173,3 +173,12 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+## RELATED LINKS
+
+[Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+
+[New-SPOContainerType](https://learn.microsoft.com/powershell/module/sharepoint-online/new-spocontainertype)
+
+[Get-SPOContainerType](https://learn.microsoft.com/powershell/module/sharepoint-online/get-spocontainertype)
+
+[Remove-SPOContainerType](https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spocontainertype)
