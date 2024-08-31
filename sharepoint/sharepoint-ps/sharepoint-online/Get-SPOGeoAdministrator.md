@@ -31,7 +31,7 @@ The `Get-SPOGeoAdministrator` cmdlet has a single parameter set and matches a us
 
 Running this cmdlet on a non-multi-geo tenant organization will return error -4.
 
-You must be a SharePoint Online or global administrator and you must have a the Multi-Geo Capabilities in Office 365 service plan to run the `Get-SPOGeoAdministrator` cmdlet.
+You must be a SharePoint Online administrator and you must have a the Multi-Geo Capabilities in Office 365 service plan to run the `Get-SPOGeoAdministrator` cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [https://go.microsoft.com/fwlink/p/?LinkId=251832](https://go.microsoft.com/fwlink/p/?LinkId=251832).
 
