@@ -53,11 +53,8 @@ After this cmdlet is executed, you'll receive the following information:
 | WorkItemId | The work item ID used to track the status of the copy job. If the copy operation is complete, this will be `00000000-0000-0000-0000-000000000000`. |
 
 - If the copy is successful, the URL for the new page will be provided.
-- If the copy is still in progress, you will receive the work item ID. You can use the provided command to check the status of the URL.
+- If the copy is still in progress, you will receive the work item ID. You can use the [Get-SPOPersonalSitePageCopyProgress](./Get-SPOPersonalSitePageCopyProgress.md) command to check the status of the URL.
 
-```powershell
-Get-SPOPersonalSitePageCopyProgress -DestinationSite <SpoSitePipeBind> -WorkItemId <Guid> [<CommonParameters>]
-```
 The following table explains the copy job's state:
 
 | Status | Explanation |
