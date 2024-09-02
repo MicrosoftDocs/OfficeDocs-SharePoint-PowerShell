@@ -5,10 +5,12 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
 title: Copy-SPOPersonalSitePage
 schema: 2.0.0
-author: samkabue
-author: bellesirapha
-ms.author: samkabue
-ms.author: spodeanu
+author:
+- samkabue
+- bellesirapha
+ms.author:
+- samkabue
+- spodeanu
 ms.reviewer:
 ---
 
