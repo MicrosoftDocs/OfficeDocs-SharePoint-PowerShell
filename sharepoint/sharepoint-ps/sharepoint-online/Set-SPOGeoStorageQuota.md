@@ -24,7 +24,7 @@ Set-SPOGeoStorageQuota -GeoLocation <String> -StorageQuotaMB <Int64> [<CommonPar
 
 ## DESCRIPTION
 
-This cmdlet sets the storage quota, in megabytes, on a particular geo-location. Additionally, it requires a connection to a multi-geo tenant to run correctly. You must be a SharePoint Online Administrator or Global Administrator.
+This cmdlet sets the storage quota, in megabytes, on a particular geo-location. Additionally, it requires a connection to a multi-geo tenant to run correctly. You must be at least a SharePoint Online Administrator to run the cmdlet.
 
 ## EXAMPLES
 
