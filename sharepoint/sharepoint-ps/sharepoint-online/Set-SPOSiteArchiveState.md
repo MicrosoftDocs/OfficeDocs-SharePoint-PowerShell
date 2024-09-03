@@ -24,7 +24,7 @@ Set-SPOSiteArchiveState [-Identity] <SpoHubSitePipeBind> -ArchiveState <String> 
 
 ## DESCRIPTION
 
-Use this cmdlet to change the archive status of the site. You must be a SharePoint Online administrator or Global administrator and be a site collection administrator to run the cmdlet.
+Use this cmdlet to change the archive status of the site. You must be at least a SharePoint Online administrator and be a site collection administrator to run the cmdlet.
 Microsoft 365 Archive needs to be enabled for the organization to be able to use the feature.
 
 ## EXAMPLES

@@ -54,7 +54,7 @@ The Detailed parameter has been deprecated. It will continue to work with earlie
 >
 > Site redirects, like the ones created after [changing the SharePoint domain name](/sharepoint/change-your-sharepoint-domain-name) will be retrieved by using this cmdlet.
 
-You need to be a SharePoint Online administrator or Global Administrator and be a site collection administrator to run the cmdlet.
+You need to be a SharePoint Online administrator and be a site collection administrator to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 

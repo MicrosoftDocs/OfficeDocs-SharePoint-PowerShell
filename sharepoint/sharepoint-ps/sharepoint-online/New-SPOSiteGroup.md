@@ -27,7 +27,7 @@ New-SPOSiteGroup -Group <String> -PermissionLevels <String[]> -Site <SpoSitePipe
 A SharePoint group is a set of individual users.
 SharePoint groups enable you to manage sets of users instead of individual users.
 
-You must be a SharePoint Online administrator or Global Administrator and be a site collection administrator to run the cmdlet.
+You must be at least a SharePoint Online administrator to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 

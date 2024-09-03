@@ -24,7 +24,8 @@ This cmdlet can be used to view the currently prioritized sites, as part of [Adv
 
 The output is a list of all site URLs, one per row. If desired, the output can be downloaded using the standard PowerShell Out-File option. If you want just the count of prioritized sites, you can use the standard Measure-Object option.
 
-You must be a SharePoint or Global Administrator to run this cmdlet.
+You must be at least a SharePoint Online administrator to run the cmdlet.
+
 ## EXAMPLES
 ### Example 1
 ```powershell

@@ -24,7 +24,7 @@ Restore-SPODeletedSite -Identity <SpoSitePipeBind> [-NoWait] [<CommonParameters>
 
 ## DESCRIPTION
 
-You must be a SharePoint Online administrator or Global Administrator and be a site collection administrator to run the cmdlet.
+You must be at least a SharePoint administrator to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 

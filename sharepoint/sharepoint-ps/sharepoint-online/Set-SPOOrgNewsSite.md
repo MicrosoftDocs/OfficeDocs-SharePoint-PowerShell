@@ -13,7 +13,7 @@ ms.author: trgreen
 
 ## SYNOPSIS
 
-Marks a site as one of multiple possible tenant's organizational news sites. Requires Global administrator or SharePoint administrator permissions.
+Marks a site as one of multiple possible tenant's organizational news sites. Requires at least SharePoint administrator permissions.
 
 ## SYNTAX
 
