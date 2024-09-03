@@ -197,15 +197,15 @@ Accept wildcard characters: False
 
 This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## FAQ
+## Notes
 
-**Will SharePoint pages retain their version history after the move?**
+**Question: Will SharePoint pages retain their version history after the move?**
 
-Currently, only the latest published version will be transferred.
+Answer: Currently, only the latest published version will be transferred.
 
-**Can recipients of SharePoint pages I shared with continue to access them after the move?**
+**Question: Can recipients of SharePoint pages I shared with continue to access them after the move?**
 
-All permissions will be removed once the pages are moved.
+Answer: All permissions will be removed once the pages are moved.
 
 ## RELATED LINKS
 
