@@ -29,7 +29,7 @@ The `Remove-SPOContainer` cmdlet deletes a File Storage Container and puts it in
 
 When admins delete a Container, it is moved into the Recycle Bin. A deleted Container can be [restored](./Restore-SPODeletedContainer.md) from the Recycle Bin within 93 days. If a Container is deleted from the Recycle Bin, or it exceeds the 93-day retention period, it is permanently deleted. Deleting a Container deletes everything within it, including all documents and files. You can view all deleted Containers in the Recycle Bin with the [`Get-SPODeletedContainer`](./Get-SPODeletedContainer.md) cmdlet.
 
-You must be a SharePoint Online Administrator or Global Administrator to run this cmdlet.
+You must be at least a SharePoint Online administrator to run the cmdlet.
 
 ## EXAMPLES
 

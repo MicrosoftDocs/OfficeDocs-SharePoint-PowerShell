@@ -26,7 +26,7 @@ Restore-SPODeletedContainer [-Identity <ContainerId>] [<CommonParameters>]
 
 ## DESCRIPTION
 
-The `Restore-SPODeletedContainer` cmdlet recovers a previously deleted File Storage Container from the Recycle Bin. Restored Containers will be retrieved by the [`Get-SPOContainer`](./Get-SPOContainer.md) cmdlet. You must be a SharePoint Online Administrator or Global Administrator to run this cmdlet.
+The `Restore-SPODeletedContainer` cmdlet recovers a previously deleted File Storage Container from the Recycle Bin. Restored Containers will be retrieved by the [`Get-SPOContainer`](./Get-SPOContainer.md) cmdlet. You must be at least a SharePoint Online Administrator to run this cmdlet.
 
 
 

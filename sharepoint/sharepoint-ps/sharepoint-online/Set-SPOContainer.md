@@ -32,7 +32,7 @@ Set-SPOContainer [-Identity]
 
 For any parameters that are passed in, the `Set-SPOContainer` cmdlet sets or updates the setting for the Container collection identified by the parameter Identity.
 
-You must be a SharePoint administrator or Global Administrator to run the cmdlet.
+You must be at least a SharePoint administrator to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Embedded Containers, see the online documentation at [Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
@@ -70,9 +70,9 @@ This example sets any previously set sensitivity label on the Container.
 ## PARAMETERS
 
 ### -BlockDownloadPolicy
-As a SharePoint Administrator or Global Administrator in Microsoft 365, you can block the download of files from SharePoint Embedded Containers. This feature does not need Microsoft Entra Conditional Access policies. This feature can be set for individual Containers but not at the organization level.
+As a SharePoint Administrator or above in Microsoft 365, you can block the download of files from SharePoint Embedded Containers. This feature does not need Microsoft Entra Conditional Access policies. This feature can be set for individual Containers but not at the organization level.
 
-Blocking the download of files allows users to remain productive while addressing the risk of accidental data loss. Users have browser-only access with no ability to download, print, or sync files. They also won't be able to access content through apps, including the Microsoft Office desktop apps. When web access is limited, users will see the following message at the top of Containers: "Your organization doesn't allow you to download, print, or sync from this Container. For help contact your IT department." Read the full documentation for advanced capabilities at [Block download policy for SharePoint Containers and OneDrive](/sharepoint/block-download-from-Containers).
+Blocking the download of files allows users to remain productive while addressing the risk of accidental data loss. Users have browser-only access with no ability to download, print, or sync files. They also won't be able to access content through apps, including the Microsoft Office desktop apps. When web access is limited, users will see the following message at the top of Containers: "Your organization doesn't allow you to download, print, or sync from this Container. For help contact your IT department." Read the full documentation for advanced capabilities at [Block download policy for SharePoint Containers and OneDrive](/sharepoint/block-download-from-sites).
 
 PARAMVALUE: $true | $false
 

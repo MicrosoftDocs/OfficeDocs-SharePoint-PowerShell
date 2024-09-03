@@ -28,7 +28,7 @@ Remove-SPODeletedContainer [-Identity <ContainerId>] [<CommonParameters>]
 
 ## DESCRIPTION
 
-The `Remove-SPODeletedContainer` cmdlet permanently removes a deleted File Storage Container from the Recycle Bin. A permanently deleted Container cannot be recovered. You must be a SharePoint Administrator or Global Administrator to run the cmdlet.
+The `Remove-SPODeletedContainer` cmdlet permanently removes a deleted File Storage Container from the Recycle Bin. A permanently deleted Container cannot be recovered. You must be at least a SharePoint Online administrator to run the cmdlet.
 
 > [!IMPORTANT]
 > We do not generally recommend that you permanently delete Containers.
