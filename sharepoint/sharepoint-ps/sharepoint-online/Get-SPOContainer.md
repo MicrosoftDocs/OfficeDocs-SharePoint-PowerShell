@@ -50,7 +50,7 @@ Get-SPOContainer [[-Identity] <ContainerSiteURL>]
 
 The `Get-SPOContainer` cmdlet retrieves and returns a list of Containers and details of an individual Container created under a SharePoint Embedded application. This command is available only in SharePoint Online Management Shell version 16.0.24211.12000 or higher to run this cmdlet.
 
-You must be a SharePoint Online Administrator or Global Administrator to run this cmdlet.
+You must be a SharePoint Online Administrator to run this cmdlet.
 
 > [!NOTE]  
 > Containers in the Recycle Bin will not be retrieved by using the `Get-SPOContainer` cmdlet. 
