@@ -5,8 +5,8 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
 title: Get-SPOPersonalSitePageCopyProgress
 schema: 2.0.0
-author: xuyangzo, bellesirapha
-ms.author: xuyangzou, spodeanu
+author: xuyangzo
+ms.author: xuyangzou
 ms.reviewer:
 ---
 
@@ -102,10 +102,9 @@ Accept wildcard characters: False
 
 This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## NOTES
-
-TODO.
 
 ## RELATED LINKS
 
 [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
+
+[Copy-SPOPersonalSitePage.md](./Copy-SPOPersonalSitePage.md)
