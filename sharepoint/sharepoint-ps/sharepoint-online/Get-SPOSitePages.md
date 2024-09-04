@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-This cmdlet allows you to retrieve all or fixed amount of SharePoint pages under a specific SharePoint site.
+This cmdlet allows you to retrieve all SharePoint pages under a specific SharePoint site.
 
 ## SYNTAX
 
