@@ -210,3 +210,7 @@ Answer: All permissions will be removed once the pages are moved.
 ## RELATED LINKS
 
 [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
+
+[Get-SPOPersonalSitePageCopyProgress.md](./Get-SPOPersonalSitePageCopyProgress.md)
+
+[Get-SPOSitePages.md](./Get-SPOSitePages.md)

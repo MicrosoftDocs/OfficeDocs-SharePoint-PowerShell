@@ -108,3 +108,5 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
 
 [Copy-SPOPersonalSitePage.md](./Copy-SPOPersonalSitePage.md)
+
+[Get-SPOSitePages.md](./Get-SPOSitePages.md)
