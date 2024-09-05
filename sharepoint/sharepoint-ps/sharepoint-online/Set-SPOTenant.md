@@ -156,7 +156,8 @@ Set-SPOTenant
  [-CoreDefaultLinkToExistingAccess <Boolean>]
  [-SelfServiceSiteCreationDisabled <Boolean>]
  [-SyncAadB2BManagementPolicy <Boolean>]
- [-ContentSecurityPolicyConfigSynced <Boolean>]
+ [-ResyncContentSecurityPolicyConfigurationEntries <Boolean>]
+ [-EnforceContentSecurityPolicy <Boolean>]
  [-DocumentUnderstandingModelScope <SyntexFeatureScopeValue>]
  [-DocumentUnderstandingModelSelectedSitesList [String[]]]
  [-DocumentUnderstandingModelSelectedSitesListOperation <SelectedSitesListOperations>]
@@ -3013,7 +3014,23 @@ Accept wildcard characters: False
 When set to `True`, forces a sync of **Content Security Policy** entries for SharePoint framework component in the tenant application catalog.
 New entries will be added to the configuration, if not already present, based on the `cdnBasedPath` property under a solution's `.config/write-manifests.json` if present.
 The sync may take up to 24 hours to complete.
-In multi-geo environments, **Content Security Policy** entries are unique to each geo.
+In multi-geo environments, **Content Security Policy** configuration is unique to each geo.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnforceContentSecurityPolicyConfiguration
+
+When set to `True`, opts-in to enforcement of the current **Content Security Policy** configuration.
+In multi-geo environments, **Content Security Policy** configuration is unique to each geo.
 
 ```yaml
 Type: Boolean
