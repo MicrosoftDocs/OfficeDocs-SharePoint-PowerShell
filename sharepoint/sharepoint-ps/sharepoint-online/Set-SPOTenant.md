@@ -167,6 +167,16 @@ Set-SPOTenant
  [-PrebuiltModelScope <SyntexFeatureScopeValue>]
  [-PrebuiltModelSelectedSitesList [String[]]]
  [-PrebuiltModelSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-DefaultContentCenterSite <String>]
+ [-DocumentTranslationScope <SyntexFeatureScopeValue>]
+ [-DocumentTranslationSelectedSitesList [String[]]]
+ [-DocumentTranslationSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-AutofillColumnScope <SyntexFeatureScopeValue>]
+ [-AutofillColumnsSelectedSitesList [String[]]]
+ [-AutofillColumnsSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-OpticalCharacterRecognitionScope <SyntexFeatureScopeValue>]
+ [-OpticalCharacterRecognitionSelectedSitesList [String[]]]
+ [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [<CommonParameters>]
 ```
 
