@@ -43,7 +43,7 @@ Example 1 places the Container with the `ContainerId` `4f0af585-8dcc-0000-223d-6
  
 ### -ContainerTypeId
  
-This parameter specifies the ID of the containertype corresponding to the SharePoint Embedded application. Use the Get-SPOContainertype command to retrieve the ContainerTypeId.
+This parameter specifies the ID of the containertype corresponding to the SharePoint Embedded application. Use the 'Get-SPOContainertype' command to retrieve the ContainerTypeId.
  
 ```yaml
 Type: String
