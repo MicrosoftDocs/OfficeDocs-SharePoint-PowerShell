@@ -72,10 +72,10 @@ Accept wildcard characters: False
 ```
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
 
-[New-SPOContainerType](https://learn.microsoft.com/powershell/module/sharepoint-online/new-spocontainertype)
+[New-SPOContainerType](sharepoint/sharepoint-ps/sharepoint-online/New-SPOContainerType.md)
 
-[Set-SPOContainerType](https://learn.microsoft.com/powershell/module/sharepoint-online/set-spocontainertype)
+[Set-SPOContainerType](sharepoint/sharepoint-ps/sharepoint-online/Set-SPOContainerType.md)
 
-[Remove-SPOContainerType](https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spocontainertype)
+[Remove-SPOContainerType](sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOContainerType.md)
