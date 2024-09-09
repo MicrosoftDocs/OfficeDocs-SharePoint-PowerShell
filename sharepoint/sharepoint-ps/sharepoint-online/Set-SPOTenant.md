@@ -3250,7 +3250,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowWebPropertyBagUpdateWhenNoScriptIsOn
-Enables or disables web property bag update when NoScript is turned on. When AllowWebPropertyBagUpdateWhenNoScriptIsOn is set to $true, web property bag can be updated even if NoScript is turned on.
+Enables or disables web property bag update when NoScript is turned on. When AllowWebPropertyBagUpdateWhenNoScriptIsOn is set to $true, web property bag can be updated even if NoScript is turned on when the user had AddAndCustomizePages (prior to NoScript removing it).
 
 PARAMVALUE: $true | $false
 
