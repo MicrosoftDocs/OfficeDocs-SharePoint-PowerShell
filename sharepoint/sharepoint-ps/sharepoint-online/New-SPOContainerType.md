@@ -163,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ###  –IsPassThroughBilling
-Use this parameter to provide create a direct to customer billed container type.
+Use this parameter to create a direct to customer billed container type.
 ```yaml
 Type: String
 Parameter Sets:
