@@ -35,14 +35,8 @@ You must be a SharePoint Embedded Administrator to run this cmdlet.
 ```powershell
 Remove-SPOContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604a8
 ```
-Example output of the Remove-SPOContainerType cmdlet
-```powershell
-Are you sure you want to perform this action?
-Performing the operation "Remove-SPOContainerType".
-[Y] Yes [A] Yes to All [N] No [L] No to All [S] Suspend [?] Help (default is "Y"): Y
-Success 
-Trial container type is deleted.
-```
+In Example 1, the cmdlet asks for a confirmation on the remove action and on confirmation, deletes the trial container type
+
 Example 1 places the Container with the `ContainerId` `4f0af585-8dcc-0000-223d-661eb2c604a8` into the Recycle Bin. The Container will be permanently deleted from the Recycle Bin after 93 days unless the deleted Container is [restored](./Restore-SPODeletedContainer.md) before permanent deletion.
  
 ## PARAMETERS
