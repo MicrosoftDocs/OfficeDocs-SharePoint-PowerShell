@@ -39,21 +39,7 @@ Set-SPOContainerType -ContainerTypeId DA1D89B3-B4CF-4C0A-8E1C-0D131C57544F -Owni
 ```
  
 Example 1 sets the container type name as "Red Container Type"
-```powershell
-Are you sure you want to perform this action?​
 
-Performing the operation "Set-SPOContainerType".​
-
-[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y​
-
-Success ​
-
-ContainerTypeId     : DA1D89B3-B4CF-4C0A-8E1C-0D131C57544F​
-
-OwningApplicationId	: 994B9586-253E-4A77-B51​
-
-ContainerTypeName   : Red Container Type​ 
-```
  
 ### Example 2
  
@@ -61,45 +47,15 @@ ContainerTypeName   : Red Container Type​
 Set-SPOContainerType -ContainerTypeId DA1D89B3-B4CF-4C0A-8E1C-0D131C57544F –Azure Subscription 01F62754-0873-4EC6-AB4A-3EED48BA8BE7 -ResourceGroup RG200
 ```
  
-In this example, the billing profile of the container type is updated with the latest information.
-```powershell
-​
-Are you sure you want to perform this action?​
+In Example 2, the billing profile of the container type is updated with the latest information.
 
-Performing the operation "Set-SPOContainerType".​
-
-[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y​
-​
-
-​ContainerTypeId     : DA1D89B3-B4CF-4C0A-8E1C-0D131C57544F​
-
-Azure Subscription  : 01F62754-0873-4EC6-AB4A-3EED48BA8BE7​
-
-Resource Group	: RG200
-```
 ### Example 3
  
 ```powershell
 Set-SPOContainerType -ContainerTypeId 01F62754-0873-4EC6-AB4A-3EED48BA8BE7 -OwningApplicationId 994B9586-253E-4A77-B51 - ContainerTypeName “Blue Container Type“ 
 ```
-In this example, the trial container type details are changed as follows:
+In Example 3, the trial container type details are changed as follows
 
-```powershell
-Are you sure you want to perform this action?​
-
-Performing the operation "Set-SPOContainerType".​
-
-[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): Y​
-​
-Success ​
-
-
-ContainerTypeId     : 01F62754-0873-4EC6-AB4A-3EED48BA8BE7​
-
-OwningApplicationId	: 994B9586-253E-4A77-B51 ​
-
-ContainerTypeName   : Blue Container Type
-```
 
  
 ## PARAMETERS
