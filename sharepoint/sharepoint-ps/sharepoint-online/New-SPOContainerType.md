@@ -49,39 +49,14 @@ You must be a SharePoint Embedded Administrator to run this cmdlet.
 ```powershell
 New-SPOContainerType -ContainerTypeName ContosoLegal -OwningApplicationId a735e4af-b86e-0000-93ba-1faded6c39e1 -AzureSubscriptionId 564e9025-f7f5-xxx9-9ddd-4cdxxxx1755 -ResourceGroup prod-resources -Region EastUS
 ```
-Example output of the New-SPOContainerType cmdlet.
-```powershell
-Are you sure you want to perform this action?
-Performing the operation "New-SPOContainerType".
-[Y] Yes [A] Yes to All [N] No [L] No to All [S] Suspend [?] Help (default is "Y"): Y
-ContainerTypeId     : 4f0af585-8dcc-0000-223d-661eb2c604e4
-ContainerTypeName   : ContosoLegal
-OwningApplicationId : a735e4af-b86e-0000-93ba-1faded6c39e1
-AzureSubscriptionId : 564e9025-f7f5-xxx9-9ddd-4cdxxxx1755
-ResourceGroup       : prod-resources
-Region              : EastUS
-Classification      : Standard
-CreationDate        : 7/2/2024
-ExpiryDate          : 
-```
+In Example 1, the cmdlet creates a new container type that is standard billed and is attached to the billing profile mentioned
 
 ### Example 2  
 ```powershell
 New-SPOContainerType –TrialContainerType - ContosoLegal -OwningApplicationId a735e4af-b86e-0000-93ba-1faded6c39e1
 ```
 
-Example output of the New-SPOContainerType cmdlet.
-
-```powershell
-Are you sure you want to perform this action?
-Performing the operation "New-SPOContainerType".
-[Y] Yes [A] Yes to All [N] No [L] No to All [S] Suspend [?] Help (default is "Y"): Y
-ContainerTypeId                              ContainerTypeName          OwningApplicationId               Classification
-------------------------------------        --------------------   -------------------------------        -----------------
-4f0af585-8dcc-0000-223d-661eb2c604e4            ContosoLegal       a735e4af-b86e-0000-93ba-1faded6c39e1         Trial
-```
-
-
+In Example 2, the cmdlet creates a trial container type, valid for 30 days.
 
 ## PARAMETERS
 
@@ -210,10 +185,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+[Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
 
-[Get-SPOContainerType](https://learn.microsoft.com/powershell/module/sharepoint-online/get-spocontainertype)
+[Get-SPOContainerType](sharepoint/sharepoint-ps/sharepoint-online/Get-SPOContainerType.md)
 
-[Set-SPOContainerType](https://learn.microsoft.com/powershell/module/sharepoint-online/set-spocontainertype)
+[Set-SPOContainerType](sharepoint/sharepoint-ps/sharepoint-online/Set-SPOContainerType.md)
 
-[Remove-SPOContainerType](https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spocontainertype)
+[Remove-SPOContainerType](sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOContainerType.md)
