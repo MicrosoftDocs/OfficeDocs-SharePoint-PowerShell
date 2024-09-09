@@ -167,6 +167,7 @@ Set-SPOTenant
  [-PrebuiltModelScope <SyntexFeatureScopeValue>]
  [-PrebuiltModelSelectedSitesList [String[]]]
  [-PrebuiltModelSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-AllowWebPropertyBagUpdateWhenNoScriptIsOn <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -3247,6 +3248,24 @@ Default value: Overwrite
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -AllowWebPropertyBagUpdateWhenNoScriptIsOn
+Enables or disables web property bag update when NoScript is turned on. When AllowWebPropertyBagUpdateWhenNoScriptIsOn is set to $true, web property bag can be updated even if NoScript is turned on.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ## RELATED LINKS
 
