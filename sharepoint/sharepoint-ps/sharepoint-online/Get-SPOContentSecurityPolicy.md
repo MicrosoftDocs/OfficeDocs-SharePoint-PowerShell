@@ -34,3 +34,5 @@ Returns all sources in the current **Content Security Policy** configuration.
 [Add-SPOContentSecurityPolicy](Add-SPOContentSecurityPolicy.md)
 
 [Remove-SPOContentSecurityPolicy](Remove-SPOContentSecurityPolicy.md)
+
+[Content Security Policy source values](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources)

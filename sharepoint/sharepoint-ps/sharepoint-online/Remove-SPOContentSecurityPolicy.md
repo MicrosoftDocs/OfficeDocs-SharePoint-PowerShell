@@ -54,3 +54,5 @@ Accept wildcard characters: False
 [Get-SPOContentSecurityPolicy](Get-SPOContentSecurityPolicy.md)
 
 [Add-SPOContentSecurityPolicy](Add-SPOContentSecurityPolicy.md)
+
+[Content Security Policy source values](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources)
