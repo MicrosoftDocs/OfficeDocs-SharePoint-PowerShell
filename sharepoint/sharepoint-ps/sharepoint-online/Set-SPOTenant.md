@@ -3029,7 +3029,7 @@ Accept wildcard characters: False
 
 ### -EnforceContentSecurityPolicyConfiguration
 
-When set to `True`, opts-in to enforcement of the current **Content Security Policy** configuration.
+When set to `True` **Content Security Policy** violations will be enforced.
 In multi-geo environments, **Content Security Policy** configuration is unique to each geo.
 
 ```yaml
