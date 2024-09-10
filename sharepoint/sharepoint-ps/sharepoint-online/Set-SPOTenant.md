@@ -3011,8 +3011,8 @@ Accept wildcard characters: False
 
 ### -ResyncContentSecurityPolicyConfigurationEntries
 
-When set to `True`, forces a sync of **Content Security Policy** entries for SharePoint framework component in the tenant application catalog.
-New entries will be added to the configuration, if not already present, based on the `cdnBasedPath` property under a solution's `.config/write-manifests.json` if present.
+When set to `True`, forces a sync of **Content Security Policy** sources for SharePoint Framework components in the tenant application catalog.
+New sources will be added to the configuration, if not already present, based on the `cdnBasedPath` property under a solution's `.config/write-manifests.json` if present.
 The sync may take up to 24 hours to complete.
 In multi-geo environments, **Content Security Policy** configuration is unique to each geo.
 

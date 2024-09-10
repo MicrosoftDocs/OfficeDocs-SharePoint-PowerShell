@@ -28,7 +28,6 @@ Get-SPOContentSecurityPolicy
 ## DESCRIPTION
 
 Returns all sources in the current **Content Security Policy** configuration.
-Each source will be added to the `script-src` directive during construction of the `Content-Security-Policy` header.
 
 ## RELATED LINKS
 
