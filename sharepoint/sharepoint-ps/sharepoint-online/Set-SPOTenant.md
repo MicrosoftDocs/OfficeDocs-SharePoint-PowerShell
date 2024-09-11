@@ -167,7 +167,7 @@ Set-SPOTenant
  [-PrebuiltModelScope <SyntexFeatureScopeValue>]
  [-PrebuiltModelSelectedSitesList [String[]]]
  [-PrebuiltModelSelectedSitesListOperation <SelectedSitesListOperations>]
- [-AllowWebPropertyBagUpdateWhenNoScriptIsOn <Boolean>]
+ [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -3249,8 +3249,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowWebPropertyBagUpdateWhenNoScriptIsOn
-Enables or disables web property bag update when NoScript is turned on. When AllowWebPropertyBagUpdateWhenNoScriptIsOn is set to $true, web property bag can be updated even if NoScript is turned on when the user had AddAndCustomizePages (prior to NoScript removing it).
+### -AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled
+Enables or disables web property bag update when DenyAddAndCustomizePages is enabled. When AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled is set to $true, web property bag can be updated even if DenyAddAndCustomizePages is turned on when the user had AddAndCustomizePages (prior to DenyAddAndCustomizePages removing it).
 
 PARAMVALUE: $true | $false
 
