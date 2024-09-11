@@ -29,16 +29,16 @@ Set-SPOContainerType -ContainerTypeId <ContainerTypeId> -AzureSubscriptionId <Az
 ```
  
 ## DESCRIPTION
-This cmdlet is used to reset the parameters associated with a container type - both trial and standard. The cmdlet can be used to change the container type name or the associated billing profile of the contianer type.
+This cmdlet is used to reset the parameters associated with a container type - both trial and standard. The cmdlet can be used to change the container type name or the associated billing profile of the container type.
 ## EXAMPLES
  
 ### Example 1
  
 ```powershell
-Set-SPOContainerType -ContainerTypeId DA1D89B3-B4CF-4C0A-8E1C-0D131C57544F -OwningApplicationId 12A9D93C-18D7-46A0-B43E-28D20ADDD56A - ContainerTypeName “Red Container Type“ 
+Set-SPOContainerType -ContainerTypeId DA1D89B3-B4CF-4C0A-8E1C-0D131C57544F -OwningApplicationId 12A9D93C-18D7-46A0-B43E-28D20ADDD56A - ContainerTypeName 'Red Container Type' 
 ```
  
-Example 1 sets the container type name as "Red Container Type"
+Example 1 sets the container type name as 'Red Container Type'
 
  
 ### Example 2
@@ -52,9 +52,9 @@ In Example 2, the billing profile of the container type is updated with the late
 ### Example 3
  
 ```powershell
-Set-SPOContainerType -ContainerTypeId 01F62754-0873-4EC6-AB4A-3EED48BA8BE7 -OwningApplicationId 994B9586-253E-4A77-B51 - ContainerTypeName “Blue Container Type“ 
+Set-SPOContainerType -ContainerTypeId 01F62754-0873-4EC6-AB4A-3EED48BA8BE7 -OwningApplicationId 994B9586-253E-4A77-B51 - ContainerTypeName 'Blue Container Type' 
 ```
-In Example 3, the trial container type details are changed as follows
+In Example 3, the trial container type name is updated as 'Blue Container Type' 
 
 
  
