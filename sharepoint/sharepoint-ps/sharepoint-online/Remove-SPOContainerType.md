@@ -37,13 +37,13 @@ Remove-SPOContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604a8
 ```
 In Example 1, the cmdlet asks for a confirmation on the remove action and on confirmation, deletes the trial container type
 
-Example 1 places the Container with the `ContainerId` `4f0af585-8dcc-0000-223d-661eb2c604a8` into the Recycle Bin. The Container will be permanently deleted from the Recycle Bin after 93 days unless the deleted Container is [restored](./Restore-SPODeletedContainer.md) before permanent deletion.
+Example 1 places the container with the `ContainerId` `4f0af585-8dcc-0000-223d-661eb2c604a8` into the Recycle Bin. The Container will be permanently deleted from the Recycle Bin after 93 days unless the deleted Container is [restored](./Restore-SPODeletedContainer.md) before permanent deletion.
  
 ## PARAMETERS
  
 ### -ContainerTypeId
  
-This parameter specifies the ID of the containertype corresponding to the SharePoint Embedded application. Use the 'Get-SPOContainertype' command to retrieve the ContainerTypeId.
+This parameter specifies the ID of the container type corresponding to the SharePoint Embedded application. Use the 'Get-SPOContainertype' command to retrieve the ContainerTypeId.
  
 ```yaml
 Type: String
