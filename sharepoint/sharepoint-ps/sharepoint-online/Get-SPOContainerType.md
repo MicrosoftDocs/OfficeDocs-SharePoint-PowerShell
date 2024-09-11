@@ -30,7 +30,7 @@ Get-SPOContainerType [-ContainerTypeId <ContainerTypeId>]
 
 ## DESCRIPTION
 
-This cmdlet returns all the container types present in the tenant or details of a specific container type when paired with the containertype Id parameter. 
+This cmdlet returns all the container types present in the tenant or details of a specific container type when paired with the containertype ID parameter. 
 
 You must be a SharePoint Embedded administrator to run the cmdlet.
 
@@ -44,7 +44,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 Get-SPOContainerType 
 ```
 
-Example 1 retrieves all the container types present in the tenant and displays information such as Container Type Id, Container Type Name, Owning Application ID, billing details, creation date, expiry date.
+Example 1 retrieves all the container types present in the tenant and displays information such as Container Type ID, Container Type Name, Owning Application ID, billing details, creation date, expiry date.
 
 ### Example 2
 
@@ -57,7 +57,7 @@ Example 2 returns the detailed properties of container type 4f0af585-8dcc-0000-2
 
 ### -ContainerTypeId
  
-This parameter specifies the ID of the containertype corresponding to the SharePoint Embedded application.
+This parameter specifies the ID of the container type corresponding to the SharePoint Embedded application.
 ```yaml
 Type: String
 Parameter Sets: (All)
