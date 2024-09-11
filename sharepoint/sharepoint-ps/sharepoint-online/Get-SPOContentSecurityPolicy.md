@@ -15,7 +15,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Returns all entries in the current **Content Security Policy** configuration.
+Returns all sources in the current **Content Security Policy** configuration.
 
 ## SYNTAX
 
@@ -27,11 +27,12 @@ Get-SPOContentSecurityPolicy
 
 ## DESCRIPTION
 
-Returns all entries in the current **Content Security Policy** configuration.
-The url in each entry will be added to the corresponding directive during construction of the `Content-Security-Policy` header.
+Returns all sources in the current **Content Security Policy** configuration.
 
 ## RELATED LINKS
 
 [Add-SPOContentSecurityPolicy](Add-SPOContentSecurityPolicy.md)
 
 [Remove-SPOContentSecurityPolicy](Remove-SPOContentSecurityPolicy.md)
+
+[Content Security Policy source values](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources)
