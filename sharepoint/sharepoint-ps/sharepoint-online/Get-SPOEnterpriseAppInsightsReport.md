@@ -23,7 +23,7 @@ This cmdlet enables the admin to check status of all active and available report
 Get-SPOEnterpriseAppInsightsReport [-ReportId <Guid>] [-Action <enum>]
 ```
 
-## Description
+## DESCRIPTION
 
 If this cmdlet is executed without any parameters, it displays the status of all active and completed reports (adhering to any retention timeline as per DAG) with the following properties:
 | Property             | Description                              |
@@ -45,7 +45,7 @@ If this cmdlet is executed with `-ReportId` as parameter, the top 100 records of
 
 If this cmdlet is executed with both the parameters, i.e. `-ReportId` and `-Action`, and if the value of `-Action` is set as `View`, it will display the same result as described above. If the value of `-Action` is set to `Download`, it will download the full report in CSV format.
   
-## Example
+## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
 
@@ -73,7 +73,7 @@ Example 3 enables admin to download the Enterprise Application Insights report o
 
 ## PARAMETERS
 
-### - ReportId
+### -ReportId
 
 It is an optional parameter, and it specifies the unique Id of the report to be viewed/downloaded.
 
@@ -90,7 +90,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### - Action
+### -Action
 
 It is an optional parameter, and it specifies whether to view or download a specific report.
 
@@ -107,12 +107,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-## CommonParameters
+### CommonParameters
 
 This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## Related Links
+## RELATED LINKS
 
 [Get started with SharePoint Online Management Shell](https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
 
-[Start-SPOEnterpriseAppInsightsReport](https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/start-spoenterpriseappinsightsreport)
+[Start-SPOEnterpriseAppInsightsReport](./Start-SPOEnterpriseAppInsightsReport.md)
