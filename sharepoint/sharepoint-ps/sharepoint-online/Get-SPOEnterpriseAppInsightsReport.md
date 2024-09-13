@@ -15,7 +15,7 @@ manager: hikakar
 
 ## SYNOPSIS
 
-This cmdlet enables the admin to check status of all active and available reports when no report ID is present and to View a Report if report ID is present.
+This cmdlet enables the admin to check status of all active and available reports when no report ID is present and to View/Download a Report if report ID is present.
 
 ## SYNTAX
 
