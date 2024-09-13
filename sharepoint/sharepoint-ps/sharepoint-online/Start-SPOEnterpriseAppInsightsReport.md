@@ -23,7 +23,7 @@ This cmdlet enables admin to trigger the build of a new Enterprise Application I
 Start-SPOEnterpriseAppInsightsReport [-Force <SwitchParameter>] [-ReportPeriodInDays <Int>] 
 ```
 
-## Description
+## DESCRIPTION
 
 After this cmdlet is executed, the Enterprise Application Insights report generation request for the last N days gets queued in the pipeline and the below metadata is displayed with the following properties:
 | Property             | Description                              |
@@ -33,7 +33,7 @@ After this cmdlet is executed, the Enterprise Application Insights report genera
 | Status | The Status of the report.               |
 | ReportPeriodInDays | The report duration in days.       |
 
-## Example
+## EXAMPLES
 
 ### -----------------------EXAMPLE 1-----------------------------
 
@@ -48,6 +48,7 @@ Example 1 generates the Enterprise Application Insights report for a default dur
 ```powershell
 Start-SPOEnterpriseAppInsightsReport –ReportPeriodInDays 14
 ```
+
 Example 2 generates the Enterprise Application Insights report for a specified duration of 14 days.
 
 ## PARAMETERS
@@ -94,4 +95,4 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 
 [Get started with SharePoint Online Management Shell](https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
 
-[Get-SPOEnterpriseAppInsightsReport](https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/get-spoenterpriseappinsightsreport)
+[Get-SPOEnterpriseAppInsightsReport](./Start-SPOEnterpriseAppInsightsReport.md)
