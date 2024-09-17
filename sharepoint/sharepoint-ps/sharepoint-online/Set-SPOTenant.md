@@ -156,7 +156,8 @@ Set-SPOTenant
  [-CoreDefaultLinkToExistingAccess <Boolean>]
  [-SelfServiceSiteCreationDisabled <Boolean>]
  [-SyncAadB2BManagementPolicy <Boolean>]
- [-ContentSecurityPolicyConfigSynced <Boolean>]
+ [-ResyncContentSecurityPolicyConfigurationEntries <Boolean>]
+ [-EnforceContentSecurityPolicy <Boolean>]
  [-DocumentUnderstandingModelScope <SyntexFeatureScopeValue>]
  [-DocumentUnderstandingModelSelectedSitesList [String[]]]
  [-DocumentUnderstandingModelSelectedSitesListOperation <SelectedSitesListOperations>]
@@ -167,6 +168,7 @@ Set-SPOTenant
  [-PrebuiltModelScope <SyntexFeatureScopeValue>]
  [-PrebuiltModelSelectedSitesList [String[]]]
  [-PrebuiltModelSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -3010,10 +3012,26 @@ Accept wildcard characters: False
 
 ### -ResyncContentSecurityPolicyConfigurationEntries
 
-When set to `True`, forces a sync of **Content Security Policy** entries for SharePoint framework component in the tenant application catalog.
-New entries will be added to the configuration, if not already present, based on the `cdnBasedPath` property under a solution's `.config/write-manifests.json` if present.
+When set to `True`, forces a sync of **Content Security Policy** sources for SharePoint Framework components in the tenant application catalog.
+New sources will be added to the configuration, if not already present, based on the `cdnBasedPath` property under a solution's `.config/write-manifests.json` if present.
 The sync may take up to 24 hours to complete.
-In multi-geo environments, **Content Security Policy** entries are unique to each geo.
+In multi-geo environments, **Content Security Policy** configuration is unique to each geo.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnforceContentSecurityPolicyConfiguration
+
+When set to `True` **Content Security Policy** violations will be enforced.
+In multi-geo environments, **Content Security Policy** configuration is unique to each geo.
 
 ```yaml
 Type: Boolean
@@ -3247,6 +3265,23 @@ Default value: Overwrite
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled
+Enables or disables web property bag update when DenyAddAndCustomizePages is enabled. When AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled is set to $true, web property bag can be updated even if DenyAddAndCustomizePages is turned on when the user had AddAndCustomizePages (prior to DenyAddAndCustomizePages removing it).
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ## RELATED LINKS
 
