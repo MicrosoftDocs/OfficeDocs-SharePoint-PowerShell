@@ -178,6 +178,7 @@ Set-SPOTenant
  [-OpticalCharacterRecognitionScope <SyntexFeatureScopeValue>]
  [-OpticalCharacterRecognitionSelectedSitesList [String[]]]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -3505,6 +3506,22 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: Overwrite
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled
+Enables or disables web property bag update when DenyAddAndCustomizePages is enabled. When AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled is set to $true, web property bag can be updated even if DenyAddAndCustomizePages is turned on when the user had AddAndCustomizePages (prior to DenyAddAndCustomizePages removing it).
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
