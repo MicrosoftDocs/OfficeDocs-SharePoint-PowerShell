@@ -45,10 +45,10 @@ If this cmdlet is executed with `-ReportId` as parameter, the top 100 records of
 | AppPermissions  | The permissions granted to the 3P application.                             |
 | RequestVoulme   | The number of times the 3P application accessed the given SharePoint site. |
 
-If this cmdlet is executed with both the parameters, i.e. `-ReportId` and `-Action`, and if the value of `-Action` is set as `View`, it will display the same result as described above. If the value of `-Action` is set to `Download`, it will download the full report in CSV format to `C:\Users\vmadministrator` directory.
+If this cmdlet is executed with both the parameters, i.e. `-ReportId` and `-Action`, and if the value of `-Action` is set as `View`, it will display the same result as described above. If the value of `-Action` is set to `Download`, it will download the full report in CSV format to the same path from where the command was run.
   
 > [!NOTE]
-> All reports adhere to any retention timeline as per Data Access Governance.
+> All reports adhere to any retention timeline as per [Data Access Governance](SharePoint/SharePointOnline/data-access-governance-reports.md).
 
 ## EXAMPLES
 
@@ -74,7 +74,7 @@ Example 2 enables administrator to view the enterprise application insights repo
 Get-SPOEnterpriseAppInsightsReport – ReportId 9d946216-afe7-49f5-8267-7b662435c70b -Action Download
 ```
 
-Example 3 enables administrator to download the enterprise application insights report of ReportId: `9d946216-afe7-49f5-8267-7b662435c70b` to `C:\Users\vmadministrator` directory.
+Example 3 enables administrator to download the enterprise application insights report of ReportId: `9d946216-afe7-49f5-8267-7b662435c70b` to the same path from where the command was run.
 
 ## PARAMETERS
 
