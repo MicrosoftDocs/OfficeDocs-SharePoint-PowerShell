@@ -15,46 +15,27 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Adds an entry to the **Content Security Policy** configuration.
+Adds a source to the **Content Security Policy** configuration.
 
 ## SYNTAX
 
 ### Default
 
 ```powershell
-Add-SPOContentSecurityPolicy [-Url] <String> [-Directive] <String> 
+Add-SPOContentSecurityPolicy [-Source] <String>
 ```
 
 ## DESCRIPTION
 
-Adds an entry to the **Content Security Policy** configuration. 
-The url in each entry will be added to the corresponding directive during construction of the Content-Security-Policy header.
-In multi-geo environments **Content Security Policy** entries are unique to each geo.
-Entries with a "*" directive will be applied to all directives.
+Adds a source to the **Content Security Policy** configuration. 
+The source will be added to the `script-src` directive during construction of the `Content-Security-Policy` header.
+In multi-geo environments, **Content Security Policy** configuration is unique to each geo.
 
 ## PARAMETERS
 
-### -Url
+### -Source
 
-Url to allow as part of this **Content Security Policy** entry.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Directive
-
-Directive to allow as part of this **Content Security Policy** entry.
-Currently allowed values are "*", "script-src" and "worker-src".
+Source to be added to the **Content Security Policy** configuration.
 
 ```yaml
 Type: String
@@ -63,7 +44,7 @@ Aliases:
 Applicable: SharePoint Online
 
 Required: True
-Position: Named
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -74,3 +55,5 @@ Accept wildcard characters: False
 [Get-SPOContentSecurityPolicy](Get-SPOContentSecurityPolicy.md)
 
 [Remove-SPOContentSecurityPolicy](Remove-SPOContentSecurityPolicy.md)
+
+[Content Security Policy source values](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources)

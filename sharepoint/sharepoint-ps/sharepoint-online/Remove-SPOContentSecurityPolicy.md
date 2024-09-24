@@ -15,26 +15,26 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Removes entries from the **Content Security Policy** configuration.
+Removes a source from the **Content Security Policy** configuration.
 
 ## SYNTAX
 
 ### Default
 
 ```powershell
-Remove-SPOContentSecurityPolicy [-Url] <String>
+Remove-SPOContentSecurityPolicy [-Source] <String>
 ```
 
 ## DESCRIPTION
 
-Removes all entries associated with the given url from the **Content Security Policy** configuration. 
-In multi-geo environments, **Content Security Policy** entries are unique to each geo.
+Removes the given source from the **Content Security Policy** configuration. 
+In multi-geo environments, **Content Security Policy** configuration is unique to each geo.
 
 ## PARAMETERS
 
-### -Url
+### -Source
 
-Url of the **Content Security Policy** entries to be removed.
+Source to be removed from the **Content Security Policy** configuration.
 
 ```yaml
 Type: String
@@ -54,3 +54,5 @@ Accept wildcard characters: False
 [Get-SPOContentSecurityPolicy](Get-SPOContentSecurityPolicy.md)
 
 [Add-SPOContentSecurityPolicy](Add-SPOContentSecurityPolicy.md)
+
+[Content Security Policy source values](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources)
