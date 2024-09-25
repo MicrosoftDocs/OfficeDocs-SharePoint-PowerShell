@@ -48,7 +48,7 @@ If this cmdlet is executed with `-ReportId` as parameter, the top 100 records of
 If this cmdlet is executed with both the parameters, i.e. `-ReportId` and `-Action`, and if the value of `-Action` is set as `View`, it will display the same result as described above. If the value of `-Action` is set to `Download`, it will download the full report in CSV format to the same path from where the command was run.
   
 > [!NOTE]
-> All reports adhere to any retention timeline as per [Data Access Governance](/sharepoint/sharepointonline/data-access-governance-reports.md).
+> All reports adhere to any retention timeline as per [Data Access Governance](/sharepoint/data-access-governance-reports).
 
 ## EXAMPLES
 
