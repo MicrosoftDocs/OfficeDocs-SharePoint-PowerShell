@@ -38,13 +38,6 @@ You must be a SharePoint Embedded Administrator or Global Administrator to run t
 
 To invite people outside your organization, please make sure [Microsoft Entra B2B](https://learn.microsoft.com/en-us/sharepoint/sharepoint-azureb2b-integration) is enabled. 
 
-### Run the following cmdlet to enable B2B integration:
-
-```powershell
-Set-SPOTenant -EnableAzureADB2BIntegration $true
-```
-
-
 ## EXAMPLES
 
 ### Example 1
@@ -62,6 +55,14 @@ Set-SPOApplication -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -Ov
 ```
 
 This example enables the override, restricting file sharing within the SharePoint Embedded application to internal company users only, regardless of the broader SharePoint Online tenant settings.
+
+### Example 3
+
+```powershell
+Set-SPOTenant -EnableAzureADB2BIntegration $true
+Set-SPOApplication -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -OverrideTenantSharingCapability $true -SharingCapability -ExternalUserandGuestSharing
+```
+This example demonstrates how to enable file sharing within the SharePoint Embedded application for external users. Note that B2B integration must be enabled to allow guest invitations to SharePoint Embedded apps.
 
 ## PARAMETERS
 
