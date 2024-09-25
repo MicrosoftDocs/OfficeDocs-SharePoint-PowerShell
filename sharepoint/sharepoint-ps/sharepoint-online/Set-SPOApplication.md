@@ -37,6 +37,7 @@ You must be a SharePoint Embedded Administrator or Global Administrator to run t
 > The OwningApplicationId for Microsoft Designer is `5e2795e3-ce8c-4cfb-b302-35fe5cd01597`.
 
 To invite people outside your organization, please make sure [Microsoft Entra B2B](https://learn.microsoft.com/en-us/sharepoint/sharepoint-azureb2b-integration) is enabled. Run the following cmdlet to enable B2B integration:
+
 ```powershell
 Set-SPOTenant -EnableAzureADB2BIntegration $true
 ```
