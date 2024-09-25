@@ -55,6 +55,11 @@ Set-SPOApplication -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -Ov
 This example enables the override, restricting file sharing within the SharePoint Embedded application to internal company users only, regardless of the broader SharePoint Online tenant settings.
 
 ## PARAMETERS
+> [!NOTE]   
+> To invite people outside your organization, please make sure [Microsoft Entra B2B](https://learn.microsoft.com/en-us/sharepoint/sharepoint-azureb2b-integration) is enabled. Run the following cmdlets to enable B2B Integration:
+```powershell
+Set-SPOTenant -EnableAzureADB2BIntegration $true
+```
 
 ### -SharingCapability
 Determines what level of sharing is available for the SharePoint Embedded Application.
