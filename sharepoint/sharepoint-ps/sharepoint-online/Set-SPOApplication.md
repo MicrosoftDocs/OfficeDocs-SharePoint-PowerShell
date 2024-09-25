@@ -56,7 +56,7 @@ This example enables the override, restricting file sharing within the SharePoin
 
 ## PARAMETERS
 
-> [!NOTE]    
+> [!NOTE]
 > To invite people outside your organization, please make sure [Microsoft Entra B2B](https://learn.microsoft.com/en-us/sharepoint/sharepoint-azureb2b-integration) is enabled. Run the following cmdlet to enable B2B integration:
 > ```powershell
 > Set-SPOTenant -EnableAzureADB2BIntegration $true
