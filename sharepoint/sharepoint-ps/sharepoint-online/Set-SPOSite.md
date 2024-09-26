@@ -60,6 +60,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-OverrideSharingCapability <Boolean>]
  [-DefaultShareLinkScope <SharingScope>]
  [-DefaultShareLinkRole <SharingRole>]
+ [-HidePeoplePreviewingFiles <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -1435,7 +1436,30 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+
 ```
+### -HidePeoplePreviewingFiles
+
+This setting disables the feature in OneDrive and SharePoint file previewing that displays the presence of other users on the file. It does not affect any experiences outside of the previewer. 
+
+PARAMVALUE: False | True
+
+If set to True, the presence of other users on the file will no longer be displayed.
+
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+
+```
+
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
