@@ -3548,7 +3548,7 @@ Accept wildcard characters: False
 
 Sets the list of security groups who are allowed to share with anonymous (non-authenticated) users as well as authenticated guest users. Each security group is denoted by its GUID object ID in the Entra directory. 
 
-To set this list to be a specific security group, you need to enter its GUID as the argument. You can enter multiple GUIDs by using commas to separate them. To view the current list, use Get-SPOTenant. 
+To set this list to be a specific security group, you need to enter its GUID as the argument. You can enter multiple GUIDs by using commas to separate them. To view the current list, use [Get-SPOTenant](Get-SPOTenant.md). 
 
 ```yaml
 Type: Guid[] 
@@ -3566,7 +3566,7 @@ Accept wildcard characters: False
 
 Sets the list of security groups who are only allowed to share with authenticated guest users. Each security group is denoted by its GUID object ID. 
 
-To set this list to be a specific security group, you need to enter its GUID as the argument. You can enter multiple GUIDs by using commas to separate them. To view the current list, use Get-SPOTenant. 
+To set this list to be a specific security group, you need to enter its GUID as the argument. You can enter multiple GUIDs by using commas to separate them. To view the current list, use [Get-SPOTenant](Get-SPOTenant.md). 
 
 ```yaml 
 Type: Guid[] 
@@ -3584,6 +3584,6 @@ Accept wildcard characters: False
 
 [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
 
-[Upgrade-SPOSite](Upgrade-SPOSite.md)
+[Get-SPOSite](Get-SPOSite.md)
 
 [Set-SPOSite](Set-SPOSite.md)
