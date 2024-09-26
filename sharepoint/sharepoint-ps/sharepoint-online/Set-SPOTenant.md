@@ -179,6 +179,8 @@ Set-SPOTenant
  [-OpticalCharacterRecognitionSelectedSitesList [String[]]]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>]
+ [-WhoCanShareAnonymousAllowList [Guid[]]]
+ [-WhoCanShareAuthenticatedGuestAllowList [Guid[]]]
  [<CommonParameters>]
 ```
 
@@ -3525,6 +3527,60 @@ Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -WhoCanShareAnonymousAllowList 
+
+Sets the list of security groups who are allowed to share with anonymous (non-authenticated) users as well as authenticated guest users. Each security group is denoted by its GUID object ID in the Entra directory. 
+
+To set this list to be a specific security group, you need to enter its GUID as the parameter. You can enter multiple GUIDs by using a comma to separate them, for example Set-SPOTenant –WhoCanShareAnonymousAllowList 46698648-fcd5-41fc-9526-c7f7b2ace919,544dd15b-cf3c-441b-96da-004d5a8cea1d. To view the current list, use Get-SPOTenant to get WhoCanShareAnonymousAllowList. 
+
+To add a security group to this list, use 
+
+```powershell
+$list = (Get-SPOTenant | Select-Object WhoCanShareAnonymousAllowList).WhoCanShareAnonymousAllowList 
+Set-SPOTenant –WhoCanShareAnonymousAllowList ($list + <new guid>) 
+``` 
+
+To remove all security groups from this list, use Set-SPOTenant –WhoCanShareAnonymousAllowList @(). 
+
+```yaml
+Type: Guid[] 
+Parameter Sets: (All) 
+Aliases: 
+Applicable: SharePoint Online 
+Required: False 
+Position: Named 
+Default value: None 
+Accept pipeline input: False 
+Accept wildcard characters: False 
+``` 
+
+### -WhoCanShareAuthenticatedGuestAllowList 
+
+Sets the list of security groups who are only allowed to share with authenticated guest users. Each security group is denoted by its GUID object ID. 
+
+To set this list to be a specific security group, you need to enter its GUID as the parameter. You can enter multiple GUIDs by using a comma to separate them, for example Set-SPOTenant –WhoCanShareAuthenticatedGuestAllowList 46698648-fcd5-41fc-9526-c7f7b2ace919,544dd15b-cf3c-441b-96da-004d5a8cea1d. To view the current list, use Get-SPOTenant to get WhoCanShareAuthenticatedGuestAllowList. 
+
+To add a security group to this list, use 
+
+```powershell
+$list = (Get-SPOTenant | Select-Object WhoCanShareAuthenticatedGuestAllowList). WhoCanShareAuthenticatedGuestAllowList 
+Set-SPOTenant – WhoCanShareAuthenticatedGuestAllowList ($list + <new guid>) 
+``` 
+
+To remove all security groups from this list, use Set-SPOTenant – WhoCanShareAuthenticatedGuestAllowList @(). 
+
+```yaml 
+Type: Guid[] 
+Parameter Sets: (All) 
+Aliases: 
+Applicable: SharePoint Online 
+Required: False 
+Position: Named 
+Default value: None 
+Accept pipeline input: False 
+Accept wildcard characters: False 
+``` 
 
 ## RELATED LINKS
 
