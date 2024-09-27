@@ -179,6 +179,8 @@ Set-SPOTenant
  [-OpticalCharacterRecognitionSelectedSitesList [String[]]]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>]
+ [-WhoCanShareAnonymousAllowList [Guid[]]]
+ [-WhoCanShareAuthenticatedGuestAllowList [Guid[]]]
  [<CommonParameters>]
 ```
 
@@ -299,7 +301,7 @@ This example sets manual version history limits on all new document libraries at
 ### EXAMPLE 14
 
 ```powershell
-PS > Set-SPOTenant -SharingDomainRestrictionMode "AllowList" -SharingAllowedDomainList "contoso.com fabrikam.com"
+Set-SPOTenant -SharingDomainRestrictionMode "AllowList" -SharingAllowedDomainList "contoso.com fabrikam.com"
 ```
 
 This example enables users to share with external collaborators from those domains only.
@@ -307,7 +309,7 @@ This example enables users to share with external collaborators from those domai
 ### EXAMPLE 15
 
 ```powershell
-PS > Set-SPOTenant -SharingDomainRestrictionMode "BlockList" -SharingBlockedDomainList "contoso.com"
+Set-SPOTenant -SharingDomainRestrictionMode "BlockList" -SharingBlockedDomainList "contoso.com"
 ```
 
 This example enables users to share with all external collaborators except for those on the BlockedDomainList.
@@ -315,7 +317,7 @@ This example enables users to share with all external collaborators except for t
 ### EXAMPLE 16
 
 ```powershell
-PS > Set-SPOTenant -EnableVersionExpirationSetting $true
+Set-SPOTenant -EnableVersionExpirationSetting $true
 ```
 
 This example opts your tenant into public preview of Improved Version History controls feature. This feature is being tracked on the Microsoft 365 Public Roadmap under ID [145802](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=145802).
@@ -327,23 +329,39 @@ By opting in, you are accepting the terms of service for version history limits.
 ### EXAMPLE 17
 
 ```powershell
-PS > Set-SPOTenant -PrebuiltModelScope SelectedSites -PrebuiltModelSelectedSitesList "https://contoso.sharepoint.com/sites/site1","https://contoso.sharepoint.com/sites/site2" -PrebuiltModelSelectedSitesListOperation Append
+Set-SPOTenant -PrebuiltModelScope SelectedSites -PrebuiltModelSelectedSitesList "https://contoso.sharepoint.com/sites/site1","https://contoso.sharepoint.com/sites/site2" -PrebuiltModelSelectedSitesListOperation Append
 ```
 
 This example sets the scope of the prebuilt model and [prebuilt document processing](/microsoft-365/syntex/prebuilt-overview) premium feature to `SelectedSites`, which limits the feature to only sites included in the selected sites list. This example also appends two sites to the feature's selected sites list.
 
 Use of these parameters require the tenant to either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
 
-### Example 18
+### EXAMPLE 18
 
 ```powershell
-PS > Set-SPOTenant -DefaultContentCenterSite "https://contoso.sharepoint.com/sites/contentcenter"
+Set-SPOTenant -DefaultContentCenterSite "https://contoso.sharepoint.com/sites/contentcenter"
 ```
 
 This example sets the tenant's default content center. It can only be used if the tenant does not already have a designated default content center. To learn more about content centers, visit [Create a content center in Microsoft Syntex](/microsoft-365/syntex/create-a-content-center).
 
-
 Use of this parameter requires the tenant to either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+
+### EXAMPLE 19
+
+```powershell
+$list = (Get-SPOTenant | Select-Object WhoCanShareAnonymousAllowList).WhoCanShareAnonymousAllowList 
+Set-SPOTenant –WhoCanShareAnonymousAllowList ($list + <new GUID>) 
+``` 
+
+This example appends a security group to the WhoCanShareAnonymousAllowList. Similar code works for the WhoCanShareAuthenticatedGuestAllowList.
+
+### EXAMPLE 20
+
+```powershell
+Set-SPOTenant –WhoCanShareAnonymousAllowList @() 
+```
+
+This example empties the WhoCanShareAnonymousAllowList. Similar code works for the WhoCanShareAuthenticatedGuestAllowList.
 
 ## PARAMETERS
 
@@ -3526,10 +3544,46 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -WhoCanShareAnonymousAllowList 
+
+Sets the list of security groups who are allowed to share with anonymous (non-authenticated) users as well as authenticated guest users. Each security group is denoted by its GUID object ID in the Entra directory. 
+
+To set this list to be a specific security group, you need to enter its GUID as the argument. You can enter multiple GUIDs by using commas to separate them. To view the current list, use [Get-SPOTenant](Get-SPOTenant.md). 
+
+```yaml
+Type: Guid[] 
+Parameter Sets: (All) 
+Aliases: 
+Applicable: SharePoint Online 
+Required: False 
+Position: Named 
+Default value: None 
+Accept pipeline input: False 
+Accept wildcard characters: False 
+``` 
+
+### -WhoCanShareAuthenticatedGuestAllowList 
+
+Sets the list of security groups who are only allowed to share with authenticated guest users. Each security group is denoted by its GUID object ID. 
+
+To set this list to be a specific security group, you need to enter its GUID as the argument. You can enter multiple GUIDs by using commas to separate them. To view the current list, use [Get-SPOTenant](Get-SPOTenant.md). 
+
+```yaml 
+Type: Guid[] 
+Parameter Sets: (All) 
+Aliases: 
+Applicable: SharePoint Online 
+Required: False 
+Position: Named 
+Default value: None 
+Accept pipeline input: False 
+Accept wildcard characters: False 
+``` 
+
 ## RELATED LINKS
 
 [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
 
-[Upgrade-SPOSite](Upgrade-SPOSite.md)
+[Get-SPOSite](Get-SPOSite.md)
 
 [Set-SPOSite](Set-SPOSite.md)
