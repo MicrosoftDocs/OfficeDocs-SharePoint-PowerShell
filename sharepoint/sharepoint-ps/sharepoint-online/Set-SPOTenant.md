@@ -320,7 +320,7 @@ This example enables users to share with all external collaborators except for t
 Set-SPOTenant -EnableVersionExpirationSetting $true
 ```
 The `EnableVersionExpirationSetting` parameter is no longer active, this feature is now automatically enabled for each tenant. Setting `EnableVersionExpirationSetting` to false would not disable the feature.
-Learn more about the Version History Setting at https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits
+[Learn more about Version History Settings](https://learn.microsoft.com/sharepoint/document-library-version-history-limits)
 
 
 ### EXAMPLE 17
@@ -2857,7 +2857,7 @@ Accept wildcard characters: False
 
 ### -EnableVersionExpirationSetting
 The `EnableVersionExpirationSetting` parameter is no longer active, this feature is now automatically enabled for each tenant. 
-Learn more about the Version History Setting at https://learn.microsoft.com/en-us/sharepoint/document-library-version-history-limits
+[Learn more about Version History Settings](https://learn.microsoft.com/sharepoint/document-library-version-history-limits)
 
 ```yaml
 Type: Boolean
