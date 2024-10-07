@@ -467,13 +467,13 @@ Accept wildcard characters: False
 
 ### -DelegateRestrictedAccessControlManagement
 
-Allows SharePoint administrators to delegate the management of Restricted access control policy on sites to site owners.
+Allows SharePoint administrators to delegate the management of Restricted access control policy on sites to site admins and owners.
 
 The valid values are:  
 
-- True - Allow site owners to manage Restricted access control policy
+- True - Allow site admins and owners to manage Restricted access control policy
 
-- False (default) - Do not allow site owners to manage Restricted access control policy 
+- False (default) - Do not allow site admins and owners to manage Restricted access control policy 
 
 
 ```yaml
@@ -491,13 +491,13 @@ Accept wildcard characters: False
 
 ### -DelegateRestrictedContentDiscoverabilityManagement
 
-Allows SharePoint administrators to delegate the management of Restricted content discoverability policy on sites to site owners.
+Allows SharePoint administrators to delegate the management of Restricted content discoverability policy on sites to site admins and owners.
 
 The valid values are:  
 
-- True - Allow site owners to manage Restricted content discoverability policy
+- True - Allow site admins and owners to manage Restricted content discoverability policy
 
-- False (default) - Do not allow site owners to manage Restricted content discoverability policy 
+- False (default) - Do not allow site admins and owners to manage Restricted content discoverability policy 
 
 
 ```yaml
