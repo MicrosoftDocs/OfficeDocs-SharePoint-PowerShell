@@ -19,7 +19,8 @@ Sets properties on the SharePoint Online organization.
 ## SYNTAX
 
 ```powershell
-Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
+Set-SPOTenant
+ [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-BccExternalSharingInvitations <Boolean>]
  [-BccExternalSharingInvitationsList <String>]
  [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>]
@@ -153,6 +154,33 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-CoreDefaultShareLinkScope <SharingScope>]
  [-CoreDefaultShareLinkRole <SharingRole>]
  [-CoreDefaultLinkToExistingAccess <Boolean>]
+ [-SelfServiceSiteCreationDisabled <Boolean>]
+ [-SyncAadB2BManagementPolicy <Boolean>]
+ [-ResyncContentSecurityPolicyConfigurationEntries <Boolean>]
+ [-EnforceContentSecurityPolicy <Boolean>]
+ [-DocumentUnderstandingModelScope <SyntexFeatureScopeValue>]
+ [-DocumentUnderstandingModelSelectedSitesList [String[]]]
+ [-DocumentUnderstandingModelSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-AIBuilderModelScope <SyntexFeatureScopeValue>]
+ [-AIBuilderModelSelectedSitesList [String[]]]
+ [-AIBuilderModelSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-AIBuilderModelSelectedSitesIncludesContentCenters <Boolean>]
+ [-PrebuiltModelScope <SyntexFeatureScopeValue>]
+ [-PrebuiltModelSelectedSitesList [String[]]]
+ [-PrebuiltModelSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-DefaultContentCenterSite <String>]
+ [-DocumentTranslationScope <SyntexFeatureScopeValue>]
+ [-DocumentTranslationSelectedSitesList [String[]]]
+ [-DocumentTranslationSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-AutofillColumnScope <SyntexFeatureScopeValue>]
+ [-AutofillColumnsSelectedSitesList [String[]]]
+ [-AutofillColumnsSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-OpticalCharacterRecognitionScope <SyntexFeatureScopeValue>]
+ [-OpticalCharacterRecognitionSelectedSitesList [String[]]]
+ [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>]
+ [-WhoCanShareAnonymousAllowList [Guid[]]]
+ [-WhoCanShareAuthenticatedGuestAllowList [Guid[]]]
  [<CommonParameters>]
 ```
 
@@ -161,7 +189,7 @@ Set-SPOTenant [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
 You can use the `Set-SPOTenant` cmdlet to enable external services and to specify the versions in which site collections can be created.
 You can also use the `Set-SPOSite` cmdlet together with the `Set-SPOTenant` cmdlet to block access to a site in your organization and redirect traffic to another site.
 
-You must be a SharePoint Online administrator or Global Administrator to run the cmdlet.
+You must be a SharePoint Online administrator to run the cmdlet.
 
 ## EXAMPLES
 
@@ -273,7 +301,7 @@ This example sets manual version history limits on all new document libraries at
 ### EXAMPLE 14
 
 ```powershell
-PS > Set-SPOTenant -SharingDomainRestrictionMode "AllowList" -SharingAllowedDomainList "contoso.com fabrikam.com"
+Set-SPOTenant -SharingDomainRestrictionMode "AllowList" -SharingAllowedDomainList "contoso.com fabrikam.com"
 ```
 
 This example enables users to share with external collaborators from those domains only.
@@ -281,7 +309,7 @@ This example enables users to share with external collaborators from those domai
 ### EXAMPLE 15
 
 ```powershell
-PS > Set-SPOTenant -SharingDomainRestrictionMode "BlockList" -SharingBlockedDomainList "contoso.com"
+Set-SPOTenant -SharingDomainRestrictionMode "BlockList" -SharingBlockedDomainList "contoso.com"
 ```
 
 This example enables users to share with all external collaborators except for those on the BlockedDomainList.
@@ -289,14 +317,48 @@ This example enables users to share with all external collaborators except for t
 ### EXAMPLE 16
 
 ```powershell
-PS > Set-SPOTenant -EnableVersionExpirationSetting $true
+Set-SPOTenant -EnableVersionExpirationSetting $true
+```
+The `EnableVersionExpirationSetting` parameter is no longer active, this feature is now automatically enabled for each tenant. Setting `EnableVersionExpirationSetting` to false would not disable the feature.
+[Learn more about Version History Settings](/sharepoint/document-library-version-history-limits)
+
+
+### EXAMPLE 17
+
+```powershell
+Set-SPOTenant -PrebuiltModelScope SelectedSites -PrebuiltModelSelectedSitesList "https://contoso.sharepoint.com/sites/site1","https://contoso.sharepoint.com/sites/site2" -PrebuiltModelSelectedSitesListOperation Append
 ```
 
-This example opts your tenant into public preview of Improved Version History controls feature. This feature is being tracked on the Microsoft 365 Public Roadmap under ID [145802](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=145802).
+This example sets the scope of the prebuilt model and [prebuilt document processing](/microsoft-365/syntex/prebuilt-overview) premium feature to `SelectedSites`, which limits the feature to only sites included in the selected sites list. This example also appends two sites to the feature's selected sites list.
 
-Visit [http://aka.ms/versioning-overview](http://aka.ms/versioning-overview) to learn more about Admin configurations available to manage versions.
+Use of these parameters require the tenant to either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
 
-By opting in, you are accepting the terms of service for version history limits. [Read the terms of service](https://aka.ms/versioning-termsofservice).
+### EXAMPLE 18
+
+```powershell
+Set-SPOTenant -DefaultContentCenterSite "https://contoso.sharepoint.com/sites/contentcenter"
+```
+
+This example sets the tenant's default content center. It can only be used if the tenant does not already have a designated default content center. To learn more about content centers, visit [Create a content center in Microsoft Syntex](/microsoft-365/syntex/create-a-content-center).
+
+Use of this parameter requires the tenant to either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+
+### EXAMPLE 19
+
+```powershell
+$list = (Get-SPOTenant | Select-Object WhoCanShareAnonymousAllowList).WhoCanShareAnonymousAllowList 
+Set-SPOTenant –WhoCanShareAnonymousAllowList ($list + <new GUID>) 
+``` 
+
+This example appends a security group to the WhoCanShareAnonymousAllowList. Similar code works for the WhoCanShareAuthenticatedGuestAllowList.
+
+### EXAMPLE 20
+
+```powershell
+Set-SPOTenant –WhoCanShareAnonymousAllowList @() 
+```
+
+This example empties the WhoCanShareAnonymousAllowList. Similar code works for the WhoCanShareAuthenticatedGuestAllowList.
 
 ## PARAMETERS
 
@@ -612,33 +674,7 @@ Accept wildcard characters: False
 
 ### -RequireAcceptingAccountMatchInvitedAccount
 
-Ensures that an external user can only accept an external sharing invitation with an account matching the invited email address.
-
-Administrators who desire increased control over external collaborators should consider enabling this feature.
-
-Note, this only applies to new external users accepting new sharing invitations. Also, the resource owner must share with an organizational or Microsoft account or the external user will be unable to access the resource.
-
-The valid values are:  
-
-- False (default) - When a document is shared with an external user, bob@contoso.com, it can be accepted by any user with access to the invitation link in the original e-mail.  
-- True - User must accept this invitation with bob@contoso.com.
-
-> [!NOTE]
-> If this functionality is turned off (value is False), it is possible for the external/guest users you invite to your Microsoft Entra ID, to log in using their personal, non-work accounts either on purpose, or by accident (they might have a pre-existing, signed in session already active in the browser window they use to accept your invitation).
-> [!NOTE]
-> Even though setting the value is instant (if you first run **Set-SPOTenant -RequireAcceptingAccountMatchInvitedAccount $True**, and then **Get-SPOTenant -RequireAcceptingAccountMatchInvitedAccount**, True should be returned), the functionality isn't turned on immediately. It may take up to 24 hours to take effect.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+This parameter has been deprecated since SharePoint Online legacy invitation flow switched to Entra B2B invitation flow.
 
 ### -SearchResolveExactEmailOrUPN
 
@@ -665,7 +701,7 @@ Accept wildcard characters: False
 
 ### -SharingCapability
 
-Determines what level of sharing is available for the site.
+Determines what level of sharing is available for OneDrive and SharePoint sites.
 
 The valid values are:  
 
@@ -953,7 +989,7 @@ Accept wildcard characters: False
 
 ### -DefaultSharingLinkType
 
-Lets administrators choose what type of link appears is selected in the "Get a link" sharing dialog box in OneDrive for Business and SharePoint Online.
+Lets administrators choose the default link type in the sharing dialog box in OneDrive for Business and SharePoint Online.
 
 For additional information about how to change the default link type, see Change the default link type when users get links for sharing.
 
@@ -1102,7 +1138,7 @@ Accept wildcard characters: False
 
 ### -FileAnonymousLinkType
 
-Anonymous access links can allow recipients to only view or view and edit. The value can be set separately for folders and separately for files.
+Anonymous access links can allow recipients to only view or view and edit. The value can be set separately for folders and files.
 
 The valid values are:
 
@@ -1319,23 +1355,7 @@ Accept wildcard characters: False
 
 ### -NotifyOwnersWhenInvitationsAccepted
 
-When this parameter is set to $true and when an external user accepts an invitation to a resource in a user's OneDrive for Business, the OneDrive for Business owner is notified by e-mail.
-
-For additional information about how to configure notifications for external sharing, see Configure notifications for external sharing for OneDrive for Business.
-
-The valid values are $true and $false.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+This parameter has been deprecated since SharePoint Online legacy invitation flow switched to Entra B2B invitation flow.
 
 ### -NotifyOwnersWhenItemsReshared
 
@@ -1484,7 +1504,7 @@ Accept wildcard characters: False
 
 ### -OwnerAnonymousNotification
 
-Enables or disables owner anonymous notification. If enabled, an email notification will be sent to the OneDrive for Business owners when an anonymous links are created or changed.
+Enables or disables owner anonymous notification. If enabled, an email notification will be sent to the OneDrive for Business owners when anonymous links are created or changed.
 
 PARAMVALUE: $true | $false
 
@@ -1597,7 +1617,7 @@ Accept wildcard characters: False
 
 ### -SharingAllowedDomainList
 
-Specifies a list of email domains that is allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
+Specifies a list of email domains that are allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
 For additional information about how to restrict a domain sharing, see [Restricted Domains Sharing in Office 365 SharePoint Online and OneDrive for Business](https://support.office.com/en-US/article/Restricted-Domains-Sharing-in-Office-365-SharePoint-Online-and-OneDrive-for-Business-5d7589cd-0997-4a00-a2ba-2320ec49c4e9).
 
@@ -1615,7 +1635,7 @@ Accept wildcard characters: False
 
 ### -SharingBlockedDomainList
 
-Specifies a list of email domains that is blocked or prohibited for sharing with the external collaborators. Use space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
+Specifies a list of email domains that are blocked or prohibited for sharing with the external collaborators. Use space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
 For additional information about how to restrict a domain sharing, see [Restricted Domains Sharing in Office 365 SharePoint Online and OneDrive for Business](https://support.office.com/en-US/article/Restricted-Domains-Sharing-in-Office-365-SharePoint-Online-and-OneDrive-for-Business-5d7589cd-0997-4a00-a2ba-2320ec49c4e9).
 
@@ -1754,7 +1774,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -CustomizedExternalSharingServiceUrl
 
 Specifies a URL that will be appended to the error message that is surfaced when a user is blocked from sharing externally by policy. This URL can be used to direct users to internal portals to request help or to inform them about your organization's policies. An example value is "<https://www.contoso.com/sharingpolicies".>
@@ -1843,7 +1862,7 @@ Accept wildcard characters: False
 
 ### -AllowDownloadingNonWebViewableFiles  
 
-This paramater has been deprecated.
+This parameter has been deprecated.
 
 ```yaml
 Type: Boolean
@@ -2330,9 +2349,7 @@ Accept wildcard characters: False
 
 ### -OneDriveLoopDefaultSharingLinkRole
 
-Gets or sets default share link role for Loop and Whiteboard files on OneDrive sites.
-
-Note: Although the values below may be viewable in Powershell, only View OR Edit may be set at this time. 
+This parameter sets the default share link role for Loop and Whiteboard files on OneDrive sites.
 
 The valid values are:  
 
@@ -2356,7 +2373,7 @@ Accept wildcard characters: False
 
 ### -CoreLoopDefaultSharingLinkScope
 
-Gets or sets default share link scope for Loop and Whiteboard files on SharePoint sites. 
+This parameter sets the default share link scope for Loop and Whiteboard files on SharePoint sites. 
 
 The valid values are:  
 
@@ -2379,9 +2396,7 @@ Accept wildcard characters: False
 
 ### -CoreLoopDefaultSharingLinkRole
 
-Gets or sets default share link role for Loop and Whiteboard files on SharePoint sites.
-
-Note: Although the values below may be viewable in Powershell, only View OR Edit may be set at this time. 
+This parameter sets the default share link role for Loop and Whiteboard files on SharePoint sites.
 
 The valid values are:  
 
@@ -2841,15 +2856,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableVersionExpirationSetting
-
-Use the `EnableVersionExpirationSetting` parameter to opt your tenant into public preview of Improved Version History controls feature Microsoft 365 Public Roadmap under ID [145802](https://www.microsoft.com/en-us/microsoft-365/roadmap?filters=&searchterms=145802).
-
-The valid values are:
-
-- True - When set to true and feature roll out to your tenant has completed, admin version history controls at organization, site and library levels will be available.
-- False (default) - When set to false, the feature will be disabled for your tenant.
-
-Note: Disabling the feature after previously enabling it, does not revert changes made when the feature was enabled.
+The `EnableVersionExpirationSetting` parameter is no longer active, this feature is now automatically enabled for each tenant. 
+[Learn more about Version History Settings](/sharepoint/document-library-version-history-limits)
 
 ```yaml
 Type: Boolean
@@ -2864,6 +2872,7 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveSharingCapability
+
 Determines what level of sharing is available for OneDrive sites. It corresponds to the `SharingCapabilities` for OneDrive sites.
 
 The valid values are:  
@@ -2885,7 +2894,10 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveDefaultShareLinkScope
-This parameter sets the default share link scope on OneDrive sites. It replaces the `DefaultSharingLinkType`. The valid values are:
+
+This parameter sets the default share link scope on OneDrive sites. It replaces the `DefaultSharingLinkType`.
+
+The valid values are:
 - `Anyone`: Anyone with the link can access the content.
 - `Organization`: Only people within the organization can access the content.
 - `SpecificPeople`: Only specific individuals (specified by the user) can access the content.
@@ -2903,7 +2915,10 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveDefaultShareLinkRole
-This parameter sets the default share link role on OneDrive sites. It replaces the `DefaultLinkPermission`. The valid values are:
+
+This parameter sets the default share link role on OneDrive sites. It replaces the `DefaultLinkPermission`.
+
+The valid values are:
 - `None`: No permissions granted.
 - `View`: View-only permissions.
 - `Edit`: Edit permissions.
@@ -2922,6 +2937,7 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveDefaultLinkToExistingAccess
+
 When set to `True`, the default sharing link will be a "People with Existing Access" link (which does not modify permissions) for OneDrive sites. When set to `False` (the default), the default sharing link type is controlled by the `OneDriveDefaultShareLinkScope` parameter.
 
 ```yaml
@@ -2936,7 +2952,10 @@ Accept wildcard characters: False
 ```
 
 ### -CoreDefaultShareLinkScope
-This parameter sets the default share link scope on SharePoint sites. It replaces the `DefaultSharingLinkType`. The valid values are:
+
+This parameter sets the default share link scope on SharePoint sites. It replaces the `DefaultSharingLinkType`.
+
+The valid values are:
 - `Anyone`: Anyone with the link can access the content.
 - `Organization`: Only people within the organization can access the content.
 - `SpecificPeople`: Only specific individuals (specified by the user) can access the content.
@@ -2954,7 +2973,10 @@ Accept wildcard characters: False
 ```
 
 ### -CoreDefaultShareLinkRole
-This parameter sets the default share link role on SharePoint sites. It replaces the `DefaultLinkPermission`. The valid values are:
+
+This parameter sets the default share link role on SharePoint sites. It replaces the `DefaultLinkPermission`.
+
+The valid values are:
 - `None`: No permissions granted.
 - `View`: View-only permissions.
 - `Edit`: Edit permissions.
@@ -2973,6 +2995,7 @@ Accept wildcard characters: False
 ```
 
 ### -CoreDefaultLinkToExistingAccess
+
 When set to `True`, the default sharing link will be a "People with Existing Access" link (which does not modify permissions) for SharePoint sites. When set to `False` (the default), the default sharing link type is controlled by the `CoreDefaultShareLinkScope` parameter.
 
 ```yaml
@@ -2986,10 +3009,571 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SelfServiceSiteCreationDisabled
+
+When set to `True`, users cannot create sites from SharePoint, OneDrive, the PnP PowerShell cmdlet, and the REST API. When set to `False` (the default), users can create sites from SharePoint, OneDrive, the PnP PowerShell cmdlet, and the REST API.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyncAadB2BManagementPolicy
+
+This feature allows SharePoint Online to synchronize several Entra B2B collaboration settings [Guest user access restriction and collaboration restriction](https://learn.microsoft.com/en-us/entra/external-id/external-collaboration-settings-configure#configure-settings-in-the-portal), and store them on SharePoint Online tenant store. On sharing, SharePoint checks whether those synchronized settings are blocking sharing before sending invitation requests to Entra B2B invitation manager. The sync might take up to 24 hours to complete if you change those Entra B2B collaboration settings. To make the change effective on SharePoint Online immediately, run 'Set-SPOTenant -SyncAadB2BManagementPolicy $true' and it forces a sync from Microsoft Entra.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResyncContentSecurityPolicyConfigurationEntries
+
+When set to `True`, forces a sync of **Content Security Policy** sources for SharePoint Framework components in the tenant application catalog.
+New sources will be added to the configuration, if not already present, based on the `cdnBasedPath` property under a solution's `.config/write-manifests.json` if present.
+The sync may take up to 24 hours to complete.
+In multi-geo environments, **Content Security Policy** configuration is unique to each geo.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnforceContentSecurityPolicyConfiguration
+
+When set to `True` **Content Security Policy** violations will be enforced.
+In multi-geo environments, **Content Security Policy** configuration is unique to each geo.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DocumentUnderstandingModelScope
+
+This parameter allows administrators to limit which SharePoint sites the document understanding model and [unstructurted document processesing](/microsoft-365/syntex/document-understanding-overview) premium feature is available on.
+
+The valid values are:
+
+- `NoSites`: Document understanding models are not available on any sites.
+- `AllSites`: Document understanding models are available on all sites.
+- `SelectedSites`: Document understanding models are available only on sites within the feature's selected sites list.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+> Use of this parameter will clear the current document understanding model selected sites list, if one exists.
+
+```yaml
+Type: SyntexFeatureScopeValue
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DocumentUnderstandingModelSelectedSitesList
+
+This parameter allows administrators to pass a list of SharePoint site URLs to modify the document understanding model and [unstructurted document processesing](/microsoft-365/syntex/document-understanding-overview) premium feature's selected sites list. By default this parameter overwrites the existing list with the user input list. Additionally, the `DocumentUnderstandingModelSelectedSitesListOperation` parameter can be used to specify a different operation. This parameter can only be called if the document understanding model's scope is set to `SelectedSites`. The inputted list of site URLs cannot exceed 100 items.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DocumentUnderstandingModelSelectedSitesListOperation
+
+This parameter allows administrators to specify the operation to perform on the document understanding model and [unstructurted document processesing](/microsoft-365/syntex/document-understanding-overview) premium feature's current selected sites list using the list of site URLs passed to the `DocumentUnderstandingModelSelectedSitesList` parameter.
+
+The valid values are:
+
+- `Overwrite`: Overwrite the existing selected sites list. This is the default operation.
+- `Append`: Append the input list of sites to the existing selected sites list.
+- `Remove`: Remove the input list of sites from the existing selected sites list.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+> Calling this parameter without `DocumentUnderstandingModelSelectedSitesList` has no effect.
+
+```yaml
+Type: SelectedSitesListOperations
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: Overwrite
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AIBuilderModelScope
+
+This parameter allows administrators to limit which SharePoint sites the AI builder model and [structured and freeform document processing](/microsoft-365/syntex/form-processing-overview) premium feature is available on.
+
+The valid values are:
+
+- `NoSites`: AI builder models are not available on any sites.
+- `AllSites`: AI builder models are available on all sites.
+- `SelectedSites`: AI builder models are available only on sites within the feature's selected sites list.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+> Use of this parameter will clear the current AI builder model selected sites list, if one exists.
+
+```yaml
+Type: SyntexFeatureScopeValue
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AIBuilderModelSelectedSitesList
+
+This parameter allows administrators to pass a list of SharePoint site URLs to modify the AI builder model and [structured and freeform document processing](/microsoft-365/syntex/form-processing-overview) premium feature's selected sites list. By default this parameter overwrites the existing list with the user input list. Additionally, the `AIBuilderModelSelectedSitesListOperation` parameter can be used to specify a different operation. This parameter can only be called if the AI builder model's scope is set to `SelectedSites`. The inputted list of site URLs cannot exceed 100 items.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AIBuilderModelSelectedSitesListOperation
+
+This parameter allows administrators to specify the operation to perform on the AI builder model and [structured and freeform document processing](/microsoft-365/syntex/form-processing-overview) premium feature's current selected sites list using the list of site URLs passed to the `AIBuilderModelSelectedSitesList` parameter.
+
+The valid values are:
+
+- `Overwrite`: Overwrite the existing selected sites list. This is the default operation.
+- `Append`: Append the input list of sites to the existing selected sites list.
+- `Remove`: Remove the input list of sites from the existing selected sites list.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+> Calling this parameter without `AIBuilderModelSelectedSitesList` has no effect.
+
+```yaml
+Type: SelectedSitesListOperations
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: Overwrite
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AIBuilderModelSelectedSitesIncludesContentCenters
+
+This parameter allows administrators to choose whether or not the AI builder model and [structured and freeform document processing](/microsoft-365/syntex/form-processing-overview) premium feature is available on all content center sites when the feature's scope is `SelectedSites` even if they are not explicitly included within the selected sites list. This parameter can only be called if the AI builder model's scope is set to `SelectedSites`.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PrebuiltModelScope
+
+This parameter allows administrators to limit which SharePoint sites the prebuilt model and [prebuilt document processing](/microsoft-365/syntex/prebuilt-overview) premium feature is available on.
+
+The valid values are:
+
+- `NoSites`: Prebuilt models are not available on any sites.
+- `AllSites`: Prebuilt models are available on all sites.
+- `SelectedSites`: Prebuilt models are available only on sites within the feature's selected sites list.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+> Use of this parameter will clear the current prebuilt model selected sites list, if one exists.
+
+```yaml
+Type: SyntexFeatureScopeValue
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PrebuiltModelSelectedSitesList
+
+This parameter allows administrators to pass a list of SharePoint site URLs to modify the prebuilt model and [prebuilt document processing](/microsoft-365/syntex/prebuilt-overview) premium feature's selected sites list. By default this parameter overwrites the existing list with the user input list. Additionally, the `PrebuiltModelSelectedSitesListOperation` parameter can be used to specify a different operation. This parameter can only be called if the prebuilt model's scope is set to `SelectedSites`. The inputted list of site URLs cannot exceed 100 items.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PrebuiltModelSelectedSitesListOperation
+
+This parameter allows administrators to specify the operation to perform on the prebuilt model and [prebuilt document processing](/microsoft-365/syntex/prebuilt-overview) premium feature's current selected sites list using the list of site URLs passed to the `PrebuiltModelSelectedSitesList` parameter.
+
+The valid values are:
+
+- `Overwrite`: Overwrite the existing selected sites list. This is the default operation.
+- `Append`: Append the input list of sites to the existing selected sites list.
+- `Remove`: Remove the input list of sites from the existing selected sites list.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+> Calling this parameter without `PrebuiltModelSelectedSitesList` has no effect.
+
+```yaml
+Type: SelectedSitesListOperations
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: Overwrite
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultContentCenterSite
+
+This parameter allows administrators to set the default content center site for their tenant, if one does not already exist, by providing a content center's URL. The content center configured here is the default for all document processing services. Content center owners can view analytics for all applied models in it, and members can build enterprise models. For more information visit [Create a content center in Microsoft Syntex](/microsoft-365/syntex/create-a-content-center).
+
+> [!NOTE]
+> Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+> You cannot change the designated default content center once it has been set.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DocumentTranslationScope
+
+This parameter allows administrators to limit which SharePoint sites the [document translation](/microsoft-365/syntex/translation) premium feature is available on.
+
+The valid values are:
+
+- `NoSites`: Document translation is not available on any sites.
+- `AllSites`: Document translation is available on all sites.
+- `SelectedSites`: Document translation is available only on sites within the feature's selected sites list.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant has pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+> Use of this parameter will clear the current document translation selected sites list, if one exists.
+
+```yaml
+Type: SyntexFeatureScopeValue
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DocumentTranslationSelectedSitesList
+
+This parameter allows administrators to pass a list of SharePoint site URLs to modify the [document translation](/microsoft-365/syntex/translation) premium feature's selected sites list. By default this parameter overwrites the existing list with the user input list. Additionally, the `DocumentTranslationSelectedSitesListOperation` parameter can be used to specify a different operation. This parameter can only be called if document translation's scope is set to `SelectedSites`. The inputted list of site URLs cannot exceed 100 items.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant has pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DocumentTranslationSelectedSitesListOperation
+
+This parameter allows administrators to specify the operation to perform on the [document translation](/microsoft-365/syntex/translation) premium feature's current selected sites list using the list of site URLs passed to the `DocumentTranslationSelectedSitesList` parameter.
+
+The valid values are:
+
+- `Overwrite`: Overwrite the existing selected sites list. This is the default operation.
+- `Append`: Append the input list of sites to the existing selected sites list.
+- `Remove`: Remove the input list of sites from the existing selected sites list.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant has pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+> Calling this parameter without `DocumentTranslationSelectedSitesList` has no effect.
+
+```yaml
+Type: SelectedSitesListOperations
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: Overwrite
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutofillColumnsScope
+
+This parameter allows administrators to limit which SharePoint sites the [autofill columns](/microsoft-365/syntex/autofill-overview) premium feature is available on.
+
+The valid values are:
+
+- `NoSites`: Autofill columns are not available on any sites.
+- `AllSites`: Autofill columns are available on all sites.
+- `SelectedSites`: Autofill columns are available only on sites within the feature's selected sites list.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant has pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+> Use of this parameter will clear the current autofill columns selected sites list, if one exists.
+
+```yaml
+Type: SyntexFeatureScopeValue
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutofillColumnsSelectedSitesList
+
+This parameter allows administrators to pass a list of SharePoint site URLs to modify the [autofill columns](/microsoft-365/syntex/autofill-overview) premium feature's selected sites list. By default this parameter overwrites the existing list with the user input list. Additionally, the `AutofillColumnsSelectedSitesListOperation` parameter can be used to specify a different operation. This parameter can only be called if autofill columns' scope is set to `SelectedSites`. The inputted list of site URLs cannot exceed 100 items.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant has pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutofillColumnsSelectedSitesListOperation
+
+This parameter allows administrators to specify the operation to perform on the [autofill columns](/microsoft-365/syntex/autofill-overview) premium feature's current selected sites list using the list of site URLs passed to the `AutofillColumnsSelectedSitesList` parameter.
+
+The valid values are:
+
+- `Overwrite`: Overwrite the existing selected sites list. This is the default operation.
+- `Append`: Append the input list of sites to the existing selected sites list.
+- `Remove`: Remove the input list of sites from the existing selected sites list.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant has pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+> Calling this parameter without `AutofillColumnsSelectedSitesList` has no effect.
+
+```yaml
+Type: SelectedSitesListOperations
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: Overwrite
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OpticalCharacterRecognitionScope
+
+This parameter allows administrators to limit which SharePoint sites the [optical character recognition](/microsoft-365/syntex/ocr) premium feature is available on.
+
+The valid values are:
+
+- `NoSites`: Optical character recognition is not available on any sites.
+- `AllSites`: Optical character recognition is available on all sites.
+- `SelectedSites`: Optical character recognition is available only on sites within the feature's selected sites list.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant has pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+> Use of this parameter will clear the current optical character recognition selected sites list, if one exists.
+
+```yaml
+Type: SyntexFeatureScopeValue
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OpticalCharacterRecognitionSelectedSitesList
+
+This parameter allows administrators to pass a list of SharePoint site URLs to modify the [optical character recognition](/microsoft-365/syntex/ocr) premium feature's selected sites list. By default this parameter overwrites the existing list with the user input list. Additionally, the `OpticalCharacterRecognitionSelectedSitesListOperation` parameter can be used to specify a different operation. This parameter can only be called if optical character recognition's scope is set to `SelectedSites`. The inputted list of site URLs cannot exceed 100 items.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant has pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OpticalCharacterRecognitionSelectedSitesListOperation
+
+This parameter allows administrators to specify the operation to perform on the [optical character recognition](/microsoft-365/syntex/ocr) premium feature's current selected sites list using the list of site URLs passed to the `OpticalCharacterRecognitionSelectedSitesList` parameter.
+
+The valid values are:
+
+- `Overwrite`: Overwrite the existing selected sites list. This is the default operation.
+- `Append`: Append the input list of sites to the existing selected sites list.
+- `Remove`: Remove the input list of sites from the existing selected sites list.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant has pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+> Calling this parameter without `OpticalCharacterRecognitionSelectedSitesList` has no effect.
+
+```yaml
+Type: SelectedSitesListOperations
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: Overwrite
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled
+Enables or disables web property bag update when DenyAddAndCustomizePages is enabled. When AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled is set to $true, web property bag can be updated even if DenyAddAndCustomizePages is turned on when the user had AddAndCustomizePages (prior to DenyAddAndCustomizePages removing it).
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhoCanShareAnonymousAllowList 
+
+Sets the list of security groups who are allowed to share with anonymous (non-authenticated) users as well as authenticated guest users. Each security group is denoted by its GUID object ID in the Entra directory. 
+
+To set this list to be a specific security group, you need to enter its GUID as the argument. You can enter multiple GUIDs by using commas to separate them. To view the current list, use [Get-SPOTenant](Get-SPOTenant.md). 
+
+```yaml
+Type: Guid[] 
+Parameter Sets: (All) 
+Aliases: 
+Applicable: SharePoint Online 
+Required: False 
+Position: Named 
+Default value: None 
+Accept pipeline input: False 
+Accept wildcard characters: False 
+``` 
+
+### -WhoCanShareAuthenticatedGuestAllowList 
+
+Sets the list of security groups who are only allowed to share with authenticated guest users. Each security group is denoted by its GUID object ID. 
+
+To set this list to be a specific security group, you need to enter its GUID as the argument. You can enter multiple GUIDs by using commas to separate them. To view the current list, use [Get-SPOTenant](Get-SPOTenant.md). 
+
+```yaml 
+Type: Guid[] 
+Parameter Sets: (All) 
+Aliases: 
+Applicable: SharePoint Online 
+Required: False 
+Position: Named 
+Default value: None 
+Accept pipeline input: False 
+Accept wildcard characters: False 
+``` 
+
 ## RELATED LINKS
 
 [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
 
-[Upgrade-SPOSite](Upgrade-SPOSite.md)
+[Get-SPOSite](Get-SPOSite.md)
 
 [Set-SPOSite](Set-SPOSite.md)

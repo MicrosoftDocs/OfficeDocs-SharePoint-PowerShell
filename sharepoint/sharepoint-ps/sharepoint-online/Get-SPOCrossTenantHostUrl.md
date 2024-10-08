@@ -24,7 +24,7 @@ Get-SPOCrossTenantHostUrl  [<CommonParameters>]
 
 ## DESCRIPTION
 
-Use this cmdlet to retrieve the cross-tenant host URL. You must be a SharePoint Administrator or a Global Administrator to run the cmdlet.
+Use this cmdlet to retrieve the cross-tenant host URL. You must be a SharePoint Administrator to run the cmdlet.
 
 ## EXAMPLES
 

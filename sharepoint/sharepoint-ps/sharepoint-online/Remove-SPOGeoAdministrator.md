@@ -30,7 +30,7 @@ For more information about how to use parameter sets, see [Cmdlet parameter sets
 
 The `Remove-SPOGeoAdministrator` cmdlet matches a user or a security group and remove the GeoAdministrator privileges in the SharePoint Organization.
 
-You must be a SharePoint Online administrator or Global Administrator, and you must have a Multi-Geo Tenant to run the `Remove-SPOGeoAdministrator` cmdlet successfully.
+You must be at least a SharePoint Online administrator, and you must have a Multi-Geo Tenant to run the `Remove-SPOGeoAdministrator` cmdlet successfully.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 

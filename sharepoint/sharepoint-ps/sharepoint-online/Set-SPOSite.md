@@ -30,29 +30,29 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-Title <String>] [-WhatIf] [-AllowDownloadingNonWebViewableFiles <Boolean>]
  [-CommentsOnSitePagesDisabled <Boolean>] [-SocialBarOnSitePagesDisabled <Boolean>]
  [-DisableAppViews <AppViewsPolicy>]
- [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>] 
+ [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>]
  [-DisableFlows <FlowsPolicy>]
  [-LoopDefaultSharingLinkScope <SharingScope>]
  [-LoopDefaultSharingLinkRole <SharingRole>]
- [-RestrictedToGeo <RestrictedToRegion>] 
+ [-RestrictedToGeo <RestrictedToRegion>]
  [-SharingAllowedDomainList <String>]
- [-SharingBlockedDomainList <String>] 
+ [-SharingBlockedDomainList <String>]
  [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
- [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] 
+ [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>]
  [-StorageQuotaReset]
  [-DefaultSharingLinkType]
- [-DefaultLinkPermission] 
+ [-DefaultLinkPermission]
  [-DefaultLinkToExistingAccess]
  [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>]
  [-AuthenticationContextName <String>]
- [-LimitedAccessFileType <SPOLimitedAccessFileType>] 
- [-AllowEditing <Boolean>]  
- [-AnonymousLinkExpirationInDays <Int32>] 
+ [-LimitedAccessFileType <SPOLimitedAccessFileType>]
+ [-AllowEditing <Boolean>]
+ [-AnonymousLinkExpirationInDays <Int32>]
  [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>]
- [-OverrideTenantExternalUserExpirationPolicy <Boolean>] 
+ [-OverrideTenantExternalUserExpirationPolicy <Boolean>]
  [-ExternalUserExpirationInDays <Int32>]
- [-SensitivityLabel <String>] 
- [-RequestFilesLinkExpirationInDays <Int32>] 
+ [-SensitivityLabel <String>]
+ [-RequestFilesLinkExpirationInDays <Int32>]
  [-RequestFilesLinkEnabled <Boolean>]
  [-RemoveLabel]
  [-BlockDownloadPolicy <Boolean>]
@@ -60,13 +60,14 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-OverrideSharingCapability <Boolean>]
  [-DefaultShareLinkScope <SharingScope>]
  [-DefaultShareLinkRole <SharingRole>]
+ [-HidePeoplePreviewingFiles <Boolean>]
  [<CommonParameters>]
 ```
 
 ### ParamSet2
 
 ```powershell
-Set-SPOSite [-Identity] <SpoSitePipeBind> -EnablePWA <Boolean> [-Confirm] [-WhatIf] [<CommonParameters>]
+Set-SPOSite [-Identity] <SpoSitePipeBind> [-EnablePWA <Boolean>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### ParamSet3
@@ -104,7 +105,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind>
 
 For any parameters that are passed in, the `Set-SPOSite` cmdlet sets or updates the setting for the site collection identified by parameter Identity.
 
-You must be a SharePoint Online administrator or Global Administrator and be a site collection administrator to run the cmdlet.
+You must be a SharePoint Online administrator and be a site collection administrator to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
@@ -359,8 +360,6 @@ Accept wildcard characters: False
 
 This parameter prevents non-owners from inviting new users to the site.
 
-This parameter is available only in SharePoint Online Management Shell Version 16.0.4613.1211 or later.
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ParamSet3
@@ -538,7 +537,13 @@ Accept wildcard characters: False
 ### -SharingCapability
 
 Determines what level of sharing is available for the site.
-The possible values are: Disabled - don't allow sharing outside your organization, ExistingExternalUserSharingOnly - Allow sharing only with the external users that already exist in your organization's directory, ExternalUserSharingOnly - allow external users who accept sharing invitations and sign in as authenticated users, or ExternalUserAndGuestSharing - allow sharing with all external users, and by using anonymous access links.
+
+The valid values are:  
+
+- Disabled - Sharing outside your organization is disabled.
+- ExistingExternalUserSharingOnly - Allow sharing only with the external users that already exist in your organization's directory.
+- ExternalUserSharingOnly - External user sharing (share by email) is enabled, but anonymous link sharing is disabled.
+- ExternalUserAndGuestSharing - External user sharing (share by email) and anonymous link sharing are both enabled.
 
 For more information about sharing, see Turn external sharing on or off for SharePoint Online (<https://learn.microsoft.com/sharepoint/turn-external-sharing-on-or-off>).
 
@@ -697,7 +702,9 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCompanyWideSharingLinks
+
 Disables People in your organization links. For more information, see [People in your organization sharing links](https://learn.microsoft.com/microsoft-365/solutions/microsoft-365-limit-sharing#people-in-your-organization-sharing-links).
+
 Possible values
 
 - Disabled
@@ -756,7 +763,7 @@ Accept wildcard characters: False
 
 ### -SharingAllowedDomainList
 
-Specifies a list of email domains that is allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
+Specifies a list of email domains that are allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
 For additional information about how to restrict a domain sharing, see [Restrict sharing of SharePoint and OneDrive content by domain](https://learn.microsoft.com/sharepoint/restricted-domains-sharing).
 
@@ -774,7 +781,7 @@ Accept wildcard characters: False
 
 ### -SharingBlockedDomainList
 
-Specifies a list of email domains that is blocked or prohibited for sharing with the external collaborators. Use space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
+Specifies a list of email domains that are blocked or prohibited for sharing with the external collaborators. Use space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
 For additional information about how to restrict a domain sharing, see [Restrict sharing of SharePoint and OneDrive content by domain](https://learn.microsoft.com/sharepoint/restricted-domains-sharing).
 
@@ -795,9 +802,10 @@ Accept wildcard characters: False
 Specifies the sharing mode for external domains.
 
 Possible values are:
+
 - None - Do not restrict sharing by domain
-- AllowList - Sharing is allowed only with external users that have account on domains specified within -SharingAllowedDomainList
-- BlockList - Sharing is allowed with external users in all domains except in domains specified within -SharingBlockedDomainList
+- AllowList - Sharing is allowed only with external users that have account on domains specified with -SharingAllowedDomainList
+- BlockList - Sharing is allowed with external users in all domains except in domains specified with -SharingBlockedDomainList
 
 For additional information about how to restrict a domain sharing, see [Restrict sharing of SharePoint and OneDrive content by domain](https://learn.microsoft.com/sharepoint/restricted-domains-sharing).
 
@@ -815,7 +823,7 @@ Accept wildcard characters: False
 
 ### -ShowPeoplePickerSuggestionsForGuestUsers
 
-To enable the option to search for existing guest users at Site Collection Level, set this parameter to $true.
+To enable the option to search for existing guest users at site collection level, set this parameter to $true.
 
 ```yaml
 Type: Boolean
@@ -847,7 +855,7 @@ Accept wildcard characters: False
 
 ### -DefaultSharingLinkType
 
-The default link type for the site collection
+The default link type for the site collection. To be replaced by DefaultShareLinkScope.
 
 PARAMVALUE: None | AnonymousAccess | Internal | Direct
 
@@ -870,7 +878,7 @@ Accept wildcard characters: False
 
 ### -DefaultLinkToExistingAccess
 
-When set to TRUE, the DefaultSharingLinkType will be overriden and the default sharing link will a People with Existing Access link (which does not modify permissions). When set to FALSE (the default), the default sharing link type is controlled by the DefaultSharingLinkType parameter
+When set to TRUE, the DefaultSharingLinkType will be overriden and the default sharing link will a People with Existing Access link (which does not modify permissions). When set to FALSE (the default), the DefaultSharingLinkType parameter controls the default sharing link type.
 
 PARAMVALUE: $true | $false
 
@@ -890,7 +898,7 @@ Accept wildcard characters: False
 
 ### -DefaultLinkPermission
 
-The default link permission for the site collection
+The default link permission for the site collection. To be replaced by DefaultShareLinkRole.
 
 PARAMVALUE: None | View | Edit
 
@@ -935,7 +943,7 @@ Accept wildcard characters: False
 
 ### -LoopDefaultSharingLinkRole
 
-Gets or sets default share link role for fluid on the site
+Gets or sets default share link role for fluid on the site.
 
 The valid values are:  
 
@@ -959,7 +967,7 @@ Accept wildcard characters: False
 
 ### -OverrideTenantAnonymousLinkExpirationPolicy
 
-Choose whether to override the anonymous or anyone link expiration policy on this site
+Choose whether to override the anonymous or anyone link expiration policy on this site.
 
 PARAMVALUE: None | False | True
 
@@ -983,7 +991,7 @@ Accept wildcard characters: False
 
 Specifies all anonymous/anyone links that have been created (or will be created) will expire after the set number of days. Only applies if OverrideTenantAnonymousLinkExpirationPolicy is set to true.
 
-To remove the expiration requirement, set the value to zero (0).
+The valid number should be between 1 and 730. To remove the expiration requirement, set the value to zero (0).
 
 ```yaml
 Type: Int32
@@ -999,7 +1007,7 @@ Accept wildcard characters: False
 
 ### -OverrideTenantExternalUserExpirationPolicy
 
-Choose whether to override the external user expiration policy on this site
+Choose whether to override the external user expiration policy on this site.
 
 Possible values:
 
@@ -1023,7 +1031,7 @@ Accept wildcard characters: False
 
 Specifies all external user expiration which will expire after the set number of days. Only applies if OverrideTenantExternalUserExpirationPolicy is set to true.
 
-To remove the expiration requirement, set the value to zero (0).
+The maximum value is 730. To remove the expiration requirement, set the value to zero (0).
 
 ```yaml
 Type: Int32
@@ -1192,7 +1200,7 @@ Accept wildcard characters: False
 
 ### -BlockDownloadPolicy
 
-As a SharePoint administrator or global administrator in Microsoft 365, you can block the download of files from SharePoint sites or OneDrive. This feature does not need Microsoft Entra Conditional Access policies. This feature can be set for individual sites but not at the organization level.
+As a SharePoint administrator in Microsoft 365, you can block the download of files from SharePoint sites or OneDrive. This feature does not need Microsoft Entra Conditional Access policies. This feature can be set for individual sites but not at the organization level.
 
 Blocking the download of files allows users to remain productive while addressing the risk of accidental data loss. Users have browser-only access with no ability to download, print, or sync files. They also won't be able to access content through apps, including the Microsoft Office desktop apps. When web access is limited, users will see the following message at the top of sites: "Your organization doesn't allow you to download, print, or sync from this site. For help contact your IT department." Read the full documentation for advanced capabilities at [Block download policy for SharePoint sites and OneDrive](https://learn.microsoft.com/sharepoint/block-download-from-sites).
 
@@ -1239,7 +1247,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAutoExpirationVersionTrim
-Global and SharePoint Administrators can set site-level version history limit settings that universally apply to new versions created on all new document libraries created on the site. Also can create request to set the version setting for existing libraries that enabled versioning.
+SharePoint Administrators can set site-level version history limit settings that universally apply to new versions created on all new document libraries created on the site. Also can create request to set the version setting for existing libraries that enabled versioning.
 
 When version history limits are managed automatically, SharePoint employs an algorithm behind the scenes that deletes (thins out) intermittent older versions that are least likely to be needed, while preserving sufficient high-value versions - more versions in the recent past and fewer farther back in time - in case restores are required.
 
@@ -1368,8 +1376,7 @@ Accept wildcard characters: False
 ```
 ### -OverrideSharingCapability
 
-Determines whether it should override the sharing capability on its partition. For example, if the tenant sharing capability is `ExternalUserAndGuestSharing`, the core partition sharing capability is `Disabled`, and the side-defined sharing capability is also `ExternalUserAndGuestSharing`, the effective site sharing capability should be `Disabled` (the most restrictive one among tenant, partition, and site) if `OverrideSharingCapability` is `false`. If `OverrideSharingCapability` is `true`, it skips checking partition sharing capability and sets the site sharing capability to `ExternalUserAndGuestSharing`.
-
+Determines whether it should override the sharing capability on its partition. For example, if the tenant sharing capability is `ExternalUserAndGuestSharing`, the core partition sharing capability is `Disabled`, and the sharing capability defined on the site collection is `ExternalUserAndGuestSharing`, the effective site sharing capability should be `Disabled` (the most restrictive one among tenant, partition, and site collecction) if `OverrideSharingCapability` is `false`. If `OverrideSharingCapability` is `true`, it skips checking partition sharing capability and the effective site sharing capability should be `ExternalUserAndGuestSharing`.
 
 PARAMVALUE: False | True
 
@@ -1429,7 +1436,30 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+
 ```
+### -HidePeoplePreviewingFiles
+
+This setting disables the feature in OneDrive and SharePoint file previewing that displays the presence of other users on the file. It does not affect any experiences outside of the previewer. 
+
+PARAMVALUE: False | True
+
+If set to True, the presence of other users on the file will no longer be displayed.
+
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+
+```
+
 
 ### -ClearGroupId
 This parameter allows you to remove the assigned M365 group id on a site, when the group is permanently deleted.
