@@ -101,6 +101,13 @@ Set-SPOSite [-Identity] <SpoSitePipeBind>
  [<CommonParameters>]
 ```
 
+### ClearGroupId
+```powershell
+Set-SPOSite [-Identity] <SpoSitePipeBind>
+ [-ClearGroupId]
+ [<CommonParameters>]
+```
+
 ## DESCRIPTION
 
 For any parameters that are passed in, the `Set-SPOSite` cmdlet sets or updates the setting for the site collection identified by parameter Identity.
@@ -1462,7 +1469,7 @@ Accept wildcard characters: False
 
 
 ### -ClearGroupId
-This parameter allows you to remove the assigned M365 group id on a site, when the group is permanently deleted.
+This parameter allows you to remove the assigned Microsoft 365 group ID on a site, when the group is permanently deleted.
 
 ```yaml
 Type: SwitchParameter
