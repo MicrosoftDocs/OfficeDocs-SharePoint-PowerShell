@@ -103,9 +103,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind>
 
 ### ClearGroupId
 ```powershell
-Set-SPOSite [-Identity] <SpoSitePipeBind>
- [-ClearGroupId]
- [<CommonParameters>]
+Set-SPOSite [-Identity] <SpoSitePipeBind> [-ClearGroupId] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
