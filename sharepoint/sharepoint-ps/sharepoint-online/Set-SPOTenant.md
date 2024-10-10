@@ -25,6 +25,8 @@ Set-SPOTenant
  [-BccExternalSharingInvitationsList <String>]
  [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>]
  [-BusinessConnectivityServiceDisabled <Boolean>]
+ [-DelegateRestrictedAccessControlManagement <Boolean>]
+ [-DelegateRestrictedContentDiscoverabilityManagement <Boolean>]
  [-DisplayStartASiteOption <Boolean>]
  [-EnableAIPIntegration <Boolean>]
  [-EnableAutoNewsDigest <Boolean>]
@@ -460,6 +462,55 @@ Position: Named
 Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
+
+```
+
+### -DelegateRestrictedAccessControlManagement
+
+Allows SharePoint administrators to delegate the management of Restricted access control policy on sites to site admins and owners.
+
+The valid values are:  
+
+- True - Allow site admins and owners to manage Restricted access control policy
+
+- False (default) - Do not allow site admins and owners to manage Restricted access control policy 
+
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+
+```
+
+### -DelegateRestrictedContentDiscoverabilityManagement
+
+Allows SharePoint administrators to delegate the management of Restricted content discoverability policy on sites to site admins and owners.
+
+The valid values are:  
+
+- True - Allow site admins and owners to manage Restricted content discoverability policy
+
+- False (default) - Do not allow site admins and owners to manage Restricted content discoverability policy 
+
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+
 ```
 
 ### -DisplayStartASiteOption
