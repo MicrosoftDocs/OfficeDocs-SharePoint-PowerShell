@@ -21,7 +21,7 @@ Set-SPTrustedIdentityTokenIssuer [-Identity] <SPTrustedIdentityTokenIssuerPipeBi
  [-AssignmentCollection <SPAssignmentCollection>] [-ClaimProvider <SPClaimProviderPipeBind>]
  [-ClaimsMappings <SPClaimMappingPipeBind[]>] [-Description <String>]
  -ImportTrustCertificate <X509Certificate2> [-Realm <String>] [-SignInUrl <String>] [-UseWReply] [-Confirm]
- [-RegisteredIssuerName <String>] [-WhatIf] [<CommonParameters>]
+ [-RegisteredIssuerName <String>] [-UseStateToRedirect <Boolean>] [-WhatIf] [<CommonParameters>]
 ```
 
 ### MetadataEndPointParameterSet
@@ -29,7 +29,7 @@ Set-SPTrustedIdentityTokenIssuer [-Identity] <SPTrustedIdentityTokenIssuerPipeBi
 Set-SPTrustedIdentityTokenIssuer [-Identity] <SPTrustedIdentityTokenIssuerPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-ClaimProvider <SPClaimProviderPipeBind>]
  [-ClaimsMappings <SPClaimMappingPipeBind[]>] [-Description <String>] -MetadataEndPoint <Uri> [-Realm <String>]
- [-SignInUrl <String>] [-UseWReply] [-Confirm] [-RegisteredIssuerName <String>] [-WhatIf] [<CommonParameters>]
+ [-SignInUrl <String>] [-UseWReply] [-Confirm] [-RegisteredIssuerName <String>] [-UseStateToRedirect <Boolean>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -266,7 +266,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegisteredIssuerName
-{{Fill RegisteredIssuerName Description}}
+Specifies the registered name of the token issuer, typically a URI, for example: "https://sts.windows.net/yourTenantId/"
 
 ```yaml
 Type: String
@@ -277,6 +277,22 @@ Applicable: SharePoint Server Subscription Edition
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseStateToRedirect
+Specifies whether or not to use the URI within the "state" property of client authentication requests to determine the proper page to redirect the client to after authentication.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Server Subscription Edition
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
