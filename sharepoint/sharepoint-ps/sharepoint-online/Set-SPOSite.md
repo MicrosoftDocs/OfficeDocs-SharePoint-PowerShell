@@ -1266,11 +1266,7 @@ The valid values are:
 > a. `MajorVersionLimit` accepts values from 1 through 50,000 (inclusive).
 > b. `MajorWithMinorVersionsLimit` accepts values from 0 through 50,000 (inclusive).
 > c. `ExpireVersionsAfterDays` accepts values of 0 to Never Expire or values >= 30 to delete versions that exceed that time period.
-> When version history limits are managed automatically (`EnableAutoExpirationVersionTrim $true`), setting `MajorVersionLimit` or `ExpireVersionsAfterDays` will result in an error as the count limits are set by the service.
->
-> This parameter is currently under public preview.
-
-PARAMVALUE: $true | $false
+> When version history limits are managed automatically (`EnableAutoExpirationVersionTrim $true`), setting `MajorVersionLimit` or `ExpireVersionsAfterDays` will result in an error as the count limits are set by the service.PARAMVALUE: $true | $false
 
 ```yaml
 Type: Boolean
