@@ -61,6 +61,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-DefaultShareLinkScope <SharingScope>]
  [-DefaultShareLinkRole <SharingRole>]
  [-HidePeoplePreviewingFiles <Boolean>]
+ [-HidePeoplePresenceInLists <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -1267,8 +1268,6 @@ The valid values are:
 > b. `MajorWithMinorVersionsLimit` accepts values from 0 through 50,000 (inclusive).
 > c. `ExpireVersionsAfterDays` accepts values of 0 to Never Expire or values >= 30 to delete versions that exceed that time period.
 > When version history limits are managed automatically (`EnableAutoExpirationVersionTrim $true`), setting `MajorVersionLimit` or `ExpireVersionsAfterDays` will result in an error as the count limits are set by the service.
->
-> This parameter is currently under public preview.
 
 PARAMVALUE: $true | $false
 
@@ -1464,8 +1463,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 
 ```
+### -HidePeoplePresenceInLists
 
+This setting disables the feature in Microsoft Lists that displays the presence of other users on the list and its items when they are viewing.
 
+PARAMVALUE: False | True
+
+If set to True, the presence of other users on the list and its items will no longer be displayed. List presence is enabled by default.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+
+```
 ### -ClearGroupId
 This parameter allows you to remove the assigned Microsoft 365 group ID on a site, when the group is permanently deleted.
 
