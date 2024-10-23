@@ -36,7 +36,7 @@ You must be a SharePoint Embedded Administrator or Global Administrator to run t
 > The OwningApplicationId for Microsoft Loop is `a187e399-0c36-4b98-8f04-1edc167a0996`.
 > The OwningApplicationId for Microsoft Designer is `5e2795e3-ce8c-4cfb-b302-35fe5cd01597`.
 
-To invite people outside your organization, please make sure [Microsoft Entra B2B](https://learn.microsoft.com/en-us/sharepoint/sharepoint-azureb2b-integration) is enabled. 
+To invite people outside your organization, please make sure [Microsoft Entra B2B](/sharepoint/sharepoint-azureb2b-integration) is enabled. 
 
 ## EXAMPLES
 
@@ -91,8 +91,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
-
 ### -OverrideTenantSharingCapability
 
 This setting allows the application to independently set its sharing capabilities, overriding the tenant-level settings of SharePoint Online. Options:
@@ -109,7 +107,6 @@ Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ## RELATED LINKS
 
