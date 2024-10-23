@@ -36,6 +36,8 @@ You must be a SharePoint Embedded Administrator or Global Administrator to run t
 > The OwningApplicationId for Microsoft Loop is `a187e399-0c36-4b98-8f04-1edc167a0996`.
 > The OwningApplicationId for Microsoft Designer is `5e2795e3-ce8c-4cfb-b302-35fe5cd01597`.
 
+To invite people outside your organization, please make sure [Microsoft Entra B2B](/sharepoint/sharepoint-azureb2b-integration) is enabled. 
+
 ## EXAMPLES
 
 ### Example 1
@@ -54,9 +56,18 @@ Set-SPOApplication -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -Ov
 
 This example enables the override, restricting file sharing within the SharePoint Embedded application to internal company users only, regardless of the broader SharePoint Online tenant settings.
 
+### Example 3
+
+```powershell
+Set-SPOTenant -EnableAzureADB2BIntegration $true
+Set-SPOApplication -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -OverrideTenantSharingCapability $true -SharingCapability -ExternalUserandGuestSharing
+```
+This example demonstrates how to enable file sharing within the SharePoint Embedded application for external users. Note that B2B integration must be enabled to allow guest invitations to SharePoint Embedded apps.
+
 ## PARAMETERS
 
 ### -SharingCapability
+
 Determines what level of sharing is available for the SharePoint Embedded Application.
 
 The valid values are:  
@@ -81,6 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -OverrideTenantSharingCapability
+
 This setting allows the application to independently set its sharing capabilities, overriding the tenant-level settings of SharePoint Online. Options:
 
 - False (default) - The application follows the tenant-level sharing capability
