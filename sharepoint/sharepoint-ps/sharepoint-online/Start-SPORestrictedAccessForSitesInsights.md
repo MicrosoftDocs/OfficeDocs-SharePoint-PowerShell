@@ -53,7 +53,7 @@ Example 1 generates the Restricted access control policy report which contains i
 Start-SPORestrictedAccessForSitesInsights -ActionsBlockedByPolicy
 ```
 
-Example 2 generates the Restricted access control policy report which contains insights about access denails by the policy.
+Example 2 generates the Restricted access control policy report which contains insights about access denials by the policy.
 
 ## PARAMETERS
 
