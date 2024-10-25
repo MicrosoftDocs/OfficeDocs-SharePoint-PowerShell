@@ -143,7 +143,7 @@ Accept wildcard characters: False
 
 ### -PageName
 
-Specifies the name of the SharePoint page to copy. This parameter is required when not using the `-AllPages` switch.
+Specifies the name of the SharePoint page to copy. This parameter is required when not using the `-AllPages` switch. Note that `-PageName` refers to the name of a SharePoint page that ends with the suffix .aspx, such as page.aspx.
 
 ```yaml
 Type: String
