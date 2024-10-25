@@ -61,7 +61,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-DefaultShareLinkScope <SharingScope>]
  [-DefaultShareLinkRole <SharingRole>]
  [-HidePeoplePreviewingFiles <Boolean>]
- [-HidePeoplePresenceInLists <Boolean>]
+ [-HidePeopleWhoHaveListsOpen <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -1463,7 +1463,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 
 ```
-### -HidePeoplePresenceInLists
+### -HidePeopleWhoHaveListsOpen
 
 This setting disables the feature in Microsoft Lists that displays the presence of other users on the list and its items when they are viewing.
 
