@@ -183,6 +183,7 @@ Set-SPOTenant
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>]
  [-WhoCanShareAnonymousAllowList [Guid[]]]
  [-WhoCanShareAuthenticatedGuestAllowList [Guid[]]]
+ [-ExtendPermissionsToUnprotectedFiles <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -3620,7 +3621,21 @@ Default value: None
 Accept pipeline input: False 
 Accept wildcard characters: False 
 ``` 
+### -ExtendPermissionsToUnprotectedFiles
+This property can be used to turn on/off the capability called "Extended SharePoint permissions to unprotected files". To learn more about this feature check [here](https://aka.ms/ExtendSharePointPermission)
 
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ## RELATED LINKS
 
 [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
