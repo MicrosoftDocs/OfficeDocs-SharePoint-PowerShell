@@ -27,7 +27,7 @@ New-SPOContainerType –ContainerTypeName <ContainerTypeName> -OwningApplication
 ### ParamSet2
 
 ```powershell
-New-SPOContainerType -ContainerTypeName <ContainerTypeName> -OwningApplicationId <OwningApplicationId> '-IsPassThroughBilling'
+New-SPOContainerType -ContainerTypeName <ContainerTypeName> -OwningApplicationId <OwningApplicationId> -IsPassThroughBilling
 ```
 
 ### ParamSet3
