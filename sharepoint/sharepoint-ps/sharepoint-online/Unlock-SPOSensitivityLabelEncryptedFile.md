@@ -26,7 +26,7 @@ Unlock-SPOSensitivityLabelEncryptedFile -FileUrl <absolute path for file> -Justi
 
 The `Unlock-SPOSensitivityLabelEncryptedFile` cmdlet runs on a single office online file that is encrypted via sensitivity label. It decrypts the file and removes the label from the file.
 
-You must be a SharePoint Online administrator or Global Administrator to run the `Unlock-SPOSensitivityLabelEncryptedFile` cmdlet. This cmdlet doesn't work on files that have double key encryption or files that have encryption but are not processed by SharePoint. These files don't show the name of the label in the Sensitivity column, and you can't edit these files in Office Online.
+You must be at least a SharePoint Online administrator to run the `Unlock-SPOSensitivityLabelEncryptedFile` cmdlet. This cmdlet doesn't work on files that have double key encryption or files that have encryption but are not processed by SharePoint. These files don't show the name of the label in the Sensitivity column, and you can't edit these files in Office Online.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
