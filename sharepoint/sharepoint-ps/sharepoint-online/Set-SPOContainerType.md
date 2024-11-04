@@ -35,7 +35,7 @@ This cmdlet is used to reset the parameters associated with a container type - b
 ### Example 1
  
 ```powershell
-Set-SPOContainerType -ContainerTypeId DA1D89B3-B4CF-4C0A-8E1C-0D131C57544F -OwningApplicationId 12A9D93C-18D7-46A0-B43E-28D20ADDD56A - ContainerTypeName 'Red Container Type' 
+Set-SPOContainerType -ContainerTypeId da1d89b3-b4cf-4c0a-8e1c-0d131c57544f -OwningApplicationId 12a9d93c-18d7-46a0-b43e-28d20addd56a - ContainerTypeName 'Red Container Type' 
 ```
  
 Example 1 sets the container type name as 'Red Container Type'
@@ -44,15 +44,15 @@ Example 1 sets the container type name as 'Red Container Type'
 ### Example 2
  
 ```powershell
-Set-SPOContainerType -ContainerTypeId DA1D89B3-B4CF-4C0A-8E1C-0D131C57544F –Azure Subscription 01F62754-0873-4EC6-AB4A-3EED48BA8BE7 -ResourceGroup RG200
+Set-SPOContainerType -ContainerTypeId da1d89b3-b4cf-4c0a-8e1c-0d131c57544f –Azure Subscription 12a9d93c-18d7-46a0-b43e-28d20addd56a -ResourceGroup RG200
 ```
  
-In Example 2, the billing profile of the container type is updated with the latest information.
+In Example 2, the billing profile of the container type is updated.
 
 ### Example 3
  
 ```powershell
-Set-SPOContainerType -ContainerTypeId 01F62754-0873-4EC6-AB4A-3EED48BA8BE7 -OwningApplicationId 994B9586-253E-4A77-B51 - ContainerTypeName 'Blue Container Type' 
+Set-SPOContainerType -ContainerTypeId 01f62754-0873-4ec6-ab4a-3eed48ba8be7 -OwningApplicationId 994b9586-253e-4a77-b51 - ContainerTypeName 'Blue Container Type' 
 ```
 In Example 3, the trial container type name is updated as 'Blue Container Type' 
 
@@ -63,7 +63,7 @@ In Example 3, the trial container type name is updated as 'Blue Container Type'
 
 ### -ContainerTypeName
 
-This parameter names your ContainerType for your SharePoint Embedded Application.
+This parameter names your container type for your SharePoint Embedded application.
 
 ```yaml
 Type: String
