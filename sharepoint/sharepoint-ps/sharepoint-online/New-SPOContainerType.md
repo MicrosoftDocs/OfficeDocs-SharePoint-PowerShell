@@ -62,7 +62,7 @@ In Example 2, the cmdlet creates a trial container type, 'ContosoLegal', valid f
 
 ### -ContainerTypeName
 
-This parameter names your container type for your SharePoint Embedded Application.
+This parameter names your container type for your SharePoint Embedded application.
 
 ```yaml
 Type: String
