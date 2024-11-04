@@ -37,7 +37,7 @@ New-SPOContainerType –TrialContainerType -ContainerTypeName <ContainerTypeName
 
 ## DESCRIPTION
 
-This cmdlet creates a new container type of the standard or trial status. A trial container type does not have a billing profile associated with it and has a validity of 30 days. A standard container type has a billing profile associated with it. With the use of -IsPassThroughBilling, we can create a direct to customer billed container type.
+This cmdlet creates a new container type of the standard or trial status. A trial container type does not have a billing profile associated with it and has a validity of 30 days. A standard container type has a billing profile associated with it. With the use of '-IsPassThroughBilling', we can create a direct to customer billed container type.
 
 You must be a SharePoint Embedded Administrator to run this cmdlet.
 
@@ -62,7 +62,7 @@ In Example 2, the cmdlet creates a trial container type, 'ContosoLegal', valid f
 
 ### -ContainerTypeName
 
-This parameter names your ContainerType for your SharePoint Embedded Application.
+This parameter names your container type for your SharePoint Embedded Application.
 
 ```yaml
 Type: String
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ###  –TrialContainerType
-This token is used to specify that the cmdlet is used to create a trial container type and thereby the billing profile need not be provided.
+This parameter is used to specify that the cmdlet is used to create a trial container type and thereby the billing profile need not be provided.
 
 ```yaml
 Type: String
@@ -163,7 +163,8 @@ Accept wildcard characters: False
 ```
 
 ###  –IsPassThroughBilling
-Use this parameter to create a direct to customer billed container type.
+This parameter is used to create a direct to customer billed container type.
+
 ```yaml
 Type: String
 Parameter Sets:
