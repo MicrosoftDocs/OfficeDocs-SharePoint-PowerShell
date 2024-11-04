@@ -34,7 +34,7 @@ This cmdlet returns all the container types present in the tenant or details o
 
 You must be a SharePoint Embedded administrator to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Embedded Containers, see the online documentation at [Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
+For permissions and the most current information about Windows PowerShell for SharePoint Embedded Containers, see the documentation at [Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
 ## EXAMPLES
 
@@ -44,7 +44,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 Get-SPOContainerType 
 ```
 
-Example 1 retrieves all the container types present in the tenant and displays information such as Container Type ID, Container Type Name, Owning Application ID, billing details, creation date, expiry date.
+Example 1 retrieves all the container types present in the tenant and displays container type specific information.
 
 ### Example 2
 
