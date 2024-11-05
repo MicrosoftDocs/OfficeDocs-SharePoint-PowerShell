@@ -133,8 +133,8 @@ Accept wildcard characters: False
 
 [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
 
-[New-SPOContainerType](sharepoint/sharepoint-ps/sharepoint-online/New-SPOContainerType.md)
+[New-SPOContainerType](./New-SPOContainerType.md)
 
-[Get-SPOContainerType](sharepoint/sharepoint-ps/sharepoint-online/Get-SPOContainerType.md)
+[Get-SPOContainerType](./Get-SPOContainerType.md)
 
-[Remove-SPOContainerType](sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOContainerType.md)
+[Remove-SPOContainerType](./Remove-SPOContainerType.md)
