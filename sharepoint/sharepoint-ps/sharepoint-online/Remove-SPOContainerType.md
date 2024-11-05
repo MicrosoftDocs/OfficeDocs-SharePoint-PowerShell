@@ -59,7 +59,7 @@ Accept wildcard characters: False
 ```
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](./powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
+[Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
 
 [New-SPOContainerType](./New-SPOContainerType.md)
 
