@@ -6,7 +6,7 @@ applicable: SharePoint Online
 title: Get-SPOContainerType
 schema: 2.0.0
 author: ShreyasSar26
-ms.author: ShreyasSar26
+ms.author: shsaravanan
 ms.reviewer:
 ---
 
