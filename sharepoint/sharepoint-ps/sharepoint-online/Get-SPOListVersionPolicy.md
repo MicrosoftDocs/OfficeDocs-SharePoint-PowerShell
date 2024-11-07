@@ -15,7 +15,7 @@ manager: seanmc
 
 ## SYNOPSIS
 
-Gets the version policy setting on the cocument library.
+Gets the version policy setting on the document library.
 
 ## SYNTAX
 
