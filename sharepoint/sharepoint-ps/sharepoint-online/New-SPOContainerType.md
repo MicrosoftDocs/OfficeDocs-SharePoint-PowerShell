@@ -49,7 +49,7 @@ You must be a SharePoint Embedded Administrator to run this cmdlet.
 ```powershell
 New-SPOContainerType -ContainerTypeName ContosoLegal -OwningApplicationId a735e4af-b86e-0000-93ba-1faded6c39e1 -AzureSubscriptionId 564e9025-f7f5-xxx9-9ddd-4cdxxxx1755 -ResourceGroup prod-resources -Region EastUS
 ```
-In Example 1, the cmdlet creates a new container type 'ContosoLegal' that is standard billed and is attached to the billing profile mentioned
+In Example 1, the cmdlet creates a new container type 'ContosoLegal' that is standard billed and is attached to the billing profile mentioned.
 
 ### Example 2  
 ```powershell
