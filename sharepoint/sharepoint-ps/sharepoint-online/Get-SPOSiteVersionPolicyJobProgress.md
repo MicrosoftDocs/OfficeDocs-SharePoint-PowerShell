@@ -15,9 +15,6 @@ manager: seanmc
 
 ## SYNOPSIS
 
-> [!NOTE]
-> This feature is part of the version history controls preview. If your tenant is not part of the preview or the feature has not rolled out to your tenant, you will get an error when trying to run this cmdlet.
-
 Gets the progress of setting version policy for existing document libraries on the site collection.
 
 ## SYNTAX
