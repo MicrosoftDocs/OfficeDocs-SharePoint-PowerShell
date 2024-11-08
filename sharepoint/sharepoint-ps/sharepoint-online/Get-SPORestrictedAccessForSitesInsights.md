@@ -15,7 +15,7 @@ manager:
 
 ## SYNOPSIS
 
-This cmdlet enables the administrator to check status of all active and available reports about insights on sites protected and access denials by Restricted access control policy when no report ID is present and to view or download the report if report ID is present.
+This cmdlet enables the administrator to check status of all active and available reports about insights on sites protected and access denials by restricted access control.
 
 ## SYNTAX
 
@@ -29,76 +29,21 @@ Get-SPORestrictedAccessForSitesInsights -ActionsBlockedByPolicy [-ReportId <Guid
 
 ## DESCRIPTION
 
-If this cmdlet is executed with `-RACProtectedSites` as parameter, it displays the status of all active and completed reports with the following properties:
+If this cmdlet is executed with `-RACProtectedSites` as parameter, it displays the status of all the active and completed reports.
 
-| Property             | Description                                                 |
-|:---------------------|:------------------------------------------------------------|
-| Id                   | The unique Id of the report.                                |
-| CreatedDateTimeInUtc | The date and time the report creation was triggered in UTC. |
-| Status               | The status of the report.                                   |
+If this cmdlet is executed with `-RACProtectedSites` `-ReportId` as parameter, top 100 sites with the highest page views that are protected by restricted access control will be displayed.
 
-If this cmdlet is executed with `-RACProtectedSites` `-ReportId` as parameter, top 100 sites with highest page views that are protected by Restrcited access control will be displayed with the following properties:
+If this cmdlet is executed with `-RACProtectedSites` `-ReportId` `-InsightsSummary` as parameter, the count of sites protected with restricted access control compared to total number of sites will be displayed.
 
-| Property                     | Description                                                   |
-|:-----------------------------|:--------------------------------------------------------------|
-| SiteName                     | The name of the SharePoint site.                              |
-| SiteType                     | The type of the SharePoint site.                              |
-| SiteURL                      | The URL of the SharePoint site.                               |
-| SiteSensitivity              | The sensitivity label of the SharePoint site.                 |
-| PrimaryAdmin                 | Primary admin of the SharePoint Site                          |
-| BlockDownloadPolicy          | Boolean status of Block download policy on the site.          |
-| ConditionalAccessPolicy      | Authentication context set for the Conditional access policy  |
-| RestrictedAccessControlGroups| Entra Groups configured during policy configuration           |
-
-If this cmdlet is executed with `-RACProtectedSites` `-ReportId` `-InsightsSummary` as parameter, count of sites protected with restricted access control compared to total number of sites will be displayed.
-
-If this cmdlet is executed with `-ActionsBlockedByPolicy` as parameter, it displays the status of all active and completed reports with the following properties:
-
-| Property             | Description                                                 |
-|:---------------------|:------------------------------------------------------------|
-| Id                   | The unique Id of the report.                                |
-| CreatedDateTimeInUtc | The date and time the report creation was triggered in UTC. |
-| Status               | The status of the report.                                   |
+If this cmdlet is executed with `-ActionsBlockedByPolicy` as parameter, it displays the status of all active and completed reports.
   
-If this cmdlet is executed with `-ActionsBlockedByPolicy` `-ReportId` `-Content TopSites` as parameter, top 100 sites with highest access denials by Restricted access control will be displayed with the following properties:
+If this cmdlet is executed with `-ActionsBlockedByPolicy` `-ReportId` `-Content TopSites` as parameter, top 100 sites with the highest access denials by restricted access control will be displayed.
 
-| Property                     | Description                                                   |
-|:-----------------------------|:--------------------------------------------------------------|
-| SiteName                     | The name of the SharePoint site.                              |
-| SiteURL                      | The URL of the SharePoint site.                               |
-| SiteSensitivity              | The sensitivity label of the SharePoint site.                 |
-| SiteType                     | The type of the SharePoint site.                              |
-| AccessDenialsCount           | Total number of access denials on the site.                   |
-| UniqueUsersBlocked           | Count of Unique users denied access on the site.              |
+If this cmdlet is executed with `-ActionsBlockedByPolicy` `-ReportId` `-Content TopUsers` as parameter, top 10 users with the highest access denials by restricted access control will be displayed.
 
-If this cmdlet is executed with `-ActionsBlockedByPolicy` `-ReportId` `-Content TopUsers` as parameter, top 10 users with highest access denials by Restricted access control will be displayed with the following properties:
+If this cmdlet is executed with `-ActionsBlockedByPolicy` `-ReportId` `-Content AllDenials` as parameter, most recent 100 access denials by restricted access control in the last 28 days will be displayed.
 
-| Property                     | Description                                                   |
-|:-----------------------------|:--------------------------------------------------------------|
-| UserEmail                    | Email id of the blocked user.                                 |
-| AccessDenialsCount           | Total number of access denials faced by the user.             |
-
-If this cmdlet is executed with `-ActionsBlockedByPolicy` `-ReportId` `-Content AllDenials` as parameter, most recent 100 access denials by Restricted access control in the last 28 days will be displayed with the following properties:
-
-| Property                     | Description                                                   |
-|:-----------------------------|:--------------------------------------------------------------|
-| AccessDenialDateTimeInUtc    | The timestamp of access denial.                               |
-| SiteName                     | The name of the SharePoint site.                              |
-| SiteURL                      | The URL of the SharePoint site.                               |
-| SiteType                     | The type of the SharePoint site.                              |
-| SiteOwnerName                | Primary Owner of the SharePoint site.                         |
-| UserEmail                    | Email ID of the denied user.                                  |
-| RestrictedAccessControlGroups| Entra Groups configured during policy configuration           |
-| SiteSensitivity              | The sensitivity label of the SharePoint site.                 |
-
-If this cmdlet is executed with `-ActionsBlockedByPolicy` `-ReportId` `-Content SiteDistribution` as parameter, distribution of access denials by Restricted access control on different site types will be displayed with the following properties:
-
-| Property                     | Description                                                   |
-|:-----------------------------|:--------------------------------------------------------------|
-| SiteType                     | The type of the SharePoint site.                              |
-| AccessDenialsCount           | Total number of access denials on the site type.              |
-| UniqueUsersBlockedCount      | Count of Unique users denied access on the site type.         |
-| SiteTypePercentage           | Relative percentage of access denials by the site type.       |
+If this cmdlet is executed with `-ActionsBlockedByPolicy` `-ReportId` `-Content SiteDistribution` as parameter, distribution of access denials by restricted access control on different site types will be displayed.
 
 > [!NOTE]
 > All reports adhere to any retention timeline as per [Data Access Governance](/sharepoint/data-access-governance-reports).
@@ -111,7 +56,7 @@ If this cmdlet is executed with `-ActionsBlockedByPolicy` `-ReportId` `-Content 
 Get-SPORestrictedAccessForSitesInsights -RACProtectedSites
 ```
 
-Example 1 enables administrator to view the status of all active and completed reports on list of sites protected with restricted access control policy.
+Example 1 enables administrator to view the status of all active and completed reports on list of sites protected with restricted access control.
 
 ### -----------------------EXAMPLE 2-----------------------------
 
@@ -119,7 +64,7 @@ Example 1 enables administrator to view the status of all active and completed r
 Get-SPORestrictedAccessForSitesInsights –RACProtectedSites -ReportId 9d946216-afe7-49f5-8267-7b662435c70b
 ```
 
-Example 2 enables administrator to view the list of sites protected with restricted access control policy report with ReportId: `9d946216-afe7-49f5-8267-7b662435c70b`
+Example 2 enables administrator to view the report containing list of sites protected with restricted access control with ReportId: `9d946216-afe7-49f5-8267-7b662435c70b`
 
 ### -----------------------EXAMPLE 3-----------------------------
 
@@ -127,13 +72,13 @@ Example 2 enables administrator to view the list of sites protected with restric
 Get-SPORestrictedAccessForSitesInsights -ActionsBlockedByPolicy -ReportId 9d946216-afe7-49f5-8267-7b662435c70b -Content TopSites
 ```
 
-Example 3 enables administrator to view the top sites with access denials due to restricted access control policy report of ReportId: `9d946216-afe7-49f5-8267-7b662435c70b`.
+Example 3 enables administrator to view the report containing top sites with access denials due to restricted access control with ReportId: `9d946216-afe7-49f5-8267-7b662435c70b`.
 
 ## PARAMETERS
 
 ### -RACProtectedSites
 
-It is an optional parameter, and it specifies the type of the report to be viewed or downloaded.
+It is an optional parameter, and it specifies the type of report to be viewed or downloaded.
 
 ```yaml
 Type: SwitchParameter
@@ -150,7 +95,7 @@ Accept wildcard characters: False
 
 ### -ActionsBlockedByPolicy
 
-It is an optional parameter, and it specifies the type of the report to be viewed or downloaded.
+It is an optional parameter, and it specifies the type of report to be viewed or downloaded.
 
 ```yaml
 Type: SwitchParameter
@@ -201,7 +146,7 @@ Accept wildcard characters: False
 
 ### -Content
 
-It is an optional parameter, and it specifies the sub-type of the report to be viewed or downloaded.
+It is an optional parameter, and it specifies the subtype of the report to be viewed or downloaded.
 
 ```yaml
 Type: ContentType

@@ -15,7 +15,7 @@ manager:
 
 ## SYNOPSIS
 
-This cmdlet enables administrator to trigger the build of a new Restricted Access Control insights report for the data from last 28 days.
+This cmdlet enables administrator to trigger the build of a new restricted access control insights report for the data from last 28 days.
 
 ## SYNTAX
 
@@ -29,13 +29,7 @@ Start-SPORestrictedAccessForSitesInsights -ActionsBlockedByPolicy [-Force <Switc
 
 ## DESCRIPTION
 
-After this cmdlet is executed, the Restricted Access Control insights report generation request for the requested sub type gets queued in the pipeline and the below metadata is displayed with the following properties:
-
-| Property             | Description                                                 |
-|:---------------------|:------------------------------------------------------------|
-| Id                   | The unique Id of the report.                                |
-| CreatedDateTimeInUtc | The date and time the report creation was triggered in UTC. |
-| Status               | The status of the report.                                   |
+After this cmdlet is executed, the restricted access control insights report generation request is initiated for the requested report subtype.                               |
 
 ## EXAMPLES
 
@@ -45,7 +39,7 @@ After this cmdlet is executed, the Restricted Access Control insights report gen
 Start-SPORestrictedAccessForSitesInsights -RACProtectedSites
 ```
 
-Example 1 generates the Restricted access control policy report which contains insights about the list of sites protected with the policy.
+Example 1 generates the restricted access control report which contains insights about the list of sites protected with the policy.
 
 ### -----------------------EXAMPLE 2-----------------------------
 
@@ -53,13 +47,13 @@ Example 1 generates the Restricted access control policy report which contains i
 Start-SPORestrictedAccessForSitesInsights -ActionsBlockedByPolicy
 ```
 
-Example 2 generates the Restricted access control policy report which contains insights about access denials by the policy.
+Example 2 generates the restricted access control report which contains insights about access denials by the policy.
 
 ## PARAMETERS
 
 ### -RACProtectedSites
 
-It is an optional parameter, and it specifies the type of the report generation to be triggered.
+It is an optional parameter, and it specifies the type of report generation to be triggered.
 
 ```yaml
 Type: SwitchParameter
@@ -76,7 +70,7 @@ Accept wildcard characters: False
 
 ### -ActionsBlockedByPolicy
 
-It is an optional parameter, and it specifies the type of the report generation to be triggered.
+It is an optional parameter, and it specifies the type of report generation to be triggered.
 
 ```yaml
 Type: SwitchParameter
