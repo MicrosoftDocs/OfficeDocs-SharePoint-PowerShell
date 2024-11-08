@@ -32,7 +32,7 @@ Get-SPOContainerType [-ContainerTypeId <ContainerTypeId>]
 
 This cmdlet returns all the container types present in the tenant or details of a specific container type when paired with the containertype ID parameter. 
 
-You must be a SharePoint Embedded administrator to run the cmdlet.
+You must be a SharePoint Embedded Administrator to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Embedded Containers, see the documentation at [Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
