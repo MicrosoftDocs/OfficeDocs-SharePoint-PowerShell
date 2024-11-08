@@ -37,7 +37,7 @@ New-SPOContainerType –TrialContainerType -ContainerTypeName <ContainerTypeName
 
 ## DESCRIPTION
 
-This cmdlet creates a new container type of the standard or trial status. A trial container type does not have a billing profile associated with it and has a validity of 30 days. A standard container type has a billing profile associated with it. With the use of '-IsPassThroughBilling', we can create a direct to customer billed container type.
+This cmdlet creates a new container type of the standard or trial status. A trial container type does not have a billing profile associated with it and has a validity of 30 days. A standard container type has a billing profile associated with it. With the use of `-IsPassThroughBilling`, we can create a direct to customer billed container type.
 
 You must be a SharePoint Embedded Administrator to run this cmdlet.
 
