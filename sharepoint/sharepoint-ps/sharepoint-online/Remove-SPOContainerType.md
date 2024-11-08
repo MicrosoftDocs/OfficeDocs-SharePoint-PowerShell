@@ -26,6 +26,7 @@ Remove-SPOContainerType -ContainerTypeId <ContainerTypeId>
 ## DESCRIPTION
  
 This cmdlet deletes only the trial container type in the tenant. To delete a container type in trial status, you must remove all containers of the container type first, including from the deleted container collection. To remove containers, refer to [Remove-SPOContainer](./Remove-SPOContainer.md). Once all the containers are deleted, trial container type can be deleted using this cmdlet.
+
 You must be a SharePoint Embedded Administrator to run this cmdlet.
  
 ## EXAMPLES
