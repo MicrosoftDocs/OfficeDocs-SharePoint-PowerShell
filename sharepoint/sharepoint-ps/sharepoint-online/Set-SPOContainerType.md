@@ -30,6 +30,11 @@ Set-SPOContainerType -ContainerTypeId <ContainerTypeId> -AzureSubscriptionId <Az
  
 ## DESCRIPTION
 This cmdlet is used to reset the parameters associated with a container type - both trial and standard. The cmdlet can be used to change the container type name or the associated billing profile of the container type.
+
+You must be a SharePoint Embedded Administrator to run the cmdlet.
+
+For permissions and the most current information about Windows PowerShell for SharePoint Embedded Containers, see the documentation at [Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
+
 ## EXAMPLES
  
 ### Example 1
