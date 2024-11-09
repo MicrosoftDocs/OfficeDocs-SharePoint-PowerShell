@@ -12,7 +12,7 @@ ms.reviewer: pullabhk
 
 ## SYNOPSIS
 
-{{ Fill in the Synopsis }}
+This command retrieves the site review report.
 
 ## SYNTAX
 

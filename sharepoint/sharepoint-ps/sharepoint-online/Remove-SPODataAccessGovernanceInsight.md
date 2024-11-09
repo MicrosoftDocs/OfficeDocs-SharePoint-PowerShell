@@ -12,7 +12,7 @@ ms.reviewer: pullabhk
 
 ## SYNOPSIS
 
-This command deletes the given DAG report
+This command deletes the given Data access governance report.
 
 ## SYNTAX
 

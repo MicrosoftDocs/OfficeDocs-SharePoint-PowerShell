@@ -12,7 +12,7 @@ ms.reviewer: pullabhk
 
 ## SYNOPSIS
 
-This command generates various reports which are meant to provide insights into potential oversharing of sensitive data in SharePoint and/or OneDrive for Business. These insights are powered by Data Access Governance (DAG) module, available in SharePoint Admin Center. SharePoint Advanced Management (SAM) license is required to run this command.
+This command generates various reports which are meant to provide insights into potential oversharing of sensitive data in SharePoint and/or OneDrive. These insights are powered by Data Access Governance (DAG) module, available in SharePoint Admin Center. SharePoint Advanced Management (SAM) license is required to run this command.
 
 ## SYNTAX
 

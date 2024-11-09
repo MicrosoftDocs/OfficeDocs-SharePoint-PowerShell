@@ -12,7 +12,7 @@ ms.reviewer: pullabhk
 
 ## SYNOPSIS
 
-Lists various reports available in 'Data Access Governance' module (DAG) in SharePoint Admin Center.
+Lists various reports available in Data access governance module in SharePoint Admin Center.
 
 ## SYNTAX
 

@@ -13,7 +13,7 @@ ms.reviewer: pullabhk
 
 ## SYNOPSIS
 
-This commands exports/downloads the DAG report to the default path "C:\WINDOWS\system32\"
+This commands exports/downloads the Data access governance report to the default path "C:\WINDOWS\system32\"
 
 ## SYNTAX
 
