@@ -1,0 +1,69 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the public filter general setting.
+module: SharePointServer
+notes: ""
+links:
+- text: Get-FASTSearchSecurityPublicFilter
+  href: Get-FASTSearchSecurityPublicFilter.yml
+syntaxes:
+- Set-FASTSearchSecurityPublicFilter [[-Filter] <String>] [<CommonParameters>]
+- Set-FASTSearchSecurityPublicFilter [[-GeneralSetting] <PublicFilterSetting>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Set-FASTSearchSecurityPublicFilter -Filter docacl:unknown
+  description: |-
+    This example updates the search security filter that is used to find documents that all users have access to.
+  summary: ""
+- title: '---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    C:\PS>$pubfilter | Set-FASTSearchSecurityPublicFilter
+  description: |-
+    This example updates the public filter setting using values from a pipeline GeneralSetting parameter.
+
+    In this example, the $pubfilterGeneralSetting was created with this command: $pubfilter = Get-FASTSearchSecurityPublicFilter.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    The search security filter that is used to find documents that all users have access to.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="PublicFilterSetting" data-throw-if-not-resolved="False" />
+  name: GeneralSetting
+  description: |+
+    A PublicFilterSetting whose property values are used for the PublicFilterSetting being updated.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "9999"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Set-FASTSearchSecurityPublicFilter
+name: Set-FASTSearchSecurityPublicFilter
+description: |-
+  This cmdlet updates the public filter general setting configuration.
+  The public filter is the search security filter that is used to find documents that all users have access to.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-fastsearchsecuritypublicfilter
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Set-FASTSearchSecurityPublicFilter

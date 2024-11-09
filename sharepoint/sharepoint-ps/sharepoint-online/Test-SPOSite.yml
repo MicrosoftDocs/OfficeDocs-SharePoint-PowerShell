@@ -1,0 +1,83 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Tests a SharePoint Online site collection.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Get-SPOAppErrors
+  href: Get-SPOAppErrors.yml
+- text: Get-SPOSite
+  href: Get-SPOSite.yml
+- text: New-SPOSite
+  href: New-SPOSite.yml
+- text: Repair-SPOSite
+  href: Repair-SPOSite.yml
+syntaxes:
+- Test-SPOSite -Identity <SpoSitePipeBind> [-RuleId <Guid>] [-RunAlways] [<CommonParameters>]
+examples:
+- title: '-----------------------EXAMPLE 1-----------------------------'
+  code: |-
+    Test-SPOSite https://contoso.sharepoint.com/sites/marketing
+  description: |-
+    This example runs all the site collection health checks on the <https://contoso.sharepoint.com/sites/marketing> site collection.
+  summary: ""
+parameters:
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the SharePoint Online site collection to test.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: RuleId
+  description: |+
+    Specifies the health check rule to run.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RunAlways
+  description: |+
+    Forces a rule to run even if a health check was run.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Test-SPOSite
+name: Test-SPOSite
+description: |-
+  The `Test-SPOSite` cmdlet runs one or all site collection health checks on the site collection and its contents.
+  Tests are intended not to make any changes except in repair mode, which can be initiated by running the `Repair-SPOSite` cmdlet.
+  This cmdlet reports the rules together with a summary of the results.
+
+  You must be at least a SharePoint administrator to run the cmdlet.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/test-sposite
+  applicable: SharePoint Online
+  title: Test-SPOSite
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

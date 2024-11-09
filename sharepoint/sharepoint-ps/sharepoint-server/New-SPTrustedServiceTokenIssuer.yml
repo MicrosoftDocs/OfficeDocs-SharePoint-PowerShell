@@ -1,0 +1,158 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a trust with a SharePoint farm.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  New-SPTrustedServiceTokenIssuer [-Name] <String> -Certificate <X509Certificate2>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Description <String>] [-Confirm] [-WhatIf]
+   [<CommonParameters>]
+- >-
+  New-SPTrustedServiceTokenIssuer [-Name] <String> [-AssignmentCollection <SPAssignmentCollection>]
+   [-Description <String>] [-Confirm] -MetadataEndPoint <Uri> [-WhatIf] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE 1------------------'
+  code: |-
+    $cert = Get-PfxCertificate C:\LiveIDSigningCert.pfx
+    New-SPTrustedServiceTokenIssuer -Name "WFEFarm1" -Description "WFE Farm 1" -Certificate $cert
+  description: |-
+    This example shows how to create a new SharePoint Farm trust using the trust certificate from a file.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+  name: Certificate
+  isRequired: true
+  description: |+
+    The type must be a name of a valid X.509 certificate; for example, Certificate1.
+
+    Specifies the X.509 certificate object from trusted authentication provider farm.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description for the trust.
+
+    The type must be a valid string; for example, WFE Farm Trust1.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: MetadataEndPoint
+  isRequired: true
+  description: |+
+    Specifies the URI for the metadata endpoint of the trusted provider.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the trust.
+
+    The type must be a valid name of a trusted service issuer; for example, WFEFarmTrust1.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.New-SPTrustedServiceTokenIssuer
+name: New-SPTrustedServiceTokenIssuer
+description: |-
+  The `New-SPTrustedServiceTokenIssuer` cmdlet creates a trust with a SharePoint farm.
+  If a certificate file is used, it must have only one X509 certificate without private keys, otherwise an exception is raised.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-sptrustedservicetokenissuer
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: New-SPTrustedServiceTokenIssuer
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

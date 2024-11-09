@@ -1,0 +1,127 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Clears all the trusted locations for a PerformancePoint Service application identity.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Clear-SPPerformancePointServiceApplicationTrustedLocation
+   -ServiceApplication <SPPerformancePointMonitoringServiceApplicationPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-TrustedLocationType <TrustedFileType>] [-WhatIf]
+   [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE-----------------------'
+  code: |-
+    Clear-SPPerformancePointServiceApplicationTrustedLocation -ServiceApplication My_Service_Application
+  description: |-
+    This example removes trusted locations from the Service application named, My_Service_Application.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPPerformancePointMonitoringServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: ServiceApplication
+  isRequired: true
+  description: |+
+    Specifies the PerformancePoint Service application that contains the trusted locations.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a PerformancePoint Service application (for example, PerfPointApp1); or an instance of a valid SPPerformancePointMonitoringServiceApplication object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="TrustedFileType" data-throw-if-not-resolved="False" />
+  name: TrustedLocationType
+  description: |+
+    Specifies the type of trusted locations to clear.
+    If the TrustedLocationType parameter is not specified, this cmdlet clears all the trusted locations for the specified PerformancePoint Service application.
+
+    The type must be one of the following: content, data source.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Clear-SPPerformancePointServiceApplicationTrustedLocation
+name: Clear-SPPerformancePointServiceApplicationTrustedLocation
+description: |-
+  The Clear-SPPerformancePointServiceApplicationTrustedLocation cmdlet removes all the trusted locations for a PerformancePoint Service application.
+  Use the TrustedLocationType parameter to remove only the trusted locations for a trusted location type.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.PerformancePoint.Scorecards.BIMonitoringService.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/clear-spperformancepointserviceapplicationtrustedlocation
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Clear-SPPerformancePointServiceApplicationTrustedLocation
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

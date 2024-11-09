@@ -1,0 +1,140 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes activity events from the published and consolidated tables.
+module: sharepoint-server
+notes: ""
+inputs:
+- name: <xref href="Microsoft.SharePoint.PowerShell.SPServiceApplicationProxyPipeBind" data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.SharePoint.PowerShell.SPSiteSubscriptionPipeBind
+    Microsoft.SharePoint.PowerShell.SPAssignmentCollection
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Remove-SPActivityFeedItems [-AllItems <Boolean>] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+   [-ID <Int64>] -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind> [-SearchText <String>]
+   [-SiteSubscription <SPSiteSubscriptionPipeBind>] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE------------------'
+  code: |-
+    $upaProxy = Get-SPServiceApplicationProxy 1232b6f7-b9ff-99ad-0cd0-fg1g67h981aq
+    $upaProxy = Get-SPServiceApplicationProxy 1232b6f7-b9ff-99ad-0cd0-fg1g67h981aq
+  description: |-
+    This example removes the specific user profile service application.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllItems
+  description: |+
+    Specifies whether to delete events.A value of "1" deletes all events.
+    A value of "0", no events are deleted.The default value is 0 (zero).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    **NOTE**: When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int64" data-throw-if-not-resolved="False" />
+  name: ID
+  description: |+
+    Limits events deleted to those which match the specified ActivityEventID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPServiceApplicationProxyPipeBind" data-throw-if-not-resolved="False" />
+  name: ProfileServiceApplicationProxy
+  isRequired: true
+  description: |+
+    Specifies the proxy of the User Profile Service application that contains the site subscription to delete.The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a service application proxy (for example, UserProfileSvcProxy1); or an instance of a valid SPServiceApplicationProxy object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SearchText
+  description: |+
+    Limits events deleted to those which contain SearchText in the string. 
+
+    Note that the SearchText will apply to *all* of the XML text saved in SQL representing this activity. The text seen in a browser window may be saved in a different representation in SQL. For example, a ">" feed symbol may be represented as "&gt" text in SQL, so the SearchText should reference "&gt" instead of ">".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPSiteSubscriptionPipeBind" data-throw-if-not-resolved="False" />
+  name: SiteSubscription
+  description: |+
+    Specifies the account under which this service should run. 
+
+    This parameter is mandatory in a hosted-environment and optional in a non-hosted environment.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Remove-SPActivityFeedItems
+name: Remove-SPActivityFeedItems
+description: |-
+  Use the Remove-SPActivityFeedItems cmdlet to remove an activity event.
+metadata:
+  external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spactivityfeeditems
+  applicable: SharePoint Server Subscription Edition
+  title: Remove-SPActivityFeedItems
+  PlatyPS schema version: 2.0.0

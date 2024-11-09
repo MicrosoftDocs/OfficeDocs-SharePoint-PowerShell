@@ -1,0 +1,116 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a PowerPoint Conversion Service application proxy.
+module: sharepoint-server
+notes: ""
+links:
+- text: New-SPPowerPointConversionServiceApplication
+  href: New-SPPowerPointConversionServiceApplication.yml
+- text: Set-SPPowerPointConversionServiceApplication
+  href: Set-SPPowerPointConversionServiceApplication.yml
+syntaxes:
+- >-
+  New-SPPowerPointConversionServiceApplicationProxy [-Name] <String>
+   -ServiceApplication <SPPowerPointConversionServiceApplicationPipeBind> [-AddToDefaultGroup]
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
+examples:
+- title: Example
+  code: |-
+    New-SPPowerPointConversionServiceApplicationProxy -Name "PowerPoint Conversion Service application proxy" -ServiceApplication "PowerPoint Conversion Service Application" -AddtoDefaultGroup
+  description: |-
+    This example creates a new instance of the PowerPoint Conversion Service application proxy named _PowerPoint Conversion Service application proxy_, binds it to the _PowerPoint Conversion Service Application_ service application, and then adds it to the default service application proxy group
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AddToDefaultGroup
+  description: |+
+    Adds the newly created proxy to the default service application proxy group.
+    If not specified, the proxy is not added to a group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the service application proxy.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPPowerPointConversionServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: ServiceApplication
+  isRequired: true
+  description: |+
+    Specifies the name of the service application to bind.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.New-SPPowerPointConversionServiceApplicationProxy
+name: New-SPPowerPointConversionServiceApplicationProxy
+description: |-
+  Use the `New-SPPowerPointConversionServiceApplicationProxy` cmdlet to create a PowerPoint Conversion Service application proxy.
+  The service application proxy is instantiated on the front-end web server and acts as an intermediary between the client computer and the service application back end.
+metadata:
+  external help file: Microsoft.Office.Server.Powerpoint.dll-Help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-sppowerpointconversionserviceapplicationproxy
+  applicable: SharePoint Server Subscription Edition
+  title: New-SPPowerPointConversionServiceApplicationProxy
+  PlatyPS schema version: 2.0.0

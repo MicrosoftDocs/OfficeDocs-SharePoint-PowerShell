@@ -1,0 +1,238 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the identity providers of a Web application.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Set-SPTrustedIdentityTokenIssuer [-Identity] <SPTrustedIdentityTokenIssuerPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-ClaimProvider <SPClaimProviderPipeBind>]
+   [-ClaimsMappings <SPClaimMappingPipeBind[]>] [-Description <String>]
+   -ImportTrustCertificate <X509Certificate2> [-Realm <String>] [-SignInUrl <String>] [-UseWReply] [-Confirm]
+   [-RegisteredIssuerName <String>] [-UseStateToRedirect <Boolean>] [-WhatIf] [<CommonParameters>]
+- >-
+  Set-SPTrustedIdentityTokenIssuer [-Identity] <SPTrustedIdentityTokenIssuerPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-ClaimProvider <SPClaimProviderPipeBind>]
+   [-ClaimsMappings <SPClaimMappingPipeBind[]>] [-Description <String>] -MetadataEndPoint <Uri> [-Realm <String>]
+   [-SignInUrl <String>] [-UseWReply] [-Confirm] [-RegisteredIssuerName <String>] [-UseStateToRedirect <Boolean>] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '-------------------------EXAMPLE 1----------------------'
+  code: |-
+    Set-SPTrustedIdentityTokenIssuer "LiveIDSTS" -Certificate (Get-ChildItem"cert:Certificates (LocalComputer)\Personal\Certificates -Name "LiveID Cert")
+  description: |-
+    This example sets the identity provider to LiveIDSTS.
+  summary: ""
+- title: '-------------------------EXAMPLE 2----------------------'
+  code: |-
+    $ip = @( (Get-SPTrustedIdentityTokenIssuer "LiveID STS"), (New-SPTrustedIdentityTokenIssuer -ASPNetMembershipProvider "myMembershipProvider" -ASPNetRoleProvider "myRoleProvider"), (Get-SPTrustedIdentityTokenIssuer "NTLM")) )
+    New-SPWebApplication https://contoso.com -IdentityProvider $ip
+  description: |-
+    This example sets the identity provider using the .ASPNetMembership and Role parameters.
+    When these parameters are used, a variable must be set; otherwise, the values do not take effect.
+  summary: ""
+- title: '-------------------------EXAMPLE 3----------------------'
+  code: |-
+    $cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2('C:\MyCert.cer')
+    Set-SPTrustedIdentityTokenIssuer "LiveIDSTS" -ImportTrustCertificate $cert
+  description: |-
+    This example updates the certificate used by the identity provider.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPClaimProviderPipeBind" data-throw-if-not-resolved="False" />
+  name: ClaimProvider
+  description: |+
+    Specifies the IP STS that can resolve and search claims for claims people picker.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or a valid name of a claim provider (for example, MyIDprovider1); or an instance of a valid SPClaimProvider object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPClaimMappingPipeBind" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ClaimsMappings
+  description: |+
+    Specifies the mapping of the claims from the original token to the SharePoint token.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or a valid name of a claim mapping rule (for example, Email); or an instance of a valid SPClaimMapping object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description for the new identity provider.
+
+    The type must be a valid string; for example, LiveID STS.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPTrustedIdentityTokenIssuerPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the identity provider to update.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or a valid name of identity provider (for example, LiveID STS); or an instance of a valid SPIdentityProvider object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+  name: ImportTrustCertificate
+  isRequired: true
+  description: |+
+    Specifies the X.509 certificate object from trusted authentication provider farm.
+
+    The type must be a name of a valid X.509 certificate; for example, Certificate1.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: MetadataEndPoint
+  isRequired: true
+  description: |+
+    Specifies the Uri of the metadata endpoint.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Realm
+  description: |+
+    Specifies the realm, or resource partition, associated with this trust.
+
+    The type must be a name of a valid realm; for example, MD_REALM.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RegisteredIssuerName
+  description: |+
+    Specifies the registered name of the token issuer, typically a URI, for example: "https://sts.windows.net/yourTenantId/"
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SignInUrl
+  description: |+
+    Specifies the sign-in URLs for this trusted identity provider STS.
+
+    The type must be a valid URL, in the form https://int.live.com/.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: UseStateToRedirect
+  description: |+
+    Specifies whether or not to use the URI within the "state" property of client authentication requests to determine the proper page to redirect the client to after authentication.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseWReply
+  description: |+
+    Includes a WReply with the token request.
+    Wreply is a URL at the relying party to which the requestor is redirected once sign-out processing is complete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPTrustedIdentityTokenIssuer
+name: Set-SPTrustedIdentityTokenIssuer
+description: |-
+  The Set-SPTrustedIdentityTokenIssuer cmdlet sets the identity providers of a Web application or extended Web application.
+  For the ASP.NET Membership provider and Role provider, this cmdlet changes the identity provider only if the result is piped to a variable and passed to a Web application.
+  For security token service (STS) identity providers, this cmdlet changes the persisted identity provider object in the SPFarm object.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-sptrustedidentitytokenissuer
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPTrustedIdentityTokenIssuer
+  PlatyPS schema version: 2.0.0

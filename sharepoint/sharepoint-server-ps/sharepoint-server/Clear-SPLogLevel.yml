@@ -1,0 +1,97 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Resets the Windows event logging and trace logging to their default values.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Clear-SPLogLevel [-AssignmentCollection <SPAssignmentCollection>] [-Identity <String[]>]
+   [-InputObject <PSObject>] [<CommonParameters>]
+examples:
+- title: '--------------EXAMPLE 1-----------------'
+  code: |-
+    Clear-SPLogLevel -Identity Cat1
+  description: |-
+    This example resets the log levels for a single category.
+  summary: ""
+- title: '--------------EXAMPLE 2-----------------'
+  code: |-
+    "Cat1", "Cat2", "Cat3" | Clear-SPLogLevel
+  description: |-
+    This example resets the log levels for multiple categories.
+  summary: ""
+- title: '--------------EXAMPLE 3-----------------'
+  code: |-
+    Get-SPLogLevel | Clear-SPLogLevel
+  description: |-
+    This example resets the log levels for all categories.
+  summary: ""
+- title: '--------------EXAMPLE 4-----------------'
+  code: |-
+    Clear-SPLogLevel -Identity "SharePoint Server:Database"
+  description: |-
+    This example resets the log level for the specific category in the SharePoint Server area only. This is useful when more than one area uses the same named category.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Identity
+  description: |+
+    Specifies the name(s) of the category or set of categories to set the throttle for; for example, "Unified Logging  Service".
+    If the Identity parameter is not specified, the event throttling setting is applied to all categories in the farm.
+
+    Providing an invalid category is a non-terminating error and will be ignored.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    Specifies the result of the InputObject parameter to be piped.
+    The value can be a string in a format identical to the Identity parameter, or can be an SPDiagnosticsCategory object.
+    The user can retrieve one or more categories from the Get-SPLogLevel cmdlet, modify their values, and then pipe the results to the Set-SPLogLevel cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Clear-SPLogLevel
+name: Clear-SPLogLevel
+description: |-
+  The Clear-SPLogLevel cmdlet resets the Windows event logging and trace logging levels for the specified categories to the default values.
+  If the Identity parameter is not provided, all categories are affected.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/clear-sploglevel
+  applicable: SharePoint Server Subscription Edition
+  title: Clear-SPLogLevel
+  PlatyPS schema version: 2.0.0

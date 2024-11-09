@@ -1,0 +1,230 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes bindings for applications, file name extensions and their associated actions on the current SharePoint farm where this cmdlet is run.
+module: SharePointServer
+notes: ""
+links:
+- text: New-SPWOPIBinding
+  href: New-SPWOPIBinding.yml
+- text: Get-SPWOPIBinding
+  href: Get-SPWOPIBinding.yml
+- text: Set-SPWOPIBinding
+  href: Set-SPWOPIBinding.yml
+- text: New-SPWOPISuppressionSetting
+  href: New-SPWOPISuppressionSetting.yml
+syntaxes:
+- >-
+  Remove-SPWOPIBinding [[-Identity] <SPWopiBindingPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
+   [-Confirm] [-WhatIf] [<CommonParameters>]
+- >-
+  Remove-SPWOPIBinding [-Action <String>] [-Application <String>]
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Extension <String>] [-ProgId <String>]
+   [-Server <String>] [-WhatIf] [-WOPIZone <String>] [<CommonParameters>]
+- >-
+  Remove-SPWOPIBinding [-All] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf]
+   [<CommonParameters>]
+examples:
+- title: '--------------EXAMPLE 1-----------------'
+  code: |-
+    Remove-SPWOPIBinding -Application "Excel"
+  description: |-
+    This example removes all bindings for Excel on the current SharePoint farm where this cmdlet is run.
+  summary: ""
+- title: '--------------EXAMPLE 2-----------------'
+  code: |-
+    Remove-SPWOPIBinding -All:$true
+  description: |-
+    This example removes all bindings on the current SharePoint farm where this cmdlet is run.
+  summary: ""
+- title: '--------------EXAMPLE 3-----------------'
+  code: |-
+    Get-SPWOPIBinding -Action "MobileView" | Remove-SPWOPIBinding
+  description: |-
+    This example removes all bindings for Office Mobile Web Apps on the current SharePoint farm where this cmdlet is run.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Action
+  description: |+
+    Specifies the action to remove bindings for.
+    For example, "view," "edit," and "embedview." For a list of actions run `Get-SPWOPIBinding`.
+    Most typically you will not use this parameter.
+    If you specify some actions but not others, some features in SharePoint may not work.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: All
+  description: |+
+    Removes all bindings.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Application
+  description: |+
+    Specifies application to remove bindings for.
+    Possible applications are as follows: "Word," "Excel," "PowerPoint," or "OneNote." Run `Get-SPWOPIBinding` to get the list of applications.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Extension
+  description: |+
+    Specifies the file name extensions to remove bindings for.
+    Run `Get-SPWOPIBinding` to get the list of file name extensions.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPWopiBindingPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the binding.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ProgId
+  description: |+
+    Specifies the programmatic identifier (ProgID) for an application to remove bindings for.
+    Run `Get-SPWOPIBinding` to get the list of ProgIDs.
+    You may only want to use this parameter to remove bindings for OneNote.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the name of WOPI application (like Office Web Apps Server) to remove bindings for.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WOPIZone
+  description: |+
+    Specifies the zone to remove bindings for.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Remove-SPWOPIBinding
+name: Remove-SPWOPIBinding
+description: |-
+  The `Remove-SPWOPIBinding` cmdlet removes bindings for applications, file name extensions and their associated actions on the current SharePoint farm where this cmdlet is run. 
+  After you run this cmdlet, you can use `New-SPWOPIBinding` to re-create the bindings as needed.
+  If you remove all the bindings for an application, users cannot use Office Web Apps or the SharePoint Share by link feature for that application.
+  If you remove all the bindings on the SharePoint farm where this cmdlet is run, users cannot use Office Web Apps or the SharePoint Share by link feature for any applications in the SharePoint library.
+
+  If you want to stop using Office Web Apps for default clicks, but must preserve the bindings' discovery information and the ability for users to use the SharePoint Share by link feature to send a link to a document and allow the recipient to use Office Web Apps for that document type, use the `New-SPWOPISuppression` cmdlet instead.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spwopibinding
+  applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Remove-SPWOPIBinding
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

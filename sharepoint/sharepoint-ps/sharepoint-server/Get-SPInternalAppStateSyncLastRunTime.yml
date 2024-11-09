@@ -1,0 +1,56 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns the latest time the internal app state update job was invoked.
+module: SharePointServer
+notes: ""
+syntaxes:
+- Get-SPInternalAppStateSyncLastRunTime [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+examples:
+- title: '-------------EXAMPLE-----------'
+  code: |-
+    Get-SPInternalAppStateSyncLastRunTime
+  description: |-
+    This example returns the latest time the internal app state update job was invoked.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Get-SPInternalAppStateSyncLastRunTime
+name: Get-SPInternalAppStateSyncLastRunTime
+description: |-
+  Use the Get-SPInternalAppStateSyncLastRunTime cmdlet to return the latest time the internal app state update job was invoked.
+  The internal app state update job gets app upgrades from the internal app directory and sets them on app instances.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spinternalappstatesynclastruntime
+  applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Get-SPInternalAppStateSyncLastRunTime
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

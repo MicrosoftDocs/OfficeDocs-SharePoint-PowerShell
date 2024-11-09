@@ -1,0 +1,51 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Stops further processing of site level trim job that is in-progress.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Get-SPOSiteFileVersionBatchDeleteJobProgress
+  href: Get-SPOSiteFileVersionBatchDeleteJobProgress.yml
+- text: New-SPOSiteFileVersionBatchDeleteJob
+  href: New-SPOSiteFileVersionBatchDeleteJob.yml
+syntaxes:
+- Remove-SPOSiteFileVersionBatchDeleteJob [-Identity] <SpoSitePipeBind> [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Remove-SPOSiteFileVersionBatchDeleteJob -Identity https://contoso.sharepoint.com/sites/site1
+  description: |-
+    Example 1 cancels further processing of the trim job for the site collection.
+  summary: ""
+parameters:
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the URL of the site collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPOSiteFileVersionBatchDeleteJob
+name: Remove-SPOSiteFileVersionBatchDeleteJob
+description: |-
+  Stops further processing of site level trim job that is in-progress.
+
+  Once the cmdlet executes successfully, all new asynchronous version deletion will be stopped. Stopping a trim job will not impact versions that have already been permanently deleted when the job was in progress.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spositefileversionbatchdeletejob
+  applicable: SharePoint Online
+  title: Remove-SPOSiteFileVersionBatchDeleteJob
+  PlatyPS schema version: 2.0.0
+  author: msjennywu
+  ms.author: jennywu
+  ms.reviewer: ""
+  manager: seanmc

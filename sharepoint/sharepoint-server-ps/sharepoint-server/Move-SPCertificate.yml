@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Moves the specified certificate to a different certificate store.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Move-SPCertificate [-Identity] <SPServerCertificatePipeBind> -NewStore <String> [-Force]
+   [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '------------EXAMPLE-----------'
+  code: |-
+    Move-SPCertificate -Identity "Team Site Certificate" -NewStore EndEntity
+  description: |-
+    This example moves the certificate with the display name "Team Site Certificate" to the end entity certificate store.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Specifies that the certificate should be moved to a different certificate store, even if the certificate is currently assigned to SharePoint objects.
+    If this parameter is specified, any existing assignments of the certificate are cleared.
+    If this parameter isn't specified and the certificate is assigned to a SharePoint object, the operation will fail.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SPServerCertificatePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The certificate to move.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewStore
+  isRequired: true
+  description: |+
+    The certificate store to move the certificate to.
+    If Default is specified, SharePoint will automatically select the appropriate certificate store for the certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Default, EndEntity, Intermediate, Pending, Root
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Move-SPCertificate
+name: Move-SPCertificate
+description: |-
+  Moves the specified certificate to a different certificate store.
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/move-spcertificate
+  applicable: SharePoint Server Subscription Edition
+  title: Move-SPCertificate
+  PlatyPS schema version: 2.0.0

@@ -1,0 +1,71 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns properties of a Visio Services application proxy or a collection of Visio Services application proxies.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Get-SPVisioServiceApplicationProxy [[-Identity] <SPVisioServiceApplicationProxyPipeBind>]
+   [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+examples:
+- title: '----------------EXAMPLE 1---------------------'
+  code: |-
+    Get-SPVisioServiceApplicationProxy
+  description: |-
+    This example returns a list of Visio Services application proxies.
+  summary: ""
+- title: '----------------EXAMPLE 2---------------------'
+  code: |-
+    Get-SPVisioServiceApplicationProxy "Connection to VGS2"
+  description: |-
+    This example returns settings for a Visio Services application proxy.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPVisioServiceApplicationProxyPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the Visio Services application proxy to get.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a Visio Services application (for example, MyVisioService1); or an instance of a valid SPVisioServiceApplication object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Get-SPVisioServiceApplicationProxy
+name: Get-SPVisioServiceApplicationProxy
+description: |-
+  The Get-SPVisioServiceApplicationProxy cmdlet reads the settings of a Visio Services application proxy.
+  If the Identity parameter is not specified, this cmdlet returns the collection of Visio Services application proxies on the farm.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Visio.Server.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spvisioserviceapplicationproxy
+  applicable: SharePoint Server Subscription Edition
+  title: Get-SPVisioServiceApplicationProxy
+  PlatyPS schema version: 2.0.0

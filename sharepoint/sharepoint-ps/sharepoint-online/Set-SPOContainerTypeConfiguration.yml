@@ -1,0 +1,64 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets or updates the configuration settings of a container type in SharePoint Embedded.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Get-SPOContainerTypeConfiguration
+  href: Get-SPOContainerTypeConfiguration.yml
+syntaxes:
+- Set-SPOContainerTypeConfiguration [-ContainerTypeId <ContainerTypeId>] [-DiscoverabilityDisabled <Boolean>] [-SharingRestricted <Boolean>]
+examples:
+- title: Example 1
+  code: |-
+    Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -DiscoverabilityDisabled $false
+  description: |-
+    Example 1 turns on discoverability for this container type. All content created within this container type will be discoverable in the Microsoft 365 experience, including on office.com, onedrive.com, recommended files, and other intelligent discovery experiences.
+  summary: ""
+- title: Example 2
+  code: |-
+    Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -SharingRestricted $false
+  description: |-
+    Example 2 turns on an open sharing model for this container type. Any container members and guest users with edit permissions can share files created within the container type.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: DiscoverabilityDisabled
+  description: |+
+    As a SharePoint Administrator or Global Administrator in Microsoft 365, you can control how your content appears in the Microsoft 365 experience. The default value for this parameter is True, which hides the SharePoint Embedded application content throughout the Microsoft 365 environment, including on office.com, onedrive.com, in recommended sections, or through other Microsoft intelligent file discovery features.
+    If you opt into the Microsoft 365 experience, your files will be integrated into Microsoft 365 environment, participating in intelligent file discovery.
+
+    PARAMVALUE: $true | $false
+
+  defaultValue: "True"
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Embedded
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: SharingRestricted
+  description: "SharePoint Embedded offers a role-based sharing model that allows developers to configure file-sharing permissions based on container permission roles, offering a choice between a restrictive and an open sharing model. The open sharing model allows any container members and guest users with edit permissions to share files. The restrictive sharing model allows only container members who are either Owners or Managers to share files.\r\n \r\nPARAMVALUE: $true | $false\r\n\r\n"
+  defaultValue: "True"
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Embedded
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Set-SPOContainerTypeConfiguration
+name: Set-SPOContainerTypeConfiguration
+description: |-
+  For any parameters passed in, the `Set-SPOContainerTypeConfiguration` cmdlet sets or updates the settings for a container type created under a SharePoint Embedded application.
+
+  You must be a SharePoint Administrator or Global Administrator to run this cmdlet.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Set-SPOContainerTypeConfiguration
+  applicable: SharePoint Online
+  title: Set-SPOContainerTypeConfiguration
+  PlatyPS schema version: 2.0.0
+  author: FarreltinF
+  ms.author: fanyi
+  ms.reviewer: ""

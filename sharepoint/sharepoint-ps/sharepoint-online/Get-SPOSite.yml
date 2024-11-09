@@ -1,0 +1,263 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns one or more site collections.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-SPOSite [[-Identity] <SpoSitePipeBind>] [-Detailed] [-Limit <String>] [<CommonParameters>]
+- >-
+  Get-SPOSite [-Detailed] [-Filter <String>] [-IncludePersonalSite <Boolean>] [-Limit <String>]
+   [-Template <String>] [-GroupIdDefined] [-ArchiveStatus <String>] [<CommonParameters>]
+- Get-SPOSite [-Identity] <SpoSitePipeBind> [-DisableSharingForNonOwnersStatus] [<CommonParameters>]
+examples:
+- title: '-----------------------EXAMPLE 1-----------------------------'
+  code: |-
+    Get-SPOSite
+  description: |-
+    Example 1 returns all site collections.
+  summary: ""
+- title: '-----------------------EXAMPLE 2-----------------------------'
+  code: |-
+    Get-SPOSite -Identity https://contoso.sharepoint.com
+  description: |-
+    Example 2 lists the site collection with detailed properties.
+  summary: ""
+- title: '-----------------------EXAMPLE 3-----------------------------'
+  code: |-
+    Get-SPOSite -Identity https://contoso.sharepoint.com -DisableSharingForNonOwnersStatus
+  description: |-
+    Example 3 Updates status on if the non owners of a site collection can share the site collection (does not set this value).
+  summary: ""
+- title: '-----------------------EXAMPLE 4-----------------------------'
+  code: |-
+    Get-SPOSite -Template GROUP#0 -IncludePersonalSite:$false
+  description: |-
+    This example enumerates Group Site Collections in a tenant.
+  summary: ""
+- title: '-----------------------EXAMPLE 5-----------------------------'
+  code: |-
+    Get-SPOSite -Identity https://contoso.sharepoint.com/sites/groupname -detailed |fl
+  description: |-
+    This example gets quota details for a Group Site.
+  summary: ""
+- title: '-----------------------EXAMPLE 6-----------------------------'
+  code: |-
+    Get-SPOSite -Identity https://contoso.sharepoint.com/sites/research | Select InformationSegment
+  description: |-
+    This example returns the InformationSegments associated with the site. It is applicable for tenants who have enabled Microsoft 365 Information barriers capability. Read [Learn about information barriers](/microsoft-365/compliance/information-barriers) to understand Information barriers in SharePoint Online.
+
+    **Note**: This property is available only in SharePoint Online Management Shell Version 16.0.19927.12000 or later.
+  summary: ""
+- title: '-----------------------EXAMPLE 7-----------------------------'
+  code: |-
+    Get-SPOSite -Filter { Url -like "contoso.sharepoint.com/sites/18" }
+  description: |-
+    This example uses server side filtering to return sites matching 18.
+  summary: ""
+- title: '-----------------------EXAMPLE 8-----------------------------'
+  code: |-
+    Get-SPOSite -Limit ALL | ?{$_.IsTeamsConnected -eq $true}
+  description: |-
+    This example uses client-side filtering to return a list of sites connected to Microsoft Teams.
+  summary: ""
+- title: '-----------------------EXAMPLE 9-----------------------------'
+  code: |-
+    Get-SPOSite -Limit ALL | ?{$_.IsTeamsChannelConnected -eq $true}
+  description: |-
+    This example uses client-side filtering to return a list of sites connected to a Microsoft Teams Private or Shared channel.
+  summary: ""
+- title: '-----------------------EXAMPLE 10-----------------------------'
+  code: |-
+    Get-SPOSite -Limit ALL -GroupIdDefined $true
+  description: |-
+    This example uses server-side filtering to return all sites that have an associated Microsoft 365 Group.
+  summary: ""
+- title: '-----------------------EXAMPLE 11-----------------------------'
+  code: |-
+    $userUPN="joe.healy@contoso.com"
+    Get-SPOSite -Filter "Owner -like '$($userUPN)'"
+  description: |-
+    This example retrieves all sites filtering by the specified owner using a variable.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ArchiveStatus
+  description: |+
+    Displays sites of a specific archive status. For example, NotArchived, RecentlyArchived, FullyArchived, Archived, or Reactivating.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Detailed
+  description: |+
+    Use this parameter to get additional property information on a site collection. You will notice a slower response time when the Detailed parameter is used.
+
+    The following properties are returned:
+
+    - ResourceUsageCurrent
+
+    - ResourceUsageAverage
+
+    - StorageUsageCurrent
+
+    - LockIssue
+
+    - WebsCount
+
+    - CompatibilityLevel
+
+    - AllowSelfServiceUpgrade
+
+    - SiteDefinedSharingCapability
+
+    Returns the stored value of the site policy.
+
+    - SharingCapability
+
+    Returns the effective access level, which is the site policy and the tenant policy combined.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableSharingForNonOwnersStatus
+  description: |+
+    This parameter prevents non-owners from sharing.
+
+    > [!NOTE]
+    > This parameter is available only in SharePoint Online Management Shell Version 16.0.4613.1211 or later. DisableSharingForNonOwnersStatus is not a persisted setting but rather an analysis of the state of the site collection. The purpose of this is to get this setting, and it's not guaranteed that other settings returned are correct. To get other settings and values, use the Get-SPOSite without this parameter to ensure everything is displayed correctly.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Specifies the script block of the server-side filter to apply. The type must be a valid filter name and value must be in the form `{ PropertyName <operator> "filterValue"}`. Valid operators are as follows: -eq, -ne, -like, -notlike.
+     Currently, you can filter by these properties: Owner, Template (can be used to filter if it is the only property present in the filter), LockState, Url.
+     Using the -or operator to include an additional filter is not supported.
+
+    Note: The operator values are case-sensitive.  
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: GroupIdDefined
+  description: |+
+    Filters the list of sites returned to sites with a Group ID (ie: Sites connected to an Microsoft 365 Group) when the value is set to $true.  Filters the list of sites to only sites without a Group ID when the value is $false.
+
+    The values are **$true**, **$false**, and **not defined**. By default, the value is **not defined**, which means that the filter does not apply.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the URL of the site collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IncludePersonalSite
+  description: |+
+    Displays personal sites when value is set to $true.
+
+    The values are $true and $false. By default, the value is $false which means no personal sites will be returned.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Limit
+  description: |+
+    Specifies the maximum number of site collections to return. It can be any number. To retrieve all site collections, use ALL. The default value is 200. If this parameter is provided, then some site collection properties will not be populated and may contain a default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Template
+  description: |+
+    Displays sites of a specific template. For example, STS, STS#0, STS#1, STS#3, GROUP#0, SRCHCEN#0 or SITEPAGEPUBLISHING#0.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOSite
+name: Get-SPOSite
+description: |-
+  This cmdlet contains more than one parameter set. You may only use parameters from one parameter set and you may not combine parameters from different parameter sets. For more information about how to use parameter sets, see Cmdlet Parameter Sets.
+
+  The `Get-SPOSite` cmdlet retrieves and returns properties of all site collections that match the given criteria.
+
+  With version 5361 of the SharePoint Online Management Shell, you may experience the following:
+
+  Additional site collections are now displayed. For example, all group and video sites along with team sites will be displayed.
+
+  The Detailed parameter has been deprecated. It will continue to work with earlier versions
+
+  > [!NOTE]
+  > Site collections in the Recycle Bin will not be retrieved by using the `Get-SPOSite` cmdlet.
+  >
+  > Site redirects, like the ones created after [changing the SharePoint domain name](/sharepoint/change-your-sharepoint-domain-name) will be retrieved by using this cmdlet.
+
+  You need to be a SharePoint Online administrator and be a site collection administrator to run the cmdlet.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+
+  > [!NOTE]
+  > If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.
+
+  > [!NOTE]
+  > If the Limit or Filter parameters are provided then the following site collection properties will not be populated and may contain a default value:
+  > AllowDownloadingNonWebViewableFiles, AllowEditing, AllowSelfServiceUpgrade, AnonymousLinkExpirationInDays, ConditionalAccessPolicy, DefaultLinkPermission, DefaultLinkToExistingAccess, DefaultSharingLinkType, DenyAddAndCustomizePages, DisableCompanyWideSharingLinks, ExternalUserExpirationInDays, InformationSegment, LimitedAccessFileType, OverrideTenantAnonymousLinkExpirationPolicy, OverrideTenantExternalUserExpirationPolicy, PWAEnabled, SandboxedCodeActivationCapability, SensitivityLabel, SharingAllowedDomainList, SharingBlockedDomainList, SharingCapability, SharingDomainRestrictionMode.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-sposite
+  applicable: SharePoint Online
+  title: Get-SPOSite
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

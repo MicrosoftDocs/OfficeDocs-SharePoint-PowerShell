@@ -1,0 +1,91 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Do not use
+module: SharePointServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.SharePoint.PowerShell.SPWebApplicationPipeBind" data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.SharePoint.PowerShell.SPSitePipeBind
+    Microsoft.SharePoint.PowerShell.SPAssignmentCollection
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Install-SPEduSites [-WebApplication] <SPWebApplicationPipeBind> [-MySiteHost] <SPSitePipeBind>
+   [-SearchCenter] <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Do not use
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Do not use
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  parameterValueGroup: ""
+- type: <xref href="SPSitePipeBind" data-throw-if-not-resolved="False" />
+  name: MySiteHost
+  isRequired: true
+  description: |+
+    Do not use
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  parameterValueGroup: ""
+- type: <xref href="SPSitePipeBind" data-throw-if-not-resolved="False" />
+  name: SearchCenter
+  isRequired: true
+  description: |+
+    Do not use
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  parameterValueGroup: ""
+- type: <xref href="SPWebApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: WebApplication
+  isRequired: true
+  description: |+
+    Do not use
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+uid: SharePointServer.Install-SPEduSites
+name: Install-SPEduSites
+description: |-
+  Do not use
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/install-spedusites
+  applicable: SharePoint Server 2013
+  title: Install-SPEduSites
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

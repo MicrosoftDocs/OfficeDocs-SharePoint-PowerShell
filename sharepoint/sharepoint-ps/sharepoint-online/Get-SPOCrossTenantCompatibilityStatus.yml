@@ -1,0 +1,45 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Determines the compatibility with the partner tenant.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+syntaxes:
+- Get-SPOCrossTenantCompatibilityStatus -PartnerCrossTenantHostUrl <String> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-SPOCrossTenantCompatibilityStatus -PartnerCrossTenantHostUrl https://contoso-my.sharepoint.com
+  description: |-
+    Gets the compatibility status with the partner tenant Contoso.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PartnerCrossTenantHostUrl
+  isRequired: true
+  description: |+
+    The cross-tenant URL of the partner tenant. The partner tenant can determine this for you by running `Get-SPOCrossTenantHostUrl` on each of the tenants.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOCrossTenantCompatibilityStatus
+name: Get-SPOCrossTenantCompatibilityStatus
+description: |-
+  This cmdlet allows you to determine the compatibility with the partner tenant before cross-tenant migration. You must be a SharePoint Administrator to run it.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spocrosstenantcompatibilitystatus
+  applicable: SharePoint Online
+  title: Get-SPOCrossTenantCompatibilityStatus
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

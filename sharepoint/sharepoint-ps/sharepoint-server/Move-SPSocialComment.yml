@@ -1,0 +1,159 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Moves social comments.
+module: SharePointServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.SharePoint.PowerShell.SPServiceApplicationProxyPipeBind" data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.SharePoint.PowerShell.SPSiteSubscriptionPipeBind
+    Microsoft.SharePoint.PowerShell.SPAssignmentCollection
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Move-SPSocialComment [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-NewUrl <String>]
+   [-OldUrl <String>] -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
+   [-SiteSubscription <SPSiteSubscriptionPipeBind>] [-WhatIf] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+    Move-SPSocialComments -ProfileServiceApplicationProxy $proxy -OldUrl "https://contoso/Pages/oldtest.aspx" -NewUrl "https://contoso/Pages/newtest.aspx"
+  description: |-
+    This example moves social comments from oldtest.aspx to newtest.aspx.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewUrl
+  description: |+
+    Specifies the target URI to which the social notes will be moved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OldUrl
+  description: |+
+    Specifies the source URI from which the social notes will be moved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPServiceApplicationProxyPipeBind" data-throw-if-not-resolved="False" />
+  name: ProfileServiceApplicationProxy
+  isRequired: true
+  description: |+
+    Specifies the proxy of the User Profile Service application that contains the site subscription to delete.The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a service application proxy (for example, UserProfileSvcProxy1); or an instance of a valid SPServiceApplicationProxy object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPSiteSubscriptionPipeBind" data-throw-if-not-resolved="False" />
+  name: SiteSubscription
+  description: |+
+    Specifies the account under which this service should run.
+
+    This parameter is mandatory in a hosted-environment and optional in a non-hosted environment.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Move-SPSocialComment
+name: Move-SPSocialComment
+description: |-
+  This cmdlet was introduced in SharePoint Server 2010 with Service Pack 1 (SP1) and SharePoint Foundation 2010 with Service Pack 1 (SP1).
+
+  Use the Move-SPSocialComment cmdlet to move social comments from one page to another page.
+
+  This cmdlet does not move Tags or Ratings.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016, SharePoint Server 2019 reference (https://go.microsoft.com/fwlink/p/?LinkId=671715).
+metadata:
+  external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/move-spsocialcomment
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Move-SPSocialComment
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

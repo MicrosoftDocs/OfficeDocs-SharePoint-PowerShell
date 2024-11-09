@@ -1,0 +1,171 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns a crawled property.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Get-SPEnterpriseSearchMetadataCrawledProperty [-AssignmentCollection <SPAssignmentCollection>]
+   [-Category <CategoryPipeBind>] [-Limit <String>] [-Name <String>] [-PropSet <Guid>]
+   -SearchApplication <SearchServiceApplicationPipeBind> [-SiteCollection <Guid>] [-Tenant <Guid>]
+   [-VariantType <Int32>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication
+    $cat = Get-SPEnterpriseSearchMetadataCategory -SearchApplication $ssa -Identity People
+    Get-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $ssa -Category $cat -Limit 1
+  description: |-
+    This example returns the first crawled property in the PeopleSearch_Scope metadata category for the default search service application.
+  summary: ""
+- title: Example 2
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication
+    $cat = Get-SPEnterpriseSearchMetadataCategory -SearchApplication $ssa -Identity People
+    $crawledProp = Get-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $ssa -Category $cat -Name urn:schemas-microsoft-com:sharepoint:portal:profile:CellPhone
+    $crawledProp.GetMappedManagedProperties()
+  description: |-
+    This example returns the mappings of a specific crawled property in the PeopleSearch_Scope metadata category for the default search service application.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="CategoryPipeBind" data-throw-if-not-resolved="False" />
+  name: Category
+  description: |+
+    Specifies the metadata category of the crawled property to return.
+
+    The type must be a valid GUID in the form 12345678-90ab-cdef-1234-567890bcdefgh, a valid name of a metadata category, for example, MetadataCategory1, or an instance of a valid Category object.
+
+  defaultValue: None
+  position: Named
+  aliases: c
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Limit
+  description: |+
+    Specifies the maximum number of items to return.
+
+    Specify ALL to return all possible results.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the crawled property to retrieve.
+
+    The type must be a valid crawled property name, for example "urn:schemas-microsoft-com:sharepoint:portal:profile:UserName"
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: PropSet
+  description: |+
+    Specifies to return crawled properties that use the specified property set.
+    A property set belongs to one crawled property category.
+
+    The type must be a valid GUID that specifies the property set in the form 12345678-90ab-cdef-1234-567890bcdefgh.
+
+  defaultValue: None
+  position: Named
+  aliases: p
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SearchServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: SearchApplication
+  isRequired: true
+  description: |+
+    Specifies the search application that contains the crawled property.
+
+    The type must be a valid search application name, for example, SearchApp1, or an instance of a valid SearchServiceApplication object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: SiteCollection
+  description: |+
+    Specifies that the crawled properties returned are to be within the scope of a site collection (SPSite).
+
+    The type must be a valid GUID that specifies the property set in the form 12345678-90ab-cdef-1234-567890bcdefgh.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Specifies that the crawled properties returned are to be within the scope of a tenant.
+
+    The type must be a valid GUID that specifies the property set in the form 12345678-90ab-cdef-1234-567890bcdefgh.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: VariantType
+  description: |+
+    Specifies to return crawled properties that use the specified variant type.
+
+    The type must be an integer that specifies the variant data type of the property set.
+
+
+
+  defaultValue: None
+  position: Named
+  aliases: vt
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Get-SPEnterpriseSearchMetadataCrawledProperty
+name: Get-SPEnterpriseSearchMetadataCrawledProperty
+description: |-
+  This cmdlet reads a CrawledProperty object for a crawled property that was created or updated.
+  You should run this cmdlet when the search functionality is configured for the first time, and after new crawled properties are discovered during a crawl.
+  If the Name parameter is not specified, this cmdlet returns all crawled properties for the specified category for the specified search application.
+  If neither the Name nor the Category parameter is specified, this cmdlet returns all crawled properties for the specified search application.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.Search.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchmetadatacrawledproperty
+  applicable: SharePoint Server Subscription Edition
+  title: Get-SPEnterpriseSearchMetadataCrawledProperty
+  PlatyPS schema version: 2.0.0

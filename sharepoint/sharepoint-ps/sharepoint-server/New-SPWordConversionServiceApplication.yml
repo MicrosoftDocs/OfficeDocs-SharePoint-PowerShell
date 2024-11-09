@@ -1,0 +1,201 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new instance of a Word Automation Services application on the farm.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  New-SPWordConversionServiceApplication [-Name] <String>
+   -ApplicationPool <SPIisWebServiceApplicationPoolPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+   [-Confirm] [-DatabaseCredential <PSCredential>] [-DatabaseName <String>] [-DatabaseServer <String>] [-Default]
+   [-PartitionMode] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE-----------------------'
+  code: |-
+    New-SPWordConversionServiceApplication -Name 'Word Conversion Services' -ApplicationPool 'SharePoint Web Services Default' -DatabaseName 'Word'
+  description: |-
+    This example creates a new Word Automation Services application named Word Conversion Services in an existing application pool named SharePoint Web Services Default.
+  summary: ""
+parameters:
+- type: <xref href="SPIisWebServiceApplicationPoolPipeBind" data-throw-if-not-resolved="False" />
+  name: ApplicationPool
+  isRequired: true
+  description: |+
+    Specifies the existing IIS-managed application pool in which this instance of Word Automation Services runs.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of an application pool (for example, AppPoolName1); or an instance of a valid IISWebServiceApplicationPool object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: DatabaseCredential
+  description: |+
+    Specifies the credentials to use for connecting to the database for the Word Automation Services application.
+    Use this parameter only if SQL Server Authentication is used to access the service application database.
+
+    When the DatabaseCredential parameter is specified, the DatabaseName and DatabaseServer parameters are required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseName
+  description: |+
+    Specifies the name of the database to create for the new Word Automation Services application.
+
+    The type must be a valid SQL database name; for example, MetadataDB1.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseServer
+  description: |+
+    Specifies the name of the host server for the Word Automation Services database.
+
+    The type must be a valid SQL database server host name; for example, SQLServerHost1.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Default
+  description: |+
+    Specifies that the service application proxy is added to the farm's default proxy group for this Web application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the new Word Automation Services application.
+
+    The type must be a valid name of a Word Automation Services application; for example, WordSvcApp1.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PartitionMode
+  description: |+
+    Specifies that this service behaves uniquely on a partitioned set of site collections.
+    This property cannot be changed after the application is provisioned.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.New-SPWordConversionServiceApplication
+name: New-SPWordConversionServiceApplication
+description: |-
+  The `New-SPWordConversionServiceApplication` cmdlet creates a new instance of a Word Automation Services application on the farm.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Word.Server.dll-Help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spwordconversionserviceapplication
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: New-SPWordConversionServiceApplication
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

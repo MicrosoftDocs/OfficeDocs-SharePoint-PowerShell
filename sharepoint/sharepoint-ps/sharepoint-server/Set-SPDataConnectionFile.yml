@@ -1,0 +1,193 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets properties of a data connection file.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Set-SPDataConnectionFile [-Identity] <SPDataConnectionFilePipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Category <String>] [-Confirm] [-Description <String>]
+   [-DisplayName <String>] [-WebAccessible <String>] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '--------------EXAMPLE 1-----------------'
+  code: |-
+    Set-SPDataConnectionFile -Identity "sample.udcx" -Category "Temp"
+  description: |-
+    This example updates the Category of the specified .udcx file.
+  summary: ""
+- title: '--------------EXAMPLE 2-----------------'
+  code: |-
+    Set-SPDataConnectionFile -Identity "sample.udcx" -DisplayName "NewDisplayName"
+  description: |-
+    This example updates the DisplayName of the specified .udcx file.
+  summary: ""
+- title: '--------------EXAMPLE 3-----------------'
+  code: |-
+    Sample.udcx" | Set-SPDataConnectionFile -Category "Temp"
+  description: |-
+    This example updates the Category of the specified .udcx file.
+  summary: ""
+- title: '--------------EXAMPLE 4-----------------'
+  code: |-
+    Get-SPDataConnectionFile | where {$_.Category -eq "Category1"}  | Set-SPDataConnectionFile -Category "Category2"
+  description: |-
+    This example updates the Category field for the collection of .udcx files that are returned from a query used by the `Get-SPDataConnectionFile` cmdlet.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Category
+  description: |+
+    Sets an arbitrary category on the file which can be used to group the files.
+    The category name can have a maximum of 255 characters.
+
+    The type must be a valid string value; for example, Category1.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Sets the description for the data connection file.
+    The name can be a maximum of 4096 alphanumeric characters.
+
+    The type must be a valid string; for example, Description of my universal data connection file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  description: |+
+    Specifies the display name that describes the data connection file.
+    The name can have a maximum of 255 characters.
+
+    The type must be a valid string; for example, InfoPathUDC1.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPDataConnectionFilePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the data connection file to update.
+
+    The type must be a valid GUID, in form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a data connection file (for example, DataConnectionFileName1.udcx); or an instance of a valid SPDataConnectionFile object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WebAccessible
+  description: |+
+    Specifies that the universal data connection file can be accessed by using the Web service.
+    If false, only the forms server can retrieve the universal data connection files internally.
+    The default value is False.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Set-SPDataConnectionFile
+name: Set-SPDataConnectionFile
+description: |-
+  The `Set-SPDataConnectionFile` cmdlet sets the properties of the data connection file specified in the Identity parameter.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spdataconnectionfile
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Set-SPDataConnectionFile
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

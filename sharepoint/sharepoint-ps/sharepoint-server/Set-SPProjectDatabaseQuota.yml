@@ -1,0 +1,139 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Microsoft internal use only.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Set-SPProjectDatabaseQuota [-Settings] <ProjectDatabaseQuotaSettings> -Url <Uri>
+   [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+- >-
+  Set-SPProjectDatabaseQuota [-Enabled] -MaxDbSize <Int32> -ReadOnlyLimit <Int32>
+   -ReadOnlyWarningThreshold <Int32> -Url <Uri> [-AssignmentCollection <SPAssignmentCollection>]
+   [<CommonParameters>]
+examples:
+- title: '--------------------EXAMPLE---------------------'
+  code: |-
+    {{ Add example code here }}
+  description: |-
+    {{ Add example description here }}
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Microsoft internal use only.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Project Server 2013
+  - Project Server 2016
+  - Project Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Enabled
+  isRequired: true
+  description: |+
+    Microsoft internal use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Project Server 2013
+  - Project Server 2016
+  - Project Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaxDbSize
+  isRequired: true
+  description: |+
+    Microsoft internal use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Project Server 2013
+  - Project Server 2016
+  - Project Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ReadOnlyLimit
+  isRequired: true
+  description: |+
+    Microsoft internal use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Project Server 2013
+  - Project Server 2016
+  - Project Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ReadOnlyWarningThreshold
+  isRequired: true
+  description: |+
+    Microsoft internal use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Project Server 2013
+  - Project Server 2016
+  - Project Server 2019
+  parameterValueGroup: ""
+- type: <xref href="ProjectDatabaseQuotaSettings" data-throw-if-not-resolved="False" />
+  name: Settings
+  isRequired: true
+  description: |+
+    Microsoft internal use only.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - Project Server 2013
+  - Project Server 2016
+  - Project Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: Url
+  isRequired: true
+  description: |+
+    Microsoft internal use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Project Server 2013
+  - Project Server 2016
+  - Project Server 2019
+  parameterValueGroup: ""
+applicable:
+- Project Server 2013
+- Project Server 2016
+- Project Server 2019
+uid: SharePointServer.Set-SPProjectDatabaseQuota
+name: Set-SPProjectDatabaseQuota
+description: |-
+  Microsoft internal use only.
+
+  For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
+metadata:
+  external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spprojectdatabasequota
+  applicable: Project Server 2013, Project Server 2016, Project Server 2019
+  title: Set-SPProjectDatabaseQuota
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

@@ -1,0 +1,45 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Permanently deletes the specified Container from the Recycle Bin. This action cannot be undone.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: /powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Remove-SPOContainer
+  href: ./Remove-SPOContainer.yml
+syntaxes:
+- Remove-SPODeletedContainer [-Identity <ContainerId>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-SPODeletedContainer -Identity b66f5b2e-4cbd-4754-9ad3-8291c2c81ade
+  description: |-
+    This example removes a deleted Container with the `ContainerId` `b66f5b2e-4cbd-4754-9ad3-8291c2c81ade` from the Recycle Bin and deletes it permanently.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: "Specifies the `<ContainerId>` of the Container to be permanently deleted.\r\n \r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPODeletedContainer
+name: Remove-SPODeletedContainer
+description: "The `Remove-SPODeletedContainer` cmdlet permanently removes a deleted File Storage Container from the Recycle Bin. A permanently deleted Container cannot be recovered. You must be at least a SharePoint Online administrator to run the cmdlet.\r\n\r\n> [!IMPORTANT]\r\n> We do not generally recommend that you permanently delete Containers.\r\n\r\n \r\n\r\n\r\nFor permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps)."
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spodeletedcontainer
+  applicable: SharePoint Online
+  title: Remove-SPODeletedContainer
+  PlatyPS schema version: 2.0.0
+  author: cindylay
+  ms.author: cindylay
+  ms.reviewer: ""

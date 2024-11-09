@@ -1,0 +1,72 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Grants rights to users or mail-enabled security groups to associate their site with a hub site.
+module: Microsoft.Online.SharePoint.PowerShell
+syntaxes:
+- >-
+  Grant-SPOHubSiteRights [-Identity] <SpoHubSitePipeBind> -Principals
+      <string[]> -Rights {Join}  [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Grant-SPOHubSiteRights https://contoso.sharepoint.com/sites/Marketing
+    -Principals nestorw@contoso.onmicrosoft.com
+    -Rights Join
+  description: |-
+    This example shows how to grant rights to Nestor (a user at the fictional Contoso site) to associate his sites with the marketing hub site.
+  summary: ""
+parameters:
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    URL of the hub site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Principals
+  isRequired: true
+  description: |+
+    One or more principals to add permissions for.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Rights
+  isRequired: true
+  description: |+
+    Always set to the value **Join**. Any user or group with **Join** permissions can view and join the hub site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Grant-SPOHubSiteRights
+name: Grant-SPOHubSiteRights
+description: |-
+  Applies permissions to a set of users or mail-enabled security groups. Use this cmdlet to scope visibility of who can associate their site with the hub site when using the SharePoint user interface. Hub sites are public by default. Once you set permissions, only those groups or users you specified can associate their site with the hub site.
+
+  To view which users or groups have permissions to a site, use the [Get-SPOHubSite](Get-SPOHubSite.yml) cmdlet.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/grant-spohubsiterights
+  applicable: SharePoint Online
+  title: Grant-SPOHubSiteRights
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

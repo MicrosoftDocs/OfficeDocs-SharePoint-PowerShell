@@ -1,0 +1,58 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Allows prioritization of a site for early execution, as part of [Advanced Tenant Rename](/sharepoint/change-your-sharepoint-domain-name#advanced-tenant-rename-preview).
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Advanced Tenant Rename
+  href: https://aka.ms/advancedtenantrename
+syntaxes:
+- Set-SPOTenantRenameSitePrioritization -SiteUrl <String> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Set-SPOTenantRenameSitePrioritization -SiteUrl https://contoso.sharepoint.com/sites/projectx
+  description: |-
+    This example prioritizes the 'projectx' site within the Advanced Tenant Rename.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SiteUrl
+  isRequired: true
+  description: |+
+    Specifies the full site URL of the site you wish to prioritize. This can be either a OneDrive for Business or SharePoint Online site. Root URLs (e.g., contoso.sharepoint.com, contoso-admin.sharepoint.com or contoso-my.sharepoint.com) can't be prioritized.
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Set-SPOTenantRenameSitePrioritization
+name: Set-SPOTenantRenameSitePrioritization
+description: |-
+  Allows for the specified site to be prioritized. 
+
+  As part of [Advanced Tenant Rename](/sharepoint/change-your-sharepoint-domain-name#advanced-tenant-rename-preview), organizations can prioritize up to 4,000 sites for initial execution among all other sites in your organization as part of the overall rename operation.
+
+  It is possible to start prioritizing sites only once the rename operation has been scheduled using the [Start-SPOTenantRename](Start-SPOTenantRename.yml) cmdlet.
+
+  Please note that prioritizing a site is not a guarantee that it will complete first. There are several factors that can affect processing times, and multiple site renames are processed in parallel. Prioritized sites have a much higher chance of completing first.
+
+  You must be at least a SharePoint administrator to run the cmdlet.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spotenantrenamesiteprioritization
+  applicable: SharePoint Online
+  title: Set-SPOTenantRenameSitePrioritization
+  author: AnfraMsft
+  ms.author: anfra
+  ms.reviewer: anushmag
+  manager: anushmag
+  PlatyPS schema version: 2.0.0

@@ -1,0 +1,337 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures the specified sites.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Set-SPSite [-Identity] <SPSitePipeBind> [-AdministrationSiteType <SPAdministrationSiteType>]
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Force]
+   [-SiteSubscription <SPSiteSubscriptionPipeBind>] [-WhatIf] [<CommonParameters>]
+- >-
+  Set-SPSite [-Identity] <SPSitePipeBind> [-AdministrationSiteType <SPAdministrationSiteType>]
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-LockState <String>] [-MaxSize <Int64>]
+   [-OwnerAlias <SPUserPipeBind>] [-QuotaTemplate <SPQuotaTemplatePipeBind>]
+   [-SecondaryOwnerAlias <SPUserPipeBind>] [-SharingType <String>] [-Template <SPWebTemplatePipeBind>]
+   [-Url <String>] [-UserAccountDirectoryPath <String>] [-WarningSize <Int64>] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '--------------------EXAMPLE 1---------------------'
+  code: |-
+    Get-SPSite https://sitename/sites/teams/* | Set-SPSite -SecondaryOwner "DOMAIN\Jdoe"
+  description: |-
+    This example sets the secondary owner on a set of site collections to DOMAIN\Jdoe.
+  summary: ""
+- title: '--------------------EXAMPLE 2---------------------'
+  code: |-
+    Set-SPSite -identity "https://sitename" -MaxSize 4000000 -WarningSize 2000000
+  description: |-
+    This example configures the Quota settings for the site collection https://sitename.
+  summary: ""
+parameters:
+- type: <xref href="SPAdministrationSiteType" data-throw-if-not-resolved="False" />
+  name: AdministrationSiteType
+  description: |+
+    Specifies the site type.
+
+    Valid values are None or TentantAdministration.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses confirmation messages involved in setting the site subscription.
+    This parameter is used in conjunction with the SiteSubscription parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the URL or GUID of the site collection to configure, or refers to an SPSite object that contains sites to configure.
+
+    The type must be a valid URL, in the form https://server_name; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or an SPSite object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LockState
+  description: |+
+    Sets the lock state of this site collection.
+    The valid lock states are
+
+    Unlock   Unlocks the site collection and makes it available to users
+
+    NoAdditions   Prevents users from adding new content to the site collection.
+    Updates and deletions are still allowed
+
+    ReadOnly   Prevents users from adding, updating, or deleting content.
+
+    NoAccess   Prevents access to content completely.
+    Users who attempt to access the site receive an access-denied message.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Int64" data-throw-if-not-resolved="False" />
+  name: MaxSize
+  description: |+
+    Sets the maximum storage size for the site collection in bytes.
+
+    The integer value must be larger than the WarningSize value.
+    You cannot use this parameter if the site collection is using a quota template.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPUserPipeBind" data-throw-if-not-resolved="False" />
+  name: OwnerAlias
+  description: |+
+    Specifies the alias name of the site collection administrator.
+
+    The type must be a valid e-mail alias, in the form domain\username.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPQuotaTemplatePipeBind" data-throw-if-not-resolved="False" />
+  name: QuotaTemplate
+  description: |+
+    Specifies the new quota template for this site collection.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890abcdef or a string
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPUserPipeBind" data-throw-if-not-resolved="False" />
+  name: SecondaryOwnerAlias
+  description: |+
+    Sets the alias of the secondary site collection administrator.
+
+    The type must be a valid e-mail alias, in the form domain\username.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SharingType
+  description: |+
+    Specifies whether external access a site collection should be disabled, limited to external users only, or enabled for external users and anonymous guests.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPSiteSubscriptionPipeBind" data-throw-if-not-resolved="False" />
+  name: SiteSubscription
+  description: |+
+    Specifies the Site Group to get site collections.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPWebTemplatePipeBind" data-throw-if-not-resolved="False" />
+  name: Template
+  description: |+
+    Specifies the template for this site collection.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890abcdef.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Url
+  description: |+
+    Specifies the URL of the new site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserAccountDirectoryPath
+  description: |+
+    Sets an organization unit to which to scope user accounts.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Int64" data-throw-if-not-resolved="False" />
+  name: WarningSize
+  description: |+
+    Sets the storage warning level for the site collection in bytes.
+
+    The integer value must be between 0 and the MaxSize value.
+    You cannot use this parameter if the site collection is using a quota template.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Set-SPSite
+name: Set-SPSite
+description: |-
+  This cmdlet contains more than one parameter set.
+  You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
+  For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+
+  The `Set-SPSite` cmdlet configures the site collection that is specified by the Identity parameter.
+  If a parameter is not used, the value is not changed.
+
+  The QuotaTemplate parameter is mutually exclusive to the MaxSize parameter and WarningSize parameter.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spsite
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Set-SPSite
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

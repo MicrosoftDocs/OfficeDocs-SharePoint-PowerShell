@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns a trusted data connection library or a list of trusted data connection libraries.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Get-SPExcelDataConnectionLibrary [[-Identity] <SPExcelDCLPipeBind>]
+   -ExcelServiceApplication <SPExcelServiceApplicationPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+   [<CommonParameters>]
+examples:
+- title: '--------------EXAMPLE 1--------------'
+  code: |-
+    Get-SPExcelserviceapplication -Identity "MyExcelService" | Get-SPExcelDataConnectionLibrary
+  description: |-
+    This example displays all the data connection libraries that connection files can be loaded by an Excel Services Application Web service application.
+  summary: ""
+- title: '--------------EXAMPLE 2--------------'
+  code: |-
+    Get-SPExcelserviceapplication -identity "MyExcelService" | Get-SPExcelDataConnectionLibrary | where {$_.Description.Contains("Sales Cube")}
+  description: |-
+    This example displays all the data connection libraries that have descriptions containing the words Sales Cube from the specified Excel Services Application Web service application.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  parameterValueGroup: ""
+- type: <xref href="SPExcelServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: ExcelServiceApplication
+  isRequired: true
+  description: |+
+    Specifies the Excel Services Application Web service application that contains the SPExcelDataConnectionLibrary list object.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of an Excel Services Application Web service application in the farm (for example, MyExcelService1); or an instance of a valid SPExcelServiceApplication object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  parameterValueGroup: ""
+- type: <xref href="SPExcelDCLPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the DataConnectionLibrary object to return.
+    If the identity parameter is not specified, this cmdlet returns all the data connection libraries that have connection files that can be loaded by Excel Services Application.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a data connection library (for example, DataConnectionLib1); a valid URL, in the form https://server_name; or an instance of a valid SPExcelDCL object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+uid: SharePointServer.Get-SPExcelDataConnectionLibrary
+name: Get-SPExcelDataConnectionLibrary
+description: |-
+  The Get-SPExcelDataConnectionLibrary cmdlet gets a library of data connection files that Excel Services Application and the Excel client use to connect to an external data source. 
+  Excel Services Application loads data connection files only if they are stored in a data connection library that is in the list of trusted data connection libraries.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spexceldataconnectionlibrary
+  applicable: SharePoint Server 2010, SharePoint Server 2013
+  title: Get-SPExcelDataConnectionLibrary
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

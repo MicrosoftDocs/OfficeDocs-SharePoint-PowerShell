@@ -1,0 +1,122 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a crawled property category from the installation.
+module: SharePointServer
+notes: ""
+links:
+- text: Get-FASTSearchMetadataCategory
+  href: Get-FASTSearchMetadataCategory.yml
+- text: Set-FASTSearchMetadataCategory
+  href: Set-FASTSearchMetadataCategory.yml
+- text: New-FASTSearchMetadataCategory
+  href: New-FASTSearchMetadataCategory.yml
+- text: Set-FASTSearchMetadataCrawledProperty
+  href: Set-FASTSearchMetadataCrawledProperty.yml
+syntaxes:
+- Remove-FASTSearchMetadataCategory [-Name] <String> [-Confirm] [-Force] [-WhatIf] [<CommonParameters>]
+- Remove-FASTSearchMetadataCategory -Category <Category> [-Confirm] [-Force] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Remove-FASTSearchMetadataCategory -name SharePoint
+  description: |-
+    This example deletes the category named "SharePoint".
+    Confirmation of the operation is requested.
+    All crawled properties mapped to the "SharePoint" category are also removed.
+  summary: ""
+- title: '---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    C:\PS>$category = Get-FASTSearchMetadataCategory -name Office
+    Remove-FASTSearchMetadataCategory -category $category -force
+  description: |-
+    This example deletes a crawled property category (stored as $category).
+    Since Force is specified, confirmation of the operation is not required.
+  summary: ""
+parameters:
+- type: <xref href="Category" data-throw-if-not-resolved="False" />
+  name: Category
+  isRequired: true
+  description: |+
+    A category object to be deleted.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Activates user prompting to confirm the operation.
+    If set, prompting is activated.
+
+    If Confirm is false (-Confirm $false), confirmation prompting is not used.
+
+    In cases where Confirm is not specified, the cmdlet will prompt if the $ConfirmPreference shell variable is equal to or greater than the ConfirmImpact setting of the cmdlet (HIGH).
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Overrides any user prompting settings, so that confirmation of the operation is not required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the category to delete.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: CategoryName, N
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: get-help about_commonparameters
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Remove-FASTSearchMetadataCategory
+name: Remove-FASTSearchMetadataCategory
+description: |-
+  This cmdlet deletes a crawled property category from your installation.
+  The cmdlet takes either the name of the category (Name parameter) or a category object (Category parameter).
+
+  All crawled properties mapped to this category are also removed.
+  To avoid deleting crawled properties belonging to a category that you are about to remove, first map all crawled properties that you wish to save to a different property set using the Set-FASTSearchMetadataCrawledProperty cmdlet.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-fastsearchmetadatacategory
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Remove-FASTSearchMetadataCategory

@@ -1,0 +1,67 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet sets the storage quota on a multi-geo tenant.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Get-SPOAppErrors
+  href: Get-SPOAppErrors.yml
+- text: Get-SPOGeoStorageQuota
+  href: Get-SPOGeoStorageQuota.yml
+syntaxes:
+- Set-SPOGeoStorageQuota -GeoLocation <String> -StorageQuotaMB <Int64> [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-SPOGeoStorageQuota -GeoLocation EASTUS -StorageQuotaMB 512
+  description: |-
+    Sets the SharePoint Online Storage Quota on the EAST US location to 512 MB.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Set-SPOGeoStorageQuota -GeoLocation NORTHCENTRALUS -StorageQuotaMB 1024
+  description: |-
+    Sets the SharePoint Online Storage Quota on the **NORTH CENTRAL US** location to 1024 MB (1GB).
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GeoLocation
+  isRequired: true
+  description: |+
+    The desired Geo Location to set.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Int64" data-throw-if-not-resolved="False" />
+  name: StorageQuotaMB
+  isRequired: true
+  description: |+
+    SharePoint Online Storage Quota in MegaBytes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Set-SPOGeoStorageQuota
+name: Set-SPOGeoStorageQuota
+description: |-
+  This cmdlet sets the storage quota, in megabytes, on a particular geo-location. Additionally, it requires a connection to a multi-geo tenant to run correctly. You must be at least a SharePoint Online Administrator to run the cmdlet.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spogeostoragequota
+  applicable: SharePoint Online
+  title: Set-SPOGeoStorageQuota
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

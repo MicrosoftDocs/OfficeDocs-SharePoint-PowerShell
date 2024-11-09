@@ -1,0 +1,116 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Provides a report of objects moved between geo locations.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+syntaxes:
+- Get-SPOCrossGeoMoveReport -MoveJobType <JobType> [-Limit <uint32>] [-MoveStartTime <datetime>] [-MoveEndTime <datetime>] [-MoveState <MoveState>] [-MoveDirection <MoveDirection>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-SPOCrossGeoMoveReport -MoveJobType SiteMove -MoveState Failed
+  description: |-
+    This example returns the failed site moves between geo locations.
+  summary: ""
+parameters:
+- type: <xref href="uint32" data-throw-if-not-resolved="False" />
+  name: Limit
+  description: |+
+    Limit the number of items to return for the report.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="MoveDirection" data-throw-if-not-resolved="False" />
+  name: MoveDirection
+  description: |+
+    The direction of the move to limit the report to. Valid values are:
+
+    * All
+    * MoveIn
+    * MoveOut
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="datetime" data-throw-if-not-resolved="False" />
+  name: MoveEndTime
+  description: |+
+    The end time to limit the move report to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="JobType" data-throw-if-not-resolved="False" />
+  name: MoveJobType
+  isRequired: true
+  description: |+
+    The type of job to limit the report to. Valid values are:
+
+    * GroupMove
+    * SiteMove
+    * UserMove
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="datetime" data-throw-if-not-resolved="False" />
+  name: MoveStartTime
+  description: |+
+    The start time to limit the move report to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="MoveState" data-throw-if-not-resolved="False" />
+  name: MoveState
+  description: |+
+    The type of state to limit the report to. Valid values are:
+
+    * All
+    * Failed
+    * InProgress
+    * NotStarted
+    * NotSupported
+    * Queued
+    * Rescheduled
+    * Stopped
+    * Success
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOCrossGeoMoveReport
+name: Get-SPOCrossGeoMoveReport
+description: |-
+  Use this cmdlet to return a report of objects moved between geo locations based on the specified parameters.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spocrossgeomovereport
+  applicable: SharePoint Online
+  title: Get-SPOCrossGeoMoveReport
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

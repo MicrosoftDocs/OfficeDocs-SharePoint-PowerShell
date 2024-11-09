@@ -1,0 +1,267 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a content source for a Search service application.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  New-SPEnterpriseSearchCrawlContentSource [-AssignmentCollection <SPAssignmentCollection>]
+   [-BDCApplicationProxyGroup <SPServiceApplicationProxyGroupPipeBind>] [-Confirm]
+   [-CrawlPriority <CrawlPriority>] [-CustomProtocol <String>] [-LOBSystemSet <String[]>]
+   [-MaxPageEnumerationDepth <Int32>] [-MaxSiteEnumerationDepth <Int32>] -Name <String>
+   -SearchApplication <SearchServiceApplicationPipeBind> [-SharePointCrawlBehavior <SharePointCrawlBehavior>]
+   [-StartAddresses <String>] [-Tag <String>] -Type <ContentSourceType> [-WhatIf] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE------------------'
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication
+    New-SPEnterpriseSearchCrawlContentSource -SearchApplication $ssa -Type File -name FileServer -StartAddresses file://someserver/public
+  description: |-
+    This example creates a new content source of type file to crawl a file system.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPServiceApplicationProxyGroupPipeBind" data-throw-if-not-resolved="False" />
+  name: BDCApplicationProxyGroup
+  description: |+
+    Specifies the proxy to use for a business type content source.
+    This proxy group must contain a default Business Data Connectivity Metadata Store proxy.
+
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="CrawlPriority" data-throw-if-not-resolved="False" />
+  name: CrawlPriority
+  description: |+
+    Specifies the priority of this content source.
+
+    The value must be one of the following integers: 1= Normal, 2=High.
+
+
+
+  defaultValue: None
+  position: Named
+  aliases: p
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CustomProtocol
+  description: |+
+    Specifies the custom protocol, handled by the custom connector, to use for this content source.
+
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LOBSystemSet
+  description: |+
+    Specifies a comma-separated list of Business Data Connectivity metadata store system names and system instance names for a business type content source.
+
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaxPageEnumerationDepth
+  description: |+
+    Specifies, for a web or custom type content source, the number of page hops that the crawler can make from the start address to a content item.
+
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaxSiteEnumerationDepth
+  description: |+
+    Specifies, for a web or custom type content source, the number of site hops that the crawler can take from the start address to a content item.
+
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the content source to create.
+
+    The type must be a valid name of a ContentSource object (for example, ContentSource1).
+
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SearchServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: SearchApplication
+  isRequired: true
+  description: |+
+    Specifies the search application that contains the content source.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid Search service application name (for example, SearchApp1); or an instance of a valid SearchServiceApplication object.
+
+
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SharePointCrawlBehavior" data-throw-if-not-resolved="False" />
+  name: SharePointCrawlBehavior
+  description: |+
+    Specifies crawl behavior for a sharepoint type content source.
+    The behavior can be either:
+
+    CrawlSites to crawl only particular site collections.
+
+    CrawlVirtualServers to crawl the entire server and all site collections on the server.
+
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: StartAddresses
+  description: |+
+    Specifies the comma-separated list of URLs at which to start a crawl for this content source.
+
+    The type must be a valid URL, in the form https://server_name.
+
+
+
+  defaultValue: None
+  position: Named
+  aliases: s
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    Specifies the URL for the page to modify the settings for a custom content source.
+    The string that specifies the URL can contain a maximum of 1,024 characters.
+
+    The type must be a valid URL, in the form https://server_name.
+
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="ContentSourceType" data-throw-if-not-resolved="False" />
+  name: Type
+  isRequired: true
+  description: |+
+    Specifies the name of the content source type. 
+    The value Business is for the Business Data Connectivity metadata store.
+    The value Exchange is for Microsoft Exchange public folders.
+    The value Custom is for a custom content source type.
+
+    The type must be the valid name of a content source type; for example, custom.
+
+
+
+  defaultValue: None
+  position: Named
+  aliases: t
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.New-SPEnterpriseSearchCrawlContentSource
+name: New-SPEnterpriseSearchCrawlContentSource
+description: |-
+  The New-SPEnterpriseSearchCrawlContentSource cmdlet creates a new content source.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.Search.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spenterprisesearchcrawlcontentsource
+  applicable: SharePoint Server Subscription Edition
+  title: New-SPEnterpriseSearchCrawlContentSource
+  PlatyPS schema version: 2.0.0

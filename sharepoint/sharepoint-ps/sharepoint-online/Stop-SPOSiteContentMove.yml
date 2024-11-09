@@ -1,0 +1,47 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Stops a job to move a particular user or group of users to be moved across geo locations relative to the one that executes the command.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Stop-SPOSiteContentMove [-SourceSiteUrl] <string> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Stop-SPOSiteContentMove -SourceSiteUrl https://contoso.sharepoint.com/sites/Research
+  description: |-
+    This example stops the move job for the specified site.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceSiteUrl
+  isRequired: true
+  description: |+
+    Specifies the source URL of the site collection.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Stop-SPOSiteContentMove
+name: Stop-SPOSiteContentMove
+description: |-
+  Use this cmdlet to stop a job to move a particular user or group of users to be moved across geo locations relative to the one that executes the command.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/stop-spositecontentmove
+  applicable: SharePoint Online
+  title: Stop-SPOSiteContentMove
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

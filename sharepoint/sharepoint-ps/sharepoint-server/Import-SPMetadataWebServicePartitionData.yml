@@ -1,0 +1,171 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Restores the data for a site subscription.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Import-SPMetadataWebServicePartitionData [-Identity] <SPSiteSubscriptionPipeBind>
+   [-ServiceProxy] <SPMetadataServiceProxyCmdletPipeBind> -Path <String>
+   [-AssignmentCollection <SPAssignmentCollection>] [-OverwriteExisting] [-NoCompression]
+   [-ToContentDatabase <SPContentDatabasePipeBind>] [-ToServiceDatabase] [<CommonParameters>]
+examples:
+- title: '-------------------EXAMPLE----------------------'
+  code: |-
+    $subscription = Get-SPSiteSubscription -Identity https://site_url
+    $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'Managed Metadata Service Connection'}
+    Import-SPMetadataWebServicePartitionData -Identity $subscription -ServiceProxy $proxy -Path "\\server_name\folder_name\file_name.cab"
+  description: |-
+    This example restores a backup of Metadata Service application data for a specific site subscription on a Metadata Service application.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPSiteSubscriptionPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the site subscription to import.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a site subscription (for example, SiteSubscriptionConfig1); or an instance of a valid SiteSubscription object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoCompression
+  description: |+
+    Do not use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: OverwriteExisting
+  description: |+
+    Specifies whether to overwrite the existing site subscription data, if it exists.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path and name of the subscription data file to import.
+
+    The type must be a valid path in either of the following forms:
+
+    - C:\folder_name\formtemplate_name
+    - \\\\server_name\folder_name\file_name.cab
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPMetadataServiceProxyCmdletPipeBind" data-throw-if-not-resolved="False" />
+  name: ServiceProxy
+  isRequired: true
+  description: |+
+    Specifies the proxy for the service application that contains the site subscription.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of the service application proxy (for example, ServiceAppProxy1); or an instance of a valid SPMetadataServiceProxy object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPContentDatabasePipeBind" data-throw-if-not-resolved="False" />
+  name: ToContentDatabase
+  description: |+
+    Do not use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ToServiceDatabase
+  description: |+
+    Do not use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Import-SPMetadataWebServicePartitionData
+name: Import-SPMetadataWebServicePartitionData
+description: |-
+  Use the Import-SPMetadataWebServicePartitionData cmdlet to restore data for a site subscription to a shared service application for the Metadata Service.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/import-spmetadatawebservicepartitiondata
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Import-SPMetadataWebServicePartitionData
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

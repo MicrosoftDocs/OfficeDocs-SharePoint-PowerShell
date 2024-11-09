@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Cancels further processing of version settings update on existing document libraries on the site collection.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Set-SPOSite
+  href: Set-SPOSite.yml
+- text: Get-SPOSiteVersionPolicyJobProgress
+  href: Get-SPOSiteVersionPolicyJobProgress.yml
+syntaxes:
+- Remove-SPOSiteVersionPolicyJob [-Identity] <SpoSitePipeBind> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-SPOSiteVersionPolicyJob -Identity https://contoso.sharepoint.com/sites/site1
+  description: |-
+    Example 1 cancels further processing of the job that sets version policy for existing document libraries on the site collection.
+  summary: ""
+parameters:
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the URL of the site collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPOSiteVersionPolicyJob
+name: Remove-SPOSiteVersionPolicyJob
+description: |-
+  `Set-SPOSite` cmdlet using `ApplyToExistingDocumentLibraries` will create a job to set version policy for existing document libraries on the site collection. This cmdlet removes the job, which stops updating the new version policy on existing libraries. The version policy already applied on existing libraries will not be reverted.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spositeversionpolicyjob
+  applicable: SharePoint Online
+  title: Remove-SPOSiteVersionPolicyJob
+  PlatyPS schema version: 2.0.0
+  author: msjennywu
+  ms.author: jennywu
+  ms.reviewer: ""
+  manager: seanmc

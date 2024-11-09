@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the archived state of the site. Can be used to archive and reactivate sites.
+module: Microsoft.Online.SharePoint.PowerShell
+syntaxes:
+- Set-SPOSiteArchiveState [-Identity] <SpoHubSitePipeBind> -ArchiveState <String> [-Confirm] [-WhatIf] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Set-SPOSiteArchiveState https://contoso.sharepoint.com/sites/Marketing -ArchiveState Archived
+  description: |-
+    This example marks the site as Archived. For seven days after the operation, the site will remain in a "RecentlyArchived" state, where any reactivations will be free and instantaneous. If a site is reactivated after seven days, any reactivations will be charged and will take time.
+  summary: ""
+- title: Example 2
+  code: |-
+    Set-SPOSiteArchiveState https://contoso.sharepoint.com/sites/Marketing -ArchiveState Active
+  description: |-
+    This example triggers the reactivation of a site. If the site is reactivated from the "RecentlyArchived" state, it will become available instantaneously. If the site is reactivated from the "FullyArchived" state, it may take time for it to be reactivated.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ArchiveState
+  isRequired: true
+  description: |+
+    Sets the archived state of the site. Valid values are Archived, Active.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Set-SPOSiteArchiveState
+name: Set-SPOSiteArchiveState
+description: |-
+  Use this cmdlet to change the archive status of the site. You must be at least a SharePoint Online administrator and be a site collection administrator to run the cmdlet.
+  Microsoft 365 Archive needs to be enabled for the organization to be able to use the feature.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spositearchivestate
+  applicable: SharePoint Online
+  title: Set-SPOSiteArchiveState
+  PlatyPS schema version: 2.0.0
+  author: AdiGanMSFT
+  ms.author: adigan
+  ms.reviewer: ""

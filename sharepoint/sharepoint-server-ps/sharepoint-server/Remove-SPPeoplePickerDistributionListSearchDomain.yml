@@ -1,0 +1,99 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet removes a domain from the People Picker distribution list search domains.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Remove-SPPeoplePickerDistributionListSearchDomain -WebApplication <SPWebApplicationPipeBind>
+   -DomainName <String> [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm]
+   [<CommonParameters>]
+examples:
+- title: '-------------EXAMPLE 1-------------'
+  code: |-
+    Remove-SPPeoplePickerDistributionListSearchDomain -WebApplication http://MyOfficeApp1 -DomainName "corp.contoso.com"
+  description: |-
+    This example removes domain "corp.contoso.com" from the distribution list search domain list of Web application MyOfficeApp1.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: get-help about_commonparameters
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DomainName
+  isRequired: true
+  description: |+
+    The domain name to remove from the list.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPWebApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: WebApplication
+  isRequired: true
+  description: |+
+    The Web application to modify the distribution list search domain list to.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Remove-SPPeoplePickerDistributionListSearchDomain
+name: Remove-SPPeoplePickerDistributionListSearchDomain
+description: |-
+  The list of distribution list search domain restricts the search of a distribution list to a specific subset of domains.
+  This Remove-SPPeoplePickerDistributionListSearchDomain cmdlet removes a domain from the distribution list search domain list.
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-sppeoplepickerdistributionlistsearchdomain
+  applicable: SharePoint Server Subscription Edition
+  title: Remove-SPPeoplePickerDistributionListSearchDomain
+  PlatyPS schema version: 2.0.0

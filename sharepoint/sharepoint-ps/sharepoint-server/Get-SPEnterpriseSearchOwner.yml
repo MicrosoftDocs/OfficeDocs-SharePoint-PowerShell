@@ -1,0 +1,99 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves the search object owner.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Get-SPEnterpriseSearchOwner [[-Identity] <SearchObjectOwner>] -Level <SearchObjectLevel>
+   [-AssignmentCollection <SPAssignmentCollection>] [-SPWeb <SPWebPipeBind>] [<CommonParameters>]
+examples:
+- title: '--------EXAMPLE--------'
+  code: |-
+    Get-SPEnterpriseSearchOwner -Level SPSite
+  description: |-
+    This example shows how to retrieve the tenant owner of a search object at the SPSite level.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SearchObjectOwner" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the search object owner to retrieve.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SearchObjectLevel" data-throw-if-not-resolved="False" />
+  name: Level
+  isRequired: true
+  description: |+
+    Specifies whether the owner object resides at the SPWeb, SPSite, SPSite Subscription, or SSA level.
+
+  defaultValue: None
+  position: Named
+  aliases: l
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPWebPipeBind" data-throw-if-not-resolved="False" />
+  name: SPWeb
+  description: |+
+    Specifies the SPWeb or SPSite in which this object resides.
+    It is only needed if Level is equal to SPWeb or SPSite.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Get-SPEnterpriseSearchOwner
+name: Get-SPEnterpriseSearchOwner
+description: |-
+  The Get-SPEnterpriseSearchOwner cmdlet retrieves the search object owner.
+  Get-SPEnterpriseSearchOwner provides scoping context to other cmdlets such as SPEnterpriseSearchResultItemType.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchowner
+  applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Get-SPEnterpriseSearchOwner
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

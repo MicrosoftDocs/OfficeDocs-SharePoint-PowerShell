@@ -1,0 +1,65 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Validates the encryption of a Group Site, Team Site, or OneDrive for Business site if a Customer Key has been registered for the site.
+module: Microsoft.Online.SharePoint.PowerShell
+outputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    The URI of the primary key.
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    The URI of the secondary key.
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: |-
+    The encryption status for the geo. Possible states include:
+
+    * Unregistered: Customer Key encryption has not yet been applied.
+    * Registering: Customer Key encryption has been applied and your files are in the process of being encrypted. If your geo is in this state, you'll also be shown information on what percentage of sites in the geo are complete so that you can monitor encryption progress.
+    * Registered: Customer Key encryption has been applied, and all files in all sites have been encrypted.
+    * Rolling: A key roll is in progress. If your geo is in this state, you'll also be shown information on what percentage of sites have completed the key roll operation so that you can monitor progress.
+links:
+- text: Register-SPODataEncryptionPolicy
+  href: https://learn.microsoft.com/powershell/module/sharepoint-online/register-spodataencryptionpolicy
+- text: Controlling your data in Office 365 using Customer Key
+  href: https://learn.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key
+- text: 'Office 365: Setting up Customer Key for SharePoint Online and OneDrive for Business'
+  href: https://learn.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key#office-365-setting-up-customer-key-for-sharepoint-online-and-onedrive-for-business
+syntaxes:
+- Get-SPOSiteDataEncryptionPolicy [-Identity] <SpoSitePipeBind> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-SPOSiteDataEncryptionPolicy https://contoso.sharepoint.com/sites/Research
+  description: |-
+    Verifies the encryption of the site https://contoso.sharepoint.com/sites/Research.
+  summary: ""
+parameters:
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The URL of the Site Collection.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOSiteDataEncryptionPolicy
+name: Get-SPOSiteDataEncryptionPolicy
+description: |-
+  When a Customer Key has been configured in the Azure tenant, it is possible to set and subsequently verify the encryption status of a SharePoint Online or OneDrive for Business site. This cmdlet verifies the encryption status of the particular site.
+
+  This cmdlet will return an error if the Azure tenant has not been configured with a Customer Key. See the Related Links section for more information on how to configure the Customer Key.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spositedataencryptionpolicy
+  applicable: SharePoint Online
+  title: Get-SPOSiteDataEncryptionPolicy
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

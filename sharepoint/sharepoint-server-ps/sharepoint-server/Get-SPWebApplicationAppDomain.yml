@@ -1,0 +1,138 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns all app domains for a specific web application.
+module: sharepoint-server
+notes: ""
+inputs:
+- name: <xref href="Microsoft.SharePoint.Administration.SPAppCmdlets.SPAppDomainPipeBind" data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.SharePoint.PowerShell.SPAssignmentCollection
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: New-SPWebApplicationAppDomain
+  href: New-SPWebApplicationAppDomain.yml
+- text: Remove-SPWebApplicationAppDomain
+  href: Remove-SPWebApplicationAppDomain.yml
+syntaxes:
+- >-
+  Get-SPWebApplicationAppDomain [[-Identity] <SPAppDomainPipeBind>] -AppDomain <String>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Zone <SPUrlZone>] [<CommonParameters>]
+- >-
+  Get-SPWebApplicationAppDomain [[-Identity] <SPAppDomainPipeBind>] -WebApplication <SPWebApplicationPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Zone <SPUrlZone>] [<CommonParameters>]
+examples:
+- title: '-----------EXAMPLE 1---------'
+  code: |-
+    Get-SPWebApplicationAppDomain
+  description: |-
+    Returns a list of SPAppDomain objects, one for each of the app domains for all web applications in the farm.
+  summary: ""
+- title: '-----------EXAMPLE 2---------'
+  code: |-
+    Get-SPWebApplicationAppDomain -Zone Default
+  description: |-
+    Returns a list of SPAppDomain objects, one for each of the app domains for the Default zone for all web applications in the farm.
+  summary: ""
+- title: '-----------EXAMPLE 3---------'
+  code: |-
+    Get-SPWebApplicationAppDomain -WebApplication https://www.contoso.com
+  description: |-
+    Returns a list of SPAppDomain objects, one for each of all the app domains for the specified web application for all zones.
+  summary: ""
+- title: '-----------EXAMPLE 4---------'
+  code: |-
+    Get-SPWebApplicationAppDomain -AppDomain contosoapps.com
+  description: |-
+    Returns a list of SPAppDomain objects, one for each web application and zone pair that shares the specified app domain.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AppDomain
+  isRequired: true
+  description: |+
+    Specifies the URI of the app domain.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPAppDomainPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the string of a domain name (that is, contoso.com) or a SPAppDomain object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPWebApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: WebApplication
+  isRequired: true
+  description: |+
+    Specifies the GUID, URI, or name of the web application for which the app domain is being configured.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPUrlZone" data-throw-if-not-resolved="False" />
+  name: Zone
+  description: |+
+    Specifies the security zone to which the app domain will be assigned.
+
+    * Default
+
+    * Intranet
+
+    * Internet
+
+    * Extranet
+
+    * Custom
+
+    If no value is specified, Default is applied.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Get-SPWebApplicationAppDomain
+name: Get-SPWebApplicationAppDomain
+description: |-
+  This cmdlet contains more than one parameter set. You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets. For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+
+  Use the Get-SPWebApplicationAppDoman cmdlet to return all app domains for a specific web application or for all web applications. If you do not specify parameters, the default zone is used.
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spwebapplicationappdomain
+  applicable: SharePoint Server Subscription Edition
+  title: Get-SPWebApplicationAppDomain
+  PlatyPS schema version: 2.0.0

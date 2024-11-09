@@ -1,0 +1,64 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Restores a SharePoint Online deleted site collection from the Recycle Bin.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Get-SPODeletedSite
+  href: Get-SPODeletedSite.yml
+- text: Remove-SPODeletedSite
+  href: Remove-SPODeletedSite.yml
+syntaxes:
+- Restore-SPODeletedSite -Identity <SpoSitePipeBind> [-NoWait] [<CommonParameters>]
+examples:
+- title: '----------------------EXAMPLE-----------------------'
+  code: |-
+    Restore-SPODeletedSite -Identity https://contoso.sharepoint.com/sites/arecycledsite
+  description: |-
+    This example restores a SharePoint Online deleted site collection named "<https://contoso.sharepoint.com/sites/arecycledsite"> from the Recycle Bin.
+  summary: ""
+parameters:
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the URL of the site collection to restore.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoWait
+  description: |+
+    Specifies to continue executing script immediately.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Restore-SPODeletedSite
+name: Restore-SPODeletedSite
+description: |-
+  You must be at least a SharePoint administrator to run the cmdlet.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/restore-spodeletedsite
+  applicable: SharePoint Online
+  title: Restore-SPODeletedSite
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

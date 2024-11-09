@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  **Note**: This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](https://learn.microsoft.com/sharepointmigration/overview-spmt-ps-cmdlets).
+
+  Creates a new random encryption key for a migration job or package.
+module: Microsoft.Online.SharePoint.PowerShell
+outputs:
+- name: <xref href="System.Byte" data-throw-if-not-resolved="False" />
+  description: |-
+    EncryptionKey: The randomly generated encryption key using [System.Security.Cryptography.AesCryptoServiceProvider](https://learn.microsoft.com/dotnet/api/system.security.cryptography.aescryptoserviceprovider) class.
+- name: <xref href="Microsoft.Online.SharePoint.Migration.SPMigrationJobEncryptionMethod" data-throw-if-not-resolved="False" />
+  description: |-
+    EncryptionMethod: The encryption algorithm used to generate the EncryptionKey. Currently hardcoded to AES256BC.
+links:
+- text: Submit-SPOMigrationjob
+  href: Submit-SPOMigrationJob.yml
+- text: ConvertTo-SPOMigrationEncryptedPackage
+  href: ConvertTo-SPOMigrationEncryptedPackage.yml
+- text: Set-SPOMigrationPackageAzureSource
+  href: Set-SPOMigrationPackageAzureSource.yml
+- text: Introduction to the SharePoint Online management shell
+  href: https://support.office.com/en-us/article/introduction-to-the-sharepoint-online-management-shell-c16941c3-19b4-4710-8056-34c034493429
+- text: SharePoint Online Management Shell Download
+  href: https://www.microsoft.com/en-US/download/details.aspx?id=35588
+syntaxes:
+- New-SPOMigrationEncryptionParameters [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    $o = New-SPOMigrationEncryptionParameters
+  description: |-
+    Outputs a random encryption key and saves it in the `$o` variable.
+  summary: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.New-SPOMigrationEncryptionParameters
+name: New-SPOMigrationEncryptionParameters
+description: |-
+  Creates a random encryption key for submission of a migration job or creation of a migration package. For use with [`Submit-SPOMigrationJob`](), [`ConvertTo-SPOMigrationEncryptedPackage`](ConvertTo-SPOMigrationEncryptedPackage.yml), and [`Set-SPOMigrationPackageAzureSource`](Set-SPOMigrationPackageAzureSource.yml) in the `-EncryptedParameter` parameter for each cmdlet.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/new-spomigrationencryptionparameters
+  applicable: SharePoint Online
+  title: New-SPOMigrationEncryptionParameters
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

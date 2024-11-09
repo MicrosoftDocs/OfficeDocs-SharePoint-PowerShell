@@ -1,0 +1,143 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a server configured to host Access Services databases.
+module: SharePointServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.SharePoint.PowerShell.SPServiceContextPipeBind" data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.SharePoint.PowerShell.SPAssignmentCollection
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Remove-SPAccessServicesDatabaseServer [-ServiceContext] <SPServiceContextPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+   -DatabaseServer <AccessServicesDatabaseServerPipeBind>
+   -DatabaseServerGroup <AccessServicesDatabaseServerGroupPipeBind> [-Force] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE------------------'
+  code: |-
+    Remove-SPAccessServicesDatabaseServer -DatabaseServer SQLSVR01 -DatabaseServerGroup DEFAULT
+  description: |-
+    This example removes the SQL Server named SQLSVR01 from the DEFAULT group as an Access Services database server.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="AccessServicesDatabaseServerPipeBind" data-throw-if-not-resolved="False" />
+  name: DatabaseServer
+  isRequired: true
+  description: |+
+    Specifies the name of the SQL Server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="AccessServicesDatabaseServerGroupPipeBind" data-throw-if-not-resolved="False" />
+  name: DatabaseServerGroup
+  isRequired: true
+  description: |+
+    The name of the Access Services database server group containing the SQL Server object to remove.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPServiceContextPipeBind" data-throw-if-not-resolved="False" />
+  name: ServiceContext
+  isRequired: true
+  description: |+
+    Specifies the service context.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Remove-SPAccessServicesDatabaseServer
+name: Remove-SPAccessServicesDatabaseServer
+description: |-
+  This cmdlet removes an Access Services database server hosting Access Services databases.
+metadata:
+  external help file: microsoft.office.access.server.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spaccessservicesdatabaseserver
+  applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Remove-SPAccessServicesDatabaseServer
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

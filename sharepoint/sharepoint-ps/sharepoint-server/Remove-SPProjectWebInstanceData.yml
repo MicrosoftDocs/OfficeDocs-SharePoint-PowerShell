@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disassociates a Site Collection with the Project Server instance.
+module: SharePointServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.SharePoint.PowerShell.SPSitePipeBind" data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.SharePoint.PowerShell.SPAssignmentCollection
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Remove-SPProjectWebInstanceData [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+   -SiteCollection <SPSitePipeBind> [-WhatIf] [<CommonParameters>]
+examples:
+- title: '----------------------EXAMPLE-----------------------'
+  code: |-
+    Remove-SPProjectWebInstanceData -SiteCollection https://contoso/sites/pwa
+  description: |-
+    This example disassociates https://contoso/sites/pwa from the Project Server instance.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Project Server 2016
+  - Project Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Project Server 2016
+  - Project Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPSitePipeBind" data-throw-if-not-resolved="False" />
+  name: SiteCollection
+  isRequired: true
+  description: |+
+    The site collection to disassociate from the Project Server instance.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Project Server 2016
+  - Project Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Project Server 2016
+  - Project Server 2019
+  parameterValueGroup: ""
+applicable:
+- Project Server 2016
+- Project Server 2019
+uid: SharePointServer.Remove-SPProjectWebInstanceData
+name: Remove-SPProjectWebInstanceData
+description: |-
+  This cmdlet disassociates the Project Server instance from the specified Site Collection, disabling the PWA Feature and removing Project content.
+metadata:
+  external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spprojectwebinstancedata
+  applicable: Project Server 2016, Project Server 2019
+  title: Remove-SPProjectWebInstanceData
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

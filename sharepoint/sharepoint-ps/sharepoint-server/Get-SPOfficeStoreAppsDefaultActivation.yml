@@ -1,0 +1,102 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns the properties of apps for Office.
+module: SharePointServer
+notes: ""
+links:
+- text: Set-SPOfficeStoreAppsDefaultActivation
+  href: Set-SPOfficeStoreAppsDefaultActivation.yml
+syntaxes:
+- >-
+  Get-SPOfficeStoreAppsDefaultActivation -SiteSubscription <SPSiteSubscriptionPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+- >-
+  Get-SPOfficeStoreAppsDefaultActivation -WebApplication <SPWebApplicationPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+examples:
+- title: '-----------------------EXAMPLE 1-----------------------------'
+  code: |-
+    Get-SPOfficeStoreAppsDefaultActivation -WebApplication https://sphvm-8044
+  description: |-
+    This examples returns the setting for the web application https://sphvm-8044.
+  summary: ""
+- title: '-----------------------EXAMPLE 2-----------------------------'
+  code: |-
+    Get-SPOfficeStoreAppsDefaultActivation -SiteSubscription efca5b88-b3a3-448d-afbc-ef620f4744f1
+  description: |-
+    This examples returns the Subscription ID setting for the tenant
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  parameterValueGroup: ""
+- type: <xref href="SPSiteSubscriptionPipeBind" data-throw-if-not-resolved="False" />
+  name: SiteSubscription
+  isRequired: true
+  description: |+
+    Specifies the Site Group to which the settings apply.
+
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  parameterValueGroup: ""
+- type: <xref href="SPWebApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: WebApplication
+  isRequired: true
+  description: |+
+    Specifies the URL, GUID, or name of the web application to which the setting applies.
+
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+uid: SharePointServer.Get-SPOfficeStoreAppsDefaultActivation
+name: Get-SPOfficeStoreAppsDefaultActivation
+description: |-
+  This cmdlet contains more than one parameter set.
+  You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
+  For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+
+  Use the `Get-SPOfficeStoreAppsDefaultActivation` cmdlet to return settings for apps for Office that run in a specific web application.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spofficestoreappsdefaultactivation
+  applicable: SharePoint Server 2013, SharePoint Server 2016
+  title: Get-SPOfficeStoreAppsDefaultActivation
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

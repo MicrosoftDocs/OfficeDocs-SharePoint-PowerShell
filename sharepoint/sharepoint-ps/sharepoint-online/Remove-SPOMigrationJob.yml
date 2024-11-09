@@ -1,0 +1,86 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Cmdlet to remove a previously created migration job from the specified site collection.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Remove-SPOMigrationJob [-TargetWebUrl] <String> [-JobId] <Guid> -Credentials <CredentialCmdletPipeBind>
+   [-NoLogFile] [<CommonParameters>]
+examples:
+- title: '-----------------------EXAMPLE-----------------------------'
+  code: |-
+    Remove-SPOMigrationJob -JobId 4da9e777-3e38-4804-96d9-ddeebe7dfa79 -TargetUrl https://contoso.sharepoint.com/sites/TargetSite
+  description: |-
+    This example removes the specified migration job from the site collection "<https://contoso.sharepoint.com/sites/TargetSite".>
+  summary: ""
+parameters:
+- type: <xref href="CredentialCmdletPipeBind" data-throw-if-not-resolved="False" />
+  name: Credentials
+  isRequired: true
+  description: |+
+    Optional credentials of a site collection administrator to use to connect to the site collection. The credentials should supply the username in UPN format (e.g. user@company.onmicrosoft.com). If this property is not set, the current tenant admin credentials from the session's previous call to `Connect-SPOService` will be used to connect to the site collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: JobId
+  isRequired: true
+  description: |+
+    Id of a previously created migration job that exists on the target site collection.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoLogFile
+  description: |+
+    Indicates to not create a log file. The default is to create a new DeleteMigrationJob log file within the current directory.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetWebUrl
+  isRequired: true
+  description: |+
+    The fully qualified URL of the site collection where the job will be deleted if found.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPOMigrationJob
+name: Remove-SPOMigrationJob
+description: |-
+  Cmdlet to remove a previously created migration job from the specified site collection.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spomigrationjob
+  applicable: SharePoint Online
+  title: Remove-SPOMigrationJob
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

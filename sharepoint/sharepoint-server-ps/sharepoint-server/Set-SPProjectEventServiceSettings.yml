@@ -1,0 +1,59 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Allows you to change the Microsoft Project Server Events Service 2016 TCP port settings. If you change the TCP port, the Microsoft Project Server Events Service 2016 needs to be restarted for the changes to take effect.
+module: sharepoint-server
+notes: ""
+inputs:
+- name: <xref href="Microsoft.SharePoint.PowerShell.SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-SPProjectEventServiceSettings [-AssignmentCollection <SPAssignmentCollection>] [-NetTcpPort <Int32>]
+   [<CommonParameters>]
+examples:
+- title: '--------------------EXAMPLE---------------------'
+  code: |-
+    Set-SPProjectEventServiceSettings -NetTcpPort 16100
+  description: |-
+    This example tells the service to listen on port 16100.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: NetTcpPort
+  description: |+
+    TCP port to listen on.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+uid: sharepoint-server.Set-SPProjectEventServiceSettings
+name: Set-SPProjectEventServiceSettings
+description: |-
+  Allows you to change the Microsoft Project Server Events Service 2016 TCP port settings. If you change the TCP port, the Microsoft Project Server Events Service 2016 needs to be restarted for the changes to take effect.
+metadata:
+  external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spprojecteventservicesettings
+  Applicable: SharePoint Server Subscription Edition
+  title: Set-SPProjectEventServiceSettings
+  PlatyPS schema version: 2.0.0

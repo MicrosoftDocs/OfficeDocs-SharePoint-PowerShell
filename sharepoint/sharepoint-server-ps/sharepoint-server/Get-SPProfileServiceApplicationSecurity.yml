@@ -1,0 +1,96 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns permission and identity information.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Get-SPProfileServiceApplicationSecurity -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-SiteSubscription <SPSiteSubscriptionPipeBind>]
+   [-Type <String>] [<CommonParameters>]
+examples:
+- title: '-------------------EXAMPLE--------------------'
+  code: |-
+    $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+    PS Get-SPProfileServiceApplicationSecurity -ProfileServiceApplicationProxy $proxy -Type MySiteReaderACL
+  description: |-
+    This example displays MySite information on UPA Proxy 1.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPServiceApplicationProxyPipeBind" data-throw-if-not-resolved="False" />
+  name: ProfileServiceApplicationProxy
+  isRequired: true
+  description: |+
+    Specifies the unique identifier for the proxy.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPSiteSubscriptionPipeBind" data-throw-if-not-resolved="False" />
+  name: SiteSubscription
+  description: |+
+    Specifies the account under which this service should run.
+    This parameter is mandatory in a hosted-environment and optional in a non-hosted environment.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Type
+  description: |+
+    Specifies the type of object to display.
+
+    The type is any one of the following values:
+
+    - MySiteReaderACL
+    - MySiteHostReaderACL
+    - UserACL
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Get-SPProfileServiceApplicationSecurity
+name: Get-SPProfileServiceApplicationSecurity
+description: |-
+  Use the Get-SPProfileServiceApplicationSecurity cmdlet to display permission and identity information for the following User Profile objects:
+
+  - Read individual My Sites
+  - Use Personal Features
+  - Use Social Features
+  - Create Personal Site
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spprofileserviceapplicationsecurity
+  applicable: SharePoint Server Subscription Edition
+  title: Get-SPProfileServiceApplicationSecurity
+  PlatyPS schema version: 2.0.0

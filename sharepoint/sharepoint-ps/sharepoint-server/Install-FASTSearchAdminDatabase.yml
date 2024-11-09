@@ -1,0 +1,124 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Installs the database used by the Microsoft FAST Search Server 2010 for SharePoint administration services.
+module: SharePointServer
+notes: ""
+links:
+- text: Uninstall-FASTSearchAdminDatabase
+  href: Uninstall-FASTSearchAdminDatabase.yml
+syntaxes:
+- >-
+  Install-FASTSearchAdminDatabase [-DbConnection <String>] [-DbName <String>] [-DbServer <String>] [-Force]
+   [-Upgrade <Boolean>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Install-FASTSearchAdminDatabase -DbConnection "Data Source=sqlserver.contoso.com;Database=FASTSearchAdminDatabase;integrated Security=True;"
+  description: |-
+    This example installs the database schema in the database server specified by the connection string.
+  summary: ""
+- title: '---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Install-FASTSearchAdminDatabase -Upgrade -DbServer "sqlserver.contoso.com"
+  description: |-
+    This example upgrades the database schema already installed in the FAST Search Server 2010 for SharePoint administration database on the given SQL Server instance.
+  summary: ""
+- title: '---------------EXAMPLE 3----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Install-FASTSearchAdminDatabase -Force -DbServer "sqlserver.contoso.com"
+  description: |-
+    This example deletes and reinstalls the database schema already installed in the FAST Search Server 2010 for SharePoint administration database on the given SQL Server instance.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DbConnection
+  description: |+
+    Specifies the database connection string for the FAST Search Server 2010 for SharePoint administration database, in the same format as the ConnectionString property of the System.Data.SqlClient.SqlConnection .NET Framework type.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DbName
+  description: |+
+    Specifies the name of the FAST Search Server 2010 for SharePoint administration database.
+
+    The name only takes effect when used in conjunction with the DbServer parameter, not the DbConnection parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DbServer
+  description: |+
+    Specifies the database server instance that contains the FAST Search Server 2010 for SharePoint administration database.
+
+    Only one of the DbServer and DbConnection parameters must be specified.
+    Using DbServer with a value of sqlserver.contoso.com is equivalent to using DbConnection with the value "Data Source=sqlserver.contoso.com;Database=FASTSearchAdminDatabase;integrated Security=True"
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    The Force parameter specifies that the FAST Search Server 2010 for SharePoint administration database already exists, but should be reinstalled.
+
+    This will delete all data that already exists in the database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Upgrade
+  description: |+
+    Specifies that the FAST Search Server 2010 for SharePoint administration database already exists and that it should be upgraded, because it uses an older version of the database schema.
+
+    The upgrade process will attempt to migrate all data to the new database schema.
+
+    It is strongly recommended that you back up the database before performing this operation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Install-FASTSearchAdminDatabase
+name: Install-FASTSearchAdminDatabase
+description: |-
+  This cmdlet installs the database used by the FAST Search Server 2010 for SharePoint administration services.
+  This cmdlet is primarily called during installation, by the FAST Search Server 2010 for SharePoint installer.
+
+  The administration database default name is "FASTSearchAdminDatabase" and should be located in the Microsoft SQL Server instance specified by the DbServer or DbConnection parameters.
+
+  In addition to performing an initial installation of the database schema, this cmdlet can also:
+
+  -- Reinstall (destructively) the database schema if it already exists.
+  -- Upgrade the database schema from an earlier version.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/install-fastsearchadmindatabase
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Install-FASTSearchAdminDatabase

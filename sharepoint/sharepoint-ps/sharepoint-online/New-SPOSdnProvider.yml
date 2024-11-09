@@ -1,0 +1,88 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a new Software-Defined Networking (SDN) provider
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Introduction to the SharePoint Online management shell
+  href: https://support.office.com/en-us/article/introduction-to-the-sharepoint-online-management-shell-c16941c3-19b4-4710-8056-34c034493429
+- text: SharePoint Online Management Shell Download
+  href: https://www.microsoft.com/en-US/download/details.aspx?id=35588
+- text: Get-SPOAppErrors
+  href: Get-SPOAppErrors.yml
+- text: Remove-SPOSdnProvider
+  href: Remove-SPOSdnProvider.yml
+syntaxes:
+- New-SPOSdnProvider [-Identity] <String> [-License] <String> [-Confirm] [-WhatIf] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    New-SPOSdnProvider -ID "Hive" -License "<Hive license key>"
+  description: |-
+    This example creates the Hive for a SDN Provider.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Identity of the provider.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: License
+  isRequired: true
+  description: |+
+    License key provided by the provider.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.New-SPOSdnProvider
+name: New-SPOSdnProvider
+description: |-
+  This Cmdlet creates a new Software-Defined Networking, and it receives two parameters, the Identity (ID) of the Hive and the License key of the Hive.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/new-sposdnprovider
+  applicable: SharePoint Online
+  title: New-SPOSdnProvider
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

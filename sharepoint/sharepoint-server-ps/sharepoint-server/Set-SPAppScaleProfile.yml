@@ -1,0 +1,75 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets settings for the app profile.
+module: sharepoint-server
+notes: ""
+links:
+- text: Get-SPAppScaleProfile
+  href: Get-SPAppScaleProfile.yml
+syntaxes:
+- >-
+  Set-SPAppScaleProfile [-AssignmentCollection <SPAssignmentCollection>] [-MaxDatabaseSize <String>]
+   [-RemoteWebSiteInstanceCount <Int32>] [<CommonParameters>]
+examples:
+- title: '-----------------EXAMPLE-----------'
+  code: |-
+    Set-SPAppScaleProfile -MaxDatabaseSize "2 GB" -RemoteWebSiteInstanceCount 1
+  description: |-
+    This example sets the farm level app scale profile.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MaxDatabaseSize
+  description: |+
+    Specifies the database size of the app profile.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: RemoteWebSiteInstanceCount
+  description: |+
+    Specifies whether a remote site can access the profilefrom.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPAppScaleProfile
+name: Set-SPAppScaleProfile
+description: |-
+  Use the `Set-SPAppScaleProfile` cmdlet to set settings for an app profile.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spappscaleprofile
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPAppScaleProfile
+  PlatyPS schema version: 2.0.0

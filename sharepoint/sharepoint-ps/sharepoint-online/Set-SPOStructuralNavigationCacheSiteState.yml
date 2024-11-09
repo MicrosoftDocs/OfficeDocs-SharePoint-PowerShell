@@ -1,0 +1,82 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enable or disable caching for all webs in a site collection.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: |-
+  To see the examples, type: "get-help Set-SPOStructuralNavigationCacheSiteState -examples". 
+
+      For more information, type: "get-help Set-SPOStructuralNavigationCacheSiteState -detailed". 
+
+      For technical information, type: "get-help Set-SPOStructuralNavigationCacheSiteState -full". 
+
+      For online help, type: "get-help Set-SPOStructuralNavigationCacheSiteState -online"
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-SPOStructuralNavigationCacheWebState
+  href: Get-SPOStructuralNavigationCacheWebState.yml
+- text: Set-SPOStructuralNavigationCacheWebState
+  href: Set-SPOStructuralNavigationCacheWebState.yml
+- text: Get-SPOStructuralNavigationCacheSiteState
+  href: Get-SPOStructuralNavigationCacheSiteState.yml
+syntaxes:
+- Set-SPOStructuralNavigationCacheSiteState -SiteUrl <String> -IsEnabled <Boolean> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Set-SPOStructuralNavigationCacheSiteState -IsEnabled $true -SiteUrl "https://contoso.sharepoint.com/sites/product/"
+  description: |-
+    This example enables caching for all webs in the site collection https://contoso.sharepoint.com/sites/product/.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Set-SPOStructuralNavigationCacheSiteState -IsEnabled $false -SiteUrl "https://contoso.sharepoint.com/sites/product/"
+  description: |-
+    This example disables caching for all webs in the site collection https://contoso.sharepoint.com/sites/product/.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsEnabled
+  isRequired: true
+  description: |+
+    $true to enable caching, $false to disable caching. 
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SiteUrl
+  isRequired: true
+  description: |+
+    Specifies the absolute URL for the site collection's root web that needs its caching state to be set. 
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Set-SPOStructuralNavigationCacheSiteState
+name: Set-SPOStructuralNavigationCacheSiteState
+description: |-
+  The Set-SPOStructuralNavigationCacheSiteState cmdlet can be used to enable or disable caching for all webs in a site collection. [Learn more](https://support.office.com/article/structural-navigation-and-performance-f163053f-8eca-4b9c-b973-36b395093b43).
+metadata:
+  external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: ""
+  PlatyPS schema version: 2.0.0
+  applicable: SharePoint Online
+  title: Set-SPOStructuralNavigationCacheSiteState
+  author: paramveersisodia
+  ms.author: paramsis
+  manager: suyog
+  ms.reviewer: ""

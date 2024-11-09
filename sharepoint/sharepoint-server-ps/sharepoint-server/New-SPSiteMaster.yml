@@ -1,0 +1,138 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a site master.
+module: sharepoint-server
+notes: ""
+inputs:
+- name: <xref href="Microsoft.SharePoint.PowerShell.SPContentDatabasePipeBind" data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.SharePoint.PowerShell.SPAssignmentCollection
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-SPSiteMaster [-ContentDatabase] <SPContentDatabasePipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-CompatibilityLevel <Int32>] [-Confirm] [-Language <UInt32>]
+   -Template <SPWebTemplatePipeBind> [-WhatIf] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE-----------------------'
+  code: |-
+    New-SPSiteMaster -ContentDatabase WSS_Content -Template STS#0
+  description: |-
+    This example creates a site master in the database WSS_Content.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: CompatibilityLevel
+  description: |+
+    Specifies the version of templates to use when creating a new SPSite object. This value sets the initial CompatibilityLevel value for the site collection.
+
+    When this parameter is not specified, the CompatibilityLevel will default to the highest possible version for the web application depending on the SiteCreationMode setting.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPContentDatabasePipeBind" data-throw-if-not-resolved="False" />
+  name: ContentDatabase
+  isRequired: true
+  description: |+
+    Specifies the name of the database to create the site master in. For example, WSS_Content.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Language
+  description: |+
+    Specifies the locale ID to use. For example, use 1033 for English.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPWebTemplatePipeBind" data-throw-if-not-resolved="False" />
+  name: Template
+  isRequired: true
+  description: |+
+    Specifies the name of the template.
+
+    The values are the following:
+
+    -- SPSPERS#2
+
+    -- SPSPERS#6
+
+    -- SPSPERS#7
+
+    -- SPSPERS#8
+
+    -- SPSPERS#9
+
+    -- SPSPERS#10
+
+    -- STS#0
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+uid: sharepoint-server.New-SPSiteMaster
+name: New-SPSiteMaster
+description: |-
+  Use the New-SPSiteMaster cmdlet to create a site master information in the farm.
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spsitemaster
+  Applicable: SharePoint Server Subscription Edition
+  title: New-SPSiteMaster
+  PlatyPS schema version: 2.0.0

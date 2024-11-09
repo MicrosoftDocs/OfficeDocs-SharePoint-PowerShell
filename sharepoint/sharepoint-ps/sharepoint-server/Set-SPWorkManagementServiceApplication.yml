@@ -1,0 +1,212 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets settings for the Work Management Service application.
+module: SharePointServer
+notes: ""
+links:
+- text: New-SPWorkManagementServiceApplication
+  href: New-SPWorkManagementServiceApplication.yml
+- text: New-SPWorkManagementServiceApplicationProxy
+  href: New-SPWorkManagementServiceApplicationProxy.yml
+- text: Set-SPWorkManagementServiceApplicationProxy
+  href: Set-SPWorkManagementServiceApplicationProxy.yml
+syntaxes:
+- >-
+  Set-SPWorkManagementServiceApplication [-Identity] <SPWorkManagementServiceCmdletPipeBind>
+   [-ApplicationPool <SPIisWebServiceApplicationPoolPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
+   [-Confirm] [-MinimumTimeBetweenProviderRefreshes <TimeSpan>] [-MinimumTimeBetweenSearchQueries <TimeSpan>]
+   [-Name <String>] [-WhatIf] [-MinimumTimeBetweenEwsSyncSubscriptionSearches <TimeSpan>]
+   [-NumberOfSubscriptionSyncsPerEwsSyncRun <UInt32>] [-NumberOfUsersEwsSyncWillProcessAtOnce <UInt32>]
+   [-NumberOfUsersPerEwsSyncBatch <UInt32>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE---------------'
+  code: |-
+    C:\PS>$wmservice = Get-SPServiceApplication -Name "Work Management Service Application"
+
+    C:\PS>$refreshTime = New-Timespan -Minutes 10
+
+    Set-SPWorkManagementServiceApplication -Identity $wmservice -MinimumTimeBetweenProviderRefreshes $refreshTime
+  description: |-
+    This example sets the minimum time between provider refreshes to 10 minutes on the service application named "Work Management Service Application".
+  summary: ""
+parameters:
+- type: <xref href="SPIisWebServiceApplicationPoolPipeBind" data-throw-if-not-resolved="False" />
+  name: ApplicationPool
+  description: |+
+    Specifies the name of an application pool to use; for example, SharePoint - 1213.
+    If no value is specified, the default application pool is used.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  parameterValueGroup: ""
+- type: <xref href="SPWorkManagementServiceCmdletPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the service application to update.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a subscription settings service application (for example, SubSettingsApp1); or an instance of a valid SPWorkManagementServiceApplication object
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: MinimumTimeBetweenEwsSyncSubscriptionSearches
+  description: |+
+    This value specifies the minimum amount of time between calls into our routine that tries to find new tenants that want to sync EWS tasks.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: MinimumTimeBetweenProviderRefreshes
+  description: |+
+    Specifies the minimum amount of time between cache update operations per user.
+    If this time has not passed since the last successful refresh request for a user, the service application does not execute new refresh requests.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: MinimumTimeBetweenSearchQueries
+  description: |+
+    Specifies the minimum amount of time between calls to the Search Service application to discover new SharePoint task lists where a user has tasks. 
+    If this time has not passed since the last successful call to Search for a user, the service application does not call Search during refresh operations.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the Work Management Service application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: NumberOfSubscriptionSyncsPerEwsSyncRun
+  description: |+
+    This value specifies the maximum number of tenants the service will try to sync via EWS per Timer job interval
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: NumberOfUsersEwsSyncWillProcessAtOnce
+  description: |+
+    This value specifies the maximum number of users a service instance machine will sync via EWS at one time across all tenants.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: NumberOfUsersPerEwsSyncBatch
+  description: |+
+    This value specifies the maximum number of users a service instance will try to sync on a given tenant via EWS per Timer job interval
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+uid: SharePointServer.Set-SPWorkManagementServiceApplication
+name: Set-SPWorkManagementServiceApplication
+description: |-
+  Use the `Set-SPWorkManagementServiceApplication` cmdlet to set settings (that is, minimum time between refreshes for aggregating tasks and load per machine for synchronization with Exchange) for the specified Work Management Service Application by using the Identity parameter.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.WorkManagement.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spworkmanagementserviceapplication
+  applicable: SharePoint Server 2013, SharePoint Server 2016
+  title: Set-SPWorkManagementServiceApplication
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

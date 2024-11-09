@@ -1,0 +1,97 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns a keyword term.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Get-SPEnterpriseSearchQueryKeyword [[-Identity] <KeywordPipeBind>] -Site <SPSitePipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE------------------'
+  code: |-
+    Get-SPEnterpriseSearchQueryKeyword -Identity Engineering -Site https://myserver/sites/engineering | Set-SPEnterpriseSearchQueryKeyword -StartDate "12/25/2009" -EndDate "12/24/2010" -Site https://myserver/sites/engineering
+  description: |-
+    This example gets a reference to the keyword with the term Engineering from the site https://myserver/sites/engineering and sets the start dates and end dates for the keyword.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="KeywordPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the keyword term to get.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid string that contains a keyword term (for example, KeywordTerm1); or an instance of a valid Keyword object.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Site
+  isRequired: true
+  description: |+
+    Filters to return keywords with the specified results URL.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form https://server_name; or an instance of a valid SPSite object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Get-SPEnterpriseSearchQueryKeyword
+name: Get-SPEnterpriseSearchQueryKeyword
+description: |-
+  The Get-SPEnterpriseSearchQueryKeyword cmdlet reads a QueryKeyword object when the keyword rule is created, updated, or deleted.
+
+  If the Identity parameter is not specified, this cmdlet returns the query keyword collection from the specified search application.
+
+  You can use this cmdlet for keywords in site collections that are in SharePoint Server mode.
+  You cannot use this cmdlet after a site collection is upgraded to SharePoint Server mode because keywords and Best Bets are automatically migrated to query rules.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.Search.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchquerykeyword
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Get-SPEnterpriseSearchQueryKeyword
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

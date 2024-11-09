@@ -1,0 +1,96 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets or updates one or more property values for a SharePoint application.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Get-SPOApplication
+  href: Get-SPOApplication.yml
+- text: Set-SPOTenant
+  href: set-spotenant.yml
+syntaxes:
+- >-
+  Set-SPOApplication 
+
+  [-OwningApplicationId <OwningApplicationId>] 
+
+  [-SharingCapability <SharingCapability>] 
+
+  [-OverrideTenantSharingCapability <Boolean>]
+examples:
+- title: Example 1
+  code: |-
+    Set-SPOApplication -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -OverrideTenantSharingCapability $false
+  description: |-
+    This example disables the override sharing capability, aligning this SharePoint Embedded application's sharing settings with sharing capability of the SharePoint Online.
+  summary: ""
+- title: Example 2
+  code: |-
+    Set-SPOApplication -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -OverrideTenantSharingCapability $true -SharingCapability -Disabled
+  description: |-
+    This example enables the override, restricting file sharing within the SharePoint Embedded application to internal company users only, regardless of the broader SharePoint Online tenant settings.
+  summary: ""
+- title: Example 3
+  code: |-
+    Set-SPOTenant -EnableAzureADB2BIntegration $true
+    Set-SPOApplication -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -OverrideTenantSharingCapability $true -SharingCapability -ExternalUserandGuestSharing
+  description: |-
+    This example demonstrates how to enable file sharing within the SharePoint Embedded application for external users. Note that B2B integration must be enabled to allow guest invitations to SharePoint Embedded apps.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: OverrideTenantSharingCapability
+  isRequired: true
+  description: |+
+    This setting allows the application to independently set its sharing capabilities, overriding the tenant-level settings of SharePoint Online. Options:
+
+    - False (default) - The application follows the tenant-level sharing capability
+    - True - The application's sharing settings are independent of the tenant level sharing capability
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Embedded
+  parameterValueGroup: ""
+- type: <xref href="SharingCapabilities" data-throw-if-not-resolved="False" />
+  name: SharingCapability
+  isRequired: true
+  description: |+
+    Determines what level of sharing is available for the SharePoint Embedded Application.
+
+    The valid values are:  
+
+    - ExternalUserAndGuestSharing (default) - External user sharing (share by email) and guest link sharing are both enabled.
+    - Disabled - External user sharing (share by email) and guest link sharing are both disabled.
+    - ExternalUserSharingOnly - External user sharing (share by email) is enabled, but guest link sharing is disabled.
+    - ExistingExternalUserSharingOnly - Only guests already in your organization's directory.
+
+    The default setting is None, meaning the application follows the SharePoint Online tenant-level sharing settings. Use the `Get-SPOTenant` cmdlet to view these settings.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Embedded
+  parameterValueGroup: ""
+uid: Microsoft.Online.SharePoint.PowerShell.Set-SPOApplication
+name: Set-SPOApplication
+description: |-
+  `Set-SPOApplication` adjusts the sharing settings at the SharePoint Embedded application level, determining if this SharePoint Embedded application content can be shared with external guests.
+
+  You must be a SharePoint Embedded Administrator or Global Administrator to run the cmdlet.
+  > [!NOTE]   
+  > The OwningApplicationId for Microsoft Loop is `a187e399-0c36-4b98-8f04-1edc167a0996`.
+  > The OwningApplicationId for Microsoft Designer is `5e2795e3-ce8c-4cfb-b302-35fe5cd01597`.
+
+  To invite people outside your organization, please make sure [Microsoft Entra B2B](/sharepoint/sharepoint-azureb2b-integration) is enabled.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Set-SPOApplication
+  Applicable: SharePoint Embedded
+  title: Set-SPOApplication
+  PlatyPS schema version: 2.0.0
+  author: FarreltinF
+  ms.author: fanyi
+  ms.reviewer: ""

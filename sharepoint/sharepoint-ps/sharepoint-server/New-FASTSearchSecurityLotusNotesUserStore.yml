@@ -1,0 +1,222 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a FAST Search Server 2010 for SharePoint security user store to provide security for Lotus Notes content.
+module: SharePointServer
+notes: ""
+links:
+- text: Set-FASTSearchSecurityLotusNotesUserStore
+  href: Set-FASTSearchSecurityLotusNotesUserStore.yml
+- text: Get-FASTSearchSecurityLotusNotesUserStore
+  href: Get-FASTSearchSecurityLotusNotesUserStore.yml
+syntaxes:
+- >-
+  New-FASTSearchSecurityLotusNotesUserStore [-Identity] <String>
+   [[-NonIndexableCharacterEncodingPrefix] <String>] [[-NonIndexableCharacterPattern] <String>]
+   [[-Description] <String>] [[-UseDenyOnDefault] <Boolean>] [[-UseDocumentSecurity] <Boolean>]
+   [[-UseWildcardSecurity] <Boolean>] [[-UseViewSecurity] <Boolean>] [[-AllowPrefix] <String>]
+   [[-DenyPrefix] <String>] [[-NonIndexableCharacterHandling] <String>] [-ObjectToClone <LotusNotesUserStore>]
+   [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    new-FASTSearchSecurityLotusNotesUserStore ln1
+  description: |-
+    This example creates a new security Lotus Notes user store with a user store identity of "ln1".
+
+    This example uses default values for all parameters except the required Identity parameter.
+  summary: ""
+- title: '---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Get-FASTSearchSecurityLotusNotesUserStore -Identity ln1 | New-FASTSearchSecurityLotusNotesUserStore -Identity ln3 -UseViewSecurity $true
+  description: |-
+    This example creates a new Lotus Notes user store with an identity of "ln3" and enables view level security.
+    The New-FASTSearchSecurityLotusNotesUserStore command uses the ObjectToClone object on the pipeline as input to the New command for default parameter values.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AllowPrefix
+  description: |+
+    A string value prepended to the document ACL to control which items the user is allowed access to and which items will be returned in the query.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "7"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DenyPrefix
+  description: |+
+    A string value prepended to the ACL to control which items the user is denied access to and which items are not returned from the query.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "8"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    A brief explanation of the user store.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    User store identity.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NonIndexableCharacterEncodingPrefix
+  description: |+
+    If NonIndexableCharacterHandling is set to encodeWithPrefix, this parameter specifies the prefix added to the encoded ACL.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "10"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NonIndexableCharacterHandling
+  description: |+
+    Specifies what to do with ACL values that match the NonIndexableCharacterRegExPattern regular expression.
+
+    Valid values:
+
+    -- encode - The ACL is encoded into a single searchable term.
+    -- encodeWithPrefix - The value of NonIndexableEncodedPrefix is concatenated with the ACL to be encoded, producing a single searchable term.
+    -- remove - The ACL is removed from both allowing and denying access. Specify "remove" if the ACL is never used to deny access.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "9"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NonIndexableCharacterPattern
+  description: |+
+    Specifies a regular expression pattern used to detect non-indexable characters in an ACL.
+
+    Identities matching this regular expression pattern will be processed based on NonIndexableCharacterHandling.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "11"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="LotusNotesUserStore" data-throw-if-not-resolved="False" />
+  name: ObjectToClone
+  description: |+
+    A Lotus Notes user store object whose property values are used as a baseline for the Lotus Notes user store being created.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: UseDenyOnDefault
+  description: |+
+    If true, support for default access with deny on users/groups is enabled on database level security.
+
+    You must enable this filter for an inverse security model: first grant access to everyone, and then explicitly deny access to certain groups or users.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: UseDocumentSecurity
+  description: |+
+    If true, item security is enabled (i.e., the filter contains an item level security condition).
+
+    If set to false, item level security is ignored; only database level security (and possibly view security) is used.
+
+    If items always inherit the ACLs of the database, you can turn off this option.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: UseViewSecurity
+  description: |+
+    If true, view security is enabled (i.e., the filter contains a view level security condition).
+
+    If set to false, view level security is ignored; only database level security (and possibly item security) is used.
+
+    If views always inherit the ACLs of the database, or if views are not indexed, you can turn off this option.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "6"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: UseWildcardSecurity
+  description: |+
+    If true, database access through wildcard group entry (starting with */) is enabled.
+
+    If set to false, the wildcard check is ignored.
+    Only normal groups are checked against the database ACL.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "5"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.New-FASTSearchSecurityLotusNotesUserStore
+name: New-FASTSearchSecurityLotusNotesUserStore
+description: |-
+  This cmdlet configures FAST Search Server 2010 for SharePoint security for Lotus Notes content.
+
+  A Lotus Notes security user store uses a user-dependent query filter that is applied to each query to enforce the defined access control policies based on indexed values.
+  The Lotus Notes security user store search filter requires that the user has read access to both the item and the database to view a specific item.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-fastsearchsecuritylotusnotesuserstore
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: New-FASTSearchSecurityLotusNotesUserStore

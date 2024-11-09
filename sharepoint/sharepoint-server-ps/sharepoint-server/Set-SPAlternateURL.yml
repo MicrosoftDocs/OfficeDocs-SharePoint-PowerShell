@@ -1,0 +1,132 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures the specified alternate URL.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Set-SPAlternateURL [-Identity] <SPAlternateUrlPipeBind> [-Url <String>] [-Zone <SPUrlZone>]
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE 1------------------'
+  code: |-
+    Set-SPAlternateURL -Identity https://www.contoso.com -Zone "Internet"
+  description: |-
+    This example changes the zone of the alternate URL https://www.contoso.com.
+  summary: ""
+- title: '------------------EXAMPLE 2------------------'
+  code: |-
+    Set-SPAlternateURL -Identity https://www.contoso.com -Url https://sharepoint.contoso.com -Zone "Default"
+  description: |-
+    This example changes the URL and zone of the alternate URL https://www.contoso.com.
+  summary: ""
+- title: '------------------EXAMPLE 3------------------'
+  code: |-
+    Get-SPAlternateURL https://www.contoso.com | Set-SPAlternateURL -Zone "Internet"
+  description: |-
+    This example changes the zone of the alternate URL https://www.contoso.com.
+  summary: ""
+- title: '------------------EXAMPLE 4------------------'
+  code: |-
+    Get-SPWebApplication |%{ Get-SPAlternateURL -WebApplication $_ -Zone "Extranet" } | Set-SPAlternateURL -Zone "Intranet"
+  description: |-
+    This example changes the zone of the alternate URL for the specified Web application from Extranet to Intranet.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPAlternateUrlPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the URL or GUID of the alternate URL to change.
+
+    The type must be a valid URL, in the form https://server_name/WebApplication/site, or a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Url
+  description: |+
+    Specifies the new alternate URL.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPUrlZone" data-throw-if-not-resolved="False" />
+  name: Zone
+  description: |+
+    Sets the supplied alternate URL as one of the five zones.
+
+    The type must be any one of the following values: Default, Intranet, Internet, Extranet, or Custom.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPAlternateURL
+name: Set-SPAlternateURL
+description: |-
+  The `Set-SPAlternateUrl` cmdlet changes the URL or zone of the alternate URL specified by the Identity parameter.
+  This cmdlet can be used to change only the zone of internal URLs and cannot be used to change the zone of public URLs.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spalternateurl
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPAlternateURL
+  PlatyPS schema version: 2.0.0

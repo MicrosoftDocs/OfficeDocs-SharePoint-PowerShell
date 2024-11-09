@@ -1,0 +1,151 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the operation status of the linguistic query and document processing components.
+module: sharepoint-server
+notes: ""
+links:
+- text: Get-SPEnterpriseSearchLinguisticComponentsStatus
+  href: Get-SPEnterpriseSearchLinguisticComponentsStatus.yml
+syntaxes:
+- >-
+  Set-SPEnterpriseSearchLinguisticComponentsStatus [-AllEnabled <Boolean>]
+   [-AssignmentCollection <SPAssignmentCollection>] [-EntityExtractionEnabled <Boolean>]
+   [-Identity <LinguisticComponentsStatusPipeBind>] [-QuerySpellingEnabled <Boolean>]
+   -SearchApplication <SearchServiceApplicationPipeBind> [-StemmingEnabled <Boolean>]
+   [-ThesaurusEnabled <Boolean>] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE 1-----------------'
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication
+    Set-SpEnterpriseSearchLinguisticComponentsStatus -SearchApplication $ssa -StemmingEnabled $false
+  description: |-
+    This example shows how to disable stemming during query processing by setting the parameter StemmingEnabled to false.
+  summary: ""
+- title: '------------------EXAMPLE 2-----------------'
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication
+    Set-SpEnterpriseSearchLinguisticComponentsStatus -SearchApplication $ssa -AllEnabled $false
+  description: |-
+    This example shows how to disable all linguistic query and document processing functionalities.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllEnabled
+  description: |+
+    A Boolean value to enable or deactivate all linguistic functionalities.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EntityExtractionEnabled
+  description: |+
+    A Boolean value to enable or deactivate the company extractor and all custom extractors during document processing.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="LinguisticComponentsStatusPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    An object that represents the current status of the linguistic components.
+
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: QuerySpellingEnabled
+  description: |+
+    A Boolean value to enable or deactivate query spelling correction.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SearchServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: SearchApplication
+  isRequired: true
+  description: |+
+    Specifies the search service application that contains the linguistic processing components.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: StemmingEnabled
+  description: |+
+    A Boolean value to enable or deactivate expansive stemming during query processing.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ThesaurusEnabled
+  description: |+
+    A Boolean value to enable or deactivate thesaurus lookup during query processing.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPEnterpriseSearchLinguisticComponentsStatus
+name: Set-SPEnterpriseSearchLinguisticComponentsStatus
+description: |-
+  This cmdlet sets the operational status of the linguistic query and document processing components.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.Search.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spenterprisesearchlinguisticcomponentsstatus
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPEnterpriseSearchLinguisticComponentsStatus
+  PlatyPS schema version: 2.0.0

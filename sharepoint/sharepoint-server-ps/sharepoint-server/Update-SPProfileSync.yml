@@ -1,0 +1,126 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the configuration of the User Profile Synchronization job based on the parameters specified.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Update-SPProfileSync [[-ExcludeWebApplications] <String>] [[-SynchronizationTiming] <String>]
+   [[-SweepTiming] <String>] [[-IgnoreIsActive] <Boolean>] [-AssignmentCollection <SPAssignmentCollection>]
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '------------EXAMPLE 1-----------'
+  code: |-
+    Update-SPProfileSync -IgnoreIsActive:$false
+  description: |-
+    This example updates the User Profile Synchronization job marking it to sync all users irrespective of their activity, without prompting for user confirmation.
+  summary: ""
+- title: '------------EXAMPLE 2-----------'
+  code: |-
+    Update-SPProfileSync -SynchronizationTiming "every 15 minutes"
+  description: |-
+    This example updates the User Profile Synchronization job marking it to run every 15 minutes, without prompting for user confirmation.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ExcludeWebApplications
+  description: |+
+    Comma-delimited list of Web application URLs to exclude from consideration in the synchronization process.
+
+    The values specified delete any existing values set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IgnoreIsActive
+  description: |+
+    Specifies whether to sync only active profiles or all profiles.
+    User profiles of users who contribute to the site are considered as Active.
+
+    The valid values are True or False.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SweepTiming
+  description: |+
+    Performs the same tasks as the SynchronizationTiming parameter.
+    However, the SweepTiming parameter sets the schedule for the "sweep" job.
+    The sweep job is driven by the SharePoint Foundation change log and is used as a lightweight way to capture new users added.
+    For example, you might have a fully synchronized site, but then a user is added to the site.
+    The sweep job ensures that the incremental newly added user gets the User Profile properties replicated quickly.
+
+    The default value is every 1 minute.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SynchronizationTiming
+  description: |+
+    Sets the schedule for the main synchronization job.
+    You can mention the schedule using a text string of SPSchedule format (for example, "every 15 minutes" means the job is scheduled to run every 15 minutes, "daily at 09:00:00" means the job is scheduled to run at 9 AM every day).
+
+    The default is once per hour.
+
+    You can use the SPSchedule.FromString() string method to pass in the strings, "every 5 minutes" or "weekly xxxxxxx".
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: sharepoint-server.Update-SPProfileSync
+name: Update-SPProfileSync
+description: |-
+  The Update-SPProfileSync cmdlet updates the configuration of the User Profile Synchronization job based on the parameters specified.
+metadata:
+  external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/update-spprofilesync
+  applicable: ""
+  title: Update-SPProfileSync
+  PlatyPS schema version: 2.0.0

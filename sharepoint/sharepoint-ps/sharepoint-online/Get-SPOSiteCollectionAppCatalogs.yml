@@ -1,0 +1,43 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use this cmdlet to get the Site Collection App Catalog.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+syntaxes:
+- Get-SPOSiteCollectionAppCatalogs [-Site] <SpoSitePipeBind> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-SPOSiteCollectionAppCatalogs -Site https://contoso.sharepoint.com/sites/Research
+  description: |-
+    This example returns the Site Collection App Catalog for the site <https://contoso.sharepoint.com/sites/Research.>
+  summary: ""
+parameters:
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Site
+  isRequired: true
+  description: |+
+    Url of the site
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOSiteCollectionAppCatalogs
+name: Get-SPOSiteCollectionAppCatalogs
+description: |-
+  Use this cmdlet to get the Site Collection App Catalog. For more information, see [Use the App Catalog to make custom business apps available for your SharePoint environment](https://learn.microsoft.com/sharepoint/use-app-catalog)
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spositecollectionappcatalogs
+  applicable: SharePoint Online
+  title: Get-SPOSiteCollectionAppCatalogs
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

@@ -1,0 +1,129 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves a result source.
+module: SharePointServer
+notes: ""
+links:
+- text: New-SPEnterpriseSearchResultSource
+  href: New-SPEnterpriseSearchResultSource.yml
+- text: Set-SPEnterpriseSearchResultSource
+  href: Set-SPEnterpriseSearchResultSource.yml
+- text: Remove-SPEnterpriseSearchResultSource
+  href: Remove-SPEnterpriseSearchResultSource.yml
+- text: Get-SPEnterpriseSearchOwner
+  href: Get-SPEnterpriseSearchOwner.yml
+syntaxes:
+- >-
+  Get-SPEnterpriseSearchResultSource [[-Identity] <ResultSourcePipeBind>] -Owner <SearchObjectOwner>
+   -SearchApplication <SearchServiceApplicationPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+   [<CommonParameters>]
+examples:
+- title: '--------------  Example 1: Get result source by name  --------------'
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
+    $owner = Get-SPEnterpriseSearchOwner -Level SSA
+    Get-SPEnterpriseSearchResultSource -Identity "Local SharePoint Results" -SearchApplication $ssa -Owner $owner
+  description: |-
+    This example retrieves the search service application level result source with the name "Local SharePoint Results".
+  summary: ""
+- title: '--------------  Example 2: Get result source by id  --------------'
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
+    $owner = Get-SPEnterpriseSearchOwner -Level SSA
+    Get-SPEnterpriseSearchResultSource -Identity 8413cd39-2156-4e00-b54d-11efd9abdB89 -SearchApplication $ssa -Owner $owner
+  description: |-
+    This example retrieves the search service application level result source with the id 8413cd39-2156-4e00-b54d-11efd9abdB89.
+  summary: ""
+- title: '--------------  Example 3: Get all result sources under SSA  --------------'
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
+    $owner = Get-SPEnterpriseSearchOwner -Level SSA
+    Get-SPEnterpriseSearchResultSource -SearchApplication $ssa -Owner $owner
+  description: |-
+    This example retrieves all the search service application level result sources.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="ResultSourcePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the result source to retrieve.
+
+    The type must be a valid GUID string, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a result source (for example, "Local SharePoint Results"); or an instance of a valid Source object.
+
+    If not specified, the result source collection for the specified search object owner is returned.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SearchObjectOwner" data-throw-if-not-resolved="False" />
+  name: Owner
+  isRequired: true
+  description: |+
+    Specifies the search object owner that defines the scope at which the corresponding result source is available.
+
+  defaultValue: None
+  position: Named
+  aliases: o
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SearchServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: SearchApplication
+  isRequired: true
+  description: |+
+    Specifies the search application.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application name, for example, SearchApp1, or an instance of a valid SearchServiceApplication object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Get-SPEnterpriseSearchResultSource
+name: Get-SPEnterpriseSearchResultSource
+description: |-
+  This cmdlet retrieves a result source object.
+
+  If the Identity parameter is not specified, this cmdlet returns the result source collection for the specified search object owner. For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [https://go.microsoft.com/fwlink/p/?LinkId=251831] (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+metadata:
+  external help file: Microsoft.Office.Server.Search.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchresultsource
+  applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Get-SPEnterpriseSearchResultSource
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

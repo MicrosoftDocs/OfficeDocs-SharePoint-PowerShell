@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures properties on an existing user.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Get-SPOUser
+  href: Get-SPOUser.yml
+syntaxes:
+- Set-SPOUser -IsSiteCollectionAdmin <Boolean> -LoginName <String> -Site <SpoSitePipeBind> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Set-SPOUser -Site https://contoso.sharepoint.com/sites/marketing -LoginName melissa.kerr@contoso.com -IsSiteCollectionAdmin $true
+  description: |-
+    This example makes melissa.kerr@contoso.com a SharePoint Online site collection administrator on <https://contoso.sharepoint.com/sites/marketing>.
+  summary: ""
+- title: Example 2
+  code: |-
+    Set-SPOUser -Site https://contoso.sharepoint.com/sites/benefits -LoginName adelev_fabrikam.onmicrosoft.com#ext#@contoso.onmicrosoft.com -IsSiteCollectionAdmin $true
+  description: |-
+    This example makes guest user adelev_fabrikam.onmicrosoft.com a SharePoint Online site collection administrator on <https://contoso.sharepoint.com/sites/benefits>.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsSiteCollectionAdmin
+  isRequired: true
+  description: |+
+    Specifies whether the user is a site collection administrator.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LoginName
+  isRequired: true
+  description: |+
+    Specifies the user name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Site
+  isRequired: true
+  description: |+
+    Specifies the full URL of the site collection. It must be in a valid managed path in the company's site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UpdateUserTypeFromAzureAD
+  description: |+
+    If the UserType property of an existing user is changed in Microsoft Entra ID from Member to Guest or vice-versa, this parameter can be used to update it in SharePoint Online.
+    For more information, see [Convert UserType](https://learn.microsoft.com/azure/active-directory/b2b/user-properties#convert-usertype).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Set-SPOUser
+name: Set-SPOUser
+description: |-
+  Use the `Set-SPOUser` cmdlet to configure properties of an existing user.
+  That is, to add or remove a user as a SharePoint Online site collection administrator.
+
+  You must be at least a SharePoint administrator to run the cmdlet.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+
+  This cmdlet is not supported for use with granular delegated admin privileges (GDAP).
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spouser
+  applicable: SharePoint Online
+  title: Set-SPOUser
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

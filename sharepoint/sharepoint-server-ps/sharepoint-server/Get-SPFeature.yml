@@ -1,0 +1,174 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns the SharePoint Features based on a given scope.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Get-SPFeature [[-Identity] <SPFeatureDefinitionPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
+   [-Farm] [-Limit <String>] [<CommonParameters>]
+- >-
+  Get-SPFeature [[-Identity] <SPFeatureDefinitionPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
+   [-Limit <String>] [-Site <SPSitePipeBind>] [-Sandboxed] [<CommonParameters>]
+- >-
+  Get-SPFeature [[-Identity] <SPFeatureDefinitionPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
+   [-Limit <String>] [-Web <SPWebPipeBind>] [<CommonParameters>]
+- >-
+  Get-SPFeature [[-Identity] <SPFeatureDefinitionPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
+   [-Limit <String>] [-WebApplication <SPWebApplicationPipeBind>] [<CommonParameters>]
+- >-
+  Get-SPFeature [[-Identity] <SPFeatureDefinitionPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
+   [-Limit <String>] [-CompatibilityLevel <Int32>] [<CommonParameters>]
+examples:
+- title: '--------------EXAMPLE 1-----------------'
+  code: |-
+    Get-SPFeature -Limit ALL | Where-Object {$_.Scope -eq "SITE"}
+  description: |-
+    This example returns a list of all installed SITE scoped Features.
+  summary: ""
+- title: '--------------EXAMPLE 2-----------------'
+  code: |-
+    Get-SPSite https://somesite | Get-SPWeb -Limit ALL |%{ Get-SPFeature -Web $_ } | Select DisplayName,ID -Unique
+  description: |-
+    This example returns the name and identifier (ID) of each uniquely enabled Feature on every SPWeb object in the site collection at https://somesite.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: CompatibilityLevel
+  description: |+
+    Specifies the version of templates to use when creating a new SPSite object. This value sets the initial CompatibilityLevel value for the site collection. When this parameter is not specified, the CompatibilityLevel will default to the highest possible version for the web application depending on the CompatibilityRange setting.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Farm
+  description: |+
+    Specifies that if this parameter is used, only enabled farm Features are displayed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPFeatureDefinitionPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the name of the Feature to retrieve.
+
+    The type must be the full or partial name, in the form  Feature1, or a GUID, in the form  1234-4567-9879, of the Feature to get.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Limit
+  description: |+
+    Limits the display results. If "All" is specified, all Features are displayed.
+
+    The type must be a valid number greater than 0. The default value is 200.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Sandboxed
+  description: |+
+    Specifies to retrieve Sandbox features.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Site
+  description: |+
+    Specifies the name of the site collection from which to get enabled Features.
+
+    The type must be a valid URL for a site collection, in the form https://server_name .
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPWebPipeBind" data-throw-if-not-resolved="False" />
+  name: Web
+  description: |+
+    Specifies the URL or GUID of the Web.
+
+    The type must be a valid URL, in the form  https://server_name , or a GUID, in the form 1234-5678-9876-0987.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPWebApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: WebApplication
+  description: |+
+    Specifies the name of the Web application from which to get enabled Features.
+
+    The type must be a valid URL to the Web application in the form https://server_name .
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Get-SPFeature
+name: Get-SPFeature
+description: |-
+  This cmdlet contains more than one parameter set.
+
+  You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+  For more information about how to use parameter sets, see Cmdlet Parameter Sets [https://go.microsoft.com/fwlink/?LinkID=18781](https://go.microsoft.com/fwlink/?LinkID=187810).
+
+  All parameter sets take the Identity parameter, which can be either the relative path of the SharePoint Feature (considered the feature name) or the GUID of a Feature definition.
+
+  If the Identity parameter is provided, the cmdlets attempt to find the given Feature definition or instance for the given scope.
+  If no parameters are specified, all installed features are returned.
+
+  The Get-SPFeature cmdlet behaves differently at each scope, returning the enabled Features at each level.
+  If no scope is provided, all installed Features are returned.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [https://go.microsoft.com/fwlink/p/?LinkId=251831](https://go.microsoft.com/fwlink/p/?LinkId=251831).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spfeature
+  applicable: SharePoint Server Subscription Edition
+  title: Get-SPFeature
+  PlatyPS schema version: 2.0.0

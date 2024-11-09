@@ -1,0 +1,80 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new full text index.
+module: SharePointServer
+notes: ""
+links:
+- text: Remove-FASTSearchMetadataFullTextIndex
+  href: Remove-FASTSearchMetadataFullTextIndex.yml
+- text: Set-FASTSearchMetadataFullTextIndex
+  href: Set-FASTSearchMetadataFullTextIndex.yml
+- text: Get-FASTSearchMetadataFullTextIndex
+  href: Get-FASTSearchMetadataFullTextIndex.yml
+- text: Set-FASTSearchMetadataRankProfile
+  href: Set-FASTSearchMetadataRankProfile.yml
+- text: New-FASTSearchMetadataFullTextIndexMapping
+  href: New-FASTSearchMetadataFullTextIndexMapping.yml
+syntaxes:
+- New-FASTSearchMetadataFullTextIndex -Description <String> -Name <String> [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    New-FASTSearchMetadataFullTextIndex -Name CommonSharePoint -Description "Content from the common SharePoint site."
+  description: |-
+    This example creates a new full text index named "CommonSharePoint".
+    After it has been created, you can map managed properties into the full text index.
+    See New-FASTSearchMetadataFullTextIndexMapping for details about mapping properties into a full text index.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  isRequired: true
+  description: |+
+    Description of the full text index, including the type of content or which connector feeds the data.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Name of the new full text index.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.New-FASTSearchMetadataFullTextIndex
+name: New-FASTSearchMetadataFullTextIndex
+description: |-
+  This cmdlet creates a new full text index in Microsoft FAST Search Server 2010 for SharePoint.
+  A full text index can be searched by specifying the full text index name in a query.
+  For example: "extracontent:car" searches for the term "car" in the full text index named "extracontent".
+  If no full text index is specified, the default full text index is used.
+  A relevancy score is calculated when searching the full text index, according to the rank profile specified in the query (or the default rank profile, if no rank profile is specified).
+
+  See Set-FASTSearchMetadataFullTextIndex for details about changing the default full text index for searching.
+
+  See Set-FASTSearchMetadataRankProfile for more details about rank profiles.
+
+  Use New-FASTSearchMetadataFullTextIndexMapping to create mappings from managed properties to a new full text index.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-fastsearchmetadatafulltextindex
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: New-FASTSearchMetadataFullTextIndex

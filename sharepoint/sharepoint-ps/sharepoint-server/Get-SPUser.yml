@@ -1,0 +1,137 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns the user account or accounts that match a given search criteria.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Get-SPUser [[-Identity] <SPUserPipeBind>] -Web <SPWebPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+   [-Group <SPGroupPipeBind>] [-Limit <String>] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE 1------------------'
+  code: |-
+    Get-SPUser -Web 'https://sharepoint.contoso.com' -Group 'Viewers'
+  description: |-
+    This example returns all members of the SharePoint group Viewers on the site https://sharepoint.contoso.com.
+  summary: ""
+- title: '------------------EXAMPLE 2------------------'
+  code: |-
+    Get-SPUser -Identity 'i:0#.w|contoso\jdoe' -Web 'https://sharepoint.contoso.com'
+  description: |-
+    This example returns the specific user identified via Windows Claims on the site https://sharepoint.contoso.com.
+  summary: ""
+- title: '------------------EXAMPLE 3------------------'
+  code: |-
+    Get-SPUser -Identity 'contoso\jdoe' -Web 'https://sharepoint.contoso.com'
+  description: |-
+    This example returns the specific user identified via Classic Windows authentication on the site https://sharepoint.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPGroupPipeBind" data-throw-if-not-resolved="False" />
+  name: Group
+  description: |+
+    Specifies the user group to which the new user belongs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPUserPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the ID or login name of the user to be returned.
+
+    The type must be a valid ID or login name, such as the format of 'CONTOSO\jdoe' for Classic Windows Authentication or 'i:0#.w|CONTOSO\jdoe' for Windows Claims.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: UserAlias
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Limit
+  description: |+
+    Specifies the maximum number of users to return.
+    The default value is 500.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPWebPipeBind" data-throw-if-not-resolved="False" />
+  name: Web
+  isRequired: true
+  description: |+
+    Specifies the Web site to be used as a scope.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a SharePoint Foundation Web site (for example, MySPSite1); or an instance of a valid SPWeb object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Get-SPUser
+name: Get-SPUser
+description: |-
+  The Get-SPUser cmdlet returns all SharePoint user accounts that match the scope given by the Identity, Web, or Group parameters.
+
+  The Identity parameter can use the alias of a user for returning exact matches.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spuser
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Get-SPUser
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

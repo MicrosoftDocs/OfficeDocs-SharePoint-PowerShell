@@ -1,0 +1,46 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!IMPORTANT]
+  > This feature is currently available to organizations that have no more than 10,000 total SharePoint sites and OneDrive accounts combined.
+
+  Get the status of the job to change the SharePoint domain name for your organization in Microsoft 365.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Rename your SharePoint domain
+  href: https://aka.ms/SPOTenantRename
+- text: Start-SPOTenantRename
+  href: Start-SPOTenantRename.yml
+- text: Stop-SPOTenantRename
+  href: Stop-SPOTenantRename.yml
+- text: Get-SPOSiteRenameState
+  href: Get-SPOSiteRenameState.yml
+syntaxes:
+- Get-SPOTenantRenameStatus [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Get-SPOTenantRenameStatus
+  description: |-
+    Gets the status of the job to rename your SharePoint domain name.
+  summary: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOTenantRenameStatus
+name: Get-SPOTenantRenameStatus
+description: |-
+  This command gets the status of the job to rename the SharePoint domain name for your organization.
+
+  > [!NOTE] 
+  > If you receive AccessDenied exceptions after the rename operation has started, try connecting to the new domain in PowerShell and try again.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spotenantrenamestatus
+  applicable: SharePoint Online
+  title: Get-SPOTenantRenameStatus
+  PlatyPS schema version: 2.0.0
+  author: WayneEwington
+  ms.author: waynewin
+  ms.reviewer: ""

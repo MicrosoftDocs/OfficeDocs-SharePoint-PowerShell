@@ -1,0 +1,170 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Copies Managed Metadata Taxonomy Groups from SharePoint on-premises to SharePoint Online.
+module: SharePointServer
+notes: ""
+inputs:
+- name: <xref href="System.String" data-throw-if-not-resolved="False" />
+  description: |-
+    System.Uri
+    System.String[]
+    System.Management.Automation.PSCredential
+    Microsoft.SharePoint.PowerShell.SPAssignmentCollection
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Copy-SPTaxonomyGroups [-AssignmentCollection <SPAssignmentCollection>] [-AuthEndpoint <String>]
+   -Credential <PSCredential> [-GraphApiEndpoint <String>] -GroupNames <String[]> -LocalSiteUrl <Uri>
+   -LocalTermStoreName <String> -RemoteSiteUrl <Uri> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    $credential = Get-Credential
+    Copy-SPTaxonomyGroups -LocalTermStoreName "Managed Metadata Service Application Proxy" -LocalSiteUrl "https://sharepoint" -RemoteSiteUrl "https://contoso.sharepoint.com" -GroupNames "Group1","Group2" -Credential $credential
+  description: |-
+    This example copies two taxonomy groups "Group1" and "Group2" from local Term Store to the remote Term Store in "https://contoso.com". These two sites have been enabled with Hybrid Taxonomy.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AuthEndpoint
+  description: |+
+    Specifies the Azure Active Directory Graph API authentication endpoint. By default, the well-known endpoint will be used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  isRequired: true
+  description: |+
+    Specifies the Taxonomy Term Store administrator credential of remote SharePoint Online Term Store.
+
+    Writes data to remote Term Store, so a Term Store Administrator's credential is needed to perform the operations.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GraphApiEndpoint
+  description: |+
+    Specifies the Azure Active Directory Graph API endpoint. By default, the well-known endpoint will be used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: GroupNames
+  isRequired: true
+  description: |+
+    Specifies the name array of Taxonomy groups in local on-premises term store that will be copied to remote SharePoint Online Term store.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: LocalSiteUrl
+  isRequired: true
+  description: |+
+    Specifies the Url of local SharePoint on-premises site that contains the local Taxonomy Term Store.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LocalTermStoreName
+  isRequired: true
+  description: |+
+    Specifies the name of local Taxonomy Term Store in the SharePoint on-premises farm.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: RemoteSiteUrl
+  isRequired: true
+  description: |+
+    Specifies the Url of remote SharePoint Online site that contains remote Taxonomy Term Store.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Copy-SPTaxonomyGroups
+name: Copy-SPTaxonomyGroups
+description: |-
+  Use the Copy-SPTaxonomyGroups cmdlet to copy specified Metadata groups from an on-premises environment to SharePoint Online in a Hybrid SharePoint setup. SharePoint Online becomes the authoritative source for the copied Taxonomy Group. All updates to the Taxonomy Group must be made in SharePoint Online.  Once a Taxonomy Group is copied, it cannot be re-copied.
+metadata:
+  external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/copy-sptaxonomygroups
+  applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Copy-SPTaxonomyGroups
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

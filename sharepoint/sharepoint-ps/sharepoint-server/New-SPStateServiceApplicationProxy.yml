@@ -1,0 +1,110 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a proxy for a state service application.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  New-SPStateServiceApplicationProxy [-ServiceApplication] <SPStateServiceApplicationPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-DefaultProxyGroup] [-Name <String>] [<CommonParameters>]
+examples:
+- title: '--------------EXAMPLE-------------------'
+  code: |-
+    $db = New-SPStateServiceDatabase -Name 'State Service'
+    $sa = New-SPStateServiceApplication -Name 'State Service' -Database $db
+    New-SPStateServiceApplicationProxy -Name 'State Service Proxy' -ServiceApplication $sa -DefaultProxyGroup
+  description: |-
+    This example creates a State Service database and Service Application. It then associates a new State Service Proxy with the State Service application and adds it to the Default proxy group.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DefaultProxyGroup
+  description: |+
+    Specifies that the service application proxy is added to the farm's default proxy group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the display name of the new proxy.
+
+    The type must be a valid name of a SQL Server database; for example, SessionStateDB1.
+    Service application proxy; for example, StateSvcAppProxy1.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPStateServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: ServiceApplication
+  isRequired: true
+  description: |+
+    Specifies the state service application to associate with the new proxy.
+
+    The type must be a valid name of a state service application (for example, StateServiceApp1); a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or an instance of a valid SPStateServiceApplication object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.New-SPStateServiceApplicationProxy
+name: New-SPStateServiceApplicationProxy
+description: |-
+  The `New-SPStateServiceApplicationProxy` cmdlet creates a proxy for a state service application.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spstateserviceapplicationproxy
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: New-SPStateServiceApplicationProxy
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

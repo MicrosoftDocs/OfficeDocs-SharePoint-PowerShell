@@ -1,0 +1,110 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Queues a job to trim versions from a document library.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Get-SPOListFileVersionBatchDeleteJobProgress
+  href: Get-SPOListFileVersionBatchDeleteJobProgress.yml
+- text: Remove-SPOListFileVersionBatchDeleteJob
+  href: Remove-SPOListFileVersionBatchDeleteJob.yml
+syntaxes:
+- New-SPOListFileVersionBatchDeleteJob [-Site] <SpoSitePipeBind> [-List] <SpoListPipeBind> [-Automatic] [-DeleteBeforeDays <Int32>] [-MajorVersionLimit <Int32>] [-MajorWithMinorVersionsLimit <Int32>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    New-SPOListFileVersionBatchDeleteJob -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -DeleteBeforeDays 360
+  description: |-
+    Example 1 starts a trim job that will delete all file versions that are over 360 days old in the document library called "Documents".
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    New-SPOListFileVersionBatchDeleteJob -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -Automatic
+  description: |-
+    Example 2 starts a trim job that will delete file versions that expired and set version expiration time for the ones not expired in the document library called "Documents" based on the automatic backend algorithm.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    New-SPOListFileVersionBatchDeleteJob -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -MajorVersionLimit 30 -MajorWithMinorVersionsLimit 10
+  description: |-
+    Example 3 starts a trim job that will delete file versions in the document library called "Documents" based on the version count limits.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Automatic
+  description: |+
+    Trim file versions using automatic version history limit algorithm.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="int" data-throw-if-not-resolved="False" />
+  name: DeleteBeforeDays
+  isRequired: true
+  description: |+
+    The minimum age of file versions to trim. In other words, all file versions that are older than this number of days will be deleted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SPOListPipeBind" data-throw-if-not-resolved="False" />
+  name: List
+  isRequired: true
+  description: |+
+    The document library name or Id.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="int" data-throw-if-not-resolved="False" />
+  name: MajorVersionLimit
+  description: |+
+    Trim file version using version count limits. Need to specify `MajorWithMinorVersionsLimit` as well.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="int" data-throw-if-not-resolved="False" />
+  name: MajorWithMinorVersionsLimit
+  description: |+
+    Trim file version using version count limits. Need to specify `MajorVersionLimit` as well.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Site
+  isRequired: true
+  description: |+
+    Specifies the URL of the site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.New-SPOListFileVersionBatchDeleteJob
+name: New-SPOListFileVersionBatchDeleteJob
+description: |-
+  Queues a job to trim versions from a document library.
+
+  Caution: Versions trimmed using this command will be permanently deleted and cannot be recovered from the recycle bin.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/new-spolistfileversionbatchdeletejob
+  applicable: SharePoint Online
+  title: New-SPOListFileVersionBatchDeleteJob
+  PlatyPS schema version: 2.0.0
+  author: msjennywu
+  ms.author: jennywu
+  ms.reviewer: ""
+  manager: seanmc

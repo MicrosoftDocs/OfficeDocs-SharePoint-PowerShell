@@ -1,0 +1,178 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  **Note**: This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](https://learn.microsoft.com/sharepointmigration/overview-spmt-ps-cmdlets).
+
+  Cmdlet to create a new migration package based on source files in a local or network shared folder.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-SPOMigrationPackage [-SourceFilesPath] <String> [-OutputPackagePath] <String> [[-TargetWebUrl] <String>]
+   [[-TargetDocumentLibraryPath] <String>] [[-TargetDocumentLibrarySubFolderPath] <String>] [-IgnoreHidden]
+   [-IncludeFileSharePermissions] [-NoAzureADLookup] [-NoLogFile] [-ReplaceInvalidCharacters]
+   [<CommonParameters>]
+examples:
+- title: '-----------------------EXAMPLE 1-----------------------------'
+  code: |-
+    New-SPOMigrationPackage -SourceFilesPath \\fileserver\share\folder1 -OutputPackagePath d:\MigrationPackages\Folder1_SrcPkg
+
+    New-SPOMigrationPackage -SourceFilesPath \\fileserver\share\folder1 -OutputPackagePath d:\MigrationPackages\Folder1_SrcPkg -TargetWebUrl https://contoso.sharepoint.com/sites/TargetSite/TargetWeb -TargetDocumentLibraryPath "Shared Documents" -TargetDocumentLibrarySubFolderPath "Sub Folder/Target Folder"
+  description: |-
+    This example creates a new set of migration source package metadata files, using default URL values, in the d:\MigrationPackages\Folder1_SrcPkg directory based on content files found in the \\fileserver\share\folder1 source location.
+  summary: ""
+- title: '-----------------------EXAMPLE 2-----------------------------'
+  code: |-
+    New-SPOMigrationPackage -SourceFilesPath \\fileserver\share\folder1 -OutputPackagePath d:\MigrationPackages\Folder1_SrcPkg -TargetWebUrl https://contoso.sharepoint.com/sites/TargetSite/TargetWeb -TargetDocumentLibraryPath "Shared Documents"
+  description: |-
+    This example creates a new set of migration source package metadata files in the d:\MigrationPackages\Folder1_SrcPkg directory based on content files found in the \\fileserver\share\folder1 source location. The package is prepared using the document library path "https://contoso.sharepoint.com/sites/TargetSite/TargetWeb/Shared Documents".
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IgnoreHidden
+  description: |+
+    Switch to ignore hidden files and folders.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeFileSharePermissions
+  description: |+
+    Used to include permissions and sharing information into the generated manifest files in the package metadata.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoAzureADLookup
+  description: |+
+    Switch to not lookup local user accounts in Microsoft Entra ID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoLogFile
+  description: |+
+    Used to not create a log file. The default is to create a new CreateMigrationPackage log file within the directory specified within the OutputPackagePath parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OutputPackagePath
+  isRequired: true
+  description: |+
+    The directory location where the output package metadata files will be saved. If the directory does not exist, it will be created.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ReplaceInvalidCharacters
+  description: |+
+    Switch to replace characters in file and folder names that would be invalid in SharePoint Online.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceFilesPath
+  isRequired: true
+  description: |+
+    The directory location where the source content files exist. This directory will be enumerated to create the package metadata files.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetDocumentLibraryPath
+  description: |+
+    The web relative document library to use as the document library part of the base URL in the package metadata. If this is not supplied, "Documents" will be used within the package metadata instead.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetDocumentLibrarySubFolderPath
+  description: |+
+    Specifies the document library relative subfolder to use as the folder path part of the base URL in the package metadata. If this is not provided, no value will be used within the package metadata. The files will be homed under the document library root.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetWebUrl
+  description: |+
+    The fully qualified web URL to use as the web address part of the base URL in the package metadata. If this is not provided, "<http://fileserver/sites/user"> will be used instead within the package metadata.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.New-SPOMigrationPackage
+name: New-SPOMigrationPackage
+description: |-
+  Cmdlet to create a new migration package based on source files in a local or network shared folder.
+
+  > [!NOTE]
+  > Limits on the SPO package size and file size
+  >
+  > | Limit | Max Size (Gb) | Description |
+  > | :---:         |     :---:      |          :---: |
+  > | Package Size   | 2-4      | The whole package can't exceed 4Gb    |
+  > | File Size     | 2        | A single file inside the source folder can't exceed 2 Gb.      |
+  > | Target Size | -| target site should remain non-accessible to end user until migration is complete|
+  > [!NOTE]
+  > Limits on HTTP Get
+  >
+  > | Limit | API Get (chars)  | Description |
+  > | :---:         |     :---:      |          :---: |
+  > | Action GET on API    | 260 chars      | The size of the API GET request can't exceed 260 chars|
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/new-spomigrationpackage
+  applicable: SharePoint Online
+  title: New-SPOMigrationPackage
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

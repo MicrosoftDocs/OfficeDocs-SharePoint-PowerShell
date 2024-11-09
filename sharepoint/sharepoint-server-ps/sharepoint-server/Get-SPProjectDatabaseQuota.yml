@@ -1,0 +1,50 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Microsoft internal use only.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- Get-SPProjectDatabaseQuota -Url <Uri> [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+examples:
+- title: '------------ Example 1 --------------------'
+  code: ""
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Microsoft internal use only.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: Url
+  isRequired: true
+  description: |+
+    Microsoft internal use only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+uid: sharepoint-server.Get-SPProjectDatabaseQuota
+name: Get-SPProjectDatabaseQuota
+description: |-
+  Microsoft internal use only.
+
+  For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
+metadata:
+  external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spprojectdatabasequota
+  Applicable: SharePoint Server Subscription Edition
+  title: Get-SPProjectDatabaseQuota
+  PlatyPS schema version: 2.0.0

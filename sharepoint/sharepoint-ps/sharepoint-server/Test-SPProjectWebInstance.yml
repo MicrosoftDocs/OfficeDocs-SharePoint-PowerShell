@@ -1,0 +1,88 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Runs a suite of tests on an existing Project Web Instance.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Test-SPProjectWebInstance [-Identity] <ProjectInstancePipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Rule <ProjectSiteHealthRuleName>] [<CommonParameters>]
+examples:
+- title: '----------------------EXAMPLE-----------------------'
+  code: |-
+    Get-SPProjectWebInstance | Test-SPProjectWebInstance
+  description: |-
+    This example runs a suite of tests on all Project Web Instances in the SharePoint Server farm.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Project Server 2013
+  - Project Server 2016
+  - Project Server 2019
+  parameterValueGroup: ""
+- type: <xref href="ProjectInstancePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies a Project Web Instance.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - Project Server 2013
+  - Project Server 2016
+  - Project Server 2019
+  parameterValueGroup: ""
+- type: <xref href="ProjectSiteHealthRuleName" data-throw-if-not-resolved="False" />
+  name: Rule
+  description: |+
+    {{Fill Rule Description}}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Project Server 2013
+  - Project Server 2016
+  - Project Server 2019
+  parameterValueGroup: ""
+applicable:
+- Project Server 2013
+- Project Server 2016
+- Project Server 2019
+uid: SharePointServer.Test-SPProjectWebInstance
+name: Test-SPProjectWebInstance
+description: |-
+  This cmdlet runs a suite of tests on an existing Project Web Instance.
+  The tests are designed to verify the health status of the Project Web Instance.
+  The cmdlet returns the set of tests as a list of Microsoft.Office.Project.Server.HealthRules objects associated with a status of type SPSiteHealthStatusType (Passed, FailedWarning, FailedError).
+
+  For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
+metadata:
+  external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/test-spprojectwebinstance
+  applicable: Project Server 2013, Project Server 2016, Project Server 2019
+  title: Test-SPProjectWebInstance
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Synchronizes the key on a Microsoft SharePoint server with the Secure Store master key.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Update-SPSecureStoreApplicationServerKey -Passphrase <String>
+   -ServiceApplicationProxy <SPServiceApplicationProxyPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+   [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE------------------'
+  code: |-
+    $newPassPhrase = "abcDEF123!"
+    $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'Secure Store Service Application Proxy'}
+    Update-SPSecureStoreApplicationServerKey -ServiceApplicationProxy $proxy -Passphrase $newPassPhrase
+  description: |-
+    This example synchronizes the passphrase of the server key on a SharePoint server with the master key for the Secure Store service database.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Passphrase
+  isRequired: true
+  description: |+
+    Specifies the passphrase that is used for the Secure Store service database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPServiceApplicationProxyPipeBind" data-throw-if-not-resolved="False" />
+  name: ServiceApplicationProxy
+  isRequired: true
+  description: |+
+    Specifies the proxy of the service application that contains the server key to synchronize.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Update-SPSecureStoreApplicationServerKey
+name: Update-SPSecureStoreApplicationServerKey
+description: |-
+  The `Update-SPSecureStoreApplicationServerKey` cmdlet synchronizes the key on a SharePoint server with the master key for the Secure Store service database.
+
+  Updating a server key is required when:
+
+  --A new SharePoint server that will run a Secure Store service instance is joined to the farm.
+  --The key stored in the server is not the key required for the current Secure Store service database (because of server or networking issues).
+  --The master key is updated but during propagation of the new key, this process fails on one or more of the servers.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/update-spsecurestoreapplicationserverkey
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Update-SPSecureStoreApplicationServerKey
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

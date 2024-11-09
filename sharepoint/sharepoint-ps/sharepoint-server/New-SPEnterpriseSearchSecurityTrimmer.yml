@@ -1,0 +1,176 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a custom security trimmer to a shared search application.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  New-SPEnterpriseSearchSecurityTrimmer [-Id] <Int32> [-RulePath <String>]
+   -SearchApplication <SearchServiceApplicationPipeBind> -TypeName <String>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Properties <String>] [-WhatIf]
+   [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE------------------'
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication
+    New-SPEnterpriseSearchSecurityTrimmer -SearchApplication $ssa -TypeName "SearchCustomSecurityTrimmer.CustomSecurityTrimmerPost, SearchCustomSecurityTrimmer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=48e046c834625a88, processorArchitecture=MSIL" -Id 1
+  description: |-
+    This example adds a new custom security trimmer for trimming the returned result set. This new security trimmer is added to the search application by using the id 1. The strong named assembly contains the class CustomSecurityTrimmerPost, which implements the ISecurityTrimmerPost interface.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Id
+  isRequired: true
+  description: |+
+    Specifies the identity of the security trimmer to use for the specified search application.
+
+    If this parameter specifies an existing custom security trimmer, the trimmer will be removed and replaced with the custom trimmer.
+
+    Remove the existing trimmer before you add a new one.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Properties
+  description: |+
+    Specifies the name-value pairs that specify the configuration properties.
+
+    The type must be in the following name/value pair format: Name1~Value1~Name2~Value2~
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: RulePath
+  description: |+
+    Specifies the content path where the security trimmer will be applied.
+
+    The string must be a valid URI in the form file:\\\\server_name\content, and it must correspond to an existing crawl rule.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SearchServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: SearchApplication
+  isRequired: true
+  description: |+
+    Adds the security trimmer to the specified search application.
+
+    The type must be a valid GUID in the form 12345678-90ab-cdef-1234-567890bcdefgh, a valid search application name, for example, SearchApp1, or an instance of a valid SearchServiceApplication object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TypeName
+  isRequired: true
+  description: |+
+    Specifies the strong named assembly name of a security trimmer type.
+    The strong name must refer to a type whose assembly is deployed to the global assembly cache on a query server and that type must implement the ISecurityTrimmerPre, ISecurityTrimmerPost or ISecurityTrimmer2 interface.
+    Security trimming can be done in two places: before query execution (ISecurityTrimmerPre) or after the results set has returned (ISecurityTrimmerPost or ISecurityTrimmer2).
+    For how to reference a strong name assembly, see https://msdn.microsoft.com/en-us/library/s1sx4kfb.aspx (https://msdn.microsoft.com/en-us/library/s1sx4kfb.aspx)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.New-SPEnterpriseSearchSecurityTrimmer
+name: New-SPEnterpriseSearchSecurityTrimmer
+description: |-
+  This cmdlet creates a new object to configure the security trimmer.
+  SPEnterpriseSearchSecurityTrimmer represents a security trimmer that performs customized security trimming of search results at query time, when the results are returned to the user.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.Search.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spenterprisesearchsecuritytrimmer
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: New-SPEnterpriseSearchSecurityTrimmer
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

@@ -1,0 +1,68 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables all Project Server functionality in the farm. The cmdlet depends on the farm having a valid SharePoint Server license (trials are allowed). Any existing Project Web App sites will become read/write. A Project Server Trial key will only be accepted if the farm has never had a Project Server trial key previously.
+module: SharePointServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.SharePoint.PowerShell.SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Enable-ProjectServerLicense [-Key] <String> [-AssignmentCollection <SPAssignmentCollection>]
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Enable-ProjectServerLicense -Key XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+  description: |-
+    This example enables all Project Server functionality in the farm. The type of license being enabled (full or trial) depends on the key that is passed in.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Key
+  isRequired: true
+  description: |+
+    License key (trial or full).
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Enable-ProjectServerLicense
+name: Enable-ProjectServerLicense
+description: |-
+  Enables Project Server functionality on the farm.
+metadata:
+  external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/enable-projectserverlicense
+  applicable: SharePoint Server 2016, SharePoint Server 2019
+  title: Enable-ProjectServerLicense
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

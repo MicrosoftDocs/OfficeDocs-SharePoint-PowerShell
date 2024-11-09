@@ -1,0 +1,186 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates an App Management Service application.
+module: SharePointServer
+notes: ""
+links:
+- text: New-SPAppManagementServiceApplicationProxy
+  href: New-SPAppManagementServiceApplicationProxy.yml
+syntaxes:
+- >-
+  New-SPAppManagementServiceApplication -ApplicationPool <SPIisWebServiceApplicationPoolPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-DatabaseCredentials <PSCredential>]
+   [-DatabaseName <String>] [-DatabaseServer <String>] [-FailoverDatabaseServer <String>] [-Name <String>]
+   [-WhatIf] [-DeferUpgradeActions] [<CommonParameters>]
+examples:
+- title: '--------------EXAMPLE----------'
+  code: |-
+    New-SPAppManagementServiceApplication -Name AppManagement -DatabaseServer MyDatabaseServer -DatabaseName AppManagementDB -ApplicationPool MyServiceAppPool
+  description: |-
+    This example creates an App Management Service application named AppManagement with a database server MyDatabaseServer and database name AppManagementDB.
+    The new service application will run under the app pool named MyServiceAppPool
+  summary: ""
+parameters:
+- type: <xref href="SPIisWebServiceApplicationPoolPipeBind" data-throw-if-not-resolved="False" />
+  name: ApplicationPool
+  isRequired: true
+  description: |+
+    Specifies the application pool of the service application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: DatabaseCredentials
+  description: |+
+    Specifies the credentials to use when creating the service application database.
+    These credentials will have owner rights on the newly created service application database.
+    If a value is not provided, the current user's credentials are used by default.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseName
+  description: |+
+    Specifies the name of the service application database to be created.
+    If a value is not provided, a default database name is provided.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseServer
+  description: |+
+    Specifies the server of the service application database to be created, If a value is not provided, the default database server is used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DeferUpgradeActions
+  description: |+
+    Specifies if the upgrade process is to be deferred and manually completed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FailoverDatabaseServer
+  description: |+
+    Specifies the failover server of the service application database to be created, If a value is not provided, there will not be a failover server for the service application database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the service application to be created.
+    If not provided, the default name is used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.New-SPAppManagementServiceApplication
+name: New-SPAppManagementServiceApplication
+description: |-
+  Use the New-SPAppManagementServiceApplication cmdlet to create an App Management Service application with the specified name on the specified application pool with a single database which specified parameters create.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spappmanagementserviceapplication
+  applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: New-SPAppManagementServiceApplication
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

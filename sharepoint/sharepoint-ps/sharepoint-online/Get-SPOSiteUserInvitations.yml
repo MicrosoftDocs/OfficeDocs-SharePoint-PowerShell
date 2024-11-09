@@ -1,0 +1,55 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Searches against all stored sharing links and retrieves the email invites.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+syntaxes:
+- Get-SPOSiteUserInvitations [-Site] <SpoSitePipeBind> [-EmailAddress] <string> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-SPOSiteUserInvitations -Site https://contoso.sharepoint.com/sites/ContosoWeb1/ -EmailAddress someone@example.com
+  description: |-
+    This example retrieves email invites stored in the ContosoWeb1 site to the user with email address someone@example.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EmailAddress
+  isRequired: true
+  description: |+
+    Email Address of the user.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Site
+  isRequired: true
+  description: |+
+    Specifies the URL of the site collection.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOSiteUserInvitations
+name: Get-SPOSiteUserInvitations
+description: |-
+  Searches against all stored sharing links on a Site and retrieves the email invites.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spositeuserinvitations
+  applicable: SharePoint Online
+  title: Get-SPOSiteUserInvitations
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

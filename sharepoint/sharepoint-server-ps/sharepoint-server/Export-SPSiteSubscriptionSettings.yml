@@ -1,0 +1,109 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a backup file of site subscription data.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Export-SPSiteSubscriptionSettings [-Identity] <SPSiteSubscriptionPipeBind> -Path <String> [-AdminProperties]
+   [-AssignmentCollection <SPAssignmentCollection>] [-Force] [<CommonParameters>]
+examples:
+- title: '--------------EXAMPLE 1-----------------'
+  code: |-
+    Export-SPSiteSubscriptionSettings -Identity "https://siteCollection" -Path "C:\siteCollection_sitesubscriptionsettings.txt"
+  description: |-
+    The example backs up the subscription settings store of https://siteCollection.
+  summary: ""
+- title: '--------------EXAMPLE 2-----------------'
+  code: |-
+    $site = Get-SPSite https://siteCollection
+    Export-SPSiteSubscriptionSettings -Identity $site.SiteSubscription -Path "C:\siteCollection_sitesubscriptionsettings.txt"
+  description: |-
+    The example backs up the subscription settings store of https://siteCollection using the Site Subscription object.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AdminProperties
+  description: |+
+    Specifies that only administrator subscription properties are exported.
+    If this parameter is not set, only non-administrator subscription properties are exported.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the output backup file (if provided) to overwrite any existing file at the given path.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPSiteSubscriptionPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the ID of the site subscription from which to back up data.
+
+    The type must be a valid URL, in the form https://server_name or a Site Subscription object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the location of the output file.
+
+    The type must be a valid path; for example,  C:/backupfile.back..
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Export-SPSiteSubscriptionSettings
+name: Export-SPSiteSubscriptionSettings
+description: |-
+  The Export-SPSiteSubscriptionSettings cmdlet generates a backup file of all settings in the subscription data store for the given site subscription.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/export-spsitesubscriptionsettings
+  applicable: SharePoint Server Subscription Edition
+  title: Export-SPSiteSubscriptionSettings
+  PlatyPS schema version: 2.0.0

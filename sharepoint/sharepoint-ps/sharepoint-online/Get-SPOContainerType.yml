@@ -1,0 +1,62 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns one or more container types created in the tenant.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: /powershell/sharepoint/sharepoint-online/connect-sharepoint-online
+- text: New-SPOContainerType
+  href: ./New-SPOContainerType.yml
+- text: Set-SPOContainerType
+  href: ./Set-SPOContainerType.yml
+- text: Remove-SPOContainerType
+  href: ./Remove-SPOContainerType.yml
+syntaxes:
+- Get-SPOContainerType
+- Get-SPOContainerType [-ContainerTypeId <ContainerTypeId>]
+examples:
+- title: Example 1
+  code: |-
+    Get-SPOContainerType
+  description: |-
+    Example 1 retrieves all the container types present in the tenant and displays container type specific information.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-SPOContainerType -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4
+  description: |-
+    Example 2 returns the detailed properties of container type 4f0af585-8dcc-0000-223d-661eb2c604e4
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ContainerTypeId
+  isRequired: true
+  description: |2+
+     
+    This parameter specifies the ID of the container type corresponding to the SharePoint Embedded application.
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOContainerType
+name: Get-SPOContainerType
+description: |-
+  This cmdlet returns all the container types present in the tenant or details of a specific container type when paired with the containertype ID parameter. 
+
+  You must be a SharePoint Embedded Administrator to run the cmdlet.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Embedded Containers, see the documentation at [Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spocontainertype
+  applicable: SharePoint Online
+  title: Get-SPOContainerType
+  PlatyPS schema version: 2.0.0
+  author: ShreyasSar26
+  ms.author: shsaravanan
+  ms.reviewer: ""

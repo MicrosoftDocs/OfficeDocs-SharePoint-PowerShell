@@ -1,0 +1,131 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Cmdlet to register customer encryption status for your geo tenant.
+  For more information, see [Controlling your data in Office 365 using Customer Key](https://learn.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key)
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+syntaxes:
+- Register-SPODataEncryptionPolicy -PrimaryKeyVaultName <string> -PrimaryKeyName <string> -PrimaryKeyVersion <guid> -SecondaryKeyVaultName <string>  -SecondaryKeyName <string> -SecondaryKeyVersion <guid> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Register-SPODataEncryptionPolicy -PrimaryKeyVaultName 'PKVaultName1' -PrimaryKeyName 'PrimaryKey1' -PrimaryKeyVersion 'f635a23bd4a44b9996ff6aadd88d42ba' -SecondaryKeyVaultName 'SKVaultName1' -SecondaryKeyName 'SecondaryKey2' -SecondaryKeyVersion '2b3e8f1d754f438dacdec1f0945f251a'
+  description: |-
+    This example registers the DEP used with SharePoint Online and OneDrive for Business to start using the given primary key.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+
+    - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
+
+    - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PrimaryKeyName
+  isRequired: true
+  description: |+
+    The name of the primary key
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PrimaryKeyVaultName
+  isRequired: true
+  description: |+
+    The name of the primary key vault
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: PrimaryKeyVersion
+  isRequired: true
+  description: |+
+    The version of the primary key
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SecondaryKeyName
+  isRequired: true
+  description: |+
+    The name of the secondary key
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SecondaryKeyVaultName
+  isRequired: true
+  description: |+
+    The name of the secondary key vault
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: SecondaryKeyVersion
+  isRequired: true
+  description: |+
+    The version of the secondary key
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Register-SPODataEncryptionPolicy
+name: Register-SPODataEncryptionPolicy
+description: |-
+  Use the Register-DataEncryptionPolicy cmdlet to register customer encryption status for your geo tenant.
+  For more information, see [Controlling your data in Office 365 using Customer Key](https://learn.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key)
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/register-spodataencryptionpolicy
+  applicable: SharePoint Online
+  title: Register-SPODataEncryptionPolicy
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

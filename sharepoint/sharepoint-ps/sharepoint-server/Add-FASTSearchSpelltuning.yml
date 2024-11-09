@@ -1,0 +1,37 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables the spell tuning processor, used to fine-tune a spell check dictionary.
+module: SharePointServer
+notes: ""
+links:
+- text: Get-FASTSearchSpelltuningStatus
+  href: Get-FASTSearchSpelltuningStatus.yml
+- text: Remove-FASTSearchSpelltuning
+  href: Remove-FASTSearchSpelltuning.yml
+syntaxes:
+- Add-FASTSearchSpelltuning [<CommonParameters>]
+examples:
+- title: (FAST Server for SharePoint 2010)
+  code: ""
+  description: ""
+  summary: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Add-FASTSearchSpelltuning
+name: Add-FASTSearchSpelltuning
+description: |-
+  This                                             cmdlet activates alignment of the spell checking dictionary with the index, so that spell checking dictionaries are built from content that is fed into the index (not from standardized spelling dictionaries).
+
+  The Did You Mean feature is dictionary based; when spell tuning is activated, Did You Mean only suggests terms that are actually in the index.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/add-fastsearchspelltuning
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Add-FASTSearchSpelltuning

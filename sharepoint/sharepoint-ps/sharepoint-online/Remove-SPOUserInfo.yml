@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Do not use.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Remove-SPOUserProfile
+  href: Remove-SPOUserProfile.yml
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LoginName
+  isRequired: true
+  description: |+
+    Do not use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Site
+  isRequired: true
+  description: |+
+    Do not use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPOUserInfo
+name: Remove-SPOUserInfo
+description: |-
+  Do not use.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spouserinfo
+  applicable: SharePoint Online
+  title: Remove-SPOUserInfo
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

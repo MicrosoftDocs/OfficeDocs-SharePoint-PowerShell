@@ -1,0 +1,46 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves the Preferred Data Location for the specified Office 365 Group.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Move a SharePoint site to a different geo location
+  href: https://learn.microsoft.com/office365/enterprise/move-sharepoint-between-geo-locations
+syntaxes:
+- Get-SPOUnifiedGroup [-GroupAlias] <string> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-SPOUnifiedGroup -GroupAlias EUTeam
+  description: |-
+    Returns the PDL for the Office 365 Group named 'EUTeam'.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GroupAlias
+  isRequired: true
+  description: |+
+    The alias of the Office 365 Group.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOUnifiedGroup
+name: Get-SPOUnifiedGroup
+description: |-
+  Retrieves the Preferred Data Location (PDL) for the specified Office 365 Group. The customer tenant must be multi-geo enabled.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spounifiedgroup
+  applicable: SharePoint Online
+  title: Get-SPOUnifiedGroup
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

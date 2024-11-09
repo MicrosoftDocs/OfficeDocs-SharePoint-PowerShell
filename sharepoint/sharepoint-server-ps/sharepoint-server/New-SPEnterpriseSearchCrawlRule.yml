@@ -1,0 +1,261 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new crawl rule.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  New-SPEnterpriseSearchCrawlRule [-AccountName <String>] [-AccountPassword <SecureString>]
+   [-AssignmentCollection <SPAssignmentCollection>] [-AuthenticationType <CrawlRuleAuthenticationType>]
+   [-Confirm] [-ContentClass <String>] [-CrawlAsHttp <Boolean>] [-FollowComplexUrls <Boolean>]
+   [-IsAdvancedRegularExpression <Boolean>] -Path <String> [-PluggableSecurityTimmerId <Int32>]
+   [-Priority <Int32>] -SearchApplication <SearchServiceApplicationPipeBind> [-SuppressIndexing <Boolean>]
+   -Type <CrawlRuleType> [-WhatIf] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE------------------'
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication
+    New-SPEnterpriseSearchCrawlRule -SearchApplication $ssa -Path https://ExampleSharePointSite -CrawlAsHttp 1 -Type InclusionRule
+  description: |-
+    This example creates an inclusion type crawl rule for the site at https://ExampleSharePointSite.
+    The rule specifies that the site be crawled as an HTTP site.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AccountName
+  description: |+
+    Specifies the account to use when applying the crawl rule.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: AccountPassword
+  description: |+
+    Specifies the account to use when applying the crawl rule.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="CrawlRuleAuthenticationType" data-throw-if-not-resolved="False" />
+  name: AuthenticationType
+  description: |+
+    Specifies one of the following authentication types to access matching URLs:
+
+    BasicAccountRuleAccess -- Specifies the account name and password that are required for this authentication type.
+
+    CertificateRuleAccess -- Specifies the valid client certificate name that is required for this authentication type.
+
+    NTLMAccountRuleAccess -- Specifies the account name for integrated authentication.
+
+    FormRuleAccess -- Specifies a valid URL for HTTP POST or HTTP GET, public and private parameters, and a list of error pages that are used by this authentication type.
+
+    CookieRuleAccess -- Specifies private parameters and a list of error pages that are used by this authentication type.
+
+    AnonymousAccess-- Specifies that the matching URLs have to be accessed anonymously.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ContentClass
+  description: |+
+    Specifies the string that is sent to the protocol handler for any content that matches the crawl rule.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: CrawlAsHttp
+  description: |+
+    Specifies whether the crawler should crawl content from a hierarchical content source as HTTP content.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: FollowComplexUrls
+  description: |+
+    Specifies whether the index engine should crawl content with URLs that contain a question mark (?).
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsAdvancedRegularExpression
+  description: |+
+    Specifies whether the rule has a full regular expression syntax.
+
+    The default value is False.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies a unique path to which a crawl rule applies.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: PluggableSecurityTimmerId
+  description: |+
+    {{Fill PluggableSecurityTimmerId Description}}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Priority
+  description: |+
+    Defines where in the list of crawl rules this crawl rule should be applied.
+
+    The priority value cannot be less than 0 or greater than or equal to the number of crawl rules for the search application.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SearchServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: SearchApplication
+  isRequired: true
+  description: |+
+    Specifies the Search application that is associated with the crawl rule to be modified.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application name (for example, SearchApp1); or an instance of a valid SearchServiceApplication object.
+
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: SuppressIndexing
+  description: |+
+    Specifies whether the crawler should exclude the content of items that this rule applies to from the content index.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="CrawlRuleType" data-throw-if-not-resolved="False" />
+  name: Type
+  isRequired: true
+  description: |+
+    Specifies the type of crawl rule.
+    A value of zero (0) includes the rule, a value of 1 excludes the rule.
+
+
+  defaultValue: None
+  position: Named
+  aliases: t
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.New-SPEnterpriseSearchCrawlRule
+name: New-SPEnterpriseSearchCrawlRule
+description: |-
+  The `New-SPEnterpriseSearchCrawlRule` cmdlet creates special rules for crawling items that are contained in the specified path.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.Search.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spenterprisesearchcrawlrule
+  applicable: SharePoint Server Subscription Edition
+  title: New-SPEnterpriseSearchCrawlRule
+  PlatyPS schema version: 2.0.0

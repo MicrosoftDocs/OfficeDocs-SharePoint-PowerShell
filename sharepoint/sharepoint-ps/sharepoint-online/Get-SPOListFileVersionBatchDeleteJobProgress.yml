@@ -1,0 +1,59 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the progress of a trim job for a site collection.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Remove-SPOListFileVersionBatchDeleteJob
+  href: Remove-SPOListFileVersionBatchDeleteJob.yml
+- text: New-SPOListFileVersionBatchDeleteJob
+  href: New-SPOListFileVersionBatchDeleteJob.yml
+syntaxes:
+- Get-SPOListFileVersionBatchDeleteJobProgress [-Site] <SpoSitePipeBind> [-List] <SpoListPipeBind> [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Get-SPOListFileVersionBatchDeleteJobProgress -Site https://contoso.sharepoint.com/sites/site1 -List "Documents"
+  description: |-
+    Example 1 gets the progress of a trim job for a document library called "Documents".
+  summary: ""
+parameters:
+- type: <xref href="SPOListPipeBind" data-throw-if-not-resolved="False" />
+  name: List
+  isRequired: true
+  description: |+
+    The document library name or Id.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Site
+  isRequired: true
+  description: |+
+    Specifies the URL of the site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOListFileVersionBatchDeleteJobProgress
+name: Get-SPOListFileVersionBatchDeleteJobProgress
+description: |-
+  Gets the progress of a trim job for a document library.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spolistfileversionbatchdeletejobprogress
+  applicable: SharePoint Online
+  title: Get-SPOListFileVersionBatchDeleteJobProgress
+  PlatyPS schema version: 2.0.0
+  author: msjennywu
+  ms.author: jennywu
+  ms.reviewer: ""
+  manager: seanmc

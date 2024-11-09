@@ -1,0 +1,68 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Similar to Invoke-SPOSiteDesign, this command is used to apply a published site design to a specified site collection target. It schedules the operation, allowing for the application of larger site scripts (Invoke-SPOSiteDesign is limited to 30 actions and subactions).
+
+  The supported site templates you can apply a site design to include: "modern" team site (with O365 group), "modern" team site (without an O365 group); communication site; classic team site; and classic publishing site.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Get-SPOSiteDesignTask
+  href: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spositedesigntask?view=sharepoint-ps
+- text: Invoke-SPOSiteDesign
+  href: https://learn.microsoft.com/powershell/module/sharepoint-online/invoke-spositedesign?view=sharepoint-ps
+syntaxes:
+- Add-SPOSiteDesignTask -SiteDesignId <guid> -WebUrl <string> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Add-SPOSiteDesignTask -SiteDesignId 501z8c32-4147-44d4-8607-26c2f67cae82 -WebUrl "https://contoso.sharepoint.com/sites/projectawesome"
+  description: ""
+  summary: |+
+    This example applies a site design that includes two site scripts - totaling over 30 site script actions. Executing the commands will schedule the site design to be queued and run against the designated site collection.
+
+parameters:
+- type: <xref href="SPOSiteDesignPipeBind" data-throw-if-not-resolved="False" />
+  name: SiteDesignId
+  isRequired: true
+  description: |+
+    The ID of the site design to apply.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WebUrl
+  isRequired: true
+  description: |+
+    The URL of the site collection where the site design will be applied.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Add-SPOSiteDesignTask
+name: Add-SPOSiteDesignTask
+description: |-
+  This command is used to apply a published site design to a specified site collection target. It schedules the operation, allowing for the application of larger site scripts (Invoke-SPOSiteDesign is limited to 30 actions and subactions).
+
+  This command is intended to replace Invoke-SPOSiteDesign and is useful when you need to apply a large number of actions or multiple site scripts.
+
+  > [!NOTE]
+  > This command only creates the request. To check on the job status or to view details of the scheduled run, use the commands in the related section below.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/add-spositedesigntask
+  applicable: SharePoint Online
+  title: Add-SPOSiteDesignTask
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

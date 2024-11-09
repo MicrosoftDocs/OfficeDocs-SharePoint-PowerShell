@@ -1,0 +1,82 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a multi-geo allowed location.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Remove-SPOMultiGeoCompanyAllowedDataLocation
+  href: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spomultigeocompanyalloweddatalocation
+syntaxes:
+- Set-SPOMultiGeoCompanyAllowedDataLocation [-Location] <string> [-InitialDomain] <string> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Set-SPOMultiGeoCompanyAllowedDataLocation -Location AUS -Domain contoso.com
+  description: |-
+    Sets AUS (Australia) as an allowed multi-geo location for the domain contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InitialDomain
+  isRequired: true
+  description: |+
+    Sets the initial domain to associate with the specified data location.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    The Preferred Data Location (PDL) to allow.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Set-SPOMultiGeoCompanyAllowedDataLocation
+name: Set-SPOMultiGeoCompanyAllowedDataLocation
+description: |-
+  Use this cmdlet to set the multi-geo allowed locations.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spomultigeocompanyalloweddatalocation
+  applicable: SharePoint Online
+  title: Set-SPOMultiGeoCompanyAllowedDataLocation
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

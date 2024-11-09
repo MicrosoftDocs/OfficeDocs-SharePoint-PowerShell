@@ -1,0 +1,94 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns a list of queries.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Get-SPEnterpriseSearchQuerySuggestionCandidates -Owner <SearchObjectOwner>
+   -SearchApplication <SearchServiceApplicationPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+   [-SourceId <Guid>] [<CommonParameters>]
+examples:
+- title: '---------------------EXAMPLE------------------------'
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication
+    Get-SPEnterpriseSearchQuerySuggestionCandidates -SearchApplication $ssa
+  description: |-
+    This example returns popular search queries by using the search application contained in the variable $searchapp.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SearchObjectOwner" data-throw-if-not-resolved="False" />
+  name: Owner
+  isRequired: true
+  description: |+
+    Specifies the search object owner that defines the scope at which the corresponding LanguageResourcePhrase is created.
+
+    The owner must be one of the following valid levels:
+
+    - Search Service Application
+    - Site Subscription
+    - Site Collection
+    - Site
+
+  defaultValue: None
+  position: Named
+  aliases: o
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SearchServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: SearchApplication
+  isRequired: true
+  description: |+
+    Specifies the search application that contains the query topology.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application name (for example, SearchApp1); or an instance of a valid SearchServiceApplication object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: SourceId
+  description: |+
+    Identifies the search result source for which the LanguageResourcePhrase applies to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Get-SPEnterpriseSearchQuerySuggestionCandidates
+name: Get-SPEnterpriseSearchQuerySuggestionCandidates
+description: |-
+  Use the Get-SPEnterpriseSearchQuerySuggestionCandidates cmdlet to return a list of popular queries that can be displayed in a related queries Web Part.
+  The list gives the administrator a chance to review potential queries and add some of them to the related queries list.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.Search.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchquerysuggestioncandidates
+  applicable: SharePoint Server Subscription Edition
+  title: Get-SPEnterpriseSearchQuerySuggestionCandidates
+  PlatyPS schema version: 2.0.0

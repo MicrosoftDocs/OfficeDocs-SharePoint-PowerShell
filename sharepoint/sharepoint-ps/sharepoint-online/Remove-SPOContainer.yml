@@ -1,0 +1,52 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sends a Container to the Recycle Bin.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Get-SPODeletedContainer
+  href: ./Get-SPODeletedContainer.yml
+- text: Restore-SPODeletedContainer
+  href: ./Restore-SPODeletedContainer.yml
+- text: Remove-SPODeletedContainer
+  href: ./Remove-SPODeletedContainer.yml
+syntaxes:
+- Remove-SPOContainer [-Identity <ContainerId>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-SPOContainer -Identity 423poi45-jikl-9bnm-b302-1234ghy56789
+  description: |-
+    Example 1 places the Container with the `ContainerId` `423poi45-jikl-9bnm-b302-1234ghy56789` into the Recycle Bin. The Container will be permanently deleted from the Recycle Bin after 93 days unless the deleted Container is [restored](./Restore-SPODeletedContainer.yml) before permanent deletion.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: "Use this parameter to provide the `ContainerId` of the Container to be deleted.\r\n \r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPOContainer
+name: Remove-SPOContainer
+description: |-
+  The `Remove-SPOContainer` cmdlet deletes a File Storage Container and puts it in the Recycle Bin. A Container that is deleted will no longer be retrieved by the [`Get-SPOContainer`](./Get-SPOContainer.yml) cmdlet.
+
+  When admins delete a Container, it is moved into the Recycle Bin. A deleted Container can be [restored](./Restore-SPODeletedContainer.yml) from the Recycle Bin within 93 days. If a Container is deleted from the Recycle Bin, or it exceeds the 93-day retention period, it is permanently deleted. Deleting a Container deletes everything within it, including all documents and files. You can view all deleted Containers in the Recycle Bin with the [`Get-SPODeletedContainer`](./Get-SPODeletedContainer.yml) cmdlet.
+
+  You must be at least a SharePoint Online administrator to run the cmdlet.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spocontainer
+  applicable: SharePoint Online
+  title: Remove-SPOContainer
+  PlatyPS schema version: 2.0.0
+  author: cindylay
+  ms.author: cindylay
+  ms.reviewer: ""

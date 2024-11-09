@@ -1,0 +1,80 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns the server ID of the instance of Analysis Services.
+module: SharePointServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Office.Excel.Server.Cmdlet.SPExcelServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.Office.Excel.Server.Cmdlet.SPExcelBIServerPipeBind
+    Microsoft.SharePoint.PowerShell.SPAssignmentCollection
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-SPExcelBIServer [[-Identity] <SPExcelBIServerPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
+   -ExcelServiceApplication <SPExcelServiceApplicationPipeBind> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-SPExcelBIServer -ExcelServiceApplication 'Excel Service Application'
+  description: |-
+    This example displays the name of the Excel Service application named 'Excel Service Application'.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  parameterValueGroup: ""
+- type: <xref href="SPExcelServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: ExcelServiceApplication
+  isRequired: true
+  description: |+
+    Specifies the Excel Services Application Web service application that contains the SPExcelFileLocation list object.The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of an Excel Services Application Web service application in the farm (for example, MyExcelService1); or an instance of a valid SPExcelServiceApplication object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  parameterValueGroup: ""
+- type: <xref href="SPExcelBIServerPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the ExcelServiceApplication identity.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+uid: SharePointServer.Get-SPExcelBIServer
+name: Get-SPExcelBIServer
+description: |-
+  Use the Get-SPExcelBIServer cmdlet to return the server ID of the instance of Analysis Servicesthat has been configured as a data model server in Excel Services.
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spexcelbiserver
+  applicable: SharePoint Server 2013
+  title: Get-SPExcelBIServer
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

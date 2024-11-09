@@ -1,0 +1,79 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets or updates one or more property values of a trial or standard container type.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: /powershell/sharepoint/sharepoint-online/connect-sharepoint-online
+- text: New-SPOContainerType
+  href: ./New-SPOContainerType.yml
+- text: Get-SPOContainerType
+  href: ./Get-SPOContainerType.yml
+- text: Remove-SPOContainerType
+  href: ./Remove-SPOContainerType.yml
+syntaxes:
+- Set-SPOContainerType -ContainerTypeId <ContainerTypeId> -OwningApplicationId <OwningApplicationId> -ContainerTypeName <ContainerTypeName>
+- Set-SPOContainerType -ContainerTypeId <ContainerTypeId> -AzureSubscriptionId <AzureSubscriptionId> -ResourceGroup <ResourceGroup>
+examples:
+- title: Example 1
+  code: |-
+    Set-SPOContainerType -ContainerTypeId da1d89b3-b4cf-4c0a-8e1c-0d131c57544f -OwningApplicationId 12a9d93c-18d7-46a0-b43e-28d20addd56a - ContainerTypeName 'Red Container Type'
+  description: |-
+    Example 1 sets the container type name as 'Red Container Type'
+  summary: ""
+- title: Example 2
+  code: |-
+    Set-SPOContainerType -ContainerTypeId da1d89b3-b4cf-4c0a-8e1c-0d131c57544f -Azure Subscription 12a9d93c-18d7-46a0-b43e-28d20addd56a -ResourceGroup RG200
+  description: |-
+    In Example 2, the billing profile of the container type is updated.
+  summary: ""
+- title: Example 3
+  code: |-
+    Set-SPOContainerType -ContainerTypeId 01f62754-0873-4ec6-ab4a-3eed48ba8be7 -OwningApplicationId 994b9586-253e-4a77-b51 - ContainerTypeName 'Blue Container Type'
+  description: |-
+    In Example 3, the trial container type name is updated as 'Blue Container Type'
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AzureSubscriptionId
+  description: |+
+    This parameter describes the Azure subscription ID to which the container type needs to be associated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ContainerTypeName
+  isRequired: true
+  description: |+
+    This parameter names your container type for your SharePoint Embedded application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Set-SPOContainerType
+name: Set-SPOContainerType
+description: |-
+  This cmdlet is used to reset the parameters associated with a container type - both trial and standard. The cmdlet can be used to change the container type name or the associated billing profile of the container type.
+
+  You must be a SharePoint Embedded Administrator to run the cmdlet.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Embedded Containers, see the documentation at [Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spocontainertype
+  applicable: SharePoint Online
+  title: Set-SPOContainerType
+  PlatyPS schema version: 2.0.0
+  author: ShreyasSar26
+  ms.author: shsaravanan
+  ms.reviewer: ""

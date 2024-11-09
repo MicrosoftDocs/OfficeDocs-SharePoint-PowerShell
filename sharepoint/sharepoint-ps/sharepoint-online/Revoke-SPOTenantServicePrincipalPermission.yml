@@ -1,0 +1,57 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Revokes a permission that was previously granted to the "SharePoint Online Client" service principal
+module: Microsoft.Online.SharePoint.PowerShell
+syntaxes:
+- Revoke-SPOTenantServicePrincipalPermission [-ObjectId] <String> [-Confirm] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE 1------------------'
+  code: |-
+    $grants = Get-SPOTenantServicePrincipalPermissionGrants
+    $grantToRemove = $grants | ? { $_.Resource -eq 'Office 365 SharePoint Online' -and $_.Scope -eq 'MyFiles.Read' } | Select-Object -First 1
+
+    if ($grantToRemove -ne $null)
+    {
+        Revoke-SPOTenantServicePrincipalPermission -ObjectId $grantToRemove.ObjectId
+    }
+  description: |-
+    Revokes the permission associated with the 'Office 365 SharePoint Online' resource and with scope claim 'MyFiles.Read'.
+    If there is no permission with those properties, then no revoke action will be taken.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: ObjectId
+  isRequired: true
+  description: |+
+    The Object ID of the permission grant to revoke
+
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Revoke-SPOTenantServicePrincipalPermission
+name: Revoke-SPOTenantServicePrincipalPermission
+description: |-
+  Revokes a permission that was previously granted to the "SharePoint Online Client" service principal.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/revoke-spotenantserviceprincipalpermission
+  applicable: SharePoint Online
+  title: Revoke-SPOTenantServicePrincipalPermission
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

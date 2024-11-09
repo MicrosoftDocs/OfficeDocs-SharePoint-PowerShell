@@ -1,0 +1,135 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the trace and event level for a set of categories.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Set-SPLogLevel [-AssignmentCollection <SPAssignmentCollection>] [-EventSeverity <String>]
+   [-Identity <String[]>] [-InputObject <PSObject>] [-TraceSeverity <String>] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE 1-----------------------'
+  code: |-
+    set-sploglevel -TraceSeverity Monitorable
+  description: |-
+    This example sets the TraceSeverity values for all categories to Monitorable.
+  summary: ""
+- title: '------------------EXAMPLE 2-----------------------'
+  code: |-
+    Set-SPLogLevel -TraceSeverity High -EventSeverity Warning -Identity "Cat1"
+  description: |-
+    This example sets the EventSeverity and TraceSeverity values for a single category.
+  summary: ""
+- title: '------------------EXAMPLE 3-----------------------'
+  code: |-
+    "Cat1", "Cat2", "Cat3" | Set-SPLogLevel -EventSeverity Error
+  description: |-
+    This example sets the EventSeverity values for multiple categories.
+  summary: ""
+- title: '------------------EXAMPLE 4-----------------------'
+  code: |-
+    Set-SPLogLevel -EventSeverity Warning -Identity "AreaName:*"
+  description: |-
+    This example sets the EventSeverity values for all categories in the same area.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EventSeverity
+  description: |+
+    Specifies the category level to be set.
+    The category level is any one of the following values:
+
+    - None
+    - ErrorCritical
+    - Error
+    - Warning
+    - Information
+    - Verbose
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Identity
+  description: |+
+    Specifies the name(s) of the category or set of categories to set the throttle for; for example, "Unified Logging Service".
+    If the Identity parameter is not specified, the event-throttling setting is applied to all categories in the farm.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: InputObject
+  description: |+
+    The InputObject is pipelined to the cmdlet and can be a string in a format identical to the Identity parameter, or can be an SPDiagnosticsCategory object.
+    The user can retrieve one or more categories from the `Get-SPLogLevel` cmdlet, modify the category values and then pipeline them into the `Set-SPLogLevel` cmdlet.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TraceSeverity
+  description: |+
+    Specifies trace throttle to set the specified categor(ies) to.
+    The trace log files are text files that are written to the trace log path that is defined on the Diagnostic Logging Settings page on the SharePoint Central Administration site.
+    The type must be any one of the following values:
+
+    - None (no traces are written to the trace log)
+    - Unexpected
+    - Monitorable
+    - High
+    - Medium
+    - Verbose
+    - VerboseEx
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPLogLevel
+name: Set-SPLogLevel
+description: |-
+  The `Set-SPLogLevel` cmdlet sets the Windows event logging and trace logging levels for one or more diagnostic logging categories registered in the farm.
+  If an event or trace associated with a category occurs, but is less severe than that category's logging level, the event or trace is not written to the event log or the trace log.
+  If an event or trace associated with a category occurs and is equally severe or more severe than that category's logging level, the event or trace is written to the event log or the trace log.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-sploglevel
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPLogLevel
+  PlatyPS schema version: 2.0.0

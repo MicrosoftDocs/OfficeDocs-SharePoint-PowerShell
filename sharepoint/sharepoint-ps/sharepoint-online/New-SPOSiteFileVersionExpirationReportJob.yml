@@ -1,0 +1,57 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Generates a version storage usage report for a site collection. This report can be used to understand current version storage footprint of the site.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Get-SPOSiteFileVersionExpirationReportJobProgress
+  href: Get-SPOSiteFileVersionExpirationReportJobProgress.yml
+syntaxes:
+- New-SPOSiteFileVersionExpirationReportJob [-Identity] <SpoSitePipeBind> [-ReportUrl <String>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    New-SPOSiteFileVersionExpirationReportJob -Identity https://contoso.sharepoint.com/sites/site1 -ReportUrl "https://contoso.sharepoint.com/sites/sites1/reports/MyReports/VersionReport.csv"
+  description: |-
+    Example 1 starts generating file version expiration report on for the site collection, saving the result to a csv file within the site collection.
+  summary: ""
+parameters:
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the URL of the site collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: ReportUrl
+  isRequired: true
+  description: |+
+    The URL of the report to save to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.New-SPOSiteFileVersionExpirationReportJob
+name: New-SPOSiteFileVersionExpirationReportJob
+description: |-
+  Generates a version storage usage report for a site collection. This report can be used to understand current version storage footprint of the site.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/new-spositefileversionexpirationreportjob
+  applicable: SharePoint Online
+  title: New-SPOSiteFileVersionExpirationReportJob
+  PlatyPS schema version: 2.0.0
+  author: msjennywu
+  ms.author: jennywu
+  ms.reviewer: ""
+  manager: seanmc

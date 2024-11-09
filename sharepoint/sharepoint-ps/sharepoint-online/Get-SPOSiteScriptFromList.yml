@@ -1,0 +1,47 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates site script syntax from an existing SharePoint list.
+module: Microsoft.Online.SharePoint.PowerShell
+syntaxes:
+- Get-SPOSiteScriptFromList -ListUrl <string> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    $extracted = Get-SPOSiteScriptFromList -ListUrl "https://contoso.sharepoint.com/sites/strategy/customer-contacts"
+    Add-SPOSiteScript `
+        -Title "Contoso Customer Tracker"
+        -Description "This creates a customer contact list"
+        -Content $extracted
+  description: ""
+  summary: |+
+    This example creates the site script output from an existing list - and writes it to a variable. This variable is then referenced to create a site script.
+
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ListUrl
+  isRequired: true
+  description: |+
+    The url of the list to be referenced for the JSON output.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOSiteScriptFromList
+name: Get-SPOSiteScriptFromList
+description: |-
+  Uses an existing SharePoint list to output a JSON blob that can be used to create a site script for use in a site design.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spositescriptfromlist
+  applicable: SharePoint Online
+  title: Get-SPOSiteScriptFromList
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

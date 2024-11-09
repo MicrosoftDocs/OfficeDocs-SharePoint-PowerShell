@@ -1,0 +1,97 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns a list of the SharePoint-related products installed in the farm and the versions of all updates installed for each product.
+module: SharePointServer
+notes: ""
+syntaxes:
+- Get-SPProduct [-AssignmentCollection <SPAssignmentCollection>] [-Local] [<CommonParameters>]
+- >-
+  Get-SPProduct [-AssignmentCollection <SPAssignmentCollection>] [-Server <SPServerPipeBind>]
+   [<CommonParameters>]
+examples:
+- title: '--------------EXAMPLE-----------------'
+  code: |-
+    Get-SPProduct -Local
+  description: |-
+    This example displays the SharePoint-related products installed on the local server.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Local
+  description: |+
+    Returns product and update information for only the local computer.
+    If you use the Local parameter, you cannot use the Server parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPServerPipeBind" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Returns product and update information for a specified server.
+    If you use the Server parameter, you cannot use the Local parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Get-SPProduct
+name: Get-SPProduct
+description: |-
+  This cmdlet contains more than one parameter set.
+  You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+  For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+
+  The Get-SPProduct cmdlet returns a list of the SharePoint-related products installed in the farm and the versions of all updates installed for each product.
+  By default this cmdlet returns the list of SharePoint-related products installed in the farm.
+  Use the Local parameter to get only information about the local server or for a specific server to get the list, use the Server parameter.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spproduct
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Get-SPProduct
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

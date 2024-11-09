@@ -1,0 +1,57 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the version policy setting on the document library.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Set-SPOListVersionPolicy
+  href: Set-SPOListVersionPolicy.yml
+syntaxes:
+- Get-SPOListVersionPolicy [-Site] <SpoSitePipeBind> [-List] <SpoListPipeBind> [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Get-SPOListVersionPolicy -Site https://contoso.sharepoint.com/sites/site1 -List "Documents"
+  description: |-
+    Example 1 gets the version policy setting on the document library called "Documents".
+  summary: ""
+parameters:
+- type: <xref href="SPOListPipeBind" data-throw-if-not-resolved="False" />
+  name: List
+  isRequired: true
+  description: |+
+    The document library name or Id.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Site
+  isRequired: true
+  description: |+
+    Specifies the URL of the site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOListVersionPolicy
+name: Get-SPOListVersionPolicy
+description: |-
+  Gets the version policy setting on the document library.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spolistversionpolicy
+  applicable: SharePoint Online
+  title: Get-SPOListVersionPolicy
+  PlatyPS schema version: 2.0.0
+  author: msjennywu
+  ms.author: jennywu
+  ms.reviewer: ""
+  manager: seanmc

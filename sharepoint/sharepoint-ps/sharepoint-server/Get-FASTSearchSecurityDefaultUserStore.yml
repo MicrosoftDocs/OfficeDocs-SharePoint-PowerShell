@@ -1,0 +1,55 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the default user store general setting.
+module: SharePointServer
+notes: ""
+links:
+- text: Set-FASTSearchSecurityDefaultUserStore
+  href: Set-FASTSearchSecurityDefaultUserStore.yml
+syntaxes:
+- Get-FASTSearchSecurityDefaultUserStore [[-Worker] <WorkerPoolNode>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1-----------------'
+  code: |-
+    Get-FASTSearchSecurityDefaultUserStore
+  description: |-
+    This example gets the identity of the default user store.
+  summary: ""
+- title: '---------------EXAMPLE 2-----------------'
+  code: |-
+    Get-FASTSearchSecurityWorkerNode workerserver | Get-FASTSearchSecurityDefaultUserStore
+  description: |-
+    This example gets the default user store's general setting information for the security worker with a server name of "workerserver".
+  summary: ""
+parameters:
+- type: <xref href="WorkerPoolNode" data-throw-if-not-resolved="False" />
+  name: Worker
+  description: |+
+    The optional Worker parameter specifies the WorkerPoolNode object for the security worker that is to handle the request.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "9999"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Get-FASTSearchSecurityDefaultUserStore
+name: Get-FASTSearchSecurityDefaultUserStore
+description: |-
+  This cmdlet gets the identity of the default user store that users and groups are looked up in.
+  The purpose of the command is to determine the user's or group's document access if the user store identity is not specified when looking up the user or group.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-fastsearchsecuritydefaultuserstore
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Get-FASTSearchSecurityDefaultUserStore

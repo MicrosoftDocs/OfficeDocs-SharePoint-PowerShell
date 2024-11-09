@@ -1,0 +1,192 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes an instance of a performance counter.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Remove-SPDiagnosticsPerformanceCounter [-Category] <String> [-AssignmentCollection <SPAssignmentCollection>]
+   [-Confirm] [-Counter <String>] [-DatabaseServer] [-Instance <String>] [-WebFrontEnd] [-WhatIf]
+   [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE 1------------------'
+  code: |-
+    Remove-SPDiagnosticsPerformanceCounter -category ASP.NET
+  description: |-
+    This example removes all the counters in the category ASP.NET on front end Web servers.
+  summary: ""
+- title: '------------------EXAMPLE 2------------------'
+  code: |-
+    Remove-SPDiagnosticsPerformanceCounter -category ASP.NET -Counter "Requests Queued"
+  description: |-
+    This example removes the counters in the category ASP.NET that have requests queued on front end Web servers.
+  summary: ""
+- title: '------------------EXAMPLE 3------------------'
+  code: |-
+    Remove-SPDiagnosticsPerformanceCounter -category Processor -counter "% Processor Time" -instance "_Total" -databaseserver
+  description: |-
+    This example removes the counters of the _Total instance, with the counter % Processor Time in the category Processor on database servers.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Category
+  isRequired: true
+  description: |+
+    Specifies the category of performance counters to remove.
+
+    The type must be a valid name of a category of performance counters; for example, ASP.NET, PhysicalDisk, or Processor.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Counter
+  description: |+
+    Specifies the type of counter to remove.
+    If this parameter is not specified, this cmdlet removes all performance counters of the specified category.
+
+    The type must be a valid name of counter type; for example, Requests Queued, Avg.
+    Disk Queue Length, and % Processor Time.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DatabaseServer
+  description: |+
+    Removes the specified performance counters that are collected on the database servers in the farm.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Instance
+  description: |+
+    Specifies the instance name of the performance counter to remove.
+    If this parameter is not specified, this cmdlet removes all instances of the specified performance counter.
+
+    The type must be a valid name of a performance counter instance; for example Total_PerfCounter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WebFrontEnd
+  description: |+
+    Removes performance counters that are collected on the front end Web servers in the farm.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Remove-SPDiagnosticsPerformanceCounter
+name: Remove-SPDiagnosticsPerformanceCounter
+description: |-
+  The `Remove-SPDiagnosticsPerformanceCounter` cmdlet removes performance counters from the collection of performance counters that are read and recorded in the usage database.
+  This cmdlet can also be used to remove entire categories and types of counters from the collection.
+  If either the DatabaseServer or WebFrontEnd parameters are not specified, this cmdlet removes the specified performance counters on the front end Web servers in the farm.
+
+  The `Remove-SPDiagnosticsPerformanceCounter` cmdlet is only available by using Windows PowerShell.
+  There is no user interface.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spdiagnosticsperformancecounter
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Remove-SPDiagnosticsPerformanceCounter
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

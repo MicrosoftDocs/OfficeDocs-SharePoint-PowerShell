@@ -1,0 +1,250 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Converts the authentication mode of a web application.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Convert-SPWebApplication -Identity <SPWebApplicationPipeBind> -From <String> -To <String>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Force] [-RetainPermissions] [-Database <SPContentDatabase>]
+   [-MapList <String>] [-SiteSubsriptionId <Guid>] [-SkipPolicies] [-SkipSites]
+   [-SourceSkipList <String>] [-TrustedProvider <SPTrustedIdentityTokenIssuerPipeBind>]
+   [-LoggingDirectory <String>] [<CommonParameters>]
+examples:
+- title: '------------EXAMPLE 1-------'
+  code: |-
+    Convert-SPWebApplication -Identity "https://<webappurl>" -To Claims -RetainPermissions
+  description: |-
+    This example converts a web application specified by the Identity parameter to use the claim authentication mode.
+  summary: ""
+- title: '------------EXAMPLE 2-------'
+  code: |-
+    Convert-SPWebApplication -Identity "https://<webappurl>" -From Legacy -To Claims -RetainPermissions
+  description: |-
+    This example converts a web application specified by the Identity parameter from Classic Windows authentication to Claims authentication mode while retaining permissions. The -From parameter is required after security update MS04-022 or the April 2014 Cumulative Update for SharePoint Server 2013 is applied. This is required for all versions of SharePoint Server 2016.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPContentDatabase" data-throw-if-not-resolved="False" />
+  name: Database
+  description: |+
+    Specifies the name of the content database to migrate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the conversion of the web application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: From
+  isRequired: true
+  description: |+
+    Specifies the authentication method to convert from.
+
+    Valid values for this parameter are as follows.
+
+    Legacy, Claims-Windows, Claims-Trusted-Default
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPWebApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the URL of the web application that you want to convert, for example: https://mysite/app1
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LoggingDirectory
+  description: |+
+    Specifies a directory where verbose logs about the results of the migration will be written.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MapList
+  description: |+
+    Specifies a file containing as list of rows in the following format: user-key, migrated-user-name, migrated-user-key.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RetainPermissions
+  description: |+
+    Specifies the account under which the cmdlet is run and retains the permission in the web application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: SiteSubsriptionId
+  description: |+
+    Specifies the GUID fo the Site Subscription.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SkipPolicies
+  description: |+
+    Specifies the SPWebApplication security policies will not be migrated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SkipSites
+  description: |+
+    Specifies the SPWebApplication's SPSites will not be migrated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceSkipList
+  description: |+
+    Specifies a file containing as list of rows in the following format: user-key.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: To
+  isRequired: true
+  description: |+
+    Specifies the authentication method to convert to.
+
+    Valid values for this parameter are as follows.
+
+    Claims, Claims-Windows, Claims-Trusted-Default, Claims-SharePoint-Online
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPTrustedIdentityTokenIssuerPipeBind" data-throw-if-not-resolved="False" />
+  name: TrustedProvider
+  description: |+
+    When you migrate from a trusted login provider this is how you specify which trusted login provider.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Convert-SPWebApplication
+name: Convert-SPWebApplication
+description: |-
+  Use the Convert-SPWebApplication cmdlet to convert the authentication mode of a Web application to Windows Claims authentication mode and migrate the user accounts in the content database to claims encoded values.
+
+  When retaining permissions, users within Sites are only converted if the source account is enabled and queryable by SharePoint. For example, if the Active Directory account is deleted or disabled prior to a Classic Windows to Windows Claims conversion, the account in the database will not be updated to the Claims format.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/convert-spwebapplication
+  applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Convert-SPWebApplication
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

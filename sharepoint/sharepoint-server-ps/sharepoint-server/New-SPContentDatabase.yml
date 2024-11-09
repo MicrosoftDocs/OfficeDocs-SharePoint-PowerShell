@@ -1,0 +1,212 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new content database and attaches it to the specified Web application.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  New-SPContentDatabase [-Name] <String> [-WebApplication] <SPWebApplicationPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-AssignNewDatabaseId] [-Confirm] [-ClearChangeLog]
+   [-DatabaseCredentials <PSCredential>] [-DatabaseServer <String>] [-MaxSiteCount <Int32>]
+   [-WarningSiteCount <Int32>] [-WhatIf] [-ChangeSyncKnowledge] [-DatabaseAccessCredentials <PSCredential>]
+   [-UseLatestSchema] [<CommonParameters>]
+examples:
+- title: '--------------EXAMPLE--------------------'
+  code: |-
+    New-SPContentDatabase "MyDatabase" -DatabaseServer "MyServer" -WebApplication https://sitename
+  description: |-
+    This example creates a new content database for the sitename Web application.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AssignNewDatabaseId
+  description: |+
+    Creates a new database ID automatically when the content database is attached.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ChangeSyncKnowledge
+  description: |+
+    Specifies Groove sync client to resync their content when a Content Database attach is used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ClearChangeLog
+  description: |+
+    Clears any pending changes from the change log in the content database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: DatabaseAccessCredentials
+  description: |+
+    Specifies the credential for the SPDataAccess role.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: DatabaseCredentials
+  description: |+
+    Specifies the PSCredential object that contains the user name and password to be used for database SQL Server Authentication.
+
+    The type must be a valid PSCredential object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseServer
+  description: |+
+    Specifies the name of the host server for the content database specified in the Name parameter.
+
+    The type must be a valid SQL Server host name; for example, SQLServerHost1.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaxSiteCount
+  description: |+
+    Specifies the maximum number of Web sites that can use the content database.
+
+    The type must be a positive integer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the new content database to create within the farm.
+
+    The type must be a valid name of a SharePoint content database; for example, SPContentDB1.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseLatestSchema
+  description: |+
+    Specifies to use the latest schema. In an on-premises environment, this parameter will have no effect at all.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: WarningSiteCount
+  description: |+
+    Specifies the number of sites that can be created before a warning event is generated and the owner of the site collection is notified.
+
+    The type must be a positive integer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPWebApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: WebApplication
+  isRequired: true
+  description: |+
+    Attaches the content database to the specified SharePoint Web application.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of SharePoint Web application (for example, MyOfficeApp1); or an instance of a valid SPWebApplication object.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.New-SPContentDatabase
+name: New-SPContentDatabase
+description: |-
+  The New-SPContentDatabase cmdlet creates a new content database and attaches it to the specified Web application.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spcontentdatabase
+  applicable: SharePoint Server Subscription Edition
+  title: New-SPContentDatabase
+  PlatyPS schema version: 2.0.0

@@ -1,0 +1,150 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Copies the data from the Project Server 2013 database into the corresponding SharePoint Server 2016 content database containing the migrated site collection.
+module: SharePointServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.SharePoint.PowerShell.SPSitePipeBind" data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.SharePoint.PowerShell.SPAssignmentCollection
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Migrate-SPProjectDatabase [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] -DatabaseName <String>
+   [-DatabaseServer <String>] [-FailoverPartner <String>] [-Overwrite] [-SQLLogon <PSCredential>]
+   -SiteCollection <SPSitePipeBind> [-WhatIf] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Migrate-SPProjectDatabase -DatabaseName ProjectDB1 -SiteCollection "https://contoso1/sites/PWA"
+  description: |-
+    This example will look for a Project Server 2013 database named ProjectDB1 on the same instance of SQL Server where the content database containing https://contoso1/sites/PWA is located. The data will be upgraded and copied into the site collection.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Project Server 2016
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - Project Server 2016
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseName
+  isRequired: true
+  description: |+
+    The name of the Project Server 2013 database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Project Server 2016
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseServer
+  description: |+
+    The name of the instance of SQL Server hosting the Project Server 2013 database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Project Server 2016
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FailoverPartner
+  description: |+
+    The name of the SQL Server failover partner for the Project Server 2013 database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Project Server 2016
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Overwrite
+  description: |+
+    Specifies to overwrite any Project data from previous attempts.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Project Server 2016
+  parameterValueGroup: ""
+- type: <xref href="SPSitePipeBind" data-throw-if-not-resolved="False" />
+  name: SiteCollection
+  isRequired: true
+  description: |+
+    The URL of the site collection to which you want to copy the Project data.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Project Server 2016
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: SQLLogon
+  description: |+
+    SQL Server authentication credentials if needed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Project Server 2016
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - Project Server 2016
+  parameterValueGroup: ""
+applicable:
+- Project Server 2016
+uid: SharePointServer.Migrate-SPProjectDatabase
+name: Migrate-SPProjectDatabase
+description: |-
+  Copies the data from the Project Server 2013 database into the corresponding SharePoint Server 2016 content database containing the migrated site collection.
+
+  Both the Project Server 2013 database and the SharePoint Server 2016 database must be on the same instance of SQL
+  Server and the SharePoint farm account must have full access to the Project Server 2013 database. During the migration process the Project Server 2013 database will be modified and cannot be mounted back to a Project Server 2013.
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/migrate-spprojectdatabase
+  applicable: Project Server 2016
+  title: Migrate-SPProjectDatabase
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

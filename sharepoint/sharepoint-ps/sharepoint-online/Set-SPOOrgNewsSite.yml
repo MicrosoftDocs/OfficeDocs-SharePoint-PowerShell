@@ -1,0 +1,48 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Marks a site as one of multiple possible tenant's organizational news sites. Requires at least SharePoint administrator permissions.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Remove-SPOOrgNewsSite
+  href: Remove-SPOOrgNewsSite.yml
+- text: Get-SPOOrgNewsSite
+  href: Get-SPOOrgNewsSite.yml
+syntaxes:
+- Set-SPOOrgNewsSite -OrgNewsSiteUrl <string> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Set-SPOOrgNewsSite -OrgNewsSiteUrl https://contoso.sharepoint.com/sites/Marketing
+  description: |-
+    This example marks <https://contoso.sharepoint.com/sites/Marketing> as an organizational news site.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OrgNewsSiteUrl
+  isRequired: true
+  description: |+
+    The URL of a site to be marked as an organizational news site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Set-SPOOrgNewsSite
+name: Set-SPOOrgNewsSite
+description: |-
+  Use this cmdlet to mark a site as an organizational authoritative news site. Such sites get primary treatment in the SharePoint user interface.
+
+  If a site with specified URL doesn't exist, this cmdlet returns a "File not found" error.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spoorgnewssite
+  applicable: SharePoint Online
+  title: Set-SPOOrgNewsSite
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen

@@ -1,0 +1,133 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use this Cmdlet to convert your XML files into a new encrypted migration package.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Get-SPOAppErrors
+  href: Get-SPOAppErrors.yml
+- text: ConvertTo-SPOMigrationTargetedPackage
+  href: ConvertTo-SPOMigrationTargetedPackage.yml
+- text: Migrate to SharePoint Online using PowerShell
+  href: https://learn.microsoft.com/sharepointmigration/overview-spmt-ps-cmdlets
+syntaxes:
+- ConvertTo-SPOMigrationEncryptedPackage -EncryptionParameters <EncryptionParameters> -MigrationSourceLocations <MigrationPackageLocation> [-NoLogFile] -TargetFilesPath <String> -TargetPackagePath <String> [<CommonParameters>]
+- >-
+  ConvertTo-SPOMigrationEncryptedPackage -EncryptionParameters <EncryptionParameters> [-NoLogFile]
+   -SourceFilesPath <String> -SourcePackagePath <String> -TargetFilesPath <String> -TargetPackagePath <String>
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    ConvertTo-SPOMigrationEncryptedPackage -EncryptionParameters SHA256 -MigrationSourceLocations $MigrationPackageLocation -NoLogFile -TargetFilesPath $TargetFilesPath -TargetPackagePath $TargetPackagePath
+  description: |-
+    Changes a migration package to a migration encrypted package on the "migrationSourceLocations" , with log file on the current tenant
+  summary: ""
+- title: Example 2
+  code: |-
+    ConvertTo-SPOMigrationEncryptedPackage -EncryptionParameters SHA384 -MigrationSourceLocations $MigrationPackageLocation  -TargetFilesPath $TargetFilesPath -TargetPackagePath $TargetPackagePath
+  description: |-
+    Same as example1 but without log file and using an encryption type SHA384
+  summary: ""
+parameters:
+- type: <xref href="EncryptionParameters" data-throw-if-not-resolved="False" />
+  name: EncryptionParameters
+  isRequired: true
+  description: |+
+    Parameters of the encryption, it doesn't accept wildcard characters.
+    It accepts parameters like SHA384, SHA256, etc.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="MigrationPackageLocation" data-throw-if-not-resolved="False" />
+  name: MigrationSourceLocations
+  isRequired: true
+  description: |+
+    Possible Source locations to migrate
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoLogFile
+  description: |+
+    Switch Parameter to determine if you should get or not a log file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceFilesPath
+  isRequired: true
+  description: |+
+    Defines the temporary Path where are located the XML source files.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourcePackagePath
+  isRequired: true
+  description: |+
+    Defines the source package path location.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetFilesPath
+  isRequired: true
+  description: |+
+    Defines the temporary Path where are located the XML source files.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetPackagePath
+  isRequired: true
+  description: |+
+    Defines the source package path location of the package to be encrypted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.ConvertTo-SPOMigrationEncryptedPackage
+name: ConvertTo-SPOMigrationEncryptedPackage
+description: |-
+  This command convert the XML file on your temporary XML folder files into a new set of targeted migration encrypted metadata files to the target directory.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/convertto-spomigrationencryptedpackage
+  applicable: SharePoint Online
+  title: ConvertTo-SPOMigrationEncryptedPackage
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

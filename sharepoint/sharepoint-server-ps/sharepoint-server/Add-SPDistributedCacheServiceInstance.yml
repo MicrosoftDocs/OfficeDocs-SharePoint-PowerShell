@@ -1,0 +1,93 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds an instance of the distributed cache service to a local server.
+module: sharepoint-server
+notes: ""
+inputs:
+- name: <xref href="Microsoft.SharePoint.PowerShell.SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Remove-SPDistributedCacheServiceInstance
+  href: Remove-SPDistributedCacheServiceInstance.yml
+syntaxes:
+- Add-SPDistributedCacheServiceInstance [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+- >-
+  Add-SPDistributedCacheServiceInstance [-AssignmentCollection <SPAssignmentCollection>] [-CacheSizeInMB <Int32>]
+   [<CommonParameters>]
+- >-
+  Add-SPDistributedCacheServiceInstance [-AssignmentCollection <SPAssignmentCollection>] [-Role <SPServerRole>]
+   [<CommonParameters>]
+examples:
+- title: '------------Example 1 -----------'
+  code: |-
+    Add-SPDistributedCacheServiceInstance
+  description: |-
+    This example adds an instance of the distributed cache service to a local server.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    **NOTE**: When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: CacheSizeInMB
+  description: |+
+    Specifies the amount of RAM to allocate for the Distributed Cache service instance.
+
+    If this parameter is not specified, the default value will be used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPServerRole" data-throw-if-not-resolved="False" />
+  name: Role
+  description: |+
+    Specifies the type of server role that the Distributed Cache service instance should be configured for. 
+
+    This parameter is typically used when you are going to do a server role conversion to the specified server role.
+
+    The valid values are:
+
+    * SingleServerFarm
+    * DistributedCache
+    * WebFrontEndWithDistributedCache
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: DistributedCache, SingleServerFarm, WebFrontEndWithDistributedCache
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Add-SPDistributedCacheServiceInstance
+name: Add-SPDistributedCacheServiceInstance
+description: |-
+  This cmdlet contains more than one parameter set. You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets. For more information about how to use parameter sets, see [Cmdlet Parameter Sets](https://go.microsoft.com/fwlink/?LinkID=187810).
+
+  Use the Add-SPDistributedCacheServiceInstance cmdlet to add an instance of the distributed cache server to a local server. This is required to start the AppFabric service.
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/add-spdistributedcacheserviceinstance
+  applicable: SharePoint Server Subscription Edition
+  title: Add-SPDistributedCacheServiceInstance
+  PlatyPS schema version: 2.0.0

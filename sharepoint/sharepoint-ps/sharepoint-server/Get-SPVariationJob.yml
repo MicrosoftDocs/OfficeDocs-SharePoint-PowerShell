@@ -1,0 +1,68 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Displays the current status of Variations Propagate Page Job Definition and Variations Propagate Site Job Definition timer jobs that are located on the Timer Job Status page of the SharePoint Central Administration website.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Get-SPVariationJob -Identity <SPWebPipeBind> [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf]
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE
+  code: |-
+    C:\PS> Get-SPVariationJob -Identity https://server/sites/pub/vhome/source/newsub
+  description: |-
+    This example displays the current status of Variations Propagate Page Job Definition and Variations Propagate Site Job Definition timer jobs that are located on the Timer Job Status page of the SharePoint Central Administration website.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SPWebPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The source variation site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: SharePointServer.Get-SPVariationJob
+name: Get-SPVariationJob
+description: |-
+  The command displays the current status of Variations Propagate Page Job Definition and Variations Propagate Site Job Definition timer jobs that are located on the Timer Job Status page of the SharePoint Central Administration website.
+metadata:
+  external help file: Microsoft.SharePoint.Publishing.dll-Help.xml
+  Module Name: SharePointServer
+  online version: ""
+  PlatyPS schema version: 2.0.0

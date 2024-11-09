@@ -1,0 +1,89 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns a property rule instance, which can be used in result item types.
+module: SharePointServer
+notes: ""
+links:
+- text: Get-SPEnterpriseSearchPropertyRuleCollection
+  href: Get-SPEnterpriseSearchPropertyRuleCollection.yml
+syntaxes:
+- >-
+  Get-SPEnterpriseSearchPropertyRule [-PropertyName] <String> [-Operator] <DefaultOperator>
+   [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+examples:
+- title: '--------EXAMPLE--------'
+  code: |-
+    $rule = Get-SPEnterpriseSearchPropertyRule -PropertyName 'ContentTypeId' -Operator 'StartsWith'
+    $rule.AddValue('0x010063C2F478ACC511DFB869B5BFDFD720851252')
+  description: |-
+    This example returns a rule for the property "ContentTypeId", where the condition is that the property shall start with a specific value.
+
+    The second step specifies the value that the property shall start with.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="DefaultOperator" data-throw-if-not-resolved="False" />
+  name: Operator
+  isRequired: true
+  description: |+
+    Specifies the operation to apply to the property, for example "Starts with".
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PropertyName
+  isRequired: true
+  description: |+
+    Specifies the name of the property that the rule concerns.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Get-SPEnterpriseSearchPropertyRule
+name: Get-SPEnterpriseSearchPropertyRule
+description: |-
+  The Get-SPEnterpriseSearchPropertyRule cmdlet returns an instance of a property rule, given the specified condition.
+  The value for the condition is set in a separate step.
+  Such a rule can be used in result item types, to group the results based on the condition of a result property.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchpropertyrule
+  applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Get-SPEnterpriseSearchPropertyRule
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

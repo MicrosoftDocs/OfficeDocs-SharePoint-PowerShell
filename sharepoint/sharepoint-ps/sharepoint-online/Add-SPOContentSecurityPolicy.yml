@@ -1,0 +1,45 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a source to the **Content Security Policy** configuration.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Get-SPOContentSecurityPolicy
+  href: Get-SPOContentSecurityPolicy.yml
+- text: Remove-SPOContentSecurityPolicy
+  href: Remove-SPOContentSecurityPolicy.yml
+- text: Content Security Policy source values
+  href: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources
+syntaxes:
+- Add-SPOContentSecurityPolicy [-Source] <String>
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Source
+  isRequired: true
+  description: |+
+    Source to be added to the **Content Security Policy** configuration.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Add-SPOContentSecurityPolicy
+name: Add-SPOContentSecurityPolicy
+description: |-
+  Adds a source to the **Content Security Policy** configuration. 
+  The source will be added to the `script-src` directive during construction of the `Content-Security-Policy` header.
+  In multi-geo environments, **Content Security Policy** configuration is unique to each geo.
+metadata:
+  external help file: ""
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/add-spocontentsecuritypolicy
+  applicable: SharePoint Online
+  title: Add-SPOContentSecurityPolicy
+  PlatyPS schema version: 2.0.0
+  author: jaobrie
+  ms.author: jaobrie
+  manager: ryannak
+  ms.reviewer: ""

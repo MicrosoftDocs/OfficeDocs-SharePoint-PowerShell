@@ -1,0 +1,43 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes the site collection app catalog.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+syntaxes:
+- Remove-SPOSiteCollectionAppCatalog [-Site] <SpoSitePipeBind> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-SPOSiteCollectionAppCatalog -Site https://contoso.sharepoint.com/sites/Research
+  description: |-
+    This example removes the site collection app catalog from the site <https://contoso.sharepoint.com/sites/Research.>
+  summary: ""
+parameters:
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Site
+  isRequired: true
+  description: |+
+    Url of the site collection.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPOSiteCollectionAppCatalog
+name: Remove-SPOSiteCollectionAppCatalog
+description: |-
+  Use this cmdlet to remove the site collection app catalog.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spositecollectionappcatalog
+  applicable: SharePoint Online
+  title: Remove-SPOSiteCollectionAppCatalog
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

@@ -1,0 +1,86 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new rank profile to calculate relevance in queries.
+module: SharePointServer
+notes: ""
+links:
+- text: Remove-FASTSearchMetadataRankProfile
+  href: Remove-FASTSearchMetadataRankProfile.yml
+- text: Set-FASTSearchMetadataRankProfile
+  href: Set-FASTSearchMetadataRankProfile.yml
+- text: Get-FASTSearchMetadataRankProfile
+  href: Get-FASTSearchMetadataRankProfile.yml
+syntaxes:
+- New-FASTSearchMetadataRankProfile -Name <String> [-Template <RankProfile>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    New-FASTSearchMetadataRankProfile -Name newrankdistribution
+  description: |-
+    This example adds a new rank profile based on the default settings.
+    The new rank profile is called "newrankdistribution".
+  summary: ""
+- title: '---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    C:\PS>$rankprofile_template = Get-FASTSearchMetadataRankProfile -Name newrankdistribution
+    New-FASTSearchMetadataRankProfile -Template $rankprofile_template -Name ExtraRankProfile
+  description: |-
+    This example adds a new rank profile based on an existing rank profile called "newrankdistribution".
+  summary: ""
+- title: '---------------EXAMPLE 3----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    C:\PS>$new_rank_profile = New-FASTSearchMetadataRankProfile -Name ImprovedDefault
+    $new_rank_profile.makeDefault()
+  description: |-
+    This example specifies a new rank profile to use as the default rank profile for the FAST Search Server 2010 for SharePoint.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the new rank profile.
+
+  defaultValue: None
+  position: Named
+  aliases: RankProfileName, N
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="RankProfile" data-throw-if-not-resolved="False" />
+  name: Template
+  description: |+
+    An object representing the rank profile that will serve as a template in creating the new rank profile.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: RankProfileTemplate, T
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.New-FASTSearchMetadataRankProfile
+name: New-FASTSearchMetadataRankProfile
+description: |-
+  A rank profile controls the relevancy calculation for a query.
+  It consists of several components which are weighted so that the relevancy calculation fits the content.
+  See Set-FASTSearchMetadataRankProfile for more details.
+
+  A rank profile can either be created with default values, or based on another existing rank profile using the Template parameter.
+
+  The rank profile is typically specified as part of a query.
+  If no rank profile is specified in the query, the default rank profile is used.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-fastsearchmetadatarankprofile
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: New-FASTSearchMetadataRankProfile

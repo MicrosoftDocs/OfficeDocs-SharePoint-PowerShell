@@ -1,0 +1,35 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Queries the current SPOHideDefaultThemes setting. SPO stands for SharePoint Online.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Set-SPOHideDefaultThemes
+  href: Set-SPOHideDefaultThemes.yml
+examples:
+- title: Example 1
+  code: |-
+    Get-SPOHideDefaultThemes
+  description: ""
+  summary: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOHideDefaultThemes
+name: Get-SPOHideDefaultThemes
+description: |-
+  The **Get-SPOHideDefaultThemes** cmdlet retrieves the current **Set-SPOHideDefaultThemes** setting. You might want to use this cmdlet in a PowerShell script to read the setting and then take different actions based on whether the default themes are hidden. This cmdlet does not have any parameters.
+
+  > [!NOTE]
+  > This cmdlet was named **Get-HideDefaultThemes** until the December 2017 release of the SPO Management Shell. We recommend that you use the latest version of the PowerShell cmdlets.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spohidedefaultthemes
+  applicable: SharePoint Online
+  title: Get-SPOHideDefaultThemes
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

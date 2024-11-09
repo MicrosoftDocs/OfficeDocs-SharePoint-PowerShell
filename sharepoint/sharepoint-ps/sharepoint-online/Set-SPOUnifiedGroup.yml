@@ -1,0 +1,58 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the Preferred Data Location (PDL) for the specified Office 365 Group. The customer tenant must be multi-geo enabled.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Get-SPOUnifiedGroup
+  href: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spounifiedgroup
+- text: Move a SharePoint site to a different geo location
+  href: https://learn.microsoft.com/office365/enterprise/move-sharepoint-between-geo-locations
+syntaxes:
+- Set-SPOUnifiedGroup [-GroupAlias] <string> [-PreferredDataLocation] <string> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Set-SPOUnifiedGroup -GroupAlias EUTeam -PreferredDataLocation EUR
+  description: |-
+    Sets the PDL for the Office 365 Group named 'EUTeam' to EUR (Europe).
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GroupAlias
+  description: |+
+    The alias of the Office 365 Group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PreferredDataLocation
+  description: |+
+    The Preferred Data Location for the Office 365 Group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Set-SPOUnifiedGroup
+name: Set-SPOUnifiedGroup
+description: |-
+  Use this cmdlet to set the Preferred Data Location for an Office 365 Group.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spounifiedgroup
+  applicable: SharePoint Online
+  title: Set-SPOUnifiedGroup
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

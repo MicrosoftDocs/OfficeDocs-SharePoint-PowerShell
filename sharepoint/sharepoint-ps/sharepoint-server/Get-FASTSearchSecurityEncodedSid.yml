@@ -1,0 +1,64 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the encoded extended security identifier.
+module: SharePointServer
+notes: ""
+links:
+- text: Get-FASTSearchSecurityDecodedSid
+  href: Get-FASTSearchSecurityDecodedSid.yml
+syntaxes:
+- Get-FASTSearchSecurityEncodedSid [[-SID] <String>] [[-User] <String>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1-----------------'
+  code: |-
+    Get-FASTSearchSecurityEncodedSid -SID S-1-5-7
+  description: |-
+    This example returns an encoded security identifier and user name for the Windows SID, "5-1-5-7".
+  summary: ""
+- title: '---------------EXAMPLE 2-----------------'
+  code: |-
+    Get-FASTSearchSecurityEncodedSid -User users
+  description: |-
+    This example returns the encoded security identifier for the Windows built-in "Users" group.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SID
+  description: |+
+    The Windows security identifier to encode.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: User
+  description: |+
+    The user or group identifier to encode.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Get-FASTSearchSecurityEncodedSid
+name: Get-FASTSearchSecurityEncodedSid
+description: |-
+  This cmdlet returns a Base64 encoded security identifier for a user, group, or Windows SID (Windows security identifier).
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-fastsearchsecurityencodedsid
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Get-FASTSearchSecurityEncodedSid

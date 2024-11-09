@@ -1,0 +1,158 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Connects a SharePoint Online administrator to a SharePoint Online connection (the SharePoint Online Administration Center).
+  This cmdlet must be run before any other SharePoint Online cmdlets can run.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Introduction to the SharePoint Online management shell
+  href: https://support.office.com/en-us/article/introduction-to-the-sharepoint-online-management-shell-c16941c3-19b4-4710-8056-34c034493429
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Disconnect-SPOService
+  href: Disconnect-SPOService.yml
+syntaxes:
+- >-
+  Connect-SPOService -AuthenticationUrl <String> [-ClientTag <String>] [-Credential <CredentialCmdletPipeBind>]
+   -Url <UrlCmdletPipeBind> -ModernAuth <Boolean> [<CommonParameters>]
+- >-
+  Connect-SPOService [-ClientTag <String>] [-Credential <CredentialCmdletPipeBind>]
+   [-Region <AADCrossTenantAuthenticationLocation>] -Url <UrlCmdletPipeBind> [<CommonParameters>]
+examples:
+- title: '-----------------------EXAMPLE 1-----------------------------'
+  code: |-
+    Connect-SPOService -Url https://contoso-admin.sharepoint.com -credential admin@contoso.com
+  description: |-
+    Example 1 shows how a SharePoint Online administrator with credential admin@contoso.com connects to a SharePoint Online Administration Center that has the URL `<https://contoso-admin.sharepoint.com.>`
+  summary: ""
+- title: '-----------------------EXAMPLE 2-----------------------------'
+  code: |-
+    $username = "admin@contoso.sharepoint.com"
+    $password = "password"
+    $cred = New-Object -TypeName System.Management.Automation.PSCredential -argumentlist $userName, $(convertto-securestring $Password -asplaintext -force)
+    Connect-SPOService -Url https://contoso-admin.sharepoint.com -Credential $cred
+  description: |-
+    Example 2 shows how a SharePoint Online administrator with a username and password connects to a SharePoint Online Administration Center that has the URL `<https://contoso-admin.sharepoint.com.>`
+  summary: ""
+- title: '--------------------`---EXAMPLE 3-----------------------------'
+  code: |-
+    Connect-SPOService -Url https://contoso-admin.sharepoint.com
+  description: |-
+    Prompts for credentials. This is required if the account is using multi-factor authentication.
+  summary: ""
+- title: '-----------------------EXAMPLE 4-----------------------------'
+  code: |-
+    Connect-SPOService -Url https://contoso-admin.sharepoint.com -Region ITAR
+  description: |-
+    Connects to a SharePoint Online Administration Center specifying the region.
+  summary: ""
+- title: '-----------------------EXAMPLE 5-----------------------------'
+  code: |-
+    Connect-SPOService -Credential $creds -Url https://tenant-admin.sharepoint.com -ModernAuth $true -AuthenticationUrl https://login.microsoftonline.com/organizations
+  description: |-
+    Connecting to SPO Service with ModernAuth Flag.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AuthenticationUrl
+  isRequired: true
+  description: |+
+    Location for Microsoft Entra Cross-Tenant Authentication service. Can be optionally used if non-default Cross-Tenant Authentication Service is used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClientTag
+  description: |+
+    Permits appending a client tag to existing client tag. Used optionally in the CSOM http traffic to identify used script or solution.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="CredentialCmdletPipeBind" data-throw-if-not-resolved="False" />
+  name: Credential
+  description: |+
+    Specifies the credentials to use to connect. If no credentials are presented, a dialog will prompt for the credentials. The credentials must be those of a SharePoint Online administrator who can access the SharePoint Online Administration Center site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ModernAuth
+  description: |2+
+     Ensures that SharePoint Online tenant administration cmdlets can connect to the service using modern TLS protocols.
+
+    To use it you also need to provide the **AuthenticationUrl** parameter.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="AADCrossTenantAuthenticationLocation" data-throw-if-not-resolved="False" />
+  name: Region
+  description: |+
+    The valid values are: Default | ITAR | Germany | China
+
+    The default value is "default".
+
+    **Note**: The ITAR value is for GCC High and DoD tenancies only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="UrlCmdletPipeBind" data-throw-if-not-resolved="False" />
+  name: Url
+  isRequired: true
+  description: |+
+    Specifies the URL of the SharePoint Online Administration Center site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Connect-SPOService
+name: Connect-SPOService
+description: |-
+  The `Connect-SPOService` cmdlet connects a SharePoint Online administrator to the SharePoint Online Administration Center.
+
+  Only a single SharePoint Online service connection is maintained from any single Windows PowerShell session.
+  In other words, this is a per-geo within an organization administrator connection.
+  Running the `Connect-SPOService` cmdlet twice implicitly disconnects the previous connection.
+  The Windows PowerShell session will be set to serve the new SharePoint Online administrator specified.
+
+  A delegated partner administrator has to swap connections for different organizations within the same Windows PowerShell session.
+
+  You must be a SharePoint Online administrator to run the cmdlet.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/connect-sposervice
+  applicable: SharePoint Online
+  title: Connect-SPOService
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

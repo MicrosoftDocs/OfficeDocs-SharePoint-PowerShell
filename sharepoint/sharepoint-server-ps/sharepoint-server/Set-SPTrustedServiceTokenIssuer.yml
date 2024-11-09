@@ -1,0 +1,138 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates a trust with the farm.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Set-SPTrustedServiceTokenIssuer [-Identity] <SPTrustedServiceTokenIssuerPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Certificate <X509Certificate2>] [-Description <String>]
+   [-Confirm] [-WhatIf] [<CommonParameters>]
+- >-
+  Set-SPTrustedServiceTokenIssuer [-Identity] <SPTrustedServiceTokenIssuerPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Description <String>] [-Confirm] [-MetadataEndPoint <Uri>]
+   [-WhatIf] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE 1------------------'
+  code: |-
+    $cert = Get-PfxCertificate C:\LiveIDSigningCert.pfx
+    Set-SPTrustedServiceTokenIssuer "WFEFarm1" - Description "WFE Farm 1" - ImportTrustCertificate $cert
+  description: |-
+    This example updates a SharePoint Farm trust using the trust certificate from a file.
+  summary: ""
+- title: '------------------EXAMPLE 2------------------'
+  code: |-
+    Set-SPTrustedServiceTokenIssuer "WFEFarm1" - Description "WFE Farm 1" -FederationMetadataUrl "https://liveid.com/STS/2007/03/fedmetadata.xml"
+  description: |-
+    This example updates a SharePoint farm trust using the trust certificate from the federation metadata endpoint URL.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+  name: Certificate
+  description: |+
+    Specifies the X.509 certificate object from trusted authentication provider farm.
+
+    The type must be a name of a valid X.509 certificate; for example, Certificate1.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies a description for the trust.
+
+    The type must be a valid string; for example, WFE Farm Trust1.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPTrustedServiceTokenIssuerPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the trusted service token issuer to update.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a trusted service token issuer (for example, WFEFarm1); or an instance of a valid SPTrustedRootAuthority object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: MetadataEndPoint
+  description: |+
+    {{Fill MetadataEndPoint Description}}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPTrustedServiceTokenIssuer
+name: Set-SPTrustedServiceTokenIssuer
+description: |-
+  The `Set-SPTrustedServiceTokenIssuer` cmdlet updates a trust with a SharePoint farm.
+  If a certificate file is used, it must have only one X509 certificate without private keys, otherwise an exception is raised.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-sptrustedservicetokenissuer
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPTrustedServiceTokenIssuer
+  PlatyPS schema version: 2.0.0

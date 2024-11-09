@@ -1,0 +1,102 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet unregisters a Remote Share BLOB Store.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Unregister-SPRemoteShareBlobStore -RemoteShareBlobStore <SPRemoteShareBlobStorePipeBind> [-Force]
+   [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------EXAMPLE 1-------------'
+  code: |-
+    Register-SPRemoteShareBlobStore -RemoteShareBlobStore "RemoteBlobStore" -Force
+  description: |-
+    This example forcely unregisters "RemoteBlobStore" from the farm
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+    NOTE: When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    This switch forces unregistration even if there are BLOBs still in use in the Remote Share BLOB Store.
+    If there are BLOBs still in use in the BLOB store being unregistered, this cmdlet will throw an exception to prevent unintentionally unregistering a BLOB store in use.
+
+    If there is a need to unregister such a BLOB store, you can run the cmdlet with this switch to ignore the detection of in use BLOBs in the BLOB store.
+
+    It's not recommended to use this "-Force" switch because it will leave BLOBs in the SMB storage behind and make your SharePoint contents inaccessible.
+    It's recommended to first migrate BLOBs and then unregister the Remote Share BLOB Store.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPRemoteShareBlobStorePipeBind" data-throw-if-not-resolved="False" />
+  name: RemoteShareBlobStore
+  isRequired: true
+  description: |+
+    Specifies the identity of the Remote Share BLOB Store to unregister.
+
+    It can either be the Remote Share BLOB Store object or the Remote Share BLOB Store name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Unregister-SPRemoteShareBlobStore
+name: Unregister-SPRemoteShareBlobStore
+description: |-
+  The \`Unregister-SPRemoteShareBlobStore\` cmdlet unregisters a Remote Share BLOB Store from your content database.
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/unregister-spremoteshareblobstore
+  applicable: SharePoint Server Subscription Edition
+  title: Unregister-SPRemoteShareBlobStore
+  PlatyPS schema version: 2.0.0

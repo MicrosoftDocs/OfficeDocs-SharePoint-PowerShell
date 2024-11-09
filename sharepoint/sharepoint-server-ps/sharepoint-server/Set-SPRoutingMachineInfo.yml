@@ -1,0 +1,143 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets routing target properties.
+module: sharepoint-server
+notes: ""
+links:
+- text: Add-SPRoutingMachineInfo
+  href: Add-SPRoutingMachineInfo.yml
+- text: Get-SPRoutingMachineInfo
+  href: Get-SPRoutingMachineInfo.yml
+- text: Remove-SPRoutingMachineInfo
+  href: Remove-SPRoutingMachineInfo.yml
+syntaxes:
+- >-
+  Set-SPRoutingMachineInfo [-Identity] <SPRoutingMachineInfoPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Availability <SPRoutingMachineAvailability>]
+   [-ClearOutgoingPort] [-OutgoingPort <Int32>] [-OutgoingScheme <SPRoutingOutgoingScheme>]
+   [-StaticWeight <Double>] [<CommonParameters>]
+examples:
+- title: '--------------------EXAMPLE---------------------'
+  code: |-
+    $wa = Get-SPWebApplication -Identity https://webAppUrl
+    $rm = Get-SPRequestManagementSettings -Identity $wa
+    $m = Get-SPRoutingMachineInfo -RequestManagementSettings $rm -Name SP01
+    Set-SPRoutingMachineInfo -Identity $m -Availability Unavailable
+  description: |-
+    This example sets the "Availability" routing target property to Unavailable for a specified identity.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPRoutingMachineAvailability" data-throw-if-not-resolved="False" />
+  name: Availability
+  description: |+
+    Specifies whether or not the specified computer will be available for routing.
+
+    The valid values are:
+
+    --Available
+    --Unavailable
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ClearOutgoingPort
+  description: |+
+    Clears the outgoing port if it is set.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPRoutingMachineInfoPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the name of the request management settings object to set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: OutgoingPort
+  description: |+
+    Specifies the port used by Request Manager to make an outgoing connection.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPRoutingOutgoingScheme" data-throw-if-not-resolved="False" />
+  name: OutgoingScheme
+  description: |+
+    Determines the schema of outgoing connections.
+
+    The valid values are:
+
+    --SameAsIncoming
+    --Http
+    --Https
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Double" data-throw-if-not-resolved="False" />
+  name: StaticWeight
+  description: |+
+    Specifies whether the static weight of a computer routing is used by Request Manager.
+    If the static weight is higher, more requests will be routed to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPRoutingMachineInfo
+name: Set-SPRoutingMachineInfo
+description: |-
+  Use the `Set-SPRoutingMachineInfo` cmdlet to set routing target properties by using the Identity parameter.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-sproutingmachineinfo
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPRoutingMachineInfo
+  PlatyPS schema version: 2.0.0

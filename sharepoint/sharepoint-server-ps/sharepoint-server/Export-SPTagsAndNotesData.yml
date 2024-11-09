@@ -1,0 +1,73 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Exports the SharePoint Newsfeed tags and notes from the SharePoint database to a ZIP file.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Export-SPTagsAndNotesData [-Site] <SPSitePipeBind> [-FilePath] <String>
+   [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+examples:
+- title: '----------------EXAMPLE-----------------'
+  code: |-
+    Export-SPTagsAndNotesData -Site https://site.contoso.com -FilePath C:\TagsAndNotes.zip
+  description: |-
+    This example creates a new ZIP file called TagsAndNotes.zip, on the root of C: drive, exports tags and notes from the SharePoint database for the site https://site.contoso.com, and adds the resulting files to the TagsAndNotes.zip file
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    {{Fill AssignmentCollection Description}}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FilePath
+  isRequired: true
+  description: |+
+    File name, including full path, that you want export the tags and notes to.
+
+    The cmdlet will create a new ZIP file with the name you specified.
+    If the file already exists, the cmdlet won't perform the export and will ask you to specify a new file name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Site
+  isRequired: true
+  description: |+
+    URL of the root site where you want to export the tags and notes from.
+
+    You must specify a valid URL to an existing SharePoint root site.
+    For example: https://site.contoso.com
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+uid: sharepoint-server.Export-SPTagsAndNotesData
+name: Export-SPTagsAndNotesData
+description: |-
+  The Export-SPTagsAndNotesData cmdlet exports the SharePoint Newsfeed tags and notes from the SharePoint database.
+  The tags and notes are written into separate files, and then the two are compressed and added to the ZIP file you specify.
+metadata:
+  external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/export-sptagsandnotesdata
+  Applicable: SharePoint Server Subscription Edition
+  title: Export-SPTagsAndNotesData
+  PlatyPS schema version: 2.0.0

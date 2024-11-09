@@ -1,0 +1,122 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates site script syntax from an existing SharePoint site.
+module: Microsoft.Online.SharePoint.PowerShell
+syntaxes:
+- Get-SPOSiteScriptFromWeb [-WebUrl] <string> [-IncludedLists <string[]>] [-IncludeBranding] [-IncludeTheme] [-IncludeRegionalSettings] [-IncludeSiteExternalSharingCapability] [-IncludeLinksToExportedItems] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    C:\> $extracted = Get-SPOSiteScriptFromWeb `
+        -WebUrl https://contoso.sharepoint.com/sites/template `
+        -IncludeBranding `
+        -IncludeTheme `
+        -IncludeRegionalSettings `
+        -IncludeSiteExternalSharingCapability `
+        -IncludeLinksToExportedItems `
+        -IncludedLists ("Shared%20Documents", "Lists/Project%20Activities")
+    C:\> Add-SPOSiteScript `
+        -Title "Contoso template site" `
+        -Description "This is a copy of a site collection." `
+        -Content $extracted
+  description: ""
+  summary: |+
+    This example creates the site script output from an existing site - and writes it to a variable. This variable is then referenced to create a site script.
+
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeBranding
+  description: |+
+    A switch that if provided, extracts the configuration of the site's branding.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="string" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: IncludedLists
+  description: |+
+    An array of one or more lists. Each is identified by the list url.
+
+    Note: Currently, navigation nodes are not exported.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeLinksToExportedItems
+  description: |+
+    A switch that if provided, extracts navigation links. In order to export navigation links pointing to lists, the list needs to be included in the request as well.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeRegionalSettings
+  description: |+
+    A switch that if provided, extracts the site's regional settings.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeSiteExternalSharingCapability
+  description: |+
+    A switch that if provided, extracts the site's external sharing capability.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeTheme
+  description: |+
+    A switch that if provided, extracts the site's custom theme by using the themeJson property.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: WebUrl
+  isRequired: true
+  description: |+
+    The url that starts with HTTPS of the site to retrieve the site script.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOSiteScriptFromWeb
+name: Get-SPOSiteScriptFromWeb
+description: |-
+  Uses an existing SharePoint site to output a JSON blob that can be used to create a site script for use in a site design.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spositescriptfromweb
+  applicable: SharePoint Online
+  title: Get-SPOSiteScriptFromWeb
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

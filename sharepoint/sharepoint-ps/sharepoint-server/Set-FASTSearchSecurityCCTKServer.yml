@@ -1,0 +1,72 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the CCTK server general setting.
+module: SharePointServer
+notes: ""
+links:
+- text: Get-FASTSearchSecurityCCTKServer
+  href: Get-FASTSearchSecurityCCTKServer.yml
+syntaxes:
+- >-
+  Set-FASTSearchSecurityCCTKServer [[-Port] <Int32>] [[-Enable] <Boolean>]
+   [[-GeneralSetting] <CCTKServerSetting>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1---------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Set-FASTSearchSecurityCCTKServer -Port 13271 -Enable $true
+  description: |-
+    This example updates the CCTK server port number and enables the CCTK server to accept requests.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Enable
+  description: |+
+    A Boolean flag to determine if the CCTK service will accept requests.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="CCTKServerSetting" data-throw-if-not-resolved="False" />
+  name: GeneralSetting
+  description: |+
+    A CCTKServerSetting instance whose property values are used for the CCTKServerSetting being updated.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "9999"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Port
+  description: |+
+    The port number that the security manager listens to for handling CCTK requests.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Set-FASTSearchSecurityCCTKServer
+name: Set-FASTSearchSecurityCCTKServer
+description: |-
+  This cmdlet updates the configuration information for the Content Connector Toolkit (CCTK) server general settings.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-fastsearchsecuritycctkserver
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Set-FASTSearchSecurityCCTKServer

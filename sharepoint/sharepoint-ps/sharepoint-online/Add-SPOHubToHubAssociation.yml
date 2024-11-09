@@ -1,0 +1,58 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Associates a hub site to a hub site.
+  Note: This feature is currently in preview and may not be available in your tenant.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: |-
+  SPOHubToHubAssociation is just a placeholder and not yet ready for production.
+syntaxes:
+- Add-SPOHubToHubAssociation [-Source] <SpoHubSitePipeBind> -Target <SpoHubSitePipeBind> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Add-SPOHubToHubAssociation -Source 7b6fd3a3-b029-4eb0-8e00-ba4a3949807d -Target 43a36572-37ec-45c3-9058-061a2db4cd26
+  description: |-
+    This example associates the source hub site with the HubSiteId 7b6fd3a3-b029-4eb0-8e00-ba4a3949807d with the target hub site with the HubSiteId 43a36572-37ec-45c3-9058-061a2db4cd26.
+  summary: ""
+parameters:
+- type: <xref href="SpoHubSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Source
+  isRequired: true
+  description: |+
+    HubSiteId of the Source Hub site to be associated with the Target Hub Site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SpoHubSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Target
+  isRequired: true
+  description: |+
+    HubSiteId of the Target Hub to associate the source Hub to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Add-SPOHubToHubAssociation
+name: Add-SPOHubToHubAssociation
+description: |-
+  Use this cmdlet to associate a hub site to a hub site.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/add-spohubtohubassociation
+  applicable: SharePoint Online
+  title: Add-SPOHubToHubAssociation
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

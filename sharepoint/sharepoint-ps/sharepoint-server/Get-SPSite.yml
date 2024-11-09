@@ -1,0 +1,334 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns all site collections that match the specified criteria.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Get-SPSite [-Identity] <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+   [-CompatibilityLevel <Int32>] [-Confirm] [-Filter <ScriptBlock>] [-Limit <String>] [-Regex] [-WhatIf]
+   [<CommonParameters>]
+- >-
+  Get-SPSite -ContentDatabase <SPContentDatabasePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+   [-CompatibilityLevel <Int32>] [-Confirm] [-Filter <ScriptBlock>] [-Limit <String>] [-WhatIf]
+   [-NeedsB2BUpgrade] [<CommonParameters>]
+- >-
+  Get-SPSite -SiteSubscription <SPSiteSubscriptionPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+   [-CompatibilityLevel <Int32>] [-Confirm] [-Filter <ScriptBlock>] [-Limit <String>] [-WhatIf]
+   [<CommonParameters>]
+- >-
+  Get-SPSite [-AssignmentCollection <SPAssignmentCollection>] [-CompatibilityLevel <Int32>] [-Confirm]
+   [-Filter <ScriptBlock>] [-Limit <String>] [-WebApplication <SPWebApplicationPipeBind>] [-WhatIf]
+   [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE 1---------------------'
+  code: |-
+    Get-SPSite 'https://<site name>' | Get-SPWeb -Limit All | Select Title
+  description: |-
+    This example gets the collection of subweb titles in site collection at https://\<site name\>.
+  summary: ""
+- title: '------------------EXAMPLE 2---------------------'
+  code: |-
+    Get-SPSite -ContentDatabase "b399a366-d899-4cff-8a9b-8c0594ee755f" | Format-Table -Property Url, Owner, SecondaryOwner
+  description: |-
+    This example gets a subset of data from all sites in the content database b399a366-d899-4cff-8a9b-8c0594ee755f.
+  summary: ""
+- title: '------------------EXAMPLE 3---------------------'
+  code: |-
+    Start-SPAssignment -Global
+
+    $s = Get-SPSite -Identity https://<MyApp>/Sites/Site1
+
+    $s.Url
+
+    Stop-SPAssignment -Global
+  description: |-
+    This example gets the sites specified by the Identity parameter and inserts the results in the variable s
+
+    The previous example uses the Global method of assignment collection.
+    The Global method is easy to use but the contents of this object grows quickly.
+    Be careful not to run a Get-SPSite command that returns many results while global assignment is enabled.
+  summary: ""
+- title: '------------------EXAMPLE 4---------------------'
+  code: |-
+    $GC = Start-SPAssignment
+    $Sites = $GC | Get-SPSite -Filter {$_.Owner -eq "DOMAIN\JDow"} -Limit 50
+    Stop-SPAssignment $GC
+  description: |-
+    This example gets the first 50 sites owned by user DOMAIN\JDow by using a server-side query, and assigns them to a local variable.
+
+    This example uses advanced assignment collection methods.
+  summary: ""
+- title: '------------------EXAMPLE 5---------------------'
+  code: |-
+    Get-SPWebApplication https://<site name> | Get-SPSite -Limit All |ForEach-Object {$sum=0}{ $sum+=$_.Usage.Storage }{$sum}
+  description: |-
+    This example shows a command that returns the sum of the disk space usage for all sites in a given web application.
+  summary: ""
+- title: '------------------EXAMPLE 6---------------------'
+  code: |-
+    Get-SPSite -Identity "https://localserver/(my|personal)/sites" -Regex
+  description: |-
+    This example returns all sites that match the given regular expression.
+
+    The Quotes on the Identity parameter are required when the Regex parameter is used.
+  summary: ""
+- title: '------------------EXAMPLE 7---------------------'
+  code: |-
+    Get-SPSite https://<site name>/sites/teams/* -Limit 100
+  description: |-
+    This example gets up to 100 of the sites under the URL https://sitename/sites/teams.
+  summary: ""
+- title: '------------------EXAMPLE 8---------------------'
+  code: |-
+    Get-SPSite | select url, @{Expression={$_.Usage.Storage}}
+  description: |-
+    This example gets the amount of storage used by a site collection, by using the storage field of the .UsageInfo property.
+  summary: ""
+- title: '------------------EXAMPLE 9---------------------'
+  code: |-
+    Get-SPSite -Limit all -CompatibilityLevel 14
+  description: |-
+    This example returns all SharePoint Server mode site collections.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: CompatibilityLevel
+  description: |+
+    Specifies the version of templates to use when creating a new SPSite object.
+    This value sets the initial CompatibilityLevel value for the site collection.
+    The values for this parameter can be either SharePoint Server or SharePoint Server.
+    When this parameter is not specified, the CompatibilityLevel will default to the highest possible version for the web application depending on the SiteCreationMode setting.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPContentDatabasePipeBind" data-throw-if-not-resolved="False" />
+  name: ContentDatabase
+  isRequired: true
+  description: |+
+    Specifies the GUID of the content database from which to list site collections.
+
+    The type must be a valid database name, in the form, SPContentDB01, or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="ScriptBlock" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Specifies the script block of the server-side filter to apply.
+
+    The type must be a valid filter name and value in the form {$_PropertyName \<operator\> "filterValue"}.
+
+    Valid operators are: EQ, NE, LIKE, NOTLIKE.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the URL or GUID of the site collection to get.
+
+    The type must be a valid URL, in the form, https://server_name or https://server_name/sites/sitename, or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Limit
+  description: |+
+    Limits the maximum number of site collections to return.
+    The default value is 200.
+
+    The type must be a valid non-negative number.
+    Specify ALL to return all site collections for the given scope.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NeedsB2BUpgrade
+  description: |+
+    Specifies whether the site needs to be upgraded.
+
+    The valid values are True and False.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Regex
+  description: |+
+    When used, the URL provided for the Identity parameter is treated as a regular expression.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPSiteSubscriptionPipeBind" data-throw-if-not-resolved="False" />
+  name: SiteSubscription
+  isRequired: true
+  description: |+
+    Specifies the site subscription from which to get site collections.
+
+    The type must be a valid URL, in the form, https://server_name or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPWebApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: WebApplication
+  description: |+
+    Specifies the URL, GUID, or name of the web application from which to list sites.
+
+    The type must be a valid URL, in the form, https://server_name, a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh); or the name of the web application (for example, WebApplication1212).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Get-SPSite
+name: Get-SPSite
+description: |-
+  This cmdlet contains more than one parameter set.
+  You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+  For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+
+  The Get-SPSite cmdlet returns either a single site that matches the Identity parameter, or all the sites that match the Filter parameter for the specified scope.
+  The scopes are the WebApplication, ContentDatabase , and SiteSubscription parameters.
+  If none of these scopes is provided, the scope is the farm.
+  If the scope is specified with no Filter parameter, all sites in that scope are returned.
+
+  The Identity parameter supports providing a partial URL that ends in a wildcard character (*).
+  All site collections that match this partial URL for the specified scope are returned.
+  Additionally, if the Regex parameter is provided, the Identity parameter is treated as a regular expression and any site collection with a URL provided in the given scope that matches the expression is returned.
+
+  The Filter parameter is a server-side filter for certain site collection properties that are stored in the content database; without the Filter parameter, filtering on these properties is a slow process.
+  These site collection properties are Owner, SecondaryOwner, and LockState.
+  The Filter parameter is a script block that uses the same syntax as a Where-Object statement, but is run on the server for faster results.
+
+  Valid values for LockState are: Unlock, NoAdditions, ReadOnly, NoAccess.
+
+  It is important to note that every site collection that the Get-SPSite cmdlet returns is automatically destroyed at the end of the pipeline.
+  To store the results of Get-SPSite in a local variable, use the Start-SPAssignment and Stop-SPAssignment cmdlets to avoid memory leaks.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spsite
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Get-SPSite
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

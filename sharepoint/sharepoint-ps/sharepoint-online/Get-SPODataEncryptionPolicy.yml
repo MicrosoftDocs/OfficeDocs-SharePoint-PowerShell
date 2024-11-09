@@ -1,0 +1,31 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  .
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+syntaxes:
+- Get-SPODataEncryptionPolicy
+examples:
+- title: Example 1
+  code: |-
+    Get-SPODataEncryptionPolicy
+  description: "The output from this cmdlet includes:\r\n  \r\n- The URI of the primary key.\r\n\r\n- The URI of the secondary key.\r\n\r\n- The encryption status for the geo. Possible states include:\r\n\r\n  - **Unregistered:** Customer Key encryption has not yet been applied.\r\n\r\n  - **Registering:** Customer Key encryption has been applied and your files are in the process of being encrypted. If your geo is in this state, you'll also be shown information on what percentage of sites in the geo are complete so that you can monitor encryption progress.\r\n\r\n  - **Registered:** Customer Key encryption has been applied, and all files in all sites have been encrypted.\r\n\r\n  - **Rolling:** A key roll is in progress. If your geo is in this state, you'll also be shown information on what percentage of sites have completed the key roll operation so that you can monitor progress."
+  summary: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPODataEncryptionPolicy
+name: Get-SPODataEncryptionPolicy
+description: |-
+  Use the Get-DataEncryptionPolicy cmdlet to view customer encryption status for your geo tenant.
+
+  For more information, see [Controlling your data in Office 365 using Customer Key](https://learn.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key)
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spodataencryptionpolicy
+  applicable: SharePoint Online
+  title: Get-SPODataEncryptionPolicy
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

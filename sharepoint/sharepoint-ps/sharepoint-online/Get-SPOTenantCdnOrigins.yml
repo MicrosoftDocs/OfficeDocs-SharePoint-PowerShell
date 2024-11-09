@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Lists all the configured origins under the tenancy or under a given site. You must be a SharePoint Online administrator to run this cmdlet.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-SPOTenantCdnOrigins -CdnType <SPOTenantCdnType> [<CommonParameters>]
+examples:
+- title: '-----------------------EXAMPLE 1-----------------------------'
+  code: |-
+    Get-SPOTenantCdnOrigins -CdnType Public
+  description: |-
+    The example returns a list of origins from the Tenant.
+  summary: ""
+parameters:
+- type: <xref href="SPOTenantCdnType" data-throw-if-not-resolved="False" />
+  name: CdnType
+  isRequired: true
+  description: |+
+    Specifies the CDN type. The valid values are: Public or Private.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: Public, Private
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOTenantCdnOrigins
+name: Get-SPOTenantCdnOrigins
+description: |-
+  Lists all the configured origins under the tenancy or under a given site.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spotenantcdnorigins
+  applicable: SharePoint Online
+  title: Get-SPOTenantCdnOrigins
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

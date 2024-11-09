@@ -1,0 +1,88 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns application errors.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Get-SPOAppInfo
+  href: Get-SPOAppInfo.yml
+syntaxes:
+- Get-SPOAppErrors [-EndTimeInUtc <DateTime>] -ProductId <Guid> [-StartTimeInUtc <DateTime>] [<CommonParameters>]
+examples:
+- title: '------------ Example 1 --------------------'
+  code: |-
+    Get-SPOAppErrors -ProductId ba51729b-e017-409d-681a-66f1dd18f0f4
+  description: |-
+    This example returns a collection of monitoring error message(s) for application whose GUID is ba51729b-e017-409d-681a-66f1dd18f0f4.
+  summary: ""
+- title: '------------ Example 2 --------------------'
+  code: |-
+    Get-SPOAppErrors -ProductId ba51729b-e017-409d-681a-66f1dd18f0f4 -StartTimeInUtc (Get-Date).AddHours(-1).ToUniversalTime()
+  description: |-
+    This example returns a collection of monitoring error message(s) for application whose GUID is ba51729b-e017-409d-681a-66f1dd18f0f4 in the last hour.
+  summary: ""
+parameters:
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: EndTimeInUtc
+  description: |+
+    Specifies the end time in UTC to search for monitoring errors. If no end time is given, the default value current time in UTC is used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: ProductId
+  isRequired: true
+  description: |+
+    Specifies the application's GUID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: StartTimeInUtc
+  description: |+
+    Specifies the start time in UTC to search for monitoring errors. If no start time is given, the default value 72 hours before the current time is used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOAppErrors
+name: Get-SPOAppErrors
+description: |-
+  The `Get-SPOAppErrors` cmdlet returns application monitoring errors (if available) for the application that is specified by ProductId between StartTimeInUtc in Coordinated Universal Time (UTC) and EndTimeInUtc in UTC.
+
+  Based on server configuration, errors are available for a limited time.
+  The default is seven days.
+  Older errors are purged.
+  Date time values that are older than 50 years or later than 20 years from today are considered invalid
+
+  Each error includes the error message, time in UTC that error happened, the site where the error happened, and the error type.
+  Values for error type are as follows: 0 - None, 1 - Install Error, 2 - Upgrade Error, 3 - Runtime Error.
+
+  You must be a SharePoint Online administrator to run the cmdlet.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spoapperrors
+  applicable: SharePoint Online
+  title: Get-SPOAppErrors
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

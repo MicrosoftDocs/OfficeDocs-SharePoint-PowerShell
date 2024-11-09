@@ -1,0 +1,64 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns the SharePoint Online users in a multi-geo tenant that match the criteria.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Get-SPOAppErrors
+  href: Get-SPOAppErrors.yml
+- text: ConvertTo-SPOMigrationTargetedPackage
+  href: ConvertTo-SPOMigrationTargetedPackage.yml
+syntaxes:
+- Get-SPOCrossGeoUsers -ValidDataLocation <Boolean> [<CommonParameters>]
+examples:
+- title: '-----------------------EXAMPLE 1-----------------------------'
+  code: |-
+    Get-SPOCrossGeoUsers -ValidDataLocation $true
+  description: |-
+    Returns all of the SharePoint Online users in a multi-geo tenant and validates the data location.
+  summary: ""
+- title: '-----------------------EXAMPLE 2-----------------------------'
+  code: |-
+    Get-SPOCrossGeoUsers
+  description: |-
+    Returns all of the SharePoint Online users in a multi-geo tenant without validating data location.
+  summary: ""
+- title: '-----------------------EXAMPLE 3-----------------------------'
+  code: |-
+    Get-SPOCrossGeoUsers -ValidDataLocation $true | where {$_.UserPrincipalName -eq 'jane@contoso.com'}
+  description: |-
+    Returns a single user from SharePoint Online in a multi-geo tenant and validates the data location.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ValidDataLocation
+  isRequired: true
+  description: |+
+    Use this parameter to validate the location of the data. The acceptable values for this parameter are:
+
+    - $False
+    - $True
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOCrossGeoUsers
+name: Get-SPOCrossGeoUsers
+description: |-
+  The Get-SPOCrossGeoUsers cmdlet is used to return the SharePoint Online users that match a given criteria. The ValidDataLocation parameter is a switch used to validate the location of the data. This cmdlet requires a connection to a multi-geo tenant to run correctly. You must have the SharePoint Online Admin role to execute this cmdlet.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spocrossgeousers
+  applicable: SharePoint Online
+  title: Get-SPOCrossGeoUsers
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

@@ -1,0 +1,50 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Remove user profile from the tenant.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Remove-SPOUserInfo
+  href: Remove-SPOUserInfo.yml
+syntaxes:
+- Remove-SPOUserProfile -LoginName <String> [<CommonParameters>]
+examples:
+- title: '------------ Example 1 --------------------'
+  code: |-
+    Remove-SPOUserProfile -LoginName joe.healy@contoso.com
+  description: |-
+    Example 1 removes a user who has the e-mail address joe.healy@contoso.com from the SharePoint Online User Profiles of the particular tenant.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LoginName
+  isRequired: true
+  description: |+
+    Specifies the login name of the user which user profile is deleted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPOUserProfile
+name: Remove-SPOUserProfile
+description: |-
+  Can be used to remove the SharePoint user profile from the tenant.
+
+  > [!NOTE]
+  > The User must be first be deleted from Microsoft Entra ID before the user profile can be deleted. You can use the Microsoft Entra cmdlet Remove-AzureADUser for this action
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spouserprofile
+  applicable: SharePoint Online
+  title: Remove-SPOUserProfile
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""
+  ms.custom: has-azure-ad-ps-ref

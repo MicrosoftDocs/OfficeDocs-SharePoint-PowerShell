@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns a list of all the types of claims.
+module: SharePointServer
+notes: ""
+links:
+- text: New-SPClaimTypeEncoding
+  href: New-SPClaimTypeEncoding.yml
+syntaxes:
+- >-
+  Get-SPClaimTypeEncoding [-AssignmentCollection <SPAssignmentCollection>] [-ClaimType <String>]
+   [-EncodingCharacter <Char>] [<CommonParameters>]
+examples:
+- title: '--------------EXAMPLE 1--------'
+  code: |-
+    Get-SPClaimTypeEncoding
+  description: |-
+    This example returns a list of all types of claima in the farm.
+  summary: ""
+- title: '--------------EXAMPLE 2--------'
+  code: |-
+    Get-SPClaimTypeEncoding -ClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/country"
+  description: |-
+    This example returns a specific claim type by using the ClaimType parameter.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClaimType
+  description: |+
+    Specifies an encoding character that is mapped to a type of input claim.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Char" data-throw-if-not-resolved="False" />
+  name: EncodingCharacter
+  description: |+
+    Specifies a type of claim that is mapped to an input character.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Get-SPClaimTypeEncoding
+name: Get-SPClaimTypeEncoding
+description: |-
+  Use the Get-SPClaimTypeEncoding cmdlet to return the following:
+
+
+  -- A list of all the types of claims that are registered in the farm
+
+  -- The Unicode character that will be encoded when the SPClaim.ToEncodedString method is invoked
+
+  -- The SPClaim.ClaimType property is set to a valid value
+
+
+  For additional information about the SPClaim methods and properties, see M:Microsoft.SharePoint.Administration.Claims.SPClaim.ToEncodedString and P:Microsoft.SharePoint.Administration.Claims.SPClaim.ClaimType respectively.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spclaimtypeencoding
+  applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Get-SPClaimTypeEncoding
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

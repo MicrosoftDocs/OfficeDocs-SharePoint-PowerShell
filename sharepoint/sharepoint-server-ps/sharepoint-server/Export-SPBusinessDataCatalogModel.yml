@@ -1,0 +1,167 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Exports a Business Data Connectivity Model.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Export-SPBusinessDataCatalogModel -Identity <MetadataObject> -Path <String>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Force] [-LocalizedNamesIncluded] [-ModelsIncluded]
+   [-PermissionsIncluded] [-PropertiesIncluded] [-ProxiesIncluded] [-SettingId <String>] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE------------------'
+  code: |-
+    $Model = Get-SPBusinessDataCatalogMetadataObject -BdcObjectType "Model" -Name "ContosoModel" -ServiceContext http://contoso
+    Export-SPBusinessDataCatalogModel -Identity $Model -Path "C:\folder\model.bdcm"
+  description: |-
+    This example gets a Business Data Connectivity Model from the Business Data Connectivity Metadata Store and exports it to the location specified with the name model and using the bdcm file extension.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Overwrites the output file if the file exists.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="MetadataObject" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the Business Data Connectivity Metadata Store metadata object from which to export the Business Data Connectivity Model.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: LocalizedNamesIncluded
+  description: |+
+    Specifies that names for business data fields in multiple languages are exported.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ModelsIncluded
+  description: |+
+    Specifies that models are included in the exported Business Data Connectivity Model file.
+    A model contains the base XML metadata for a system.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies the path and name to use to create the export file.
+
+    The type must be a valid path in either of the following forms:
+
+    - C:\folder_name \file.bdcm
+    - \\\\server_name\folder_name \file.bdcm
+    - ...\folder_name\file.bdcm
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PermissionsIncluded
+  description: |+
+    Specifies that permissions from the Business Data Connectivity Model are exported.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PropertiesIncluded
+  description: |+
+    Specifies that properties from the application definition are exported.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ProxiesIncluded
+  description: |+
+    Specifies that proxies for Business Data Connectivity Service applications are exported.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SettingId
+  description: |+
+    Specifies the custom environment settings model slice to export.
+
+    The type must be a valid string that identifies a model slice; for example, ModelSlice1.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Export-SPBusinessDataCatalogModel
+name: Export-SPBusinessDataCatalogModel
+description: |-
+  The Export-SPBusinessDataCatalogModel cmdlet exports a Business Data Connectivity Model. 
+  There are two types of Business Data Connectivity models: Model type (.bdcm) and Resource type (.bdcr).
+  The Model type contains the base XML metadata, and can also include resource properties.
+  The Resource type includes only resource properties.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/export-spbusinessdatacatalogmodel
+  applicable: SharePoint Server Subscription Edition
+  title: Export-SPBusinessDataCatalogModel
+  PlatyPS schema version: 2.0.0

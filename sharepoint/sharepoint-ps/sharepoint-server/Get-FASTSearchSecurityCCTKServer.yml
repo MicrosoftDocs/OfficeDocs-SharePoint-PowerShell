@@ -1,0 +1,35 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the CCTK server general setting.
+module: SharePointServer
+notes: ""
+links:
+- text: Set-FASTSearchSecurityCCTKServer
+  href: Set-FASTSearchSecurityCCTKServer.yml
+syntaxes:
+- Get-FASTSearchSecurityCCTKServer [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1-----------------'
+  code: |-
+    Get-FASTSearchSecurityCCTKServer
+  description: |-
+    This example retrieves the configuration setting for the server that handles CCTK requests.
+  summary: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Get-FASTSearchSecurityCCTKServer
+name: Get-FASTSearchSecurityCCTKServer
+description: |-
+  This cmdlet gets the configuration setting for the server that handles CCTK requests.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-fastsearchsecuritycctkserver
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Get-FASTSearchSecurityCCTKServer

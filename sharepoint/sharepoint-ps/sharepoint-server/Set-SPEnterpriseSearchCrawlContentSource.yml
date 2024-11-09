@@ -1,0 +1,535 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the properties of a crawl content source for a Search service application.
+module: SharePointServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Office.Server.Search.Cmdlet.ContentSourcePipeBind" data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.SharePoint.PowerShell.SPAssignmentCollection
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-SPEnterpriseSearchCrawlContentSource [-Identity] <ContentSourcePipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>]
+   [-BDCApplicationProxyGroup <SPServiceApplicationProxyGroupPipeBind>] [-Confirm]
+   [-CrawlPriority <CrawlPriority>] [-CrawlScheduleDaysOfMonth <Int32>]
+   [-CrawlScheduleMonthsOfYear <MonthsOfYear>] [-CrawlScheduleRepeatDuration <Int32>]
+   [-CrawlScheduleRepeatInterval <Int32>] [-CrawlScheduleStartDateTime <DateTime>] [-CustomProtocol <String>]
+   [-EnableContinuousCrawls <Boolean>] [-LOBSystemSet <String[]>] [-MaxPageEnumerationDepth <Int32>]
+   [-MaxSiteEnumerationDepth <Int32>] [-MonthlyCrawlSchedule] [-Name <String>]
+   [-ScheduleType <ContentSourceCrawlScheduleType>] [-SearchApplication <SearchServiceApplicationPipeBind>]
+   [-StartAddresses <String>] [-Tag <String>] [-WhatIf] [<CommonParameters>]
+- >-
+  Set-SPEnterpriseSearchCrawlContentSource [-Identity] <ContentSourcePipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>]
+   [-BDCApplicationProxyGroup <SPServiceApplicationProxyGroupPipeBind>] [-Confirm]
+   [-CrawlPriority <CrawlPriority>] [-CrawlScheduleDaysOfWeek <DaysOfWeek>]
+   [-CrawlScheduleRepeatDuration <Int32>] [-CrawlScheduleRepeatInterval <Int32>]
+   [-CrawlScheduleRunEveryInterval <Int32>] [-CrawlScheduleStartDateTime <DateTime>] [-CustomProtocol <String>]
+   [-EnableContinuousCrawls <Boolean>] [-LOBSystemSet <String[]>] [-MaxPageEnumerationDepth <Int32>]
+   [-MaxSiteEnumerationDepth <Int32>] [-Name <String>] [-ScheduleType <ContentSourceCrawlScheduleType>]
+   [-SearchApplication <SearchServiceApplicationPipeBind>] [-StartAddresses <String>] [-Tag <String>]
+   [-WeeklyCrawlSchedule] [-WhatIf] [<CommonParameters>]
+- >-
+  Set-SPEnterpriseSearchCrawlContentSource [-Identity] <ContentSourcePipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>]
+   [-BDCApplicationProxyGroup <SPServiceApplicationProxyGroupPipeBind>] [-Confirm]
+   [-CrawlPriority <CrawlPriority>] [-CrawlScheduleRepeatDuration <Int32>] [-CrawlScheduleRepeatInterval <Int32>]
+   [-CrawlScheduleRunEveryInterval <Int32>] [-CrawlScheduleStartDateTime <DateTime>] [-CustomProtocol <String>]
+   [-DailyCrawlSchedule] [-EnableContinuousCrawls <Boolean>] [-LOBSystemSet <String[]>]
+   [-MaxPageEnumerationDepth <Int32>] [-MaxSiteEnumerationDepth <Int32>] [-Name <String>]
+   -ScheduleType <ContentSourceCrawlScheduleType> [-SearchApplication <SearchServiceApplicationPipeBind>]
+   [-StartAddresses <String>] [-Tag <String>] [-WhatIf] [<CommonParameters>]
+- >-
+  Set-SPEnterpriseSearchCrawlContentSource [-Identity] <ContentSourcePipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>]
+   [-BDCApplicationProxyGroup <SPServiceApplicationProxyGroupPipeBind>] [-Confirm]
+   [-CrawlPriority <CrawlPriority>] [-CustomProtocol <String>] [-EnableContinuousCrawls <Boolean>]
+   [-LOBSystemSet <String[]>] [-MaxPageEnumerationDepth <Int32>] [-MaxSiteEnumerationDepth <Int32>]
+   [-Name <String>] [-RemoveCrawlSchedule] [-ScheduleType <ContentSourceCrawlScheduleType>]
+   [-SearchApplication <SearchServiceApplicationPipeBind>] [-StartAddresses <String>] [-Tag <String>] [-WhatIf]
+   [<CommonParameters>]
+examples:
+- title: '--------------------EXAMPLE---------------------'
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication
+    $cs = Get-SPEnterpriseSearchCrawlContentSource -Identity 'Local SharePoint Sites' -SearchApplication $ssa
+    $cs | Set-SPEnterpriseSearchCrawlContentSource -ScheduleType Full -DailyCrawlSchedule -CrawlScheduleRunEveryInterval 30
+    $cs | Set-SPEnterpriseSearchCrawlContentSource -ScheduleType Incremental -DailyCrawlSchedule -CrawlScheduleRepeatInterval 60 -CrawlScheduleRepeatDuration 1440
+  description: |-
+    This example returns the "Local SharePoint Sites" content source and creates a schedule to run a full crawl every 30 days and an incremental crawl every hour every day.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPServiceApplicationProxyGroupPipeBind" data-throw-if-not-resolved="False" />
+  name: BDCApplicationProxyGroup
+  description: |+
+    Specifies the proxy to use for a business type content source.
+    This proxy group must contain a default Business Data Connectivity Metadata Store proxy.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="CrawlPriority" data-throw-if-not-resolved="False" />
+  name: CrawlPriority
+  description: |+
+    Specifies the priority of this content source.
+
+    The type must be one of the following integers: 1= Normal, 2=High.
+
+
+  defaultValue: None
+  position: Named
+  aliases: p
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: Normal, High
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: CrawlScheduleDaysOfMonth
+  description: |+
+    Specifies the days on which to crawl when the MonthlyCrawlSchedule parameter is set.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="DaysOfWeek" data-throw-if-not-resolved="False" />
+  name: CrawlScheduleDaysOfWeek
+  description: |+
+    Specifies the days on which to crawl when the WeeklyCrawlSchedule parameter is set.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Weekdays, Saturday, Weekends, Everyday
+- type: <xref href="MonthsOfYear" data-throw-if-not-resolved="False" />
+  name: CrawlScheduleMonthsOfYear
+  description: |+
+    Specifies the months on which to crawl when the MonthlyCrawlSchedule parameter is set.
+
+
+  defaultValue: None
+  position: Named
+  aliases: month
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: January, February, March, April, May, June, July, August, September, October, November, December, AllMonths
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: CrawlScheduleRepeatDuration
+  description: |+
+    Specifies the number of times to repeat the crawl schedule.
+
+
+  defaultValue: None
+  position: Named
+  aliases: duration
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: CrawlScheduleRepeatInterval
+  description: |+
+    Specifies the number of minutes between each repeat interval for the crawl schedule
+
+
+  defaultValue: None
+  position: Named
+  aliases: interval
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: CrawlScheduleRunEveryInterval
+  description: |+
+    Specifies the interval between crawls.
+
+    When the DailyCrawlSchedule parameter is set, specifies the number of days between crawls.
+
+    When the WeeklyCrawlSchedule parameter is set, specifies the number of weeks between crawls.
+
+
+  defaultValue: None
+  position: Named
+  aliases: every
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: CrawlScheduleStartDateTime
+  description: |+
+    Specifies the initial date of the crawl.
+    The default value is midnight on the current day.
+
+
+  defaultValue: None
+  position: Named
+  aliases: start
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CustomProtocol
+  description: |+
+    Specifies the custom protocol, handled by the custom connector, to use for this content source.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DailyCrawlSchedule
+  description: |+
+    Base schedule on days between crawls.
+
+
+  defaultValue: None
+  position: Named
+  aliases: daily
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableContinuousCrawls
+  description: |+
+    Specifies the value of the EnableContinuousCrawls parameter: True or False.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="ContentSourcePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the crawl content source to update.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a ContentSource object (for example, ContentSource1); or an instance of a valid ContentSource object.
+
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: LOBSystemSet
+  description: |+
+    Specifies a comma-separated list of Business Data Connectivity Metadata Store system names and system instance names for a business type content source.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaxPageEnumerationDepth
+  description: |+
+    Specifies, for a web or custom type content source, the number of page hops that the crawler can make from the start address to a content item.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaxSiteEnumerationDepth
+  description: |+
+    Specifies, for a web or custom type content source, the number of site hops that the crawler can take from the start address to a content item.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: MonthlyCrawlSchedule
+  description: |+
+    Base the schedule on months between crawls.
+
+
+  defaultValue: None
+  position: Named
+  aliases: monthly
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the new display name for the content source.
+
+    The type must be a valid name of a content source; for example, ContentSource1.
+
+
+  defaultValue: None
+  position: Named
+  aliases: n
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RemoveCrawlSchedule
+  description: |+
+    Deletes the specified crawl.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="ContentSourceCrawlScheduleType" data-throw-if-not-resolved="False" />
+  name: ScheduleType
+  isRequired: true
+  description: |+
+    Specifies the type of crawl schedule.
+
+    The type must be one of the following values: Full or Incremental.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: Full, Incremental, Full, Incremental, Full, Incremental, Full, Incremental
+- type: <xref href="SearchServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: SearchApplication
+  description: |+
+    Specifies the search application that contains the content source.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application name (for example, SearchApp1); or an instance of a valid SearchServiceApplication object.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: StartAddresses
+  description: |+
+    Specifies the comma-separated list of URLs at which to start a crawl for this content source.
+
+    The type must be a valid URL, in the form https://server_name.
+
+
+  defaultValue: None
+  position: Named
+  aliases: s
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Tag
+  description: |+
+    Specifies the URL for the page to modify the settings for a custom content source.
+    The string that specifies the URL can contain a maximum of 1,024 characters.
+
+    The type must be a valid URL, in the form https://server_name.
+
+
+  defaultValue: None
+  position: Named
+  aliases: t
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WeeklyCrawlSchedule
+  description: |+
+    Base the schedule on weeks between crawls.
+
+
+  defaultValue: None
+  position: Named
+  aliases: weekly
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Set-SPEnterpriseSearchCrawlContentSource
+name: Set-SPEnterpriseSearchCrawlContentSource
+description: |-
+  This cmdlet contains more than one parameter set.
+  You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
+  For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+
+  The `Set-SPEnterpriseSearchCrawlContentSource` cmdlet updates the rules of a crawl content source when the search functionality is initially configured and after any new content source is added.
+  This cmdlet is called once to set the incremental crawl schedule for a content source and it is called again to set a full crawl schedule.
+
+  The value of the optional EnableContinuousCrawls parameter can be True or False.
+  A value of True enables continuous crawls of items in this content source.
+  This causes the search system to automatically start incremental crawls to process the latest changes to items in the corresponding data repositories.
+  This helps to keep the index fresh for items in this content source.
+  Search service application administrators can still configure full crawls as needed.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.Search.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spenterprisesearchcrawlcontentsource
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Set-SPEnterpriseSearchCrawlContentSource
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

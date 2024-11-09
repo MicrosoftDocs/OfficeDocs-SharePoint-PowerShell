@@ -1,0 +1,45 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet returns the compatibility status between geographic locations.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Get-SPOAppErrors
+  href: Get-SPOAppErrors.yml
+syntaxes:
+- Get-SPOGeoMoveCrossCompatibilityStatus [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Get-SPOGeoMoveCrossCompatibilityStatus
+  description: |-
+    Get the compatibility status for all locations.
+  summary: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOGeoMoveCrossCompatibilityStatus
+name: Get-SPOGeoMoveCrossCompatibilityStatus
+description: |-
+  This cmdlet returns the compatibility between sites and locations for a move in a multi-geo SharePoint Online tenant.
+  The following statuses can be returned:
+  - **Compatible** - The sites and locations are currently compatible and a move can be performed.
+  - **Incompatible** - The sites or locations are currently not compatible and a move cannot be performed at this point in time.
+  - **Warning** - The sites or locations are currently not compatible. Although a move can be performed, it is recommended to postpone until they are compatible.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spogeomovecrosscompatibilitystatus
+  applicable: SharePoint Online
+  title: Get-SPOGeoMoveCrossCompatibilityStatus
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

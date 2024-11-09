@@ -1,0 +1,124 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Exports the data of the specified subscription.
+module: sharepoint-server
+notes: ""
+inputs:
+- name: <xref href="Microsoft.SharePoint.PowerShell.SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Clear-SPServerScaleOutDatabaseTenantData
+  href: Clear-SPServerScaleOutDatabaseTenantData.yml
+- text: Import-SPServerScaleOutDatabaseTenantData
+  href: Import-SPServerScaleOutDatabaseTenantData.yml
+syntaxes:
+- >-
+  Export-SPServerScaleOutDatabaseTenantData [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+   -FilePath <String> [-Force] -ServiceApplication <SPServiceApplicationPipeBind> -SiteSubscriptionId <Guid>
+   [-WhatIf] [<CommonParameters>]
+examples:
+- title: '----------EXAMPLE-------'
+  code: |-
+    Export-SPServerScaleOutDatabaseTenantData -FilePath "C:\TenantData.dat" -ServiceApplication $serviceApplication -SiteSubscriptionId "5CAF2F99-A75F-4239-B9CD-7FE63D1CE904"
+  description: |-
+    This example exports data for the site subscription with id 5CAF2F99-A75F-4239-B9CD-7FE63D1CE904 to the file at C:\ TenantData.dat, from the specified service application.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    {{Fill AssignmentCollection Description}}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FilePath
+  isRequired: true
+  description: |+
+    {{Fill FilePath Description}}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    {{Fill Force Description}}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: ServiceApplication
+  isRequired: true
+  description: |+
+    {{Fill ServiceApplication Description}}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: SiteSubscriptionId
+  isRequired: true
+  description: |+
+    {{Fill SiteSubscriptionId Description}}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Export-SPServerScaleOutDatabaseTenantData
+name: Export-SPServerScaleOutDatabaseTenantData
+description: |-
+  Use the Export-SPServerScaleOutDatabaseTenantData cmdlet to export the data of the specified subscription id to the specified file from the specified service application.
+metadata:
+  external help file: Microsoft.Office.Server.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/export-spserverscaleoutdatabasetenantdata
+  applicable: SharePoint Server Subscription Edition
+  title: Export-SPServerScaleOutDatabaseTenantData
+  PlatyPS schema version: 2.0.0

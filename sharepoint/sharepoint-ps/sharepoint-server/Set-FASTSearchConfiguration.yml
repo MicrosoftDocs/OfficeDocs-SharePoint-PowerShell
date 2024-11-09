@@ -1,0 +1,48 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures the local instance of Microsoft FAST Search Server 2010 for SharePoint.
+module: SharePointServer
+notes: ""
+syntaxes:
+- Set-FASTSearchConfiguration [-LogFile <String>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Set-FastSearchConfiguration -LogFile C:\log.txt
+  description: |-
+    This example configures the local machine and writes the log output to C:\log.txt.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogFile
+  description: |+
+    Specifies the full path of a file where all log messages will be written.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Set-FASTSearchConfiguration
+name: Set-FASTSearchConfiguration
+description: |-
+  This cmdlet configures the local instance of FAST Search Server 2010 for SharePoint.
+
+  FAST Search Server 2010 for SharePoint must be installed, but not running, on the local machine before you run this cmdlet.
+
+  If you are not running this cmdlet on the admin node in the FAST Search Server 2010 for SharePoint installation, make sure that the admin node is started before you run this cmdlet.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-fastsearchconfiguration
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Set-FASTSearchConfiguration

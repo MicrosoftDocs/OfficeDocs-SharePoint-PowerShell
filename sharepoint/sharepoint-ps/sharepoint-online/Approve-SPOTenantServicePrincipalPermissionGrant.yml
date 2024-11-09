@@ -1,0 +1,54 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Approves a permission request for the current tenant's "SharePoint Online Client" service principal.
+module: Microsoft.Online.SharePoint.PowerShell
+syntaxes:
+- Approve-SPOTenantServicePrincipalPermissionGrant -Resource <string> -Scope <string>
+examples:
+- title: '------------------EXAMPLE 1------------------'
+  code: |-
+    Approve-SPOTenantServicePrincipalPermissionGrant -Resource "Microsoft Graph" -Scope "Mail.Read"
+  description: |-
+    Adds a permission scope for the 'Microsoft Graph' resource with scope claim 'Mail.Read'.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Resource
+  isRequired: true
+  description: |+
+    Resource of the permission request to add.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Scope
+  isRequired: true
+  description: |+
+    Scope of the permission request to add.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Approve-SPOTenantServicePrincipalPermissionGrant
+name: Approve-SPOTenantServicePrincipalPermissionGrant
+description: |-
+  Adds a permission for the current tenant's "SharePoint Online Client" service principal. Can be used to add needed permissions to the service principal without specifically requesting them in the SharePoint Framework solution file (sppkg).
+metadata:
+  external help file: ""
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/approve-spotenantserviceprincipalpermissiongrant
+  applicable: SharePoint Online
+  title: Approve-SPOTenantServicePrincipalPermissionGrant
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

@@ -1,0 +1,139 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the activation state of a parser for a given file format.
+module: sharepoint-server
+notes: ""
+links:
+- text: New-SPEnterpriseSearchFileFormat
+  href: New-SPEnterpriseSearchFileFormat.yml
+- text: Get-SPEnterpriseSearchFileFormat
+  href: Get-SPEnterpriseSearchFileFormat.yml
+- text: Remove-SPEnterpriseSearchFileFormat
+  href: Remove-SPEnterpriseSearchFileFormat.yml
+syntaxes:
+- >-
+  Set-SPEnterpriseSearchFileFormatState [-Identity] <DocumentParserFileFormatStatePipeBind> [-Enable] <Boolean>
+   -SearchApplication <SearchServiceApplicationPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+   [-Confirm] [-WhatIf] [-UseIFilter <Boolean>] [<CommonParameters>]
+examples:
+- title: '--------------------EXAMPLE---------------------'
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication
+    Set-SPEnterpriseSearchFileFormatState -SearchApplication $ssa -Identity PDF -Enable $false
+  description: |-
+    This example uses the `Set-SPEnterpriseSearchFileFormatState` cmdlet to disable the parser for the file format "PDF".
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Enable
+  isRequired: true
+  description: |+
+    Specifies the activation state of the parser that corresponds to the specified file format.
+    The activation state can be $FALSE (disabled) or $TRUE (enabled).
+
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="DocumentParserFileFormatStatePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the identification of the format to be disabled or enabled.
+
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SearchServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: SearchApplication
+  isRequired: true
+  description: |+
+    Specifies the name of the search application.
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application name (for example, SearchApp1); or an instance of a valid SearchServiceApplication object.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: UseIFilter
+  description: |+
+    Specifies use of a third-party iFilter when parsing the file format. UseIFilter can be $false (built-in format handler is used) or $TRUE (third-party iFilter is used). $false is the default value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPEnterpriseSearchFileFormatState
+name: Set-SPEnterpriseSearchFileFormatState
+description: |-
+  The `Set-SPEnterpriseSearchFileFormatState` cmdlet sets the activation state of the parser that corresponds to the specified file format.
+  By default, the initial activation state of all file formats is $TRUE (enabled).
+  Use this cmdlet to temporarily disable a malfunctioning parser.
+  The system will only consider the change after a restart of the content processing components.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.Search.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spenterprisesearchfileformatstate
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPEnterpriseSearchFileFormatState
+  PlatyPS schema version: 2.0.0

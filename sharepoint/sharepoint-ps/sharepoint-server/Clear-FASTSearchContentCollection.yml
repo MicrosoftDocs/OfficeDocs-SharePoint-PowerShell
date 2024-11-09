@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Clears the content of a Microsoft FAST Search Server 2010 for SharePoint content collection.
+module: SharePointServer
+notes: ""
+links:
+- text: New-FASTSearchContentCollection
+  href: New-FASTSearchContentCollection.yml
+- text: Remove-FASTSearchContentCollection
+  href: Remove-FASTSearchContentCollection.yml
+- text: Get-FASTSearchContentCollection
+  href: Get-FASTSearchContentCollection.yml
+syntaxes:
+- Clear-FASTSearchContentCollection [-Name] <String> [-Confirm] [-Force] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    C:\PS>Clear-FASTSearchContentCollection -Name newscollection
+  description: |-
+    This example clears the content of the "newscollection" content collection.
+  summary: ""
+- title: '---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    C:\PS>Clear-FASTSearchContentCollection -Name newscollection -Force
+  description: |-
+    This example clears the content of the "newscollection" content collection.
+    The user does not have to confirm the operation.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Activates user prompting to confirm the operation.
+    If set, prompting is activated.
+
+    If Confirm is false (-Confirm:$false), you will not be prompted.
+
+    In cases where Confirm is not specified, the cmdlet will prompt if the $ConfirmPreference shell variable is equal to or greater than the ConfirmImpact setting of the cmdlet (HIGH).
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Overrides any user prompting settings so the user is not asked to confirm the operation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the content collection to clear.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: get-help about_commonparameters
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Clear-FASTSearchContentCollection
+name: Clear-FASTSearchContentCollection
+description: |-
+  This cmdlet deletes from the index all items that are associated with the specified collection without removing the collection.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/clear-fastsearchcontentcollection
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Clear-FASTSearchContentCollection

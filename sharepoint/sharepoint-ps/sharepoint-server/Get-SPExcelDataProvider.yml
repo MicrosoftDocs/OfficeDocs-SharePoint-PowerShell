@@ -1,0 +1,81 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns a safe data provider or a list of safe data providers.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Get-SPExcelDataProvider -ExcelServiceApplication <SPExcelServiceApplicationPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+examples:
+- title: '---------------------EXAMPLE---------------------'
+  code: |-
+    Get-SPExcelServiceApplication -Identity "ExcelServices" | Get-SPExcelDataProvider | where {$_.ProviderID -eq "SQLOLEDB"}
+  description: |-
+    This example displays the data provider with the provider identifier (ID) SQLOLEDB from the list of data providers that is on the MyExcelService application.
+    To select a specific provider from the list of safe providers, you must pipe a where clause that can filter the list of providers.
+  summary: ""
+- title: '--------------EXAMPLE--------------'
+  code: |-
+    Get-SPExcelDataProvider -ExcelServiceApplication "Excel Services" | format-table
+  description: |-
+    This example displays a list of safe data providers for the specific Excel Services Application Web service application, and then formats the results of the data providers in a table.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  parameterValueGroup: ""
+- type: <xref href="SPExcelServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: ExcelServiceApplication
+  isRequired: true
+  description: |+
+    Specifies the Excel Services Application Web service application that contains the SPExcelDataProvider list object.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of an Excel Services Application Web service application in the farm (for example, MyExcelService1); or an instance of a valid SPExcelServiceApplication object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+uid: SharePointServer.Get-SPExcelDataProvider
+name: Get-SPExcelDataProvider
+description: |-
+  The Get-SPExcelDataProvider cmdlet reads a safe data provider or a list of safe data providers for an Excel Services Application.
+  Excel Services Application refreshes external data connections only if the data provider for the connection is on the list of safe data providers.
+  Excel Services Application includes a set of common data providers on this list.
+  Therefore, using cmdlets to modify safe data providers is typically done only in custom data connection scenarios.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spexceldataprovider
+  applicable: SharePoint Server 2010, SharePoint Server 2013
+  title: Get-SPExcelDataProvider
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

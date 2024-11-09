@@ -1,0 +1,157 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Enables an installed SharePoint Feature at the given scope.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Enable-SPFeature [-Identity] <SPFeatureDefinitionPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+   [-Confirm] [-Force] [-PassThru] [-Url <String>] [-WhatIf] [<CommonParameters>]
+- >-
+  Enable-SPFeature [-Identity] <SPFeatureDefinitionPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+   [-Confirm] [-Force] [-PassThru] [-WhatIf] [-CompatibilityLevel <Int32>] [<CommonParameters>]
+examples:
+- title: '--------------EXAMPLE 1-----------------'
+  code: |-
+    Enable-SPFeature -identity "MyCustom" -URL https://somesite
+  description: |-
+    This example enables the "MyCustom" site scoped SharePoint Feature at https://somesite.
+  summary: ""
+- title: '--------------EXAMPLE 2-----------------'
+  code: |-
+    $w = Get-SPWeb https://somesite/myweb | ForEach{ $_.URL }
+    Get-SPFeature -Web $w |%{ Enable-SPFeature -Identity $_ -URL $w}
+  description: |-
+    This example enables all SharePoint Features in the subsite at https://somesite/myweb.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: CompatibilityLevel
+  description: |+
+    {{Fill CompatibilityLevel Description}}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the activation of a Feature.
+    This causes any custom code associated with the Feature to rerun.
+
+    > [!NOTE]
+    > Please be aware `-Force` will not work if you updated the feature with Update-SPSolution. In this case you have to disable feature first with `Disable-SPFeature` and then enable it back with `Enable-SPFeature`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPFeatureDefinitionPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the name of the Feature or GUID to uninstall.
+
+    The type must be the name of the Feature folder located in the 14\Template\Features folder or GUID, in the form 21d186e1-7036-4092-a825-0eb6709e9281.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    If provided, the cmdlet outputs the Feature definition object after enable.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Url
+  description: |+
+    Specifies the URL of the Web application, site collection, or Web site for which the Feature is being activated.
+
+    The type must be a valid URL; for example, https://server_name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Enable-SPFeature
+name: Enable-SPFeature
+description: |-
+  The Enable-SPFeature cmdlet enables an installed feature at the given scope. 
+  If the feature is a farm feature, no URL is needed.
+  Otherwise, provide the URL where the feature is to be enabled and it will be enabled at the proper scope based on the Feature definition.
+
+  This cmdlet has no output unless the PassThru parameter is provided, in which case the SPFeatureDefinition object for the newly enabled feature is returned.
+
+  If you try to use the Url parameter on a farm-scoped feature, you receive the following error message:
+
+  The feature '\<feature name\>' applies to the entire farm; the Url parameter cannot be used with farm-scoped features.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/enable-spfeature
+  applicable: SharePoint Server Subscription Edition
+  title: Enable-SPFeature
+  PlatyPS schema version: 2.0.0

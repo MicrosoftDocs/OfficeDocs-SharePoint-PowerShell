@@ -1,0 +1,62 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets a SharePoint Site as a Home Site.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Set-SPOHomeSite -HomeSiteUrl <String> [-VivaConnectionsDefaultStart <SwitchParameter>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Set-SPOHomeSite -HomeSiteUrl "https://contoso.sharepoint.com/sites/homesite"
+    This example set the site collection at *<https://contoso.sharepoint.com/sites/homesite>* as SharePoint Online Home Site.
+  description: ""
+  summary: ""
+- title: Example 2
+  code: |-
+    Set-SPOHomeSite -HomeSiteUrl "https://contoso.sharepoint.com/sites/homesite" -VivaConnectionsDefaultStart:$true
+    Sets the home site to the provided site collection url and keeps the Viva Connections landing experience to the SharePoint home site.
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HomeSiteUrl
+  isRequired: true
+  description: |+
+    Sets the URL of the site collection to be the home site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: VivaConnectionsDefaultStart
+  description: |+
+    When set to $true, the VivaConnectionsDefaultStart parameter will keep the Viva Connections landing experience to the SharePoint home site for the desktop experience. If set to $false, the Viva Connections home experience will be used. This command doesn't impact the mobile experience. 
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Set-SPOHomeSite
+name: Set-SPOHomeSite
+description: |-
+  Use this cmdlet to set a SharePoint Site as a Home Site. A home site is a communication site that you create and set as the top landing page for all users in your intranet. For more information, see [Set up a home site for your organization](https://learn.microsoft.com/SharePoint/home-site)
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spohomesite
+  applicable: SharePoint Online
+  title: Set-SPOHomeSite
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

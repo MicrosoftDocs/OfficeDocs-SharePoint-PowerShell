@@ -1,0 +1,474 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets property settings on a Machine Translation service application.
+module: sharepoint-server
+notes: ""
+links:
+- text: New-SPTranslationServiceApplication
+  href: New-SPTranslationServiceApplication.yml
+- text: New-SPTranslationServiceApplicationProxy
+  href: New-SPTranslationServiceApplicationProxy.yml
+- text: Set-SPTranslationServiceApplicationProxy
+  href: Set-SPTranslationServiceApplicationProxy.yml
+syntaxes:
+- >-
+  Set-SPTranslationServiceApplication [-Identity] <TranslationServiceApplicationPipeBind>
+   [-AddEnabledFileExtensions <String[]>] [-ApplicationPool <SPIisWebServiceApplicationPoolPipeBind>]
+   [-AssignmentCollection <SPAssignmentCollection>] [-ClearEnabledFileExtensions] [-Confirm]
+   [-DatabaseCredential <PSCredential>] [-DatabaseName <String>] [-DatabaseServer <String>]
+   [-DisableBinaryFileScan <Boolean>] [-EnableAllFileExtensions] [-FailoverDatabaseServer <String>]
+   [-JobExpirationDays <Int32>] [-KeepAliveTimeout <Int32>] [-MachineTranslationAddress <String>]
+   [-MachineTranslationCategory <String>] [-MachineTranslationClientId <String>] [-MaximumBinaryFileSize <Int32>]
+   [-MaximumItemsPerDay <Int32>] [-MaximumItemsPerPartitionPerDay <Int32>]
+   [-MaximumSyncTranslationRequests <Int32>] [-MaximumTextFileSize <Int32>] [-MaximumTranslationAttempts <Int32>]
+   [-MaximumTranslationTime <Int32>] [-MaximumWordCharacterCount <Int32>] [-RecycleProcessThreshold <Int32>]
+   [-RemoveEnabledFileExtensions <String[]>] [-TimerJobFrequency <Int32>] [-TotalActiveProcesses <Int32>]
+   [-TranslationsPerInstance <Int32>] [-UseDefaultInternetSettings] [-WebProxyAddress <String>] [-WhatIf]
+   [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE---------------'
+  code: |-
+    Set-SPTranslationServiceApplication TranslationService -JobExpirationDays 14 -TotalActiveProcesses 3
+  description: |-
+    This example sets the job expiration to 14 days and the number of worker processes per server to 3 for the Machine Translation Service application named TranslationService.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AddEnabledFileExtensions
+  description: |+
+    Comma delimited list of file extensions that you want to add to the set of enabled file extensions for the Machine Translation Service application
+
+    To return a list of supported file extensions, type \[Microsoft.Office.TranslationServices.TranslationService\]::EnumerateFileExtensions().
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPIisWebServiceApplicationPoolPipeBind" data-throw-if-not-resolved="False" />
+  name: ApplicationPool
+  description: |+
+    Specifies the managed application pool that the instance of Translation Service will run in.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ClearEnabledFileExtensions
+  description: |+
+    Disables all file extensions for the Machine Translation Service application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: DatabaseCredential
+  description: |+
+    Specifies the SQL Server credentials used for this Translation Service instance.
+    This parameter to be used only used for SQL authentication; if not present, Windows authentication is used instead.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseName
+  description: |+
+    Specifies the database name which is to be used for this Translation Service instance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseServer
+  description: |+
+    Specifies the database server which is to be used for this Translation Service instance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: DisableBinaryFileScan
+  description: |+
+    Determines whether Gatekeeper is run on binary files.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: EnableAllFileExtensions
+  description: |+
+    Enables all file extensions for the Machine Translation Service application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FailoverDatabaseServer
+  description: |+
+    Specifies the SQL server instance that will be used as a backup to the primary SQL Server instance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="TranslationServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the URL or GUID of the instance of the Machine Translation service to set.
+
+    The type must be a valid URL in the form, https://server_name or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: JobExpirationDays
+  description: |+
+    Specifies the amount of days after which completed jobs can be automatically removed from the Machine Translation Service queue database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: KeepAliveTimeout
+  description: |+
+    Specifies the length of time (in seconds) that the worker can be inactive before it is automatically stopped.
+
+    The valid values are 60 to 600.
+    The default value is 60.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MachineTranslationAddress
+  description: |+
+    Specifies the service URL the service application will use to call the translation provider.
+    For example, https://api.microsofttranslator.com/v2/soap.svc
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MachineTranslationCategory
+  description: |+
+    Specifies the category which will be used by the service when calling the translation provider.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MachineTranslationClientId
+  description: |+
+    Specifies the AppId which will be used by the service when calling the translation provider.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaximumBinaryFileSize
+  description: |+
+    Specifies the maximum file size in kilobytes (KB) which can be translated for file types which contain binary data.
+    The valid values are 100 to 524288.
+    The default value is 51200.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaximumItemsPerDay
+  description: |+
+    Specifies the maximum number of items which can be added to the job queue in a 24-hour period.
+    A value of zero indicates no limit.
+
+    The valid values are 1000 to 1000000.
+    A value of zero indicates no limit.
+    The default value is zero.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaximumItemsPerPartitionPerDay
+  description: |+
+    Specifies the maximum number of items which can be added to the job queue in a 24-hour period per partition.
+    A value of zero indicates no limit.
+
+    The valid values are 1000 to 1000000.
+    A value of zero indicates no limit.
+    The default value is zero.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaximumSyncTranslationRequests
+  description: |+
+    Specifies the maximum number of items which can be added to the sync queue.
+    A valid of zero indicates no limit.
+
+    The valid values are 0 to 300.
+    The default value is 10.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaximumTextFileSize
+  description: |+
+    Specifies the maximum file size in kilobytes (KB) which can be translated for file types which contain mostly text data.
+    The valid values are 100 to 15360.
+    The default value is 5120.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaximumTranslationAttempts
+  description: |+
+    Specifies the maximum number of attempts an unsuccessful job is tried before it is marked as Failed.
+
+    The valid values are 1 to 10.
+    The default value is 2.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaximumTranslationTime
+  description: |+
+    Specifies the maximum length of time (in minutes) that a translation can take.
+
+    The valid values are 60 to 3600.
+    The default value is 600.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaximumWordCharacterCount
+  description: |+
+    Specifies the maximum character count for a Microsoft Word document which can be translated.
+
+    The valid Int values are 10000 to 10000000.
+    The default value is 500000.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: RecycleProcessThreshold
+  description: |+
+    Specifies the number of documents which are translated before a Translation Worker process is recycled.
+
+    The valid values are 1 to 1,000.
+    The default value is 100.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RemoveEnabledFileExtensions
+  description: |+
+    Comma delimited list of file extensions that you want to remove from the set of enabled file extensions for the Machine Translation Service application.
+
+    To return a list of supported file extensions, type \[Microsoft.Office.TranslationServices.TranslationService\]::EnumerateFileExtensions().
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TimerJobFrequency
+  description: |+
+    Specifies the frequency (in minutes) with which the timer job for this service application runs.
+    The valid values are 1 to 59.
+    The default value is 15 minutes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TotalActiveProcesses
+  description: |+
+    Specifies the number of Translation Workers which are simultaneously running on a single machine.
+
+    The valid values are 1 to 5.
+    The default value is 1.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TranslationsPerInstance
+  description: |+
+    Specifies the number of translations dispatched to each service instance every time the timer job is run.
+
+    Valid values are 1 to 1,000.
+    The default value is 200.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseDefaultInternetSettings
+  description: |+
+    Determines whether the service application will use default Internet settings for the user service account to connect to the translation provider.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WebProxyAddress
+  description: |+
+    Specifies the web proxy address and port that the service application will use to connect to the translation provider.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPTranslationServiceApplication
+name: Set-SPTranslationServiceApplication
+description: |-
+  Use the `Set-SPTranslationServiceApplication` cmdlet to set properties on a Machine Translation service application in the farm.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.TranslationServices.dll-Help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-sptranslationserviceapplication
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPTranslationServiceApplication
+  PlatyPS schema version: 2.0.0

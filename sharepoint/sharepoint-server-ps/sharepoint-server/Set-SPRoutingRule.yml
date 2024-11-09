@@ -1,0 +1,119 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes properties of an existing routing rule.
+module: sharepoint-server
+notes: ""
+links:
+- text: Add-SPRoutingRule
+  href: Add-SPRoutingRule.yml
+- text: Get-SPRoutingRule
+  href: Get-SPRoutingRule.yml
+- text: Remove-SPRoutingRule
+  href: Remove-SPRoutingRule.yml
+syntaxes:
+- >-
+  Set-SPRoutingRule [-Identity] <SPRoutingRulePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+   [-Criteria <SPRequestManagementRuleCriteriaPipeBind[]>] [-ExecutionGroup <Int32>] [-Expiration <DateTime>]
+   [-MachinePool <SPRoutingMachinePoolPipeBind>] [<CommonParameters>]
+examples:
+- title: '--------------------EXAMPLE---------------------'
+  code: |-
+    $wa = Get-SPWebApplication https://webAppUrl
+    $rm = Get-SPRequestManagementSettings -Identity $wa
+    Get-SPRoutingRule -RequestManagementSettings $rm
+    $machines = Get-SPRoutingMachineInfo -RequestManagementSettings $rm
+    $pool = Add-SPRoutingMachinePool -RequestManagementSettings $rm -Name <Name of Pool> -MachineTargets $machines
+    $criteria = New-SPRequestManagementRuleCriteria -Value http -Property url -MatchType startswith -CaseSensitive $false
+    $rule = Add-SPRoutingRule -RequestManagementSettings $rm -Name <Rule Name> -Criteria $c -MachinePool $pool
+    $criteriaNew = New-SPRequestManagementRuleCriteria -Property UserAgent -MatchType Equals -Value "Mozilla/4.0 (compatible; MSIE 4.01; Windows NT; MS Search 6.0 Robot)"
+    Set-SPRoutingRule -Identity $rule -Criteria $criteriaNew
+  description: |-
+    This example sets a routing rule for the specified identity by using the $rule variable.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPRequestManagementRuleCriteriaPipeBind" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Criteria
+  description: |+
+    Specifies the criteria for the rule to match.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ExecutionGroup
+  description: |+
+    Specifies the group in which the rule will be placed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: Expiration
+  description: |+
+    Specifies the expiration date and time of the rule.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPRoutingRulePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the name of the request management settings object to set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPRoutingMachinePoolPipeBind" data-throw-if-not-resolved="False" />
+  name: MachinePool
+  description: |+
+    Specifies the pool of machines to which a request will be routed if the changed rule is matched.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPRoutingRule
+name: Set-SPRoutingRule
+description: |-
+  Use the `Set-SPRoutingRule` cmdlet to change properties of an existing routing rule.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-sproutingrule
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPRoutingRule
+  PlatyPS schema version: 2.0.0

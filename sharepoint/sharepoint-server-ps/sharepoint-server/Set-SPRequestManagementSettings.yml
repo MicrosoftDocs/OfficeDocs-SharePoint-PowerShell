@@ -1,0 +1,106 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets Request Manager properties.
+module: sharepoint-server
+notes: ""
+links:
+- text: Get-SPRequestManagementSettings
+  href: Get-SPRequestManagementSettings.yml
+- text: New-SPRequestManagementRuleCriteria
+  href: New-SPRequestManagementRuleCriteria.yml
+syntaxes:
+- >-
+  Set-SPRequestManagementSettings [-Identity] <SPRequestManagementSettingsPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-RoutingEnabled] [-RoutingScheme <SPRoutingScheme>]
+   [-ThrottlingEnabled] [<CommonParameters>]
+examples:
+- title: '--------------------EXAMPLE---------------------'
+  code: |-
+    $wa = Get-SPWebApplication https://webAppUrl
+    $req = $wa | Get-SPRequestManagementSettings
+    Set-SPRequestManagementSettings -Identity $req -ThrottlingEnabled:$false
+  description: |-
+    This example disables throttling on the specified Web Application.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPRequestManagementSettingsPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the Request Manager object for which settings will be applied.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RoutingEnabled
+  description: |+
+    Specifies whether routing is enabled or disabled for the Request Manager object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPRoutingScheme" data-throw-if-not-resolved="False" />
+  name: RoutingScheme
+  description: |+
+    Specifies the routing scheme.
+
+    The value is one of the following:
+
+    --Default- Performs random selection.
+    --StaticMachineWeight- Uses Static weight of target.
+    --HealthBased- Considers health score of machine.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ThrottlingEnabled
+  description: |+
+    Specifies whether throttling is enabled or disabled for the Request Manager object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPRequestManagementSettings
+name: Set-SPRequestManagementSettings
+description: |-
+  Use the `Set-SPRequestManagementSettings` cmdlet to set properties for the Request Manager.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-sprequestmanagementsettings
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPRequestManagementSettings
+  PlatyPS schema version: 2.0.0

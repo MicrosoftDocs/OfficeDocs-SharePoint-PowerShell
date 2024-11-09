@@ -1,0 +1,254 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the properties of a search service for a farm.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Set-SPEnterpriseSearchService [[-Identity] <SearchServicePipeBind>] [-AcknowledgementTimeout <String>]
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-ConnectionTimeout <String>]
+   [-ContactEmail <String>] [-IgnoreSSLWarnings <String>] [-InternetIdentity <String>]
+   [-PerformanceLevel <String>] [-ProxyType <String>] [-ServiceAccount <String>]
+   [-ServicePassword <SecureString>] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE------------------'
+  code: |-
+    $password = Read-Host -AsSecureString
+    Set-SPEnterpriseSearchService -IgnoreSSLWarnings $true -ServiceAccount 'contoso\adminAccount' -ServicePassword $password
+  description: |-
+    This example configures the search service to ignore SSL warnings and changes the service account for the search service.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AcknowledgementTimeout
+  description: |+
+    Specifies the time in seconds that the search server will wait for request acknowledgement while connecting to other services.
+
+    The type must be string input that can be parsed to an integer value.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ConnectionTimeout
+  description: |+
+    Specifies the time in seconds that the search server waits while connecting to other services.
+
+    The type must be string input that can be parsed to an integer value.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ContactEmail
+  description: |+
+    Specifies an e-mail address to which external site administrators can write if problems occur when the site is being crawled.
+
+    The type must be a valid e-mail address, in the form MyAddress@mycompany.com.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SearchServicePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the search service to update.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application name (for example, SearchService1); or an instance of a valid SearchService object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IgnoreSSLWarnings
+  description: |+
+    Specifies that the search service will ignore Secure Sockets Layer (SSL) certificate name warnings.
+    The default value is False.
+
+    The type must be a string that can be cast to a Boolean value, for example, True or False.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InternetIdentity
+  description: |+
+    Specifies the value that the crawler sends in the headers of its HTTP requests to sites when it fetches their pages.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PerformanceLevel
+  description: "Specifies the relative number of threads for the crawl component performance.\r\nThe type must be one of the following values: Reduced, PartlyReduced, or Maximum. The default value is Maximum.\r\n \r\n* Reduced: Total number of threads = number of processors, Max Threads/host = number of processors. Threads are assigned Below Normal priority.\r\n \r\n* Partly Reduced: Total number of threads = 16 times the number of processors , Max Threads/host = 8 plus the number of processors. Threads are assigned Below Normal priority.\r\n \r\n* Maximum: Total number of threads = 32 times the number of processors, Max Threads/host = 8 plus the number of processors. Threads are assigned Normal priority.  \r\n\r\n\r\n\r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ProxyType
+  description: |+
+    Specifies whether the search service uses a proxy server or connects directly when crawling content.
+    The default value is Direct, (No proxy server is used).
+
+    The type must be one of the following values: Direct or Proxy.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ServiceAccount
+  description: |+
+    Specifies the user account or service account to use for running the Office Server Search service.
+    When this parameter is used, the ServicePassword parameter must also be specified.
+
+    The type must be a valid account name on the domain, in the form Domain\user name or user name.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: ServicePassword
+  description: |+
+    Specifies the password for the service account specified in ServiceAccount.
+
+    The type must contain the domain password to the account specified in the ServiceAccount parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Set-SPEnterpriseSearchService
+name: Set-SPEnterpriseSearchService
+description: |-
+  This cmdlet updates properties of a search service for a farm.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.Search.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spenterprisesearchservice
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Set-SPEnterpriseSearchService
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

@@ -1,0 +1,58 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Revokes rights for specified principals to a hub.
+module: Microsoft.Online.SharePoint.PowerShell
+syntaxes:
+- Revoke-SPOHubSiteRights [-Identity] <SpoHubSitePipeBind> -Principals <string[]>  [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Revoke-SPOHubSiteRights https://contoso.sharepoint.com/sites/Marketing `
+    -Principals "nestorw@contoso.onmicrosoft.com"
+  description: |-
+    This example shows how to revoke rights so that Nestor can no longer join sites to the Marketing hub site.
+  summary: ""
+parameters:
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    URL of the hub site.
+
+  defaultValue: None
+  position: Named
+  aliases: HubSite
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Principals
+  isRequired: true
+  description: |+
+    One or more principals to revoke the permissions for.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Revoke-SPOHubSiteRights
+name: Revoke-SPOHubSiteRights
+description: |-
+  Revokes rights for specified principals to the given hub site. The specified principals will no longer be able to associate sites with the hub. To find which principals have access to a hub site, use the [Get-SPOHubSite](Get-SPOHubSite.yml) cmdlet.
+
+  > [!NOTE]
+  > If the hub site doesn't exist, this cmdlet returns a "File not found" error.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/revoke-spohubsiterights
+  applicable: SharePoint Online
+  title: Revoke-SPOHubSiteRights
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

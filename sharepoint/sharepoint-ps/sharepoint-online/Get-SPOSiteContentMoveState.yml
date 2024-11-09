@@ -1,0 +1,119 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This Cmdlet allows a SharePoint administrators to check the status of a site or group move.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Get-SPOAppErrors
+  href: Get-SPOAppErrors.yml
+syntaxes:
+- >-
+  Get-SPOSiteContentMoveState [-Limit <UInt32>] [-MoveStartTime <DateTime>] [-MoveEndTime <DateTime>]
+   [-MoveState <MoveState>] [-MoveDirection <MoveDirection>] [<CommonParameters>]
+- Get-SPOSiteContentMoveState -SourceSiteUrl <String> [<CommonParameters>]
+- Get-SPOSiteContentMoveState -SiteMoveId <Guid> [<CommonParameters>]
+examples:
+- title: '-----------------------EXAMPLE 1-----------------------------'
+  code: |-
+    Get-SPOSiteContentMoveState -SourceSiteUrl $siteurl
+  description: |-
+    Gets the status of the site content give on the variable $siteurl
+  summary: ""
+parameters:
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Limit
+  description: |+
+    Specifies the maximum number of Content move states to return. 
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="MoveDirection" data-throw-if-not-resolved="False" />
+  name: MoveDirection
+  description: |+
+    Possible values for this parameter are:
+    - MoveOut
+    - MoveIn
+    - All
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: MoveOut, MoveIn, All
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: MoveEndTime
+  description: |+
+    End date and time for the time window between which Content move states are to be retrieved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: MoveStartTime
+  description: |+
+    Start date and time for the time window between which Content move states are to be retrieved.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="MoveState" data-throw-if-not-resolved="False" />
+  name: MoveState
+  description: |+
+    This parameter is used to specify the move state of the Content move states to retrieve.
+    Possible values:
+    - NotStarted
+    - InProgress
+    - Success
+    - Failed
+    - Stopped
+    - Queued
+    - NotSupported
+    - Rescheduled
+    - All
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: NotStarted, InProgress, Success, Failed, Stopped, Queued, NotSupported, Rescheduled, All
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: SiteMoveId
+  isRequired: true
+  description: |+
+    Id of the Site move to retrieve.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceSiteUrl
+  isRequired: true
+  description: |+
+    Specifies the source URL of the site collection.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOSiteContentMoveState
+name: Get-SPOSiteContentMoveState
+description: |-
+  This command gets the information and the status of a move request of a user between sites in a SharePoint Online Multi Geo tenant.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spositecontentmovestate
+  applicable: SharePoint Online
+  title: Get-SPOSiteContentMoveState
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

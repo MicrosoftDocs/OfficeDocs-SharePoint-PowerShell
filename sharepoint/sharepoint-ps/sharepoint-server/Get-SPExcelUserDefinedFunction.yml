@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns a user-defined function or a collection of user-defined functions.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Get-SPExcelUserDefinedFunction [[-Identity] <SPExcelUDFPipeBind>]
+   -ExcelServiceApplication <SPExcelServiceApplicationPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+   [<CommonParameters>]
+examples:
+- title: '--------------EXAMPLE 1--------------'
+  code: |-
+    Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelUserDefinedFunction -Identity SampleCompany.SampleApplication.SampleUdf
+  description: |-
+    This example displays the user-defined function named SampleCompany.SampleApplication.SampleUdf from the list of user-defined functions that is in the Excel Services Application Web service application named MyExcelService.
+  summary: ""
+- title: '--------------EXAMPLE 2--------------'
+  code: |-
+    Get-SPExcelServiceApplication | Get-SPExcelUserDefinedFunction | format-list
+  description: |-
+    This example displays every user-defined function for every Excel Services Application Web service application in the farm, and then displays the results in a list.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  parameterValueGroup: ""
+- type: <xref href="SPExcelServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: ExcelServiceApplication
+  isRequired: true
+  description: |+
+    Specifies the Excel Services Application Web service application that contains the SPExcelUserDefinedFunction list object.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of an Excel Services Application Web service application in the farm (for example, MyExcelService1); or an instance of a valid SPExcelServiceApplication object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  parameterValueGroup: ""
+- type: <xref href="SPExcelUDFPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the UserDefinedFunction object to get.
+    If the Identity parameter is not specified, the cmdlet returns all of the functions in the user defined functions list.
+
+    The type must be a valid name of the code assembly (for example, SampleCompany.SampleApplication.SampleUdf); or an instance of a valid SPExcelUDF object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+uid: SharePointServer.Get-SPExcelUserDefinedFunction
+name: Get-SPExcelUserDefinedFunction
+description: |-
+  The Get-SPExcelUserDefinedFunction cmdlet reads a user-defined function and its properties, or returns the collection of user-defined functions for an Excel Services Application Web service application. 
+  Excel Services Application uses only user-defined functions that are in the list of user-defined functions.
+  User-defined functions are managed code assemblies that can be called from an Excel Services Application workbook by using standard Excel Services Application formula syntax.
+  The assemblies can perform custom logic or other actions, such as refreshing data.
+  Windows PowerShell cmdlets operate on the entries in the user-defined function list, but do not operate on the assemblies.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spexceluserdefinedfunction
+  applicable: SharePoint Server 2010, SharePoint Server 2013
+  title: Get-SPExcelUserDefinedFunction
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

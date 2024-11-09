@@ -1,0 +1,252 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures the managed account.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Set-SPManagedAccount [-Identity] <SPManagedAccountPipeBind> -ConfirmPassword <SecureString>
+   -NewPassword <SecureString> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+   [-EmailNotification <Int32>] [-PreExpireDays <Int32>] [-Schedule <String>] [-SetNewPassword] [-WhatIf]
+   [<CommonParameters>]
+- >-
+  Set-SPManagedAccount [-Identity] <SPManagedAccountPipeBind> -ExistingPassword <SecureString>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-EmailNotification <Int32>]
+   [-PreExpireDays <Int32>] [-Schedule <String>] [-UseExistingPassword] [-WhatIf] [<CommonParameters>]
+- >-
+  Set-SPManagedAccount [-Identity] <SPManagedAccountPipeBind> -Password <SecureString>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-EmailNotification <Int32>]
+   [-PreExpireDays <Int32>] [-Schedule <String>] [-WhatIf] [<CommonParameters>]
+- >-
+  Set-SPManagedAccount [-Identity] <SPManagedAccountPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+   [-AutoGeneratePassword] [-Confirm] [-EmailNotification <Int32>] [-PreExpireDays <Int32>] [-Schedule <String>]
+   [-WhatIf] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE-----------------------'
+  code: |-
+    $m = Get-SPManagedAccount -Identity "DOMAINx\UserY"
+    Set-SPManagedAccount -Identity $m -AutoGeneratePassword true
+  description: |-
+    This example displays an explicit managed account if it exists and then attempts to update it to use automatically generated passwords.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AutoGeneratePassword
+  description: |+
+    Automatically generates a new password.
+
+    The type must be either of the following values:
+
+    - True
+    - False
+
+    The default value is False.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: ConfirmPassword
+  isRequired: true
+  description: |+
+    Confirms the new password for this managed account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: EmailNotification
+  description: |+
+    Specifies the number of days before password change to begin e-mail notifications.
+
+    The default value is 5.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: ExistingPassword
+  isRequired: true
+  description: |+
+    Sets the password for this managed account to an existing value that has already been changed in Active Directory Domain Services (AD DS).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPManagedAccountPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the full name or partial name of the managed accounts to retrieve.
+
+    The type must be a valid account name, in the form Domain\User, or a GUID, in the form 1234-3456-09876.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: NewPassword
+  isRequired: true
+  description: |+
+    Sets a new password for the managed account
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: Password
+  isRequired: true
+  description: |+
+    Sets a password for the managed account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: PreExpireDays
+  description: |+
+    Specifies the number of days before expiration to schedule password change.
+
+    The default value is 2.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Schedule
+  description: |+
+    Specifies the new schedule on which the password change job is to run.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SetNewPassword
+  description: |+
+    Sets the password to the new value that is passed in, and changes the value in AD DS.
+
+    The type must be either of the following values:
+
+    - True
+    - False
+
+    The default value is False.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseExistingPassword
+  description: |+
+    Sets the password to a new value passed in where the value is already changed in AD DS.
+
+    The type must be either of the following values:
+
+    - True
+    - False
+
+    The default value is False.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPManagedAccount
+name: Set-SPManagedAccount
+description: |-
+  This cmdlet contains more than one parameter set.
+  You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
+  For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+
+  The `Set-SPManagedAccount` cmdlet sets the properties on the given managed account.
+
+  You can use this cmdlet to change the password expiration and notification settings for the managed account: Use the default parameter set.
+  Additionally, you can use this cmdlet to change the password for the managed account to automatically generated passwords on a set schedule: Use the parameter set that includes the AutoGeneratePassword parameter.
+  You can also use this cmdlet to change the password for the managed account to a new value, known to the administrator: Use the parameter set that includes the SetNewPassword parameter.
+  Finally, you can use this cmdlet to change the password for the managed account to an existing value that has been already been changed in Active Directory Domain Services (AD DS): Use the parameter set that includes the UseExistingPassword parameter.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spmanagedaccount
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPManagedAccount
+  PlatyPS schema version: 2.0.0

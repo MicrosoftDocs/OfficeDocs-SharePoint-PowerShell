@@ -1,0 +1,99 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a user store.
+module: SharePointServer
+notes: ""
+links:
+- text: Get-FASTSearchSecurityUserStore
+  href: Get-FASTSearchSecurityUserStore.yml
+syntaxes:
+- >-
+  Remove-FASTSearchSecurityUserStore [-Identity] <String> [[-SecurityUserStoreToRemove] <SecurityUserStore>]
+   [-Confirm] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Remove-FASTSearchSecurityUserStore -Identity wn1
+  description: |-
+    This example deletes the "wn1" user store.
+    A prompt is displayed to confirm the request.
+  summary: ""
+- title: '---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Get-FASTSearchSecurityLotusNotesUserStore ln2 | remove-FASTSearchSecurityUserStore
+  description: |-
+    This example deletes the user store specified by a piped SecurityUserStoreToRemove instance.
+    A prompt is displayed to confirm the request.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Activates user prompting to confirm the operation.
+    If set, prompting is activated and you must confirm the remove request.
+
+    To suppress user prompting, set the confirm parameter to false.
+    For example: -confirm:$false
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The identity of the user store to remove.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="SecurityUserStore" data-throw-if-not-resolved="False" />
+  name: SecurityUserStoreToRemove
+  description: |+
+    A MicrosoftUserStore, LotusNotesUserStore, or ClaimsUserStore instance whose identity is used to remove the user store.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "9999"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: get-help about_commonparameters
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Remove-FASTSearchSecurityUserStore
+name: Remove-FASTSearchSecurityUserStore
+description: |-
+  This cmdlet deletes a security user store.
+  The user store may be a Lotus Notes, Microsoft, or claims user store.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-fastsearchsecurityuserstore
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Remove-FASTSearchSecurityUserStore

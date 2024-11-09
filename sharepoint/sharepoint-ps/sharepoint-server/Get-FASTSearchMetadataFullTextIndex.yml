@@ -1,0 +1,56 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves a full text index.
+module: SharePointServer
+notes: ""
+links:
+- text: New-FASTSearchMetadataFullTextIndex
+  href: New-FASTSearchMetadataFullTextIndex.yml
+- text: Remove-FASTSearchMetadataFullTextIndex
+  href: Remove-FASTSearchMetadataFullTextIndex.yml
+- text: Set-FASTSearchMetadataFullTextIndex
+  href: Set-FASTSearchMetadataFullTextIndex.yml
+syntaxes:
+- Get-FASTSearchMetadataFullTextIndex [[-Name] <String>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1-----------------'
+  code: |-
+    Get-FASTSearchMetadataFullTextIndex -Name content
+  description: |-
+    This example retrieves the full text index named "content".
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The name of the full text index to retrieve.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: FullTextIndexName, N
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Get-FASTSearchMetadataFullTextIndex
+name: Get-FASTSearchMetadataFullTextIndex
+description: |-
+  This cmdlet retrieves a full text index object.
+  The full text indexes are the searchable content of a Microsoft FAST Search Server 2010 for SharePoint system.
+  Although it is also possible to search on a specific managed property without using a full text index, full relevancy calculation is only done when searching in full text indexes.
+
+  If no name is specified, all full text indexes are retrieved.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-fastsearchmetadatafulltextindex
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Get-FASTSearchMetadataFullTextIndex

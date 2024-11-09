@@ -1,0 +1,56 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns the state of user-license enforcement.
+module: sharepoint-server
+notes: ""
+links:
+- text: Disable-SPUserLicensing
+  href: Disable-SPUserLicensing.yml
+- text: Enable-SPUserLicensing
+  href: Enable-SPUserLicensing.yml
+syntaxes:
+- Get-SPUserLicensing [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE-------------'
+  code: |-
+    Get-SPUserLicensing
+  description: |-
+    This example returns the state of user-license enforcement on the SharePoint farm.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Get-SPUserLicensing
+name: Get-SPUserLicensing
+description: |-
+  The Get-SPUserLicensing cmdlet returns the state of user-license enforcement for an entire SharePoint farm.
+
+  If user-license enforcement is enabled on a SharePoint farm, the return value is true.
+  Otherwise the value is false.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spuserlicensing
+  applicable: SharePoint Server Subscription Edition
+  title: Get-SPUserLicensing
+  PlatyPS schema version: 2.0.0

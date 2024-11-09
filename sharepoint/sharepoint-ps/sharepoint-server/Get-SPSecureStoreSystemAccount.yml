@@ -1,0 +1,60 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns a list of users from a designated list.
+module: SharePointServer
+notes: ""
+links:
+- text: Add-SPSecureStoreSystemAccount
+  href: Add-SPSecureStoreSystemAccount.yml
+- text: Remove-SPSecureStoreSystemAccount
+  href: Remove-SPSecureStoreSystemAccount.yml
+syntaxes:
+- Get-SPSecureStoreSystemAccount [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+examples:
+- title: '-------------EXAMPLE----------'
+  code: |-
+    Get-SPSecureStoreSystemAccount
+  description: |-
+    This example returns a list of user accounts for the secure store system.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Get-SPSecureStoreSystemAccount
+name: Get-SPSecureStoreSystemAccount
+description: |-
+  Use the Get-SPSecureStoreSystemAccount cmdlet to return a list of user accounts which are considered to be a system account.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spsecurestoresystemaccount
+  applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Get-SPSecureStoreSystemAccount
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

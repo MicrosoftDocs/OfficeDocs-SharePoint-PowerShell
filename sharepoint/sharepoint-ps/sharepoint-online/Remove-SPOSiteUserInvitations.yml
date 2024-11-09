@@ -1,0 +1,64 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  .
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+syntaxes:
+- Remove-SPOSiteUserInvitations [-Site] <SpoSitePipeBind> [-EmailAddress] <string> [-CountOnly] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-SPOSiteUserInvitations -Site https://contoso.sharepoint.com/sites/Research -EmailAddress "someone@contoso.com"
+  description: |-
+    This example removes the user with the mail address "someone@contoso.com" from the site with the url <https://contoso.sharepoint.com/sites/Research.>
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CountOnly
+  description: ""
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EmailAddress
+  isRequired: true
+  description: |+
+    Email Address of the user.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Site
+  isRequired: true
+  description: |+
+    Specifies the URL of the site collection.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPOSiteUserInvitations
+name: Remove-SPOSiteUserInvitations
+description: |-
+  .
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spositeuserinvitations
+  applicable: SharePoint Online
+  title: Remove-SPOSiteUserInvitations
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

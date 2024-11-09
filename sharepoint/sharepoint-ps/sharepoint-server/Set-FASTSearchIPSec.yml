@@ -1,0 +1,106 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures local Internet Protocol security (IPsec) for Microsoft FAST Search Server 2010 for SharePoint.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Set-FASTSearchIPSec [-Create] -Password <SecureString> -UserName <String> [-LogFile <String>]
+   [<CommonParameters>]
+- Set-FASTSearchIPSec [-Remove] [-LogFile <String>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Set-FASTSearchIPSec -Create -UserName user1 -Password xxx
+  description: |-
+    This example sets up Internet Protocol security on the local machine.
+  summary: ""
+- title: '---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Set-FASTSearchIPSec -Remove
+  description: |-
+    This example removes Internet Protocol security rules from the local machine.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Create
+  isRequired: true
+  description: |+
+    Specifies that IPsec rules will be created.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogFile
+  description: |+
+    Specifies the full path of a file where all log messages will be written.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: Password
+  isRequired: true
+  description: |+
+    Specifies the password of the domain user that can look up machines in the domain controller.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Remove
+  isRequired: true
+  description: |+
+    Specifies that IPsec rules will be deleted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserName
+  isRequired: true
+  description: |+
+    Specifies the username of the domain user that can look up machines in the domain controller.
+
+  defaultValue: None
+  position: Named
+  aliases: User
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Set-FASTSearchIPSec
+name: Set-FASTSearchIPSec
+description: |-
+  This cmdlet deletes or creates firewall rules to configure IP security for the local machine.
+
+  FAST Search Server 2010 for SharePoint must be installed on the local machine before you run this cmdlet.
+
+  If you are not running this cmdlet on the admin node in the FAST Search Server 2010 for SharePoint installation, make sure that the admin node is started before you run this cmdlet.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-fastsearchipsec
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Set-FASTSearchIPSec

@@ -1,0 +1,190 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Refreshes the microblog feed cache.
+module: sharepoint-server
+notes: ""
+links:
+- text: Update-SPRepopulateMicroblogLMTCache
+  href: Update-SPRepopulateMicroblogLMTCache.yml
+syntaxes:
+- >-
+  Update-SPRepopulateMicroblogFeedCache [-AccountName <String>]
+   -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-SiteSubscription <SPSiteSubscriptionPipeBind>]
+   [-SiteUrl <String>] [<CommonParameters>]
+- >-
+  Update-SPRepopulateMicroblogFeedCache [-AccountName <String>]
+   -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-SiteSubscription <SPSiteSubscriptionPipeBind>]
+   [-SiteUrl <String>] [<CommonParameters>]
+- >-
+  Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] -SiteSubscription <SPSiteSubscriptionPipeBind> -ListId <Guid>
+   -ListRootFolderUrl <String> -SiteId <Guid> -WebId <Guid> [<CommonParameters>]
+examples:
+- title: '------------EXAMPLE 1------------'
+  code: |-
+    $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+    Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy $proxy -AccountName contoso\userName
+  description: |-
+    This example refreshes the feed for a specific user by using the AccountName parameter.
+  summary: ""
+- title: '------------EXAMPLE 2------------'
+  code: |-
+    $site = (Get-SPWebApplication -IncludeCentralAdministration | ?{$_.IsAdministrationWebApplication -eq $true}).Sites[0]
+    $context = Get-SPServiceContext $site
+    $upm = New-Object Microsoft.Office.Server.UserProfiles.UserProfileManager($context)
+    $profiles = $upm.GetEnumerator()
+    $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
+    while($profiles.MoveNext()) {
+        $profile = $profiles.Current
+        Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy $proxy -AccountName $profile.AccountName }
+  description: |-
+    This example refreshes the feeds for all users in the User Profile Service Application.
+  summary: ""
+- title: '------------EXAMPLE 3------------'
+  code: |-
+    Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy $proxy -SiteUrl https://sharepoint.contoso.com
+  description: |-
+    This example refreshes the feed on the site https://sharepoint.contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AccountName
+  description: |+
+    Specifies the user's account name for the User Profile Service application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: ListId
+  isRequired: true
+  description: |+
+    The ListId of the FollowableList.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ListRootFolderUrl
+  isRequired: true
+  description: |+
+    The RootFolderUrl of the FollowableList.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPServiceApplicationProxyPipeBind" data-throw-if-not-resolved="False" />
+  name: ProfileServiceApplicationProxy
+  isRequired: true
+  description: |+
+    Specifies the User Profile Service application proxy to update.
+
+    The type must be in one of the following forms:
+
+    --A valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
+    --A valid name of a service application proxy (for example, UserProfileSvcProxy1)
+    --An instance of a valid SPServiceApplicationProxy object
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: SiteId
+  isRequired: true
+  description: |+
+    The SiteId containing the FollowableList.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPSiteSubscriptionPipeBind" data-throw-if-not-resolved="False" />
+  name: SiteSubscription
+  isRequired: true
+  description: |+
+    Specifies the account under which this service should run.
+    This parameter is mandatory in a hosted-environment and optional in a non-hosted environment.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SiteUrl
+  description: |+
+    Specifies the Site's URL to repopulate the site feeds. If you don't specify this parameter, you must specify the AccountName parameter. If neither parameter is specified, an error message is displayed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: WebId
+  isRequired: true
+  description: |+
+    The WebId containing the FollowableList.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Update-SPRepopulateMicroblogFeedCache
+name: Update-SPRepopulateMicroblogFeedCache
+description: |-
+  Use the `Update-SPRepopulateMicroblogFeedCache` cmdlet to refresh the feeds of a given user.
+  It can be used in scenarios where the automatic refresh has failed or when reverting to an old version of a user's personal site.
+
+  When you refresh the cache, the `Update-SPRepopulateMicroblogLMTCache` cmdlet should be run first and then the `Update-SPRepopulateMicroblogFeedCache` cmdlet second.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/update-sprepopulatemicroblogfeedcache
+  applicable: SharePoint Server Subscription Edition
+  title: Update-SPRepopulateMicroblogFeedCache
+  PlatyPS schema version: 2.0.0

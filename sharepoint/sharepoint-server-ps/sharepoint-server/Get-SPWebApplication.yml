@@ -1,0 +1,86 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns all Web applications that match the given criteria.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Get-SPWebApplication [[-Identity] <SPWebApplicationPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
+   [-IncludeCentralAdministration] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE 1----------------------'
+  code: |-
+    $w = Get-SPWebApplication https://sitename
+  description: |-
+    This example gets the Web application for https://sitename and stores it in a variable.
+  summary: ""
+- title: '------------------EXAMPLE 2-----------------------'
+  code: |-
+    Get-SPWebApplication -IncludeCentralAdministration | Where { $_.DefaultServerComment -eq "SharePoint Central Administration v4"} | Format-List *
+  description: |-
+    This example displays all public properties on the SharePoint Central Administration Web application in list format.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPWebApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the name, URL, or GUID of the Web application.
+
+    The type must be a valid URL, in the form https://server_name; a GUID, in the form 1234-5678-9876-0987; or a valid name, in the form SPWebApplication - 1212.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeCentralAdministration
+  description: |+
+    Includes the Central Administration Web application in the collection of Web applications that can be returned.
+    The IncludeCentral Administration parameter must still meet any other filters provided.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Get-SPWebApplication
+name: Get-SPWebApplication
+description: |-
+  The Get-SPWebApplication cmdlet returns all Web applications that match the scope given by the Identity parameter.
+  The Identity can be the name of the name, URL, or GUID of the Web application.
+  If no Identity is specified, all Web applications are returned.
+
+  The Central Administration Web application is only returned if its exact identity is provided or the IncludeCentralAdministration flag is provided.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spwebapplication
+  applicable: SharePoint Server Subscription Edition
+  title: Get-SPWebApplication
+  PlatyPS schema version: 2.0.0

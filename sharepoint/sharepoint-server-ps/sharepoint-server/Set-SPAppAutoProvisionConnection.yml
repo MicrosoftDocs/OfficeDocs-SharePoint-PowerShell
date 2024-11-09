@@ -1,0 +1,159 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets provision connection settings for an app.
+module: sharepoint-server
+notes: ""
+links:
+- text: Get-SPAppAutoProvisionConnection
+  href: Get-SPAppAutoProvisionConnection.yml
+syntaxes:
+- >-
+  Set-SPAppAutoProvisionConnection -ConnectionType <ConnectionTypes> -EndPoint <String>
+   [-AssignmentCollection <SPAssignmentCollection>] [-SiteSubscription <SPSiteSubscriptionPipeBind>]
+   [<CommonParameters>]
+- >-
+  Set-SPAppAutoProvisionConnection -ConnectionType <ConnectionTypes> -EndPoint <String> -Password <String>
+   -Username <String> [-AssignmentCollection <SPAssignmentCollection>]
+   [-SiteSubscription <SPSiteSubscriptionPipeBind>] [<CommonParameters>]
+- >-
+  Set-SPAppAutoProvisionConnection -ConnectionType <ConnectionTypes> -Password <String> -Username <String>
+   [-AssignmentCollection <SPAssignmentCollection>] [-SiteSubscription <SPSiteSubscriptionPipeBind>]
+   [<CommonParameters>]
+- >-
+  Set-SPAppAutoProvisionConnection [-Remove] [-AssignmentCollection <SPAssignmentCollection>]
+   [-SiteSubscription <SPSiteSubscriptionPipeBind>] [<CommonParameters>]
+examples:
+- title: '--------------------EXAMPLE 1---------------------'
+  code: |-
+    Set-SpAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost -Password passname -Username <username>
+  description: |-
+    This example configures remote web host to be used provision apps that use this functionality for the default site subscription server on https://SPremotewebhost.
+  summary: ""
+- title: '--------------------EXAMPLE 2---------------------'
+  code: |-
+    $subscription = Get-SPSiteSubscription https://Contoso.com
+    Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost -Password passname -Username <username> -SiteSubscription $subscription
+  description: |-
+    This example configures remote web host to be used provision apps that use this functionality for the site subscription of Contoso.com site to server on https://SPremotewebhost.
+  summary: ""
+- title: '--------------------EXAMPLE 3---------------------'
+  code: |-
+    Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost
+  description: |-
+    This example updates the endpoint of the already configured remote web host server https://SPRemotewebhost for the default site subscription.
+  summary: ""
+- title: '--------------------EXAMPLE 4---------------------'
+  code: |-
+    Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -Remove
+  description: |-
+    This example removes the remote web host configuration for the default site subscription.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="ConnectionTypes" data-throw-if-not-resolved="False" />
+  name: ConnectionType
+  isRequired: true
+  description: |+
+    Specifies the connection type to provision.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EndPoint
+  isRequired: true
+  description: |+
+    Specifies the end point of the provision connection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Password
+  isRequired: true
+  description: |+
+    Specifies the password for the provision connection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Remove
+  isRequired: true
+  description: |+
+    Removes the auto provision connection of the app.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPSiteSubscriptionPipeBind" data-throw-if-not-resolved="False" />
+  name: SiteSubscription
+  description: |+
+    Specifies the site collection for which the provision connection is to be associated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Username
+  isRequired: true
+  description: |+
+    Specifies the user name of the connection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPAppAutoProvisionConnection
+name: Set-SPAppAutoProvisionConnection
+description: |-
+  This cmdlet contains more than one parameter set.
+  You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
+  For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+
+  Use the `Set-SPAppAutoProvisionConnection` cmdlet to set provision connection settings for a specified app.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spappautoprovisionconnection
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPAppAutoProvisionConnection
+  PlatyPS schema version: 2.0.0

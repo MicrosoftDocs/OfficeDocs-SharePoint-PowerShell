@@ -1,0 +1,178 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Start a job to move a particular user or group of users to be moved across geo locations relative to the one that executes the command
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Get-SPOAppErrors
+  href: Get-SPOAppErrors.yml
+- text: Start-SPOSiteRename
+  href: Start-SPOSiteRename.yml
+- text: Stop-SPOUserAndContentMove
+  href: Stop-SPOUserAndContentMove.yml
+- text: Get-SPOUserAndContentMoveState
+  href: Get-SPOUserAndContentMoveState.yml
+syntaxes:
+- >-
+  Start-SPOSiteContentMove [-SourceSiteUrl] <String> [-DestinationDataLocation] <String>
+   [[-PreferredMoveBeginDate] <DateTime>] [[-PreferredMoveEndDate] <DateTime>] [[-Reserved] <String>]
+   [-ValidationOnly] [-SuppressMarketplaceAppCheck] [-SuppressWorkflow2013Check] [-SuppressAllWarnings]
+   [-SuppressBcsCheck][<CommonParameters>]
+- >-
+  Start-SPOSiteContentMove [-SourceSiteUrl] <String> [-DestinationUrl] <String> [[-PreferredMoveBeginDate] <DateTime>]
+   [[-PreferredMoveEndDate] <DateTime>] [[-Reserved] <String>] [-ValidationOnly] [-SuppressMarketplaceAppCheck] [-SuppressWorkflow2013Check] 
+   [-SuppressAllWarnings] [-SuppressBcsCheck] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Start-SPOSiteContentMove -SourceSiteUrl https://contosoenergy.sharepoint.com/sites/hr -DestinationDataLocation EUR
+  description: |-
+    Starts the movement of the content on <https://contosoenergy.sharepoint.com/sites/hr> to the EUR destination.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Start-SPOSiteContentMove -SourceSiteUrl https://contosoenergy.sharepoint.com/sites/hr -DestinationDataLocation EUR -PreferredMoveBeginDate ((Get-Date).AddHours(1)) -PreferredMoveEndDate ((Get-Date).AddHour(12))
+  description: |-
+    Starts a site geo move for <https://contosoenergy.sharepoint.com/sites/hr> to the EUR destination with a preffered start time window of 1 to 12 hours from the move schedule operation.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Start-SPOSiteContentMove -SourceSiteUrl https://contosoenergy.sharepoint.com/sites/hr -DestinationUrl https://contosoenergyEUR.sharepoint.com/sites/hrEU
+  description: |-
+    Starts a site geo move for <https://contosoenergy.sharepoint.com/sites/hr> and allows site rename to <https://contosoenergyEUR.sharepoint.com/sites/hrEU> as part of the geo move operation. Renaming a site is not supported for SharePoint Embedded container sites.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DestinationDataLocation
+  isRequired: true
+  description: |+
+    Defines the new destination of the content that you want to move. This is the 3 letter data location value. 
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DestinationUrl
+  description: |+
+    Destination URL is optional in cases where the administrator wants to perform a site rename as part of the move.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: PreferredMoveBeginDate
+  description: |+
+    Specifies what is the preferred Date and time to start the move job. This is a preference and will be honored based on system resource availability. 
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: PreferredMoveEndDate
+  description: |+
+    Specifies what is the preferred Date and time to stop the move job from starting. This is a preference and will be honored based on system resource availability. If a the move is already in progress, we will complete the move. 
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Reserved
+  description: |+
+    Reserved for Microsoft Internal use.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceSiteUrl
+  isRequired: true
+  description: |+
+    Specifies the source URL of the site collection you want to move. 
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SuppressAllWarnings
+  description: |+
+    Suppress all warning messages.
+
+  defaultValue: None
+  position: "9"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SuppressBcsCheck
+  description: |+
+    Suppress checking for Business Connectivity Services used with the associated site.
+
+  defaultValue: None
+  position: "10"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SuppressMarketplaceAppCheck
+  description: |+
+    Suppress checking compatibility of marketplace SharePoint Add-ins deployed to the associated site.
+
+  defaultValue: None
+  position: "7"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SuppressWorkflow2013Check
+  description: |+
+    Suppress checking compatibility of SharePoint 2013 Workflows deployed to the associated site.
+
+  defaultValue: None
+  position: "8"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ValidationOnly
+  description: |+
+    This parameter will perform a validation check on whether the site can be moved and will not execute the move. 
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Start-SPOSiteContentMove
+name: Start-SPOSiteContentMove
+description: |-
+  UrlAndDestinationDataLocation: These parameters allow a SharePoint administrator to validate a geo move before scheduling it.
+
+  UrlAndDestinationUrl: These parameters allow a SharePoint administrator to move and (optionally) rename a site as part of the geo move operation by specifying a new site name in the destination URL. Renaming a site is not supported for SharePoint Embedded container sites.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/start-spositecontentmove
+  applicable: SharePoint Online
+  title: Start-SPOSiteContentMove
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

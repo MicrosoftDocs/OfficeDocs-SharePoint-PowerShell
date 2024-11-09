@@ -1,0 +1,100 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Queues a job to trim versions for all document libraries in a site collection.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Get-SPOSiteFileVersionBatchDeleteJobProgress
+  href: Get-SPOSiteFileVersionBatchDeleteJobProgress.yml
+- text: Remove-SPOSiteFileVersionBatchDeleteJob
+  href: Remove-SPOSiteFileVersionBatchDeleteJob.yml
+syntaxes:
+- New-SPOSiteFileVersionBatchDeleteJob [-Identity] <SpoSitePipeBind> [-Automatic] [-DeleteBeforeDays <Int32>] [-MajorVersionLimit <Int32>] [-MajorWithMinorVersionsLimit <Int32>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    New-SPOSiteFileVersionBatchDeleteJob -Identity https://contoso.sharepoint.com/sites/site1 -DeleteBeforeDays 360
+  description: |-
+    Example 1 starts a trim job that will delete all file versions that are over 360 days old in all document libraries in the site collection.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    New-SPOSiteFileVersionBatchDeleteJob -Identity https://contoso.sharepoint.com/sites/site1 -Automatic
+  description: |-
+    Example 2 starts a trim job that will delete file versions that expired and set version expiration time for the ones not expired in the site collection based on the backend algorithm.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    New-SPOSiteFileVersionBatchDeleteJob -Identity https://contoso.sharepoint.com/sites/site1 -MajorVersionLimit 30 -MajorWithMinorVersionsLimit 10
+  description: |-
+    Example 3 starts a trim job that will delete file versions in the site collection based on the version count limits.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Automatic
+  description: |+
+    Trim file versions using automatic version history limit algorithm.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="int" data-throw-if-not-resolved="False" />
+  name: DeleteBeforeDays
+  isRequired: true
+  description: |+
+    The minimum age of file versions to trim. In other words, all file versions that are older than this number of days will be deleted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the URL of the site collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="int" data-throw-if-not-resolved="False" />
+  name: MajorVersionLimit
+  description: |+
+    Trim file version using version count limits. Need to specify `MajorWithMinorVersionsLimit` as well.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="int" data-throw-if-not-resolved="False" />
+  name: MajorWithMinorVersionsLimit
+  description: |+
+    Trim file version using version count limits. Need to specify `MajorVersionLimit` as well.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.New-SPOSiteFileVersionBatchDeleteJob
+name: New-SPOSiteFileVersionBatchDeleteJob
+description: |-
+  Queues a job to trim versions for all document libraries in a site collection.
+
+  Caution: Versions deleted using this cmdlet will be permanently deleted and cannot be recovered from the recycle bin.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/new-spositefileversionbatchdeletejob
+  applicable: SharePoint Online
+  title: New-SPOSiteFileVersionBatchDeleteJob
+  PlatyPS schema version: 2.0.0
+  author: msjennywu
+  ms.author: jennywu
+  ms.reviewer: ""
+  manager: seanmc

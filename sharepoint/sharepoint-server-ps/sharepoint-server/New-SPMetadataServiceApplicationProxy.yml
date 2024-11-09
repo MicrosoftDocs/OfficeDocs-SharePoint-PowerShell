@@ -1,0 +1,192 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new connection to a managed metadata service application.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  New-SPMetadataServiceApplicationProxy -Name <String> [-AssignmentCollection <SPAssignmentCollection>]
+   [-Confirm] [-ContentTypePushdownEnabled] [-ContentTypeSyndicationEnabled] [-DefaultProxyGroup]
+   [-DefaultKeywordTaxonomy] [-DefaultSiteCollectionTaxonomy] [-PartitionMode]
+   [-ServiceApplication <SPMetadataServiceCmdletPipeBind>] [-Uri <String>] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '-------------------EXAMPLE 1----------------'
+  code: |-
+    New-SPMetadataServiceApplicationProxy -Name "MetadataServiceProxy1" -ServiceApplication "MetadataServiceApp1"
+  description: |-
+    This example creates a connection to a managed metadata service application in the local farm.
+  summary: ""
+- title: '-------------------EXAMPLE 2----------------'
+  code: |-
+    New-SPMetadataServiceApplicationProxy -Name "MetadataServiceProxy3" -ServiceApplication "MetadataServiceApp3" -PartitionMode
+  description: |-
+    This example creates a partitioned connection to a managed metadata service application in the local farm.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ContentTypePushdownEnabled
+  description: |+
+    Specifies that existing instances of changed content types in subsites and libraries will be updated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ContentTypeSyndicationEnabled
+  description: |+
+    Specifies that this connection will provide access to the content types that are associated with the managed metadata service application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DefaultKeywordTaxonomy
+  description: |+
+    Specifies that new enterprise keywords will be stored in the term store associated with the managed metadata service application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DefaultProxyGroup
+  description: |+
+    Specifies that the connection be added to the default proxy group for the farm.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DefaultSiteCollectionTaxonomy
+  description: |+
+    Specifies that the term set that is created when you create a new managed metadata column will be stored in the term store associated with the managed metadata application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the display name of the service application proxy to create.
+    The name can contain a maximum of 128 characters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PartitionMode
+  description: |+
+    Specifies that the service application restrict data by subscription.
+
+    This property cannot be changed after the service application proxy has been created.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPMetadataServiceCmdletPipeBind" data-throw-if-not-resolved="False" />
+  name: ServiceApplication
+  description: |+
+    Specifies the local managed metadata service application to connect to.
+    The service application must exist on the local farm.
+
+    The type must be a valid GUID; a valid name of the service application; or an instance of a valid SPMetadataServiceApplication object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Uri
+  description: |+
+    Specifies the URI of a remote managed metadata service application to connect to.
+
+    To specify the managed metadata service application that this proxy is connecting to, you must set only the URI parameter or only the ServiceApplication parameter.
+
+    The type must be a valid URL, in the form urn:schemas-microsoft-com:sharepoint:service:fa5c65ebed244a15817768825004f3a7#authority=urn:uuid:acdd6deff6sd4bb899f5beb42051bf3b7&authority=https:// \<server\>:32844/Topology/topology.svc.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.New-SPMetadataServiceApplicationProxy
+name: New-SPMetadataServiceApplicationProxy
+description: |-
+  Use the `New-SPMetadataServiceApplicationProxy` cmdlet to create a new connection to a managed metadata service application.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spmetadataserviceapplicationproxy
+  applicable: SharePoint Server Subscription Edition
+  title: New-SPMetadataServiceApplicationProxy
+  PlatyPS schema version: 2.0.0

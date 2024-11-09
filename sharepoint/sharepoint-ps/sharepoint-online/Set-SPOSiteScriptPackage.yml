@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates a previously uploaded site script package. The package file must be a zip archive containing all the files necessary for the site script. A file called "manifest.json" with script actions must be present in this zip file.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-SPOSiteScriptPackage -Identity <SPOSiteScriptPipeBind> [-Title <String>] [-ContentPath <String>]
+   [-Description <String>] [-Version <Int32>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    $manifestContent = @'
+    {
+      "$schema": "schema.json",
+      "actions": [
+          {
+            "verb": "importBusinessApps",
+            "listName": "Contoso list",
+            "solutionRelativeFilePath": "solution.zip"
+          }
+      ],
+      "version": 2
+    }
+    '@;
+    Set-Content "manifest.json" $manifestContent
+    $compress = @{
+      Path = ".\manifest.json", ".\solution.zip"
+      DestinationPath = "c:\scripts\site-script-package-v2.zip"
+    }
+    Compress-Archive @compress
+
+    Set-SPOSiteScriptPackage -Identity edaec4ec-71e2-4026-ac1e-6686bb30190e -Title "Install Contoso flow" -Description "Installs the new Contoso flow in a list" -ContentPath "c:\scripts\site-script-package-v2.zip" -Version 2
+  description: |-
+    This example updates a site script package with ID 'edaec4ec-71e2-4026-ac1e-6686bb30190e' as a zip file containing a manifest.json with script actions as exemplified previously and an updated Dataverse solution zip file.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ContentPath
+  description: |+
+    The absolute path to a zip archive file containing the content of the new site script package.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    A description of the site script.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SPOSiteScriptPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The ID of the site script.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Title
+  description: |+
+    The display name of the site script.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Version
+  description: |+
+    The version number of the site script.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Microsoft.Online.SharePoint.PowerShell.Set-SPOSiteScriptPackage
+name: Set-SPOSiteScriptPackage
+description: |-
+  Updates a previously uploaded site script package. The package file must be a zip archive containing all the files necessary for the site script. A file called "manifest.json" with script actions must be present in this zip file.
+metadata:
+  external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: ""
+  PlatyPS schema version: 2.0.0

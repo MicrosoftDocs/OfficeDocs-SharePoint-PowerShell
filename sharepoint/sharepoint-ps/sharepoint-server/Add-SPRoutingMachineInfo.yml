@@ -1,0 +1,164 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a new routing target to the farm.
+module: SharePointServer
+notes: ""
+links:
+- text: Get-SPRoutingMachineInfo
+  href: Get-SPRoutingMachineInfo.yml
+- text: Remove-SPRoutingMachineInfo
+  href: Remove-SPRoutingMachineInfo.yml
+- text: Set-SPRoutingMachineInfo
+  href: Set-SPRoutingMachineInfo.yml
+syntaxes:
+- >-
+  Add-SPRoutingMachineInfo [-RequestManagementSettings] <SPRequestManagementSettingsPipeBind> [-Name] <String>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Availability <SPRoutingMachineAvailability>]
+   [-OutgoingPort <Int32>] [-OutgoingScheme <SPRoutingOutgoingScheme>] [-StaticWeight <Double>]
+   [<CommonParameters>]
+examples:
+- title: '-------------EXAMPLE--------------'
+  code: |-
+    C:\PS>$web=Get-SPWebApplication -Identity <URL of web application>
+
+    C:\PS>$rm=Get-SPRequestManagementSettings -Identity $web
+
+    C:\PS>Add-SPRoutingMachineInfo -RequestManagementSettings $rm -Name <MachineName> -Availability Available
+
+    C:\PS>
+  description: |-
+    This example adds a routing target for a specified identity to the farm.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPRoutingMachineAvailability" data-throw-if-not-resolved="False" />
+  name: Availability
+  description: |+
+    Specifies whether or not the added computer will be available for routing.
+
+    The valid values are:
+
+    --Available
+    --Unavailable
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the computer to add to the route.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: OutgoingPort
+  description: |+
+    Specifies the port used by Request Manager to make an outgoing connection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPRoutingOutgoingScheme" data-throw-if-not-resolved="False" />
+  name: OutgoingScheme
+  description: |+
+    Determines the Http scheme of outgoing connections.
+
+    The valid values are:
+
+    --SameAsIncoming
+    --Http
+    --Https
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPRequestManagementSettingsPipeBind" data-throw-if-not-resolved="False" />
+  name: RequestManagementSettings
+  isRequired: true
+  description: |+
+    Specifies the name of the request management settings object to add to the routing target.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Double" data-throw-if-not-resolved="False" />
+  name: StaticWeight
+  description: |+
+    Specifies the static weight of a computer routing that is used by Request Manager.
+    If the static weight is higher, more requests will be routed to the computer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Add-SPRoutingMachineInfo
+name: Add-SPRoutingMachineInfo
+description: |-
+  Use the Add-SPRoutingMachineInfo cmdlet to add a new routing target to the farm by using the RequestManagementSettings and Name parameters.
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/add-sproutingmachineinfo
+  applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Add-SPRoutingMachineInfo
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

@@ -1,0 +1,60 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a managed-property-to-full-text-index mapping.
+module: SharePointServer
+notes: ""
+links:
+- text: New-FASTSearchMetadataFullTextIndexMapping
+  href: New-FASTSearchMetadataFullTextIndexMapping.yml
+- text: Set-FASTSearchMetadataFullTextIndexMapping
+  href: Set-FASTSearchMetadataFullTextIndexMapping.yml
+- text: Get-FASTSearchMetadataFullTextIndexMapping
+  href: Get-FASTSearchMetadataFullTextIndexMapping.yml
+syntaxes:
+- Remove-FASTSearchMetadataFullTextIndexMapping [-Mapping] <FullTextIndexMapping> [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    $fulltextindex = Get-FASTSearchMetadataFullTextIndex -Name content
+    $managedproperty = Get-FASTSearchMetadataManagedProperty -Name CreatedBy
+    $fulltextindexmapping = Get-FASTSearchMetadataFullTextIndexMapping -ManagedProperty $managedproperty -FullTextIndex $fulltextindex
+    Remove-FASTSearchMetadataFullTextIndexMapping -mapping $fulltextindexmapping
+  description: |-
+    This example removes the mapping of the managed property "CreatedBy" from the full text index "content".
+    Since the cmdlet takes an object of the mapping, the example first retrieves the mapping using Get-FASTSearchMetadataFullTextIndexMapping.
+  summary: ""
+parameters:
+- type: <xref href="FullTextIndexMapping" data-throw-if-not-resolved="False" />
+  name: Mapping
+  isRequired: true
+  description: |+
+    An object representing the full text index mapping to be removed.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: FullTextIndexMapping, M
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Remove-FASTSearchMetadataFullTextIndexMapping
+name: Remove-FASTSearchMetadataFullTextIndexMapping
+description: |-
+  This cmdlet removes the mapping of a managed property to a full text index.
+  The managed properties are not affected, and can still be mapped to other full text indexes.
+
+  The content must be recrawled/re-fed to reflect that managed properties have been removed from full text indexes.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-fastsearchmetadatafulltextindexmapping
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Remove-FASTSearchMetadataFullTextIndexMapping

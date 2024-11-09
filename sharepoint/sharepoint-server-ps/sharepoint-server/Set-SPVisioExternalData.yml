@@ -1,0 +1,83 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures settings related to external data connections for a Visio Services application.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Set-SPVisioExternalData -UnattendedServiceAccountApplicationID <String>
+   -VisioServiceApplication <SPVisioServiceApplicationPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+   [<CommonParameters>]
+examples:
+- title: '--------------------EXAMPLE-----------------------'
+  code: |-
+    Set-SPVisioExternalData -VisioServiceApplication "VGS1" -UnattendedServiceAccountApplicationID "SSSApp1"
+  description: |-
+    This example sets the unattended service account application ID to SSSApp1 for the Visio Services application named VGS1.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UnattendedServiceAccountApplicationID
+  isRequired: true
+  description: |+
+    Specifies the target application ID in the registered secure store service that is used to reference unattended service account credentials.
+    The unattended service account is a single account that all documents can use to refresh data.
+    It is required when connecting to external data sources.
+
+    The type must be a valid value less than or equal to 256 characters.
+    The application ID must be registered in the secure store service application or an error message will be displayed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPVisioServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: VisioServiceApplication
+  isRequired: true
+  description: |+
+    Specifies the Visio Services application that contains the SPVisioExternalData object.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a Visio Services application (for example, MyVisioService1); or an instance of a valid SPVisioServiceApplication object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPVisioExternalData
+name: Set-SPVisioExternalData
+description: |-
+  The `Set-SPVisioExternalData` cmdlet sets and configures settings for external data connections for the Visio Services application.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Visio.Server.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spvisioexternaldata
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPVisioExternalData
+  PlatyPS schema version: 2.0.0

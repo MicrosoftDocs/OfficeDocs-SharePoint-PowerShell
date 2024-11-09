@@ -1,0 +1,360 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a managed property to a shared search application.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  New-SPEnterpriseSearchMetadataManagedProperty [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+   [-DefaultForQueryIndependentRank <UInt32>] [-Description <String>] [-EnabledForQueryIndependentRank <Boolean>]
+   [-EnabledForScoping <Boolean>] [-FullTextQueriable <Boolean>] [-IncludeInAlertSignature <Boolean>]
+   [-IncludeInMd5 <Boolean>] -Name <String> [-NameNormalized <Boolean>] [-NoWordBreaker <Boolean>]
+   [-Queryable <Boolean>] [-RemoveDuplicates <Boolean>] [-RespectPriority <Boolean>] [-Retrievable <Boolean>]
+   [-SafeForAnonymous <Boolean>] -SearchApplication <SearchServiceApplicationPipeBind> [-SiteCollection <Guid>]
+   [-Tenant <Guid>] -Type <Int32> [-UserFlags <Int16>] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE------------------'
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication
+    New-SPEnterpriseSearchMetadataManagedProperty -Name AboutMeUpdate -SearchApplication $ssa -Type 4
+  description: |-
+    This example creates a new managed property named AboutMeUpdate in the default search service application and sets it type to DateTime.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: DefaultForQueryIndependentRank
+  description: |+
+    Specifies that the managed property is mandatory when it is used in query-independent rank (relevance).
+
+
+  defaultValue: None
+  position: Named
+  aliases: def
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Adds a description to the metadata managed property.
+
+    The type must be a valid string.
+
+
+  defaultValue: None
+  position: Named
+  aliases: d
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnabledForQueryIndependentRank
+  description: |+
+    Specifies that the managed property is mandatory when it is used in the custom ranking model for the query-independent work of ranking.
+
+    The type must be one of the following query-independent ranking features in the custom model XML:
+
+    - queryIndependentFeature
+    - categoryFeature
+    - languageFeature
+
+
+  defaultValue: None
+  position: Named
+  aliases: qir
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnabledForScoping
+  description: |+
+    Specifies that the managed property can be used in a scope definition.
+
+
+  defaultValue: None
+  position: Named
+  aliases: e
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: FullTextQueriable
+  description: |+
+    Specifies that the managed property can be used in enterprise search SQL queries.
+
+
+  defaultValue: None
+  position: Named
+  aliases: f
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IncludeInAlertSignature
+  description: |+
+    Specifies whether this managed property should be included in the alert signature.
+
+  defaultValue: None
+  position: Named
+  aliases: ia
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IncludeInMd5
+  description: |+
+    Specifies that the managed property is included in the hash used by the crawler to determine whether a document has changed.
+
+
+  defaultValue: None
+  position: Named
+  aliases: im5
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the new managed property.
+
+    The type must be a valid name of a managed property, for example, ManagedProperty1.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: NameNormalized
+  description: |+
+    Specifies if the values of the managed property should be normalized, that is, enable to return results independent of letter casing and diacritics used in the query.
+    If value is set to true, the values are normalized.
+
+
+  defaultValue: None
+  position: Named
+  aliases: nn
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: NoWordBreaker
+  description: |+
+    Specifies that the values for this managed property are processed by a word breaker.
+
+
+  defaultValue: None
+  position: Named
+  aliases: nw
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Queryable
+  description: |+
+    Specifies whether this managed property is queryable or not.
+
+
+  defaultValue: None
+  position: Named
+  aliases: q
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: RemoveDuplicates
+  description: |+
+    Specifies that duplicate values for the managed property are removed.
+
+
+  defaultValue: None
+  position: Named
+  aliases: rd
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: RespectPriority
+  description: |+
+    Specifies that when a mapped crawled property contains multiple values and RespectPriority is set to  true, only the first mapped crawled property is copied. 
+    Otherwise, all mapped crawled properties that have a value are copied.
+
+
+  defaultValue: None
+  position: Named
+  aliases: rp
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Retrievable
+  description: |+
+    Specifies whether this managed property is retrievable or not.
+
+
+  defaultValue: None
+  position: Named
+  aliases: r
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: SafeForAnonymous
+  description: |+
+    Specifies whether it is acceptable to display the contents of the property in search results for anonymous searches.
+
+  defaultValue: None
+  position: Named
+  aliases: sfa
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SearchServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: SearchApplication
+  isRequired: true
+  description: |+
+    Specifies the search application that contains the managed property collection.
+
+    The type must be a valid search application name (for example, SearchApp1), or an instance of a valid SearchServiceApplication object.
+
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: SiteCollection
+  description: |+
+    Specifies that the managed properties returned are to be within the scope of a site collection (SPSite).
+
+    The type must be a valid GUID that specifies the property set in the form 12345678-90ab-cdef-1234-567890bcdefgh.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Specifies that the managed properties returned are to be within the scope of a tenant.
+
+    The type must be a valid GUID that specifies the property set in the form 12345678-90ab-cdef-1234-567890bcdefgh.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Type
+  isRequired: true
+  description: |+
+    Specifies the data type of the new managed property.
+
+    The type must be one of the following data types:
+
+    1 = Text
+
+    2 = Integer
+
+    3 = Decimal
+
+    4 = DateTime
+
+    5 = YesNo
+
+    6 = Binary
+
+    7 = Double
+
+
+  defaultValue: None
+  position: Named
+  aliases: t
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int16" data-throw-if-not-resolved="False" />
+  name: UserFlags
+  description: |+
+    Reserved for future use.
+
+
+  defaultValue: None
+  position: Named
+  aliases: u
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.New-SPEnterpriseSearchMetadataManagedProperty
+name: New-SPEnterpriseSearchMetadataManagedProperty
+description: |-
+  This cmdlet creates a new managed property.
+  SPEnterpriseSearchMetadataManagedProperty represents a managed property in the enterprise search metadata property schema.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.Search.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spenterprisesearchmetadatamanagedproperty
+  applicable: SharePoint Server Subscription Edition
+  title: New-SPEnterpriseSearchMetadataManagedProperty
+  PlatyPS schema version: 2.0.0

@@ -1,0 +1,120 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns external users in the tenant.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Remove-SPOExternalUser
+  href: Remove-SPOExternalUser.yml
+syntaxes:
+- Get-SPOExternalUser [[-Position] <Int32>] [[-PageSize] <Int32>] [[-Filter] <String>] [[-SortOrder] <SortOrder>] [[-SiteUrl] <String>] [-ShowOnlyUsersWithAcceptingAccountNotMatchInvitedAccount <Boolean>] [<CommonParameters>]
+examples:
+- title: '-----------------------EXAMPLE 1-----------------------------'
+  code: |-
+    Get-SPOExternalUser -Position 0 -PageSize 2
+  description: |-
+    Example 1 returns the first two external users in the collection.
+  summary: ""
+- title: '-----------------------EXAMPLE 2-----------------------------'
+  code: |-
+    Get-SPOExternalUser -Position 2 -PageSize 2
+  description: |-
+    Example 2 returns two external users from the third page of the collection.
+  summary: ""
+- title: '-----------------------EXAMPLE 3-----------------------------'
+  code: |-
+    Get-SPOExternalUser -Position 0 -PageSize 30 -SiteUrl https://contoso.sharepoint.com
+  description: |-
+    Example 3 returns the first 30 users that match the SiteUrl <https://contoso.sharepoint.com>.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    Limits the results to only those users whose first name, last name, or email address begins with the text in the string using a case-insensitive comparison.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: PageSize
+  description: |+
+    Specifies the maximum number of users to be returned in the collection.
+
+    The value must be less than or equal to 50.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Position
+  description: |+
+    Use to specify the zero-based index of the position in the sorted collection of the first result to be returned.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ShowOnlyUsersWithAcceptingAccountNotMatchInvitedAccount
+  description: |+
+    Shows users who have accepted an invite but not using the account the invite was sent to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SiteUrl
+  description: |+
+    Specifies the site to retrieve external users for.
+
+    If no site is specified, the external users for all sites are returned.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SortOrder" data-throw-if-not-resolved="False" />
+  name: SortOrder
+  description: |+
+    Specifies the sort results in Ascending or Descending order on the SPOUser.Email property should occur.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOExternalUser
+name: Get-SPOExternalUser
+description: |-
+  The `Get-SPOExternalUser` cmdlet returns external users that are located in the tenant based on specified criteria.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [https://go.microsoft.com/fwlink/p/?LinkId=251832](https://go.microsoft.com/fwlink/p/?LinkId=251832).
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spoexternaluser
+  applicable: SharePoint Online
+  title: Get-SPOExternalUser
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

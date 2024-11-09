@@ -1,0 +1,85 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Note: Currently this cmdlet is part of pre-release functionality and may not function in your tenant.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- New-SPOTenantOrgRelation [-Scenario] <OrgRelationScenario> [-PartnerRole] <OrgRelationRole> [-PartnerCompanyId] <Guid> [-PartnerInstanceId <Guid>] [-PartnerSiteSubscriptionId <Guid>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> {{ Add example code here }}
+  description: |-
+    {{ Add example description here }}
+  summary: ""
+parameters:
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: PartnerCompanyId
+  isRequired: true
+  description: |+
+    {{ Fill PartnerCompanyId Description }}
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: PartnerInstanceId
+  description: |+
+    {{ Fill PartnerInstanceId Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="OrgRelationRole" data-throw-if-not-resolved="False" />
+  name: PartnerRole
+  isRequired: true
+  description: |+
+    {{ Fill PartnerRole Description }}
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: None, Source, Target
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: PartnerSiteSubscriptionId
+  description: |+
+    {{ Fill PartnerSiteSubscriptionId Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="OrgRelationScenario" data-throw-if-not-resolved="False" />
+  name: Scenario
+  isRequired: true
+  description: |+
+    {{ Fill Scenario Description }}
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  parameterValueGroup: None, MnA
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.New-SPOTenantOrgRelation
+name: New-SPOTenantOrgRelation
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/New-SPOTenantOrgRelation
+  applicable: SharePoint Online
+  title: New-SPOTenantOrgRelation
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

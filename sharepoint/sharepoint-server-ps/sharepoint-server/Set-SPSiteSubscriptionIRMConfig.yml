@@ -1,0 +1,139 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the Information Rights Management (IRM) settings.
+module: sharepoint-server
+notes: ""
+links:
+- text: Get-SPSiteSubscriptionIRMConfig
+  href: Get-SPSiteSubscriptionIRMConfig.yml
+syntaxes:
+- >-
+  Set-SPSiteSubscriptionIRMConfig [-Identity] <SPSiteSubscriptionPipeBind> [-IrmEnabled]
+   [-AssignmentCollection <SPAssignmentCollection>] [-CertificateServerUrl <Uri>] [-Confirm] [-PassThru]
+   [-WhatIf] [<CommonParameters>]
+examples:
+- title: '--------------------EXAMPLE 1---------------------'
+  code: |-
+    site = Get-SPSite  HYPERLINK "https://<myspserver>" https:// <myspserver>
+    $subscription = $site.SiteSubscription
+    Set-SPSiteSubscriptionIRMConfig -Identity $subscription -IrmEnabled -CertificateServerUrl https:// <rmsserver>
+  description: |-
+    This example enables IRM for the tenant and configures it to use the specified RMS server.
+  summary: ""
+- title: '--------------------EXAMPLE 2---------------------'
+  code: |-
+    site = Get-SPSite  HYPERLINK "https://myspserver" https:// <myspserver>
+    $subscription = $site.SiteSubscription
+    Set- SPSiteSubscriptionIRMConfig -Identity $subscription -IrmEnabled:$false
+  description: |-
+    This example disables IRM for the tenant.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: CertificateServerUrl
+  description: |+
+    Specifies the address of the RMS certificate server to use for the tenant.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPSiteSubscriptionPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies a site subscription for a particular tenant.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IrmEnabled
+  isRequired: true
+  description: |+
+    Specifies whether IRM is enabled in the tenant.
+
+    The default value is false.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PassThru
+  description: |+
+    Specifies that the output object can be passed through the pipeline.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPSiteSubscriptionIRMConfig
+name: Set-SPSiteSubscriptionIRMConfig
+description: |-
+  Use the Identity parameter of the `Set-SPSiteSubscriptionIRMConfig` cmdlet to set the IRM setting for a specified tenant.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spsitesubscriptionirmconfig
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPSiteSubscriptionIRMConfig
+  PlatyPS schema version: 2.0.0

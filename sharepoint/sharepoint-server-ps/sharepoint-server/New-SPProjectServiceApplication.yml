@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new Project Server Service application.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  New-SPProjectServiceApplication [-Name] <String> -ApplicationPool <SPIisWebServiceApplicationPoolPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Proxy] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE 1-----------------------'
+  code: |-
+    New-SPProjectServiceApplication -Name "PsiApplication" -ApplicationPool "PsiApplicationPool" -Proxy
+  description: |-
+    This example creates a Project Server Service application with the name PsiApplication and an application pool with the name PsiApplicationPool and it creates a Project Server Service application proxy for the application.
+  summary: ""
+- title: '------------------EXAMPLE 2-----------------------'
+  code: |-
+    Get-SPIisWebServiceApplicationPool "PsiApplicationPool" | New-SPProjectServiceApplication -Name "PsiApplication"
+  description: |-
+    This example creates a Project Server Service application with the name PsiApplication.
+    The result is piped using an application pool object.
+  summary: ""
+parameters:
+- type: <xref href="SPIisWebServiceApplicationPoolPipeBind" data-throw-if-not-resolved="False" />
+  name: ApplicationPool
+  isRequired: true
+  description: |+
+    Specifies the existing IIS application pool to run the Web service in for the new service application.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of an application pool (for example, AppPoolName1); or an instance of a valid IISWebServiceApplicationPool object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the new Project Server Service application.
+
+    The type must be a valid name of a Project Server Service application; for example, ProjectWebApp1.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Proxy
+  description: |+
+    Specifies that a proxy for new service application is automatically created.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+uid: sharepoint-server.New-SPProjectServiceApplication
+name: New-SPProjectServiceApplication
+description: |-
+  The `New-SPProjectServiceApplication` cmdlet creates a new Project Server Service application.
+
+  For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
+metadata:
+  external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spprojectserviceapplication
+  Applicable: SharePoint Server Subscription Edition
+  title: New-SPProjectServiceApplication
+  PlatyPS schema version: 2.0.0

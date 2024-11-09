@@ -1,0 +1,211 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds an existing user to a SharePoint site with the designated permissions.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  New-SPUser [-UserAlias] <String> -Web <SPWebPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+   [-Confirm] [-DisplayName <String>] [-Email <String>] [-Group <SPGroupPipeBind>] [-PermissionLevel <String[]>]
+   [-SiteCollectionAdmin] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE 1----------------------'
+  code: |-
+    New-SPUser -UserAlias 'Contoso\Jdow'-DisplayName 'Jane Dow' -Web https://contoso.com
+  description: |-
+    This example adds a new user named Jane Dow to the Contoso domain.
+  summary: ""
+- title: '------------------EXAMPLE 2----------------------'
+  code: |-
+    Get-SPWeb https://sitename | New-SPUser -UserAlias Contoso\Jdow
+  description: |-
+    This example adds Contoso\Jdow to all webs in the https://sitename site collection.
+    Because this site collection uses inherited permissions, only the top-level web site needs to be touched.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  description: |+
+    Specifies a string that contains the display name of the user.
+
+    The type must be a valid user name; for example, Joe.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Email
+  description: |+
+    Specifies the email address of the new user.
+
+    The type must be a valid email address, in the form someone@contoso.com.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPGroupPipeBind" data-throw-if-not-resolved="False" />
+  name: Group
+  description: |+
+    Specifies the user group to which the new user belongs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PermissionLevel
+  description: |+
+    Adds a user to a permission level.
+
+    The type must be a valid permission level for the web application; for example, Full Control, Read, Contribute, or All.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SiteCollectionAdmin
+  description: |+
+    Specifies whether to add the user as an administrator to the site collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserAlias
+  isRequired: true
+  description: |+
+    Specifies the user alias from Active Directory Domain Services (AD DS).
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPWebPipeBind" data-throw-if-not-resolved="False" />
+  name: Web
+  isRequired: true
+  description: |+
+    Specifies the URL or GUID of the web on which to create this user.
+
+    The type must be a valid URL, in the form https://server_name, or a GUID, in the form 1234-5678-9876-0987.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.New-SPUser
+name: New-SPUser
+description: |-
+  The `New-SPUser` cmdlet adds an existing user to a SharePoint web site with the designated permissions.
+  This user has the given permissions in all subsites that inherit permissions.
+  The user account must already exist in the user directory.
+
+  If your environment is in Active Directory mode, the user must already exist in Active Directory Domain Services (AD DS) and only the UserAlias parameter is required; all other fields are pulled from AD DS.
+  If only an alias is given and the farm is in Active Directory Account Create mode, the Email parameter is also required.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spuser
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: New-SPUser
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

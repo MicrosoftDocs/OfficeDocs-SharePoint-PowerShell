@@ -1,0 +1,110 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new billing policy for an application owned by the tenant.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: /powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+syntaxes:
+- >-
+  New-SPOAppBillingPolicy
+
+  [[-ApplicationId] <ApplicationId>]
+
+  [[-AzureSubscriptionId] <AzureSubscriptionID>]
+
+  [[-ResourceGroup] <ResourceGroup>]
+
+  [[-AzureRegion] <AzureRegion>]
+
+  [[-UsageCharges] <UsageCharges>]
+examples:
+- title: Example 1
+  code: |-
+    New-SPOAppBillingPolicy -ApplicationId 50785fde-3082-47ac-a36d-06282ac5c7da  -AzureSubscriptionId c7170373-eb8d-4984-8cc9-59bcc88c65a0 -ResouceGroup "SPOPAYG" -AzureRegion "Uk-South" -UsageCharges AppOwnerIsCharged
+  description: ""
+  summary: ""
+- title: Example 2
+  code: |-
+    New-SPOAppBillingPolicy -ApplicationId 50785fde-3082-47ac-a36d-06282ac5c7da  -AzureSubscriptionId c7170373-eb8d-4984-8cc9-59bcc88c65a0 -ResouceGroup "SPOPAYG" -AzureRegion "Uk-South" -UsageCharges ConsumingTenantOfTheAppisCharged
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="GUID" data-throw-if-not-resolved="False" />
+  name: ApplicationID
+  isRequired: true
+  description: "This parameter specifies the ID of the  application.\r\n \r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AzureRegion
+  isRequired: true
+  description: "The region of the Azure Subscription.\r\n \r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="GUID" data-throw-if-not-resolved="False" />
+  name: AzureSubscriptionId
+  isRequired: true
+  description: "The unique identifier of the Azure Active Directory profile (Microsoft Entra ID) for billing purposes.\r\n \r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ResourceGroup
+  isRequired: true
+  description: "Resource Group Name associated with the Azure Subscription\r\n \r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Switch" data-throw-if-not-resolved="False" />
+  name: UsageCharges
+  isRequired: true
+  description: "This parameters determined who is charged for the usage of the application. This parameter supports two values  - AppOwnerIsCharged or ConsumingTenantoftheAppischarged.\r\n- AppOwnerIsCharged : The tenant owning the application is charged for the usage\r\n- ConsumingTenantoftheAppischarged : The tenant using the application is charged for the usage.\r\n \r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.New-SPOAppBillingPolicy
+name: New-SPOAppBillingPolicy
+description: |-
+  This cmdlet creates a new billing policy for an application that is owned by the tenant running the cmdlet. 
+
+  You must be a SharePoint Administrator to run this cmdlet.
+
+  > [!NOTE]
+  > To use the New-SPOAppBillingPolicy cmdlet, an admin must authenticate to SharePoint Online using modern authentication.
+  >
+  > Use the **Connect-SPOService** cmdlet shown below, which will prompt you to enter your credentials. If multi-factor authentication (MFA) is enabled, you will need to complete the MFA process (e.g., entering a verification code sent to your phone).
+  > 
+  >
+  > `Connect-SPOService -Url https://(your-tenant)-admin.sharepoint.com`
+  >
+  > Replace (your-tenant) with your actual SharePoint Online domain, e.g. `https://contoso-admin.sharepoint.com.`
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/New-SPOAppBillingPolicy
+  applicable: SharePoint Online
+  title: New-SPOAppBillingPolicy
+  PlatyPS schema version: 2.0.0
+  author: arakesh
+  ms.author: arakesh
+  ms.reviewer: ""

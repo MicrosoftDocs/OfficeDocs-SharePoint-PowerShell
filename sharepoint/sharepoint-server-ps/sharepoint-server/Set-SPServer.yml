@@ -1,0 +1,96 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes the role of the server.
+module: sharepoint-server
+notes: ""
+inputs:
+- name: <xref href="Microsoft.SharePoint.PowerShell.SPServerPipeBind" data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.SharePoint.PowerShell.SPAssignmentCollection
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-SPServer [-Identity] <SPServerPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+   [-Role <SPServerRole>] [-Status <SPObjectStatus>] [<CommonParameters>]
+examples:
+- title: '--------------------EXAMPLE---------------------'
+  code: |-
+    Set-SPServer -Role SingleServerFarm
+  description: |-
+    This example changes the server to SingleServerFarm role.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used. 
+
+    **NOTE**: When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.                 
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPServerPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the name of the server in the farm.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: Address
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPServerRole" data-throw-if-not-resolved="False" />
+  name: Role
+  description: |+
+    Specifies the name of the server role you want to change. 
+
+    The valid values are:
+
+    * WebFrontEnd
+    * Application
+    * SingleServerFarm
+    * Distributed Cache
+    * Search
+    * Custom
+    * ApplicationWithSearch
+    * WebFrontEndWithDistributedCache
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: Application, ApplicationWithSearch, Custom, DistributedCache, Search, SingleServerFarm, WebFrontEnd, WebFrontEndWithDistributedCache
+- type: <xref href="SPObjectStatus" data-throw-if-not-resolved="False" />
+  name: Status
+  description: |+
+    Sets the status of the server in the farm.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: Online, Disabled, Offline, Unprovisioning, Provisioning, Upgrading, Patching
+uid: sharepoint-server.Set-SPServer
+name: Set-SPServer
+description: |-
+  The Set-SPServer cmdlet changes the role of the server in the farm by using the Role parameter. A new cmdlet in SharePoint Server 2016, SharePoint Server 2019 that is used in MinRole.
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spserver
+  Applicable: SharePoint Server Subscription Edition
+  title: Set-SPServer
+  PlatyPS schema version: 2.0.0

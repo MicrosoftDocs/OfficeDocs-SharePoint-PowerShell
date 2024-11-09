@@ -1,0 +1,88 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables automatic provisioning of an app.
+module: SharePointServer
+notes: ""
+links:
+- text: Enable-SPAppAutoProvision
+  href: Enable-SPAppAutoProvision.yml
+- text: Get-SPAppAutoProvisionConnection
+  href: Get-SPAppAutoProvisionConnection.yml
+- text: Set-SPAppAutoProvisionConnection
+  href: Set-SPAppAutoProvisionConnection.yml
+syntaxes:
+- >-
+  Disable-SPAppAutoProvision [-AssignmentCollection <SPAssignmentCollection>]
+   [-SiteSubscription <SPSiteSubscriptionPipeBind>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1--------------'
+  code: |-
+    Disable-SPAppAutoProvision
+  description: |-
+    This example disables app auto provisioning for the farm.
+    The app auto provisioning is enabled by default.
+    This setting overrides site subscription level setting.
+  summary: ""
+- title: '---------------EXAMPLE 2--------------'
+  code: |-
+    C:\PS>$subscription = Get-SPSiteSubscription https://Contoso.com
+
+    Disable-SPAppAutoProvision -SiteSubscription $subscription
+  description: |-
+    This example disables app auto provisioning for the site subscription for Contoso.Com site.
+    The app auto provisioning is enabled by default.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPSiteSubscriptionPipeBind" data-throw-if-not-resolved="False" />
+  name: SiteSubscription
+  description: |+
+    Specifies the site collection for which auto provisioning is to be disabled.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Disable-SPAppAutoProvision
+name: Disable-SPAppAutoProvision
+description: |-
+  Use the Disable-SPAppAutoProvision cmdlet to disable automatic provisioning of an app to the farm.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/disable-spappautoprovision
+  applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Disable-SPAppAutoProvision
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

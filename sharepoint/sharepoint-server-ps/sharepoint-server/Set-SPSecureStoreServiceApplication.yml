@@ -1,0 +1,204 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets properties of a Secure Store Service application in the farm.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Set-SPSecureStoreServiceApplication -Identity <SPServiceApplicationPipeBind>
+   [-ApplicationPool <SPIisWebServiceApplicationPool>] [-AssignmentCollection <SPAssignmentCollection>]
+   [-AuditingEnabled] [-AuditlogMaxSize <Int32>] [-Confirm] [-DatabaseCredentials <PSCredential>]
+   [-DatabaseName <String>] [-DatabasePassword <SecureString>] [-DatabaseServer <String>]
+   [-DatabaseUsername <String>] [-FailoverDatabaseServer <String>] [-Sharing] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE------------------'
+  code: |-
+    Set-SPSecureStoreServiceApplication -Identity $contosoServApp -AuditlogMaxSize 40
+  description: |-
+    This example sets the maximum size of the audit log to 40 days for the given service application.
+  summary: ""
+parameters:
+- type: <xref href="SPIisWebServiceApplicationPool" data-throw-if-not-resolved="False" />
+  name: ApplicationPool
+  description: |+
+    Specifies the existing IIS application pool to run the Web service in for the new service application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AuditingEnabled
+  description: |+
+    Turns on auditing for the Secure Store Service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: AuditlogMaxSize
+  description: |+
+    Specifies the number of days to retain the audit log.
+
+    The type must be a valid integer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: DatabaseCredentials
+  description: |+
+    Specifies the PSCredential object that contains the user name and password to be used for database SQL authentication.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseName
+  description: |+
+    Specifies the name of the Secure Store service database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: DatabasePassword
+  description: |+
+    Specifies the password for the user specified in DatabaseUserName.
+    Use this parameter only if SQL authentication is used to access the metadata service application database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseServer
+  description: |+
+    Specifies the name of the host server for the database specified in DatabaseName.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseUsername
+  description: |+
+    Specifies the user name to use for connecting to the database for the Secure Store service application.
+    Use this parameter only if SQL authentication is used to access the service application database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FailoverDatabaseServer
+  description: |+
+    Specifies the name of the host server for the failover database server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the service application to update.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Sharing
+  description: |+
+    Specifies that the Secure Store Service application is published and shared across the farm.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPSecureStoreServiceApplication
+name: Set-SPSecureStoreServiceApplication
+description: |-
+  The `Set-SPSecureStoreServiceApplication` cmdlet sets properties of a Secure Store Service application in the farm.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spsecurestoreserviceapplication
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPSecureStoreServiceApplication
+  PlatyPS schema version: 2.0.0

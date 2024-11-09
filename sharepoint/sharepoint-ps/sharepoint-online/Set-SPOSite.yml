@@ -1,0 +1,1133 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets or updates one or more properties' values for a site collection.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Set-SPOTenant
+  href: Set-SPOTenant.yml
+syntaxes:
+- >-
+  Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [-Confirm]
+   [-DenyAddAndCustomizePages <Boolean>] [-LocaleId <UInt32>] [-LockState <String>] [-MediaTranscription <MediaTranscriptionPolicyType>] [-NoWait] [-Owner <String>]
+   [-ResourceQuotaWarningLevel <Double>]
+   [-SandboxedCodeActivationCapability <SandboxedCodeActivationCapabilities>]
+   [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>]
+   [-SharingCapability <SharingCapabilities>] [-StorageQuota <Int64>] [-StorageQuotaWarningLevel <Int64>]
+   [-Title <String>] [-WhatIf] [-AllowDownloadingNonWebViewableFiles <Boolean>]
+   [-CommentsOnSitePagesDisabled <Boolean>] [-SocialBarOnSitePagesDisabled <Boolean>]
+   [-DisableAppViews <AppViewsPolicy>]
+   [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>]
+   [-DisableFlows <FlowsPolicy>]
+   [-LoopDefaultSharingLinkScope <SharingScope>]
+   [-LoopDefaultSharingLinkRole <SharingRole>]
+   [-RestrictedToGeo <RestrictedToRegion>]
+   [-SharingAllowedDomainList <String>]
+   [-SharingBlockedDomainList <String>]
+   [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
+   [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>]
+   [-StorageQuotaReset]
+   [-DefaultSharingLinkType]
+   [-DefaultLinkPermission]
+   [-DefaultLinkToExistingAccess]
+   [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>]
+   [-AuthenticationContextName <String>]
+   [-LimitedAccessFileType <SPOLimitedAccessFileType>]
+   [-AllowEditing <Boolean>]
+   [-AnonymousLinkExpirationInDays <Int32>]
+   [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>]
+   [-OverrideTenantExternalUserExpirationPolicy <Boolean>]
+   [-ExternalUserExpirationInDays <Int32>]
+   [-SensitivityLabel <String>]
+   [-RequestFilesLinkExpirationInDays <Int32>]
+   [-RequestFilesLinkEnabled <Boolean>]
+   [-RemoveLabel]
+   [-BlockDownloadPolicy <Boolean>]
+   [-OverrideBlockUserInfoVisibility <String>]
+   [-OverrideSharingCapability <Boolean>]
+   [-DefaultShareLinkScope <SharingScope>]
+   [-DefaultShareLinkRole <SharingRole>]
+   [-HidePeoplePreviewingFiles <Boolean>]
+   [-HidePeopleWhoHaveListsOpen <Boolean>]
+   [<CommonParameters>]
+- Set-SPOSite [-Identity] <SpoSitePipeBind> [-EnablePWA <Boolean>] [-Confirm] [-WhatIf] [<CommonParameters>]
+- >-
+  Set-SPOSite [-Identity] <SpoSitePipeBind> [-Confirm] [-DisableSharingForNonOwners] [-WhatIf]
+   [<CommonParameters>]
+- >-
+  Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [-Confirm]
+   [-DenyAddAndCustomizePages <Boolean>] [-LocaleId <UInt32>] [-LockState <String>] [-NoWait] [-Owner <String>]
+   [-ResourceQuotaWarningLevel <Double>]
+   [-SandboxedCodeActivationCapability <SandboxedCodeActivationCapabilities>]
+   [-SharingCapability <SharingCapabilities>] [-StorageQuota <Int64>] [-StorageQuotaWarningLevel <Int64>]
+   [<CommonParameters>]
+- >-
+  Set-SPOSite [-Identity] <SpoSitePipeBind>
+   [-EnableAutoExpirationVersionTrim <Boolean>]
+   [-MajorVersionLimit <int>]
+   [-MajorWithMinorVersionsLimit <int>]
+   [-ExpireVersionsAfterDays <int>]
+   [-ApplyToNewDocumentLibraries]
+   [-ApplyToExistingDocumentLibraries]
+   [-InheritVersionPolicyFromTenant]
+   [<CommonParameters>]
+- Set-SPOSite [-Identity] <SpoSitePipeBind> [-ClearGroupId] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -Owner joe.healy@contoso.com -NoWait
+  description: |-
+    Example 1 updates the owner of site collection <https://contoso.sharepoint.com/sites/site1> to the person whose email address is joe.healy@contoso.com. This cmdlet is executed immediately without delay.
+  summary: ""
+- title: Example 2
+  code: |-
+    Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -StorageQuota 1024
+  description: |-
+    Example 2 updates the settings of site collection <https://contoso.sharepoint.com/sites/site1.> The storage quota is updated to 1024 megabytes (1 GB).
+  summary: ""
+- title: Example 3
+  code: |-
+    Set-SPOSite -Identity https://contoso.sharepoint.com -StorageQuota 1500 -StorageQuotaWarningLevel 1400
+  description: |-
+    This example updates the settings of site collection <https://contoso.sharepoint.com.> The storage quota is updated to 1500 megabytes and the storage quota warning level is updated to 1400 megabytes.
+  summary: ""
+- title: Example 4
+  code: |-
+    Set-SPOSite -Identity https://contoso.sharepoint.com -DisableSharingForNonOwners
+  description: |-
+    Example 4 prevents non-owners of a site from inviting new users to the site.
+  summary: ""
+- title: Example 5
+  code: |-
+    Set-SPOSite -Identity https://contoso.sharepoint.com/sites/groupname -StorageQuota 3000 -StorageQuotaWarningLevel 2000
+  description: |-
+    This example sets the quota for the site.
+
+    > [!NOTE]
+    > If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.
+  summary: ""
+- title: Example 6
+  code: |-
+    Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnablePWA $true
+  description: |-
+    Example 6 enables the site "site1" to create  Project Web Applications (PWA).
+  summary: ""
+- title: Example 7
+  code: |-
+    Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -SharingCapability ExternalUserSharingOnly
+    Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -SharingDomainRestrictionMode AllowList -SharingAllowedDomainList "contoso.com"
+  description: |-
+    Example 7 sets the Sharing Capability to allow external users who accept sharing invitations and sign in as authenticated users, and then specifies an email domain that is allowed for sharing with the external collaborators.
+  summary: ""
+- title: Example 8
+  code: |-
+    Set-SPOSite -Identity https://contoso.sharepoint.com/sites/research -AddInformationSegment a17efb47-e3c9-4d85-a188-1cd59c83de32
+  description: |-
+    This example adds InformationSegment 'a17efb47-e3c9-4d85-a188-1cd59c83de32' to the site.
+  summary: ""
+- title: Example 9
+  code: |-
+    Set-SPOSite -Identity https://contoso.sharepoint.com/sites/research -RemoveInformationSegment a17efb47-e3c9-4d85-a188-1cd59c83de32
+  description: |-
+    In example, InformationSegment 'a17efb47-e3c9-4d85-a188-1cd59c83de32' is removed from the site.
+  summary: ""
+- title: Example 10
+  code: |-
+    Set-SPOSite -Identity https://contoso.sharepoint.com/sites/research -ConditionalAccessPolicy AuthenticationContext -AuthenticationContextName "MFA"
+  description: |-
+    In this example, an authentication context called MFA is attached to the site.
+  summary: ""
+- title: Example 11
+  code: |-
+    Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $true
+  description: |-
+    Example 11 sets automatic version history limits at site level. Automatic setting will be applied to all new document libraries created in the site and a background request will be created to asynchronously process the update on existing document libraries that have versioning enabled.
+  summary: ""
+- title: EXAMPLE 12
+  code: |-
+    Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -MajorWithMinorVersionsLimit 20 -ExpireVersionsAfterDays 30
+  description: |-
+    Example 12 sets manual version history limits at site level by limiting the number of versions and the time (in days) versions are kept. The new document libraries will use this version setting. Also it creates a job to set this manual version setting for existing document libraries that enabled versioning.
+  summary: ""
+- title: EXAMPLE 13
+  code: |-
+    Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -MajorWithMinorVersionsLimit 20 -ExpireVersionsAfterDays 0
+  description: |-
+    Example 13 sets manual version history limits at site level by limiting the number of versions with no time limits. The new document libraries will use this version setting. Also it creates a job to set this manual version setting for existing document libraries that enabled versioning.
+  summary: ""
+- title: Example 14
+  code: |-
+    Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $true -ApplyToNewDocumentLibraries
+  description: |-
+    Example 14 sets automatic version history limits at site level. The new document libraries will use this version setting.
+  summary: ""
+- title: EXAMPLE 15
+  code: |-
+    Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 30 -ApplyToNewDocumentLibraries
+  description: |-
+    Example 15 sets manual version history limits at site level by limiting the number of versions and the time (in days) versions are kept. The new document libraries will use this version setting.
+  summary: ""
+- title: EXAMPLE 16
+  code: |-
+    Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 0 -ApplyToNewDocumentLibraries
+  description: |-
+    Example 16 sets manual version history limits at site level by limiting the number of versions with no time limits. The new document libraries will use this version setting.
+  summary: ""
+- title: Example 17
+  code: |-
+    Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $true -ApplyToExistingDocumentLibraries
+  description: |-
+    Example 17 creates a job to set automatic version history limits for existing document libraries that enabled versioning.
+  summary: ""
+- title: EXAMPLE 18
+  code: |-
+    Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -MajorWithMinorVersionsLimit 20 -ExpireVersionsAfterDays 30 -ApplyToExistingDocumentLibraries
+  description: |-
+    Example 18 creates a job to set manual version history limits that limits the number of versions and the time (in days) versions are kept for existing document libraries that enabled versioning.
+  summary: ""
+- title: EXAMPLE 19
+  code: |-
+    Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -MajorWithMinorVersionsLimit 20 -ExpireVersionsAfterDays 0 -ApplyToExistingDocumentLibraries
+  description: |-
+    Example 19 creates a request to set manual version history limits that limits the number of versions with no time limits for existing document libraries that enabled versioning.
+  summary: ""
+- title: EXAMPLE 20
+  code: |-
+    Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -InheritVersionPolicyFromTenant
+  description: |-
+    Example 20 clears the file version setting at site level. The new document libraries will use the Tenant Level setting. It won't impact the existing document libraries.
+  summary: ""
+parameters:
+- type: <xref href="GUID" data-throw-if-not-resolved="False" />
+  name: AddInformationSegment
+  description: |+
+    This parameter allows you to add a segment to a SharePoint site. This parameter is only applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read https://learn.microsoft.com/sharepoint/information-barriers documentation to understand Information barriers in SharePoint Online.
+
+    **Note**: This parameter is available only in SharePoint Online Management Shell Version 16.0.19927.12000 or later.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowDownloadingNonWebViewableFiles
+  description: |+
+    Specifies if non web viewable files can be downloaded.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowEditing
+  description: |+
+    Prevents users from editing Office files in the browser and copying and pasting Office file contents out of the browser window.
+
+    PARAMVALUE: $true | $false
+
+  defaultValue: "True"
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AllowSelfServiceUpgrade
+  description: |+
+    Determines whether site collection administrators can upgrade their site collections.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: AnonymousLinkExpirationInDays
+  description: |+
+    Specifies all anonymous/anyone links that have been created (or will be created) will expire after the set number of days. Only applies if OverrideTenantAnonymousLinkExpirationPolicy is set to true.
+
+    The valid number should be between 1 and 730. To remove the expiration requirement, set the value to zero (0).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ApplyToExistingDocumentLibraries
+  description: |+
+    Create a job to apply the version history limits setting to existing document libraries.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ApplyToNewDocumentLibraries
+  description: |+
+    Apply the version history limits setting to new document libraries.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AuthenticationContextName
+  description: |+
+    The conditional access authentication context name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="BlockDownloadLinksFileTypes" data-throw-if-not-resolved="False" />
+  name: BlockDownloadLinksFileType
+  description: |+
+    The valid values are:
+
+    - WebPreviewableFiles
+    - ServerRenderedFilesOnly
+
+    **Note**: ServerRendered (Office Only) and WebPreviewable (All supported files).
+
+    The site's value is compared with the tenant level setting and the stricter one wins. For example, if the tenant is set to ServerRenderedFilesOnly then that will be used even if the site is set to WebPreviewableFiles.
+
+  defaultValue: WebPreviewableFiles
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: BlockDownloadPolicy
+  description: |+
+    As a SharePoint administrator in Microsoft 365, you can block the download of files from SharePoint sites or OneDrive. This feature does not need Microsoft Entra Conditional Access policies. This feature can be set for individual sites but not at the organization level.
+
+    Blocking the download of files allows users to remain productive while addressing the risk of accidental data loss. Users have browser-only access with no ability to download, print, or sync files. They also won't be able to access content through apps, including the Microsoft Office desktop apps. When web access is limited, users will see the following message at the top of sites: "Your organization doesn't allow you to download, print, or sync from this site. For help contact your IT department." Read the full documentation for advanced capabilities at [Block download policy for SharePoint sites and OneDrive](https://learn.microsoft.com/sharepoint/block-download-from-sites).
+
+    PARAMVALUE: $true | $false
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ClearGroupId
+  description: |+
+    This parameter allows you to remove the assigned Microsoft 365 group ID on a site, when the group is permanently deleted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: CommentsOnSitePagesDisabled
+  description: |+
+    Use this parameter to disable Comments section on Site Pages.
+    The parameter can't be used for Groups Site Collections.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SPOConditionalAccessPolicyType" data-throw-if-not-resolved="False" />
+  name: ConditionalAccessPolicy
+  description: |+
+    Please read [Control access from unmanaged devices](/sharepoint/control-access-from-unmanaged-devices) documentation here to understand Conditional Access Policy usage in SharePoint Online.
+
+    Possible values:
+    - AllowFullAccess: Allows full access from desktop apps, mobile apps, and the web.
+    - AllowLimitedAccess: Allows limited, web-only access.
+    - BlockAccess: Blocks Access.
+    - AuthenticationContext: Assign a Microsoft Entra authentication context. Must add the AuthenticationContextName. Please read [Configure authentication contexts](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps#configure-authentication-contexts).
+
+
+  defaultValue: AllowFullAccess
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SharingPermissionType" data-throw-if-not-resolved="False" />
+  name: DefaultLinkPermission
+  description: |+
+    The default link permission for the site collection. To be replaced by DefaultShareLinkRole.
+
+    PARAMVALUE: None | View | Edit
+
+    - None - Respect the organization default link permission
+    - View - Sets the default link permission for the site to "view" permissions
+    - Edit - Sets the default link permission for the site to "edit" permissions
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SharingLinkType" data-throw-if-not-resolved="False" />
+  name: DefaultLinkToExistingAccess
+  description: |+
+    When set to TRUE, the DefaultSharingLinkType will be overriden and the default sharing link will a People with Existing Access link (which does not modify permissions). When set to FALSE (the default), the DefaultSharingLinkType parameter controls the default sharing link type.
+
+    PARAMVALUE: $true | $false
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SharingRole" data-throw-if-not-resolved="False" />
+  name: DefaultShareLinkRole
+  description: |+
+    The default share link role for the site collection. It replaces `DefaultLinkPermission`.
+
+    The valid values are:  
+
+    - Edit
+    - None
+    - RestrictedView
+    - Review
+    - View
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SharingScope" data-throw-if-not-resolved="False" />
+  name: DefaultShareLinkScope
+  description: |+
+    The default share link scope on the site. It replaces `DefaultSharingLinkType`.
+
+    The valid values are:  
+
+    - Anyone
+    - Organization
+    - SpecificPeople
+    - Uninitialized
+
+  defaultValue: Uninitialized
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SharingLinkType" data-throw-if-not-resolved="False" />
+  name: DefaultSharingLinkType
+  description: |+
+    The default link type for the site collection. To be replaced by DefaultShareLinkScope.
+
+    PARAMVALUE: None | AnonymousAccess | Internal | Direct
+
+    - None - Respect the organization default sharing link type
+    - AnonymousAccess - Sets the default sharing link for this site to an Anonymous Access or Anyone link
+    - Internal - Sets the default sharing link for this site to the "organization" link or company shareable link
+    - Direct - Sets the default sharing link for this site to the "Specific people" link
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: DenyAddAndCustomizePages
+  description: |+
+    Determines whether the Add And Customize Pages right is denied on the site collection.
+    For more information about permission levels, see User permissions and permission levels in SharePoint.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="AppViewsPolicy" data-throw-if-not-resolved="False" />
+  name: DisableAppViews
+  description: |+
+    **Note**: This parameter has been retired and no longer functions.
+
+    Disables the Power Apps button.
+    Possible values:
+
+    - Disabled
+    - NotDisabled
+    - Unknown (not settable)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="CompanyWideSharingLinksPolicy" data-throw-if-not-resolved="False" />
+  name: DisableCompanyWideSharingLinks
+  description: |+
+    Disables People in your organization links. For more information, see [People in your organization sharing links](https://learn.microsoft.com/microsoft-365/solutions/microsoft-365-limit-sharing#people-in-your-organization-sharing-links).
+
+    Possible values
+
+    - Disabled
+    - NotDisabled
+    - Unknown (not settable)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="FlowsPolicy" data-throw-if-not-resolved="False" />
+  name: DisableFlows
+  description: |+
+    **Note**: This parameter has been retired and no longer functions.
+
+    Disables the Power Automate button.
+    Possible values
+
+    - Disabled
+    - NotDisabled
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableSharingForNonOwners
+  description: |+
+    This parameter prevents non-owners from inviting new users to the site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnableAutoExpirationVersionTrim
+  description: |+
+    SharePoint Administrators can set site-level version history limit settings that universally apply to new versions created on all new document libraries created on the site. Also can create request to set the version setting for existing libraries that enabled versioning.
+
+    When version history limits are managed automatically, SharePoint employs an algorithm behind the scenes that deletes (thins out) intermittent older versions that are least likely to be needed, while preserving sufficient high-value versions - more versions in the recent past and fewer farther back in time - in case restores are required.
+
+    The valid values are:
+
+    - True - Version history limits for new versions created on new/existing document libraries in the site will be managed automatically.
+    - False - Version history limits for new Versions created on new/existing document libraries in the site will be managed manually by setting limits to the number of major versions (`MajorVersionLimit`), number of major with minor versions (`MajorWithMinorVersionsLimit`) and time set (`ExpireVersionsAfterDays`). Review the documentation of both parameters to manage your organization's version limits manually.
+
+    > [!NOTE]
+    > When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), `MajorVersionLimit` and `ExpireVersionsAfterDays` are both required parameters, `MajorWithMinorVersionsLimit` is also required for creating request for setting existing document libraries with the following acceptable values:
+    > a. `MajorVersionLimit` accepts values from 1 through 50,000 (inclusive).
+    > b. `MajorWithMinorVersionsLimit` accepts values from 0 through 50,000 (inclusive).
+    > c. `ExpireVersionsAfterDays` accepts values of 0 to Never Expire or values >= 30 to delete versions that exceed that time period.
+    > When version history limits are managed automatically (`EnableAutoExpirationVersionTrim $true`), setting `MajorVersionLimit` or `ExpireVersionsAfterDays` will result in an error as the count limits are set by the service.
+
+    PARAMVALUE: $true | $false
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EnablePWA
+  isRequired: true
+  description: |+
+    Determines whether site can include Project Web App.
+    For more information about Project Web App, see Plan SharePoint groups in Project Server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ExpireVersionsAfterDays
+  description: |+
+    When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), admins will need to set the limits to the number of major versions (`MajorVersionLimit`), the number of major with minor versions (`MajorWithMinorVersionsLimit`) and the time period the versions are stored (`ExpireVersionsAfterDays`). Please check the description of `EnableAutoExpirationVersionTrim` for more details.
+
+    PARAMVALUE: Int32
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ExternalUserExpirationInDays
+  description: |+
+    Specifies all external user expiration which will expire after the set number of days. Only applies if OverrideTenantExternalUserExpirationPolicy is set to true.
+
+    The maximum value is 730. To remove the expiration requirement, set the value to zero (0).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: HidePeoplePreviewingFiles
+  description: |+
+    This setting disables the feature in OneDrive and SharePoint file previewing that displays the presence of other users on the file. It does not affect any experiences outside of the previewer. 
+
+    PARAMVALUE: False | True
+
+    If set to True, the presence of other users on the file will no longer be displayed.
+
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: HidePeopleWhoHaveListsOpen
+  description: |+
+    This setting disables the feature in Microsoft Lists that displays the presence of other users on the list and its items when they are viewing.
+
+    PARAMVALUE: False | True
+
+    If set to True, the presence of other users on the list and its items will no longer be displayed. List presence is enabled by default.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the URL of the site collection to update.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: InheritVersionPolicyFromTenant
+  description: |+
+    Clear the file version setting at site level. The new document libraries will use the Tenant Level setting. It won't impact the existing document libraries.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SPOLimitedAccessFileType" data-throw-if-not-resolved="False" />
+  name: LimitedAccessFileType
+  description: |+
+    The following parameters can be used with -ConditionalAccessPolicy AllowLimitedAccess for both the organization-wide setting and the site-level setting.
+
+    - OfficeOnlineFilesOnly: Allows users to preview only Office files in the browser. This option increases security but may be a barrier to user productivity.
+
+    - LimitedAccessFileType WebPreviewableFiles (default): Allows users to preview Office files and other file types (such as PDF files and images) in the browser. Note that the contents of file types other than Office files are handled in the browser. This option optimizes for user productivity but offers less security for files that aren't Office files.
+
+    - LimitedAccessFileType OtherFiles: Allows users to download files that can't be previewed, such as .zip and .exe. This option offers less security.
+
+  defaultValue: WebPreviewableFiles
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: LocaleId
+  description: |+
+    Specifies the language of this site collection.
+    For more information, see [MS-OE376, LCID](https://learn.microsoft.com/openspecs/office_standards/ms-oe376/6c085406-a698-4e12-9d4d-c3b0ee3dbc4a).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LockState
+  description: |+
+    Sets the lock state on a site.
+    Valid values are: NoAccess, ReadOnly and Unlock.
+    When the lock state of a site is ReadOnly, a message will appear on the site stating that the site is under maintenance and it is read-only.
+    When the lock state of a site is NoAccess, all traffic to the site will be blocked.
+    If parameter NoAccessRedirectUrl in the `Set-SPOTenant` cmdlet is set, traffic to sites that have a lock state NoAccess will be redirected to that URL.
+    If parameter NoAccessRedirectUrl is not set, a 403 error will be returned.
+    It isn't possible to set the lock state on the root site collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SharingRole" data-throw-if-not-resolved="False" />
+  name: LoopDefaultSharingLinkRole
+  description: |+
+    Gets or sets default share link role for fluid on the site.
+
+    The valid values are:  
+
+    - Edit
+    - None
+    - RestrictedView
+    - Review
+    - View
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SharingScope" data-throw-if-not-resolved="False" />
+  name: LoopDefaultSharingLinkScope
+  description: |+
+    Gets or sets default share link scope for fluid on the site.
+
+    The valid values are:  
+
+    - Anyone
+    - Organization
+    - SpecificPeople
+    - Uninitialized
+
+  defaultValue: Uninitialized
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MajorVersionLimit
+  description: |+
+    When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), admins will need to set the limits to the number of major versions (`MajorVersionLimit`) and the time period the versions are stored (`ExpireVersionsAfterDays`). Please check the description of `EnableAutoExpirationVersionTrim` for more details.
+
+    PARAMVALUE: Int32
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MajorWithMinorVersionsLimit
+  description: |+
+    When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), admins will need to set the limits to the number of major versions (`MajorVersionLimit`), the number of major with minor versions (`MajorWithMinorVersionsLimit`) and the time period the versions are stored (`ExpireVersionsAfterDays`). Please check the description of `EnableAutoExpirationVersionTrim` for more details.
+
+    PARAMVALUE: Int32
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="MediaTranscriptionPolicyType" data-throw-if-not-resolved="False" />
+  name: MediaTranscription
+  description: |+
+    When the feature is enabled, videos can have transcripts generated on demand or generated automatically in certain scenarios. This is the default because the policy is default on. If a video owner decides they don't want the transcript, they can always hide or delete it from that video. 
+    Possible values:
+
+    - Enabled
+    - Disabled
+
+  defaultValue: Enabled
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoWait
+  description: |+
+    Specifies to continue executing script immediately.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OverrideBlockUserInfoVisibility
+  description: |+
+    Choose whether to override the Block User Info Visibility policy on this site.
+
+    PARAMVALUE: 
+
+    - OrganizationDefault (default) - Respect the organization-level Block User Info Visibility policy.
+
+    - ApplyToNoUsers  - No users are prevented from accessing User Info when they have Limited Access permission only on the site.
+
+    - ApplyToAllUsers - All users (internal or external) are prevented from accessing User Info if they have Limited Access permission only on the site.
+
+    - ApplyToGuestAndExternalUsers - Only external or guest users are prevented from accessing User Info if they have Limited Access permission only on the site.
+
+    - ApplyToInternalUsers - Only internal users are prevented from accessing User Info if they have Limited Access permission only on the site.
+
+  defaultValue: OrganizationDefault
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: OverrideSharingCapability
+  description: |+
+    Determines whether it should override the sharing capability on its partition. For example, if the tenant sharing capability is `ExternalUserAndGuestSharing`, the core partition sharing capability is `Disabled`, and the sharing capability defined on the site collection is `ExternalUserAndGuestSharing`, the effective site sharing capability should be `Disabled` (the most restrictive one among tenant, partition, and site collecction) if `OverrideSharingCapability` is `false`. If `OverrideSharingCapability` is `true`, it skips checking partition sharing capability and the effective site sharing capability should be `ExternalUserAndGuestSharing`.
+
+    PARAMVALUE: False | True
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: OverrideTenantAnonymousLinkExpirationPolicy
+  description: |+
+    Choose whether to override the anonymous or anyone link expiration policy on this site.
+
+    PARAMVALUE: None | False | True
+
+    - None - Respect the organization-level policy for anonymous or anyone link expiration
+    - False - Respect the organization-level policy for anonymous or anyone link expiration
+    - True - Override the organization-level policy for anonymous or anyone link expiration (can be more or less restrictive)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: OverrideTenantExternalUserExpirationPolicy
+  description: |+
+    Choose whether to override the external user expiration policy on this site.
+
+    Possible values:
+
+    - None: Respect the organization-level policy for external user expiration.
+    - False: Respect the organization-level policy for external user expiration.
+    - True: Override the organization-level policy for external user expiration (can be more or less restrictive).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Owner
+  description: |+
+    Specifies the owner of the site collection. Changing the Owner of a OneDrive is not supported and causes many experiences to break.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="GUID" data-throw-if-not-resolved="False" />
+  name: RemoveInformationSegment
+  description: |+
+    This parameter allows you to remove a segment from a SharePoint site. This parameter is only applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read https://learn.microsoft.com/sharepoint/information-barriers documentation to understand Information barriers with SharePoint Online.
+
+    **Note**: This parameter is available only in SharePoint Online Management Shell Version 16.0.19927.12000 or later.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: RemoveLabel
+  description: |+
+    This parameter allows you to remove the assigned sensitivity label on a site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: RequestFilesLinkEnabled
+  description: |+
+    Enables or disables the Request Files link on the site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: RequestFilesLinkExpirationInDays
+  description: |+
+    Specifies the number of days before a Request Files link expires for the site.
+
+    The value can be from 0 to 730 days.
+
+  defaultValue: "-1"
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Double" data-throw-if-not-resolved="False" />
+  name: ResourceQuotaWarningLevel
+  description: |+
+    Specifies the warning level in megabytes of the site collection to warn the site collection administrator that the site is approaching the resource quota.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="RestrictedToRegion" data-throw-if-not-resolved="False" />
+  name: RestrictedToGeo
+  description: |+
+    PARAMVALUE: NoRestriction | BlockMoveOnly | BlockFull | Unknown
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SandboxedCodeActivationCapabilities" data-throw-if-not-resolved="False" />
+  name: SandboxedCodeActivationCapability
+  description: |+
+    PARAMVALUE: Unknown | Check | Disabled | Enabled
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SensitivityLabel
+  description: |+
+    Used to specify the unique identifier (GUID) of the SensitivityLabel.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SharingAllowedDomainList
+  description: |+
+    Specifies a list of email domains that are allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
+
+    For additional information about how to restrict a domain sharing, see [Restrict sharing of SharePoint and OneDrive content by domain](https://learn.microsoft.com/sharepoint/restricted-domains-sharing).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SharingBlockedDomainList
+  description: |+
+    Specifies a list of email domains that are blocked or prohibited for sharing with the external collaborators. Use space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
+
+    For additional information about how to restrict a domain sharing, see [Restrict sharing of SharePoint and OneDrive content by domain](https://learn.microsoft.com/sharepoint/restricted-domains-sharing).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SharingCapabilities" data-throw-if-not-resolved="False" />
+  name: SharingCapability
+  description: |+
+    Determines what level of sharing is available for the site.
+
+    The valid values are:  
+
+    - Disabled - Sharing outside your organization is disabled.
+    - ExistingExternalUserSharingOnly - Allow sharing only with the external users that already exist in your organization's directory.
+    - ExternalUserSharingOnly - External user sharing (share by email) is enabled, but anonymous link sharing is disabled.
+    - ExternalUserAndGuestSharing - External user sharing (share by email) and anonymous link sharing are both enabled.
+
+    For more information about sharing, see Turn external sharing on or off for SharePoint Online (<https://learn.microsoft.com/sharepoint/turn-external-sharing-on-or-off>).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SharingDomainRestrictionModes" data-throw-if-not-resolved="False" />
+  name: SharingDomainRestrictionMode
+  description: |+
+    Specifies the sharing mode for external domains.
+
+    Possible values are:
+
+    - None - Do not restrict sharing by domain
+    - AllowList - Sharing is allowed only with external users that have account on domains specified with -SharingAllowedDomainList
+    - BlockList - Sharing is allowed with external users in all domains except in domains specified with -SharingBlockedDomainList
+
+    For additional information about how to restrict a domain sharing, see [Restrict sharing of SharePoint and OneDrive content by domain](https://learn.microsoft.com/sharepoint/restricted-domains-sharing).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ShowPeoplePickerSuggestionsForGuestUsers
+  description: |+
+    To enable the option to search for existing guest users at site collection level, set this parameter to $true.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: SocialBarOnSitePagesDisabled
+  description: |+
+    Disables or enables the Social Bar for Site Collection.
+
+    The Social Bar will appear on all modern SharePoint pages with the exception of the home page of a site. It will give users the ability to like a page, see the number of views, likes, and comments on a page, and see the people who have liked a page.
+
+    PARAMVALUE: $true | $false
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Int64" data-throw-if-not-resolved="False" />
+  name: StorageQuota
+  description: |+
+    Specifies the storage quota in megabytes of the site collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: StorageQuotaReset
+  description: |+
+    Resets the OneDrive for Business storage quota to the tenant's new default storage space.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Int64" data-throw-if-not-resolved="False" />
+  name: StorageQuotaWarningLevel
+  description: |+
+    Specifies the warning level in megabytes of the site collection to warn the site collection administrator that the site is approaching the storage quota.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Title
+  description: |+
+    Specifies the title of the site collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    The WhatIf switch doesn't work on this cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Set-SPOSite
+name: Set-SPOSite
+description: |-
+  For any parameters that are passed in, the `Set-SPOSite` cmdlet sets or updates the setting for the site collection identified by parameter Identity.
+
+  You must be a SharePoint Online administrator and be a site collection administrator to run the cmdlet.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+
+  For OneDrive for Business site collection, the only valid parameters are Identity, AllowDownloadingNonWebViewableFiles, AllowEditing, ConditionalAccessPolicy, DefaultLinkPermission, DefaultSharingLinkType, DisableCompanyWideSharingLinks, LimitedAccessFileType, LockState, Owner, SharingAllowedDomainList, SharingBlockedDomainList, SharingCapability, SharingDomainRestrictionMode, ShowPeoplePickerSuggestionsForGuestUsers, StorageQuota, and StorageWarningLevel.
+
+  For Groups site collection, the only valid parameters  are Identity, AllowSelfServiceUpgrade, DefaultLinkPermission, DefaultSharingLinkType, DenyAddAndCustomizePages, DisableCompanyWideSharingLinks, DisableSharingForNonOwners, LockState, Owner, ResourceQuota, ResourceQuotaWarningLevel, SandboxedCodeActivationCapability, SharingCapability, ShowPeoplePickerSuggestionsForGuestUsers, SocialBarOnSitePagesDisabled, StorageQuota, StorageQuotaReset, and StorageQuotaWarningLevel.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-sposite
+  applicable: SharePoint Online
+  title: Set-SPOSite
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

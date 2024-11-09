@@ -1,0 +1,50 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets details about list designs that are on the SharePoint tenant. You can specify an ID of a specific list design to retrieve. If there are no parameters listed, details about all list designs are listed.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Online.SharePoint.PowerShell.SPOListDesignPipeBind" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-SPOListDesign [[-Identity] <SPOListDesignPipeBind>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-SPOListDesign -Identity 44252d09-62c4-4913-9eb0-a2a8b8d7f863 
+
+    Id: 44252d09-62c4-4913-9eb0-a2a8b8d7f863  
+    Title: Contoso customer tracking  
+    SiteScriptIds: {1306913c-8463-42ca-bd63-efad0fcdbba4}  
+    Description: Tracks key customer data in a list 
+    ListColor: Orange 
+    ListIcon: BullseyeTarget
+  description: |-
+    This example and sample response show how to get list design details.
+  summary: ""
+parameters:
+- type: <xref href="SPOListDesignPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The ID of the list design to retrieve. 
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOListDesign
+name: Get-SPOListDesign
+description: |-
+  Gets details about list designs that are on the SharePoint tenant. You can specify an ID of a specific list design to retrieve. If there are no parameters listed, details about all list designs are listed.
+metadata:
+  external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spolistdesign
+  PlatyPS schema version: 2.0.0
+  author: SaladiHarini
+  ms.author: hasaladi
+  title: Get-SPOListDesign

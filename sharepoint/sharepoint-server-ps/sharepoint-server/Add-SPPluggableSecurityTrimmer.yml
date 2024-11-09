@@ -1,0 +1,126 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a pluggable security trimmer to a Profile service application proxy.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Add-SPPluggableSecurityTrimmer -UserProfileApplicationProxyId <Guid> -PlugInId <Int32>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-QualifiedTypeName <String>] [-WhatIf]
+   [-CustomProperties <NameValueCollection>] [<CommonParameters>]
+examples:
+- title: '----------------EXAMPLE 1--------------------'
+  code: |-
+    $proxy = Get-SPServiceApplicationProxy | ? {$_.TypeName -eq 'User Profile Service Application Proxy'}
+    Add-SPPluggableSecurityTrimmer -UserProfileApplicationProxyId $proxy.Id -PlugInId 0
+  description: |-
+    This example adds a pluggable security trimmer that is related to the User Profile service application proxy.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="NameValueCollection" data-throw-if-not-resolved="False" />
+  name: CustomProperties
+  description: |+
+    {{Fill CustomProperties Description}}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: PlugInId
+  isRequired: true
+  description: |+
+    The index of the pluggable security trimmer must have an integer value greater than or equal to zero.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: QualifiedTypeName
+  description: |+
+    Specifies the qualified type name of the class that implements the pluggable security trimmer.
+
+    The type must be a valid qualified type name, in the form Microsoft.Office.Server.SocialData.SocialSecurityTrimmer,Microsoft.Office.Server.UserProfiles,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: UserProfileApplicationProxyId
+  isRequired: true
+  description: |+
+    Specifies the ID of the User Profile service application proxy to which you are adding the pluggable security trimmer.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Add-SPPluggableSecurityTrimmer
+name: Add-SPPluggableSecurityTrimmer
+description: |-
+  Use the Add-SPPluggableSecurityTrimmer cmdlet to add a specified pluggable security trimmer to a User Profile service application proxy.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/add-sppluggablesecuritytrimmer
+  applicable: SharePoint Server Subscription Edition
+  title: Add-SPPluggableSecurityTrimmer
+  PlatyPS schema version: 2.0.0

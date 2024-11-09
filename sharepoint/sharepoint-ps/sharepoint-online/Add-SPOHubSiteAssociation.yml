@@ -1,0 +1,61 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Associates a site with a hub site.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: |-
+  If the site or hub site doesn't exist, this cmdlet returns a "File not found" error.
+
+  If the site is already a hub site, this cmdlet returns a "This site is already a HubSite" error.
+
+  In multi-geo situations, when assigning a hub that is across geo locations, you must pass the site ID of the hub site to the HubSite parameter as a URL will fail.
+syntaxes:
+- Add-SPOHubSiteAssociation [-Site] <SpoSitePipeBind> -HubSite <SpoHubSitePipeBind> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Add-SPOHubSiteAssociation https://contoso.sharepoint.com/sites/Research -HubSite https://contoso.sharepoint.com/sites/Marketing
+  description: |-
+    This example associates the research site with the marketing hub site.
+  summary: ""
+parameters:
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: HubSite
+  isRequired: true
+  description: |+
+    URL or Site ID of the hub site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Site
+  isRequired: true
+  description: |+
+    URL of the site to join to the hub site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Add-SPOHubSiteAssociation
+name: Add-SPOHubSiteAssociation
+description: |-
+  Use this cmdlet to associate a site with a hub site.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/add-spohubsiteassociation
+  applicable: SharePoint Online
+  title: Add-SPOHubSiteAssociation
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

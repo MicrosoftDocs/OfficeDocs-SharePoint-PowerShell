@@ -1,0 +1,134 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  **Note**: This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](https://learn.microsoft.com/sharepointmigration/overview-spmt-ps-cmdlets).
+
+  Creates a new migration job in the target site collection.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Upload on-premises content to SharePoint Online using PowerShell cmdlets
+  href: https://support.office.com/en-us/article/upload-on-premises-content-to-sharepoint-online-using-powershell-cmdlets-555049c6-15ef-45a6-9a1f-a1ef673b867c
+- text: Get-SPOAppErrors
+  href: Get-SPOAppErrors.yml
+syntaxes:
+- >-
+  Invoke-SPOMigrationEncryptUploadSubmit -Credentials <CredentialCmdletPipeBind>
+   -MigrationSourceLocations <MigrationPackageLocation> [-NoLogFile] -TargetWebUrl <String> [<CommonParameters>]
+- >-
+  Invoke-SPOMigrationEncryptUploadSubmit -Credentials <CredentialCmdletPipeBind> [-NoLogFile]
+   -SourceFilesPath <String> -SourcePackagePath <String> -TargetWebUrl <String> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    $job = Invoke-SPOMigrationEncryptUploadSubmit -SourceFilesPath $sourceFiles -SourcePackagePath $spoPackagePath -Credentials $cred -TargetWebUrl $targetWebUrl
+  description: |-
+    This example shows how to submit package data to create a new migration job
+  summary: ""
+- title: Example 2
+  code: |-
+    $sourceFiles = "sourceFiles"
+    $spoPackagePath = "packagePath"
+    $credentials = Get-Credential
+    $targetweburl = "https://contoso.sharepoint.com"
+    Invoke-SPOMigrationEncryptUploadSubmit -SourceFilesPath $sourceFiles -SourcePackagePath $spoPackagePath -Credentials $credentials -TargetWebUrl $targetweburl
+  description: |-
+    This example shows how to submit package data to create a new migration job.
+
+    This article contains the steps on how to create this package: <https://support.office.com/en-us/article/upload-on-premises-content-to-sharepoint-online-using-powershell-cmdlets-555049c6-15ef-45a6-9a1f-a1ef673b867c>
+  summary: ""
+- title: Example 3
+  code: |-
+    $jobs = $finalPackages | % {Invoke-SPOMigrationEncryptUploadSubmit -SourceFilesPath $_.FilesDirectory.FullName -SourcePackagePath $_.PackageDirectory.FullName -Credentials $cred -TargetWebUrl $targetWeb}
+  description: ""
+  summary: |+
+    This example shows how to submit package data to create new migration jobs for parallel import.
+
+parameters:
+- type: <xref href="CredentialCmdletPipeBind" data-throw-if-not-resolved="False" />
+  name: Credentials
+  isRequired: true
+  description: |+
+    Parameter to fill out credentials of the SPO tenant.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="MigrationPackageLocation" data-throw-if-not-resolved="False" />
+  name: MigrationSourceLocations
+  isRequired: true
+  description: |+
+    Migration Location where the package lies.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoLogFile
+  description: |+
+    Controls if a log will be created or not
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceFilesPath
+  isRequired: true
+  description: |+
+    Source files Path, string
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourcePackagePath
+  isRequired: true
+  description: |+
+    Source Package Path.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetWebUrl
+  isRequired: true
+  description: |+
+    Target web URL
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Invoke-SPOMigrationEncryptUploadSubmit
+name: Invoke-SPOMigrationEncryptUploadSubmit
+description: |-
+  Creates a new migration job in the target site collection, and then returns a GUID representing the JobID. This command will upload encrypted source files and manifests into temporary Azure blob storage per job.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/invoke-spomigrationencryptuploadsubmit
+  applicable: SharePoint Online
+  title: Invoke-SPOMigrationEncryptUploadSubmit
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

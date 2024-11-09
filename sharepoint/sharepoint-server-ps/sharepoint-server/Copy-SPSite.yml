@@ -1,0 +1,122 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Makes a copy of a site collection.
+module: sharepoint-server
+notes: ""
+links:
+- text: Test-SPSite
+  href: Test-SPSite.yml
+- text: Repair-SPSite
+  href: Repair-SPSite.yml
+syntaxes:
+- >-
+  Copy-SPSite [-Identity] <SPSitePipeBind> [-TargetUrl] <String> [-AssignmentCollection <SPAssignmentCollection>]
+   [-DestinationDatabase <SPContentDatabasePipeBind>] [-HostHeaderWebApplication <String>] [-PreserveSiteId]
+   [<CommonParameters>]
+examples:
+- title: '--------------EXAMPLE-------------'
+  code: |-
+    Copy-SPSite https://contoso/sites/OldTeam -DestinationDatabase WSS_Content -TargetUrl https://contoso/sites/NewTeam
+  description: |-
+    This example makes a copy of the https://contoso/sites/OldTeam site collection from its database to the WSS_Content database with the new URL, https://contoso/sites/NewTeam and a new Site ID.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPContentDatabasePipeBind" data-throw-if-not-resolved="False" />
+  name: DestinationDatabase
+  description: |+
+    Specifies the location where the copy will be sent to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostHeaderWebApplication
+  description: |+
+    Use when the site collection is a host-named site collection that allows the site to land on the correct web application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the site collection to copy.
+    This can be a valid URL or GUID.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PreserveSiteId
+  description: |+
+    Specifies if the SiteID is to be saved or not.
+
+    The valid values are True and False. The default value is False.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetUrl
+  isRequired: true
+  description: |+
+    The URL that will be used for the destination copy of the site collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Copy-SPSite
+name: Copy-SPSite
+description: |-
+  Use the Copy-SPSite cmdlet to make a copy of a site collection from an implied source content database to a specified destination content database.
+
+  The copy of the site collection has a new URL and a new SiteID.
+  When you have database snapshot capabilities on a computer runningSQL Server, a temporary snapshot of the source database is created for the duration of the copy to prevent any data changes during the copy process.
+  If you do not have database snapshot capabilities on the server running SQL Server, you can back up the source and restore it to the destination to get the same result.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/copy-spsite
+  applicable: SharePoint Server Subscription Edition
+  title: Copy-SPSite
+  PlatyPS schema version: 2.0.0

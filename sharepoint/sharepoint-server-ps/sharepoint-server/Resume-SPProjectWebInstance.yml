@@ -1,0 +1,69 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Switches the specified instance of Project Web App to read-write mode, allowing users to change data again.
+module: sharepoint-server
+notes: ""
+links:
+- text: Pause-SPProjectWebInstance
+  href: Pause-SPProjectWebInstance.yml
+syntaxes:
+- >-
+  Resume-SPProjectWebInstance [-Identity] <ProjectInstancePipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+examples:
+- title: '----------------------EXAMPLE-----------------------'
+  code: |-
+    $sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Project Application Services'}
+    $instance = Get-SPProjectWebInstance -ServiceApplication $sa
+    Resume-SPProjectWebInstance -Identity $instance
+  description: |-
+    Resumes the Project Web Server Instance in the Project Web Application Service Application.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="ProjectInstancePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the instance of Project Web App to be switched to read-write mode.
+    It can be the unique id of the instance, the URL of the Project Web App site, the site collection object that contains the Project Web App site (an SPSite), or the Project Web App instance object itself (a PSSite).
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+uid: sharepoint-server.Resume-SPProjectWebInstance
+name: Resume-SPProjectWebInstance
+description: |-
+  Switches the specified instance of Project Web App to read-write mode, allowing users to change data again.
+  This cmdlet does not set the database itself to read-write.
+  The database must be set to read-write before you run this cmdlet, or this cmdlet will fail.
+
+  For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
+metadata:
+  external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/resume-spprojectwebinstance
+  Applicable: SharePoint Server Subscription Edition
+  title: Resume-SPProjectWebInstance
+  PlatyPS schema version: 2.0.0

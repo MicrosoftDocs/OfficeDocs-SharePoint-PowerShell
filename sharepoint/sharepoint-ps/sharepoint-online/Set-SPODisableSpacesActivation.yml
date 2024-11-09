@@ -1,0 +1,98 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables the SharePoint Spaces activation.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-SPODisableSpacesActivation [-Disable] <Boolean> [-Scope] <String> [[-Identity] <SpoSitePipeBind>] [-WhatIf]
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Set-SPODisableSpacesActivation -Scope Tenant -Disable:$true
+  description: |-
+    This example disables the SharePoint Spaces activation at Tenant level.
+  summary: ""
+- title: Example 2
+  code: |-
+    PS C:\> Set-SPODisableSpacesActivation -Disable:$true -Identity https://contoso.sharepoint.com/sites/Marketing -Scope Site
+  description: |-
+    This example disables the SharePoint Spaces activation for a site.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Disable
+  isRequired: true
+  description: |+
+    Set True to disable SharePoint Spaces activation, set to False to enable.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the URL of the site collection to update.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Scope
+  isRequired: true
+  description: |+
+    Specifies the scope.
+
+    Possible values:
+    - Tenant
+    - Site
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Set-SPODisableSpacesActivation
+name: Set-SPODisableSpacesActivation
+description: |-
+  Disables the SharePoint Spaces activation either at Tenant level or Site level.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spodisablespacesactivation
+  applicable: SharePoint Online
+  title: Set-SPODisableSpacesActivation
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

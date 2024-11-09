@@ -1,0 +1,140 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a regular expression aliaser.
+module: SharePointServer
+notes: ""
+links:
+- text: Set-FASTSearchSecurityRegexAliaser
+  href: Set-FASTSearchSecurityRegexAliaser.yml
+- text: Get-FASTSearchSecurityRegexAliaser
+  href: Get-FASTSearchSecurityRegexAliaser.yml
+- text: New-FASTSearchSecurityRegexAliaserPattern
+  href: New-FASTSearchSecurityRegexAliaserPattern.yml
+syntaxes:
+- >-
+  New-FASTSearchSecurityRegexAliaser [-InputUserStoreId] <String> [-OutputUserStoreIds] <String[]>
+   [-Patterns] <System.Collections.Generic.List`1[Microsoft.SharePoint.Search.Extended.Security.Config.RegExAliasPatternMapConfig]>
+   [[-Identity] <String>] [[-CaseSensitive] <Boolean>] [[-UnicodeCaseSensitive] <Boolean>]
+   [-ObjectToClone <SecurityRegexAliaser>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    New-FASTSearchSecurityRegexAliaserPattern -Regex .* -MapToUsername \1 | New-FASTSearchSecurityRegexAliaser -Identity regex1 -InputUserStoreId ln1 -OutputUserStoreIds ln2
+  description: |-
+    This example creates a regular expression aliaser pattern object and pipes it into a New-FASTSearchSecurityRegexAliaser cmdlet to create a regular expression aliaser.
+  summary: ""
+- title: '---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    New-FASTSearchSecurityRegexAliaserPattern -Regex .* -MapToUsername \1 | New-FASTSearchSecurityRegexAliaser -InputUserStoreId ln1 -OutputUserStoreIds ln2,ln3 -CaseSensitive $False -UnicodeCaseSensitive $False
+  description: |-
+    This example creates a regular expression aliaser pattern object and pipes it into a New-FASTSearchSecurityRegexAliaser cmdlet to create a regular expression aliaser.
+    The example sets the case-sensitive flags so pattern matching is performed in a case-insensitive manner.
+    The OutputUserStoreIds parameter maps users/groups to two user stores: "ln2" and "ln3".
+    The example generates the aliaser identity.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: CaseSensitive
+  description: |+
+    Specifies whether the regular expression patterns defined in the RegExAliasPatternMapConfig list are matched based on case sensitivity matching rules.
+    The default is true.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "5"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The identity of the aliaser.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InputUserStoreId
+  isRequired: true
+  description: |+
+    The identity of the mapped-from user store.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="SecurityRegexAliaser" data-throw-if-not-resolved="False" />
+  name: ObjectToClone
+  description: |+
+    A SecurityRegexAliaser object whose property values are used for the SecurityRegexAliaser aliaser being created.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: OutputUserStoreIds
+  isRequired: true
+  description: |+
+    A comma-separated list of mapped-to user store identities.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.SharePoint.Search.Extended.Security.Config.RegExAliasPatternMapConfig" data-throw-if-not-resolved="False" /><span>]</span>
+  name: Patterns
+  isRequired: true
+  description: |+
+    A list of RegExAliasPatternMapConfig instances containing the regular expression patterns used for the mapping.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: UnicodeCaseSensitive
+  description: |+
+    Specifies whether the regular expressions patterns defined in the RegExAliasPatternMapConfig list are matched based on Unicode case sensitivity matching rules.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "6"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.New-FASTSearchSecurityRegexAliaser
+name: New-FASTSearchSecurityRegexAliaser
+description: |-
+  This cmdlet creates a regular expression aliaser to map users/groups from one user store to users/groups in other user stores, based on a regular expression pattern.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-fastsearchsecurityregexaliaser
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: New-FASTSearchSecurityRegexAliaser

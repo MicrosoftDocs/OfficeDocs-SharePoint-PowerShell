@@ -1,0 +1,59 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Note: Currently this cmdlet is part of pre-release functionality and may not function in your tenant.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-SPOTenantOrgRelationByPartner [-PartnerCompanyId] <Guid> [[-PartnerInstanceId] <Guid>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: ""
+  description: |-
+    {{ Add example description here }}
+  summary: ""
+parameters:
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: PartnerCompanyId
+  isRequired: true
+  description: |+
+    {{ Fill PartnerCompanyId Description }}
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: PartnerInstanceId
+  description: |+
+    {{ Fill PartnerInstanceId Description }}
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOTenantOrgRelationByPartner
+name: Get-SPOTenantOrgRelationByPartner
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Get-SPOTenantOrgRelationByPartner
+  applicable: SharePoint Online
+  title: Get-SPOTenantOrgRelationByPartner
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

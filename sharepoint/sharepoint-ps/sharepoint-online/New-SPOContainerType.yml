@@ -1,0 +1,72 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet creates a new container type of standard or trial status. The standard container type can be created with the regular billing structure or direct to customer billing structure.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: /powershell/sharepoint/sharepoint-online/connect-sharepoint-online
+- text: Get-SPOContainerType
+  href: ./Get-SPOContainerType.yml
+- text: Set-SPOContainerType
+  href: ./Set-SPOContainerType.yml
+- text: Remove-SPOContainerType
+  href: ./Remove-SPOContainerType.yml
+syntaxes:
+- New-SPOContainerType -ContainerTypeName <ContainerTypeName> -OwningApplicationId <OwningApplicationId> -AzureSubscriptionId <AzureSubscriptionId> -ResourceGroup <ResourceGroup> -Region <Region>
+- New-SPOContainerType -ContainerTypeName <ContainerTypeName> -OwningApplicationId <OwningApplicationId> -IsPassThroughBilling
+- New-SPOContainerType -TrialContainerType -ContainerTypeName <ContainerTypeName> -OwningApplicationId <OwningApplicationId>
+examples:
+- title: Example 1
+  code: |-
+    New-SPOContainerType -ContainerTypeName ContosoLegal -OwningApplicationId a735e4af-b86e-0000-93ba-1faded6c39e1 -AzureSubscriptionId 564e9025-f7f5-xxx9-9ddd-4cdxxxx1755 -ResourceGroup prod-resources -Region EastUS
+  description: |-
+    In Example 1, the cmdlet creates a new container type 'ContosoLegal' that is standard billed and is attached to the billing profile mentioned.
+  summary: ""
+- title: Example 2
+  code: |-
+    New-SPOContainerType -TrialContainerType - ContosoLegal -OwningApplicationId a735e4af-b86e-0000-93ba-1faded6c39e1
+  description: |-
+    In Example 2, the cmdlet creates a trial container type, 'ContosoLegal', valid for 30 days.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ContainerTypeName
+  isRequired: true
+  description: |+
+    This parameter names your container type for your SharePoint Embedded application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Region
+  description: |+
+    This parameter describes the region to which the billing profile of the container type is associated with.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.New-SPOContainerType
+name: New-SPOContainerType
+description: |-
+  This cmdlet creates a new container type of the standard or trial status. A trial container type does not have a billing profile associated with it and has a validity of 30 days. A standard container type has a billing profile associated with it. With the use of `-IsPassThroughBilling`, we can create a direct to customer billed container type.
+
+  You must be a SharePoint Embedded Administrator to run this cmdlet.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/new-spocontainertype
+  applicable: SharePoint Online
+  title: New-SPOContainerType
+  PlatyPS schema version: 2.0.0
+  author: ShreyasSar26
+  ms.author: shsaravanan
+  ms.reviewer: ""

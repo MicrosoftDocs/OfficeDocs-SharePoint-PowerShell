@@ -1,0 +1,96 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns all routing rules.
+module: SharePointServer
+notes: ""
+links:
+- text: Add-SPRoutingRule
+  href: Add-SPRoutingRule.yml
+- text: Remove-SPRoutingRule
+  href: Remove-SPRoutingRule.yml
+- text: Set-SPRoutingRule
+  href: Set-SPRoutingRule.yml
+syntaxes:
+- >-
+  Get-SPRoutingRule [-RequestManagementSettings] <SPRequestManagementSettingsPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Name <String>] [<CommonParameters>]
+examples:
+- title: '--------------EXAMPLE------------'
+  code: |-
+    C:\PS>$web=Get-SPWebApplication -Identity <URL of web application>
+
+    C:\PS>$rm=Get-SPRequestManagementSettings -Identity $web
+
+    Get-SPRoutingRule -RequestManagementSettings $rm
+  description: |-
+    This example returns a routing rule for the farm.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the rule to return.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPRequestManagementSettingsPipeBind" data-throw-if-not-resolved="False" />
+  name: RequestManagementSettings
+  isRequired: true
+  description: |+
+    Specifies the name of the request management settings object to return.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Get-SPRoutingRule
+name: Get-SPRoutingRule
+description: |-
+  Use the Get-SPRoutingRule cmdlet to return routing rules for the farm.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-sproutingrule
+  applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Get-SPRoutingRule
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

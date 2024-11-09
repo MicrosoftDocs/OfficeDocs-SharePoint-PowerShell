@@ -1,0 +1,64 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Cmdlet to get a scheduled site design script.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Add-SPOSiteDesignTask
+  href: Add-SPOSiteDesignTask.yml
+- text: Get-SPOSiteDesignRun
+  href: Get-SPOSiteDesignRun.yml
+- text: Get-SPOSiteDesignRunStatus
+  href: Get-SPOSiteDesignRunStatus.yml
+syntaxes:
+- Get-SPOSiteDesignTask -Identity <guid> -WebUrl <string> [<CommonParameters>]
+examples:
+- title: '-----------------------EXAMPLE 1-----------------------------'
+  code: |-
+    Get-SPOSiteDesignTask -Identity 501z8c32-4147-44d4-8607-26c2f67cae82 -WebUrl "https://contoso.sharepoint.com/sites/projectawesome"
+  description: |-
+    This example returns a scheduled site design whose ID is 501z8c32-4147-44d4-8607-26c2f67cae82 and which was applied on the site <https://contoso.sharepoint.com/sites/projectawesome>.
+  summary: ""
+parameters:
+- type: <xref href="SPOSiteDesignPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The ID of the scheduled site design to apply.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WebUrl
+  isRequired: true
+  description: |+
+    The URL of the site collection where the site design will be applied.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOSiteDesignTask
+name: Get-SPOSiteDesignTask
+description: |-
+  Used to retrieve a scheduled site design script. It takes the ID of the scheduled site design and the URL fo the SPWeb where the site design is scheduled to be applied.
+
+  > [!NOTE]
+  > This command only retrieves a previously scheduled request.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spositedesigntask
+  applicable: SharePoint Online
+  title: Get-SPOSiteDesignTask
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

@@ -1,0 +1,65 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the public key that is used to connect to the WOPI application on the current SharePoint farm where this cmdlet is run.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Update-SPWOPIProofKey [-AssignmentCollection <SPAssignmentCollection>] [-ServerName <String>]
+   [<CommonParameters>]
+examples:
+- title: '--------------EXAMPLE-----------------'
+  code: |-
+    Update-SPWOPIProofKey -ServerName "Server.corp.Contoso.com"
+  description: |-
+    This example obtains the current public key from the WOPI application (such as a server that runs Office Web Apps Server) and updates the key that is stored on the SharePoint farm.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ServerName
+  description: |+
+    Specifies the WOPI application to obtain the key from.
+    This may be a server that runs Office Web Apps Server.
+    If this parameter is missing, public keys for all WOPI applications which are connected to the current SharePoint farm, are updated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Update-SPWOPIProofKey
+name: Update-SPWOPIProofKey
+description: |-
+  The `Update-SPWOPIProofKey` cmdlet updates the public key that is used to connect to the WOPI application (which could be a server that runs Office Web Apps Server) on the current SharePoint farm where this cmdlet is run.
+  You may want to use this cmdlet if the keys become unsynchronized between the SharePoint farm and the WOPI application.
+  If the keys are unsynchronized, documents may not open in the browser and messages such as "Invalid Proof Signature for file..." or "Invalid Proof Signature for folder..." are found in the Unified Logging System (ULS) logs.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/update-spwopiproofkey
+  applicable: SharePoint Server Subscription Edition
+  title: Update-SPWOPIProofKey
+  PlatyPS schema version: 2.0.0

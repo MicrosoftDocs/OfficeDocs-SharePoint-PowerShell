@@ -1,0 +1,178 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet sets settings of People Picker of a specified Web application.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Set-SPPeoplePickerConfig -WebApplication <SPWebApplicationPipeBind> [-ActiveDirectoryCustomFilter <String>]
+   [-ActiveDirectoryCustomQuery <String>] [-ActiveDirectorySearchTimeout <Int32>]
+   [-PeopleEditorOnlyResolveWithinSiteCollection] [-OnlySearchWithinSiteCollection]
+   [-NoWindowsAccountsForNonWindowsAuthenticationMode] [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf]
+   [-SecureSocketsLayer]
+   [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------EXAMPLE 1-------------'
+  code: |-
+    Set-SPPeoplePickerConfig -WebApplication http://MyOfficeApp1 -ActiveDirectoryCustomFilter "((Title=Manager))" -ActiveDirectoryCustomQuery (sn={0}*) -ActiveDirectorySearchTimeout 60 -PeopleEditorOnlyResolveWithinSiteCollection -OnlySearchWithinSiteCollection -NoWindowsAccountsForNonWindowsAuthenticationMode
+  description: |-
+    This example sets the following settings to the People Picker of Web application MyOfficeApp1:
+                - Return a list of Active Directory users with a title of "Manager"
+                - The query only searches on the last name
+                - 60 seconds before Active Directory search times out
+                - The People Picker control should only return the site collection users when clicking the "Check Names" button
+                - The People Picker control should only return the site collection users when useing the "Select People and Groups" dialog box
+                - The People Picker control return only non-Active Directory users when the Web application uses forms-based authentication
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ActiveDirectoryCustomFilter
+  description: |+
+    The Lightweight Directory Access Protocol (LDAP) query string to create a customized filter for displaying query results.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ActiveDirectoryCustomQuery
+  description: |+
+    The Lightweight Directory Access Protocol (LDAP) query string appended to the People Picker query to Active Directory.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ActiveDirectorySearchTimeout
+  description: |+
+    The amount of seconds of time before Active Directory search times out.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoWindowsAccountsForNonWindowsAuthenticationMode
+  description: |+
+    Specifies the People Picker control return only non-Active Directory users when the Web application uses form-based authentication.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: OnlySearchWithinSiteCollection
+  description: |+
+    Specifies the People Picker control should only return the site collection users when using the "Select People and Groups" dialog box.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: PeopleEditorOnlyResolveWithinSiteCollection
+  description: |+
+    Specifies the People Picker control should only return the site collection users when click the "Check Names" button.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SecureSocketsLayer
+  description: |+
+    Specifies whether to enable Secure LDAP (LDAPS) for secure communication in the SharePoint People Picker.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPWebApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: WebApplication
+  isRequired: true
+  description: |+
+    The Web application to set People Picker settings to.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPPeoplePickerConfig
+name: Set-SPPeoplePickerConfig
+description: |-
+  This Set-SPPeoplePickerConfig cmdlet sets the following settings of People Picker of a specified Web application:
+          1) The customized query filter sent to AD with People Picker query.
+          2) The customized query sent to AD with People Picker query.
+          3) The amount of time before AD search time out.
+          4) Whether the People Picker control should only return the site collection users when clicking the "Check Names" button.
+          5) Whether the People Picker control should only return the site collection users when using the "Select People and Groups" dialog box.
+          6) Whether return only non-Active Directory users when the Web application uses form-based authentication.
+          7) Whether to enable Secure LDAP (LDAPS) for secure communication.
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-sppeoplepickerconfig
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPPeoplePickerConfig
+  PlatyPS schema version: 2.0.0

@@ -1,0 +1,52 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Approves a permission request for the current tenant's "SharePoint Online Client" service principal
+module: Microsoft.Online.SharePoint.PowerShell
+syntaxes:
+- Approve-SPOTenantServicePrincipalPermissionRequest -RequestId <Guid>
+examples:
+- title: '------------------EXAMPLE 1------------------'
+  code: |-
+    $requests = Get-SPOTenantServicePrincipalPermissionRequests
+    $requestToApprove = $requests | ? { $_.Resource -eq 'Office 365 SharePoint Online' -and $_.Scope -eq 'MyFiles.Read' } | Select-Object -First 1
+
+    if ($requestToApprove -ne $null)
+    {
+        Approve-SPOTenantServicePrincipalPermissionRequest -RequestId $requestToApprove.Id
+    }
+  description: |-
+    Approves the permission request for the 'Office 365 SharePoint Online' resource with scope claim 'MyFiles.Read'.
+    If there is no request with those properties, then no approve action will be taken.
+  summary: ""
+parameters:
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: RequestId
+  isRequired: true
+  description: |+
+    The ID of the permission request to approve
+
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Approve-SPOTenantServicePrincipalPermissionRequest
+name: Approve-SPOTenantServicePrincipalPermissionRequest
+description: |-
+  Approves a permission request for the current tenant's "SharePoint Online Client" service principal
+
+  The return value of a successful call is a permission grant object. See the [Description section of Get-SPOTenantServicePrincipalPermissionGrants](https://learn.microsoft.com/powershell/module/sharepoint-online/get-spotenantserviceprincipalpermissiongrants#description) for more information about a permission grant object.
+
+  To get the collection of permission grants for the "SharePoint Online Client" service principal, use the [Get-SPOTenantServicePrincipalPermissionGrants](https://learn.microsoft.com/powershell/module/sharepoint-online/get-spotenantserviceprincipalpermissiongrants) command.
+
+  Approving a permission request also removes that request from the list of permission requests.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/approve-spotenantserviceprincipalpermissionrequest
+  applicable: SharePoint Online
+  title: Approve-SPOTenantServicePrincipalPermissionRequest
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

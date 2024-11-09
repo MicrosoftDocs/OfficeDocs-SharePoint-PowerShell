@@ -1,0 +1,195 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the Information Rights Management (IRM) settings.
+module: sharepoint-server
+notes: ""
+links:
+- text: Get-SPIRMSettings
+  href: Get-SPIRMSettings.yml
+syntaxes:
+- >-
+  Set-SPIRMSettings -CertificateServerUrl <Uri> [-IrmEnabled] [-AssignmentCollection <SPAssignmentCollection>]
+   [-CertificatePassword <SecureString>] [-Confirm] [-ServiceAuthenticationCertificate <X509Certificate2>]
+   [-SubscriptionScopeSettingsEnabled] [-WhatIf] [-UseOauth] [<CommonParameters>]
+- >-
+  Set-SPIRMSettings [-IrmEnabled] [-AssignmentCollection <SPAssignmentCollection>]
+   [-CertificatePassword <SecureString>] [-Confirm] [-ServiceAuthenticationCertificate <X509Certificate2>]
+   [-SubscriptionScopeSettingsEnabled] [-UseActiveDirectoryDiscovery] [-WhatIf] [-UseOauth] [<CommonParameters>]
+examples:
+- title: '--------------EXAMPLE 1------------'
+  code: |-
+    Set-SPIRMSettings -RmsEnabled -UseActiveDirectoryDiscovery
+  description: |-
+    This example enables IRM for the farm and configures it to use the default RMS server configured in Active Directory.
+  summary: ""
+- title: '--------------EXAMPLE 2------------'
+  code: |-
+    Set-SPIRMSettings -RmsEnabled -CertificateServerUrl https://myrmsserver
+  description: |-
+    This example enables IRM for the farm and specifies the URL of the RMS server to use.
+  summary: ""
+- title: '--------------EXAMPLE 3------------'
+  code: |-
+    site = Get-SPSite http://myspserver
+    $subscription = $site.SiteSubscription
+    Set-SPIRMSettings -SiteSubscription $subscription -RmsEnabled -CertificateServerUrl https://myrmsserver
+  description: |-
+    This example enables IRM for the specified tenant and specifies the URL of the RMS server to use.
+  summary: ""
+- title: '--------------EXAMPLE 4------------'
+  code: |-
+    Set-SPIRMSettings -RmsEnabled:$false
+  description: |-
+    This example disables IRM for the farm.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: CertificatePassword
+  description: |+
+    Specifies the password to access the Service Authentication Certificate.
+    This password is required in order to install the certificate in the machine certificate store.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: CertificateServerUrl
+  isRequired: true
+  description: |+
+    Specifies the address of the RMS certificate server to use for the tenant.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IrmEnabled
+  isRequired: true
+  description: |+
+    Specifies whether or not IRM is enabled in the tenant.
+
+    The default value is false.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="X509Certificate2" data-throw-if-not-resolved="False" />
+  name: ServiceAuthenticationCertificate
+  description: |+
+    Specifies the service authentication certificate.
+
+    If the parameter is specified and not null, the authentication certificate is used when connecting from this farm to the RMS server.
+    If the parameter is not specified, the local farm connects to RMS server using integrated windows authentication.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SubscriptionScopeSettingsEnabled
+  description: |+
+    Specifies whether or not IRM can be configured at the site subscription scope.
+
+    Site subscriptions can only configure custom IRM settings if IRM is enabled at the Farm scope.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseActiveDirectoryDiscovery
+  description: |+
+    Specifies whether or not the RMS service should be used for discovery that will determine the address of the RMS server in the domain.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseOauth
+  description: |+
+    Specifies whether OAuth should be used.
+
+    The valid values are True and False.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPIRMSettings
+name: Set-SPIRMSettings
+description: |-
+  This cmdlet contains more than one parameter set.
+  You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
+  For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+
+  Use the `Set-SPIRMSettings` cmdlet to set the Information Rights Management (IRM) settings for the tenant.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spirmsettings
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPIRMSettings
+  PlatyPS schema version: 2.0.0

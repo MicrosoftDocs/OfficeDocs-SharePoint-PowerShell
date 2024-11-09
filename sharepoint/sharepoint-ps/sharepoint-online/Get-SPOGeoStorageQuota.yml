@@ -1,0 +1,56 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet gets the storage quota on a multi-geo tenant.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Get-SPOAppErrors
+  href: Get-SPOAppErrors.yml
+- text: Set-SPOGeoStorageQuota
+  href: set-SPOGeoStorageQuota.yml
+syntaxes:
+- Get-SPOGeoStorageQuota [-AllLocations] [<CommonParameters>]
+examples:
+- title: '-----------------------EXAMPLE 1-----------------------------'
+  code: |-
+    Get-SPOGeoStorageQuota -AllLocations
+  description: |-
+    Get the storage size quota of all locations.
+  summary: ""
+- title: '-----------------------EXAMPLE 2-----------------------------'
+  code: |-
+    Get-SPOGeoStorageQuota
+  description: |-
+    Get the storage size quota of the current location.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllLocations
+  description: |+
+    Use this parameter to retrieve the storage size quota of all locations.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOGeoStorageQuota
+name: Get-SPOGeoStorageQuota
+description: |-
+  This cmdlet shows the storage on the current location or all locations in a multi-geo tenant.
+
+  This cmdlet requires a connection to a multi-geo tenant to run correctly. You must be a SharePoint Online Administrator to get the storage on the current location or all locations in a multi-geo SPO tenant.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spogeostoragequota
+  applicable: SharePoint Online
+  title: Get-SPOGeoStorageQuota
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

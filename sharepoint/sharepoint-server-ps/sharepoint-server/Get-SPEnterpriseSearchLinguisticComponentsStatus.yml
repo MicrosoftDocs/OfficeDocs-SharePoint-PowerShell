@@ -1,0 +1,74 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns the status of the linguistic query and document processing components.
+module: sharepoint-server
+notes: ""
+links:
+- text: Set-SPEnterpriseSearchLinguisticComponentsStatus
+  href: Set-SPEnterpriseSearchLinguisticComponentsStatus.yml
+syntaxes:
+- >-
+  Get-SPEnterpriseSearchLinguisticComponentsStatus [[-Identity] <LinguisticComponentsStatusPipeBind>]
+   -SearchApplication <SearchServiceApplicationPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+   [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE------------------'
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication
+    Get-SpEnterpriseSearchLinguisticComponentsStatus -SearchApplication $ssa
+  description: |-
+    This example gets the current status of the linguistic query and document processing components from the default SearchServiceApplication.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="LinguisticComponentsStatusPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    An object that represents the current status of the linguistic components.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SearchServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: SearchApplication
+  isRequired: true
+  description: |+
+    Specifies the search service application that contains the linguistic processing components.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Get-SPEnterpriseSearchLinguisticComponentsStatus
+name: Get-SPEnterpriseSearchLinguisticComponentsStatus
+description: |-
+  This cmdlet returns an object that represents the operational status of the linguistic query and document processing components.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.Search.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchlinguisticcomponentsstatus
+  applicable: SharePoint Server Subscription Edition
+  title: Get-SPEnterpriseSearchLinguisticComponentsStatus
+  PlatyPS schema version: 2.0.0

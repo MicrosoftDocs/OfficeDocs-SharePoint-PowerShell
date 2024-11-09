@@ -1,0 +1,52 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the specified user's UserType value from Microsoft Entra ID.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Properties of a Microsoft Entra B2B collaboration user
+  href: https://learn.microsoft.com/azure/active-directory/b2b/user-properties
+syntaxes:
+- Update-UserType [-LoginName] <String> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Update-UserType -LoginName jdoe@contoso.com
+  description: |-
+    Updates the jdoe@contoso.com's UserType on all SharePoint Online sites in the tenant based on the UserType value in Microsoft Entra ID.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LoginName
+  isRequired: true
+  description: |+
+    The login name of the target user to update across SharePoint Online.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Update-UserType
+name: Update-UserType
+description: |-
+  This cmdlet retrieves the UserType value of the specified user and updates the UserType across all SharePoint Online sites in the Office 365 tenant. This can be used, for example, to convert a Guest user to a standard (Member) user if the user's UserType was previously updated in Microsoft Entra ID.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/update-usertype
+  applicable: SharePoint Online
+  title: Update-UserType
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

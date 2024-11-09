@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets details about site designs that are on the SharePoint tenant. You can specify an ID of a specific site design to retrieve. If there are no parameters listed, details about all site designs are listed.
+module: Microsoft.Online.SharePoint.PowerShell
+syntaxes:
+- Get-SPOSiteDesign [[-Identity] <SPOSiteDesignPipeBind>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-SPOSiteDesign 44252d09-62c4-4913-9eb0-a2a8b8d7f863
+
+    Id                  : 44252d09-62c4-4913-9eb0-a2a8b8d7f863
+    Title               : Contoso - Team Project
+    WebTemplate         : 64
+    SiteScriptIds       : {1306913c-8463-42ca-bd63-efad0fcdbba4}
+    Description         : Use this design to apply Contoso theme and create
+                          custom lists and add to nav
+  description: ""
+  summary: |+
+    This example and sample response show how to get site design details.
+
+parameters:
+- type: <xref href="SPOSiteDesignPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The ID of the site design to retrieve.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOSiteDesign
+name: Get-SPOSiteDesign
+description: |-
+  Gets details about site designs that are on the SharePoint tenant. You can specify an ID of a specific site design to retrieve. If there are no parameters listed, details about all site designs are listed.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spositedesign
+  applicable: SharePoint Online
+  title: Get-SPOSiteDesign
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

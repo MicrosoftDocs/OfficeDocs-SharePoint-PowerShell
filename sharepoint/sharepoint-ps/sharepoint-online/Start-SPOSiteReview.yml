@@ -1,0 +1,62 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  {{ Fill in the Synopsis }}
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Start-SPOSiteReview -ReportID <Guid> -SiteID <Guid> [-Comment <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> {{ Add example code here }}
+  description: |-
+    {{ Add example description here }}
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Comment
+  description: |+
+    {{ Fill Comment Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: ReportID
+  isRequired: true
+  description: |+
+    {{ Fill ReportID Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: SiteID
+  isRequired: true
+  description: |+
+    {{ Fill SiteID Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Microsoft.Online.SharePoint.PowerShell.Start-SPOSiteReview
+name: Start-SPOSiteReview
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: ""
+  PlatyPS schema version: 2.0.0
+  author: MachelleTranMSFT
+  ms.author: mactra
+  ms.reviewer: pullabhk

@@ -1,0 +1,110 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new list or document library design available to users when they create a new list or document library from site contents, certain site home pages, the SharePoint home page, the Microsoft Lists app, Microsoft Teams, or Office.com.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Add-SPOListDesign -Title <String> -SiteScripts <SPOSiteScriptPipeBind[]> [-Description <String>]
+   [-ThumbnailUrl <String>] [-TemplateFeatures <String[]>] [-ListColor <SPOListDesignColor>]
+   [-ListIcon <SPOListDesignIcon>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS > Add-SPOListDesign
+        -Title "Contoso customer tracking"  
+        -Description "Tracks key customer data in a list"  
+        -SiteScripts "<ID>"  
+        -ListColor Orange  
+        -ListIcon BullseyeTarget  
+        -Thumbnail "https://contoso.sharepoint.com/SiteAssets/site-thumbnail.png"
+  description: |-
+    This example creates a new list or document library design.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    The display description of the list or document library design.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SPOListDesignColor" data-throw-if-not-resolved="False" />
+  name: ListColor
+  description: |+
+    Default color associated with the list when creating the list.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: DarkRed, Red, Orange, Green, DarkGreen, Teal, Blue, NavyBlue, BluePurple, DarkBlue, Lavendar, Pink
+- type: <xref href="SPOListDesignIcon" data-throw-if-not-resolved="False" />
+  name: ListIcon
+  description: |+
+    Default icon associated with the list when creating the list.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Bug, Calendar, BullseyeTarget, ClipboardList, Airplane, Rocket, Color, Insights, CubeShape, TestBeakerSolid, Robot, Savings
+- type: <xref href="SPOSiteScriptPipeBind" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SiteScripts
+  isRequired: true
+  description: |+
+    An array of one or more site scripts. Each is identified by an ID. The scripts run in the order listed. 
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: TemplateFeatures
+  description: |+
+    Set of features that the template comes with. It is displayed as a bulleted list when the user is looking at the template preview in the list or document library creation dialog.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ThumbnailUrl
+  description: |+
+    The URL of a thumbnail image. If none is specified, SharePoint uses a generic image. Recommended size is 400 x 300 pixels.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Title
+  isRequired: true
+  description: |+
+    The display name of the list or document library design.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Microsoft.Online.SharePoint.PowerShell.Add-SPOListDesign
+name: Add-SPOListDesign
+description: |-
+  Creates a new list or document library design available to users when they create a new list or document library from the SharePoint home page, the Microsoft Lists app, Microsoft Teams, or Office.com.
+
+  List designs will be available in UI where lists are created, and document library designs will be available in UI where document libraries are created. The difference is based on the "templateType" of the site design used. "templateType" 100 is for Lists, "templateType" 101 is for document libraries.
+metadata:
+  external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/add-spolistdesign
+  PlatyPS schema version: 2.0.0
+  author: reedpamsft
+  ms.author: reedpa
+  ms.reviewer: ""
+  title: Add-SPOListDesign

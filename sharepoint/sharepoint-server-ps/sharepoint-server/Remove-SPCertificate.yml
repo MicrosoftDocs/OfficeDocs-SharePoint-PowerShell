@@ -1,0 +1,100 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes a certificate and any associated private key.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Remove-SPCertificate [-Identity] <SPServerCertificatePipeBind> [-Force]
+   [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '------------EXAMPLE-----------'
+  code: |-
+    Remove-SPCertificate -Identity "Team Sites Certificate"
+  description: |-
+    This example deletes the "Team Sites Certificate" certificate and any private key associated with that certificate.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Specifies that the certificate should be deleted from SharePoint, even if the certificate is currently assigned to SharePoint objects.
+    If this parameter is specified, any existing assignments of the certificate are also cleared.
+    If this parameter isn't specified and the certificate is assigned to a SharePoint object, the operation will fail.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SPServerCertificatePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The certificate to delete from SharePoint.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Remove-SPCertificate
+name: Remove-SPCertificate
+description: |-
+  Deletes a certificate and any associated private key.
+
+  The following will happen when you delete a certificate from SharePoint:
+
+  By default, SharePoint won't allow you to delete a certificate if it's currently assigned to a SharePoint object.
+  You must override the default behavior with the Force parameter if you want to force the deletion of a certificate.
+  If you override the default behavior, existing assignments of the certificate are cleared.
+
+  The certificate and any private key associated with that certificate is deleted from the Windows certificate store on every server in the SharePoint farm.
+
+  The certificate and any private key associated with it is deleted from the SharePoint configuration database.
+
+  Any previous exports of the certificate through the SharePoint administration interface won't be deleted.
+  Those exported files will still exist.
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spcertificate
+  applicable: SharePoint Server Subscription Edition
+  title: Remove-SPCertificate
+  PlatyPS schema version: 2.0.0

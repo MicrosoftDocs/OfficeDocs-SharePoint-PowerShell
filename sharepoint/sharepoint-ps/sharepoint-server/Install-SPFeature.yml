@@ -1,0 +1,221 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Installs a SharePoint Feature by using the Feature.xml file.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Install-SPFeature [-Path] <String> [-AssignmentCollection <SPAssignmentCollection>]
+   [-CompatibilityLevel <Int32>] [-Confirm] [-Force] [-WhatIf] [<CommonParameters>]
+- >-
+  Install-SPFeature [-AllExistingFeatures] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Force]
+   [-SolutionId <String>] [-WhatIf] [<CommonParameters>]
+- >-
+  Install-SPFeature [-ScanForFeatures] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Force]
+   [-SolutionId <String>] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '--------------EXAMPLE 1-----------------'
+  code: |-
+    Install-SPFeature -path "MyCustomFeature"
+  description: |-
+    This example installs a new feature at $env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\15\TEMPLATE\FEATURES\MyCustomFeature/feature.xml.
+  summary: ""
+- title: '--------------EXAMPLE 2-----------------'
+  code: |-
+    Install-SPFeature -AllExistingFeatures -Whatif
+  description: |-
+    This example shows the unregistered features that are available on the file system and that are installed if this command is run without the WhatIf parameter.
+    This is commonly done after an upgrade process.
+  summary: ""
+- title: '--------------EXAMPLE 3-----------------'
+  code: |-
+    Install-SPFeature -path "MyCustomFeature"  -CompatibilityLevel 14
+  description: |-
+    This example installs a new feature at $env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\14\TEMPLATE\FEATURES\MyCustomFeature\feature.xml.
+  summary: ""
+- title: '--------------EXAMPLE 4-----------------'
+  code: |-
+    Install-SPFeature -path "MyCustomFeature"  -CompatibilityLevel 15
+  description: |-
+    This example installs a new feature at $env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\15\TEMPLATE\FEATURES\MyCustomFeature\feature.xml.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllExistingFeatures
+  isRequired: true
+  description: |+
+    Scans for existing, but unregistered features, and then registers them with the farm.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: CompatibilityLevel
+  description: |+
+    Specifies the version of feature to install.
+    When the version is not specified it will default to the web applications MaxVersion value.
+
+    The values for this can be either 14 or 15.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Forces the installation of an already installed feature.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Specifies an authentic file path; for example, MyFeature.
+
+    The path to feature must be a literal path to the 14\Template\Features directory.
+    The feature.xml file name is implied and does not need to be provided.
+
+    If the path to the feature is not found , the following error message is displayed: "Failed to find the XML file at location 14\Template\Features\\\<file path\>."
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ScanForFeatures
+  isRequired: true
+  description: |+
+    Scans and then displays a feature.
+    The ScanForFeatures parameter does not install a feature.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SolutionId
+  description: |+
+    Specifies the solution ID of the features.
+    If the SolutionId parameter is not provided, all solution IDs are scanned.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Install-SPFeature
+name: Install-SPFeature
+description: |-
+  This cmdlet contains more than one parameter set.
+  You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+  For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+
+  The Install-SPFeature cmdlet installs a specific SPFeature by providing, in the Identity parameter, the relative path from the version-specific common FEATURES folder to the feature.
+  The version-specific FEATURES folder is "$env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\14\TEMPLATE\FEATURES\" if the site collection is in 14 mode, and "$env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\15\TEMPLATE\FEATURES\" if the site collection is in 15 mode.
+  The SharePoint Feature's files must already be put in the proper directory, either manually or by using a solution installer.
+
+  If the value of the AllExistingFeatures parameter is true, the file system is scanned and all new features that are in both FEATURES folders are installed.
+  This is generally only used during deployment and upgrade.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/install-spfeature
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Install-SPFeature
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

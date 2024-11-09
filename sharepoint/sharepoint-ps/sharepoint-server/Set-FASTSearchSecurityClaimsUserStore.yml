@@ -1,0 +1,94 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates a claims user store.
+module: SharePointServer
+notes: ""
+links:
+- text: Get-FASTSearchSecurityClaimsUserStore
+  href: Get-FASTSearchSecurityClaimsUserStore.yml
+- text: New-FASTSearchSecurityClaimsUserStore
+  href: New-FASTSearchSecurityClaimsUserStore.yml
+syntaxes:
+- >-
+  Set-FASTSearchSecurityClaimsUserStore [-Identity] <String> [[-SecurityContent] <ClaimsUserStore>]
+   [[-Description] <String>] [[-Issuer] <String>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Set-FASTSearchSecurityClaimsUserStore -Identity clm -Description "SharePoint Users"
+  description: |-
+    This example updates the description of the "clm" claims user store.
+  summary: ""
+- title: '---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Get-FASTSearchSecurityClaimsUserStore -Identity cl2 | Set-FASTSearchSecurityClaimsUserStore -Issuer Windows
+  description: |-
+    This example sets the issuer of the "cl2" claims user store to "Windows".
+    The Set-FASTSearchSecurityClaimsUserStore cmdlet updates the SecurityContent value piped from the Get-FASTSearchSecurityClaimsUserStore.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    A brief explanation of the user store.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The user store identity.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Issuer
+  description: |+
+    The Microsoft SharePoint Server Security Token Service (STS) claims provider that issued the claims.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="ClaimsUserStore" data-throw-if-not-resolved="False" />
+  name: SecurityContent
+  description: |+
+    A claims user store object whose property values are used to update another claims user store.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Set-FASTSearchSecurityClaimsUserStore
+name: Set-FASTSearchSecurityClaimsUserStore
+description: |-
+  This cmdlet updates the configuration settings for a claims user store.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-fastsearchsecurityclaimsuserstore
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Set-FASTSearchSecurityClaimsUserStore

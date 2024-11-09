@@ -1,0 +1,359 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets properties of a Word Automation Services application.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Set-SPWordConversionServiceApplication [-Identity] <WordServiceApplicationPipeBind> [-ActiveProcesses <Int32>]
+   [-AddSupportedFormats <String[]>] [-ApplicationPool <SPIisWebServiceApplicationPoolPipeBind>]
+   [-AssignmentCollection <SPAssignmentCollection>] [-ClearSupportedFormats] [-Confirm]
+   [-ConversionsPerInstance <Int32>] [-ConversionTimeout <Int32>] [-DatabaseCredential <PSCredential>]
+   [-DatabaseName <String>] [-DatabaseServer <String>] [-DisableBinaryFileScan] [-DisableEmbeddedFonts]
+   [-KeepAliveTimeout <Int32>] [-MaximumConversionAttempts <Int32>] [-MaximumConversionTime <Int32>]
+   [-MaximumMemoryUsage <Int32>] [-RecycleProcessThreshold <Int32>] [-RemoveSupportedFormats <String[]>]
+   [-TimerJobFrequency <Int32>] [-WhatIf] [-MaximumGroupSize <Int32>] [-MaximumSyncConversionRequests <Int32>]
+   [<CommonParameters>]
+examples:
+- title: '-----------EXAMPLE-----------------'
+  code: |-
+    Get-SPServiceApplication -Name WordServices1 | Set-SPWordConversionServiceApplication -TimerJobFrequency 30
+  description: |-
+    This example sets the timer job frequency of the WordServices1 application to 30 minutes.
+  summary: ""
+parameters:
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ActiveProcesses
+  description: |+
+    Specifies the number of conversion processes on each machine on which the service application runs.
+    This value is equivalent to the number of simultaneous conversions.
+    The default value is 8.
+
+    The type must be a valid integer in the range from 1 to 1000.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AddSupportedFormats
+  description: |+
+    Specifies a set of file formats to be enabled for use by the service application.
+
+    The value must be a comma-delimited list of one or more of the following: docx, doc, mht, rtf, xml.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPIisWebServiceApplicationPoolPipeBind" data-throw-if-not-resolved="False" />
+  name: ApplicationPool
+  description: |+
+    Specifies the existing IIS managed application pool in which this instance of Word Automation Services runs.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of an application pool (for example, AppPoolName1); or an instance of a valid IISWebServiceApplicationPool object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ClearSupportedFormats
+  description: |+
+    Specifies that all file formats should be disabled for use by the service application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ConversionsPerInstance
+  description: |+
+    Specifies the number of items sent to each conversion process (see the ActiveProcesses parameter description earlier in this table) every time the timer job is run.
+    The default value is 12.
+
+    The type must be a valid integer.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ConversionTimeout
+  description: |+
+    Specifies the time, in minutes, after which a conversion that is marked InProgress is confirmed to be still running each time the timer job runs and if necessary, the conversion is restarted.
+    The default value is 5.
+
+    The type must be a valid integer in the range from 1 to 60.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: DatabaseCredential
+  description: |+
+    Specifies the credentials to use for connecting to the database for the Word Automation Services application.
+    Use this parameter only if SQL Authentication is used to access the service application database.
+
+    When the DatabaseCredential parameter is specified, the DatabaseName and DatabaseServer parameters are required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseName
+  description: |+
+    Specifies the name of the database to use for this instance of the Word Automation Services application.
+
+    The type must be a valid SQL database name; for example, MetadataDB1.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseServer
+  description: |+
+    Specifies the name of the host server for the Word Automation Services database.
+
+    The type must be a valid SQL database server host name; for example, SQLServerHost1.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableBinaryFileScan
+  description: |+
+    Specifies whether additional checks are run when Word documents are processed.
+    Turn this setting off only if all documents processed by the service are trusted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableEmbeddedFonts
+  description: |+
+    Specifies whether embedded fonts are ignored when present in input documents.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="WordServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the Word Automation Services application to update.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a Word Automation Services application (for example, WordSvcApp1); or an instance of a valid SPServiceApplication object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: KeepAliveTimeout
+  description: |+
+    Specifies the length of time, in seconds, that a conversion can be non-responsive before it is terminated.
+    The default value is 30.
+
+    The type must be a valid integer in the range from 10 to 60.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaximumConversionAttempts
+  description: |+
+    The maximum number of conversion attempts before a conversion is marked with status "Failed".
+    The default value is 2.
+
+    The type must be a valid integer in the range from 1 to 10.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaximumConversionTime
+  description: |+
+    Specifies the maximum length of time, in seconds, that a conversion can run before it is terminated.
+    The default value is 300.
+
+    The type must be a valid integer in the range from 60 to MaxInt.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaximumGroupSize
+  description: |+
+    {{Fill MaximumGroupSize Description}}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaximumMemoryUsage
+  description: |+
+    Specifies the maximum percentage of system memory which can be used by the service application.
+    The default value is 100.
+
+    The type must be a valid integer in the range from 10 to 100.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaximumSyncConversionRequests
+  description: |+
+    {{Fill MaximumSyncConversionRequests Description}}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: RecycleProcessThreshold
+  description: |+
+    Specifies the number of documents which are converted before a conversion process is recycled.
+    For additional information about the conversion process, see the ActiveProcess parameter description earlier in this table.
+
+    The type must be a valid integer in the range from 1 to 1000.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: RemoveSupportedFormats
+  description: |+
+    Specifies a set of file formats to be disabled for use by the service application.
+
+    The value must be a comma delimited list of one or more of the following: docx, doc, mht, rtf, xml.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TimerJobFrequency
+  description: |+
+    Specifies the frequency, in minutes, with which the timer job for this service application runs.
+    The default value is 15.
+
+    The type must be a valid integer in the range from 1 to 59.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPWordConversionServiceApplication
+name: Set-SPWordConversionServiceApplication
+description: |-
+  The `Set-SPWordConversionServiceApplication` cmdlet sets global properties of a Word Automation Services application.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Word.Server.dll-Help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spwordconversionserviceapplication
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPWordConversionServiceApplication
+  PlatyPS schema version: 2.0.0

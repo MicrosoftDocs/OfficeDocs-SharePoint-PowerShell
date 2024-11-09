@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the progress of a trim job for a site collection.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Remove-SPOSiteFileVersionBatchDeleteJob
+  href: Remove-SPOSiteFileVersionBatchDeleteJob.yml
+- text: New-SPOSiteFileVersionBatchDeleteJob
+  href: New-SPOSiteFileVersionBatchDeleteJob.yml
+syntaxes:
+- Get-SPOSiteFileVersionBatchDeleteJobProgress [-Identity] <SpoSitePipeBind> [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Get-SPOSiteFileVersionBatchDeleteJobProgress -Identity https://contoso.sharepoint.com/sites/site1
+  description: |-
+    Example 1 gets the progress of a trim job for a site collection.
+  summary: ""
+parameters:
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the URL of the site collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOSiteFileVersionBatchDeleteJobProgress
+name: Get-SPOSiteFileVersionBatchDeleteJobProgress
+description: |-
+  Gets the progress of a trim job for a site collection.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spositefileversionbatchdeletejobprogress
+  applicable: SharePoint Online
+  title: Get-SPOSiteFileVersionBatchDeleteJobProgress
+  PlatyPS schema version: 2.0.0
+  author: msjennywu
+  ms.author: jennywu
+  ms.reviewer: ""
+  manager: seanmc

@@ -1,0 +1,92 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a user agent to a farm.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Add-SPInfoPathUserAgent [-Name] <String> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf]
+   [<CommonParameters>]
+examples:
+- title: '------------EXAMPLE-----------------'
+  code: |-
+    Add-SPInfoPathUserAgent -Name "NewAgent"
+  description: |-
+    This example creates a new agent named NewAgent.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the user agent to receive InfoPath 2013 files.
+    These user agents represent search bots that are commonly used in an enterprise environment.
+    If a different search technology is being used and InfoPath 2013 files are not being indexed, you can add additional search bots for that technology to the collection.
+
+    The type must be a valid file name; for example UserAgentName1.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Add-SPInfoPathUserAgent
+name: Add-SPInfoPathUserAgent
+description: |-
+  The Add-SPInfoPathUserAgent cmdlet creates a user agent to receive the .xml file that contains the data of the form for indexing.
+  The user agent receives the InfoPath 2013 files from InfoPath Forms Services in SharePoint Server instead of Web pages in response to an HTTP request.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/add-spinfopathuseragent
+  applicable: SharePoint Server Subscription Edition
+  title: Add-SPInfoPathUserAgent
+  PlatyPS schema version: 2.0.0

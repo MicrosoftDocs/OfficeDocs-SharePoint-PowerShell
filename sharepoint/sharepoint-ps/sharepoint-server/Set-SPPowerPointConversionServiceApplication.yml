@@ -1,0 +1,154 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures settings for a PowerPoint Conversion Service application.
+module: SharePointServer
+notes: ""
+links:
+- text: New-SPPowerPointConversionServiceApplication
+  href: New-SPPowerPointConversionServiceApplication.yml
+- text: New-SPPowerPointConversionServiceApplicationProxy
+  href: New-SPPowerPointConversionServiceApplicationProxy.yml
+syntaxes:
+- >-
+  Set-SPPowerPointConversionServiceApplication [-Identity] <SPPowerPointConversionServiceApplicationPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-CacheExpirationPeriodInSeconds <UInt32>]
+   [-MaximumConversionsPerWorker <UInt32>] [-WorkerKeepAliveTimeoutInSeconds <UInt32>]
+   [-WorkerProcessCount <UInt32>] [-WorkerTimeoutInSeconds <UInt32>] [<CommonParameters>]
+examples:
+- title: '--------------------EXAMPLE 1---------------------'
+  code: |-
+    Set-SPPowerPointConversionServiceApplication -Identity "MyWorkgroupPPTApp" -CacheExpirationPeriodInSeconds 1200
+  description: |-
+    This example establishes new operational defaults for the conversion cache expiration.
+  summary: ""
+- title: '--------------------EXAMPLE 2---------------------'
+  code: |-
+    Set-SPPowerPointConversionServiceApplication -Identity "MyWorkgroupPPTApp" -DisableBinaryScan:$false
+  description: |-
+    This example disables binary scanning of documents.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: CacheExpirationPeriodInSeconds
+  description: |+
+    Specifies the maximum time, in seconds, that items remain in the back-end server cache.
+    The default value is 600 seconds (10 minutes).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPPowerPointConversionServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the unique name of this PowerPoint Conversion Service application.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: MaximumConversionsPerWorker
+  description: |+
+    Specifies the maximum number of presentations that a conversion worker process can convert before recycling.
+    The default value is 5.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: WorkerKeepAliveTimeoutInSeconds
+  description: |+
+    Specifies the maximum time, in seconds, that a conversion worker process can be unresponsive before being terminated.
+    The default value is 120 seconds.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: WorkerProcessCount
+  description: |+
+    Specifies the number of active instances of the conversion worker process on each back-end.
+    This value must be less than the Windows Communication Foundation (WCF) connection limit for this computer.
+    The default value is 3.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: WorkerTimeoutInSeconds
+  description: |+
+    Specifies the maximum time, in seconds, that a conversion worker process is given for any single conversion.
+    The default is 300 seconds (5 minutes).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Set-SPPowerPointConversionServiceApplication
+name: Set-SPPowerPointConversionServiceApplication
+description: |-
+  Use the `Set-SPPowerPointConversionServiceApplication` cmdlet to set properties and settings for an instance of a PowerPoint Conversion Service application that is in a farm.
+metadata:
+  external help file: Microsoft.Office.Server.Powerpoint.dll-Help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-sppowerpointconversionserviceapplication
+  applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Set-SPPowerPointConversionServiceApplication
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

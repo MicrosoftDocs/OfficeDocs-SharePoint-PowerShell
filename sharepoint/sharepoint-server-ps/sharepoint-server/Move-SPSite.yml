@@ -1,0 +1,159 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Moves site collections from one content database to another.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Move-SPSite [-Identity] <SPSitePipeBind> -DestinationDatabase <SPContentDatabasePipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-RbsProviderMapping <Hashtable>] [-WhatIf]
+   [-CopyEvents <Boolean>] [<CommonParameters>]
+examples:
+- title: '---------------------EXAMPLE 1-----------------------'
+  code: |-
+    Move-SPSite https://servername/sites/sitename -DestinationDatabase ContentDb2
+  description: |-
+    This example moves the site collection https://servername/sites/sitename to the content database ContentDb2.
+  summary: ""
+- title: '---------------------EXAMPLE 2-----------------------'
+  code: |-
+    Get-SPSite -ContentDatabase ContentDb1 | Move-SPSite -DestinationDatabase ContentDb2
+  description: |-
+    This example moves all site collections in ContentDb1 to ContentDb2.
+  summary: ""
+- title: '---------------------EXAMPLE 3-----------------------'
+  code: |-
+    Get-SPSiteAdministration | where { $_.OwnerLoginName -eq "DOMAIN\username" } | Move-SPSite -DestinationDatabase ContentDb2
+  description: |-
+    This example moves all site collections where DOMAIN\username is the site collection owner to ContentDb2.
+    The Get-SPSiteAdministration cmdlet is used instead of the Get-SPSite cmdlet because you must have permission within the site collection to access the properties of the SPSite object.
+    You can access the properties of the SPSiteAdministration object as a SharePoint farm administrator.
+  summary: ""
+- title: '---------------------EXAMPLE 4-----------------------'
+  code: |-
+    Move-SPSite -Identity siteUrl -DestinationDatabase databaseName -RbsProviderMapping
+           @{"sourceProvider1"="targetProvider1", "sourceProvider2"="targetProvider2"}
+  description: |-
+    This example moves an RBS-enabled site collection from one RBS-enabled content database to another RBS-enabled content database, sourceProvider1 is the source RBS provider and targetProvider1 is the target RBS provider.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: CopyEvents
+  description: |+
+    Specifies if events of the EventCache table need to be copied to the destination Content Database.
+
+    The valid values are True or False.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPContentDatabasePipeBind" data-throw-if-not-resolved="False" />
+  name: DestinationDatabase
+  isRequired: true
+  description: |+
+    Specifies the content database that the site collection should be moved to.
+    For example, ContentDB2.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the identity of the site collection to be moved.
+    For example, https://servername/sites/sitename.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: RbsProviderMapping
+  description: |+
+    This parameter was added in SharePoint Server with Service Pack 1 (SP1) and SharePoint Foundation with Service Pack 1 (SP1).
+
+    Used to move an RBS-enabled site collection from one RBS-enabled content database to another RBS-enabled content database without moving the underlying BLOB content.
+    If the content database has more than one RBS provider associated with it, you must specify all providers.
+    The same providers must be enabled on the target content database and the source content database.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Move-SPSite
+name: Move-SPSite
+description: |-
+  The Move-SPSite cmdlet moves the data in the specified site collection from its current content database to the content database specified by the DestinationDatabase parameter.
+
+  A no-access lock is applied to the site collection to prevent users from altering data within the site collection while the move is taking place.
+
+  Once the move is complete, the site collection is returned to its original lock state. 
+
+  An IIS reset is required on any server running the Microsoft SharePoint Foundation Web Application service for the site move to take effect. This is not required for SharePoint Server 2019.
+
+  The destination content database specified must already exist, must be attached to the same SQL Server as the site collection's current content database, and must be attached to the site collection's current Web application.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/move-spsite
+  applicable: SharePoint Server Subscription Edition
+  title: Move-SPSite
+  PlatyPS schema version: 2.0.0

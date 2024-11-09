@@ -1,0 +1,253 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new certificate signing request.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  New-SPCertificate -FriendlyName <String> -CommonName <String> [-AlternativeNames <String[]>]
+   [-OrganizationalUnit <String>] [-Organization <String>] [-Locality <String>] [-State <String>]
+   [-Country <String>] [-Exportable] [-HashAlgorithm <String>] [-Path <String>] [-Force]
+   [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-SPCertificate -FriendlyName <String> -CommonName <String> [-AlternativeNames <String[]>]
+   [-OrganizationalUnit <String>] [-Organization <String>] [-Locality <String>] [-State <String>]
+   [-Country <String>] [-Exportable] [-KeySize <Int32>] [-HashAlgorithm <String>] [-Path <String>] [-Force]
+   [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  New-SPCertificate -FriendlyName <String> -CommonName <String> [-AlternativeNames <String[]>]
+   [-OrganizationalUnit <String>] [-Organization <String>] [-Locality <String>] [-State <String>]
+   [-Country <String>] [-Exportable] [-EllipticCurve <EllipticCurveType>] [-HashAlgorithm <String>]
+   [-Path <String>] [-Force] [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm]
+   [<CommonParameters>]
+examples:
+- title: '------------EXAMPLE1-----------'
+  code: |-
+    New-SPCertificate -FriendlyName "Team Sites Certificate" -KeySize 2048 -CommonName sharepoint.contoso.com -AlternativeNames extranet.contoso.com, onedrive.contoso.com -OrganizationalUnit "Contoso IT Department" -Organization "Contoso" -Locality "Redmond" -State "Washington" -Country "US" -Exportable -HashAlgorithm SHA256 -Path "\\server\fileshare\Team Sites Certificate Signing Request.txt"
+  description: |-
+    This example creates a new certificate signing request, specifying the organizational information, key algorithm and size, and path to the certificate signing request file that will be generated.
+    The private key of this certificate will be exportable.
+  summary: ""
+- title: '------------EXAMPLE2-----------'
+  code: |-
+    New-SPCertificate -FriendlyName "Team Sites Certificate" -CommonName sharepoint.contoso.com -AlternativeNames extranet.contoso.com, onedrive.contoso.com
+  description: |-
+    This example creates a new certificate signing request, using the farm's default organizational information, key algorithm, and size.
+    The private key of this certificate will not be exportable.
+    The certificate signing request file is stored in Central Administration.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AlternativeNames
+  description: |+
+    Additional DNS domain names or IP addresses that this certificate will be assigned to.
+    Fully Qualified Domain Names (FQDNs) are recommended.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CommonName
+  isRequired: true
+  description: |+
+    The primary DNS domain name or IP address that this certificate will be assigned to.
+    Fully Qualified Domain Names (FQDNs) are recommended.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Country
+  description: |+
+    The 2 letter country code where your organization is legally located.
+    This must be an ISO 3166-1 alpha-2 country code.
+    If this parameter is not specified, the default country of the farm will be used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="EllipticCurveType" data-throw-if-not-resolved="False" />
+  name: EllipticCurve
+  description: |+
+    Specifies to use the elliptic curve cryptography key algorithm for your certificate, and the elliptic curve of your public and private ECC keys.
+
+    Larger elliptic curves provide more cryptographic strength than smaller elliptic curves, but they're also more computationally expensive and take more time to complete the SSL/TLS connection.
+    Select nistP256 if you're unsure which elliptic curve to use.
+    Elliptic curves larger than nistP384 are not recommended.
+
+    If neither this parameter nor the KeySize parameter is specified, the default key algorithm and key size / elliptic curve of the farm will be used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Default, nistP256, nistP384, nistP521
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Exportable
+  description: |+
+    Specifies whether the private key of the certificate may be exported.
+    If this parameter isn't specified, the private key of certificate deployed to the Windows Certificate Store on each server in the SharePoint farm will not be exportable, and SharePoint will not allow you to export the private key from within the SharePoint administration interface.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Specifies to overwrite a file if it already exists at the specified path.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FriendlyName
+  isRequired: true
+  description: |+
+    The friendly name for the certificate.
+    This name can be used to help you remember the purpose of this certificate.
+    The friendly name will only be visible to SharePoint farm administrators, not to end users.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HashAlgorithm
+  description: |+
+    Specifies the hash algorithm of your certificate signature, which your certificate authority will use to verify that your certificate request hasn't been tampered with.
+
+    Larger hash algorithms provide more cryptographic strength than smaller hash algorithms, but they're also more computationally expensive.
+    Select SHA256 if you're unsure which hash algorithm to use.
+    Hash algorithms larger than SHA384 are not recommended.
+
+    If this parameter is not specified, the default hash algorithm of the farm will be used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Default, SHA256, SHA384, SHA512
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: KeySize
+  description: |+
+    Specifies to use the RSA key algorithm for your certificate, and the size of your public and private RSA keys in bits.
+
+    Larger key sizes provide more cryptographic strength than smaller key sizes, but they're also more computationally expensive and take more time to complete the SSL/TLS connection.
+    Select 2048 if you're unsure which key size to use.
+    Key sizes larger than 4096 are not recommended.
+
+    If neither this parameter nor the EllipticCurve parameter is specified, the default key algorithm and key size / elliptic curve of the farm will be used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: 0, 2048, 4096, 8192, 16384
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Locality
+  description: |+
+    The name of the city or locality where your organization is legally located.
+    Do not abbreviate the name.
+    If this parameter is not specified, the default locality of the farm will be used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Organization
+  description: |+
+    The legally registered name of your organization or company.
+    If this parameter is not specified, the default organization of the farm will be used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OrganizationalUnit
+  description: |+
+    The name of your department within your organization or company.
+    If this parameter is not specified, the default organizational unit of the farm will be used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    The path to the certificate signing request file that will be generated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: State
+  description: |+
+    The name of the state or province where your organization is legally located.
+    Do not abbreviate the name.
+    If this parameter is not specified, the default state of the farm will be used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.New-SPCertificate
+name: New-SPCertificate
+description: |-
+  Creates a new certificate signing request.
+  This is the first step in a three-step process to install a new SSL certificate.
+
+  Once an SSL certificate request is created via the operation, the SharePoint administrator must submit the certificate request to their SSL certificate authority.
+  The SSL certificate authority will then generate a signed certificate based on the request and return it to the SharePoint administrator.
+  The SharePoint administrator must then import the certificate provided by the SSL certificate authority into SharePoint.
+  SharePoint will then pair the imported certificate with the private key generated by the certificate request operation.
+  The certificate is then ready to be used by SharePoint.
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spcertificate
+  applicable: SharePoint Server Subscription Edition
+  title: New-SPCertificate
+  PlatyPS schema version: 2.0.0

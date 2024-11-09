@@ -1,0 +1,89 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Replaces existing certificate assignments with a new certificate.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Switch-SPCertificate [-Identity] <SPServerCertificatePipeBind> [-NewCertificate] <SPServerCertificatePipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '------------EXAMPLE-----------'
+  code: |-
+    Switch-SPCertificate -Identity "Team Sites Certificate (2020)" -NewCertificate "Team Sites Certificate (2021)"
+  description: |-
+    This example replaces the assignments of the "Team Sites Certificate (2020)" certificate with the "Team Sites Certificate (2021)" certificate.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="SPServerCertificatePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The certificate whose assignments you want to replace.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SPServerCertificatePipeBind" data-throw-if-not-resolved="False" />
+  name: NewCertificate
+  isRequired: true
+  description: |+
+    The certificate that should replace all of the assignments of the certificate specified by the Identity parameter.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Switch-SPCertificate
+name: Switch-SPCertificate
+description: |-
+  You may wish to replace all usage of a certificate within SharePoint with a different certificate.
+  For example, if an existing certificate is approaching its expiration and you've imported a new certificate to replace it.
+  Use the Switch-SPCertificate cmdlet to replace the assignments of one certificate with a different certificate.
+  All usage of that certificate within SharePoint will then be replaced with the different certificate.
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/switch-spcertificate
+  applicable: SharePoint Server Subscription Edition
+  title: Switch-SPCertificate
+  PlatyPS schema version: 2.0.0

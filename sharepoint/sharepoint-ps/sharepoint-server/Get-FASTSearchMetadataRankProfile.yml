@@ -1,0 +1,63 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves rank profiles from the Microsoft FAST Search Server 2010 for SharePoint system.
+module: SharePointServer
+notes: ""
+links:
+- text: New-FASTSearchMetadataRankProfile
+  href: New-FASTSearchMetadataRankProfile.yml
+- text: Remove-FASTSearchMetadataRankProfile
+  href: Remove-FASTSearchMetadataRankProfile.yml
+- text: Set-FASTSearchMetadataRankProfile
+  href: Set-FASTSearchMetadataRankProfile.yml
+syntaxes:
+- Get-FASTSearchMetadataRankProfile [[-Name] <String>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1-----------------'
+  code: |-
+    Get-FASTSearchMetadataRankProfile -Name newdefault
+  description: |-
+    This example retrieves the rank profile named "newdefault".
+  summary: ""
+- title: '---------------EXAMPLE 2-----------------'
+  code: |-
+    Get-FASTSearchMetadataRankProfile -Name *?default
+  description: |-
+    This example retrieves all rank profiles that match the pattern "*?default".
+    It will not match the default rankprofile named "default".
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The name of the rank profile to retrieve.
+    This option supports wildcards, and matching is case-insensitive.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: RankProfileName, N
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Get-FASTSearchMetadataRankProfile
+name: Get-FASTSearchMetadataRankProfile
+description: |-
+  This cmdlet retrieves rank profiles which match the Name parameter.
+  A rank profile is a weighting scheme for calculating relevance, specifying how each relevance component should be weighted when calculating an item's relevance.
+
+  See Set-FASTSearchMetadataRankProfile for details about rank profile parameters.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-fastsearchmetadatarankprofile
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Get-FASTSearchMetadataRankProfile

@@ -1,0 +1,54 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes billing policy asscoiated with the application.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: /powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+syntaxes:
+- Remove-SPOAppBillingPolicy [[-ApplicationId] <ApplicationId>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-SPOAppBillingPolicy -ApplicationId 1653hhd-87100luhw-786265gk-00asa00
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="GUID" data-throw-if-not-resolved="False" />
+  name: ApplicationID
+  isRequired: true
+  description: "This parameter specifies the ID of the  application.\r\n \r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPOAppBillingPolicy
+name: Remove-SPOAppBillingPolicy
+description: |-
+  Remove-SPOAppBillingPolicy removes the billing policy associated with the application. 
+
+  You must be a SharePoint Administrator to run this cmdlet.
+
+  > [!NOTE]
+  > To use the Remove-SPOAppBillingPolicy cmdlet, an admin must authenticate to SharePoint Online using modern authentication.
+  >
+  > Use the **Connect-SPOService** cmdlet shown below, which will prompt you to enter your credentials. If multi-factor authentication (MFA) is enabled, you will need to complete the MFA process (e.g., entering a verification code sent to your phone).
+  > 
+  >
+  > `Connect-SPOService -Url https://(your-tenant)-admin.sharepoint.com`
+  >
+  > Replace (your-tenant) with your actual SharePoint Online domain, e.g. `https://contoso-admin.sharepoint.com.`
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Remove-SPOAppBillingPolicy
+  applicable: SharePoint Online
+  title: Remove-SPOAppBillingPolicy
+  PlatyPS schema version: 2.0.0
+  author: arakesh
+  ms.author: arakesh
+  ms.reviewer: ""

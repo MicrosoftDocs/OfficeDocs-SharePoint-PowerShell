@@ -1,0 +1,214 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Moves a specified percentage of partitions from one scale-out database to another.
+module: sharepoint-server
+notes: ""
+links:
+- text: Add-SPScaleOutDatabase
+  href: Add-SPScaleOutDatabase.yml
+- text: Get-SPScaleOutDatabase
+  href: Get-SPScaleOutDatabase.yml
+- text: Remove-SPScaleOutDatabase
+  href: Remove-SPScaleOutDatabase.yml
+syntaxes:
+- >-
+  Split-SPScaleOutDatabase -NewDatabaseName <String> -SourceDatabase <SPDatabasePipeBind>
+   -SourceServiceApplication <SPServiceApplicationPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+   [-Confirm] [-MoveLowerHalf] [-NewDatabaseCredentials <PSCredential>] [-NewDatabaseFailoverServer <String>]
+   [-NewDatabaseServer <String>] [-SourcePercentage <Int32>] [-WhatIf] [<CommonParameters>]
+- >-
+  Split-SPScaleOutDatabase -SourceDatabase <SPDatabasePipeBind>
+   -SourceServiceApplication <SPServiceApplicationPipeBind> -TargetDatabase <SPDatabasePipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-MoveLowerHalf] [-SourcePercentage <Int32>]
+   [-WhatIf] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1---------------'
+  code: |-
+    $databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
+    $database = $databases[0]
+    Split-SPScaleOutDatabase -NewDatabaseName Database2 -NewDatabaseServer MyDatabaseServer -SourceDatabase $database -SourceServiceApplication $serviceApplication -SourcePercentage 30
+  description: |-
+    This example creates a new scale-out database named Database2 on the MyDatabaseServer database server  in the given service application.
+
+    The example also moves 30% of the data from the upper side of the data range in the first scale-out database of the given service application.
+  summary: ""
+- title: '---------------EXAMPLE 2---------------'
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication
+    $newReportingDb = "Search_AnalyticsReporting2"
+    $reportingDb = Get-SPScaleOutDatabase -SearchApplication $ssa
+    Split-SPServerScaleOutDatabase -SourceServiceApplication $ssa -SourceDatabase $reportingDb -NewDatabaseName $newReportingDb -SourcePercentage 33
+  description: |-
+    This example scales out the Search Analytics database, moving 33% of data to the new databases.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: MoveLowerHalf
+  description: |+
+    Specifies whether to move the lower or the upper side of the data range from the source scale-out database.
+    If this parameter is not specified, the default behavior is to move the upper side of the source scale-out database data range.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: NewDatabaseCredentials
+  description: |+
+    Specifies the credentials to use when creating the scale-out database.
+    These credentials will have owner rights on the newly created scale-out database.
+    If a value is not provided, the current user's credentials will be used by default.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewDatabaseFailoverServer
+  description: |+
+    Specifies the failover server name of the new scale-out database to be created.
+    If a value is not provided, the new scale-out database does not have a failover server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewDatabaseName
+  isRequired: true
+  description: |+
+    Specifies the name of a new scale-out database that you are creating.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewDatabaseServer
+  description: |+
+    Specifies the name of the server of the new scale-out database to be created.
+    If a value is not provided, the default database server is used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPDatabasePipeBind" data-throw-if-not-resolved="False" />
+  name: SourceDatabase
+  isRequired: true
+  description: |+
+    The source scale-out database to move data from.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: SourcePercentage
+  description: |+
+    Specifies the percentage of data in the source scale-out database to move.
+    If a value is not provided, the default value of 50 percent is used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: SourceServiceApplication
+  isRequired: true
+  description: |+
+    The service application in which the data move operation will take place.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPDatabasePipeBind" data-throw-if-not-resolved="False" />
+  name: TargetDatabase
+  isRequired: true
+  description: |+
+    The target scale-out database to move data to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Split-SPScaleOutDatabase
+name: Split-SPScaleOutDatabase
+description: |-
+  This cmdlet contains more than one parameter set.
+  You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
+  For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+
+  Use the `Split-SPScaleOutDatabase` cmdlet to move a specified percentage of partitions from a source database to an existing target database or to a new database that you create with the specified parameters.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/split-spscaleoutdatabase
+  applicable: SharePoint Server Subscription Edition
+  title: Split-SPScaleOutDatabase
+  PlatyPS schema version: 2.0.0

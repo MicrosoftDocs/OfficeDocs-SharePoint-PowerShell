@@ -1,0 +1,141 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new site design available to users when they create a new site from the SharePoint home page.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+syntaxes:
+- >-
+  Add-SPOSiteDesign
+    -Title <string>
+    -WebTemplate <string>
+    -SiteScripts <SPOSiteScriptPipeBind[]>
+    [-Description <string>]
+    [-ThumbnailUrl <string>]
+    [-PreviewImageUrl <string>]
+    [-PreviewImageAltText <string>]
+    [-IsDefault]
+    [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Add-SPOSiteDesign `
+      -Title "Contoso customer tracking" `
+      -WebTemplate "64" `
+      -SiteScripts "<ID>" `
+      -Description "Tracks key customer data in a list" `
+      -ThumbnailUrl "https://contoso.sharepoint.com/SiteAssets/site-thumbnail.png" `
+      -PreviewImageUrl "https://contoso.sharepoint.com/SiteAssets/site-preview.png" `
+      -PreviewImageAltText "site preview"
+  description: ""
+  summary: |+
+    This example creates a new site design.
+
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    The display description of the site design.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IsDefault
+  description: |+
+    A switch that if provided, applies the site design to the default site template. For more information, see [Customize a default site design](https://learn.microsoft.com/sharepoint/dev/declarative-customization/customize-default-site-design).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PreviewImageAltText
+  description: |+
+    The alt text description of the image for accessibility.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PreviewImageUrl
+  description: |+
+    The URL of a preview image. If none is specified, SharePoint uses a generic image.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SPOSiteScriptPipeBind" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SiteScripts
+  isRequired: true
+  description: |+
+    An array of one or more site scripts. Each is identified by an ID. The scripts run in the order listed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ThumbnailUrl
+  description: |+
+    The URL of a thumbnail image. If none is specified, SharePoint uses a generic image. Recommended size is 400 x 300 pixels.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Title
+  isRequired: true
+  description: |+
+    The display name of the site design.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WebTemplate
+  isRequired: true
+  description: |+
+    Identifies which base template to add the design to. Use the value **64** for the Team site template, and the value **68** for the Communication site template.
+    For more information, visit [SharePoint site design and site script overview](https://learn.microsoft.com/sharepoint/dev/declarative-customization/site-design-overview).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Add-SPOSiteDesign
+name: Add-SPOSiteDesign
+description: |-
+  Creates a new site design available to users when they create a new site from the SharePoint home page.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/add-spositedesign
+  applicable: SharePoint Online
+  title: Add-SPOSiteDesign
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

@@ -1,0 +1,90 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  **Note**: This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](https://learn.microsoft.com/sharepointmigration/overview-spmt-ps-cmdlets).
+
+  Use this cmdlet to monitor the status of a submitted SharePoint Online migration job.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Get-SPOAppErrors
+  href: Get-SPOAppErrors.yml
+- text: Get-SPOAppErrors
+  href: Get-SPOAppErrors.yml
+syntaxes:
+- >-
+  Get-SPOMigrationJobStatus -Credentials <CredentialCmdletPipeBind> [-JobId <Guid>] [-NoLogFile]
+   -TargetWebUrl <String> [<CommonParameters>]
+examples:
+- title: '-----------------------EXAMPLE 1-----------------------------'
+  code: |-
+    $targetWebUrl = "https://contoso.sharepoint.com/sites/migrationtest"
+    $credentials = Get-Credential
+    Get-SPOMigrationJobStatus -TargetWebUrl $targetWebUrl -Credentials $credentials -JobId "779c4b3b-ec24-4705-bb58-c38f4329418c"
+  description: |-
+    Get the status of your SPO Migration Job.
+    You can obtain the Job id when submit package data to create new SPO migration job via the Invoke-SPOMigrationEncryptUploadSubmit cmdlet
+  summary: ""
+parameters:
+- type: <xref href="CredentialCmdletPipeBind" data-throw-if-not-resolved="False" />
+  name: Credentials
+  isRequired: true
+  description: |+
+    The credentials of a site collection administrator to use to connect to the site collection. The credentials should supply the username in UPN format (e.g. user@company.onmicrosoft.com). If this property is not set, the current tenant admin credentials from the session's previous call to `Connect-SPOService` will be used to connect to the site collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: JobId
+  description: |+
+    (optional) The ID of a migration job that exists on the target site collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoLogFile
+  description: |+
+    (optional) Indicates to not create a log file. The default is to create a new DeleteMigrationJob log file within the current directory.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetWebUrl
+  isRequired: true
+  description: |+
+    The fully qualified target web URL where the package will be imported. This must include the same TargetWebUrl that was used during `ConvertTo-SPOMigrationTargetedPackage`.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOMigrationJobStatus
+name: Get-SPOMigrationJobStatus
+description: |-
+  This cmdlet will check the status of a migration job.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spomigrationjobstatus
+  applicable: SharePoint Online
+  title: Get-SPOMigrationJobStatus
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

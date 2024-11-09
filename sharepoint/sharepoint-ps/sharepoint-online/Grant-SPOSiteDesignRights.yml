@@ -1,0 +1,75 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Used to apply permissions to a set of users or a security group, effectively scoping the visibility of the site design in the UX. They start off public, but after you set permissions, only those groups or users with permissions can access the site design.
+module: Microsoft.Online.SharePoint.PowerShell
+syntaxes:
+- >-
+  Grant-SPOSiteDesignRights
+    [-Identity] <SPOSiteDesignPipeBind>
+    -Principals <string[]>
+    -Rights {View}
+    [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Grant-SPOSiteDesignRights `
+             -Identity 44252d09-62c4-4913-9eb0-a2a8b8d7f863 `
+             -Principals "nestorw@contoso.onmicrosoft.com" `
+             -Rights View
+  description: ""
+  summary: |+
+    This example shows how to grant view rights on a site design to Nestor (a user at the fictional Contoso site).
+
+parameters:
+- type: <xref href="SPOSiteDesignPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The ID of the site design to get scoping information.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Principals
+  isRequired: true
+  description: |+
+    One or more principles to add permissions for.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SPOSiteDesignPrincipalRights" data-throw-if-not-resolved="False" />
+  name: Rights
+  isRequired: true
+  description: |+
+    Always set to the value **View**. Any user or group with view permissions can view and use the site design.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Grant-SPOSiteDesignRights
+name: Grant-SPOSiteDesignRights
+description: |-
+  Used to apply permissions to a set of users or a security group, effectively scoping the visibility of the site design in the UX. They start off public, but after you set permissions, only those groups or users with permissions can access the site design.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/grant-spositedesignrights
+  applicable: SharePoint Online
+  title: Grant-SPOSiteDesignRights
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

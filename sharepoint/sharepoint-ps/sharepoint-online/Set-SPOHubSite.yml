@@ -1,0 +1,102 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the hub site information such as name, logo, and description.
+module: Microsoft.Online.SharePoint.PowerShell
+syntaxes:
+- Set-SPOHubSite [-Identity] <SpoHubSitePipeBind> [-Title <string>] [-LogoUrl <string>] [-Description <string>] [-SiteDesignId <guid>] [-RequiresJoinApproval <bool>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Set-SPOHubSite https://contoso.sharepoint.com/sites/Marketing `
+    -Title "Marketing Hub" `
+    -LogoUrl https://contoso.sharepoint.com/sites/Marketing/SiteAssets/hublogo.png `
+    -Description "Hub for the Marketing division"
+  description: |-
+    This example updates the name of the hub displayed in the SharePoint user interface. It also updates the logo used in the hub navigation, and specifies an optional description for the hub.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    A description of the hub site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    URL of the hub site.
+
+  defaultValue: None
+  position: Named
+  aliases: HubSite
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LogoUrl
+  description: |+
+    The URL of a logo to use in the hub navigation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: RequiresJoinApproval
+  description: |+
+    Determines if joining a Hub site requires approval.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SiteDesignId
+  description: |+
+    Site Design ID, for example db752673-18fd-44db-865a-aa3e0b28698e
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Title
+  description: |+
+    The display name of the hub.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Set-SPOHubSite
+name: Set-SPOHubSite
+description: |-
+  Use this cmdlet to set properties such as name, logo, and description. These properties appear for the hub in the SharePoint user interface.
+
+  If the hub site doesn't exist, this cmdlet returns a "File not found" error.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spohubsite
+  applicable: SharePoint Online
+  title: Set-SPOHubSite
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

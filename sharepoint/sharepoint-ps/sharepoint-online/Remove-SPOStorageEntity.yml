@@ -1,0 +1,57 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Tenant properties allow tenant administrators to add properties in the app catalog that can be read by various SharePoint Framework components. Because tenant properties are stored in the tenant app catalog, you must provide the tenant app catalog site collection URL or the site collection app catalog URL in the following cmdlets.
+  This cmdlet is used to remove a value in the property bag.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+syntaxes:
+- Remove-SPOStorageEntity [-Site] <SpoSitePipeBind> [-Key] <string> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-SPOStorageEntity "https://tenant-name.sharepoint.com/sites/app-catalog" -Key "MyCustomValue"
+  description: |-
+    This example removes the value of my custom value.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Key
+  isRequired: true
+  description: |+
+    The key in the property bag that should be removed.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Site
+  isRequired: true
+  description: |+
+    URL to the tenant or site collection app catalog.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPOStorageEntity
+name: Remove-SPOStorageEntity
+description: |-
+  Use this cmdlet to remove a value within the property bag.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spostorageentity
+  applicable: SharePoint Online
+  title: Remove-SPOStorageEntity
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

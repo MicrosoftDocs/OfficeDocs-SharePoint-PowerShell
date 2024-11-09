@@ -1,0 +1,114 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns a shared scope rule.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Get-SPEnterpriseSearchQueryScopeRule [[-Identity] <ScopeRulePipeBind>] -Scope <ScopePipeBind> [-Url <Uri>]
+   [-AssignmentCollection <SPAssignmentCollection>] [-SearchApplication <SearchServiceApplicationPipeBind>]
+   [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE------------------'
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
+    $scope = Get-SPEnterpriseSearchQueryScope -Identity MustCrawl -SearchApplication $ssa
+    Get-SPEnterpriseSearchQueryScopeRule -Scope $scope -Url https://criticalSite | Set-SPEnterpriseSearchQueryScopeRule -Url https://criticalSite -UrlScopeRuleType Url
+  description: |-
+    This example gets a reference to a scope rule for the URL https://criticalSite, and sets its rule type to URL.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="ScopeRulePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the scope rule to get.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a scope rule (for example, ScopeRule1); or an instance of a valid ScopeRule object.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="ScopePipeBind" data-throw-if-not-resolved="False" />
+  name: Scope
+  isRequired: true
+  description: |+
+    Returns query scope rules for the specified scope.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a scope (for example, Scope1); or an instance of a valid Scope object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: n
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SearchServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: SearchApplication
+  description: |+
+    Specifies the search application that contains the query scope rule collection.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application name (for example, SearchApp1); or an instance of a valid SearchServiceApplication object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: Url
+  description: |+
+    The type must be a valid URL, in the form https://server_name.
+
+    Returns query scope rules for the specified results URL.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Get-SPEnterpriseSearchQueryScopeRule
+name: Get-SPEnterpriseSearchQueryScopeRule
+description: |-
+  The Get-SPEnterpriseSearchQueryScopeRule cmdlet reads a QueryScopeRule object when the shared scope rule is created, updated, or deleted.
+  SPEnterpriseSearchQueryScopeRule represents a query result scope rule that can be applied to a scope.
+
+  In SharePoint Server, result sources provide the functionality that scopes provided in SharePoint Server.
+
+  During an upgrade from SharePoint Server, to retain legacy settings, shared scopes are automatically migrated.
+  However, these scopes are read-only after the migration.
+  This cmdlet can be used to read a scope rule of a shared scope that has been migrated.
+
+  During an upgrade from SharePoint Server, to preserve legacy settings, local scopes are also automatically migrated when the corresponding sites or site collections are migrated.
+  In a SharePoint Server farm, the scopes of a site or site collection that is in SharePoint Server mode are read-write, whereas the scopes of a site or site collection after upgrade to SharePoint Server mode are read-only.
+  This cmdlet can be used to read a scope rule of a migrated local scope in either situation.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.Search.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchqueryscoperule
+  applicable: SharePoint Server Subscription Edition
+  title: Get-SPEnterpriseSearchQueryScopeRule
+  PlatyPS schema version: 2.0.0

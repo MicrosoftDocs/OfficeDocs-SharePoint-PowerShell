@@ -1,0 +1,229 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a new instance of a performance counter to a Web front end computer or a database server.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Add-SPDiagnosticsPerformanceCounter [-Category] <String> -Counter <String> [-AllInstances]
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-DatabaseServer] [-WebFrontEnd] [-WhatIf]
+   [<CommonParameters>]
+- >-
+  Add-SPDiagnosticsPerformanceCounter [-Category] <String> [-Counter <String>] -Instance <String> [-AllInstances]
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-DatabaseServer] [-WebFrontEnd] [-WhatIf]
+   [<CommonParameters>]
+- >-
+  Add-SPDiagnosticsPerformanceCounter [-Category] <String> [-Instance <String>] [-AllInstances]
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-DatabaseServer] [-WebFrontEnd] [-WhatIf]
+   -CounterList <String[]> [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE 1------------------'
+  code: |-
+    C:\PS>Add-SPDiagnosticsPerformanceCounter -category ASP.NET -Counter "Requests Queued"
+  description: |-
+    This example adds the counter that has the name ASP.NET\Requests Queued on front end Web servers.
+  summary: ""
+- title: '------------------EXAMPLE 2------------------'
+  code: |-
+    C:\PS>Add-SPDiagnosticsPerformanceCounter -category PhysicalDisk -counter "Avg. Disk Queue Length" -allinstances
+  description: |-
+    This example adds all instances of the counter PhysicalDisk in the category Avg.
+    Disk Queue Length on front end Web servers.
+  summary: ""
+- title: '------------------EXAMPLE 3------------------'
+  code: |-
+    C:\PS>Add-SPDiagnosticsPerformanceCounter -category Processor -counter "% Processor Time" -instance "_Total" -databaseserver
+  description: |-
+    This example adds the _Total instance of the counter % Processor Time in the category Processor on database servers.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllInstances
+  description: |+
+    Collects all instances of a counter category and type on the target Web front end computer or database server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Category
+  isRequired: true
+  description: |+
+    Specifies the category of performance counter to add to the target Web front end computer or database server.
+
+    The type must be a valid name of a category of performance counters; for example, ASP.NET, PhysicalDisk, or Processor.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Counter
+  isRequired: true
+  description: |+
+    Specifies the type of counter to add to the target Web front end computer or database server.
+
+    The type must be a valid name of counter type; for example, Requests Queued, Avg.
+    Disk Queue Length, and % Processor Time.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: CounterList
+  isRequired: true
+  description: |+
+    {{Fill CounterList Description}}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DatabaseServer
+  description: |+
+    Adds the specified performance counter to all database servers in the farm.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Instance
+  isRequired: true
+  description: |+
+    Specifies the display name of the new performance counter.
+
+    The type must be a valid name of a performance counter instance; for example Total_PerfCounter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WebFrontEnd
+  description: |+
+    Adds the specified performance counter to all Web front end computers in the farm.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Add-SPDiagnosticsPerformanceCounter
+name: Add-SPDiagnosticsPerformanceCounter
+description: |-
+  This cmdlet contains more than one parameter set.
+  You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+  For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+
+  The Add-SPDiagnosticsPerformanceCounter cmdlet adds a performance counter to a front end Web server or a database server.
+  A performance counter is read and recorded in the usage database.
+  By default, the new performance counter is added to the database servers in the farm.
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/add-spdiagnosticsperformancecounter
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Add-SPDiagnosticsPerformanceCounter
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

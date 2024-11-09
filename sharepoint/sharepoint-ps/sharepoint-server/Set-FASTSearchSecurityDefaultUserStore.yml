@@ -1,0 +1,68 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the default user store general setting.
+module: SharePointServer
+notes: ""
+links:
+- text: Get-FASTSearchSecurityDefaultUserStore
+  href: Get-FASTSearchSecurityDefaultUserStore.yml
+syntaxes:
+- Set-FASTSearchSecurityDefaultUserStore [[-DefaultUserStoreId] <String>] [<CommonParameters>]
+- Set-FASTSearchSecurityDefaultUserStore [[-GeneralSetting] <DefaultUserStoreSetting>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Set-FASTSearchSecurityDefaultUserStore -DefaultUserStoreId win
+  description: |-
+    This example sets the default user store to "win".
+  summary: ""
+- title: '---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    C:\PS>$defuserstore | Set-FASTSearchSecurityDefaultUserStore
+  description: |-
+    This example updates the default user store using values from a pipeline GeneralSetting parameter.
+
+    In this example, the $defuserstoreGeneralSetting was created with this command: $defuserstore = Get-FASTSearchSecurityDefaultUserStore.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DefaultUserStoreId
+  description: |+
+    The identity of the user store to set as the default user store.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="DefaultUserStoreSetting" data-throw-if-not-resolved="False" />
+  name: GeneralSetting
+  description: |+
+    A DefaultUserStoreSettinginstance whose property values are used for the DefaultUserStoreSetting being updated.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "9999"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Set-FASTSearchSecurityDefaultUserStore
+name: Set-FASTSearchSecurityDefaultUserStore
+description: |-
+  This cmdlet updates the identity of the user store that users and groups are looked up in, to determine the appropriate document access if the user store identity is not specified when looking up the user or group.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-fastsearchsecuritydefaultuserstore
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Set-FASTSearchSecurityDefaultUserStore

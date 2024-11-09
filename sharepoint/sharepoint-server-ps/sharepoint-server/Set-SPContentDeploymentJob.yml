@@ -1,0 +1,235 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets properties of a content deployment job.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Set-SPContentDeploymentJob [-Identity] <SPContentDeploymentJobPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Description <String>]
+   [-EmailAddresses <String[]>] [-EmailNotifications <ContentDeploymentNotificationSettings>]
+   [-HostingSupportEnabled] [-IncrementalEnabled] [-Name <String>] [-Schedule <String>] [-ScheduleEnabled]
+   [-Scope <SPWebPipeBind[]>] [-SqlSnapshotSetting <ContentDeploymentSqlSnapshotSetting>] [-WhatIf]
+   [<CommonParameters>]
+examples:
+- title: '-----------------EXAMPLE------------------'
+  code: |-
+    Get-SPContentDeploymentJob "Job 1" | Set-SPContentDeploymentJob -Schedule "hourly between 0 and 59" -ScheduleEnabled:$true
+  description: |-
+    This example sets the deployment job called Job 1 to run hourly.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies the description for the content deployment job.
+    The name can be a maximum of 4096 alphanumeric characters.
+
+    The type must be a valid string.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: EmailAddresses
+  description: |+
+    Specifies the e-mail addresses of individuals who receive notification e-mails about this ContentDeploymentJob object.
+
+    The type must be a list of valid e-mail addresses.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="ContentDeploymentNotificationSettings" data-throw-if-not-resolved="False" />
+  name: EmailNotifications
+  description: |+
+    Specifies how e-mail notifications are sent about this ContentDeploymentJob object.
+
+    The type must be one of the following:
+
+    -Never specifies that e-mail notifications will not be sent when a job succeeds or fails.
+
+    - Success specifies that e-mail notifications will be sent if a content deployment job succeeds.
+    - Failure specifies that e-mail notifications will be sent if a content deployment job fails.
+    - Always specifies that e-mail notifications will be sent when a job succeeds or fails.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: HostingSupportEnabled
+  description: |+
+    Enables special hosting behavior.
+    The default value is False.
+
+    Normally, a content deployment job is enabled or disabled by using the SharePoint Central Administration Web site.
+    However, in the case of hosting, the tenant administrator does not have permissions to access the Central Administration page to configure jobs.
+    Therefore, when the HostingSupportEnabled parameter is set to True, the hoster creates the job, so that tenants can enable or disable their deployment jobs from their tenant administration site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPContentDeploymentJobPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the content deployment job to update.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a content deployment job (for example, DeployJob1); or an instance of a valid SPContentDeploymentJob object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncrementalEnabled
+  description: |+
+    Specifies that only incremental changes are deployed to the destination site collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the name of the new content deployment job.
+
+    The type must be a valid name of a content deployment job; for example, DeployJob1.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Schedule
+  description: |+
+    Sets the schedule for the deployment job.
+
+    The type must be a valid SPSchedule object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ScheduleEnabled
+  description: |+
+    Enables the schedule for the deployment job.
+    If the schedule is not enabled, the job can be run manually only.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPWebPipeBind" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Scope
+  description: |+
+    Sets the scope of the deployment job.
+    SPSite objects that are passed in must exist in the current path of the source site collection.
+    The default scope is the entire site collection.
+    Valid values include a SPWeb object or an array of SPWeb objects.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a SharePoint Foundation Web site (for example, MySPSite1); or an instance of a valid SPWeb object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="ContentDeploymentSqlSnapshotSetting" data-throw-if-not-resolved="False" />
+  name: SqlSnapshotSetting
+  description: |+
+    Backs up the SharePoint Foundation content database by using SQL Server.
+
+    The type must be one of the following values: None or CreateNew.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPContentDeploymentJob
+name: Set-SPContentDeploymentJob
+description: |-
+  The `Set-SPContentDeploymentJob` cmdlet sets the properties of a content deployment job.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.Publishing.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spcontentdeploymentjob
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPContentDeploymentJob
+  PlatyPS schema version: 2.0.0

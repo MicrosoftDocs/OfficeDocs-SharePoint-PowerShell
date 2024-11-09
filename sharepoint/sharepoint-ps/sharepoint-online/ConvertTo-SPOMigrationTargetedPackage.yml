@@ -1,0 +1,209 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use this cmdlet to convert your XML files into a new migration package.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Get-SPOAppErrors
+  href: Get-SPOAppErrors.yml
+- text: ConvertTo-SPOMigrationEncryptedPackage
+  href: ConvertTo-SPOMigrationEncryptedPackage.yml
+syntaxes:
+- ConvertTo-SPOMigrationTargetedPackage [-SourceFilesPath] <String> [-SourcePackagePath] <String> [[-OutputPackagePath] <String>] [-TargetWebUrl] <String> [-AzureADUserCredentials <CredentialCmdletPipeBind>] -Credentials <CredentialCmdletPipeBind> [-NoAzureADLookup] [-NoLogFile] [-ParallelImport] [-PartitionSizeInBytes <Int64>] -TargetDocumentLibraryPath <String> [-TargetDocumentLibrarySubFolderPath <String>] [-TargetEnvironment <TargetEnvironment>] [-UserMappingFile <String>] [<CommonParameters>]
+- ConvertTo-SPOMigrationTargetedPackage [-SourceFilesPath] <String> [-SourcePackagePath] <String> [[-OutputPackagePath] <String>] [-TargetWebUrl] <String> [-AzureADUserCredentials <CredentialCmdletPipeBind>] -Credentials <CredentialCmdletPipeBind> [-NoAzureADLookup] [-NoLogFile] [-ParallelImport] [-PartitionSizeInBytes <Int64>] [-TargetEnvironment <TargetEnvironment>] -TargetListPath <String> [-UserMappingFile <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    $finalPackages = ConvertTo-SPOMigrationTargetedPackage -ParallelImport -SourceFilesPath $sourceFiles -SourcePackagePath $sourcePackage -OutputPackagePath $targetPackage -Credentials $cred -TargetWebUrl $targetWeb -TargetDocumentLibraryPath $targetDocLib
+  description: ""
+  summary: |+
+    This example shows how to convert a package to a targeted one by looking up data in the target site collection. It uses the '-ParallelImport' parameter to boost file share migration performance.
+parameters:
+- type: <xref href="CredentialCmdletPipeBind" data-throw-if-not-resolved="False" />
+  name: AzureADUserCredentials
+  description: |+
+    Receives Microsoft Entra User Credentials
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="CredentialCmdletPipeBind" data-throw-if-not-resolved="False" />
+  name: Credentials
+  isRequired: true
+  description: |+
+    Fill out the Regular Credentials (Get-Credential)
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoAzureADLookup
+  description: |+
+    Switch parameter that says if the command should or should not look up for Microsoft Entra ID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoLogFile
+  description: |+
+    Switch Parameter to determine if you should get or not a log file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OutputPackagePath
+  description: |+
+    Output package path
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ParallelImport
+  description: |+
+    Switch parameter to boost file share migration performance.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Int64" data-throw-if-not-resolved="False" />
+  name: PartitionSizeInBytes
+  description: |+
+    Define the partition size in Bytes where it will be located the target package.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceFilesPath
+  isRequired: true
+  description: |+
+    Defines the temporary Path where are located the XML source files.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourcePackagePath
+  isRequired: true
+  description: |+
+    Defines the source package path location.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetDocumentLibraryPath
+  isRequired: true
+  description: |+
+    Defines the target document library path.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetDocumentLibrarySubFolderPath
+  description: |+
+    Defines the target document library subfolder path.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="TargetEnvironment" data-throw-if-not-resolved="False" />
+  name: TargetEnvironment
+  description: |+
+    Defines the Target environment: Production, ProductionChina, None or OnPremises.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: Production, ProductionChina, None, OnPremises
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetListPath
+  isRequired: true
+  description: |+
+    Defines the Target list path
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TargetWebUrl
+  isRequired: true
+  description: |+
+    Defines the Target Web URL of the package.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserMappingFile
+  description: |+
+    Defines the file mapping of the user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.ConvertTo-SPOMigrationTargetedPackage
+name: ConvertTo-SPOMigrationTargetedPackage
+description: |-
+  Use this cmdlet to create a migration package from one Library to Another Library in form of a package. It converts the XML files and saves them as a new set of targeted migration package metadata files to the target directory.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/convertto-spomigrationtargetedpackage
+  applicable: SharePoint Online
+  title: ConvertTo-SPOMigrationTargetedPackage
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

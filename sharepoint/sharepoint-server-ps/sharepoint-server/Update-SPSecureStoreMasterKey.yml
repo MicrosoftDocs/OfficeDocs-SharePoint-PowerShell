@@ -1,0 +1,89 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Changes the master key of a Secure Store Service application.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Update-SPSecureStoreMasterKey -Passphrase <String> -ServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE------------------'
+  code: |-
+    $newPassPhrase = "abcDEF123!"
+    $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'Secure Store Service Application Proxy'}
+    Update-SPSecureStoreMasterKey -ServiceApplicationProxy $proxy -Passphrase $newPassPhrase
+  description: |-
+    This example creates a new master key for the given service application.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Passphrase
+  isRequired: true
+  description: |+
+    Specifies the passphrase that is used for the Secure Store database.
+    The passphrase that you enter is not stored.
+    Make sure that you write down the passphrase and store it in a secure location.
+    The passphrase will be required to add new Secure Store service servers.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPServiceApplicationProxyPipeBind" data-throw-if-not-resolved="False" />
+  name: ServiceApplicationProxy
+  isRequired: true
+  description: |+
+    Specifies the proxy of the Secure Store service application that contains the master key to update.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Update-SPSecureStoreMasterKey
+name: Update-SPSecureStoreMasterKey
+description: |-
+  The `Update-SPSecureStoreApplicationServerKey` cmdlet changes the master key of a Secure Store Service application.
+
+  Updating the master key is required when:
+
+
+  --A new instance of a service application is created and the database for the Secure Store service application is new or empty.
+
+  --The master key or passphrase has been compromised.
+
+  --Security guidelines require that the passphrase or key be replaced.
+
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/update-spsecurestoremasterkey
+  applicable: SharePoint Server Subscription Edition
+  title: Update-SPSecureStoreMasterKey
+  PlatyPS schema version: 2.0.0

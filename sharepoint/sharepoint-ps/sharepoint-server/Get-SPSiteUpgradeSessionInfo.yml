@@ -1,0 +1,172 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Manage or report site upgrade.
+module: SharePointServer
+notes: ""
+links:
+- text: Remove-SPSiteUpgradeSessionInfo
+  href: Remove-SPSiteUpgradeSessionInfo.yml
+syntaxes:
+- >-
+  Get-SPSiteUpgradeSessionInfo -ContentDatabase <SPContentDatabasePipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-HideWaiting] [-ShowCompleted] [-ShowFailed]
+   [-ShowInProgress] [-SiteSubscription <SPSiteSubscriptionPipeBind>] [<CommonParameters>]
+- >-
+  Get-SPSiteUpgradeSessionInfo -Site <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+   [<CommonParameters>]
+examples:
+- title: '-----------EXAMPLE 1----------'
+  code: |-
+    C:\PS>$db = Get-SPContentDatabase -Identity wss_content
+
+    Get-SPSiteUpgradeSessionInfo -ContentDatabase $db
+  description: |-
+    This example returns siteupgradeinfo for every SPContentDatabase returned from Get-SPContentDatabase cmdlet.
+  summary: ""
+- title: '-----------EXAMPLE 2----------'
+  code: |-
+    C:\PS>$site=Get-SPSite -Identity https://localhost
+
+    Get-SPSiteUpgradeSessionInfo -Site $site
+  description: |-
+    This example returns siteupgradeinfo for every SPSite object returned from Get-SPSite cmdlet.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPContentDatabasePipeBind" data-throw-if-not-resolved="False" />
+  name: ContentDatabase
+  isRequired: true
+  description: |+
+    Specifies the GUID of the content database from which to list site collections.The type must be a valid database name, in the form  SPContentDB01, or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: HideWaiting
+  description: |+
+    Specifies to hide site collections that upgrade has not started.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ShowCompleted
+  description: |+
+    Specifies to show site collections that has completed upgrade.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ShowFailed
+  description: |+
+    Specifies to show site collections that have failed upgrade.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ShowInProgress
+  description: |+
+    Displays site collections that are in the process of being upgraded.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Site
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPSiteSubscriptionPipeBind" data-throw-if-not-resolved="False" />
+  name: SiteSubscription
+  description: |+
+    Specifies to limit the result to site collections within the site subscription.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Get-SPSiteUpgradeSessionInfo
+name: Get-SPSiteUpgradeSessionInfo
+description: |-
+  This cmdlet contains more than one parameter set.
+  You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+  For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+
+  Use the Get-SPSiteUpgradeSessionInfo cmdlet to manage or report site upgrade of the farm.
+
+  This cmdlet has two modes, get upgrade information for a specific SPSite object or for a given content database.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spsiteupgradesessioninfo
+  applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Get-SPSiteUpgradeSessionInfo
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

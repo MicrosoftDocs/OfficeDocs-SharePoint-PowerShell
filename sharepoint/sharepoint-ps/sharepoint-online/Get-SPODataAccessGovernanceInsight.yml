@@ -1,0 +1,74 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Lists various reports available in 'Data Access Governance' module (DAG) in SharePoint Admin Center.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-SPODataAccessGovernanceInsight -ReportEntity <ReportEntityEnum> [-WorkLoad <WorkloadEnum>]
+   [-ReportType <ReportTypeEnum>] [<CommonParameters>]
+- Get-SPODataAccessGovernanceInsight -ReportID <Guid> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-SPODataAccessGovernanceInsight -ReportEntity EveryoneExceptExternalUsersForItems
+  description: |-
+    This command fetches all DAG reports about 'Everyone except external users' attached to a item i.e., file/folder/list. The output consists of important parameters such as Status, ReportID, number of sites in the report and other user provided values during report generation.
+  summary: ""
+parameters:
+- type: <xref href="ReportEntityEnum" data-throw-if-not-resolved="False" />
+  name: ReportEntity
+  isRequired: true
+  description: |+
+    Specifies the 'potential oversharing' scenario as captured by DAG report given during the report creation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: SharingLinks_Anyone, SharingLinks_PeopleInYourOrg, SharingLinks_Guests, SensitivityLabelForFiles, EveryoneExceptExternalUsersAtSite, EveryoneExceptExternalUsersForItems, PermissionedUsers
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: ReportID
+  isRequired: true
+  description: |+
+    Specifies the ID of the particular report to be fetched.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="ReportTypeEnum" data-throw-if-not-resolved="False" />
+  name: ReportType
+  description: |+
+    Specifies the time period of data of the reports to be fetched i.e., fetch 'Snapshot' reports or 'RecentActivity' reports
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Snapshot, RecentActivity
+- type: <xref href="WorkloadEnum" data-throw-if-not-resolved="False" />
+  name: WorkLoad
+  description: |+
+    Specifies the datasource of the reports to be fetched i.e., reports for SharePoint sites or for OneDrive accounts.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: SharePoint, OneDriveForBusiness
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPODataAccessGovernanceInsight
+name: Get-SPODataAccessGovernanceInsight
+description: |-
+  Fetch details of various reports available in 'Data Access Governance' module (DAG) in SharePoint Admin Center
+metadata:
+  external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: ""
+  PlatyPS schema version: 2.0.0
+  author: MachelleTranMSFT
+  ms.author: mactra
+  ms.reviewer: pullabhk

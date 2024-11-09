@@ -1,0 +1,48 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Extracts and displays the sensitivity label related information attached to an office file stored in SharePoint.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: /powershell/sharepoint/sharepoint-online/connect-sharepoint-online
+- text: Get-SPOAppErrors
+  href: Get-SPOAppErrors.yml
+syntaxes:
+- Get-FileSensitivityLabelInfo -FileUrl <String> [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Get-FileSensitivityLabelInfo -FileUrl "https://contoso.com/sites/Marketing/Shared Documents/Doc1.docx"
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FileUrl
+  isRequired: true
+  description: |+
+    Full URL for the file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-FileSensitivityLabelInfo
+name: Get-FileSensitivityLabelInfo
+description: |-
+  The `Get-FileSensitivityLabelInfo` cmdlet runs on a single office online file. If the file has a sensitivity label attached then it returns the id, displayname, isProtectionEnabled flag and id of the parent label (if applicable). You must be a SharePoint Online administrator to run the `GetFileSensitivityLabelInfo` cmdlet. Note that this cmdlet does not work on files that have labels with custom permission or user defined permission or double key encryption.
+  For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Get-FileSensitivityLabelInfo
+  applicable: SharePoint Online
+  title: Get-FileSensitivityLabelInfo
+  PlatyPS schema version: 2.0.0
+  author: SanjoyanM
+  ms.author: samust
+  ms.reviewer: ""

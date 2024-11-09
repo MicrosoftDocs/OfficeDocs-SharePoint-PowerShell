@@ -1,0 +1,153 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a routing rule.
+module: SharePointServer
+notes: ""
+links:
+- text: Get-SPRoutingRule
+  href: Get-SPRoutingRule.yml
+- text: Remove-SPRoutingRule
+  href: Remove-SPRoutingRule.yml
+- text: Set-SPRoutingRule
+  href: Set-SPRoutingRule.yml
+syntaxes:
+- >-
+  Add-SPRoutingRule [-RequestManagementSettings] <SPRequestManagementSettingsPipeBind> [-Name] <String>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Criteria <SPRequestManagementRuleCriteriaPipeBind[]>]
+   [-ExecutionGroup <Int32>] [-Expiration <DateTime>] [-MachinePool <SPRoutingMachinePoolPipeBind>]
+   [<CommonParameters>]
+examples:
+- title: '--------------EXAMPLE--------'
+  code: |-
+    C:\PS>$rm=Get-SPRequestManagementSettings -Identity $web
+
+    C:\PS>Get-SPRoutingRule -RequestManagementSettings $rm
+
+    C:\PS>$machines=Get-SPRoutingMachineInfo -RequestManagementSettings $rm
+
+    C:\PS>Add-SPRoutingMachinePool -RequestManagementSettings $rm -Name <Name of Pool> -MachineTargets $machines
+  description: |-
+    This examples adds a routing rule to the farm by using the $rm and $machines variables.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPRequestManagementRuleCriteriaPipeBind" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Criteria
+  description: |+
+    Specifies the criteria for the rule to match.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: ExecutionGroup
+  description: |+
+    Specifies the group in which the rule will be placed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: Expiration
+  description: |+
+    Specifies the expiration date and time of the rule.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPRoutingMachinePoolPipeBind" data-throw-if-not-resolved="False" />
+  name: MachinePool
+  description: |+
+    Specifies the pool of machines to which a request will be routed if the created rule is matched.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the rule.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPRequestManagementSettingsPipeBind" data-throw-if-not-resolved="False" />
+  name: RequestManagementSettings
+  isRequired: true
+  description: |+
+    Specifies the name of the request management settings object to add to the routing rule.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Add-SPRoutingRule
+name: Add-SPRoutingRule
+description: |-
+  The Add-SPRoutingRule cmdlet adds a routing rule for the farm.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/add-sproutingrule
+  applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Add-SPRoutingRule
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

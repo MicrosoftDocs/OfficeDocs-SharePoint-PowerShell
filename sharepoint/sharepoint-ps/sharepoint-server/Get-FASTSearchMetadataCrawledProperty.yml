@@ -1,0 +1,148 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves a crawled property from Microsoft FAST Search Server 2010 for SharePoint.
+module: SharePointServer
+notes: ""
+links:
+- text: New-FASTSearchMetadataCrawledProperty
+  href: New-FASTSearchMetadataCrawledProperty.yml
+- text: Set-FASTSearchMetadataCrawledProperty
+  href: Set-FASTSearchMetadataCrawledProperty.yml
+syntaxes:
+- >-
+  Get-FASTSearchMetadataCrawledProperty [[-Name] <String>] [-Count <Int32>] [-Filter <String>] [-Offset <Int32>]
+   [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1-----------------'
+  code: |-
+    Get-FASTSearchMetadataCrawledProperty
+  description: |-
+    Calling Get-FASTSearchMetadataCrawledProperty without any parameters returns all known crawled properties in the FAST Search Server 2010 for SharePoint system.
+  summary: ""
+- title: '---------------EXAMPLE 2-----------------'
+  code: |-
+    Get-FASTSearchMetadataCrawledProperty -Name viewurl
+  description: |-
+    This example retrieves a crawled property with the exact name "viewurl".
+  summary: ""
+- title: '---------------EXAMPLE 3-----------------'
+  code: |-
+    Get-FASTSearchMetadataCrawledProperty -filter 4
+  description: |-
+    This example retrieves and returns any crawled property that includes a "4" in its name.
+  summary: ""
+- title: '---------------EXAMPLE 4-----------------'
+  code: |-
+    Get-FASTSearchMetadataCrawledproperty -filter url -count 2
+  description: |-
+    This example retrieves the first two crawled properties with the name "url".
+  summary: ""
+- title: '---------------EXAMPLE 5-----------------'
+  code: |-
+    Get-FASTSearchMetadataCrawledproperty |ForEach-Object{ if ($_.IsMappedToContents) {$_.Name} }
+  description: |-
+    This example returns the names of all crawled properties that have the IsMappedToContents parameter set to "true".
+    The example first retrieves all configured crawled properties, and then iterates over them to find those with IsMappedToContents set to "true"
+  summary: ""
+- title: '---------------EXAMPLE 6-----------------'
+  code: |-
+    Get-FASTSearchMetadataCrawledproperty -offset 0 -count 2
+    Get-FASTSearchMetadataCrawledproperty -offset 2 -count 2
+    Get-FASTSearchMetadataCrawledproperty -offset 4 -count 2
+  description: |-
+    This example generates a list of two crawled properties each time the cmdlet is run.
+    The Offset is increased by the Count value to start returning crawled properties where the last run ended.
+  summary: ""
+- title: '---------------EXAMPLE 7----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Get-FASTSearchMetadataCrawledProperty -filter url| where-object {($_.Name -eq "url") -and ($_.VariantType -eq 31) -and ($_.Propset -eq "63e90878-0292-490d-8b7c-f3905a8b65fd")}
+  description: |-
+    This example lists all potential matches to a named crawled property, and then selects the exact crawled property by iterating over the result set and picking out the result that also matches both the requested property set and variant type.
+    The command returns the "url" crawled property in the "Enterprise Crawler" category.
+  summary: ""
+parameters:
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Count
+  description: |+
+    The maximum number of crawled properties to return (starting from the first returned crawled property, or from the index given by the Offset parameter).
+
+    If the Filter or Name parameter is specified, these will only be applied after the result set has been narrowed down to the range \[Offset, Offset + Count\].
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Filter
+  description: |+
+    The term used to search for configured crawled properties.
+
+    The Filter parameter does not support wildcards.
+    Matching is case-insensitive, and matches a string anywhere within the name attribute of the crawled property.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The name of crawled property to retrieve.
+
+    The Name parameter supports wildcards.
+    Combine the Name parameter with the Offset and Count parameters to control the range that is searched.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Offset
+  description: |+
+    The offset in the result set from which to start returning results.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Get-FASTSearchMetadataCrawledProperty
+name: Get-FASTSearchMetadataCrawledProperty
+description: |-
+  This cmdlet retrieves a crawled property from the FAST Search Server 2010 for SharePoint system.
+  If the cmdlet is called without any parameters, it returns all crawled properties in the system.
+  The order of the returned crawled property list is fixed, and multiple calls return the same ordered list as long as no new crawled properties have been added.
+
+  Get-FASTSearchMetadataCrawledProperty supports several ways of looking up properties.
+  Run with a single parameter or with a named parameter (using Name), the cmdlet retrieves crawled properties with that exact name, if any exist.
+  The Name parameter supports wildcards.
+  Alternatively, a filter can be specified (using the Filter parameter) to search the crawled properties and to return any crawled property with a name that includes the filter value.
+  The filter option does not support wildcards.
+
+  Retrieving crawled properties with the Filter parameter is much more efficient than using the Name parameter.
+
+  To paginate a set of results from this cmdlet, use an Offset and Count to control the number of returned results.
+
+  Offset and Count are calculated before either filter or named matching is done.
+  This means that if a crawled property falls outside the \[Offset,Offset+Count\] range, it will not be returned.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-fastsearchmetadatacrawledproperty
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Get-FASTSearchMetadataCrawledProperty

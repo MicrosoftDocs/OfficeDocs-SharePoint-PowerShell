@@ -1,0 +1,121 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates a previously uploaded site script.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+syntaxes:
+- >-
+  Set-SPOSiteScript
+    -Identity <SPOSiteScriptPipeBind>
+    -Title <string>
+    -Content <string>
+    [-Description <string>]
+    [-Version <Int32>]
+    [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    $newnavscript = @'
+    {
+        "$schema": "schema.json",
+            "actions": [
+                {
+                    "verb": "addNavLink",
+                    "url": "/Custom Library",
+                    "displayName": "Custom Library Updated",
+                    "isWebRelative": true
+                },
+                {
+                    "verb": "addNavLink",
+                    "url": "/Lists/Custom List",
+                    "displayName": "Custom List Updated",
+                    "isWebRelative": true
+                },
+                {
+                    "verb": "applyTheme",
+                    "themeName": "Contoso Explorers"
+                }
+            ],
+                "bindata": { },
+        "version": 2
+    };
+    '@
+
+    Set-SPOSiteScript -Identity edaec4ec-71e2-4026-ac1e-6686bb30190d -Content $newnavscript -Version 2
+  description: ""
+  summary: |+
+    This example updates a previously created site script. Any site designs referencing it execute the updated script.
+
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Content
+  description: |+
+    The JSON value that describes the script. For more information, see the [JSON reference](https://learn.microsoft.com/sharepoint/dev/declarative-customization/site-design-json-schema).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    A description of the script.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SPOSiteDesignPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The id of the site design.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Title
+  description: |+
+    The display name of the site design.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Version
+  description: |+
+    A version number of the script.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Set-SPOSiteScript
+name: Set-SPOSiteScript
+description: |-
+  Updates a previously uploaded site script.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spositescript
+  applicable: SharePoint Online
+  title: Set-SPOSiteScript
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

@@ -1,0 +1,46 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This commands exports/downloads the DAG report to the default path "C:\WINDOWS\system32\"
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Export-SPODataAccessGovernanceInsight -ReportID <Guid> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Export-SPODataAccessGovernanceInsight -ReportID 28f4c550-215a-472b-a123-c11e5fa8804c
+  description: |-
+    This command downloads the report of the given ID to the default path "C:\WINDOWS\system32\"
+  summary: ""
+parameters:
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: ReportID
+  isRequired: true
+  description: |+
+    Specifies the ID of the DAG report to be downloaded.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Export-SPODataAccessGovernanceInsight
+name: Export-SPODataAccessGovernanceInsight
+description: |-
+  This commands exports/downloads the DAG report, specified by the ReportID, to the default path "C:\WINDOWS\system32\". The ReportID is shown in the output of the 'Start-SPODataAccessGovernanceInsight' command. It can also be fetched from the output of the 'Get-SPODataAccessGovernanceInsight' command.
+metadata:
+  external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  applicable: SharePoint Online
+  online version: ""
+  PlatyPS schema version: 2.0.0
+  author: MachelleTranMSFT
+  ms.author: mactra
+  ms.reviewer: pullabhk

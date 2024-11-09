@@ -1,0 +1,51 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets a Lotus Notes user store.
+module: SharePointServer
+notes: ""
+links:
+- text: New-FASTSearchSecurityLotusNotesUserStore
+  href: New-FASTSearchSecurityLotusNotesUserStore.yml
+- text: Set-FASTSearchSecurityLotusNotesUserStore
+  href: Set-FASTSearchSecurityLotusNotesUserStore.yml
+syntaxes:
+- Get-FASTSearchSecurityLotusNotesUserStore [[-Identity] <String>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1-----------------'
+  code: |-
+    Get-FASTSearchSecurityLotusNotesUserStore -Identity ln1
+  description: |-
+    This example gets the Lotus Notes user store with the identity "ln1".
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The identity of the Lotus Notes user store to get.
+    If not specified, a list of all Lotus Notes user stores is returned.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Get-FASTSearchSecurityLotusNotesUserStore
+name: Get-FASTSearchSecurityLotusNotesUserStore
+description: |-
+  This cmdlet retrieves a specific Lotus Notes user store.
+  If the Identity parameter is not specified, the cmdlet gets a list of all Lotus Notes user stores.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-fastsearchsecuritylotusnotesuserstore
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Get-FASTSearchSecurityLotusNotesUserStore

@@ -1,0 +1,56 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Command to remove a scheduled site design script.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Get-SPOSiteDesignTask
+  href: Get-SPOSiteDesignTask.yml
+- text: Get-SPOSiteDesignRun
+  href: Get-SPOSiteDesignRun.yml
+- text: Get-SPOSiteDesignRunStatus
+  href: Get-SPOSiteDesignRunStatus.yml
+syntaxes:
+- >-
+  Remove-SPOSiteDesignTask
+    -Identity <guid>
+    [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-SPOSiteDesignTask -Identity 501z8c32-4147-44d4-8607-26c2f67cae82
+  description: ""
+  summary: |+
+    This example removes a previously scheduled site design.
+
+parameters:
+- type: <xref href="SPOSiteDesignPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The ID of the site design to apply.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPOSiteDesignTask
+name: Remove-SPOSiteDesignTask
+description: |-
+  Removes a scheduled site design by providing the site design ID. If the execution of the associated site script has already started the execution will not be terminated.
+
+  > [!NOTE]
+  > This command only removes a scheduled request. To check on the job status or to view details of the scheduled run, use the commands in the related section below.
+metadata:
+  external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spositedesigntask
+  applicable: SharePoint Online
+  title: Remove-SPOSiteDesignTask
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

@@ -1,0 +1,47 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get the replication parameters to manage Multi-Geo taxonomy replication.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Introduction to the SharePoint Online management shell
+  href: https://support.office.com/en-us/article/introduction-to-the-sharepoint-online-management-shell-c16941c3-19b4-4710-8056-34c034493429
+- text: SharePoint Online Management Shell Download
+  href: https://www.microsoft.com/en-US/download/details.aspx?id=35588
+- text: Get-SPOAppErrors
+  href: Get-SPOAppErrors.yml
+- text: Set-SPOTenantTaxonomyReplicationParameters
+  href: Set-SPOTenantTaxonomyReplicationParameters.yml
+- text: Get-SPOTenantContentTypeReplicationParameters
+  href: Get-SPOTenantContentTypeReplicationParameters.yml
+- text: Set-SPOTenantContentTypeReplicationParameters
+  href: Set-SPOTenantContentTypeReplicationParameters.yml
+syntaxes:
+- Get-SPOTenantTaxonomyReplicationParameters [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-SPOTenantTaxonomyReplicationParameters
+  description: |-
+    Gets the replication groups that are being replicated on the current tenant.
+  summary: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOTenantTaxonomyReplicationParameters
+name: Get-SPOTenantTaxonomyReplicationParameters
+description: |-
+  Before using this cmdlet, make sure you connect to SharePoint Online using [Connect-SPOService](Connect-SPOService.yml) and the desirable satellite location URL as the -Url parameter.
+
+  This Cmdlet gets the replication parameters and it works to get the replication taxonomy in a Multi-Geo tenant.
+  It works with the [Set-SPOTenantTaxonomyReplicationParameters](Set-SPOTenantTaxonomyReplicationParameters.yml) to set the parameters.
+
+  Get the sites to be replicated in a Multi-Geo taxonomy replication.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spotenanttaxonomyreplicationparameters
+  applicable: SharePoint Online
+  title: Get-SPOTenantTaxonomyReplicationParameters
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

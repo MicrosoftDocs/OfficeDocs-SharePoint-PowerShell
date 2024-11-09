@@ -1,0 +1,95 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a FAST Search Server 2010 for SharePoint security user store to provide security for claims content.
+module: SharePointServer
+notes: ""
+links:
+- text: Get-FASTSearchSecurityClaimsUserStore
+  href: Get-FASTSearchSecurityClaimsUserStore.yml
+- text: Set-FASTSearchSecurityClaimsUserStore
+  href: Set-FASTSearchSecurityClaimsUserStore.yml
+syntaxes:
+- >-
+  New-FASTSearchSecurityClaimsUserStore [-Identity] <String> [[-Description] <String>] [[-Issuer] <String>]
+   [-ObjectToClone <ClaimsUserStore>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    New-FASTSearchSecurityClaimsUserStore -Identity clm
+  description: |-
+    This example creates a new security claims user store with a user store Identity of "clm".
+
+    This example uses default values for all parameters except the required Identity parameter.
+  summary: ""
+- title: '---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Get-FASTSearchSecurityClaimsUserStore -Identity clm | New-FASTSearchSecurityClaimsUserStore -Identity cl2
+  description: |-
+    This example creates a new security claims user store with an identity of "cl2" using all properties from the claims user store "clm" as a baseline.
+    The New-FASTSearchSecurityClaimsUserStore cmdlet uses the ObjectToClone value on the pipeline as input to the New cmdlet.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    A brief explanation of the user store.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The user store identity.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Issuer
+  description: |+
+    The Microsoft SharePoint Server Security Token Service (STS) claims provider that issued the claims.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="ClaimsUserStore" data-throw-if-not-resolved="False" />
+  name: ObjectToClone
+  description: |+
+    A claims user store object whose property values are used as a baseline to create another claims user store.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.New-FASTSearchSecurityClaimsUserStore
+name: New-FASTSearchSecurityClaimsUserStore
+description: |-
+  This cmdlet configures extended security for claims content.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-fastsearchsecurityclaimsuserstore
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: New-FASTSearchSecurityClaimsUserStore

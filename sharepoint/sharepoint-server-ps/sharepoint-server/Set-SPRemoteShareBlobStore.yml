@@ -1,0 +1,129 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures the specified Remote Share BLOB Store.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Set-SPRemoteShareBlobStore -RemoteShareBlobStore <SPRemoteShareBlobStorePipeBind> [-Location <String>]
+   [-BlobStoreCredential <PSCredential>] [-PoolCapacity <Int32>] [-AssignmentCollection <SPAssignmentCollection>]
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------EXAMPLE 1-------------'
+  code: |-
+    Set-SPRemoteShareBlobStore -RemoteShareBlobStore "RemoteStore" -Location "\\storage_name\blobstore\"
+  description: |-
+    This example sets the location of Remote Share BLOB Store "RemoteStore" to "\\\\storage_name\blobstore\"
+  summary: ""
+- title: '-------------EXAMPLE 2-------------'
+  code: |-
+    Set-SPRemoteShareBlobStore -RemoteShareBlobStore "RemoteStore" -BlobStoreCredential (Get-Credential)
+  description: |-
+    This example prompts the user to provide BLOB store credentials for the specified Remote Share BLOB Store "RemoteStore".
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+    NOTE: When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: BlobStoreCredential
+  description: |+
+    Specifies the credentials to use to connect to the BLOB store.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Location
+  description: |+
+    Specifies the path of the SMB storage this BLOB store will use.
+    You must use a Universal Naming Convention (UNC) share path.
+    For example: \\\\storage_name\blobstore.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: PoolCapacity
+  description: |+
+    The number of BLOB trunks in each BLOB pool.
+
+    If this parameter is not specified, the current value will not be changed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPRemoteShareBlobStorePipeBind" data-throw-if-not-resolved="False" />
+  name: RemoteShareBlobStore
+  isRequired: true
+  description: |+
+    Specifies the identity of the Remote Share BLOB Store to unregister.
+
+    It can either be the Remote Share BLOB Store object or the Remote Share BLOB Store name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPRemoteShareBlobStore
+name: Set-SPRemoteShareBlobStore
+description: |-
+  The \`Set-SPRemoteShareBlobStore\` cmdlet changes the setting of the registed Remote Share BLOB Store.
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spremoteshareblobstore
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPRemoteShareBlobStore
+  PlatyPS schema version: 2.0.0

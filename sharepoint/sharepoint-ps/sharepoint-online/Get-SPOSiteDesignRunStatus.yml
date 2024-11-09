@@ -1,0 +1,74 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves and displays a list of all site script actions executed for a specified site design applied to a site.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Online.SharePoint.PowerShell.SPOSiteDesignRun" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-SPOSiteDesignRun
+  href: Get-SPOSiteDesignRun.yml
+syntaxes:
+- Get-SPOSiteDesignRunStatus [-Run] <SPOSiteDesignRun> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    $myrun = Get-SPOSiteDesignRun -WebUrl "https://contoso.sharepoint.com/sites/project-playbook" -SiteDesignId cefd782e-sean-4814-a68a-b33b116c302f
+
+    Get-SPOSiteDesignRunStatus -Run $myrun
+
+    OrdinalIndex: | 0
+    SiteScriptId: | sean530b-4133-444e-9e31-fb0c07f69d3a
+    SiteScriptTitle: | project tracker script for contoso legal
+    SiteScriptIndex: | 0
+    ActionIndex: | 0
+    ActionTitle: | Add principal contoso legal team to SPGroup Owners.
+    ActionKey: | 4f8509cd-0000-0000-0000-00000000
+    OutcomeCode: | Success
+    OutcomeText: |
+
+    OrdinalIndex: | 1
+    SiteScriptId: | sean530b-4133-444e-9e31-abc123abc123
+    SiteScriptTitle: | project tracker script for contoso legal
+    SiteScriptIndex: | 0
+    ActionIndex: | 1
+    ActionTitle: | Apply theme Contoso Legal.
+    ActionKey: | 4f8509cd-0000-0000-0000-00000000
+    OutcomeCode: | Success
+    OutcomeText: |
+  description: ""
+  summary: |+
+    This example gets the run for a specific site design applied to a site and sets it to a variable. This variable is then passed into the command -run parameter. The result is a display of all the site script actions applied for that site design run, including the script action title and outcome.
+
+parameters:
+- type: <xref href="SPOSiteDesignRun" data-throw-if-not-resolved="False" />
+  name: Run
+  isRequired: true
+  description: |+
+    The site design run for the desired set of script action details.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOSiteDesignRunStatus
+name: Get-SPOSiteDesignRunStatus
+description: |-
+  Retrieves and displays a list of all site script actions executed for a specified site design applied to a site.
+metadata:
+  external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spositedesignrunstatus
+  applicable: SharePoint Online
+  title: Get-SPOSiteDesignRunStatus
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

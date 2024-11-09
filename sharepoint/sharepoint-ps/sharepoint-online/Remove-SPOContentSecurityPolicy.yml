@@ -1,0 +1,44 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a source from the **Content Security Policy** configuration.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Get-SPOContentSecurityPolicy
+  href: Get-SPOContentSecurityPolicy.yml
+- text: Add-SPOContentSecurityPolicy
+  href: Add-SPOContentSecurityPolicy.yml
+- text: Content Security Policy source values
+  href: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources
+syntaxes:
+- Remove-SPOContentSecurityPolicy [-Source] <String>
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Source
+  isRequired: true
+  description: |+
+    Source to be removed from the **Content Security Policy** configuration.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPOContentSecurityPolicy
+name: Remove-SPOContentSecurityPolicy
+description: |-
+  Removes the given source from the **Content Security Policy** configuration. 
+  In multi-geo environments, **Content Security Policy** configuration is unique to each geo.
+metadata:
+  external help file: ""
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spocontentsecuritypolicy
+  applicable: SharePoint Online
+  title: Remove-SPOContentSecurityPolicy
+  PlatyPS schema version: 2.0.0
+  author: jaobrie
+  ms.author: jaobrie
+  manager: ryannak
+  ms.reviewer: ""

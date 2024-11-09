@@ -1,0 +1,163 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Specifies content types for replicating from on-premises to SharePoint Online (SPO) environment.
+module: SharePointServer
+notes: ""
+inputs:
+- name: <xref href="System.Uri" data-throw-if-not-resolved="False" />
+  description: |-
+    System.String
+    System.String[]
+    System.Management.Automation.PSCredential
+    Microsoft.SharePoint.PowerShell.SPAssignmentCollection
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Copy-SPContentTypes [-AssignmentCollection <SPAssignmentCollection>] [-AuthEndpoint <String>]
+   -ContentTypeNames <String[]> -Credential <PSCredential> [-GraphApiEndPoint <String>] -LocalSiteUrl <Uri>
+   -LocalTermStoreName <String> -RemoteSiteUrl <Uri> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Copy-SPContentTypes -LocalSiteUrl https://localsite/ -LocalTermStoreName "managed metadata service application proxy" -RemoteSiteUrl https://contoso.sharepoint.com/ -ContentTypeNames @("ContentTypeA", "ContentTypeB") -Credential (Get-Credential)
+  description: |-
+    This example migrates the specified content types named: ContentTypeA, ContentTypeB on the local site https://localsite/ whose term store named "managed metadata service application proxy" to the hub site of remote site https://contoso.sharepoint.com/. If the remote site is a hub site, the migration target will be itself.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    **NOTE**: When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AuthEndpoint
+  description: |+
+    Specifies the AuthEndpoint to use, but not the default one.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ContentTypeNames
+  isRequired: true
+  description: |+
+    Specifies the content type names to be migrated. Can be in a form of an array. 
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: Credential
+  isRequired: true
+  description: |+
+    Specifies the administrator account credential of the target SharePoint Online site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GraphApiEndPoint
+  description: |+
+    Specifies the GraphApiEndpoint to use, but not the default one.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: LocalSiteUrl
+  isRequired: true
+  description: |+
+    Specifies the migration source. Can be a local site or a local hubsite.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LocalTermStoreName
+  isRequired: true
+  description: |+
+    Specifies the name of the local term store of the local site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: RemoteSiteUrl
+  isRequired: true
+  description: |+
+    Specifies the migration target. You can input a remote site url or remote hub site url, both will be processed to be the hub site url.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Copy-SPContentTypes
+name: Copy-SPContentTypes
+description: |-
+  This cmdlet is used in hybrid scenarios with SharePoint Online to copy Content Types from an on-premises farm to SharePoint Online.
+metadata:
+  external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/copy-spcontenttypes
+  applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Copy-SPContentTypes
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

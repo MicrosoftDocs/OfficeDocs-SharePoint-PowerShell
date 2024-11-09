@@ -1,0 +1,89 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new Secure Store application fields object.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  New-SPSecureStoreApplicationField [-Masked] -Name <String> -Type <SecureStoreCredentialType>
+   [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE------------------'
+  code: |-
+    New-SPSecureStoreApplicationField -Name "UserName" -Type WindowsUserName -Masked:$false
+  description: |-
+    This example creates a new credential field of type WindowsUserName with the name UserName and the masked property (which when true will hide characters as they are typed in by the user) set to false.
+    This cmdlet is typically used in conjunction with the `New-SPSecureStoreApplication` cmdlet.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Masked
+  isRequired: true
+  description: |+
+    Masks the visible characters that are typed in the field.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the new target application field.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SecureStoreCredentialType" data-throw-if-not-resolved="False" />
+  name: Type
+  isRequired: true
+  description: |+
+    Specifies the type of credential field to add to a target application.
+
+    The type must be one of the following: UserName, Password, Pin, Key, Generic, WindowsUserName, or WindowsPassword.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.New-SPSecureStoreApplicationField
+name: New-SPSecureStoreApplicationField
+description: |-
+  The `New-SPSecureStoreApplicationField` cmdlet creates a new Secure Store application field object for a target application.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spsecurestoreapplicationfield
+  applicable: SharePoint Server Subscription Edition
+  title: New-SPSecureStoreApplicationField
+  PlatyPS schema version: 2.0.0

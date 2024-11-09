@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns whether Public content delivery network (CDN) or Private CDN is enabled on the tenant level. Requires Tenant administrator permissions.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-SPOTenantCdnEnabled -CdnType <SPOTenantCdnType> [<CommonParameters>]
+examples:
+- title: '-----------------------EXAMPLE 1-----------------------------'
+  code: |-
+    Get-SPOTenantCdnEnabled -CdnType Public
+  description: |-
+    The example returns a CDN with a type of public.
+  summary: ""
+parameters:
+- type: <xref href="SPOTenantCdnType" data-throw-if-not-resolved="False" />
+  name: CdnType
+  isRequired: true
+  description: |+
+    Specifies the CDN type. The valid values are Public or Private.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: Public, Private
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOTenantCdnEnabled
+name: Get-SPOTenantCdnEnabled
+description: |-
+  Returns whether Public content delivery network (CDN) or Private CDN is enabled on the tenant level.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spotenantcdnenabled
+  applicable: SharePoint Online
+  title: Get-SPOTenantCdnEnabled
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

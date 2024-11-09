@@ -1,0 +1,86 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns a list of all Project Server Queue settings and their current values for the specified Project Server Service Application.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Get-SPProjectQueueSettings [-ServiceApplication <PsiServiceApplicationPipeBind>]
+   [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+examples:
+- title: '--------------------EXAMPLE---------------------'
+  code: |-
+    Get-SPProjectQueueSettings -ServiceApplication "Project Service Application"
+  description: |-
+    This example retrieves the queue settings for the "Project Service Application" service application.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Project Server 2013
+  - Project Server 2016
+  - Project Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PsiServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: ServiceApplication
+  description: |+
+    Specifies the Project Server service application to target.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefg; a valid name of a Project Server Service Application (for example, ProjectServiceApp1); or an instance of a valid PsiServiceApplication object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: sa
+  applicable:
+  - Project Server 2013
+  - Project Server 2016
+  - Project Server 2019
+  parameterValueGroup: ""
+applicable:
+- Project Server 2013
+- Project Server 2016
+- Project Server 2019
+uid: SharePointServer.Get-SPProjectQueueSettings
+name: Get-SPProjectQueueSettings
+description: |-
+  Returns a list of all Project Server Queue settings and their current values for a specific Project Server Service Application.
+  Settings returned include the following:
+
+  - MaxDegreeOfConcurrency
+  - MsgRetryInterval
+  - MsgRetryLimit
+  - SqlRetryInterval
+  - SqlRetryLimit
+  - SqlCommandTimeout
+  - CleanupSuccessAgeLimit
+  - CleanupNonSuccessAgeLimit
+  - PeriodicTasksInterval
+  - QueueTimeout
+  - MaxConnections
+
+  For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
+metadata:
+  external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spprojectqueuesettings
+  applicable: Project Server 2013, Project Server 2016, Project Server 2019
+  title: Get-SPProjectQueueSettings
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

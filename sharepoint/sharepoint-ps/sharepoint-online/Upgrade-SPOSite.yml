@@ -1,0 +1,124 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starts the upgrade process on a site collection.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Request-SPOUpgradeEvaluationSite
+  href: Request-SPOUpgradeEvaluationSite.yml
+- text: New-SPOSite
+  href: New-SPOSite.yml
+syntaxes:
+- >-
+  Upgrade-SPOSite [-Confirm] -Identity <SpoSitePipeBind> [-NoEmail] [-QueueOnly] [-VersionUpgrade] [-WhatIf]
+   [<CommonParameters>]
+examples:
+- title: '-----------------------EXAMPLE 1-----------------------------'
+  code: |-
+    Upgrade-SPOSite -Identity https://contoso.sharepoint.com/sites/marketing
+  description: |-
+    Example 1 runs a build-to-build upgrade of the existing site collection <https://contoso.sharepoint.com/sites/marketing.> The CompatibilityLevel property associated with the site collection is not changed by this operation. For more information about CompatibilityLevel, see `New-SPOSite`.
+  summary: ""
+- title: '-----------------------EXAMPLE 2-----------------------------'
+  code: |-
+    Upgrade-SPOSite -Identity https://contoso.sharepoint.com/sites/marketing -VersionUpgrade
+  description: |-
+    Example 2 runs a version-to-version upgrade of the existing site collection <https://contoso.sharepoint.com/sites/marketing.> The CompatibilityLevel property associated with the site collection is changed to a value of SharePoint 2013 by this operation. For more information about CompatibilityLevel, see `New-SPOSite`.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the SharePoint Online site collection to upgrade.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoEmail
+  description: |+
+    Specifies that the system not send the requester and site collection administrators a notification e-mail message at the end of the upgrade process.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: QueueOnly
+  description: |+
+    Adds the site collection to the upgrade queue. The upgrade does not occur immediately.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: VersionUpgrade
+  description: |+
+    Specifies whether to perform a version-to-version upgrade on the site collection. When this parameter is set, it internally triggers any available build-to-build upgrade associated with the current site collection operating mode and continues with version-to-version upgrade. When this parameter is not set, it triggers only build-to-build upgrade on the site collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Upgrade-SPOSite
+name: Upgrade-SPOSite
+description: |-
+  The `Upgrade-SPOSite` cmdlet activates the upgrade process for the specified SharePoint Online site collection.
+  This cmdlet can also be used to resume failed upgrades.
+
+  When upgrade is initiated, it can either be a build-to-build or version-to-version upgrade.
+  The default is build-to-build upgrade.
+  When in version-to-version upgrade, site collection health checks are first run in repair mode to ensure that the site collection can be upgraded successfully.
+
+  You must be at least a SharePoint Online administrator and be a site collection administrator to run the cmdlet.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/upgrade-sposite
+  applicable: SharePoint Online
+  title: Upgrade-SPOSite
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

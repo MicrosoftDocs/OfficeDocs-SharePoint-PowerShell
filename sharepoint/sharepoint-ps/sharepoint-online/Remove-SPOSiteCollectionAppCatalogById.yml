@@ -1,0 +1,43 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes the site collection app catalog by the id of the site collection.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+syntaxes:
+- Remove-SPOSiteCollectionAppCatalogById -SiteId <guid> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-SPOSiteCollectionAppCatalogById -SiteId bdbd7458-8199-4e99-87ca-15fe9dc17a86
+  description: |-
+    This example removes the site collection app catalog from the site with the id 'bdbd7458-8199-4e99-87ca-15fe9dc17a86'.
+  summary: ""
+parameters:
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: SiteId
+  isRequired: true
+  description: |+
+    Guid of the site collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPOSiteCollectionAppCatalogById
+name: Remove-SPOSiteCollectionAppCatalogById
+description: |-
+  Use this cmdlet to remove the site collection app catalog by the id of the site collection.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spositecollectionappcatalogbyid
+  applicable: SharePoint Online
+  title: Remove-SPOSiteCollectionAppCatalogById
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

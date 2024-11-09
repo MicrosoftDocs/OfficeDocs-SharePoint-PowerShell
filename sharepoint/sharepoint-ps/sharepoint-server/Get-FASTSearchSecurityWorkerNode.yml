@@ -1,0 +1,88 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets status information about a security worker or workers.
+module: SharePointServer
+notes: ""
+syntaxes:
+- Get-FASTSearchSecurityWorkerNode [[-Identity] <String>] [-Active] [-Dead] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1-----------------'
+  code: |-
+    Get-FASTSearchSecurityWorkerNode -Identity localhost
+  description: |-
+    This example gets the status and complete URI for the worker with "localhost" in its URI.
+  summary: ""
+- title: '---------------EXAMPLE 2-----------------'
+  code: |-
+    Get-FASTSearchSecurityWorkerNode
+  description: |-
+    This example returns a list of all workers, both active and inactive.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Active
+  description: |+
+    If specified, get a list of all active workers.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Dead
+  description: |+
+    If specified, get a list of all inactive workers.
+    A worker is "dead" if it does not respond to requests from the security manager.
+    This may occur if a worker machine goes down, or if there are network problems.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The identity of the worker to get.
+    This is a URI or a partial URI, the server name for example.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Get-FASTSearchSecurityWorkerNode
+name: Get-FASTSearchSecurityWorkerNode
+description: |-
+  This cmdlet retrieves the URI and status for a security worker or a group of workers.
+  A security worker is the Windows service that generates user search security filters.
+  The cmdlet's function changes depending upon the parameter values:
+
+  -- If Identity is specified, the command gets the worker associated with the given URI.
+
+  -- If Active is specified, the command gets a list of all active workers.
+
+  -- If Dead is specified, the command gets a list of all inactive workers.
+
+  -- If none of these parameters are specified, the command returns a list of all workers.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-fastsearchsecurityworkernode
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Get-FASTSearchSecurityWorkerNode

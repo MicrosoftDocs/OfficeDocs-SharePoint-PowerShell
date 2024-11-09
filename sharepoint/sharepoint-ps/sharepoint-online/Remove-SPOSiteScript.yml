@@ -1,0 +1,43 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a site script.
+module: Microsoft.Online.SharePoint.PowerShell
+syntaxes:
+- Remove-SPOSiteScript  [-Identity] <SPOSiteScriptPipeBind>  [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-SPOSiteScript 5ea28194-6fe7-4e2c-ba84-c409368278e2
+  description: ""
+  summary: |+
+    This example shows how to remove a site design.
+
+parameters:
+- type: <xref href="SPOSiteScriptPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The ID of the site script to remove.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPOSiteScript
+name: Remove-SPOSiteScript
+description: |-
+  Removes a site script.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spositescript
+  applicable: SharePoint Online
+  title: Remove-SPOSiteScript
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

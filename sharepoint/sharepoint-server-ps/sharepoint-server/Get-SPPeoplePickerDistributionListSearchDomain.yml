@@ -1,0 +1,102 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns all domains in the People Picker distribution list search domains.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Get-SPPeoplePickerDistributionListSearchDomain -WebApplication <SPWebApplicationPipeBind>
+   [-DomainName <String>] [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm]
+   [<CommonParameters>]
+examples:
+- title: '-------------EXAMPLE 1-------------'
+  code: |-
+    Get-SPPeoplePickerDistributionListSearchDomain -WebApplication http://sitename
+  description: |-
+    This example returns all domains in the People Picker distribution list search domains for users in the http://sitename web application.
+  summary: ""
+- title: '-------------EXAMPLE 2-------------'
+  code: |-
+    Get-SPPeoplePickerDistributionListSearchDomain -WebApplication http://sitename -DomainName "corp.contoso.com"
+  description: |-
+    This example returns the People Picker distribution list search entry in the http://sitename web application that uses the "corp.contoso.com" domain.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DomainName
+  description: |+
+    Name of the domain.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPWebApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: WebApplication
+  isRequired: true
+  description: |+
+    Specifies the name, URL, or GUID of the Web application containing the People Picker search settings.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Get-SPPeoplePickerDistributionListSearchDomain
+name: Get-SPPeoplePickerDistributionListSearchDomain
+description: |-
+  The Get-SPGetPeoplePickerDistributionListSearchDomain cmdlet returns all domains in the People Picker distribution list search domains that match the criteria specified by the parameters.
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-sppeoplepickerdistributionlistsearchdomain
+  applicable: SharePoint Server Subscription Edition
+  title: Get-SPPeoplePickerDistributionListSearchDomain
+  PlatyPS schema version: 2.0.0

@@ -1,0 +1,92 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Export user information from site user information list.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: New-SPOSiteGroup
+  href: New-SPOSiteGroup.yml
+- text: Get-SPOUser
+  href: Get-SPOUser.yml
+- text: Set-SPOUser
+  href: Set-SPOUser.yml
+- text: Remove-SPOUser
+  href: Remove-SPOUser.yml
+syntaxes:
+- Export-SPOUserInfo -LoginName <String> -Site <SpoSitePipeBind> -OutputFolder <String> [<CommonParameters>]
+examples:
+- title: '------------ Example 1 --------------------'
+  code: |-
+    Export-SPOUserInfo -LoginName joe.healy@contoso.com -site https://contoso.sharepoint.com/sites/sc1 -OutputFolder "C:\users\admin\exportfolder"
+  description: |-
+    Example 1 exports a user data who has the e-mail address joe.healy@contoso.com from the site collection <https://contoso.sharepoint.com/sites/sc1> to folder C:\users\admin\exportfolder.
+  summary: ""
+- title: '------------ Example 2 --------------------'
+  code: |-
+    $sites = Get-SPOSite -IncludePersonalSite $true
+    $user = "joe.healy@contoso.com"
+    foreach ($site in $sites)
+    {
+    Export-SPOUserInfo -LoginName $user -site $site.Url -OutputFolder
+    "C:\users\admin\exportfolder"
+    }
+  description: |-
+    Example 2 exports user data who has email address joe.healy@contoso.com from all site collections to folder C:\users\admin\exportfolder.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LoginName
+  isRequired: true
+  description: |+
+    Specifies the login name of the user to export.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OutputFolder
+  isRequired: true
+  description: |+
+    Target folder where the CSV file is generated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Site
+  isRequired: true
+  description: |+
+    Specifies the URL of the site collection to which you want to export the user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Export-SPOUserInfo
+name: Export-SPOUserInfo
+description: |-
+  Export user information from site user information list.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/export-spouserinfo
+  applicable: SharePoint Online
+  title: Export-SPOUserInfo
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

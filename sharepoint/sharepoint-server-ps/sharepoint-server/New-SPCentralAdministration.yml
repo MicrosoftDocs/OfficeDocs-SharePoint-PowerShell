@@ -1,0 +1,183 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new SharePoint Central Administration Web application.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  New-SPCentralAdministration [-Port] <Int32> [[-WindowsAuthProvider] <String>] [-SecureSocketsLayer]
+   [[-HostHeader] <String>] [-Certificate <SPServerCertificatePipeBind>] [-UseServerNameIndication]
+   [-AllowLegacyEncryption] [-Url <String>] [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+- >-
+  New-SPCentralAdministration [[-WindowsAuthProvider] <String>] [-AssignmentCollection <SPAssignmentCollection>]
+   [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE 1-----------------------'
+  code: |-
+    New-SPCentralAdministration -WindowsAuthProvider NTLM -Port 8080
+  description: |-
+    This example creates the Central Administration site at port 8080 on the local farm using NTLM authentication.
+  summary: ""
+- title: '------------------EXAMPLE 2-----------------------'
+  code: |-
+    New-SPCentralAdministration -WindowsAuthProvider Kerberos -Port 443 -SecureSocketsLayer -HostHeader centraladmin.example.com
+  description: |-
+    This example creates the Central Administration site using SSL on port 443 with the host header centraladmin.example.com and Kerberos authentication.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowLegacyEncryption
+  description: |+
+    Specifies that older SSL and TLS protocol versions and cipher suites are allowed to be used with this IIS website.
+    Legacy encryption is weaker than modern encryption and is not recommended.
+
+    This feature requires Windows Server 2022 or higher.
+    This feature is not available when SharePoint is deployed with earlier versions of Windows Server.
+
+    This parameter is only valid when used with the SecureSocketsLayer parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPServerCertificatePipeBind" data-throw-if-not-resolved="False" />
+  name: Certificate
+  description: |+
+    Specifies the certificate that will be used for the Secure Sockets Layer (SSL) binding of this IIS website.
+    This parameter is only valid when used with the SecureSocketsLayer parameter.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostHeader
+  description: |+
+    Specifies the host header of the Central Administration IIS website.
+
+    If this parameter is omitted there will be no host header binding and the URL of the Central Administration site will be based on the name of this server.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: Host
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Port
+  isRequired: true
+  description: |+
+    Specifies the port number for Central Administration.
+    If no port is specified, a nonconflicting port number is auto-generated.
+
+    The type must be a valid port number.
+
+    If you specify a port number that has already been assigned, IIS does not start the new site until you change either the port number of the new site or the port number of the old site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SecureSocketsLayer
+  description: |+
+    Enables Secure Sockets Layer (SSL) encryption for the Central Administration IIS website.
+    If you choose to use SSL, you must import a server certificate to SharePoint and assign it to the Central Administration IIS website.
+    The Central Administration web application won't be accessible until you do this.
+
+    The default value is False.
+
+    If this parameter is omitted or set to False the Central Administration site will use HTTP for the specified port.
+
+  defaultValue: "False"
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Url
+  description: |+
+    Specifies the load-balanced URL for Central Administration.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseServerNameIndication
+  description: |+
+    Specifies that the Secure Sockets Layer (SSL) binding of this IIS website should use Server Name Indication (SNI).
+    Server Name Indication allows multiple IIS websites with unique host headers and unique server certificates to share the same SSL port.
+    If Server Name Indication isn't used, all IIS websites sharing the same SSL port must share the same server certificate.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WindowsAuthProvider
+  description: |+
+    Specifies the authentication provider for this web application.
+    If no authentication provider is specified, the default value NTLM is used.
+
+    The type must be one of two values: Kerberos or NTLM.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.New-SPCentralAdministration
+name: New-SPCentralAdministration
+description: |-
+  The New-SPCentralAdministration cmdlet creates a new Central Administration Web application and starts the central administration service on the local computer.
+  Central Administration is available only on computers where this service runs.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spcentraladministration
+  applicable: SharePoint Server Subscription Edition
+  title: New-SPCentralAdministration
+  PlatyPS schema version: 2.0.0

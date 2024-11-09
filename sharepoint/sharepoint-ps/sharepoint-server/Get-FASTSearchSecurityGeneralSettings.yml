@@ -1,0 +1,57 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the security general settings.
+module: SharePointServer
+notes: ""
+syntaxes:
+- Get-FASTSearchSecurityGeneralSettings [[-Worker] <WorkerPoolNode>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1-----------------'
+  code: |-
+    Get-FASTSearchSecurityGeneralSettings | fl
+  description: |-
+    This example retrieves the configuration setting for all the general security settings and formats the information as a list.
+  summary: ""
+parameters:
+- type: <xref href="WorkerPoolNode" data-throw-if-not-resolved="False" />
+  name: Worker
+  description: |+
+    The optional Worker parameter specifies the WorkerPoolNode object for the security worker that is to handle the request.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "9999"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Get-FASTSearchSecurityGeneralSettings
+name: Get-FASTSearchSecurityGeneralSettings
+description: |-
+  This cmdlet retrieves configuration information for general security settings, such as:
+
+  -- Default user store ID
+
+  -- CCTK server port number
+
+  -- CCTK server enabled
+
+  -- Default log level
+
+  -- Log level namespaces
+
+  -- Public Filter FQL
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-fastsearchsecuritygeneralsettings
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Get-FASTSearchSecurityGeneralSettings

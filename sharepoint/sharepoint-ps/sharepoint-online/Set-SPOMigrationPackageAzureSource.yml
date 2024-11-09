@@ -1,0 +1,234 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Cmdlet to create Azure containers, upload migration package files into the appropriate containers and snapshot the uploaded content.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Set-SPOMigrationPackageAzureSource -AccountKey <String> -AccountName <String> [-AzureQueueName <String>]
+   [-EncryptionMetaInfo <MigrationFileEncryptionInfo[]>] [-EncryptionParameters <EncryptionParameters>]
+   [-FileContainerName <String>] -MigrationSourceLocations <MigrationPackageLocation> [-NoLogFile]
+   [-NoSnapshotCreation] [-NoUpload] [-Overwrite] [-PackageContainerName <String>] [<CommonParameters>]
+- >-
+  Set-SPOMigrationPackageAzureSource -AccountKey <String> -AccountName <String> [-AzureQueueName <String>]
+   [-EncryptionMetaInfo <MigrationFileEncryptionInfo[]>] [-EncryptionParameters <EncryptionParameters>]
+   [-FileContainerName <String>] [-NoLogFile] [-NoSnapshotCreation] [-NoUpload] [-Overwrite]
+   [-PackageContainerName <String>] -SourceFilesPath <String> -SourcePackagePath <String> [<CommonParameters>]
+- >-
+  Set-SPOMigrationPackageAzureSource [-EncryptionMetaInfo <MigrationFileEncryptionInfo[]>]
+   [-EncryptionParameters <EncryptionParameters>]
+   -MigrationPackageAzureLocations <MigrationPackageAzureLocations>
+   -MigrationSourceLocations <MigrationPackageLocation> [-NoLogFile] [-NoSnapshotCreation] [-NoUpload]
+   [-Overwrite] [<CommonParameters>]
+- >-
+  Set-SPOMigrationPackageAzureSource [-EncryptionMetaInfo <MigrationFileEncryptionInfo[]>]
+   [-EncryptionParameters <EncryptionParameters>]
+   -MigrationPackageAzureLocations <MigrationPackageAzureLocations> [-NoLogFile] [-NoSnapshotCreation]
+   [-NoUpload] [-Overwrite] -SourceFilesPath <String> -SourcePackagePath <String> [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    $azurelocations = Set-SPOMigrationPackageAzureSource -SourcePath \\fileserver\share\folder1 -OutputPackagePath d:\MigrationPackages\Folder1_TgtPkg -FileContainerUri migration-files -PackageContainerUri migration-package -AccountName migrationstore -AccountKey "nmcXQ+1NctB7BlRVm+8+qWUn6GUFIH7E5ZQPThcjg8SfFWTJ34HthyOEoROwxHYIajpOYxYDt7qUwSEBQlLWoA=="
+  description: |-
+    This example creates migration package containers in Azure storage using the supplied account credentials, uploads the package files into them, snapshots the files and lastly returns the connection strings to a PowerShell variable.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Set-SPOMigrationPackageAzureSource -SourcePath \\fileserver\share\folder1 -OutputPackagePath d:\MigrationPackages\Folder1_TgtPkg -MigrationPackageAzureLocations $azurelocations -AccountName migrationstore -AccountKey "nmcXQ+1NctB7BlRVm+8+qWUn6GUFIH7E5ZQPThcjg8SfFWTJ34HthyOEoROwxHYIajpOYxYDt7qUwSEBQlLWoA==" -NoUpload
+  description: |-
+    This example uses existing migration package containers in Azure storage to snapshot previously uploaded files and then returns the connection strings to a PowerShell variable.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AccountKey
+  isRequired: true
+  description: |+
+    The account key for the Azure Storage account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AccountName
+  isRequired: true
+  description: |+
+    The account name for the Azure Storage account.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AzureQueueName
+  description: |+
+    An optional name of the Azure Storage Reporting Queue where import operations lists events during import. This value must be in lower case and conform to Azure's queue naming rules.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="MigrationFileEncryptionInfo" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: EncryptionMetaInfo
+  description: |+
+    PARAMVALUE: MigrationFileEncryptionInfo[]
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="EncryptionParameters" data-throw-if-not-resolved="False" />
+  name: EncryptionParameters
+  description: |+
+    An EncryptionParameters object. See [New-SPOMigrationEncryptionParameters](https://learn.microsoft.com/powershell/module/sharepoint-online/new-spomigrationencryptionparameters) for more information.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FileContainerName
+  description: |+
+    The optional name of the Azure Blob Storage container that will be created if it does not currently exist. It will hold the uploaded package content files. The value must be in lower case and conform to Azure's container naming rules. If this not supplied a name will be generated using the format <GUID>-files.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="MigrationPackageAzureLocations" data-throw-if-not-resolved="False" />
+  name: MigrationPackageAzureLocations
+  isRequired: true
+  description: |+
+    A set of fully qualified URLs and SAS tokens representing the Azure Blob Storage containers that hold the package content and metadata files and an optional Azure Storage Reporting Queue. This object is returned during successful processing of the `Set-SPOMigrationPackageAzureSource`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="MigrationPackageLocation" data-throw-if-not-resolved="False" />
+  name: MigrationSourceLocations
+  isRequired: true
+  description: |+
+    Possible Source locations to migrate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoLogFile
+  description: |+
+    Indicates to not create a log file. The default is to create a new CopyMigrationPackage log file within the directory specified within the SourcePackagePath parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoSnapshotCreation
+  description: |+
+    Indicates to not perform snapshots on the content in the containers. The default is to snapshot each of the packages files in the containers.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoUpload
+  description: |+
+    Indicates to not upload the package files. The default is to upload all the package files.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Overwrite
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PackageContainerName
+  description: |+
+    The optional name of the Azure Blob Storage container that will be created if it does not currently exist. It will hold the uploaded package metadata files. The value must be in lower case and conform to Azure's container naming rules. If this not supplied a name will be generated using the format <GUID>-package.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourceFilesPath
+  isRequired: true
+  description: |+
+    The directory location where the package's source content files exist.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SourcePackagePath
+  isRequired: true
+  description: |+
+    The directory location where the package's metadata files exist.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Set-SPOMigrationPackageAzureSource
+name: Set-SPOMigrationPackageAzureSource
+description: |-
+  This cmdlet contains more than one parameter set. You may only use parameters from one parameter set and you may not combine parameters from different parameter sets. For more information about how to use parameter sets, see Cmdlet Parameter Sets.
+
+  This cmdlet returns a Microsoft.Online.SharePoint.Migration. MigrationPackageAzureLocations object, which can be used as a source for this cmdlet or, more commonly, as a source for the `Submit-SPOMigrationJob` cmdlet.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spomigrationpackageazuresource
+  applicable: SharePoint Online
+  title: Set-SPOMigrationPackageAzureSource
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

@@ -1,0 +1,45 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a list design. It no longer appears in the UI for creating a new list.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Online.SharePoint.PowerShell.SPOListDesignPipeBind" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Remove-SPOListDesign [-Identity] <SPOListDesignPipeBind> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS > Remove-SPOListDesign -Identity 44252d09-62c4-4913-9eb0-a2a8b8d7f863
+  description: |-
+    This example shows how to remove a list design.
+  summary: ""
+parameters:
+- type: <xref href="SPOListDesignPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The ID of the list design to remove. 
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPOListDesign
+name: Remove-SPOListDesign
+description: |-
+  Removes a list design. It no longer appears in the UI for creating a new list.
+metadata:
+  external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spolistdesign
+  PlatyPS schema version: 2.0.0
+  author: SaladiHarini
+  ms.author: hasaladi
+  ms.reviewer: ""
+  title: Remove-SPOListDesign

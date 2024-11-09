@@ -1,0 +1,127 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a claim mapping rule for a security token service (STS) identity provider.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  New-SPClaimTypeMapping [-IncomingClaimType] <String> [-IncomingClaimTypeDisplayName] <String>
+   [[-LocalClaimType] <String>] [-AssignmentCollection <SPAssignmentCollection>] [-SameAsIncoming]
+   [<CommonParameters>]
+examples:
+- title: '--------------------EXAMPLE 1----------------------------'
+  code: |-
+    $map1 = New-SPClaimTypeMapping -IncomingClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress" -IncomingClaimTypeDisplayName "EmailAddress" -SameAsIncoming
+    $map2 = New-SPClaimTypeMapping -IncomingClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier" -IncomingClaimTypeDisplayName "PUID" -LocalClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/thumbprint"
+    New-SPTrustedIdentityTokenIssuer -Name "LiveIDSTS" -Description "LiveID Provider" -Realm "urn:domain.company.com" -ImportTrustCertificate $cert -ClaimsMappings $map1[,$map2..] -SignInUrl "https://login.live.com/login.srf" -IdentifierClaim $map2.InputClaimType
+  description: |-
+    This example creates a claim map from an incoming token to a SharePoint token.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IncomingClaimType
+  isRequired: true
+  description: |+
+    Specifies the URI of the incoming claim type.
+
+    The type must be a valid URI, in the form http://schemas.microsoft.com/email.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: IncomingClaimTypeDisplayName
+  isRequired: true
+  description: |+
+    Specifies the display name of the incoming claim type.
+
+    The type must be a valid name of an incoming claim type; for example, Email.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LocalClaimType
+  description: |+
+    Specifies the URI of the local claim type.
+    If the SameAsIncoming parameter is False, this is a required parameter.
+
+    The type must be a valid URI, in the form http://schemas.microsoft.com/email.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SameAsIncoming
+  description: |+
+    Specifies that the claim type specified in the IncomingClaimType parameter is used for the LocalClaimType parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.New-SPClaimTypeMapping
+name: New-SPClaimTypeMapping
+description: |-
+  The New-SPClaimTypeMapping cmdlet creates a claim mapping rule for a security token service (STS) identity provider.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spclaimtypemapping
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: New-SPClaimTypeMapping
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

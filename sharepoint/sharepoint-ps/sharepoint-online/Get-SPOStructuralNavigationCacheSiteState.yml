@@ -1,0 +1,64 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get the structural navigation caching state for a site collection.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: |-
+  To see the examples, type: "get-help Get-SPOStructuralNavigationCacheSiteState -examples". 
+
+      For more information, type: "get-help Get-SPOStructuralNavigationCacheSiteState -detailed". 
+
+      For technical information, type: "get-help Get-SPOStructuralNavigationCacheSiteState -full". 
+
+      For online help, type: "get-help Get-SPOStructuralNavigationCacheSiteState -online"
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Get-SPOStructuralNavigationCacheWebState
+  href: Get-SPOStructuralNavigationCacheWebState.yml
+- text: Set-SPOStructuralNavigationCacheWebState
+  href: Set-SPOStructuralNavigationCacheWebState.yml
+- text: Set-SPOStructuralNavigationCacheSiteState
+  href: Set-SPOStructuralNavigationCacheSiteState.yml
+syntaxes:
+- Get-SPOStructuralNavigationCacheSiteState -SiteUrl <String> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Get-SPOStructuralNavigationCacheSiteState -SiteUrl "https://contoso.sharepoint.com/sites/product/"
+  description: |-
+    This example checks if structural navigation caching is enabled for the entire site collection https://contoso.sharepoint.com/sites/product/. If caching is enabled, then it will return True. If caching is disabled, then it will return False.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SiteUrl
+  isRequired: true
+  description: |+
+    Specifies the absolute URL for the site collection's root web being checked for its caching state. 
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOStructuralNavigationCacheSiteState
+name: Get-SPOStructuralNavigationCacheSiteState
+description: |-
+  The Get-SPOStructuralNavigationCacheSiteState cmdlet can be used to determine if structural navigation caching is enabled or disabled for a site collection. [Learn more](https://support.office.com/article/structural-navigation-and-performance-f163053f-8eca-4b9c-b973-36b395093b43).
+metadata:
+  external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: ""
+  PlatyPS schema version: 2.0.0
+  applicable: SharePoint Online
+  title: Get-SPOStructuralNavigationCacheSiteState
+  author: paramveersisodia
+  ms.author: paramsis
+  manager: suyog
+  ms.reviewer: ""

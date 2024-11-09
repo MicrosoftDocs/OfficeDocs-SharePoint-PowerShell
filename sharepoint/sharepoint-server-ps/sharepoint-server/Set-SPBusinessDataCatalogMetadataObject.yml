@@ -1,0 +1,159 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the value of a property or attribute of a Business Data Connectivity Metadata Store metadata object.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Set-SPBusinessDataCatalogMetadataObject -Identity <MetadataObject>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-DisplayName <String>] [-Remove]
+   [-SettingId <String>] [-WhatIf] [<CommonParameters>]
+- >-
+  Set-SPBusinessDataCatalogMetadataObject -Identity <MetadataObject>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-PropertyName <String>]
+   [-PropertyValue <PSObject>] [-Remove] [-SettingId <String>] [-WhatIf] [<CommonParameters>]
+- >-
+  Set-SPBusinessDataCatalogMetadataObject -Identity <MetadataObject>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-PropertyName <String>] [-Remove]
+   [-SettingId <String>] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE 1------------------'
+  code: |-
+    $obj = Get-SPBusinessDataCatalogMetadataObject -Namespace "ContosoDatabase" -Name "ContosoDatabase" -BdcObjectType "LobSystemInstance" -ServiceContext http://contoso
+    Set-SPBusinessDataCatalogMetadataObject -Identity $obj -PropertyName "ShowInSearchUI" -PropertyValue "True"
+  description: |-
+    This example creates a property on the LobSystemInstance (External System Instance) of name ContosoDatabase.
+    The property has the name ShowInSearchUI and a value of True.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  description: |+
+    Specifies the display name of the Business Data Connectivity Metadata Store metadata object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="MetadataObject" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the Business Data Connectivity Metadata Store metadata object to update.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PropertyName
+  description: |+
+    Specifies the name of the property to update.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="PSObject" data-throw-if-not-resolved="False" />
+  name: PropertyValue
+  description: |+
+    Sets the new value of the property specified in the PropertyName parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Remove
+  description: |+
+    Removes the property specified in the PropertyName parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SettingId
+  description: |+
+    Specifies the custom environment settings model slice for which the property applies.
+
+    The type must be a valid string that identifies a model slice; for example, ModelSlice1.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPBusinessDataCatalogMetadataObject
+name: Set-SPBusinessDataCatalogMetadataObject
+description: |-
+  This cmdlet contains more than one parameter set.
+  You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
+  For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+
+  The `Set-SPBusinessDataCatalogMetadataObject` cmdlet sets the value of a property or attribute of a Business Data Connectivity Metadata Store metadata object.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spbusinessdatacatalogmetadataobject
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPBusinessDataCatalogMetadataObject
+  PlatyPS schema version: 2.0.0

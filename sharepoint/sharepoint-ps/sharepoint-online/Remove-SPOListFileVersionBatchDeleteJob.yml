@@ -1,0 +1,59 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Cancels further processing of a trim job for a document library.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Get-SPOListFileVersionBatchDeleteJobProgress
+  href: Get-SPOListFileVersionBatchDeleteJobProgress.yml
+- text: New-SPOListFileVersionBatchDeleteJob
+  href: New-SPOListFileVersionBatchDeleteJob.yml
+syntaxes:
+- Remove-SPOListFileVersionBatchDeleteJob [-Site] <SpoSitePipeBind> [-List] <SpoListPipeBind> [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Remove-SPOListFileVersionBatchDeleteJob -Site https://contoso.sharepoint.com/sites/site1 -List "Documents"
+  description: |-
+    Example 1 cancels further processing of the trim job for a document library called "Documents".
+  summary: ""
+parameters:
+- type: <xref href="SPOListPipeBind" data-throw-if-not-resolved="False" />
+  name: List
+  isRequired: true
+  description: |+
+    The document library name or Id.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Site
+  isRequired: true
+  description: |+
+    Specifies the URL of the site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPOListFileVersionBatchDeleteJob
+name: Remove-SPOListFileVersionBatchDeleteJob
+description: |-
+  Cancels further processing of a trim job for a document library. This will stop the ongoing version deletion trim job and no further deletions will happen. Stopping a trim job will not impact versions that have already been permanently deleted when the job was in progress.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spolistfileversionbatchdeletejob
+  applicable: SharePoint Online
+  title: Remove-SPOListFileVersionBatchDeleteJob
+  PlatyPS schema version: 2.0.0
+  author: msjennywu
+  ms.author: jennywu
+  ms.reviewer: ""
+  manager: seanmc

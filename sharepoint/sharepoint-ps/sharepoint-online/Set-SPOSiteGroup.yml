@@ -1,0 +1,120 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the SharePoint Online owner and permission levels on a group inside a site collection.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Get-SPOSiteGroup
+  href: Get-SPOSiteGroup.yml
+syntaxes:
+- >-
+  Set-SPOSiteGroup -Identity <String> [-Name <String>] [-Owner <String>] [-PermissionLevelsToAdd <String[]>]
+   [-PermissionLevelsToRemove <String[]>] -Site <SpoSitePipeBind> [<CommonParameters>]
+examples:
+- title: '-----------------------EXAMPLE 1-----------------------------'
+  code: |-
+    Set-SPOSiteGroup -Site https://contoso.sharepoint.com/sites/siteA -Identity "ProjectViewers" -PermissionLevelsToRemove "Full Control" -PermissionLevelsToAdd "View Only"
+  description: |-
+    Example 1 changes permission level of the ProjectViewers group inside site collection <https://contoso.sharepoint.com/sites/siteA> from Full Control to View Only.
+  summary: ""
+- title: '-----------------------EXAMPLE 2-----------------------------'
+  code: |-
+    Set-SPOSiteGroup -Site https://contoso.sharepoint.com -Identity "ProjectViewers" -Owner Melissa.kerr@contoso.com
+  description: |-
+    Example 2 sets Melissa.kerr@contoso.com as the owner of the ProjectViewers group.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the name of the group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the new name of the group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Owner
+  description: |+
+    Specifies the owner (individual or a security group) of the group to be created.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PermissionLevelsToAdd
+  description: |+
+    Specifies the permission levels to grant to the group.
+
+    > [!NOTE]
+    > Permission levels are defined by SharePoint Online administrators from SharePoint Online Administration Center.  
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: PermissionLevelsToRemove
+  description: |+
+    Specifies the permission levels to remove from the group.
+
+    > [!NOTE]
+    > Permission levels are defined by SharePoint Online administrators from SharePoint Online Administration Center.  
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Site
+  isRequired: true
+  description: |+
+    Specifies the site collection the group belongs to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Set-SPOSiteGroup
+name: Set-SPOSiteGroup
+description: |-
+  You must be at least a SharePoint Online administrator and be a site collection administrator to run the `Set-SPOSiteGroup` cmdlet.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spositegroup
+  applicable: SharePoint Online
+  title: Set-SPOSiteGroup
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

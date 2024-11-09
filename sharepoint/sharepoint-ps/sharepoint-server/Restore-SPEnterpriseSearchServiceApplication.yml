@@ -1,0 +1,284 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Restores third-party backup of a search application.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Restore-SPEnterpriseSearchServiceApplication [-Name] <String>
+   -ApplicationPool <SPIisWebServiceApplicationPoolPipeBind>
+   -AdminSearchServiceInstance <SearchServiceInstancePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+   [-Confirm] -DatabaseName <String> [-DatabasePassword <SecureString>] -DatabaseServer <String>
+   [-DatabaseUsername <String>] [-FailoverDatabaseServer <String>] [-WhatIf] [<CommonParameters>]
+- >-
+  Restore-SPEnterpriseSearchServiceApplication [-Name] <String>
+   -ApplicationPool <SPIisWebServiceApplicationPoolPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+   [-Confirm] [-KeepId] [-WhatIf] -TopologyFile <String> [-DeferUpgradeActions] [<CommonParameters>]
+examples:
+- title: '----------------------EXAMPLE 1-----------------------'
+  code: |-
+    $searchInstance = Get-SPEnterpriseSearchServiceInstance -local
+    $applicationPool = New-SPServiceApplicationPool -Name "SearchServiceApplicationPool" -Account "domain\username"
+    Restore-SPEnterpriseSearchServiceApplication -Name "SearchServiceApplication" -ApplicationPool $applicationPool -AdminSearchServiceInstance $searchInstance -DatabaseName "SearchServiceApplication_Admindb" -DatabaseServer "SQLServer1"
+  description: |-
+    This example uses Application Configuration Attach mode to restore configuration data.
+  summary: ""
+- title: '----------------------EXAMPLE 2-----------------------'
+  code: |-
+    $applicationPool = New-SPServiceApplicationPool -Name "SearchServiceApplicationPool" -Account "domain\username"
+    Restore-SPEnterpriseSearchServiceApplication -Name "SearchServiceApplication" -ApplicationPool $applicationPool -TopologyFile "C:\TopologyFile.xml"
+  description: |-
+    This example uses Search Application Attach mode to restore topology data in the file that is named topology.xml.
+  summary: ""
+parameters:
+- type: <xref href="SearchServiceInstancePipeBind" data-throw-if-not-resolved="False" />
+  name: AdminSearchServiceInstance
+  isRequired: true
+  description: |+
+    Specifies the search service instance to be used with the administration component.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPIisWebServiceApplicationPoolPipeBind" data-throw-if-not-resolved="False" />
+  name: ApplicationPool
+  isRequired: true
+  description: |+
+    Specifies the application pool for the query web service.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseName
+  isRequired: true
+  description: |+
+    Specifies the name of the database to create for the restoring the search application.
+
+    The type must be a valid name of a SQL Server database, for example, RestoreDB1.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: DatabasePassword
+  description: |+
+    Specifies the name of the password for the database server on the SQL Server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseServer
+  isRequired: true
+  description: |+
+    Specifies the name of the host server for the database specified in DatabaseName.
+
+    The type must be a valid SQL Server host name, for example, SQLServerHost1.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseUsername
+  description: |+
+    Specifies the account name that is specified in the Database Server parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DeferUpgradeActions
+  description: |+
+    Prevents database schema update during restore. Do not use.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FailoverDatabaseServer
+  description: |+
+    Use this parameter if you want the administration database to use a failover database server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: KeepId
+  description: |+
+    Specifies if the search service application ID's from the topology .xml file should be used for the restored search service application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the new Search application name.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: TopologyFile
+  isRequired: true
+  description: |+
+    Specifies the path of the .XML file that contains the application topology information.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Restore-SPEnterpriseSearchServiceApplication
+name: Restore-SPEnterpriseSearchServiceApplication
+description: |-
+  This cmdlet contains more than one parameter set.
+
+  You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
+  For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+
+  This cmdlet is used by third parties to create a search application that uses existing data.
+
+  Some third parties back up the application data and have to restore the application later. So, the data is restored and uses the `Restore-SPEnterpriseSearchServiceApplication` cmdlet to create a new search application that uses the restored data.
+
+  This cmdlet supports parameter sets.
+
+  The first set of parameters is for Application Configuration Attach mode and the second set of parameters is for Search Application Attach mode.
+
+  Application Configuration Attach mode only restores configuration data that is stored in the administration database.
+  However, Search Application Attach restores configuration, topology and all crawled data.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.Search.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/restore-spenterprisesearchserviceapplication
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Restore-SPEnterpriseSearchServiceApplication
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

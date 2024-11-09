@@ -1,0 +1,88 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new Microsoft FAST Search Server 2010 for SharePoint content collection.
+module: SharePointServer
+notes: ""
+links:
+- text: Clear-FASTSearchContentCollection
+  href: Clear-FASTSearchContentCollection.yml
+- text: Remove-FASTSearchContentCollection
+  href: Remove-FASTSearchContentCollection.yml
+- text: Get-FASTSearchContentCollection
+  href: Get-FASTSearchContentCollection.yml
+syntaxes:
+- >-
+  New-FASTSearchContentCollection [-Name] <String> [[-Description] <String>] [[-Pipeline] <String>]
+   [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    New-FASTSearchContentCollection -Name newscollection
+  description: |-
+    This example creates a new FAST Search Server 2010 for SharePoint content collection named "newscollection".
+  summary: ""
+- title: '---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    New-FASTSearchContentCollection -Name newscollection -Description "A collection for news content"
+  description: |-
+    This example creates a new content collection named "newscollection", and attaches a description to it.
+  summary: ""
+- title: '---------------EXAMPLE 3----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    New-FASTSearchContentCollection -Name newscollection -Description "A collection for news content" -Pipeline "Office14 (webcluster)"
+  description: |-
+    This example creates a new content collection, and uses the FAST Search Server 2010 for SharePoint document processing pipeline "Office14 (webcluster)" to feed content to the content collection.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    A description of the content collection to add.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the FAST Search Server 2010 for SharePoint content collection to add.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Pipeline
+  description: |+
+    The FAST Search Server 2010 for SharePoint document processing pipeline used to feed content to the content collection.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.New-FASTSearchContentCollection
+name: New-FASTSearchContentCollection
+description: |-
+  This cmdlet creates a new FAST Search Server 2010 for SharePoint content collection.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-fastsearchcontentcollection
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: New-FASTSearchContentCollection

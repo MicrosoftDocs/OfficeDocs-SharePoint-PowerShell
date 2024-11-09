@@ -1,0 +1,40 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Lists URLs of all the configured organizational news sites. Requires Tenant administrator permissions.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Set-SPOOrgNewsSite
+  href: Set-SPOOrgNewsSite.yml
+- text: Remove-SPOOrgNewsSite
+  href: Remove-SPOOrgNewsSite.yml
+syntaxes:
+- Get-SPOOrgNewsSite [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Get-SPOOrgNewsSite
+  description: |-
+    The example returns a list of organizational news sites from the Tenant.
+  summary: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOOrgNewsSite
+name: Get-SPOOrgNewsSite
+description: |-
+  Lists URLs of all the organizational authoritative news sites.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spoorgnewssite
+  applicable: SharePoint Online
+  title: Get-SPOOrgNewsSite
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen

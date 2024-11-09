@@ -1,0 +1,69 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet enables the administrator to check status of all active and available reports when no report ID is present and to view or download a report if report ID is present.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: /powershell/sharepoint/sharepoint-online/connect-sharepoint-online
+- text: Start-SPOEnterpriseAppInsightsReport
+  href: ./Start-SPOEnterpriseAppInsightsReport.yml
+syntaxes:
+- Get-SPOEnterpriseAppInsightsReport [-ReportId <Guid>] [-Action <ActionType>]
+examples:
+- title: '-----------------------EXAMPLE 1-----------------------------'
+  code: |-
+    Get-SPOEnterpriseAppInsightsReport
+  description: |-
+    Example 1 enables administrator to view the status of all active and completed reports.
+  summary: ""
+- title: '-----------------------EXAMPLE 2-----------------------------'
+  code: |-
+    Get-SPOEnterpriseAppInsightsReport -ReportId 9d946216-afe7-49f5-8267-7b662435c70b
+  description: |-
+    Example 2 enables administrator to view the enterprise application insights report of ReportId: `9d946216-afe7-49f5-8267-7b662435c70b`
+  summary: ""
+- title: '-----------------------EXAMPLE 3-----------------------------'
+  code: |-
+    Get-SPOEnterpriseAppInsightsReport - ReportId 9d946216-afe7-49f5-8267-7b662435c70b -Action Download
+  description: |-
+    Example 3 enables administrator to download the enterprise application insights report of ReportId: `9d946216-afe7-49f5-8267-7b662435c70b` to the same path from where the command was run.
+  summary: ""
+parameters:
+- type: <xref href="ActionType" data-throw-if-not-resolved="False" />
+  name: Action
+  description: |+
+    It is an optional parameter, and it specifies whether to view or download a specific report.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: ReportId
+  description: |+
+    It is an optional parameter, and it specifies the unique Id of the report to be viewed or downloaded.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOEnterpriseAppInsightsReport
+name: Get-SPOEnterpriseAppInsightsReport
+description: "If this cmdlet is executed without any parameters, it displays the status of all active and completed reports with the following properties:\r\n\r\n| Property             | Description                                                 |\r\n|:---------------------|:------------------------------------------------------------|\r\n| Id                   | The unique Id of the report.                                |\r\n| CreatedDateTimeInUtc | The date and time the report creation was triggered in UTC. |\r\n| Status               | The status of the report.                                   |\r\n| ReportPeriodInDays   | The report duration in days.                                |\r\n\r\nIf this cmdlet is executed with `-ReportId` as parameter, the top 100 records of the report from the last N days will be displayed with the following properties:\r\n\r\n| Property        | Description                                                                |\r\n|:----------------|:---------------------------------------------------------------------------|\r\n| SiteName        | The name of the SharePoint site.                                           |\r\n| SiteURL         | The URL of the SharePoint site.                                            |\r\n| SiteSensitivity | The sensitivity label of the SharePoint site.                              |\r\n| AppID           | The AppID of the 3P application.                                           |\r\n| AppPermissions  | The permissions granted to the 3P application.                             |\r\n| RequestVoulme   | The number of times the 3P application accessed the given SharePoint site. |\r\n\r\nIf this cmdlet is executed with both the parameters, i.e. `-ReportId` and `-Action`, and if the value of `-Action` is set as `View`, it will display the same result as described above. If the value of `-Action` is set to `Download`, it will download the full report in CSV format to the same path from where the command was run.\r\n  \r\n> [!NOTE]\r\n> All reports adhere to any retention timeline as per [Data Access Governance](/sharepoint/data-access-governance-reports)."
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spoenterpriseappinsightsreport
+  applicable: SharePoint Online
+  title: Get-SPOEnterpriseAppInsightsReport
+  PlatyPS schema version: 2.0.0
+  author: sumikumar
+  ms.author: sumikumar
+  ms.reviewer: ""
+  manager: hikakar

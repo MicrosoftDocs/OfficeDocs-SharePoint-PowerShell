@@ -1,0 +1,81 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets all groups in a user store that the specified user is a member of.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Get-FASTSearchSecurityUserStoreGroupExpansion [-Identity] <String> [-User] <String>
+   [[-Worker] <WorkerPoolNode>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1-----------------'
+  code: |-
+    Get-FASTSearchSecurityUserStoreGroupExpansion -Identity ln1 -User user1
+  description: |-
+    This example gets all the groups in the "ln1" user store that are parents, grand-parents, etc.
+    of the "user1" user.
+  summary: ""
+- title: '---------------EXAMPLE 2-----------------'
+  code: |-
+    Get-FASTSearchSecurityWorkerNode workerserver | Get-FASTSearchSecurityUserStoreGroupExpansion -Identity ln2 -User user1
+  description: |-
+    This example gets all the groups in the "ln2" user store from the worker with a server name of "workerserver" that are parents, grand-parents, etc.
+    of the "user1" user.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The identity of the user store to look in.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: User
+  isRequired: true
+  description: |+
+    The user or group identifier to look up.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="WorkerPoolNode" data-throw-if-not-resolved="False" />
+  name: Worker
+  description: |+
+    The optional Worker parameter specifies the WorkerPoolNode object for the security worker that is to handle the request.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "9999"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Get-FASTSearchSecurityUserStoreGroupExpansion
+name: Get-FASTSearchSecurityUserStoreGroupExpansion
+description: |-
+  This cmdlet gets all the groups in a user store that the user is a member of, and all the groups that any owning group is a member of.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-fastsearchsecurityuserstoregroupexpansion
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Get-FASTSearchSecurityUserStoreGroupExpansion

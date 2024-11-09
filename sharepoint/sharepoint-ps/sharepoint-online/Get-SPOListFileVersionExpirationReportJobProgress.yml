@@ -1,0 +1,67 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the status for a file version expiration report generation job for a document library.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: New-SPOListFileVersionExpirationReportJob
+  href: New-SPOListFileVersionExpirationReportJob.yml
+syntaxes:
+- Get-SPOListFileVersionExpirationReportJobProgress [-Site] <SpoSitePipeBind> [-List] <SpoListPipeBind> [-ReportUrl <String>] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Get-SPOListFileVersionExpirationReportJobProgress -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -ReportUrl "https://contoso.sharepoint.com/sites/sites1/reports/MyReports/VersionReport.csv"
+  description: |-
+    Example 1 gets the status for a file version expiration report generation job for a document library called "Documents".
+  summary: ""
+parameters:
+- type: <xref href="SPOListPipeBind" data-throw-if-not-resolved="False" />
+  name: List
+  isRequired: true
+  description: |+
+    The document library name or Id.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="string" data-throw-if-not-resolved="False" />
+  name: ReportUrl
+  isRequired: true
+  description: |+
+    The URL of the report to get the job status on.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Site
+  isRequired: true
+  description: |+
+    Specifies the URL of the site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOListFileVersionExpirationReportJobProgress
+name: Get-SPOListFileVersionExpirationReportJobProgress
+description: |-
+  Gets the status for a file version expiration report generation job for a document library.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spolistfileversionexpirationreportjobprogress
+  applicable: SharePoint Online
+  title: Get-SPOListFileVersionExpirationReportJobProgress
+  PlatyPS schema version: 2.0.0
+  author: msjennywu
+  ms.author: jennywu
+  ms.reviewer: ""
+  manager: seanmc

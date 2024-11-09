@@ -1,0 +1,85 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Displays all globally installed site templates that match the given identity.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Get-SPWebTemplate [[-Identity] <SPWebTemplatePipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
+   [-CompatibilityLevel <UInt32>] [<CommonParameters>]
+examples:
+- title: '--------------EXAMPLE 1-----------------'
+  code: |-
+    $template = Get-SPWebTemplate "STS#0"
+    New-SPSite https://contoso.com -OwnerAlias "DOMAIN\JDOE" -Template $template
+  description: |-
+    This example creates a site collection by using the team site Web template (ID=STS#0).
+  summary: ""
+- title: '--------------EXAMPLE 2-----------------'
+  code: |-
+    Get-SPWebTemplate "STS*"
+  description: |-
+    This example displays basic information about all the STS templates.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: CompatibilityLevel
+  description: |+
+    Specifies the version of templates to use when creating a new SPSite object.
+    This value sets the initial CompatibilityLevel value for the site collection.
+    The values for this parameter can be either SharePoint Server or SharePoint Server.
+    When this parameter is not specified, the CompatibilityLevel will default to the highest possible version for the Web application depending on the SiteCreationMode setting
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPWebTemplatePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the name of the Web template to display.
+
+    The type must be the ID or full or partial name of the Web template.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Get-SPWebTemplate
+name: Get-SPWebTemplate
+description: |-
+  The Get-SPWebTemplate cmdlet displays all installed site templates that match the full or partial identity that was given.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spwebtemplate
+  applicable: SharePoint Server Subscription Edition
+  title: Get-SPWebTemplate
+  PlatyPS schema version: 2.0.0

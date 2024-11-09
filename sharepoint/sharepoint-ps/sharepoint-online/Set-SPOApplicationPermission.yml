@@ -1,0 +1,102 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Manages permissions for a guest application to access a SharePoint Embedded application.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Get-SPOApplication
+  href: ./Get-SPOApplication.yml
+- text: Set-SPOApplication
+  href: ./Set-SPOApplication.yml
+syntaxes:
+- >-
+  Set-SPOApplicationPermission 
+
+  [[-OwningApplicationId] <OwningApplicationid>] [[-ApplicationId] <ApplicationId>] [[-PermissionAppOnly] <AppOnlyPermission>] [[-PermissionDelegated] <DelegatedPermission>]
+examples:
+- title: Example 1
+  code: |-
+    Set-SPOApplicationPermission -OwningApplicationId a187e399-0c36-4b98-8f04-1edc167a0996 -ApplicationId 12345678-1234-1234-abcd-abcdefghijkl -PermissionAppOnly Read, Write
+  description: |-
+    Example 1 gives the guest application with ID `12345678-1234-1234-abcd-abcdefghijkl` app-only Read, Write permissions to access the owning application Microsoft Loop of ID `a187e399-0c36-4b98-8f04-1edc167a0996`.
+  summary: ""
+- title: Example 2
+  code: |-
+    Set-SPOApplicationPermission -OwningApplicationId 5e2795e3-ce8c-4cfb-b302-35fe5cd01597 -ApplicationId 12345678-1234-1234-abcd-abcdefghijkl -PermissionAppOnly ReadContent, WriteContent -PermissionDelegated None
+  description: |-
+    Example 2 gives the guest application with ID `12345678-1234-1234-abcd-abcdefghijkl` app-only ReadContent, WriteContent permissions to access the owning application Microsoft Designer of ID `a187e399-0c36-4b98-8f04-1edc167a0996`.
+  summary: ""
+- title: Example 3
+  code: |-
+    Set-SPOApplicationPermission -OwningApplicationId 5e2795e3-ce8c-4cfb-b302-35fe5cd01597 -ApplicationId 12345678-1234-1234-abcd-abcdefghijkl -PermissionAppOnly None -PermissionDelegated None
+  description: |-
+    Example 3 sets guest application permissions to None for the guest application with ID `12345678-1234-1234-abcd-abcdefghijkl`. This has deleted previous permissions for that guest application to access owning application of `a187e399-0c36-4b98-8f04-1edc167a0996`.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ApplicationId
+  isRequired: true
+  description: |+
+    Use this parameter to specify the guest application ID. A guest application is any application within the tenant's enterprise applications.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OwningApplicationId
+  isRequired: true
+  description: |+
+    Use this parameter to specify the Owning Application where guest application access is granted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PermissionAppOnly
+  isRequired: true
+  description: |+
+    Use this parameter to specify the app-only permissions of the guest application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PermissionDelegated
+  description: |+
+    This parameter specifies delegated permissions which are not supported for guest applications at this time.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint
+  parameterValueGroup: ""
+applicable:
+- SharePoint
+uid: Microsoft.Online.SharePoint.PowerShell.Set-SPOApplicationPermission
+name: Set-SPOApplicationPermission
+description: |-
+  The `Set-SPOApplicationPermission` cmdlet manages permissions for a guest application's access to a SharePoint Embedded application. This includes adding, updating, and deleting guest application permissions. A guest application is defined as any application within the enterprise applications of the owning tenant. 
+
+  You must be a SharePoint Administrator to run this cmdlet. For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps). 
+
+  > [!NOTE]
+  > Only app-only permissions are supported for guest applications accessing SharePoint Embedded applications. Delegated permissions are not supported and are default set to `None`.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spoapplicationpermission
+  applicable: SharePoint
+  title: Set-SPOApplicationPermission
+  PlatyPS schema version: 2.0.0
+  author: cindylay
+  ms.author: cindylay
+  ms.reviewer: ""

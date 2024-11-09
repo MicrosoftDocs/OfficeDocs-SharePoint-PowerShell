@@ -1,0 +1,101 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns a ranking model.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Get-SPEnterpriseSearchRankingModel [[-Identity] <RankingModelPipeBind>] -Owner <SearchObjectOwner>
+   -SearchApplication <SearchServiceApplicationPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+   [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE 1------------------'
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication -Identity 'Search Service Application'
+    $owner = Get-SPEnterpriseSearchOwner -Level ssa
+    Get-SPEnterpriseSearchRankingModel -Identity '8f6fd0bc-06f9-43cf-bbab-08c377e083f4' -SearchApplication $ssa -Owner $owner
+  description: |-
+    This example retrieves the ranking model on the search service application level with the identity 8f6fd0bc-06f9-43cf-bbab-08c377e083f4 for the search application Search Service Application.
+  summary: ""
+- title: '------------------EXAMPLE 2------------------'
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application"
+    $owner = Get-SPEnterpriseSearchOwner -Level ssa
+    Get-SPEnterpriseSearchRankingModel -SearchApplication $ssa -Owner $owner
+  description: |-
+    This example retrieves all ranking models defined on the search service application level for the search application Search Service Application.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="RankingModelPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the ranking model to retrieve.
+
+    The type must be a valid GUID in the form 8f6fd0bc-06f9-43cf-bbab-08c377e083f4, or an instance of a valid RankingModel object.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SearchObjectOwner" data-throw-if-not-resolved="False" />
+  name: Owner
+  isRequired: true
+  description: |+
+    Specifies the scope where the ranking model is available.
+    The available scopes are: SSA, Tenant, Site Collection or Site.
+    A ranking model can be available in multiple scopes.
+
+  defaultValue: None
+  position: Named
+  aliases: o
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SearchServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: SearchApplication
+  isRequired: true
+  description: |+
+    Specifies the search application that contains the ranking model.
+
+    The type must be a valid GUID in the form 9bf36458-fc99-4f7b-b060-867e5a63adce, a valid search application name, for example, SearchApp1, or an instance of a valid SearchServiceApplication object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Get-SPEnterpriseSearchRankingModel
+name: Get-SPEnterpriseSearchRankingModel
+description: |-
+  This cmdlet reads the RankingModel object when a ranking model is created, removed, or updated.
+
+  If the Identity parameter is not specified or the identity does not match any of the ranking models in the collection, all rank models for the search application are returned.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.Search.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchrankingmodel
+  applicable: SharePoint Server Subscription Edition
+  title: Get-SPEnterpriseSearchRankingModel
+  PlatyPS schema version: 2.0.0

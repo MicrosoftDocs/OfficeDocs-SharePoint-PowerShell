@@ -1,0 +1,169 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Exports certificates from the SharePoint farm.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Export-SPCertificate [-Identity] <SPServerCertificatePipeBind> -Password <SecureString>
+   [-EncryptionType <String>] [-IncludeAllCertificatesInCertificationPath] [-NoExtendedProperties]
+   [-Path <String>] [-Force] [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm]
+   [<CommonParameters>]
+- >-
+  Export-SPCertificate [-Identity] <SPServerCertificatePipeBind> -Type <String>
+   [-IncludeAllCertificatesInCertificationPath] [-Path <String>] [-Force]
+   [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '------------EXAMPLE 1-----------'
+  code: "$password = ConvertTo-SecureString -AsPlainText -Force \r\n \r\nExport-SPCertificate -Identity \"Team Sites Certificate\" -Password $password -IncludeAllCertificatesInCertificationPath -Path \"\\\\server\\fileshare\\certificates.pfx\""
+  description: |-
+    This example exports the "Team Sites Certificate" certificate and its private key, as well as other certificates in its certificate chain, to the \\\\server\fileshare\certificates.pfx file.
+  summary: ""
+- title: '------------EXAMPLE 2-----------'
+  code: |-
+    Export-SPCertificate -Identity "Team Sites Certificate" -Type Cert
+  description: |-
+    This example exports the "Team Sites Certificate" certificate to a Cert file that's stored in Central Administration.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EncryptionType
+  description: |+
+    Specifies the encryption algorithm to use to protect the exported PFX file.
+    AES256 specifies that AES-256 encryption with SHA256 hashing will be used.
+    TripleDes specifies that 3DES encryption with SHA1 hashing will be used.
+    AES-256 encryption is stronger than 3DES encryption, but is only supported with PFX files on Windows Server 2019 and newer operating systems.
+    Use 3DES encryption if the PFX file needs to be compatible with older operating systems.
+    If this parameter isn't specified, AES-256 encryption is used by default.
+    This parameter is only compatible with PFX files.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: AES256, TripleDes
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Specifies to overwrite a file if it already exists at the specified path.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SPServerCertificatePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The certificate to export.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IncludeAllCertificatesInCertificationPath
+  description: |+
+    Specifies whether to export additional certificates that are part of the certificate chain of the specified certificate.
+    This will only add parent certificates of the specified certificate, not child certificates issued by the specified certificate.
+    This parameter is only compatible with PFX and P7B files.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoExtendedProperties
+  description: |+
+    Specifies whether extended properties of the certificate should not be exported, such as the friendly name of the certificate.
+    This parameter is only compatible with PFX files.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: Password
+  isRequired: true
+  description: |+
+    The password to use to protect the exported PFX file.
+    This parameter is only compatible with PFX files.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  description: |+
+    The path to the PFX, P7B, or CER file that the certificates should be exported to.
+
+    The certificates will also be exported to a certificate file stored in Central Administration regardless of whether this parameter is specified.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Type
+  isRequired: true
+  description: |+
+    Specifies the type of file to generate.
+    Cert will generate a CER file containing a single DER-encoded certificate.
+    Pkcs7 will generate a P7B (PKCS #7) file containing one or more certificates.
+    This parameter is only compatible with CER and P7B files.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Cert, Pkcs7
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+uid: sharepoint-server.Export-SPCertificate
+name: Export-SPCertificate
+description: |-
+  Exports certificates from the SharePoint farm into a certificate file.
+  This exported certificate file is stored in the Central Administration site by default, but can also be stored in a path specified by the Path parameter.
+
+  SharePoint supports exporting certificates to PFX (PKCS #12) files, P7B (PKCS #7) files, and CER files.
+  Both PFX files and P7B files can contain multiple certificates, which is useful for exporting a chain of certificates from the end entity (leaf) certificate to the root certificate. 
+  However, only PFX files can contain private keys for certificates, which are necessary for a server certificate to be assigned to an IIS web site.
+  CER files contain only a single certificate.
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
+  module name: SharePointServer
+  online version: ""
+  PlatyPS schema version: 2.0.0

@@ -1,0 +1,88 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves a list of crawled properties mapped to a managed property.
+module: SharePointServer
+notes: ""
+links:
+- text: New-FASTSearchMetadataCrawledPropertyMapping
+  href: New-FASTSearchMetadataCrawledPropertyMapping.yml
+- text: Remove-FASTSearchMetadataCrawledPropertyMapping
+  href: Remove-FASTSearchMetadataCrawledPropertyMapping.yml
+- text: Set-FASTSearchMetadataCrawledPropertyMapping
+  href: Set-FASTSearchMetadataCrawledPropertyMapping.yml
+- text: Get-FASTSearchMetadataCrawledProperty
+  href: Get-FASTSearchMetadataCrawledProperty.yml
+- text: Get-FASTSearchMetadataManagedProperty
+  href: Get-FASTSearchMetadataManagedProperty.yml
+syntaxes:
+- Get-FASTSearchMetadataCrawledPropertyMapping [-Name] <String> [<CommonParameters>]
+- Get-FASTSearchMetadataCrawledPropertyMapping -ManagedProperty <ManagedProperty> [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1-----------------'
+  code: |-
+    C:\PS>Get-FASTSearchMetadataCrawledPropertyMapping -Name title
+  description: |-
+    This example returns a list of crawled properties that are mapped to the managed property named "title".
+  summary: ""
+- title: '---------------EXAMPLE 2-----------------'
+  code: |-
+    $managedproperty = Get-FASTSearchMetadataManagedProperty -name title
+    Get-FASTSearchMetadataCrawledPropertyMapping -ManagedProperty $managedproperty
+  description: |-
+    This example first retrieves a ManagedPropertyImpl object, and then uses it to look up the corresponding crawled property mappings.
+    It returns all crawled properties that are set up to map content into this managed property.
+  summary: ""
+- title: '---------------EXAMPLE 3-----------------'
+  code: |-
+    $crawledproperty = Get-FASTSearchmetadataCrawledProperty -name title
+    $crawledproperty.GetMappedManagedProperties()
+  description: |-
+    These commands are the opposite of Get-FASTSearchMetdataCrawledPropertyMapping; they find all managed properties that have a mapping for a specific crawled property.
+    This is useful when assessing how modifying a crawled property will impact the search index.
+  summary: ""
+parameters:
+- type: <xref href="ManagedProperty" data-throw-if-not-resolved="False" />
+  name: ManagedProperty
+  isRequired: true
+  description: |+
+    The managed property object for finding crawled properties.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of a managed property for finding crawled properties.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Get-FASTSearchMetadataCrawledPropertyMapping
+name: Get-FASTSearchMetadataCrawledPropertyMapping
+description: |-
+  This cmdlet retrieves a list of the crawled properties that are mapped to a managed property.
+  The managed property can be specified with the Name parameter or by a ManagedPropertyImpl object as returned by Get-FASTSearchMetadataManagedProperty (using the ManagedProperty parameter).
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-fastsearchmetadatacrawledpropertymapping
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Get-FASTSearchMetadataCrawledPropertyMapping

@@ -1,0 +1,30 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use this cmdlet to get the multi geo experience mode.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+syntaxes:
+- Get-SPOMultiGeoExperience [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-SPOMultiGeoExperience
+  description: |-
+    This example will show you whether the geo location is in SPO or ODB mode.
+  summary: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOMultiGeoExperience
+name: Get-SPOMultiGeoExperience
+description: |-
+  Use this cmdlet to get the multi geo experience mode.  For more information see [Enabling SharePoint Multi-Geo in your satellite geo location](https://learn.microsoft.com/office365/enterprise/enabling-sp-multigeo-satellite-geolocation)
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spomultigeoexperience
+  applicable: SharePoint Online
+  title: Get-SPOMultiGeoExperience
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

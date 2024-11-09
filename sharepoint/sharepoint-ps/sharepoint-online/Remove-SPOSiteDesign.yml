@@ -1,0 +1,46 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a site design. It no longer appears in the UI for creating a new site.
+module: Microsoft.Online.SharePoint.PowerShell
+syntaxes:
+- >-
+  Remove-SPOSiteDesign
+    [-Identity] <SPOSiteDesignPipeBind>
+    [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-SPOSiteDesign 21209d88-38de-4844-9823-f1f600a1179a
+  description: ""
+  summary: |+
+    This example shows how to remove a site design.
+
+parameters:
+- type: <xref href="SPOSiteDesignPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The ID of the site design to remove.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPOSiteDesign
+name: Remove-SPOSiteDesign
+description: |-
+  Removes a site design. It no longer appears in the UI for creating a new site.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spositedesign
+  applicable: SharePoint Online
+  title: Remove-SPOSiteDesign
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

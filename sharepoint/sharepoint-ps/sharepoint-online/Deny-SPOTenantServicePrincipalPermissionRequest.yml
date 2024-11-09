@@ -1,0 +1,48 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Denies a permission request for the current tenant's "SharePoint Online Client" service principal
+module: Microsoft.Online.SharePoint.PowerShell
+syntaxes:
+- Deny-SPOTenantServicePrincipalPermissionRequest -RequestId <Guid>
+examples:
+- title: '------------------EXAMPLE 1------------------'
+  code: |-
+    $requests = Get-SPOTenantServicePrincipalPermissionRequests
+    $requestToDeny = $requests | ? { $_.Resource -eq 'Office 365 SharePoint Online' -and $_.Scope -eq 'MyFiles.Read' } | Select-Object -First 1
+
+    if ($requestToDeny -ne $null)
+    {
+        Deny-SPOTenantServicePrincipalPermissionRequest -RequestId $requestToDeny.Id
+    }
+  description: |-
+    Denies the permission request for the 'Office 365 SharePoint Online' resource with scope claim 'MyFiles.Read'.
+    If there is no request with those properties, then no deny action will be taken.
+  summary: ""
+parameters:
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: RequestId
+  isRequired: true
+  description: |+
+    The ID of the permission request to deny
+
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Deny-SPOTenantServicePrincipalPermissionRequest
+name: Deny-SPOTenantServicePrincipalPermissionRequest
+description: |-
+  Denies a permission request for the current tenant's "SharePoint Online Client" service principal
+
+  Denying a permission request removes that request from the list of permission requests.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/deny-spotenantserviceprincipalpermissionrequest
+  applicable: SharePoint Online
+  title: Deny-SPOTenantServicePrincipalPermissionRequest
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

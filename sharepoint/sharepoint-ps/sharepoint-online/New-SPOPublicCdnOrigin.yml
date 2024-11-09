@@ -1,0 +1,78 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new public CDN on a document library in your SharePoint Online Tenant
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Introduction to the SharePoint Online management shell
+  href: https://support.office.com/en-us/article/introduction-to-the-sharepoint-online-management-shell-c16941c3-19b4-4710-8056-34c034493429
+- text: SharePoint Online Management Shell Download
+  href: https://www.microsoft.com/en-US/download/details.aspx?id=35588
+- text: Get-SPOAppErrors
+  href: Get-SPOAppErrors.yml
+- text: Get-SPOPublicCdnOrigins
+  href: Get-SPOPublicCdnOrigins.yml
+- text: Remove-SPOPublicCdnOrigin
+  href: Remove-SPOPublicCdnOrigin.yml
+syntaxes:
+- New-SPOPublicCdnOrigin [-Url] <String> [-Confirm] [-WhatIf] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    New-SPOPublicCdnOrigin -URL https://contoso.sharepoint.com/sites/CDN/CDNFilesLibrary/
+  description: |-
+    This example shows how to you can setup a new Public CDN on a document library in your SharePoint online tenant.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Url
+  isRequired: true
+  description: |+
+    Specify the URL that will be enabled for Public CDN in your tenant
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.New-SPOPublicCdnOrigin
+name: New-SPOPublicCdnOrigin
+description: |-
+  This cmdlet creates a new Public CDN Origin in your SPO Tenant
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/new-spopubliccdnorigin
+  applicable: SharePoint Online
+  title: New-SPOPublicCdnOrigin
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

@@ -1,0 +1,58 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  In a multi-geo tenant returns the SharePoint Online user (or users) that had been moved.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Get-SPOAppErrors
+  href: Get-SPOAppErrors.yml
+syntaxes:
+- Get-SPOCrossGeoMovedUsers -Direction <String> [<CommonParameters>]
+examples:
+- title: '-----------------------EXAMPLE 1-----------------------------'
+  code: |-
+    Get-SPOCrossGeoMovedUsers -Direction MoveIn
+  description: |-
+    Get the cross users that have been moved in the current SPO site
+  summary: ""
+- title: '-----------------------EXAMPLE 2-----------------------------'
+  code: |-
+    Get-SPOCrossGeoMovedUsers -Direction MoveOut
+  description: |-
+    Get the cross users that have been moved out the current SPO site
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Direction
+  isRequired: true
+  description: |+
+    Used to specify move direction.
+
+    Possible values
+
+    - MoveIn
+    - MoveOut
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: MoveIn, MoveOut
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOCrossGeoMovedUsers
+name: Get-SPOCrossGeoMovedUsers
+description: |-
+  This cmdlet allows you to get the moved users out and in the current SPO Site. It requires a connection to a multi-geo tenant to run correctly. You must be a SharePoint Online Administrator to get the moved users out and in the current SPO site.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spocrossgeomovedusers
+  applicable: SharePoint Online
+  title: Get-SPOCrossGeoMovedUsers
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

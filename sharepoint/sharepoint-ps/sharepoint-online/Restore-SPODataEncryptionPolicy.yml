@@ -1,0 +1,105 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Cmdlet to restore customer encryption status for your geo tenant when in recovery mode.
+  For more information, see [Controlling your data in Office 365 using Customer Key](https://learn.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key)
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+syntaxes:
+- Restore-SPODataEncryptionPolicy -PrimaryKeyVaultName <string>  -PrimaryKeyName <string> -PrimaryKeyVersion <guid> -SecondaryKeyVaultName <string> -SecondaryKeyName <string> -SecondaryKeyVersion <guid> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Restore-SPODataEncryptionPolicy -PrimaryKeyVaultName 'PKVaultName1' -PrimaryKeyName 'PrimaryKey1' -PrimaryKeyVersion 'f635a23bd4a44b9996ff6aadd88d42ba' -SecondaryKeyVaultName 'SKVaultName1' -SecondaryKeyName 'SecondaryKey2' -SecondaryKeyVersion '2b3e8f1d754f438dacdec1f0945f251a'
+  description: |-
+    This example restores the DEP used with SharePoint Online and OneDrive for Business to the given keys.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PrimaryKeyName
+  isRequired: true
+  description: |+
+    The name of the primary key.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PrimaryKeyVaultName
+  isRequired: true
+  description: |+
+    The name of the primary key vault.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: PrimaryKeyVersion
+  isRequired: true
+  description: |+
+    The version of the primary key.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SecondaryKeyName
+  isRequired: true
+  description: |+
+    The name of the secondary key.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SecondaryKeyVaultName
+  isRequired: true
+  description: |+
+    The name of the secondary key vault.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: SecondaryKeyVersion
+  isRequired: true
+  description: |+
+    The version of the secondary key.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Restore-SPODataEncryptionPolicy
+name: Restore-SPODataEncryptionPolicy
+description: |-
+  Use the cmdlet to restore customer encryption status for your geo tenant when in recovery mode.
+  For more information, see [Controlling your data in Office 365 using Customer Key](https://learn.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key)
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/restore-spodataencryptionpolicy
+  applicable: SharePoint Online
+  title: Restore-SPODataEncryptionPolicy
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

@@ -1,0 +1,71 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  {{ Fill in the Synopsis }}
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-SPOSiteReview [-SiteReviewID <Guid>] [-Status <SiteReviewStatus>]
+   [-ReportEntity <SiteAccessReportEntityEnum>] [-SiteID <Guid>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> {{ Add example code here }}
+  description: |-
+    {{ Add example description here }}
+  summary: ""
+parameters:
+- type: <xref href="SiteAccessReportEntityEnum" data-throw-if-not-resolved="False" />
+  name: ReportEntity
+  description: |+
+    {{ Fill ReportEntity Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: All, SharingLinks_Anyone, SharingLinks_PeopleInYourOrg, SharingLinks_Guests, SensitivityLabelForFiles, EveryoneExceptExternalUsersAtSite, EveryoneExceptExternalUsersForItems, PermissionedUsers
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: SiteID
+  description: |+
+    {{ Fill SiteID Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: SiteReviewID
+  description: |+
+    {{ Fill SiteReviewID Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SiteReviewStatus" data-throw-if-not-resolved="False" />
+  name: Status
+  description: |+
+    {{ Fill Status Description }}
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: All, Pending, Failed, Completed
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOSiteReview
+name: Get-SPOSiteReview
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: ""
+  PlatyPS schema version: 2.0.0
+  author: MachelleTranMSFT
+  ms.author: mactra
+  ms.reviewer: pullabhk

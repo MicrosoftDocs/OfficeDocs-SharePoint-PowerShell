@@ -1,0 +1,47 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves email addresses associated with a specific content event category. If no category is specified by the user, email addresses for all categories of content events will be provided.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Remove-SPOContentEventEmailAddresses
+  href: Remove-SPOContentEventEmailAddresses.yml
+- text: Set-SPOContentEventEmailAddresses
+  href: Set-SPOContentEventEmailAddresses.yml
+syntaxes:
+- Get-SPOContentEventEmailAddresses [-Category] <ContentEventCategory>
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Get-SPOContentEventEmailAddresses -Category Ransomware
+  description: |-
+    In Example 1, the system will display the email addresses categorized under ransomware that the admin had previously entered.
+  summary: ""
+parameters:
+- type: <xref href="ContentEventCategory" data-throw-if-not-resolved="False" />
+  name: Category
+  description: |+
+    Specifies the content event category.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOContentEventEmailAddresses
+name: Get-SPOContentEventEmailAddresses
+description: |-
+  Retrieves email addresses associated with a specific content event category. If no category is specified by the user, email addresses for all categories of content events will be provided.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spocontenteventemailaddresses
+  applicable: SharePoint Online
+  title: Get-SPOContentEventEmailAddresses
+  PlatyPS schema version: 1.0.0
+  author: mshabaz
+  ms.author: mshabaz
+  ms.reviewer: ""
+  manager: miabhish

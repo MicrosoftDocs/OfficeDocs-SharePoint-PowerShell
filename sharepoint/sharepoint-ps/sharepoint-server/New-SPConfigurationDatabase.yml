@@ -1,0 +1,291 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new configuration database.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  New-SPConfigurationDatabase [-DatabaseName] <String> [-DatabaseServer] <String> [[-DirectoryDomain] <String>]
+   [[-DirectoryOrganizationUnit] <String>] [[-AdministrationContentDatabaseName] <String>]
+   [[-DatabaseCredentials] <PSCredential>] [-FarmCredentials] <PSCredential> [-Passphrase] <SecureString>
+   [-SkipRegisterAsDistributedCacheHost] [-AssignmentCollection <SPAssignmentCollection>]
+   [-DatabaseFailOverServer <String>] [-LocalServerRole <SPServerRole>] [-ServerRoleOptional]
+   [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE 1-----------------------'
+  code: |-
+    New-SPConfigurationDatabase -DatabaseName "SharePointConfigDB1" -DatabaseServer "SQL-01" -Passphrase (ConvertTo-SecureString "MyPassword" -AsPlainText -force) -FarmCredentials (Get-Credential)
+  description: |-
+    This example prompts the user to provide user credentials for the default Farm Administrator account.
+  summary: ""
+- title: '------------------EXAMPLE 2-----------------------'
+  code: |-
+    New-SPConfigurationDatabase -DatabaseName "SharePointConfigDB1" -DatabaseServer "SQL-01" -Passphrase (ConvertTo-SecureString "MyPassword" -AsPlainText -force) -FarmCredentials (Get-Credential) -SkipRegisterAsDistributedCacheHost
+  description: |-
+    This example prompts the user to provide user credentials for the default Farm Administrator account and skips registering the server as Distributed Cache host. Applies to SharePoint Server 2013 and SharePoint Server 2016, SharePoint Server 2019 only.
+  summary: ""
+- title: '------------------EXAMPLE 3-----------------------'
+  code: |-
+    New-SPConfigurationDatabase -DatabaseName "SharePointConfigDB1" -DatabaseServer "SQL-01" -Passphrase (ConvertTo-SecureString "MyPassword" -AsPlainText -force) -FarmCredentials (Get-Credential) -LocalServerRole Custom
+  description: |-
+    This example prompts the user to provide user credentials for the default Farm Administrator account and sets the Server Role to Custom. Applies to SharePoint Server 2016, SharePoint Server 2019 only.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AdministrationContentDatabaseName
+  description: |+
+    Specifies the name for the Central Administration content database for the new farm.
+    If no name is specified, a default name is used.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "5"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: DatabaseCredentials
+  description: |+
+    Specifies the Credential object for the database user.
+    Use this parameter if you use SQL Server Authentication.
+    If no database credentials are provided, Windows authentication is used.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "6"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseFailOverServer
+  description: |+
+    Specifies the SQL Server Database Mirror partner server for the Configuration and Central Administration database.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseName
+  isRequired: true
+  description: |+
+    Specifies the name of the new configuration database.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseServer
+  isRequired: true
+  description: |+
+    Specifies the database server on which to create the configuration database.
+    If no value is specified, the default value is used.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DirectoryDomain
+  description: |+
+    Specifies the directory domain for the new farm.
+    If no domain is specified, the domain in which the local computer is located is used.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DirectoryOrganizationUnit
+  description: |+
+    Specifies the directory organizational unit for the new configuration database.
+    If no organizational unit is specified, the organizational unit in which the local computer is located is used.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: FarmCredentials
+  isRequired: true
+  description: |+
+    Specifies credentials for the Farm Administrator account.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "7"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPServerRole" data-throw-if-not-resolved="False" />
+  name: LocalServerRole
+  description: |+
+    Specifies the Server Role. Valid options for all versions of SharePoint Server 2016, SharePoint Server 2019 are:
+    `Custom`, `SingleServerFarm`, `Application`, `WebFrontEnd`, `DistributedCache`, `Search`
+
+    With the addition of Feature Pack 1, new options include:
+    `ApplicationWithSearch`, `WebFrontEndWithDistributedCache `
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SecureString" data-throw-if-not-resolved="False" />
+  name: Passphrase
+  isRequired: true
+  description: |+
+    Specifies the secure password phrase for the new farm.
+    This passphrase is used to join other machines to this farm.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "8"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ServerRoleOptional
+  description: |+
+    Configures the farm to not require a server role to be specified. If no server role is specified, the server defaults to the Custom role.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SiteMapDatabaseName
+  description: |+
+    Do not use. Specifies the database name of the Site Map site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SiteMapDatabaseServer
+  description: |+
+    Do not use. Specifies the database server name of the Site Map site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SkipRegisterAsDistributedCacheHost
+  description: |+
+    By default all the servers in the farm are registered as a cache host (that is, DistributedCacheService is running by default).
+
+    Use this parameter to not register the server computer as a distributed cache host.
+    If you want to have a dedicated cache host, then use this parameter to make sure that caching service is not installed on the computer.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "9"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.New-SPConfigurationDatabase
+name: New-SPConfigurationDatabase
+description: |-
+  The New-SPConfigurationDatabase cmdlet creates a new configuration database on the specified database server.
+  This is the central database for a new SharePoint farm.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spconfigurationdatabase
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: New-SPConfigurationDatabase
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

@@ -1,0 +1,85 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Defines the threshold over which a full user sync job will be executed during off peak hours instead of immediately.
+  This threshold is the product of the number of projects multiplied by the number of users.
+module: sharepoint-server
+notes: ""
+links:
+- text: Set-SPProjectUserSync
+  href: Set-SPProjectUserSync.yml
+- text: Set-SPProjectUserSyncDisabledSyncThreshold
+  href: Set-SPProjectUserSyncDisabledSyncThreshold.yml
+- text: Set-SPProjectUserSyncFullSyncThreshold
+  href: Set-SPProjectUserSyncFullSyncThreshold.yml
+syntaxes:
+- >-
+  Set-SPProjectUserSyncOffPeakSyncThreshold [-Url] <Uri> [-Threshold] <Int32>
+   [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+examples:
+- title: '--------------------EXAMPLE---------------------'
+  code: |-
+    Set-SPProjectUserSyncOffPeakSyncThreshold -URL https://contoso/PWA -Threshold 900000
+  description: |-
+    This example sets the sync off-peak threshold for the Project Web App instance at https://contoso-AppSrv/PWA to 900000.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Threshold
+  isRequired: true
+  description: |+
+    A whole number consisting of the number of projects multiplied by the number of users.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: Url
+  isRequired: true
+  description: |+
+    The URL of the Project Web App instance where you want to set the threshold.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+uid: sharepoint-server.Set-SPProjectUserSyncOffPeakSyncThreshold
+name: Set-SPProjectUserSyncOffPeakSyncThreshold
+description: |-
+  The `Set-SPProjectUserSyncOffPeakSyncThreshold` cmdlet defines the threshold over which a full user sync job will be executed during off-peak hours instead of immediately.
+  This threshold is the product of the number of projects multiplied by the number of users.
+  This threshold is used to preserve server performance.
+  Set it to a negative value to reset to the default of no threshold configured.
+
+  This cmdlet only works in Project Server Permission mode.
+
+  For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
+metadata:
+  external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spprojectusersyncoffpeaksyncthreshold
+  Applicable: SharePoint Server Subscription Edition
+  title: Set-SPProjectUserSyncOffPeakSyncThreshold
+  PlatyPS schema version: 2.0.0

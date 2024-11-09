@@ -1,0 +1,342 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new site collection at the specified URL.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  New-SPSite [-Url] <String> -OwnerAlias <SPUserPipeBind> [-AdministrationSiteType <SPAdministrationSiteType>]
+   [-AssignmentCollection <SPAssignmentCollection>] [-CompatibilityLevel <Int32>] [-Confirm]
+   [-ContentDatabase <SPContentDatabasePipeBind>] [-Description <String>]
+   [-HostHeaderWebApplication <SPWebApplicationPipeBind>] [-Language <UInt32>] [-Name <String>]
+   [-OverrideCompatibilityRestriction] [-OwnerEmail <String>] [-QuotaTemplate <SPQuotaTemplatePipeBind>]
+   [-SecondaryEmail <String>] [-SecondaryOwnerAlias <SPUserPipeBind>]
+   [-SiteSubscription <SPSiteSubscriptionPipeBind>] [-Template <SPWebTemplatePipeBind>] [-WhatIf]
+   [-CreateFromSiteMaster] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE 1-----------------------'
+  code: |-
+    New-SPSite https://webApp/sites/test -OwnerAlias "DOMAIN\JDoe" -Language 1033 -Template STS#0
+  description: |-
+    This example creates an English site collection at https://\<site name\>/sites/test that is owned by user DOMAIN\Jdow.
+  summary: ""
+- title: '------------------EXAMPLE 2-----------------------'
+  code: |-
+    $w = Get-SPWebApplication https://webApp
+    New-SPSite https://www.contoso.com -OwnerAlias "DOMAIN\jdow" -HostHeaderWebApplication $w -Name "Contoso" -Template STS#0
+  description: |-
+    This example creates a host-named site collection.
+    Because the template is provided, the root web of this site collection will be created.
+  summary: ""
+- title: '------------------EXAMPLE 3-----------------------'
+  code: |-
+    Get-SPWebTemplate | Where{ $_.Title -eq "Team Site" } | ForEach-Object{ New-SPSite https://<site name</sites/test -OwnerAlias DOMAIN\jdow -Template $_ }
+  description: |-
+    This example creates a site collection by using the "Team Site" Web template.
+  summary: ""
+- title: '------------------EXAMPLE 4-----------------------'
+  code: |-
+    New-SPSite -URL https://webApp/sites/testsite -OwnerAlias "DOMAIN\JDow" -Language 1033 -CompatibilityLevel 14 -Template STS#0
+  description: |-
+    This example creates an English 14 mode site collection by using the Team site template at https://\<site name\>/sites/testsite that is owned by user DOMAIN\Jdow
+  summary: ""
+parameters:
+- type: <xref href="SPAdministrationSiteType" data-throw-if-not-resolved="False" />
+  name: AdministrationSiteType
+  description: |+
+    Specifies the site type.
+
+    Valid values are None or TentantAdministration.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: CompatibilityLevel
+  description: |+
+    Specifies the version of templates to use when creating a new SPSite object.
+
+    This value sets the initial CompatibilityLevel value for the site collection.
+
+    When this parameter is not specified, the CompatibilityLevel will default to the highest possible version for the web application depending on the SiteCreationMode setting.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPContentDatabasePipeBind" data-throw-if-not-resolved="False" />
+  name: ContentDatabase
+  description: |+
+    Specifies the name or GUID of the content database in which to create the new site. If no content database is specified, the site collection is selected automatically.
+
+    The type must be a valid database name in the form, SiteContent1212, or a GUID in the form, 1234-5678-9807.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CreateFromSiteMaster
+  description: |+
+    Specifies whether to create a new site using the Site Master.
+
+    The valid values are True or False.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Describes the new site.
+
+    If no value is specified, the value is left blank.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPWebApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: HostHeaderWebApplication
+  description: |+
+    Specifies that if the URL provided is to be a host-named site collection, the HostHeaderWebApplication parameter must be the name, URL, GUID, or SPWebApplication object for the web application in which this site collection is created.
+
+    If no value is specified, the value is left blank.
+
+    The type must be a valid name in one of the following forms:
+
+    --A WebApplication
+
+    --A URL (for example, https://server_name)
+
+    --A GUID (for example, 1234-5678-9876-0987)
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Language
+  description: |+
+    Specifies the language ID for the new site collection.
+
+    If no language is specified, the site collection is created with the same language that was specified when the product was installed.
+
+    This must be a valid language identifier (LCID).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the title of the new site collection.
+
+    If no name is specified, the default name is applied.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: OverrideCompatibilityRestriction
+  description: |+
+    Specifies whether to use compatibility restriction for site.
+
+    The valid values are True or False.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPUserPipeBind" data-throw-if-not-resolved="False" />
+  name: OwnerAlias
+  isRequired: true
+  description: |+
+    Specifies the user login name of the site owner.
+
+    The type must be a valid user alias, in the form, Domain\username.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OwnerEmail
+  description: |+
+    Specifies the email address of site owner.
+    If no value is specified, the value is left blank.
+
+    The type must be a email address in the form, someone@example.com.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPQuotaTemplatePipeBind" data-throw-if-not-resolved="False" />
+  name: QuotaTemplate
+  description: |+
+    Specifies the quota template for the new site.The template must exist already.
+
+    If no template is specified, no quota is applied.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SecondaryEmail
+  description: |+
+    Specifies the email address of the secondary site owner. If no value is specified, the value is left blank.
+
+    The type must be a email address, in the form, someone@example.com.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPUserPipeBind" data-throw-if-not-resolved="False" />
+  name: SecondaryOwnerAlias
+  description: |+
+    Specifies the user login credentials of the secondary site owner.
+
+    If no value is specified, the value is left blank.
+
+    The type must be a valid user alias, in the form, Domain\username.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPSiteSubscriptionPipeBind" data-throw-if-not-resolved="False" />
+  name: SiteSubscription
+  description: |+
+    Specifies the Site Group to get site collections.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPWebTemplatePipeBind" data-throw-if-not-resolved="False" />
+  name: Template
+  description: |+
+    Specifies the Web template for the root web of the new site collection.
+
+    The template must be already installed.
+
+    If no template is specified, no template is provisioned.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Url
+  isRequired: true
+  description: |+
+    Specifies the URL that the new site collection uses.
+
+    If the URL is not a host header site, the URL must start with the web application URL.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.New-SPSite
+name: New-SPSite
+description: |-
+  The `New-SPSite` cmdlet creates a new site collection with the URL and owner that the Url and OwnerAlias parameters.
+  This cmdlet can create site collections in either the SharePoint Server mode which uses the legacy versions of templates and features, or can be created in SharePoint Server mode which uses the new versions of templates and features.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spsite
+  applicable: SharePoint Server Subscription Edition
+  title: New-SPSite
+  PlatyPS schema version: 2.0.0

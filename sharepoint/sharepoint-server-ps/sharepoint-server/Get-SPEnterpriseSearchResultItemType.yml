@@ -1,0 +1,125 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves result item types.
+module: sharepoint-server
+notes: ""
+links:
+- text: New-SPEnterpriseSearchResultItemType
+  href: New-SPEnterpriseSearchResultItemType.yml
+- text: Set-SPEnterpriseSearchResultItemType
+  href: Set-SPEnterpriseSearchResultItemType.yml
+- text: Remove-SPEnterpriseSearchResultItemType
+  href: Remove-SPEnterpriseSearchResultItemType.yml
+- text: Get-SPEnterpriseSearchOwner
+  href: Get-SPEnterpriseSearchOwner.yml
+syntaxes:
+- >-
+  Get-SPEnterpriseSearchResultItemType [[-Identity] <ResultItemTypePipeBind>] -Owner <SearchObjectOwner>
+   [-AssignmentCollection <SPAssignmentCollection>] [-SearchApplication <SearchServiceApplicationPipeBind>]
+   [-SearchApplicationProxy <SearchServiceApplicationProxyPipeBind>] [<CommonParameters>]
+examples:
+- title: '--------EXAMPLE--------'
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication
+    $tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite
+    Get-SPEnterpriseSearchResultItemType -Owner $tenantOwner -SearchApplication $ssa
+  description: |-
+    This example retrieves the result item types that are defined for the owner referenced by $tenantowner for the search application referenced by $ssa.
+
+    Although SearchApplication and SearchApplicationProxy are optional parameters, this cmdlet requires use of one of them.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="ResultItemTypePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the result item type to update.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SearchObjectOwner" data-throw-if-not-resolved="False" />
+  name: Owner
+  isRequired: true
+  description: |+
+    Specifies the search object owner that defines the scope at which the result item type is created.
+
+  defaultValue: None
+  position: Named
+  aliases: o
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SearchServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: SearchApplication
+  description: |+
+    Specifies the name of the search application.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application name (for example, SearchApp1); or an instance of a valid SearchServiceApplication object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SearchServiceApplicationProxyPipeBind" data-throw-if-not-resolved="False" />
+  name: SearchApplicationProxy
+  description: |+
+    Specifies the proxy of the search application that contains the result item type.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application proxy name (for example, SearchAppProxy1); or an instance of a valid SearchServiceApplicationProxy object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Get-SPEnterpriseSearchResultItemType
+name: Get-SPEnterpriseSearchResultItemType
+description: |-
+  The Get-SPEnterpriseSearchResultItemType cmdlet retrieves the result item types that exist for the specified owner.
+
+  Result item types enable you to change the look of search results based on the type of result.
+  You start by defining a collection of rules, which will be evaluated against the properties of results.
+  Then you define the display template to use for rendering that type of result. 
+  Once you have created the result item type, results matching the rules of the result item type will render using the specified display template.
+
+  Example use cases:
+
+  - Change the look of results for a particular file name extension, for example Word documents.
+  - Change the look of a particular content type in search results.
+  - Change the look of results from a particular author.
+  - Add a result action to results from a particular result source as part of a custom search application.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: sharepointserver.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchresultitemtype
+  applicable: SharePoint Server Subscription Edition
+  title: Get-SPEnterpriseSearchResultItemType
+  PlatyPS schema version: 2.0.0

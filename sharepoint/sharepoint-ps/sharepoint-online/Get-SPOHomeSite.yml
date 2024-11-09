@@ -1,0 +1,30 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns the home site url for your tenant.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+syntaxes:
+- Get-SPOHomeSite [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-SPOHomeSite
+  description: |-
+    This example returns the home site url for your tenant.
+  summary: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOHomeSite
+name: Get-SPOHomeSite
+description: |-
+  Use this cmdlet to get the home site url for your tenant.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spohomesite
+  applicable: SharePoint Online
+  title: Get-SPOHomeSite
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

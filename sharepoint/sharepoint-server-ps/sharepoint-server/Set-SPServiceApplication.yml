@@ -1,0 +1,130 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets properties of a service application.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Set-SPServiceApplication [-Identity] <SPServiceApplicationPipeBind>
+   [-DefaultEndpoint <SPServiceEndpointPipeBind>] [-AssignmentCollection <SPAssignmentCollection>]
+   [-IisWebServiceApplicationPool <SPIisWebServiceApplicationPoolPipeBind>]
+   [-ServiceApplicationProxyGroup <SPServiceApplicationProxyGroupPipeBind>] [-Confirm] [-WhatIf]
+   [<CommonParameters>]
+examples:
+- title: '---------------------EXAMPLE----------------'
+  code: |-
+    $serviceapp = Get-SPServiceApplication "My Service App"
+    Set-SPServiceApplication $serviceapp -DefaultEndpoint https
+  description: |-
+    This example sets the default endpoint of the service application to be https.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPServiceEndpointPipeBind" data-throw-if-not-resolved="False" />
+  name: DefaultEndpoint
+  description: |+
+    Specifies the address of the default endpoint of the service application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the service application to update.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a subscription settings service application (for example, SubSettingsApp1); or an instance of a valid SPServiceApplication object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPIisWebServiceApplicationPoolPipeBind" data-throw-if-not-resolved="False" />
+  name: IisWebServiceApplicationPool
+  description: |+
+    Specifies the name or identity of the application pool used by the service application.
+
+    The IisWebServiceApplicationPool parameter only applies to Web Service applications.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPServiceApplicationProxyGroupPipeBind" data-throw-if-not-resolved="False" />
+  name: ServiceApplicationProxyGroup
+  description: |+
+    Specifies a custom service application proxy group for the Web application to use.
+    The Web application will use the proxies in this proxy group to connect to service applications.
+    If the ServiceApplicationProxyGroup parameter is not specified, the farm's default proxy group is used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPServiceApplication
+name: Set-SPServiceApplication
+description: |-
+  Use the `Set-SPServiceApplication` cmdlet to set various properties of a service application such as the default endpoint and the application pool used by the service application.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spserviceapplication
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPServiceApplication
+  PlatyPS schema version: 2.0.0

@@ -1,0 +1,100 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns an instance of a Project Web App site.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Get-SPProjectWebInstance [-ServiceApplication <PsiServiceApplicationPipeBind>]
+   [-AssignmentCollection <SPAssignmentCollection>] [-Url <Uri>] [<CommonParameters>]
+examples:
+- title: '----------------------EXAMPLE-----------------------'
+  code: |-
+    Get-SPProjectWebInstance -Url https://server/pwa
+  description: |-
+    This example returns the properties for a Project Web App instance at https://server/pwa.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Project Server 2013
+  - Project Server 2016
+  - Project Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PsiServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: ServiceApplication
+  description: |+
+    Specifies the name of the Project Server service application.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a Project Web App instance (for example, ProjectWebApp1); or an instance of a valid PsiServiceApplication object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: sa
+  applicable:
+  - Project Server 2013
+  - Project Server 2016
+  - Project Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: Url
+  description: |+
+    Specifies the URL of the Project Web App instance to get.
+
+    The type must be a valid URL, in the form https://\<server_name\>/\<PWA_name\>.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - Project Server 2013
+  - Project Server 2016
+  - Project Server 2019
+  parameterValueGroup: ""
+applicable:
+- Project Server 2013
+- Project Server 2016
+- Project Server 2019
+uid: SharePointServer.Get-SPProjectWebInstance
+name: Get-SPProjectWebInstance
+description: |-
+  The Get-SPProjectWebInstance cmdlet returns an instance of a Project Web App site, including the following information:
+
+  - ID (GUID)
+  - Service application name
+  - Parent web app
+  - Project Web App URL
+  - Locale identifier (LCID)
+  - Admin account
+  - Project Web App database server
+  - Database name for the Project Web App database
+  - Provisioning status
+  - Report center status
+  - Site ID (GUID)
+
+  For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
+metadata:
+  external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spprojectwebinstance
+  applicable: Project Server 2013, Project Server 2016, Project Server 2019
+  title: Get-SPProjectWebInstance
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

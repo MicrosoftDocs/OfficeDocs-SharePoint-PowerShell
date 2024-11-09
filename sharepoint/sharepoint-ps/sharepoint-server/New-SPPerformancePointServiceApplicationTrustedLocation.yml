@@ -1,0 +1,179 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new trusted location for a PerformancePoint Service application.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  New-SPPerformancePointServiceApplicationTrustedLocation
+   -ServiceApplication <SPPerformancePointMonitoringServiceApplicationPipeBind>
+   -TrustedLocationType <TrustedFileType> -Type <RepositoryLocationType> -Url <String>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Description <String>] [-WhatIf]
+   [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE---------------------'
+  code: |-
+    New-SPPerformancePointServiceApplicationTrustedLocation -ServiceApplication PPSApp_01 -url "https://Some_Valid_Site_URL" -Type Site -TrustedLocationType Content
+  description: |-
+    This example creates a new TrustedLocation for the PPSApp_01 service application.
+    This creates a Content trusted location of type Site with the specified URL.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    Specifies the description of the new safe data provider.
+
+    The type must be a valid string with a maximum of 4096 characters.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPPerformancePointMonitoringServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: ServiceApplication
+  isRequired: true
+  description: |+
+    Specifies the PerformancePoint Service application to which the new trusted location will be added.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a PerformancePoint Service application (for example, PerfPointApp1); or an instance of a valid SPPerformancePointMonitoringServiceApplication object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="TrustedFileType" data-throw-if-not-resolved="False" />
+  name: TrustedLocationType
+  isRequired: true
+  description: |+
+    Specifies the type of trusted locations to create.
+    If TrustedLocationType is not specified, this cmdlet creates all the trusted locations for the specified PerformancePoint Service application.
+
+    The type must be one of the following: Content or Data Source.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="RepositoryLocationType" data-throw-if-not-resolved="False" />
+  name: Type
+  isRequired: true
+  description: |+
+    Specifies the type of trusted location.
+
+    The type must be one of the following: Site Collection, Site, Document Library, List
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Url
+  isRequired: true
+  description: |+
+    Specifies the URL of the trusted location site, site collection, site, document library, or list.
+    The type must be a valid URL, in the form https://server_name, or https://server_name/sitecollection/site/list.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.New-SPPerformancePointServiceApplicationTrustedLocation
+name: New-SPPerformancePointServiceApplicationTrustedLocation
+description: |-
+  The `New-SPPerformancePointServiceApplicationTrustedLocation` cmdlet creates a new trusted location for a PerformancePoint Service application.
+  The new trusted location can be a Content or Data Source trusted location type and is enforced only when it is enabled in the PerformancePoint Service application.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.PerformancePoint.Scorecards.BIMonitoringService.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spperformancepointserviceapplicationtrustedlocation
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: New-SPPerformancePointServiceApplicationTrustedLocation
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

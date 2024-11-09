@@ -1,0 +1,92 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves the list of users with permission to access the crawl log information.
+module: SharePointServer
+notes: ""
+links:
+- text: Set-SPEnterpriseSearchCrawlLogReadPermission
+  href: Set-SPEnterpriseSearchCrawlLogReadPermission.yml
+- text: Remove-SPEnterpriseSearchCrawlLogReadPermission
+  href: Remove-SPEnterpriseSearchCrawlLogReadPermission.yml
+syntaxes:
+- >-
+  Get-SPEnterpriseSearchCrawlLogReadPermission -SearchApplication <SearchServiceApplicationPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Tenant <Guid>] [<CommonParameters>]
+examples:
+- title: '--------EXAMPLE--------'
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication
+    Get-SPEnterpriseSearchCrawlLogReadPermission -SearchApplication $ssa -Tenant '00000000-0000-0000-0000-000000000001'
+  description: |-
+    This example retrieves a list of users who have permission to view the crawl log information for a tenant with id '00000000-0000-0000-0000-000000000001' on the search application referenced by `$ssa`.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SearchServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: SearchApplication
+  isRequired: true
+  description: |+
+    Specifies the name of the search application for which to list crawl log permissions.
+    The type must be a valid GUID, of the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application name (for example, SearchApp1); or an instance of a valid SearchServiceApplication object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Tenant
+  description: |+
+    Specifies that the list of users shall be within the scope of this tenant.
+    The type must be a valid GUID of the form 12345678-90ab-cdef-1234-567890bcdefgh.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Get-SPEnterpriseSearchCrawlLogReadPermission
+name: Get-SPEnterpriseSearchCrawlLogReadPermission
+description: |-
+  Only the Search Service Application administrator can use the Get-SPEnterpriseSearchCrawlLogReadPermission cmdlet.
+
+  The Search Service Application administrator uses the cmdlet to retrieve a list of users with permission to view the crawl log information.
+  The administrator can choose to limit this list to users with permission to view crawl log information from a particular tenant.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.Search.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchcrawllogreadpermission
+  applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Get-SPEnterpriseSearchCrawlLogReadPermission
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

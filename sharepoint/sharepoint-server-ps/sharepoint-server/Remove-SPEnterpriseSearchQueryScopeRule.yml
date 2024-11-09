@@ -1,0 +1,135 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes query results scope rules.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Remove-SPEnterpriseSearchQueryScopeRule [-Identity] <ScopeRulePipeBind> -Url <Uri>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Scope <ScopePipeBind>]
+   [-SearchApplication <SearchServiceApplicationPipeBind>] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE------------------'
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication -Identity "MySSA"
+    $scope = Get-SPEnterpriseSearchQueryScope -Identity MustCrawl -SearchApplication $ssa
+    Get-SPEnterpriseSearchQueryScopeRule -Scope $scope -Url https://criticalSite | Remove-SPEnterpriseSearchQueryScopeRule -Url https://criticalSite
+  description: |-
+    This example removes a scope rule for the URL https://criticalSite from a search service application named MySSA.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="ScopeRulePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the scope rule to delete.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a scope rule (for example, ScopeRule1); or an instance of a valid ScopeRule object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="ScopePipeBind" data-throw-if-not-resolved="False" />
+  name: Scope
+  description: |+
+    Filters to delete multiple rules for a specified scope.
+
+    The type must be a valid string that identifies the scope; for example, Scope1.
+
+  defaultValue: None
+  position: Named
+  aliases: n
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SearchServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: SearchApplication
+  description: |+
+    Specifies the search application that contains the query scope rule collection.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application name (for example, SearchApp1); or an instance of a valid SearchServiceApplication object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: Url
+  isRequired: true
+  description: |+
+    Filters to delete query scope rules for the specified results URL.
+
+    The type must be a valid URL, in the form https://server_name.
+
+  defaultValue: None
+  position: Named
+  aliases: u
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Remove-SPEnterpriseSearchQueryScopeRule
+name: Remove-SPEnterpriseSearchQueryScopeRule
+description: |-
+  After you upgrade a Search service application to SharePoint Server, you can view shared scopes, but you cannot create, update, or delete them.
+  Therefore, you cannot use this cmdlet for shared scopes after upgrade.
+  However, you can convert shared scopes to result sources, which serve a similar purpose.
+  Similarly, after you upgrade a SharePoint Server site collection to SharePoint Server, you can view local scopes, but you cannot create, update, or delete them.
+  Therefore, you cannot use this cmdlet for local scopes after you upgrade a site collection.
+  However, you can convert local scopes to result sources, which serve a similar purpose.
+
+  The `Remove-SPEnterpriseSearchQueryScopeRule` cmdlet deletes one or more shared scope rules from the scope rule collection.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [https://go.microsoft.com/fwlink/p/?LinkId=251831](https://go.microsoft.com/fwlink/p/?LinkId=251831).
+metadata:
+  external help file: Microsoft.Office.Server.Search.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spenterprisesearchqueryscoperule
+  applicable: SharePoint Server Subscription Edition
+  title: Remove-SPEnterpriseSearchQueryScopeRule
+  PlatyPS schema version: 2.0.0

@@ -1,0 +1,429 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures the specified web application.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Set-SPWebApplication [-Identity] <SPWebApplicationPipeBind> [-DefaultTimeZone <Int32>]
+   [-DefaultQuotaTemplate <String>] [-ServiceApplicationProxyGroup <SPServiceApplicationProxyGroupPipeBind>]
+   [-NotProvisionGlobally] [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm]
+   [<CommonParameters>]
+- >-
+  Set-SPWebApplication [-Identity] <SPWebApplicationPipeBind> -Zone <SPUrlZone>
+   [-AuthenticationProvider <SPAuthenticationProviderPipeBind[]>]
+   [-AdditionalClaimProvider <SPClaimProviderPipeBind[]>] [-SignInRedirectURL <String>]
+   [-SignInRedirectProvider <SPTrustedIdentityTokenIssuerPipeBind>] [-AuthenticationMethod <String>] [-Force]
+   [-NotProvisionGlobally] [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm]
+   [<CommonParameters>]
+- >-
+  Set-SPWebApplication [-Identity] <SPWebApplicationPipeBind> -Zone <SPUrlZone> [-SecureSocketsLayer]
+   [-HostHeader <String>] [-Certificate <SPServerCertificatePipeBind>] [-UseServerNameIndication]
+   [-AllowLegacyEncryption] -Port <Int32> [-Url <String>] [-NotProvisionGlobally]
+   [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]
+- >-
+  Set-SPWebApplication [-Identity] <SPWebApplicationPipeBind> -SMTPServer <String> [-SMTPServerPort <Int32>]
+   [-OutgoingEmailAddress <String>] [-ReplyToEmailAddress <String>] [-SMTPCredentials <PSCredential>]
+   [-DisableSMTPEncryption] [-Certificate <SPServerCertificatePipeBind>] [-NotProvisionGlobally]
+   [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    $credentials = Get-Credential
+    Set-SPWebApplication -Identity http://servername -SMTPServer mail.example.com -SMTPServerPort 587 -OutgoingEmailAddress user@example.com -ReplyToAddress replyto@example.com -SMTPCredentials $credentials
+  description: |-
+    This example sets the http://servername web application to use the SMTP server mail.example.com, the SMTP server port 587, the from address user@example.com, the reply-to address replyto@example.com, and the credentials stored in the $credentials object.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Set-SPWebApplication -Identity http://servername -SMTPServer mail.example.com -OutgoingEmailAddress user@example.com -ReplyToAddress replyto@example.com -SMTPCredentials $null
+  description: |-
+    This example sets the http://servername web application to use the SMTP server mail.example.com, the default SMTP server port, the from address user@example.com, the reply-to address replyto@example.com, and to connect to the SMTP server anonymously.
+  summary: ""
+parameters:
+- type: <xref href="SPClaimProviderPipeBind" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AdditionalClaimProvider
+  description: |+
+    Adds a specific claim provider to the defined web application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: AllowLegacyEncryption
+  description: |+
+    Specifies that older SSL and TLS protocol versions and cipher suites are allowed to be used with this IIS website.
+    Legacy encryption is weaker than modern encryption and is not recommended.
+
+    This feature requires Windows Server 2022 or higher.
+    This feature is not available when SharePoint is deployed with earlier versions of Windows Server.
+
+    This parameter is only valid when used with the SecureSocketsLayer parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: AuthenticationMethod
+  description: |+
+    Use to set a web application to classic Windows authentication.
+    The valid values are NTLM or Kerberos.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPAuthenticationProviderPipeBind" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AuthenticationProvider
+  description: |+
+    Defines the authentication provider(s) that applies to the web application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPServerCertificatePipeBind" data-throw-if-not-resolved="False" />
+  name: Certificate
+  description: |+
+    Specifies the certificate that will be used for the Secure Sockets Layer (SSL) binding of this IIS website, or for authenticating to an SMTP server to send email.
+
+    When configuring the Secure Sockets Layer (SSL) binding of this IIS website, this parameter is only valid when used with the SecureSocketsLayer parameter.
+    When configuring SMTP authentication, this parameter is only valid when the DisableSMTPEncryption parameter is not specified.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DefaultQuotaTemplate
+  description: |+
+    Specifies the new default site quota template for this web application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: DefaultTimeZone
+  description: |+
+    Specifies the default time zone for new site collections in this web application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DisableSMTPEncryption
+  description: |+
+    Specifies whether to turn on or off SMTP Encryption.
+
+    The default value is false.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Suppresses confirmation messages involved in settings for a web application.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HostHeader
+  description: |+
+    Specifies the host header binding for this IIS website.
+    A host header binding allows multiple IIS websites to share the same port number.
+    Web requests sent to a shared port number are routed to the correct IIS website based on the value of the HTTP host header sent by the client.
+
+    If no host header binding is specified, then all web requests sent to this port number will be routed to this IIS website unless another IIS website has a host header binding that matches the HTTP host header sent by the client.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPWebApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the name or URL of the web application.
+
+    The type must be a valid name, in the form WebApplication-1212, or URL, in the form https://example.contoso.com.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NotProvisionGlobally
+  description: |+
+    Only provisions the web application on the local server with the changes specified by this cmdlet. Web applications on other servers in the farm will not be provisioned with these changes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OutgoingEmailAddress
+  description: |+
+    Specifies the new outgoing e-mail address for e-mail messages sent from this web application.
+    The type must be a valid address; for example, someone@example.com.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Port
+  isRequired: true
+  description: |+
+    Specifies the port on which this web application can be accessed.
+    This can be any valid port number.
+
+    If you specify a port number that has already been assigned, IIS does not start the new site until you change either the port number of the new site or the port number of the old site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReplyToEmailAddress
+  description: |+
+    Configures the reply e-mail address.
+
+    The type must be a valid address; for example, someone@example.com.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SecureSocketsLayer
+  description: |+
+    Enables Secure Sockets Layer (SSL) encryption for this web application.
+    If you choose to use SSL, you must import a server certificate to SharePoint and assign it to the IIS website for this web application.
+    Until this is done, the web application will be inaccessible from this IIS website.
+
+    The default value is False.
+
+    If this parameter is omitted or set to False, this web application will use HTTP for the specified port.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPServiceApplicationProxyGroupPipeBind" data-throw-if-not-resolved="False" />
+  name: ServiceApplicationProxyGroup
+  description: |+
+    Specifies a custom service application proxy group for the web application to use.
+    The web application will use the proxies in this proxy group to connect to service applications.
+    If this parameter is not specified, the farm's default proxy group is used.
+
+  defaultValue: None
+  position: Named
+  aliases: ProxyGroup
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPTrustedIdentityTokenIssuerPipeBind" data-throw-if-not-resolved="False" />
+  name: SignInRedirectProvider
+  description: |+
+    Sets the sign-in redirect URL to point to the URL that is defined in the specified authentication provider.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SignInRedirectURL
+  description: |+
+    Specifies the sign-in redirect URL for the web application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: SMTPCredentials
+  description: |+
+    Specifies credentials to authenticate to the SMTP server.
+    Set the value to $null to connect to the SMTP server anonymously.
+    If this parameter isn't specified, the existing authentication settings will be preserved.
+
+    You must use the `Set-SPApplicationCredentialKey` PowerShell cmdlet to set an identical application credential key on each server in the farm before specifying credentials.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SMTPServer
+  isRequired: true
+  description: |+
+    Specifies the new outbound SMTP server that this web application will use.
+    Set to $null to clear the server setting.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: SMTPServerPort
+  description: |+
+    Specifies a SMTP port value.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Url
+  description: |+
+    Specifies the load-balanced URL for the web application zone.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: UseServerNameIndication
+  description: |+
+    Specifies that the Secure Sockets Layer (SSL) binding of this IIS website should use Server Name Indication (SNI).
+    Server Name Indication allows multiple IIS websites with unique host headers and unique server certificates to share the same SSL port.
+    If Server Name Indication isn't used, all IIS websites sharing the same SSL port must share the same SSL certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPUrlZone" data-throw-if-not-resolved="False" />
+  name: Zone
+  isRequired: true
+  description: |+
+    When configuring zone-specific settings, the zone to configure must be specified.
+    This zone must already exist.
+
+    The type must be any one of the following values: Default, Intranet, Internet, Extranet, or Custom.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPWebApplication
+name: Set-SPWebApplication
+description: |-
+  This cmdlet contains more than one parameter set.
+  You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+  For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+
+  The `Set-SPWebApplication` cmdlet configures the web application specified by the Identity parameter.
+  For any settings that are zone-specific (for the Zone parameter set), the zone to configure must be provided.
+  The provided zone must already exist.
+
+  All IIS binding settings should be respecified when updating the binding of an IIS website via the `Set-SPWebApplication` cmdlet. This includes the URL, secure sockets layer setting, the port number, the host header, and the certificate. If a binding setting isn't respecified, it will revert to its default value.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spwebapplication
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPWebApplication
+  PlatyPS schema version: 2.0.0

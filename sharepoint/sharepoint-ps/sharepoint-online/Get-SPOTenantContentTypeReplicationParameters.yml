@@ -1,0 +1,43 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets content types for replication parameters
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Introduction to the SharePoint Online management shell
+  href: https://support.office.com/en-us/article/introduction-to-the-sharepoint-online-management-shell-c16941c3-19b4-4710-8056-34c034493429
+- text: SharePoint Online Management Shell Download
+  href: https://www.microsoft.com/en-US/download/details.aspx?id=35588
+- text: Get-SPOAppErrors
+  href: Get-SPOAppErrors.yml
+- text: Get-SPOTenantTaxonomyReplicationParameters
+  href: Get-SPOTenantTaxonomyReplicationParameters.yml
+- text: Set-SPOTenantTaxonomyReplicationParameters
+  href: Set-SPOTenantTaxonomyReplicationParameters.yml
+- text: Set-SPOTenantContentTypeReplicationParameters
+  href: Set-SPOTenantContentTypeReplicationParameters.yml
+syntaxes:
+- Get-SPOTenantContentTypeReplicationParameters [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-SPOTenantContentTypeReplicationParameters
+  description: |-
+    Gets content types for replication parameters
+  summary: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOTenantContentTypeReplicationParameters
+name: Get-SPOTenantContentTypeReplicationParameters
+description: |-
+  Before you run the cmdlets, please use `Connect-SPOService` to connect to SharePoint Online first.
+  This Cmdlets gets the content types that are being replicated from primary location to satellite
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spotenantcontenttypereplicationparameters
+  applicable: SharePoint Online
+  title: Get-SPOTenantContentTypeReplicationParameters
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

@@ -1,0 +1,104 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Set SharePoint O365 Link Settings for Hybrid Configuration.
+module: sharepoint-server
+links:
+- text: Get-SPO365LinkSettings
+  href: Get-SPO365LinkSettings.yml
+- text: Test-SPO365LinkSettings
+  href: Test-SPO365LinkSettings.yml
+syntaxes:
+- >-
+  Set-SPO365LinkSettings -MySiteHostUrl <String> [-Audiences <String[]>] [-RedirectSites <Boolean>]
+   [-HybridAppLauncherEnabled <Boolean>] [-OnedriveDefaultToCloudEnabled <Boolean>]
+   [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+examples:
+- title: '------------EXAMPLE 1-----------'
+  code: |-
+    Set-SPO365LinkSettings -MySiteHostUrl https://contoso-my.sharepoint.com/ -RedirectSites $true
+  description: |-
+    This example sets the mysite host URL to contoso-my.sharepoint.com
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: Audiences
+  description: |+
+    Sets the user(s) for whom redirection is active.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: HybridAppLauncherEnabled
+  description: |+
+    Sets a flag that indicates whether app launcher get data from SharePoint Online (SPO) is allowed
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MySiteHostUrl
+  isRequired: true
+  description: |+
+    Sets the root URL for the redirected pages.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: OnedriveDefaultToCloudEnabled
+  description: |+
+    Sets a flag that indicates whether Local Onedrive is redirected to SPO OneDrive.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPO365LinkSettings
+name: Set-SPO365LinkSettings
+description: |-
+  Use the **Set-SPO365LinkSettings** cmdlet to configure some of Hybrid features (Hybrid site redirection, OneDrive redirection, ODB default to Cloud) without running Hybrid Configuration Wizard.
+
+  To run this cmdlet requires farm administrator permission and that the user account has full control access to the User Profile Application service.
+metadata:
+  external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spo365linksettings
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPO365LinkSettings
+  PlatyPS schema version: 2.0.0

@@ -1,0 +1,91 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns a list of User Settings Providers installed on the farm.
+module: SharePointServer
+notes: ""
+links:
+- text: New-SPUserSettingsProvider
+  href: New-SPUserSettingsProvider.yml
+- text: Remove-SPUserSettingsProvider
+  href: Remove-SPUserSettingsProvider.yml
+- text: Get-SPUserSettingsProviderManager
+  href: Get-SPUserSettingsProviderManager.yml
+syntaxes:
+- >-
+  Get-SPUserSettingsProvider [[-Identity] <SPUserSettingsProviderPipeBind>]
+   [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+examples:
+- title: '-----------EXAMPLE--------'
+  code: |-
+    C:\PS>$provider = Get-SPUserSettingsProvider
+
+    C:\PS>$site = Get-SPSite -Identity https://someserver
+
+    C:\PS>$user = $site.RootWeb.CurrentUser
+
+    C:\PS>$ctx = $provider.GetProviderContext($user)
+
+    C:\PS>$provider.GetUserRegionalSettings($ctx,$user)
+  description: |-
+    This example returns the regional settings for a specified user.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPUserSettingsProviderPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the GUID ID for a User Settings Provider.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Get-SPUserSettingsProvider
+name: Get-SPUserSettingsProvider
+description: |-
+  Use the Get-SPUserSettingsProvider cmdlet to return a list of User Settings Providers.
+  To return a list of a specific user setting provider, use the Identity parameter.
+  Otherwise, the list for the entire farm is returned.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spusersettingsprovider
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Get-SPUserSettingsProvider
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

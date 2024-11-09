@@ -1,0 +1,100 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new mapping from a managed property into the full text index.
+module: SharePointServer
+notes: ""
+links:
+- text: Remove-FASTSearchMetadataFullTextIndexMapping
+  href: Remove-FASTSearchMetadataFullTextIndexMapping.yml
+- text: Set-FASTSearchMetadataFullTextIndexMapping
+  href: Set-FASTSearchMetadataFullTextIndexMapping.yml
+- text: Get-FASTSearchMetadataFullTextIndexMapping
+  href: Get-FASTSearchMetadataFullTextIndexMapping.yml
+- text: Set-FASTSearchMetadataRankProfile
+  href: Set-FASTSearchMetadataRankProfile.yml
+- text: Get-FASTSearchMetadataManagedProperty
+  href: Get-FASTSearchMetadataManagedProperty.yml
+- text: Get-FASTSearchMetadataFullTextIndex
+  href: Get-FASTSearchMetadataFullTextIndex.yml
+syntaxes:
+- >-
+  New-FASTSearchMetadataFullTextIndexMapping -FullTextIndex <FullTextIndex> -Level <Int32>
+   -ManagedProperty <ManagedProperty> [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    C:\PS>$title = Get-FASTSearchMetadataManagedProperty -name title
+    $fulltextindex = Get-FASTSearchMetadataFullTextIndex -Name thirdfulltextindex
+    New-FASTSearchMetadataFullTextIndexMapping -ManagedProperty $title -FullTextIndex $fulltextindex -Level 3
+  description: |-
+    This example maps the managed property called "title" into the full text index named "thirdfulltextindex" at level 3.
+
+    After this mapping is made, the content must be re-fed to populate the full text index.
+  summary: ""
+parameters:
+- type: <xref href="FullTextIndex" data-throw-if-not-resolved="False" />
+  name: FullTextIndex
+  isRequired: true
+  description: |+
+    The full text index to add the mapping to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Level
+  isRequired: true
+  description: |+
+    The importance level of this managed property.
+    Allowed values are 1 through 7.
+
+  defaultValue: None
+  position: Named
+  aliases: ImportanceLevel, L
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="ManagedProperty" data-throw-if-not-resolved="False" />
+  name: ManagedProperty
+  isRequired: true
+  description: |+
+    The managed property being mapped to the full text index.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.New-FASTSearchMetadataFullTextIndexMapping
+name: New-FASTSearchMetadataFullTextIndexMapping
+description: |-
+  This cmdlet adds the content of a managed property to a full text index by mapping the managed property into the full text index.
+  The mapping is only applicable to new content; existing content must be re-fed to appear in this full text index.
+
+  The managed properties are ordered by a concept called importance level.
+  If the number of matching documents for a query term is greater than the StopWordThreshold for the rank profile in use, the Microsoft FAST Search Server 2010 for SharePoint system retries the query, limiting the managed properties searched to those from a higher importance level.
+
+  Importance level 1 (the first level that will be used in a query) includes managed properties from all levels 1 and up.
+  Importance level 2 includes levels 2 and up.
+  The maximum level is 7.
+
+  This process is called drilling.
+  See Set-FASTSearchMetadataRankProfile for more information about StopWordThreshold.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-fastsearchmetadatafulltextindexmapping
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: New-FASTSearchMetadataFullTextIndexMapping

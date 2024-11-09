@@ -1,0 +1,102 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a new origin from the Public or Private content delivery network (CDN). Requires Tenant administrator permissions.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Remove-SPOTenantCdnOrigin -CdnType <SPOTenantCdnType> [-Confirm] -OriginUrl <String> [-WhatIf] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Remove-SPOTenantCdnOrigin -CdnType Public -OriginUrl sites/pubsite/siteassets/subfolder
+  description: |-
+    The example removes a CDN from a tenant level.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Remove-SPOTenantCdnOrigin -CdnType Public -OriginScope Site  -Site https://contoso.sharepoint.com/sites/pubsite -OriginUrl siteassets/subfolder
+  description: |-
+    The example removes a CDN from a site level.
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Remove-SPOTenantCdnOrigin -CdnType Private -OriginUrl /sites/branding/Assets
+  description: |-
+    This example removes a recently-removed organizational assets library from a CDN.
+  summary: ""
+parameters:
+- type: <xref href="SPOTenantCdnType" data-throw-if-not-resolved="False" />
+  name: CdnType
+  isRequired: true
+  description: |+
+    Specifies the CDN type. The valid values are: Public or Private.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: Public, Private
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OriginUrl
+  isRequired: true
+  description: |+
+    Specifies a path to the doc library to be configured. It can be provided in two ways: relative path, or a mask.
+
+    Relative-Relative path depends on the OriginScope. If the originScope is Tenant, a path must be a relative path under the tenant root. If the originScope is Site, a path must be a relative path under the given Site. The path must point to the valid Document Library or a folder with a document library.
+
+    Any asset stored under the path provided (in the container itself or any of its subfolders) will be exposed via CDN
+
+    Mask - Mask allows to configure a partial URL match. It must start with */, and must not include * anywhere else. I.e. an origin "*/masterpages" will expose all the assets under all the masterpages libraries, either under the tenant root (means, anywhere in the tenancy) or in the given site collection, depends on the OriginScope parameter. Equally, */masterpages/subfolder will enable items in "subfolder" and below.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPOTenantCdnOrigin
+name: Remove-SPOTenantCdnOrigin
+description: |-
+  Removes a new origin from the Public or Private content delivery network (CDN).
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spotenantcdnorigin
+  applicable: SharePoint Online
+  title: Remove-SPOTenantCdnOrigin
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

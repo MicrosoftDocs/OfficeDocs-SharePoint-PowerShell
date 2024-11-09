@@ -1,0 +1,88 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves mappings between managed properties and the full text indexes.
+module: SharePointServer
+notes: ""
+links:
+- text: New-FASTSearchMetadataFullTextIndexMapping
+  href: New-FASTSearchMetadataFullTextIndexMapping.yml
+- text: Remove-FASTSearchMetadataFullTextIndexMapping
+  href: Remove-FASTSearchMetadataFullTextIndexMapping.yml
+- text: Set-FASTSearchMetadataFullTextIndexMapping
+  href: Set-FASTSearchMetadataFullTextIndexMapping.yml
+- text: Get-FASTSearchMetadataFullTextIndex
+  href: Get-FASTSearchMetadataFullTextIndex.yml
+- text: Get-FASTSearchMetadataManagedProperty
+  href: Get-FASTSearchMetadataManagedProperty.yml
+syntaxes:
+- >-
+  Get-FASTSearchMetadataFullTextIndexMapping [-FullTextIndex <FullTextIndex>]
+   [-ManagedProperty <ManagedProperty>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1-----------------'
+  code: |-
+    $fulltextindex = Get-FASTSearchMetadataFullTextIndex -name content
+    Get-FASTSearchMetadataFullTextIndexMapping -fulltextindex $fulltextindex| ForEach-Object {$_.ManagedProperty.Name}
+  description: |-
+    This example retrieves the full text index mappings for the full text index "content".
+    It then iterates over the mappings and outputs the names of the managed properties included in the full text index.
+  summary: ""
+- title: '---------------EXAMPLE 2-----------------'
+  code: |-
+    $title = Get-FASTSearchMetadataManagedProperty -name title
+    Get-FASTSearchMetadataFullTextIndexMapping -managedproperty $title
+  description: |-
+    This example retrieves all full text indexes where the managed property named "title" is included.
+
+    The specified managed property is mapped to both "content" and "thirdfulltextindex", showing that there is no limit to how many full text indexes a managed property can be part of.
+  summary: ""
+parameters:
+- type: <xref href="FullTextIndex" data-throw-if-not-resolved="False" />
+  name: FullTextIndex
+  description: |+
+    The full text index specified to retrieve mappings.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="ManagedProperty" data-throw-if-not-resolved="False" />
+  name: ManagedProperty
+  description: |+
+    The managed property specified to retrieve mappings.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Get-FASTSearchMetadataFullTextIndexMapping
+name: Get-FASTSearchMetadataFullTextIndexMapping
+description: |-
+  This cmdlet retrieves mappings from managed properties to full text indexes.
+  These mappings control which managed properties are included in each full text index.
+
+  Running Get-FASTSearchMetadataFullTextIndexMapping with only a managed property as a parameter (the ManagedProperty parameter) returns all mappings to full text indexes in which the managed property is included.
+
+  Running Get-FASTSearchMetadataFullTextIndexMapping with only a full text index as a parameter (the FullTextIndex parameter) returns all mappings from managed properties that are included in the full text index
+
+  Running Get-FASTSearchMetadataFullTextIndexMapping with both the ManagedProperty and the FullTextIndex parameters returns a single FullTextIndexMappingImpl object for that exact mapping, if it exists in the Microsoft FAST Search Server 2010 for SharePoint system.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-fastsearchmetadatafulltextindexmapping
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Get-FASTSearchMetadataFullTextIndexMapping

@@ -1,0 +1,63 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Uploads a resource to the resource store.
+module: SharePointServer
+notes: ""
+links:
+- text: Get-FASTSearchResource
+  href: Get-FASTSearchResource.yml
+- text: Remove-FASTSearchResource
+  href: Remove-FASTSearchResource.yml
+syntaxes:
+- Add-FASTSearchResource [-Path] <String> [-FilePath] <String> [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    C:\PS>Add-FASTSearchResource dictionaries\spellcheck\check_en.aut c:\check_en.aut
+  description: |-
+    This example uploads the file c:\check_en.aut to dictionaries\spellcheck\check_en.aut to the resource store.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FilePath
+  isRequired: true
+  description: |+
+    Path of the local resource to be uploaded.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Partial URI within the resource store where the file will be uploaded.
+
+  defaultValue: None
+  position: "1"
+  aliases: ResourceURI
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Add-FASTSearchResource
+name: Add-FASTSearchResource
+description: |-
+  This cmdlet uploads a specified file, located in the local environment, to the Microsoft FAST Search Server 2010 for SharePoint resource store.
+  The location of the resource store is typically specified in %FASTSEARCH%/etc/Admin.config (where %FASTSEARCH% is the FAST Search Server 2010 for SharePoint installation folder.) Specify a unique location of the resource in the upload URI.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/add-fastsearchresource
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Add-FASTSearchResource

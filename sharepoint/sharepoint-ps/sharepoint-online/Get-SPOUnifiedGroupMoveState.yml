@@ -1,0 +1,81 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns the state of an Office 365 Group move between Preferred Data Locations.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: |-
+  You can also apply the `-Verbose` option to see additional information about the move.
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: |-
+    The move status for the Office 365 Group. Possible values are:
+
+    * Ready to Trigger: The move has not started.
+    * Scheduled: The move is in queue but has not yet started.
+    * InProgress (n/4): The move is in progress in one of the following states: Validation (1/4), Backup (2/4), Restore (3/4), Cleanup (4/4).
+    * Success: The move has completed successfully.
+    * Failed: The move failed.
+links:
+- text: Move a SharePoint site to a different geo location
+  href: https://learn.microsoft.com/office365/enterprise/move-sharepoint-between-geo-locations
+syntaxes:
+- Get-SPOUnifiedGroupMoveState [-GroupAlias] <string> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-SPOUnifiedGroupMoveState -GroupAlias EUTeam
+  description: |-
+    Returns the status of the move between geos for the Office 365 Group named 'EUTeam'.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: GroupAlias
+  isRequired: true
+  description: |+
+    The alias of the Office 365 Group.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOUnifiedGroupMoveState
+name: Get-SPOUnifiedGroupMoveState
+description: |-
+  Retrieves the state of the Office 365 Group move to the Preferred Data Location (PDL) for the specified. The customer tenant must be multi-geo enabled.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spounifiedgroupmovestate
+  applicable: SharePoint Online
+  title: Get-SPOUnifiedGroupMoveState
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

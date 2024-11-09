@@ -1,0 +1,109 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns an Access Services database.
+module: SharePointServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Office.Access.Services.PowerShell.AccessServicesDatabasePipeBind" data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.SharePoint.PowerShell.SPContentDatabasePipeBind
+    System.Boolean
+    Microsoft.SharePoint.PowerShell.SPAssignmentCollection
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-SPAccessServicesDatabase [[-Identity] <AccessServicesDatabasePipeBind>]
+   [[-ContentDb] <SPContentDatabasePipeBind>] [[-AccessAppsOnly] <Boolean>]
+   [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-SPAccessServicesDatabase -Identity https://apps-eec88dc5f597c6.contoso-apps.com/sites/team/accessApp
+  description: |-
+    Using the App Web, this example returns the Access database named 'accessApp'.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-SPAccessServicesDatabase -ContentDb WSS_Content
+  description: |-
+    This example returns all Access databases associated with sites in the content database, WSS_Content.
+  summary: ""
+parameters:
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AccessAppsOnly
+  description: |+
+    Returns only Access Apps.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPContentDatabasePipeBind" data-throw-if-not-resolved="False" />
+  name: ContentDb
+  description: |+
+    The Content Database to return Access Apps from.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="AccessServicesDatabasePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The URL to the Access App. Must be the App Web URL.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Get-SPAccessServicesDatabase
+name: Get-SPAccessServicesDatabase
+description: |-
+  Returns an Access Services database.
+metadata:
+  external help file: microsoft.office.access.server.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spaccessservicesdatabase
+  applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Get-SPAccessServicesDatabase
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

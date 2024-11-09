@@ -1,0 +1,110 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a feature to a SharePoint Feature set.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Add-SPSiteSubscriptionFeaturePackMember [-Identity] <SPSiteSubscriptionFeaturePackPipeBind>
+   -FeatureDefinition <SPFeatureDefinitionPipeBind> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+   [-WhatIf] [<CommonParameters>]
+examples:
+- title: '-------------EXAMPLE----------------'
+  code: |-
+    $fp = New-SPSiteSubscriptionFeaturePack
+    Get-SPFeature -limit all | Where{ $_.Scope -eq "WEB" } | Add-SPSiteSubscriptionFeaturePackMember -id $fp
+    $fp = Get-SPSiteSubscriptionFeaturePack $fp
+  description: |-
+    This example creates a Feature set and adds all Web site scoped Features to the set.
+
+    The Feature set is refreshed in the last line so that the local object has the correct values.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: get-help about_commonparameters
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPFeatureDefinitionPipeBind" data-throw-if-not-resolved="False" />
+  name: FeatureDefinition
+  isRequired: true
+  description: |+
+    Specifies the Feature definition, name, or GUID to add to the Feature set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPSiteSubscriptionFeaturePackPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the Feature set object or GUID to which the given SharePoint Feature is added.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or a valid name of a Feature set (for example, FeatureSet1); or an instance of a valid SPFeatureSet object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Add-SPSiteSubscriptionFeaturePackMember
+name: Add-SPSiteSubscriptionFeaturePackMember
+description: |-
+  The Add-SPSiteSubscriptionFeaturePackMember cmdlet adds features to the provided SharePoint Feature set.
+  Feature sets are an Allow List of  SharePoint Features that can be associated with any site subscription.
+  If a Feature set is assigned to a site subscription, only the SPFeatures object in that Feature set are available for use on the site collections and Web sites that are members of the site subscription.
+  Feature sets contain a list of the GUIDs of each Feature that are on the Allow List for associated site subscriptions.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/add-spsitesubscriptionfeaturepackmember
+  applicable: SharePoint Server Subscription Edition
+  title: Add-SPSiteSubscriptionFeaturePackMember
+  PlatyPS schema version: 2.0.0

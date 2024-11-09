@@ -1,0 +1,58 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet allows you to retrieve all SharePoint pages under a specific SharePoint site.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: /powershell/sharepoint/sharepoint-online/connect-sharepoint-online
+- text: Copy-SPOPersonalSitePage.md
+  href: ./Copy-SPOPersonalSitePage.yml
+- text: Get-SPOPersonalSitePageCopyProgress.md
+  href: ./Get-SPOPersonalSitePageCopyProgress.yml
+syntaxes:
+- Get-SPOSitePages -Site <SpoSitePipeBind> [<CommonParameters>]
+examples:
+- title: '-----------------------EXAMPLE 1-----------------------------'
+  code: |-
+    Get-SPOSitePages -Site 'https://contoso.sharepoint.com/sites/testsite'
+  description: |-
+    Example 1 demonstrates how a SharePoint Administrator can retrieve all the SharePoint pages under the `testsite`.
+  summary: ""
+parameters:
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Site
+  isRequired: true
+  description: |+
+    Specifies the URL of the SharePoint site from which to fetch the SharePoint pages.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOSitePages
+name: Get-SPOSitePages
+description: |-
+  After this cmdlet is executed, the information for each SharePoint page will be displayed with the following properties:
+
+  | Property             | Description                              |
+  | :------------------- | :--------------------------------------- |
+  | Name                 | The name of the SharePoint page.                    |
+  | Title                | The title of the SharePoint page.                   |
+  | UniqueId             | The unique ID of the SharePoint page.               |
+  | CreatedDateTime      | The creation date and time of the SharePoint page.       |
+  | LastModifiedDateTime | The last modified date and time of the SharePoint page. |
+  | CreatedBy            | The creator of the SharePoint page.                 |
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spositepages
+  applicable: SharePoint Online
+  title: Get-SPOSitePages
+  PlatyPS schema version: 2.0.0
+  author: xuyangzo
+  ms.author: xuyangzou
+  ms.reviewer: ""

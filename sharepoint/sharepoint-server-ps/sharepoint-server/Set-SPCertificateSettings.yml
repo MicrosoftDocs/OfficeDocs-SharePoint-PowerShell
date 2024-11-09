@@ -1,0 +1,223 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures certificate management settings.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Set-SPCertificateSettings [-OrganizationalUnit <String>] [-Organization <String>] [-Locality <String>]
+   [-State <String>] [-Country <String>] [-KeyAlgorithm <KeyAlgorithmGroup>] [-KeySize <Int32>]
+   [-EllipticCurve <EllipticCurveType>] [-HashAlgorithm <String>]
+   [-RsaSignaturePadding <RsaSignaturePaddingType>] [-CertificateExpirationAttentionThreshold <Int32>]
+   [-CertificateExpirationWarningThreshold <Int32>] [-CertificateExpirationErrorThreshold <Int32>]
+   [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '------------EXAMPLE-----------'
+  code: |-
+    Set-SPCertificateSettings -CertificateExpirationWarningThreshold 22
+  description: |-
+    This examples changes the certificate expiration warning threshold to 22 days.
+    SharePoint will begin sending warnings about upcoming certificate expirations 22 days before they expire.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: CertificateExpirationAttentionThreshold
+  description: |+
+    Specifies the number of days before a certificate expires to trigger a certificate expiration notification.
+    This is a reminder of upcoming certificate expirations that can be handled with normal priority.
+    A certificate will only trigger a notification when it is assigned to SharePoint objects.
+    This notification is disabled when set to 0.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: CertificateExpirationErrorThreshold
+  description: |+
+    Specifies the number of days after a certificate expired to trigger a certificate expiration alert.
+    This is an alert about certificates that have already expired and should be handled with critical priority.
+    A certificate will only trigger an alert when it is assigned to SharePoint objects.
+    This alert is disabled when set to 0.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: CertificateExpirationWarningThreshold
+  description: |+
+    Specifies the number of days before a certificate expires to trigger a certificate expiration warning.
+    This is a warning of imminent certificate expirations that should be handled with high priority.
+    A certificate will only trigger a warning when it is assigned to SharePoint objects.
+    This warning is disabled when set to 0.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Country
+  description: |+
+    The 2 letter country code where your organization is legally located.
+    This must be an ISO 3166-1 alpha-2 country code.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="EllipticCurveType" data-throw-if-not-resolved="False" />
+  name: EllipticCurve
+  description: |+
+    Specifies the elliptic curve of your public and private ECC keys.
+
+    Larger elliptic curves provide more cryptographic strength than smaller elliptic curves, but they're also more computationally expensive and take more time to complete the SSL/TLS connection.
+    Select nistP256 if you're unsure which elliptic curve to use.
+    Elliptic curves larger than nistP384 are not recommended.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Default, nistP256, nistP384, nistP521
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: HashAlgorithm
+  description: |+
+    Specifies the hash algorithm of your certificate signature, which your certificate authority will use to verify that your certificate request hasn't been tampered with.
+
+    Larger hash algorithms provide more cryptographic strength than smaller hash algorithms, but they're also more computationally expensive.
+    Select SHA256 if you're unsure which hash algorithm to use.
+    Hash algorithms larger than SHA384 are not recommended.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Default, SHA256, SHA384, SHA512
+- type: <xref href="KeyAlgorithmGroup" data-throw-if-not-resolved="False" />
+  name: KeyAlgorithm
+  description: |+
+    Specifies the key algorithm for your certificate.
+    This choice will be used for both the public key and the private key of your certificate.
+
+    RSA is the most common and widely supported key algorithm for certificates.
+    Select the RSA algorithm if you're unsure which type of key your certificate authority supports.
+
+    ECC uses elliptic curve cryptography based on ECDSA keys with NIST P-256, P-384, or P-521 curves.
+    SSL/TLS connections are faster to complete with ECC certificates than RSA certificates at the equivalent security strength.
+    Verify that your certificate authority supports ECC certificates before selecting it.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ECC, RSA
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: KeySize
+  description: |+
+    Specifies the size of your public and private RSA keys in bits.
+
+    Larger key sizes provide more cryptographic strength than smaller key sizes, but they're also more computationally expensive and take more time to complete the SSL/TLS connection.
+    Select 2048 if you're unsure which key size to use.
+    Key sizes larger than 4096 are not recommended.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: 0, 2048, 4096, 8192, 16384
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Locality
+  description: |+
+    The name of the city or locality where your organization is legally located.
+    Do not abbreviate the name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Organization
+  description: |+
+    The legally registered name of your organization or company.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OrganizationalUnit
+  description: |+
+    The name of your department within your organization or company.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="RsaSignaturePaddingType" data-throw-if-not-resolved="False" />
+  name: RsaSignaturePadding
+  description: |+
+    Specifies the RSA signature padding mode for creating and renewing certificates with RSA keys.
+    Pkcs1 represents the RSASSA-PKCS1-v1_5 padding mode.
+    Pss represents the RSASSA-PSS padding mode.
+    The default RSA signature padding mode is Pkcs1.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Default, Pkcs1, Pss
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: State
+  description: |+
+    The name of the state or province where your organization is legally located.
+    Do not abbreviate the name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPCertificateSettings
+name: Set-SPCertificateSettings
+description: |-
+  SharePoint supports farm-wide default settings for certificate management.
+  These include default properties for creating and renewing certificates and certificate health rule thresholds.
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spcertificatesettings
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPCertificateSettings
+  PlatyPS schema version: 2.0.0

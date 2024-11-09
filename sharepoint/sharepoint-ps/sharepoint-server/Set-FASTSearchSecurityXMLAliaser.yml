@@ -1,0 +1,133 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates an XML aliaser.
+module: SharePointServer
+notes: ""
+links:
+- text: New-FASTSearchSecurityXMLAliaser
+  href: New-FASTSearchSecurityXMLAliaser.yml
+- text: Get-FASTSearchSecurityXMLAliaser
+  href: Get-FASTSearchSecurityXMLAliaser.yml
+syntaxes:
+- >-
+  Set-FASTSearchSecurityXMLAliaser -Identity <String> [-InputPropertyName <String>] [-InputUserStoreId <String>]
+   [-OutputUserStoreIds <String[]>] [-PathToXMLFile <String>] [-XMLAliaser <SecurityXMLAliaser>]
+   [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Set-FASTSearchSecurityXMLAliaser -Identity xmlalias1 -PathToXMLFile "C:\dev\temp\mapping1.xml"
+  description: |-
+    This example uploads and updates the XML mapping for an XML aliaser.
+  summary: ""
+- title: '---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Get-FASTSearchSecurityAliaser myxmlalias | Set-FASTSearchSecurityXMLAliaser -OutputUserStoreIds ln2 -InputPropertyName '$PRINCIPAL_REFERENCE_ALIAS'
+  description: |-
+    This example changes the OutputUserStoreIds and InputPropertyName for the XML aliaser piped from a Get-FASTSearchSecurityAliaser cmdlet.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The identity of the XML aliaser to update.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InputPropertyName
+  description: |+
+    The user/group property name this regular expression pattern is matched again.
+
+    The inputPropertyName is one of the following:
+
+    -- $PRINCIPAL_REFERENCE_ID - The identifier of the user or group. This is the default.
+
+    Be sure to enclose in single quotes: '$PRINCIPAL_REFERENCE_ID'
+
+    -- $PRINCIPAL_REFERENCE_ALIAS - The alias of the user or group.
+
+    Be sure to enclose in single quotes: '$PRINCIPAL_REFERENCE_NAME'
+
+    Any other property of the user or group.
+    Refer to your specific user store for other properties that the user store exposes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InputUserStoreId
+  description: |+
+    The identity of the mapped-from user store.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: OutputUserStoreIds
+  description: |+
+    A comma-separated list of mapped-to user store identities.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PathToXMLFile
+  description: |+
+    The absolute path to the XML mapping file to upload to the XML aliaser.
+
+    The path must specify a file accessible to the security manager.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="SecurityXMLAliaser" data-throw-if-not-resolved="False" />
+  name: XMLAliaser
+  description: |+
+    A SecurityXMLAliaserobject whose property values are being updated.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Set-FASTSearchSecurityXMLAliaser
+name: Set-FASTSearchSecurityXMLAliaser
+description: |-
+  This cmdlet updates the configuration settings for an XML principal aliaser.
+
+  An XML aliaser maps users/groups from one user store to users/groups in other user stores, based on an XML mapping file.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-fastsearchsecurityxmlaliaser
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Set-FASTSearchSecurityXMLAliaser

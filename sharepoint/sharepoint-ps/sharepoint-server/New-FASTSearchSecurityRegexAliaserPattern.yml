@@ -1,0 +1,109 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new regular expression pattern for a regex principal aliaser.
+module: SharePointServer
+notes: ""
+links:
+- text: Get-FASTSearchSecurityRegexAliaser
+  href: Get-FASTSearchSecurityRegexAliaser.yml
+- text: New-FASTSearchSecurityRegexAliaser
+  href: New-FASTSearchSecurityRegexAliaser.yml
+- text: Set-FASTSearchSecurityRegexAliaser
+  href: Set-FASTSearchSecurityRegexAliaser.yml
+syntaxes:
+- >-
+  New-FASTSearchSecurityRegexAliaserPattern [-Regex] <String> [-MapToUsername] <String>
+   [[-InputPropertyName] <String>]
+   [-Patterns <System.Collections.Generic.List`1[Microsoft.SharePoint.Search.Extended.Security.Config.RegExAliasPatternMapConfig]>]
+   [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    New-FASTSearchSecurityRegexAliaserPattern -Regex .* -InputPropertyName mail -MapToUsername "\1"
+  description: |-
+    This example creates a regular expression pattern that can be used to map the "mail" property of a Microsoft user store to identities in other user stores.
+
+    Use the regex pattern configuration object output from this command for the value of a pattern's parameter in a New-FASTSearchSecurityRegexAliaser or a Set-FASTSearchSecurityRegexAliaser cmdlet.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: InputPropertyName
+  description: |+
+    The user/group property name this regular expression pattern is matched against.
+
+    The InputPropertyName is one of the following:
+
+    -- $PRINCIPAL_REFERENCE_ID - The identifier of the user or group. This is the default.
+    -- $PRINCIPAL_REFERENCE_ALIAS - The alias of the user or group.
+
+    Any other property of the user or group.
+    Refer to your specific user store for other properties that the user store exposes.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MapToUsername
+  isRequired: true
+  description: |+
+    The user or group name to look to.
+    This can also contain regular expression group replacements using the syntax:
+
+    \#
+
+    where # is the group capture index.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.SharePoint.Search.Extended.Security.Config.RegExAliasPatternMapConfig" data-throw-if-not-resolved="False" /><span>]</span>
+  name: Patterns
+  description: |+
+    A list of RegExAliasPatternMapConfig objects.
+    The RegExAliasPatternMapConfig being created is added to this list.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Regex
+  isRequired: true
+  description: |+
+    The regular expression pattern that determines if the user or group should be mapped to another user store.
+    This regular expression pattern may contain regular expression groups that may be used in the generation of the MapToUsername value.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.New-FASTSearchSecurityRegexAliaserPattern
+name: New-FASTSearchSecurityRegexAliaserPattern
+description: |-
+  This cmdlet creates a new regular expression pattern that can be added to the list of patterns for a regular expression based principal aliaser.
+  This cmdlet creates a regular expression pattern that is used by and input to the New-FASTSearchSecurityRegexAliaser and Set-FASTSearchSecurityRegexAliaser cmdlets.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-fastsearchsecurityregexaliaserpattern
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: New-FASTSearchSecurityRegexAliaserPattern

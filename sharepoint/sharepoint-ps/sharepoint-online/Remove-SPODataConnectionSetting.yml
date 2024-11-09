@@ -1,0 +1,159 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a Business Connectivity Services connection.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Get-SPODataConnectionSetting
+  href: ../sharepoint-server/Get-SPODataConnectionSetting.yml
+- text: New-SPODataConnectionSetting
+  href: New-SPODataConnectionSetting.yml
+- text: Set-SPODataConnectionSetting
+  href: Set-SPODataConnectionSetting.yml
+syntaxes:
+- >-
+  Remove-SPODataConnectionSetting [-Identity] <ODataConnectionSettings>
+   -ServiceContext <SPServiceContextPipeBind> [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
+   [-WhatIf] [<CommonParameters>]
+- >-
+  Remove-SPODataConnectionSetting -ServiceContext <SPServiceContextPipeBind> -Name <String>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '-----------------------EXAMPLE 1-----------------------------'
+  code: |-
+    Remove-SPODataConnectionSetting -ServiceContext "http://contoso" -Name "ContosoServiceApp"
+  description: |-
+    This example removes the Business Connectivity Services connection named ContosoServiceApp.
+    Metadata properties are also removed.
+  summary: ""
+- title: '-----------------------EXAMPLE 2-----------------------------'
+  code: |-
+    Remove-SPODataConnectionSetting -ServiceContext "http://contoso" -Name "ContosoServiceApp-metadata"
+  description: |-
+    This example removes the Business Connectivity Services connection metadata named ContosoServiceApp.
+
+    The associated Business Connectivity Services connection object is also removed.
+  summary: ""
+- title: '-----------------------EXAMPLE 3-----------------------------'
+  code: |-
+    $ConnectionVariable = Get-SPODataConnectionSettingMetadata -ServiceContext http://contoso -Name "ContosoServiceApp"
+
+    Remove-SPODataConnectionSetting -Identity $ConnectionVariable -ServiceContext "http://contoso"
+  description: |-
+    This example removes the Business Connectivity Services and its associated metadata connection named ContosoServiceApp.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  parameterValueGroup: ""
+- type: <xref href="ODataConnectionSettings" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the OData Connection Settings object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name of the existing Business Connectivity Services connection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  parameterValueGroup: ""
+- type: <xref href="SPServiceContextPipeBind" data-throw-if-not-resolved="False" />
+  name: ServiceContext
+  isRequired: true
+  description: |+
+    Specifies the service context which is in the form of an instance of an SPServiceContext object, an SPSiteAdministration object identifier, or a SPSite object.
+    An example of a service context value is an identifier from the ID field, a string identifier, a URI, or a string representation of a GUID.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPODataConnectionSetting
+name: Remove-SPODataConnectionSetting
+description: |-
+  This cmdlet contains more than one parameter set.
+  You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
+  For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+
+  Use the `Remove-SPODataConnectionSetting` cmdlet to remove a Business Connectivity Services connection for a particular Business Connectivity Services service application in the farm.
+
+  The metadata object associated with the Business Connectivity Services connection is also deleted.
+
+  This cmdlet applies to an on-premises environment only.
+  You cannot use this command in the SharePoint Online Management Shell.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://go.microsoft.com/fwlink/p/?LinkId=251831).
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spodataconnectionsetting
+  applicable: SharePoint Server 2013, SharePoint Server 2016
+  title: Remove-SPODataConnectionSetting
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

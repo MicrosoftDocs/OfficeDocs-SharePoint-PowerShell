@@ -1,0 +1,71 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new sharing report job.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- New-SPOSiteSharingReportJob [-Site] <SPOSitePipeBind> [-ReportStorageWebUrl] <String> [-ReportStorageFolderUrl] <String> [<CommonParameters>]
+examples:
+- title: '-----------------------EXAMPLE 1-----------------------------'
+  code: |-
+    $site = Get-SPOSite -Identity https://contoso.sharepoint.com/sites/site1
+
+    New-SPOSiteSharingReportJob -Site $site -ReportStorageWebUrl 'https://contoso.sharepoint.com/sites/site2/web1' -ReportStorageFolderUrl '/Documents/folder'
+  description: ""
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ReportStorageFolderUrl
+  isRequired: true
+  description: |+
+    Location to where the report will be exported. 
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ReportStorageWebUrl
+  isRequired: true
+  description: |+
+    Report web storage URL.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Site
+  isRequired: true
+  description: |+
+    Specifies the site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.New-SPOSiteSharingReportJob
+name: New-SPOSiteSharingReportJob
+description: |-
+  This cmdlet is not currently active in Production and may be removed in the future. You will receive the error, "Site collection sharing report feature has not been enabled", if you run this cmdlet which is currently by design.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://docs.microsoft.com/powershell/module/sharepoint-online/New-SPOSiteSharingReportJob
+  applicable: SharePoint Online
+  title: New-SPOSiteSharingReportJob
+  PlatyPS schema version: 2.0.0
+  author: salarson
+  ms.author: salarson
+  ms.reviewer: ""

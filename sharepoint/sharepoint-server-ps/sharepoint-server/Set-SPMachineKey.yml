@@ -1,0 +1,137 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures the ASP.NET view state decryption and validation keys of a web application.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Set-SPMachineKey -WebApplication <SPWebApplicationPipeBind> [-DecryptionKey <String>] [-ValidationKey <String>]
+   [-Local] [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '-------------EXAMPLE 1-------------'
+  code: |-
+    Set-SPMachineKey -WebApplication http://sitename
+  description: |-
+    This example sets the ASP.NET view state decryption and validation keys for web application 'http://sitename' to new randomly generated keys.
+    The new keys are deployed to all servers in the farm.
+  summary: ""
+- title: '-------------EXAMPLE 2-------------'
+  code: |-
+    Set-SPMachineKey -WebApplication http://sitename -DecryptionKey '509EEEE0709AE3EA2690017D174648075D3E7659FB7CBC65F08661F737610501' -ValidationKey '988EAEF669CC691E420C3887F54BDD7D0741C84CBA36406FCA5250B780771469' -Local
+  description: |-
+    This example sets the ASP.NET view state decryption and validation keys for web application 'http://sitename' to new keys specified by the DecryptionKey and ValidationKey parameters.
+    The new keys are only deployed to the local server.
+    Other servers in the farm will continue to use the previous keys.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DecryptionKey
+  description: |+
+    Specifies the new ASP.NET view state decryption key.
+    The key should be represented as a 64-character long hexadecimal string (0-9 and A-F).
+
+    If this parameter is not specified, a random decryption key will be generated and used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Local
+  description: |+
+    Deploy the new decryption and validation keys only to the local server.
+    Other servers in the farm will continue to use the previous decryption and validation keys.
+    Web sessions that are load balanced across multiple servers in the farm will fail if these keys are not synchronized on every server in the farm.
+    Use the Update-SPMachineKey cmdlet to deploy the keys to additional servers in the farm.
+
+    If this parameter is not specified, the new decryption and validation keys will be deployed to all servers in the farm.
+
+  defaultValue: "False"
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ValidationKey
+  description: |+
+    Specifies the new ASP.NET view state validation key.
+    The key should be represented as a 64-character long hexadecimal string (0-9 and A-F).
+
+    If this parameter is not specified, a random decryption key will be generated and used.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPWebApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: WebApplication
+  isRequired: true
+  description: |+
+    Specifies the name, URL, or GUID of the Web application.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPMachineKey
+name: Set-SPMachineKey
+description: |-
+  The \`Set-SPMachineKey\` cmdlet configures the ASP.NET view state decryption and validation keys of a web application.
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spmachinekey
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPMachineKey
+  PlatyPS schema version: 2.0.0

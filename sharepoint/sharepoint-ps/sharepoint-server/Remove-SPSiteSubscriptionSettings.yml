@@ -1,0 +1,193 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes the settings service data for a specified site subscription, or finds and removes orphaned data.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Remove-SPSiteSubscriptionSettings [-Identity] <SPServiceApplicationPipeBind> [-FindAllOrphans]
+   [-AlternativeSiteSubscriptions <Guid[]>] [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Force]
+   [-WhatIf] [<CommonParameters>]
+- >-
+  Remove-SPSiteSubscriptionSettings [-Identity] <SPServiceApplicationPipeBind> -SiteSubscriptions <Guid[]>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '------------EXAMPLE 1--------------'
+  code: |-
+    Remove-SPSiteSubscriptionSettings -FindAllOrphans -Whatif
+  description: |-
+    This example finds all orphans and displays them on the screen.
+    Remove the WhatIf parameter to remove these extra settings.
+  summary: ""
+- title: '------------EXAMPLE 2--------------'
+  code: |-
+    Remove-SPSubscriptionSettingsServiceApplication -FindAllOrphans -AlternativeSiteSubscriptions $SubscriptionList
+  description: |-
+    Use this example if the service application is consumed by a remote farm and you want the clean orphaned site subscription settings data (an array of all site subscriptions whose data must remain in the service application is assigned to the $SubscriptionList variable.
+  summary: ""
+parameters:
+- type: <xref href="Guid" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: AlternativeSiteSubscriptions
+  description: |+
+    Specifies the complete collection or comma-separated list of site subscriptions that should exist in the settings service application.
+    Any data not matching the items in this list will be removed.
+
+    This parameter is important when the FindAllOrphans parameter is used.
+    The value specified for AlternativeSiteSubscriptions parameter is stating that any site subscriptions not on the local farm will be deleted, unless an alternate list of site subscriptions is given.
+
+    The type must be an array of valid GUIDs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: FindAllOrphans
+  isRequired: true
+  description: |+
+    Specifies that orphaned settings stores in the service application are deleted.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Automatically bypasses the secondary warning provided by the cmdlet prior to the operation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the site subscription settings service application that contains the service data to delete.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a subscription settings service application (for example, SubscriptionSettingsApp1); or an instance of a valid SPSubscriptionSettingsServiceApplication object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: SiteSubscriptions
+  isRequired: true
+  description: |+
+    Specifies the site subscriptions with the settings service data to delete.
+
+    The type must be an array of valid GUIDs.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Remove-SPSiteSubscriptionSettings
+name: Remove-SPSiteSubscriptionSettings
+description: |-
+  This cmdlet contains more than one parameter set.
+  You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
+  For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+
+  The `Remove-SPSiteSubscriptionSettings` cmdlet deletes site subscription stored data for the specified site subscription.
+  If the FindAllOrphans parameter is specified, this cmdlet locates any data in the service application that does not exist in the list of local site subscriptions or the alternate list of subscriptions.
+
+  The set of site subscriptions can be specified directly, or discovered by comparing data in the service application to the set of existing site subscriptions which finds the data set that corresponds to nonexistent site subscriptions.
+
+  If this cmdlet is run on a federated service application without specifying the complete list of site subscription IDs for the AlternativeSiteSubscriptions parameter, data loss can result.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spsitesubscriptionsettings
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Remove-SPSiteSubscriptionSettings
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

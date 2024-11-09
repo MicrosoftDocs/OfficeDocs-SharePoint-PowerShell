@@ -1,0 +1,42 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns the current configuration status.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-SPOTenantSyncClientRestriction
+examples:
+- title: '-----------------------EXAMPLE 1-----------------------------'
+  code: |-
+    Get-SPOTenantSyncClientRestriction
+  description: |-
+    This example returns a current boolean value of the TenantRestrictionEnabled and BlockMacSync properties and a current set list of domains GUIDs in the AllowedDomainList property.
+  summary: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOTenantSyncClientRestriction
+name: Get-SPOTenantSyncClientRestriction
+description: |-
+  The `Get-SPOTenantSyncClientRestriction` cmdlet returns whether the TenantRestrictionEnabled property is true or false and DomainGUIDs that are currently in the safe recipient list which is represented by the AllowedDomainList property.
+
+  This cmdlet, that does not take any input, also returns the current state of the BlockMacSync and GrooveBlockOption properties.
+
+  You must be at least a SharePoint Online administrator to run the cmdlet.
+
+  Requires a valid `Connect-SPOService` context to identify the tenant. For information on how to connect to the tenant, see `Connect-SPOService`.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spotenantsyncclientrestriction
+  applicable: SharePoint Online
+  title: Get-SPOTenantSyncClientRestriction
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

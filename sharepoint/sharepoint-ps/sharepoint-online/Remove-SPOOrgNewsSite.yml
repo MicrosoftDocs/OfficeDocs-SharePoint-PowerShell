@@ -1,0 +1,46 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a given site from the list of organizational news sites based on its URL in your SharePoint Online Tenant
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Get-SPOOrgNewsSite
+  href: Get-SPOOrgNewsSite.yml
+- text: Set-SPOOrgNewsSite
+  href: Set-SPOOrgNewsSite.yml
+syntaxes:
+- Remove-SPOOrgNewsSite -OrgNewsSiteUrl <String> [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Remove-SPOOrgNewsSite -OrgNewsSiteUrl https://contoso.sharepoint.com/sites/Marketing
+  description: |-
+    This example removes <https://contoso.sharepoint.com/sites/Marketing> from the list of organizational news sites.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OrgNewsSiteUrl
+  isRequired: true
+  description: |+
+    The URL of a site to be marked as an organizational news site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPOOrgNewsSite
+name: Remove-SPOOrgNewsSite
+description: |-
+  This cmdlet will remove a site from list of organizational news sites based on its URL.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spoorgnewssite
+  applicable: SharePoint Online
+  title: Remove-SPOOrgNewsSite
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen

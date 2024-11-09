@@ -1,0 +1,73 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Resets all Project Server Queue settings to their default values for a specific Project Server Service Application.
+module: SharePointServer
+notes: ""
+links:
+- text: Set-SPProjectQueueSettings
+  href: Set-SPProjectQueueSettings.yml
+- text: Get-SPProjectQueueSettings
+  href: Get-SPProjectQueueSettings.yml
+syntaxes:
+- >-
+  Reset-SPProjectQueueSettings [-ServiceApplication <PsiServiceApplicationPipeBind>]
+   [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+examples:
+- title: '--------------------EXAMPLE---------------------'
+  code: |-
+    $sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Project Application Services'}
+    Reset-SPProjectQueueSettings -ServiceApplication $sa
+  description: |-
+    This example resets the queue settings for a Project Server Service Application service application.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    {{Fill AssignmentCollection Description}}
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - Project Server 2013
+  - Project Server 2016
+  - Project Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PsiServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: ServiceApplication
+  description: |+
+    Specifies the Project Server service application to target.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name for a Project Server service application (for example, ProjectServiceApp1); or an instance of a valid PsiServiceApplication object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: sa
+  applicable:
+  - Project Server 2013
+  - Project Server 2016
+  - Project Server 2019
+  parameterValueGroup: ""
+applicable:
+- Project Server 2013
+- Project Server 2016
+- Project Server 2019
+uid: SharePointServer.Reset-SPProjectQueueSettings
+name: Reset-SPProjectQueueSettings
+description: |-
+  Resets all Project Server Queue settings to their default values for a specific Project Server Service Application.
+
+  For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
+metadata:
+  external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/reset-spprojectqueuesettings
+  applicable: Project Server 2013, Project Server 2016, Project Server 2019
+  title: Reset-SPProjectQueueSettings
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

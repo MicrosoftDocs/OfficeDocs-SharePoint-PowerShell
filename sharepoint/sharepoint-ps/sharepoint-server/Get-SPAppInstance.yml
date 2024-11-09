@@ -1,0 +1,153 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns the metadata for an instance of an app.
+module: SharePointServer
+notes: ""
+links:
+- text: Uninstall-SPAppInstance
+  href: Uninstall-SPAppInstance.yml
+- text: Update-SPAppInstance
+  href: Update-SPAppInstance.yml
+syntaxes:
+- >-
+  Get-SPAppInstance -Identity <SPAppInstance> [-AssignmentCollection <SPAssignmentCollection>]
+   [<CommonParameters>]
+- >-
+  Get-SPAppInstance -Site <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>] -AppInstanceId <Guid>
+   [<CommonParameters>]
+- >-
+  Get-SPAppInstance [-App <SPApp>] [-AssignmentCollection <SPAssignmentCollection>] -Web <SPWebPipeBind>
+   [<CommonParameters>]
+examples:
+- title: '-----------EXAMPLE 1-----------'
+  code: |-
+    Get-SPAppInstance -Web https://localhost
+  description: |-
+    This example returns a collection if more than one app is installed on https://localhost.
+    If only one app is installed, a single object is returned.
+  summary: ""
+- title: '-----------EXAMPLE 2-----------'
+  code: |-
+    Get-SPAppInstance -AppInstanceId $instance.Id
+  description: |-
+    This example returns the ID of an instance of an app.
+  summary: ""
+parameters:
+- type: <xref href="SPApp" data-throw-if-not-resolved="False" />
+  name: App
+  description: |+
+    Specifies the App.
+
+    This parameter returns metadata for all instances of an app.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: AppInstanceId
+  isRequired: true
+  description: |+
+    Specifies the App Instance ID to display.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPAppInstance" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the App instance for which to find metadata.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Site
+  isRequired: true
+  description: |+
+    Sets the query scope to a site.
+
+    Subsites are not included.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPWebPipeBind" data-throw-if-not-resolved="False" />
+  name: Web
+  isRequired: true
+  description: |+
+    Specifies the SPWeb object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Get-SPAppInstance
+name: Get-SPAppInstance
+description: |-
+  This cmdlet contains more than one parameter set.
+  You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+  For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+
+  Use the Get-AppInstance cmdlet to get a collection of app instances that are installed on an SPWeb object.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spappinstance
+  applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Get-SPAppInstance
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

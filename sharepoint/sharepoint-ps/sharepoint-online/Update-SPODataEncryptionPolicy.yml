@@ -1,0 +1,100 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates customer encryption status for a geo tenant.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Update-SPODataEncryptionPolicy [-KeyVaultName] <String> [-KeyName] <String> [-KeyVersion] <Guid> [-KeyType] <CustomerKeyVaultKeyType> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Update-SPODataEncryptionPolicy -KeyVaultName <ReplacementKeyVaultName> -KeyName <ReplacementKeyName> -KeyVersion <ReplacementKeyVersion> -KeyType Primary
+  description: |-
+    This example updates the DEP used with SharePoint Online and OneDrive for Business to start using the new key
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: KeyName
+  isRequired: true
+  description: |+
+    The name of the key
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="CustomerKeyVaultKeyType" data-throw-if-not-resolved="False" />
+  name: KeyType
+  isRequired: true
+  description: |+
+    The type of the key, possible values are
+
+    - Primary
+    - Secondary
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Primary, Secondary
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: KeyVaultName
+  isRequired: true
+  description: |+
+    The name of the Azure Key Vault Name
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: KeyVersion
+  isRequired: true
+  description: |+
+    The version of the key
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Update-SPODataEncryptionPolicy
+name: Update-SPODataEncryptionPolicy
+description: |-
+  Use the Update-SPODataEncryptionPolicy cmdlet to update customer encryption status for your geo tenant.
+  For more information, see [Controlling your data in Office 365 using Customer Key](https://learn.microsoft.com/microsoft-365/compliance/controlling-your-data-using-customer-key)
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/update-spodataencryptionpolicy
+  applicable: SharePoint Online
+  title: Update-SPODataEncryptionPolicy
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

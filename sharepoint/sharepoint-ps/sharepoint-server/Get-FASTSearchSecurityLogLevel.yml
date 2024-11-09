@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the log level general setting.
+module: SharePointServer
+notes: ""
+links:
+- text: Set-FASTSearchSecurityLogLevel
+  href: Set-FASTSearchSecurityLogLevel.yml
+syntaxes:
+- Get-FASTSearchSecurityLogLevel [[-Worker] <WorkerPoolNode>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1-----------------'
+  code: |-
+    Get-FASTSearchSecurityLogLevel
+  description: |-
+    This example gets the configuration information for the log level's general setting, specifying the data logged by the security system.
+  summary: ""
+parameters:
+- type: <xref href="WorkerPoolNode" data-throw-if-not-resolved="False" />
+  name: Worker
+  description: |+
+    The optional Worker parameter specifies the WorkerPoolNode object for the security worker that is to handle the request.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "9999"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Get-FASTSearchSecurityLogLevel
+name: Get-FASTSearchSecurityLogLevel
+description: |-
+  This cmdlet retrieves the configuration information for the log level general setting.
+  The log level controls the type of information that is logged by the security system.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-fastsearchsecurityloglevel
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Get-FASTSearchSecurityLogLevel

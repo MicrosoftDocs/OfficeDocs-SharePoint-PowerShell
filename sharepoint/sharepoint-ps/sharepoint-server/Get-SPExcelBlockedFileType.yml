@@ -1,0 +1,93 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns a file type or list of file types that are prevented from loading.
+module: SharePointServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.Office.Excel.Server.Cmdlet.SPExcelBlockedFileTypePipeBind" data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.Office.Excel.Server.Cmdlet.SPExcelServiceApplicationPipeBind
+    Microsoft.SharePoint.PowerShell.SPAssignmentCollection
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-SPExcelBlockedFileType [[-Identity] <SPExcelBlockedFileTypePipeBind>]
+   [-AssignmentCollection <SPAssignmentCollection>] -ExcelServiceApplication <SPExcelServiceApplicationPipeBind>
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-SPExcelBlockedFileType -ExcelServiceApplication 'Excel Service Application'
+  description: |-
+    This example retrieves all blocked file types for the service application named 'Excel Service Application'.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  parameterValueGroup: ""
+- type: <xref href="SPExcelServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: ExcelServiceApplication
+  isRequired: true
+  description: |+
+    Specifies the Excel Services Application Web service application that contains the SPBlockedExcelFileType list object.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of an Excel
+    Services Application Web service application in the farm (for example, MyExcelService1); or an instance of a valid SPExcelServiceApplication object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  parameterValueGroup: ""
+- type: <xref href="SPExcelBlockedFileTypePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the Excel Services Application Web service application that contains the SPBlockedExcelFileType list object.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of an Excel
+    Services Application Web service application in the farm (for example, MyExcelService1); or an instance of a valid SPExcelServiceApplication object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+uid: SharePointServer.Get-SPExcelBlockedFileType
+name: Get-SPExcelBlockedFileType
+description: |-
+  The Get-SPExcelBlockedFileType cmdlet reads a file type or a list of file types that cannot be loaded in Excel Services Application.  Excel Services Application does not load any files that correspond to a file type in this list.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [https://go.microsoft.com/fwlink/p/?LinkId=251831](https://go.microsoft.com/fwlink/p/?LinkId=251831).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spexcelblockedfiletype
+  applicable: SharePoint Server 2010, SharePoint Server 2013
+  title: Get-SPExcelBlockedFileType
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

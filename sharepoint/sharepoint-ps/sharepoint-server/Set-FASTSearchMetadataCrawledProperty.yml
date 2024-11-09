@@ -1,0 +1,115 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the properties of a crawled property.
+module: SharePointServer
+notes: ""
+links:
+- text: New-FASTSearchMetadataCrawledProperty
+  href: New-FASTSearchMetadataCrawledProperty.yml
+- text: Get-FASTSearchMetadataCrawledProperty
+  href: Get-FASTSearchMetadataCrawledProperty.yml
+syntaxes:
+- >-
+  Set-FASTSearchMetadataCrawledProperty -CrawledProperty <CrawledProperty> [-Propset <Guid>]
+   [-VariantType <Int32>] [-IsMappedToContents <Boolean>] [<CommonParameters>]
+- >-
+  Set-FASTSearchMetadataCrawledProperty -Name <String> [-Propset <Guid>] [-VariantType <Int32>]
+   [-IsMappedToContents <Boolean>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    C:\PS>$description = Get-FASTSearchMetadataCrawledProperty -Name Description
+    $description # Before
+    Set-FASTSearchMetadataCrawledProperty -CrawledProperty $description -IsMappedToContents 1
+    $description # After
+  description: |-
+    This example automatically maps a crawled property to the full text index "content", making the content of the crawled property searchable.
+  summary: ""
+parameters:
+- type: <xref href="CrawledProperty" data-throw-if-not-resolved="False" />
+  name: CrawledProperty
+  isRequired: true
+  description: |+
+    An object representing the crawled property to update.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsMappedToContents
+  description: |+
+    This Boolean parameter specifies whether or not the content of the crawled property should be automatically mapped into the default full text index.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the crawled property to update.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: CrawledPropertyName, N
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: Propset
+  description: |+
+    The property set GUID of the crawled property which is being updated.
+
+    The GUID controls which category the crawled property is part of.
+    A GUID (Global Unique Identifier) is a 128-bit integer that has a very low probability of being duplicated.
+    The accepted GUID format is "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" or a System.Guid object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: VariantType
+  description: |+
+    An integer value specifying the variant type of the updated crawled property.
+
+    See https://go.microsoft.com/fwlink/?LinkId=163232 (https://go.microsoft.com/fwlink/?LinkId=163232) for a list of common variant types.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Set-FASTSearchMetadataCrawledProperty
+name: Set-FASTSearchMetadataCrawledProperty
+description: |-
+  This cmdlet specifies if a crawled property should be automatically indexed as part of the default full text index, "content".
+
+  When the IsMappedToContents parameter is set to "true", the crawled property is added to the default searchable index.
+
+  To find the crawled property to update, specify a crawled property object, or the combination of name, property set, and variant type.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-fastsearchmetadatacrawledproperty
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Set-FASTSearchMetadataCrawledProperty

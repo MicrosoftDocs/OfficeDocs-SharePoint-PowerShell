@@ -1,0 +1,49 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet returns the SharePoint Online user or security group accounts with Global Admin privileges in the current multi-geo tenant.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Add or remove a geo administrator
+  href: https://learn.microsoft.com/Office365/Enterprise/add-a-sharepoint-geo-admin
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Get-SPOAppErrors
+  href: Get-SPOAppErrors.yml
+- text: Add-SPOGeoAdministrator
+  href: Add-SPOGeoAdministrator.yml
+- text: Remove-SPOGeoAdministrator
+  href: Remove-SPOGeoAdministrator.yml
+syntaxes:
+- Get-SPOGeoAdministrator [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-SPOGeoAdministrator
+  description: |-
+    This cmdlet will output a SharePoint Online user or security group that is Multi-Geo administrators on the current multi-geo tenant.
+  summary: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOGeoAdministrator
+name: Get-SPOGeoAdministrator
+description: |-
+  You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
+  For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+
+  The `Get-SPOGeoAdministrator` cmdlet has a single parameter set and matches a user or a list of users which has the ability to do changes globally in the geo location that you are connected to.
+
+  Running this cmdlet on a non-multi-geo tenant organization will return error -4.
+
+  You must be a SharePoint Online administrator and you must have a the Multi-Geo Capabilities in Office 365 service plan to run the `Get-SPOGeoAdministrator` cmdlet.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [https://go.microsoft.com/fwlink/p/?LinkId=251832](https://go.microsoft.com/fwlink/p/?LinkId=251832).
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spogeoadministrator
+  applicable: SharePoint Online
+  title: Get-SPOGeoAdministrator
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

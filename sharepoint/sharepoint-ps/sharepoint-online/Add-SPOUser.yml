@@ -1,0 +1,86 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds an existing Office 365 user or an Office 365 security group to a SharePoint group.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: New-SPOSiteGroup
+  href: New-SPOSiteGroup.yml
+- text: Get-SPOUser
+  href: Get-SPOUser.yml
+- text: Set-SPOUser
+  href: Set-SPOUser.yml
+- text: Remove-SPOUser
+  href: Remove-SPOUser.yml
+syntaxes:
+- Add-SPOUser -Group <String> -LoginName <String> -Site <SpoSitePipeBind> [<CommonParameters>]
+examples:
+- title: '------------ Example 1 --------------------'
+  code: |-
+    Add-SPOUser -Site https://contoso.sharepoint.com/sites/sc1 -LoginName joe.healy@contoso.com -Group "SC1 Owners"
+  description: |-
+    Example 1 adds a user who has the e-mail address joe.healy@contoso.com to the group "SC1 Owners" in the site collection <https://contoso.sharepoint.com/sites/sc1.>
+  summary: ""
+- title: '------------ Example 2 --------------------'
+  code: |-
+    Add-SPOUser -Site https://contoso.sharepoint.com -LoginName melissa.kerr@contoso.com -Group "Team Site Members"
+  description: |-
+    Example 2 adds a user who has the e-mail address melissa.kerr@contoso.com to the group "Team Site Members" in the site collection <https://contoso.sharepoint.com.>
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Group
+  isRequired: true
+  description: |+
+    Specifies the name of the SharePoint group to add the user or the security group to.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LoginName
+  isRequired: true
+  description: |+
+    Specifies the login name of the user to add.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Site
+  isRequired: true
+  description: |+
+    Specifies the URL of the site collection to which you want to add the user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Add-SPOUser
+name: Add-SPOUser
+description: |-
+  Along with the group memberships that are normally required to run Windows PowerShell, you must have the SharePoint Admin role and be a site collection administrator to use the `Add-SPOUser` cmdlet.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/add-spouser
+  applicable: SharePoint Online
+  title: Add-SPOUser
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

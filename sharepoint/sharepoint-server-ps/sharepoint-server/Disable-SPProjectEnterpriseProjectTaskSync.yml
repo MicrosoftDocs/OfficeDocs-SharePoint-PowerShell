@@ -1,0 +1,60 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables task sync between Project Web App and the associated project site. Once this is disabled, tasks created in the enterprise project in Project Web App will no longer sync to the task list on the project site associated with the project. This feature is disabled by default.
+module: sharepoint-server
+notes: ""
+inputs:
+- name: <xref href="Microsoft.SharePoint.PowerShell.SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Disable-SPProjectEnterpriseProjectTaskSync [-AssignmentCollection <SPAssignmentCollection>] -Url <Uri>
+   [<CommonParameters>]
+examples:
+- title: '------------Example 1 -----------'
+  code: |-
+    Disable-SPProjectEnterpriseProjectTaskSync -Url https://pwa_site
+  description: |-
+    Disables Project Server task sync on the Project Web App site, https://pwa_site.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: Url
+  isRequired: true
+  description: |+
+    The URL of the PWA site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+uid: sharepoint-server.Disable-SPProjectEnterpriseProjectTaskSync
+name: Disable-SPProjectEnterpriseProjectTaskSync
+description: |-
+  Disables task sync between Project Web App and the associated project site.
+metadata:
+  external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/disable-spprojectenterpriseprojecttasksync
+  Applicable: SharePoint Server Subscription Edition
+  title: Disable-SPProjectEnterpriseProjectTaskSync
+  PlatyPS schema version: 2.0.0

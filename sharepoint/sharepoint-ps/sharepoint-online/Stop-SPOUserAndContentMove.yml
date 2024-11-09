@@ -1,0 +1,57 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  In a Multi-Geo company, stops the ability to move a user's content related objects in a SharePoint Online Tenant
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Introduction to the SharePoint Online management shell
+  href: https://support.office.com/en-us/article/introduction-to-the-sharepoint-online-management-shell-c16941c3-19b4-4710-8056-34c034493429
+- text: SharePoint Online Management Shell Download
+  href: https://www.microsoft.com/en-US/download/details.aspx?id=35588
+- text: Get-SPOAppErrors
+  href: Get-SPOAppErrors.yml
+- text: Start-SPOUserAndContentMove
+  href: Start-SPOUserAndContentMove.yml
+syntaxes:
+- Stop-SPOUserAndContentMove [-UserPrincipalName] <String> [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Stop-SPOUserAndContentMove -UserPrincipalName "TesIser@contoso.com"
+  description: |-
+    This example stops the ability to move the "TesIser@contoso.com" user content in the current Tenant.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Stop-SPOUserAndContentMove "TesIser@contoso.com"
+  description: |-
+    Equivalent to the one above
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserPrincipalName
+  isRequired: true
+  description: |+
+    UserPrincipalName or UPN defined for the specific user on the SPO tenant
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Stop-SPOUserAndContentMove
+name: Stop-SPOUserAndContentMove
+description: |-
+  Stops the ability to move a user's content related objects in a SharePoint Online Tenant
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/stop-spouserandcontentmove
+  applicable: SharePoint Online
+  title: Stop-SPOUserAndContentMove
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

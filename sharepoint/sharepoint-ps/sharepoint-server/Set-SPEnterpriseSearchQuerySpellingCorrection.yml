@@ -1,0 +1,199 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the operation status of the Query Spelling Corrections (QSC) component.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Set-SPEnterpriseSearchQuerySpellingCorrection [-AssignmentCollection <SPAssignmentCollection>]
+   [-ContentAlignmentEnabled <Boolean>] [-DiacriticsInSuggestionsEnabled <Boolean>]
+   [-Identity <QuerySpellingCorrectionPipeBind>] [-MaxDictionarySize <Int32>] [-MaxProcessingTime <TimeSpan>]
+   -SearchApplication <SearchServiceApplicationPipeBind> [-SecurityTrimmingEnabled <Boolean>]
+   [-SpellingDictionary <SpellingDictionaryType>] [-TermFrequencyThreshold <Int32>] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE-----------------'
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication
+    Set-SpEnterpriseSEarchQuerySpellingCorrection -SearchApplication $ssa -SpellingDictionary dynamic
+  description: |-
+    This example sets the dictionary named dynamic to be used for query spelling correction for the default search service application.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ContentAlignmentEnabled
+  description: |+
+    A Boolean value to enable or deactivate the content alignment process.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: DiacriticsInSuggestionsEnabled
+  description: |+
+    A switch to enable or disable spelling suggestions that contain diacritics (for example, German umlaut umlaut). 
+    The default setting is true.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="QuerySpellingCorrectionPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies an object that represents the current status for the query spelling correction.
+
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: MaxDictionarySize
+  description: |+
+    Specifies the maximal number of terms in a content-aligned spelling dictionary.
+    In a multi-tenant environment, this number is valid per tenant.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="TimeSpan" data-throw-if-not-resolved="False" />
+  name: MaxProcessingTime
+  description: |+
+    Specifies the maximum runtime for compiling a content-aligned spelling dictionary.
+    The default value is 6 hours.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SearchServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: SearchApplication
+  isRequired: true
+  description: |+
+    Specifies the search service application that contains the QSC components.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: SecurityTrimmingEnabled
+  description: |+
+    A Boolean value to enable or deactivate the security check for spelling suggestions. 
+    If enabled, only spelling suggestions that deliver at least one document for the current user are shown.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SpellingDictionaryType" data-throw-if-not-resolved="False" />
+  name: SpellingDictionary
+  description: |+
+    Specifies the dictionary to be used for query spelling correction.
+    The two available values are dynamic and static.
+    When value is set to dynamic, the query spelling correction uses the content-aligned dictionary.
+    When value is set to static, the query spelling correction uses the out of the box static spelling dictionaries.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TermFrequencyThreshold
+  description: |+
+    Specifies the minimum number of documents that must contain the most frequently used term in the document collection for the content-alignment process to be executed.
+    In a multi-tenant environment, this number is valid per tenant.
+
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Set-SPEnterpriseSearchQuerySpellingCorrection
+name: Set-SPEnterpriseSearchQuerySpellingCorrection
+description: |-
+  This cmdlet provides access to the configuration options for the QSC component.
+  The two most prominent configuration options are the switch to enable the content-alignment process and the selection of dictionaries to be used for query spelling correction, that is the set of fixed dictionaries per language or the dynamic dictionary that is being produced by the content alignment process.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.Search.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spenterprisesearchqueryspellingcorrection
+  applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Set-SPEnterpriseSearchQuerySpellingCorrection
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

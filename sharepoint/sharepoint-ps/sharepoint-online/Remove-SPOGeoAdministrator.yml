@@ -1,0 +1,66 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a new SharePoint user or security Group in the current Multi-Geo Tenant.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Get-SPOAppErrors
+  href: Get-SPOAppErrors.yml
+- text: Add-SPOGeoAdministrator
+  href: Add-SPOGeoAdministrator.yml
+- text: Get-SPOGeoAdministrator
+  href: Get-SPOGeoAdministrator.yml
+syntaxes:
+- Remove-SPOGeoAdministrator [-LoginName] <String> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-SPOGeoAdministrator contosoadmin
+  description: |-
+    Remove the GeoAdministrator privileges to the user contosoadmin of the SharePoint Online multi-geo tenant.
+  summary: ""
+- title: Example 2
+  code: |-
+    Remove-SPOGeoAdministrator -LoginName contosoadmin
+  description: |-
+    Same as example 1, but using the LoginName parameter explicitly.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LoginName
+  isRequired: true
+  description: |+
+    It's the user Principal Name or UPN of a user. Typically the username that he uses to log in.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPOGeoAdministrator
+name: Remove-SPOGeoAdministrator
+description: |-
+  This cmdlet contains a single parameter set.
+  You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
+  For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+
+  The `Remove-SPOGeoAdministrator` cmdlet matches a user or a security group and remove the GeoAdministrator privileges in the SharePoint Organization.
+
+  You must be at least a SharePoint Online administrator, and you must have a Multi-Geo Tenant to run the `Remove-SPOGeoAdministrator` cmdlet successfully.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spogeoadministrator
+  applicable: SharePoint Online
+  title: Remove-SPOGeoAdministrator
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

@@ -1,0 +1,51 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes a resource from the resource store.
+module: SharePointServer
+notes: ""
+links:
+- text: Get-FASTSearchResource
+  href: Get-FASTSearchResource.yml
+- text: Add-FASTSearchResource
+  href: Add-FASTSearchResource.yml
+syntaxes:
+- Remove-FASTSearchResource [-Path] <String> [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Remove-FASTSearchResource dictionaries\spellcheck\check_en.aut
+  description: |-
+    This example deletes the resource dictionaries\spellcheck\check_en.aut from the resource store.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Path
+  isRequired: true
+  description: |+
+    Partial URI within the resource store of the file which will be deleted.
+
+  defaultValue: None
+  position: "1"
+  aliases: ResourceURI
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Remove-FASTSearchResource
+name: Remove-FASTSearchResource
+description: |-
+  This cmdlet deletes a specified file located in the Microsoft FAST Search Server 2010 for SharePoint resource store.
+  The location of the resource store is typically specified in %FASTSEARCH%/etc/Admin.config (where %FASTSEARCH% is the FAST Search Server 2010 for SharePoint installation folder.)
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-fastsearchresource
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Remove-FASTSearchResource

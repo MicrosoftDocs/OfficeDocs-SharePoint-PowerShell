@@ -1,0 +1,50 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new Microsoft FAST Search Server 2010 for SharePoint search setting group.
+module: SharePointServer
+notes: ""
+links:
+- text: Get-FASTSearchSearchSettingGroup
+  href: Get-FASTSearchSearchSettingGroup.yml
+- text: Remove-FASTSearchSearchSettingGroup
+  href: Remove-FASTSearchSearchSettingGroup.yml
+syntaxes:
+- New-FASTSearchSearchSettingGroup -Name <String> [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    New-FASTSearchSearchSettingGroup -Name marketinggroup
+  description: |-
+    This example creates a new FAST Search Server 2010 for SharePoint search setting group named "marketinggroup".
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the search setting group to add.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.New-FASTSearchSearchSettingGroup
+name: New-FASTSearchSearchSettingGroup
+description: |-
+  This cmdlet creates a new FAST Search Server 2010 for SharePoint search setting group.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-fastsearchsearchsettinggroup
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: New-FASTSearchSearchSettingGroup

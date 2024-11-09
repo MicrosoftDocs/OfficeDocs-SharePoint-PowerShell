@@ -1,0 +1,148 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates criteria for the rule to match.
+module: sharepoint-server
+notes: ""
+links:
+- text: Get-SPRequestManagementSettings
+  href: Get-SPRequestManagementSettings.yml
+- text: Set-SPRequestManagementSettings
+  href: Set-SPRequestManagementSettings.yml
+syntaxes:
+- >-
+  New-SPRequestManagementRuleCriteria [-Value] <String> [-CustomHeader] <String> [-CaseSensitive]
+   [[-MatchType] <SPRequestManagementRuleMatchType>] [-AssignmentCollection <SPAssignmentCollection>]
+   [<CommonParameters>]
+- >-
+  New-SPRequestManagementRuleCriteria [-Value] <String> [-Property] <SPRequestManagementRulePropertyType>
+   [-CaseSensitive] [[-MatchType] <SPRequestManagementRuleMatchType>]
+   [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE-----------------------'
+  code: |-
+    New-SPRequestManagementRuleCriteria -Property Host -Value Client01 -MatchType Equals
+  description: |-
+    This example creates a new rule that matches the Host 'Client01'.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: CaseSensitive
+  description: |+
+    Specifies whether or not the match is case sensitive.
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: CustomHeader
+  isRequired: true
+  description: |+
+    Specifies the custom header for the rule.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPRequestManagementRuleMatchType" data-throw-if-not-resolved="False" />
+  name: MatchType
+  description: |+
+    Defines operators for the match.
+
+    The following are the valid values:
+
+    --Equals
+
+    --Regex
+
+    --StartsWith
+
+    --EndsWith
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPRequestManagementRulePropertyType" data-throw-if-not-resolved="False" />
+  name: Property
+  isRequired: true
+  description: |+
+    Specifies a header for a value to match.
+
+    The following are the valid values:
+
+    --Url
+
+    --Urlreferrer
+
+    --UserAgent
+
+    --Host
+
+    --IP
+
+    --HttpMethod
+
+    --SoapAction
+
+    --CustomHeader
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Value
+  isRequired: true
+  description: |+
+    Specifies a value for the rule to match.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.New-SPRequestManagementRuleCriteria
+name: New-SPRequestManagementRuleCriteria
+description: |-
+  This cmdlet contains more than one parameter set.
+  You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
+  For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+
+  Use the `New-SPRequestManagementRuleCriteria` cmdlet to create criteria for the rule to match.
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-sprequestmanagementrulecriteria
+  applicable: SharePoint Server Subscription Edition
+  title: New-SPRequestManagementRuleCriteria
+  PlatyPS schema version: 2.0.0

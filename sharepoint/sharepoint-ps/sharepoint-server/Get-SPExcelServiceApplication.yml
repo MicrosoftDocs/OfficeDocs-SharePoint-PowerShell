@@ -1,0 +1,83 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns an SPExcelServiceApplication object.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Get-SPExcelServiceApplication [[-Identity] <SPExcelServiceApplicationPipeBind>]
+   [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+examples:
+- title: '--------------EXAMPLE 1--------------'
+  code: |-
+    Get-SPExcelServiceApplication "MyExcelServices"
+  description: |-
+    This example displays the Excel Services Application Web service application named MyExcelServices.
+  summary: ""
+- title: '--------------EXAMPLE 2--------------'
+  code: |-
+    Get-SPExcelServiceApplication
+  description: |-
+    This example displays every Excel Services Application Web service application that runs in the farm.
+  summary: ""
+- title: '--------------EXAMPLE 3--------------'
+  code: |-
+    Get-SPExcelServiceApplication -Identity "MyExcelService" | format-list *
+  description: |-
+    This example displays Excel Services Application Web service application named MyExcelService, and then displays all of its settings in a list format.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  parameterValueGroup: ""
+- type: <xref href="SPExcelServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the ExcelServiceApplication object to get.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of an Excel Services Application Web service application in the farm (for example, MyExcelService1); or an instance of a valid SPExcelServiceApplication object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+uid: SharePointServer.Get-SPExcelServiceApplication
+name: Get-SPExcelServiceApplication
+description: |-
+  The Get-SPExcelServiceApplication cmdlet retrieves an SPExcelServiceApplication object. 
+  If the object returned by this cmdlet is changed, the change affects all instances of the specified Excel Services Application Web service application in the farm.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spexcelserviceapplication
+  applicable: SharePoint Server 2010, SharePoint Server 2013
+  title: Get-SPExcelServiceApplication
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

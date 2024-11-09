@@ -1,0 +1,86 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets properties of a machine pool.
+module: sharepoint-server
+notes: ""
+links:
+- text: Add-SPRoutingMachinePool
+  href: Add-SPRoutingMachinePool.yml
+- text: Get-SPRoutingMachinePool
+  href: Get-SPRoutingMachinePool.yml
+- text: Remove-SPRoutingMachinePool
+  href: Remove-SPRoutingMachinePool.yml
+syntaxes:
+- >-
+  Set-SPRoutingMachinePool [-Identity] <SPRoutingMachinePoolPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-MachineTargets <SPRoutingRuleTargetPipeBind[]>]
+   [<CommonParameters>]
+examples:
+- title: '--------------------EXAMPLE---------------------'
+  code: |-
+    $wa = Get-SPWebApplication -Identity https://webAppUrl
+    $rm = Get-SPRequestManagementSettings -Identity $wa
+    $pool = Get-SPRoutingMachinePool -RequestManagementSettings $rm -Name 'MachinePool'
+    $newMachine = Get-SPRoutingMachineInfo -RequestManagementSettings $rm -Name SP01
+    Set-SPRoutingMachinePool -Identity $pool -MachineTargets ($pool.MachineTargets + $newMachine)
+  description: |-
+    This example sets the routing machine pool on the specified Web Application. Using the Request Management settings of the Web Application, it retrieves the existing routing machine pool named 'MachinePool'. It then gets the routing machine info for a new machine to add to the pool. Lastly, it sets the pool with the existing machine targets plus the new machine target.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPRoutingMachinePoolPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the name of the request management settings object to set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPRoutingRuleTargetPipeBind" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: MachineTargets
+  description: |+
+    Specifies the routing targets collection that the machine pool will contain.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPRoutingMachinePool
+name: Set-SPRoutingMachinePool
+description: |-
+  Use the `Set-SPRoutingMachinePool` cmdlet to set properties of a machine pool by using the Identity parameter.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-sproutingmachinepool
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPRoutingMachinePool
+  PlatyPS schema version: 2.0.0

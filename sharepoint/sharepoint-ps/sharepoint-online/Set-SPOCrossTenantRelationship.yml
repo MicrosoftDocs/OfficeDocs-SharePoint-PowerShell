@@ -1,0 +1,67 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet sends a trust request to the tenant with whom you want to establish trust.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+syntaxes:
+- Set-SPOCrossTenantRelationship -PartnerCrossTenantHostUrl <String> -PartnerRole <OrgRelationRole> -Scenario <OrgRelationScenario>  [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Set-SPOCrossTenantRelationship -Scenario MnA -PartnerRole Target -PartnerCrossTenantHostUrl https://contoso-my.sharepoint.com
+  description: |-
+    This cmdlet sends a trust request to the Contoso tenant.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PartnerCrossTenantHostUrl
+  isRequired: true
+  description: |+
+    The cross-tenant URL of the partner tenant. The partner tenant can determine this for you by running `Get-SPOCrossTenantHostUrl` on each of the tenants.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="OrgRelationRole" data-throw-if-not-resolved="False" />
+  name: PartnerRole
+  isRequired: true
+  description: |+
+    Roles of the partner tenant you're establishing trust with. Use *source* if the partner tenant is the source of the OneDrive migrations, and *target* if the partner tenant is the destination.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: Target, Source
+- type: <xref href="OrgRelationScenario" data-throw-if-not-resolved="False" />
+  name: Scenario
+  isRequired: true
+  description: ""
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: MnA, None
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Set-SPOCrossTenantRelationship
+name: Set-SPOCrossTenantRelationship
+description: |-
+  Use this cmdlet to send a trust request to the tenant with whom you want to establish trust.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spocrosstenantrelationship
+  applicable: SharePoint Online
+  title: Set-SPOCrossTenantRelationship
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

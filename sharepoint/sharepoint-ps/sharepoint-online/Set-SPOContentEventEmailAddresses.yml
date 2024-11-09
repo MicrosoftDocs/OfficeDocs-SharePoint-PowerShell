@@ -1,0 +1,58 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds the email addresses to the specified category of content event. Consequently, notification emails will be sent to these addresses.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Get-SPOContentEventEmailAddresses
+  href: Get-SPOContentEventEmailAddresses.yml
+- text: Remove-SPOContentEventEmailAddresses
+  href: Remove-SPOContentEventEmailAddresses.yml
+syntaxes:
+- Set-SPOContentEventEmailAddresses [-Category] <ContentEventCategory> [-EmailAddresses] <string[]>
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-SPOContentEventEmailAddresses -Category Ransomware -EmailAddresses "Joe.Doe@contoso.com", "John.Dow@contoso.com"
+  description: |-
+    In Example 1, the email addresses joe.doe@contoso.com and john.dow@contoso.com has been added to the ransomware category within the content event. As a result, notification emails of ransomware events will be dispatched to these two addresses.
+  summary: ""
+parameters:
+- type: <xref href="ContentEventCategory" data-throw-if-not-resolved="False" />
+  name: Category
+  isRequired: true
+  description: |+
+    Specifies the content event category.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="strings" data-throw-if-not-resolved="False" />
+  name: EmailAddresses
+  isRequired: true
+  description: |+
+    List of comma seperated email addresses
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Set-SPOContentEventEmailAddresses
+name: Set-SPOContentEventEmailAddresses
+description: |-
+  Adds the email addresses to specified category of content event.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spocontenteventemailaddresses
+  applicable: SharePoint Online
+  title: Set-SPOContentEventEmailAddresses
+  PlatyPS schema version: 1.0.0
+  author: mshabaz
+  ms.author: mshabaz
+  ms.reviewer: ""
+  manager: miabhish

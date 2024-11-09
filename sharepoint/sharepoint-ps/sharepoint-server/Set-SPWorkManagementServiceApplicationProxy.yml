@@ -1,0 +1,130 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the settings for the Work Management Service application proxy.
+module: SharePointServer
+notes: ""
+links:
+- text: New-SPWorkManagementServiceApplication
+  href: New-SPWorkManagementServiceApplication.yml
+- text: New-SPWorkManagementServiceApplicationProxy
+  href: New-SPWorkManagementServiceApplicationProxy.yml
+- text: Set-SPWorkManagementServiceApplication
+  href: Set-SPWorkManagementServiceApplication.yml
+syntaxes:
+- >-
+  Set-SPWorkManagementServiceApplicationProxy [-Identity] <SPWorkManagementServiceProxyCmdletPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-DefaultProxyGroup] [-Name <String>] [-WhatIf]
+   [<CommonParameters>]
+examples:
+- title: '-------------EXAMPLE--------'
+  code: |-
+    Set-SPWorkManagementServiceApplicationProxy -Identity "9187d901-e0e0-4509-b117-9eca20d3ead5" -DefaultProxyGroup
+  description: |-
+    This example makes the Work Management service part of the default proxy group.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DefaultProxyGroup
+  description: |+
+    Specifies whether the Work Management Service application proxy is to the default proxy group for the local farm.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  parameterValueGroup: ""
+- type: <xref href="SPWorkManagementServiceProxyCmdletPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the service application proxy to update.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a subscription settings service application (for example, SubSettingsApp1); or an instance of a valid SPWorkManagementServiceApplicationProxy object
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the display name for the new Work Management Service application.
+    For example, WorkManService1.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+uid: SharePointServer.Set-SPWorkManagementServiceApplicationProxy
+name: Set-SPWorkManagementServiceApplicationProxy
+description: |-
+  Use the `Set-SPWorkManagementServiceApplicationProxy` cmdlet to set the settings for the Work Management service application proxy.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.WorkManagement.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spworkmanagementserviceapplicationproxy
+  applicable: SharePoint Server 2013, SharePoint Server 2016
+  title: Set-SPWorkManagementServiceApplicationProxy
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

@@ -1,0 +1,246 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a claims principal.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  New-SPClaimsPrincipal [-ClaimValue] <String> [[-ClaimType] <String>]
+   [-TrustedIdentityTokenIssuer] <SPTrustedIdentityTokenIssuerPipeBind> [-IdentifierClaim]
+   [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+- >-
+  New-SPClaimsPrincipal [-ClaimValue] <String> [-ClaimType] <String>
+   [-AssignmentCollection <SPAssignmentCollection>] -ClaimProvider <SPClaimProvider> [<CommonParameters>]
+- >-
+  New-SPClaimsPrincipal [-EncodedClaim] <String> [-AssignmentCollection <SPAssignmentCollection>]
+   [<CommonParameters>]
+- >-
+  New-SPClaimsPrincipal [-Identity] <String> [-IdentityType] <SPIdentifierTypes>
+   [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+- >-
+  New-SPClaimsPrincipal [-Identity] <String> [-TrustedIdentityTokenIssuer] <SPTrustedIdentityTokenIssuerPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+examples:
+- title: '-------------------------EXAMPLE 1-----------------------------'
+  code: |-
+    New-SPSite https://sitename/sites/newsite -owner (New-SPClaimsPrincipal contoso\johndoe -TrustedIdentityTokenIssuer "NTLM")
+  description: |-
+    This example creates a claim principal for a Windows user.
+  summary: ""
+- title: '-------------------------EXAMPLE 2-----------------------------'
+  code: |-
+    New-SPSite https://localhost/sites/newsite -owner (New-SPClaimsPrincipal contoso\allusers -TrustedIdentityTokenIssuer "NTLM")
+  description: |-
+    This example creates a claim principal for a Windows group.
+  summary: ""
+- title: '-------------------------EXAMPLE 3-----------------------------'
+  code: |-
+    New-SPSite https://sitename/sites/newsite -owner (New-SPClaimsPrincipal -ClaimValue "john@contoso.com" -ClaimType Email -TrustedIdentityTokenIssuer "LiveID STS" -IdentifierClaim Yes)
+  description: |-
+    This example creates a claim principal for a trusted identity token issuer claim.
+  summary: ""
+- title: '-------------------------EXAMPLE 4-----------------------------'
+  code: |-
+    $ip = New-SPIdentityProvider -ASPNetMembershipProvider "myMembershipProvider" -ASPNetRoleProvider "myRoleProvider"
+    New-SPSite https://sitename/sites/newsite -owner (New-SPClaimsPrincipal "john@contoso.com" -TrustedIdentityTokenIssuer $ip)
+  description: |-
+    This example creates a claim principal for a ASPNet Membership User.
+  summary: ""
+- title: '-------------------------EXAMPLE 5-----------------------------'
+  code: |-
+    New-SPSite https://sitename/sites/newsite -owner (New-SPClaimsPrincipal "Sales Manager Role" -IdentityProvider "myRoleProvider")
+  description: |-
+    This example creates a claim principal for a ASPNet Role.
+  summary: ""
+- title: '-------------------------EXAMPLE 6-----------------------------'
+  code: |-
+    $cp = New-SPClaimsPrincipal -Identity "redmond\SiteOwner" -IdentityType 1
+    New-SPSite https://servername:port -OwnerAlias $cp.ToEncodedString() -Template "STS#0"
+  description: |-
+    This example creates a claim principal for a Basic Claim Role, which is also called an encoded claim).
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPClaimProvider" data-throw-if-not-resolved="False" />
+  name: ClaimProvider
+  isRequired: true
+  description: |+
+    Specifies the security token service identity provider that will contain the claims principal.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or a valid name of identity provider (for example, MyIDprovider1); or an instance of a valid SPIdentityProvider object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClaimType
+  isRequired: true
+  description: |+
+    Specifies the type of claim to create.
+    The value I indicates a unique user identity claim, and the value C indicates all other claims.
+
+    The type must be either of the following values: I or C.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ClaimValue
+  isRequired: true
+  description: |+
+    Specifies the claim value of the claims object.
+    The claims value specifies the user, group, or computer that the claim is authenticating.
+
+    The type must be a valid claim value; for example, john@contoso.com.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: EncodedClaim
+  isRequired: true
+  description: |+
+    Converts a simple claim to a full encoded claim.
+
+    The type must be a valid claim value; for example, i:001w|redmond\user.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IdentifierClaim
+  description: |+
+    Specifies if the new claim is an identity claim.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the name of the new claims principal.
+
+    The type must be a valid name of a claims principal.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPIdentifierTypes" data-throw-if-not-resolved="False" />
+  name: IdentityType
+  isRequired: true
+  description: |+
+    Specifies the type of the new claims principal.
+
+    The type must be one of the following: WindowsSamAccountName, WindowsSecurityGroupSid, FormsUser, FormsRole, or EncodedClaim.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPTrustedIdentityTokenIssuerPipeBind" data-throw-if-not-resolved="False" />
+  name: TrustedIdentityTokenIssuer
+  isRequired: true
+  description: |+
+    Specifies the ID of the authentication provider.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or a valid name of an Authentication provider (for example, MyAuthprovider1); or an instance of a valid SPTrustedIdentityTokenIssuer object.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.New-SPClaimsPrincipal
+name: New-SPClaimsPrincipal
+description: |-
+  This cmdlet contains more than one parameter set.
+  You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+  For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+
+  The New-SPClaimsPrincipal cmdlet creates a claims principal.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spclaimsprincipal
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: New-SPClaimsPrincipal
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

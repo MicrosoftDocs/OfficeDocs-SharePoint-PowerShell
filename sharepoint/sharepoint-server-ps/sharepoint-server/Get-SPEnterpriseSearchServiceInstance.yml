@@ -1,0 +1,76 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns the search service instance for a farm.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Get-SPEnterpriseSearchServiceInstance [[-Identity] <SearchServiceInstancePipeBind>]
+   [-AssignmentCollection <SPAssignmentCollection>] [-Local] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE 1------------------'
+  code: |-
+    Get-SPEnterpriseSearchServiceInstance -Local
+  description: |-
+    This example obtains a reference to the local search service instance.
+  summary: ""
+- title: '------------------EXAMPLE 2------------------'
+  code: |-
+    Get-SPEnterpriseSearchServiceInstance | ?{$_.Server -match 'SP01'}
+  description: |-
+    This example obtains a reference to the search service instance on the SharePoint server named 'SP01'.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SearchServiceInstancePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the search service instance to return.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a query server (for example, MyQueryServer); or an instance of a valid SearchServiceInstance object.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Local
+  description: |+
+    Returns the search service instance for the current search server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Get-SPEnterpriseSearchServiceInstance
+name: Get-SPEnterpriseSearchServiceInstance
+description: |-
+  This cmdlet returns the SearchServiceInstance object when the object is created, updated, or deleted.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.Search.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchserviceinstance
+  applicable: SharePoint Server Subscription Edition
+  title: Get-SPEnterpriseSearchServiceInstance
+  PlatyPS schema version: 2.0.0

@@ -1,0 +1,53 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves FAST Search Server 2010 for SharePoint document processing pipelines.
+module: SharePointServer
+notes: ""
+syntaxes:
+- Get-FASTSearchDocumentProcessingPipeline [[-Name] <String>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1-----------------'
+  code: |-
+    Get-FASTSearchDocumentProcessingPipeline
+  description: |-
+    This example retrieves all FAST Search Server 2010 for SharePoint document processing pipelines.
+  summary: ""
+- title: '---------------EXAMPLE 2-----------------'
+  code: |-
+    Get-FASTSearchDocumentProcessingPipeline -Name "Office14 (webcluster)"
+  description: |-
+    This example retrieves a single FAST Search Server 2010 for SharePoint document processing pipeline named "Office14 (webcluster)".
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The name of the document processing pipeline to retrieve.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Get-FASTSearchDocumentProcessingPipeline
+name: Get-FASTSearchDocumentProcessingPipeline
+description: |-
+  A document processing pipeline consists of multiple processing stages that an item goes through before being indexed for searching.
+  Item processing includes adding/removing/modifying metadata, linguistic processing, language detection.
+  This cmdlet retrieves all FAST Search Server 2010 for SharePoint document processing pipelines.
+  When one pipeline name is specified, a single pipeline is retrieved if it exists.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-fastsearchdocumentprocessingpipeline
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Get-FASTSearchDocumentProcessingPipeline

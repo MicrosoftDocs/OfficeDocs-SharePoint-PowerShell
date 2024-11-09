@@ -1,0 +1,47 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disconnects from a SharePoint Online service.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Get-SPOAppErrors
+  href: Get-SPOAppErrors.yml
+- text: Connect-SPOService
+  href: Connect-SPOService.yml
+syntaxes:
+- Disconnect-SPOService [<CommonParameters>]
+examples:
+- title: '------------ Example 1 --------------------'
+  code: |-
+    Disconnect-SPOService
+  description: |-
+    This example disconnects the service for the tenant.
+  summary: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Disconnect-SPOService
+name: Disconnect-SPOService
+description: |-
+  The `Disconnect-SPOService` cmdlet explicitly disconnects a previously created SharePoint Online service connection.
+
+  Global administrators can disconnect the service by running the `Disconnect-SPOService` cmdlet or by running the `Connect-SPOService` cmdlet to initiate another connection.
+  For more information, see `Connect-SPOService`.
+
+  Even after a connection is terminated, operations that were started before the connection is terminated will run to completion.
+  In other words, long-running operations will not be terminated by running the `Disconnect-SPOService` cmdlet or the `Connect-SPOService` cmdlet.
+
+  You must be a SharePoint Online administrator to run the cmdlet.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/disconnect-sposervice
+  applicable: SharePoint Online
+  title: Disconnect-SPOService
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

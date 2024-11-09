@@ -1,0 +1,76 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets all the groups on the specified site collection.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Set-SPOSiteGroup
+  href: Set-SPOSiteGroup.yml
+- text: Remove-SPOSiteGroup
+  href: Remove-SPOSiteGroup.yml
+syntaxes:
+- Get-SPOSiteGroup [-Group <String>] [-Limit <Int32>] -Site <SpoSitePipeBind> [<CommonParameters>]
+examples:
+- title: '-----------------------EXAMPLE 1-----------------------------'
+  code: |-
+    Get-SPOSiteGroup -Site https://contoso.sharepoint.com/sites/siteA
+  description: |-
+    This example returns all the groups on the specified site collection <https://contoso.sharepoint.com/sites/siteA.>
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Group
+  description: |+
+    Specifies the group name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Limit
+  description: |+
+    Specifies the maximum number of groups to return. The default value is 200.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Site
+  isRequired: true
+  description: |+
+    Specifies the site collection scope.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOSiteGroup
+name: Get-SPOSiteGroup
+description: |-
+  Use the `Get-SPOSiteGroup` cmdlet to get all the groups on the specified site collection by using the Site parameter.
+
+  You must be a SharePoint Online administrator and a site collection administrator to run the cmdlet.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [SharePoint Online PowerShell](https://learn.microsoft.com/powershell/module/sharepoint-online/index).
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spositegroup
+  applicable: SharePoint Online
+  title: Get-SPOSiteGroup
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

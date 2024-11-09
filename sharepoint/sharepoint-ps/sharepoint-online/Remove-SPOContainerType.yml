@@ -1,0 +1,53 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet removes the container type specified from the tenant.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: /powershell/sharepoint/sharepoint-online/connect-sharepoint-online
+- text: New-SPOContainerType
+  href: ./New-SPOContainerType.yml
+- text: Set-SPOContainerType
+  href: ./Set-SPOContainerType.yml
+- text: Remove-SPOContainerType
+  href: ./Get-SPOContainerType.yml
+syntaxes:
+- Remove-SPOContainerType -ContainerTypeId <ContainerTypeId>
+examples:
+- title: Example 1
+  code: |-
+    Remove-SPOContainerTypeId -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604a8
+  description: |-
+    In Example 1, the cmdlet asks for a confirmation on the remove action and on confirmation, deletes the trial container type.
+
+    Example 1 places the container with the given ID into the recycle bin. The container will be permanently deleted from the recycle bin after 93 days unless the deleted container is [restored](./Restore-SPODeletedContainer.yml) before permanent deletion.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ContainerTypeId
+  isRequired: true
+  description: " \r\nThis parameter specifies the ID of the container type corresponding to the SharePoint Embedded application. Use the `Get-SPOContainertype` command to retrieve the ID.\r\n \r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPOContainerType
+name: Remove-SPOContainerType
+description: |-
+  This cmdlet deletes only the trial container type in the tenant. To delete a container type in trial status, you must remove all containers of the container type first, including from the deleted container collection. To remove containers, refer to [Remove-SPOContainer](./Remove-SPOContainer.yml). Once all the containers are deleted, trial container type can be deleted using this cmdlet.
+
+  You must be a SharePoint Embedded Administrator to run this cmdlet.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spocontainertype
+  applicable: SharePoint Online
+  title: Remove-SPOContainerType
+  PlatyPS schema version: 2.0.0
+  author: ShreyasSar26
+  ms.author: shsaravanan
+  ms.reviewer: ""

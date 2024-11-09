@@ -1,0 +1,170 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  > [!NOTE]
+  > This Feature is part of the Admin Center Preview. If your tenant is not part of the Admin Center Preview, you will get an error when trying to run this cmdlet.
+
+  Starts a job to rename a site. You can change the URL, and optionally the site title along with changing the URL, of a site on a SharePoint Online collection.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Get-SPOAppErrors
+  href: Get-SPOAppErrors.yml
+- text: Start-SPOUserAndContentMove
+  href: Start-SPOUserAndContentMove.yml
+- text: Stop-SPOUserAndContentMove
+  href: Stop-SPOUserAndContentMove.yml
+- text: Get-SPOUserAndContentMoveState
+  href: Get-SPOUserAndContentMoveState.yml
+syntaxes:
+- >-
+  Start-SPOSiteRename [-Identity] <SpoSitePipeBind> [-NewSiteUrl] <string> [[-NewSiteTitle] <string>]
+      [[-SuppressMarketplaceAppCheck]] [[-SuppressWorkflow2013Check]] [-ValidationOnly] [[-Reserved] <string>] [-WhatIf] [-Confirm]
+      [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    $url="https://<tenant>.sharepoint.com/sites/samplesite"
+    $NewSiteUrl="https://<tenant>.sharepoint.com/sites/renamed"
+    Start-SPOSiteRename -Identity $url -NewSiteUrl $NewSiteUrl
+  description: |-
+    Starts the rename of the SPO site with name "samplesite" to "renamed" without modifying the title.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    $url="https://<tenant>.sharepoint.com/sites/samplesite"
+    $NewSiteUrl="https://<tenant>.sharepoint.com/sites/renamed"
+    $newTitle="New Title"
+    Start-SPOSiteRename -Identity $url -NewSiteUrl $NewSiteUrl -NewSiteTitle $newTitle
+  description: |-
+    Starts the rename of the SPO site with name "samplesite" to "renamed" modifying the title of the site to "New Title"
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    $url="https://<tenant>.sharepoint.com/sites/samplesite"
+    $NewSiteUrl="https://<tenant>.sharepoint.com/sites/renamed"
+    $newTitle="New Title"
+    Start-SPOSiteRename -Identity $url -NewSiteUrl $NewSiteUrl -NewSiteTitle $newTitle -SuppressMarketplaceAppCheck -SuppressWorkflow2013Check -WhatIf
+  description: |-
+    Starts the **simulation** rename of the SPO site with name "samplesite" to "renamed" modifying the title of the site to "New Title" without MarketPlaceAppCheck and without WorkFlow2013Check
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command. For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the original URL of the site collection.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewSiteTitle
+  isRequired: true
+  description: |+
+    Specifies the new Title of the site.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: NewSiteUrl
+  isRequired: true
+  description: |+
+    Specifies the new desired URL.
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Reserved
+  description: |+
+    Reserved for Microsoft internal use.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SuppressMarketplaceAppCheck
+  description: |+
+    Suppress checking compatibility of marketplace SharePoint Add-ins deployed to the associated site.
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SuppressWorkflow2013Check
+  description: |+
+    Suppress checking compatibility of SharePoint 2013 Workflows deployed to the associated site.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ValidationOnly
+  description: |+
+    Verifies that the site address can be changed.
+
+  defaultValue: None
+  position: "5"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  isRequired: true
+  description: |+
+    Simulation of what would happen if you run the script without modifying anything.
+
+  defaultValue: None
+  position: "0"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Start-SPOSiteRename
+name: Start-SPOSiteRename
+description: |-
+  This command starts a rename of a site on a SharePoint Online site. You can change the URL, and optionally the site title along with changing the URL. Also allows you to simulate the run using the -WhatIf parameter as well as -SuppressWorkflow2013Check and SuppressMarketplaceAppCheck switch parameters.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/start-spositerename
+  applicable: SharePoint Online
+  title: Start-SPOSiteRename
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

@@ -1,0 +1,30 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Used to retrieve the current configuration values for Idle session sign-out policy.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+syntaxes:
+- Get-SPOBrowserIdleSignOut [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-SPOBrowserIdleSignOut
+  description: |-
+    This example retrieves the current configuration values for Idle session sign-out
+  summary: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOBrowserIdleSignOut
+name: Get-SPOBrowserIdleSignOut
+description: |-
+  Use this cmdlet to retrieve the current configuration values for Idle session sign-out policy, the time at which users are warned and subsequently signed out of Office 365 after a period of browser inactivity in SharePoint and OneDrive.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spobrowseridlesignout
+  applicable: SharePoint Online
+  title: Get-SPOBrowserIdleSignOut
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

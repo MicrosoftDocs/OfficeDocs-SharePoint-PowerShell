@@ -1,0 +1,123 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a crawled-property-to-managed-property mapping.
+module: SharePointServer
+notes: ""
+links:
+- text: Get-FASTSearchMetadataCrawledPropertyMapping
+  href: Get-FASTSearchMetadataCrawledPropertyMapping.yml
+- text: New-FASTSearchMetadataCrawledPropertyMapping
+  href: New-FASTSearchMetadataCrawledPropertyMapping.yml
+- text: Set-FASTSearchMetadataCrawledPropertyMapping
+  href: Set-FASTSearchMetadataCrawledPropertyMapping.yml
+- text: Get-FASTSearchMetadataCrawledProperty
+  href: Get-FASTSearchMetadataCrawledProperty.yml
+- text: Get-FASTSearchMetadataManagedProperty
+  href: Get-FASTSearchMetadataManagedProperty.yml
+syntaxes:
+- >-
+  Remove-FASTSearchMetadataCrawledPropertyMapping -CrawledProperty <CrawledProperty>
+   -ManagedProperty <ManagedProperty> [-Confirm] [-Force] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    $title = Get-FASTSearchMetadataManagedProperty -name title
+    $crawledproperties = $title.GetCrawledPropertyMappings()
+    $crawledproperties # To List the output before the removal
+    Remove-FASTSearchMetadataCrawledPropertyMapping -managedproperty $title -crawledproperty $crawledproperties[4]
+    $crawledproperties # To list the output after the removal
+  description: |-
+    This example removes the mapping of the crawled property "sitemap.title" to the managed property "title".
+
+    This example calls the GetCrawledPropertyMappings() method call exposed by the managed property, but you could also find the crawled property by using Get-FASTSearchMetadataCrawledProperty.
+    The return value from GetCrawledPropertyMappings() is an array of crawled properties, of which the last is the "sitemap.title" crawled property mapping.
+    The last of the crawled properties (array index 4) has the mapping removed from it by calling Remove-FASTSearchMetadataCrawledPropertyMapping.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Activates user prompting to confirm the operation.
+    If set, prompting is activated.
+    If Confirm is false (-Confirm:$false), confirmation prompting is not used.
+
+    In cases where Confirm is not specified, the cmdlet will prompt if the $ConfirmPreference shell variable is equal to or greater than the ConfirmImpact setting of the cmdlet (HIGH).
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="CrawledProperty" data-throw-if-not-resolved="False" />
+  name: CrawledProperty
+  isRequired: true
+  description: |+
+    The crawled property which is having a mapping removed.
+    The object can be retrieved by using Get-FASTSearchMetadataCrawledProperty, or by using the GetCrawledPropertyMappings() method call on a managed property object.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Overrides any user prompting settings, so that confirmation of the operation is not required.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="ManagedProperty" data-throw-if-not-resolved="False" />
+  name: ManagedProperty
+  isRequired: true
+  description: |+
+    The managed property object which is having a mapping removed.
+    The object can be retrieved by using the Get-FASTSearchMetadataManagedPropertycmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: get-help about_commonparameters
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Remove-FASTSearchMetadataCrawledPropertyMapping
+name: Remove-FASTSearchMetadataCrawledPropertyMapping
+description: |-
+  This cmdlet removes the mapping of a crawled property to a managed property.
+  Both the managed property and the crawled property still exist after the mapping is removed.
+
+  The cmdlet parameters are both objects, and must be retrieved separately.
+
+  The content must be recrawled/re-fed for the search index to reflect that the mapping was removed.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-fastsearchmetadatacrawledpropertymapping
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Remove-FASTSearchMetadataCrawledPropertyMapping

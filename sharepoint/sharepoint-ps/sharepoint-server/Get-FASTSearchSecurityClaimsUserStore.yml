@@ -1,0 +1,53 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Get the claims security user store.
+module: SharePointServer
+notes: ""
+links:
+- text: Set-FASTSearchSecurityClaimsUserStore
+  href: Set-FASTSearchSecurityClaimsUserStore.yml
+- text: New-FASTSearchSecurityClaimsUserStore
+  href: New-FASTSearchSecurityClaimsUserStore.yml
+syntaxes:
+- Get-FASTSearchSecurityClaimsUserStore [[-Identity] <String>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1-----------------'
+  code: |-
+    Get-FASTSearchSecurityClaimsUserStore -Identity clm
+  description: |-
+    This example retrieves the claims user store with the identity "clm".
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    The identity of a claims user store to display.
+
+    If an Identity is not specified, all claims user stores are displayed.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Get-FASTSearchSecurityClaimsUserStore
+name: Get-FASTSearchSecurityClaimsUserStore
+description: |-
+  This cmdlet retrieves a specific claims user store.
+
+  If the Identity parameter is not specified, the cmdlet gets a list of all claims user stores.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-fastsearchsecurityclaimsuserstore
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Get-FASTSearchSecurityClaimsUserStore

@@ -1,0 +1,77 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Select groups for replication
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Introduction to the SharePoint Online management shell
+  href: https://support.office.com/en-us/article/introduction-to-the-sharepoint-online-management-shell-c16941c3-19b4-4710-8056-34c034493429
+- text: SharePoint Online Management Shell Download
+  href: https://www.microsoft.com/en-US/download/details.aspx?id=35588
+- text: Get-SPOAppErrors
+  href: Get-SPOAppErrors.yml
+- text: Get-SPOTenantTaxonomyReplicationParameters
+  href: Get-SPOTenantTaxonomyReplicationParameters.yml
+- text: Get-SPOTenantContentTypeReplicationParameters
+  href: Get-SPOTenantContentTypeReplicationParameters.yml
+- text: Set-SPOTenantContentTypeReplicationParameters
+  href: Set-SPOTenantContentTypeReplicationParameters.yml
+syntaxes:
+- Set-SPOTenantTaxonomyReplicationParameters [-ReplicateAllGroups] [<CommonParameters>]
+- Set-SPOTenantTaxonomyReplicationParameters -ReplicatedGroups <String[]> [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Set-SPOTenantTaxonomyReplicationParameters -ReplicatedGroups "group1","group2"
+  description: |-
+    Tenant admin can use this cmdlet to select some groups only for replicating to overwrite default settings.
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Set-SPOTenantTaxonomyReplicationParameters -ReplicateAllGroups
+  description: |-
+    Tenant admin can also reset to replicate all the groups.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ReplicateAllGroups
+  isRequired: true
+  description: |+
+    This parameter specifies whether all groups should be replicated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ReplicatedGroups
+  isRequired: true
+  description: |+
+    Specifies a comma-separated list of groups that should be replicated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Set-SPOTenantTaxonomyReplicationParameters
+name: Set-SPOTenantTaxonomyReplicationParameters
+description: |-
+  Before using this cmdlet, make sure you connect to SharePoint Online using [Connect-SPOService](Connect-SPOService.yml) and the desirable satellite location URL as the -Url parameter.
+
+  By default, all global groups except system/search/people/sitecollection in primary location will be replicated to
+  satellite.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spotenanttaxonomyreplicationparameters
+  applicable: SharePoint Online
+  title: Set-SPOTenantTaxonomyReplicationParameters
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

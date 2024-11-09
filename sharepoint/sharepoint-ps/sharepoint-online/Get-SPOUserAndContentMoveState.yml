@@ -1,0 +1,160 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet allows SharePoint administrators to check the status of a user or site move across geo locations.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Get-SPOAppErrors
+  href: Get-SPOAppErrors.yml
+- text: Start-SPOUserAndContentMove
+  href: Start-SPOUserAndContentMove.yml
+syntaxes:
+- >-
+  Get-SPOUserAndContentMoveState [-Limit <UInt32>] [-MoveDirection <Direction>] [-MoveEndTime <DateTime>]
+   [-MoveStartTime <DateTime>] [-MoveState <State>] [<CommonParameters>]
+- Get-SPOUserAndContentMoveState -OdbMoveId <Guid> [<CommonParameters>]
+- Get-SPOUserAndContentMoveState -UserPrincipalName <String> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-SPOUserAndContentMoveState -OdbMoveId b298219e-3440-10b8-8931-46e805e2b85b
+  description: |-
+    Obtain the move state by OneDrive Move Job ID
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-SPOUserAndContentMoveState -MoveState NotStarted
+  description: |-
+    Getting which moves are being done in a particular state
+  summary: ""
+- title: Example 3
+  code: |-
+    Get-SPOUserAndContentMoveState -MoveDirection All
+  description: |-
+    Gives you the output for users moving in and out from the geo location you are logged into
+  summary: ""
+- title: Example 4
+  code: |-
+    Get-SPOUserAndContentMoveState -MoveDirection In
+  description: |-
+    Gives you the output for users moving into the geo location that you are logged into
+  summary: ""
+- title: Example 5
+  code: |-
+    Get-SPOUserAndContentMoveState -MoveDirection Out
+  description: |-
+    Gives you the output for users moving out from the geo location that you are logged into
+  summary: ""
+- title: Example 6
+  code: |-
+    Get-SPOUserAndContentMoveState -UserPrincipalName jezz@contoso.com
+  description: |-
+    Obtains the status of the move for jezz@contoso.com
+  summary: ""
+parameters:
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: Limit
+  description: |+
+    Get the limit of user on a single call of the parameter
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Direction" data-throw-if-not-resolved="False" />
+  name: MoveDirection
+  description: |+
+    Allows you to define the direction of the user move in relation to your current SharePoint location
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: All, MoveIn, MoveOut
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: MoveEndTime
+  description: |+
+    Allows you to obtain the moves that are scheduled to end by a particular time, as defined in UTC
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: MoveStartTime
+  description: |+
+    Allows you to obtain the moves that are scheduled to begin at a particular time, as defined in UTC
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="State" data-throw-if-not-resolved="False" />
+  name: MoveState
+  description: |+
+    Move State current status.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: All, NotStarted, Scheduled, InProgress, Stopped, Success, Failed
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: OdbMoveId
+  isRequired: true
+  description: |+
+    OneDrive GUID MoveID that you get when you start a job.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserPrincipalName
+  isRequired: true
+  description: |+
+    User Principal name is the unique property on Microsoft Entra ID for each user.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOUserAndContentMoveState
+name: Get-SPOUserAndContentMoveState
+description: |-
+  This command gets the information and the status of a move request of a user between sites in a SharePoint Online Multi Geo tenant.
+
+  The following are the available move states:
+
+  |Status|Description|
+  | --- | --- |
+  |ReadyToTrigger| The move is ready to be initiated by an administrator. |
+  |NotStarted| The move has not started. |
+  |InProgress| The move is in progress in one of the following states: Validation, Backup, Restore, Cleanup.|
+  |Success| The move has completed successfully.|
+  |Failed|The move failed.|
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spouserandcontentmovestate
+  applicable: SharePoint Online
+  title: Get-SPOUserAndContentMoveState
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

@@ -1,0 +1,73 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables the hub site feature on a site.
+module: Microsoft.Online.SharePoint.PowerShell
+syntaxes:
+- Unregister-SPOHubSite [-Identity] <SpoHubSitePipeBind> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Unregister-SPOHubSite -Identity <guid>
+  description: |-
+    This example removes a site from the hub site list based on unique hub identifier (<guid>).
+  summary: ""
+- title: Example 2
+  code: |-
+    Unregister-SPOHubSite -Identity https://contoso.sharepoint.com/sites/Marketing
+  description: |-
+    This example disables the hub feature on the marketing site.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SpoHubSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Guid based identifier or URL of the site to disable the hub site feature. If hub site has been already deleted, you will need to use a Guid based identifier to remove the site from the list of hub sites.
+
+  defaultValue: None
+  position: Named
+  aliases: HubSite
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs. The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Unregister-SPOHubSite
+name: Unregister-SPOHubSite
+description: |-
+  Disables the hub site feature on a site so that it is no longer a hub site. Associated sites may still appear associated for up to an hour. If you want to speed up the process, use the Remove-SPOHubSiteAssociation cmdlet to remove the associated sites first.
+
+  > [!NOTE]
+  > If the site doesn't exist, this cmdlet returns a "File not found" error.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/unregister-spohubsite
+  applicable: SharePoint Online
+  title: Unregister-SPOHubSite
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

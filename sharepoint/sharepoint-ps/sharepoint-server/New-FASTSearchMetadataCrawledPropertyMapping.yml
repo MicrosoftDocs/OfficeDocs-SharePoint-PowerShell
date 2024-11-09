@@ -1,0 +1,92 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new mapping from a crawled property to a managed property.
+module: SharePointServer
+notes: ""
+links:
+- text: Get-FASTSearchMetadataCrawledPropertyMapping
+  href: Get-FASTSearchMetadataCrawledPropertyMapping.yml
+- text: Remove-FASTSearchMetadataCrawledPropertyMapping
+  href: Remove-FASTSearchMetadataCrawledPropertyMapping.yml
+- text: Set-FASTSearchMetadataCrawledPropertyMapping
+  href: Set-FASTSearchMetadataCrawledPropertyMapping.yml
+syntaxes:
+- >-
+  New-FASTSearchMetadataCrawledPropertyMapping -CrawledProperty <CrawledProperty>
+   -ManagedProperty <ManagedProperty> [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    C:\PS>$sitetitle_managedproperty = Get-FASTSearchMetadataManagedProperty -Name sitetitle
+    $internaltitle_crawledproperty = Get-FASTSearchMetadataCrawledProperty -name internaltitle
+    New-FASTSearchMetadataCrawledPropertyMapping -Managedproperty $sitetitle_managedproperty -crawledproperty $internaltitle_crawledproperty
+  description: |-
+    This example adds a mapping from the crawled property "internaltitle" (here part of the Web category) to the managed property "sitetitle".
+
+    Note that both the crawled property and the managed property already exist, and these commands only add the mapping.
+    As a result, the crawled property "internaltitle" will now be mapped to "sitetitle" and stored in the FAST Search Server 2010 for SharePoint system.
+    The managed property can then be included in a full text index to make it searchable.
+  summary: ""
+- title: '---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    C:\PS>$extended_title = New-FASTSearchMetadataManagedproperty -name ExtendedTitle -Type 1
+    $title = Get-FASTSearchMetadataManagedProperty -name title
+    $title.GetCrawledPropertyMappings() | ForEach-Object { New-FASTSearchMetadataCrawledPropertyMapping -ManagedProperty $extended_title -CrawledProperty $_ }
+  description: |-
+    This example adds a new managed property named "ExtendedTitle", and maps to "ExtendedProperty" all crawled properties that are normally mapped to the managed property named "title".
+    The original "title" managed property is not changed, to avoid changing the current behavior of the search system.
+
+    This example first generates a list of crawled property objects mapped to the original "title" managed property.
+    Then the example iterates over this list using ForEach-Object to add each of them to the new "ExtendedTitle" managed property.
+    More crawled properties can be added to this new managed property later without impacting the "title" managed property.
+  summary: ""
+parameters:
+- type: <xref href="CrawledProperty" data-throw-if-not-resolved="False" />
+  name: CrawledProperty
+  isRequired: true
+  description: |+
+    The crawled property that is mapped to a managed property.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="ManagedProperty" data-throw-if-not-resolved="False" />
+  name: ManagedProperty
+  isRequired: true
+  description: |+
+    The managed property to which a crawled property is mapped.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.New-FASTSearchMetadataCrawledPropertyMapping
+name: New-FASTSearchMetadataCrawledPropertyMapping
+description: |-
+  This cmdlet maps a crawled property to a managed property and stores the crawled content in the Microsoft FAST Search Server 2010 for SharePoint index.
+
+  You can map a crawled property to multiple managed properties.
+  If you map multiple crawled properties to a single managed property, use the managed property's MergeCrawledProperties parameter to control whether or not the crawled properties are merged into the managed property or just overwritten.
+  See Set-FASTSearchMetadataManagedProperty for more information.
+
+  When you map a crawled property into a managed property, the variant type of the crawled property is converted into the available data types in FAST Search Server 2010 for SharePoint.
+  See https://go.microsoft.com/fwlink/?LinkId=163233 (https://go.microsoft.com/fwlink/?LinkId=163233) for details about this conversion, and which variant types can be converted into native FAST Search Server 2010 for SharePoint types.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-fastsearchmetadatacrawledpropertymapping
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: New-FASTSearchMetadataCrawledPropertyMapping

@@ -1,0 +1,47 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets the progress of setting version policy for existing document libraries on the site collection.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Set-SPOSite
+  href: Set-SPOSite.yml
+syntaxes:
+- Get-SPOSiteVersionPolicyJobProgress [-Identity] <SpoSitePipeBind> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-SPOSiteVersionPolicyJobProgress -Identity https://contoso.sharepoint.com/sites/site1
+  description: |-
+    Example 1 gets the progress of setting version policy for existing document libraries on the site collection.
+  summary: ""
+parameters:
+- type: <xref href="SpoSitePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the URL of the site collection.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOSiteVersionPolicyJobProgress
+name: Get-SPOSiteVersionPolicyJobProgress
+description: |-
+  `Set-SPOSite` cmdlet using `ApplyToExistingDocumentLibraries` will create a job to set version policy for existing document libraries on the site collection. This cmdlet then gets the progress of the job.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spositeversionpolicyjobprogress
+  applicable: SharePoint Online
+  title: Get-SPOSiteVersionPolicyJobProgress
+  PlatyPS schema version: 2.0.0
+  author: msjennywu
+  ms.author: jennywu
+  ms.reviewer: ""
+  manager: seanmc

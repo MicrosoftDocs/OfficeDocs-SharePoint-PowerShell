@@ -1,0 +1,103 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the properties of a full text index.
+module: SharePointServer
+notes: ""
+links:
+- text: New-FASTSearchMetadataFullTextIndex
+  href: New-FASTSearchMetadataFullTextIndex.yml
+- text: Remove-FASTSearchMetadataFullTextIndex
+  href: Remove-FASTSearchMetadataFullTextIndex.yml
+- text: Get-FASTSearchMetadataFullTextIndex
+  href: Get-FASTSearchMetadataFullTextIndex.yml
+syntaxes:
+- >-
+  Set-FASTSearchMetadataFullTextIndex -FullTextIndex <FullTextIndex> [-Description <String>]
+   [-StemmingEnabled <Boolean>] [<CommonParameters>]
+- >-
+  Set-FASTSearchMetadataFullTextIndex -Name <String> [-Description <String>] [-StemmingEnabled <Boolean>]
+   [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Set-FASTSearchMetadataFullTextIndex -name content -description "Central content repository"
+  description: |-
+    This example updates the description of the existing full text index named "content".
+  summary: ""
+- title: '---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Set-FASTSearchMetadataFullTextIndex -Name content -StemmingEnabled 1
+  description: |-
+    This example enables stemming on the full text index named "content".
+    The content of the full text index must be recrawled/re-fed for this change to take effect.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    A new description to use for the full text index.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="FullTextIndex" data-throw-if-not-resolved="False" />
+  name: FullTextIndex
+  isRequired: true
+  description: |+
+    An object representing the full text index to be updated.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Name of the full text index to be updated.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: FullTextIndexName, N
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: StemmingEnabled
+  description: |+
+    Enables or disables stemming for this full text index.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Set-FASTSearchMetadataFullTextIndex
+name: Set-FASTSearchMetadataFullTextIndex
+description: |-
+  This cmdlet enables/disables stemming and changes the description of a full text index.
+
+  Stemming is the process of reducing words to their base form or expanding to all known forms to increase recall.
+  Whether stemming is done through reduction or expansion depends on the language in which the content is written.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-fastsearchmetadatafulltextindex
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Set-FASTSearchMetadataFullTextIndex

@@ -1,0 +1,61 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the visibility of the available built-in Design Packages at moment of site creation.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Set-SPOBuiltInDesignPackageVisibility [-IsVisible] <Boolean> [-DesignPackage] <DesignPackageType> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Set-SPOBuiltInDesignPackageVisibility -DesignPackage Showcase -IsVisible:$false
+  description: |-
+    This example sets the visibility of Showcase design package to false.
+  summary: ""
+parameters:
+- type: <xref href="DesignPackageType" data-throw-if-not-resolved="False" />
+  name: DesignPackage
+  isRequired: true
+  description: |+
+    Name of the design package, available names are
+    - Topic
+    - Showcase
+    - Blank
+    - TeamSite
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: None, Topic, Showcase, Blank, TeamSite
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IsVisible
+  isRequired: true
+  description: |+
+    Determines if the design package is visible
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Set-SPOBuiltInDesignPackageVisibility
+name: Set-SPOBuiltInDesignPackageVisibility
+description: |-
+  Sets the visibility of the available built-in Design Packages. For more information, see [Moving from Publishing sites to Communication sites](https://learn.microsoft.com/sharepoint/publishing-sites-classic-to-modern-experience)
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spobuiltindesignpackagevisibility
+  applicable: SharePoint Online
+  title: Set-SPOBuiltInDesignPackageVisibility
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

@@ -1,0 +1,151 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes a user from a Web site.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Remove-SPUser [-Identity] <SPUserPipeBind> -Web <SPWebPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Group <SPGroupPipeBind>] [-WhatIf]
+   [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE 1-----------------------'
+  code: |-
+    Remove-SPUser "Contoso\jdoe" -web https://test/web1
+
+    Get-SPWeb "https://test/web1" | Remove-SPUser "Contoso\jdoe"
+  description: |-
+    This example removes the user (Contoso\jdoe) from the Web application https://test/web1.
+  summary: ""
+- title: '------------------EXAMPLE 2-----------------------'
+  code: |-
+    Get-SPSite https://contoso.com |Get-SPWeb |Remove-SPUser "Contoso\jdoe"
+  description: |-
+    This syntax removes the user (Contoso\Jdoe) from every Web in a site collection located at https://contoso.com.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPGroupPipeBind" data-throw-if-not-resolved="False" />
+  name: Group
+  description: |+
+    The user only gets removed from that group.
+    Otherwise, the user gets removed from the site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPUserPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the GUID, the user name, or SPUser object to remove.
+
+    The type must be a valid GUID of the user, in the form 1234-5678-9876-0987.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: UserAlias
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPWebPipeBind" data-throw-if-not-resolved="False" />
+  name: Web
+  isRequired: true
+  description: |+
+    Specifies the name of the URL or GUID from which the user is to be removed.
+    This parameter is needed only if the identity provided is the user name.
+
+    The type must be a valid URL, in the form https://server_name, or a GUID, in the form 1234-5678-9807.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Remove-SPUser
+name: Remove-SPUser
+description: |-
+  The `Remove-SPUser` cmdlet specifies the identity and user group from which a user is to be removed.
+  The `Remove-SPUser` cmdlet does not remove the user from Active Directory Domain Services (AD DS).
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spuser
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Remove-SPUser
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

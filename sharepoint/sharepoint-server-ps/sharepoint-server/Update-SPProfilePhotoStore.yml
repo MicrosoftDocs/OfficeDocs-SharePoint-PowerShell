@@ -1,0 +1,122 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the profile photo store to be compatible with SharePoint Server.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Update-SPProfilePhotoStore -MySiteHostLocation <SPSitePipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-CreateThumbnailsForImportedPhotos <Boolean>]
+   [-NewBaseUri <Uri>] [-NoDelete <Boolean>] [-OldBaseUri <Uri>] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE-------------------'
+  code: |-
+    Update-SPProfilePhotoStore -MySiteHostLocation https://mysites
+  description: |-
+    This example uploads photos to a specified My Site host location.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: CreateThumbnailsForImportedPhotos
+  description: |+
+    Creates thumbnails for all the imported user profile pictures.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPSitePipeBind" data-throw-if-not-resolved="False" />
+  name: MySiteHostLocation
+  isRequired: true
+  description: |+
+    Specifies the URL for the My Site host location where the photos are to be uploaded.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: NewBaseUri
+  description: |+
+    Specifies the new URL for profile pictures.
+    For example, https://server2/.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: NoDelete
+  description: |+
+    When the value is set to true, imported user profile picture files will be preserverd after creating thumbnails for them.
+    > [!NOTE]
+    > This will only work when CreateThumbnailsForImportedPhotos is set to `$true`
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: OldBaseUri
+  description: |+
+    Specifies the old URL for profile pictures.
+    For example, https://server1/.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Update-SPProfilePhotoStore
+name: Update-SPProfilePhotoStore
+description: |-
+  After upgrading from Office SharePoint Server to SharePoint Server, run the `Update-SPProfilePhotoStore` cmdlet to ensure that the SharePoint profile photo store is compatible with SharePoint Server.
+  The `Update-SPProfilePhotoStore` cmdlet should be used only after an upgrade from Office SharePoint Server has completed.
+  When the `Update-SPProfilePhotoStore` cmdlet is used, three thumbnail versions with predictable sizes and names are created from the original photo, the new photos are placed into the My Site Host's User Photos library, and the property value in the profile database is updated.
+
+  During the operation, the original image is left as-is.
+  If the operation fails for certain users for any reason, it continues on to the next user.
+
+  During the migration of profile photos from one server URL to another, one can use the OldBaseUri and NewBaseUri parameters.
+  You just need to specify the starting portion of the URL that has changed from old to new and an attempt to rebase the profile picture URLs will occur.
+
+  For example, OldBaseUri: https://server1/my/ProfilePhotos; NewBaseUri: https://server1/my/NewLocation/ProfilePhotos
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/update-spprofilephotostore
+  applicable: SharePoint Server Subscription Edition
+  title: Update-SPProfilePhotoStore
+  PlatyPS schema version: 2.0.0

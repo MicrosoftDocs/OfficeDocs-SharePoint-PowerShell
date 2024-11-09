@@ -1,0 +1,155 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This command generates various reports which are meant to provide insights into potential oversharing of sensitive data in SharePoint and/or OneDrive for Business. These insights are powered by Data Access Governance (DAG) module, available in SharePoint Admin Center. SharePoint Advanced Management (SAM) license is required to run this command.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Data Access Governance reports for SharePoint admins
+  href: /sharepoint/data-access-governance-reports
+syntaxes:
+- >-
+  Start-SPODataAccessGovernanceInsight -ReportEntity <ReportEntityEnum> -Workload <WorkloadEnum>
+   -ReportType <ReportTypeEnum> -Name <String>
+   [-Template <System.Collections.Generic.List`1[Microsoft.Online.SharePoint.TenantAdministration.TemplateEnum]>]
+   [-Privacy <PrivacyEnum>] [-SiteSensitivityLabelGUID <System.Collections.Generic.List`1[System.Guid]>]
+   [<CommonParameters>]
+- >-
+  Start-SPODataAccessGovernanceInsight -ReportEntity <ReportEntityEnum> -Workload <WorkloadEnum>
+   -ReportType <ReportTypeEnum> [<CommonParameters>]
+- >-
+  Start-SPODataAccessGovernanceInsight -ReportEntity <ReportEntityEnum> -Workload <WorkloadEnum>
+   -ReportType <ReportTypeEnum> [-FileSensitivityLabelName <String>] -FileSensitivityLabelGUID <Guid>
+   [<CommonParameters>]
+- >-
+  Start-SPODataAccessGovernanceInsight -ReportEntity <ReportEntityEnum> -Workload <WorkloadEnum>
+   -ReportType <ReportTypeEnum> -Name <String>
+   [-Template <System.Collections.Generic.List`1[Microsoft.Online.SharePoint.TenantAdministration.TemplateEnum]>]
+   [-Privacy <PrivacyEnum>] [-SiteSensitivityLabelGUID <System.Collections.Generic.List`1[System.Guid]>]
+   -CountOfUsersMoreThan <Int32> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    PS C:\> Start-SPODataAccessGovernanceInsight -ReportEntity PermissionedUsers -Workload SharePoint -ReportType Snapshot -Name "OversharingBaselineReport" -CountOfUsersMoreThan 1000
+  description: |-
+    The above command generates a list of SharePoint sites which can be accessed by more than 1000 users, as of the report generation day.
+  summary: ""
+parameters:
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: CountOfUsersMoreThan
+  isRequired: true
+  description: |+
+    Specifies the threshold of oversharing as defined by the number of users that can access the site. The number of users that can access the site are determined by expanding all users, groups across all permissions (at site level and at the level of any item with unique permissions), deduplicate and arrive at a unique number. Minimum value is 100.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: FileSensitivityLabelGUID
+  isRequired: true
+  description: |+
+    Specifies the GUID for the sensitivity label for the file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: FileSensitivityLabelName
+  description: |+
+    Specifies the name of the sensitivity label for the file.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    Specifies the name to be given to the generated report.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="PrivacyEnum" data-throw-if-not-resolved="False" />
+  name: Privacy
+  description: |+
+    Specifies the privacy setting of the 0365 group. Relevant in case of filtering the report for group connected sites.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: All, Private, Public
+- type: <xref href="ReportEntityEnum" data-throw-if-not-resolved="False" />
+  name: ReportEntity
+  isRequired: true
+  description: |+
+    Specifies the 'potential oversharing' scenario that should be captured by the DAG report.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: SharingLinks_Anyone, SharingLinks_PeopleInYourOrg, SharingLinks_Guests, SensitivityLabelForFiles, EveryoneExceptExternalUsersAtSite, EveryoneExceptExternalUsersForItems, PermissionedUsers
+- type: <xref href="ReportTypeEnum" data-throw-if-not-resolved="False" />
+  name: ReportType
+  isRequired: true
+  description: |+
+    Specifies the time period of data based on which DAG report is generated. A 'Snapshot' report will have the latest data as of the report generation time. A 'RecentActivity' report will be based on data in the last 'X' days.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: Snapshot, RecentActivity
+- type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="System.Guid" data-throw-if-not-resolved="False" /><span>]</span>
+  name: SiteSensitivityLabelGUID
+  description: |+
+    Specifies the GUID of the sensitivity label applied to the site.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="System.Collections.Generic.List`1" data-throw-if-not-resolved="False" /><span>[</span><xref href="Microsoft.Online.SharePoint.TenantAdministration.TemplateEnum" data-throw-if-not-resolved="False" /><span>]</span>
+  name: Template
+  description: |+
+    Specifies the template of the site. Relevant in case a report should be generated for that particular template.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: AllSites, ClassicSites, CommunicationSites, TeamSites, OtherSites
+- type: <xref href="WorkloadEnum" data-throw-if-not-resolved="False" />
+  name: Workload
+  isRequired: true
+  description: |+
+    Specifies whether the report is for SharePoint sites or OneDrive accounts.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: SharePoint, OneDriveForBusiness
+uid: Microsoft.Online.SharePoint.PowerShell.Start-SPODataAccessGovernanceInsight
+name: Start-SPODataAccessGovernanceInsight
+description: |-
+  This command is used to generate reports, in Data Access Governance (DAG) module, regarding potential oversharing of sensitive data. Reports are currently available for:
+
+  - Sharing links created in last 28 days (Anyone, People-in-your-org, Specific people shared externally).
+  - Content shared with Everyone except external users (EEEU) in last 28 days.
+  - List of sites having labelled files, as of report generation time.
+  - List of sites having 'too-many-users', as of report generation time, to setup an oversharing baseline.
+metadata:
+  external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: ""
+  PlatyPS schema version: 2.0.0
+  author: MachelleTranMSFT
+  ms.author: mactra
+  ms.reviewer: pullabhk

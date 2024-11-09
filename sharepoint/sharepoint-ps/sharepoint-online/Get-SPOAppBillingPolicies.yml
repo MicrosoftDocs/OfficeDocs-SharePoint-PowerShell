@@ -1,0 +1,44 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns billing policies that are owned by the tenant.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: /powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+syntaxes:
+- Get-SPOAppBillingPolicies
+examples:
+- title: Example 1
+  code: |-
+    Get-SPOAppBillingPolicies
+  description: ""
+  summary: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOAppBillingPolicies
+name: Get-SPOAppBillingPolicies
+description: |-
+  Get-SPOAppBillingPolicies returns a list of billing policies that are owned by the tenant. If the tenant has no billing policies associated, the cmdlet will produce no output. 
+
+  The output of this cmdlet will include information related to the billing policy such as Application Id, Azure subscription ID, Resource Group, Region, State of the subscription and the usage charging model.
+
+  You must be a SharePoint Administrator to run this cmdlet.
+
+  > [!NOTE]
+  > To use the Get-SPOAppBillingPolicies cmdlet, an admin must authenticate to SharePoint Online using modern authentication.
+  >
+  > Use the **Connect-SPOService** cmdlet shown below, which will prompt you to enter your credentials. If multi-factor authentication (MFA) is enabled, you will need to complete the MFA process (e.g., entering a verification code sent to your phone).
+  > 
+  > `Connect-SPOService -Url https://(your-tenant)-admin.sharepoint.com`
+  > 
+  > Replace (your-tenant) with your actual SharePoint Online domain, e.g. `https://contoso-admin.sharepoint.com. `
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Get-SPOAppBillingPolicies
+  applicable: SharePoint Online
+  title: Get-SPOAppBillingPolicies
+  PlatyPS schema version: 2.0.0
+  author: arakesh
+  ms.author: arakesh
+  ms.reviewer: ""

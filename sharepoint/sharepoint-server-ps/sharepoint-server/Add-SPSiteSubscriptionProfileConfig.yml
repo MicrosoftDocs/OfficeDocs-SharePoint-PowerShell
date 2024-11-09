@@ -1,0 +1,182 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a new site subscription to a User Profile Service application.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Add-SPSiteSubscriptionProfileConfig [-Identity] <SPSiteSubscriptionPipeBind>
+   [-MySiteHostLocation <SPSitePipeBind>] -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-SynchronizationOU <String>] [-WhatIf]
+   [<CommonParameters>]
+- >-
+  Add-SPSiteSubscriptionProfileConfig [-Identity] <SPSiteSubscriptionPipeBind>
+   -MySiteHostLocation <SPSitePipeBind> -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-MySiteManagedPath <SPPrefixPipeBind>]
+   [-SiteNamingConflictResolution <String>] [-SynchronizationOU <String>] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '--------------EXAMPLE------------------'
+  code: |-
+    $sub = Get-SPSiteSubscription https://contoso/my
+    $proxy = Get-SPServiceApplicationProxy | ? {$_.TypeName -eq 'User Profile Service Application Proxy'}
+    Add-SPSiteSubscriptionProfileConfig -Identity $sub -ProfileServiceApplicationProxy $proxy -MySiteHostLocation https://contoso/my
+    $sub = New-SPSiteSubscription
+  description: |-
+    This example creates a new User Profile Service application tenant.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPSiteSubscriptionPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the proxy of the User Profile Service application to add the site subscription to.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a User Profile Service application proxy (for example, UserProfileSvcProxy1); or an instance of a valid SPServiceApplicationProxy object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPSitePipeBind" data-throw-if-not-resolved="False" />
+  name: MySiteHostLocation
+  isRequired: true
+  description: |+
+    Specifies the site collection where the My Site host for the site subscription is provisioned.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or a valid URL, in the form https://server_name; or an instance of a valid SPSite object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPPrefixPipeBind" data-throw-if-not-resolved="False" />
+  name: MySiteManagedPath
+  description: |+
+    Specifies the managed path where personal sites will be created.
+
+    The type must be a valid URL, in the form https://server_name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPServiceApplicationProxyPipeBind" data-throw-if-not-resolved="False" />
+  name: ProfileServiceApplicationProxy
+  isRequired: true
+  description: |+
+    Specifies the identifier for the User Profile Service Application proxy where the tenant is to be created.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SiteNamingConflictResolution
+  description: |+
+    Specifies the format to use to name personal sites.
+
+    Use one of the following integer values:
+
+    1   Personal site collections are to be named based on user names without any conflict resolution.
+    For example, https://portal_site/location/username/
+
+    2   Personal site collections are to be based on user names with conflict resolution by using domain names.
+    For example, .../username/ or .../domain_username/
+
+    3   Personal site collections are to be named by using domain and user name always, to avoid any conflicts.
+    For example, https://portal_site/location/domain_username/
+
+    The default value is 1 (do not resolve conflicts).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SynchronizationOU
+  description: |+
+    Specifies the organizational unit serving the site subscription.
+
+    The type must be a valid name of an organizational unit; for example, OrgUnit1.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Add-SPSiteSubscriptionProfileConfig
+name: Add-SPSiteSubscriptionProfileConfig
+description: |-
+  This cmdlet contains more than one parameter set.
+  You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+  For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+
+  The Add-SPSiteSubscriptionProfileConfig cmdlet adds a new site subscription to a User Profile Service application.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/add-spsitesubscriptionprofileconfig
+  applicable: SharePoint Server Subscription Edition
+  title: Add-SPSiteSubscriptionProfileConfig
+  PlatyPS schema version: 2.0.0

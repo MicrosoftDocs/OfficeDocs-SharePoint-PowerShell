@@ -1,0 +1,129 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet removes a forest of domain from the list that the People Picker uses when searching for users.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Remove-SPPeoplePickerSearchADDomain -WebApplication <SPWebApplicationPipeBind> -DomainName <String> [-IsForest]
+   [-UserName <String>] [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm]
+   [<CommonParameters>]
+examples:
+- title: '-------------EXAMPLE 1-------------'
+  code: |-
+    Remove-SPPeoplePickerSearchADDomain -WebApplication http://MyOfficeApp1 -DomainName "corp.contoso.com" -IsForest
+  description: |-
+    This example removes forest corp.contoso.com from the People Picker search Active Directory domain list of the Web application MyOfficeApp1.
+  summary: ""
+- title: '-------------EXAMPLE 2-------------'
+  code: |-
+    Remove-SPPeoplePickerSearchADDomain -WebApplication http://MyOfficeApp1 -DomainName "corp.contoso.com" -UserName "contoso\user"
+  description: |-
+    This example removes domain corp.contoso.com from the People Picker search Active Directory domain list of the Web application MyOfficeApp1, with login name contoso\user.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: get-help about_commonparameters
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DomainName
+  isRequired: true
+  description: |+
+    Name of the domain or forest.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: IsForest
+  description: |+
+    Specifies that the name specified by the DomainName parameter is an Active Directory forest.
+    If the IsForest parameter is omitted, the name specified by the DomainName parameter is treated as an Active Directory domain.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserName
+  description: |+
+    The login name of the forest or domain.
+
+    If this is not specified, it will match domains with empty login name.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPWebApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: WebApplication
+  isRequired: true
+  description: |+
+    The Web application to remove the People Picker forest/domain settings from.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Remove-SPPeoplePickerSearchADDomain
+name: Remove-SPPeoplePickerSearchADDomain
+description: |-
+  This Remove-SPPeoplePickerSearchADDomain cmdlet removes a forest or domain with domain name and optional login name from the list of Active Directory domains used by People Picker.
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-sppeoplepickersearchaddomain
+  applicable: SharePoint Server Subscription Edition
+  title: Remove-SPPeoplePickerSearchADDomain
+  PlatyPS schema version: 2.0.0

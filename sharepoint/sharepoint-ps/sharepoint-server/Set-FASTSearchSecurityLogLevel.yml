@@ -1,0 +1,154 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Updates the log level general setting.
+module: SharePointServer
+notes: ""
+links:
+- text: Get-FASTSearchSecurityLogLevel
+  href: Get-FASTSearchSecurityLogLevel.yml
+syntaxes:
+- >-
+  Set-FASTSearchSecurityLogLevel [[-GeneralSetting] <LogLevelSetting>] [-DebugNameSpaceLogLevel <String[]>]
+   [-DefaultLogLevel <String>] [-ErrorNameSpaceLogLevel <String[]>] [-IncludeExceptionStack <Boolean>]
+   [-InfoNameSpaceLogLevel <String[]>] [-WarningNameSpaceLogLevel <String[]>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Set-FASTSearchSecurityLogLevel -DefaultLogLevel debug -IncludeExceptionStack $True
+  description: |-
+    This example sets the default log level to the "Debug" level and enables the setting to include the exception stack in the log.
+  summary: ""
+- title: '---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Set-FASTSearchSecurityLogLevel -WarningNameSpaceLogLevel Microsoft
+  description: |-
+    This example sets the log level setting for the "Microsoft" namespace to the "Warning" level.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: DebugNameSpaceLogLevel
+  description: |+
+    A list of C# namespaces.
+    Any class contained in that namespace logs all messages to the log.
+
+    A class can occur in only one namespace.
+    If you specify the same class in more than one name space log level, the log level that generates the most messages will be set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DefaultLogLevel
+  description: |+
+    Specifies the type of log messages that each class writes to the log, unless the class is contained in a namespace explicitly specified in ErrorLogLevelNameSpaces, WarningLogLevelNameSpaces, InfoLogLevelNameSpaces, and DebugLogLevelNameSpaces.
+
+    Valid values are:
+
+    -- Error
+    -- Warning
+    -- Info
+    -- Debug
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: ErrorNameSpaceLogLevel
+  description: |+
+    A list of C# namespaces.
+    Any class included in the namespace only logs error messages.
+
+    A class can occur in only one namespace.
+    If you specify the same class in more than one namespace log level, the log level that generates the most messages will be set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="LogLevelSetting" data-throw-if-not-resolved="False" />
+  name: GeneralSetting
+  description: |+
+    A LogLevelSetting whose property values are used for the LogLevelSetting being updated.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "9999"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: IncludeExceptionStack
+  description: |+
+    Whether or not to include the exception stack in the log.
+    Set to $True to include the exception stack.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: InfoNameSpaceLogLevel
+  description: |+
+    A list of C# namespaces.
+    Any class contained in that namespace only logs error, warning, and info messages.
+
+    A class can occur in only one namespace.
+    If you specify the same class in more than one namespace log level, the log level that generates the most messages will be set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" /><span>[</span><span>]</span>
+  name: WarningNameSpaceLogLevel
+  description: |+
+    A list of C# namespaces.
+    Any class included in the namespace only logs error and warning messages.
+
+    A class can occur in only one namespace.
+    If you specify the same class in more one than namespace log level, the log level that generates the most messages will be set.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Set-FASTSearchSecurityLogLevel
+name: Set-FASTSearchSecurityLogLevel
+description: |-
+  This cmdlet updates the configuration information for the log level's general setting.
+  The log level controls the type of information that is logged by the security system.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-fastsearchsecurityloglevel
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Set-FASTSearchSecurityLogLevel

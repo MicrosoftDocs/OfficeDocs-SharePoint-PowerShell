@@ -1,0 +1,105 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves one or all search topologies that belong to a given search service application.
+module: sharepoint-server
+notes: ""
+links:
+- text: New-SPEnterpriseSearchTopology
+  href: New-SPEnterpriseSearchTopology.yml
+- text: Set-SPEnterpriseSearchTopology
+  href: Set-SPEnterpriseSearchTopology.yml
+- text: Remove-SPEnterpriseSearchTopology
+  href: Remove-SPEnterpriseSearchTopology.yml
+syntaxes:
+- >-
+  Get-SPEnterpriseSearchTopology [[-Identity] <SearchTopologyPipeBind>]
+   -SearchApplication <SearchServiceApplicationPipeBind> [-Active]
+   [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE 1------------------'
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication
+    Get-SPEnterpriseSearchTopology -SearchApplication $ssa
+  description: |-
+    This example retrieves all search topologies of the search service application referenced by $ssa.
+  summary: ""
+- title: '------------------EXAMPLE 2------------------'
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication
+    Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Active
+  description: |-
+    This example retrieves the active search topology of the search service application referenced by $ssa.
+  summary: ""
+- title: '------------------EXAMPLE 3------------------'
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication
+    Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Identity '10fa59cb-4b32-4fe6-8f8d-065388df201e'
+  description: |-
+    This example retrieves search topology with the identity 10fa59cb-4b32-4fe6-8f8d-065388df201e of the search service application referenced by $ssa.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Active
+  description: |+
+    Specifies that the active search topology should be returned.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SearchTopologyPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: |+
+    Specifies the search topology to retrieve.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SearchServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: SearchApplication
+  isRequired: true
+  description: |+
+    Specifies the search application to which the search topology belongs.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application name (for example, SearchApp1); or an instance of a valid SearchServiceApplication object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Get-SPEnterpriseSearchTopology
+name: Get-SPEnterpriseSearchTopology
+description: |-
+  This cmdlet retrieves a given search topology, the active search topology, or all search topologies that belong to a given search service application.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.Search.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchtopology
+  applicable: SharePoint Server Subscription Edition
+  title: Get-SPEnterpriseSearchTopology
+  PlatyPS schema version: 2.0.0

@@ -1,0 +1,51 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Copies shared application data to existing Web application folders.
+module: sharepoint-server
+notes: |-
+  During a Cummulative Update installation if you face a situation where the full PSConfig cannot run then this cmdlet should be executed on all SharePoint servers to keep the Farm in a supported state.
+syntaxes:
+- Install-SPApplicationContent [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+examples:
+- title: '---------------------EXAMPLE--------------------'
+  code: |-
+    Install-SPApplicationContent
+  description: |-
+    This example copies data to a Web application in the existing folders.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Install-SPApplicationContent
+name: Install-SPApplicationContent
+description: |-
+  The Install-SPApplicationContent cmdlet copies shared application data to existing Web application folders.
+
+  This cmdlet does not take any parameters.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/install-spapplicationcontent
+  applicable: SharePoint Server Subscription Edition
+  title: Install-SPApplicationContent
+  PlatyPS schema version: 2.0.0

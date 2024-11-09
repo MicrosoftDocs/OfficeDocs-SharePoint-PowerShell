@@ -1,0 +1,79 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves a crawled property category.
+module: SharePointServer
+notes: ""
+links:
+- text: Remove-FASTSearchMetadataCategory
+  href: Remove-FASTSearchMetadataCategory.yml
+- text: Set-FASTSearchMetadataCategory
+  href: Set-FASTSearchMetadataCategory.yml
+- text: New-FASTSearchMetadataCategory
+  href: New-FASTSearchMetadataCategory.yml
+syntaxes:
+- Get-FASTSearchMetadataCategory [[-Name] <String>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1-----------------'
+  code: |-
+    Get-FASTSearchMetadataCategory
+  description: |-
+    This example returns all available categories.
+    This is the default behavior if you do not specify any parameters.
+  summary: ""
+- title: '---------------EXAMPLE 2-----------------'
+  code: |-
+    Get-FASTSearchMetadataCategory -Name SharePoint
+  description: |-
+    This example returns one specific category, the "SharePoint" category.
+  summary: ""
+- title: '---------------EXAMPLE 3-----------------'
+  code: |-
+    Get-FASTSearchMetadataCategory -Name m*
+  description: |-
+    This example returns all categories with a name that begins with "m".
+    Matching is case-insensitive.
+  summary: ""
+- title: '---------------EXAMPLE 4-----------------'
+  code: |-
+    $category = Get-FASTSearchMetadataCategory -Name &quot;Enterprise Crawler&quot;
+    $category.GetAllCrawledProperties()|ForEach-Object {$_.Name}
+  description: |-
+    This example returns all crawled properties that are mapped to the category named "Enterprise Crawler".
+    The example first retrieves the category, and then calls the category's GetAllCrawledProperties() function to list its crawled properties.
+    It then iterates over the list of crawled properties and selects the name of each crawled property.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The name of the category to retrieve.
+    If no category is specified, all categories are returned.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: CategoryName, N
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Get-FASTSearchMetadataCategory
+name: Get-FASTSearchMetadataCategory
+description: |-
+  This cmdlet retrieves a category object from the installation.
+  If no name is specified, it retrieves all categories in the system.
+
+  A category contains several crawled properties that are grouped together for setting properties that are common to them all.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-fastsearchmetadatacategory
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Get-FASTSearchMetadataCategory

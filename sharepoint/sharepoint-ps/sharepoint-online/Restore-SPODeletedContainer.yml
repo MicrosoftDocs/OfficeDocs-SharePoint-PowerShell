@@ -1,0 +1,45 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Recovers a deleted Container from the Recycle Bin.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: /powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Get-SPODeletedContainer
+  href: ./Get-SPODeletedContainer.yml
+syntaxes:
+- Restore-SPODeletedContainer [-Identity <ContainerId>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Restore-SPODeletedContainer -Identity b66f5b2e-4cbd-4754-9ad3-8291c2c81ade
+  description: |-
+    Example 1 restores the Container with `ContainerId` `b66f5b2e-4cbd-4754-9ad3-8291c2c81ade` from the Recycle Bin.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  description: "Use this parameter to specify the `ContainerId` of the deleted container to be restored.\r\n \r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Restore-SPODeletedContainer
+name: Restore-SPODeletedContainer
+description: |-
+  The `Restore-SPODeletedContainer` cmdlet recovers a previously deleted File Storage Container from the Recycle Bin. Restored Containers will be retrieved by the [`Get-SPOContainer`](./Get-SPOContainer.yml) cmdlet. You must be at least a SharePoint Online Administrator to run this cmdlet.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/restore-spodeletedcontainer
+  applicable: SharePoint Online
+  title: Restore-SPODeletedContainer
+  PlatyPS schema version: 2.0.0
+  author: cindylay
+  ms.author: cindylay
+  ms.reviewer: ""

@@ -1,0 +1,171 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets properties of a proxy for a User Profile Service application.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Set-SPProfileServiceApplicationProxy [-Identity] <SPServiceApplicationProxyPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-DefaultProxyGroup]
+   [-MySiteHostLocation <SPSitePipeBind>] [-MySiteManagedPath <SPPrefixPipeBind>] [-Name <String>]
+   [-SiteNamingConflictResolution <String>] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '----------------EXAMPLE---------------------'
+  code: |-
+    $proxy = Get-SPServiceApplicationProxy | ? {$_.TypeName -eq 'User Profile Service Application Proxy'}
+    Set-SPProfileServiceApplicationProxy -Identity $proxy -SiteNamingConflictResolution 2
+  description: |-
+    This example sets the User Profile Service Application Proxy to use a site naming conflict resolution to use domain names prefixed to usernames.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: DefaultProxyGroup
+  description: |+
+    Specifies that the User Profile Service application proxy is added to the default proxy group for the local farm.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPServiceApplicationProxyPipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the User Profile Service application proxy to update.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a service application proxy (for example, UserProfileSvcProxy1); or an instance of a valid SPServiceApplicationProxy object.
+
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPSitePipeBind" data-throw-if-not-resolved="False" />
+  name: MySiteHostLocation
+  description: |+
+    Specifies the site collection where the My Site will be created.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or a valid URL, in the form https://server_name; or an instance of a valid SPSite object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPPrefixPipeBind" data-throw-if-not-resolved="False" />
+  name: MySiteManagedPath
+  description: |+
+    Specifies the managed path location of personal sites.
+
+    The type must be a valid URL, in the form https://server_name.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    Specifies the display name for the User Profile Service application.
+    The name that you use must be a unique name of a User Profile Service application in this farm.
+    The name can be a maximum of 128 characters.
+
+    The type must be a name of a valid service application proxy; for example, UserProfileSvcProxy1.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SiteNamingConflictResolution
+  description: |+
+    Specifies the format to use to name personal sites.
+
+    Use one of the following integer values:
+
+    1   Personal site collections are to be based on user names without any conflict resolution.
+    For example, https://portal_site/location/username/
+
+    2   Personal site collections are to be based on user names with conflict resolution by using domain names.
+    For example, .../username/ or .../domain_username/
+
+    3   Personal site collections are to be named by using domain and user name always, to avoid any conflicts.
+    For example, https://portal_site/location/domain_username/
+
+    The default value is 1 (do not resolve conflicts).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPProfileServiceApplicationProxy
+name: Set-SPProfileServiceApplicationProxy
+description: |-
+  The `Set-SPProfileServiceApplicationProxy` cmdlet sets properties of a proxy for a User Profile Service application.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spprofileserviceapplicationproxy
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPProfileServiceApplicationProxy
+  PlatyPS schema version: 2.0.0

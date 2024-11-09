@@ -1,0 +1,131 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns a list of bindings that were created by using New-SPWOPIBinding on the current SharePoint farm where this cmdlet is run.
+module: sharepoint-server
+notes: ""
+links:
+- text: New-SPWOPIBinding
+  href: New-SPWOPIBinding.yml
+- text: Set-SPWOPIBinding
+  href: Set-SPWOPIBinding.yml
+- text: Remove-SPWOPIBinding
+  href: Remove-SPWOPIBinding.yml
+syntaxes:
+- >-
+  Get-SPWOPIBinding [-Action <String>] [-Application <String>] [-AssignmentCollection <SPAssignmentCollection>]
+   [-Extension <String>] [-ProgId <String>] [-Server <String>] [-WOPIZone <String>] [<CommonParameters>]
+examples:
+- title: '--------------EXAMPLE 1-----------------'
+  code: |-
+    Get-SPWOPIBinding -Server "Server.corp.Contoso.com"
+  description: |-
+    This example returns a list of bindings that were created on the current SharePoint farm where this cmdlet is run for the WOPI application "Server.corp.Contoso.com."  The WOPI application may be the server that runs Office Web Apps Server.
+  summary: ""
+- title: '--------------EXAMPLE 2-----------------'
+  code: |-
+    Get-SPWOPIZone | Get-SPWOPIBinding
+  description: |-
+    This example returns a list of bindings that were created on the current SharePoint farm where this cmdlet is run for the zone configured for the WOPI application.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Action
+  description: |+
+    Specifies the action to return bindings for.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Application
+  description: |+
+    Specifies the application to return bindings for.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Extension
+  description: |+
+    Specifies the file name extension to return bindings for.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ProgId
+  description: |+
+    Specifies the programmatic identifier (ProgID) for an application to return bindings for.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Server
+  description: |+
+    Specifies the name of WOPI application (such as a server that runs Office Web Apps Server) to return bindings for.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WOPIZone
+  description: |+
+    Specifies the zone to return bindings for.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Get-SPWOPIBinding
+name: Get-SPWOPIBinding
+description: |-
+  The Get-SPWOPIBinding returns a list of bindings that were created by using New-SPWOPIBinding on the current SharePoint farm where this cmdlet is run.
+  Results include actions, applications, file types and zones that are configured for a WOPI application (such as a server that runs Office Web Apps Server).
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spwopibinding
+  applicable: SharePoint Server Subscription Edition
+  title: Get-SPWOPIBinding
+  PlatyPS schema version: 2.0.0

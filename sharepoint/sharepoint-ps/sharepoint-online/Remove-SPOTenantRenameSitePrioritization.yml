@@ -1,0 +1,55 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Allows removal of the prioritization previously assigned to a site for early execution, as part of [Advanced Tenant Rename](/sharepoint/change-your-sharepoint-domain-name#advanced-tenant-rename-preview).
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Advanced Tenant Rename
+  href: https://aka.ms/advancedtenantrename
+syntaxes:
+- Remove-SPOTenantRenameSitePrioritization -SiteUrl <String> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-SPOTenantRenameSitePrioritization -SiteUrl https://contoso.sharepoint.com/sites/projectx
+  description: |-
+    This example removes the 'projectx' site from the prioritized list of sites within the Advanced Tenant Rename.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SiteUrl
+  isRequired: true
+  description: |+
+    Specifies the full site URL of the site you wish to prioritize. This can be either a OneDrive for Business or SharePoint Online site. Only a site that is currently prioritized can be removed.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPOTenantRenameSitePrioritization
+name: Remove-SPOTenantRenameSitePrioritization
+description: |-
+  This cmdlet can be used to remove priority previously assigned to a site as part of [Advanced Tenant Rename](/sharepoint/change-your-sharepoint-domain-name#advanced-tenant-rename-preview).
+
+  Removing prioritization from a site means that it will be not be queued for initial execution as part of the overall rename operation. The site will still be queued for processing subsequently like any other unprioritized site, and does not get skipped from the rename.
+
+  You must be at least a SharePoint administrator to run the cmdlet.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spotenantrenamesiteprioritization
+  applicable: SharePoint Online
+  title: Remove-SPOTenantRenameSitePrioritization
+  author: AnfraMsft
+  ms.author: anfra
+  ms.reviewer: anushmag
+  manager: anushmag
+  PlatyPS schema version: 2.0.0

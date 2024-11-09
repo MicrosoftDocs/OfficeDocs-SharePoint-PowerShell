@@ -1,0 +1,65 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Validates whether the configured Office 365 hybrid site uses a valid template.
+module: sharepoint-server
+links:
+- text: Get-SPO365LinkSettings
+  href: Get-SPO365LinkSettings.yml
+- text: Set-SPO365LinkSettings
+  href: Set-SPO365LinkSettings.yml
+syntaxes:
+- >-
+  Test-SPO365LinkSettings [-AssignmentCollection <SPAssignmentCollection>] -MySiteHostUrl <Uri>
+   [<CommonParameters>]
+examples:
+- title: '------------EXAMPLE 1-----------'
+  code: |-
+    Test-SPO365LinkSettings -MySiteHostUrl https://contoso-my.sharepoint.com/
+  description: |-
+    This example test a template using the contoso-my.sharepoint site.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Uri" data-throw-if-not-resolved="False" />
+  name: MySiteHostUrl
+  isRequired: true
+  description: |+
+    The root URL for the redirected pages
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Test-SPO365LinkSettings
+name: Test-SPO365LinkSettings
+description: |-
+  Use the **Test-SPO365LinkSettings** cmdlet to validate a templated against a configured Office 365 hybrid site.
+metadata:
+  external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/test-spo365linksettings
+  applicable: SharePoint Server Subscription Edition
+  title: Test-SPO365LinkSettings
+  PlatyPS schema version: 2.0.0

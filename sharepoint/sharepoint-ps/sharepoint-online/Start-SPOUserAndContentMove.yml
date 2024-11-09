@@ -1,0 +1,126 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Starts the ability to move a user closer to their sites.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Get-SPOAppErrors
+  href: Get-SPOAppErrors.yml
+- text: Start-SPOSiteRename
+  href: Start-SPOSiteRename.yml
+- text: Start-SPOUserAndContentMove
+  href: Start-SPOUserAndContentMove.yml
+- text: Stop-SPOUserAndContentMove
+  href: Stop-SPOUserAndContentMove.yml
+- text: Get-SPOUserAndContentMoveState
+  href: Get-SPOUserAndContentMoveState.yml
+syntaxes:
+- >-
+  Start-SPOUserAndContentMove [-UserPrincipalName] <String> [-DestinationDataLocation] <String>
+   [[-PreferredMoveBeginDate] <DateTime>] [[-PreferredMoveEndDate] <DateTime>]
+   [[-Notify] <String>] [[-Reserved] <String>] [-ValidationOnly] [<CommonParameters>]
+examples:
+- title: EXAMPLE 1
+  code: |-
+    Start-SPOUserAndContentMove -UserPrincipalName username@contoso.onmicrosoft.com -DestinationDataLocation EUR
+  description: |-
+    This example moves the user username@contoso.onmicrosoft.com from their current location, to the European location (EUR).
+  summary: ""
+- title: EXAMPLE 2
+  code: |-
+    Start-SPOUserAndContentMove -UserPrincipalName username@contoso.onmicrosoft.com -DestinationDataLocation JPN
+  description: |-
+    This example moves the user username@contoso.onmicrosoft.com from their current location, to the Japanese location (JPN).
+  summary: ""
+- title: EXAMPLE 3
+  code: |-
+    Start-SPOUserAndContentMove -UserPrincipalName username@contoso.onmicrosoft.com -DestinationDataLocation EUR -PreferredMoveBeginDate ((Get-Date).AddHours(1)) -PreferredMoveEndDate ((Get-Date).AddHour(12))
+  description: |-
+    This example moves the user username@contoso.onmicrosoft.com from their current location, to the European location (EUR), with a preferred start move date. Doing so is recommended for administrators who wish to plan their user moves outside business hours and on weekends.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DestinationDataLocation
+  isRequired: true
+  description: |+
+    Defines the destination location where you want to move the user. Note that you may only move a user to their preferred data location. Thus before moving a user, you must change their preferred data location. 
+
+  defaultValue: None
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Notify
+  description: |+
+    Provides an SPO notification that the user is being moved.
+
+  defaultValue: None
+  position: "6"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: PreferredMoveBeginDate
+  description: |+
+    Specifies what is the preferred date and time to begin the move. 
+
+  defaultValue: None
+  position: "3"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: PreferredMoveEndDate
+  description: |+
+    Specifies what is the preferred date and time to stop stop the move. Recommened when administrators are scripting large scale moves that they wish to complete within a timeframe. 
+
+  defaultValue: None
+  position: "4"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserPrincipalName
+  isRequired: true
+  description: |+
+    UserPrincipalName or UPN defined for the specific user on the SPO tenant
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ValidationOnly
+  description: |+
+    Use this parameter to validate if the user is able to be moved. This parameter is recommended for any user move. 
+
+  defaultValue: None
+  position: "8"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Start-SPOUserAndContentMove
+name: Start-SPOUserAndContentMove
+description: |-
+  This cmdlet applies to Multi-Geo tenants and it is designed to move user profiles and their corresponding OneDrive personal sites across geo locations. These cmdlets may only be run by a SharePoint administrator or above, who is connected to the SharePoint administration center of the geo location where the user is currently hosted.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/start-spouserandcontentmove
+  applicable: SharePoint Online
+  title: Start-SPOUserAndContentMove
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

@@ -1,0 +1,101 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Deletes a Microsoft FAST Search Server 2010 for SharePoint search setting group.
+module: SharePointServer
+notes: ""
+links:
+- text: New-FASTSearchSearchSettingGroup
+  href: New-FASTSearchSearchSettingGroup.yml
+- text: Get-FASTSearchSearchSettingGroup
+  href: Get-FASTSearchSearchSettingGroup.yml
+syntaxes:
+- Remove-FASTSearchSearchSettingGroup -Name <String> [-Confirm] [-Force] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Remove-FASTSearchSearchSettingGroup -Name marketinggroup
+  description: |-
+    This example deletes the "marketinggroup" search setting group.
+  summary: ""
+- title: '---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Remove-FASTSearchSearchSettingGroup -Name marketinggroup -Force
+  description: |-
+    This example deletes the "marketinggroup" search setting group without being prompted to confirm the operation.
+  summary: ""
+- title: '---------------EXAMPLE 3----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Remove-FASTSearchSearchSettingGroup -Name marketinggroup -WhatIf
+  description: |-
+    This example describes what would happen if you executed the Remove-FASTSearchSearchSettingGroup cmdlet.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Activates user prompting to confirm the operation.
+    If set, prompting is activated.
+
+    If Confirm is false (-Confirm:$false), you will not be prompted.
+
+    In cases where Confirm is not specified, the cmdlet will prompt if the $ConfirmPreference shell variable is equal to or greater than the ConfirmImpact setting of the cmdlet (HIGH).
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    Overrides any user prompting settings so the user is not asked to confirm the operation.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  isRequired: true
+  description: |+
+    The name of the search setting group to delete.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: get-help about_commonparameters
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Remove-FASTSearchSearchSettingGroup
+name: Remove-FASTSearchSearchSettingGroup
+description: |-
+  This cmdlet deletes a FAST Search Server 2010 for SharePoint search setting group.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-fastsearchsearchsettinggroup
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Remove-FASTSearchSearchSettingGroup

@@ -1,0 +1,85 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Sets the content delivery network (CDN) policies at the tenant level.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Set-SPOTenantCdnPolicy -CdnType <SPOTenantCdnType> -PolicyType <SPOTenantCdnPolicyType> -PolicyValue <String> [<CommonParameters>]
+examples:
+- title: '--------------------EXAMPLE 1---------------------'
+  code: |-
+    Set-SPOTenantCdnPolicy -CdnType Public -PolicyType IncludeFileExtensions -PolicyValue "CSS,EOT,GIF,ICO,JPEG,JPG,JS,MAP,PNG,SVG,TTF,WOFF,BMP"
+  description: |-
+    This example sets a CDN to a public type with a policy value of listed extensions.
+  summary: ""
+- title: '--------------------EXAMPLE 2---------------------'
+  code: |-
+    Set-SPOTenantCdnPolicy -CdnType Public -PolicyType ExcludeRestrictedSiteClassifications -PolicyValue "Confidential,Restricted"
+  description: |-
+    This example sets the ExcludeRestrictedSiteClassifications policy for the selected CdnType to a policy value of listed excluded site classifications.
+  summary: ""
+parameters:
+- type: <xref href="SPOTenantCdnType" data-throw-if-not-resolved="False" />
+  name: CdnType
+  isRequired: true
+  description: |+
+    The CdnType parameter specifies the CDN type. The valid values are Public or Private.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: Public, Private
+- type: <xref href="SPOTenantCdnPolicyType" data-throw-if-not-resolved="False" />
+  name: PolicyType
+  isRequired: true
+  description: |+
+    The PolicyType specifies the type of policy to set.
+
+    Valid values:
+
+    - IncludeFileExtensions
+    - ExcludeRestrictedSiteClassifications
+    - ExcludeIfNoScriptDisabled
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: IncludeFileExtensions, ExcludeRestrictedSiteClassifications, ExcludeIfNoScriptDisabled
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: PolicyValue
+  isRequired: true
+  description: |+
+    A String representing the value of the policy type defined by the PolicyType parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Set-SPOTenantCdnPolicy
+name: Set-SPOTenantCdnPolicy
+description: |-
+  Use this cmdlet to set the content delivery network (CDN) policies at the tenant level.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spotenantcdnpolicy
+  applicable: SharePoint Online
+  title: Set-SPOTenantCdnPolicy
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

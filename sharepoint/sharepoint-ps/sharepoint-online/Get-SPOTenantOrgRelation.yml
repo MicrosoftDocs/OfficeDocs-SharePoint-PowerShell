@@ -1,0 +1,36 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Note: Currently this cmdlet is part of pre-release functionality and may not function in your tenant.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Get-SPOTenantOrgRelation [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-SPOTenantOrgRelation
+  description: |-
+    {{ Add example description here }}
+  summary: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOTenantOrgRelation
+name: Get-SPOTenantOrgRelation
+description: |-
+  {{ Fill in the Description }}
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Get-SPOTenantOrgRelation
+  applicable: SharePoint Online
+  title: Get-SPOTenantOrgRelation
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

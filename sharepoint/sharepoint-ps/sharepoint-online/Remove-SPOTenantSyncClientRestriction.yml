@@ -1,0 +1,42 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Disables the feature for the tenancy.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Remove-SPOTenantSyncClientRestriction [<CommonParameters>]
+examples:
+- title: '-----------------------EXAMPLE-----------------------------'
+  code: |-
+    Remove-SPOTenantSyncClientRestriction
+  description: |-
+    This example returns  the value of False for the TenantRestrictionEnabled property.
+  summary: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPOTenantSyncClientRestriction
+name: Remove-SPOTenantSyncClientRestriction
+description: |-
+  You must be at least a SharePoint administrator to run the cmdlet.
+
+  Requires a valid `Connect-SPOService` context to identify the tenant. For information on how to connect to the tenant, see `Connect-SPOService`.
+
+  The `Remove-SPOTenantSyncClientRestriction` cmdlet disables the feature for tenancy, but does not remove any present domain GUID entries from the safe sender recipient list. After the `Remove-SPOTenantSyncClientRestriction` cmdlet is run it can take up to 24 hours for change to take effect. This parameter will also remove any values set from the GrooveBlockOption parameter for syncing.
+
+  The `Remove-SPOTenantSyncClientRestriction` cmdlet does not have any parameters.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spotenantsyncclientrestriction
+  applicable: SharePoint Online
+  title: Remove-SPOTenantSyncClientRestriction
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

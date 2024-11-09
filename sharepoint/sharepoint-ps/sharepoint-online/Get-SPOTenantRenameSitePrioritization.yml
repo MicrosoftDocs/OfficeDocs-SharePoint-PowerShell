@@ -1,0 +1,56 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns the list of sites that are prioritized for early execution, as part of [Advanced Tenant Rename](/sharepoint/change-your-sharepoint-domain-name#advanced-tenant-rename-preview).
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Advanced Tenant Rename
+  href: https://aka.ms/advancedtenantrename
+syntaxes:
+- Get-SPOTenantRenameSitePrioritization [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Get-SPOTenantRenameSitePrioritization
+  description: |-
+    This example will return the list of sites prioritized for the Advanced Tenant Rename scheduled in the tenant, if one exists.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-SPOTenantRenameSitePrioritization | Measure-Object
+  description: |-
+    This example will return the count of prioritized sites.
+  summary: ""
+- title: Example 3
+  code: |-
+    Get-SPOTenantRenameSitePrioritization | Out-File -FilePath .\sites.txt
+  description: |-
+    This example will download the list of prioritized sites and saves it as file 'sites.txt' in the current directory.
+  summary: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOTenantRenameSitePrioritization
+name: Get-SPOTenantRenameSitePrioritization
+description: |-
+  This cmdlet can be used to view the currently prioritized sites, as part of [Advanced Tenant Rename](/sharepoint/change-your-sharepoint-domain-name#advanced-tenant-rename-preview).
+
+  The output is a list of all site URLs, one per row. If desired, the output can be downloaded using the standard PowerShell Out-File option. If you want just the count of prioritized sites, you can use the standard Measure-Object option.
+
+  You must be at least a SharePoint Online administrator to run the cmdlet.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spotenantrenamesiteprioritization
+  applicable: SharePoint Online
+  title: Get-SPOTenantRenameSitePrioritization
+  author: AnfraMsft
+  ms.author: anfra
+  ms.reviewer: anushmag
+  manager: anushmag
+  PlatyPS schema version: 2.0.0

@@ -1,0 +1,82 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Uninstalls the database used by the Microsoft FAST Search Server 2010 for SharePoint administration services.
+  This cmdlet is primarily called during uninstallation by the FAST Search Server 2010 for SharePoint installer.
+module: SharePointServer
+notes: ""
+links:
+- text: Install-FASTSearchAdminDatabase
+  href: Install-FASTSearchAdminDatabase.yml
+syntaxes:
+- >-
+  Uninstall-FASTSearchAdminDatabase [-DbConnection <String>] [-DbName <String>] [-DbServer <String>]
+   [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)'
+  code: |-
+    Uninstall-FASTSearchAdminDatabase -DbServer=sqlserver.contoso.com
+  description: |-
+    This example uninstalls the FAST Search Server 2010 for SharePoint administration database on the given SQL Server instance.
+    All data will be deleted.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DbConnection
+  description: |+
+    Specifies the database connection string for the FAST Search Server 2010 for SharePoint administration database, in the same format as the ConnectionString property of the System.Data.SqlClient.SqlConnection .NET Framework type.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DbName
+  description: |+
+    Specifies the name of the FAST Search Server 2010 for SharePoint administration database.
+
+    The name only takes effect when used in conjunction with the DbServer parameter, not the DbConnection parameter.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DbServer
+  description: |+
+    Specifies the database server instance that contains the FAST Search Server 2010 for SharePoint administration database
+
+    Only one of the DbServer and DbConnection parameters must be specified.
+    Using DbServer with a value of sqlserver.contoso.com is equivalent to using DbConnection with the value "Data Source=sqlserver.contoso.com;Database=FASTSearchAdminDatabase;integrated Security=True""
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Uninstall-FASTSearchAdminDatabase
+name: Uninstall-FASTSearchAdminDatabase
+description: |-
+  This cmdlet uninstalls the database used by the FAST Search Server 2010 for SharePoint administration services.
+  All data is deleted.
+  This cmdlet is primarily called during uninstallation, by the FAST Search Server 2010 for SharePoint installer.
+
+  The administration database default name is "FASTSearchAdminDatabase" and is located in the Microsoft SQL Server instance specified by the DbServer or DbConnection parameters.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/uninstall-fastsearchadmindatabase
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Uninstall-FASTSearchAdminDatabase

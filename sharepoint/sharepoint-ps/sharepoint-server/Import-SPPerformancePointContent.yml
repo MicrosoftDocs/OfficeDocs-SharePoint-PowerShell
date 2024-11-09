@@ -1,0 +1,132 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Imports a Performance Point Server (PPS) dashboard.
+module: SharePointServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.SharePoint.PowerShell.SPWebPipeBind" data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.SharePoint.PowerShell.SPAssignmentCollection
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Import-SPPerformancePointContent [-AssignmentCollection <SPAssignmentCollection>] -DatasourceMap <Hashtable>
+   -ImportFileUrl <String> -LocationMap <Hashtable> -MasterPageUrl <String> -SiteDestination <SPWebPipeBind>
+   [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    $ContentList = @{"/bi/Dashboard Content" = "/biprod/Dashboard Content"; "/bi/My Projects" = "/biprod/My Projects"}
+    $DatasourceList = @{"/bi/DataConnections/AdventureWorks.ppsdc" = "/myBi/libraries/DataConnections/AdventureWorks_prod.ppsdc"; "/bi/DataConnections/AW 2008 Cubes4.ppsdc" =     "/myBi/libraries/DataConnections/AW 2008 Cubes3.ppsdc"; "/sales/DataConnections/Excel DS.ppsdc" = "/marketing/PPS Data Sources/PDW 2010.ppsdc"}
+    Import-SPPerformancePointContent -ImportFileURL "https://contoso.com/biprod/DocumentLibrary/Dashboard1.cmp" -SiteDestination "https://contoso.com/biprod/" -LocationMap $ContentList -DatasourceMap $DatasourceList -MasterPage "marketing and sales.master"
+  description: |-
+    This example imports a dashboard by using the $Datasourcelist and $ContentList variables.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: DatasourceMap
+  isRequired: true
+  description: |+
+    Maps existing or adds new data sources to destination library.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ImportFileUrl
+  isRequired: true
+  description: |+
+    Path and Name of the CMP file created in the export command.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Hashtable" data-throw-if-not-resolved="False" />
+  name: LocationMap
+  isRequired: true
+  description: |+
+    Maps the locations between source lists and destination lists.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: MasterPageUrl
+  isRequired: true
+  description: |+
+    Specifies which master page to use for imported dashboards.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPWebPipeBind" data-throw-if-not-resolved="False" />
+  name: SiteDestination
+  isRequired: true
+  description: |+
+    Specifies the site to which the dashboard will be deployed. Also used to determine the location of the import Key Performance Indicator (KPI).
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Import-SPPerformancePointContent
+name: Import-SPPerformancePointContent
+description: |-
+  The Import-SPPerformancePointContent imports a PPS dashboard and its dependencies from a CMP file that can then be used to import to another server.
+metadata:
+  external help file: Microsoft.PerformancePoint.Scorecards.BIMonitoringService.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/import-spperformancepointcontent
+  applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: Import-SPPerformancePointContent
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

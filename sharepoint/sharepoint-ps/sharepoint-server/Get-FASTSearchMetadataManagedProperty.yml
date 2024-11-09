@@ -1,0 +1,66 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Retrieves a managed property with the specified name.
+module: SharePointServer
+notes: ""
+links:
+- text: New-FASTSearchMetadataManagedProperty
+  href: New-FASTSearchMetadataManagedProperty.yml
+- text: Set-FASTSearchMetadataManagedProperty
+  href: Set-FASTSearchMetadataManagedProperty.yml
+- text: Remove-FASTSearchMetadataManagedProperty
+  href: Remove-FASTSearchMetadataManagedProperty.yml
+syntaxes:
+- Get-FASTSearchMetadataManagedProperty [[-Name] <String>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1-----------------'
+  code: |-
+    Get-FASTSearchMetadataManagedProperty -name title
+  description: |-
+    This example retrieves a managed property named "title".
+    It returns an object representing the managed property.
+  summary: ""
+- title: '---------------EXAMPLE 2-----------------'
+  code: |-
+    Get-FASTSearchMetadataManagedProperty -name content*
+  description: |-
+    This example returns all managed properties with names starting with "content".
+    It returns a list of managed property objects.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Name
+  description: |+
+    The name of the managed property to retrieve.
+    This option supports wildcards, and the matching is case-insensitive.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ManagedPropertyName, N
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Get-FASTSearchMetadataManagedProperty
+name: Get-FASTSearchMetadataManagedProperty
+description: |-
+  This command retrieves managed properties that match the input parameter.
+  If wildcards are used, the command may return more than one managed property.
+
+  A managed property is a piece of information (such as title, author, etc.) that is stored for each item in the index.
+
+  See Set-FASTSearchMetadataManagedProperty for details about the managed property parameters and how to configure them.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-fastsearchmetadatamanagedproperty
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Get-FASTSearchMetadataManagedProperty

@@ -1,0 +1,53 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  If the farm has Project Server enabled, this cmdlet will disable the Project Server functionality across the farm. All Project Web App sites will be read only and will still contain any data that existed before the license was disabled. New Project Web App sites cannot be created.
+module: SharePointServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.SharePoint.PowerShell.SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Disable-ProjectServerLicense [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Disable-ProjectServerLicense
+  description: |-
+    This example disables Project Server functionality for the entire farm.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.Disable-ProjectServerLicense
+name: Disable-ProjectServerLicense
+description: |-
+  Disables Project Server functionality across the farm.
+metadata:
+  external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/disable-projectserverlicense
+  applicable: SharePoint Server 2016, SharePoint Server 2019
+  title: Disable-ProjectServerLicense
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

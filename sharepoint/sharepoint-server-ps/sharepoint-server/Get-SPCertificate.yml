@@ -1,0 +1,151 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns all certificates that match the specified criteria.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Get-SPCertificate [-DisplayName <String>] [-Thumbprint <String>] [-SerialNumber <String>] [-Store <String>]
+   [-InUse] [-DaysToExpiration <Int32>] [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] [-Confirm]
+   [<CommonParameters>]
+- >-
+  Get-SPCertificate [-Identity] <SPServerCertificatePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+   [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: '------------EXAMPLE 1-----------'
+  code: |-
+    Get-SPCertificate -DisplayName "Team Sites Certificate"
+  description: |-
+    This example gets all certificates in the farm with the display name "Team Sites Certificate".
+  summary: ""
+- title: '------------EXAMPLE 2-----------'
+  code: |-
+    Get-SPCertificate -InUse -DaysToExpiration 30
+  description: |-
+    This example gets all certificates that are in use and will expire within the next 30 days.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: DaysToExpiration
+  description: |+
+    If a positive number, only return certificates that will expire in the number of days from now specified by this parameter.
+    Specify "-1" to only return certificates that have already expired.
+    Specifying "0" will result in no filtering based on expiration date.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DisplayName
+  description: |+
+    The display name of the certificate to find.
+    Use this parameter instead of the Identity parameter if multiple certificates might match this criteria.
+    The Identity parameter can only return a single certificate.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SPServerCertificatePipeBind" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    Specifies the display name, thumbprint, serial number, or GUID of the certificate to find.
+    If multiple certificates match the identity specified, no certificates will be returned.
+    Use the filtering criteria of the optional parameters when multiple certificates would match.
+
+    The type must be a valid display name, in the form "Certificate Display Name", a valid thumbprint, in the form "1234567890ABCDEF1234567890ABCDEF12345678", a valid serial number, in the form "1234567890ABCDEF1234567890ABCDEF", or a valid GUID, in the form "12345678-90ab-cdef-1234-567890abcdef".
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: InUse
+  description: |+
+    Specifies to only return certificates that are directly assigned to SharePoint objects (i.e.
+    currently in use).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SerialNumber
+  description: |+
+    The serial number of the certificate to find, in the form "1234567890ABCDEF1234567890ABCDEF".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Store
+  description: |+
+    Specifies the certificate store to search.
+    If this parameter isn't specified, all certificate stores will be searched.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: EndEntity, Intermediate, Pending, Root
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Thumbprint
+  description: |+
+    The thumbprint of the certificate to find, in the form "1234567890ABCDEF1234567890ABCDEF12345678".
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Get-SPCertificate
+name: Get-SPCertificate
+description: |-
+  The Get-SPCertificate cmdlet returns either a single certificate that matches the Identity parameter, or all the certificates that match the filtering criteria of the optional parameters.
+  If no parameters are specified, all certificates in the farm are returned.
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spcertificate
+  applicable: SharePoint Server Subscription Edition
+  title: Get-SPCertificate
+  PlatyPS schema version: 2.0.0

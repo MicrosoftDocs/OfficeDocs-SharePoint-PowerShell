@@ -1,0 +1,35 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets time duration settings.
+module: sharepoint-server
+notes: ""
+inputs:
+- name: <xref href="Microsoft.SharePoint.PowerShell.SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  Get-SPTranslationThrottlingSetting [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-Farm <SPFarm>]
+   [-WhatIf] [<CommonParameters>]
+examples:
+- title: '------------Example 1 -----------'
+  code: |-
+    Get-SPTranslationThrottlingSetting
+  description: |-
+    This example displays all the time duration and timer jobs for the farm.
+  summary: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Get-SPTranslationThrottlingSetting
+name: Get-SPTranslationThrottlingSetting
+description: |-
+  Use the Get-SPTranslationThrottlingSetting cmdlet to display the time duration for timer jobs.
+metadata:
+  external help file: Microsoft.SharePoint.Translation.dll-Help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-sptranslationthrottlingsetting
+  applicable: SharePoint Server Subscription Edition
+  title: Get-SPTranslationThrottlingSetting
+  PlatyPS schema version: 2.0.0

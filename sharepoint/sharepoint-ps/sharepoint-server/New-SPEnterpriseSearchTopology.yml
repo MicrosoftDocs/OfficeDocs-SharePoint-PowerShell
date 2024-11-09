@@ -1,0 +1,141 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new search topology in the given search service application.
+module: SharePointServer
+notes: ""
+links:
+- text: Get-SPEnterpriseSearchTopology
+  href: Get-SPEnterpriseSearchTopology.yml
+- text: Set-SPEnterpriseSearchTopology
+  href: Set-SPEnterpriseSearchTopology.yml
+- text: Remove-SPEnterpriseSearchTopology
+  href: Remove-SPEnterpriseSearchTopology.yml
+syntaxes:
+- >-
+  New-SPEnterpriseSearchTopology -SearchApplication <SearchServiceApplicationPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-Clone] [-Confirm]
+   [-SearchTopology <SearchTopologyPipeBind>] [-WhatIf] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE 1------------------'
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication
+    New-SPEnterpriseSearchTopology -SearchApplication $ssa
+  description: |-
+    This example creates a new, empty search topology in the search service application referenced by $ssa.
+  summary: ""
+- title: '------------------EXAMPLE 2------------------'
+  code: |-
+    $ssa = Get-SPEnterpriseSearchServiceApplication
+    $topology = Get-SPEnterpriseSearchTopology -SearchApplication $ssa
+    New-SPEnterpriseSearchTopology -SearchApplication $ssa -Clone -SearchTopology $topology
+  description: |-
+    This example creates a new search topology in the search service application referenced by $ssa by cloning the existing topology referenced by $topology.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Clone
+  description: |+
+    Specifies that the new search topology is to be created by cloning an existing search topology.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Specifies that the new search topology is to be created by cloning an existing search topology.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SearchServiceApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: SearchApplication
+  isRequired: true
+  description: |+
+    Specifies the search application to which the search topology will belong.
+
+    The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application name (for example, SearchApp1); or an instance of a valid SearchServiceApplication object.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SearchTopologyPipeBind" data-throw-if-not-resolved="False" />
+  name: SearchTopology
+  description: |+
+    Specifies the existing search topology of which the new topology will be a clone.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.New-SPEnterpriseSearchTopology
+name: New-SPEnterpriseSearchTopology
+description: |-
+  This cmdlet creates a new, inactive search topology in the given search service application.
+  If the Clone switch is used, a cloned topology is created.
+  Otherwise, an empty topology is created.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.Office.Server.Search.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spenterprisesearchtopology
+  applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: New-SPEnterpriseSearchTopology
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

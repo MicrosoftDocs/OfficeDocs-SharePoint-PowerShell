@@ -1,0 +1,96 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Export query logs for a user in an Office 365 tenant.
+
+  > [!NOTE]
+  > Beginning February 2022, we'll be removing the Export-SPOQueryLogs command from SharePoint in Microsoft 365. We encourage users to instead download their Microsoft Search query history logs from the [My Account privacy portal](https://myaccount.microsoft.com/settingsandprivacy/privacy).
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+links:
+- text: Introduction to the SharePoint Online management shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps
+- text: Set up the SharePoint Online Management Shell Windows PowerShell environment
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+syntaxes:
+- Export-SPOQueryLogs [-StartTime <DateTime>] -LoginName <String> -OutputFolder <String> [<CommonParameters>]
+examples:
+- title: '------------ Example 1 --------------------'
+  code: |-
+    Export-SPOQueryLogs -LoginName user1@contoso.sharepoint.com
+  description: |-
+    Example 1 exports the query log for a user who has the e-mail address user1@contoso.sharepoint.com to the two files user1@contoso.sharepoint.com_queries.csv and user1@contoso.sharepoint.com_personalQueries.csv, in the current working folder.
+  summary: ""
+- title: '------------ Example 2 --------------------'
+  code: |-
+    Export-SPOQueryLogs -LoginName user1@contoso.sharepoint.com -StartTime "2018-10-21" -OutputFolder "c:\users\contosoadmin\Documents"
+  description: |-
+    Example 2 exports the query log from the starting time 21. October 2018, for a user who has the e-mail address user1@contoso.sharepoint.com, to the two files user1@contoso.sharepoint.com_queries.csv and user1@contoso.sharepoint.com_personalQueries.csv, in the folder c:\users\contosoadmin\Documents.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: LoginName
+  isRequired: true
+  description: |+
+    Specifies the login name of the user to export.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OutputFolder
+  description: |+
+    Target folder where the CSV file is generated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="DateTime" data-throw-if-not-resolved="False" />
+  name: StartTime
+  description: |+
+    Specifies from which point of time to export the logs from. Use the date format YYYY-MM-DD.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Export-SPOQueryLogs
+name: Export-SPOQueryLogs
+description: |-
+  Export the query logs for a user in an Office 365 tenant. The result of the export is stored in the current working folder or a specified folder, in the two files loginName_queries.csv and loginName_personalQueries.csv.
+
+  The output of the queries.csv will be for example:
+
+  | QueryTime  |  QueryText |
+  | ------------- | ------------- |
+  | 5/31/2018 09:16 | Querytext1  |
+  | 5/31/2018 08:16  | Querytext2  |
+
+  You have to be a tenant admin to run the cmdlet.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+metadata:
+  external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/export-spoquerylogs
+  applicable: SharePoint Online
+  title: Export-SPOQueryLogs
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

@@ -1,0 +1,172 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new SharePoint Online site collection for the current company.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps
+- text: Get-SPOSite
+  href: Get-SPOSite.yml
+- text: Set-SPOSite
+  href: Set-SPOSite.yml
+syntaxes:
+- >-
+  New-SPOSite [-CompatibilityLevel <Int32>] [-LocaleId <UInt32>] [-NoWait] -Owner <String>
+   [-ResourceQuota <Double>] -StorageQuota <Int64> [-Template <String>] [-TimeZoneId <Int32>] [-Title <String>]
+   -Url <UrlCmdletPipeBind> [<CommonParameters>]
+examples:
+- title: '-----------------------EXAMPLE 1-----------------------------'
+  code: |-
+    New-SPOSite -Url https://contoso.sharepoint.com/sites/mynewsite -Owner joe.healy@contoso.com -StorageQuota 1000 -Title "My new site collection"
+  description: |-
+    Example 1 creates a new site collection for the current company with specified site URL, title and owner. The storage quota is set to 1000 megabytes.
+  summary: ""
+- title: '-----------------------EXAMPLE 2-----------------------------'
+  code: |-
+    New-SPOSite -Url https://contoso.sharepoint.com/sites/mynewsite -Owner joe.healy@contoso.com -StorageQuota 1000 -CompatibilityLevel 15 -LocaleID 1033 -ResourceQuota 300 -Template "STS#0" -TimeZoneId 13 -Title "My new site collection"
+  description: |-
+    Example 2 creates a new site collection for the current company with specified site URL, title, owner and template. The storage quota is set to 1000 megabytes and the resource quota is set to 300 megabytes. The template compatibility level is set to 15 which means that the site collection only supports the SharePoint 2013 template. The language is set to English - United States (LocaleID = 1033) and the time zone is set to (GMT-08:00) Pacific Time (US and Canada) (TimeZone = 13).
+  summary: ""
+- title: '-----------------------EXAMPLE 3-----------------------------'
+  code: |-
+    New-SPOSite -Url https://contoso.sharepoint.com/sites/accounting -Owner admin@contoso.com -StorageQuota 100 -NoWait -ResourceQuota 50 -Template STS#0
+  description: |-
+    Example 3 creates a new site collection for the current company with specified site URL, owner and template. The storage quota is set to 100 megabytes and the resource quota is set to 50 megabytes. This cmdlet is executed immediately without delay.
+  summary: ""
+parameters:
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: CompatibilityLevel
+  description: |+
+    This parameter no longer has any effect and only accepts a value of '15'.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="UInt32" data-throw-if-not-resolved="False" />
+  name: LocaleId
+  description: |+
+    Specifies the language of this site collection. For more information, see Locale IDs Assigned by Microsoft (<https://go.microsoft.com/fwlink/p/?LinkId=242911>). The Template and LocaleId parameters must be a valid combination as returned from the `Get-SPOWebTemplate` cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: NoWait
+  description: |+
+    Specifies to continue executing script immediately.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Owner
+  isRequired: true
+  description: |+
+    Specifies the user name of the site collection's primary owner. The owner must be a email-enabled user instead of a security group or an email-enabled security group.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Double" data-throw-if-not-resolved="False" />
+  name: ResourceQuota
+  description: |+
+    Specifies the quota for this site collection in Sandboxed Solutions units. This value must not exceed the company's aggregate available Sandboxed Solutions quota. The default value is 0. For more information, see [Resource Usage Limits on Sandboxed Solutions in SharePoint](https://learn.microsoft.com/previous-versions/office/developer/sharepoint-2010/gg615462(v=office.14)). Note that this parameter is now obsolete and has been deprecated.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Int64" data-throw-if-not-resolved="False" />
+  name: StorageQuota
+  isRequired: true
+  description: |+
+    Specifies the storage quota for this site collection in megabytes. This value must not exceed the company's available quota.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Template
+  description: |+
+    Specifies the site collection template type. Use the `Get-SPOWebTemplate` cmdlet to get the list of valid templates. If no template is specified, one can be added later. The Template and LocaleId parameters must be a valid combination as returned from the `Get-SPOWebTemplate` cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: TimeZoneId
+  description: |+
+    Specifies the time zone of the site collection. For more information, see [RegionalSettings.TimeZones property](/previous-versions/office/sharepoint-csom/jj171282(v=office.15)).
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Title
+  description: |+
+    Specifies the title of the site collection.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="UrlCmdletPipeBind" data-throw-if-not-resolved="False" />
+  name: Url
+  isRequired: true
+  description: |+
+    Specifies the full URL of the new site collection. It must be in a valid managed path in the company's site. For example, for company contoso, valid managed paths are <https://contoso.sharepoint.com/sites> and <https://contoso.sharepoint.com/teams.>
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.New-SPOSite
+name: New-SPOSite
+description: |-
+  The `New-SPOSite` cmdlet creates a new site collection for the current company.
+  However, creating a new SharePoint Online site collection fails if a deleted site with the same URL exists in the Recycle Bin.
+
+  You must be at least a SharePoint Online administrator to run the cmdlet.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832>.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/new-sposite
+  applicable: SharePoint Online
+  title: New-SPOSite
+  PlatyPS schema version: 2.0.0
+  author: trent-green
+  ms.author: trgreen
+  ms.reviewer: ""

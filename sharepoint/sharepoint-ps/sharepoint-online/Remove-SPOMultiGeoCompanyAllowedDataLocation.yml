@@ -1,0 +1,70 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Use this cmdlet to remove a multi geo allowed location.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+links:
+- text: Set-SPOMultiGeoCompanyAllowedDataLocation
+  href: Set-SPOMultiGeoCompanyAllowedDataLocation.yml
+syntaxes:
+- Remove-SPOMultiGeoCompanyAllowedDataLocation [-Location] <string> [-WhatIf] [-Confirm] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-SPOMultiGeoCompanyAllowedDataLocation -Location AUS
+  description: |-
+    Removes AUS (Australia) as an allowed mutli-geo location.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Location
+  isRequired: true
+  description: |+
+    The Preferred Data Location (PDL) to remove.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Displays a message that describes the effect of the command instead of executing the command.
+    For more information, type the following command: `get-help about_commonparameters`
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPOMultiGeoCompanyAllowedDataLocation
+name: Remove-SPOMultiGeoCompanyAllowedDataLocation
+description: |-
+  Removes a specified multi-geo location that was previously allowed by [Set-SPOMultiGeoCompanyAllowedDataLocation](Set-SPOMultiGeoCompanyAllowedDataLocation.yml).
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spomultigeocompanyalloweddatalocation
+  applicable: SharePoint Online
+  title: Remove-SPOMultiGeoCompanyAllowedDataLocation
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

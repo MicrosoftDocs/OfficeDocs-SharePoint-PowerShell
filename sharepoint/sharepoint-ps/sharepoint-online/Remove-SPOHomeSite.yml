@@ -1,0 +1,30 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes the current SharePoint Online Home site setting.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+syntaxes:
+- Remove-SPOHomeSite [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-SPOHomeSite
+  description: |-
+    This example removes the current SharePoint Online Home Site setting.
+  summary: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPOHomeSite
+name: Remove-SPOHomeSite
+description: |-
+  Use this cmdlet to remove the current SharePoint Online Home Site setting.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spohomesite
+  applicable: SharePoint Online
+  title: Remove-SPOHomeSite
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

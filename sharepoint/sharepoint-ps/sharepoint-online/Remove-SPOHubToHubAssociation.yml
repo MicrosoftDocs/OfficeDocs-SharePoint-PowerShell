@@ -1,0 +1,43 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Removes the selected hub site from its parent hub.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+syntaxes:
+- Remove-SPOHubToHubAssociation [-HubSiteId] <SpoHubSitePipeBind> [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    Remove-SPOHubToHubAssociation -HubSiteId 6638bd4c-d88d-447c-9eb2-c84f28ba8b15
+  description: |-
+    This example removes the site with the given id from its parent Hub.
+  summary: ""
+parameters:
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: HubsiteId
+  isRequired: true
+  description: |+
+    Id of the Hub site to be removed from its parent Hub.
+
+  defaultValue: None
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Remove-SPOHubToHubAssociation
+name: Remove-SPOHubToHubAssociation
+description: |-
+  Use this cmdlet to remove the selected hub site from its parent hub.
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spohubtohubassociation
+  applicable: SharePoint Online
+  title: Remove-SPOHubToHubAssociation
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

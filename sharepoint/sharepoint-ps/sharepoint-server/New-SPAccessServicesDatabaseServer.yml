@@ -1,0 +1,311 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Adds a server to host Access Services databases.
+module: SharePointServer
+notes: ""
+inputs:
+- name: <xref href="Microsoft.SharePoint.PowerShell.SPServiceContextPipeBind" data-throw-if-not-resolved="False" />
+  description: |-
+    Microsoft.SharePoint.PowerShell.SPAssignmentCollection
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- >-
+  New-SPAccessServicesDatabaseServer [-ServiceContext] <SPServiceContextPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-AvailableForCreate <Boolean>] [-Confirm]
+   [-DatabaseServerCredentials <PSCredential>] [-DatabaseServerGroupName <String>] -DatabaseServerName <String>
+   [-Encrypt <Boolean>] [-Exclusive <Boolean>] [-SecondaryDatabaseServerName <String>]
+   [-ServerReferenceId <Guid>] [-TrustServerCertificate <Boolean>] [-UserDomain <String>]
+   [-ValidateServer <Boolean>] [-WhatIf] [-LoginType <LoginType>] [-State <DatabaseServerStates>]
+   [-StateOwner <ServerStateOwner>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    New-SPAccessServicesDatabaseServer -ServiceContext https://siteUrl -DatabaseServerName SQLSVR01 -ValidateServer:$true
+  description: |-
+    This example adds the SQL Server named SQLSVR01 as an Access Services database server using the context of the site, https://siteUrl. This also validates SQLSVR01 is capable of hosting Access Services databases.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: AvailableForCreate
+  description: |+
+    Indicates whether or not the SQL Server is available to create Access Services databases on. The default value is true.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Confirm
+  description: |+
+    Prompts you for confirmation before running the cmdlet.
+
+  defaultValue: None
+  position: Named
+  aliases: cf
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="PSCredential" data-throw-if-not-resolved="False" />
+  name: DatabaseServerCredentials
+  description: |+
+    Specifies the credentials used to connect to the SQL Server.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseServerGroupName
+  description: |+
+    Specifies the Access Services database group name. The default value is DEFAULT.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: DatabaseServerName
+  isRequired: true
+  description: |+
+    Specifies the name of the SQL Server to add.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Encrypt
+  description: |+
+    Specifies to use SSL encryption between Access Services and the SQL Server hosting Access Services databases.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: Exclusive
+  description: |+
+    If the SQL Server has AvaliableForCreate set to False, this will update it to True. If the SQL Server Id does not match the database server Id and the server has AvailableForCreate set to True, this will set AvailableForCreate to False.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="LoginType" data-throw-if-not-resolved="False" />
+  name: LoginType
+  description: |+
+    Indicates the login type. Valid values are:
+
+    * ApplicationLogin 
+
+    * LocalDBApplicationLogin 
+
+    * ServerLogin 
+
+    * StorageAccountLogon
+
+    * WindowsAzureServerLogin
+
+    The default value is ServerLogin.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ApplicationLogin, LocalDBApplicationLogin, ServerLogin, StorageAccountLogon, WindowsAzureServerLogin
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: SecondaryDatabaseServerName
+  description: |+
+    Specifies a secondary SQL Server to associate to the new SQL Server. This is used for disaster recovery purposes.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Guid" data-throw-if-not-resolved="False" />
+  name: ServerReferenceId
+  description: |+
+    Provide a specific Server Reference Id. By default, a Server Reference Id is generated automatically when the SQL Server is added.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SPServiceContextPipeBind" data-throw-if-not-resolved="False" />
+  name: ServiceContext
+  isRequired: true
+  description: |+
+    Specifies the service context to retrieve Access Services information from.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "0"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="DatabaseServerStates" data-throw-if-not-resolved="False" />
+  name: State
+  description: |+
+    Indicates the availability of the SQL Server to be added. Valid values are:
+
+    * Active
+
+    * Locked
+
+    * Reserved
+
+    The default value is Active.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: Active, Locked, Reserved
+- type: <xref href="ServerStateOwner" data-throw-if-not-resolved="False" />
+  name: StateOwner
+  description: |+
+    Specifies the state owner. Valid values are:
+
+    * NoOwner
+
+    * TenantMove
+
+    The default value is NoOwner.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: NoOwner, TenantMove
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: TrustServerCertificate
+  description: |+
+    Sets a value that indicates whether the channel will be encrypted while bypassing walking the certificate chain to validate trust.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: UserDomain
+  description: |+
+    Specifies the domain to use for credentials.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: ValidateServer
+  description: |+
+    Validates the SQL Server is in a supported state to host Access Services databases.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: WhatIf
+  description: |+
+    Shows what would happen if the cmdlet runs.
+    The cmdlet is not run.
+
+  defaultValue: None
+  position: Named
+  aliases: wi
+  applicable:
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.New-SPAccessServicesDatabaseServer
+name: New-SPAccessServicesDatabaseServer
+description: |-
+  This cmdlet adds additional Access Services database servers to host Access Services databases.
+metadata:
+  external help file: microsoft.office.access.server.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spaccessservicesdatabaseserver
+  applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: New-SPAccessServicesDatabaseServer
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""

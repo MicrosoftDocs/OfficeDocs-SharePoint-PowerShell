@@ -1,0 +1,102 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Gets complete group expansion information for a user.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  Get-FASTSearchSecurityCompleteGroupExpansion [-Identity] <String> [-User] <String> [-ExtraProperties]
+   [[-XmlFile] <String>] [[-Worker] <WorkerPoolNode>] [<CommonParameters>]
+examples:
+- title: '---------------EXAMPLE 1-----------------'
+  code: |-
+    Get-FASTSearchSecurityCompleteGroupExpansion -Identity ln1 -User user1
+  description: |-
+    This example retrieves complete group expansion information for "user1" in the user store "ln1", showing all equivalent users and groups in all user stores, by finding all parents and processing all aliaser mappings.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: ExtraProperties
+  description: |+
+    If specified, the command gets the extra properties for all principals (user and groups) returned by the resolve.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "3"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Identity
+  isRequired: true
+  description: |+
+    The identity of the user store containing the user to expand.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: User
+  isRequired: true
+  description: |+
+    The user or group identifier to expand.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="WorkerPoolNode" data-throw-if-not-resolved="False" />
+  name: Worker
+  description: |+
+    The optional Worker parameter specifies the WorkerPoolNode object for the security worker that is to handle the request.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "9999"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: XmlFile
+  description: |+
+    The absolute path to an XML file which is accessible and writable from the security manager.
+    If specified, complete expansion information is written as XML to this file.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "4"
+  aliases: ""
+  applicable:
+  - FAST Server for SharePoint 2010
+  parameterValueGroup: ""
+applicable:
+- FAST Server for SharePoint 2010
+uid: SharePointServer.Get-FASTSearchSecurityCompleteGroupExpansion
+name: Get-FASTSearchSecurityCompleteGroupExpansion
+description: |-
+  This cmdlet gets troubleshooting information for group expansions and aliaser processing performed to create the user search security filter.
+
+  The group expansion information contains the user, expanded groups that contain the user (i.e., the user is a member of the group), and all groups that contain other expanded groups.
+
+  The aliaser procession information contains all mapped to users and groups based on the regular expression and XML aliaser mapping definitions.
+
+  For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (https://go.microsoft.com/fwlink/?LinkId=163227).
+metadata:
+  external help file: sharepointserver.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-fastsearchsecuritycompletegroupexpansion
+  applicable: FAST Server for SharePoint 2010
+  PlatyPS schema version: 2.0.0
+  author: techwriter40
+  ms.author: pamgreen
+  ms.reviewer: ""
+  title: Get-FASTSearchSecurityCompleteGroupExpansion

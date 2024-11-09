@@ -1,0 +1,78 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Uploads a new site script package for use either directly or in a site design.
+module: Microsoft.Online.SharePoint.PowerShell
+notes: ""
+inputs:
+- name: <xref href="None" data-throw-if-not-resolved="False" />
+  description: ""
+outputs:
+- name: <xref href="System.Object" data-throw-if-not-resolved="False" />
+  description: ""
+syntaxes:
+- Add-SPOSiteScriptPackage -Title <String> -ContentPath <String> [-Description <String>] [<CommonParameters>]
+examples:
+- title: Example 1
+  code: |-
+    $manifestContent = @'
+    {
+      "$schema": "schema.json",
+      "actions": [
+          {
+            "verb": "importBusinessApps",
+            "listName": "Contoso list",
+            "solutionRelativeFilePath": "solution.zip"
+          }
+      ]
+    }
+    '@;
+    Set-Content "manifest.json" $manifestContent
+    $compress = @{
+      Path = ".\manifest.json", ".\solution.zip"
+      DestinationPath = "c:\scripts\site-script-package.zip"
+    }
+    Compress-Archive @compress
+
+    Add-SPOSiteScriptPackage -Title "Install Contoso flow" -Description "Installs the new Contoso flow in a list" -ContentPath "c:\scripts\site-script-package.zip"
+  description: |-
+    This example adds a site script package as a zip file containing a manifest.json with script actions as exemplified previously, as well as a Dataverse solution zip file with a Power Automate flow definition.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ContentPath
+  isRequired: true
+  description: |+
+    The absolute path to a zip archive file containing the content of the new site script package.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Description
+  description: |+
+    A description of the site script.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: Title
+  isRequired: true
+  description: |+
+    The display name of the site script.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  parameterValueGroup: ""
+uid: Microsoft.Online.SharePoint.PowerShell.Add-SPOSiteScriptPackage
+name: Add-SPOSiteScriptPackage
+description: |-
+  Uploads a new site script package for use either directly or in a site design. The package file must be a zip archive containing all the files necessary for the site script. A file called "manifest.json" with script actions must be present in this zip file.
+metadata:
+  external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: ""
+  PlatyPS schema version: 2.0.0

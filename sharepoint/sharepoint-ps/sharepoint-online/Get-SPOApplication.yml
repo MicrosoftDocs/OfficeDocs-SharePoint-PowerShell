@@ -1,0 +1,68 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Returns a list of SharePoint Embedded applications in the specified tenant.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Get-SPOContainer
+  href: ./Get-SPOContainer.yml
+- text: Set-SPOApplication
+  href: ./Set-SPOApplication.yml
+syntaxes:
+- Get-SPOApplication [[-OwningApplicationId] <OwningApplicationid>] [<CommonParameters>]
+- Get-SPOApplication [[-OwningApplicationId] <OwningApplicationid>] [[-ApplicationId] <ApplicationId>]
+examples:
+- title: Example 1
+  code: |-
+    Get-SPOApplication
+  description: |-
+    Example 1 returns all SharePoint Embedded applications registered in the specified tenant by their `OwningApplicationId` and `OwningApplicationName`.
+  summary: ""
+- title: Example 2
+  code: |-
+    Get-SPOApplication -OwningApplicationId <OwningApplicationId>
+  description: |-
+    Example 2 provides details about the owning application in the specified tenant. It returns Applications, which includes the list of guest application IDs with permissions to the owning application, as well as the SharingCapability settings and the OverrideTenantSharingCapability status
+  summary: ""
+- title: Example 3
+  code: |-
+    Get-SPOApplication -OwningApplicationId <OwningApplicationId> -ApplicationId <ApplicationId>
+  description: |-
+    Example 3 enumerates app-only permissions of the guest application specified in `ApplicationId`.
+  summary: ""
+parameters:
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: ApplicationId
+  description: |+
+    Use this parameter to enumerate app-only permissions of the guest application id with access to the specified owning application.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: OwningApplicationId
+  description: "Use this parameter to get details about applications registered in the specified tenant.\r\n\r\nThe following details are returned:\r\n\r\n- OwningApplicationId\r\n\r\n- OwningApplicationName\r\n\r\n- Applications (by id)\r\n\r\n- SharingCapability\r\n\r\n- OverrideTenantSharingCapability\r\n  \r\n"
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint
+  parameterValueGroup: ""
+applicable:
+- SharePoint
+uid: Microsoft.Online.SharePoint.PowerShell.Get-SPOApplication
+name: Get-SPOApplication
+description: |-
+  The `Get-SPOApplication` cmdlet retrieves and returns SharePoint Embedded applications of all publishers registered in a tenant that match the given criteria. You must be a SharePoint Administrator to run the cmdlet. For permissions and the most current information about Windows PowerShell, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spoapplication
+  applicable: SharePoint
+  title: Get-SPOApplication
+  PlatyPS schema version: 2.0.0
+  author: cindylay
+  ms.author: cindylay
+  ms.reviewer: ""

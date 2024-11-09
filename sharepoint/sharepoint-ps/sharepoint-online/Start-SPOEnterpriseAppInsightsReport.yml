@@ -1,0 +1,71 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  This cmdlet enables administrator to trigger the build of a new enterprise application insights report for the last N days.
+module: Microsoft.Online.SharePoint.PowerShell
+links:
+- text: Getting started with SharePoint Online Management Shell
+  href: /powershell/sharepoint/sharepoint-online/connect-sharepoint-online
+- text: Get-SPOEnterpriseAppInsightsReport
+  href: ./Get-SPOEnterpriseAppInsightsReport.yml
+syntaxes:
+- Start-SPOEnterpriseAppInsightsReport [-ReportPeriodInDays <Int>] [-Force <SwitchParameter>]
+examples:
+- title: '-----------------------EXAMPLE 1-----------------------------'
+  code: |-
+    Start-SPOEnterpriseAppInsightsReport
+  description: |-
+    Example 1 generates the enterprise application insights report for a default duration of 1 day as the parameter `-ReportPeriodInDays` is not provided.
+  summary: ""
+- title: '-----------------------EXAMPLE 2-----------------------------'
+  code: |-
+    Start-SPOEnterpriseAppInsightsReport -ReportPeriodInDays 14
+  description: |-
+    Example 2 generates the enterprise application insights report for a specified duration of 14 days.
+  summary: ""
+parameters:
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: Force
+  description: |+
+    It is an optional parameter which is used to bypass confirmation prompts and execute the command without interruptions.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+- type: <xref href="Int" data-throw-if-not-resolved="False" />
+  name: ReportPeriodInDays
+  description: |+
+    It is an optional parameter, and it specifies the duration of the enterprise application insights report in days. The possible values of ReportPeriodInDays are: 1, 7, 14, 28. If this parameter is not provided, it generates the report for a default duration of 1 day.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Online
+  parameterValueGroup: ""
+applicable:
+- SharePoint Online
+uid: Microsoft.Online.SharePoint.PowerShell.Start-SPOEnterpriseAppInsightsReport
+name: Start-SPOEnterpriseAppInsightsReport
+description: |-
+  After this cmdlet is executed, the enterprise application insights report generation request for the last N days gets queued in the pipeline and the below metadata is displayed with the following properties:
+
+  | Property             | Description                                                 |
+  |:---------------------|:------------------------------------------------------------|
+  | Id                   | The unique Id of the report.                                |
+  | CreatedDateTimeInUtc | The date and time the report creation was triggered in UTC. |
+  | Status               | The status of the report.                                   |
+  | ReportPeriodInDays   | The report duration in days.                                |
+metadata:
+  external help file: sharepointonline.xml
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-online/start-spoenterpriseappinsightsreport
+  applicable: SharePoint Online
+  title: Start-SPOEnterpriseAppInsightsReport
+  PlatyPS schema version: 2.0.0
+  author: sumikumar
+  ms.author: sumikumar
+  ms.reviewer: ""
+  manager: hikakar

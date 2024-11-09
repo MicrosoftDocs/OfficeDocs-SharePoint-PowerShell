@@ -1,0 +1,118 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Creates a new SharePoint Central Administration Web application.
+module: SharePointServer
+notes: ""
+syntaxes:
+- >-
+  New-SPCentralAdministration [[-Port] <Int32>] [[-WindowsAuthProvider] <String>]
+   [-AssignmentCollection <SPAssignmentCollection>] [-SecureSocketsLayer] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE 1-----------------------'
+  code: |-
+    New-SPCentralAdministration -WindowsAuthProvider NTLM -Port 8080
+  description: |-
+    This example creates the Central Administration site at port 8080 on the local farm using NTLM authentication.
+  summary: ""
+- title: '------------------EXAMPLE 2-----------------------'
+  code: |-
+    New-SPCentralAdministration -WindowsAuthProvider Kerberos -Port 443 -SecureSocketsLayer
+  description: |-
+    This example creates the Central Administration site using SSL on port 443 with Kerberos authentication.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: Port
+  description: |+
+    Specifies the port number for Central Administration.
+    If no port is specified, a nonconflicting port number is auto-generated.
+
+    The type must be a valid port number.
+
+    If you specify a port number that has already been assigned, IIS does not start the new site until you change either the port number of the new site or the port number of the old site.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="SwitchParameter" data-throw-if-not-resolved="False" />
+  name: SecureSocketsLayer
+  description: |+
+    Enables Secure Socket Layer (SSL) encryption for the specified port. If you choose to use SSL, you must assign a server certificate to the Central Administration IIS web site by using the IIS administration tools. The Central Administration web application won't be accessible until you do this.
+
+    The default value is False.
+
+    If this parameter is omitted or set to False the Central Administration site will use HTTP for the specified port.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+- type: <xref href="String" data-throw-if-not-resolved="False" />
+  name: WindowsAuthProvider
+  description: |+
+    Specifies the authorization provider for this Web application.
+    If no authentication provider is specified, the default value NTLM is used.
+
+    The type must be one of two values: Kerberos or NTLM.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "2"
+  aliases: ""
+  applicable:
+  - SharePoint Server 2010
+  - SharePoint Server 2013
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server 2010
+- SharePoint Server 2013
+- SharePoint Server 2016
+- SharePoint Server 2019
+uid: SharePointServer.New-SPCentralAdministration
+name: New-SPCentralAdministration
+description: |-
+  The New-SPCentralAdministration cmdlet creates a new Central Administration Web application and starts the central administration service on the local computer.
+  Central Administration is available only on computers where this service runs.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  Module Name: Microsoft.SharePoint.Powershell
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spcentraladministration
+  applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+  title: New-SPCentralAdministration
+  PlatyPS schema version: 2.0.0

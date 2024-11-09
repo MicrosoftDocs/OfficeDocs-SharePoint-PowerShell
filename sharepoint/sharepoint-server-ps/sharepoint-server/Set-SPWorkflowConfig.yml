@@ -1,0 +1,145 @@
+### YamlMime:PowershellCmdlet
+summary: |-
+  Configures the workflow settings for the specified Web application.
+module: sharepoint-server
+notes: ""
+syntaxes:
+- >-
+  Set-SPWorkflowConfig [-SiteCollection] <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>]
+   [-DeclarativeWorkflowsEnabled <Boolean>] [-EmailNoPermissionParticipantsEnabled <Boolean>]
+   [-SendDocumentToExternalParticipants <Boolean>] [-SingleWorkflowEpisodeTimeout <Int32>] [<CommonParameters>]
+- >-
+  Set-SPWorkflowConfig [-WebApplication] <SPWebApplicationPipeBind>
+   [-AssignmentCollection <SPAssignmentCollection>] [-DeclarativeWorkflowsEnabled <Boolean>]
+   [-EmailNoPermissionParticipantsEnabled <Boolean>] [-SendDocumentToExternalParticipants <Boolean>]
+   [-SingleWorkflowEpisodeTimeout <Int32>] [<CommonParameters>]
+examples:
+- title: '------------------EXAMPLE-----------------------'
+  code: |-
+    Set-SPWorkflowConfig -webapplication https://sitename DeclarativeWorkflowsEnabled $true -EmailNoPermissionParticipantsEnabled $true -SendDocumentToExternalParticipants $false
+  description: |-
+    This example sets the workflow settings for the specified Web application to turn on declarative workflows, turn on e-mail to participants who do not have permissions to the site and turn off the functionality to send e-mail messages as attachments to external participants.
+
+    No return values.
+    Use the `Get-SPWorkflowConfig` cmdlet to see values.
+    To set farm-level workflow settings for event-delivery time-out and to postpone threshold and batch size, use `Set-SPFarmConfig`.
+  summary: ""
+parameters:
+- type: <xref href="SPAssignmentCollection" data-throw-if-not-resolved="False" />
+  name: AssignmentCollection
+  description: |+
+    Manages objects for the purpose of proper disposal.
+    Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
+    Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
+    When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+    When the Global parameter is used, all objects are contained in the global store.
+    If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
+  defaultValue: None
+  pipelineInput: true
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: DeclarativeWorkflowsEnabled
+  description: |+
+    Sets whether declarative workflows are allowed to run in the Web application.
+
+    The type must be either 1 for True or 0 for False.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: EmailNoPermissionParticipantsEnabled
+  description: |+
+    Sets whether workflows send task e-mail messages to users who do not have permissions to the site in which the workflows are running.
+
+    The type must be  either 1 for True or 0 for False.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Boolean" data-throw-if-not-resolved="False" />
+  name: SendDocumentToExternalParticipants
+  description: |+
+    Sets whether workflows automatically send a copy of the document as an e-mail attachment to participants who do not have access to the site or who are not in any linked directory other than Active Directory Domain Services (AD DS).
+
+    The type must be either 1 for True or 0 for False.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="Int32" data-throw-if-not-resolved="False" />
+  name: SingleWorkflowEpisodeTimeout
+  description: |+
+    Amount of time in seconds given to the workflow to run.
+
+  defaultValue: None
+  position: Named
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPSitePipeBind" data-throw-if-not-resolved="False" />
+  name: SiteCollection
+  isRequired: true
+  description: |+
+    Specifies the name or URL of the site collection.
+
+    The only other parameter that is used with the SiteCollection parameter is the DeclarativeWorkflowsEnabled parameter.
+    No other parameters are used.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+- type: <xref href="SPWebApplicationPipeBind" data-throw-if-not-resolved="False" />
+  name: WebApplication
+  isRequired: true
+  description: |+
+    Specifies the name or URL of the Web application.
+
+    The type must be a valid name or GUID, in the form WebApplication-1212, or a URL, in the form https://server_name/WebApplication-1212.
+
+  defaultValue: None
+  pipelineInput: true
+  position: "1"
+  aliases: ""
+  applicable:
+  - SharePoint Server Subscription Edition
+  parameterValueGroup: ""
+applicable:
+- SharePoint Server Subscription Edition
+uid: sharepoint-server.Set-SPWorkflowConfig
+name: Set-SPWorkflowConfig
+description: |-
+  This cmdlet contains more than one parameter set.
+  You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
+  For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
+
+  Use the `Set-SPWorkflowConfig` cmdlet to configure the workflow settings for the specified Web application.
+
+  For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+metadata:
+  external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
+  module name: SharePointServer
+  online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spworkflowconfig
+  applicable: SharePoint Server Subscription Edition
+  title: Set-SPWorkflowConfig
+  PlatyPS schema version: 2.0.0
