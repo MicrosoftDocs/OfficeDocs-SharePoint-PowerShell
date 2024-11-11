@@ -17,11 +17,11 @@ Sets the Opt-In Copilot promo status for the tenant.
 
 ## SYNTAX
 ```powershell
-Set-SPOCopilotPromoOptInStatus -IsCopilotPromoStatusEnabled $true
+Set-SPOCopilotPromoOptInStatus -IsCopilotPromoStatusEnabled <boolean>
 ```
 ## DESCRIPTION
 
-This cmdlet sets the Opt-In Copilot promo status for the tenant to `True` or `False`. The user must be a SharePoint Admin to run the cmlets.
+This cmdlet sets the Opt-In Copilot promo status for the tenant to `True` or `False`. 
 
 ## EXAMPLES
 
@@ -49,5 +49,5 @@ Required: True
 Default value: None
 ```
 ## RELATED LINKS
-	- [Get-SPOCopilotPromoOptInStatus](./Get-SPOCopilotPromoOptInStatus.md)
-	- [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
+- [Get-SPOCopilotPromoOptInStatus](./Get-SPOCopilotPromoOptInStatus.md)
+- [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
