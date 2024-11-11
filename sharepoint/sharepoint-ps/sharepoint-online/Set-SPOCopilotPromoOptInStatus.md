@@ -13,47 +13,41 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Retrieves the IsCopilotPromoStatusEnabled ( "true/false" ) state of the Copilot promo opt-in bit and stores the information.
+Sets the Opt-In Copilot promo status for the tenant.
 
 ## SYNTAX
 ```powershell
-Set-SPOCopilotPromoOptInStatus
+Set-SPOCopilotPromoOptInStatus -IsCopilotPromoStatusEnabled $true
 ```
-
-### Parameters:
-
-The following details are returned:
-
-- Copilot promo status set successfully, returns nothing if successful. 
-
-- Copilot promo status set failed, returns an error. 
-
 ## DESCRIPTION
 
-The `Set-SPOCopilotPromoOptInStatus` cmdlet stores the opt-in state. The user must be a SharePoint Admin to run the cmlets.
-
+This cmdlet sets the Opt-In Copilot promo status for the tenant to `True` or `False`. The user must be a SharePoint Admin to run the cmlets.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-Set-SPOCopilotPromoOptInStatusSetSuccessfully -SPOCopilotPromoOptInStatusEnabled true
+Set-SPOCopilotPromoOptInStatusSetSuccessfully -SPOCopilotPromoOptInStatusEnabled $true
 ```
 
-Example 1: No success message returned, can validate by executing Get-SPOCopilotPromoOptInStatus.
-If commandlet fails to execute for Set-CopilotPromoOptInStatus, an error message is shown to user.
+Example 1 sets the Opt-In Copilot promo status for the tenant to `True`.
 
-### Example 2
+### Parameter:
 
-```powershell
-Set-SPOCopilotPromoOptInStatusSetSuccessfully -SPOCopilotPromoOptInStatusDisabled false
+### -IsCopilotPromoStatusEnabled
+
+Use this parameter to set Copilot opt-in promo status. 
+
+```yaml
+Type: boolean
+Parameter Sets: 
+Aliases:
+Applicable: SharePoint Online
+
+Required: True
+Default value: None
 ```
-
-Example 2: Success message shown to user when commandlet executes successfully for Set-CopilotPromoOptInStatus
-If commandlet fails to execute for Set-CopilotPromoOptInStatus, an error message is shown to user.
-
-
 ## RELATED LINKS
-
-Get-SPOCopilotPromoOptInStatus
+	- [Get-SPOCopilotPromoOptInStatus](./Get-SPOCopilotPromoOptInStatus.md)
+	- [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
