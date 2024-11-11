@@ -17,7 +17,8 @@ Sets the Opt-In Copilot promo status for the tenant.
 
 ## SYNTAX
 ```powershell
-Set-SPOCopilotPromoOptInStatus -IsCopilotPromoStatusEnabled <boolean>
+Set-SPOCopilotPromoOptInStatus -IsCopilotPromoStatusEnabled <Boolean>
+
 ```
 ## DESCRIPTION
 
