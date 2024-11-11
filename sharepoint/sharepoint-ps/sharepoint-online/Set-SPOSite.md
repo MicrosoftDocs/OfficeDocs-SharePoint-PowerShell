@@ -62,7 +62,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-DefaultShareLinkRole <SharingRole>]
  [-HidePeoplePreviewingFiles <Boolean>]
  [-HidePeopleWhoHaveListsOpen <Boolean>]
- [-
+ [-AddRestrictedAccessControlGroups <GUID>]
  [-
  [-
  [-
