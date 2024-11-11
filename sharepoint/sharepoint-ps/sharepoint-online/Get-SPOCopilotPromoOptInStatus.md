@@ -1,15 +1,15 @@
-# Get-SPOCopilotPromoOptInStatus 
 ---
-- External help file: sharepointonline.xml
-- Module Name: Microsoft.Online.SharePoint.PowerShell
-- Online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Get-SPOCopilotPromoOptInStatus
-- Applicable: SharePoint Online
-- Title: Get-SPOCopilotPromoOptInStatus.md
-- Schema: 
-- Author: swathi.iruvanti
-- Ms.author: siruvanti
-- Ms.reviewer:
+external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Get-SPOCopilotPromoOptInStatus
+applicable: SharePoint Online
+title: Get-SPOCopilotPromoOptInStatus.md
+schema: 
+author: swathi.iruvanti
+ms.author: siruvanti
+ms.reviewer:
 ---
+
 # Get-SPOCopilotPromoOptInStatus
 
 ## SYNOPSIS
@@ -23,7 +23,7 @@ Get-SPOCopilotPromoOptInStatus
 
 ## DESCRIPTION
 
-The `Get-SPOCopilotPromoOptInStatus` This cmdlet returns the Opt-In Copilot promo status for the tenant.
+This cmdlet returns the Opt-In Copilot promo status for the tenant.
 If the promo status is enabled, the return value is `True`, otherwise the return value is `False`.
 
 
@@ -35,13 +35,8 @@ If the promo status is enabled, the return value is `True`, otherwise the return
 Get-SPOCopilotPromoOptInStatusEnabled
 ```
 
-Example 1: returns the value of the Opt-In promo status.
+Example 1 returns the value of the Opt-In promo status.
 
 ## RELATED LINKS
-
 - [Set-SPOCopilotPromoOptInStatus](./Set-SPOCopilotPromoOptInStatus.md)
-
-  
 - [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
-
-
