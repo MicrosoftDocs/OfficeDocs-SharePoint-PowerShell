@@ -26,7 +26,6 @@ Get-SPOCopilotPromoOptInStatus
 This cmdlet returns the Opt-In Copilot promo status for the tenant.
 If the promo status is enabled, the return value is `True`, otherwise the return value is `False`.
 
-
 ## EXAMPLES
 
 ### Example 1
