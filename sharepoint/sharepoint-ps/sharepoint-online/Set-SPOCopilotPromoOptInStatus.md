@@ -41,7 +41,7 @@ Example 1 sets the Opt-In Copilot promo status for the tenant to `True`.
 Use this parameter to set Copilot opt-in promo status. 
 
 ```yaml
-Type: boolean
+Type: Boolean
 Parameter Sets: 
 Aliases:
 Applicable: SharePoint Online
