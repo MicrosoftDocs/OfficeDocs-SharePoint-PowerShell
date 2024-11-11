@@ -5,8 +5,8 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
 title: Get-SPORestrictedAccessForSitesInsights
 schema: 2.0.0
-author: itambakhe
-ms.author: itambakhe
+author: ishwari.tambakhe
+ms.author: ishwari.tambakhe
 ms.reviewer:
 manager:
 ---
