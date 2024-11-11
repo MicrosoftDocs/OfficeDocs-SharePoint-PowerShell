@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
 title: Get-SPOCopilotPromoOptInStatus.md
 schema: 
-author: swathi.iruvanti
+author: siruvanti
 ms.author: siruvanti
 ms.reviewer:
 ---
