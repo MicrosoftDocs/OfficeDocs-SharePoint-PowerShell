@@ -1,20 +1,20 @@
-Get-SPOCopilotPromoOptInStatus 
+# Get-SPOCopilotPromoOptInStatus 
 ---
-external help file: sharepointonline.xml
-Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Get-SPOCopilotPromoOptInStatus
-applicable: SharePoint Online
-title: Get-SPOCopilotPromoOptInStatus.md
-schema: 
-author: swathi.iruvanti
-ms.author: siruvanti
-ms.reviewer:
+- External help file: sharepointonline.xml
+- Module Name: Microsoft.Online.SharePoint.PowerShell
+- Online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Get-SPOCopilotPromoOptInStatus
+- Applicable: SharePoint Online
+- Title: Get-SPOCopilotPromoOptInStatus.md
+- Schema: 
+- Author: swathi.iruvanti
+- Ms.author: siruvanti
+- Ms.reviewer:
 ---
 # Get-SPOCopilotPromoOptInStatus
 
 ## SYNOPSIS
 
-Returns the true or false Opt-In Copilot promo status 
+Returns the Opt-In Copilot promo status for the tenant.
 
 ## SYNTAX
 ```powershell
@@ -23,7 +23,9 @@ Get-SPOCopilotPromoOptInStatus
 
 ## DESCRIPTION
 
-The `Get-SPOCopilotPromoOptInStatus` cmdlet retrieves and returns the opt-in Copilot promo status. The user must be a SharePoint Admin to run the cmlets.
+The `Get-SPOCopilotPromoOptInStatus` This cmdlet returns the Opt-In Copilot promo status for the tenant.
+If the promo status is enabled, the return value is `True`, otherwise the return value is `False`.
+
 
 ## EXAMPLES
 
@@ -31,21 +33,15 @@ The `Get-SPOCopilotPromoOptInStatus` cmdlet retrieves and returns the opt-in Cop
 
 ```powershell
 Get-SPOCopilotPromoOptInStatusEnabled
-true
 ```
 
-Example 1: Success message shown to user when commandlet returns a positive flag from Tenant store
-
-### Example 2
-
-```powershell
-Get-SPOCopilotPromoOptInStatusDisabled
-False
-```
-
-Example 2: Success message shown to user when commandlet returns a negative flag from Tenant store
+Example 1: returns the value of the Opt-In promo status.
 
 ## RELATED LINKS
 
-Set-SPOCopilotPromoOptInStatus
-![image](https://github.com/user-attachments/assets/09e50724-88f0-4e26-8298-085d62c3bdbd)
+- [Set-SPOCopilotPromoOptInStatus](./Set-SPOCopilotPromoOptInStatus.md)
+
+  
+- [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
+
+
