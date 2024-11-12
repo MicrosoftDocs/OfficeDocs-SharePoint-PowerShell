@@ -37,13 +37,42 @@ Set-SPOTenantTempAuthSettings -Remove -Type {Allow | Deny} -AppIds <string> -Fea
 
 Sets the temp auth settings for the tenant.
 
+> [!NOTE]
+> If there are any setting overlaps, the precedence is as follows:
+> 1. DenyList 
+> 2. AllowList
+> 3. IsDisabled
+
+> [!NOTE]
+> If there are setting overlaps within the AllowList or DenyList, the last setting that comes in the list takes precedence.
+
 ## EXAMPLES
 
 ### Example 1
 ```powershell
 Set-SPOTenantTempAuthSettings -IsDisabled $true
+
+Set-SPOTenantTempAuthSettings -Add -Type Allow -AppIds "00000000-0000-0000-0000-000000000000,11111111-1111-1111-1111-111111111111" -Features "All"
 ```
-Example 1 sets disables temp auth for the tenant.
+This example first disables temp auth for the tenant overall. Then adds app ids `00000000-0000-0000-0000-000000000000` and `11111111-1111-1111-1111-111111111111` to the allow list so that both apps can continue using tempAuth for `All` features.
+
+### Example 2
+```powershell
+Set-SPOTenantTempAuthSettings -Remove -Type Allow -AppIds "00000000-0000-0000-0000-000000000000,11111111-1111-1111-1111-111111111111" -Features "All"
+```
+This example removes an existing allow list setting.
+
+### Example 3
+```powershell
+Set-SPOTenantTempAuthSettings -IsDisabled $true
+
+Set-SPOTenantTempAuthSettings -Add -Type Allow -AppIds "00000000-0000-0000-0000-000000000000" -Features "Download"
+
+Set-SPOTenantTempAuthSettings -Add -Type Deny -AppIds "00000000-0000-0000-0000-000000000000,11111111-1111-1111-1111-111111111111" -Features "All"
+```
+This example disables temp auth for the tenant overall and allows the app with id `00000000-0000-0000-0000-000000000000` to continue using temp auth for the `Download` feature. It also denies the use of temp auth for app ids `00000000-0000-0000-0000-000000000000` and `11111111-1111-1111-1111-111111111111` for `All` features.
+
+In this case, app id `00000000-0000-0000-0000-000000000000` is not allowed to use temp auth for the `Download` feature even though that setting has been added to the allow list. This is because the deny list has a setting that explicitly denies the same app from using temp auth for `All` features, which takes precedence over the allow list setting.
 
 ## PARAMETERS
 
@@ -115,12 +144,10 @@ Accept wildcard characters: False
 
 String containing a comma-separated list of app ids for the allow list or deny list setting.
 
-POSSIBLE VALUES:
-| Value | Description |
-|------|------|
-| "All" | Default. The allow or deny list setting will apply to all apps. |
-| "00000000-0000-0000-0000-000000000000,11111111-1111-1111-1111-111111111111" | The allow or deny list setting will apply to only the apps in the list. |
-| "None" | The allow or deny list setting will apply to none of the apps. |
+Possible Values:
+- "All": Default. The allow or deny list setting will apply to all apps.
+- A comma-separated list of app ids (e.g. "00000000-0000-0000-0000-000000000000,11111111-1111-1111-1111-111111111111"): The allow or deny list setting will apply to only the apps in the list.
+- "None": The allow or deny list setting will apply to none of the apps.
 
 ```yaml
 Type: String
@@ -148,47 +175,44 @@ Accept wildcard characters: False
 
 String containing a comma-separated list of features for the allow list or deny list setting.
 
-POSSIBLE VALUES:
-| Value | Description |
-|------|------|
-| "All" | Default. The allow or deny list setting will apply to all features. |
-| "00000000-0000-0000-0000-000000000000,11111111-1111-1111-1111-111111111111" | The allow or deny list setting will apply to only the features in the list. See below for a list of available features. |
+Possible Values:
+- "All": Default. The allow or deny list setting will apply to all features.
+- A comma-separated list of feature names (e.g. "00000000-0000-0000-0000-000000000000,11111111-1111-1111-1111-111111111111"): The allow or deny list setting will apply to only the features in the list. See the list below for all available features.
 
-| Feature Name          |
-|-----------------------|
-| "Whiteboard"          |
-| "S2S"                 |
-| "Exception"           |
-| "Download"            |
-| "WebRendering"        |
-| "WebRenderingEmbed"   |
-| "WebRenderingPreview" |
-| "NonPreAuth"          |
-| "LegacyProofToken"    |
-| "SharePointDataConnector" |
-| "DataFormWebpart"     |
-| "Esign"               |
-| "SharePointConnector" |
-| "WAC"                 |
-| "Video"               |
-| "Sharing"             |
-| "CDN"                 |
-| "Loop"                |
-| "SearchPreview"       |
-| "SyncClient"          |
-| "Monitoring"          |
-| "Stream"              |
-| "MoveCopyJob"         |
-| "PreAuthUrls"         |
-| "UploadSession"       |
-| "Transform"           |
-| "Thumbnail"           |
-| "Embed"               |
-| "VroomContent"        |
-| "S2S-PAC"             |
-| "PAC"                 |
-| "VideoPlayback"       |
-| "AudioTrackUpload"    |
+Feature Names:
+- "Whiteboard"
+- "S2S"
+- "Exception"
+- "Download"
+- "WebRendering"
+- "WebRenderingEmbed"
+- "WebRenderingPreview"
+- "NonPreAuth"
+- "LegacyProofToken"
+- "SharePointDataConnector"
+- "DataFormWebpart"
+- "Esign"
+- "SharePointConnector"
+- "WAC"
+- "Video"
+- "Sharing"
+- "CDN"
+- "Loop"
+- "SearchPreview"
+- "SyncClient"
+- "Monitoring"
+- "Stream"
+- "MoveCopyJob"
+- "PreAuthUrls"
+- "UploadSession"
+- "Transform"
+- "Thumbnail"
+- "Embed"
+- "VroomContent"
+- "S2S-PAC"
+- "PAC"
+- "VideoPlayback"
+- "AudioTrackUpload"
 
 
 ```yaml
