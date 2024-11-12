@@ -3,7 +3,7 @@ external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Set-SPOCopilotPromoOptInStatus
 applicable: SharePoint Online
-title: Set-SPOCopilotPromoOptInStatus.md
+title: Set-SPOCopilotPromoOptInStatus
 schema: 
 author: siruvanti
 ms.author: siruvanti
