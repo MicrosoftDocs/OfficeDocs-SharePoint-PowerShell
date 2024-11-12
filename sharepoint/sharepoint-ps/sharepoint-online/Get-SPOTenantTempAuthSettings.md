@@ -20,7 +20,7 @@ Gets the temp auth settings for the tenant.
 ## SYNTAX
 
 ```powershell
-Get-SPOTenantTempAuthSettings
+Get-SPOTenantTempAuthSettings [<CommonParameters>]
 ```
 
 ## DESCRIPTION
