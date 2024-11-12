@@ -62,6 +62,11 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-DefaultShareLinkRole <SharingRole>]
  [-HidePeoplePreviewingFiles <Boolean>]
  [-HidePeopleWhoHaveListsOpen <Boolean>]
+ [-AddRestrictedAccessControlGroups <Guid>]
+ [-ClearRestrictedAccessControl <Boolean>]
+ [-RestrictedAccessControl <Boolean>]
+ [-RestrictedAccessControlGroups <Guid>]
+ [-RemoveRestrictedAccessControlGroups <Guid>]
  [<CommonParameters>]
 ```
 
@@ -328,6 +333,37 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -AddRestrictedAccessControlGroups
+
+Add the groups that are given access to the site and its content as per the restricted access control policy to the existing list of control groups.
+
+```yaml
+Type: GUID
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClearRestrictedAccessControl
+
+Resets the restricted access control flag to False and clears the list of control groups that were given access to the site and its content as per restricted access control policy.
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 
@@ -475,6 +511,54 @@ Specifies the warning level in megabytes of the site collection to warn the site
 
 ```yaml
 Type: Double
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictedAccessControl
+
+Specifies the flag value for restricted access control policy.
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictedAccessControlGroups
+
+Specifies the groups that are given access to the site and its content as per the restricted access control policy.
+
+```yaml
+Type: GUID
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveRestrictedAccessControlGroups
+
+Removes the specified groups from the list of control groups that are given access to the site and its content as per the restricted access control policy.
+
+```yaml
+Type: GUID
 Parameter Sets: ParamSet1
 Aliases:
 Applicable: SharePoint Online
