@@ -183,6 +183,7 @@ Set-SPOTenant
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>]
  [-WhoCanShareAnonymousAllowList [Guid[]]]
  [-WhoCanShareAuthenticatedGuestAllowList [Guid[]]]
+ [-ExtendPermissionsToUnprotectedFiles <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -2791,8 +2792,6 @@ The valid values are:
 > a. `MajorVersionLimit` accepts values from 1 through 50,000 (inclusive).
 > b. `ExpireVersionsAfterDays` accepts values of 0 to Never Expire or values >= 30 to delete versions that exceed that time period.
 > When version history limits are managed automatically (`EnableAutoExpirationVersionTrim $true`), setting `MajorVersionLimit` or `ExpireVersionsAfterDays` will result in an error as the count limits are set by the service.
->
-> This parameter is currently under public preview.
 
 PARAMVALUE: $true | $false
 
@@ -3620,7 +3619,21 @@ Default value: None
 Accept pipeline input: False 
 Accept wildcard characters: False 
 ``` 
+### -ExtendPermissionsToUnprotectedFiles
+This property can be used to turn on/off the capability called "Extended SharePoint permissions to unprotected files". To learn more about this feature check [here](https://aka.ms/ExtendSharePointPermission)
 
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ## RELATED LINKS
 
 [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
