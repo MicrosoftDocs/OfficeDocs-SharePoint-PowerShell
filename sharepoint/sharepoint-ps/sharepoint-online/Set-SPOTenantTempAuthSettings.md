@@ -37,15 +37,6 @@ Set-SPOTenantTempAuthSettings -Remove -Type {Allow | Deny} -AppIds <string> -Fea
 
 Sets the temp auth settings for the tenant.
 
-> [!NOTE]
-> If there are any setting overlaps, the precedence is as follows:
-> 1. DenyList 
-> 2. AllowList
-> 3. IsDisabled
-
-> [!NOTE]
-> If there are setting overlaps within the AllowList or DenyList, the last setting that comes in the list takes precedence.
-
 ## EXAMPLES
 
 ### Example 1
@@ -54,7 +45,7 @@ Set-SPOTenantTempAuthSettings -IsDisabled $true
 
 Set-SPOTenantTempAuthSettings -Add -Type Allow -AppIds "00000000-0000-0000-0000-000000000000,11111111-1111-1111-1111-111111111111" -Features "All"
 ```
-This example first disables temp auth for the tenant overall. Then adds app ids `00000000-0000-0000-0000-000000000000` and `11111111-1111-1111-1111-111111111111` to the allow list so that both apps can continue using tempAuth for `All` features.
+This example disables temp auth for the tenant overall, and adds app ids `00000000-0000-0000-0000-000000000000` and `11111111-1111-1111-1111-111111111111` to the allow list so that both apps can continue using tempAuth for `All` features.
 
 ### Example 2
 ```powershell
@@ -70,9 +61,30 @@ Set-SPOTenantTempAuthSettings -Add -Type Allow -AppIds "00000000-0000-0000-0000-
 
 Set-SPOTenantTempAuthSettings -Add -Type Deny -AppIds "00000000-0000-0000-0000-000000000000,11111111-1111-1111-1111-111111111111" -Features "All"
 ```
-This example disables temp auth for the tenant overall and allows the app with id `00000000-0000-0000-0000-000000000000` to continue using temp auth for the `Download` feature. It also denies the use of temp auth for app ids `00000000-0000-0000-0000-000000000000` and `11111111-1111-1111-1111-111111111111` for `All` features.
+This example disables temp auth for the tenant overall, allows app id `00000000-0000-0000-0000-000000000000` to continue using temp auth for the `Download` feature, and denies using temp auth for app ids `00000000-0000-0000-0000-000000000000` and `11111111-1111-1111-1111-111111111111` for `All` features.
 
-In this case, app id `00000000-0000-0000-0000-000000000000` is not allowed to use temp auth for the `Download` feature even though that setting has been added to the allow list. This is because the deny list has a setting that explicitly denies the same app from using temp auth for `All` features, which takes precedence over the allow list setting.
+In this case, app id `00000000-0000-0000-0000-000000000000` is not allowed to use temp auth for the `Download` feature even though we have allow listed the app to use the feature. This is because there is also a setting that denies the same app from using temp auth for `All` features, which takes precedence over the allow list setting.
+
+> [!NOTE]
+> The precedence for the settings is as follows:
+> 1. DenyList 
+> 2. AllowList
+> 3. IsDisabled
+
+### Example 4
+```powershell
+Set-SPOTenantTempAuthSettings -IsDisabled $true
+
+Set-SPOTenantTempAuthSettings -Add -Type Allow -AppIds "None" -Features "Download,Embed"
+
+Set-SPOTenantTempAuthSettings -Add -Type Allow -AppIds "11111111-1111-1111-1111-111111111111" -Features "All"
+```
+This example disables temp auth for the tenant overall, but it has overlapping settings in the allow list. First, `None` of the apps are allowed to use temp auth for the `Download` and `Embed` features. Second, the app with id `11111111-1111-1111-1111-111111111111` is allowed to use tempAuth for `All` features. 
+
+In this case, temp auth will still be allowed in both the `Download` and `Embed` scenarios for app id `11111111-1111-1111-1111-111111111111` because the second allow list setting takes precedence over the first allow list setting.
+
+> [!NOTE]
+> If there are overlapping settings within the same AllowList or DenyList, the last setting that comes in the list takes precedence.
 
 ## PARAMETERS
 
