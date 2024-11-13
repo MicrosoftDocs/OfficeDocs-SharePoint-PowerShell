@@ -25,7 +25,7 @@ Get-SPOContainerType
 ```
 ### ParamSet2
 ```powershell
-Get-SPOContainerType [-ContainerTypeId <ContainerTypeId>] 
+Get-SPOContainerType -ContainerTypeId <ContainerTypeId>
 ```
 
 ## DESCRIPTION
