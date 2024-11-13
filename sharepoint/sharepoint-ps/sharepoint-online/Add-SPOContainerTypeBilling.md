@@ -3,7 +3,7 @@ external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version: https://learn.microsoft.com/powershell/module/sharepoint-online/add-spocontainertypebilling
 applicable: SharePoint Online
-title: Get-SPOContainerType
+title: Add-SPOContainerTypeBilling
 schema: 2.0.0
 author: ShreyasSar26
 ms.author: shsaravanan
