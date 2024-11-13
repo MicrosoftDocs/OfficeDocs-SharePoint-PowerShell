@@ -21,7 +21,7 @@ Adds the mentioned billing profile details to a standard container type.
 ### ParamSet1
 
 ```powershell
-Add-SPOContainerTypeBilling [–ContainerTypeId <ContainerTypeId>] [-AzureSubscriptionId <AzureSubscriptionId>] [-ResourceGroup <ResourceGroup>] [-Region <Region>] 
+Add-SPOContainerTypeBilling –ContainerTypeId <ContainerTypeId> -AzureSubscriptionId <AzureSubscriptionId> -ResourceGroup <ResourceGroup> -Region <Region>
 ```
 
 
