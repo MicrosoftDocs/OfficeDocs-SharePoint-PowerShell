@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
 title: Set-SPOTenantTempAuthSettings
 schema: 2.0.0
-author: laurenwong
+author: lw-msft
 ms.author: laurenwong
 ms.reviewer:
 manager: bhaveshd
@@ -24,13 +24,11 @@ Set-SPOTenantTempAuthSettings -IsDisabled <bool>  [<CommonParameters>]
 ```
 
 ```powershell
-Set-SPOTenantTempAuthSettings -Add -Type {Allow | Deny} [-AppIds <string>] [-Features <string>]
-[<CommonParameters>]
+Set-SPOTenantTempAuthSettings -Add -Type {Allow | Deny} [-AppIds <string>] [-Features <string>] [<CommonParameters>]
 ```
 
 ```powershell
-Set-SPOTenantTempAuthSettings -Remove -Type {Allow | Deny} -AppIds <string> -Features <string>
-[<CommonParameters>]
+Set-SPOTenantTempAuthSettings -Remove -Type {Allow | Deny} -AppIds <string> -Features <string> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,13 +43,13 @@ Set-SPOTenantTempAuthSettings -IsDisabled $true
 
 Set-SPOTenantTempAuthSettings -Add -Type Allow -AppIds "00000000-0000-0000-0000-000000000000,11111111-1111-1111-1111-111111111111" -Features "All"
 ```
-This example disables temp auth for the tenant overall, and adds app ids `00000000-0000-0000-0000-000000000000` and `11111111-1111-1111-1111-111111111111` to the allow list so that both apps can continue using tempAuth for `All` features.
+This example disables temp auth for the tenant overall, and adds 2 apps to the allow list so that both apps can continue using tempAuth for all features.
 
 ### Example 2
 ```powershell
 Set-SPOTenantTempAuthSettings -Remove -Type Allow -AppIds "00000000-0000-0000-0000-000000000000,11111111-1111-1111-1111-111111111111" -Features "All"
 ```
-This example removes an existing allow list setting.
+This example removes an existing setting from the allow list.
 
 ### Example 3
 ```powershell
@@ -61,9 +59,9 @@ Set-SPOTenantTempAuthSettings -Add -Type Allow -AppIds "00000000-0000-0000-0000-
 
 Set-SPOTenantTempAuthSettings -Add -Type Deny -AppIds "00000000-0000-0000-0000-000000000000,11111111-1111-1111-1111-111111111111" -Features "All"
 ```
-This example disables temp auth for the tenant overall, allows app id `00000000-0000-0000-0000-000000000000` to continue using temp auth for the `Download` feature, and denies using temp auth for app ids `00000000-0000-0000-0000-000000000000` and `11111111-1111-1111-1111-111111111111` for `All` features.
+This example disables temp auth for the tenant overall, allows app id 00000000-0000-0000-0000-000000000000 to continue using temp auth for the Download feature, and denies apps with ids 00000000-0000-0000-0000-000000000000 and 11111111-1111-1111-1111-111111111111 from using temp auth for all features.
 
-In this case, app id `00000000-0000-0000-0000-000000000000` is not allowed to use temp auth for the `Download` feature even though we have allow listed the app to use the feature. This is because there is also a setting that denies the same app from using temp auth for `All` features, which takes precedence over the allow list setting.
+In this case, the app with id 00000000-0000-0000-0000-000000000000 will not be allowed to use temp auth for the Download feature even though we have already allow listed the app to use the feature. This is because there is also a setting that explicitly denies the same app from using temp auth for all features in the deny list, which takes precedence over the allow list.
 
 > [!NOTE]
 > The precedence for the settings is as follows:
@@ -79,9 +77,9 @@ Set-SPOTenantTempAuthSettings -Add -Type Allow -AppIds "None" -Features "Downloa
 
 Set-SPOTenantTempAuthSettings -Add -Type Allow -AppIds "11111111-1111-1111-1111-111111111111" -Features "All"
 ```
-This example disables temp auth for the tenant overall, but it has overlapping settings in the allow list. First, `None` of the apps are allowed to use temp auth for the `Download` and `Embed` features. Second, the app with id `11111111-1111-1111-1111-111111111111` is allowed to use tempAuth for `All` features. 
+This example disables temp auth for the tenant overall, but it has overlapping settings in the allow list. The first setting says that none of the apps are allowed to use temp auth for the Download and Embed features. The second setting says that the app with id 11111111-1111-1111-1111-111111111111 is allowed to use tempAuth for all features. 
 
-In this case, temp auth will still be allowed in both the `Download` and `Embed` scenarios for app id `11111111-1111-1111-1111-111111111111` because the second allow list setting takes precedence over the first allow list setting.
+In this case, temp auth will still be allowed in the Download and Embed features for the app with id 11111111-1111-1111-1111-111111111111 because the second allow list setting takes precedence over the first allow list setting.
 
 > [!NOTE]
 > If there are overlapping settings within the same AllowList or DenyList, the last setting that comes in the list takes precedence.
@@ -178,7 +176,7 @@ Parameter Sets: RemoveListItem
 Applicable: SharePoint Online
 Required: True
 Position: Named
-Default value: "All"
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -189,7 +187,7 @@ String containing a comma-separated list of features for the allow list or deny 
 
 Possible Values:
 - "All": Default. The allow or deny list setting will apply to all features.
-- A comma-separated list of feature names (e.g. "00000000-0000-0000-0000-000000000000,11111111-1111-1111-1111-111111111111"): The allow or deny list setting will apply to only the features in the list. See the list below for all available features.
+- A comma-separated list of feature names (e.g. "Whiteboard,Download,WAC"): The allow or deny list setting will apply to only the features in the list. See the list below for all available features.
 
 Feature Names:
 - "Whiteboard"
@@ -244,10 +242,13 @@ Parameter Sets: RemoveListItem
 Applicable: SharePoint Online
 Required: True
 Position: Named
-Default value: "All"
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
 
