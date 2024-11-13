@@ -60,6 +60,13 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-OverrideSharingCapability <Boolean>]
  [-DefaultShareLinkScope <SharingScope>]
  [-DefaultShareLinkRole <SharingRole>]
+ [-HidePeoplePreviewingFiles <Boolean>]
+ [-HidePeopleWhoHaveListsOpen <Boolean>]
+ [-AddRestrictedAccessControlGroups <Guid>]
+ [-ClearRestrictedAccessControl <Boolean>]
+ [-RestrictedAccessControl <Boolean>]
+ [-RestrictedAccessControlGroups <Guid>]
+ [-RemoveRestrictedAccessControlGroups <Guid>]
  [<CommonParameters>]
 ```
 
@@ -98,6 +105,11 @@ Set-SPOSite [-Identity] <SpoSitePipeBind>
  [-ApplyToExistingDocumentLibraries]
  [-InheritVersionPolicyFromTenant]
  [<CommonParameters>]
+```
+
+### ClearGroupId
+```powershell
+Set-SPOSite [-Identity] <SpoSitePipeBind> [-ClearGroupId] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -321,6 +333,37 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -AddRestrictedAccessControlGroups
+
+Add the groups that are given access to the site and its content as per the restricted access control policy to the existing list of control groups.
+
+```yaml
+Type: GUID
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClearRestrictedAccessControl
+
+Resets the restricted access control flag to False and clears the list of control groups that were given access to the site and its content as per restricted access control policy.
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 
@@ -468,6 +511,54 @@ Specifies the warning level in megabytes of the site collection to warn the site
 
 ```yaml
 Type: Double
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictedAccessControl
+
+Specifies the flag value for restricted access control policy.
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictedAccessControlGroups
+
+Specifies the groups that are given access to the site and its content as per the restricted access control policy.
+
+```yaml
+Type: GUID
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveRestrictedAccessControlGroups
+
+Removes the specified groups from the list of control groups that are given access to the site and its content as per the restricted access control policy.
+
+```yaml
+Type: GUID
 Parameter Sets: ParamSet1
 Aliases:
 Applicable: SharePoint Online
@@ -1261,8 +1352,6 @@ The valid values are:
 > b. `MajorWithMinorVersionsLimit` accepts values from 0 through 50,000 (inclusive).
 > c. `ExpireVersionsAfterDays` accepts values of 0 to Never Expire or values >= 30 to delete versions that exceed that time period.
 > When version history limits are managed automatically (`EnableAutoExpirationVersionTrim $true`), setting `MajorVersionLimit` or `ExpireVersionsAfterDays` will result in an error as the count limits are set by the service.
->
-> This parameter is currently under public preview.
 
 PARAMVALUE: $true | $false
 
@@ -1435,7 +1524,63 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+
 ```
+### -HidePeoplePreviewingFiles
+
+This setting disables the feature in OneDrive and SharePoint file previewing that displays the presence of other users on the file. It does not affect any experiences outside of the previewer. 
+
+PARAMVALUE: False | True
+
+If set to True, the presence of other users on the file will no longer be displayed.
+
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+
+```
+### -HidePeopleWhoHaveListsOpen
+
+This setting disables the feature in Microsoft Lists that displays the presence of other users on the list and its items when they are viewing.
+
+PARAMVALUE: False | True
+
+If set to True, the presence of other users on the list and its items will no longer be displayed. List presence is enabled by default.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+
+```
+### -ClearGroupId
+This parameter allows you to remove the assigned Microsoft 365 group ID on a site, when the group is permanently deleted.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ClearGroupId
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).

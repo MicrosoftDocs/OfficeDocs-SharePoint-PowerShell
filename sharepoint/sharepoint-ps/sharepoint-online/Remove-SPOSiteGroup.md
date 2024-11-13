@@ -26,7 +26,7 @@ Remove-SPOSiteGroup -Identity <String> -Site <SpoSitePipeBind> [<CommonParameter
 
 Use the `Remove-SPOSiteGroup` cmdlet to remove a group from a site collection by specifying the name of the group in the Identity parameter.
 
-You must be a SharePoint Online administrator or Global Administrator and be a site collection administrator to run the `Remove-SPOSiteGroup` cmdlet.
+You must be at least a SharePoint Online administrator and be a site collection administrator to run the `Remove-SPOSiteGroup` cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 

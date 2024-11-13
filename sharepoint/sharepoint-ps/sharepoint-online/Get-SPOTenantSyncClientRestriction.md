@@ -28,7 +28,7 @@ The `Get-SPOTenantSyncClientRestriction` cmdlet returns whether the TenantRestri
 
 This cmdlet, that does not take any input, also returns the current state of the BlockMacSync and GrooveBlockOption properties.
 
-You must be a SharePoint Online administrator or Global Administrator to run the cmdlet.
+You must be at least a SharePoint Online administrator to run the cmdlet.
 
 Requires a valid `Connect-SPOService` context to identify the tenant. For information on how to connect to the tenant, see `Connect-SPOService`.
 
