@@ -14,43 +14,57 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Returns one or more Containers in a SharePoint Embedded application. 
+Returns one or more containers in a SharePoint Embedded application. 
 
 ## SYNTAX
 
 ### ParamSet1
 
 ```powershell
-Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [<CommonParameters>]
+Get-SPOContainer -Identity <ContainerId>
 ```
 
 ### ParamSet2
+
 ```powershell
-Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [-Paged]
+Get-SPOContainer -OwningApplicationId <OwningApplicationId>
 ```
 
 ### ParamSet3
 ```powershell
-Get-SPOContainer [-OwningApplicationId <OwningApplicationId>] [-Paged] [-PagingToken <Token String>]
+Get-SPOContainer -OwningApplicationId <OwningApplicationId> -Paged
 ```
 
 ### ParamSet4
-
 ```powershell
-Get-SPOContainer [[-Identity] <ContainerId>]
+Get-SPOContainer -OwningApplicationId <OwningApplicationId> -Paged -PagingToken <Token String>
 ```
 
 ### ParamSet5
 
 ```powershell
-Get-SPOContainer [[-Identity] <ContainerSiteURL>]  
+Get-SPOContainer -OwningApplicationId <OwningApplicationId> -SortByStorage <Ascending | Descending>
+```
+
+### ParamSet6
+
+```powershell
+Get-SPOContainer -OwningApplicationId <OwningApplicationId> -SortByStorage <Ascending | Descending>-Paged
+```
+### ParamSet7
+
+```powershell
+Get-SPOContainer -OwningApplicationId <OwningApplicationId> -SortByStorage <Ascending | Descending>-Paged -PagingToken <Token String>
 ```
 
 ## DESCRIPTION
 
-The `Get-SPOContainer` cmdlet retrieves and returns a list of Containers and details of an individual Container created under a SharePoint Embedded application. This command is available only in SharePoint Online Management Shell version 16.0.24211.12000 or higher to run this cmdlet.
+The `Get-SPOContainer` cmdlet retrieves and returns the details of an individual container when paired `Identity` parameter, where the container ID needs to be mentioned. The cmdlet returns the list of containers belonging to a SharePoint Embedded application when paired with the `OwningApplicationId` parameter. 
 
-You must be a SharePoint Online Administrator to run this cmdlet.
+You must be a SharePoint Embedded Administrator to run the cmdlet.
+
+For permissions and the most current information about Windows PowerShell for SharePoint Embedded Containers, see the documentation at [Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
+
 
 > [!NOTE]  
 > Containers in the Recycle Bin will not be retrieved by using the `Get-SPOContainer` cmdlet. 
@@ -62,47 +76,58 @@ You must be a SharePoint Online Administrator to run this cmdlet.
 ### Example 1
 
 ```powershell
-Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 | FT 
+Get-SPOContainer -Identity b66f5b2e-4cbd-4754-9ad3-8291c2c81ade 
 ```
 
-Example 1 returns a tabular list of Containers created under the SharePoint Embedded application with the `OwningApplicationId` of  `423poi45-jikl-9bnm-b302-1234ghy56789`.
-
-To retrieve Containers for the Microsoft Loop app, use OwningApplicationId: `a187e399-0c36-4b98-8f04-1edc167a0996`. 
-
-To retrieve Containers for the Microsoft Designer app, use OwningApplicationId: `5e2795e3-ce8c-4cfb-b302-35fe5cd01597`.
+Example 1 returns the detailed properties of the Container with associated Container ID b66f5b2e-4cbd-4754-9ad3-8291c2c81ade 
 
 ### Example 2
 
 ```powershell
-Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -Identity b66f5b2e-4cbd-4754-9ad3-8291c2c81ade 
+Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 | FT 
 ```
-
-Example 2 returns the detailed properties of the Container with associated `ContainerId`.
+Example 2 returns a tabular list of Containers created under the SharePoint Embedded application with the `OwningApplicationId` of  `423poi45-jikl-9bnm-b302-1234ghy56789`.
 
  
 ### Example 3
 
 ```powershell
-Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -Identity https://contoso.sharepoint.com/storagecontainers/CSP_b66f5b2e-4cbd-4754-9ad3-8291c2c81ade 
+Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -Paged | FT
 ```
-
-Example 3 gives the detailed properties of a Container using the site URL of a Container.
+Example 3 uses the `-Paged` command to retrieve a paging token.
 
 ### Example 4
 
 ```powershell
-Get-SPOContainer -OwningApplicationId <OwningApplicationId> -Identity <ContainerId> -Paged | FT
+Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -Paged -PagingToken <Token String> | FT 
 ```
 
-Example 4 uses the `-Paged` command to retrieve a paging token.
+Example 4 uses the `PagingToken` to view more containers.
 
 ### Example 5
 
 ```powershell
-Get-SPOContainer -OwningApplicationId <OwningApplicationId> -Identity <ContainerId> -Paged -PagingToken <Token String> | FT 
+Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -SortByStorage <Ascending>
 ```
 
-Example 5 uses the `PagingToken` to view more Containers.
+Example 5 displays the containers belonging to the application, sorted in ascending order of storage
+
+### Example 6
+
+```powershell
+Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -SortByStorage <Ascending>-Paged
+```
+
+Example 6 displays the containers belonging to the application, sorted in ascending order of storage
+
+### Example 7
+
+```powershell
+Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -SortByStorage <Ascending>-Paged-PagingToken <Token String>
+```
+
+Example 7 displays the containers belonging to the application, sorted in ascending order of storage
+
 
 ## PARAMETERS
 
@@ -125,7 +150,7 @@ Accept wildcard characters: False
 
 ### -Identity
 
-Use this parameter to specify the Container in the given OwningApplicationId.
+Use this parameter to specify the Container ID of a container.
  
 ```yaml
 Type: String
@@ -142,7 +167,7 @@ Accept wildcard characters: False
 
 ### -Paged
 
-This parameter can be used when there are more than 200 Containers in a given SharePoint repository services application. Using `-Paged` will provide a `<Paging Token>` that will display the next 200 Containers.
+This parameter can be used when there are more than 200 Containers in a given SharePoint Embedded application. Using `-Paged` will provide a `<Paging Token>` that will display the next 200 Containers.
 
 ```yaml
 Type: String
@@ -160,7 +185,7 @@ Accept wildcard characters: False
 
 ### -PagingToken
 
-Use this parameter to provide the `<Paging Token>` provided to view the remaining Containers as shown in Example 5. If there are no more Containers to display, the commandlet output will return the message `End of Containers view.` Otherwise, use the given `<Paging Token>` to retrieve the next batch of up to 200 Containers.
+Use this parameter to provide the `<Paging Token>` provided to view the remaining Containers as shown in Example 4. If there are no more Containers to display, the commandlet output will return the message `End of Containers view.` Otherwise, use the given `<Paging Token>` to retrieve the next batch of up to 200 Containers.
 
 ```yaml
 Type: String
@@ -174,12 +199,20 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -SortByStorage
 
-### CommonParameters
+This parameter can be used when you need to see the list of containers, sorted by storage. 
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+```yaml
+Type: String
+Position: Named
+Default value: None
+Required: False
+Accept pipeline input: False
+Accept wildcard characters: False
+Applies to: SharePoint Online
+```
 
-## NOTES
 
 ## RELATED LINKS
 
