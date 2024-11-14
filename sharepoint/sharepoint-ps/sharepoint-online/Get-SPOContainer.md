@@ -102,7 +102,7 @@ Example 3 uses the `-Paged` command to retrieve a paging token.
 Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -Paged -PagingToken <Token String> | FT 
 ```
 
-Example 4 uses the `PagingToken` to view more containers.
+Example 4 uses the `-PagingToken` parameter along with the `-Paged`parameter to view more containers that were not displayed in Example 3
 
 ### Example 5
 
@@ -118,7 +118,7 @@ Example 5 displays the containers belonging to the application, sorted in ascend
 Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -SortByStorage <Ascending>-Paged
 ```
 
-Example 6 displays the containers belonging to the application, sorted in ascending order of storage
+Example 6 displays a paged view of the the containers belonging to the application, sorted in ascending order of storage
 
 ### Example 7
 
@@ -126,7 +126,7 @@ Example 6 displays the containers belonging to the application, sorted in ascend
 Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -SortByStorage <Ascending>-Paged-PagingToken <Token String>
 ```
 
-Example 7 displays the containers belonging to the application, sorted in ascending order of storage
+Example 7 displays the next list of paged view  of containers belonging to the application, sorted in ascending order of storage
 
 
 ## PARAMETERS
