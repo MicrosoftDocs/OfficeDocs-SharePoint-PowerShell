@@ -30,11 +30,7 @@ Set-SPORestrictedSiteCreation
 
 ## DESCRIPTION
 
-The Set-SPORestrictedSiteCreation cmdlet sets or updates the configuration or setting for the Restricted Site Creation feature.
-
-You must be a SharePoint Online administrator to run the cmdlet.
-
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+This cmdlet sets or updates the configuration or setting for the Restricted Site Creation feature.
 
 > [!Important]
 > You must use version 16.0.25513 (published November 2024) or later of the [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588) for these commands to function properly. Earlier versions do not have the current list of site types and will not operate correctly.
@@ -47,7 +43,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 Set-SPORestrictedSiteCreation –Enabled:$true
 ```
 
-Example 1`enables the restricted site creation feature for the tenant. 
+Example 1 enables the restricted site creation feature for the tenant. 
 
 ### Example 2
 
@@ -75,7 +71,8 @@ Example 4 updates the policy for the `Team` site type to apply to members of the
 ### Example 5
 
 ```powershell
-Set-SPORestrictedSiteCreation –SiteType "OneDrive" -RestrictedSiteCreationGroups "" ```
+Set-SPORestrictedSiteCreation –SiteType "OneDrive" -RestrictedSiteCreationGroups ""
+```
 
 Example 5 clears the policy for the `OneDrive` site type so that it no longer applies to any users.
 
@@ -84,7 +81,7 @@ Example 5 clears the policy for the `OneDrive` site type so that it no longer ap
 ### -Enabled
 
 PARAMVALUE: true | false
-Enables of disabled Restricted Site Creation feature in tenant
+Enables or disables Restricted Site Creation feature in tenant.
 
 ```yaml
 Type: Boolean
@@ -122,7 +119,7 @@ Accept wildcard characters: False
 
 ### -SiteType
 
-When paired with the –RestrictedSiteCreationGroups parameter, creates a new policy which applies to the specified types of sites.
+When paired with the `–RestrictedSiteCreationGroups` parameter, creates a new policy which applies to the specified types of sites.
 
 PARAMVALUE: All | SharePoint | OneDrive | Team | Communication
 •	All - OneDrive and all SharePoint sites 
@@ -146,7 +143,7 @@ Accept wildcard characters: False
 
 ### -RestrictedSiteCreationGroups
 
-A comma-separated list of up to 10 Microsoft Entra security group IDs. When paired with the –SiteType parameter, defines a new policy which applies to the specified groups.
+A comma-separated list of up to 10 Microsoft Entra security group IDs. When paired with the `–SiteType` parameter, defines a new policy which applies to the specified groups.
 Set to the empty string ("") to clear the policy for a site type.
 
 ```yaml
@@ -173,6 +170,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+
+[Getting started with SharePoint Online Management Shell](https://learn.microsoft.com//powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
 
 [Set-SPORestrictedSiteCreation](Set-SPORestrictedSiteCreation.md)
