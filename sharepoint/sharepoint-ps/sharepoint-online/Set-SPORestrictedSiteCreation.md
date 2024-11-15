@@ -7,7 +7,7 @@ title: Set-SPORestrictedSiteCreation
 schema: 2.0.0
 author: vaibhav-gaddam
 ms.author: vgaddam
-ms.reviewer:
+ms.reviewer: jmcdowe
 ---
 
 # Set-SPORestrictedSiteCreation
