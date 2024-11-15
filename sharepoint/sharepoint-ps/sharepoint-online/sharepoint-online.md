@@ -367,7 +367,6 @@ The following cmdlet references are for SharePoint Online.
 
 {{Manually Enter New-SPOSiteFileVersionExpirationReportJob Description Here}}
 
-
 ### [New-SPOSiteGroup](New-SPOSiteGroup.md)
 
 {{Manually Enter New-SPOSiteGroup Description Here}}
@@ -542,7 +541,7 @@ This cmdlet is not currently active in production and may be removed in the futu
 
 ### [Set-SPORestrictedSiteCreation](Set-SPORestrictedSiteCreation.md)
 
-{{Manually Enter Set-SPORestrictedSiteCreation Description Here}}
+{{Sets or updates one or more group configurations for restricting site creation}}
 
 ### [Set-SPOSite](Set-SPOSite.md)
 
