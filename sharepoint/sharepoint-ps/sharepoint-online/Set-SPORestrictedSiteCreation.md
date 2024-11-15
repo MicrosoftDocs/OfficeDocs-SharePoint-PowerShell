@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
 title: Set-SPORestrictedSiteCreation
 schema: 2.0.0
-author: vaibhav-gaddam
+author: vgaddam-pm
 ms.author: vgaddam
 ms.reviewer: jmcdowe
 ---
