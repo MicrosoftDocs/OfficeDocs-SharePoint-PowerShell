@@ -3,6 +3,10 @@ external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version:
 schema: 2.0.0
+author: pvrk
+ms.author: pvrk
+manager: 
+ms.reviewer:
 ---
 
 # Start-SPODataAccessGovernanceInsight
@@ -58,7 +62,7 @@ This command is used to generate reports, in Data Access Governance (DAG) module
 ### Example 1
 
 ```powershell
-PS C:\> Start-SPODataAccessGovernanceInsight -ReportEntity PermissionedUsers -Workload SharePoint -ReportType Snapshot -Name "OversharingBaselineReport" -CountOfUsersMoreThan 1000
+Start-SPODataAccessGovernanceInsight -ReportEntity PermissionedUsers -Workload SharePoint -ReportType Snapshot -Name "OversharingBaselineReport" -CountOfUsersMoreThan 1000
 ```
 
 The above command generates a list of SharePoint sites which can be accessed by more than 1000 users, as of the report generation day.
@@ -245,4 +249,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Data Access Governance reports for SharePoint admins](/sharepoint/data-access-governance-reports)
+[Data Access Governance reports (DAG) for SharePoint admins](/sharepoint/data-access-governance-reports)
+[Site access review for DAG reports](/sharepoint/site-access-review)
+
+[Get-SPODataAccessGovernanceInsight](Get-SPODataAccessGovernanceInsight.md)

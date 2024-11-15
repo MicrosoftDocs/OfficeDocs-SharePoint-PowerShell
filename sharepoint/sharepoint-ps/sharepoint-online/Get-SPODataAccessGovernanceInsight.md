@@ -3,6 +3,10 @@ external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version:
 schema: 2.0.0
+author: pvrk
+ms.author: pvrk
+manager: 
+ms.reviewer:
 ---
 
 # Get-SPODataAccessGovernanceInsight
@@ -33,10 +37,10 @@ Fetch details of various reports available in 'Data Access Governance' module (D
 ### Example 1
 
 ```powershell
-PS C:\> Get-SPODataAccessGovernanceInsight -ReportEntity EveryoneExceptExternalUsersForItems
+Get-SPODataAccessGovernanceInsight -ReportEntity EveryoneExceptExternalUsersForItems
 ```
 
-This command fetches all DAG reports about 'Everyone except external users' attached to a item i.e., file/folder/list. The output consists of important parameters such as Status, ReportID, number of sites in the report and other user provided values during report generation.
+The above command fetches all DAG reports about 'Everyone except external users' attached to a item i.e., file/folder/list. The output consists of important parameters such as Status, ReportID, number of sites in the report and other user provided values during report generation.
 
 ## PARAMETERS
 
@@ -117,6 +121,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Start-SPODataAccessGovernanceInsight](Start-SPODataAccessGovernanceInsight.md)
+[Export-SPODataAccessGovernanceInsight](Export-SPODataAccessGovernanceInsight.md)

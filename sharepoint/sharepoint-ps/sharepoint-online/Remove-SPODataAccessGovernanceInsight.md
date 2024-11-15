@@ -3,6 +3,10 @@ external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version:
 schema: 2.0.0
+author: pvrk
+ms.author: pvrk
+manager: 
+ms.reviewer:
 ---
 
 # Remove-SPODataAccessGovernanceInsight
@@ -26,7 +30,7 @@ This command deletes the DAG report, specified by the given ReportID. The Report
 ### Example 1
 
 ```powershell
-PS C:\> Remove-SPODataAccessGovernanceInsight -ReportID 28f4c550-215a-472b-a123-c11e5fa8804c
+Remove-SPODataAccessGovernanceInsight -ReportID 28f4c550-215a-472b-a123-c11e5fa8804c
 ```
 
 This command deletes the report of the given ID "28f4c550-215a-472b-a123-c11e5fa8804c"
@@ -90,6 +94,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Start-SPODataAccessGovernanceInsight](Start-SPODataAccessGovernanceInsight.md)
+[Export-SPODataAccessGovernanceInsight](Export-SPODataAccessGovernanceInsight.md)

@@ -3,6 +3,10 @@ external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version:
 schema: 2.0.0
+author: pvrk
+ms.author: pvrk
+manager: 
+ms.reviewer:
 ---
 
 # Get-SPOSiteReview
@@ -24,7 +28,7 @@ This command fetches details of a particular access review or a group of access 
 
 ### Example 1
 ```powershell
-PS C:\> Get-SPOSiteReview -ReportEntity PermissionedUsers     
+Get-SPOSiteReview -ReportEntity PermissionedUsers     
 ```
 
 The above command retrieves all site access reviews raised under all permissioned user reports.
@@ -103,6 +107,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
+
 ## NOTES
 
 ## RELATED LINKS
+
+[Start-SPOSiteReview](Start-SPOSiteReview.md)
+
+[Site access review for DAG reports](/sharepoint/site-access-review)
