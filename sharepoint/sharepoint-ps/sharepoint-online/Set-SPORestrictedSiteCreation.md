@@ -3,7 +3,7 @@ external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-sporestrictedsitecreation
 applicable: SharePoint Online
-title: Set-SPOSite
+title: Set-SPORestrictedSiteCreation
 schema: 2.0.0
 author: vaibhav-gaddam
 ms.author: vgaddam
