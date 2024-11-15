@@ -3,8 +3,8 @@ external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version:
 schema: 2.0.0
-author: pvrk
-ms.author: pvrk
+author: pullabhk
+ms.author: pullabhk
 manager: 
 ms.reviewer:
 ---
@@ -12,7 +12,7 @@ ms.reviewer:
 # Get-SPOSiteReview
 
 ## SYNOPSIS
-Track all site access reviews initiated by all SharePoint admins
+Track all site access reviews initiated by all SharePoint administrators in Data Access Governance (DAG) reports.
 
 ## SYNTAX
 
@@ -22,21 +22,21 @@ Get-SPOSiteReview [-SiteReviewID <Guid>] [-Status <SiteReviewStatus>]
 ```
 
 ## DESCRIPTION
-This command fetches details of a particular access review or a group of access reviews as per the filtering criteria.
+This cmdlet fetches details of a particular access review or a group of access reviews as per the filtering criteria.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Get-SPOSiteReview -ReportEntity PermissionedUsers     
+Get-SPOSiteReview -ReportEntity PermissionedUsers
 ```
 
-The above command retrieves all site access reviews raised under all permissioned user reports.
+The above cmdlet retrieves all site access reviews raised under all 'Permissioned user' snapshot reports.
 
 ## PARAMETERS
 
 ### -ReportEntity
-Specifies the 'potential oversharing' scenario that should be captured by the DAG report.
+Specifies the entity that could cause oversharing and hence tracked by these reports. For eg: Sharing links, sharing with Everyone except external users, users with permissions etc.
 
 ```yaml
 Type: SiteAccessReportEntityEnum
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteReviewID
-Specifies the ID of the particular access review
+Specifies the ID of the particular access review.
 
 ```yaml
 Type: Guid
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-Specifies the current status of the site access review
+Specifies the current status of the site access review.
 
 ```yaml
 Type: SiteReviewStatus
@@ -112,6 +112,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Start-SPOSiteReview](Start-SPOSiteReview.md)
-
+[Start-SPOSiteReview](./Start-SPOSiteReview.md)
 [Site access review for DAG reports](/sharepoint/site-access-review)

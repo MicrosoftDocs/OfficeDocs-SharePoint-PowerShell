@@ -3,8 +3,8 @@ external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version:
 schema: 2.0.0
-author: pvrk
-ms.author: pvrk
+author: pullabhk
+ms.author: pullabhk
 manager: 
 ms.reviewer:
 ---
@@ -13,7 +13,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-This command deletes the given DAG report
+This cmdlet deletes the given Data Access Governance (DAG) report.
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ Remove-SPODataAccessGovernanceInsight -ReportID <Guid> [-WhatIf] [-Confirm] [<Co
 
 ## DESCRIPTION
 
-This command deletes the DAG report, specified by the given ReportID. The ReportID is shown in the output of the 'Start-SPODataAccessGovernanceInsight' command. It can also be fetched from the output of the 'Get-SPODataAccessGovernanceInsight' command.
+This command deletes the DAG report, specified by the given `ReportID`. The `ReportID` is shown in the output of the [Start-SPODataAccessGovernanceInsight](./Start-SPODataAccessGovernanceInsight.md) command. It can also be fetched from the output of the [Get-SPODataAccessGovernanceInsight](./Get-SPODataAccessGovernanceInsight.md) command.
 
 ## EXAMPLES
 
@@ -33,7 +33,7 @@ This command deletes the DAG report, specified by the given ReportID. The Report
 Remove-SPODataAccessGovernanceInsight -ReportID 28f4c550-215a-472b-a123-c11e5fa8804c
 ```
 
-This command deletes the report of the given ID "28f4c550-215a-472b-a123-c11e5fa8804c"
+This command deletes the report of the given ID "28f4c550-215a-472b-a123-c11e5fa8804c".
 
 ## PARAMETERS
 
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 
 ### -ReportID
 
-Specifies the ID of the DAG report to be removed/deleted.
+Specifies the ID of the DAG report to be removed or deleted.
 
 ```yaml
 Type: Guid
@@ -99,5 +99,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Start-SPODataAccessGovernanceInsight](Start-SPODataAccessGovernanceInsight.md)
-[Export-SPODataAccessGovernanceInsight](Export-SPODataAccessGovernanceInsight.md)
+[Start-SPODataAccessGovernanceInsight](./Start-SPODataAccessGovernanceInsight.md)
+[Export-SPODataAccessGovernanceInsight](./Export-SPODataAccessGovernanceInsight.md)

@@ -3,8 +3,8 @@ external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version:
 schema: 2.0.0
-author: pvrk
-ms.author: pvrk
+author: pullabhk
+ms.author: pullabhk
 manager: 
 ms.reviewer:
 ---
@@ -13,7 +13,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-This command generates various reports which are meant to provide insights into potential oversharing of sensitive data in SharePoint and/or OneDrive for Business. These insights are powered by Data Access Governance (DAG) module, available in SharePoint Admin Center. SharePoint Advanced Management (SAM) license is required to run this command.
+This cmdlet generates Data Access Governance (DAG) reports meant to provide insights into potential oversharing of sensitive data in SharePoint and/or OneDrive for Business. SharePoint Advanced Management (SAM) license is required to run these reports.
 
 ## SYNTAX
 
@@ -50,7 +50,7 @@ Start-SPODataAccessGovernanceInsight -ReportEntity <ReportEntityEnum> -Workload 
 
 ## DESCRIPTION
 
-This command is used to generate reports, in Data Access Governance (DAG) module, regarding potential oversharing of sensitive data. Reports are currently available for:
+This cmdlet is used to generate Data Access Governance (DAG) reports which deal with potential oversharing of sensitive data. These reports are present in Sharepoint admin center. Reports are currently available for the following scenarios:
 
 - Sharing links created in last 28 days (Anyone, People-in-your-org, Specific people shared externally).
 - Content shared with Everyone except external users (EEEU) in last 28 days.
@@ -65,7 +65,7 @@ This command is used to generate reports, in Data Access Governance (DAG) module
 Start-SPODataAccessGovernanceInsight -ReportEntity PermissionedUsers -Workload SharePoint -ReportType Snapshot -Name "OversharingBaselineReport" -CountOfUsersMoreThan 1000
 ```
 
-The above command generates a list of SharePoint sites which can be accessed by more than 1000 users, as of the report generation day.
+The above cmdlet generates a list of SharePoint sites which can be accessed by more than 1000 users, as of report generation day.
 
 ## PARAMETERS
 
@@ -152,7 +152,7 @@ Accept wildcard characters: False
 
 ### -ReportEntity
 
-Specifies the 'potential oversharing' scenario that should be captured by the DAG report.
+Specifies the entity that could cause oversharing and hence tracked by these reports. For eg: Sharing links, sharing with Everyone except external users, users with permissions etc.
 
 ```yaml
 Type: ReportEntityEnum
@@ -251,5 +251,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Data Access Governance reports (DAG) for SharePoint admins](/sharepoint/data-access-governance-reports)
 [Site access review for DAG reports](/sharepoint/site-access-review)
-
-[Get-SPODataAccessGovernanceInsight](Get-SPODataAccessGovernanceInsight.md)
+[Get-SPODataAccessGovernanceInsight](./Get-SPODataAccessGovernanceInsight.md)

@@ -3,8 +3,8 @@ external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version:
 schema: 2.0.0
-author: pvrk
-ms.author: pvrk
+author: pullabhk
+ms.author: pullabhk
 manager: 
 ms.reviewer:
 ---
@@ -13,7 +13,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-This cmdlet downloads the Data Access Governance (DAG) reports to the current working directory
+This cmdlet downloads the Data Access Governance (DAG) reports to the current working directory.
 
 ## SYNTAX
 
@@ -23,7 +23,7 @@ Export-SPODataAccessGovernanceInsight -ReportID <Guid> [<CommonParameters>]
 
 ## DESCRIPTION
 
-This cmdlet exports or downloads the DAG report, specified by the ReportID, to the current working directory. The ReportID is shown in the output of the 'Start-SPODataAccessGovernanceInsight' command. It can also be fetched from the output of the 'Get-SPODataAccessGovernanceInsight' command.
+This cmdlet exports or downloads the DAG report, specified by the `ReportID`, to the current working directory. The `ReportID` is shown in the output of the [Start-SPODataAccessGovernanceInsight](./Start-SPODataAccessGovernanceInsight.md) command. It can also be fetched from the output of the [Get-SPODataAccessGovernanceInsight](./Get-SPODataAccessGovernanceInsight.md) command.
 
 ## EXAMPLES
 
@@ -33,7 +33,7 @@ This cmdlet exports or downloads the DAG report, specified by the ReportID, to t
 Export-SPODataAccessGovernanceInsight -ReportID 28f4c550-215a-472b-a123-c11e5fa8804c
 ```
 
-The above example downloads the report of the given ID to the current working directory
+The above example downloads the report of the given ID to the current working directory.
 
 ## PARAMETERS
 
@@ -69,5 +69,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPODataAcccessGovernanceInsight](Get-SPODataAccessGovernanceInsight.md)
-[Start-SPODataAccessGovernanceInsight](Start-SPODataAccessGovernanceInsight.md)
+[Get-SPODataAcccessGovernanceInsight](./Get-SPODataAccessGovernanceInsight.md)
+[Start-SPODataAccessGovernanceInsight](./Start-SPODataAccessGovernanceInsight.md)

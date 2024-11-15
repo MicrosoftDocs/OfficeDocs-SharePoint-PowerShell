@@ -3,8 +3,8 @@ external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version:
 schema: 2.0.0
-author: pvrk
-ms.author: pvrk
+author: pullabhk
+ms.author: pullabhk
 manager: 
 ms.reviewer:
 ---
@@ -13,7 +13,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Lists various reports available in 'Data Access Governance' module (DAG) in SharePoint Admin Center.
+Lists various 'Data Access Governance' (DAG) reports in SharePoint admin center.
 
 ## SYNTAX
 
@@ -30,7 +30,7 @@ Get-SPODataAccessGovernanceInsight -ReportID <Guid> [<CommonParameters>]
 
 ## DESCRIPTION
 
-Fetch details of various reports available in 'Data Access Governance' module (DAG) in SharePoint Admin Center
+Fetch details of various Data Access Governance (DAG) reports available in SharePoint admin center.
 
 ## EXAMPLES
 
@@ -40,13 +40,13 @@ Fetch details of various reports available in 'Data Access Governance' module (D
 Get-SPODataAccessGovernanceInsight -ReportEntity EveryoneExceptExternalUsersForItems
 ```
 
-The above command fetches all DAG reports about 'Everyone except external users' attached to a item i.e., file/folder/list. The output consists of important parameters such as Status, ReportID, number of sites in the report and other user provided values during report generation.
+The above cmdlet fetches all DAG reports about 'Everyone except external users' attached to a item i.e., to a file, folder, or list in the last 28 days. The output consists of important parameters such as Status, ReportID, number of sites in the report and other user provided values during report generation.
 
 ## PARAMETERS
 
 ### -ReportEntity
 
-Specifies the 'potential oversharing' scenario as captured by DAG report given during the report creation.
+Specifies the entity that could cause oversharing and hence tracked by these reports. For eg: Sharing links, sharing with Everyone except external users, users with permissions etc.
 
 ```yaml
 Type: ReportEntityEnum
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 
 ### -ReportType
 
-Specifies the time period of data of the reports to be fetched i.e., fetch 'Snapshot' reports or 'RecentActivity' reports
+Specifies the time period of data of the reports to be fetched i.e., fetch 'Snapshot' reports or 'RecentActivity' reports.
 
 ```yaml
 Type: ReportTypeEnum
@@ -126,5 +126,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Start-SPODataAccessGovernanceInsight](Start-SPODataAccessGovernanceInsight.md)
-[Export-SPODataAccessGovernanceInsight](Export-SPODataAccessGovernanceInsight.md)
+[Start-SPODataAccessGovernanceInsight](./Start-SPODataAccessGovernanceInsight.md)
+[Export-SPODataAccessGovernanceInsight](./Export-SPODataAccessGovernanceInsight.md)
