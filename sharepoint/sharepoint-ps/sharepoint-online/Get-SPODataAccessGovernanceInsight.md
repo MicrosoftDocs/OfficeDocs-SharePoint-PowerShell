@@ -1,9 +1,9 @@
 ---
-external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
+external help file: [https://learn.microsoft.com/powershell/module/sharepoint-online/Get-SPODataAccessGovernanceInsight](https://learn.microsoft.com/powershell/module/sharepoint-online/Get-SPODataAccessGovernanceInsight)
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version:
 schema: 2.0.0
-author: pullabhk
+author: pvrk
 ms.author: pullabhk
 manager: 
 ms.reviewer:
@@ -30,7 +30,7 @@ Get-SPODataAccessGovernanceInsight -ReportID <Guid> [<CommonParameters>]
 
 ## DESCRIPTION
 
-Fetch details of various Data Access Governance (DAG) reports available in SharePoint admin center.
+Fetch details of various DAG reports available in SharePoint admin center.
 
 ## EXAMPLES
 
@@ -46,7 +46,7 @@ The above cmdlet fetches all DAG reports about 'Everyone except external users' 
 
 ### -ReportEntity
 
-Specifies the entity that could cause oversharing and hence tracked by these reports. For eg: Sharing links, sharing with Everyone except external users, users with permissions etc.
+Specifies the entity that could cause oversharing and hence tracked by these reports.
 
 ```yaml
 Type: ReportEntityEnum
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 
 ### -ReportType
 
-Specifies the time period of data of the reports to be fetched i.e., fetch 'Snapshot' reports or 'RecentActivity' reports.
+Specifies the time period of data of the reports to be fetched. A 'Snapshot' report will have the latest data as of the report generation time. A 'RecentActivity' report will be based on data in the last 28 days.
 
 ```yaml
 Type: ReportTypeEnum

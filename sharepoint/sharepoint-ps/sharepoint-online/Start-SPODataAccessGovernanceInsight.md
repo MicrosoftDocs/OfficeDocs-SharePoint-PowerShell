@@ -3,7 +3,7 @@ external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version:
 schema: 2.0.0
-author: pullabhk
+author: pvrk
 ms.author: pullabhk
 manager: 
 ms.reviewer:
@@ -18,39 +18,58 @@ This cmdlet generates Data Access Governance (DAG) reports meant to provide insi
 ## SYNTAX
 
 ### EEEUParameterSet
+
 ```
-Start-SPODataAccessGovernanceInsight -ReportEntity <ReportEntityEnum> -Workload <WorkloadEnum>
- -ReportType <ReportTypeEnum> -Name <String>
- [-Template <System.Collections.Generic.List`1[Microsoft.Online.SharePoint.TenantAdministration.TemplateEnum]>]
- [-Privacy <PrivacyEnum>] [-SiteSensitivityLabelGUID <System.Collections.Generic.List`1[System.Guid]>]
- [<CommonParameters>]
+Start-SPODataAccessGovernanceInsight 
+-ReportEntity <ReportEntityEnum> 
+-Workload <WorkloadEnum>
+-ReportType <ReportTypeEnum> 
+-Name <String>
+[-Template <System.Collections.Generic.List`1[Microsoft.Online.SharePoint.TenantAdministration.TemplateEnum]>]
+[-Privacy <PrivacyEnum>]
+[-SiteSensitivityLabelGUID <System.Collections.Generic.List`1[System.Guid]>]
+[<CommonParameters>]
 ```
 
 ### SharingLinkParameterSet
+
 ```
-Start-SPODataAccessGovernanceInsight -ReportEntity <ReportEntityEnum> -Workload <WorkloadEnum>
- -ReportType <ReportTypeEnum> [<CommonParameters>]
+Start-SPODataAccessGovernanceInsight 
+-ReportEntity <ReportEntityEnum> 
+-Workload <WorkloadEnum>
+-ReportType <ReportTypeEnum> [<CommonParameters>]
 ```
 
 ### LabelParameterSet
+
 ```
-Start-SPODataAccessGovernanceInsight -ReportEntity <ReportEntityEnum> -Workload <WorkloadEnum>
- -ReportType <ReportTypeEnum> [-FileSensitivityLabelName <String>] -FileSensitivityLabelGUID <Guid>
- [<CommonParameters>]
+Start-SPODataAccessGovernanceInsight 
+-ReportEntity <ReportEntityEnum>
+-Workload <WorkloadEnum>
+-ReportType <ReportTypeEnum> 
+[-FileSensitivityLabelName <String>] 
+-FileSensitivityLabelGUID <Guid>
+[<CommonParameters>]
 ```
 
 ### SitePermissionsParameterSet
+
 ```
-Start-SPODataAccessGovernanceInsight -ReportEntity <ReportEntityEnum> -Workload <WorkloadEnum>
- -ReportType <ReportTypeEnum> -Name <String>
- [-Template <System.Collections.Generic.List`1[Microsoft.Online.SharePoint.TenantAdministration.TemplateEnum]>]
- [-Privacy <PrivacyEnum>] [-SiteSensitivityLabelGUID <System.Collections.Generic.List`1[System.Guid]>]
- -CountOfUsersMoreThan <Int32> [<CommonParameters>]
+Start-SPODataAccessGovernanceInsight 
+-ReportEntity <ReportEntityEnum> 
+-Workload <WorkloadEnum>
+-ReportType <ReportTypeEnum> 
+-Name <String>
+[-Template <System.Collections.Generic.List`1[Microsoft.Online.SharePoint.TenantAdministration.TemplateEnum]>]
+[-Privacy <PrivacyEnum>] 
+[-SiteSensitivityLabelGUID <System.Collections.Generic.List`1[System.Guid]>]
+-CountOfUsersMoreThan <Int32> 
+[<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-This cmdlet is used to generate Data Access Governance (DAG) reports which deal with potential oversharing of sensitive data. These reports are present in Sharepoint admin center. Reports are currently available for the following scenarios:
+This cmdlet is used to generate DAG reports which deal with potential oversharing of sensitive data. These reports are present in Sharepoint admin center. Reports are currently available for the following scenarios:
 
 - Sharing links created in last 28 days (Anyone, People-in-your-org, Specific people shared externally).
 - Content shared with Everyone except external users (EEEU) in last 28 days.
@@ -152,7 +171,7 @@ Accept wildcard characters: False
 
 ### -ReportEntity
 
-Specifies the entity that could cause oversharing and hence tracked by these reports. For eg: Sharing links, sharing with Everyone except external users, users with permissions etc.
+Specifies the entity that could cause oversharing and hence tracked by these reports.
 
 ```yaml
 Type: ReportEntityEnum
@@ -169,7 +188,7 @@ Accept wildcard characters: False
 
 ### -ReportType
 
-Specifies the time period of data based on which DAG report is generated. A 'Snapshot' report will have the latest data as of the report generation time. A 'RecentActivity' report will be based on data in the last 'X' days.
+Specifies the time period of data based on which DAG report is generated. A 'Snapshot' report will have the latest data as of the report generation time. A 'RecentActivity' report will be based on data in the last 28 days.
 
 ```yaml
 Type: ReportTypeEnum

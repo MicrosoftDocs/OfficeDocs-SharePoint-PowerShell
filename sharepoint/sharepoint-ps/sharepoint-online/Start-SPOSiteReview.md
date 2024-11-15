@@ -3,7 +3,7 @@ external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version:
 schema: 2.0.0
-author: pullabhk
+author: pvrk
 ms.author: pullabhk
 manager: 
 ms.reviewer:
@@ -12,7 +12,7 @@ ms.reviewer:
 # Start-SPOSiteReview
 
 ## SYNOPSIS
-SharePoint administrators can delegate access governance of sites to corresponding site owners through 'site access review'. The 'access review' is under the context of oversharing as specified in the Data Access Governance (DAG) reports. Read all about site access review [here](/sharepoint/site-access-review).
+SharePoint Administrators can delegate access governance of sites to corresponding site owners through 'site access review'. The 'access review' is under the context of oversharing as specified in the Data Access Governance (DAG) reports. Read all about site access review [here](/sharepoint/site-access-review).
 
 ## SYNTAX
 
@@ -21,7 +21,7 @@ Start-SPOSiteReview -ReportID <Guid> -SiteID <Guid> [-Comment <String>] [<Common
 ```
 
 ## DESCRIPTION
-Initiates 'site access review' request to all the site owners under the context of the DAG report. The request is sent via email to all site owners with comments given by SharePoint administrator.
+Initiates 'site access review' request to all the site owners under the context of the DAG report. The request is sent via email to all site owners with comments given by SharePoint Administrator.
 
 ## EXAMPLES
 
@@ -36,7 +36,7 @@ The above cmdlet initiates site access review for the given site as per overshar
 ## PARAMETERS
 
 ### -Comment
-SharePoint administrator to add comments to provide more context to the site owner regarding the purpose of the review.
+SharePoint Administrator to add comments to provide more context to the site owner regarding the purpose of the review.
 
 ```yaml
 Type: String

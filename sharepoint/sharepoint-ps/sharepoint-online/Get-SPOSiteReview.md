@@ -1,9 +1,9 @@
 ﻿---
-external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
+external help file: [https://learn.microsoft.com/powershell/module/sharepoint-online/Get-SPOSiteReview](https://learn.microsoft.com/powershell/module/sharepoint-online/Get-SPOSiteReview)
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version:
 schema: 2.0.0
-author: pullabhk
+author: pvrk
 ms.author: pullabhk
 manager: 
 ms.reviewer:
@@ -36,7 +36,7 @@ The above cmdlet retrieves all site access reviews raised under all 'Permissione
 ## PARAMETERS
 
 ### -ReportEntity
-Specifies the entity that could cause oversharing and hence tracked by these reports. For eg: Sharing links, sharing with Everyone except external users, users with permissions etc.
+Specifies the entity that could cause oversharing and hence tracked by these reports.
 
 ```yaml
 Type: SiteAccessReportEntityEnum
