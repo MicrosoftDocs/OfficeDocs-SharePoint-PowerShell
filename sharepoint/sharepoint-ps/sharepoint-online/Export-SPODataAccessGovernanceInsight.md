@@ -1,5 +1,5 @@
 ---
-external help file: [https://learn.microsoft.com/powershell/module/sharepoint-online/Export-SPODataAccessGovernanceInsight](https://learn.microsoft.com/powershell/module/sharepoint-online/Export-SPODataAccessGovernanceInsight)
+external help file: https://learn.microsoft.com/powershell/module/sharepoint-online/Export-SPODataAccessGovernanceInsight
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version:
 schema: 2.0.0

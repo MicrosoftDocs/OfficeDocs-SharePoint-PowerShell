@@ -1,5 +1,5 @@
 ﻿---
-external help file: [https://learn.microsoft.com/powershell/module/sharepoint-online/Start-SPOSiteReview](https://learn.microsoft.com/powershell/module/sharepoint-online/Start-SPOSiteReview)
+external help file: https://learn.microsoft.com/powershell/module/sharepoint-online/Start-SPOSiteReview
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version:
 schema: 2.0.0

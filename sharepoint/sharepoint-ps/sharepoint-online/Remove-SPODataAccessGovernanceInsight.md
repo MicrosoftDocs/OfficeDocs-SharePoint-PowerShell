@@ -1,5 +1,5 @@
 ---
-external help file: [https://learn.microsoft.com/powershell/module/sharepoint-online/Remove-SPODataAccessGovernanceInsight](https://learn.microsoft.com/powershell/module/sharepoint-online/Remove-SPODataAccessGovernanceInsight)
+external help file: https://learn.microsoft.com/powershell/module/sharepoint-online/Remove-SPODataAccessGovernanceInsight
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version:
 schema: 2.0.0
