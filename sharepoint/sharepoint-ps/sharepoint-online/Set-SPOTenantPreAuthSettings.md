@@ -19,13 +19,9 @@ Sets the pre auth settings for the tenant.
 
 **What is pre auth?**
 
-SharePoint embeds self-issued tokens into some URLs called pre auth URLs or temp auth URLs to provide temporary access to a SharePoint resource, which helps support more rich user experiences. For example, a common scenario is downloading a file using a pre auth URL that passes the token in the `tempauth` query parameter. Below is an example of what that URL might look like:
+SharePoint embeds self-issued tokens into some URLs called pre auth URLs or temp auth URLs to provide temporary access to a SharePoint resource, which helps support more rich user experiences. For example, a common scenario is downloading a file using a pre auth URL that includes the token in the `tempauth` query parameter like so: `https://<tenant>.sharepoint.com/sites/samplesite/_layouts/15/download.aspx?UniqueId=<id>&tempauth=v1.ey...`.
 
-```
-https://<tenant>.sharepoint.com/sites/samplesite/_layouts/15/download.aspx?UniqueId=<id>&tempauth=v1.ey...
-```
-
-However, pre auth is currently being deprecated. So this command will let you control whether you want to disable your use of pre auth overall and define any special cases to allow or deny the use of pre auth in based on app id and feature. 
+However, pre auth is currently being deprecated. So this command lets you control whether you want to disable the use of pre auth overall and define special cases to allow or deny the use of pre auth in based on app id and feature. 
 
 ## SYNTAX
 
