@@ -70,13 +70,13 @@ This example removes an existing setting from the allow list.
 ```powershell
 Set-SPOTenantPreAuthSettings -IsDisabled $true
 
-Set-SPOTenantPreAuthSettings -Add -Type Allow -AppIds "00000000-0000-0000-0000-000000000000" -Features "Download"
+Set-SPOTenantPreAuthSettings -Add -Type Allow -AppIds "00000000-0000-0000-0000-000000000000" -Features "All"
 
-Set-SPOTenantPreAuthSettings -Add -Type Deny -AppIds "00000000-0000-0000-0000-000000000000,11111111-1111-1111-1111-111111111111" -Features "All"
+Set-SPOTenantPreAuthSettings -Add -Type Deny -AppIds "00000000-0000-0000-0000-000000000000" -Features "Download,Embed"
 ```
-This example disables pre auth for the tenant overall, allows app id 00000000-0000-0000-0000-000000000000 to continue using pre auth for the Download feature, and denies apps with ids 00000000-0000-0000-0000-000000000000 and 11111111-1111-1111-1111-111111111111 from using pre auth for all features.
+This example disables pre auth for the tenant overall and allows app id 00000000-0000-0000-0000-000000000000 to continue using pre auth for all features apart from the Download and Embed features.
 
-In this case, the app with id 00000000-0000-0000-0000-000000000000 will not be allowed to use pre auth for the Download feature even though we have already allow listed the app to use the feature. This happens because there is also a setting that explicitly denies the same app from using pre auth for all features in the deny list, which takes precedence over the allow list (see the note in the description).
+In this case, the app with id 00000000-0000-0000-0000-000000000000 will not be allowed to use pre auth for the Download and Embed features, but it can use pre auth for all other features. This happens because the deny list takes precedence over the allow list, so for any overlapping settings between the two lists, the deny list will win (see the first note in the description).
 
 ### Example 4
 ```powershell
@@ -88,7 +88,9 @@ Set-SPOTenantPreAuthSettings -Add -Type Allow -AppIds "11111111-1111-1111-1111-1
 ```
 This example disables pre auth for the tenant overall, but it has overlapping settings in the allow list. The first setting says that none of the apps are allowed to use pre auth for the Download and Embed features. The second setting says that the app with id 11111111-1111-1111-1111-111111111111 is allowed to use pre auth for all features. 
 
-In this case, pre auth will still be allowed in the Download and Embed features for the app with id 11111111-1111-1111-1111-111111111111 even though we said that no apps can use preauth for those features. This is because the second allow list setting overwrites the first allow list setting (see the note in the description).
+In this case, pre auth will be allowed for all features including Download and Embed for the app with id 11111111-1111-1111-1111-111111111111 even though we said that no apps can use preauth for those two features. This happens because the second allow list setting overwrites the first allow list setting (see the second note in the description).
+
+If you swapped the order of the allow list settings, pre auth will no longer be allowed for the Download and Embed features for the app with id 11111111-1111-1111-1111-111111111111. But all other features should still be allowed to continue using pre auth for that app.  
 
 ## PARAMETERS
 
