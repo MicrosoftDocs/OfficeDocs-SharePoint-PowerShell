@@ -113,10 +113,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Start-SPOSiteReview](./Start-SPOSiteReview.md)
-
 [Site access review for DAG reports](/sharepoint/site-access-review)
+
+[Start-SPOSiteReview](./Start-SPOSiteReview.md)
 
 [Start-SPODataAccessGovernanceInsight](./Start-SPODataAccessGovernanceInsight.md)
 
 [Get-SPODataAccessGovernanceInsight](./Get-SPODataAccessGovernanceInsight.md)
+
+[Export-SPODataAccessGovernanceInsight](./Export-SPODataAccessGovernanceInsight.md)
+
+[Remove-SPODataAccessGovernanceInsight](./Remove-SPODataAccessGovernanceInsight.md)

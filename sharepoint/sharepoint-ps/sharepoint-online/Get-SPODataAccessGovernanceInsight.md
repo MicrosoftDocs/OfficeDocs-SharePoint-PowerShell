@@ -31,7 +31,7 @@ Get-SPODataAccessGovernanceInsight -ReportID <Guid> [<CommonParameters>]
 
 ## DESCRIPTION
 
-Fetch details of various DAG reports available in SharePoint admin center.
+This cmdlet fetches details of various DAG reports available in SharePoint admin center.
 
 ## EXAMPLES
 
@@ -132,3 +132,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Export-SPODataAccessGovernanceInsight](./Export-SPODataAccessGovernanceInsight.md)
 
 [Remove-SPODataAccessGovernanceInsight](./Remove-SPODataAccessGovernanceInsight.md)
+
+[Start-SPOSiteReview](./Start-SPOSiteReview.md)
+
+[Get-SPOSiteReview](./Get-SPOSiteReview.md)

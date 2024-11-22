@@ -104,3 +104,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Start-SPODataAccessGovernanceInsight](./Start-SPODataAccessGovernanceInsight.md)
 
 [Export-SPODataAccessGovernanceInsight](./Export-SPODataAccessGovernanceInsight.md)
+
+[Get-SPODataAccessGovernanceInsight](./Get-SPODataAccessGovernanceInsight.md)
+
+[Remove-SPODataAccessGovernanceInsight](./Remove-SPODataAccessGovernanceInsight.md)

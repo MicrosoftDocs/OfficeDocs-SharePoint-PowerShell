@@ -278,4 +278,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Export-SPODataAccessGovernanceInsight](./Export-SPODataAccessGovernanceInsight.md)
 
+[Remove-SPODataAccessGovernanceInsight](./Remove-SPODataAccessGovernanceInsight.md)
+
 [Start-SPOSiteReview](./Start-SPOSiteReview.md)
+
+[Get-SPOSiteReview](./Get-SPOSiteReview.md)
