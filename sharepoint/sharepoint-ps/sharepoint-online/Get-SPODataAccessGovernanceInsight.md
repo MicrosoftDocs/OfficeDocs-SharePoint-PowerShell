@@ -41,7 +41,7 @@ This cmdlet fetches details of various DAG reports available in SharePoint admin
 Get-SPODataAccessGovernanceInsight -ReportEntity EveryoneExceptExternalUsersForItems
 ```
 
-The above cmdlet fetches all DAG reports about 'Everyone except external users' attached to a item i.e., to a file, folder, or list in the last 28 days. The output consists of important parameters such as Status, ReportID, number of sites in the report and other user provided values during report generation.
+The above cmdlet fetches all DAG reports about 'Everyone except external users' attached to an item i.e., to a file, folder, or list in the last 28 days. The output consists of important parameters such as Status, ReportID, number of sites in the report and other user provided values during report generation.
 
 ## PARAMETERS
 
