@@ -23,7 +23,7 @@ Start-SPOSiteReview -ReportID <Guid> -SiteID <Guid> [-Comment <String>] [<Common
 ```
 
 ## DESCRIPTION
-Initiates 'site access review' request to all the site owners under the context of the DAG report. The request is sent via email to all site owners with comments given by SharePoint Administrator.
+Initiates a 'site access review' request to all the site owners under the context of the DAG report. The request is sent via email to all site owners with comments given by SharePoint Administrator.
 
 ## EXAMPLES
 
