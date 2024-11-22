@@ -6,32 +6,12 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "sharepoint/virtual-folder/sharepoint-online/Export-SPODataAccessGovernanceInsight.md",
-      "redirect_url": "/powershell/module/sharepoint-online",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "sharepoint/virtual-folder/sharepoint-online/Get-SPODataAccessGovernanceInsight.md",
-      "redirect_url": "/powershell/module/sharepoint-online",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "sharepoint/virtual-folder/sharepoint-online/Get-SPOSiteReview.md",
-      "redirect_url": "/powershell/module/sharepoint-online",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "sharepoint/virtual-folder/sharepoint-online/Get-SPOTenantRestrictedSearchAllowedList.md",
       "redirect_url": "/powershell/module/sharepoint-online",
       "redirect_document_id": false
     },
     {
       "source_path": "sharepoint/virtual-folder/sharepoint-online/Get-SPOTenantRestrictedSearchMode.md",
-      "redirect_url": "/powershell/module/sharepoint-online",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "sharepoint/virtual-folder/sharepoint-online/Remove-SPODataAccessGovernanceInsight.md",
       "redirect_url": "/powershell/module/sharepoint-online",
       "redirect_document_id": false
     },
@@ -44,16 +24,6 @@
       "source_path": "sharepoint/virtual-folder/sharepoint-online/Set-SPOTenantRestrictedSearchMode.md",
       "redirect_url": "/powershell/module/sharepoint-online",
       "redirect_document_id": false
-    },
-    {
-      "source_path": "sharepoint/virtual-folder/sharepoint-online/Start-SPODataAccessGovernanceInsight.md",
-      "redirect_url": "/powershell/module/sharepoint-online",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "sharepoint/virtual-folder/sharepoint-online/Start-SPOSiteReview.md",
-      "redirect_url": "/powershell/module/sharepoint-online",
-      "redirect_document_id": false
-    }
+    }    
   ]
 }
