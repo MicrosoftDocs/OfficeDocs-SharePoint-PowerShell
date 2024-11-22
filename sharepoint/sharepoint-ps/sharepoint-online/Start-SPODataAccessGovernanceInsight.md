@@ -92,7 +92,7 @@ The above cmdlet generates a list of SharePoint sites which can be accessed by m
 
 ### -CountOfUsersMoreThan
 
-Specifies the threshold of oversharing as defined by the number of users that can access the site. The number of users that can access the site are determined by expanding all users, groups across all permissions (at site level and at the level of any item with unqiue permissions), deduplicate and arrive at a unique number. Minumum value is 100.
+Specifies the threshold of oversharing as defined by the number of users that can access the site. The number of users that can access the site are determined by expanding all users, groups across all permissions (at site level and at the level of any item with unqiue permissions), deduplicate and arrive at a unique number. Minimum value is 100.
 
 ```yaml
 Type: Int32
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 
 ### -Privacy
 
-Specifies the privacy setting of the 0365 group. Relevant in case of filtering the report for group connected sites.
+Specifies the privacy setting of the Microsoft 365 group. Relevant in case of filtering the report for group connected sites.
 
 ```yaml
 Type: PrivacyEnum
