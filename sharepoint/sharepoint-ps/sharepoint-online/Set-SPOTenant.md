@@ -184,6 +184,32 @@ Set-SPOTenant
  [-WhoCanShareAnonymousAllowList [Guid[]]]
  [-WhoCanShareAuthenticatedGuestAllowList [Guid[]]]
  [-ExtendPermissionsToUnprotectedFiles <Boolean>]
+ [-LegacyBrowserAuthProtocolsEnabled <Boolean>]
+ [-EnableDiscoverableByOrganizationForVideos <Boolean> ]
+ [-RestrictedAccessControlforSitesErrorHelpLink <String> ]
+ [-SensitivityLabel <String> ]
+ [-DisableWorkflow2010 <Boolean> ]
+ [-Sites <String> ]
+ [-AnyoneLinkTrackUsers <Boolean> ]
+ [-OneDriveBlockGuestsAsSiteAdmin <SharingState> ]
+ [-AllowSharingOutsideRestrictedAccessControlGroups <Boolean> ]
+ [-Workflows2013Enabled <Boolean> ]
+ [-IsCollabMeetingNotesFluidEnabled <Boolean> ]
+ [-IsLoopEnabled <Boolean> ]
+ [-DisablePersonalListCreation <Boolean> ]
+ [-DisableVivaConnectionsAnalytics <Boolean> ]
+ [-AppBypassInformationBarriers <Boolean> ]
+ [-DisableModernListTemplateIds <Guid[]> ]
+ [-EnableModernListTemplateIds <Guid[]> ]
+ [-HideSyncButtonOnTeamSite <Boolean> ]
+ [-StreamLaunchConfig <Int32> ]
+ [-EnableRestrictedAccessControl <Boolean> ]
+ [-BlockDownloadFileTypeIds <SPBlockDownloadFileTypeId[]> ]
+ [-ExcludedBlockDownloadGroupIds <GUID[]> ]
+ [-RecycleBinRetentionPeriod <Int32> ]
+ [-EnableMediaReactions <Boolean> ]
+ [-AllowSensitivityLabelOnRecords <Boolean> ]
+ [-ContentSecurityPolicyEnforcement <Boolean> ]
  [<CommonParameters>]
 ```
 
@@ -3621,6 +3647,456 @@ Accept wildcard characters: False
 ``` 
 ### -ExtendPermissionsToUnprotectedFiles
 This property can be used to turn on/off the capability called "Extended SharePoint permissions to unprotected files". To learn more about this feature check [here](https://aka.ms/ExtendSharePointPermission)
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -LegacyBrowserAuthProtocolsEnabled
+
+Controls whether legacy browser authentication protocols are enabled.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableDiscoverableByOrganizationForVideos
+
+Allows the sharing dialog to include a checkbox offering the user the ability to share to a security group containing every user in the organization.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictedAccessControlforSitesErrorHelpLink
+
+Sets a custom learn more link to inform users who were denied access to a SharePoint site due to the restricted site access control policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SensitivityLabel
+
+Sets the sensitiviy label for a site.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableWorkflow2010
+
+Controls whether Workflow 2010 is enabled.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Sites
+
+List of sites that certain properties will apply to, such as a conditional access policy.
+
+The valid values are:  
+
+- Url
+- SiteId
+
+```yaml
+Type: SpoSitePipeBind
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: Uninitialized
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AnyoneLinkTrackUsers
+
+Requires recipients to verify their identity with an email address to access content from an Anyone link
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveBlockGuestsAsSiteAdmin
+
+Controls whether guests are blocked from using OneDrive.
+
+The valid values are:
+
+- On
+- Off
+- Unspecified
+
+```yaml
+Type: SharingState
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowSharingOutsideRestrictedAccessControlGroups
+
+Controls whether sharing SharePoint sites and their content is allowed with users and groups who are not allowed as per the Restricted access control policy.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Workflows2013Enabled
+
+Controls whether Workflow 2013 is enabled.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsCollabMeetingNotesFluidEnabled
+
+Controls whether collaborative meeting notes are enabled in Microsoft Teams.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsLoopEnabled
+
+Controls whether Loop components are available in Microsoft Teams. 
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisablePersonalListCreation
+
+Controls whether users can create a personal list.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableVivaConnectionsAnalytics
+
+Controls whether the Viva Connections analytics feature is enabled.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppBypassInformationBarriers
+
+Controls whether applications running in app-only mode can access sites protected by information barriers.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableModernListTemplateIds
+
+Specifies list of modern template IDs not enabled in tenant.
+
+To set this list to be a specific security group, you need to enter its GUID as the argument. You can enter multiple GUIDs by using commas to separate them. To view the current list, use [Get-SPOTenant](Get-SPOTenant.md). 
+
+```yaml
+Type: Guid[] 
+Parameter Sets: (All) 
+Aliases: 
+Applicable: SharePoint Online 
+Required: False 
+Position: Named 
+Default value: None 
+Accept pipeline input: False 
+Accept wildcard characters: False 
+``` 
+
+### -EnableModernListTemplateIds
+
+Specifies list of modern template IDs enabled in tenant.
+
+To set this list to be a specific security group, you need to enter its GUID as the argument. You can enter multiple GUIDs by using commas to separate them. To view the current list, use [Get-SPOTenant](Get-SPOTenant.md). 
+
+```yaml
+Type: Guid[] 
+Parameter Sets: (All) 
+Aliases: 
+Applicable: SharePoint Online 
+Required: False 
+Position: Named 
+Default value: None 
+Accept pipeline input: False 
+Accept wildcard characters: False 
+``` 
+
+### -HideSyncButtonOnTeamSite
+
+When set to true, turns off OneDrive sync from all the SharePoint libraries in your organization.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StreamLaunchConfig
+
+Sets the default destination for the Stream app launcher tile
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableRestrictedAccessControl
+
+Lets you and other Global or SharePoint Administrators restrict access to sites.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BlockDownloadFileTypeIds
+
+Specifies the list of file type IDs that BlockDownloadFileTypePolicy applies to. 
+
+
+The valid values are:
+
+- TeamsMeetingRecording
+
+```yaml
+Type: SPBlockDownloadFileTypeId[]
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExcludedBlockDownloadGroupIds
+
+Exempts users from specified groups from the block download policy and they can fully download any content for the site.
+
+To set this list to be a specific security group, you need to enter its GUID as the argument. You can enter multiple GUIDs by using commas to separate them. To view the current list, use [Get-SPOTenant](Get-SPOTenant.md). 
+
+```yaml
+Type: Guid[] 
+Parameter Sets: (All) 
+Aliases: 
+Applicable: SharePoint Online 
+Required: False 
+Position: Named 
+Default value: None 
+Accept pipeline input: False 
+Accept wildcard characters: False 
+```
+
+### -RecycleBinRetentionPeriod
+Sets the amount of time content is kept in the in recycle bin in Microsoft365.com before it is deleted. 
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableMediaReactions
+
+Controls whether media reactions are enabled.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowSensitivityLabelOnRecords
+
+Controls whether sensitivity labels can be applied to records.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContentSecurityPolicyEnforcement
+
+Controls whether content security policy is enabled.
 
 PARAMVALUE: $true | $false
 
