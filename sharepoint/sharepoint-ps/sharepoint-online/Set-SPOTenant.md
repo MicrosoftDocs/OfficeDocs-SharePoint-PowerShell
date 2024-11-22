@@ -210,6 +210,7 @@ Set-SPOTenant
  [-EnableMediaReactions <Boolean> ]
  [-AllowSensitivityLabelOnRecords <Boolean> ]
  [-ContentSecurityPolicyEnforcement <Boolean> ]
+ [- DisableSpacesActivation <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -3765,7 +3766,7 @@ Accept wildcard characters: False
 
 ### -AnyoneLinkTrackUsers
 
-Requires recipients to verify their identity with an email address to access content from an Anyone link
+Requires recipients to verify their identity with an email address to access content from an Anyone link.
 
 PARAMVALUE: $true | $false
 
@@ -3976,7 +3977,7 @@ Accept wildcard characters: False
 
 ### -StreamLaunchConfig
 
-Sets the default destination for the Stream app launcher tile
+Sets the default destination for the Stream app launcher tile.
 
 ```yaml
 Type: Int32
@@ -4110,6 +4111,24 @@ Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -DisableSpacesActivation
+
+Controls SharePoint spaces activation.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ## RELATED LINKS
 
 [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
