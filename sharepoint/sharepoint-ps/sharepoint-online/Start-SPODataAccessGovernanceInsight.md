@@ -1,7 +1,9 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version:
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/start-spodataaccessgovernanceinsight
+applicable: SharePoint Online
+title: Start-SPODataAccessGovernanceInsight
 schema: 2.0.0
 author: pvrk
 ms.author: pullabhk
@@ -269,5 +271,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Data Access Governance reports (DAG) for SharePoint admins](/sharepoint/data-access-governance-reports)
+
 [Site access review for DAG reports](/sharepoint/site-access-review)
+
 [Get-SPODataAccessGovernanceInsight](./Get-SPODataAccessGovernanceInsight.md)
+
+[Export-SPODataAccessGovernanceInsight](./Export-SPODataAccessGovernanceInsight.md)
+
+[Start-SPOSiteReview](./Start-SPOSiteReview.md)

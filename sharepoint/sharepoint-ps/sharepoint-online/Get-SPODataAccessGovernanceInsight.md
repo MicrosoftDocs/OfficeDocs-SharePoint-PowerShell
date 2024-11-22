@@ -1,7 +1,9 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version:
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spodataaccessgovernanceinsight
+applicable: SharePoint Online
+title: Get-SPODataAccessGovernanceInsight
 schema: 2.0.0
 author: pvrk
 ms.author: pullabhk
@@ -19,8 +21,7 @@ Lists various 'Data Access Governance' (DAG) reports in SharePoint admin center.
 
 ### GetAllReportsParameterSet
 ```
-Get-SPODataAccessGovernanceInsight -ReportEntity <ReportEntityEnum> [-WorkLoad <WorkloadEnum>]
- [-ReportType <ReportTypeEnum>] [<CommonParameters>]
+Get-SPODataAccessGovernanceInsight -ReportEntity <ReportEntityEnum> [-WorkLoad <WorkloadEnum>] [-ReportType <ReportTypeEnum>] [<CommonParameters>]
 ```
 
 ### GetReportParameterSet
@@ -127,4 +128,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Start-SPODataAccessGovernanceInsight](./Start-SPODataAccessGovernanceInsight.md)
+
 [Export-SPODataAccessGovernanceInsight](./Export-SPODataAccessGovernanceInsight.md)
+
+[Remove-SPODataAccessGovernanceInsight](./Remove-SPODataAccessGovernanceInsight.md)

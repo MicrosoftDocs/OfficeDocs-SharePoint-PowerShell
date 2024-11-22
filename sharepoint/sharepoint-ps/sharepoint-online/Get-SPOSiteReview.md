@@ -1,7 +1,9 @@
 ﻿---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version:
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spositereview
+applicable: SharePoint Online
+title: Get-SPOSiteReview
 schema: 2.0.0
 author: pvrk
 ms.author: pullabhk
@@ -12,13 +14,12 @@ ms.reviewer:
 # Get-SPOSiteReview
 
 ## SYNOPSIS
-Track all site access reviews initiated by all SharePoint administrators in Data Access Governance (DAG) reports.
+Track all site access reviews initiated from Data Access Governance (DAG) reports.
 
 ## SYNTAX
 
 ```
-Get-SPOSiteReview [-SiteReviewID <Guid>] [-Status <SiteReviewStatus>]
- [-ReportEntity <SiteAccessReportEntityEnum>] [-SiteID <Guid>] [<CommonParameters>]
+Get-SPOSiteReview [-SiteReviewID <Guid>] [-Status <SiteReviewStatus>] [-ReportEntity <SiteAccessReportEntityEnum>] [-SiteID <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -113,4 +114,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Start-SPOSiteReview](./Start-SPOSiteReview.md)
+
 [Site access review for DAG reports](/sharepoint/site-access-review)
+
+[Start-SPODataAccessGovernanceInsight](./Start-SPODataAccessGovernanceInsight.md)
+
+[Get-SPODataAccessGovernanceInsight](./Get-SPODataAccessGovernanceInsight.md)
