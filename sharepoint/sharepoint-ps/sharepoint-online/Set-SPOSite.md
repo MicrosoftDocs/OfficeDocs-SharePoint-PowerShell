@@ -67,6 +67,19 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-RestrictedAccessControl <Boolean>]
  [-RestrictedAccessControlGroups <Guid>]
  [-RemoveRestrictedAccessControlGroups <Guid>]
+ [-ReadOnlyForUnmanagedDevices <Boolean>]
+ [-ExcludedBlockDownloadGroupIds <GUID[]>]
+ [-ExcludeBlockDownloadPolicySiteOwners <Boolean>]
+ [-ReadOnlyForBlockDownloadPolicy <Boolean>]
+ [-AuthenticationContextAccessType <SPOAuthenticationContextPolicyAccessType>]
+ [-HubSiteId <Guid[]>]
+ [-InformationBarriersMode <String>]
+ [-RestrictContentOrgWideSearch <Boolean>]
+ [-RestrictedAccessControl <Boolean>]
+ [-RestrictedAccessControlGroups <Guid[]>]
+ [-AddRestrictedAccessControlGroups <Guid[]>]
+ [-RemoveRestrictedAccessControlGroups <Guid[]>]
+ [-ClearRestrictedAccessControl <SwitchParameter>]
  [<CommonParameters>]
 ```
 
@@ -1580,7 +1593,244 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -ReadOnlyForUnmanagedDevices
 
+Controls whether unmanaged devices have read-only access.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExcludedBlockDownloadGroupIds
+
+Exempts users from specified groups from the block download policy and they can fully download any content for the site.
+
+```yaml
+Type: Guid[] 
+Parameter Sets: (All) 
+Aliases: 
+Applicable: SharePoint Online 
+Required: False 
+Position: Named 
+Default value: None 
+Accept pipeline input: False 
+Accept wildcard characters: False 
+``` 
+
+### -ExcludeBlockDownloadPolicySiteOwners
+
+Controls if site owners are excluded from block download policy.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReadOnlyForBlockDownloadPolicy
+Controls if read-only should be enabled for block download policy.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExcludeBlockDownloadSharePointGroups
+
+Specifies the groups excluded from the block download policy.
+
+```yaml
+Type: String
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuthenticationContextAccessType
+
+Controls whether Authentication Context Limited Access is enabled for a site.
+
+
+The valid values are:
+
+- AllowLimitedAccess
+- BlockAccess
+
+```yaml
+Type: SPOAuthenticationContextPolicyAccessType
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HubSiteId
+
+Sets the hub site for a specified sharepoint site.
+
+```yaml
+Type: GUID
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationBarriersMode
+
+Specifies the information barrier mode.
+
+```yaml
+Type: String
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictContentOrgWideSearch
+
+Controls whether org-wide content search is enabled for a site.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictedAccessControl
+
+Sets access restriction policy by group membership.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictedAccessControlGroups
+
+Specifies the IDs of groups that have access under an access restriction policy.
+
+```yaml
+Type: Guid[] 
+Parameter Sets: (All) 
+Aliases: 
+Applicable: SharePoint Online 
+Required: False 
+Position: Named 
+Default value: None 
+Accept pipeline input: False 
+Accept wildcard characters: False 
+``` 
+
+### -AddRestrictedAccessControlGroups
+
+Specifies the IDs of groups to be added to an access restriction policy and gain access.
+
+```yaml
+Type: Guid[] 
+Parameter Sets: (All) 
+Aliases: 
+Applicable: SharePoint Online 
+Required: False 
+Position: Named 
+Default value: None 
+Accept pipeline input: False 
+Accept wildcard characters: False 
+``` 
+
+### -RemoveRestrictedAccessControlGroups
+
+Specifies the IDs of groups to be removed from access restriction policy and lose access.
+
+```yaml
+Type: Guid[] 
+Parameter Sets: (All) 
+Aliases: 
+Applicable: SharePoint Online 
+Required: False 
+Position: Named 
+Default value: None 
+Accept pipeline input: False 
+Accept wildcard characters: False 
+``` 
+
+### -ClearRestrictedAccessControl
+
+Clears the list of groups that are given access via an access restriction policy.
+
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
