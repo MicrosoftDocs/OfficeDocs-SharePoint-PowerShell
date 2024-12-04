@@ -1106,7 +1106,9 @@ Accept wildcard characters: False
 
 Allows administrators to prevent certain Adaptive Card Extensions from being added to pages or rendering on pages on which they were previously added. Currently, only the following Adaptive Card Extensions can be disabled in such a manner:
 
-- Power Apps: 0d2d0fd0-9489-47ef-acfb-90edca009cba
+| Adaptive Card Extension Name | GUID |
+|---|---|
+| Power Apps | 0d2d0fd0-9489-47ef-acfb-90edca009cba |
 
 To disable a specific Adaptive Card Extension, you need to enter its GUID as the parameter. To view a list of disabled Adaptive Card Extensions, use [Get-SPOTenant](Get-SPOTenant.md) to get `DisabledAdaptiveCardExtensionIds`.
 
