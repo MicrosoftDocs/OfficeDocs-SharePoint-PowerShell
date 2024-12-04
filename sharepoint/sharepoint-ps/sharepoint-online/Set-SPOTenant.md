@@ -55,8 +55,8 @@ Set-SPOTenant
  [-SocialBarOnSitePagesDisabled <Boolean>]
  [-DefaultLinkPermission <SharingPermissionType>]
  [-DefaultSharingLinkType <SharingLinkType>]
- [-DisabledWebPartIds <Guid>]
- [-DisabledAdaptiveCardExtensionIds <Guid>]
+ [-DisabledWebPartIds [Guid[]]]
+ [-DisabledAdaptiveCardExtensionIds [Guid[]]]
  [-DisallowInfectedFileDownload <Boolean>]
  [-DisableAddShortcutsToOneDrive <Boolean>]
  [-EnableGuestSignInAcceleration <Boolean>]
@@ -363,6 +363,13 @@ Set-SPOTenant –WhoCanShareAnonymousAllowList @()
 ```
 
 This example empties the WhoCanShareAnonymousAllowList. Similar code works for the WhoCanShareAuthenticatedGuestAllowList.
+
+### EXAMPLE 21
+```powershell
+Set-SPOTenant -DisabledAdaptiveCardExtensionIds 0d2d0fd0-9489-47ef-acfb-90edca009cba
+```
+
+This example disables the Power Apps Adaptive Card Extension.
 
 ## PARAMETERS
 
@@ -1101,9 +1108,9 @@ Allows administrators to prevent certain Adaptive Card Extensions from being add
 
 - Power Apps: 0d2d0fd0-9489-47ef-acfb-90edca009cba
 
-To disable a specific Adaptive Card Extension, you need to enter its GUID as the parameter. For example Set-SPOTenant -DisabledAdaptiveCardExtensionIds 0d2d0fd0-9489-47ef-acfb-90edca009cba. To view a list of disabled Adaptive Card Extensions, use Get-SPOTenant to get DisabledAdaptiveCardExtensionIds.
+To disable a specific Adaptive Card Extension, you need to enter its GUID as the parameter. To view a list of disabled Adaptive Card Extensions, use [Get-SPOTenant](Get-SPOTenant.md) to get `DisabledAdaptiveCardExtensionIds`.
 
-To re-enable some disabled Adaptive Card Extensions, use the Set-SPOTenant with the -DisabledAdaptiveCardExtensionIds parameter and corresponding GUIDs that you still want to keep disabling. To re-enable all disabled Adaptive Card Extensions, use Set-SPOTenant -DisabledAdaptiveCardExtensionIds @().
+To re-enable some disabled Adaptive Card Extensions, use the `Set-SPOTenant` with the `-DisabledAdaptiveCardExtensionIds` parameter and corresponding GUIDs that you still want to keep disabling. To re-enable all disabled Adaptive Card Extensions, use `Set-SPOTenant -DisabledAdaptiveCardExtensionIds @()`.
 
 ```yaml
 Type: Guid[]
