@@ -37,7 +37,7 @@ Disables the hub site feature on a site so that it is no longer a hub site. Asso
 Unregister-SPOHubSite -Identity <guid>
 ```
 
-This example removes a site from the hub site list based on unique hub identifier (<guid>).
+This example removes a site from the hub site list based on unique hub identifier (\<guid\>).
 
 ### Example 2
 
