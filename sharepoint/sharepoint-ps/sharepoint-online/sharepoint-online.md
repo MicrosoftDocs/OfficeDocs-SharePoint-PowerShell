@@ -540,6 +540,10 @@ This cmdlet is not currently active in production and may be removed in the futu
 
 {{Manually Enter Set-SPOOrgAssetsLibrary Description Here}}
 
+### [Set-SPORestrictedSiteCreation](Set-SPORestrictedSiteCreation.md)
+
+{{Sets or updates one or more group configurations for restricting site creation}}
+
 ### [Set-SPOSite](Set-SPOSite.md)
 
 {{Manually Enter Set-SPOSite Description Here}}
