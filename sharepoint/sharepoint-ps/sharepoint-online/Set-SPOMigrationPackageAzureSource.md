@@ -164,7 +164,7 @@ Accept wildcard characters: False
 
 ### -FileContainerName
 
-The optional name of the Azure Blob Storage container that will be created if it does not currently exist. It will hold the uploaded package content files. The value must be in lower case and conform to Azure's container naming rules. If this not supplied a name will be generated using the format <GUID>-files.
+The optional name of the Azure Blob Storage container that will be created if it does not currently exist. It will hold the uploaded package content files. The value must be in lower case and conform to Azure's container naming rules. If this not supplied a name will be generated using the format \<GUID\>-files.
 
 ```yaml
 Type: String
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 
 ### -PackageContainerName
 
-The optional name of the Azure Blob Storage container that will be created if it does not currently exist. It will hold the uploaded package metadata files. The value must be in lower case and conform to Azure's container naming rules. If this not supplied a name will be generated using the format <GUID>-package.
+The optional name of the Azure Blob Storage container that will be created if it does not currently exist. It will hold the uploaded package metadata files. The value must be in lower case and conform to Azure's container naming rules. If this not supplied a name will be generated using the format \<GUID\>-package.
 
 ```yaml
 Type: String

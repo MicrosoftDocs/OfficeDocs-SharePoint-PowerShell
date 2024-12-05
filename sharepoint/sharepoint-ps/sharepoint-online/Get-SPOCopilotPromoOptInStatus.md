@@ -31,7 +31,7 @@ If the promo status is enabled, the return value is `True`, otherwise the return
 ### Example 1
 
 ```powershell
-Get-SPOCopilotPromoOptInStatusEnabled
+Get-SPOCopilotPromoOptInStatus
 ```
 
 Example 1 returns the value of the Opt-In promo status.

@@ -29,12 +29,12 @@ This cmdlet sets the Opt-In Copilot promo status for the tenant to `True` or `Fa
 ### Example 1
 
 ```powershell
-Set-SPOCopilotPromoOptInStatusSetSuccessfully -SPOCopilotPromoOptInStatusEnabled $true
+Set-SPOCopilotPromoOptInStatus -IsCopilotPromoStatusEnabled $true
 ```
 
 Example 1 sets the Opt-In Copilot promo status for the tenant to `True`.
 
-### Parameter:
+## PARAMETERS
 
 ### -IsCopilotPromoStatusEnabled
 
