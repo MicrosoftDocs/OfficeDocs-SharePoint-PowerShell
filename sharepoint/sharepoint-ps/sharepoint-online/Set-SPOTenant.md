@@ -185,6 +185,7 @@ Set-SPOTenant
  [-WhoCanShareAnonymousAllowList [Guid[]]]
  [-WhoCanShareAuthenticatedGuestAllowList [Guid[]]]
  [-ExtendPermissionsToUnprotectedFiles <Boolean>]
+ [RecycleBinRetentionPeriod <int>]
  [<CommonParameters>]
 ```
 
@@ -3666,6 +3667,23 @@ Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -RecycleBinRetentionPeriod
+This property can be used set the retention period of deleted file in recycle bin across a tenant. The minimum valus that can be set is 7 i.e. 7 days. The maximum value that can be set is 180 i.e. 180 days. The default values is 93 days.   
+
+PARAMVALUE: number [between 7 and 180, including both]
+
+```yaml
+Type: int
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: 93
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ## RELATED LINKS
 
 [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
