@@ -19,7 +19,9 @@ Sets the pre auth settings for the tenant.
 
 **What is pre auth?**
 
-SharePoint includes self-issued tokens into some URLs called pre auth URLs or temp auth URLs to provide temporary access to a SharePoint resource, which helps support more rich user experiences. For example, a common scenario is downloading a file using a pre auth URL that includes the token in the `tempauth` query parameter like so: `https://<tenant>.sharepoint.com/sites/samplesite/_layouts/15/download.aspx?UniqueId=<id>&tempauth=v1.ey...`.
+SharePoint includes self-issued tokens into some URLs called pre auth URLs or temp auth URLs to provide temporary access to a SharePoint resource, which helps support more rich user experiences. For example, a common scenario is downloading a file using a pre auth URL that includes the token in the `tempauth` query parameter like so:
+
+`https://<tenant>.sharepoint.com/sites/samplesite/_layouts/15/download.aspx?UniqueId=<id>&tempauth=v1.ey...`
 
 However, pre auth is currently being deprecated. So this command lets you control whether you want to disable the use of pre auth overall and define any special cases to allow or deny the use of pre auth in based on app id and feature. 
 
@@ -30,11 +32,25 @@ Set-SPOTenantPreAuthSettings -IsDisabled <bool> [<CommonParameters>]
 ```
 
 ```powershell
-Set-SPOTenantPreAuthSettings -Add -Type {Allow | Deny} [-IncludedApps <string>] [-ExcludedApps <string>] [-IncludedFeatures <string>] [-ExcludedFeatures <string>] [<CommonParameters>]
+Set-SPOTenantPreAuthSettings
+  -Add
+  -Type {Allow | Deny}
+  [-IncludedApps <string>]
+  [-ExcludedApps <string>]
+  [-IncludedFeatures <string>]
+  [-ExcludedFeatures <string>]
+  [<CommonParameters>]
 ```
 
 ```powershell
-Set-SPOTenantPreAuthSettings -Remove -Type {Allow | Deny} [-IncludedApps <string>] [-ExcludedApps <string>] [-IncludedFeatures <string>] [-ExcludedFeatures <string>] [<CommonParameters>]
+Set-SPOTenantPreAuthSettings
+  -Remove
+  -Type {Allow | Deny}
+  [-IncludedApps <string>]
+  [-ExcludedApps <string>]
+  [-IncludedFeatures <string>]
+  [-ExcludedFeatures <string>]
+  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
