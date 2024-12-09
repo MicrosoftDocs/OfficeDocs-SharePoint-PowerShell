@@ -19,7 +19,7 @@ Sets the pre auth settings for the tenant.
 
 **What is pre auth?**
 
-SharePoint includes self-issued tokens into some URLs called pre auth URLs or temp auth URLs to provide temporary access to a SharePoint resource, which helps support more rich user experiences. For example, a common scenario is downloading a file using a pre auth URL that includes the token in the `tempauth` query parameter like so:
+SharePoint includes self-issued tokens into URLs called pre auth URLs or temp auth URLs to provide temporary access to a SharePoint resource, which helps support more rich user experiences. For example, a common scenario is downloading a file using a pre auth URL that includes the token in the `tempauth` query parameter like so:
 
 `https://<tenant>.sharepoint.com/sites/samplesite/_layouts/15/download.aspx?UniqueId=<id>&tempauth=v1.ey...`
 
@@ -64,7 +64,7 @@ Sets the pre auth settings for the tenant.
 > 3. IsDisabled
 
 > [!NOTE]
-> If there are any overlapping settings (meaning that they apply to the same app id and feature) within the Allow or Deny list, the last setting that comes in the list wins and essentially overwrites the previous settings.
+> The -IncludedApps and -IncludedFeatures parameters alone should be enough for simpler configurations. However, there are some cases (like example 3) where the -ExcludedApps and -ExcludedFeatures parameters are useful to define exactly which apps are allowed/denied from using pre auth.
 
 ## EXAMPLES
 
@@ -74,11 +74,13 @@ Set-SPOTenantPreAuthSettings -IsDisabled $true
 
 Set-SPOTenantPreAuthSettings -Add -Type Allow -IncludedApps "00000000-0000-0000-0000-000000000000,11111111-1111-1111-1111-111111111111"
 ```
-This example disables pre auth for the tenant overall and adds a setting that allows 2 apps continue using pre auth for all features, while the rest of the apps and features are denied from using pre auth.
+This example disables pre auth for the tenant overall and adds a setting that allows two apps continue using pre auth for all features, while the rest of the apps and features are denied from using pre auth.
 
 > [!NOTE]
-> This example relies on the default values for the `-ExcludedApps`, `-IncludedFeatures`, or `-ExcludedFeatures` parameters. So the following would be an equivalent command, where the empty quotes say that all other apps and features are included for the setting.
->  `Set-SPOTenantPreAuthSettings -Add -Type Allow -IncludedApps "00000000-0000-0000-0000-000000000000,11111111-1111-1111-1111-111111111111" -ExcludedApps "" -IncludedFeatures "" -ExcludedFeatures ""`
+> This example relies on the default values for the `-ExcludedApps`, `-IncludedFeatures`, or `-ExcludedFeatures` parameters. The following would be an equivalent command, where empty quotes for -ExcludedApps mean that the rest of the apps are excluded from the setting and empty quotes for both -IncludedFeatures and -ExcludedFeatures mean that all features are included for the setting.
+>  ```
+> Set-SPOTenantPreAuthSettings -Add -Type Allow -IncludedApps "00000000-0000-0000-0000-000000000000,11111111-1111-1111-1111-111111111111" -ExcludedApps "" -IncludedFeatures "" -ExcludedFeatures ""
+>  ```
 
 ### Example 2
 ```powershell
@@ -104,9 +106,9 @@ Set-SPOTenantPreAuthSettings -Add -Type Allow -IncludedApps "00000000-0000-0000-
 
 Set-SPOTenantPreAuthSettings -Add -Type Deny -IncludedApps "00000000-0000-0000-0000-000000000000,11111111-1111-1111-1111-111111111111"
 ```
-This example enables pre auth for the tenant overall, but it has overlapping settings between the allow and deny lists. The allow list setting allows the app with id 00000000-0000-0000-0000-000000000000 to use pre auth for WAC, Embed, and Download features. But the deny list setting denies the same app from using pre auth for all features.
+This example disables pre auth for the tenant overall, but it has overlapping settings between the allow and deny lists. The allow list setting tries to allow the app with id 00000000-0000-0000-0000-000000000000 to use pre auth for WAC, Embed, and Download features. But the deny list setting denies the same app from using pre auth for all features.
 
-In this case, the app with id 00000000-0000-0000-0000-000000000000 will not be allowed to use pre auth for any feature (including all the allow-listed features) because the deny list takes precedence over the allow list. Any other app will be denied from using pre auth for any feature. 
+In this case, the app with id 00000000-0000-0000-0000-000000000000 will be denied from using pre auth for any feature (including all the allow-listed features) because the deny list takes precedence over the allow list. Any other app will be denied from using pre auth for any feature. 
 
 ## PARAMETERS
 
@@ -180,7 +182,7 @@ String containing a comma-separated list of app ids that are included for the al
 
 Possible Values:
 - `""`: Default. If both the -IncludedApps and -ExcludedApps parameters are empty strings, the allow or deny list setting will apply to all apps.
-- A comma-separated list of app ids (e.g. `"00000000-0000-0000-0000-000000000000,11111111-1111-1111-1111-111111111111"`): The allow or deny list setting will apply to only the apps in the list and all other apps will not have the setting applied.
+- A comma-separated list of app ids (e.g. `"00000000-0000-0000-0000-000000000000,11111111-1111-1111-1111-111111111111"`): The allow or deny list setting will apply to only the apps in the list and all other apps will be excluded from the setting.
 
 ```yaml
 Type: String
@@ -199,7 +201,7 @@ String containing a comma-separated list of app ids that are excluded for the al
 
 Possible Values:
 - `""`: Default. If both the -IncludedApps and -ExcludedApps parameters are empty strings, the allow or deny list setting will apply to all apps.
-- A comma-separated list of app ids (e.g. `"00000000-0000-0000-0000-000000000000,11111111-1111-1111-1111-111111111111"`): The allow or deny list setting will not apply to the apps in the list and all other apps will have the setting applied.
+- A comma-separated list of app ids (e.g. `"00000000-0000-0000-0000-000000000000,11111111-1111-1111-1111-111111111111"`): The allow or deny list setting will not apply to the apps in the list and all other apps will be included for this setting.
 
 ```yaml
 Type: String
@@ -218,7 +220,7 @@ String containing a comma-separated list of features included for the allow list
 
 Possible Values:
 - `""`: Default. If both the -IncludedFeatures and -ExcludedFeatures parameters are empty string, the allow or deny list setting will apply to all features.
-- A comma-separated list of features (e.g. `"Whiteboard,Download,WAC"`): The allow or deny list setting will apply to only the features in the list (see the list below for all available features) and all other features will not have the setting applied.
+- A comma-separated list of features (e.g. `"Whiteboard,Download,WAC"`): The allow or deny list setting will apply to only the features in the list (see the list below for all available features) and all other features will be excluded from the setting.
 
 Features:
 - "Whiteboard"
@@ -250,7 +252,7 @@ Features:
 - "Thumbnail"
 - "Embed"
 - "VroomContent"
-- "S2S-PAC"
+- "S2SPAC"
 - "PAC"
 - "VideoPlayback"
 - "AudioTrackUpload"
@@ -273,7 +275,7 @@ String containing a comma-separated list of features excluded for the allow list
 
 Possible Values:
 - `""`: Default. If both the -IncludedFeatures and -ExcludedFeatures parameters are empty string, the allow or deny list setting will apply to all features.
-- A comma-separated list of features (e.g. `"Whiteboard,Download,WAC"`): The allow or deny list setting will not apply to the features in the list (see the list above for all available features) and all other features will have the setting applied.
+- A comma-separated list of features (e.g. `"Whiteboard,Download,WAC"`): The allow or deny list setting will not apply to the features in the list (see the list above for all available features) and all other features will be included for the setting.
 
 ```yaml
 Type: String
