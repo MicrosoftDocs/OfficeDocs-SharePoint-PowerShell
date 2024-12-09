@@ -175,6 +175,10 @@ The following cmdlet references are for SharePoint Online.
 
 {{Manually Enter Get-SPOPublicCdnOrigins Description Here}}
 
+### [Get-SPORestrictedSiteCreation](Get-SPORestrictedSiteCreation.md)
+
+{{Gets group configurations for restricting site creation policy}}
+
 ### [Get-SPOSite](Get-SPOSite.md)
 
 {{Manually Enter Get-SPOSite Description Here}}
@@ -539,6 +543,10 @@ This cmdlet is not currently active in production and may be removed in the futu
 ### [Set-SPOOrgAssetsLibrary](Set-SPOOrgAssetsLibrary.md)
 
 {{Manually Enter Set-SPOOrgAssetsLibrary Description Here}}
+
+### [Set-SPORestrictedSiteCreation](Set-SPORestrictedSiteCreation.md)
+
+{{Sets or updates one or more group configurations for restricting site creation}}
 
 ### [Set-SPOSite](Set-SPOSite.md)
 
