@@ -168,18 +168,7 @@ Possible Values:
 
 ```yaml
 Type: String
-Parameter Sets: AddListItem
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: ""
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
-Parameter Sets: RemoveListItem
+Parameter Sets: AddListItem, RemoveListItem
 Applicable: SharePoint Online
 Required: False
 Position: Named
@@ -198,18 +187,7 @@ Possible Values:
 
 ```yaml
 Type: String
-Parameter Sets: AddListItem
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: ""
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
-Parameter Sets: RemoveListItem
+Parameter Sets: AddListItem, RemoveListItem
 Applicable: SharePoint Online
 Required: False
 Position: Named
@@ -264,18 +242,7 @@ Features:
 
 ```yaml
 Type: String
-Parameter Sets: AddListItem
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: ""
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
-Parameter Sets: RemoveListItem
+Parameter Sets: AddListItem, RemoveListItem
 Applicable: SharePoint Online
 Required: False
 Position: Named
@@ -294,18 +261,7 @@ Possible Values:
 
 ```yaml
 Type: String
-Parameter Sets: AddListItem
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: ""
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
-Parameter Sets: RemoveListItem
+Parameter Sets: AddListItem, RemoveListItem
 Applicable: SharePoint Online
 Required: False
 Position: Named
