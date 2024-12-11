@@ -15,7 +15,7 @@ manager: hikakar
 
 ## SYNOPSIS
 
-This cmdlet enables administrator to trigger the build of a new Copilot Agent Insight report for the last N days.
+Using this commandlet, SPO Administrators may trigger the build of a new Copilot agent insight report for the specified number of days.
 
 ## SYNTAX
 
@@ -25,14 +25,14 @@ Start-SPOCopilotAgentInsightsReport [-ReportPeriodInDays <Int>] [-Force <SwitchP
 
 ## DESCRIPTION
 
-After this cmdlet is executed, the Copilot Agent Insight report generation request for the last N days gets queued in the pipeline and the below metadata is displayed with the following properties:
+After this cmdlet is executed, the Copilot agent insight report generation request for the specified number of days gets queued in the pipeline and the below metadata is displayed with the following properties:
 
-| Property             | Description                                                 |
-|:---------------------|:------------------------------------------------------------|
-| Id                   | The unique Id of the report.                                |
-| CreatedDateTimeInUtc | The date and time the report creation was triggered in UTC. |
-| Status               | The status of the report.                                   |
-| ReportPeriodInDays   | The report duration in days.                                |
+| Property             | Description                                                      |
+|:---------------------|:-----------------------------------------------------------------|
+| Id                   | The unique Id of the report.                                     |
+| CreatedDateTimeInUtc | The date and time in UTC when the report creation was triggered. |
+| Status               | The status of the report.                                        |
+| ReportPeriodInDays   | The report duration in days.                                     |
 
 ## EXAMPLES
 
@@ -42,7 +42,7 @@ After this cmdlet is executed, the Copilot Agent Insight report generation reque
 Start-SPOCopilotAgentInsightsReport
 ```
 
-Example 1 generates the Copilot agent insights report for a default duration of 1 day as the parameter `–ReportPeriodInDays` is not provided.
+Example 1 generates the Copilot agent insight report for a default duration of 1 day as the parameter `–ReportPeriodInDays` is not provided.
 
 ### -----------------------EXAMPLE 2-----------------------------
 
@@ -50,13 +50,13 @@ Example 1 generates the Copilot agent insights report for a default duration of 
 Start-SPOCopilotAgentInsightsReport –ReportPeriodInDays 14
 ```
 
-Example 2 generates the Copilot Agent insights report for a specified duration of 14 days.
+Example 2 generates the Copilot agent insight report for a specified duration of 14 days.
 
 ## PARAMETERS
 
 ### -ReportPeriodInDays
 
-It is an optional parameter, and it specifies the duration of the Copilot Agent insights report in days. The possible values of ReportPeriodInDays are: 1, 7, 14, 28. If this parameter is not provided, it generates the report for a default duration of 1 day.
+It specifies the duration of the Copilot agent insight report in days. The possible values of ReportPeriodInDays are: 1, 7, 14, 28. If this parameter is not provided, it generates the report for a default duration of 1 day.
 
 ```yaml
 Type: Int

@@ -15,7 +15,7 @@ manager: hikakar
 
 ## SYNOPSIS
 
-
+This cmdlet enables the administrator to check status of all active and available reports when no report ID is present and to view or download a report if report ID is present.
 
 ## SYNTAX
 
@@ -34,44 +34,6 @@ If this cmdlet is executed without any parameters, it displays the status of all
 | Status               | The status of the report.                                   |
 | ReportPeriodInDays   | The report duration in days.                                |
 
-If this cmdlet is executed with `-ReportId` as parameter and `-Content` as `CopilotAgentsOnSites`, a report with list of all sites on which a Copilot agent is created along with the names of the Copilot agent created in last N days will be displayed with the following properties:
-
-| Property                | Description                                              |
-|:------------------------|:---------------------------------------------------------|
-| Site name               | The name of the SharePoint site.                         |
-| URL                     | The URL of the SharePoint site.                          |
-| Template                | The Site template of the SharePoint site.                |
-| Site owner              | Name of the owner of the SharePoint site.                |
-| Copilot name            | Name of Copilot agent on the SharePoint site.            |
-| Sensitivity             | The sensitivity label of the SharePoint site.            |
-| Restrict site access    | RAC status (Yes/No) of the SharePoint site.              |
-| Restrict site discovery | RCD status (Yes/No) of the SharePoint site.              |
-| External sharing        | External Sharing status (Yes/No) of the SharePoint site. |
-
-If this cmdlet is executed with `-ReportId` as parameter and `-Content` as `TopSites`, the top 100 records summarizing the number of Copilot Agents on sites created in last N days will be displayed with the following properties:
-
-| Property                | Description                                              |
-|:------------------------|:---------------------------------------------------------|
-| Site name               | The name of the SharePoint site.                         |
-| URL                     | The URL of the SharePoint site.                          |
-| Template                | The Site template of the SharePoint site.                |
-| Site owner              | Name of the owner of the SharePoint site.                |
-| Copilot agents          | Number of Copilot agents on the SharePoint site.         |
-| Sensitivity             | The sensitivity label of the SharePoint site.            |
-| Restrict site access    | RAC status (Yes/No) of the SharePoint site.              |
-| Restrict site discovery | RCD status (Yes/No) of the SharePoint site.              |
-| External sharing        | External Sharing status (Yes/No) of the SharePoint site. |
-
-If this cmdlet is executed with `-ReportId` as parameter and `-Content` as `SiteDistribution`, a report showing Copilot distribution across sites in last N days will be displayed with the following properties:
-
-| Property       | Description                                                                                  |
-|:---------------|:---------------------------------------------------------------------------------------------|
-| Site template  | The Site template of the SharePoint site.                                                    |
-| Sites          | Number of sites corresponding to that particular site template.                              |
-| Copilot agents | Name of Copilot agent on the SharePoint site corresponding to that particular site template. |
-
-If this cmdlet is executed with both the parameters, i.e. `-ReportId` and `-Action`, and if the value of `-Action` is set as `View`, it will display the same result as described above. If the value of `-Action` is set to `Download`, it will download the full report in CSV format to the same path from where the command was run.
-  
 > [!NOTE]
 > All reports adhere to any retention timeline as per [Data Access Governance](/sharepoint/data-access-governance-reports).
 
@@ -91,7 +53,7 @@ Example 1 enables administrator to view the status of all active and completed r
 Get-SPOCopilotAgentInsightsReport –ReportId 9d946216-afe7-49f5-8267-7b662435c70b
 ```
 
-Example 2 enables administrator to view the Copilot agent insights report of ReportId: `9d946216-afe7-49f5-8267-7b662435c70b`.
+Example 2 enables administrator to view the Copilot agent insight report of ReportId: `9d946216-afe7-49f5-8267-7b662435c70b`.
 
 ### -----------------------EXAMPLE 3-----------------------------
 
@@ -99,13 +61,13 @@ Example 2 enables administrator to view the Copilot agent insights report of Rep
 Get-SPOCopilotAgentInsightsReport – ReportId 9d946216-afe7-49f5-8267-7b662435c70b -Action Download
 ```
 
-Example 3 enables administrator to download the Copilot agent insights report of ReportId: `9d946216-afe7-49f5-8267-7b662435c70b` to the same path from where the command was run.
+Example 3 enables administrator to download the Copilot agent insight report of ReportId: `9d946216-afe7-49f5-8267-7b662435c70b` to the same path from where the command was run.
 
 ## PARAMETERS
 
 ### -ReportId
 
-It is an optional parameter, and it specifies the unique Id of the report to be viewed or downloaded.
+It specifies the unique Id of the report to be viewed or downloaded.
 
 ```yaml
 Type: Guid
@@ -122,7 +84,43 @@ Accept wildcard characters: False
 
 ### -Content
 
-It is an optional parameter, and it specifies the kind of report to view or download. There are 3 kinds of sub-reports: CopilotAgentsOnSites, TopSites, SiteDistribution.
+It specifies the kind of report to view or download. There are 3 kinds of sub-reports: CopilotAgentsOnSites, TopSites, SiteDistribution.
+
+If this cmdlet is executed with `-Content` as `CopilotAgentsOnSites`, a report with list of all sites on which a Copilot agent is created along with the names of the Copilot agent created in the specified number of days will be displayed with the following properties:
+
+| Property                | Description                                              |
+|:------------------------|:---------------------------------------------------------|
+| Site name               | The name of the SharePoint site.                         |
+| URL                     | The URL of the SharePoint site.                          |
+| Template                | The Site template of the SharePoint site.                |
+| Site owner              | Name of the owner of the SharePoint site.                |
+| Copilot name            | Name of Copilot agent on the SharePoint site.            |
+| Sensitivity             | The sensitivity label of the SharePoint site.            |
+| Restrict site access    | RAC status (Yes/No) of the SharePoint site.              |
+| Restrict site discovery | RCD status (Yes/No) of the SharePoint site.              |
+| External sharing        | External Sharing status (Yes/No) of the SharePoint site. |
+
+If this cmdlet is executed with `-ReportId` as parameter and `-Content` as `TopSites`, the top 100 records summarizing the number of Copilot Agents on sites created in the specified number of days will be displayed with the following properties:
+
+| Property                | Description                                              |
+|:------------------------|:---------------------------------------------------------|
+| Site name               | The name of the SharePoint site.                         |
+| URL                     | The URL of the SharePoint site.                          |
+| Template                | The Site template of the SharePoint site.                |
+| Site owner              | Name of the owner of the SharePoint site.                |
+| Copilot agents          | Number of Copilot agents on the SharePoint site.         |
+| Sensitivity             | The sensitivity label of the SharePoint site.            |
+| Restrict site access    | RAC status (Yes/No) of the SharePoint site.              |
+| Restrict site discovery | RCD status (Yes/No) of the SharePoint site.              |
+| External sharing        | External Sharing status (Yes/No) of the SharePoint site. |
+
+If this cmdlet is executed with `-ReportId` as parameter and `-Content` as `SiteDistribution`, a report showing Copilot distribution across sites in the specified number of days will be displayed with the following properties:
+
+| Property       | Description                                                                                  |
+|:---------------|:---------------------------------------------------------------------------------------------|
+| Site template  | The Site template of the SharePoint site.                                                    |
+| Sites          | Number of sites corresponding to that particular site template.                              |
+| Copilot agents | Name of Copilot agent on the SharePoint site corresponding to that particular site template. |
 
 ```yaml
 Type: SPOCopilotAgentInsightType
@@ -139,7 +137,7 @@ Accept wildcard characters: False
 
 ### -Action
 
-It is an optional parameter, and it specifies whether to view or download a specific report.
+It determines whether a report would be viewed or downloaded. If the value of `-Action` is set as `View`, it will display the output on the PowerShell screen. Else if the value of `-Action` is set as `Download`, it will download the full report in CSV format to the same path from where the command was run.
 
 ```yaml
 Type: ActionType
