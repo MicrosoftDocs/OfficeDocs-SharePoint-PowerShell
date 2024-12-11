@@ -50,6 +50,9 @@ The following are the available move states:
 |InProgress| The move is in progress in one of the following states: Validation, Backup, Restore, Cleanup.|
 |Success| The move has completed successfully.|
 |Failed|The move failed.|
+|Stopped|The move was canceled by an admin while it was still queued.|
+|NotSupported|The move could not be processed because the PDL was invalid.|
+|Rescheduled|The move did not succeed and is being scheduled again for another attempt.|
 
 ## EXAMPLES
 
