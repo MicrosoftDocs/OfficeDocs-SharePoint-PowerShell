@@ -42,7 +42,7 @@ After this cmdlet is executed, the Copilot agent insight report generation reque
 Start-SPOCopilotAgentInsightsReport
 ```
 
-Example 1 generates the Copilot agent insight report for a default duration of 1 day as the parameter `–ReportPeriodInDays` is not provided.
+Example 1 generates the Copilot agent insight report for a default duration of 1 day since the parameter `–ReportPeriodInDays` is not provided.
 
 ### -----------------------EXAMPLE 2-----------------------------
 
@@ -66,7 +66,7 @@ Applicable: SharePoint Online
  
 Required: False
 Position: Named
-Default value: None
+Default value: 1
 Accept pipeline input: False
 Accept wildcard characters: False 
 ```
