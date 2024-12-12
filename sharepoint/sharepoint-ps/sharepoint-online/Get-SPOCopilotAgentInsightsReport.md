@@ -88,31 +88,31 @@ It specifies the kind of report to view or download. There are 3 kinds of sub-re
 
 If this cmdlet is executed with `-Content` as `CopilotAgentsOnSites`, a report with list of all sites on which a Copilot agent is created along with the names of the Copilot agent created in the specified number of days will be displayed with the following properties:
 
-| Property                        | Description                                              |
-|:--------------------------------|:---------------------------------------------------------|
-| Site name                       | The name of the SharePoint site.                         |
-| URL                             | The URL of the SharePoint site.                          |
-| Template                        | The Site template of the SharePoint site.                |
-| Site owner                      | Name of the owner of the SharePoint site.                |
-| Copilot name                    | Name of Copilot agent on the SharePoint site.            |
-| Sensitivity                     | The sensitivity label of the SharePoint site.            |
-| Restrict site access enabled    | RAC status (Yes/No) of the SharePoint site.              |
-| Restrict site discovery enabled | RCD status (Yes/No) of the SharePoint site.              |
-| External sharing                | External Sharing status (Yes/No) of the SharePoint site. |
+| Property                        | Description                                                     |
+|:--------------------------------|:----------------------------------------------------------------|
+| Site name                       | The name of the SharePoint site.                                |
+| URL                             | The URL of the SharePoint site.                                 |
+| Template                        | The Site template of the SharePoint site.                       |
+| Site owner                      | Name of the owner of the SharePoint site.                       |
+| Copilot name                    | Name of Copilot agent on the SharePoint site.                   |
+| Sensitivity                     | The sensitivity label of the SharePoint site.                   |
+| Restrict site access enabled    | Restrict site access status (Yes/No) of the SharePoint site.    |
+| Restrict site discovery enabled | Restrict site discovery status (Yes/No) of the SharePoint site. |
+| External sharing                | External Sharing status (Yes/No) of the SharePoint site.        |
 
-If this cmdlet is executed with `-ReportId` as parameter and `-Content` as `TopSites`, the top 100 records summarizing the number of Copilot Agents on sites created in the specified number of days will be displayed with the following properties:
+If this cmdlet is executed with `-ReportId` as parameter and `-Content` as `TopSites`, the top 100 records summarizing the number of Copilot agents on sites created in the specified number of days will be displayed with the following properties:
 
-| Property                        | Description                                              |
-|:--------------------------------|:---------------------------------------------------------|
-| Site name                       | The name of the SharePoint site.                         |
-| URL                             | The URL of the SharePoint site.                          |
-| Template                        | The Site template of the SharePoint site.                |
-| Site owner                      | Name of the owner of the SharePoint site.                |
-| Copilot agents                  | Number of Copilot agents on the SharePoint site.         |
-| Sensitivity                     | The sensitivity label of the SharePoint site.            |
-| Restrict site access enabled    | RAC status (Yes/No) of the SharePoint site.              |
-| Restrict site discovery enabled | RCD status (Yes/No) of the SharePoint site.              |
-| External sharing                | External Sharing status (Yes/No) of the SharePoint site. |
+| Property                        | Description                                                     |
+|:--------------------------------|:----------------------------------------------------------------|
+| Site name                       | The name of the SharePoint site.                                |
+| URL                             | The URL of the SharePoint site.                                 |
+| Template                        | The Site template of the SharePoint site.                       |
+| Site owner                      | Name of the owner of the SharePoint site.                       |
+| Copilot agents                  | Number of Copilot agents on the SharePoint site.                |
+| Sensitivity                     | The sensitivity label of the SharePoint site.                   |
+| Restrict site access enabled    | Restrict site access status (Yes/No) of the SharePoint site.    |
+| Restrict site discovery enabled | Restrict site discovery status (Yes/No) of the SharePoint site. |
+| External sharing                | External Sharing status (Yes/No) of the SharePoint site.        |
 
 If this cmdlet is executed with `-ReportId` as parameter and `-Content` as `SiteDistribution`, a report showing Copilot distribution across sites in the specified number of days will be displayed with the following properties:
 
@@ -120,7 +120,7 @@ If this cmdlet is executed with `-ReportId` as parameter and `-Content` as `
 |:---------------|:---------------------------------------------------------------------------------------------|
 | Site template  | The Site template of the SharePoint site.                                                    |
 | Sites          | Number of sites corresponding to that particular site template.                              |
-| Copilot agents | Name of Copilot agent on the SharePoint site corresponding to that particular site template. |
+| Copilot agents | Number of Copilot agent on the SharePoint site corresponding to that particular site template. |
 
 ```yaml
 Type: SPOCopilotAgentInsightType

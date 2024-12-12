@@ -15,7 +15,7 @@ manager: hikakar
 
 ## SYNOPSIS
 
-Using this commandlet, SPO Administrators may trigger the build of a new Copilot agent insight report for the specified number of days.
+Using this cmdlet, administrators may trigger the build of a new Copilot agent insight report for the specified number of days.
 
 ## SYNTAX
 
