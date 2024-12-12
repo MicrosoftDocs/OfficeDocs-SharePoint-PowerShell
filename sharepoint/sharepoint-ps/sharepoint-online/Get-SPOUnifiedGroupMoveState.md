@@ -103,8 +103,8 @@ The move status for the Office 365 Group. Possible values are:
 * InProgress (n/4): The move is in progress in one of the following states: Validation (1/4), Backup (2/4), Restore (3/4), Cleanup (4/4).
 * Success: The move has completed successfully.
 * Failed: The move failed.
-* Stopped: The move was canceled by an admin while it was still queued.
-* NotSupported: The move could not be processed because the PDL was invalid.
+* Stopped: The move was canceled by an administrator while it was still queued.
+* NotSupported: The move could not be processed because the Preferred Data Location was invalid.
 * Rescheduled: The move did not succeed and is being scheduled again for another attempt.
 
 ## NOTES
