@@ -113,4 +113,4 @@ You can also apply the `-Verbose` option to see additional information about the
 
 ## RELATED LINKS
 
-[Move a SharePoint site to a different geo location](https://learn.microsoft.com/office365/enterprise/move-sharepoint-between-geo-locations)
+[Move a SharePoint site to a different geo location](/microsoft-365/enterprise/m365-dr-workload-spo)
