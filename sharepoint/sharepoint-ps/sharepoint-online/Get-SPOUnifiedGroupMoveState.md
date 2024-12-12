@@ -107,9 +107,8 @@ The move status for the Office 365 Group. Possible values are:
 * NotSupported: The move could not be processed because the Preferred Data Location was invalid.
 * Rescheduled: The move did not succeed and is being scheduled again for another attempt.
 
-## NOTES
-
-You can also apply the `-Verbose` option to see additional information about the move.
+> [!NOTE]
+> You can also apply the `-Verbose` option to see additional information about the move.
 
 ## RELATED LINKS
 
