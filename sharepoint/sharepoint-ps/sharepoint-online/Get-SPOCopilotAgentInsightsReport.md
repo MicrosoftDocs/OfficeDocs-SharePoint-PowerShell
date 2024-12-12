@@ -120,7 +120,7 @@ If this cmdlet is executed with `-ReportId` as parameter and `-Content` as `
 |:---------------|:---------------------------------------------------------------------------------------------|
 | Site template  | The Site template of the SharePoint site.                                                    |
 | Sites          | Number of sites corresponding to that particular site template.                              |
-| Copilot agents | Number of Copilot agent on the SharePoint site corresponding to that particular site template. |
+| Copilot agents | Number of Copilot agents on the SharePoint site corresponding to that particular site template. |
 
 ```yaml
 Type: SPOCopilotAgentInsightType
