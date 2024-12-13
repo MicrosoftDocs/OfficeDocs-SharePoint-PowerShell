@@ -99,8 +99,8 @@ Accept wildcard characters: False
 
 Specifies whether policies allow or deny users from creating sites.
 PARAMVALUE: Deny | Allow
-•	Deny – a user will be blocked from creating a site if any policy applies to them.
-•	Allow – a user will only be allowed to create a site if a policy applies to them.
+- Deny – a user will be blocked from creating a site if any policy applies to them.
+- Allow – a user will only be allowed to create a site if a policy applies to them.
 
 > [!NOTE]
 > The restricted site creation mode is shared across all site type policies. It is not possible to use deny mode for one site type and allow mode for a different site type. When the mode is changed, all polices are cleared.
@@ -122,11 +122,11 @@ Accept wildcard characters: False
 When paired with the `–RestrictedSiteCreationGroups` parameter, creates a new policy which applies to the specified types of sites.
 
 PARAMVALUE: All | SharePoint | OneDrive | Team | Communication
-•	All - OneDrive and all SharePoint sites 
-•	SharePoint - All SharePoint sites (but not OneDrive) 
-•	OneDrive - Only OneDrive 
-•	Team - Only SharePoint team sites (group-connected and classic) 
-•	Communication - Only SharePoint communication sites
+- All - OneDrive and all SharePoint sites 
+- SharePoint - All SharePoint sites (but not OneDrive) 
+- OneDrive - Only OneDrive 
+- Team - Only SharePoint team sites (group-connected and classic) 
+- Communication - Only SharePoint communication sites
 
 
 ```yaml
