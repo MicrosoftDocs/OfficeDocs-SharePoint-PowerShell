@@ -15,7 +15,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-This cmdlet downloads the Data Access Governance (DAG) reports to the current working directory.
+This cmdlet downloads the Data Access Governance (DAG) reports to the specified path. The default is the "Downloads" folder.
 
 ## SYNTAX
 
@@ -25,7 +25,7 @@ Export-SPODataAccessGovernanceInsight -ReportID <Guid> [<CommonParameters>]
 
 ## DESCRIPTION
 
-This cmdlet exports or downloads the DAG report, specified by the `ReportID`, to the current working directory. The `ReportID` is shown in the output of the [Start-SPODataAccessGovernanceInsight](./Start-SPODataAccessGovernanceInsight.md) command. It can also be fetched from the output of the [Get-SPODataAccessGovernanceInsight](./Get-SPODataAccessGovernanceInsight.md) command.
+This cmdlet exports or downloads the DAG report, specified by the `ReportID`, to the path as specified with `DownloadPath`. If not specified, the commands downloads the report to the "Downloads" folder. The `ReportID` is shown in the output of the [Start-SPODataAccessGovernanceInsight](./Start-SPODataAccessGovernanceInsight.md) command. It can also be fetched from the output of the [Get-SPODataAccessGovernanceInsight](./Get-SPODataAccessGovernanceInsight.md) command.
 
 ## EXAMPLES
 
@@ -49,6 +49,22 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DownloadPath
+
+Specifies the path to which the report should be downloaded. The default path is the "Downloads" folder.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
