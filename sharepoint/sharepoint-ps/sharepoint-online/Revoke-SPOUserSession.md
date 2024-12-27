@@ -39,9 +39,9 @@ Possible results for this cmdlet are:
 Result |                                                                                             Reason
 --- | ---
 Warning : We couldn't find the user@contoso.com. Check for typos and try again. |                    Invalid input for -User parameter.
-We successfully signed out <user> from all devices. |                                                Successful instantaneous revocation.
-It can take up to an hour to sign out <user> from all devices. |                                     Successful non-instantaneous revocation.
-Sorry, something went wrong and we couldn't sign out <user> from any device. |                       The cmdlet did not successfully execute.
+We successfully signed out \<user\> from all devices. |                                                Successful instantaneous revocation.
+It can take up to an hour to sign out \<user\> from all devices. |                                     Successful non-instantaneous revocation.
+Sorry, something went wrong and we couldn't sign out \<user\> from any device. |                       The cmdlet did not successfully execute.
 The cmdlet will be available in the future, but it isn't ready for use in your organization yet. |   The cmdlet has been disabled for the tenant.
 
 ## EXAMPLES
