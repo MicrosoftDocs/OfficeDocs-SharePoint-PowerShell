@@ -205,7 +205,7 @@ Set-SPOTenant
  [-StreamLaunchConfig <Int32> ]
  [-EnableRestrictedAccessControl <Boolean> ]
  [-BlockDownloadFileTypeIds <SPBlockDownloadFileTypeId[]> ]
- [-ExcludedBlockDownloadGroupIds <GUID[]> ]
+ [-ExcludedBlockDownloadGroupIds <GUID> ]
  [-RecycleBinRetentionPeriod <Int32> ]
  [-EnableMediaReactions <Boolean> ]
  [-AllowSensitivityLabelOnRecords <Boolean> ]
@@ -980,7 +980,7 @@ Accept wildcard characters: False
 ### -CommentsOnSitePagesDisabled
 
 Disables or enables commenting functionality on the site pages.
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -997,7 +997,7 @@ Accept wildcard characters: False
 ### -CommentsOnFilesDisabled
 
 Disables or enables commenting functionality on the files.
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -1014,7 +1014,7 @@ Accept wildcard characters: False
 ### -CommentsOnListItemsDisabled
 
 Disables or enables commenting functionality on list items.
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -1034,7 +1034,7 @@ Disables or enables the Social Bar.
 
 The Social Bar will appear on all modern SharePoint pages with the exception of the home page of a site. It will give users the ability to like a page, see the number of views, likes, and comments on a page, and see the people who have liked a page.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -1400,7 +1400,7 @@ Accept wildcard characters: False
 
 Enables or disables notifications in OneDrive for Business.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -1418,7 +1418,7 @@ Accept wildcard characters: False
 
 Enables or disables notifications in SharePoint.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -1585,7 +1585,7 @@ Accept wildcard characters: False
 
 Enables or disables owner anonymous notification. If enabled, an email notification will be sent to the OneDrive for Business owners when anonymous links are created or changed.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -1624,7 +1624,7 @@ Accept wildcard characters: False
 
 Prevents external users from resharing files, folders, and sites that they do not own.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -1660,7 +1660,7 @@ Accept wildcard characters: False
 
 Enables or disables the public CDN.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -1975,7 +1975,7 @@ Accept wildcard characters: False
 
 Prevents users from editing Office files in the browser and copying and pasting Office file contents out of the browser window.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -1993,7 +1993,7 @@ Accept wildcard characters: False
 
 Enables OneDrive and SharePoint integration with Microsoft Entra B2B. For more information, see [SharePoint and OneDrive integration with Microsoft Entra B2B](/sharepoint/sharepoint-azureb2b-integration).
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -2323,7 +2323,7 @@ Accept wildcard characters: False
 This parameter has no effect and it was used to opt-out of PST files retention policy changes as communicated in MC256835 (May 2021).
 Starting August 16, 2021, the service started retaining 30 days worth of versions for any PST files stored in OneDrive for Business and SharePoint Online team site document libraries. This change was introduced to prevent cases of previous versions of PST files quickly consuming available storage. The change only impacts previous versions of PST files stored in your document library storage. As a best practice, PST files should not be uploaded on OneDrive for Business and SharePoint Online team site document libraries due to the impact on storage and network bandwidth.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -2341,7 +2341,7 @@ Accept wildcard characters: False
 
 When the feature is disabled ($true), the option [Add shortcut to My files](https://support.microsoft.com/office/add-shortcuts-to-shared-folders-in-onedrive-for-work-or-school-d66b1347-99b7-4470-9360-ffc048d35a33) will be removed; any folders that have already been added will remain on the user's computer.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -2820,7 +2820,7 @@ The valid values are:
 > b. `ExpireVersionsAfterDays` accepts values of 0 to Never Expire or values >= 30 to delete versions that exceed that time period.
 > When version history limits are managed automatically (`EnableAutoExpirationVersionTrim $true`), setting `MajorVersionLimit` or `ExpireVersionsAfterDays` will result in an error as the count limits are set by the service.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -2871,7 +2871,7 @@ Accept wildcard characters: False
 ### -MassDeleteNotificationDisabled
 Enables or disables the mass delete detection feature. When MassDeleteNotificationDisabled is set to $true, tenant admins can perform mass deletion operations without triggering notifications.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -3598,7 +3598,7 @@ Accept wildcard characters: False
 ### -AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled
 Enables or disables web property bag update when DenyAddAndCustomizePages is enabled. When AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled is set to $true, web property bag can be updated even if DenyAddAndCustomizePages is turned on when the user had AddAndCustomizePages (prior to DenyAddAndCustomizePages removing it).
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -3615,7 +3615,7 @@ Accept wildcard characters: False
 
 Sets the list of security groups who are allowed to share with anonymous (non-authenticated) users as well as authenticated guest users. Each security group is denoted by its GUID object ID in the Entra directory. 
 
-To set this list to be a specific security group, you need to enter its GUID as the argument. You can enter multiple GUIDs by using commas to separate them. To view the current list, use [Get-SPOTenant](Get-SPOTenant.md). 
+To set this list to be a specific security group, you need to enter its GUID as the argument. You can enter multiple GUIDs by using commas to separate them. To view the current list, use [./Get-SPOTenant.md](Get-SPOTenant.md). 
 
 ```yaml
 Type: Guid[] 
@@ -3633,7 +3633,7 @@ Accept wildcard characters: False
 
 Sets the list of security groups who are only allowed to share with authenticated guest users. Each security group is denoted by its GUID object ID. 
 
-To set this list to be a specific security group, you need to enter its GUID as the argument. You can enter multiple GUIDs by using commas to separate them. To view the current list, use [Get-SPOTenant](Get-SPOTenant.md). 
+To set this list to be a specific security group, you need to enter its GUID as the argument. You can enter multiple GUIDs by using commas to separate them. To view the current list, use [./Get-SPOTenant.md](Get-SPOTenant.md). 
 
 ```yaml 
 Type: Guid[] 
@@ -3649,7 +3649,7 @@ Accept wildcard characters: False
 ### -ExtendPermissionsToUnprotectedFiles
 This property can be used to turn on/off the capability called "Extended SharePoint permissions to unprotected files". To learn more about this feature check [here](https://aka.ms/ExtendSharePointPermission)
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -3665,7 +3665,7 @@ Accept wildcard characters: False
 
 Controls whether legacy browser authentication protocols are enabled.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -3682,7 +3682,7 @@ Accept wildcard characters: False
 
 Allows the sharing dialog to include a checkbox offering the user the ability to share to a security group containing every user in the organization.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -3731,7 +3731,7 @@ Accept wildcard characters: False
 
 Controls whether Workflow 2010 is enabled.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -3768,7 +3768,7 @@ Accept wildcard characters: False
 
 Requires recipients to verify their identity with an email address to access content from an Anyone link.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -3807,7 +3807,7 @@ Accept wildcard characters: False
 
 Controls whether sharing SharePoint sites and their content is allowed with users and groups who are not allowed as per the Restricted access control policy.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -3824,7 +3824,7 @@ Accept wildcard characters: False
 
 Controls whether Workflow 2013 is enabled.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -3841,7 +3841,7 @@ Accept wildcard characters: False
 
 Controls whether collaborative meeting notes are enabled in Microsoft Teams.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -3858,7 +3858,7 @@ Accept wildcard characters: False
 
 Controls whether Loop components are available in Microsoft Teams. 
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -3875,7 +3875,7 @@ Accept wildcard characters: False
 
 Controls whether users can create a personal list.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -3892,7 +3892,7 @@ Accept wildcard characters: False
 
 Controls whether the Viva Connections analytics feature is enabled.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -3909,7 +3909,7 @@ Accept wildcard characters: False
 
 Controls whether applications running in app-only mode can access sites protected by information barriers.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -3926,7 +3926,7 @@ Accept wildcard characters: False
 
 Specifies list of modern template IDs not enabled in tenant.
 
-To set this list to be a specific security group, you need to enter its GUID as the argument. You can enter multiple GUIDs by using commas to separate them. To view the current list, use [Get-SPOTenant](Get-SPOTenant.md). 
+To set this list to be a specific security group, you need to enter its GUID as the argument. You can enter multiple GUIDs by using commas to separate them. To view the current list, use [./Get-SPOTenant.md](Get-SPOTenant.md). 
 
 ```yaml
 Type: Guid[] 
@@ -3944,7 +3944,7 @@ Accept wildcard characters: False
 
 Specifies list of modern template IDs enabled in tenant.
 
-To set this list to be a specific security group, you need to enter its GUID as the argument. You can enter multiple GUIDs by using commas to separate them. To view the current list, use [Get-SPOTenant](Get-SPOTenant.md). 
+To set this list to be a specific security group, you need to enter its GUID as the argument. You can enter multiple GUIDs by using commas to separate them. To view the current list, use [./Get-SPOTenant.md](Get-SPOTenant.md). 
 
 ```yaml
 Type: Guid[] 
@@ -3962,7 +3962,7 @@ Accept wildcard characters: False
 
 When set to true, turns off OneDrive sync from all the SharePoint libraries in your organization.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -3995,7 +3995,7 @@ Accept wildcard characters: False
 
 Lets you and other Global or SharePoint Administrators restrict access to sites.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -4032,7 +4032,7 @@ Accept wildcard characters: False
 
 Exempts users from specified groups from the block download policy and they can fully download any content for the site.
 
-To set this list to be a specific security group, you need to enter its GUID as the argument. You can enter multiple GUIDs by using commas to separate them. To view the current list, use [Get-SPOTenant](Get-SPOTenant.md). 
+To set this list to be a specific security group, you need to enter its GUID as the argument. You can enter multiple GUIDs by using commas to separate them. To view the current list, use [./Get-SPOTenant.md](Get-SPOTenant.md). 
 
 ```yaml
 Type: Guid[] 
@@ -4065,7 +4065,7 @@ Accept wildcard characters: False
 
 Controls whether media reactions are enabled.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -4082,7 +4082,7 @@ Accept wildcard characters: False
 
 Controls whether sensitivity labels can be applied to records.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -4099,7 +4099,7 @@ Accept wildcard characters: False
 
 Controls whether content security policy is enabled.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -4116,7 +4116,7 @@ Accept wildcard characters: False
 
 Controls SharePoint spaces activation.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
