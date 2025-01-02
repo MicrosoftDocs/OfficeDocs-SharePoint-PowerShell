@@ -68,7 +68,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-RestrictedAccessControlGroups <Guid>]
  [-RemoveRestrictedAccessControlGroups <Guid>]
  [-ReadOnlyForUnmanagedDevices <Boolean>]
- [-ExcludedBlockDownloadGroupIds <Guid[]>]
+ [-ExcludedBlockDownloadGroupIds <Guid>]
  [-ExcludeBlockDownloadPolicySiteOwners <Boolean>]
  [-ReadOnlyForBlockDownloadPolicy <Boolean>]
  [-AuthenticationContextAccessType <SPOAuthenticationContextPolicyAccessType>]
