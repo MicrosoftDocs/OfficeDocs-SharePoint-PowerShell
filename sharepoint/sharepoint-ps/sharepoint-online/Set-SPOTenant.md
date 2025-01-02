@@ -205,7 +205,7 @@ Set-SPOTenant
  [-StreamLaunchConfig <Int32> ]
  [-EnableRestrictedAccessControl <Boolean> ]
  [-BlockDownloadFileTypeIds <SPBlockDownloadFileTypeId[]> ]
- [-ExcludedBlockDownloadGroupIds <GUID> ]
+ [-ExcludedBlockDownloadGroupIds <Guid[]> ]
  [-RecycleBinRetentionPeriod <Int32> ]
  [-EnableMediaReactions <Boolean> ]
  [-AllowSensitivityLabelOnRecords <Boolean> ]
