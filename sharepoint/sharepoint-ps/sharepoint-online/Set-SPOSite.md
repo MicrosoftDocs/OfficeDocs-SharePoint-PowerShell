@@ -67,6 +67,19 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
  [-RestrictedAccessControl <Boolean>]
  [-RestrictedAccessControlGroups <Guid>]
  [-RemoveRestrictedAccessControlGroups <Guid>]
+ [-ReadOnlyForUnmanagedDevices <Boolean>]
+ [-ExcludedBlockDownloadGroupIds <Guid>]
+ [-ExcludeBlockDownloadPolicySiteOwners <Boolean>]
+ [-ReadOnlyForBlockDownloadPolicy <Boolean>]
+ [-AuthenticationContextAccessType <SPOAuthenticationContextPolicyAccessType>]
+ [-HubSiteId <Guid>]
+ [-InformationBarriersMode <String>]
+ [-RestrictContentOrgWideSearch <Boolean>]
+ [-RestrictedAccessControl <Boolean>]
+ [-RestrictedAccessControlGroups <Guid[]>]
+ [-AddRestrictedAccessControlGroups <Guid[]>]
+ [-RemoveRestrictedAccessControlGroups <Guid[]>]
+ [-ClearRestrictedAccessControl <SwitchParameter>]
  [<CommonParameters>]
 ```
 
@@ -754,7 +767,7 @@ Disables or enables the Social Bar for Site Collection.
 
 The Social Bar will appear on all modern SharePoint pages with the exception of the home page of a site. It will give users the ability to like a page, see the number of views, likes, and comments on a page, and see the people who have liked a page.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: False | True
 
 ```yaml
 Type: Boolean
@@ -970,7 +983,7 @@ Accept wildcard characters: False
 
 When set to TRUE, the DefaultSharingLinkType will be overriden and the default sharing link will a People with Existing Access link (which does not modify permissions). When set to FALSE (the default), the DefaultSharingLinkType parameter controls the default sharing link type.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: False | True
 
 
 ```yaml
@@ -1214,7 +1227,7 @@ Accept wildcard characters: False
 
 Prevents users from editing Office files in the browser and copying and pasting Office file contents out of the browser window.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: False | True
 
 ```yaml
 Type: Boolean
@@ -1294,7 +1307,7 @@ As a SharePoint administrator in Microsoft 365, you can block the download of fi
 
 Blocking the download of files allows users to remain productive while addressing the risk of accidental data loss. Users have browser-only access with no ability to download, print, or sync files. They also won't be able to access content through apps, including the Microsoft Office desktop apps. When web access is limited, users will see the following message at the top of sites: "Your organization doesn't allow you to download, print, or sync from this site. For help contact your IT department." Read the full documentation for advanced capabilities at [Block download policy for SharePoint sites and OneDrive](https://learn.microsoft.com/sharepoint/block-download-from-sites).
 
-PARAMVALUE: $true | $false
+PARAMVALUE: False | True
 
 ```yaml
 Type: Boolean
@@ -1353,7 +1366,7 @@ The valid values are:
 > c. `ExpireVersionsAfterDays` accepts values of 0 to Never Expire or values >= 30 to delete versions that exceed that time period.
 > When version history limits are managed automatically (`EnableAutoExpirationVersionTrim $true`), setting `MajorVersionLimit` or `ExpireVersionsAfterDays` will result in an error as the count limits are set by the service.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: False | True
 
 ```yaml
 Type: Boolean
@@ -1580,7 +1593,244 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -ReadOnlyForUnmanagedDevices
 
+Controls whether unmanaged devices have read-only access.
+
+PARAMVALUE: False | True
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExcludedBlockDownloadGroupIds
+
+Exempts users from specified groups from the block download policy and they can fully download any content for the site.
+
+```yaml
+Type: Guid[] 
+Parameter Sets: (All) 
+Aliases: 
+Applicable: SharePoint Online 
+Required: False 
+Position: Named 
+Default value: None 
+Accept pipeline input: False 
+Accept wildcard characters: False 
+``` 
+
+### -ExcludeBlockDownloadPolicySiteOwners
+
+Controls if site owners are excluded from block download policy.
+
+PARAMVALUE: False | True
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReadOnlyForBlockDownloadPolicy
+Controls if read-only should be enabled for block download policy.
+
+PARAMVALUE: False | True
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExcludeBlockDownloadSharePointGroups
+
+Specifies the groups excluded from the block download policy.
+
+```yaml
+Type: String
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuthenticationContextAccessType
+
+Controls whether Authentication Context Limited Access is enabled for a site.
+
+
+The valid values are:
+
+- AllowLimitedAccess
+- BlockAccess
+
+```yaml
+Type: SPOAuthenticationContextPolicyAccessType
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HubSiteId
+
+Sets the hub site for a specified SharePoint site.
+
+```yaml
+Type: GUID
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InformationBarriersMode
+
+Specifies the information barrier mode.
+
+```yaml
+Type: String
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictContentOrgWideSearch
+
+Controls whether org-wide content search is enabled for a site.
+
+PARAMVALUE: False | True
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictedAccessControl
+
+Sets access restriction policy by group membership.
+
+PARAMVALUE: False | True
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictedAccessControlGroups
+
+Specifies the IDs of groups that have access under an access restriction policy.
+
+```yaml
+Type: Guid[] 
+Parameter Sets: (All) 
+Aliases: 
+Applicable: SharePoint Online 
+Required: False 
+Position: Named 
+Default value: None 
+Accept pipeline input: False 
+Accept wildcard characters: False 
+``` 
+
+### -AddRestrictedAccessControlGroups
+
+Specifies the IDs of groups to be added to an access restriction policy and gain access.
+
+```yaml
+Type: Guid[] 
+Parameter Sets: (All) 
+Aliases: 
+Applicable: SharePoint Online 
+Required: False 
+Position: Named 
+Default value: None 
+Accept pipeline input: False 
+Accept wildcard characters: False 
+``` 
+
+### -RemoveRestrictedAccessControlGroups
+
+Specifies the IDs of groups to be removed from access restriction policy and lose access.
+
+```yaml
+Type: Guid[] 
+Parameter Sets: (All) 
+Aliases: 
+Applicable: SharePoint Online 
+Required: False 
+Position: Named 
+Default value: None 
+Accept pipeline input: False 
+Accept wildcard characters: False 
+``` 
+
+### -ClearRestrictedAccessControl
+
+Clears the list of groups that are given access via an access restriction policy.
+
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
