@@ -291,6 +291,10 @@ The following cmdlet references are for SharePoint Online.
 
 {{Manually Enter Get-SPOTenantTaxonomyReplicationParameters Description Here}}
 
+### [Get-SPOTenantPreAuthSettings](Get-SPOTenantPreAuthSettings.md)
+
+{{Manually Enter Get-SPOTenantPreAuthSettings Description Here}}
+
 ### [Get-SPOTheme](Get-SPOTheme.md)
 
 {{Manually Enter Get-SPOTheme Description Here}}
@@ -607,6 +611,10 @@ This cmdlet is not currently active in production and may be removed in the futu
 ### [Set-SPOTenantTaxonomyReplicationParameters](Set-SPOTenantTaxonomyReplicationParameters.md)
 
 {{Manually Enter Set-SPOTenantTaxonomyReplicationParameters Description Here}}
+
+### [Set-SPOTenantPreAuthSettings](Set-SPOTenantPreAuthSettings.md)
+
+{{Manually Enter Set-SPOTenantPreAuthSettings Description Here}}
 
 ### [Set-SPOUser](Set-SPOUser.md)
 
