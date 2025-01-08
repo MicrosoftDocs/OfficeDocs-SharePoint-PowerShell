@@ -33,7 +33,7 @@ If this cmdlet is executed with `-RACProtectedSites` as parameter, it displays t
 
 If this cmdlet is executed with `-RACProtectedSites` `-ReportId` as parameter, top 100 sites with the highest page views that are protected by restricted access control will be displayed.
 
-If this cmdlet is executed with `-RACProtectedSites` `-ReportId` `-FullDetails`, up to 1 million sites that are protected by restricted access control will be available for download in a CSV file format.
+If this cmdlet is executed with `-RACProtectedSites` `-ReportId` `-FullDetails` `-Download`, a CSV file containing list of up to 1 million sites protected by restricted access control will be downloaded.
 
 If this cmdlet is executed with `-RACProtectedSites` `-ReportId` `-InsightsSummary` as parameter, the count of sites protected with restricted access control compared to total number of sites will be displayed.
 
@@ -182,10 +182,10 @@ Accept wildcard characters: False
 
 ### -FullDetails
 
-It is an optional parameter, and TBD
+It is an optional parameter and allows to download a CSV file containing up to 1 million records.
 
 ```yaml
-Type: Bool
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
