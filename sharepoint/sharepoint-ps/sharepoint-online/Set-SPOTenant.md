@@ -20,7 +20,7 @@ Sets properties on the SharePoint Online organization.
 
 ```powershell
 Set-SPOTenant
-  [-AIBuilderModelScope <SyntexFeatureScopeValue>]
+ [-AIBuilderModelScope <SyntexFeatureScopeValue>]
  [-AIBuilderModelSelectedSitesIncludesContentCenters <Boolean>]
  [-AIBuilderModelSelectedSitesList [String[]]]
  [-AIBuilderModelSelectedSitesListOperation <SelectedSitesListOperations>]
@@ -36,7 +36,7 @@ Set-SPOTenant
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>]
  [-AnyoneLinkTrackUsers <Boolean>]
  [-AppBypassInformationBarriers <Boolean>]
-[-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
+ [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-AutofillColumnScope <SyntexFeatureScopeValue>]
  [-AutofillColumnsSelectedSitesList [String[]]]
  [-AutofillColumnsSelectedSitesListOperation <SelectedSitesListOperations>]
@@ -46,9 +46,9 @@ Set-SPOTenant
  [-BlockDownloadFileTypePolicy <Boolean>]
  [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>]
  [-BlockSendLabelMismatchEmail <Boolean>]
- [-BlockUserInfoVisibility]
- [-BlockUserInfoVisibilityInOneDrive]
- [-BlockUserInfoVisibilityInSharePoint]
+ [-BlockUserInfoVisibility <String>]
+ [-BlockUserInfoVisibilityInOneDrive <String>]
+ [-BlockUserInfoVisibilityInSharePoint <String>]
  [-BusinessConnectivityServiceDisabled <Boolean>]
  [-CommentsOnFilesDisabled <Boolean>]
  [-CommentsOnListItemsDisabled <Boolean>]
@@ -79,7 +79,7 @@ Set-SPOTenant
  [-DisabledAdaptiveCardExtensionIds [Guid[]]]
  [-DisableDocumentLibraryDefaultLabeling <Boolean>]
  [-DisabledWebPartIds [Guid[]]]
- [-DisableModernListTemplateIds <Guid[]>]
+ [-DisableModernListTemplateIds [Guid[]]]
  [-DisableOutlookPSTVersionTrimming <Boolean>]
  [-DisablePersonalListCreation <Boolean>]
  [-DisableSpacesActivation <Boolean>]
@@ -103,14 +103,14 @@ Set-SPOTenant
  [-EnableGuestSignInAcceleration <Boolean>]
  [-EnableMediaReactions <Boolean>]
  [-EnableMinimumVersionRequirement <Boolean>]
- [-EnableModernListTemplateIds <Guid[]>]
+ [-EnableModernListTemplateIds [Guid[]]]
  [-EnablePromotedFileHandlers <Boolean>]
  [-EnableRestrictedAccessControl <Boolean>]
  [-EnableSensitivityLabelforPDF <Boolean>]
  [-EnableVersionExpirationSetting <Boolean>]
  [-EnforceContentSecurityPolicy <Boolean>]
- [-ExcludedBlockDownloadGroupIds <Guid[]>]
- [-ExcludeSiteTemplate]
+ [-ExcludedBlockDownloadGroupIds [Guid[]]]
+ [-ExcludeSiteTemplate <SwitchParameter>]
  [-ExpireVersionsAfterDays <int>]
  [-ExtendPermissionsToUnprotectedFiles <Boolean>]
  [-ExternalServicesEnabled <Boolean>]
@@ -121,7 +121,7 @@ Set-SPOTenant
  [-FolderAnonymousLinkType <AnonymousLinkType>]
  [-HideSyncButtonOnTeamSite <Boolean>]
  [-IBImplicitGroupBased <Boolean>]
- [-IncludeAtAGlanceInShareEmails]
+ [-IncludeAtAGlanceInShareEmails <Boolean>]
  [-InformationBarriersSuspension <Boolean>]
  [-IPAddressAllowList <String>]
  [-IPAddressEnforcement <Boolean>]
@@ -182,7 +182,7 @@ Set-SPOTenant
  [-RequireAnonymousLinksExpireInDays <Int32>]
  [-RestrictedAccessControlforSitesErrorHelpLink <String>]
  [-ResyncContentSecurityPolicyConfigurationEntries <Boolean>]
- [-ReSyncTenantPrivacyProfile]
+ [-ReSyncTenantPrivacyProfile <SwitchParameter>]
  [-SearchResolveExactEmailOrUPN <Boolean>]
  [-SelfServiceSiteCreationDisabled <Boolean>]
  [-SensitivityLabel <String>]
@@ -488,6 +488,8 @@ Accept wildcard characters: False
 ### -BusinessConnectivityServiceDisabled
 Prevents access to features that depend on the Business Connectivity Service (BCS), including external lists, external columns, and external content types.
 
+PARAMVALUE: True | False
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -498,7 +500,6 @@ Position: Named
 Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
 
 ### -DelegateRestrictedAccessControlManagement
@@ -570,6 +571,8 @@ Accept wildcard characters: False
 
 This parameter enables SharePoint to process the content of files stored in SharePoint and OneDrive with sensitivity labels that include encryption. For more information, see [Enable sensitivity labels for Office files in SharePoint and OneDrive](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
+PARAMVALUE: True | False
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -585,6 +588,8 @@ Accept wildcard characters: False
 ### -EnableMinimumVersionRequirement
 
 This parameter was used to opt-out of the versioning setting update. It has no effect as of today as versioning setting has already been rolled out.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -602,6 +607,8 @@ Accept wildcard characters: False
 
 This parameter is reserved for Microsoft internal use.
 
+PARAMVALUE: True | False
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -617,7 +624,9 @@ Accept wildcard characters: False
 ### -MarkNewFilesSensitiveByDefault
 
 If external sharing is turned on, sensitive content could be shared and accessed by guests before the Office DLP rule finishes processing, you can address this issue by configuring this parameter.
+
 Possible values are
+
 - BlockExternalSharing: Prevents guests from accessing newly added files until at least one Office DLP policy scans the content of the file.
 - AllowExternalSharing: Disables this feature.
 
@@ -1786,6 +1795,8 @@ Accept wildcard characters: False
 
 Shows people picker suggestions for guest users. To enable the option to search for existing guest users at Tenant Level, set this parameter to $true.
 
+PARAMVALUE: True | False
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -1823,7 +1834,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ReSyncTenantPrivacyProfile 
+### -ReSyncTenantPrivacyProfile
+
 The 'SyncPrivacyProfileProperties' parameter is obsolete and renamed ReSyncTenantPrivacyProfile.
 
 This parameter enables the synchronization of privacy profile properties.
@@ -1848,6 +1860,8 @@ Accept wildcard characters: False
 
 This feature enables tenant admins to enable ODB and SPO to respect Exchange supports Address Book Policy (ABP) policies in the people picker.
 
+PARAMVALUE: True | False
+
 > [!NOTE]
 > When set to $true, users aren't able to share with security groups or SharePoint groups.  
 
@@ -1865,6 +1879,8 @@ Accept wildcard characters: False
 ### -DisableDocumentLibraryDefaultLabeling
 
 This switch allows tenant admins to disable the capability of configuring a default sensitivity label for a document library.
+
+PARAMVALUE: True | False
 
 > [!NOTE]
 > When set to $true, users aren't able to apply a default sensitivity label for a document library. The default value is false.  
@@ -1987,6 +2003,8 @@ Accept wildcard characters: False
 
 When this parameter is true, the email notification that a user receives when is mentioned, includes the surrounding document context. Set it to false to disable this feature.
 
+PARAMVALUE: True | False
+
 ```yaml
 Type: Boolean
 Parameter Sets: ParamSet1
@@ -2071,7 +2089,6 @@ False (default) - Disables the policy.
 
 ```yaml
 Type: Boolean
-
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
@@ -2098,7 +2115,6 @@ The valid values are:
 
 ```yaml
 Type: Boolean
-
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
@@ -2131,9 +2147,10 @@ Sets email attestation to required.
 
 If people who use a verification code select to "stay signed in" in the browser, they must prove that they can access the same account that they used to redeem the sharing invitation. You can set the number of days for email attestation with **-EmailAttestationReAuthDays**. This setting affects only ad-hoc external recipients.
 
+PARAMVALUE: True | False
+
 ```yaml
 Type: Boolean
-
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
@@ -2254,9 +2271,10 @@ Accept wildcard characters: False
 
 Enable or disable auto news digest. [Documentation](https://aka.ms/autonewsdigest) for auto news digest.
 
+PARAMVALUE: True | False
+
 ```yaml
 Type: Boolean
-
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
@@ -2271,9 +2289,10 @@ Accept wildcard characters: False
 
 Enable or disable the At A Glance feature in sharing e-mails. This provides the key points and time to read for the shared item if available.
 
+PARAMVALUE: True | False
+
 ```yaml
 Type: Boolean
-
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
@@ -2288,11 +2307,12 @@ Accept wildcard characters: False
 
 Prevents creation of new SharePoint 2010 classic workflows.
 
+PARAMVALUE: True | False
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -2304,11 +2324,12 @@ Accept wildcard characters: False
 
 Prevents creation of new SharePoint 2013 classic workflows.
 
+PARAMVALUE: True | False
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-
 Required: False
 Position: Named
 Default value: None
@@ -2319,6 +2340,8 @@ Accept wildcard characters: False
 ### -BlockSendLabelMismatchEmail
 
 When a sensitivity label mismatch occurs between the label on the document uploaded and the label on the site, SharePoint Online captures an audit record, and sends an Incompatible sensitivity label detected email notification to the person who uploaded the document and the site owner. The notification contains details of the document which caused the problem and the label assigned to the document and to the site. The comparison happens between the priority of these two labels. 
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -2572,6 +2595,8 @@ Accept wildcard characters: False
 
 The ShowPeoplePickerGroupSuggestionsForIB setting (defaulted to false) allows showing group suggestions for information barriers (IBs) in the People Picker.
 
+PARAMVALUE: True | False
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -2588,6 +2613,8 @@ Accept wildcard characters: False
 
 When InformationBarriersSuspension parameter is set to $false, information barriers in SharePoint and OneDrive is enabled, when set to $true, it is disabled.
 
+PARAMVALUE: True | False
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -2603,6 +2630,8 @@ Accept wildcard characters: False
 ### -IBImplicitGroupBased
 
 The IBImplicitGroupBased setting enables Microsoft 365 Groups membership-based access and sharing control for all Implicit mode sites.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -2646,6 +2675,8 @@ Accept wildcard characters: False
 
 Controls whether viewers commenting on media items is disabled or not.
 
+PARAMVALUE: True | False
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -2687,6 +2718,8 @@ Accept wildcard characters: False
 
 Enable or disable the Request files link on the OneDrive partition for all OneDrive sites. If this value is not set, the Request files link will only show for OneDrives with Anyone links enabled. 
 
+PARAMVALUE: True | False
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -2702,6 +2735,8 @@ Accept wildcard characters: False
 ### -CoreRequestFilesLinkEnabled
 
 Enable or disable the Request files link on the core partition for all SharePoint sites (not including OneDrive sites). If this value is not set, Request files will only show for OneDrives with Anyone links enabled. 
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -2800,6 +2835,8 @@ Enables or disables users in the organization to authenticate SharePoint applica
 
 This parameter affects the way code in SharePoint interacts with Microsoft Entra ID to get tokens to access APIs. In scenarios where third-party cookies are disabled (such as Safari browsers with ITP feature enabled), any code that requires a token to access an API automatically triggers a full page refresh. When IsEnableAppAuthPopUpEnabled is set to $true, SharePoint will instead surface a popup in this scenario.
 
+PARAMVALUE: True | False
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -2823,6 +2860,8 @@ After the policy is turned on, any new Teams meeting recording files created by 
 Because this policy affects meeting recordings stored in OneDrive and SharePoint, you must be a SharePoint administrator to configure it.
 
 Note that this policy doesn't apply to manually uploaded meeting recording files. For more details, see [Block the download of Teams meeting recording files from SharePoint or OneDrive](/microsoftteams/block-download-meeting-recording).
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean 
@@ -3054,6 +3093,8 @@ Accept wildcard characters: False
 
 When set to `True`, the default sharing link will be a "People with Existing Access" link (which does not modify permissions) for OneDrive sites. When set to `False` (the default), the default sharing link type is controlled by the `OneDriveDefaultShareLinkScope` parameter.
 
+PARAMVALUE: True | False
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -3112,6 +3153,8 @@ Accept wildcard characters: False
 
 When set to `True`, the default sharing link will be a "People with Existing Access" link (which does not modify permissions) for SharePoint sites. When set to `False` (the default), the default sharing link type is controlled by the `CoreDefaultShareLinkScope` parameter.
 
+PARAMVALUE: True | False
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -3127,6 +3170,8 @@ Accept wildcard characters: False
 
 When set to `True`, users cannot create sites from SharePoint, OneDrive, the PnP PowerShell cmdlet, and the REST API. When set to `False` (the default), users can create sites from SharePoint, OneDrive, the PnP PowerShell cmdlet, and the REST API.
 
+PARAMVALUE: True | False
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -3141,6 +3186,8 @@ Accept wildcard characters: False
 ### -SyncAadB2BManagementPolicy
 
 This feature allows SharePoint Online to synchronize several Entra B2B collaboration settings [Guest user access restriction and collaboration restriction](https://learn.microsoft.com/en-us/entra/external-id/external-collaboration-settings-configure#configure-settings-in-the-portal), and store them on SharePoint Online tenant store. On sharing, SharePoint checks whether those synchronized settings are blocking sharing before sending invitation requests to Entra B2B invitation manager. The sync might take up to 24 hours to complete if you change those Entra B2B collaboration settings. To make the change effective on SharePoint Online immediately, run 'Set-SPOTenant -SyncAadB2BManagementPolicy $true' and it forces a sync from Microsoft Entra.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -3160,6 +3207,8 @@ New sources will be added to the configuration, if not already present, based on
 The sync may take up to 24 hours to complete.
 In multi-geo environments, **Content Security Policy** configuration is unique to each geo.
 
+PARAMVALUE: True | False
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -3175,6 +3224,8 @@ Accept wildcard characters: False
 
 When set to `True` **Content Security Policy** violations will be enforced.
 In multi-geo environments, **Content Security Policy** configuration is unique to each geo.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
@@ -3329,6 +3380,8 @@ This parameter allows administrators to choose whether or not the AI builder mod
 
 > [!NOTE]
 > Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: Boolean
