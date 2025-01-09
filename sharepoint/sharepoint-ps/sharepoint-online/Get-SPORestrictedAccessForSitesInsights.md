@@ -20,8 +20,10 @@ This cmdlet enables the administrator to check status of all active and availabl
 ## SYNTAX
 
 ```powershell
-Get-SPORestrictedAccessForSitesInsights -RACProtectedSites [-ReportId <Guid>] [-Action <ActionType>] [-InsightsSummary <Boolean>]
+Get-SPORestrictedAccessForSitesInsights -RACProtectedSites [-ReportId <Guid>] [-FullDetails] [-Action <ActionType>] [-InsightsSummary <Boolean>]
 ```
+
+## SYNTAX
 
 ```powershell
 Get-SPORestrictedAccessForSitesInsights -ActionsBlockedByPolicy [-ReportId <Guid>] [-Content <ContentType>] [-Action <ActionType>]
@@ -32,6 +34,8 @@ Get-SPORestrictedAccessForSitesInsights -ActionsBlockedByPolicy [-ReportId <Guid
 If this cmdlet is executed with `-RACProtectedSites` as parameter, it displays the status of all the active and completed reports.
 
 If this cmdlet is executed with `-RACProtectedSites` `-ReportId` as parameter, top 100 sites with the highest page views that are protected by restricted access control will be displayed.
+
+If this cmdlet is executed with `-RACProtectedSites` `-ReportId` `-FullDetails` `-Action Download`, a CSV file containing list of up to 1 million sites protected by restricted access control will be downloaded.
 
 If this cmdlet is executed with `-RACProtectedSites` `-ReportId` `-InsightsSummary` as parameter, the count of sites protected with restricted access control compared to total number of sites will be displayed.
 
@@ -174,6 +178,23 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FullDetails
+
+It is an optional parameter and allows to download a CSV file containing up to 1 million records.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+ 
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
