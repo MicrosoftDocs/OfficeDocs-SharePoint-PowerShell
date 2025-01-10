@@ -42,7 +42,7 @@ Set-SPOTenant
  [-AutofillColumnsSelectedSitesListOperation <SelectedSitesListOperations>]
  [-BccExternalSharingInvitations <Boolean>]
  [-BccExternalSharingInvitationsList <String>]
- [-BlockDownloadFileTypeIds <SPBlockDownloadFileTypeId[]>]
+ [-BlockDownloadFileTypeIds [SPBlockDownloadFileTypeId[]]]
  [-BlockDownloadFileTypePolicy <Boolean>]
  [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>]
  [-BlockSendLabelMismatchEmail <Boolean>]
