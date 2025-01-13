@@ -25,9 +25,15 @@ Set-SPOBuiltInFontPackageSettings [-HideBuiltInFontPackages] <Boolean>
 
 Use this cmdlet to set settings of built-in font packages.
 
-## EXAMPLE
+## EXAMPLES
 
+### Example 1
+
+```powershell
 Set-SPOBuiltInFontPackageSettings -HideBuiltInFontPackages $true
+```
+
+This example sets the built-in font packages to be hidden from SharePoint sites.
 
 ## PARAMETERS
 

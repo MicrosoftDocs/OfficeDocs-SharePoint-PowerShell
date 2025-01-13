@@ -26,11 +26,12 @@ Get-SPOBuiltInFontPackageSettings
 
 Use this cmdlet to get all settings of built-in font packages.
 
-## EXAMPLE
+## EXAMPLES
+
+### Example 1
 
 ```powershell
 Get-SPOBuiltInFontPackageSettings
 ```
 
-## PARAMETERS
-
+This example retrieves the current settings of built-in font packages.
