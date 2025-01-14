@@ -21,65 +21,70 @@ Sets or updates one or more properties' values for a site collection.
 ### ParamSet1
 
 ```powershell
-Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [-Confirm]
- [-DenyAddAndCustomizePages <Boolean>] [-LocaleId <UInt32>] [-LockState <String>] [-MediaTranscription <MediaTranscriptionPolicyType>] [-NoWait] [-Owner <String>]
- [-ResourceQuotaWarningLevel <Double>]
- [-SandboxedCodeActivationCapability <SandboxedCodeActivationCapabilities>]
+Set-SPOSite
+ [-AddRestrictedAccessControlGroups [Guid[]]]
+ [-AllowDownloadingNonWebViewableFiles <Boolean>]
+ [-AllowEditing <Boolean>]
+ [-AllowSelfServiceUpgrade <Boolean>]
+ [-AnonymousLinkExpirationInDays <Int32>]
+ [-AuthenticationContextAccessType <SPOAuthenticationContextPolicyAccessType>]
+ [-AuthenticationContextName <String>]
  [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>]
- [-SharingCapability <SharingCapabilities>] [-StorageQuota <Int64>] [-StorageQuotaWarningLevel <Int64>]
- [-Title <String>] [-WhatIf] [-AllowDownloadingNonWebViewableFiles <Boolean>]
- [-CommentsOnSitePagesDisabled <Boolean>] [-SocialBarOnSitePagesDisabled <Boolean>]
+ [-BlockDownloadPolicy <Boolean>]
+ [-ClearRestrictedAccessControl <SwitchParameter>]
+ [-CommentsOnSitePagesDisabled <Boolean>]
+ [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>]
+ [-DefaultLinkPermission <SharingPermissionType>]
+ [-DefaultLinkToExistingAccess <Boolean>]
+ [-DefaultShareLinkRole <SharingRole>]
+ [-DefaultShareLinkScope <SharingScope>]
+ [-DefaultSharingLinkType <SharingLinkType>]
+ [-DenyAddAndCustomizePages <Boolean>]
  [-DisableAppViews <AppViewsPolicy>]
  [-DisableCompanyWideSharingLinks <CompanyWideSharingLinksPolicy>]
  [-DisableFlows <FlowsPolicy>]
- [-LoopDefaultSharingLinkScope <SharingScope>]
- [-LoopDefaultSharingLinkRole <SharingRole>]
- [-RestrictedToGeo <RestrictedToRegion>]
- [-SharingAllowedDomainList <String>]
- [-SharingBlockedDomainList <String>]
- [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
- [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>]
- [-StorageQuotaReset]
- [-DefaultSharingLinkType]
- [-DefaultLinkPermission]
- [-DefaultLinkToExistingAccess]
- [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>]
- [-AuthenticationContextName <String>]
- [-LimitedAccessFileType <SPOLimitedAccessFileType>]
- [-AllowEditing <Boolean>]
- [-AnonymousLinkExpirationInDays <Int32>]
- [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>]
- [-OverrideTenantExternalUserExpirationPolicy <Boolean>]
+ [-ExcludeBlockDownloadPolicySiteOwners <Boolean>]
+ [-ExcludedBlockDownloadGroupIds [Guid[]]]
  [-ExternalUserExpirationInDays <Int32>]
- [-SensitivityLabel <String>]
- [-RequestFilesLinkExpirationInDays <Int32>]
- [-RequestFilesLinkEnabled <Boolean>]
- [-RemoveLabel]
- [-BlockDownloadPolicy <Boolean>]
- [-OverrideBlockUserInfoVisibility <String>]
- [-OverrideSharingCapability <Boolean>]
- [-DefaultShareLinkScope <SharingScope>]
- [-DefaultShareLinkRole <SharingRole>]
  [-HidePeoplePreviewingFiles <Boolean>]
  [-HidePeopleWhoHaveListsOpen <Boolean>]
- [-AddRestrictedAccessControlGroups <Guid>]
- [-ClearRestrictedAccessControl <Boolean>]
- [-RestrictedAccessControl <Boolean>]
- [-RestrictedAccessControlGroups <Guid>]
- [-RemoveRestrictedAccessControlGroups <Guid>]
- [-ReadOnlyForUnmanagedDevices <Boolean>]
- [-ExcludedBlockDownloadGroupIds <Guid>]
- [-ExcludeBlockDownloadPolicySiteOwners <Boolean>]
- [-ReadOnlyForBlockDownloadPolicy <Boolean>]
- [-AuthenticationContextAccessType <SPOAuthenticationContextPolicyAccessType>]
  [-HubSiteId <Guid>]
+ [-Identity <SpoSitePipeBind>]
  [-InformationBarriersMode <String>]
+ [-LimitedAccessFileType <SPOLimitedAccessFileType>]
+ [-LocaleId <UInt32>]
+ [-LockState <String>]
+ [-LoopDefaultSharingLinkRole <SharingRole>]
+ [-LoopDefaultSharingLinkScope <SharingScope>]
+ [-MediaTranscription <MediaTranscriptionPolicyType>]
+ [-OverrideBlockUserInfoVisibility <String>]
+ [-OverrideSharingCapability <Boolean>]
+ [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>]
+ [-OverrideTenantExternalUserExpirationPolicy <Boolean>]
+ [-Owner <String>]
+ [-ReadOnlyForBlockDownloadPolicy <Boolean>]
+ [-ReadOnlyForUnmanagedDevices <Boolean>]
+ [-RemoveLabel <SwitchParameter>]
+ [-RemoveRestrictedAccessControlGroups [Guid[]]]
+ [-RequestFilesLinkEnabled <Boolean>]
+ [-RequestFilesLinkExpirationInDays <Int32>]
+ [-ResourceQuotaWarningLevel <Double>]
  [-RestrictContentOrgWideSearch <Boolean>]
  [-RestrictedAccessControl <Boolean>]
- [-RestrictedAccessControlGroups <Guid[]>]
- [-AddRestrictedAccessControlGroups <Guid[]>]
- [-RemoveRestrictedAccessControlGroups <Guid[]>]
- [-ClearRestrictedAccessControl <SwitchParameter>]
+ [-RestrictedAccessControlGroups [Guid[]]]
+ [-RestrictedToGeo <RestrictedToRegion>]
+ [-SandboxedCodeActivationCapability <SandboxedCodeActivationCapabilities>]
+ [-SensitivityLabel <String>]
+ [-SharingAllowedDomainList <String>]
+ [-SharingBlockedDomainList <String>]
+ [-SharingCapability <SharingCapabilities>]
+ [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
+ [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>]
+ [-SocialBarOnSitePagesDisabled <Boolean>]
+ [-StorageQuota <Int64>]
+ [-StorageQuotaReset <SwitchParameter>]
+ [-StorageQuotaWarningLevel <Int64>]
+ [-Title <String>]
  [<CommonParameters>]
 ```
 
@@ -335,36 +340,7 @@ Accept wildcard characters: False
 
 Determines whether site collection administrators can upgrade their site collections.
 
-```yaml
-Type: Boolean
-Parameter Sets: ParamSet1
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-### -AddRestrictedAccessControlGroups
-
-Add the groups that are given access to the site and its content as per the restricted access control policy to the existing list of control groups.
-
-```yaml
-Type: GUID
-Parameter Sets: ParamSet1
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ClearRestrictedAccessControl
-
-Resets the restricted access control flag to False and clears the list of control groups that were given access to the site and its content as per restricted access control policy.
+PARAMVALUE: False | True
 
 ```yaml
 Type: Boolean
@@ -373,7 +349,7 @@ Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -398,6 +374,8 @@ Accept wildcard characters: False
 
 Determines whether the Add And Customize Pages right is denied on the site collection.
 For more information about permission levels, see User permissions and permission levels in SharePoint.
+
+PARAMVALUE: False | True
 
 ```yaml
 Type: Boolean
@@ -536,7 +514,9 @@ Accept wildcard characters: False
 
 ### -RestrictedAccessControl
 
-Specifies the flag value for restricted access control policy.
+Sets access restriction policy by group membership.
+
+PARAMVALUE: False | True
 
 ```yaml
 Type: Boolean
@@ -546,38 +526,6 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RestrictedAccessControlGroups
-
-Specifies the groups that are given access to the site and its content as per the restricted access control policy.
-
-```yaml
-Type: GUID
-Parameter Sets: ParamSet1
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoveRestrictedAccessControlGroups
-
-Removes the specified groups from the list of control groups that are given access to the site and its content as per the restricted access control policy.
-
-```yaml
-Type: GUID
-Parameter Sets: ParamSet1
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -730,12 +678,13 @@ Accept wildcard characters: False
 
 Specifies if non web viewable files can be downloaded.
 
+PARAMVALUE: False | True
+
 ```yaml
 Type: Boolean
 Parameter Sets: ParamSet1
 Aliases:
 Applicable: SharePoint Online
-
 Required: False
 Position: Named
 Default value: None
@@ -748,12 +697,13 @@ Accept wildcard characters: False
 Use this parameter to disable Comments section on Site Pages.
 The parameter can't be used for Groups Site Collections.
 
+PARAMVALUE: False | True
+
 ```yaml
 Type: Boolean
 Parameter Sets: ParamSet1
 Aliases:
 Applicable: SharePoint Online
-
 Required: False
 Position: Named
 Default value: None
@@ -928,6 +878,8 @@ Accept wildcard characters: False
 
 To enable the option to search for existing guest users at site collection level, set this parameter to $true.
 
+PARAMVALUE: False | True
+
 ```yaml
 Type: Boolean
 Parameter Sets: ParamSet1
@@ -985,13 +937,11 @@ When set to TRUE, the DefaultSharingLinkType will be overriden and the default s
 
 PARAMVALUE: False | True
 
-
 ```yaml
-Type: SharingLinkType
+Type: Boolean
 Parameter Sets: ParamSet1
 Aliases:
 Applicable: SharePoint Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1152,12 +1102,13 @@ Accept wildcard characters: False
 
 Enables or disables the Request Files link on the site.
 
+PARAMVALUE: False | True
+
 ```yaml
 Type: Boolean
 Parameter Sets: ParamSet1
 Aliases:
 Applicable: SharePoint Online
-
 Required: False
 Position: Named
 Default value: None
@@ -1475,6 +1426,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -OverrideSharingCapability
 
 Determines whether it should override the sharing capability on its partition. For example, if the tenant sharing capability is `ExternalUserAndGuestSharing`, the core partition sharing capability is `Disabled`, and the sharing capability defined on the site collection is `ExternalUserAndGuestSharing`, the effective site sharing capability should be `Disabled` (the most restrictive one among tenant, partition, and site collecction) if `OverrideSharingCapability` is `false`. If `OverrideSharingCapability` is `true`, it skips checking partition sharing capability and the effective site sharing capability should be `ExternalUserAndGuestSharing`.
@@ -1547,7 +1499,6 @@ PARAMVALUE: False | True
 
 If set to True, the presence of other users on the file will no longer be displayed.
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -1558,8 +1509,8 @@ Position: Named
 Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
+
 ### -HidePeopleWhoHaveListsOpen
 
 This setting disables the feature in Microsoft Lists that displays the presence of other users on the list and its items when they are viewing.
@@ -1578,9 +1529,10 @@ Position: Named
 Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
+
 ### -ClearGroupId
+
 This parameter allows you to remove the assigned Microsoft 365 group ID on a site, when the group is permanently deleted.
 
 ```yaml
@@ -1593,6 +1545,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -ReadOnlyForUnmanagedDevices
 
 Controls whether unmanaged devices have read-only access.
@@ -1645,6 +1598,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReadOnlyForBlockDownloadPolicy
+
 Controls if read-only should be enabled for block download policy.
 
 PARAMVALUE: False | True
@@ -1680,7 +1634,6 @@ Accept wildcard characters: False
 ### -AuthenticationContextAccessType
 
 Controls whether Authentication Context Limited Access is enabled for a site.
-
 
 The valid values are:
 
@@ -1749,24 +1702,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RestrictedAccessControl
-
-Sets access restriction policy by group membership.
-
-PARAMVALUE: False | True
-
-```yaml
-Type: Boolean
-Parameter Sets: ParamSet1
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -RestrictedAccessControlGroups
 
 Specifies the IDs of groups that have access under an access restriction policy.
@@ -1818,7 +1753,6 @@ Accept wildcard characters: False
 ### -ClearRestrictedAccessControl
 
 Clears the list of groups that are given access via an access restriction policy.
-
 
 ```yaml
 Type: SwitchParameter
