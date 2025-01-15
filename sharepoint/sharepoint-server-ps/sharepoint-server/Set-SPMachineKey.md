@@ -34,12 +34,12 @@ The new keys are deployed to all servers in the farm.
 
 ### -------------EXAMPLE 2------------- 
 ```powershell
-Set-SPMachineKey -WebApplication http://sitename -DecryptionKey '509EEEE0709AE3EA2690017D174648075D3E7659FB7CBC65F08661F737610501' -ValidationKey '988EAEF669CC691E420C3887F54BDD7D0741C84CBA36406FCA5250B780771469' -Local
+Set-SPMachineKey -WebApplication http://sitename -DecryptionKey '<Your Key!>' -ValidationKey '<Your Key!>' -Local
 ```
 
-This example sets the ASP.NET view state decryption and validation keys for web application 'http://sitename' to new keys specified by the DecryptionKey and ValidationKey parameters.
-The new keys are only deployed to the local server.
-Other servers in the farm will continue to use the previous keys.
+The preceding sample sets the ASP.NET view state decryption and validation keys for web application 'http://sitename' to new keys specified by the DecryptionKey and ValidationKey parameters. The new keys are only deployed to the local server. Other servers in the farm will continue to use the previous keys.
+
+See **How to generate a `<machineKey> element`** in the [Resolving view state message authentication code (MAC) errors](https://support.microsoft.com/en-us/topic/resolving-view-state-message-authentication-code-mac-errors-6c0e9fd3-f8a8-c953-8fbe-ce840446a9f3) support article for information on generating keys.
 
 ## PARAMETERS
 
