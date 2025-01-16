@@ -52,7 +52,6 @@ Set-SPOSite
  [-Identity <SpoSitePipeBind>]
  [-InformationBarriersMode <String>]
  [-LimitedAccessFileType <SPOLimitedAccessFileType>]
- [-LocaleId <UInt32>]
  [-LockState <String>]
  [-LoopDefaultSharingLinkRole <SharingRole>]
  [-LoopDefaultSharingLinkScope <SharingScope>]
@@ -105,7 +104,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-Confirm] [-DisableSharingForNonOwner
 
 ```powershell
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [-Confirm]
- [-DenyAddAndCustomizePages <Boolean>] [-LocaleId <UInt32>] [-LockState <String>] [-NoWait] [-Owner <String>]
+ [-DenyAddAndCustomizePages <Boolean>] [-LockState <String>] [-NoWait] [-Owner <String>]
  [-ResourceQuotaWarningLevel <Double>]
  [-SandboxedCodeActivationCapability <SandboxedCodeActivationCapabilities>]
  [-SharingCapability <SharingCapabilities>] [-StorageQuota <Int64>] [-StorageQuotaWarningLevel <Int64>]
@@ -113,6 +112,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-AllowSelfServiceUpgrade <Boolean>] [
 ```
 
 ### SetSiteFileVersionPolicy
+
 ```powershell
 Set-SPOSite [-Identity] <SpoSitePipeBind>
  [-EnableAutoExpirationVersionTrim <Boolean>]
@@ -126,6 +126,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind>
 ```
 
 ### ClearGroupId
+
 ```powershell
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-ClearGroupId] [<CommonParameters>]
 ```
@@ -140,7 +141,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 For OneDrive for Business site collection, the only valid parameters are Identity, AllowDownloadingNonWebViewableFiles, AllowEditing, ConditionalAccessPolicy, DefaultLinkPermission, DefaultSharingLinkType, DisableCompanyWideSharingLinks, LimitedAccessFileType, LockState, Owner, SharingAllowedDomainList, SharingBlockedDomainList, SharingCapability, SharingDomainRestrictionMode, ShowPeoplePickerSuggestionsForGuestUsers, StorageQuota, and StorageWarningLevel.
 
-For Groups site collection, the only valid parameters  are Identity, AllowSelfServiceUpgrade, DefaultLinkPermission, DefaultSharingLinkType, DenyAddAndCustomizePages, DisableCompanyWideSharingLinks, DisableSharingForNonOwners, LockState, Owner, ResourceQuota, ResourceQuotaWarningLevel, SandboxedCodeActivationCapability, SharingCapability, ShowPeoplePickerSuggestionsForGuestUsers, SocialBarOnSitePagesDisabled, StorageQuota, StorageQuotaReset, and StorageQuotaWarningLevel.
+For Groups site collection, the only valid parameters are Identity, AllowSelfServiceUpgrade, DefaultLinkPermission, DefaultSharingLinkType, DenyAddAndCustomizePages, DisableCompanyWideSharingLinks, DisableSharingForNonOwners, LockState, Owner, ResourceQuota, ResourceQuotaWarningLevel, SandboxedCodeActivationCapability, SharingCapability, ShowPeoplePickerSuggestionsForGuestUsers, SocialBarOnSitePagesDisabled, StorageQuota, StorageQuotaReset, and StorageQuotaWarningLevel.
 
 ## EXAMPLES
 
@@ -185,7 +186,7 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/groupname -StorageQuo
 This example sets the quota for the site.
 
 > [!NOTE]
-> If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.  
+> If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.
 
 ### Example 6
 
@@ -193,7 +194,7 @@ This example sets the quota for the site.
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnablePWA $true
 ```
 
-Example 6 enables the site "site1" to create  Project Web Applications (PWA).
+Example 6 enables the site "site1" to create Project Web Applications (PWA).
 
 ### Example 7
 
@@ -210,7 +211,7 @@ Example 7 sets the Sharing Capability to allow external users who accept sharing
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/research -AddInformationSegment a17efb47-e3c9-4d85-a188-1cd59c83de32
 ```
 
-This example adds InformationSegment 'a17efb47-e3c9-4d85-a188-1cd59c83de32' to the site. 
+This example adds InformationSegment 'a17efb47-e3c9-4d85-a188-1cd59c83de32' to the site.
 
 ### Example 9
 
@@ -229,9 +230,11 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/research -Conditional
 In this example, an authentication context called MFA is attached to the site.
 
 ### Example 11
+
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $true
 ```
+
 Example 11 sets automatic version history limits at site level. Automatic setting will be applied to all new document libraries created in the site and a background request will be created to asynchronously process the update on existing document libraries that have versioning enabled.
 
 ### EXAMPLE 12
@@ -251,9 +254,11 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpi
 Example 13 sets manual version history limits at site level by limiting the number of versions with no time limits. The new document libraries will use this version setting. Also it creates a job to set this manual version setting for existing document libraries that enabled versioning.
 
 ### Example 14
+
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $true -ApplyToNewDocumentLibraries
 ```
+
 Example 14 sets automatic version history limits at site level. The new document libraries will use this version setting.
 
 ### EXAMPLE 15
@@ -273,9 +278,11 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpi
 Example 16 sets manual version history limits at site level by limiting the number of versions with no time limits. The new document libraries will use this version setting.
 
 ### Example 17
+
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $true -ApplyToExistingDocumentLibraries
 ```
+
 Example 17 creates a job to set automatic version history limits for existing document libraries that enabled versioning.
 
 ### EXAMPLE 18
@@ -295,6 +302,7 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpi
 Example 19 creates a request to set manual version history limits that limits the number of versions with no time limits for existing document libraries that enabled versioning.
 
 ### EXAMPLE 20
+
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -InheritVersionPolicyFromTenant
 ```
@@ -405,23 +413,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LocaleId
-
-Specifies the language of this site collection.
-For more information, see [MS-OE376, LCID](https://learn.microsoft.com/openspecs/office_standards/ms-oe376/6c085406-a698-4e12-9d4d-c3b0ee3dbc4a).
-
-```yaml
-Type: UInt32
-Parameter Sets: ParamSet1
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -LockState
 
 Sets the lock state on a site.
@@ -446,7 +437,7 @@ Accept wildcard characters: False
 
 ### -MediaTranscription
 
-When the feature is enabled, videos can have transcripts generated on demand or generated automatically in certain scenarios. This is the default because the policy is default on. If a video owner decides they don't want the transcript, they can always hide or delete it from that video. 
+When the feature is enabled, videos can have transcripts generated on demand or generated automatically in certain scenarios. This is the default because the policy is default on. If a video owner decides they don't want the transcript, they can always hide or delete it from that video.
 Possible values:
 
 - Enabled
@@ -589,7 +580,7 @@ Accept wildcard characters: False
 
 Determines what level of sharing is available for the site.
 
-The valid values are:  
+The valid values are:
 
 - Disabled - Sharing outside your organization is disabled.
 - ExistingExternalUserSharingOnly - Allow sharing only with the external users that already exist in your organization's directory.
@@ -975,7 +966,7 @@ Accept wildcard characters: False
 
 Gets or sets default share link scope for fluid on the site.
 
-The valid values are:  
+The valid values are:
 
 - Anyone
 - Organization
@@ -998,7 +989,7 @@ Accept wildcard characters: False
 
 Gets or sets default share link role for fluid on the site.
 
-The valid values are:  
+The valid values are:
 
 - Edit
 - None
@@ -1139,11 +1130,11 @@ Accept wildcard characters: False
 Please read [Control access from unmanaged devices](/sharepoint/control-access-from-unmanaged-devices) documentation here to understand Conditional Access Policy usage in SharePoint Online.
 
 Possible values:
+
 - AllowFullAccess: Allows full access from desktop apps, mobile apps, and the web.
 - AllowLimitedAccess: Allows limited, web-only access.
 - BlockAccess: Blocks Access.
 - AuthenticationContext: Assign a Microsoft Entra authentication context. Must add the AuthenticationContextName. Please read [Configure authentication contexts](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps#configure-authentication-contexts).
-
 
 ```yaml
 Type: SPOConditionalAccessPolicyType
@@ -1157,8 +1148,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
-### -AuthenticationContextName 
+### -AuthenticationContextName
 
 The conditional access authentication context name.
 
@@ -1213,6 +1203,7 @@ Default value: WebPreviewableFiles
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -AddInformationSegment
 
 This parameter allows you to add a segment to a SharePoint site. This parameter is only applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read https://learn.microsoft.com/sharepoint/information-barriers documentation to understand Information barriers in SharePoint Online.
@@ -1227,6 +1218,7 @@ Default value: None
 ```
 
 ### -RemoveInformationSegment
+
 This parameter allows you to remove a segment from a SharePoint site. This parameter is only applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read https://learn.microsoft.com/sharepoint/information-barriers documentation to understand Information barriers with SharePoint Online.
 
 **Note**: This parameter is available only in SharePoint Online Management Shell Version 16.0.19927.12000 or later.
@@ -1239,6 +1231,7 @@ Default value: None
 ```
 
 ### -RemoveLabel
+
 This parameter allows you to remove the assigned sensitivity label on a site.
 
 ```yaml
@@ -1276,11 +1269,11 @@ Accept wildcard characters: False
 
 Choose whether to override the Block User Info Visibility policy on this site.
 
-PARAMVALUE: 
+PARAMVALUE:
 
 - OrganizationDefault (default) - Respect the organization-level Block User Info Visibility policy.
 
-- ApplyToNoUsers  – No users are prevented from accessing User Info when they have Limited Access permission only on the site.
+- ApplyToNoUsers – No users are prevented from accessing User Info when they have Limited Access permission only on the site.
 
 - ApplyToAllUsers – All users (internal or external) are prevented from accessing User Info if they have Limited Access permission only on the site.
 
@@ -1301,6 +1294,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAutoExpirationVersionTrim
+
 SharePoint Administrators can set site-level version history limit settings that universally apply to new versions created on all new document libraries created on the site. Also can create request to set the version setting for existing libraries that enabled versioning.
 
 When version history limits are managed automatically, SharePoint employs an algorithm behind the scenes that deletes (thins out) intermittent older versions that are least likely to be needed, while preserving sufficient high-value versions - more versions in the recent past and fewer farther back in time - in case restores are required.
@@ -1332,6 +1326,7 @@ Accept wildcard characters: False
 ```
 
 ### -MajorVersionLimit
+
 When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), admins will need to set the limits to the number of major versions (`MajorVersionLimit`) and the time period the versions are stored (`ExpireVersionsAfterDays`). Please check the description of `EnableAutoExpirationVersionTrim` for more details.
 
 PARAMVALUE: Int32
@@ -1349,6 +1344,7 @@ Accept wildcard characters: False
 ```
 
 ### -MajorWithMinorVersionsLimit
+
 When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), admins will need to set the limits to the number of major versions (`MajorVersionLimit`), the number of major with minor versions (`MajorWithMinorVersionsLimit`) and the time period the versions are stored (`ExpireVersionsAfterDays`). Please check the description of `EnableAutoExpirationVersionTrim` for more details.
 
 PARAMVALUE: Int32
@@ -1366,6 +1362,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpireVersionsAfterDays
+
 When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), admins will need to set the limits to the number of major versions (`MajorVersionLimit`), the number of major with minor versions (`MajorWithMinorVersionsLimit`) and the time period the versions are stored (`ExpireVersionsAfterDays`). Please check the description of `EnableAutoExpirationVersionTrim` for more details.
 
 PARAMVALUE: Int32
@@ -1383,6 +1380,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyToNewDocumentLibraries
+
 Apply the version history limits setting to new document libraries.
 
 ```yaml
@@ -1398,6 +1396,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyToExistingDocumentLibraries
+
 Create a job to apply the version history limits setting to existing document libraries.
 
 ```yaml
@@ -1413,6 +1412,7 @@ Accept wildcard characters: False
 ```
 
 ### -InheritVersionPolicyFromTenant
+
 Clear the file version setting at site level. The new document libraries will use the Tenant Level setting. It won't impact the existing document libraries.
 
 ```yaml
@@ -1449,7 +1449,7 @@ Accept wildcard characters: False
 
 The default share link scope on the site. It replaces `DefaultSharingLinkType`.
 
-The valid values are:  
+The valid values are:
 
 - Anyone
 - Organization
@@ -1467,11 +1467,12 @@ Default value: Uninitialized
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -DefaultShareLinkRole
 
 The default share link role for the site collection. It replaces `DefaultLinkPermission`.
 
-The valid values are:  
+The valid values are:
 
 - Edit
 - None
@@ -1489,11 +1490,11 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
-
 ```
+
 ### -HidePeoplePreviewingFiles
 
-This setting disables the feature in OneDrive and SharePoint file previewing that displays the presence of other users on the file. It does not affect any experiences outside of the previewer. 
+This setting disables the feature in OneDrive and SharePoint file previewing that displays the presence of other users on the file. It does not affect any experiences outside of the previewer.
 
 PARAMVALUE: False | True
 
@@ -1568,16 +1569,16 @@ Accept wildcard characters: False
 Exempts users from specified groups from the block download policy and they can fully download any content for the site.
 
 ```yaml
-Type: Guid[] 
-Parameter Sets: (All) 
-Aliases: 
-Applicable: SharePoint Online 
-Required: False 
-Position: Named 
-Default value: None 
-Accept pipeline input: False 
-Accept wildcard characters: False 
-``` 
+Type: Guid[]
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -ExcludeBlockDownloadPolicySiteOwners
 
@@ -1707,48 +1708,48 @@ Accept wildcard characters: False
 Specifies the IDs of groups that have access under an access restriction policy.
 
 ```yaml
-Type: Guid[] 
-Parameter Sets: (All) 
-Aliases: 
-Applicable: SharePoint Online 
-Required: False 
-Position: Named 
-Default value: None 
-Accept pipeline input: False 
-Accept wildcard characters: False 
-``` 
+Type: Guid[]
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AddRestrictedAccessControlGroups
 
 Specifies the IDs of groups to be added to an access restriction policy and gain access.
 
 ```yaml
-Type: Guid[] 
-Parameter Sets: (All) 
-Aliases: 
-Applicable: SharePoint Online 
-Required: False 
-Position: Named 
-Default value: None 
-Accept pipeline input: False 
-Accept wildcard characters: False 
-``` 
+Type: Guid[]
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -RemoveRestrictedAccessControlGroups
 
 Specifies the IDs of groups to be removed from access restriction policy and lose access.
 
 ```yaml
-Type: Guid[] 
-Parameter Sets: (All) 
-Aliases: 
-Applicable: SharePoint Online 
-Required: False 
-Position: Named 
-Default value: None 
-Accept pipeline input: False 
-Accept wildcard characters: False 
-``` 
+Type: Guid[]
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -ClearRestrictedAccessControl
 
@@ -1765,6 +1766,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
