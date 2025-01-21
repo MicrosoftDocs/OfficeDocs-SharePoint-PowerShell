@@ -103,11 +103,13 @@ The move status for the Office 365 Group. Possible values are:
 * InProgress (n/4): The move is in progress in one of the following states: Validation (1/4), Backup (2/4), Restore (3/4), Cleanup (4/4).
 * Success: The move has completed successfully.
 * Failed: The move failed.
+* Stopped: The move was canceled by an administrator while it was still queued.
+* NotSupported: The move could not be processed because the Preferred Data Location was invalid.
+* Rescheduled: The move did not succeed and is being scheduled again for another attempt.
 
-## NOTES
-
-You can also apply the `-Verbose` option to see additional information about the move.
+> [!NOTE]
+> You can also apply the `-Verbose` option to see additional information about the move.
 
 ## RELATED LINKS
 
-[Move a SharePoint site to a different geo location](https://learn.microsoft.com/office365/enterprise/move-sharepoint-between-geo-locations)
+[Move a SharePoint site to a different geo location](/microsoft-365/enterprise/m365-dr-workload-spo)
