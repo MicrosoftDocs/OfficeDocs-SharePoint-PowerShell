@@ -34,6 +34,8 @@ This cmdlet returns all the container types present in the tenant or details o
 
 You must be a SharePoint Embedded Administrator to run the cmdlet.
 
+While the basic information of container types is displayed to all administrators running this cmdlet, the billing information about a container type is only visible to administrators who also have owner or contributor access on the billing subscription attached to the container type. 
+
 For permissions and the most current information about Windows PowerShell for SharePoint Embedded Containers, see the documentation at [Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
 ## EXAMPLES
