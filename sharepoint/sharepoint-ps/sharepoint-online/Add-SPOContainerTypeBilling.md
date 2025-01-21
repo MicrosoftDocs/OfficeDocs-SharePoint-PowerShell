@@ -29,7 +29,9 @@ Add-SPOContainerTypeBilling –ContainerTypeId <ContainerTypeId> -AzureSubscript
 
 This cmdlet attaches the Azure subscription ID, resource group and region with the container type ID provided.
 
-You must be a SharePoint Embedded Administrator to run this cmdlet.
+You must be a SharePoint Embedded Administrator to run this cmdlet. The user or admin who creates the billing relationship for SharePoint Embedded needs to have owner or contributor permissions on an Azure subscription, with active time bound permission on billing, and on the Resource group. 
+
+If you don't have an Azure subscription, follow steps here to [create a subscription](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions).
 
 For permissions and the most current information about Windows PowerShell for SharePoint Embedded Containers, see the documentation at [Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
