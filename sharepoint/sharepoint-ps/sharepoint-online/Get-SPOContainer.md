@@ -206,17 +206,13 @@ This parameter can be used when you need to see the list of containers, sorted b
 
 ```yaml
 Type: String
+Applicable: SharePoint Online
 
+Required: False
 Position: Named
 Default value: None
-Required: False
 Accept pipeline input: False
 Accept wildcard characters: False
-Applies to: SharePoint Online
 ```
 
-
-## RELATED LINKS
-
-[Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps)
 
