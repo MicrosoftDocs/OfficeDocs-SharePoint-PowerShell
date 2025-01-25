@@ -53,11 +53,11 @@ Example 2 returns a comma-separated list of the IDs of the Microsoft Entra secur
 When provided, only return the Microsoft Entra security groups configured for the specified site type.
 
 PARAMVALUE: All | SharePoint | OneDrive | Team | Communication
-•	All - OneDrive and all SharePoint sites 
-•	SharePoint - All SharePoint sites (but not OneDrive) 
-•	OneDrive - Only OneDrive 
-•	Team - Only SharePoint team sites (group-connected and classic) 
-•	Communication - Only SharePoint communication sites
+-	All - OneDrive and all SharePoint sites 
+-	SharePoint - All SharePoint sites (but not OneDrive) 
+-	OneDrive - Only OneDrive 
+-	Team - Only SharePoint team sites (group-connected and classic) 
+-	Communication - Only SharePoint communication sites
 
 ```yaml
 Type: RestrictedSiteCreationSiteType
