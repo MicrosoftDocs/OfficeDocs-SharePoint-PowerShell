@@ -37,7 +37,7 @@ New-SPOContainerType –TrialContainerType -ContainerTypeName <ContainerTypeName
 
 ## DESCRIPTION
 
-This cmdlet creates a new standard or trial container type. A standard container type, by definition, has a billing profile associated with it and can be either regular billed or direct to consumer billed. A trial container type does not have a billing profile. In case of regular billing, the next step after creation is the addition of a billing profile using the [Add-SPOContainerTypeBilling](./Add-SPOContainerTypeBilling.md) cmdlet. With the use of `-IsPassThroughBilling`, you can create a direct to customer billed container type. There is no need to attach a billing profile in case this case.  `–TrialContainerType` when used creates a trial container type, that has a validity of 30 days. 
+This cmdlet creates a new standard or trial container type. A standard container type, by definition, has a billing profile associated with it and can be either regular billed or direct to consumer billed. A trial container type does not have a billing profile. In case of regular billing, the next step after creation is the addition of a billing profile using the [Add-SPOContainerTypeBilling](./Add-SPOContainerTypeBilling.md) cmdlet. With the use of `-IsPassThroughBilling`, you can create a direct to customer billed container type. There is no need to attach a billing profile in case this case. `–TrialContainerType` when used creates a trial container type that has a validity of 30 days. 
 
 You must be a SharePoint Embedded Administrator to run this cmdlet.
 
@@ -53,7 +53,7 @@ In Example 1, the cmdlet creates a new regular billed container type 'ContosoLeg
 
 ### Example 2  
 ```powershell
-New-SPOContainerType – IsPassThroughBilling – ContainerTypeName “ContosoLegal” -OwningApplicationId a735e4af-b86e-0000-93ba-1faded6c39e1 
+New-SPOContainerType –IsPassThroughBilling –ContainerTypeName ContosoLegal -OwningApplicationId a735e4af-b86e 
 ```
 
 In Example 2, the cmdlet creates a direct to customer billed container type 'ContosoLegal'. 
@@ -62,7 +62,7 @@ In Example 2, the cmdlet creates a direct to customer billed container type 'Con
 
 ```powershell 
 
-New-SPOContainerType –TrialContainerType - ContosoLegal -OwningApplicationId a735e4af-b86e-0000-93ba-1faded6c39e1 
+New-SPOContainerType –TrialContainerType -ContainerTypeName ContosoLegal -OwningApplicationId a735e4af-b86e
 
 ``` 
 
