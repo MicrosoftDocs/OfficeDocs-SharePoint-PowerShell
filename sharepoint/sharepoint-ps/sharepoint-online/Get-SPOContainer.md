@@ -59,9 +59,9 @@ Get-SPOContainer -OwningApplicationId <OwningApplicationId> -SortByStorage <Asce
 
 ## DESCRIPTION
 
-The `Get-SPOContainer` cmdlet retrieves and returns the details of an individual container when paired `Identity` parameter, where the container ID needs to be mentioned. The cmdlet returns the list of containers belonging to a SharePoint Embedded application when paired with the `OwningApplicationId` parameter. 
+The `Get-SPOContainer` cmdlet retrieves and returns the details of an individual container when paired with `Identity` parameter, where the container ID needs to be mentioned. The cmdlet returns the list of containers belonging to a SharePoint Embedded application when paired with the `OwningApplicationId` parameter. 
 
-You must be a SharePoint Embedded Administrator to run the cmdlet.
+You must be a SharePoint Embedded Administrator to run this cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Embedded Containers, see the documentation at [Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
@@ -76,7 +76,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### Example 1
 
 ```powershell
-Get-SPOContainer -Identity b66f5b2e-4cbd-4754-9ad3-8291c2c81ade 
+Get-SPOContainer -Identity b66f5b2e-4cbd
 ```
 
 Example 1 returns the detailed properties of the Container with associated Container ID b66f5b2e-4cbd-4754-9ad3-8291c2c81ade 
@@ -84,7 +84,7 @@ Example 1 returns the detailed properties of the Container with associated Conta
 ### Example 2
 
 ```powershell
-Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 | FT 
+Get-SPOContainer -OwningApplicationId 423poi45-as | ft 
 ```
 Example 2 returns a tabular list of Containers created under the SharePoint Embedded application with the `OwningApplicationId` of  `423poi45-jikl-9bnm-b302-1234ghy56789`.
 
@@ -92,14 +92,14 @@ Example 2 returns a tabular list of Containers created under the SharePoint Embe
 ### Example 3
 
 ```powershell
-Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -Paged | FT
+Get-SPOContainer -OwningApplicationId 423poi45-as -Paged | ft
 ```
 Example 3 uses the `-Paged` command to retrieve a paging token.
 
 ### Example 4
 
 ```powershell
-Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -Paged -PagingToken <Token String> | FT 
+Get-SPOContainer -OwningApplicationId 423poi45-as -Paged -PagingToken <Token String> | ft 
 ```
 
 Example 4 uses the `-PagingToken` parameter along with the `-Paged`parameter to view more containers that were not displayed in Example 3
@@ -107,7 +107,7 @@ Example 4 uses the `-PagingToken` parameter along with the `-Paged`parameter to 
 ### Example 5
 
 ```powershell
-Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -SortByStorage <Ascending>
+Get-SPOContainer -OwningApplicationId 423poi45-as -SortByStorage <Ascending>
 ```
 
 Example 5 displays the containers belonging to the application, sorted in ascending order of storage
@@ -115,7 +115,7 @@ Example 5 displays the containers belonging to the application, sorted in ascend
 ### Example 6
 
 ```powershell
-Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -SortByStorage <Ascending>-Paged
+Get-SPOContainer -OwningApplicationId 423poi45-as -SortByStorage <Ascending> -Paged
 ```
 
 Example 6 displays a paged view of the the containers belonging to the application, sorted in ascending order of storage
@@ -123,10 +123,10 @@ Example 6 displays a paged view of the the containers belonging to the applicati
 ### Example 7
 
 ```powershell
-Get-SPOContainer -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -SortByStorage <Ascending>-Paged-PagingToken <Token String>
+Get-SPOContainer -OwningApplicationId 423poi45-as -SortByStorage <Ascending> -Paged -PagingToken <Token String>
 ```
 
-Example 7 displays the next list of paged view  of containers belonging to the application, sorted in ascending order of storage
+Example 7 displays the next list of paged view of containers belonging to the application, sorted in ascending order of storage
 
 
 ## PARAMETERS
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 
 ### -Identity
 
-Use this parameter to specify the Container ID of a container.
+Use this parameter to specify the Container ID.
  
 ```yaml
 Type: String
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 
 ### -Paged
 
-This parameter can be used when there are more than 200 Containers in a given SharePoint Embedded application. Using `-Paged` will provide a `<Paging Token>` that will display the next 200 Containers.
+This parameter can be used when there are more than 200 Containers in a given SharePoint Embedded application. Using `-Paged` will provide a `paging token` that will display the next 200 Containers.
 
 ```yaml
 Type: String
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 
 ### -PagingToken
 
-Use this parameter to provide the `<Paging Token>` provided to view the remaining Containers as shown in Example 4. If there are no more Containers to display, the commandlet output will return the message `End of Containers view.` Otherwise, use the given `<Paging Token>` to retrieve the next batch of up to 200 Containers.
+Use this parameter to provide the `<Paging Token>` provided to view the remaining Containers as shown in Example 4. If there are no more Containers to display, the commandlet output will return the message `End of Containers view.` Otherwise, use the given `paging token` to retrieve the next batch of up to 200 Containers.
 
 ```yaml
 Type: String
