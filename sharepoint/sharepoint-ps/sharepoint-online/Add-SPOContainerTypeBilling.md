@@ -31,7 +31,7 @@ This cmdlet attaches the Azure subscription ID, resource group and region with
 
 You must be a SharePoint Embedded Administrator to run this cmdlet. You also need to have owner or contributor permissions on an Azure subscription, with active time bound permission on billing, and on the Resource group. 
 
-If you don't have an Azure subscription, follow steps here to [create a subscription](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions).
+If you don't have an Azure subscription, follow steps here to [create a subscription](/azure/cloud-adoption-framework/ready/azure-best-practices/initial-subscriptions).
 
 For permissions and the most current information about Windows PowerShell for SharePoint Embedded Containers, see the documentation at [Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
@@ -40,10 +40,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### Example 1
 
 ```powershell
-Add-SPOContainerTypeBilling - ContainerTypeId aa1d89b3-b4cf-4c0a-8e1c-0d131c57544a -AzureSubscriptionId 5a8a4d9f-9f8d-4cac-8a97-28ab04ff194c -ResourceGroup "RG100" -Region "(US) East US“ 
+Add-SPOContainerTypeBilling - ContainerTypeId aa1d89b3-b4cf-4c0a-8e1c-0d131c57544a -AzureSubscriptionId 5a8a4d9f-9f8d-4cac-8a97-28ab04ff194c -ResourceGroup "RG100" -Region "(US) East US"
 ```
 
-Example 1 attaches the billing profile of Azure subscription ID “5a8a4d9f-9f8d-4cac-8a97-28ab04ff194c”, resource group “RG100” and region “(US) East US” to the container type ID “aa1d89b3-b4cf-4c0a-8e1c-0d131c57544a” 
+Example 1 attaches the billing profile of Azure subscription ID "5a8a4d9f-9f8d-4cac-8a97-28ab04ff194c", resource group "RG100" and region "(US) East US" to the container type ID "aa1d89b3-b4cf-4c0a-8e1c-0d131c57544a"
 
 
 ## PARAMETERS
