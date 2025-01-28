@@ -32,6 +32,8 @@ Set-SPOTenant
  [-AllowGuestUserShareToUsersNotInSiteCollection <Boolean>]
  [-AllowOverrideForBlockUserInfoVisibility]
  [-AllowSensitivityLabelOnRecords <Boolean>]
+ [-AllowSelectSecurityGroupsInSPSitesList [String[]]]
+ [-AllowSelectSGsInODBListInTenant [String[]]]
  [-AllowSharingOutsideRestrictedAccessControlGroups <Boolean>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>]
  [-AnyoneLinkTrackUsers <Boolean>]
@@ -73,6 +75,8 @@ Set-SPOTenant
  [-DelayDenyAddAndCustomizePagesEnforcement <Boolean>]
  [-DelegateRestrictedAccessControlManagement <Boolean>]
  [-DelegateRestrictedContentDiscoverabilityManagement <Boolean>]
+ [-DenySelectSecurityGroupsInSPSitesList [String[]]]
+ [-DenySelectSGsInODBListInTenant [String[]]]
  [-DisableAddShortcutsToOneDrive <Boolean>]
  [-DisableBackToClassic <Boolean>]
  [-DisableCustomAppAuthentication <Boolean>]
@@ -111,6 +115,7 @@ Set-SPOTenant
  [-EnforceContentSecurityPolicy <Boolean>]
  [-ExcludedBlockDownloadGroupIds [Guid[]]]
  [-ExcludeSiteTemplate <SwitchParameter>]
+ [-ExemptNativeUsersFromTenantLevelRestricedAccessControl <Boolean>]
  [-ExpireVersionsAfterDays <int>]
  [-ExtendPermissionsToUnprotectedFiles <Boolean>]
  [-ExternalServicesEnabled <Boolean>]
@@ -4219,6 +4224,88 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowSelectSecurityGroupsInSPSitesList
+
+Allows members of specific security groups to access SharePoint content.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DenySelectSecurityGroupsInSPSitesList
+
+Restricts members of specific security groups from accessing SharePoint content.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowSelectSGsInODBListInTenant
+
+Allows members of specific security groups to access OneDrive content.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DenySelectSGsInODBListInTenant
+
+Restricts members of specific security groups from accessing OneDrive content.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExemptNativeUsersFromTenantLevelRestricedAccessControl
+
+Gets or sets the value of a setting which determines whether Native Identity users should be exempted from restricted access control policy at tenant level.
+
+PARAMVALUE: True | False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
