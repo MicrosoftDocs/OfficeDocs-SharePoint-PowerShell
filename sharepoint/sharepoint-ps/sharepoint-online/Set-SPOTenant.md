@@ -32,8 +32,8 @@ Set-SPOTenant
  [-AllowGuestUserShareToUsersNotInSiteCollection <Boolean>]
  [-AllowOverrideForBlockUserInfoVisibility]
  [-AllowSensitivityLabelOnRecords <Boolean>]
- [-AllowSelectSecurityGroupsInSPSitesList [List<string>]]
- [-AllowSelectSGsInODBListInTenant [List<string>]]
+ [-AllowSelectSecurityGroupsInSPSitesList [List<String>]]
+ [-AllowSelectSGsInODBListInTenant [List<String>]]
  [-AllowSharingOutsideRestrictedAccessControlGroups <Boolean>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>]
  [-AnyoneLinkTrackUsers <Boolean>]
@@ -75,8 +75,8 @@ Set-SPOTenant
  [-DelayDenyAddAndCustomizePagesEnforcement <Boolean>]
  [-DelegateRestrictedAccessControlManagement <Boolean>]
  [-DelegateRestrictedContentDiscoverabilityManagement <Boolean>]
- [-DenySelectSecurityGroupsInSPSitesList [List<string>]]
- [-DenySelectSGsInODBListInTenant [List<string>]]
+ [-DenySelectSecurityGroupsInSPSitesList [List<String>]]
+ [-DenySelectSGsInODBListInTenant [List<String>]]
  [-DisableAddShortcutsToOneDrive <Boolean>]
  [-DisableBackToClassic <Boolean>]
  [-DisableCustomAppAuthentication <Boolean>]
@@ -4294,7 +4294,7 @@ Accept wildcard characters: False
 
 ### -ExemptNativeUsersFromTenantLevelRestricedAccessControl
 
-Gets or sets the value of a setting which determines whether Native Identity users should be exempted from restricted access control policy at tenant level
+Gets or sets the value of a setting which determines whether Native Identity users should be exempted from restricted access control policy at tenant level.
 
 PARAMVALUE: True | False
 
