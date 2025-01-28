@@ -32,8 +32,8 @@ Set-SPOTenant
  [-AllowGuestUserShareToUsersNotInSiteCollection <Boolean>]
  [-AllowOverrideForBlockUserInfoVisibility]
  [-AllowSensitivityLabelOnRecords <Boolean>]
- [-AllowSelectSecurityGroupsInSPSitesList [List<String>]]
- [-AllowSelectSGsInODBListInTenant [List<String>]]
+ [-AllowSelectSecurityGroupsInSPSitesList [String[]]]
+ [-AllowSelectSGsInODBListInTenant [String[]]]
  [-AllowSharingOutsideRestrictedAccessControlGroups <Boolean>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>]
  [-AnyoneLinkTrackUsers <Boolean>]
@@ -75,8 +75,8 @@ Set-SPOTenant
  [-DelayDenyAddAndCustomizePagesEnforcement <Boolean>]
  [-DelegateRestrictedAccessControlManagement <Boolean>]
  [-DelegateRestrictedContentDiscoverabilityManagement <Boolean>]
- [-DenySelectSecurityGroupsInSPSitesList [List<String>]]
- [-DenySelectSGsInODBListInTenant [List<String>]]
+ [-DenySelectSecurityGroupsInSPSitesList [String[]]]
+ [-DenySelectSGsInODBListInTenant [String[]]]
  [-DisableAddShortcutsToOneDrive <Boolean>]
  [-DisableBackToClassic <Boolean>]
  [-DisableCustomAppAuthentication <Boolean>]
@@ -4233,7 +4233,7 @@ Accept wildcard characters: False
 Allows members of specific security groups to access SharePoint content.
 
 ```yaml
-Type: List<string>
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
@@ -4249,7 +4249,7 @@ Accept wildcard characters: False
 Restricts members of specific security groups from accessing SharePoint content.
 
 ```yaml
-Type: List<string>
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
@@ -4265,7 +4265,7 @@ Accept wildcard characters: False
 Allows members of specific security groups to access OneDrive content.
 
 ```yaml
-Type: List<string>
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
@@ -4281,7 +4281,7 @@ Accept wildcard characters: False
 Restricts members of specific security groups from accessing OneDrive content.
 
 ```yaml
-Type: List<string>
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
