@@ -102,7 +102,7 @@ Example 3 uses the `-Paged` command to retrieve a paging token.
 Get-SPOContainer -OwningApplicationId 423poi45-as -Paged -PagingToken <Token String> | ft 
 ```
 
-Example 4 uses the `-PagingToken` parameter along with the `-Paged`parameter to view more containers that were not displayed in Example 3
+Example 4 uses the `-PagingToken` parameter along with the `-Paged` parameter to view more containers that were not displayed in Example 3
 
 ### Example 5
 
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 
 ### -PagingToken
 
-Use this parameter to provide the `<Paging Token>` provided to view the remaining Containers as shown in Example 4. If there are no more Containers to display, the commandlet output will return the message `End of Containers view.` Otherwise, use the given `paging token` to retrieve the next batch of up to 200 Containers.
+Use this parameter to provide the `paging token` provided to view the remaining Containers as shown in Example 4. If there are no more Containers to display, the commandlet output will return the message `End of Containers view.` Otherwise, use the given `paging token` to retrieve the next batch of up to 200 Containers.
 
 ```yaml
 Type: String
