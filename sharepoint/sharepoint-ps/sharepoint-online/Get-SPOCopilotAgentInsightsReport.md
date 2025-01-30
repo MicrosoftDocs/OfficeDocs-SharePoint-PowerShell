@@ -13,6 +13,9 @@ manager: hikakar
 
 # Get-SPOCopilotAgentInsightsReport
 
+> [!NOTE]
+> The cmdlets are currently in development and likely to be rolled out for private preview in early March 2025 and will be subsequently expanded to global audience/users.
+
 ## SYNOPSIS
 
 This cmdlet enables the administrator to check status of all active and available reports when no report ID is present and to view or download a report if report ID is present.
