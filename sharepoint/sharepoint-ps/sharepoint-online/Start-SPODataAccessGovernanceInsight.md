@@ -69,6 +69,18 @@ Start-SPODataAccessGovernanceInsight
 [<CommonParameters>]
 ```
 
+### UserPermissionsParameterSet
+
+```
+Start-SPODataAccessGovernanceInsight 
+-ReportEntity <ReportEntityEnum> 
+-Workload <WorkloadEnum>
+-ReportType <ReportTypeEnum> 
+-Name <String> 
+-UserIDList <System.Collections.Generic.List`1[System.Guid]>
+[<CommonParameters>]
+```
+
 ## DESCRIPTION
 
 This cmdlet is used to generate DAG reports which deal with potential oversharing of sensitive data. These reports are present in Sharepoint admin center. Reports are currently available for the following scenarios:
@@ -77,6 +89,7 @@ This cmdlet is used to generate DAG reports which deal with potential oversharin
 - Content shared with Everyone except external users (EEEU) in last 28 days.
 - List of sites having labelled files, as of report generation time.
 - List of sites having 'too-many-users', as of report generation time, to setup an oversharing baseline.
+- List of sites with direct or indirect permissions to given users. *(Private Preview)*
 
 ## EXAMPLES
 
@@ -179,7 +192,7 @@ Specifies the entity that could cause oversharing and hence tracked by these rep
 Type: ReportEntityEnum
 Parameter Sets: (All)
 Aliases:
-Accepted values: SharingLinks_Anyone, SharingLinks_PeopleInYourOrg, SharingLinks_Guests, SensitivityLabelForFiles, EveryoneExceptExternalUsersAtSite, EveryoneExceptExternalUsersForItems, PermissionedUsers
+Accepted values: SharingLinks_Anyone, SharingLinks_PeopleInYourOrg, SharingLinks_Guests, SensitivityLabelForFiles, EveryoneExceptExternalUsersAtSite, EveryoneExceptExternalUsersForItems, PermissionedUsers, PermissionsReport (Preview)
 
 Required: True
 Position: Named
@@ -227,7 +240,7 @@ Specifies the template of the site. Relevant in case a report should be generate
 
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Online.SharePoint.TenantAdministration.TemplateEnum]
-Parameter Sets: EEEUParameterSet, SitePermissionsParameterSet
+Parameter Sets: EEEUParameterSet, SitePermissionsParameterSet, UserPermissionsParameterSet
 Aliases:
 Accepted values: AllSites, ClassicSites, CommunicationSites, TeamSites, OtherSites
 
@@ -247,6 +260,22 @@ Type: WorkloadEnum
 Parameter Sets: (All)
 Aliases:
 Accepted values: SharePoint, OneDriveForBusiness
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserIDList
+
+Specifies the AAD/Entra object IDs of the users for whom permissions report should be generated. Can be fetched using the ```Get-MgUser``` command from Microsoft Graph PowerShell.
+
+```yaml
+Type: System.Collections.Generic.List`1[System.Guid]
+Parameter Sets: UserPermissionsParameterSet
+Aliases:
 
 Required: True
 Position: Named
