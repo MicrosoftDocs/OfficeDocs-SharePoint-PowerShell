@@ -43,7 +43,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 Add-SPOContainerTypeBilling - ContainerTypeId aa1d89b3 -AzureSubscriptionId 5a8a4d9f -ResourceGroup "RG100" -Region "(US) East US"
 ```
 
-Example 1 attaches the billing profile of Azure subscription ID "5a8a4d9f", resource group "RG100" and region "(US) East US" to the container type ID "aa1d89b3"
+Example 1 attaches the billing profile of Azure subscription ID "5a8a4d9f", resource group "RG100" and region "(US) East US" to the container type ID "aa1d89b3".
 
 
 ## PARAMETERS
