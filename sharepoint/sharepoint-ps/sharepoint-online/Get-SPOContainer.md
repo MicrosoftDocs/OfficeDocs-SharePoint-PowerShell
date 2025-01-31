@@ -214,5 +214,8 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+## RELATED LINKS
+
+[Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell)
 
 
