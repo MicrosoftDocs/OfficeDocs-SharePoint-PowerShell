@@ -76,30 +76,30 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### Example 1
 
 ```powershell
-Get-SPOContainer -Identity b66f5b2e-4cbd
+Get-SPOContainer -Identity b66f5b2e
 ```
 
-Example 1 returns the detailed properties of the Container with associated Container ID b66f5b2e-4cbd-4754-9ad3-8291c2c81ade 
+Example 1 returns the detailed properties of the Container with associated Container ID b66f5b2e
 
 ### Example 2
 
 ```powershell
-Get-SPOContainer -OwningApplicationId 423poi45-as | ft 
+Get-SPOContainer -OwningApplicationId 423poi45 | ft 
 ```
-Example 2 returns a tabular list of Containers created under the SharePoint Embedded application with the `OwningApplicationId` of  `423poi45-as`.
+Example 2 returns a tabular list of Containers created under the SharePoint Embedded application with the `OwningApplicationId` of  `423poi45`.
 
  
 ### Example 3
 
 ```powershell
-Get-SPOContainer -OwningApplicationId 423poi45-as -Paged | ft
+Get-SPOContainer -OwningApplicationId 423poi45 -Paged | ft
 ```
 Example 3 uses the `-Paged` command to retrieve a paging token.
 
 ### Example 4
 
 ```powershell
-Get-SPOContainer -OwningApplicationId 423poi45-as -Paged -PagingToken <Token String> | ft 
+Get-SPOContainer -OwningApplicationId 423poi45 -Paged -PagingToken <Token String> | ft 
 ```
 
 Example 4 uses the `-PagingToken` parameter along with the `-Paged` parameter to view more containers that were not displayed in Example 3
@@ -107,7 +107,7 @@ Example 4 uses the `-PagingToken` parameter along with the `-Paged` parameter to
 ### Example 5
 
 ```powershell
-Get-SPOContainer -OwningApplicationId 423poi45-as -SortByStorage Ascending
+Get-SPOContainer -OwningApplicationId 423poi45 -SortByStorage Ascending
 ```
 
 Example 5 displays the containers belonging to the application, sorted in ascending order of storage
@@ -115,7 +115,7 @@ Example 5 displays the containers belonging to the application, sorted in ascend
 ### Example 6
 
 ```powershell
-Get-SPOContainer -OwningApplicationId 423poi45-as -SortByStorage Ascending -Paged
+Get-SPOContainer -OwningApplicationId 423poi45 -SortByStorage Ascending -Paged
 ```
 
 Example 6 displays a paged view of the the containers belonging to the application, sorted in ascending order of storage
