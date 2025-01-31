@@ -47,13 +47,13 @@ You must be a SharePoint Embedded Administrator to run this cmdlet.
 ### Example 1
 
 ```powershell
-New-SPOContainerType -ContainerTypeName ContosoLegal -OwningApplicationId a735e4af-b86e-0000-93ba-1faded6c39e1  
+New-SPOContainerType -ContainerTypeName ContosoLegal -OwningApplicationId a735e4af  
 ```
 In Example 1, the cmdlet creates a new regular billed container type 'ContosoLegal'
 
 ### Example 2  
 ```powershell
-New-SPOContainerType –IsPassThroughBilling –ContainerTypeName ContosoLegal -OwningApplicationId a735e4af-b86e 
+New-SPOContainerType –IsPassThroughBilling –ContainerTypeName ContosoLegal -OwningApplicationId a735e4af
 ```
 
 In Example 2, the cmdlet creates a direct to customer billed container type 'ContosoLegal'. 
@@ -62,7 +62,7 @@ In Example 2, the cmdlet creates a direct to customer billed container type 'Con
 
 ```powershell 
 
-New-SPOContainerType –TrialContainerType -ContainerTypeName ContosoLegal -OwningApplicationId a735e4af-b86e
+New-SPOContainerType –TrialContainerType -ContainerTypeName ContosoLegal -OwningApplicationId a735e4af
 
 ``` 
 
