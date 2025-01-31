@@ -21,18 +21,18 @@ This cmdlet creates a new container type of standard or trial status. The standa
 ### ParamSet1
 
 ```powershell
-New-SPOContainerType –ContainerTypeName <ContainerTypeName> -OwningApplicationId <OwningApplicationId> -ApplicationRedirectUrl <ApplicationRedirectUrl>
+New-SPOContainerType [-ContainerTypeName] <String> [-OwningApplicationId] <String> [-ApplicationRedirectUrl] <String> [<CommonParameters>]
 ```
 
 ### ParamSet2
 
 ```powershell
-New-SPOContainerType -ContainerTypeName <ContainerTypeName> -OwningApplicationId <OwningApplicationId> -ApplicationRedirectUrl <ApplicationRedirectUrl>​ -IsPassThroughBilling 
+New-SPOContainerType [-ContainerTypeName] <String> [-OwningApplicationId] <String> [-ApplicationRedirectUrl] <String> [-IsPassThroughBilling] [<CommonParameters>]
 ```
 
 ### ParamSet3
 ```powershell
-New-SPOContainerType –TrialContainerType -ContainerTypeName <ContainerTypeName> -OwningApplicationId <OwningApplicationId> -ApplicationRedirectUrl <ApplicationRedirectUrl> 
+New-SPOContainerType [–TrialContainerType] [-ContainerTypeName] <String> [-OwningApplicationId] <String> [-ApplicationRedirectUrl] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
