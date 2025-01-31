@@ -15,6 +15,10 @@ The following cmdlet references are for SharePoint Online.
 
 ## sharepoint-online Cmdlets
 
+### [Add-SPOContainerTypeBilling](Add-SPOContainerTypeBilling.md)
+
+{{Manually Enter Add-SPOContainerTypeBilling Description Here}}
+
 ### [Add-SPOGeoAdministrator](Add-SPOGeoAdministrator.md)
 
 {{Manually Enter Add-SPOGeoAdministrator Description Here}}
@@ -102,6 +106,14 @@ The following cmdlet references are for SharePoint Online.
 ### [Get-SPOCopilotAgentInsightsReport](Get-SPOCopilotAgentInsightsReport.md)
 
 {{Gets the status of all active and available reports when no report ID is present, and allows to view or download a report if report ID is present.}}
+
+### [Get-SPOContainer](Get-SPOContainer.md)
+
+{{Manually Enter Get-SPOContainer Description Here}}
+
+### [Get-SPOContainerType](Get-SPOContainerType.md)
+
+{{Manually Enter Get-SPOContainerType Description Here}}
 
 ### [Get-SPOCrossGeoMovedUsers](Get-SPOCrossGeoMovedUsers.md)
 
@@ -330,6 +342,10 @@ The following cmdlet references are for SharePoint Online.
 ### [Invoke-SPOSiteSwap](Invoke-SPOSiteSwap.md)
 
 {{Manually Enter Invoke-SPOSiteSwap Description Here}}
+
+### [New-SPOContainerType](New-SPOContainerType.md)
+
+{{Manually Enter New-SPOContainerType Description Here}}
 
 ### [New-SPODataConnectionSetting](New-SPODataConnectionSetting.md)
 
