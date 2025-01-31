@@ -53,7 +53,7 @@ Example 1 retrieves all the container types present in the tenant and displays c
 ```powershell
 Get-SPOContainerType -ContainerTypeId 4f0af585
 ```
-Example 2 returns the detailed properties of container type 4f0af585
+Example 2 returns the detailed properties of container type 4f0af585.
 
 ## PARAMETERS
 
