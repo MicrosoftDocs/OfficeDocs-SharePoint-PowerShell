@@ -21,40 +21,40 @@ Returns one or more containers in a SharePoint Embedded application.
 ### ParamSet1
 
 ```powershell
-Get-SPOContainer -Identity <ContainerId>
+Get-SPOContainer -Identity <ContainerId> [<CommonParameters>]
 ```
 
 ### ParamSet2
 
 ```powershell
-Get-SPOContainer -OwningApplicationId <OwningApplicationId>
+Get-SPOContainer -OwningApplicationId <OwningApplicationId> [<CommonParameters>]
 ```
 
 ### ParamSet3
 ```powershell
-Get-SPOContainer -OwningApplicationId <OwningApplicationId> -Paged
+Get-SPOContainer -OwningApplicationId <OwningApplicationId> [-Paged] [<CommonParameters>]
 ```
 
 ### ParamSet4
 ```powershell
-Get-SPOContainer -OwningApplicationId <OwningApplicationId> -Paged -PagingToken <Token String>
+Get-SPOContainer -OwningApplicationId <OwningApplicationId> [-Paged] [-PagingToken <TokenString>] [<CommonParameters>]
 ```
 
 ### ParamSet5
 
 ```powershell
-Get-SPOContainer -OwningApplicationId <OwningApplicationId> -SortByStorage <Ascending | Descending>
+Get-SPOContainer -OwningApplicationId <OwningApplicationId> [-SortByStorage <Ascending | Descending>] [<CommonParameters>]
 ```
 
 ### ParamSet6
 
 ```powershell
-Get-SPOContainer -OwningApplicationId <OwningApplicationId> -SortByStorage <Ascending | Descending>-Paged
+Get-SPOContainer -OwningApplicationId <OwningApplicationId> [-SortByStorage <Ascending | Descending>] [-Paged] [<CommonParameters>]
 ```
 ### ParamSet7
 
 ```powershell
-Get-SPOContainer -OwningApplicationId <OwningApplicationId> -SortByStorage <Ascending | Descending>-Paged -PagingToken <Token String>
+Get-SPOContainer -OwningApplicationId <OwningApplicationId> [-SortByStorage <Ascending | Descending>] [-Paged] [-PagingToken <TokenString>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
