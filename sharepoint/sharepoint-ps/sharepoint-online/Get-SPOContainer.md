@@ -79,7 +79,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 Get-SPOContainer -Identity b66f5b2e
 ```
 
-Example 1 returns the detailed properties of the Container with associated Container ID b66f5b2e
+Example 1 returns the detailed properties of the Container with associated Container ID b66f5b2e.
 
 ### Example 2
 
@@ -99,10 +99,10 @@ Example 3 uses the `-Paged` command to retrieve a paging token.
 ### Example 4
 
 ```powershell
-Get-SPOContainer -OwningApplicationId 423poi45 -Paged -PagingToken <Token String> | ft 
+Get-SPOContainer -OwningApplicationId 423poi45 -Paged -PagingToken <zacad> | ft 
 ```
 
-Example 4 uses the `-PagingToken` parameter along with the `-Paged` parameter to view more containers that were not displayed in Example 3
+Example 4 uses the `-PagingToken` parameter along with the `-Paged` parameter to view more containers that were not displayed in Example 3.
 
 ### Example 5
 
@@ -110,7 +110,7 @@ Example 4 uses the `-PagingToken` parameter along with the `-Paged` parameter to
 Get-SPOContainer -OwningApplicationId 423poi45 -SortByStorage Ascending
 ```
 
-Example 5 displays the containers belonging to the application, sorted in ascending order of storage
+Example 5 displays the containers belonging to the application, sorted in ascending order of storage.
 
 ### Example 6
 
@@ -118,15 +118,15 @@ Example 5 displays the containers belonging to the application, sorted in ascend
 Get-SPOContainer -OwningApplicationId 423poi45 -SortByStorage Ascending -Paged
 ```
 
-Example 6 displays a paged view of the the containers belonging to the application, sorted in ascending order of storage
+Example 6 displays a paged view of the the containers belonging to the application, sorted in ascending order of storage.
 
 ### Example 7
 
 ```powershell
-Get-SPOContainer -OwningApplicationId 423poi45-as -SortByStorage Ascending -Paged -PagingToken <Token String>
+Get-SPOContainer -OwningApplicationId 423poi45-as -SortByStorage Ascending -Paged -PagingToken <zacad>
 ```
 
-Example 7 displays the next list of paged view of containers belonging to the application, sorted in ascending order of storage
+Example 7 displays the next list of paged view of containers belonging to the application, sorted in ascending order of storage.
 
 
 ## PARAMETERS
