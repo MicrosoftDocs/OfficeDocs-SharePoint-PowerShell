@@ -21,11 +21,11 @@ Returns one or more container types created in the tenant.
 ### ParamSet1
 
 ```powershell
-Get-SPOContainerType 
+Get-SPOContainerType [<CommonParameters>]
 ```
 ### ParamSet2
 ```powershell
-Get-SPOContainerType -ContainerTypeId <ContainerTypeId>
+Get-SPOContainerType -ContainerTypeId <ContainerTypeId> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
