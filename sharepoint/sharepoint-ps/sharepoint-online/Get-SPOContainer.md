@@ -218,4 +218,14 @@ Accept wildcard characters: False
 
 [Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell)
 
+[Get-SPOApplication](./Get-SPOApplication.md)
+
+[Set-SPOContainer](./Set-SPOContainer.md)
+
+[Remove-SPOContainer](./Remove-SPOContainer.md)
+
+[Remove-SPODeletedContainer](./Set-SPODeletedContainer.md)
+
+[Restore-SPODeletedContainer](./Restore-SPODeletedContainer.md)
+
 
