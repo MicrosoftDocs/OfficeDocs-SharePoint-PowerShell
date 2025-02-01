@@ -17,7 +17,7 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Add-SPOContainerTypeBilling](Add-SPOContainerTypeBilling.md)
 
-{{Adds a Azure billing subscription to a new standard billed container type}}
+{{Adds a Azure billing subscription to a new standard billed container type.}}
 
 ### [Add-SPOGeoAdministrator](Add-SPOGeoAdministrator.md)
 
@@ -109,11 +109,11 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Get-SPOContainer](Get-SPOContainer.md)
 
-{{Returns the details of all the containers or a specific container in the tenant}}
+{{Returns the details of all the containers or a specific container in the tenant.}}
 
 ### [Get-SPOContainerType](Get-SPOContainerType.md)
 
-{{Returns details of all the container types or a specific container type in the tenant}}
+{{Returns details of all the container types or a specific container type in the tenant.}}
 
 ### [Get-SPOCrossGeoMovedUsers](Get-SPOCrossGeoMovedUsers.md)
 
@@ -345,7 +345,7 @@ The following cmdlet references are for SharePoint Online.
 
 ### [New-SPOContainerType](New-SPOContainerType.md)
 
-{{Creates a new container type in the tenant}}
+{{Creates a new container type in the tenant.}}
 
 ### [New-SPODataConnectionSetting](New-SPODataConnectionSetting.md)
 
