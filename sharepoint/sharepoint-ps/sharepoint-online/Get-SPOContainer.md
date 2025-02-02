@@ -222,9 +222,11 @@ Accept wildcard characters: False
 
 [Set-SPOContainer](./Set-SPOContainer.md)
 
+[Get-SPODeletedContainer](./Get-SPODeletedContainer.md)
+
 [Remove-SPOContainer](./Remove-SPOContainer.md)
 
-[Remove-SPODeletedContainer](./Set-SPODeletedContainer.md)
+[Remove-SPODeletedContainer](./Remove-SPODeletedContainer.md)
 
 [Restore-SPODeletedContainer](./Restore-SPODeletedContainer.md)
 
