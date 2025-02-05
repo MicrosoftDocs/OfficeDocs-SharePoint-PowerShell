@@ -17,6 +17,9 @@ manager: hikakar
 
 This cmdlet enables the administrator to check status of all active and available reports when no report ID is present and to view or download a report if report ID is present.
 
+> [!NOTE]
+> The feature associated with this cmdlet will be rolling out soon.
+
 ## SYNTAX
 
 ```powershell
