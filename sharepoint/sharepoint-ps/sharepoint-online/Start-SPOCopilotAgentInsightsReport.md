@@ -10,12 +10,15 @@ ms.author: bhagatshweta
 ms.reviewer:
 manager: hikakar
 ---
- 
-# Start-SPOCopilotAgentInsightsReport
+
+ # Start-SPOCopilotAgentInsightsReport
 
 ## SYNOPSIS
 
 Using this cmdlet, administrators may trigger the build of a new Copilot agent insight report for the specified number of days.
+
+> [!NOTE]
+> The feature associated with this cmdlet will be rolling out soon.
 
 ## SYNTAX
 
