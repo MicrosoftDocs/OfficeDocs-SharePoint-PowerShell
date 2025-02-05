@@ -18,7 +18,7 @@ manager: hikakar
 Using this cmdlet, administrators may trigger the build of a new Copilot agent insight report for the specified number of days.
 
 > [!NOTE]
-> This cmdlet is currently in development and will be available in future releases.
+> The feature associated with this cmdlet will be rolling out soon.
 
 ## SYNTAX
 
