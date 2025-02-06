@@ -5,8 +5,8 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 Applicable: SharePoint Embedded
 title: Set-SPOApplication
 schema: 2.0.0
-author: FarreltinF
-ms.author: fanyi
+author: ShreyasSar26
+ms.author: shssaravanan
 ms.reviewer:
 ---
 
@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Sets or updates one or more property values for a SharePoint application.
+Sets or updates one or more configuration of a SharePoint Embedded application.
 
 ## SYNTAX
 
@@ -25,13 +25,15 @@ Set-SPOApplication
 [-OwningApplicationId <OwningApplicationId>] 
 [–SharingCapability <SharingCapability>] 
 [-OverrideTenantSharingCapability <Boolean>]
+[-CopilotEmbeddedChatHosts <String>]
 ```
 
 ## DESCRIPTION
 
-`Set-SPOApplication` adjusts the sharing settings at the SharePoint Embedded application level, determining if this SharePoint Embedded application content can be shared with external guests.
+`Set-SPOApplication` cmdlet is used to set the configuration properties of a specific application, determined by the `OwningApplicationId`. Using `Sharing Capability` parameter, the administrator can adjust the sharing settings at the SharePoint Embedded application level, determining if this SharePoint Embedded application content can be shared with external guests. Using the `CopilotEmbeddedChatHosts` parameter, the host URLs that will drive the application’s chat support can be added.
 
-You must be a SharePoint Embedded Administrator or Global Administrator to run the cmdlet.
+You must be a SharePoint Embedded Administrator to run the cmdlet.
+
 > [!NOTE]   
 > The OwningApplicationId for Microsoft Loop is `a187e399-0c36-4b98-8f04-1edc167a0996`.
 > The OwningApplicationId for Microsoft Designer is `5e2795e3-ce8c-4cfb-b302-35fe5cd01597`.
