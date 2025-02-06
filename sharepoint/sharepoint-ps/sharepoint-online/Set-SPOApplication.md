@@ -66,6 +66,13 @@ Set-SPOApplication -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -Ov
 ```
 This example demonstrates how to enable file sharing within the SharePoint Embedded application for external users. Note that B2B integration must be enabled to allow guest invitations to SharePoint Embedded apps.
 
+### Example 4
+
+```powershell
+Set-SPOApplication -OwningApplicationId 423poi45 -CopilotEmbeddedChatHosts "http://localhost:3000 https://prepspo.spgrid.com https://pemdevtenant.myownsite.com" 
+```
+This example sets the host URLs for the application with Id 423poi45.
+
 ## PARAMETERS
 
 ### -SharingCapability
@@ -86,7 +93,7 @@ Type: SharingCapabilities
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Embedded
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -103,13 +110,23 @@ This setting allows the application to independently set its sharing capabilitie
 ```yaml
 Type: Boolean
 Applicable: SharePoint Embedded
-Required: True
+Required: False
 Position: Named
 Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -CopilotEmbeddedChatHosts
 
+```yaml
+Type: String
+Applicable: SharePoint Embedded
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ## RELATED LINKS
 
 [Get-SPOApplication](Get-SPOApplication.md)
