@@ -24,6 +24,7 @@ Set-SPOTenant
  [-AIBuilderModelSelectedSitesIncludesContentCenters <Boolean>]
  [-AIBuilderModelSelectedSitesList [String[]]]
  [-AIBuilderModelSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-AllOrganizationSecurityGroupId <Guid>]
  [-AllowAnonymousMeetingParticipantsToAccessWhiteboards <SharingState>]
  [-AllowCommentsTextOnEmailEnabled <Boolean>]
  [-AllowDownloadingNonWebViewableFiles <Boolean>]
@@ -404,6 +405,22 @@ Set-SPOTenant -DisabledAdaptiveCardExtensionIds 0d2d0fd0-9489-47ef-acfb-90edca00
 This example disables the Power Apps Adaptive Card Extension.
 
 ## PARAMETERS
+
+### -AllOrganizationSecurityGroupId
+
+Sets the All-Organization Security Group by object ID. This group is then used for other features, such as "EnableDiscoverableByOrganizationForVideos", if enabled. If you change the group ID associated with the All-Organization Security Group, it will only be effective on new shares or permission events.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -ApplyAppEnforcedRestrictionsToAdHocRecipients
 
@@ -3778,7 +3795,7 @@ Accept wildcard characters: False
 
 ### -EnableDiscoverableByOrganizationForVideos
 
-Allows the sharing dialog to include a checkbox offering the user the ability to share to a security group containing every user in the organization.
+When set to true, allows users to easily share a video with the entire company, using the security group defined in "AllOrganizationSecurityGroupId". If this security group is undefined, the Discoverable By Company for Videos feature will remain hidden.
 
 PARAMVALUE: True | False
 
