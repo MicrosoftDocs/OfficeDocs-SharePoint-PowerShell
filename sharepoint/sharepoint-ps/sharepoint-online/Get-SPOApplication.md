@@ -40,6 +40,8 @@ Get-SPOApplication [[-OwningApplicationId] <OwningApplicationid>] [[-Application
 The `Get-SPOApplication` cmdlet retrieves and returns SharePoint Embedded applications of all publishers registered in a tenant or a particular application when paired with the `OwningApplicationId` parameter. 
 
 You must be a SharePoint Embedded Administrator to run the cmdlet. 
+
+
 ## EXAMPLES
 
 ### Example 1
