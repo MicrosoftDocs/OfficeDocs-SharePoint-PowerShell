@@ -58,8 +58,8 @@ Get-SPOApplication -OwningApplicationId <OwningApplicationId>
 
 Example 2 provides details about the application corresponding to the “Owning Application Id” in the specified tenant. It also returns configuration details of the application such as:
 1)	“Applications” that  lists all the guest application IDs with permissions to the owning application.
-2)	“SharingCapability” settings and the “OverrideTenantSharingCapability” status 
-3)	“CopilotEmbeddedChatHosts” that lists all the host URLs driving the Copilot embedded chat capability on the SharePoint Embedded application
+2)	“SharingCapability” settings and the “OverrideTenantSharingCapability” status. 
+3)	“CopilotEmbeddedChatHosts” that lists the host URLs driving the Copilot embedded chat capability on the SharePoint Embedded application.
 
 
 ### Example 3
@@ -69,6 +69,16 @@ Get-SPOApplication -OwningApplicationId <OwningApplicationId> -ApplicationId <Ap
 ```
 
 Example 3 enumerates app-only permissions of the guest application specified in `ApplicationId`.
+
+### Example 4
+
+```powershell
+$r = Get-SPOApplication -OwningApplicationId <OwningApplicationId>
+$r.CopilotEmbeddedChatHosts
+```
+
+Example 4 enumerates the entire list of the host URLs driving the Copilot embedded chat capability on the SharePoint Embedded application.
+
 ## PARAMETERS
 
 ### -OwningApplicationId
