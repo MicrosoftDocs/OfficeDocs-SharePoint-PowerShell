@@ -115,6 +115,10 @@ The following cmdlet references are for SharePoint Online.
 
 {{Returns details of all the container types or a specific container type in the tenant.}}
 
+### [Get-Get-SPOCopilotPromoUsage](Get-SPOCopilotPromoUsage.md)
+
+{{Retruns SharePoint Agent promotion queries used by the tenant.}}
+
 ### [Get-SPOCrossGeoMovedUsers](Get-SPOCrossGeoMovedUsers.md)
 
 {{Manually Enter Get-SPOCrossGeoMovedUsers Description Here}}
