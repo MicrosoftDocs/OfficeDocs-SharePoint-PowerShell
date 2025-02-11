@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Retruns the count of SharePoint Agent promotion queries used by the tenant.
+Returns the count of SharePoint Agent promotion queries used by the tenant.
 
 ## SYNTAX
 ```powershell
