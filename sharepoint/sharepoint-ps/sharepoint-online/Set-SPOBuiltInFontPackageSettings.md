@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
 title: Set-SPOBuiltInFontPackageSettings
 schema: 2.0.0
-author: yixianpu
+author: Yixian15
 ms.author: yixianpu
 ms.reviewer:
 ---
