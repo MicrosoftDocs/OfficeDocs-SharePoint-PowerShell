@@ -40,3 +40,7 @@ This example sets the built-in font packages to be hidden from SharePoint sites.
 ### -HideBuiltInFontPackages
 
 Hide built in font packages from SharePoint sites if this value is true.
+
+## RELATED LINKS
+
+- [Get-SPOBuiltInFontPackageSettings](./Get-SPOBuiltInFontPackageSettings.md)

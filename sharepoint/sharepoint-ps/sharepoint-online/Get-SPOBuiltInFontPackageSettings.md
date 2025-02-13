@@ -35,3 +35,7 @@ Get-SPOBuiltInFontPackageSettings
 ```
 
 This example retrieves the current settings of built-in font packages.
+
+## RELATED LINKS
+
+- [Set-SPOBuiltInFontPackageSettings](./Set-SPOBuiltInFontPackageSettings.md)
