@@ -47,15 +47,6 @@ Clear-SPOTenantPreAuthSettings –Type Allow
 
 This example clears all list items from the allow list.
 
-**Example Output**:
-
-```powershell
-Confirm 
-
-This action will permanently delete all the Allow list item settings. Are you sure you want to proceed? 
-[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): A 
-```
-
 ### EXAMPLE 2
 
 ```powershell
