@@ -1,0 +1,91 @@
+---
+external help file: sharepointonline.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/clear-spotenantpreauthsettings
+applicable: SharePoint Online
+title: Clear-SPOTenantPreAuthSettings
+schema: 2.0.0
+author: lw-msft
+ms.author: laurenwong, neilh
+ms.reviewer:
+manager: bhaveshd
+---
+
+# Clear-SPOTenantPreAuthSettings
+
+## SYNOPSIS
+
+Clears the pre-authentication settings for either the allow or deny list. 
+
+## SYNTAX
+
+```powershell
+Clear-SPOTenantPreAuthSettings
+  -Type {Allow | Deny}
+  [<CommonParameters>]
+```
+
+## DESCRIPTION
+
+Clears the pre-authentication settings for either the allow or deny list.
+
+**What is pre-authentication?**
+
+SharePoint includes self-issued tokens in URLs called pre-authentication URLs (also known as tempauth URLs) to provide temporary access to a SharePoint resource, which helps support more rich user experiences. For example, a common scenario is downloading a file using a URL that includes a token in the `tempauth` query parameter like the following:
+
+`https://<tenant>.sharepoint.com/sites/samplesite/_layouts/15/download.aspx?UniqueId=<id>&tempauth=v1.ey...`
+
+This feature is currently being deprecated and you can use the related [Set-SPOTenantPreAuthSettings](Set-SPOTenantPreAuthSettings.md) to control the use of pre-authentication in various use cases.
+
+## EXAMPLES
+
+### EXAMPLE 1
+
+```powershell
+Clear-SPOTenantPreAuthSettings –Type Allow
+```
+
+This example clears all list items from the allow list.
+
+**Example Output**:
+
+```powershell
+Confirm 
+
+This action will permanently delete all the Allow list item settings. Are you sure you want to proceed? 
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): A 
+```
+
+### EXAMPLE 2
+
+```powershell
+Clear-SPOTenantPreAuthSettings –Type Deny 
+```
+
+This example clears all list items from the deny list. 
+
+## PARAMETERS
+
+### -Type
+
+This parameter indicates whether the cmdlet is interacting with the Allow list or the Deny list within the SPOTenantPreAuthSettings. 
+
+PARAMVALUE: Allow | Deny
+
+```yaml
+Type: ListType
+Applicable: SharePoint Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## RELATED LINKS
+
+- [Get-SPOTenantPreAuthSettings](Get-SPOTenantPreAuthSettings.md)
+- [Set-SPOTenantPreAuthSettings](Set-SPOTenantPreAuthSettings.md)
