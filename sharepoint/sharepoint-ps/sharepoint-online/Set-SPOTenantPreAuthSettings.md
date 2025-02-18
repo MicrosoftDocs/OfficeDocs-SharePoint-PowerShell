@@ -146,6 +146,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Add
+
+This parameter specifies that the operation of the cmdlet is to Add a setting to the SPOTenantPreAuthSettings configuration.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Add
+Applicable: SharePoint Online
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Remove
 
 This parameter specifies that the operation of the cmdlet is to Remove a setting from the SPOTenantPreAuthSettings configuration.
@@ -168,21 +183,6 @@ This parameter identifies the configuration setting to remove from the SPOTenant
 ```yaml
 Type: String
 Parameter Sets: Remove
-Applicable: SharePoint Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Add
-
-This parameter specifies that the operation of the cmdlet is to Add a setting to the SPOTenantPreAuthSettings configuration.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: Add
 Applicable: SharePoint Online
 Required: True
 Position: Named
