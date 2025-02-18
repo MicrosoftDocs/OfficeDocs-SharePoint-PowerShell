@@ -6,7 +6,7 @@ applicable: SharePoint Online
 title: Set-SPOTenantPreAuthSettings
 schema: 2.0.0
 author: lw-msft
-ms.author: laurenwong, neilh
+ms.author: laurenwong
 ms.reviewer:
 manager: bhaveshd
 ---
@@ -84,7 +84,7 @@ These switches are assumed to take the default value of `""` if not used with th
 
 ### Example 3
 ```powershell
-Set-SPOTenantPreAuthSettings -Remove -Id "12345678-1234-1234-1234-123456789012"
+Set-SPOTenantPreAuthSettings -Remove -Id "368dde6f-c857-4383-a8a7-02a04a294e6d"
 ```
 This example will remove an existing item from the current list of items. The remove switch can remove allow or deny entries from the list.
 
@@ -123,9 +123,9 @@ This example enables pre-authentication overall and denies requests that are not
 > - `"Empty"` represents any requests that are not coming from an app (e.g. direct requests from the browser) and will not have an app ID associated with it
 > - `""` can mean several things:
 >   - If you have `–IncludedApps "" -ExcludedApps ""`, it means that the setting applies to all
->   - If you have `–IncludedApps "" -ExcludedApps "<appid>"`, it means that the setting applies to all apps apart from <appids>.
->   - If you have `–IncludedApps "<appids>" and -ExcludedApps ""`, it means that the setting only applies to <appids>
->   - You cannot have a setting with `–IncludedApps "<appids>" –ExcludedApps "<appids>"`
+>   - If you have `–IncludedApps "" -ExcludedApps "<appid>"`, it means that the setting applies to all apps apart from 029e7c27-4b9c-4f8b-ba32-b96249468d42.
+>   - If you have `–IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42" and -ExcludedApps ""`, it means that the setting only applies to the appId 029e7c27-4b9c-4f8b-ba32-b96249468d42
+>   - You cannot have a setting with `–IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42" –ExcludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42"`
 
 ## PARAMETERS
 
