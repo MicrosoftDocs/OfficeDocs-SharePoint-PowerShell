@@ -6,7 +6,7 @@ applicable: SharePoint Online
 title: Get-SPOTenantPreAuthSettings
 schema: 2.0.0
 author: lw-msft
-ms.author: laurenwong, neilh
+ms.author: laurenwong
 ms.reviewer:
 manager: bhaveshd
 ---
