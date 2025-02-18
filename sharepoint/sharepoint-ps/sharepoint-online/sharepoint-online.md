@@ -67,6 +67,10 @@ The following cmdlet references are for SharePoint Online.
 
 {{Manually Enter Approve-SPOTenantServicePrincipalPermissionRequest Description Here}}
 
+### [Clear-SPOTenantPreAuthSettings](Clear-SPOTenantPreAuthSettings.md)
+
+{{Manually Enter Clear-SPOTenantPreAuthSettings Description Here}}
+
 ### [Connect-SPOService](Connect-SPOService.md)
 
 {{Manually Enter Connect-SPOService Description Here}}
@@ -286,6 +290,10 @@ The following cmdlet references are for SharePoint Online.
 ### [Get-SPOTenantLogLastAvailableTimeInUtc](Get-SPOTenantLogLastAvailableTimeInUtc.md)
 
 {{Manually Enter Get-SPOTenantLogLastAvailableTimeInUtc Description Here}}
+
+### [Get-SPOTenantPreAuthSettings](Get-SPOTenantPreAuthSettings.md)
+
+{{Manually Enter Get-SPOTenantPreAuthSettings Description Here}}
 
 ### [Get-SPOTenantRenameSitePrioritization](Get-SPOTenantRenameSitePrioritization.md)
 
@@ -623,6 +631,10 @@ This cmdlet is not currently active in production and may be removed in the futu
 ### [Set-SPOTenantSyncClientRestriction](Set-SPOTenantSyncClientRestriction.md)
 
 {{Manually Enter Set-SPOTenantSyncClientRestriction Description Here}}
+
+### [Set-SPOTenantPreAuthSettings](Set-SPOTenantPreAuthSettings.md)
+
+{{Manually Enter Set-SPOTenantPreAuthSettings Description Here}}
 
 ### [Set-SPOTenantTaxonomyReplicationParameters](Set-SPOTenantTaxonomyReplicationParameters.md)
 
