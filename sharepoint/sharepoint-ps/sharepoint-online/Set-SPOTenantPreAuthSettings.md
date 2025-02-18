@@ -15,7 +15,7 @@ manager: bhaveshd
 
 ## SYNOPSIS
 
-Sets the configuration of pre-Authentication.
+Sets the configuration of pre-authentication.
 
 ## SYNTAX
 
@@ -277,6 +277,8 @@ Accept wildcard characters: False
 ```
 
 ### Feature Names
+
+The `-IncludedFeatures` and `-ExcludedFeatures` use feature names from the following table. It explicitly mentions if the feature will be broken if it is disabled via the PowerShell cmdlet.
 
 | Feature name         | Description                                                              | Additional Information                                                                                     |
 |----------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
