@@ -43,15 +43,7 @@ But this feature is currently being deprecated. You can use the related [Set-SPO
 Get-SPOTenantPreAuthSettings
 ```
 
-This example returns all the PreAuthentication settings for the tenant as an object.
-
-**Example Output**:
-
-```powershell
-IsDisabled AllowList 
----------- ----------
-True       {{Id: 1cddb994-de09-4ebd-b401-5d68ea148252, IncludedApps: [00000000-0000-0000-0000-000000000000], Exclude... 
-```
+This example returns all the pre-authentication settings for the tenant as an object.
 
 ### EXAMPLE 2
 
@@ -59,27 +51,7 @@ True       {{Id: 1cddb994-de09-4ebd-b401-5d68ea148252, IncludedApps: [00000000-0
 Get-SPOTenantPreAuthSettings | ConvertTo-Json
 ```
 
-Gets all the pre auth settings for the tenant. Note that this example uses `ConvertTo-Json` to display the settings in JSON format since more complex Allow or Deny lists may be hard to read as an object.
-
-**Example Output**:
-
-```powershell
-{ 
-  "IsDisabled":  true, 
-  "AllowList":  [
-    {
-      "Id":  "1cddb994-de09-4ebd-b401-5d68ea148252", 
-      "IncludedApps":  "00000000-0000-0000-0000-000000000000", 
-      "ExcludedApps":  "", 
-      "IncludedFeatures":  "", 
-      "ExcludedFeatures":  "Download, WebRenderingEmbed" 
-    }
-  ], 
-  "DenyList":  [
-
-  ] 
-} 
-```
+Gets all the pre-authentication settings for the tenant. Note that this example uses `ConvertTo-Json` to display the settings in JSON format since more complex Allow or Deny lists may be hard to read as an object.
 
 ## PARAMETERS
 
