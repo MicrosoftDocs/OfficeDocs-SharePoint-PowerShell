@@ -15,7 +15,7 @@ manager: bhaveshd
 
 ## SYNOPSIS
 
-Gets the configuration of Pre-Authentication.
+Gets the configuration of pre-authentication.
 
 ## SYNTAX
 
@@ -25,7 +25,15 @@ Get-SPOTenantPreAuthSettings [<CommonParameters>]
 
 ## DESCRIPTION
 
-Gets the configuration of Pre-Authentication.
+Gets the configuration of pre-authentication.
+
+**What is pre-authentication?**
+
+SharePoint includes self-issued tokens in URLs called pre-authentication URLs (also known as tempauth URLs) to provide temporary access to a SharePoint resource, which helps support more rich user experiences. For example, a common scenario is downloading a file using a URL that includes a token in the `tempauth` query parameter like the following:
+
+`https://<tenant>.sharepoint.com/sites/samplesite/_layouts/15/download.aspx?UniqueId=<id>&tempauth=v1.ey...`
+
+But this feature is currently being deprecated. You can use the related [Set-SPOTenantPreAuthSettings](Set-SPOTenantPreAuthSettings.md) to control the use of pre-authentication in various use cases.
 
 ## EXAMPLES
 
