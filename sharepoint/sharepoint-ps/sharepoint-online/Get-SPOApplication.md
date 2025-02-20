@@ -95,6 +95,8 @@ The following details are returned:
 - SharingCapability
 
 - OverrideTenantSharingCapability
+
+- CopilotEmbeddedChatHosts
   
 ```yaml
 Type: String
