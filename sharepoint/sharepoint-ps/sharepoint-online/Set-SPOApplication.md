@@ -25,7 +25,7 @@ Set-SPOApplication
 [[-OwningApplicationId] <Guid>] 
 [[–SharingCapability] <SharingCapability>] 
 [[-OverrideTenantSharingCapability] <Boolean>]
-[]-CopilotEmbeddedChatHosts] <String>]
+[[-CopilotEmbeddedChatHosts] <String>]
 ```
 
 ## DESCRIPTION
