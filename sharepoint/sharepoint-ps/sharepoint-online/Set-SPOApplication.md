@@ -22,15 +22,15 @@ Sets or updates one or more configuration of a SharePoint Embedded application.
 
 ```powershell
 Set-SPOApplication 
-[-OwningApplicationId <OwningApplicationId>] 
-[–SharingCapability <SharingCapability>] 
-[-OverrideTenantSharingCapability <Boolean>]
-[-CopilotEmbeddedChatHosts <String>]
+[[-OwningApplicationId] <Guid>] 
+[[–SharingCapability] <SharingCapability>] 
+[[-OverrideTenantSharingCapability] <Boolean>]
+[]-CopilotEmbeddedChatHosts] <String>]
 ```
 
 ## DESCRIPTION
 
-`Set-SPOApplication` cmdlet is used to set the configuration properties of a specific application, determined by the `OwningApplicationId`. Using `Sharing Capability` parameter, the administrator can adjust the sharing settings at the SharePoint Embedded application level, determining if this SharePoint Embedded application content can be shared with external guests. Using the `CopilotEmbeddedChatHosts` parameter, the host URLs that will drive the application’s chat support can be added.
+`Set-SPOApplication` cmdlet is used to set the configuration properties of a specific application, determined by the `OwningApplicationId`.
 
 You must be a SharePoint Embedded Administrator to run the cmdlet.
 
@@ -75,6 +75,25 @@ This example sets the host URLs for the application with Id 423poi45.
 
 ## PARAMETERS
 
+### -OwningApplicationId
+
+This parameter specifies the ID of the SharePoint Embedded application.
+
+  
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ### -SharingCapability
 
 Determines what level of sharing is available for the SharePoint Embedded Application.
@@ -117,6 +136,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -CopilotEmbeddedChatHosts
+
+This parameter is used to add host URLs responsible for driving the Copilot embedded chat functionality in the SharePoint Embedded application.
 
 ```yaml
 Type: String
