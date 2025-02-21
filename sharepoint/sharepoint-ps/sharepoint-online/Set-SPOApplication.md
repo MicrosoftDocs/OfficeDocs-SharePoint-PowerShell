@@ -6,7 +6,7 @@ Applicable: SharePoint Embedded
 title: Set-SPOApplication
 schema: 2.0.0
 author: ShreyasSar26
-ms.author: shssaravanan
+ms.author: shsaravanan
 ms.reviewer:
 ---
 
@@ -38,7 +38,7 @@ Set-SPOApplication
 
 `Set-SPOApplication` cmdlet is used to set the configuration properties of a specific application, determined by the `OwningApplicationId`.
 
-You must be a SharePoint Embedded Administrator to run the cmdlet.
+You must be a SharePoint Embedded Administrator to run this cmdlet.
 
 > [!NOTE]   
 > The OwningApplicationId for Microsoft Loop is `a187e399-0c36-4b98-8f04-1edc167a0996`.
@@ -75,7 +75,7 @@ This example demonstrates how to enable file sharing within the SharePoint Embed
 ### Example 4
 
 ```powershell
-Set-SPOApplication -OwningApplicationId 423poi45 -CopilotEmbeddedChatHosts "http://localhost:3000 https://prepspo.spgrid.com https://pemdevtenant.myownsite.com" 
+Set-SPOApplication -OwningApplicationId 423poi45 -CopilotEmbeddedChatHosts "http://localhost:3000 https://contoso.sharepoint.com https://fabrikam.com" 
 ```
 This example sets the host URLs for the application with Id 423poi45.
 
@@ -83,7 +83,7 @@ This example sets the host URLs for the application with Id 423poi45.
 
 ### -CopilotEmbeddedChatHosts
 
-This parameter is used to add host URLs responsible for driving the Copilot embedded chat functionality in the SharePoint Embedded application.
+This parameter is used to add host URLs allowed to use the SharePoint Embedded application's declarative agent experience.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
