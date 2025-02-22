@@ -192,7 +192,7 @@ Specifies the entity that could cause oversharing and hence tracked by these rep
 Type: ReportEntityEnum
 Parameter Sets: (All)
 Aliases:
-Accepted values: SharingLinks_Anyone, SharingLinks_PeopleInYourOrg, SharingLinks_Guests, SensitivityLabelForFiles, EveryoneExceptExternalUsersAtSite, EveryoneExceptExternalUsersForItems, PermissionedUsers, PermissionsReport (Preview)
+Accepted values: SharingLinks_Anyone, SharingLinks_PeopleInYourOrg, SharingLinks_Guests, SensitivityLabelForFiles, EveryoneExceptExternalUsersAtSite, EveryoneExceptExternalUsersForItems, PermissionedUsers, PermissionsReport
 
 Required: True
 Position: Named
@@ -270,7 +270,7 @@ Accept wildcard characters: False
 
 ### -UserIDList
 
-Specifies the AAD/Entra object IDs of the users for whom permissions report should be generated. Can be fetched using the ```Get-MgUser``` command from Microsoft Graph PowerShell.
+Specifies the Entra object IDs of the users for whom permissions report should be generated. Can be fetched using the `Get-MgUser` command from [Microsoft Graph PowerShell](/powershell/module/microsoft.graph.users/get-mguser).
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.Guid]
