@@ -15,6 +15,10 @@ The following cmdlet references are for SharePoint Online.
 
 ## sharepoint-online Cmdlets
 
+### [Add-SPOContainerTypeBilling](Add-SPOContainerTypeBilling.md)
+
+{{Adds a Azure billing subscription to a new standard billed container type.}}
+
 ### [Add-SPOGeoAdministrator](Add-SPOGeoAdministrator.md)
 
 {{Manually Enter Add-SPOGeoAdministrator Description Here}}
@@ -102,6 +106,18 @@ The following cmdlet references are for SharePoint Online.
 ### [Get-SPOCopilotAgentInsightsReport](Get-SPOCopilotAgentInsightsReport.md)
 
 {{Gets the status of all active and available reports when no report ID is present, and allows to view or download a report if report ID is present.}}
+
+### [Get-SPOContainer](Get-SPOContainer.md)
+
+{{Returns the details of all the containers or a specific container in the tenant.}}
+
+### [Get-SPOContainerType](Get-SPOContainerType.md)
+
+{{Returns details of all the container types or a specific container type in the tenant.}}
+
+### [Get-Get-SPOCopilotPromoUsage](Get-SPOCopilotPromoUsage.md)
+
+{{Retruns SharePoint Agent promotion queries used by the tenant.}}
 
 ### [Get-SPOCrossGeoMovedUsers](Get-SPOCrossGeoMovedUsers.md)
 
@@ -330,6 +346,10 @@ The following cmdlet references are for SharePoint Online.
 ### [Invoke-SPOSiteSwap](Invoke-SPOSiteSwap.md)
 
 {{Manually Enter Invoke-SPOSiteSwap Description Here}}
+
+### [New-SPOContainerType](New-SPOContainerType.md)
+
+{{Creates a new container type in the tenant.}}
 
 ### [New-SPODataConnectionSetting](New-SPODataConnectionSetting.md)
 

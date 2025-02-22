@@ -21,18 +21,20 @@ Returns one or more container types created in the tenant.
 ### ParamSet1
 
 ```powershell
-Get-SPOContainerType 
+Get-SPOContainerType [<CommonParameters>]
 ```
 ### ParamSet2
 ```powershell
-Get-SPOContainerType [-ContainerTypeId <ContainerTypeId>] 
+Get-SPOContainerType -ContainerTypeId <ContainerTypeId> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-This cmdlet returns all the container types present in the tenant or details of a specific container type when paired with the containertype ID parameter. 
+This cmdlet returns all the container types present in the tenant or details of a specific container type when paired with the `ContainerTypeId` parameter. 
 
 You must be a SharePoint Embedded Administrator to run the cmdlet.
+
+While the basic information of container types is displayed to all administrators running this cmdlet, the billing information about a container type is only visible to administrators who also have owner or contributor access on the billing subscription attached to the container type. 
 
 For permissions and the most current information about Windows PowerShell for SharePoint Embedded Containers, see the documentation at [Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
@@ -49,9 +51,9 @@ Example 1 retrieves all the container types present in the tenant and displays c
 ### Example 2
 
 ```powershell
-Get-SPOContainerType -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 
+Get-SPOContainerType -ContainerTypeId 4f0af585
 ```
-Example 2 returns the detailed properties of container type 4f0af585-8dcc-0000-223d-661eb2c604e4 
+Example 2 returns the detailed properties of container type 4f0af585.
 
 ## PARAMETERS
 
