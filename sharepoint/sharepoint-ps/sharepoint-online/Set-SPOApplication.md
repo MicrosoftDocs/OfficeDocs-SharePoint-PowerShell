@@ -6,7 +6,7 @@ Applicable: SharePoint Embedded
 title: Set-SPOApplication
 schema: 2.0.0
 author: ShreyasSar26
-ms.author: shssaravanan
+ms.author: shsaravanan
 ms.reviewer:
 ---
 
