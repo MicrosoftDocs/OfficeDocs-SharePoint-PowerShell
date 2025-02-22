@@ -96,7 +96,7 @@ This cmdlet is used to generate DAG reports which deal with potential oversharin
 ### Example 1
 
 ```powershell
-Start-SPODataAccessGovernanceInsight -ReportEntity PermissionedUsers -Workload SharePoint -ReportType Snapshot -Name "OversharingBaselineReport" -CountOfUsersMoreThan 1000
+Start-SPODataAccessGovernanceInsight -ReportEntity PermissionedUsers -Workload SharePoint -ReportType Snapshot -Name "OversharingBaselineReport" -CountOfUsersMoreThan 0
 ```
 
 The above cmdlet generates a list of SharePoint sites which can be accessed by more than 1000 users, as of report generation day.
@@ -105,7 +105,7 @@ The above cmdlet generates a list of SharePoint sites which can be accessed by m
 
 ### -CountOfUsersMoreThan
 
-Specifies the threshold of oversharing as defined by the number of users that can access the site. The number of users that can access the site are determined by expanding all users, groups across all permissions (at site level and at the level of any item with unqiue permissions), deduplicate and arrive at a unique number. Minimum value is 100.
+Specifies the threshold of oversharing as defined by the number of users that can access the site. The number of users that can access the site are determined by expanding all users, groups across all permissions (at site level and at the level of any item with unqiue permissions), deduplicate and arrive at a unique number. Minimum value is 0.
 
 ```yaml
 Type: Int32
