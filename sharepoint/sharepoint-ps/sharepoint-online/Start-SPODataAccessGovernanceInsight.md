@@ -21,7 +21,7 @@ This cmdlet generates Data Access Governance (DAG) reports meant to provide insi
 
 ### EEEUParameterSet
 
-```
+```powershell
 Start-SPODataAccessGovernanceInsight 
 -ReportEntity <ReportEntityEnum> 
 -Workload <WorkloadEnum>
@@ -35,7 +35,7 @@ Start-SPODataAccessGovernanceInsight
 
 ### SharingLinkParameterSet
 
-```
+```powershell
 Start-SPODataAccessGovernanceInsight 
 -ReportEntity <ReportEntityEnum> 
 -Workload <WorkloadEnum>
@@ -44,7 +44,7 @@ Start-SPODataAccessGovernanceInsight
 
 ### LabelParameterSet
 
-```
+```powershell
 Start-SPODataAccessGovernanceInsight 
 -ReportEntity <ReportEntityEnum>
 -Workload <WorkloadEnum>
@@ -56,7 +56,7 @@ Start-SPODataAccessGovernanceInsight
 
 ### SitePermissionsParameterSet
 
-```
+```powershell
 Start-SPODataAccessGovernanceInsight 
 -ReportEntity <ReportEntityEnum> 
 -Workload <WorkloadEnum>
@@ -71,7 +71,7 @@ Start-SPODataAccessGovernanceInsight
 
 ### UserPermissionsParameterSet
 
-```
+```powershell
 Start-SPODataAccessGovernanceInsight 
 -ReportEntity <ReportEntityEnum> 
 -Workload <WorkloadEnum>
