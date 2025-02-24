@@ -5,8 +5,8 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 Applicable: SharePoint Embedded
 title: Set-SPOApplication
 schema: 2.0.0
-author: FarreltinF
-ms.author: fanyi
+author: ShreyasSar26
+ms.author: shsaravanan
 ms.reviewer:
 ---
 
@@ -14,24 +14,32 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Sets or updates one or more property values for a SharePoint application.
+Sets or updates one or more configuration of a SharePoint Embedded application.
 
 ## SYNTAX
+
+```
+Set-SPOApplication [-OwningApplicationId] <Guid> [[-SharingCapability] <SharingCapabilities>]
+ [[-OverrideTenantSharingCapability] <Boolean>]
+ [[-CopilotEmbeddedChatHosts] <System.Collections.Generic.List`1[System.String]>] [<CommonParameters>]
+```
 
 ### ParamSet1
 
 ```powershell
 Set-SPOApplication 
-[-OwningApplicationId <OwningApplicationId>] 
-[–SharingCapability <SharingCapability>] 
-[-OverrideTenantSharingCapability <Boolean>]
+[[-OwningApplicationId] <Guid>] 
+[[–SharingCapability] <SharingCapability>] 
+[[-OverrideTenantSharingCapability] <Boolean>]
+[[-CopilotEmbeddedChatHosts] <String>]
 ```
 
 ## DESCRIPTION
 
-`Set-SPOApplication` adjusts the sharing settings at the SharePoint Embedded application level, determining if this SharePoint Embedded application content can be shared with external guests.
+`Set-SPOApplication` cmdlet is used to set the configuration properties of a specific application, determined by the `OwningApplicationId`.
 
-You must be a SharePoint Embedded Administrator or Global Administrator to run the cmdlet.
+You must be a SharePoint Embedded Administrator to run this cmdlet.
+
 > [!NOTE]   
 > The OwningApplicationId for Microsoft Loop is `a187e399-0c36-4b98-8f04-1edc167a0996`.
 > The OwningApplicationId for Microsoft Designer is `5e2795e3-ce8c-4cfb-b302-35fe5cd01597`.
@@ -64,7 +72,47 @@ Set-SPOApplication -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -Ov
 ```
 This example demonstrates how to enable file sharing within the SharePoint Embedded application for external users. Note that B2B integration must be enabled to allow guest invitations to SharePoint Embedded apps.
 
+### Example 4
+
+```powershell
+Set-SPOApplication -OwningApplicationId 423poi45 -CopilotEmbeddedChatHosts "http://localhost:3000 https://contoso.sharepoint.com https://fabrikam.com" 
+```
+This example sets the host URLs for the application with Id 423poi45.
+
 ## PARAMETERS
+
+### -CopilotEmbeddedChatHosts
+
+This parameter is used to add host URLs allowed to use the SharePoint Embedded application's declarative agent experience.
+
+```yaml
+Type: System.Collections.Generic.List`1[System.String]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OwningApplicationId
+
+This parameter specifies the ID of the SharePoint Embedded application.
+  
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -SharingCapability
 
@@ -83,9 +131,10 @@ The default setting is None, meaning the application follows the SharePoint Onli
 Type: SharingCapabilities
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Embedded
-Required: True
-Position: Named
+Accepted values: Disabled, ExternalUserSharingOnly, ExternalUserAndGuestSharing, ExistingExternalUserSharingOnly
+
+Required: False
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -100,13 +149,18 @@ This setting allows the application to independently set its sharing capabilitie
 
 ```yaml
 Type: Boolean
-Applicable: SharePoint Embedded
-Required: True
-Position: Named
-Default value: False
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 2
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
 
