@@ -14,8 +14,8 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Sets settings of built-in font packages.
- 
+Use this cmdlet to set settings of [built-in font packages](/sharepoint/brand-center-font-packages).
+
 ## SYNTAX
 
 ```powershell
@@ -23,7 +23,7 @@ Set-SPOBuiltInFontPackageSettings [-HideBuiltInFontPackages] <Boolean>
 ```
 ## DESCRIPTION
 
-Use this cmdlet to set settings of built-in font packages.
+Use this cmdlet to set settings of [built-in font packages](/sharepoint/brand-center-font-packages).
 
 ## EXAMPLES
 

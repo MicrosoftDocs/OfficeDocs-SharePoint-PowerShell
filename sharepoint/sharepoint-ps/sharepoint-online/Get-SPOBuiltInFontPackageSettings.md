@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Gets settings of built-in font packages.
+Use this cmdlet to get settings of [built-in font packages](/sharepoint/brand-center-font-packages).
  
 ## SYNTAX
 
@@ -24,7 +24,7 @@ Get-SPOBuiltInFontPackageSettings
 
 ## DESCRIPTION
 
-Use this cmdlet to get all settings of built-in font packages.
+Use this cmdlet to get settings of [built-in font packages](/sharepoint/brand-center-font-packages).
 
 ## EXAMPLES
 
