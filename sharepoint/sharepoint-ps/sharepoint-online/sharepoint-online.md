@@ -103,6 +103,10 @@ The following cmdlet references are for SharePoint Online.
 
 {{Manually Enter Get-SPOAppInfo Description Here}}
 
+### [Get-SPOBuiltInFontPackageSettings](Get-SPOBuiltInFontPackageSettings.md)
+
+{{Gets settings of built-in font packages.}}
+
 ### [Get-SPOCopilotAgentInsightsReport](Get-SPOCopilotAgentInsightsReport.md)
 
 {{Gets the status of all active and available reports when no report ID is present, and allows to view or download a report if report ID is present.}}
@@ -531,6 +535,10 @@ This cmdlet is not currently active in production and may be removed in the futu
 ### [Revoke-SPOUserSession](Revoke-SPOUserSession.md)
 
 {{Manually Enter Revoke-SPOUserSession Description Here}}
+
+### [Set-SPOBuiltInFontPackageSettings](Set-SPOBuiltInFontPackageSettings.md)
+
+{{Sets settings of built-in font packages.}}
 
 ### [Set-SPOCrossTenantRelationship](Set-SPOCrossTenantRelationship.md)
 
