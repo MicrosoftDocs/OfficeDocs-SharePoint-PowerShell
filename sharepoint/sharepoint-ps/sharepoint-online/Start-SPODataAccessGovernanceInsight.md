@@ -21,7 +21,7 @@ This cmdlet generates Data Access Governance (DAG) reports meant to provide insi
 
 ### EEEUParameterSet
 
-```
+```powershell
 Start-SPODataAccessGovernanceInsight 
 -ReportEntity <ReportEntityEnum> 
 -Workload <WorkloadEnum>
@@ -35,7 +35,7 @@ Start-SPODataAccessGovernanceInsight
 
 ### SharingLinkParameterSet
 
-```
+```powershell
 Start-SPODataAccessGovernanceInsight 
 -ReportEntity <ReportEntityEnum> 
 -Workload <WorkloadEnum>
@@ -44,7 +44,7 @@ Start-SPODataAccessGovernanceInsight
 
 ### LabelParameterSet
 
-```
+```powershell
 Start-SPODataAccessGovernanceInsight 
 -ReportEntity <ReportEntityEnum>
 -Workload <WorkloadEnum>
@@ -56,7 +56,7 @@ Start-SPODataAccessGovernanceInsight
 
 ### SitePermissionsParameterSet
 
-```
+```powershell
 Start-SPODataAccessGovernanceInsight 
 -ReportEntity <ReportEntityEnum> 
 -Workload <WorkloadEnum>
@@ -69,6 +69,18 @@ Start-SPODataAccessGovernanceInsight
 [<CommonParameters>]
 ```
 
+### UserPermissionsParameterSet
+
+```powershell
+Start-SPODataAccessGovernanceInsight 
+-ReportEntity <ReportEntityEnum> 
+-Workload <WorkloadEnum>
+-ReportType <ReportTypeEnum> 
+-Name <String> 
+-UserIDList <System.Collections.Generic.List`1[System.Guid]>
+[<CommonParameters>]
+```
+
 ## DESCRIPTION
 
 This cmdlet is used to generate DAG reports which deal with potential oversharing of sensitive data. These reports are present in Sharepoint admin center. Reports are currently available for the following scenarios:
@@ -77,13 +89,14 @@ This cmdlet is used to generate DAG reports which deal with potential oversharin
 - Content shared with Everyone except external users (EEEU) in last 28 days.
 - List of sites having labelled files, as of report generation time.
 - List of sites having 'too-many-users', as of report generation time, to setup an oversharing baseline.
+- List of sites with direct or indirect permissions to given users. *(Private Preview)*
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-Start-SPODataAccessGovernanceInsight -ReportEntity PermissionedUsers -Workload SharePoint -ReportType Snapshot -Name "OversharingBaselineReport" -CountOfUsersMoreThan 1000
+Start-SPODataAccessGovernanceInsight -ReportEntity PermissionedUsers -Workload SharePoint -ReportType Snapshot -Name "OversharingBaselineReport" -CountOfUsersMoreThan 0
 ```
 
 The above cmdlet generates a list of SharePoint sites which can be accessed by more than 1000 users, as of report generation day.
@@ -92,7 +105,7 @@ The above cmdlet generates a list of SharePoint sites which can be accessed by m
 
 ### -CountOfUsersMoreThan
 
-Specifies the threshold of oversharing as defined by the number of users that can access the site. The number of users that can access the site are determined by expanding all users, groups across all permissions (at site level and at the level of any item with unqiue permissions), deduplicate and arrive at a unique number. Minimum value is 100.
+Specifies the threshold of oversharing as defined by the number of users that can access the site. The number of users that can access the site are determined by expanding all users, groups across all permissions (at site level and at the level of any item with unqiue permissions), deduplicate and arrive at a unique number. Minimum value is 0.
 
 ```yaml
 Type: Int32
@@ -179,7 +192,7 @@ Specifies the entity that could cause oversharing and hence tracked by these rep
 Type: ReportEntityEnum
 Parameter Sets: (All)
 Aliases:
-Accepted values: SharingLinks_Anyone, SharingLinks_PeopleInYourOrg, SharingLinks_Guests, SensitivityLabelForFiles, EveryoneExceptExternalUsersAtSite, EveryoneExceptExternalUsersForItems, PermissionedUsers
+Accepted values: SharingLinks_Anyone, SharingLinks_PeopleInYourOrg, SharingLinks_Guests, SensitivityLabelForFiles, EveryoneExceptExternalUsersAtSite, EveryoneExceptExternalUsersForItems, PermissionedUsers, PermissionsReport
 
 Required: True
 Position: Named
@@ -227,7 +240,7 @@ Specifies the template of the site. Relevant in case a report should be generate
 
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.Online.SharePoint.TenantAdministration.TemplateEnum]
-Parameter Sets: EEEUParameterSet, SitePermissionsParameterSet
+Parameter Sets: EEEUParameterSet, SitePermissionsParameterSet, UserPermissionsParameterSet
 Aliases:
 Accepted values: AllSites, ClassicSites, CommunicationSites, TeamSites, OtherSites
 
@@ -247,6 +260,22 @@ Type: WorkloadEnum
 Parameter Sets: (All)
 Aliases:
 Accepted values: SharePoint, OneDriveForBusiness
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserIDList
+
+Specifies the Entra object IDs of the users for whom permissions report should be generated. Can be fetched using the `Get-MgUser` command from [Microsoft Graph PowerShell](/powershell/module/microsoft.graph.users/get-mguser).
+
+```yaml
+Type: System.Collections.Generic.List`1[System.Guid]
+Parameter Sets: UserPermissionsParameterSet
+Aliases:
 
 Required: True
 Position: Named
