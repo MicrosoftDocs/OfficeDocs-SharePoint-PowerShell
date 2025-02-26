@@ -37,7 +37,7 @@ New-SPOContainerType [–TrialContainerType] [-ContainerTypeName] <String> [-Own
 
 ## DESCRIPTION
 
-This cmdlet creates a new standard or trial container type. A standard container type, by definition, has a billing profile associated with it and can be either regular billed or direct to consumer billed. A trial container type does not have a billing profile. In case of regular billing, the next step after creation is the addition of a billing profile using the [Add-SPOContainerTypeBilling](./Add-SPOContainerTypeBilling.md) cmdlet. With the use of `-IsPassThroughBilling`, you can create a direct to customer billed container type. There is no need to attach a billing profile in case this case. `–TrialContainerType` when used creates a trial container type that has a validity of 30 days. Using `-GovernableByAdmin`, you can decide whether consuming tenant administrators of the application should be provided management capabilities on Microsoft-enabled administrator support, through the SharePoint Administrator Center and PowerShell. By default, the value is set to True. When set to False, the consuming tenant administrator can perform only read-only actions on containers of the container type, in both the SharePoint Administrator Center and PowerShell.
+This cmdlet creates a new standard or trial container type. A standard container type, by definition, has a billing profile associated with it and can be either regular billed or direct to consumer billed. A trial container type does not have a billing profile. In case of regular billing, the next step after creation is the addition of a billing profile using the [Add-SPOContainerTypeBilling](./Add-SPOContainerTypeBilling.md) cmdlet. With the use of `-IsPassThroughBilling`, you can create a direct to customer billed container type. There is no need to attach a billing profile in case this case. `–TrialContainerType` when used creates a trial container type that has a validity of 30 days. 
 
 You must be a SharePoint Embedded Administrator to run this cmdlet.
 
@@ -72,7 +72,7 @@ In Example 3, the cmdlet creates a trial container type, ContosoLegal, valid for
 
 ```powershell 
 
-New-SPOContainerType -ContainerTypeName ContosoLegal -OwningApplicationId a735e4af -GovernableByAdmin False
+New-SPOContainerType -ContainerTypeName ContosoLegal -OwningApplicationId a735e4af -GovernableByAdmin $false
 
 ``` 
 
@@ -148,7 +148,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ###  –GovernableByAdmin
-This parameter is used to opt in/out of management capabilities on Microsoft-enabled administrator platforms for the consuming tenant administrators of the container type. 
+Using `-GovernableByAdmin`, you can decide whether consuming tenant administrators of the application should be provided management capabilities on Microsoft-enabled administrator support, through SharePoint admin center and PowerShell. By default, the value is set to True. When set to False, the consuming tenant administrator can perform only read-only actions on containers of the container type, in both the SharePoint Administrator Center and PowerShell.
 
 ```yaml
 Type: Boolean
