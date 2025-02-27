@@ -148,7 +148,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ###  –GovernableByAdmin
-Using `-GovernableByAdmin`, you can decide whether consuming tenant administrators of the application should be provided management capabilities on Microsoft-enabled administrator support, through SharePoint admin center and PowerShell. By default, the value is set to True. When set to False, the consuming tenant administrator can perform only read-only actions on containers of the container type, in both the SharePoint Administrator Center and PowerShell.
+Using `-GovernableByAdmin`, you can decide whether consuming tenant administrators of the application should be provided management capabilities on Microsoft-enabled administrator support, through SharePoint admin center and PowerShell. By default, the value is set to True. When set to False, the consuming tenant administrator can perform only read-only actions on containers of the container type, in both SharePoint admin center and PowerShell.
 
 ```yaml
 Type: Boolean
