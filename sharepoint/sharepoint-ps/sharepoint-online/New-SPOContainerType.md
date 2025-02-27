@@ -21,18 +21,18 @@ This cmdlet creates a new container type of standard or trial status. The standa
 ### ParamSet1
 
 ```powershell
-New-SPOContainerType [-ContainerTypeName] <String> [-OwningApplicationId] <String> [-ApplicationRedirectUrl] <String> [<CommonParameters>]
+New-SPOContainerType [-ContainerTypeName] <String> [-OwningApplicationId] <String> [-ApplicationRedirectUrl] <String> [-GovernableByAdmin] <Boolean> [<CommonParameters>]
 ```
 
 ### ParamSet2
 
 ```powershell
-New-SPOContainerType [-ContainerTypeName] <String> [-OwningApplicationId] <String> [-ApplicationRedirectUrl] <String> [-IsPassThroughBilling] [<CommonParameters>]
+New-SPOContainerType [-ContainerTypeName] <String> [-OwningApplicationId] <String> [-ApplicationRedirectUrl] <String> [-IsPassThroughBilling] [-GovernableByAdmin] <Boolean> [<CommonParameters>]
 ```
 
 ### ParamSet3
 ```powershell
-New-SPOContainerType [–TrialContainerType] [-ContainerTypeName] <String> [-OwningApplicationId] <String> [-ApplicationRedirectUrl] <String> [<CommonParameters>]
+New-SPOContainerType [–TrialContainerType] [-ContainerTypeName] <String> [-OwningApplicationId] <String> [-ApplicationRedirectUrl] <String> [-GovernableByAdmin] <Boolean>  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,6 +67,17 @@ New-SPOContainerType –TrialContainerType -ContainerTypeName ContosoLegal -Owni
 ``` 
 
 In Example 3, the cmdlet creates a trial container type, ContosoLegal, valid for 30 days. 
+
+### Example 4   
+
+```powershell 
+
+New-SPOContainerType -ContainerTypeName ContosoLegal -OwningApplicationId a735e4af -GovernableByAdmin $false
+
+``` 
+
+In Example 4, the cmdlet creates a standard container type, ContosoLegal that has opted out of management through Microsoft-enabled administrator platforms. 
+
 
 ## PARAMETERS
 
@@ -136,7 +147,21 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+###  –GovernableByAdmin
+Using `-GovernableByAdmin`, you can decide whether consuming tenant administrators of the application should be provided management capabilities on Microsoft-enabled administrator support, through SharePoint admin center and PowerShell. By default, the value is set to True. When set to False, the consuming tenant administrator can perform only read-only actions on containers of the container type, in both SharePoint admin center and PowerShell.
 
+```yaml
+Type: Boolean
+Parameter Sets:
+Aliases:
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ## RELATED LINKS
 
