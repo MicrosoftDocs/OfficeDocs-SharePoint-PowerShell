@@ -58,7 +58,7 @@ This example clears all list items from the deny list.
 
 ### -Type
 
-This parameter indicates whether the cmdlet is interacting with the Allow list or the Deny list within the `SPOTenantPreAuthSettings`.
+This parameter indicates whether the cmdlet is interacting with the allow list or the deny list.
 
 PARAMVALUE: Allow | Deny
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-5.1).
 
 ## RELATED LINKS
 
