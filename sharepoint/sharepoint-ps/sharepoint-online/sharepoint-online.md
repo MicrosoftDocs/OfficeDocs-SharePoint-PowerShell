@@ -69,7 +69,7 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Clear-SPOTenantPreAuthSettings](Clear-SPOTenantPreAuthSettings.md)
 
-{{Manually Enter Clear-SPOTenantPreAuthSettings Description Here}}
+{{Clears the pre-authentication settings for either the allow or deny list. }}
 
 ### [Connect-SPOService](Connect-SPOService.md)
 
@@ -297,7 +297,7 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Get-SPOTenantPreAuthSettings](Get-SPOTenantPreAuthSettings.md)
 
-{{Manually Enter Get-SPOTenantPreAuthSettings Description Here}}
+{{Gets the configuration of pre-authentication.}}
 
 ### [Get-SPOTenantRenameSitePrioritization](Get-SPOTenantRenameSitePrioritization.md)
 
@@ -642,7 +642,7 @@ This cmdlet is not currently active in production and may be removed in the futu
 
 ### [Set-SPOTenantPreAuthSettings](Set-SPOTenantPreAuthSettings.md)
 
-{{Manually Enter Set-SPOTenantPreAuthSettings Description Here}}
+{{Sets the configuration of pre-authentication.}}
 
 ### [Set-SPOTenantTaxonomyReplicationParameters](Set-SPOTenantTaxonomyReplicationParameters.md)
 
