@@ -48,14 +48,13 @@ You can use this cmdlet to configure or disable the pre-authentication feature w
 >
 > But this feature is currently being deprecated, so this cmdlet lets you control the use of pre-authentication in various use cases.
 
-> [!NOTE]
+> [!IMPORTANT]
 > The settings leverage an order of precedence: 
 > 1. Deny
 > 2. Allow
 > 3. IsDisabled
-
-> [!NOTE]
-> As the use of this cmdlet can disable functionality in your SharePoint Online tenant, it is highly recommended to test and evaluate each change in a test tenant ahead of making changes in a production environment. 
+>
+> Additionally, as the use of this cmdlet can disable functionality in your SharePoint Online tenant, it is _highly recommended_ to test and evaluate each change in a test tenant ahead of making changes in a production environment. 
 
 You must be a SharePoint Administrator to run the cmdlet. 
 
