@@ -19,7 +19,7 @@ Clears the pre-authentication settings for either the allow or deny list.
 
 ## SYNTAX
 
-```
+```powershell
 Clear-SPOTenantPreAuthSettings -Type <TenantPreAuthSettingsListType> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
