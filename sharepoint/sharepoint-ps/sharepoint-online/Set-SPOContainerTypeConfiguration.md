@@ -18,13 +18,9 @@ Sets or updates the configuration settings of a container type in SharePoint Emb
 
 ## SYNTAX
 ```powershell
-Set-SPOContainerTypeConfiguration
- [-ContainerTypeId <ContainerTypeId>]
- [-DiscoverabilityDisabled <Boolean>]
- [-SharingRestricted <Boolean>]
- [-WhoCanShareAnonymousAllowList <Guid[]>]
- [-WhoCanShareAuthenticatedGuestAllowList <Guid[]>]
- [-OverrideTenantWhoCanShareAnonymousAllowList <Boolean>]
+Set-SPOContainerTypeConfiguration -ContainerTypeId <Guid> [-DiscoverabilityDisabled <Boolean>]
+ [-SharingRestricted <Boolean>] [-ApplicationRedirectUrl <String>] [-WhoCanShareAnonymousAllowList <Guid[]>]
+ [-WhoCanShareAuthenticatedGuestAllowList <Guid[]>] [-OverrideTenantWhoCanShareAnonymousAllowList <Boolean>]
  [-OverrideTenantWhoCanShareAuthenticatedGuestAllowList <Boolean>]
 ```
 
@@ -55,26 +51,26 @@ Example 2 turns on an open sharing model for this container type. Any container 
 ### Example 3
 
 ```powershell
-Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -OverrideTenantWhoCanShareAnonymousAllowList $TRUE -WhoCanShareAnonymousAllowList <guids> 
+Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -OverrideTenantWhoCanShareAnonymousAllowList $true -WhoCanShareAnonymousAllowList <guids> 
 ```
 
-Example 3 overrides the tenant-level WhoCanShareAnonymousAllowList.
+Example 3 overrides the tenant-level `WhoCanShareAnonymousAllowList`.
 
 ### Example 4
 
 ```powershell
-Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -OverrideTenantWhoCanShareAnonymousAllowList $TRUE –WhoCanShareAnonymousAllowList $NULL -OverrideTenantWhoCanShareAuthenticatedGuestAllowList $TRUE –WhoCanShareAuthenticatedGuestAllowList $NULL
+Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -OverrideTenantWhoCanShareAnonymousAllowList $true –WhoCanShareAnonymousAllowList $null -OverrideTenantWhoCanShareAuthenticatedGuestAllowList $true –WhoCanShareAuthenticatedGuestAllowList $null
 ```
 
-Example 4 overrides the tenant-level WhoCanShare settings with null lists, which bypass the check. This has the effect of no longer restricting external sharing privileges to members of specific security groups.
+Example 4 overrides the tenant-level `WhoCanShareAnonymousAllowList` and `WhoCanShareAuthenticatedGuestAllowList` with null values, which bypass the check. This has the effect of no longer restricting external sharing privileges to members of specific security groups.
 
 ### Example 5
 
 ```powershell
-Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -OverrideTenantWhoCanShareAuthenticatedGuestAllowList $TRUE –WhoCanShareAuthenticatedGuestAllowList $NULL 
+Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -OverrideTenantWhoCanShareAuthenticatedGuestAllowList $true –WhoCanShareAuthenticatedGuestAllowList $null 
 ```
 
-Example 5 overrides the tenant-level WhoCanShareAuthenticatedGuestAllowList with a null list, while leaving the WhoCanShareAnonymousAllowList untouched. This has the effect of no longer restricting the privilege of sharing to authenticated guests to members of specific security groups.
+Example 5 overrides the tenant-level `WhoCanShareAuthenticatedGuestAllowList` with a null value, while leaving the `WhoCanShareAnonymousAllowList` untouched. This has the effect of no longer restricting the privilege of sharing to authenticated guests to members of specific security groups.
 
 ## PARAMETERS
 
@@ -113,12 +109,12 @@ Accept wildcard characters: False
 
 ### -WhoCanShareAnonymousAllowList 
 
-Sets a container type-specific list of security groups who are allowed to share with anonymous (non-authenticated) users as well as authenticated guest users. Must be set in conjunction with OverrideTenantWhoCanShareAnonymousAllowList.
+Sets a container type-specific list of security groups who are allowed to share with anonymous (non-authenticated) users as well as authenticated guest users. This must be set in conjunction with `OverrideTenantWhoCanShareAnonymousAllowList`.
 
 > [!NOTE]
 > This allow list only accepts security groups, and not Microsoft 365 Groups.
 
-Each security group is denoted by its GUID object ID. To set this list to be a specific security group, you need to enter its GUID as the parameter. You can enter multiple GUIDs by using a comma to separate them. To skip the check and allow all security groups to share to anyone, set this allow list and the WhoCanShareAuthenticatedGuestAllowList to null arrays. 
+Each security group is denoted by its GUID object ID. To set this list to be a specific security group, you need to enter its GUID as the parameter. You can enter multiple GUIDs by using a comma to separate them. To skip the check and allow all security groups to share to anyone, set this allow list and the `WhoCanShareAuthenticatedGuestAllowList` to null arrays. 
 
 ```yaml
 Type: Guid[] 
@@ -134,7 +130,7 @@ Accept wildcard characters: False
 
 ### WhoCanShareAuthenticatedGuestAllowList
 
-Sets a container type-specific list of security groups who are allowed to share with authenticated guest users at the container level. Must be set in conjunction with OverrideTenantWhoCanShareAuthenticatedGuestAllowList.
+Sets a container type-specific list of security groups who are allowed to share with authenticated guest users at the container level. This must be set in conjunction with `OverrideTenantWhoCanShareAuthenticatedGuestAllowList`.
 
 > [!NOTE]
 > This allow list only accepts security groups, and not Microsoft 365 Groups.
@@ -155,7 +151,7 @@ Accept wildcard characters: False
 
 ### OverrideTenantWhoCanShareAnonymousAllowList
 
-This setting determines if the container type WhoCanShareAnonymousAllowList overrides the tenant-level WhoCanShareAnonymousAllowList. The default value for this parameter is false.
+This setting determines if the container type `WhoCanShareAnonymousAllowList` overrides the tenant-level `WhoCanShareAnonymousAllowList`. The default value for this parameter is false.
 
 PARAMVALUE: True | False
 
@@ -172,7 +168,7 @@ Accept wildcard characters: False
 
 ### OverrideTenantWhoCanShareAuthenticatedGuestAllowList
 
-This setting determines if the container type WhoCanShareAuthenticatedGuestAllowList overrides the tenant-level WhoCanShareAuthenticatedGuestAllowList. The default value for this parameter is false.
+This setting determines if the container type `WhoCanShareAuthenticatedGuestAllowList` overrides the tenant-level `WhoCanShareAuthenticatedGuestAllowList`. The default value for this parameter is false.
 
 PARAMVALUE: True | False
 
