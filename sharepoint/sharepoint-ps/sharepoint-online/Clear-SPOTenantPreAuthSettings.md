@@ -32,14 +32,14 @@ Clears the pre-authentication settings for either the allow or deny list.
 
 ## EXAMPLES
 
-### Example 1: Clear all pre-authentication settings from the allow list
+### Example 1
 ```powershell
 PS C:\> Clear-SPOTenantPreAuthSettings –Type Allow
 ```
 
 This example clears all list items from the allow list.
 
-### Example 2: Clear all pre-authentication settings from the deny list
+### Example 2
 
 ```powershell
 PS C:\> Clear-SPOTenantPreAuthSettings –Type Deny 
