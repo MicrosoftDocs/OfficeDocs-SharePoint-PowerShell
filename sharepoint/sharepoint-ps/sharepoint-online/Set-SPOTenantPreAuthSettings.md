@@ -1,14 +1,8 @@
 ---
-external help file: sharepointonline.xml
+external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spotenantpreauthsettings
-applicable: SharePoint Online
-title: Set-SPOTenantPreAuthSettings
+online version:
 schema: 2.0.0
-author: lw-msft
-ms.author: laurenwong
-ms.reviewer:
-manager: bhaveshd
 ---
 
 # Set-SPOTenantPreAuthSettings
@@ -62,53 +56,58 @@ You must be a SharePoint Administrator to run the cmdlet.
 
 ### Example 1
 ```powershell
-Set-SPOTenantPreAuthSettings -IsDisabled $true 
+PS C:\> Set-SPOTenantPreAuthSettings -IsDisabled $true 
 
-Set-SPOTenantPreAuthSettings -Add -Type Allow -IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42,0ab82eba-96c7-4681-9f75-c18437e20d0e"
+PS C:\> Set-SPOTenantPreAuthSettings -Add -Type Allow -IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42,0ab82eba-96c7-4681-9f75-c18437e20d0e"
 ```
+
 This example disables pre-authentication overall and adds a setting that allows two apps to use pre-authentication for all features.
 
 ### Example 2
 ```powershell
-Set-SPOTenantPreAuthSettings -Add -Type Allow -IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42,0ab82eba-96c7-4681-9f75-c18437e20d0e" -ExcludedApps "" -IncludedFeatures "" -ExcludedFeatures ""
+PS C:\> Set-SPOTenantPreAuthSettings -Add -Type Allow -IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42,0ab82eba-96c7-4681-9f75-c18437e20d0e" -ExcludedApps "" -IncludedFeatures "" -ExcludedFeatures ""
 ```
+
 This example performs the same function as example 1 except in this case the switches for `-ExcludedApps`, `-IncludedFeatures`, and `-ExcludedFeatures` are added to the cmdlet.
 
 These switches are assumed to take the default value of `""` if not used with the cmdlet and example 2 is used to demonstrate the complete set of switches only. 
 
 ### Example 3
 ```powershell
-Set-SPOTenantPreAuthSettings -Remove -Id "368dde6f-c857-4383-a8a7-02a04a294e6d"
+PS C:\> Set-SPOTenantPreAuthSettings -Remove -Id "368dde6f-c857-4383-a8a7-02a04a294e6d"
 ```
+
 This example will remove an existing item from the current list of items. The remove switch can remove allow or deny entries from the list.
 
 ### Example 4
 ```powershell
-Set-SPOTenantPreAuthSettings -IsDisabled $true 
+PS C:\> Set-SPOTenantPreAuthSettings -IsDisabled $true 
 
-Set-SPOTenantPreAuthSettings -Add -Type Allow -ExcludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42" -ExcludedFeatures "Download,WebRenderingEmbed" 
+PS C:\> Set-SPOTenantPreAuthSettings -Add -Type Allow -ExcludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42" -ExcludedFeatures "Download,WebRenderingEmbed" 
 ```
+
 This example disables pre-authentication overall and allows all apps apart from one to use pre-authentication for all features except for `"Download"` and `"WebRenderingEmbed"`. 
 
 In this case, the app `"029e7c27-4b9c-4f8b-ba32-b96249468d42"` will always be denied from using pre-authentication since it is excluded from the allow list setting. Any other app will be allowed to use pre-authentication for any feature apart from `"Download"` and `"WebRenderingEmbed"`. 
 
 ### Example 5
 ```powershell
-Set-SPOTenantPreAuthSettings -IsDisabled $true
+PS C:\> Set-SPOTenantPreAuthSettings -IsDisabled $true
 
-Set-SPOTenantPreAuthSettings -Add -Type Allow -IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42" -IncludedFeatures "OfficeOnline,WebRenderingEmbed,Download"
+PS C:\> Set-SPOTenantPreAuthSettings -Add -Type Allow -IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42" -IncludedFeatures "OfficeOnline,WebRenderingEmbed,Download"
 
-Set-SPOTenantPreAuthSettings -Add -Type Deny -IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42,0ab82eba-96c7-4681-9f75-c18437e20d0e"
+PS C:\> Set-SPOTenantPreAuthSettings -Add -Type Deny -IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42,0ab82eba-96c7-4681-9f75-c18437e20d0e"
 ```
+
 This example disables pre-authentication overall but contains an overlap between the settings in the Allow list and Deny list. It first allows an app to use pre-authentication for the `"OfficeOnline"`, `"WebRenderingEmbed"`, and `"Download"` features. But in the final execution of the cmdlet, it denies the same app from using pre-authentication for all features. 
 
 In this case, the app `"029e7c27-4b9c-4f8b-ba32-b96249468d42"` would not be allowed to use pre-authentication for any of the allow-listed features despite having the setting. This is because the Deny list takes precedence over the Allow list. 
 
 ### Example 6
 ```powershell
-Set-SPOTenantPreAuthSettings -IsDisabled $false
+PS C:\> Set-SPOTenantPreAuthSettings -IsDisabled $false
 
-Set-SPOTenantPreAuthSettings -Add -Type Deny -IncludedApps "Empty"
+PS C:\> Set-SPOTenantPreAuthSettings -Add -Type Deny -IncludedApps "Empty"
 ```
 This example enables pre-authentication overall and denies requests that are not coming from an app (e.g. requests coming via a browser) from using pre-authentication for all features. 
 
@@ -130,8 +129,9 @@ This parameter specifies that the operation of the cmdlet is to Add a setting to
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AddListItem
-Applicable: SharePoint Online
-Required: False
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -140,14 +140,13 @@ Accept wildcard characters: False
 
 ### -ExcludedApps
 
-This parameter value contains the apps ids to configure within the `-ExcludedApps` scope.
-
-PARAMVALUE: `"Empty"`, `""`, or a comma-separated list of app IDs
+This parameter value contains the apps ids to configure within the `-ExcludedApps` scope. Possible values include: `""`, `"Empty"`, or a comma-separated list of app IDs.
 
 ```yaml
 Type: String
 Parameter Sets: AddListItem
-Applicable: SharePoint Online
+Aliases:
+
 Required: False
 Position: Named
 Default value: ""
@@ -157,14 +156,13 @@ Accept wildcard characters: False
 
 ### -ExcludedFeatures
 
-This parameter value contains the feature names to configure within the `-ExcludedFeatures` scope. 
-
-PARAMVALUE: `"Empty"`, `""`, or a comma-separated list of app IDs
+This parameter value contains the feature names to configure within the `-ExcludedFeatures` scope. Possible values include: `""` or a comma-separated list of feature names (see NOTES section below).
 
 ```yaml
 Type: String
 Parameter Sets: AddListItem
-Applicable: SharePoint Online
+Aliases:
+
 Required: False
 Position: Named
 Default value: ""
@@ -179,7 +177,8 @@ This parameter identifies the list item setting to remove from the current confi
 ```yaml
 Type: String
 Parameter Sets: RemoveListItem
-Applicable: SharePoint Online
+Aliases:
+
 Required: True
 Position: Named
 Default value: None
@@ -189,14 +188,13 @@ Accept wildcard characters: False
 
 ### -IncludedApps
 
-This parameter value contains the app ids to configure within the `-IncludedApps` scope. 
-
-PARAMVALUE: `"Empty"`, `""`, or a comma-separated list of app IDs
+This parameter value contains the app ids to configure within the `-IncludedApps` scope. Possible values include: `""`, `"Empty"`, or a comma-separated list of app IDs.
 
 ```yaml
 Type: String
 Parameter Sets: AddListItem
-Applicable: SharePoint Online
+Aliases:
+
 Required: False
 Position: Named
 Default value: ""
@@ -206,14 +204,13 @@ Accept wildcard characters: False
 
 ### -IncludedFeatures
 
-This parameter value contains the feature names to configure within the `-IncludedFeatures` scope. 
-
-PARAMVALUE: `"Empty"`, `""`, or a comma-separated list of app IDs
+This parameter value contains the feature names to configure within the `-IncludedFeatures` scope. Possible values include: `""` or a comma-separated list of feature names (see NOTES section below).
 
 ```yaml
 Type: String
 Parameter Sets: AddListItem
-Applicable: SharePoint Online
+Aliases:
+
 Required: False
 Position: Named
 Default value: ""
@@ -225,12 +222,11 @@ Accept wildcard characters: False
 
 This parameter allows the administrator to toggle pre-authentication for all apps and features to be either enabled or disabled.
 
-PARAMVALUE: True | False
-
 ```yaml
 Type: Boolean
 Parameter Sets: IsDisabled
-Applicable: SharePoint Online
+Aliases:
+
 Required: True
 Position: Named
 Default value: False
@@ -245,8 +241,9 @@ This parameter specifies that the operation of the cmdlet is to Remove a setting
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RemoveListItem
-Applicable: SharePoint Online
-Required: False
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -257,12 +254,12 @@ Accept wildcard characters: False
 
 This parameter indicates whether the cmdlet is interacting with the allow list or the deny list. 
 
-PARAMVALUE: Allow | Deny
-
 ```yaml
 Type: TenantPreAuthSettingsListType
 Parameter Sets: AddListItem
-Applicable: SharePoint Online
+Aliases:
+Accepted values: Allow, Deny
+
 Required: True
 Position: Named
 Default value: None
@@ -270,7 +267,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### Feature Names
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### None
+
+## OUTPUTS
+
+### System.Object
+
+## NOTES
 
 The `-IncludedFeatures` and `-ExcludedFeatures` use feature names from the following table. It explicitly mentions if the feature will be broken if it is disabled via the PowerShell cmdlet.
 
