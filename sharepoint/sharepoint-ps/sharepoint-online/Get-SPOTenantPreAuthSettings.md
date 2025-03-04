@@ -1,14 +1,8 @@
 ---
-external help file: sharepointonline.xml
+external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spotenantpreauthsettings
-applicable: SharePoint Online
-title: Get-SPOTenantPreAuthSettings
+online version:
 schema: 2.0.0
-author: lw-msft
-ms.author: laurenwong
-ms.reviewer:
-manager: bhaveshd
 ---
 
 # Get-SPOTenantPreAuthSettings
@@ -38,18 +32,18 @@ Gets the configuration of pre-authentication.
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1: Get all pre-authentication settings as an object
 
 ```powershell
-Get-SPOTenantPreAuthSettings
+PS C:\> Get-SPOTenantPreAuthSettings
 ```
 
 This example returns all the pre-authentication settings for the tenant as an object.
 
-### EXAMPLE 2
+### Example 2: Get all pre-authentication settings in JSON format
 
 ```powershell
-Get-SPOTenantPreAuthSettings | ConvertTo-Json
+PS C:\> Get-SPOTenantPreAuthSettings | ConvertTo-Json
 ```
 
 Gets all the pre-authentication settings for the tenant. Note that this example uses `ConvertTo-Json` to display the settings in JSON format since more complex Allow or Deny lists may be hard to read as an object.
@@ -57,7 +51,16 @@ Gets all the pre-authentication settings for the tenant. Note that this example 
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-5.1).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### None
+
+## OUTPUTS
+
+### System.Object
+## NOTES
 
 ## RELATED LINKS
 
