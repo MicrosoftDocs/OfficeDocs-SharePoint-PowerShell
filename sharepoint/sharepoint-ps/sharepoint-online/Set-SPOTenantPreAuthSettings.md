@@ -280,8 +280,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
-### Feature Names
-
 The `-IncludedFeatures` and `-ExcludedFeatures` use feature names from the following table. It explicitly mentions if the feature will be broken if it is disabled via the PowerShell cmdlet.
 
 | Feature name         | Description                                                              | Additional Information                                                                                     |
@@ -297,9 +295,6 @@ The `-IncludedFeatures` and `-ExcludedFeatures` use feature names from the follo
 | WebRendering         | Scenarios for rendering previews of files in browser.                    |                                                                                                            |
 | WebRenderingEmbed    | Embed SharePoint files in another application. 3rd party application and some 1st party applications may be broken | [Embed Web Part](https://support.microsoft.com/office/add-content-to-your-page-using-the-embed-web-part-721f3b2f-437f-45ef-ac4e-df29dba74de8) |
 | Whiteboard           | Teams integration with Whiteboard app will be broken for anonymous and guest users. | [Use Whiteboard in a Teams meeting - Microsoft Support](https://support.microsoft.com/office/use-whiteboard-in-a-teams-meeting-26f87802-b37f-4af0-806d-af79fbfb8ae6) |
-
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-5.1).
 
 ## RELATED LINKS
 
