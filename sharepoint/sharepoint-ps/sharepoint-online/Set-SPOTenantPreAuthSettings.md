@@ -280,6 +280,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+### Feature Names
+
 The `-IncludedFeatures` and `-ExcludedFeatures` use feature names from the following table. It explicitly mentions if the feature will be broken if it is disabled via the PowerShell cmdlet.
 
 | Feature name         | Description                                                              | Additional Information                                                                                     |
