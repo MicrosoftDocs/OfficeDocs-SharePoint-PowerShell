@@ -32,7 +32,7 @@ Gets the configuration of pre-authentication.
 
 ## EXAMPLES
 
-### Example 1: Get all pre-authentication settings as an object
+### Example 1
 
 ```powershell
 PS C:\> Get-SPOTenantPreAuthSettings
@@ -40,7 +40,7 @@ PS C:\> Get-SPOTenantPreAuthSettings
 
 This example returns all the pre-authentication settings for the tenant as an object.
 
-### Example 2: Get all pre-authentication settings in JSON format
+### Example 2
 
 ```powershell
 PS C:\> Get-SPOTenantPreAuthSettings | ConvertTo-Json
