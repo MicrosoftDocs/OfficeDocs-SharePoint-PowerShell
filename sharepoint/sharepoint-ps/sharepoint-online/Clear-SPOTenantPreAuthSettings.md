@@ -1,8 +1,14 @@
 ---
-external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
+external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version:
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/clear-spotenantpreauthsettings
+applicable: SharePoint Online
+title: Clear-SPOTenantPreAuthSettings
 schema: 2.0.0
+author: lw-msft
+ms.author: laurenwong
+ms.reviewer:
+manager: bhaveshd
 ---
 
 # Clear-SPOTenantPreAuthSettings
@@ -34,7 +40,7 @@ Clears the pre-authentication settings for either the allow or deny list.
 
 ### Example 1
 ```powershell
-PS C:\> Clear-SPOTenantPreAuthSettings –Type Allow
+Clear-SPOTenantPreAuthSettings –Type Allow
 ```
 
 This example clears all list items from the allow list.
@@ -42,7 +48,7 @@ This example clears all list items from the allow list.
 ### Example 2
 
 ```powershell
-PS C:\> Clear-SPOTenantPreAuthSettings –Type Deny 
+Clear-SPOTenantPreAuthSettings –Type Deny 
 ```
 
 This example clears all list items from the deny list. 
@@ -98,16 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
-
-## INPUTS
-
-### None
-
-## OUTPUTS
-
-### System.Object
-## NOTES
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-5.1).
 
 ## RELATED LINKS
 - [Get-SPOTenantPreAuthSettings](Get-SPOTenantPreAuthSettings.md)
