@@ -1,7 +1,7 @@
 ---
 external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-SPOContainer
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Set-SPOContainer
 Applicable: SharePoint Embedded
 title: Set-SPOContainer
 schema: 2.0.0
