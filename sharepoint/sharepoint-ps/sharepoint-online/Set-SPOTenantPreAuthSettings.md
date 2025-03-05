@@ -66,14 +66,12 @@ Set-SPOTenantPreAuthSettings -IsDisabled $true
 
 Set-SPOTenantPreAuthSettings -Add -Type Allow -IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42,0ab82eba-96c7-4681-9f75-c18437e20d0e"
 ```
-
 This example disables pre-authentication overall and adds a setting that allows two apps to use pre-authentication for all features.
 
 ### Example 2
 ```powershell
 Set-SPOTenantPreAuthSettings -Add -Type Allow -IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42,0ab82eba-96c7-4681-9f75-c18437e20d0e" -ExcludedApps "" -IncludedFeatures "" -ExcludedFeatures ""
 ```
-
 This example performs the same function as example 1 except in this case the switches for `-ExcludedApps`, `-IncludedFeatures`, and `-ExcludedFeatures` are added to the cmdlet.
 
 These switches are assumed to take the default value of `""` if not used with the cmdlet and example 2 is used to demonstrate the complete set of switches only. 
@@ -82,7 +80,6 @@ These switches are assumed to take the default value of `""` if not used with th
 ```powershell
 Set-SPOTenantPreAuthSettings -Remove -Id "368dde6f-c857-4383-a8a7-02a04a294e6d"
 ```
-
 This example will remove an existing item from the current list of items. The remove switch can remove allow or deny entries from the list.
 
 ### Example 4
@@ -91,7 +88,6 @@ Set-SPOTenantPreAuthSettings -IsDisabled $true
 
 Set-SPOTenantPreAuthSettings -Add -Type Allow -ExcludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42" -ExcludedFeatures "Download,WebRenderingEmbed" 
 ```
-
 This example disables pre-authentication overall and allows all apps apart from one to use pre-authentication for all features except for `"Download"` and `"WebRenderingEmbed"`. 
 
 In this case, the app `"029e7c27-4b9c-4f8b-ba32-b96249468d42"` will always be denied from using pre-authentication since it is excluded from the allow list setting. Any other app will be allowed to use pre-authentication for any feature apart from `"Download"` and `"WebRenderingEmbed"`. 
@@ -104,7 +100,6 @@ Set-SPOTenantPreAuthSettings -Add -Type Allow -IncludedApps "029e7c27-4b9c-4f8b-
 
 Set-SPOTenantPreAuthSettings -Add -Type Deny -IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42,0ab82eba-96c7-4681-9f75-c18437e20d0e"
 ```
-
 This example disables pre-authentication overall but contains an overlap between the settings in the Allow list and Deny list. It first allows an app to use pre-authentication for the `"OfficeOnline"`, `"WebRenderingEmbed"`, and `"Download"` features. But in the final execution of the cmdlet, it denies the same app from using pre-authentication for all features. 
 
 In this case, the app `"029e7c27-4b9c-4f8b-ba32-b96249468d42"` would not be allowed to use pre-authentication for any of the allow-listed features despite having the setting. This is because the Deny list takes precedence over the Allow list. 
