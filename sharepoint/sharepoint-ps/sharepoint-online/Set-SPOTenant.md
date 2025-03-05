@@ -114,6 +114,7 @@ Set-SPOTenant
  [-EnableSensitivityLabelforPDF <Boolean>]
  [-EnableVersionExpirationSetting <Boolean>]
  [-EnforceContentSecurityPolicy <Boolean>]
+ [-EnforceRequestDigest <Boolean>]
  [-ExcludedBlockDownloadGroupIds [Guid[]]]
  [-ExcludeSiteTemplate <SwitchParameter>]
  [-ExemptNativeUsersFromTenantLevelRestricedAccessControl <Boolean>]
@@ -3246,6 +3247,23 @@ Accept wildcard characters: False
 
 When set to `True` **Content Security Policy** violations will be enforced.
 In multi-geo environments, **Content Security Policy** configuration is unique to each geo.
+
+PARAMVALUE: True | False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnforceRequestDigest
+
+When set to `True` a valid Request Digest is required on SOAP API calls that perform a state-changing operation.
 
 PARAMVALUE: True | False
 
