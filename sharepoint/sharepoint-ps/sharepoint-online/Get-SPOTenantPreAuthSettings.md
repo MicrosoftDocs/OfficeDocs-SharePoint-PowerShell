@@ -1,8 +1,14 @@
 ---
-external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
+external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version:
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spotenantpreauthsettings
+applicable: SharePoint Online
+title: Get-SPOTenantPreAuthSettings
 schema: 2.0.0
+author: lw-msft
+ms.author: laurenwong
+ms.reviewer:
+manager: bhaveshd
 ---
 
 # Get-SPOTenantPreAuthSettings
@@ -35,7 +41,7 @@ Gets the configuration of pre-authentication.
 ### Example 1
 
 ```powershell
-PS C:\> Get-SPOTenantPreAuthSettings
+Get-SPOTenantPreAuthSettings
 ```
 
 This example returns all the pre-authentication settings for the tenant as an object.
@@ -43,7 +49,7 @@ This example returns all the pre-authentication settings for the tenant as an ob
 ### Example 2
 
 ```powershell
-PS C:\> Get-SPOTenantPreAuthSettings | ConvertTo-Json
+Get-SPOTenantPreAuthSettings | ConvertTo-Json
 ```
 
 Gets all the pre-authentication settings for the tenant. Note that this example uses `ConvertTo-Json` to display the settings in JSON format since more complex Allow or Deny lists may be hard to read as an object.
@@ -51,16 +57,7 @@ Gets all the pre-authentication settings for the tenant. Note that this example 
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
-
-## INPUTS
-
-### None
-
-## OUTPUTS
-
-### System.Object
-## NOTES
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-5.1).
 
 ## RELATED LINKS
 
