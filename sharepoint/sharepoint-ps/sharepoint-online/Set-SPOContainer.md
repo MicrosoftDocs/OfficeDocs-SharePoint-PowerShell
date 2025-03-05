@@ -5,8 +5,8 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 Applicable: SharePoint Embedded
 title: Set-SPOContainer
 schema: 2.0.0
-author: abiramisuresh
-ms.author: abisuresh
+author: ShreyasSar26
+ms.author: shsaravanan
 ms.reviewer:
 ---
 
