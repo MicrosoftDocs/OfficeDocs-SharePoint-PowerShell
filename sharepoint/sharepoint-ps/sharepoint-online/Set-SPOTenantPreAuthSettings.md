@@ -1,8 +1,14 @@
 ---
-external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
+external help file: sharepointonline.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version:
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spotenantpreauthsettings
+applicable: SharePoint Online
+title: Set-SPOTenantPreAuthSettings
 schema: 2.0.0
+author: lw-msft
+ms.author: laurenwong
+ms.reviewer:
+manager: bhaveshd
 ---
 
 # Set-SPOTenantPreAuthSettings
@@ -56,16 +62,16 @@ You must be a SharePoint Administrator to run the cmdlet.
 
 ### Example 1
 ```powershell
-PS C:\> Set-SPOTenantPreAuthSettings -IsDisabled $true 
+Set-SPOTenantPreAuthSettings -IsDisabled $true 
 
-PS C:\> Set-SPOTenantPreAuthSettings -Add -Type Allow -IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42,0ab82eba-96c7-4681-9f75-c18437e20d0e"
+Set-SPOTenantPreAuthSettings -Add -Type Allow -IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42,0ab82eba-96c7-4681-9f75-c18437e20d0e"
 ```
 
 This example disables pre-authentication overall and adds a setting that allows two apps to use pre-authentication for all features.
 
 ### Example 2
 ```powershell
-PS C:\> Set-SPOTenantPreAuthSettings -Add -Type Allow -IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42,0ab82eba-96c7-4681-9f75-c18437e20d0e" -ExcludedApps "" -IncludedFeatures "" -ExcludedFeatures ""
+Set-SPOTenantPreAuthSettings -Add -Type Allow -IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42,0ab82eba-96c7-4681-9f75-c18437e20d0e" -ExcludedApps "" -IncludedFeatures "" -ExcludedFeatures ""
 ```
 
 This example performs the same function as example 1 except in this case the switches for `-ExcludedApps`, `-IncludedFeatures`, and `-ExcludedFeatures` are added to the cmdlet.
@@ -74,16 +80,16 @@ These switches are assumed to take the default value of `""` if not used with th
 
 ### Example 3
 ```powershell
-PS C:\> Set-SPOTenantPreAuthSettings -Remove -Id "368dde6f-c857-4383-a8a7-02a04a294e6d"
+Set-SPOTenantPreAuthSettings -Remove -Id "368dde6f-c857-4383-a8a7-02a04a294e6d"
 ```
 
 This example will remove an existing item from the current list of items. The remove switch can remove allow or deny entries from the list.
 
 ### Example 4
 ```powershell
-PS C:\> Set-SPOTenantPreAuthSettings -IsDisabled $true 
+Set-SPOTenantPreAuthSettings -IsDisabled $true 
 
-PS C:\> Set-SPOTenantPreAuthSettings -Add -Type Allow -ExcludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42" -ExcludedFeatures "Download,WebRenderingEmbed" 
+Set-SPOTenantPreAuthSettings -Add -Type Allow -ExcludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42" -ExcludedFeatures "Download,WebRenderingEmbed" 
 ```
 
 This example disables pre-authentication overall and allows all apps apart from one to use pre-authentication for all features except for `"Download"` and `"WebRenderingEmbed"`. 
@@ -92,11 +98,11 @@ In this case, the app `"029e7c27-4b9c-4f8b-ba32-b96249468d42"` will always be de
 
 ### Example 5
 ```powershell
-PS C:\> Set-SPOTenantPreAuthSettings -IsDisabled $true
+Set-SPOTenantPreAuthSettings -IsDisabled $true
 
-PS C:\> Set-SPOTenantPreAuthSettings -Add -Type Allow -IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42" -IncludedFeatures "OfficeOnline,WebRenderingEmbed,Download"
+Set-SPOTenantPreAuthSettings -Add -Type Allow -IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42" -IncludedFeatures "OfficeOnline,WebRenderingEmbed,Download"
 
-PS C:\> Set-SPOTenantPreAuthSettings -Add -Type Deny -IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42,0ab82eba-96c7-4681-9f75-c18437e20d0e"
+Set-SPOTenantPreAuthSettings -Add -Type Deny -IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42,0ab82eba-96c7-4681-9f75-c18437e20d0e"
 ```
 
 This example disables pre-authentication overall but contains an overlap between the settings in the Allow list and Deny list. It first allows an app to use pre-authentication for the `"OfficeOnline"`, `"WebRenderingEmbed"`, and `"Download"` features. But in the final execution of the cmdlet, it denies the same app from using pre-authentication for all features. 
@@ -105,9 +111,9 @@ In this case, the app `"029e7c27-4b9c-4f8b-ba32-b96249468d42"` would not be allo
 
 ### Example 6
 ```powershell
-PS C:\> Set-SPOTenantPreAuthSettings -IsDisabled $false
+Set-SPOTenantPreAuthSettings -IsDisabled $false
 
-PS C:\> Set-SPOTenantPreAuthSettings -Add -Type Deny -IncludedApps "Empty"
+Set-SPOTenantPreAuthSettings -Add -Type Deny -IncludedApps "Empty"
 ```
 This example enables pre-authentication overall and denies requests that are not coming from an app (e.g. requests coming via a browser) from using pre-authentication for all features. 
 
@@ -268,15 +274,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
-
-## INPUTS
-
-### None
-
-## OUTPUTS
-
-### System.Object
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-5.1).
 
 ## NOTES
 
