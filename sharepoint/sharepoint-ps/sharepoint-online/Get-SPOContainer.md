@@ -208,7 +208,7 @@ Accept wildcard characters: False
 
 ### -Paged
 
-This parameter can be used when there are more than 200 Containers in a given SharePoint Embedded application. Using `-Paged` will provide a paging token that will display the next 200 Containers.
+This parameter can be used when there are more than 200 containers in a given SharePoint Embedded application. Using `-Paged` will provide a paging token that will display the next 200 Containers. 
 
 ```yaml
 Type: String
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 
 ### -PagingToken
 
-Use this parameter to provide the paging token provided to view the remaining Containers as shown in Example 4. If there are no more Containers to display, the cmdlet output will return the message `End of containers view.` Otherwise, use the given paging token to retrieve the next batch of up to 200 Containers.
+Use this parameter to provide the paging token provided to view the remaining containers as shown in Example 4. If there are no more containers to display, the cmdlet output will return the message `End of containers view.` Otherwise, use the given paging token to retrieve the next batch of up to 200 Containers. For displaying the next set of archived containers, `-ArchiveStatus` paramter needs to be used along with this parameter. 
 
 ```yaml
 Type: String
