@@ -76,7 +76,7 @@ Use this parameter to specify the container url.
 
 ```yaml
 Type: String
-Applies to: SharePoint Online
+Applicable: SharePoint Embedded
 Required: True
 Position: Named
 Default value: False
