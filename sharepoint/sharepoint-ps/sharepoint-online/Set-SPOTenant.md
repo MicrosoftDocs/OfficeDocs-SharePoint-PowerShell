@@ -3263,7 +3263,7 @@ Accept wildcard characters: False
 
 ### -EnforceRequestDigest
 
-When set to `True` a valid Request Digest is required on SOAP API calls that perform a state-changing operation.
+When set to `True` a valid request digest is required on SOAP API calls that perform a state-changing operation.
 
 PARAMVALUE: True | False
 
