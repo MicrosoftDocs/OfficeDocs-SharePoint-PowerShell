@@ -38,7 +38,7 @@ Gets the configuration of pre-authentication.
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1
 
 ```powershell
 Get-SPOTenantPreAuthSettings
@@ -46,7 +46,7 @@ Get-SPOTenantPreAuthSettings
 
 This example returns all the pre-authentication settings for the tenant as an object.
 
-### EXAMPLE 2
+### Example 2
 
 ```powershell
 Get-SPOTenantPreAuthSettings | ConvertTo-Json
@@ -58,6 +58,16 @@ Gets all the pre-authentication settings for the tenant. Note that this example 
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-5.1).
+
+## INPUTS
+
+### None
+
+## OUTPUTS
+
+### System.Object
+
+## NOTES
 
 ## RELATED LINKS
 

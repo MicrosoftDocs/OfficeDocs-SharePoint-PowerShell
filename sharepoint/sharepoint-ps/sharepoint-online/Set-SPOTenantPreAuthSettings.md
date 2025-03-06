@@ -130,8 +130,9 @@ This parameter specifies that the operation of the cmdlet is to Add a setting to
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AddListItem
-Applicable: SharePoint Online
-Required: False
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -140,14 +141,13 @@ Accept wildcard characters: False
 
 ### -ExcludedApps
 
-This parameter value contains the apps ids to configure within the `-ExcludedApps` scope.
-
-PARAMVALUE: `"Empty"`, `""`, or a comma-separated list of app IDs
+This parameter value contains the apps ids to configure within the `-ExcludedApps` scope. Possible values include: `""`, `"Empty"`, or a comma-separated list of app IDs.
 
 ```yaml
 Type: String
 Parameter Sets: AddListItem
-Applicable: SharePoint Online
+Aliases:
+
 Required: False
 Position: Named
 Default value: ""
@@ -157,14 +157,13 @@ Accept wildcard characters: False
 
 ### -ExcludedFeatures
 
-This parameter value contains the feature names to configure within the `-ExcludedFeatures` scope. 
-
-PARAMVALUE: `"Empty"`, `""`, or a comma-separated list of app IDs
+This parameter value contains the feature names to configure within the `-ExcludedFeatures` scope. Possible values include: `""` or a comma-separated list of feature names (see NOTES section below).
 
 ```yaml
 Type: String
 Parameter Sets: AddListItem
-Applicable: SharePoint Online
+Aliases:
+
 Required: False
 Position: Named
 Default value: ""
@@ -179,7 +178,8 @@ This parameter identifies the list item setting to remove from the current confi
 ```yaml
 Type: String
 Parameter Sets: RemoveListItem
-Applicable: SharePoint Online
+Aliases:
+
 Required: True
 Position: Named
 Default value: None
@@ -189,14 +189,13 @@ Accept wildcard characters: False
 
 ### -IncludedApps
 
-This parameter value contains the app ids to configure within the `-IncludedApps` scope. 
-
-PARAMVALUE: `"Empty"`, `""`, or a comma-separated list of app IDs
+This parameter value contains the app ids to configure within the `-IncludedApps` scope. Possible values include: `""`, `"Empty"`, or a comma-separated list of app IDs.
 
 ```yaml
 Type: String
 Parameter Sets: AddListItem
-Applicable: SharePoint Online
+Aliases:
+
 Required: False
 Position: Named
 Default value: ""
@@ -206,14 +205,13 @@ Accept wildcard characters: False
 
 ### -IncludedFeatures
 
-This parameter value contains the feature names to configure within the `-IncludedFeatures` scope. 
-
-PARAMVALUE: `"Empty"`, `""`, or a comma-separated list of app IDs
+This parameter value contains the feature names to configure within the `-IncludedFeatures` scope. Possible values include: `""` or a comma-separated list of feature names (see NOTES section below).
 
 ```yaml
 Type: String
 Parameter Sets: AddListItem
-Applicable: SharePoint Online
+Aliases:
+
 Required: False
 Position: Named
 Default value: ""
@@ -225,12 +223,11 @@ Accept wildcard characters: False
 
 This parameter allows the administrator to toggle pre-authentication for all apps and features to be either enabled or disabled.
 
-PARAMVALUE: True | False
-
 ```yaml
 Type: Boolean
 Parameter Sets: IsDisabled
-Applicable: SharePoint Online
+Aliases:
+
 Required: True
 Position: Named
 Default value: False
@@ -245,8 +242,9 @@ This parameter specifies that the operation of the cmdlet is to Remove a setting
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RemoveListItem
-Applicable: SharePoint Online
-Required: False
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -257,12 +255,12 @@ Accept wildcard characters: False
 
 This parameter indicates whether the cmdlet is interacting with the allow list or the deny list. 
 
-PARAMVALUE: Allow | Deny
-
 ```yaml
 Type: TenantPreAuthSettingsListType
 Parameter Sets: AddListItem
-Applicable: SharePoint Online
+Aliases:
+Accepted values: Allow, Deny
+
 Required: True
 Position: Named
 Default value: None
@@ -270,7 +268,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### Feature Names
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-5.1).
+
+## INPUTS
+
+### None
+
+## OUTPUTS
+
+### System.Object
+
+## NOTES
 
 The `-IncludedFeatures` and `-ExcludedFeatures` use feature names from the following table. It explicitly mentions if the feature will be broken if it is disabled via the PowerShell cmdlet.
 
@@ -287,9 +296,6 @@ The `-IncludedFeatures` and `-ExcludedFeatures` use feature names from the follo
 | WebRendering         | Scenarios for rendering previews of files in browser.                    |                                                                                                            |
 | WebRenderingEmbed    | Embed SharePoint files in another application. 3rd party application and some 1st party applications may be broken | [Embed Web Part](https://support.microsoft.com/office/add-content-to-your-page-using-the-embed-web-part-721f3b2f-437f-45ef-ac4e-df29dba74de8) |
 | Whiteboard           | Teams integration with Whiteboard app will be broken for anonymous and guest users. | [Use Whiteboard in a Teams meeting - Microsoft Support](https://support.microsoft.com/office/use-whiteboard-in-a-teams-meeting-26f87802-b37f-4af0-806d-af79fbfb8ae6) |
-
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-5.1).
 
 ## RELATED LINKS
 

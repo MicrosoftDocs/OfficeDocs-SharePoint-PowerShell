@@ -38,15 +38,14 @@ Clears the pre-authentication settings for either the allow or deny list.
 
 ## EXAMPLES
 
-### EXAMPLE 1
-
+### Example 1
 ```powershell
 Clear-SPOTenantPreAuthSettings –Type Allow
 ```
 
 This example clears all list items from the allow list.
 
-### EXAMPLE 2
+### Example 2
 
 ```powershell
 Clear-SPOTenantPreAuthSettings –Type Deny 
@@ -56,16 +55,48 @@ This example clears all list items from the deny list.
 
 ## PARAMETERS
 
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Type
 
 This parameter indicates whether the cmdlet is interacting with the allow list or the deny list.
 
-PARAMVALUE: Allow | Deny
-
 ```yaml
 Type: TenantPreAuthSettingsListType
-Applicable: SharePoint Online
+Parameter Sets: (All)
+Aliases:
+Accepted values: Allow, Deny
+
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -74,6 +105,16 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters?view=powershell-5.1).
+
+## INPUTS
+
+### None
+
+## OUTPUTS
+
+### System.Object
+
+## NOTES
 
 ## RELATED LINKS
 
