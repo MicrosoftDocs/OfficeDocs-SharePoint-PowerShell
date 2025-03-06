@@ -21,11 +21,25 @@ Sets or updates one or more property values for a container in SharePoint Embedd
 ### ParamSet1
 
 ```powershell
-Set-SPOContainer [[-Identity]<String>] 
- [[-BlockDownloadPolicy <Boolean>]]
- [[-ConditionalAccessPolicy] <SPOConditionalAccessPolicyType>]
- [[-SensitivityLabel] <String>] 
- [-RemoveLabel]
+Set-SPOContainer [-Identity] <SPOContainerPipeBind> [[-BlockDownloadPolicy <Boolean>]] [<CommonParameters>]
+```
+
+### ParamSet2
+
+```powershell
+Set-SPOContainer [-Identity]<SPOContainerPipeBind> [[-ConditionalAccessPolicy] <SPOConditionalAccessPolicyType>] [<CommonParameters>]
+```
+
+### ParamSet3
+
+```powershell
+Set-SPOContainer [-Identity]<SPOContainerPipeBind> [[-SensitivityLabel] <String>] [<CommonParameters>]
+```
+
+### ParamSet1
+
+```powershell
+Set-SPOContainer [-Identity]<SPOContainerPipeBind> [-RemoveLabel] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
