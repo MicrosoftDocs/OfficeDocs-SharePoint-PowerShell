@@ -138,6 +138,7 @@ Set-SPOTenant
  [-IsEnableAppAuthPopUpEnabled <Boolean>]
  [-IsLoopEnabled <Boolean>]
  [-IsSharePointAddInsDisabled <Boolean>]
+ [-IsSharePointAddInsBlocked <Boolean>]
  [-IsWBFluidEnabled <Boolean>]
  [-LabelMismatchEmailHelpLink <String>]
  [-LegacyAuthProtocolsEnabled <Boolean>]
@@ -1224,6 +1225,27 @@ The valid values are:
 
 - False (default) - All the add-ins features are supported.  
 - True - All the add-ins features will be disabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsSharePointAddInsBlocked
+
+When this feature is enabled, all functionalities of the add-ins will be restricted, preventing them from running or installing.
+
+The valid values are:  
+
+- False (default) - All the add-ins features are supported.  
+- True - All the add-ins features will be blocked.
 
 ```yaml
 Type: Boolean
