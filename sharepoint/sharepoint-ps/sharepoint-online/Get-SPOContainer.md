@@ -21,72 +21,72 @@ Returns one or more containers in a SharePoint Embedded application.
 ### ParamSet1
 
 ```powershell
-Get-SPOContainer -Identity <SPOContainerPipeBind> [-ProgressAction <ActionPreference>] [<CommonParameters>]
+Get-SPOContainer -Identity <SPOContainerPipeBind> [<CommonParameters>]
 ```
 
 ### ParamSet2
 
 ```powershell
-Get-SPOContainer [-OwningApplicationId] <Guid>  [-ProgressAction <ActionPreference>] [<CommonParameters>]
+Get-SPOContainer [-OwningApplicationId] <Guid> [<CommonParameters>]
 ```
 
 ### ParamSet3
 ```powershell
-Get-SPOContainer [-OwningApplicationId] <Guid> [-Paged]  [-ProgressAction <ActionPreference>] [<CommonParameters>]
+Get-SPOContainer [-OwningApplicationId] <Guid> [-Paged] [<CommonParameters>]
 ```
 
 ### ParamSet4
 ```powershell
-Get-SPOContainer [-OwningApplicationId] <Guid> [-Paged] [-PagingToken <String>]  [-ProgressAction <ActionPreference>] [<CommonParameters>]
+Get-SPOContainer [-OwningApplicationId] <Guid> [-Paged] [-PagingToken <String>] [<CommonParameters>]
 ```
 
 ### ParamSet5
 
 ```powershell
-Get-SPOContainer [-OwningApplicationId <Guid>] [-SortByStorage] <SortOrder>  [-ProgressAction <ActionPreference>] [<CommonParameters>]
+Get-SPOContainer [-OwningApplicationId <Guid>] [-SortByStorage] <SortOrder> [<CommonParameters>]
 ```
 
 ### ParamSet6
 
 ```powershell
-Get-SPOContainer [-OwningApplicationId <Guid>] [-SortByStorage] <SortOrder> [-Paged]  [-ProgressAction <ActionPreference>] [<CommonParameters>]
+Get-SPOContainer [-OwningApplicationId <Guid>] [-SortByStorage] <SortOrder> [-Paged] [<CommonParameters>]
 ```
 ### ParamSet7
 
 ```powershell
-Get-SPOContainer [-OwningApplicationId <Guid>] [-SortByStorage] <SortOrder> [-Paged] [[-PagingToken] <String>]  [-ProgressAction <ActionPreference>] [<CommonParameters>]
+Get-SPOContainer [-OwningApplicationId <Guid>] [-SortByStorage] <SortOrder> [-Paged] [[-PagingToken] <String>] [<CommonParameters>]
 ```
 ### ParamSet8
 
 ```powershell
-Get-SPOContainer [-OwningApplicationId] <Guid> [-ArchiveStatus] <SPContainerArchiveStatusFilterProperties> [-ProgressAction <ActionPreference>] [<CommonParameters>]
+Get-SPOContainer [-OwningApplicationId] <Guid> [-ArchiveStatus] <SPContainerArchiveStatusFilterProperties> [<CommonParameters>]
 ```
 
 ### ParamSet9
 ```powershell
-Get-SPOContainer [-OwningApplicationId] <Guid> [-ArchiveStatus] <SPContainerArchiveStatusFilterProperties>[-Paged]  [-ProgressAction <ActionPreference>] [<CommonParameters>]
+Get-SPOContainer [-OwningApplicationId] <Guid> [-ArchiveStatus] <SPContainerArchiveStatusFilterProperties>[-Paged] [<CommonParameters>]
 ```
 
 ### ParamSet10
 ```powershell
-Get-SPOContainer [-OwningApplicationId] <Guid> [-ArchiveStatus] <SPContainerArchiveStatusFilterProperties> [-Paged] [[-PagingToken] <String>]  [-ProgressAction <ActionPreference>] [<CommonParameters>]
+Get-SPOContainer [-OwningApplicationId] <Guid> [-ArchiveStatus] <SPContainerArchiveStatusFilterProperties> [-Paged] [[-PagingToken] <String>] [<CommonParameters>]
 ```
 
 ### ParamSet11
 
 ```powershell
-Get-SPOContainer [-OwningApplicationId] <Guid> [-ArchiveStatus] <SPContainerArchiveStatusFilterProperties> [-SortByStorage <SortOrder>]  [-ProgressAction <ActionPreference>] [<CommonParameters>]
+Get-SPOContainer [-OwningApplicationId] <Guid> [-ArchiveStatus] <SPContainerArchiveStatusFilterProperties> [-SortByStorage <SortOrder>] [<CommonParameters>]
 ```
 
 ### ParamSet12
 
 ```powershell
-Get-SPOContainer [-OwningApplicationId] <Guid> [-ArchiveStatus] <SPContainerArchiveStatusFilterProperties> [-SortByStorage <SortOrder>] [-Paged]  [-ProgressAction <ActionPreference>] [<CommonParameters>]
+Get-SPOContainer [-OwningApplicationId] <Guid> [-ArchiveStatus] <SPContainerArchiveStatusFilterProperties> [-SortByStorage <SortOrder>] [-Paged] [<CommonParameters>]
 ```
 ### ParamSet13
 
 ```powershell
-Get-SPOContainer [-OwningApplicationId] <Guid> [-ArchiveStatus] <SPContainerArchiveStatusFilterProperties> [[-SortByStorage] <SortOrder>] [-Paged] [[-PagingToken] <String>]  [-ProgressAction <ActionPreference>] [<CommonParameters>]
+Get-SPOContainer [-OwningApplicationId] <Guid> [-ArchiveStatus] <SPContainerArchiveStatusFilterProperties> [[-SortByStorage] <SortOrder>] [-Paged] [[-PagingToken] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
