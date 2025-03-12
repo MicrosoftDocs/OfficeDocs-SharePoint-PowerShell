@@ -21,25 +21,37 @@ Sets or updates one or more property values for a container in SharePoint Embedd
 ### ParamSet1
 
 ```powershell
-Set-SPOContainer [-Identity] <SPOContainerPipeBind> [[-BlockDownloadPolicy <Boolean>]] [<CommonParameters>]
+Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-BlockDownloadPolicy <Boolean>]
+ [-ExcludeBlockDownloadPolicyContainerOwners <Boolean>] [-ReadOnlyForBlockDownloadPolicy <Boolean>] [<CommonParameters>]
 ```
 
 ### ParamSet2
 
 ```powershell
-Set-SPOContainer [-Identity]<SPOContainerPipeBind> [[-ConditionalAccessPolicy] <SPOConditionalAccessPolicyType>] [<CommonParameters>]
+Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>]
+ [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>]
+ [-ReadOnlyForUnmanagedDevices <Boolean>] [-AuthenticationContextName <String>] [<CommonParameters>]
 ```
 
 ### ParamSet3
 
 ```powershell
-Set-SPOContainer [-Identity]<SPOContainerPipeBind> [[-SensitivityLabel] <String>] [<CommonParameters>]
+Set-SPOContainer [-Identity] <SPOContainerPipeBind> [[-SensitivityLabel] <String>] [<CommonParameters>]
 ```
 
-### ParamSet1
+
+### ParamSet4
 
 ```powershell
-Set-SPOContainer [-Identity]<SPOContainerPipeBind> [-RemoveLabel] [<CommonParameters>]
+Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-RemoveLabel] [<CommonParameters>]
+```
+
+### ParamSet5
+
+```powershell
+Set-SPOContainer [-Identity] <SPOContainerPipeBind>
+ [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>] [-SharingAllowedDomainList <String>]
+ [-SharingBlockedDomainList <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -80,7 +92,7 @@ This example sets a sensitivity label on the container.
 ```powershell
 Set-SPOContainer -Identity https://contoso.sharepoint.com/contentstorage/CSP_33a63968-abae-49a3-a255-f83d0ab2260a/ -RemoveLabel
 ```
-This example sets any previously set sensitivity label on the container.
+This example removes any previously set sensitivity label on the container.
 
 ## PARAMETERS
 
@@ -94,6 +106,40 @@ Applicable: SharePoint Embedded
 Required: True
 Position: Named
 Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowEditing
+
+Prevents users from editing Office files in the browser and copying and pasting Office file contents out of the browser window.
+
+PARAMVALUE: False | True
+
+```yaml
+Type: Boolean
+Parameter Sets: ConditionalAccess
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuthenticationContextName
+
+The conditional access authentication context name.
+
+```yaml
+Type: String
+Parameter Sets: ConditionalAccess
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -166,6 +212,138 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -ExcludeBlockDownloadPolicyContainerOwners
+Controls if container owners are excluded from block download policy.
+
+PARAMVALUE: False | True
+
+```yaml
+Type: Boolean
+Parameter Sets: BlockDownloadPolicy
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LimitedAccessFileType
+The following parameters can be used with -ConditionalAccessPolicy AllowLimitedAccess for both the organization-wide setting and the container-level setting.
+
+OfficeOnlineFilesOnly: Allows users to preview only Office files in the browser. This option increases security but may be a barrier to user productivity.
+
+LimitedAccessFileType WebPreviewableFiles (default): Allows users to preview Office files and other file types (such as PDF files and images) in the browser. Note that the contents of file types other than Office files are handled in the browser. This option optimizes for user productivity but offers less security for files that aren't Office files.
+
+LimitedAccessFileType OtherFiles: Allows users to download files that can't be previewed, such as .zip and .exe. This option offers less security.
+
+```yaml
+Type: SPOLimitedAccessFileType
+Parameter Sets: ConditionalAccess
+Aliases:
+Accepted values: OfficeOnlineFilesOnly, WebPreviewableFiles, OtherFiles
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReadOnlyForBlockDownloadPolicy
+Controls if read-only should be enabled for block download policy.
+
+PARAMVALUE: False | True
+
+```yaml
+Type: Boolean
+Parameter Sets: BlockDownloadPolicy
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReadOnlyForUnmanagedDevices
+Controls whether unmanaged devices have read-only access.
+
+PARAMVALUE: False | True
+
+```yaml
+Type: Boolean
+Parameter Sets: ConditionalAccess
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SharingAllowedDomainList
+Specifies a list of email domains that are allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
+
+```yaml
+Type: String
+Parameter Sets: AllowDenyDomain
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SharingBlockedDomainList
+Specifies a list of email domains that are blocked or prohibited for sharing with the external collaborators. Use space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
+
+```yaml
+Type: String
+Parameter Sets: AllowDenyDomain
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SharingDomainRestrictionMode
+Specifies the sharing mode for external domains.
+
+Possible values are:
+
+None - Do not restrict sharing by domain
+AllowList - Sharing is allowed only with external users that have account on domains specified with -SharingAllowedDomainList
+BlockList - Sharing is allowed with external users in all domains except in domains specified with -SharingBlockedDomainList
+
+```yaml
+Type: SharingDomainRestrictionModes
+Parameter Sets: AllowDenyDomain
+Aliases:
+Accepted values: None, AllowList, BlockList
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+### CommonParameters
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+
+
+
 
 ## RELATED LINKS
 
