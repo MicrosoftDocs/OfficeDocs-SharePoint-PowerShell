@@ -38,17 +38,19 @@ Example 1 sets the Opt-In Copilot promo status for the tenant to `True`.
 ## PARAMETERS
 
 ### -IsCopilotPromoStatusEnabled
-
 Use this parameter to set Copilot opt-in promo status. 
 
 ```yaml
 Type: Boolean
-Parameter Sets: 
+Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
 
 Required: True
+Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ## RELATED LINKS
