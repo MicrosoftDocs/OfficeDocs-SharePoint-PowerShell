@@ -1202,9 +1202,9 @@ Accept wildcard characters: False
 
 ### -DisableSharePointStoreAccess
 
-This feature allows the SharePoint tenant administrators to disable SharePoint Store access for all users in the tenant.
+This feature allows the SharePoint Administrators to disable SharePoint Store access for all users in the tenant.
 
-Accepts a value of true (enabled) to hide the SharePoint app store. By default this feature is set to false.
+Accepts a value of true (enabled) to hide the SharePoint app store or false (disabled) to show the SharePoint app store. By default this feature is set to false.
 
 ```yaml
 Type: Boolean
