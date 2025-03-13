@@ -16,10 +16,11 @@ ms.reviewer:
 Sets the Opt-In Copilot promo status for the tenant.
 
 ## SYNTAX
-```powershell
-Set-SPOCopilotPromoOptInStatus -IsCopilotPromoStatusEnabled <Boolean>
 
 ```
+Set-SPOCopilotPromoOptInStatus -IsCopilotPromoStatusEnabled <Boolean>
+```
+
 ## DESCRIPTION
 
 This cmdlet sets the Opt-In Copilot promo status for the tenant to `True` or `False`. 
@@ -49,6 +50,7 @@ Applicable: SharePoint Online
 Required: True
 Default value: None
 ```
+
 ## RELATED LINKS
 - [Get-SPOCopilotPromoOptInStatus](./Get-SPOCopilotPromoOptInStatus.md)
 - [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
