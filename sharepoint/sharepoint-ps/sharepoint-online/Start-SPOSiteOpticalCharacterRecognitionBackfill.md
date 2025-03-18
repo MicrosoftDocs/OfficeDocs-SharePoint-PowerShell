@@ -50,7 +50,7 @@ Starts OCR process for all content that hasn't been processed before in the sele
 Specifies the site URL where OCR process should be enabled on.
 
 ```yaml
-Type: String
+Type: SpoSitePipeBind
 Parameter Sets: Default
 Aliases:
 Applicable: SharePoint Online
