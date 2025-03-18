@@ -32,6 +32,9 @@ This cmdlet starts a job to trigger the OCR process for files that have either n
 
 OCR backfill can only be run on OCR-enabled sites. If OCR is disabled for the site, please enable OCR before proceeding with OCR backfilling. Refer to this [article](/en-us/microsoft-365/syntex/ocr) for instructions on enabling OCR on the selected site.
 
+> [!Note]
+> Backfilling cancellation is currently under development. Once the cmdlet is triggered, the backfilling process cannot be stopped. Disabling OCR on the selected site will not cancel the ongoing backfilling session.
+
 ## EXAMPLES
 
 ### EXAMPLE 1
