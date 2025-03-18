@@ -25,6 +25,7 @@ Set-SPOSite
  [-AddRestrictedAccessControlGroups [Guid[]]]
  [-AllowDownloadingNonWebViewableFiles <Boolean>]
  [-AllowEditing <Boolean>]
+ [-AllowFileArchive <Boolean>]
  [-AllowSelfServiceUpgrade <Boolean>]
  [-AnonymousLinkExpirationInDays <Int32>]
  [-AuthenticationContextAccessType <SPOAuthenticationContextPolicyAccessType>]
@@ -1531,6 +1532,27 @@ Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -AllowFileArchive
+
+This setting disables the file archive feature in the Microsoft SharePoint site.
+
+PARAMVALUE: False | True
+
+If set to True, the feature will be enable. Feature is disabled by default.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -ClearGroupId
 
