@@ -14,8 +14,8 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-> [!NOTE]
-> This feature - Optical Character Recognition (OCR) is a pay-as-you-go feature, triggering this cmdlet will incur cost for your organization
+> [!important]
+> Optical Character Recognition (OCR) is a pay-as-you-go feature, triggering this cmdlet will incur cost for your organization
 
 Initiates a job to trigger the Optical Character Recognition (OCR) process for all files for the selected site.
 
@@ -23,14 +23,14 @@ Initiates a job to trigger the Optical Character Recognition (OCR) process for a
 
 ```Powershell
 
-Start-SPOSiteBackfillOCR [-Site] <string> 
+Start-SPOSiteOpticalCharacterRecognitionBackfill [-Site] <string> 
 ```
 
 ## DESCRIPTION
 
-This command starts a job to trigger the Optical Character Recognition (OCR) process for files that have either never been OCR processed or have been modified since the last OCR process. This ensures all relevant content in the site is recognized and indexed for improved searchability and accessibility. 
+This cmdlet starts a job to trigger the OCR process for files that have either never been OCR processed or have been modified since the last OCR process. This ensures all relevant content in the site is recognized and indexed for improved searchability and accessibility. 
 
-OCR backfill can only be run on OCR-enabled sites. If OCR is disabled for the site, please enable OCR before proceeding with OCR backfilling. Refer to this [article](https://learn.microsoft.com/en-us/microsoft-365/syntex/ocr) for instructions on enabling OCR on the selected site.
+OCR backfill can only be run on OCR-enabled sites. If OCR is disabled for the site, please enable OCR before proceeding with OCR backfilling. Refer to this [article](/en-us/microsoft-365/syntex/ocr) for instructions on enabling OCR on the selected site.
 
 ## EXAMPLES
 
@@ -38,20 +38,10 @@ OCR backfill can only be run on OCR-enabled sites. If OCR is disabled for the si
 
 ```powershell
 
-Start-SPOSiteBackfillOCR -Site https://contosoenergy.sharepoint.com/sites/hr
+Start-SPOSiteOpticalCharacterRecognitionBackfill -Site https://contosoenergy.sharepoint.com/sites/hr
 ```
 
-Starts OCR process for all content hasn't been processed before in the selected site.
-
-### EXAMPLE 2
-
-```powershell
-
-$site = Get-SPOSIte -Identity https://contosoenergy.sharepoint.com/sites/hr
-Start-SPOSiteBackfillOCR -Site $site 
-```
-
-Start OCR process for all content hasn't been processed before in the selected site.
+Starts OCR process for all content that hasn't been processed before in the selected site.
 
 ## PARAMETERS
 
@@ -78,6 +68,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Overview of optical character recognition in SharePoint](https://learn.microsoft.com/en-us/microsoft-365/syntex/ocr-overview)
+[Overview of optical character recognition in SharePoint](/en-us/microsoft-365/syntex/ocr-overview)
 
-[Learn about optical character recognition in Microsoft Purview](https://learn.microsoft.com/en-us/purview/ocr-learn-about?tabs=purview)
+[Learn about optical character recognition in Microsoft Purview](/en-us/purview/ocr-learn-about?tabs=purview)
