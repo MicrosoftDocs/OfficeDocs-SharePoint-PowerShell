@@ -17,13 +17,13 @@ ms.reviewer:
 > [!important]
 > Optical Character Recognition (OCR) is a pay-as-you-go feature. Running this cmdlet will incur cost for your organization.
 
-Initiates a job to trigger the Optical Character Recognition (OCR) process for all files for the selected site.
+Initiates a job to trigger the OCR process for all files for the selected site.
 
 ## SYNTAX
 
 ```Powershell
 
-Start-SPOSiteOpticalCharacterRecognitionBackfill [-Site] <string> 
+Start-SPOSiteOpticalCharacterRecognitionBackfill [-Site] <SpoSitePipeBind> 
 ```
 
 ## DESCRIPTION
@@ -50,7 +50,7 @@ Starts OCR process for all content that hasn't been processed before in the sele
 
 ### -Site
 
-Specifies the site URL where OCR process should be enabled on.
+Specifies the site where OCR process should be enabled on.
 
 ```yaml
 Type: SpoSitePipeBind
