@@ -676,6 +676,10 @@ This cmdlet is not currently active in production and may be removed in the futu
 
 {{Manually Enter Start-SPOSiteContentMove Description Here}}
 
+### [Start-SPOSiteOpticalCharacterRecognitionBackfill](Start-SPOSiteOpticalCharacterRecognitionBackfill.md)
+
+{{Initiates a job to trigger the Optical Character Recognition (OCR) process for all files for the selected site.}}
+
 ### [Start-SPOUserAndContentMove](Start-SPOUserAndContentMove.md)
 
 {{Manually Enter Start-SPOUserAndContentMove Description Here}}
