@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
 title: Set-SPOAppPrioritizationPolicy
 schema: 2.0.0
-author: Sibourda
+author: killerewok2000
 ms.author: Sibourda
 ms.reviewer:
 ---
