@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Edits an existing SPO App Prioritization Policy in your tenancy. 
+Edits an existing SPO app prioritization Policy in your tenancy. 
 
 ## SYNTAX
 

@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Gets all existing SPO App Prioritization Policies of your tenancy 
+Gets all existing SPO app prioritization Policies of your tenancy 
 
 ## SYNTAX
 
@@ -25,7 +25,7 @@ Get-SPOAppPrioritizationPolicies
 
 ## DESCRIPTION
 
-This cmdlet adds a new SPO App Prioritization Billing policies to your tenancy. You must be a SharePoint you must be a SharePoint Tenant Admin to run the commandlet. You need to make sure you’re not adding a new billing policy for an app that already has a billing policy to it. 
+This cmdlet adds a new SPO app prioritization Billing policies to your tenancy. You must be a SharePoint you must be a SharePoint Tenant Admin to run the commandlet. You need to make sure you’re not adding a new billing policy for an app that already has a billing policy to it. 
 
 ## EXAMPLES
 
@@ -35,7 +35,7 @@ This cmdlet adds a new SPO App Prioritization Billing policies to your tenancy
 Get- SPOAppPrioritizationPolicies 
 ```
 
-Example 1 returns a collection of all existing SPO App Prioritization Policies. Each Policy will contain PolicyId, AppId, AzureSubscription, ResourceGroup, Account, Enabled (status of this policy i.e true or false) and QuotaMultiplier 
+Example 1 returns a collection of all existing SPO app prioritization Policies. Each Policy will contain PolicyId, AppId, AzureSubscription, ResourceGroup, Account, Enabled (status of this policy i.e true or false) and QuotaMultiplier 
 
 
 ## PARAMETERS

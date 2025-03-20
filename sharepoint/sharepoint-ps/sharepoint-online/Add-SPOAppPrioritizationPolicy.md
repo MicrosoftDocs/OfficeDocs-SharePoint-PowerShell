@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Adds a new SPO App Prioritization Policy to your tenancy.
+Adds a new SPO app prioritization Policy to your tenancy.
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ Add-SPOAppPrioritizationPolicies -AppId <Guid string of the app you need SPAP en
 
 ## DESCRIPTION
 
-This cmdlet adds a new SPO App Prioritization Billing policies to your tenancy. You must be a SharePoint you must be a SharePoint Tenant Admin to run the commandlet. You need to make sure you’re not adding a new billing policy for an app that already has a billing policy to it. 
+This cmdlet adds a new SPO app prioritization Billing policies to your tenancy. You must be a SharePoint you must be a SharePoint Tenant Admin to run the commandlet. You need to make sure you’re not adding a new billing policy for an app that already has a billing policy to it. 
 
 ## EXAMPLES
 
