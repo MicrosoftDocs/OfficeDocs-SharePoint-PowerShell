@@ -25,7 +25,7 @@ Get-SPOAppPrioritizationPolicies [<CommonParameters>]
 
 ## DESCRIPTION
 
-This cmdlet gets all existing SPO App Prioritization billing policies for your tenancy.
+This cmdlet gets all existing SPO App prioritization billing policies for your tenancy.
 
 ## EXAMPLES
 
