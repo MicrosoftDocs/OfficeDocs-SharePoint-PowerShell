@@ -19,7 +19,7 @@ Adds a new SPO app prioritization Policy to your tenancy.
 ## SYNTAX
 
 ```
-Add-SPOAppPrioritizationPolicy -AppId <String> -AzureSubscriptionId <String> -ResourceGroup <String> -Account <String> -QuotaMultiplier <Int32> [<CommonParameters>]
+Add-SPOAppPrioritizationPolicy -AppId <guid> -AzureSubscriptionId <guid> -ResourceGroup <String> -Account <String> -QuotaMultiplier <Int32> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,7 +43,7 @@ Example 1 adds the billing policy to your tenancy. It will not add the policy on
  
 This parameter specifies the app ID of the application to onboard.
 ```yaml
-Type: String
+Type: guid
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 This parameter describes the Azure subscription ID to which the container type needs to be associated.
 
 ```yaml
-Type: String
+Type: guid
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
