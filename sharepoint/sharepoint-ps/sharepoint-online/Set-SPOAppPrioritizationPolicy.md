@@ -24,7 +24,7 @@ Set-SPOAppPrioritizationPolicy -PolicyId <String> -Enabled <Boolean> -QuotaMulti
 
 ## DESCRIPTION
 
-This cmdlet lets you enable or disable an existing policy and/or change the QuotaMultiplier associated with the policy. Note that disabling the policy does not delete the policy. If you need to change only one of the two parameters, retain the value of the non-changing parameter from the Get-SPOAppPrioritizationPolicies commandlet.
+This cmdlet lets you enable or disable an existing policy and/or change the quota multiplier limit associated with the policy. Note that disabling the policy does not delete the policy. If you need to change only one of the two parameters, retain the value of the non-changing parameter from the `Get-SPOAppPrioritizationPolicies` commandlet.
 
 ## EXAMPLES
 
@@ -42,7 +42,7 @@ Example 1 disables the policy bearing the policyId 48abxxa9
 Set-SPOAppPrioritizationPolicies -PolicyId 48abxxa9 -Enabled $true -QuotaMultiplier 7 
 ```
 
-Example 2 enables the policy bearing the policyId 48abxxa9 and also sets the QuotaMultiplier to 7. 
+Example 2 enables the policy bearing the policyId 48abxxa9 and also sets the quota multiplier limit to 7. 
 
 ### Example 3
 
@@ -50,7 +50,7 @@ Example 2 enables the policy bearing the policyId 48abxxa9 and also sets the Quo
 Set-SPOAppPrioritizationPolicies -PolicyId 48abxxa9 -QuotaMultiplier 8 
 ```
 
-Example 3 set the QuotaMultiplier to 7 of the policy bearing the policyId 48abxxa9. 
+Example 3 set the quota multiplier limit to 7 of the policy bearing the policyId 48abxxa9. 
 
 ## PARAMETERS
 
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 
 ### -QuotaMultiplier
  
-This parameter specifies the multiplier for the scaling feature.
+This parameter specifies the quota multiplier limit for the scaling feature.
 
 ```yaml
 Type: int

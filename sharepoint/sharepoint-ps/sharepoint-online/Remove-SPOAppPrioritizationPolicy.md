@@ -34,7 +34,7 @@ This cmdlet lets you delete an existing SPO app prioritization policy.
 Remove-SPOAppPrioritizationPolicy -PolicyId 48abxxa9 
 ```
 
-Example 1 deletes the policy bearing the policyId 48abxxa9. Running the Get-SPOAppPrioritizationPolicies command will no longer show the policy in the result. 
+Example 1 deletes the policy bearing the policyId 48abxxa9. Running the `Get-SPOAppPrioritizationPolicies` command will no longer show the policy in the result. 
 
 ## PARAMETERS
 
