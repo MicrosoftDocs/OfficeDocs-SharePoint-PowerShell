@@ -31,7 +31,7 @@ This cmdlet lets you enable or disable an existing policy and/or change the Qu
 ### Example 1
 
 ```powershell
-Set-SPOAppPrioritizationPolicies -PolicyId 48abxxa9 -Enabled $false -QuotaMultiplier 4 
+Set-SPOAppPrioritizationPolicies -PolicyId 48abxxa9 -Enabled $false 
 ```
 
 Example 1 disables the policy bearing the policyId 48abxxa9
@@ -44,6 +44,13 @@ Set-SPOAppPrioritizationPolicies -PolicyId 48abxxa9 -Enabled $true -QuotaMultipl
 
 Example 2 enables the policy bearing the policyId 48abxxa9 and also sets the QuotaMultiplier to 7. 
 
+### Example 3
+
+```powershell
+Set-SPOAppPrioritizationPolicies -PolicyId 48abxxa9 -QuotaMultiplier 8 
+```
+
+Example 3 set the QuotaMultiplier to 7 of the policy bearing the policyId 48abxxa9. 
 
 ## PARAMETERS
 
@@ -97,6 +104,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### CommonParameters
 
 This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
