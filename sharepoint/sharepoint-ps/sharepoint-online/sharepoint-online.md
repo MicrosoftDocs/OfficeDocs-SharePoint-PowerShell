@@ -113,7 +113,7 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Get-SPOAppPrioritizationPolicies](Get-SPOAppPrioritizationPolicies.md)
 
-{{Gets all existing SPO app prioritization Policies of your tenancy}}
+{{Gets all existing SPO app prioritization policies of your tenancy}}
 
 ### [Get-SPOBuiltInFontPackageSettings](Get-SPOBuiltInFontPackageSettings.md)
 
