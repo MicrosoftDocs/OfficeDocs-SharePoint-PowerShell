@@ -24,7 +24,7 @@ Set-SPOAppPrioritizationPolicy -PolicyId <String> -Enabled <Boolean> -QuotaMulti
 
 ## DESCRIPTION
 
-This cmdlet lets you enable or disable an existing policy and/or change the quota multiplier limit associated with the policy. Note that disabling the policy does not delete the policy. If you need to change only one of the two parameters, retain the value of the non-changing parameter from the `Get-SPOAppPrioritizationPolicies` commandlet.
+This cmdlet lets you enable or disable an existing policy and/or change the quota multiplier limit associated with the policy. Note that disabling the policy does not delete the policy. If you need to change only one of the two parameters, retain the value of the non-changing parameter from the `Get-SPOAppPrioritizationPolicies` commandlet. 
 
 ## EXAMPLES
 
@@ -80,7 +80,7 @@ Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 
 ### -QuotaMultiplier
  
-This parameter specifies the quota multiplier limit for the scaling feature.
+This parameter specifies the quota multiplier limit for the scaling feature. Value has to be a range of [1,10]
 
 ```yaml
 Type: int
@@ -98,7 +98,7 @@ Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
  
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
