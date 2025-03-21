@@ -14,17 +14,17 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Edits an existing SPO app prioritization Policy in your tenancy. 
+Edits an existing SPO app prioritization policy in your tenancy. 
 
 ## SYNTAX
 
-```powershell
-Set-SPOAppPrioritizationPolicy -PolicyId <string> -Enabled <boolean> -QuotaMultiplier <int> 
+```
+Set-SPOAppPrioritizationPolicy -PolicyId <String> -Enabled <Boolean> -QuotaMultiplier <Int32> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-This cmdlet lets you enable or disable an existing policy and/or change the quotaMultiplier associated with the policy. Note that disabling the policy does not delete the policy. If you need to change only one of the two parameters, retain the value of the non-changing parameter from the Get commandlet. Both the parameters are mandatory. 
+This cmdlet lets you enable or disable an existing policy and/or change the QuotaMultiplier associated with the policy. Note that disabling the policy does not delete the policy. If you need to change only one of the two parameters, retain the value of the non-changing parameter from the Get-SPOAppPrioritizationPolicies commandlet.
 
 ## EXAMPLES
 
@@ -97,6 +97,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### CommonParameters
+
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## RELATED LINKS
 
@@ -105,7 +108,5 @@ Accept wildcard characters: False
 [Add-SPOAppPrioritizationPolicy](./Add-SPOAppPrioritizationPolicy.md)
 
 [Get-SPOAppPrioritizationPolicies](./Get-SPOAppPrioritizationPolicies.md)
-
-[Set-SPOAppPrioritizationPolicy](./Set-SPOAppPrioritizationPolicy.md)
 
 [Remove-SPOAppPrioritizationPolicy](./Remove-SPOAppPrioritizationPolicy.md)

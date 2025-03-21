@@ -14,18 +14,18 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Gets all existing SPO app prioritization Policies of your tenancy 
+Gets all existing SPO app prioritization policies of your tenancy. 
 
 ## SYNTAX
 
-```powershell
-Get-SPOAppPrioritizationPolicies
+```
+Get-SPOAppPrioritizationPolicies [<CommonParameters>]
 ```
 
 
 ## DESCRIPTION
 
-This cmdlet adds a new SPO app prioritization Billing policies to your tenancy. You must be a SharePoint you must be a SharePoint Tenant Admin to run the commandlet. You need to make sure you’re not adding a new billing policy for an app that already has a billing policy to it. 
+This cmdlet gets all existing SPO App Prioritization billing policies for your tenancy.
 
 ## EXAMPLES
 
@@ -35,20 +35,20 @@ This cmdlet adds a new SPO app prioritization Billing policies to your tenancy
 Get- SPOAppPrioritizationPolicies 
 ```
 
-Example 1 returns a collection of all existing SPO app prioritization Policies. Each Policy will contain PolicyId, AppId, AzureSubscription, ResourceGroup, Account, Enabled (status of this policy i.e true or false) and QuotaMultiplier 
+Example 1 returns a collection of all existing SPO app prioritization policies. Each policy will contain PolicyId, AppId, AzureSubscription, ResourceGroup, Account, Enabled (status of this policy i.e true or false) and QuotaMultiplier 
 
 
 ## PARAMETERS
 
+### CommonParameters
 
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## RELATED LINKS
 
 [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
 
 [Add-SPOAppPrioritizationPolicy](./Add-SPOAppPrioritizationPolicy.md)
-
-[Get-SPOAppPrioritizationPolicies](./Get-SPOAppPrioritizationPolicies.md)
 
 [Set-SPOAppPrioritizationPolicy](./Set-SPOAppPrioritizationPolicy.md)
 

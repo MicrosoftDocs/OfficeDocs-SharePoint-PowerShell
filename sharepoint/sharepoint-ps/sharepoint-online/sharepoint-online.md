@@ -17,7 +17,7 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Add-SPOAppPrioritizationPolicy](Add-SPOAppPrioritizationPolicy.md)
 
-{{Adds a new SPO app prioritization Policy to your tenancy.}}
+{{Adds a new SPO app prioritization policy to your tenancy.}}
 
 ### [Add-SPOContainerTypeBilling](Add-SPOContainerTypeBilling.md)
 
@@ -430,7 +430,7 @@ This cmdlet is not currently active in production and may be removed in the futu
 
 ### [Remove-SPOAppPrioritizationPolicy](Remove-SPOAppPrioritizationPolicy.md)
 
-{{Deletes an existing SPO app prioritization Policy in your tenancy.}}
+{{Deletes an existing SPO app prioritization policy in your tenancy.}}
 
 ### [Remove-SPODataConnectionSetting](Remove-SPODataConnectionSetting.md)
 
@@ -558,7 +558,7 @@ This cmdlet is not currently active in production and may be removed in the futu
 
 ### [Set-SPOAppPrioritizationPolicy](Set-SPOAppPrioritizationPolicy.md)
 
-{{Edits an existing SPO app prioritization Policy in your tenancy. }}
+{{Edits an existing SPO app prioritization policy in your tenancy. }}
 
 ### [Set-SPOBuiltInFontPackageSettings](Set-SPOBuiltInFontPackageSettings.md)
 

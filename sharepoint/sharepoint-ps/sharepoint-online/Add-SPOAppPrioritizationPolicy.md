@@ -18,13 +18,13 @@ Adds a new SPO app prioritization Policy to your tenancy.
 
 ## SYNTAX
 
-```powershell
-Add-SPOAppPrioritizationPolicies -AppId <Guid string of the app you need SPAP enabled for> -AzureSubscriptionId <Guid string of the Azure Subscription Id> -ResourceGroup <String> -Account <String> -QuotaMultiplier <int> 
+```
+Add-SPOAppPrioritizationPolicy -AppId <String> -AzureSubscriptionId <String> -ResourceGroup <String> -Account <String> -QuotaMultiplier <Int32> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-This cmdlet adds a new SPO app prioritization Billing policies to your tenancy. You must be a SharePoint you must be a SharePoint Tenant Admin to run the commandlet. You need to make sure you’re not adding a new billing policy for an app that already has a billing policy to it. 
+This cmdlet adds a new SPO app prioritization billing policies to your tenancy. Ensure that you do not add a new billing policy to an app that already has one.
 
 ## EXAMPLES
 
@@ -122,13 +122,14 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### CommonParameters
+
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 
 ## RELATED LINKS
 
 [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
-
-[Add-SPOAppPrioritizationPolicy](./Add-SPOAppPrioritizationPolicy.md)
 
 [Get-SPOAppPrioritizationPolicies](./Get-SPOAppPrioritizationPolicies.md)
 
