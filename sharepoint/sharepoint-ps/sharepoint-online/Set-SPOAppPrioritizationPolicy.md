@@ -90,7 +90,7 @@ Accept wildcard characters: False
 
 ### -QuotaMultiplier
  
-This parameter specifies the quota multiplier limit for the scaling feature. Value has to be a range of [1,10]
+This parameter specifies the quota multiplier limit for the scaling feature. Value must be between 1 and 10.
 
 ```yaml
 Type: int
