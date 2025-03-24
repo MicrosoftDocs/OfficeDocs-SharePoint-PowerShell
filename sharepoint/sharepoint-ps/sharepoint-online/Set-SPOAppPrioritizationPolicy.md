@@ -19,7 +19,7 @@ Edits an existing SPO app prioritization policy in your tenancy.
 ## SYNTAX
 
 ```
-Set-SPOAppPrioritizationPolicy -PolicyId <String> -Enabled <Boolean> -QuotaMultiplier <Int32> [<CommonParameters>]
+Set-SPOAppPrioritizationPolicy -PolicyId <String> [-Enabled <Boolean>] [-QuotaMultiplier <Int32>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
