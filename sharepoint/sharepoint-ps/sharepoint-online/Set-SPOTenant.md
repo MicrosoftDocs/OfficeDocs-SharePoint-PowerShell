@@ -1354,11 +1354,12 @@ Accept wildcard characters: False
 
 ### -FolderAnonymousLinkType
 
-Anonymous access links can allow recipients to only view or view and edit.
+Users can configure folder anonymous access links that allow recipients to view, view and upload, or view, edit, and upload files.
 
 The valid values are:
 
 - View
+- ViewUpload
 - Edit
 
 ```yaml
