@@ -21,6 +21,7 @@ Connects the local server computer to a farm.
 Connect-SPConfigurationDatabase [-DatabaseName] <String> [-SkipRegisterAsDistributedCacheHost]
  [-Passphrase] <SecureString> -DatabaseServer <String> [-AssignmentCollection <SPAssignmentCollection>]
  [-DatabaseCredentials <PSCredential>] [-DatabaseFailOverPartner <String>] [-LocalServerRole <SPServerRole>]
+ [-DatabaseConnectionEncryption <SqlConnectionEncryptOption>] [-DatabaseServerCertificateHostName <String>]
  [<CommonParameters>]
 ```
 
@@ -189,6 +190,39 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DatabaseConnectionEncryption
+Specifies whether TLS encryption is used for the connection between SharePoint and the database.
+Mandatory requires that TLS encryption is used. If TLS encryption can't be successfully negotiated, the connection will fail.
+Optional allows TLS encryption to be used. If the database server requires TLS encryption, then TLS encryption will be used. Otherwise, TLS encryption will not be used.
+Strict requires that TLS encryption is used with TDS 8.0, which is the strongest encryption configuration. If TLS encryption with TDS 8.0 can't be successfully negotiated, the connection will fail.
+Databases mounted to SharePoint before the Version 24H2 feature update was installed default to Optional encryption. If this parameter is not specified when mounting a new database to SharePoint after the Version 24H2 feature update is installed, the default is Mandatory.
+
+```yaml
+Type: SqlConnectionEncryptOption
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Server Subscription Edition
+Required: True
+Position: Named
+Default value: Mandatory
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+### -DatabaseServerCertificateHostName
+Sets the host name to use when validating the server certificate for the connection.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Server Subscription Edition
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
