@@ -1535,7 +1535,7 @@ Accept wildcard characters: False
 
 ### -AllowFileArchive
 
-This setting disables the file archive feature in the Microsoft SharePoint site. If this feature is enabled and M365 archive is enabled at the tenant-level, then this site will allow file archive
+This setting enables or disables the file archive feature for a SharePoint site. If -AllowFileArchive flag is enabled for a site and Microsoft 365 Archive is enabled at the tenant-level, then the site will allow file archive
 
 PARAMVALUE: False | True
 
