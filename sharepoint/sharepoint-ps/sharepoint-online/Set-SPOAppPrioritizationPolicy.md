@@ -14,7 +14,9 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Edits an existing SPO app prioritization policy in your tenancy. 
+Edits an existing SPO app prioritization policy in your tenancy.
+> [!NOTE]
+> This functionality is rolling out and might not be fully enabled in your environment yet. 
 
 ## SYNTAX
 
@@ -90,7 +92,7 @@ Accept wildcard characters: False
 
 ### -QuotaMultiplier
  
-This parameter specifies the quota multiplier limit for the scaling feature. Value must be between 1 and 10.
+This parameter specifies the quota multiplier limit for the scaling feature. Value must be between 2 and 10.
 
 ```yaml
 Type: int
