@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 ### -QuotaMultiplier
  
-This parameter specifies the multiplier for the scaling feature.
+This parameter specifies the multiplier for the scaling feature. Value must be between 2 and 10.
 
 ```yaml
 Type: int
