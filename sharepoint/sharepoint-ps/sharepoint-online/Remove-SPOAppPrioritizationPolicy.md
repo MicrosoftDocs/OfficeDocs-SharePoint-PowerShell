@@ -15,6 +15,8 @@ ms.reviewer:
 ## SYNOPSIS
 
 Deletes an existing SPO app prioritization policy in your tenancy.  
+> [!NOTE]
+> This functionality is rolling out and might not be fully enabled in your environment yet. 
 
 ## SYNTAX
 
