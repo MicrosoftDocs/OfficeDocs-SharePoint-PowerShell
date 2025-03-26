@@ -16,7 +16,7 @@ ms.reviewer:
 
 Gets all existing SPO app prioritization policies of your tenancy. 
 > [!NOTE]
-> This functionnality is rolling out and might not be fully enabled on your environment yet. 
+> This functionality is rolling out and might not be fully enabled on your environment yet. 
 
 ## SYNTAX
 
