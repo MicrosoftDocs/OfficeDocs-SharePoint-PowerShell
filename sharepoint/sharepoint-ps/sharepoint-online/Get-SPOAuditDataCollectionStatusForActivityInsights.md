@@ -15,7 +15,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Lists the current status of audit data collection for reports based on activities within the last 28 days, from SharePoint Admin Center.
+Lists the current status of audit data collection for reports on activities from the last 28 days in the SharePoint admin center.
 
 ## SYNTAX
 
@@ -26,23 +26,23 @@ Get-SPOAuditDataCollectionStatusForActivityInsights [-ReportEntity <OptInReportE
 
 ## DESCRIPTION
 
-SharePoint administrators can generate reports based on activities within the last 28 days such as Sharing link reports, content shared with Everyone except external users etc from SharePoint admin center. These reports require audit data to be collected after approved by SharePoint admin. This command gives the current status of the relevant audit data collection.
+SharePoint Administrators can generate reports on activities from the last 28 days, such as sharing link reports and content shared with everyone except external users, from the SharePoint admin center. These reports need audit data, which must be collected after approval by the SharePoint Administrator. This cmdlet shows the current status of the audit data collection.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> Get-SPOAuditDataCollectionStatusForActivityInsights -ReportEntity SharingLinks_Anyone
+Get-SPOAuditDataCollectionStatusForActivityInsights -ReportEntity SharingLinks_Anyone
 ```
 
-This command fetches the current status of audit data collection for the report on sites with most number of "Anyone" sharing links generated in the last 28 days.
+This example fetches the current status of audit data collection for the report on sites with most number of "Anyone" sharing links generated in the last 28 days.
 
 ## PARAMETERS
 
 ### -ReportEntity
 
-Specifies the entity for which the corresponding audit data collection status should be shown
+Specifies the entity for which the corresponding audit data collection status should be shown.
 
 ```yaml
 Type: OptInReportEntityEnum
@@ -58,7 +58,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

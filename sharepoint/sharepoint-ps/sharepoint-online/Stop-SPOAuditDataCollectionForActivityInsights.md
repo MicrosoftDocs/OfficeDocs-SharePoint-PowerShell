@@ -15,7 +15,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-This cmdlet stops collecting relevant audit data for reports, based on activities within the last 28 days, such as Sharing link reports, content shared with Everyone except external users etc from SharePoint admin center.
+This cmdlet stops collecting audit data for reports on activities from the last 28 days, such as sharing link reports and content shared with everyone except external users, from the SharePoint admin center.
 
 ## SYNTAX
 
@@ -26,18 +26,19 @@ Stop-SPOAuditDataCollectionForActivityInsights -ReportEntity <OptInReportEntityE
 ## DESCRIPTION
 This cmdlet stops collecting relevant audit data for reports, based on activites related to sharing and access. Reports are available for the following scenarios:
 
-- Sharing links created in last 28 days (Anyone, People-in-your-org, Specific people shared externally).
-- Content shared with Everyone except external users (EEEU) in last 28 days.
-- Copilot agents created in last 28 days *(Private Preview)*
+- Sharing links created in the last 28 days (Anyone, People-in-your-org, Specific people shared externally).
+- Content shared with Everyone except external users (EEEU) in the last 28 days.
+- Copilot agents created in the last 28 days *(Private Preview)*.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
-PS C:\> Stop-SPOAuditDataCollectionForActivityInsights -ReportEntity SharingLinks_Anyone
+Stop-SPOAuditDataCollectionForActivityInsights -ReportEntity SharingLinks_Anyone
 ```
 
-This cmdlet will stop collecting audit data related to the generation of 'Anyone' sharing links from the moment it is executed.
+This example will stop collecting audit data related to the generation of 'Anyone' sharing links from the moment the command is executed.
 
 ## PARAMETERS
 
@@ -59,7 +60,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
