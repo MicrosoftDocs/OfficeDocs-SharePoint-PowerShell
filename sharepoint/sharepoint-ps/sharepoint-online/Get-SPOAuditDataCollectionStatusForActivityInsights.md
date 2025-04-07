@@ -48,7 +48,7 @@ Specifies the entity for which the corresponding audit data collection status sh
 Type: OptInReportEntityEnum
 Parameter Sets: (All)
 Aliases:
-Accepted values: SharingLinks_Anyone, SharingLinks_PeopleInYourOrg, SharingLinks_Guests, EveryoneExceptExternalUsersAtSite, EveryoneExceptExternalUsersForItems, CopilotAppInsights
+Accepted values: SharingLinksAnyone, SharingLinksPeopleInYourOrg, SharingLinksGuests, EveryoneExceptExternalUsersAtSite, EveryoneExceptExternalUsersForItems, CopilotAppInsights
 
 Required: False
 Position: Named

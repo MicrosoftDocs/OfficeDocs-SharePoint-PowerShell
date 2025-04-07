@@ -27,7 +27,7 @@ Start-SPOAuditDataCollectionForActivityInsights -ReportEntity <OptInReportEntity
 
 This cmdlet starts collecting audit data for reports on sharing and access activities from the last 28 days. Reports are available for the following scenarios:
 
-- Sharing links created in the last 28 days (Anyone, People-in-your-org, Specific people shared externally).
+- Sharing links created in the last 28 days (Anyone, People in Your Organization, Specific people shared externally).
 - Content shared with Everyone except external users (EEEU) in the last 28 days.
 - Copilot agents created in the last 28 days *(Private Preview)*.
 
@@ -39,7 +39,7 @@ This cmdlet starts collecting audit data for reports on sharing and access activ
 Start-SPOAuditDataCollectionForActivityInsights -ReportEntity SharingLinks_Anyone
 ```
 
-This example will start collecting audit data related to the generation of 'Anyone' sharing links from the moment the command is executed.
+This example will start collecting audit data related to the generation of 'Anyone' sharing links from the moment the cmdlet is executed.
 
 ## PARAMETERS
 
@@ -51,7 +51,7 @@ Specifies the entity for which the corresponding audit data should be collected.
 Type: OptInReportEntityEnum
 Parameter Sets: (All)
 Aliases:
-Accepted values: SharingLinks_Anyone, SharingLinks_PeopleInYourOrg, SharingLinks_Guests, EveryoneExceptExternalUsersAtSite, EveryoneExceptExternalUsersForItems, CopilotAppInsights
+Accepted values: SharingLinksAnyone, SharingLinksPeopleInYourOrg, SharingLinksGuests, EveryoneExceptExternalUsersAtSite, EveryoneExceptExternalUsersForItems, CopilotAppInsights
 
 Required: True
 Position: Named
