@@ -107,10 +107,6 @@ The following cmdlet references are for SharePoint Online.
 
 {{Gets all existing SPO app prioritization policies of your tenancy}}
 
-### [Get-SPOAuditDataCollectionStatusForActivityInsights](Get-SPOAuditDataCollectionStatusForActivityInsights.md)
-
-{{Shows the current status of the audit data collection for reports on activities in the last 28 days.}}
-
 ### [Get-SPOBuiltInFontPackageSettings](Get-SPOBuiltInFontPackageSettings.md)
 
 {{Gets settings of built-in font packages.}}
