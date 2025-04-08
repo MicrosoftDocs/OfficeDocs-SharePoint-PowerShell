@@ -105,7 +105,7 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Get-SPOAppPrioritizationPolicies](Get-SPOAppPrioritizationPolicies.md)
 
-{{Gets all existing SPO app prioritization policies of your tenancy}}
+{{Gets all existing SPO app prioritization policies in the tenant}}
 
 ### [Get-SPOBuiltInFontPackageSettings](Get-SPOBuiltInFontPackageSettings.md)
 
@@ -662,7 +662,7 @@ This cmdlet is not currently active in production and may be removed in the futu
 
 ### [Stop-SPOAuditDataCollectionForActivityInsights](Stop-SPOAuditDataCollectionForActivityInsights.md)
 
-{{Stop collecting audit data for reports on activities from the last 28 days.}}
+{{Stops collecting audit data for reports on activities from the last 28 days.}}
 
 ### [Stop-SPOUserAndContentMove](Stop-SPOUserAndContentMove.md)
 
