@@ -103,6 +103,10 @@ The following cmdlet references are for SharePoint Online.
 
 {{Manually Enter Get-SPOAppInfo Description Here}}
 
+### [Get-SPOAuditDataCollectionStatusForActivityInsights](Get-SPOAuditDataCollectionStatusForActivityInsights.md)
+
+{{Shows the current status of the audit data collection for reports on activities in the last 28 days.}}
+
 ### [Get-SPOBuiltInFontPackageSettings](Get-SPOBuiltInFontPackageSettings.md)
 
 {{Gets settings of built-in font packages.}}
@@ -640,6 +644,10 @@ This cmdlet is not currently active in production and may be removed in the futu
 
 {{Manually Enter Set-SPOUser Description Here}}
 
+### [Start-SPOAuditDataCollectionForActivityInsights](Start-SPOAuditDataCollectionForActivityInsights.md)
+
+{{Starts collecting audit data for reports on activities from the last 28 days.}}
+
 ### [Start-SPOCopilotAgentInsightsReport](Start-SPOCopilotAgentInsightsReport.md)
 
 {{Triggers the build of a new Copilot agent insight report for the specified number of days.}}
@@ -651,6 +659,10 @@ This cmdlet is not currently active in production and may be removed in the futu
 ### [Start-SPOUserAndContentMove](Start-SPOUserAndContentMove.md)
 
 {{Manually Enter Start-SPOUserAndContentMove Description Here}}
+
+### [Stop-SPOAuditDataCollectionForActivityInsights](Stop-SPOAuditDataCollectionForActivityInsights.md)
+
+{{Stop collecting audit data for reports on activities from the last 28 days.}}
 
 ### [Stop-SPOUserAndContentMove](Stop-SPOUserAndContentMove.md)
 
