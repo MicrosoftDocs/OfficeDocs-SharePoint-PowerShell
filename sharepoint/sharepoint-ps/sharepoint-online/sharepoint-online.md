@@ -103,6 +103,10 @@ The following cmdlet references are for SharePoint Online.
 
 {{Manually Enter Get-SPOAppInfo Description Here}}
 
+### [Get-SPOAppPrioritizationPolicies](Get-SPOAppPrioritizationPolicies.md)
+
+{{Gets all existing SPO app prioritization policies of your tenancy}}
+
 ### [Get-SPOAuditDataCollectionStatusForActivityInsights](Get-SPOAuditDataCollectionStatusForActivityInsights.md)
 
 {{Shows the current status of the audit data collection for reports on activities in the last 28 days.}}
