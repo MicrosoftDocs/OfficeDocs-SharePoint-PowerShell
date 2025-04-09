@@ -105,11 +105,15 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Get-SPOAppPrioritizationPolicies](Get-SPOAppPrioritizationPolicies.md)
 
-{{Gets all existing SPO app prioritization policies in the tenant}}
+{{Gets all existing SPO app prioritization policies of your tenancy}}
 
 ### [Get-SPOBuiltInFontPackageSettings](Get-SPOBuiltInFontPackageSettings.md)
 
 {{Gets settings of built-in font packages.}}
+
+### [Get-SPOAuditDataCollectionStatusForActivityInsights](Get-SPOAuditDataCollectionStatusForActivityInsights.md)
+
+{{Gets the current status of audit data collection for reports on activities from the last 28 days.}}
 
 ### [Get-SPOCopilotAgentInsightsReport](Get-SPOCopilotAgentInsightsReport.md)
 
