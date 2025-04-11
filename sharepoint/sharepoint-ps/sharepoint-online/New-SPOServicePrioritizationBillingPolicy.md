@@ -38,7 +38,7 @@ This example creates a new billing policy for service prioritization with the sp
 ## PARAMETERS
 
 ### -AzureRegion
-{{ Fill AzureRegion Description }}
+Specifies the Azure region where the billing policy applies.
 
 ```yaml
 Type: String
@@ -53,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -AzureSubscriptionId
-{{ Fill AzureSubscriptionId Description }}
+Specifies the unique identifier (GUID) of the Azure subscription associated with the billing policy.
 
 ```yaml
 Type: Guid
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -FriendlyName
-{{ Fill FriendlyName Description }}
+Specifies a user-friendly name for the billing policy.
 
 ```yaml
 Type: String
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroup
-{{ Fill ResourceGroup Description }}
+Specifies the Azure resource group associated with the billing policy.
 
 ```yaml
 Type: String

@@ -38,7 +38,7 @@ This example adds a new app registration with the specified AppId and PolicyId, 
 ## PARAMETERS
 
 ### -AppId
-{{ Fill AppId Description }}
+Specifies the unique identifier (GUID) of the app registration to be added.
 
 ```yaml
 Type: Guid
@@ -53,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyId
-{{ Fill PolicyId Description }}
+Specifies the unique identifier (GUID) of the policy to associate with the app registration.
 
 ```yaml
 Type: Guid
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -QuotaMultiplier
-{{ Fill QuotaMultiplier Description }}
+This parameter specifies the quota multiplier limit for the scaling feature. Value must be between 2 and 10.
 
 ```yaml
 Type: Int32

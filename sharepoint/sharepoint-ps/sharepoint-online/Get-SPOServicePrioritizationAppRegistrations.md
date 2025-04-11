@@ -36,6 +36,9 @@ This example retrieves all app registrations configured for service prioritizati
 
 ## PARAMETERS
 
+### -AppId
+Specifies the unique identifier (GUID) of the app registration to retrieve.
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 

@@ -38,7 +38,7 @@ This example updates the app registration with the specified AppId, enabling it 
 ## PARAMETERS
 
 ### -AppId
-{{ Fill AppId Description }}
+Specifies the unique identifier (GUID) of the app registration to update.
 
 ```yaml
 Type: Guid
@@ -53,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-{{ Fill Enabled Description }}
+Specifies whether the app registration is enabled or disabled. Accepts a Boolean value.
 
 ```yaml
 Type: Boolean
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -QuotaMultiplier
-{{ Fill QuotaMultiplier Description }}
+This parameter specifies the quota multiplier limit for the scaling feature. Value must be between 2 and 10.
 
 ```yaml
 Type: Int32

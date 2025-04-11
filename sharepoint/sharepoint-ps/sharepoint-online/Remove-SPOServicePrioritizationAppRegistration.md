@@ -37,7 +37,7 @@ This example removes the app registration with the specified AppId from service 
 ## PARAMETERS
 
 ### -AppId
-{{ Fill AppId Description }}
+The unique identifier (GUID) of the app registration to be removed from service prioritization. This parameter is required and must be specified.
 
 ```yaml
 Type: Guid
