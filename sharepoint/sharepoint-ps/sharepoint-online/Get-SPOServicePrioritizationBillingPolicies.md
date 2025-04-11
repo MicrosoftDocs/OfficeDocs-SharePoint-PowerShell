@@ -13,7 +13,7 @@ ms.reviewer:
 # Get-SPOServicePrioritizationBillingPolicies
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Retrieves the list of billing policies configured for service prioritization in SharePoint Online.
 
 ## SYNTAX
 
@@ -22,16 +22,15 @@ Get-SPOServicePrioritizationBillingPolicies [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The `Get-SPOServicePrioritizationBillingPolicies` cmdlet retrieves all billing policies that have been configured for service prioritization in SharePoint Online. This cmdlet is useful for administrators who need to review or audit the current billing policies and their associated configurations.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-SPOServicePrioritizationBillingPolicies
 ```
-
-{{ Add example description here }}
+This example retrieves all billing policies configured for service prioritization in SharePoint Online.
 
 ## PARAMETERS
 

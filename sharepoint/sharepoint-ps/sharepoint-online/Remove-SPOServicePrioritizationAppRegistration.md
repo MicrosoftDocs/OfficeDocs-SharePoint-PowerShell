@@ -13,7 +13,7 @@ ms.reviewer:
 # Remove-SPOServicePrioritizationAppRegistration
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Removes an app registration from service prioritization in SharePoint Online.
 
 ## SYNTAX
 
@@ -22,16 +22,15 @@ Remove-SPOServicePrioritizationAppRegistration -AppId <Guid> [<CommonParameters>
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The `Remove-SPOServicePrioritizationAppRegistration` cmdlet removes a specified app registration from the service prioritization configuration in SharePoint Online. This is useful for administrators who need to decommission or update app registrations.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Remove-SPOServicePrioritizationAppRegistration -AppId "12345678-1234-1234-1234-1234567890ab"
 ```
-
-{{ Add example description here }}
+This example removes the app registration with the specified AppId from service prioritization.
 
 ## PARAMETERS
 

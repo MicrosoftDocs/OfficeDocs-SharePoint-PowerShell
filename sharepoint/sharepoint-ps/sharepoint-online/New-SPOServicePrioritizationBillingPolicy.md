@@ -13,7 +13,7 @@ ms.reviewer:
 # New-SPOServicePrioritizationBillingPolicy
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Creates a new billing policy for service prioritization in SharePoint Online.
 
 ## SYNTAX
 
@@ -23,16 +23,15 @@ New-SPOServicePrioritizationBillingPolicy -AzureSubscriptionId <Guid> -ResourceG
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The `New-SPOServicePrioritizationBillingPolicy` cmdlet allows administrators to create a new billing policy for service prioritization in SharePoint Online. This cmdlet is useful for defining custom billing rules and policies for specific Azure subscriptions and resource groups.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> New-SPOServicePrioritizationBillingPolicy -AzureSubscriptionId "12345678-1234-1234-1234-1234567890ab" -ResourceGroup "MyResourceGroup" -AzureRegion "EastUS" -FriendlyName "MyBillingPolicy"
 ```
-
-{{ Add example description here }}
+This example creates a new billing policy for service prioritization with the specified Azure subscription, resource group, and region.
 
 ## PARAMETERS
 

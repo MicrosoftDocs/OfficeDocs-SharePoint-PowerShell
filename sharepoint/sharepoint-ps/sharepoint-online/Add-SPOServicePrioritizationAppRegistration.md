@@ -13,7 +13,7 @@ ms.reviewer:
 # Add-SPOServicePrioritizationAppRegistration
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Adds a new app registration for service prioritization in SharePoint Online.
 
 ## SYNTAX
 
@@ -23,16 +23,15 @@ Add-SPOServicePrioritizationAppRegistration -AppId <Guid> -PolicyId <Guid> -Quot
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The `Add-SPOServicePrioritizationAppRegistration` cmdlet allows administrators to register a new app for service prioritization in SharePoint Online. This cmdlet is useful for configuring specific apps to receive prioritized service handling based on defined policies.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Add-SPOServicePrioritizationAppRegistration -AppId "12345678-1234-1234-1234-1234567890ab" -PolicyId "87654321-4321-4321-4321-0987654321ba" -QuotaMultiplier 2
 ```
-
-{{ Add example description here }}
+This example adds a new app registration with the specified AppId and PolicyId, and sets the quota multiplier to 2.
 
 ## PARAMETERS
 

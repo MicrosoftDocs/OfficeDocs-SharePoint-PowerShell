@@ -13,7 +13,7 @@ ms.reviewer:
 # Get-SPOServicePrioritizationAppRegistrations
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Retrieves the list of app registrations configured for service prioritization in SharePoint Online.
 
 ## SYNTAX
 
@@ -22,16 +22,15 @@ Get-SPOServicePrioritizationAppRegistrations [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The `Get-SPOServicePrioritizationAppRegistrations` cmdlet retrieves all app registrations that have been configured for service prioritization in SharePoint Online. This cmdlet is useful for administrators who need to review or audit the current app registrations and their associated policies.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Get-SPOServicePrioritizationAppRegistrations
 ```
-
-{{ Add example description here }}
+This example retrieves all app registrations configured for service prioritization in SharePoint Online.
 
 ## PARAMETERS
 
