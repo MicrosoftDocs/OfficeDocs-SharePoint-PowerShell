@@ -24,20 +24,20 @@ Get-SPOServicePrioritizationBillingPolicies [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The `Get-SPOServicePrioritizationBillingPolicies` cmdlet retrieves all billing policies that have been configured for service prioritization in SharePoint Online. This cmdlet is useful for administrators who need to review or audit the current billing policies and their associated configurations.
+This cmdlet retrieves all billing policies that have been configured for service prioritization in SharePoint Online. This cmdlet is useful for administrators who need to review or audit the current billing policies and their associated configurations.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Get-SPOServicePrioritizationBillingPolicies
+Get-SPOServicePrioritizationBillingPolicies
 ```
 This example retrieves all billing policies configured for service prioritization in SharePoint Online.
 
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

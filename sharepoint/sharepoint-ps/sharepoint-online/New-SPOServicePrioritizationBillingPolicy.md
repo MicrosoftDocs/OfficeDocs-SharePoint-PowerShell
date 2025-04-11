@@ -25,13 +25,13 @@ New-SPOServicePrioritizationBillingPolicy -AzureSubscriptionId <Guid> -ResourceG
 ```
 
 ## DESCRIPTION
-The `New-SPOServicePrioritizationBillingPolicy` cmdlet allows administrators to create a new billing policy for service prioritization in SharePoint Online. This cmdlet is useful for defining custom billing rules and policies for specific Azure subscriptions and resource groups.
+This cmdlet allows administrators to create a new billing policy for service prioritization in SharePoint Online. This cmdlet is useful for defining custom billing rules and policies for specific Azure subscriptions and resource groups.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> New-SPOServicePrioritizationBillingPolicy -AzureSubscriptionId "12345678-1234-1234-1234-1234567890ab" -ResourceGroup "MyResourceGroup" -AzureRegion "EastUS" -FriendlyName "MyBillingPolicy"
+New-SPOServicePrioritizationBillingPolicy -AzureSubscriptionId "12345678-1234-1234-1234-1234567890ab" -ResourceGroup "MyResourceGroup" -AzureRegion "EastUS" -FriendlyName "MyBillingPolicy"
 ```
 This example creates a new billing policy for service prioritization with the specified Azure subscription, resource group, and region.
 
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

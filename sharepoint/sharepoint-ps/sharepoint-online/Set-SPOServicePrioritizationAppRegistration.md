@@ -25,13 +25,13 @@ Set-SPOServicePrioritizationAppRegistration -AppId <Guid> [-Enabled <Boolean>] [
 ```
 
 ## DESCRIPTION
-The `Set-SPOServicePrioritizationAppRegistration` cmdlet updates the configuration of an existing app registration for service prioritization in SharePoint Online. This cmdlet is useful for modifying properties such as enabling or disabling the app registration or adjusting the quota multiplier.
+This cmdlet updates the configuration of an existing app registration for service prioritization in SharePoint Online. This cmdlet is useful for modifying properties such as enabling or disabling the app registration or adjusting the quota multiplier.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Set-SPOServicePrioritizationAppRegistration -AppId "12345678-1234-1234-1234-1234567890ab" -Enabled $true -QuotaMultiplier 3
+Set-SPOServicePrioritizationAppRegistration -AppId "12345678-1234-1234-1234-1234567890ab" -Enabled $true -QuotaMultiplier 3
 ```
 This example updates the app registration with the specified AppId, enabling it and setting the quota multiplier to 3.
 
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

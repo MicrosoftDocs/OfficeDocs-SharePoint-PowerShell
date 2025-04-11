@@ -24,13 +24,13 @@ Remove-SPOServicePrioritizationAppRegistration -AppId <Guid> [<CommonParameters>
 ```
 
 ## DESCRIPTION
-The `Remove-SPOServicePrioritizationAppRegistration` cmdlet removes a specified app registration from the service prioritization configuration in SharePoint Online. This is useful for administrators who need to decommission or update app registrations.
+This cmdlet removes a specified app registration from the service prioritization configuration in SharePoint Online. This is useful for administrators who need to decommission or update app registrations.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Remove-SPOServicePrioritizationAppRegistration -AppId "12345678-1234-1234-1234-1234567890ab"
+Remove-SPOServicePrioritizationAppRegistration -AppId "12345678-1234-1234-1234-1234567890ab"
 ```
 This example removes the app registration with the specified AppId from service prioritization.
 
@@ -52,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

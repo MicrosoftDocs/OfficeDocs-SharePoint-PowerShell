@@ -24,23 +24,20 @@ Get-SPOServicePrioritizationAppRegistrations [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The `Get-SPOServicePrioritizationAppRegistrations` cmdlet retrieves all app registrations that have been configured for service prioritization in SharePoint Online. This cmdlet is useful for administrators who need to review or audit the current app registrations and their associated policies.
+This cmdlet retrieves all app registrations that have been configured for service prioritization in SharePoint Online. This cmdlet is useful for administrators who need to review or audit the current app registrations and their associated policies.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Get-SPOServicePrioritizationAppRegistrations
+Get-SPOServicePrioritizationAppRegistrations
 ```
 This example retrieves all app registrations configured for service prioritization in SharePoint Online.
 
 ## PARAMETERS
 
-### -AppId
-Specifies the unique identifier (GUID) of the app registration to retrieve.
-
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -56,7 +53,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
 
 [Add-SPOServicePrioritizationAppRegistration](./Add-SPOServicePrioritizationAppRegistration.md)
-
 
 [Remove-SPOServicePrioritizationAppRegistration](./Remove-SPOServicePrioritizationAppRegistration.md)
 
