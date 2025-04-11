@@ -38,8 +38,8 @@ Set-SPOTenant
  [-AllowSharingOutsideRestrictedAccessControlGroups <Boolean>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>]
  [-AnyoneLinkTrackUsers <Boolean>]
- [-AppBypassInformationBarriers <Boolean>]
  [-AppAccessInformationBarriersAllowList [String[]]]
+ [-AppBypassInformationBarriers <Boolean>]
  [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-AutofillColumnScope <SyntexFeatureScopeValue>]
  [-AutofillColumnsSelectedSitesList [String[]]]
@@ -4395,7 +4395,7 @@ Accept wildcard characters: False
 
 ### -AppAccessInformationBarriersAllowList
 
-Gets ot sets the list of third-party application IDs (GUIDs) that are allowed to access Information barriers protected sites and OneDrives in the tenant. 
+Gets or sets the list of third-party application IDs (GUIDs) that are allowed to access information barriers protected sites and OneDrive accounts in the tenant. 
 Note: The feature associated with this cmdlet will be rolling out soon.
 
 ```yaml
