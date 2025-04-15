@@ -668,6 +668,10 @@ This cmdlet is not currently active in production and may be removed in the futu
 
 {{Manually Enter Set-SPOUser Description Here}}
 
+### [Start-SPOAuditDataCollectionForActivityInsights](Start-SPOAuditDataCollectionForActivityInsights.md)
+
+{{Starts collecting audit data for reports on activities from the last 28 days.}}
+
 ### [Start-SPOCopilotAgentInsightsReport](Start-SPOCopilotAgentInsightsReport.md)
 
 {{Triggers the build of a new Copilot agent insight report for the specified number of days.}}
@@ -683,6 +687,10 @@ This cmdlet is not currently active in production and may be removed in the futu
 ### [Start-SPOUserAndContentMove](Start-SPOUserAndContentMove.md)
 
 {{Manually Enter Start-SPOUserAndContentMove Description Here}}
+
+### [Stop-SPOAuditDataCollectionForActivityInsights](Stop-SPOAuditDataCollectionForActivityInsights.md)
+
+{{Stops collecting audit data for reports on activities from the last 28 days.}}
 
 ### [Stop-SPOUserAndContentMove](Stop-SPOUserAndContentMove.md)
 
