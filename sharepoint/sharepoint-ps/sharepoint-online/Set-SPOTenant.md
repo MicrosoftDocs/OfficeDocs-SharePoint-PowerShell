@@ -38,6 +38,7 @@ Set-SPOTenant
  [-AllowSharingOutsideRestrictedAccessControlGroups <Boolean>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>]
  [-AnyoneLinkTrackUsers <Boolean>]
+ [-AppAccessInformationBarriersAllowList [String[]]]
  [-AppBypassInformationBarriers <Boolean>]
  [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-AutofillColumnScope <SyntexFeatureScopeValue>]
@@ -4391,6 +4392,24 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -AppAccessInformationBarriersAllowList
+
+Gets or sets the list of third-party application IDs (GUIDs) that are allowed to access information barriers protected sites and OneDrive accounts in the tenant. 
+Note: The feature associated with this cmdlet will be rolling out soon.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ## RELATED LINKS
 
