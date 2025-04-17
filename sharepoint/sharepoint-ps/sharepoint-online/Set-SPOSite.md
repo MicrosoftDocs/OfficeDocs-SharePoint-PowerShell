@@ -25,7 +25,7 @@ Set-SPOSite
  [-AddRestrictedAccessControlGroups [Guid[]]]
  [-AllowDownloadingNonWebViewableFiles <Boolean>]
  [-AllowEditing <Boolean>]
- [-AllowFileArchive <Boolean>] 
+ [-AllowFileArchive <Boolean>]
  [-AllowSelfServiceUpgrade <Boolean>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>]
  [-AnonymousLinkExpirationInDays <Int32>]
