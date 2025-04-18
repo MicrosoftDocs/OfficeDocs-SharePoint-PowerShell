@@ -27,7 +27,7 @@ Get-SPOCrossTenantCompatibilityStatus -PartnerCrossTenantHostUrl <String> [<Comm
 This cmdlet allows you to determine the compatibility with the partner tenant before cross-tenant migration. You must be a SharePoint Administrator to run it. 
 
 > [!NOTE]
-> You must run this command on the Source tenant only.
+> You must run this command on the source tenant only.
 
 ## EXAMPLES
 
