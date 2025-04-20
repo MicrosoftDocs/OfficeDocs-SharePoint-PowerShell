@@ -21,6 +21,7 @@
     },
     "redirections": {
         "packageRoot": "redirections",
+        "referenceTocUrl": "/powershell/module/sharepoint-online/toc.json",
         "redirection1": {
             "source_path": "/powershell/module/sharepoint-online/add-spoappprioritizationpolicy",
             "redirect_url": "/powershell/module/sharepoint-online/overview",
