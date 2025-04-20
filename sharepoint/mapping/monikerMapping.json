@@ -10,37 +10,13 @@
             "sharepoint-pnp": {}
         }
     },
-    "sharepoint-server-ps": {
-        "conceptualToc": "docs-conceptual/toc.yml",
-        "conceptualTocUrl": "/powershell/sharepoint/toc.json",
-        "referenceTocUrl": "/powershell/module/sharepoint-ps/toc.json",
-        "packageRoot": "sharepoint-server-ps",
-        "modules": {
-            "sharepoint-server": {}
-        }
-    },
-    "redirections": {
-        "packageRoot": "redirections",
-        "referenceTocUrl": "/powershell/module/sharepoint-online/toc.json",
-        "redirection1": {
-            "source_path": "/powershell/module/sharepoint-online/add-spoappprioritizationpolicy",
-            "redirect_url": "/powershell/module/sharepoint-online/overview",
-            "redirect_document_id": false
-        },
-        "redirection2": {
-            "source_path": "/powershell/module/sharepoint-online/get-spoappprioritizationpolicies",
-            "redirect_url": "/powershell/module/sharepoint-online/overview",
-            "redirect_document_id": false
-        },
-        "redirection3": {
-            "source_path": "/powershell/module/sharepoint-online/remove-spoappprioritizationpolicy",
-            "redirect_url": "/powershell/module/sharepoint-online/overview",
-            "redirect_document_id": false
-        },
-        "redirection4": {
-            "source_path": "/powershell/module/sharepoint-online/set-spoappprioritizationpolicy",
-            "redirect_url": "/powershell/module/sharepoint-online/overview",
-            "redirect_document_id": false
-        }
-    }
+        "sharepoint-server-ps": {
+            "conceptualToc": "docs-conceptual/toc.yml",
+            "conceptualTocUrl": "/powershell/sharepoint/toc.json",
+            "referenceTocUrl": "/powershell/module/sharepoint-ps/toc.json",
+            "packageRoot": "sharepoint-server-ps",
+            "modules": {
+                "sharepoint-server": {}
+            }
+    }   
 }
