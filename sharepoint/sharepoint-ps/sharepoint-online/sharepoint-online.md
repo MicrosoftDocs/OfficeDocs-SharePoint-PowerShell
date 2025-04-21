@@ -15,6 +15,10 @@ The following cmdlet references are for SharePoint Online.
 
 ## sharepoint-online Cmdlets
 
+### [Add-SPOAppPrioritizationPolicy](Add-SPOAppPrioritizationPolicy.md)
+
+{{Adds a new SPO app prioritization policy to your tenancy.}}
+
 ### [Add-SPOContainerTypeBilling](Add-SPOContainerTypeBilling.md)
 
 {{Adds a Azure billing subscription to a new standard billed container type.}}
@@ -106,6 +110,10 @@ The following cmdlet references are for SharePoint Online.
 ### [Get-SPOAppInfo](Get-SPOAppInfo.md)
 
 {{Manually Enter Get-SPOAppInfo Description Here}}
+
+### [Get-SPOAppPrioritizationPolicies](Get-SPOAppPrioritizationPolicies.md)
+
+{{Gets all existing SPO app prioritization policies of your tenancy}}
 
 ### [Get-SPOBuiltInFontPackageSettings](Get-SPOBuiltInFontPackageSettings.md)
 
@@ -420,6 +428,10 @@ This cmdlet is not currently active in production and may be removed in the futu
 
 {{Manually Enter Register-SPOHubSite Description Here}}
 
+### [Remove-SPOAppPrioritizationPolicy](Remove-SPOAppPrioritizationPolicy.md)
+
+{{Deletes an existing SPO app prioritization policy in your tenancy.}}
+
 ### [Remove-SPODataConnectionSetting](Remove-SPODataConnectionSetting.md)
 
 {{Manually Enter Remove-SPODataConnectionSetting Description Here}}
@@ -544,6 +556,10 @@ This cmdlet is not currently active in production and may be removed in the futu
 
 {{Manually Enter Revoke-SPOUserSession Description Here}}
 
+### [Set-SPOAppPrioritizationPolicy](Set-SPOAppPrioritizationPolicy.md)
+
+{{Edits an existing SPO app prioritization policy in your tenancy. }}
+
 ### [Set-SPOBuiltInFontPackageSettings](Set-SPOBuiltInFontPackageSettings.md)
 
 {{Sets settings of built-in font packages.}}
@@ -652,6 +668,10 @@ This cmdlet is not currently active in production and may be removed in the futu
 
 {{Manually Enter Set-SPOUser Description Here}}
 
+### [Start-SPOAuditDataCollectionForActivityInsights](Start-SPOAuditDataCollectionForActivityInsights.md)
+
+{{Starts collecting audit data for reports on activities from the last 28 days.}}
+
 ### [Start-SPOCopilotAgentInsightsReport](Start-SPOCopilotAgentInsightsReport.md)
 
 {{Triggers the build of a new Copilot agent insight report for the specified number of days.}}
@@ -660,9 +680,17 @@ This cmdlet is not currently active in production and may be removed in the futu
 
 {{Manually Enter Start-SPOSiteContentMove Description Here}}
 
+### [Start-SPOSiteOpticalCharacterRecognitionBackfill](Start-SPOSiteOpticalCharacterRecognitionBackfill.md)
+
+{{Initiates a job to trigger the Optical Character Recognition (OCR) process for all files for the selected site.}}
+
 ### [Start-SPOUserAndContentMove](Start-SPOUserAndContentMove.md)
 
 {{Manually Enter Start-SPOUserAndContentMove Description Here}}
+
+### [Stop-SPOAuditDataCollectionForActivityInsights](Stop-SPOAuditDataCollectionForActivityInsights.md)
+
+{{Stops collecting audit data for reports on activities from the last 28 days.}}
 
 ### [Stop-SPOUserAndContentMove](Stop-SPOUserAndContentMove.md)
 

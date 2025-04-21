@@ -38,6 +38,7 @@ Set-SPOTenant
  [-AllowSharingOutsideRestrictedAccessControlGroups <Boolean>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>]
  [-AnyoneLinkTrackUsers <Boolean>]
+ [-AppAccessInformationBarriersAllowList [String[]]]
  [-AppBypassInformationBarriers <Boolean>]
  [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-AutofillColumnScope <SyntexFeatureScopeValue>]
@@ -87,6 +88,7 @@ Set-SPOTenant
  [-DisableModernListTemplateIds [Guid[]]]
  [-DisableOutlookPSTVersionTrimming <Boolean>]
  [-DisablePersonalListCreation <Boolean>]
+ [-DisableSharePointStoreAccess <Boolean>]
  [-DisableSpacesActivation <Boolean>]
  [-DisableVivaConnectionsAnalytics <Boolean>]
  [-DisableWorkflow2010 <Boolean>]
@@ -1186,6 +1188,24 @@ Accept wildcard characters: False
 Prevents the Download button from being displayed on the Virus Found warning page.
 
 Accepts a value of true (enabled) to hide the Download button or false (disabled) to display the Download button. By default this feature is set to false.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableSharePointStoreAccess
+
+This feature allows the SharePoint Administrators to disable SharePoint Store access for all users in the tenant.
+
+Accepts a value of true (enabled) to hide the SharePoint app store or false (disabled) to show the SharePoint app store. By default this feature is set to false.
 
 ```yaml
 Type: Boolean
@@ -4372,6 +4392,24 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -AppAccessInformationBarriersAllowList
+
+Gets or sets the list of third-party application IDs (GUIDs) that are allowed to access information barriers protected sites and OneDrive accounts in the tenant. 
+Note: The feature associated with this cmdlet will be rolling out soon.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ## RELATED LINKS
 
