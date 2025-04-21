@@ -18,8 +18,6 @@ This cmdlet creates a new container type of standard or trial status. The standa
 
 ## SYNTAX
 
-### ParamSet1
-
 ```powershell
 New-SPOContainerType [-ContainerTypeName] <String> -OwningApplicationId <Guid> [-ApplicationRedirectUrl <String>] [-TrialContainerType] [-IsPassThroughBilling] [-IsGovernableByAdmin <Boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -69,6 +67,23 @@ In Example 4, the cmdlet creates a standard container type, ContosoLegal that ha
 
 ## PARAMETERS
 
+### -ApplicationRedirectUrl
+
+This parameter specifies the url of that the application should be redirected to. 
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ContainerTypeName
 
 This parameter names your container type for your SharePoint Embedded application.
@@ -81,6 +96,40 @@ Applicable: SharePoint Online
 
 Required: True
 Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+###  –GovernableByAdmin
+
+Using `-GovernableByAdmin`, you can decide whether consuming tenant administrators of the application should be provided management capabilities on Microsoft-enabled administrator support, through SharePoint admin center and PowerShell. When not passed, the value is set to Ture. When set to False, the consuming tenant administrator can perform only read-only actions on containers of the container type, in both SharePoint admin center and PowerShell.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+###  –IsPassThroughBilling
+
+This parameter is used to create a direct to customer billed container type.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -121,39 +170,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-###  –IsPassThroughBilling
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
-This parameter is used to create a direct to customer billed container type.
 
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-###  –GovernableByAdmin
-
-Using `-GovernableByAdmin`, you can decide whether consuming tenant administrators of the application should be provided management capabilities on Microsoft-enabled administrator support, through SharePoint admin center and PowerShell. When not passed, the value is set to Ture. When set to False, the consuming tenant administrator can perform only read-only actions on containers of the container type, in both SharePoint admin center and PowerShell.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ## RELATED LINKS
 
