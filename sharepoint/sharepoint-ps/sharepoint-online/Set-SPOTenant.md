@@ -73,8 +73,7 @@ Set-SPOTenant
  [-DefaultContentCenterSite <String>]
  [-DefaultLinkPermission <SharingPermissionType>]
  [-DefaultOneDriveInformationBarrierMode <String>]
- [-DefaultSharingLinkType <SharingLinkType>]
- [-DelayDenyAddAndCustomizePagesEnforcement <Boolean>]
+ [-DefaultSharingLinkType <SharingLinkType>] 
  [-DelayDenyAddAndCustomizePagesEnforcementOnClassicPublishingSites <Boolean>]
  [-DelegateRestrictedAccessControlManagement <Boolean>]
  [-DelegateRestrictedContentDiscoverabilityManagement <Boolean>]
@@ -3013,31 +3012,6 @@ Accept wildcard characters: False
 Enables or disables the mass delete detection feature. When MassDeleteNotificationDisabled is set to $true, tenant admins can perform mass deletion operations without triggering notifications.
 
 PARAMVALUE: True | False
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DelayDenyAddAndCustomizePagesEnforcement
-
-This parameter controls how SharePoint will deal with sites where custom scripts are allowed.
-
-The valid values are:
-
-* False (default) - for site collections where administrators enabled the ability to add custom script, SharePoint will revoke that ability within 24 hours from the last time this setting was changed.
-* True - All changes performed by administrators to custom script settings are preserved.
-
-> [!NOTE]
-> This setting affects all sites. There are no options to preserve changes to custom script settings only on some specific sites. This parameter will be available until November 2024. After that time, administrators can still allow custom scripts on specific sites, but that change will be revoked automatically after up to 24 hours.
-For more information, see [Allow or prevent custom script](/sharepoint/allow-or-prevent-custom-script).
 
 ```yaml
 Type: Boolean
