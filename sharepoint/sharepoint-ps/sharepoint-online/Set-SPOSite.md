@@ -27,6 +27,7 @@ Set-SPOSite
  [-AllowEditing <Boolean>]
  [-AllowFileArchive <Boolean>]
  [-AllowSelfServiceUpgrade <Boolean>]
+ [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>]
  [-AnonymousLinkExpirationInDays <Int32>]
  [-AuthenticationContextAccessType <SPOAuthenticationContextPolicyAccessType>]
  [-AuthenticationContextName <String>]
@@ -359,6 +360,22 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled
+Enables or disables web property bag updates. When `AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled` is set to `$true`, the web property bag can be updated even if the Add And Customize Pages right is denied on the site collection.
+
+PARAMVALUE: True | False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
