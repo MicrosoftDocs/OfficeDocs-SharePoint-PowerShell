@@ -365,7 +365,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled
-Enables or disables web property bag updates. When AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled is set to $true, the web property bag can be updated even if the Add And Customize Pages right is denied on the site collection.
+Enables or disables web property bag updates. When `AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled` is set to `$true`, the web property bag can be updated even if the Add And Customize Pages right is denied on the site collection.
 
 PARAMVALUE: True | False
 
