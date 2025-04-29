@@ -1,6 +1,7 @@
 ---
 ms.author: jtremper
 title: Get started with the SharePoint Online Management Shell
+description:  Get started with the SharePoint Online Management Shell
 ---
 
 # Get started with SharePoint Online Management Shell #
