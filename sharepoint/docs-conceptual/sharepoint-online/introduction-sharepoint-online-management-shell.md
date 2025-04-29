@@ -1,4 +1,5 @@
 ---
+ms.author: jtremper
 title: Intro to SharePoint Online Management Shell
 description: Intro to SharePoint Online Management Shell
 ---
