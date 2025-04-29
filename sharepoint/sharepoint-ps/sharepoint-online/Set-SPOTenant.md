@@ -775,8 +775,7 @@ The valid values are:
 - True (default) - The Shared with Everyone folder is created.  
 - False - No folder is created when the site and OneDrive for Business document library is created.
 
-The default behavior of the Shared with Everyone folder changed in August 2015.  
-For additional information about the change, see [Provision the Shared with Everyone folder in OneDrive for Business](https://support.office.com/article/Provision-the-Shared-with-Everyone-folder-in-OneDrive-for-Business-6bb02c91-fd0b-42ba-9457-3921cb6dc5b2).
+The default behavior of the Shared with Everyone folder changed in August 2015.
 
 ```yaml
 Type: Boolean
