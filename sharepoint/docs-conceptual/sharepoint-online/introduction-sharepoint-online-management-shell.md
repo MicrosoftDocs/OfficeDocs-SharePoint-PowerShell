@@ -1,5 +1,6 @@
 ---
-ms.author: jtremper
+manager: mengkel
+ms.author: samkabue
 title: Intro to SharePoint Online Management Shell
 description: Intro to SharePoint Online Management Shell
 ---
