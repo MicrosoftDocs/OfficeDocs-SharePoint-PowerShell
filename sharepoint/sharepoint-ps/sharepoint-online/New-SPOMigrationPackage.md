@@ -223,7 +223,7 @@ Accept wildcard characters: False
 
 ### -TargetWebUrl
 
-The fully qualified web URL to use as the web address part of the base URL in the package metadata. If this is not provided, "<http://fileserver/sites/user"> will be used instead within the package metadata.
+The fully qualified web URL to use as the web address part of the base URL in the package metadata. If this is not provided, "<`http://fileserver/sites/user`>" will be used instead within the package metadata.
 
 ```yaml
 Type: String
