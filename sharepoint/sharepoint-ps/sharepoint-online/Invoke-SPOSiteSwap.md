@@ -5,8 +5,8 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
 title: Invoke-SPOSiteSwap
 schema: 2.0.0
-author: WayneEwington
-ms.author: waynewin
+author: DivyaSrungaram
+ms.author: divyasru
 ms.reviewer:
 ---
 
