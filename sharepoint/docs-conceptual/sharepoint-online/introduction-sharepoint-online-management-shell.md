@@ -34,4 +34,4 @@ After you get familiar with SharePoint sites and users, try using SharePoint Onl
 
 ## How do I get permissions and set up the environment?
 
-To use SharePoint Online PowerShell commands, you must be a SharePoint admin in your organization. For info about installing the SharePoint Online Management Shell module and connecting to the SharePoint Online service, see [Get started with SharePoint Online Management Shell](connect-sharepoint-online.md)
+To use SharePoint Online PowerShell commands, you must be a SharePoint admin in your organization. For info about installing the SharePoint Online Management Shell module and connecting to the SharePoint Online service, see [Get started with SharePoint Online Management Shell](connect-sharepoint-online.md).
