@@ -23,7 +23,7 @@ Get-SPOCopilotPromoUsage
 
 ## DESCRIPTION
 
-This cmdlet retrieves the number of SharePoint Agent promotion queries used by the tenant each month. 
+This cmdlet retrieves the number of SharePoint Agent promotion queries used by the tenant each month, starting the month tenant qualified for trial. 
 It provides a monthly breakdown of query usage, helping admins track consumption of the promotion queries over time. 
 
 ## EXAMPLES

@@ -73,8 +73,8 @@ Set-SPOTenant
  [-DefaultContentCenterSite <String>]
  [-DefaultLinkPermission <SharingPermissionType>]
  [-DefaultOneDriveInformationBarrierMode <String>]
- [-DefaultSharingLinkType <SharingLinkType>]
- [-DelayDenyAddAndCustomizePagesEnforcement <Boolean>]
+ [-DefaultSharingLinkType <SharingLinkType>] 
+ [-DelayDenyAddAndCustomizePagesEnforcementOnClassicPublishingSites <Boolean>]
  [-DelegateRestrictedAccessControlManagement <Boolean>]
  [-DelegateRestrictedContentDiscoverabilityManagement <Boolean>]
  [-DenySelectSecurityGroupsInSPSitesList [String[]]]
@@ -775,8 +775,7 @@ The valid values are:
 - True (default) - The Shared with Everyone folder is created.  
 - False - No folder is created when the site and OneDrive for Business document library is created.
 
-The default behavior of the Shared with Everyone folder changed in August 2015.  
-For additional information about the change, see [Provision the Shared with Everyone folder in OneDrive for Business](https://support.office.com/article/Provision-the-Shared-with-Everyone-folder-in-OneDrive-for-Business-6bb02c91-fd0b-42ba-9457-3921cb6dc5b2).
+The default behavior of the Shared with Everyone folder changed in August 2015.
 
 ```yaml
 Type: Boolean
@@ -3025,18 +3024,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DelayDenyAddAndCustomizePagesEnforcement
+### -DelayDenyAddAndCustomizePagesEnforcementOnClassicPublishingSites
 
-This parameter controls how SharePoint will deal with sites where custom scripts are allowed.
+This parameter controls how SharePoint will deal with classic publishing sites (templates BLANKINTERNETCONTAINER#0, CMSPUBLISHING#0 and BLANKINTERNET#0) where custom scripts are allowed.
 
 The valid values are:
 
-* False (default) - for site collections where administrators enabled the ability to add custom script, SharePoint will revoke that ability within 24 hours from the last time this setting was changed.
+* False (default) - for classic publishing site collections where administrators enabled the ability to add custom script, SharePoint will revoke that ability within 24 hours from the last time this setting was changed.
 * True - All changes performed by administrators to custom script settings are preserved.
 
 > [!NOTE]
-> This setting affects all sites. There are no options to preserve changes to custom script settings only on some specific sites. This parameter will be available until November 2024. After that time, administrators can still allow custom scripts on specific sites, but that change will be revoked automatically after up to 24 hours.
-For more information, see [Allow or prevent custom script](/sharepoint/allow-or-prevent-custom-script).
+> This setting affects all classic publishing sites (templates BLANKINTERNETCONTAINER#0, CMSPUBLISHING#0 and BLANKINTERNET#0). There are no options to preserve changes to custom script settings only on some specific sites.
 
 ```yaml
 Type: Boolean
@@ -3768,8 +3766,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled
-Enables or disables web property bag update when DenyAddAndCustomizePages is enabled. When AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled is set to $true, web property bag can be updated even if DenyAddAndCustomizePages is turned on when the user had AddAndCustomizePages (prior to DenyAddAndCustomizePages removing it).
-
+Enables or disables web property bag updates in all sites in the tenant. When `AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled` is set to `$true`, the web property bag can be updated even if the Add And Customize Pages right is denied on a site collection.
 PARAMVALUE: True | False
 
 ```yaml

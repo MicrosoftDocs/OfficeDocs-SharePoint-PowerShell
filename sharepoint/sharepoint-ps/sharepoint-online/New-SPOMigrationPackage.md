@@ -14,7 +14,8 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-**Note**: This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](https://learn.microsoft.com/sharepointmigration/overview-spmt-ps-cmdlets).
+> [!NOTE]
+> This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](https://learn.microsoft.com/sharepointmigration/overview-spmt-ps-cmdlets).
 
 Cmdlet to create a new migration package based on source files in a local or network shared folder.
 
@@ -223,7 +224,7 @@ Accept wildcard characters: False
 
 ### -TargetWebUrl
 
-The fully qualified web URL to use as the web address part of the base URL in the package metadata. If this is not provided, "<http://fileserver/sites/user"> will be used instead within the package metadata.
+The fully qualified web URL to use as the web address part of the base URL in the package metadata. If this is not provided, "`http://fileserver/sites/user`" will be used instead within the package metadata.
 
 ```yaml
 Type: String
