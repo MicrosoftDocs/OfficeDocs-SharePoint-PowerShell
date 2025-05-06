@@ -71,7 +71,6 @@ Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb
 ```
 
 Example 5 overrides the tenant-level `WhoCanShareAuthenticatedGuestAllowList` with a null value, while leaving the `WhoCanShareAnonymousAllowList` untouched. This has the effect of no longer restricting the privilege of sharing to authenticated guests to members of specific security groups.
->>>>>>> main
 
 ## PARAMETERS
 
