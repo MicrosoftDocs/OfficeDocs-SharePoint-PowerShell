@@ -22,8 +22,6 @@ Set-SPOContainerTypeConfiguration -ContainerTypeId <Guid> [-DiscoverabilityDisab
  [-SharingRestricted <Boolean>] [-ApplicationRedirectUrl <String>] [-WhoCanShareAnonymousAllowList <Guid[]>]
  [-WhoCanShareAuthenticatedGuestAllowList <Guid[]>] [-OverrideTenantWhoCanShareAnonymousAllowList <Boolean>]
  [-OverrideTenantWhoCanShareAuthenticatedGuestAllowList <Boolean>]
- [[-CopilotEmbeddedChatHosts] <System.Collections.Generic.List`1[System.String]>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,12 +48,6 @@ Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb
 
 Example 2 turns on an open sharing model for this container type. Any container members and guest users with edit permissions can share files created within the container type.
 
-### Example 3
-
-```powershell
-Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585 -CopilotEmbeddedChatHosts "http://localhost:3000 https://contoso.sharepoint.com https://fabrikam.com" 
-```
-This example sets the host URLs for the container type with Id 4f0af585.
 
 ## PARAMETERS
 
@@ -118,21 +110,6 @@ Aliases:
 
 Required: True
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CopilotEmbeddedChatHosts
-This parameter is used to add host URLs allowed to use the SharePoint Embedded application's declarative agent experience. 
-
-```yaml
-Type: System.Collections.Generic.List`1[System.String]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -218,8 +195,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## RELATED LINKS
 
