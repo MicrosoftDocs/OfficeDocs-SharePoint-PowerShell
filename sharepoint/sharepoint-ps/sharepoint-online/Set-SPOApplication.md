@@ -83,7 +83,7 @@ This example sets the host URLs for the application with Id 423poi45.
 
 ### -CopilotEmbeddedChatHosts
 
-This parameter is used to add host URLs allowed to use the SharePoint Embedded application's declarative agent experience. This will always be a subset of permissible URLs set by the application's developer. To check the list of permissible URLs, use the `Get-SPOApplication` cmdlet. 
+This parameter is used to add host URLs allowed to use the SharePoint Embedded application's declarative agent experience. These URLs must always be a subset of the permissible URLs defined by the application's developer. To view the list of permissible URLs, use the `Get-SPOApplication` cmdlet.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
