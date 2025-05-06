@@ -38,6 +38,7 @@ Set-SPOTenant
  [-AllowSharingOutsideRestrictedAccessControlGroups <Boolean>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>]
  [-AnyoneLinkTrackUsers <Boolean>]
+ [-AppAccessInformationBarriersAllowList [String[]]]
  [-AppBypassInformationBarriers <Boolean>]
  [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>]
  [-AutofillColumnScope <SyntexFeatureScopeValue>]
@@ -72,8 +73,8 @@ Set-SPOTenant
  [-DefaultContentCenterSite <String>]
  [-DefaultLinkPermission <SharingPermissionType>]
  [-DefaultOneDriveInformationBarrierMode <String>]
- [-DefaultSharingLinkType <SharingLinkType>]
- [-DelayDenyAddAndCustomizePagesEnforcement <Boolean>]
+ [-DefaultSharingLinkType <SharingLinkType>] 
+ [-DelayDenyAddAndCustomizePagesEnforcementOnClassicPublishingSites <Boolean>]
  [-DelegateRestrictedAccessControlManagement <Boolean>]
  [-DelegateRestrictedContentDiscoverabilityManagement <Boolean>]
  [-DenySelectSecurityGroupsInSPSitesList [String[]]]
@@ -87,6 +88,7 @@ Set-SPOTenant
  [-DisableModernListTemplateIds [Guid[]]]
  [-DisableOutlookPSTVersionTrimming <Boolean>]
  [-DisablePersonalListCreation <Boolean>]
+ [-DisableSharePointStoreAccess <Boolean>]
  [-DisableSpacesActivation <Boolean>]
  [-DisableVivaConnectionsAnalytics <Boolean>]
  [-DisableWorkflow2010 <Boolean>]
@@ -114,6 +116,7 @@ Set-SPOTenant
  [-EnableSensitivityLabelforPDF <Boolean>]
  [-EnableVersionExpirationSetting <Boolean>]
  [-EnforceContentSecurityPolicy <Boolean>]
+ [-EnforceRequestDigest <Boolean>]
  [-ExcludedBlockDownloadGroupIds [Guid[]]]
  [-ExcludeSiteTemplate <SwitchParameter>]
  [-ExemptNativeUsersFromTenantLevelRestricedAccessControl <Boolean>]
@@ -137,6 +140,7 @@ Set-SPOTenant
  [-IsEnableAppAuthPopUpEnabled <Boolean>]
  [-IsLoopEnabled <Boolean>]
  [-IsSharePointAddInsDisabled <Boolean>]
+ [-IsSharePointAddInsBlocked <Boolean>]
  [-IsWBFluidEnabled <Boolean>]
  [-LabelMismatchEmailHelpLink <String>]
  [-LegacyAuthProtocolsEnabled <Boolean>]
@@ -771,8 +775,7 @@ The valid values are:
 - True (default) - The Shared with Everyone folder is created.  
 - False - No folder is created when the site and OneDrive for Business document library is created.
 
-The default behavior of the Shared with Everyone folder changed in August 2015.  
-For additional information about the change, see [Provision the Shared with Everyone folder in OneDrive for Business](https://support.office.com/article/Provision-the-Shared-with-Everyone-folder-in-OneDrive-for-Business-6bb02c91-fd0b-42ba-9457-3921cb6dc5b2).
+The default behavior of the Shared with Everyone folder changed in August 2015.
 
 ```yaml
 Type: Boolean
@@ -1197,6 +1200,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisableSharePointStoreAccess
+
+This feature allows the SharePoint Administrators to disable SharePoint Store access for all users in the tenant.
+
+Accepts a value of true (enabled) to hide the SharePoint app store or false (disabled) to show the SharePoint app store. By default this feature is set to false.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisableCustomAppAuthentication
 
 Prevents apps using an Azure Access Control (ACS) app-only access token to access SharePoint. ACS, a service of Microsoft Entra ID, has been retired on November 7, 2018. This retirement does not impact the SharePoint add-in model, which uses the https://accounts.accesscontrol.windows.net hostname (which is not impacted by this retirement). For new tenants, apps using an ACS app-only access token are disabled by default. We recommend using the Microsoft Entra app-only model which is modern and more secure. Note that marking this property to $true doesn't prevent creating apps in SharePoint that use an Azure Access Control (ACS) app-only access token. Marking this property to $true only ensures that such apps can't access SharePoint anymore.
@@ -1223,6 +1244,27 @@ The valid values are:
 
 - False (default) - All the add-ins features are supported.  
 - True - All the add-ins features will be disabled.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsSharePointAddInsBlocked
+
+When this feature is enabled, all functionalities of the add-ins will be restricted, preventing them from running or installing.
+
+The valid values are:  
+
+- False (default) - All the add-ins features are supported.  
+- True - All the add-ins features will be blocked.
 
 ```yaml
 Type: Boolean
@@ -2982,18 +3024,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DelayDenyAddAndCustomizePagesEnforcement
+### -DelayDenyAddAndCustomizePagesEnforcementOnClassicPublishingSites
 
-This parameter controls how SharePoint will deal with sites where custom scripts are allowed.
+This parameter controls how SharePoint will deal with classic publishing sites (templates BLANKINTERNETCONTAINER#0, CMSPUBLISHING#0 and BLANKINTERNET#0) where custom scripts are allowed.
 
 The valid values are:
 
-* False (default) - for site collections where administrators enabled the ability to add custom script, SharePoint will revoke that ability within 24 hours from the last time this setting was changed.
+* False (default) - for classic publishing site collections where administrators enabled the ability to add custom script, SharePoint will revoke that ability within 24 hours from the last time this setting was changed.
 * True - All changes performed by administrators to custom script settings are preserved.
 
 > [!NOTE]
-> This setting affects all sites. There are no options to preserve changes to custom script settings only on some specific sites. This parameter will be available until November 2024. After that time, administrators can still allow custom scripts on specific sites, but that change will be revoked automatically after up to 24 hours.
-For more information, see [Allow or prevent custom script](/sharepoint/allow-or-prevent-custom-script).
+> This setting affects all classic publishing sites (templates BLANKINTERNETCONTAINER#0, CMSPUBLISHING#0 and BLANKINTERNET#0). There are no options to preserve changes to custom script settings only on some specific sites.
 
 ```yaml
 Type: Boolean
@@ -3246,6 +3287,23 @@ Accept wildcard characters: False
 
 When set to `True` **Content Security Policy** violations will be enforced.
 In multi-geo environments, **Content Security Policy** configuration is unique to each geo.
+
+PARAMVALUE: True | False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnforceRequestDigest
+
+When set to `True` a valid request digest is required on SOAP API calls that perform a state-changing operation.
 
 PARAMVALUE: True | False
 
@@ -3708,8 +3766,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled
-Enables or disables web property bag update when DenyAddAndCustomizePages is enabled. When AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled is set to $true, web property bag can be updated even if DenyAddAndCustomizePages is turned on when the user had AddAndCustomizePages (prior to DenyAddAndCustomizePages removing it).
-
+Enables or disables web property bag updates in all sites in the tenant. When `AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled` is set to `$true`, the web property bag can be updated even if the Add And Customize Pages right is denied on a site collection.
 PARAMVALUE: True | False
 
 ```yaml
@@ -3726,6 +3783,9 @@ Accept wildcard characters: False
 ### -WhoCanShareAnonymousAllowList 
 
 Sets the list of security groups who are allowed to share with anonymous (non-authenticated) users as well as authenticated guest users. Each security group is denoted by its GUID object ID in the Entra directory. 
+
+> [!NOTE]
+> This allow list only accepts security groups, and not Microsoft 365 Groups.
 
 To set this list to be a specific security group, you need to enter its GUID as the argument. You can enter multiple GUIDs by using commas to separate them. To view the current list, use [./Get-SPOTenant.md](Get-SPOTenant.md). 
 
@@ -3744,6 +3804,9 @@ Accept wildcard characters: False
 ### -WhoCanShareAuthenticatedGuestAllowList 
 
 Sets the list of security groups who are only allowed to share with authenticated guest users. Each security group is denoted by its GUID object ID. 
+
+> [!NOTE]
+> This allow list only accepts security groups, and not Microsoft 365 Groups.
 
 To set this list to be a specific security group, you need to enter its GUID as the argument. You can enter multiple GUIDs by using commas to separate them. To view the current list, use [./Get-SPOTenant.md](Get-SPOTenant.md). 
 
@@ -4326,6 +4389,24 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -AppAccessInformationBarriersAllowList
+
+Gets or sets the list of third-party application IDs (GUIDs) that are allowed to access information barriers protected sites and OneDrive accounts in the tenant. 
+Note: The feature associated with this cmdlet will be rolling out soon.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ## RELATED LINKS
 

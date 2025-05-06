@@ -219,6 +219,82 @@ Accept wildcard characters: False
 ```
 
 
+### -WhoCanShareAnonymousAllowList 
+
+Sets a container type-specific list of security groups who are allowed to share with anonymous (non-authenticated) users as well as authenticated guest users. This must be set in conjunction with `OverrideTenantWhoCanShareAnonymousAllowList`.
+
+> [!NOTE]
+> This allow list only accepts security groups, and not Microsoft 365 Groups.
+
+Each security group is denoted by its GUID object ID. To set this list to be a specific security group, you need to enter its GUID as the parameter. You can enter multiple GUIDs by using a comma to separate them. To skip the check and allow all security groups to share to anyone, set this allow list and the `WhoCanShareAuthenticatedGuestAllowList` to null arrays. 
+
+```yaml
+Type: Guid[] 
+Parameter Sets: (All) 
+Aliases: 
+Applicable: SharePoint Online 
+Required: False 
+Position: Named 
+Default value: None 
+Accept pipeline input: False 
+Accept wildcard characters: False 
+```
+
+### WhoCanShareAuthenticatedGuestAllowList
+
+Sets a container type-specific list of security groups who are allowed to share with authenticated guest users at the container level. This must be set in conjunction with `OverrideTenantWhoCanShareAuthenticatedGuestAllowList`.
+
+> [!NOTE]
+> This allow list only accepts security groups, and not Microsoft 365 Groups.
+
+Each security group is denoted by its GUID object ID. To set this list to be a specific security group, you need to enter its GUID as the parameter. You can enter multiple GUIDs by using a comma to separate them. To skip the check and allow all security groups to share to authenticated guests, set this allow list to a null array.
+
+```yaml
+Type: Guid[] 
+Parameter Sets: (All) 
+Aliases: 
+Applicable: SharePoint Online 
+Required: False 
+Position: Named 
+Default value: None 
+Accept pipeline input: False 
+Accept wildcard characters: False 
+```
+
+### OverrideTenantWhoCanShareAnonymousAllowList
+
+This setting determines if the container type `WhoCanShareAnonymousAllowList` overrides the tenant-level `WhoCanShareAnonymousAllowList`. The default value for this parameter is false.
+
+PARAMVALUE: True | False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### OverrideTenantWhoCanShareAuthenticatedGuestAllowList
+
+This setting determines if the container type `WhoCanShareAuthenticatedGuestAllowList` overrides the tenant-level `WhoCanShareAuthenticatedGuestAllowList`. The default value for this parameter is false.
+
+PARAMVALUE: True | False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ## RELATED LINKS
 
 [Get-SPOContainerTypeConfiguration](Get-SPOContainerTypeConfiguration.md)
