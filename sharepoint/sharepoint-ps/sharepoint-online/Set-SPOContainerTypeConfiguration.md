@@ -48,6 +48,30 @@ Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb
 
 Example 2 turns on an open sharing model for this container type. Any container members and guest users with edit permissions can share files created within the container type.
 
+### Example 3
+
+```powershell
+Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -OverrideTenantWhoCanShareAnonymousAllowList $true -WhoCanShareAnonymousAllowList <guids> 
+```
+
+Example 3 overrides the tenant-level `WhoCanShareAnonymousAllowList`.
+
+### Example 4
+
+```powershell
+Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -OverrideTenantWhoCanShareAnonymousAllowList $true –WhoCanShareAnonymousAllowList $null -OverrideTenantWhoCanShareAuthenticatedGuestAllowList $true –WhoCanShareAuthenticatedGuestAllowList $null
+```
+
+Example 4 overrides the tenant-level `WhoCanShareAnonymousAllowList` and `WhoCanShareAuthenticatedGuestAllowList` with null values, which bypass the check. This has the effect of no longer restricting external sharing privileges to members of specific security groups.
+
+### Example 5
+
+```powershell
+Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -OverrideTenantWhoCanShareAuthenticatedGuestAllowList $true –WhoCanShareAuthenticatedGuestAllowList $null 
+```
+
+Example 5 overrides the tenant-level `WhoCanShareAuthenticatedGuestAllowList` with a null value, while leaving the `WhoCanShareAnonymousAllowList` untouched. This has the effect of no longer restricting the privilege of sharing to authenticated guests to members of specific security groups.
+>>>>>>> main
 
 ## PARAMETERS
 
