@@ -33,17 +33,17 @@
     {
       "source_path": "/powershell/module/sharepoint-online/Get-SPOAppPrioritizationPolicies.md",
       "redirect_url": "/powershell/module/sharepoint-online/Get-SPOServicePrioritizationAppRegistrations.md",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "/powershell/module/sharepoint-online//Remove-SPOAppPrioritizationPolicy.md",
       "redirect_url": "/powershell/module/sharepoint-online/Remove-SPOServicePrioritizationAppRegistration.md",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "/powershell/module/sharepoint-online//Set-SPOAppPrioritizationPolicy.md",
       "redirect_url": "/powershell/module/sharepoint-online/Set-SPOServicePrioritizationAppRegistration.md",
-      "redirect_document_id": false
+      "redirect_document_id": true
     }
   ]
 }
