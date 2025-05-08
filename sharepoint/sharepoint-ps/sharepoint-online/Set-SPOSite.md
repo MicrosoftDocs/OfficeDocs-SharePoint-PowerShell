@@ -71,6 +71,7 @@ Set-SPOSite
  [-RequestFilesLinkExpirationInDays <Int32>]
  [-ResourceQuotaWarningLevel <Double>]
  [-RestrictContentOrgWideSearch <Boolean>]
+ [-RestrictedContentDiscoveryforCopilotAndAgents <Boolean>]
  [-RestrictedAccessControl <Boolean>]
  [-RestrictedAccessControlGroups [Guid[]]]
  [-RestrictedToGeo <RestrictedToRegion>]
@@ -1799,6 +1800,22 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictedContentDiscoveryforCopilotAndAgents
+
+Sets or updates the site setting to host Agents by activating or deactivating the Restricted Content Discovery (RCD) for Agents. *Currently under private preview.*
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases:
+
 Required: False
 Position: Named
 Default value: None
