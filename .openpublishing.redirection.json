@@ -27,22 +27,22 @@
     },
     {
       "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Add-SPOAppPrioritizationPolicy.md",
-      "redirect_url": "/powershell/sharepoint/sharepoint-online/connect-sharepoint-online.md",
+      "redirect_url": "/sharepoint/sharepoint-ps/sharepoint-online/Add-SPOServicePrioritizationAppRegistration.md",
       "redirect_document_id": false
     },
     {
       "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOAppPrioritizationPolicies.md",
-      "redirect_url": "/powershell/sharepoint/sharepoint-online/connect-sharepoint-online.md",
+      "redirect_url": "/sharepoint/sharepoint-ps/sharepoint-online/Get-SPOServicePrioritizationAppRegistrations.md",
       "redirect_document_id": false
     },
     {
       "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOAppPrioritizationPolicy.md",
-      "redirect_url": "/powershell/sharepoint/sharepoint-online/connect-sharepoint-online.md",
+      "redirect_url": "/sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOServicePrioritizationAppRegistration.md",
       "redirect_document_id": false
     },
     {
       "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOAppPrioritizationPolicy.md",
-      "redirect_url": "/powershell/sharepoint/sharepoint-online/connect-sharepoint-online.md",
+      "redirect_url": "/sharepoint/sharepoint-ps/sharepoint-online/Set-SPOServicePrioritizationAppRegistration.md",
       "redirect_document_id": false
     }
   ]
