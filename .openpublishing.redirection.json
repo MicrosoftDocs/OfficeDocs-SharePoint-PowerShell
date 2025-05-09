@@ -26,22 +26,22 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "/powershell/module/sharepoint-online/add-spoappprioritizationpolicy.md",
+      "source_path": "powershell/module/sharepoint-online/add-spoappprioritizationpolicy.md",
       "redirect_url": "/powershell/sharepoint/sharepoint-online/connect-sharepoint-online.md",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powershell/module/sharepoint-online/Get-SPOAppPrioritizationPolicies.md",
+      "source_path": "powershell/module/sharepoint-online/Get-SPOAppPrioritizationPolicies.md",
       "redirect_url": "/powershell/sharepoint/sharepoint-online/connect-sharepoint-online.md",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powershell/module/sharepoint-online/Remove-SPOAppPrioritizationPolicy.md",
+      "source_path": "powershell/module/sharepoint-online/Remove-SPOAppPrioritizationPolicy.md",
       "redirect_url": "/powershell/sharepoint/sharepoint-online/connect-sharepoint-online.md",
       "redirect_document_id": false
     },
     {
-      "source_path": "/powershell/module/sharepoint-online/Set-SPOAppPrioritizationPolicy.md",
+      "source_path": "powershell/module/sharepoint-online/Set-SPOAppPrioritizationPolicy.md",
       "redirect_url": "/powershell/sharepoint/sharepoint-online/connect-sharepoint-online.md",
       "redirect_document_id": false
     }
