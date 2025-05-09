@@ -16,8 +16,7 @@ ms.reviewer:
 
 Deletes an existing SPO app prioritization policy in your tenancy.  
 > [!NOTE]
-> This functionality is rolling out and might not be fully enabled in your environment yet. 
-
+> New command is now : Remove-SPOServicePrioritizationAppRegistrations
 ## SYNTAX
 
 ```
@@ -41,14 +40,14 @@ Example 1 deletes the policy bearing the policyId 48abxxa9. Running the `Get-SPO
 ## PARAMETERS
 
 ### -PolicyId 
- 
+
 This parameter specifies the ID of policy.
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
- 
+
 Required: True
 Position: Named
 Default value: None
@@ -56,7 +55,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### CommonParameters
-
 This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## RELATED LINKS

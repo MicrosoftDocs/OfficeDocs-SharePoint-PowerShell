@@ -16,8 +16,7 @@ ms.reviewer:
 
 Adds a new SPO app prioritization Policy to your tenancy.
 > [!NOTE]
-> This functionality is rolling out and might not be fully enabled in your environment yet. 
-
+>  New command is now : Add-SPOServicePrioritizationAppRegistration
 ## SYNTAX
 
 ```
@@ -42,25 +41,22 @@ Example 1 adds the billing policy to your tenancy. It will not add the policy on
 ## PARAMETERS
 
 ### -AppId
- 
+
 This parameter specifies the app ID of the application to onboard.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
- 
+
 Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 ### -AzureSubscriptionId
-
 This parameter describes the Azure subscription ID to which the container type needs to be associated.
-
 ```yaml
 Type: Guid
 Parameter Sets: (All)
@@ -73,12 +69,8 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-
 ### -ResourceGroup
-
 This parameter describes the resource group to be used for the associated container type.
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -91,11 +83,8 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 ### -Account
-
 This parameter describes the account to which the billing profile of the container type is associated with.
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -111,13 +100,12 @@ Accept wildcard characters: False
 ### -QuotaMultiplier
  
 This parameter specifies the multiplier for the scaling feature. Value must be between 2 and 10.
-
 ```yaml
 Type: int
 Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
- 
+
 Required: True
 Position: Named
 Default value: None
@@ -125,7 +113,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### CommonParameters
-
 This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 
