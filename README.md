@@ -4,6 +4,8 @@
 
 Anyone who is interested can contribute to the topics. When you contribute, your work will go directly into the content set after being merged. It will then be published to [Microsoft Learn](https://learn.microsoft.com/) and you will be listed as a contributor at: <https://github.com/MicrosoftDocs/OfficeDocs-SharePoint-PowerShell/graphs/contributors>.
 
+If you get stuck and are a Microsoft employee or vendor, post a message to [Ask an Admin](https://aka.ms/askanadmin).
+
 ### Quickly update an article using GitHub.com
 
 Contributors who only make infrequent or small updates can edit the file directly on GitHub.com without having to install any additional software. This article shows you how. [This two-minute video](https://learn-video.azurefd.net/vod/player?id=b5167c5a-9c69-499b-99ac-e5467882bc92) also covers how to contribute.
