@@ -16,7 +16,7 @@ ms.reviewer:
 
 Adds a new SPO app prioritization Policy to your tenancy.
 > [!NOTE]
-> This functionality is rolling out and might not be fully enabled in your environment yet. 
+>  New command is now : Add-SPOServicePrioritizationAppRegistration
 ## SYNTAX
 
 ```

@@ -16,7 +16,7 @@ ms.reviewer:
 
 Gets all existing SPO app prioritization policies of your tenancy. 
 > [!NOTE]
-> This functionality is rolling out and might not be fully enabled in your environment yet. 
+> New command is now : Get-SPOServicePrioritizationAppRegistrations
 ## SYNTAX
 
 ```
