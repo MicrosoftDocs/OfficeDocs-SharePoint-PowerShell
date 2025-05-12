@@ -5,8 +5,8 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
 title: Set-SPOContainerTypeConfiguration
 schema: 2.0.0
-author: FarreltinF
-ms.author: fanyi
+author: ShreyasSar26
+ms.author: shsaravanan
 ms.reviewer:
 ---
 
@@ -22,13 +22,15 @@ Set-SPOContainerTypeConfiguration -ContainerTypeId <Guid> [-DiscoverabilityDisab
  [-SharingRestricted <Boolean>] [-ApplicationRedirectUrl <String>] [-WhoCanShareAnonymousAllowList <Guid[]>]
  [-WhoCanShareAuthenticatedGuestAllowList <Guid[]>] [-OverrideTenantWhoCanShareAnonymousAllowList <Boolean>]
  [-OverrideTenantWhoCanShareAuthenticatedGuestAllowList <Boolean>]
+ [[-CopilotEmbeddedChatHosts] <System.Collections.Generic.List`1[System.String]>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 For any parameters passed in, the `Set-SPOContainerTypeConfiguration` cmdlet sets or updates the settings for a container type created under a SharePoint Embedded application.
 
-You must be a SharePoint Administrator or Global Administrator to run this cmdlet.
+You must be a SharePoint Embedded Administrator to run this cmdlet. 
 
 ## EXAMPLES
 
@@ -72,6 +74,13 @@ Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb
 
 Example 5 overrides the tenant-level `WhoCanShareAuthenticatedGuestAllowList` with a null value, while leaving the `WhoCanShareAnonymousAllowList` untouched. This has the effect of no longer restricting the privilege of sharing to authenticated guests to members of specific security groups.
 
+### Example 6
+
+```powershell
+Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585 -CopilotEmbeddedChatHosts "http://localhost:3000 https://contoso.sharepoint.com https://fabrikam.com" 
+```
+This example sets the host URLs for the container type with Id 4f0af585.
+
 ## PARAMETERS
 
 ### -DiscoverabilityDisabled
@@ -106,6 +115,131 @@ Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### -ApplicationRedirectUrl
+
+This parameter specifies the url of that the application should be redirected to. 
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContainerTypeId
+
+This parameter specifies the ID of the container type corresponding to the SharePoint Embedded application.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -CopilotEmbeddedChatHosts
+This parameter is used to add host URLs allowed to use the SharePoint Embedded application's declarative agent experience. 
+
+```yaml
+Type: System.Collections.Generic.List`1[System.String]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OverrideTenantWhoCanShareAnonymousAllowList
+
+This setting determines if the container type `WhoCanShareAnonymousAllowList` overrides the tenant-level `WhoCanShareAnonymousAllowList`. The default value for this parameter is false.
+
+PARAMVALUE: True | False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OverrideTenantWhoCanShareAuthenticatedGuestAllowList
+
+This setting determines if the container type `WhoCanShareAuthenticatedGuestAllowList` overrides the tenant-level `WhoCanShareAuthenticatedGuestAllowList`. The default value for this parameter is false.
+
+PARAMVALUE: True | False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhoCanShareAnonymousAllowList
+
+Sets a container type-specific list of security groups who are allowed to share with anonymous (non-authenticated) users as well as authenticated guest users. This must be set in conjunction with `OverrideTenantWhoCanShareAnonymousAllowList`.
+
+> [!NOTE]
+> This allow list only accepts security groups, and not Microsoft 365 Groups.
+
+Each security group is denoted by its GUID object ID. To set this list to be a specific security group, you need to enter its GUID as the parameter. You can enter multiple GUIDs by using a comma to separate them. To skip the check and allow all security groups to share to anyone, set this allow list and the `WhoCanShareAuthenticatedGuestAllowList` to null arrays. 
+
+```yaml
+Type: Guid[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhoCanShareAuthenticatedGuestAllowList
+
+Sets a container type-specific list of security groups who are allowed to share with authenticated guest users at the container level. This must be set in conjunction with `OverrideTenantWhoCanShareAuthenticatedGuestAllowList`.
+
+> [!NOTE]
+> This allow list only accepts security groups, and not Microsoft 365 Groups.
+
+Each security group is denoted by its GUID object ID. To set this list to be a specific security group, you need to enter its GUID as the parameter. You can enter multiple GUIDs by using a comma to separate them. To skip the check and allow all security groups to share to authenticated guests, set this allow list to a null array.
+
+
+```yaml
+Type: Guid[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -WhoCanShareAnonymousAllowList 
 
@@ -182,6 +316,9 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### CommonParameters
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## RELATED LINKS
 
