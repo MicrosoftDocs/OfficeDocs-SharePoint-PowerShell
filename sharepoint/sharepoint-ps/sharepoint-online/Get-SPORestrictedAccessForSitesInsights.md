@@ -20,13 +20,15 @@ This cmdlet enables the administrator to check status of all active and availabl
 ## SYNTAX
 
 ```powershell
-Get-SPORestrictedAccessForSitesInsights -RACProtectedSites [-ReportId <Guid>] [-FullDetails] [-Action <ActionType>] [-InsightsSummary <Boolean>]
-```
-
-## SYNTAX
-
-```powershell
-Get-SPORestrictedAccessForSitesInsights -ActionsBlockedByPolicy [-ReportId <Guid>] [-Content <ContentType>] [-Action <ActionType>]
+Get-SPORestrictedAccessForSitesInsights 
+[-RACProtectedSites] 
+[-ActionsBlockedByPolicy]
+[-ReportId <Guid>]
+[-Action <ActionType>]
+[-InsightsSummary]
+[-FullDetails]
+[-Content <SPOActionsBlockedByRACPolicyInsightType>]
+[<CommonParameters>]
 ```
 
 ## DESCRIPTION
