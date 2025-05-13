@@ -18,19 +18,20 @@ Sets or updates one or more property values of a trial, standard or a direct to 
  
 ## SYNTAX
  
-### ParamSet1
- 
-```powershell
+### ContainerTypeName
+```
 Set-SPOContainerType -ContainerTypeId <Guid> [-ContainerTypeName] <String> [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
-### ParamSet2
-```powershell
+
+### AzureSubscriptionId
+```
 Set-SPOContainerType -ContainerTypeId <Guid> [[-AzureSubscriptionId] <Guid>] [-ResourceGroup] <String>
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
-### ParamSet3
-```powershell
+
+### ApplicationRedirectUrl
+```
 Set-SPOContainerType -ContainerTypeId <Guid> [-ApplicationRedirectUrl] <String> [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
