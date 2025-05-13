@@ -59,7 +59,7 @@ This example disables the override sharing capability, aligning this SharePoint 
 ### Example 2
 
 ```powershell
-Set-SPOApplication -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -OverrideTenantSharingCapability $true -SharingCapability -Disabled
+Set-SPOApplication -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -OverrideTenantSharingCapability $true -SharingCapability Disabled
 ```
 
 This example enables the override, restricting file sharing within the SharePoint Embedded application to internal company users only, regardless of the broader SharePoint Online tenant settings.
@@ -68,7 +68,7 @@ This example enables the override, restricting file sharing within the SharePoin
 
 ```powershell
 Set-SPOTenant -EnableAzureADB2BIntegration $true
-Set-SPOApplication -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -OverrideTenantSharingCapability $true -SharingCapability -ExternalUserandGuestSharing
+Set-SPOApplication -OwningApplicationId 423poi45-jikl-9bnm-b302-1234ghy56789 -OverrideTenantSharingCapability $true -SharingCapability ExternalUserandGuestSharing
 ```
 This example demonstrates how to enable file sharing within the SharePoint Embedded application for external users. Note that B2B integration must be enabled to allow guest invitations to SharePoint Embedded apps.
 
@@ -83,7 +83,7 @@ This example sets the host URLs for the application with Id 423poi45.
 
 ### -CopilotEmbeddedChatHosts
 
-This parameter is used to add host URLs allowed to use the SharePoint Embedded application's declarative agent experience.
+This parameter is used to add host URLs allowed to use the SharePoint Embedded application's declarative agent experience. This will always be a subset of permissible URLs set by the application's developer. To check the list of permissible URLs, use the `Get-SPOApplication` cmdlet. 
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
