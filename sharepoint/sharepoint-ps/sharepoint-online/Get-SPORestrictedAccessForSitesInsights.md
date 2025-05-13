@@ -19,14 +19,8 @@ This cmdlet enables the administrator to check status of all active and availabl
 
 ## SYNTAX
 
-```powershell
-Get-SPORestrictedAccessForSitesInsights -RACProtectedSites [-ReportId <Guid>] [-FullDetails] [-Action <ActionType>] [-InsightsSummary <Boolean>]
 ```
-
-## SYNTAX
-
-```powershell
-Get-SPORestrictedAccessForSitesInsights -ActionsBlockedByPolicy [-ReportId <Guid>] [-Content <ContentType>] [-Action <ActionType>]
+Get-SPORestrictedAccessForSitesInsights [-RACProtectedSites] [-ActionsBlockedByPolicy] [-ReportId <Guid>] [-Action <ActionType>] [-InsightsSummary] [-FullDetails] [-Content <SPOActionsBlockedByRACPolicyInsightType>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -80,16 +74,16 @@ Example 3 enables administrator to view the report containing top sites with acc
 
 ## PARAMETERS
 
-### -RACProtectedSites
+### -Action
 
-It is an optional parameter, and it specifies the type of report to be viewed or downloaded.
+It is an optional parameter, and it specifies whether to view or download a specific report.
 
 ```yaml
-Type: SwitchParameter
+Type: ActionType
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Online
- 
+Aliases:
+Accepted values: View, Download
+
 Required: False
 Position: Named
 Default value: None
@@ -104,46 +98,11 @@ It is an optional parameter, and it specifies the type of report to be viewed or
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Online
- 
+Aliases:
+
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReportId
-
-It is an optional parameter, and it specifies the unique Id of the report to be viewed or downloaded.
-
-```yaml
-Type: Guid
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
- 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InsightsSummary
-
-It is an optional parameter, and it specifies the subtype of the report to be viewed or downloaded.
-
-```yaml
-Type: Bool
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
- 
-Required: False
-Position: Named
-Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -153,28 +112,11 @@ Accept wildcard characters: False
 It is an optional parameter, and it specifies the subtype of the report to be viewed or downloaded.
 
 ```yaml
-Type: ContentType
+Type: SPOActionsBlockedByRACPolicyInsightType
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
- 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
+Accepted values: AllDenials, TopSites, TopUsers, SiteDistribution
 
-### -Action
-
-It is an optional parameter, and it specifies whether to view or download a specific report.
-
-```yaml
-Type: ActionType
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
- 
 Required: False
 Position: Named
 Default value: None
@@ -190,11 +132,58 @@ It is an optional parameter and allows to download a CSV file containing up to 1
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
- 
+
 Required: False
 Position: Named
-Default value: False
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InsightsSummary
+
+It is an optional parameter, and it specifies the subtype of the report to be viewed or downloaded.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RACProtectedSites
+
+It is an optional parameter, and it specifies the type of report to be viewed or downloaded.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReportId
+
+It is an optional parameter, and it specifies the unique Id of the report to be viewed or downloaded.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
