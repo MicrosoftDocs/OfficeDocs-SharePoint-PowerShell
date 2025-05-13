@@ -11,13 +11,13 @@ ms.reviewer:
 ---
  
 # Set-SPOContainerType
- 
+
 ## SYNOPSIS
- 
+
 Sets or updates one or more property values of a trial, standard or a direct to customer billed container type.
- 
+
 ## SYNTAX
- 
+
 ### ContainerTypeName
 ```
 Set-SPOContainerType -ContainerTypeId <Guid> [-ContainerTypeName] <String> [-WhatIf] [-Confirm]
@@ -35,7 +35,7 @@ Set-SPOContainerType -ContainerTypeId <Guid> [[-AzureSubscriptionId] <Guid>] [-R
 Set-SPOContainerType -ContainerTypeId <Guid> [-ApplicationRedirectUrl] <String> [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
- 
+
 ## DESCRIPTION
 
 This cmdlet updates the existing property of a container type with the new value provided. The cmdlet can be used to change the basic information of a container type such as container type name or the billing information of the container type.
@@ -46,8 +46,9 @@ While you only need to be a SharePoint Embedded Administrator to set the basic i
 
 For permissions and the most current information about Windows PowerShell for SharePoint Embedded Containers, see the documentation at [Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
+
 ## EXAMPLES
- 
+
 ### Example 1
  
 ```powershell
@@ -73,9 +74,8 @@ Set-SPOContainerType -ContainerTypeId 01f62754-0873-4ec6-ab4a-3eed48ba8be7 -Owni
 In Example 3, the trial container type name is updated as 'Blue Container Type' 
 
 
- 
 ## PARAMETERS
- 
+
 ### -ApplicationRedirectUrl
 This parameter sets the application redirect Url for the container type.
 
@@ -86,6 +86,36 @@ Aliases:
 
 Required: True
 Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AzureSubscriptionId
+Use this parameter to set the Azure billing subscription ID you wish to attach to the container type.
+
+```yaml
+Type: Guid
+Parameter Sets: AzureSubscriptionId
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -107,66 +137,43 @@ Accept wildcard characters: False
 ```
 
 ### -ContainerTypeName
-
-This parameter names your container type for your SharePoint Embedded application.
+Use this parameter to pass the conatiner type name you intend to use for the container type
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: ContainerTypeName
 Aliases:
-Applicable: SharePoint Online
 
 Required: True
-Position: Named
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-### -OwningApplicationId
-
-This parameter specifies the ID of the SharePoint Embedded application.  
-
-```yaml
-Type: String
-Parameter Sets: 
-Aliases:
-Applicable: SharePoint Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AzureSubscriptionId
-
-This parameter describes the Azure subscription ID to which the container type needs to be associated.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: SharePoint Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 
 ### -ResourceGroup
-
-This parameter describes the resource group to be used for the associated container type.
+Use this parameter to set the Azure resource group of the associated Azure billing subscription you intend to attach to the container type. 
 
 ```yaml
 Type: String
-Parameter Sets: 
+Parameter Sets: AzureSubscriptionId
 Aliases:
-Applicable: SharePoint Online
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
 
 Required: False
 Position: Named
@@ -187,3 +194,4 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 [Get-SPOContainerType](./Get-SPOContainerType.md)
 
 [Remove-SPOContainerType](./Remove-SPOContainerType.md)
+
