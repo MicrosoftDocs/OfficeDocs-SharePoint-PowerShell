@@ -85,7 +85,6 @@ This example sets the host URLs for the application with Id 423poi45.
 
 This parameter is used to add host URLs allowed to use the SharePoint Embedded application's declarative agent experience. This will always be a subset of permissible URLs set by the application's developer. To check the list of permissible URLs, use the `Get-SPOApplication` cmdlet. 
 
-
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: (All)
