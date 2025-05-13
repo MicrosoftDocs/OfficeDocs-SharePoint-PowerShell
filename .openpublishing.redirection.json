@@ -24,6 +24,26 @@
       "source_path": "sharepoint/virtual-folder/sharepoint-online/Set-SPOTenantRestrictedSearchMode.md",
       "redirect_url": "/powershell/module/sharepoint-online",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "sharepoint/virtual-folder/sharepoint-online/Add-SPOAppPrioritizationPolicy.md",
+      "redirect_url": "/powershell/module/sharepoint-online/Add-SPOServicePrioritizationAppRegistration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "sharepoint/virtual-folder/sharepoint-online/Get-SPOAppPrioritizationPolicies.md",
+      "redirect_url": "/powershell/module/sharepoint-online/Get-SPOServicePrioritizationAppRegistrations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "sharepoint/virtual-folder/sharepoint-online/Remove-SPOAppPrioritizationPolicy.md",
+      "redirect_url": "/powershell/module/sharepoint-online/Remove-SPOServicePrioritizationAppRegistration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "sharepoint/virtual-folder/sharepoint-online/Set-SPOAppPrioritizationPolicy.md",
+      "redirect_url": "/powershell/module/sharepoint-online/Set-SPOServicePrioritizationAppRegistration",
+      "redirect_document_id": false
     }
   ]
 }
