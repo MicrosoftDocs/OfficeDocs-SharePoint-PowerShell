@@ -14,21 +14,21 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Returns container type configurations in a SharePoint Embedded application. 
+Use this cmdlet to read the configuration values set on the container type. 
 
 ## SYNTAX
 
 ### ParamSet1
 
 ```powershell
-Get-SPOContainerTypeConfiguration [-ContainerTypeId <ContainerTypeId>]
+Get-SPOContainerTypeConfiguration -ContainerTypeId <Guid> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The `Get-SPOContainerTypeConfiguration` cmdlet retrieves and returns configuration settings set on a container type created under a SharePoint Embedded application. 
+The `Get-SPOContainerTypeConfiguration` cmdlet retrieves and returns configuration settings set on a container type created under a SharePoint Embedded application. This can either be the default value or the previously set value on the container type. 
 
-You must be a SharePoint Administrator or Global Administrator to run this cmdlet.
+You must be a SharePoint Embedded Administrator to run this cmdlet. 
 
 ## EXAMPLES
 
@@ -58,6 +58,10 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+### CommonParameters
+
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+
 
 ## RELATED LINKS
 
