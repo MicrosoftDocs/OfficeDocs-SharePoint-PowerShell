@@ -22,7 +22,8 @@ Set-SPOContainerTypeConfiguration -ContainerTypeId <Guid> [-DiscoverabilityDisab
  [-SharingRestricted <Boolean>] [-ApplicationRedirectUrl <String>] [-WhoCanShareAnonymousAllowList <Guid[]>]
  [-WhoCanShareAuthenticatedGuestAllowList <Guid[]>] [-OverrideTenantWhoCanShareAnonymousAllowList <Boolean>]
  [-OverrideTenantWhoCanShareAuthenticatedGuestAllowList <Boolean>]
- [[-CopilotEmbeddedChatHosts] <System.Collections.Generic.List`1[System.String]>] [-WhatIf] [-Confirm]
+ [[-CopilotEmbeddedChatHosts] <System.Collections.Generic.List`1[System.String]>]
+ [-AnonymousLinkExpirationInDays <Int32>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -83,38 +84,25 @@ This example sets the host URLs for the container type with Id 4f0af585.
 
 ## PARAMETERS
 
-### -DiscoverabilityDisabled
-
-As a SharePoint Administrator or Global Administrator in Microsoft 365, you can control how your content appears in the Microsoft 365 experience. The default value for this parameter is True, which hides the SharePoint Embedded application content throughout the Microsoft 365 environment, including on office.com, onedrive.com, in recommended sections, or through other Microsoft intelligent file discovery features.
-If you opt into the Microsoft 365 experience, your files will be integrated into Microsoft 365 environment, participating in intelligent file discovery.
-
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Boolean
-Applicable: SharePoint Embedded
-Position: Named
-Required: False
-Default value: True
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SharingRestricted
-
-SharePoint Embedded offers a role-based sharing model that allows developers to configure file-sharing permissions based on container permission roles, offering a choice between a restrictive and an open sharing model. The open sharing model allows any container members and guest users with edit permissions to share files. The restrictive sharing model allows only container members who are either Owners or Managers to share files.
+### -AnonymousLinkExpirationInDays
+Specifies all anonymous links created after the value is set will expire after the set number of days.
  
-PARAMVALUE: $true | $false
+The value can be from 1 to 730 days.
+ 
+To defer to the tenant level setting, set the value to -1.
 
 ```yaml
-Type: Boolean
-Applicable: SharePoint Embedded
-Position: Named
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
 Required: False
-Default value: True
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -ApplicationRedirectUrl
 
 This parameter specifies the url of that the application should be redirected to. 
@@ -146,6 +134,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -CopilotEmbeddedChatHosts
 This parameter is used to add host URLs allowed to use the SharePoint Embedded application's declarative agent experience. 
 
@@ -157,6 +146,23 @@ Aliases:
 Required: False
 Position: 3
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DiscoverabilityDisabled
+
+As a SharePoint Administrator or Global Administrator in Microsoft 365, you can control how your content appears in the Microsoft 365 experience. The default value for this parameter is True, which hides the SharePoint Embedded application content throughout the Microsoft 365 environment, including on office.com, onedrive.com, in recommended sections, or through other Microsoft intelligent file discovery features.
+If you opt into the Microsoft 365 experience, your files will be integrated into Microsoft 365 environment, participating in intelligent file discovery.
+
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Applicable: SharePoint Embedded
+Position: Named
+Required: False
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -197,6 +203,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SharingRestricted
+
+SharePoint Embedded offers a role-based sharing model that allows developers to configure file-sharing permissions based on container permission roles, offering a choice between a restrictive and an open sharing model. The open sharing model allows any container members and guest users with edit permissions to share files. The restrictive sharing model allows only container members who are either Owners or Managers to share files.
+ 
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Boolean
+Applicable: SharePoint Embedded
+Position: Named
+Required: False
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhoCanShareAnonymousAllowList
 
 Sets a container type-specific list of security groups who are allowed to share with anonymous (non-authenticated) users as well as authenticated guest users. This must be set in conjunction with `OverrideTenantWhoCanShareAnonymousAllowList`.
@@ -233,83 +255,6 @@ Type: Guid[]
 Parameter Sets: (All)
 Aliases:
 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-
-### -WhoCanShareAnonymousAllowList 
-
-Sets a container type-specific list of security groups who are allowed to share with anonymous (non-authenticated) users as well as authenticated guest users. This must be set in conjunction with `OverrideTenantWhoCanShareAnonymousAllowList`.
-
-> [!NOTE]
-> This allow list only accepts security groups, and not Microsoft 365 Groups.
-
-Each security group is denoted by its GUID object ID. To set this list to be a specific security group, you need to enter its GUID as the parameter. You can enter multiple GUIDs by using a comma to separate them. To skip the check and allow all security groups to share to anyone, set this allow list and the `WhoCanShareAuthenticatedGuestAllowList` to null arrays. 
-
-```yaml
-Type: Guid[] 
-Parameter Sets: (All) 
-Aliases: 
-Applicable: SharePoint Online 
-Required: False 
-Position: Named 
-Default value: None 
-Accept pipeline input: False 
-Accept wildcard characters: False 
-```
-
-### WhoCanShareAuthenticatedGuestAllowList
-
-Sets a container type-specific list of security groups who are allowed to share with authenticated guest users at the container level. This must be set in conjunction with `OverrideTenantWhoCanShareAuthenticatedGuestAllowList`.
-
-> [!NOTE]
-> This allow list only accepts security groups, and not Microsoft 365 Groups.
-
-Each security group is denoted by its GUID object ID. To set this list to be a specific security group, you need to enter its GUID as the parameter. You can enter multiple GUIDs by using a comma to separate them. To skip the check and allow all security groups to share to authenticated guests, set this allow list to a null array.
-
-```yaml
-Type: Guid[] 
-Parameter Sets: (All) 
-Aliases: 
-Applicable: SharePoint Online 
-Required: False 
-Position: Named 
-Default value: None 
-Accept pipeline input: False 
-Accept wildcard characters: False 
-```
-
-### OverrideTenantWhoCanShareAnonymousAllowList
-
-This setting determines if the container type `WhoCanShareAnonymousAllowList` overrides the tenant-level `WhoCanShareAnonymousAllowList`. The default value for this parameter is false.
-
-PARAMVALUE: True | False
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### OverrideTenantWhoCanShareAuthenticatedGuestAllowList
-
-This setting determines if the container type `WhoCanShareAuthenticatedGuestAllowList` overrides the tenant-level `WhoCanShareAuthenticatedGuestAllowList`. The default value for this parameter is false.
-
-PARAMVALUE: True | False
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
