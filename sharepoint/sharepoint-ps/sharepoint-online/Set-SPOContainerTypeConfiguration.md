@@ -152,10 +152,10 @@ Accept wildcard characters: False
 
 ### -DiscoverabilityDisabled
 
-As a SharePoint Administrator or Global Administrator in Microsoft 365, you can control how your content appears in the Microsoft 365 experience. The default value for this parameter is True, which hides the SharePoint Embedded application content throughout the Microsoft 365 environment, including on office.com, onedrive.com, in recommended sections, or through other Microsoft intelligent file discovery features.
+As a SharePoint Administrator in Microsoft 365, you can control how your content appears in the Microsoft 365 experience. When this value is true, the SharePoint Embedded application content is hidden throughout the Microsoft 365 environment, including on office.com, onedrive.com, in recommended sections, or through other Microsoft intelligent file discovery features.
 If you opt into the Microsoft 365 experience, your files will be integrated into Microsoft 365 environment, participating in intelligent file discovery.
 
-PARAMVALUE: $true | $false
+PARAMVALUE: true | false
 
 ```yaml
 Type: Boolean
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 
 ### -OverrideTenantWhoCanShareAnonymousAllowList
 
-This setting determines if the container type `WhoCanShareAnonymousAllowList` overrides the tenant-level `WhoCanShareAnonymousAllowList`. The default value for this parameter is false.
+This setting determines if the container type `WhoCanShareAnonymousAllowList` overrides the tenant-level `WhoCanShareAnonymousAllowList`.
 
 PARAMVALUE: True | False
 
@@ -180,14 +180,14 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -OverrideTenantWhoCanShareAuthenticatedGuestAllowList
 
-This setting determines if the container type `WhoCanShareAuthenticatedGuestAllowList` overrides the tenant-level `WhoCanShareAuthenticatedGuestAllowList`. The default value for this parameter is false.
+This setting determines if the container type `WhoCanShareAuthenticatedGuestAllowList` overrides the tenant-level `WhoCanShareAuthenticatedGuestAllowList`.
 
 PARAMVALUE: True | False
 
@@ -198,7 +198,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -207,7 +207,7 @@ Accept wildcard characters: False
 
 SharePoint Embedded offers a role-based sharing model that allows developers to configure file-sharing permissions based on container permission roles, offering a choice between a restrictive and an open sharing model. The open sharing model allows any container members and guest users with edit permissions to share files. The restrictive sharing model allows only container members who are either Owners or Managers to share files.
  
-PARAMVALUE: $true | $false
+PARAMVALUE: true | false
 
 ```yaml
 Type: Boolean
