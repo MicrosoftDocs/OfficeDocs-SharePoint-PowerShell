@@ -1361,7 +1361,6 @@ The valid values are:
 - View
 - ViewUpload
 - Edit
-- None
 
 ```yaml
 Type: AnonymousLinkType
