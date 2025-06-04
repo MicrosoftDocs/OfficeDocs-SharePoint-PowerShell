@@ -21,7 +21,7 @@ Lists various 'Data Access Governance' (DAG) reports in SharePoint admin center.
 
 ### GetAllReportsParameterSet
 ```
-Get-SPODataAccessGovernanceInsight -ReportEntity <ReportEntityEnum> [-WorkLoad <WorkloadEnum>] [-ReportType <ReportTypeEnum>] [<CommonParameters>]
+Get-SPODataAccessGovernanceInsight -ReportEntity <ReportEntityEnum> [-Workload <WorkloadEnum>] [-ReportType <ReportTypeEnum>] [<CommonParameters>]
 ```
 
 ### GetReportParameterSet
@@ -95,7 +95,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -WorkLoad
+### -Workload
 
 Specifies the datasource of the reports to be fetched i.e., reports for SharePoint sites or for OneDrive accounts.
 
