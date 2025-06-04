@@ -39,6 +39,12 @@ To open the SharePoint Online Management Shell command prompt, from the **Start*
 
 > [!VIDEO https://www.youtube.com/embed/TMzHAWEQjlk]
 
+> [!NOTE]
+> In order to run SharePoint Online PowerShell commands in a Windows PowerShell 7 console, you must import the SharePoint module using the -UseWindowsPowerShell parameter.
+```powershell
+Import-Module Microsoft.Online.SharePoint.PowerShell -UseWindowsPowerShell
+```
+
 ## To connect with a user name and password
 
 1. Run the following command at the SharePoint Online Management Shell command prompt:
