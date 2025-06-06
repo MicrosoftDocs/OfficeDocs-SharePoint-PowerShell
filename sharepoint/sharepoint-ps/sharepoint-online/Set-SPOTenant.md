@@ -2067,15 +2067,12 @@ Accept wildcard characters: False
 
 ### -AllowClassicPublishingSiteCreation
 
-This parameter allows creation of classic publishing site collections (templates BLANKINTERNETCONTAINER#0, CMSPUBLISHING#0 and BLANKINTERNET#0) and enablement of publishing features in other classic site collection types.
+This parameter allows creation of classic publishing site collections (templates BLANKINTERNETCONTAINER#0, CMSPUBLISHING#0 and BLANKINTERNET#0) and activation of classic publishing features in site collections.
 
 The valid values are:
 
-* False (default) - Classic publishing site collections can not be created, the publishing features can not be activated in all site collections.
+* False (default) - Classic publishing site collections can not be created; the publishing features can not be activated in site collections.
 * True - Classic publishing site collections can be created and the publishing features can be activated in site collections.
-
-> [!NOTE]
-> This setting affects classic publishing sites (templates BLANKINTERNETCONTAINER#0, CMSPUBLISHING#0 and BLANKINTERNET#0) creation and all site collections for publishing feature activation.
 
 ```yaml
 Type: Boolean
