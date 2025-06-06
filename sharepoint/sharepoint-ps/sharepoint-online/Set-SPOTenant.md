@@ -26,6 +26,7 @@ Set-SPOTenant
  [-AIBuilderModelSelectedSitesListOperation <SelectedSitesListOperations>]
  [-AllOrganizationSecurityGroupId <Guid>]
  [-AllowAnonymousMeetingParticipantsToAccessWhiteboards <SharingState>]
+ [-AllowClassicPublishingSiteCreation <Boolean>]
  [-AllowCommentsTextOnEmailEnabled <Boolean>]
  [-AllowDownloadingNonWebViewableFiles <Boolean>]
  [-AllowEditing <Boolean>]
@@ -2060,6 +2061,30 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowClassicPublishingSiteCreation
+
+This parameter allows creation of classic publishing site collections (templates BLANKINTERNETCONTAINER#0, CMSPUBLISHING#0 and BLANKINTERNET#0) and enablement of publishing features in other classic site collection types.
+
+The valid values are:
+
+* False (default) - Classic publishing site collections can not be created, the publishing features can not be activated in all site collections.
+* True - Classic publishing site collections can be created and the publishing features can be activated in site collections.
+
+> [!NOTE]
+> This setting affects classic publishing sites (templates BLANKINTERNETCONTAINER#0, CMSPUBLISHING#0 and BLANKINTERNET#0) creation and all site collections for publishing feature activation.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
