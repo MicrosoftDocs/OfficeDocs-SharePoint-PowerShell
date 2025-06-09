@@ -3864,7 +3864,7 @@ Accept wildcard characters: False
 
 ### -LegacyBrowserAuthProtocolsEnabled
 
-Controls whether legacy browser authentication protocols are enabled.
+Controls whether legacy browser authentication connections to SharePoint with legacy Relying Party suite (RPS) protocol are enabled. Legacy protocols are more susceptible to brute-force and phishing attacks because they use non-modern authentication methods. Setting this to False prevents applications, (including third party applications) from using non-modern authentication protocols to access SharePoint Online and OneDrive resources in a browser.
 
 PARAMVALUE: True | False
 
