@@ -15,7 +15,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-This cmdlet generates reports in information barriers (IB) meant to identify and discover usage patterns across SharePoint sites and OneDrive accounts in the organization.
+Generates a new report to identify and discover the usage patterns of Information Barriers (IB) across SharePoint sites and OneDrive accounts in the organization.
 
 ## SYNTAX
 
@@ -25,17 +25,17 @@ Start-SPOInformationBarriersInsightsReport [-Yes <Boolean>] [-WhatIf] [-Confirm]
 
 ## DESCRIPTION
 
-This cmdlet would create reports in Information Barriers (IB) to identify top sites and their modes to help apply suitable controls for the sites as applicable.
+This cmdlet creates reports to identify [top sites and their IB modes](/purview/information-barriers-insights-report) to help apply suitable controls for the sites as applicable.
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> Start-SPOInformationBarriersInsightsReport
+Start-SPOInformationBarriersInsightsReport -Yes
 ```
 
-This PS command would create Information Barriers reports to identify top sites and their modes to help apply suitable controls for the sites as applicable.
+This example generates IB reports without asking for further confirmation.
 
 ## PARAMETERS
 

@@ -15,7 +15,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-This cmdlet helps to view the status of the insights on Information Barrier (IB).
+Rnables the SharePoint administrator to check status of all active and completed reports of insights on Information Barriers (IB).
 
 ## SYNTAX
 
@@ -25,36 +25,31 @@ Get-SPOInformationBarriersInsightsReport [-ReportId <Guid>] [-Section <SectionTy
 
 ## DESCRIPTION
 
-This cmdlet helps to view the details of the specific parameters from the insights report.
+If this cmdlet is executed without any parameters, it displays the status of all active and completed reports with the following properties:
+
+|Property  |Description  |
+|---------|---------|
+|Content     | Display the [modes of IB](/purview/information-barriers-insights-report) for sites present in the report.      |
+|State     | The status of the report.   |
+|Id     | The unique Id of the report.     |
+|StartTimeInUtc     |  The date and time in UTC when the report creation was started.       |
+|CompleteTimeInUtc     |  The date and time in UTC when the report creation was completed.       |
+|QueuedTimeInUtc     |   TThe date and time in UTC when the report creation was triggered.      |
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-PS C:\> Get-SPOInformationBarriersInsightsReport -reportId ec65a1cf-9b1a-48c2-a1b4-f923ac4c0776
-
-Content: Explicit, Implicit, Open, OwnerModerated, ModeDistribution
-State: Completed
-Id: ec65a1cf-9b1a-48c2-a1b4-f923ac4c0776
-StartTimeInUtc: 4/25/2023 4:10:16 PM
-CompleteTimeInUtc: 4/25/2023 4:10:25 PM
-QueuedTimeInUtc: 4/25/2023 4:06:47 PM
+Get-SPOInformationBarriersInsightsReport -reportId ec65a1cf-9b1a-48c2-a1b4-f923ac4c0776
 ```
 
-In the above example, the insights report results are displayed for SharePoint sites included in the organization with an ID of ec65a1cf-9b1a-48c2-a1b4-f923ac4c0776. The values in the Content line represent the modes that have results in the report. If a mode (applicable to SharePoint) isn't listed, there aren't any SharePoint sites in the organization with that mode.
+In the above example, the insights report results are displayed for SharePoint sites included in the organization with given ID.
 
 ### Example 2
 
 ```powershell
-PS C:\> Get-SPOInformationBarriersInsightsReport -reportId ec65a1cf-9b1a-48c2-a1b4-f923ac4c0776 -service OneDrive
-
-Content: Explicit, Mixed, Open, OwnerModerated, ModeDistribution
-State: Completed
-Id: ec65a1cf-9b1a-48c2-a1b4-f923ac4c0776
-StartTimeInUtc: 4/25/2023 4:10:16 PM
-CompleteTimeInUtc: 4/25/2023 4:10:25 PM
-QueuedTimeInUtc: 4/25/2023 4:06:47 PM
+Get-SPOInformationBarriersInsightsReport -reportId ec65a1cf-9b1a-48c2-a1b4-f923ac4c0776 -service OneDrive
 ```
 
 The above cmdlet helps to view summary of the modes with results for OneDrive sites from the generated report ID. In the above example, the insights report results are displayed for OneDrive accounts included in the organization with an ID of ec65a1cf-9b1a-48c2-a1b4-f923ac4c0776. The values in the Content line represent the modes that have results in the report. If a mode (applicable to OneDrive) isn't listed, there aren't any OneDrive accounts in the organization with that mode.
@@ -63,7 +58,7 @@ The above cmdlet helps to view summary of the modes with results for OneDrive si
 
 ### -Action
 
-This parameter helps to view or download the results of the insights report.
+It determines whether a report would be viewed or downloaded. If the value of -Action is set as View, it will display the output on the PowerShell screen. Else if the value of -Action is set as Download, it will download the full report in CSV format to the same path from where the command was run.
 
 ```yaml
 Type: ActionType
