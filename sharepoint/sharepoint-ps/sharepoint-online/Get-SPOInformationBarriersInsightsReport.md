@@ -15,7 +15,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Rnables the SharePoint administrator to check status of all active and completed reports of insights on Information Barriers (IB).
+Enables the SharePoint Administrator to check status of all active and completed reports of insights on Information Barriers (IB).
 
 ## SYNTAX
 
@@ -29,7 +29,7 @@ If this cmdlet is executed without any parameters, it displays the status of all
 
 |Property  |Description  |
 |---------|---------|
-|Content     | Display the [modes of IB](/purview/information-barriers-insights-report) for sites present in the report.      |
+|Content     | Display the [IB modes](/purview/information-barriers-insights-report) for sites present in the report.      |
 |State     | The status of the report.   |
 |Id     | The unique Id of the report.     |
 |StartTimeInUtc     |  The date and time in UTC when the report creation was started.       |
@@ -41,7 +41,7 @@ If this cmdlet is executed without any parameters, it displays the status of all
 ### Example 1
 
 ```powershell
-Get-SPOInformationBarriersInsightsReport -reportId ec65a1cf-9b1a-48c2-a1b4-f923ac4c0776
+Get-SPOInformationBarriersInsightsReport -ReportId ec65a1cf-9b1a-48c2-a1b4-f923ac4c0776
 ```
 
 In the above example, the insights report results are displayed for SharePoint sites included in the organization with given ID.
@@ -49,16 +49,19 @@ In the above example, the insights report results are displayed for SharePoint s
 ### Example 2
 
 ```powershell
-Get-SPOInformationBarriersInsightsReport -reportId ec65a1cf-9b1a-48c2-a1b4-f923ac4c0776 -service OneDrive
+Get-SPOInformationBarriersInsightsReport -ReportId ec65a1cf-9b1a-48c2-a1b4-f923ac4c0776 -service OneDrive
 ```
 
-The above cmdlet helps to view summary of the modes with results for OneDrive sites from the generated report ID. In the above example, the insights report results are displayed for OneDrive accounts included in the organization with an ID of ec65a1cf-9b1a-48c2-a1b4-f923ac4c0776. The values in the Content line represent the modes that have results in the report. If a mode (applicable to OneDrive) isn't listed, there aren't any OneDrive accounts in the organization with that mode.
+This example helps to view summary of the modes with results for OneDrive sites from the generated report ID. In the above example, the insights report results are displayed for OneDrive accounts included in the organization with an ID of ec65a1cf-9b1a-48c2-a1b4-f923ac4c0776. The values in the Content line represent the modes that have results in the report. If a mode (applicable to OneDrive) isn't listed, there aren't any OneDrive accounts in the organization with that mode.
 
 ## PARAMETERS
 
 ### -Action
 
-It determines whether a report would be viewed or downloaded. If the value of -Action is set as View, it will display the output on the PowerShell screen. Else if the value of -Action is set as Download, it will download the full report in CSV format to the same path from where the command was run.
+Specifies whether the report is displayed in the console or downloaded as a file.
+
+- If set to `View`, the report is displayed directly in the PowerShell window.
+- If set to `Download`, the report is saved as a CSV file in the directory where the command is run.
 
 ```yaml
 Type: ActionType
@@ -141,7 +144,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
