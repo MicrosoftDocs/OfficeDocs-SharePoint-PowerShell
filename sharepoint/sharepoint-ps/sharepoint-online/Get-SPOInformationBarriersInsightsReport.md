@@ -34,7 +34,7 @@ If this cmdlet is executed without any parameters, it displays the status of all
 |Id     | The unique Id of the report.     |
 |StartTimeInUtc     |  The date and time in UTC when the report creation was started.       |
 |CompleteTimeInUtc     |  The date and time in UTC when the report creation was completed.       |
-|QueuedTimeInUtc     |   TThe date and time in UTC when the report creation was triggered.      |
+|QueuedTimeInUtc     |   The date and time in UTC when the report creation was triggered.      |
 
 ## EXAMPLES
 
