@@ -20,17 +20,18 @@ This cmdlet must be run before any other SharePoint Online cmdlets can run.
 ## SYNTAX
 
 ### AuthenticationUrl
-
-```powershell
-Connect-SPOService -AuthenticationUrl <String> [-ClientTag <String>] [-Credential <CredentialCmdletPipeBind>]
- -Url <UrlCmdletPipeBind> -ModernAuth <Boolean> [<CommonParameters>] -UseSystemBrowser <Boolean>
+```
+Connect-SPOService [-Url] <UrlCmdletPipeBind> [[-Credential] <CredentialCmdletPipeBind>]
+ [[-ClientTag] <String>] [-AuthenticationUrl] <String> [[-ModernAuth] <Boolean>]
+ [[-UseSystemBrowser] <Boolean>] [<CommonParameters>]
 ```
 
 ### AuthenticationLocation
 
-```powershell
-Connect-SPOService [-ClientTag <String>] [-Credential <CredentialCmdletPipeBind>]
- [-Region <AADCrossTenantAuthenticationLocation>] -Url <UrlCmdletPipeBind> [<CommonParameters>] -UseSystemBrowser <Boolean>
+```
+Connect-SPOService [-Url] <UrlCmdletPipeBind> [[-Credential] <CredentialCmdletPipeBind>]
+ [[-ClientTag] <String>] [[-Region] <AADCrossTenantAuthenticationLocation>] [[-ModernAuth] <Boolean>]
+ [[-UseSystemBrowser] <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -217,8 +218,8 @@ Parameter Sets: (All)
 Aliases:
 Applicable: SharePoint Online
 Required: False
-Position: Named
-Default value: False
+Position: 5
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -227,11 +228,6 @@ Accept wildcard characters: False
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
-
-## OUTPUTS
-
-## NOTES
 
 ## RELATED LINKS
 
