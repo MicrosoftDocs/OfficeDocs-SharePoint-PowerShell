@@ -26,6 +26,7 @@ Set-SPOTenant
  [-AIBuilderModelSelectedSitesListOperation <SelectedSitesListOperations>]
  [-AllOrganizationSecurityGroupId <Guid>]
  [-AllowAnonymousMeetingParticipantsToAccessWhiteboards <SharingState>]
+ [-AllowClassicPublishingSiteCreation <Boolean>]
  [-AllowCommentsTextOnEmailEnabled <Boolean>]
  [-AllowDownloadingNonWebViewableFiles <Boolean>]
  [-AllowEditing <Boolean>]
@@ -1354,11 +1355,12 @@ Accept wildcard characters: False
 
 ### -FolderAnonymousLinkType
 
-Anonymous access links can allow recipients to only view or view and edit.
+Users can configure folder anonymous access links that allow recipients to view, view and upload, or view, edit, and upload files.
 
 The valid values are:
 
 - View
+- ViewUpload
 - Edit
 
 ```yaml
@@ -2059,6 +2061,27 @@ Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowClassicPublishingSiteCreation
+
+This parameter allows creation of classic publishing site collections (templates BLANKINTERNETCONTAINER#0, CMSPUBLISHING#0 and BLANKINTERNET#0) and activation of classic publishing features in sites.
+
+The valid values are:
+
+* False (default) - Classic publishing site collections cannot be created and the publishing features cannot be activated in sites.
+* True - Classic publishing site collections can be created and the publishing features can be activated in sites.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -3841,7 +3864,7 @@ Accept wildcard characters: False
 
 ### -LegacyBrowserAuthProtocolsEnabled
 
-Controls whether legacy browser authentication protocols are enabled.
+Controls whether legacy browser authentication connections to SharePoint with legacy Relying Party suite (RPS) protocol are enabled. Legacy protocols are more susceptible to brute-force and phishing attacks because they use non-modern authentication methods. Setting this to False prevents applications, (including third party applications) from using non-modern authentication protocols to access SharePoint Online and OneDrive resources in a browser.
 
 PARAMVALUE: True | False
 

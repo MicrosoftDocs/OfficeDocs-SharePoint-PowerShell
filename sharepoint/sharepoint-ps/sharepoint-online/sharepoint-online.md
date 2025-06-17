@@ -15,10 +15,6 @@ The following cmdlet references are for SharePoint Online.
 
 ## sharepoint-online Cmdlets
 
-### [Add-SPOAppPrioritizationPolicy](Add-SPOAppPrioritizationPolicy.md)
-
-{{Adds a new SPO app prioritization policy to your tenancy.}}
-
 ### [Add-SPOContainerTypeBilling](Add-SPOContainerTypeBilling.md)
 
 {{Adds a Azure billing subscription to a new standard billed container type.}}
@@ -67,6 +63,10 @@ The following cmdlet references are for SharePoint Online.
 
 {{Manually Enter Add-SPOUser Description Here}}
 
+### [Add-SPOServicePrioritizationAppRegistration](Add-SPOServicePrioritizationAppRegistration.md)
+
+{{Adds a new SPO service prioritization app registration.}}
+
 ### [Approve-SPOTenantServicePrincipalPermissionRequest](Approve-SPOTenantServicePrincipalPermissionRequest.md)
 
 {{Manually Enter Approve-SPOTenantServicePrincipalPermissionRequest Description Here}}
@@ -110,10 +110,6 @@ The following cmdlet references are for SharePoint Online.
 ### [Get-SPOAppInfo](Get-SPOAppInfo.md)
 
 {{Manually Enter Get-SPOAppInfo Description Here}}
-
-### [Get-SPOAppPrioritizationPolicies](Get-SPOAppPrioritizationPolicies.md)
-
-{{Gets all existing SPO app prioritization policies of your tenancy}}
 
 ### [Get-SPOBuiltInFontPackageSettings](Get-SPOBuiltInFontPackageSettings.md)
 
@@ -347,6 +343,14 @@ The following cmdlet references are for SharePoint Online.
 
 {{Manually Enter Get-SPOWebTemplate Description Here}}
 
+### [Get-SPOServicePrioritizationAppRegistrations](Get-SPOServicePrioritizationAppRegistrations.md)
+
+{{Gets all existing SPO service prioritization app registrations.}}
+
+### [Get-SPOServicePrioritizationBillingPolicies](Get-SPOServicePrioritizationBillingPolicies.md)
+
+{{Gets all existing SPO service prioritization billing policies.}}
+
 ### [Grant-SPOHubSiteRights](Grant-SPOHubSiteRights.md)
 
 {{Manually Enter Grant-SPOHubSiteRights Description Here}}
@@ -415,7 +419,6 @@ The following cmdlet references are for SharePoint Online.
 
 {{Manually Enter New-SPOSiteFileVersionExpirationReportJob Description Here}}
 
-
 ### [New-SPOSiteGroup](New-SPOSiteGroup.md)
 
 {{Manually Enter New-SPOSiteGroup Description Here}}
@@ -424,13 +427,13 @@ The following cmdlet references are for SharePoint Online.
 
 This cmdlet is not currently active in production and may be removed in the future. You will receive the error "Site collection sharing report feature has not been enabled" if you run this cmdlet, which is by design. 
 
+### [New-SPOServicePrioritizationBillingPolicy](New-SPOServicePrioritizationBillingPolicy.md)
+
+{{Creates a new SPO service prioritization billing policy.}}
+
 ### [Register-SPOHubSite](Register-SPOHubSite.md)
 
 {{Manually Enter Register-SPOHubSite Description Here}}
-
-### [Remove-SPOAppPrioritizationPolicy](Remove-SPOAppPrioritizationPolicy.md)
-
-{{Deletes an existing SPO app prioritization policy in your tenancy.}}
 
 ### [Remove-SPODataConnectionSetting](Remove-SPODataConnectionSetting.md)
 
@@ -524,6 +527,10 @@ This cmdlet is not currently active in production and may be removed in the futu
 
 {{Manually Enter Remove-SPOUser Description Here}}
 
+### [Remove-SPOServicePrioritizationAppRegistration](Remove-SPOServicePrioritizationAppRegistration.md)
+
+{{Removes an existing SPO service prioritization app registration.}}
+
 ### [Repair-SPOSite](Repair-SPOSite.md)
 
 {{Manually Enter Repair-SPOSite Description Here}}
@@ -555,10 +562,6 @@ This cmdlet is not currently active in production and may be removed in the futu
 ### [Revoke-SPOUserSession](Revoke-SPOUserSession.md)
 
 {{Manually Enter Revoke-SPOUserSession Description Here}}
-
-### [Set-SPOAppPrioritizationPolicy](Set-SPOAppPrioritizationPolicy.md)
-
-{{Edits an existing SPO app prioritization policy in your tenancy. }}
 
 ### [Set-SPOBuiltInFontPackageSettings](Set-SPOBuiltInFontPackageSettings.md)
 
