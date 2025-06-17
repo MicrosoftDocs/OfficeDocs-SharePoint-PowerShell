@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
 title: Connect-SPOService
 schema: 2.0.0
-author: ShreyasS26
+author: ShreyasSar26
 ms.author: shsaravanan
 ms.reviewer:
 ---
