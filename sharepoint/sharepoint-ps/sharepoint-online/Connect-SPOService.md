@@ -36,7 +36,7 @@ Connect-SPOService [-Url] <UrlCmdletPipeBind> [[-Credential] <CredentialCmdletPi
 
 ## DESCRIPTION
 
-The `Connect-SPOService` cmdlet connects a SharePoint Online administrator or the SharePoint Embedded administrator to the SharePoint Online Administration Center.
+The `Connect-SPOService` cmdlet connects a SharePoint Online administrator or SharePoint Embedded administrator to the SharePoint Online Administration Center.
 
 Only a single SharePoint Online service connection is maintained from any single Windows PowerShell session.
 In other words, this is a per-geo within an organization administrator connection.
