@@ -5,8 +5,8 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
 title: Connect-SPOService
 schema: 2.0.0
-author: trent-green
-ms.author: trgreen
+author: ShreyasS26
+ms.author: shsaravanan
 ms.reviewer:
 ---
 
@@ -23,19 +23,19 @@ This cmdlet must be run before any other SharePoint Online cmdlets can run.
 
 ```powershell
 Connect-SPOService -AuthenticationUrl <String> [-ClientTag <String>] [-Credential <CredentialCmdletPipeBind>]
- -Url <UrlCmdletPipeBind> -ModernAuth <Boolean> [<CommonParameters>] 
+ -Url <UrlCmdletPipeBind> -ModernAuth <Boolean> [<CommonParameters>] -UseSystemBrowser <Boolean>
 ```
 
 ### AuthenticationLocation
 
 ```powershell
 Connect-SPOService [-ClientTag <String>] [-Credential <CredentialCmdletPipeBind>]
- [-Region <AADCrossTenantAuthenticationLocation>] -Url <UrlCmdletPipeBind> [<CommonParameters>]
+ [-Region <AADCrossTenantAuthenticationLocation>] -Url <UrlCmdletPipeBind> [<CommonParameters>] -UseSystemBrowser <Boolean>
 ```
 
 ## DESCRIPTION
 
-The `Connect-SPOService` cmdlet connects a SharePoint Online administrator to the SharePoint Online Administration Center.
+The `Connect-SPOService` cmdlet connects the SharePoint Online administrator or the SharePoint Embedded administrator to the SharePoint Online Administration Center.
 
 Only a single SharePoint Online service connection is maintained from any single Windows PowerShell session.
 In other words, this is a per-geo within an organization administrator connection.
@@ -44,7 +44,7 @@ The Windows PowerShell session will be set to serve the new SharePoint Online ad
 
 A delegated partner administrator has to swap connections for different organizations within the same Windows PowerShell session.
 
-You must be a SharePoint Online administrator to run the cmdlet.
+You must be a SharePoint Online administrator or a SharePoint Embedded administrator to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
@@ -91,6 +91,13 @@ Connects to a SharePoint Online Administration Center specifying the region.
 Connect-SPOService -Credential $creds -Url https://tenant-admin.sharepoint.com -ModernAuth $true -AuthenticationUrl https://login.microsoftonline.com/organizations
 ```
 Connecting to SPO Service with ModernAuth Flag.
+
+### -----------------------EXAMPLE 6-----------------------------
+
+ ```powershell
+Connect-SPOService -Url https://contoso-admin.sharepoint.com -UseSystemBrowser $true
+```
+Authenticates using the Microsoft Authentication Library (MAAL) and connects to the SharePoint Online Administration Center on successful authentication.
 
 ## PARAMETERS
 
@@ -188,6 +195,21 @@ Accept wildcard characters: False
  Ensures that SharePoint Online tenant administration cmdlets can connect to the service using modern TLS protocols.
 
 To use it you also need to provide the **AuthenticationUrl** parameter.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -UseSystemBrowser
+
+ Used to authenticate the user using the Microsoft Authentication Library (MSAL).
 
 ```yaml
 Type: Boolean
