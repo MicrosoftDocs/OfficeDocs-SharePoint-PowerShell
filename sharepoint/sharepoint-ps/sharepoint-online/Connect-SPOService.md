@@ -97,7 +97,7 @@ Connecting to SPO Service with ModernAuth Flag.
  ```powershell
 Connect-SPOService -Url https://contoso-admin.sharepoint.com -UseSystemBrowser $true
 ```
-Authenticates using the Microsoft Authentication Library (MAAL) and connects to the SharePoint Online Administration Center on successful authentication.
+Authenticates using the Microsoft Authentication Library (MSAL) and connects to the SharePoint Online Administration Center on successful authentication.
 
 ## PARAMETERS
 
