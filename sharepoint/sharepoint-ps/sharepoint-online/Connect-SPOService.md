@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Connects a SharePoint Online administrator to a SharePoint Online connection (the SharePoint Online Administration Center).
+Connects the SharePoint Online Administrator or the SharePoint Embedded Administrator to a SharePoint Online connection (the SharePoint Online Administration Center).
 This cmdlet must be run before any other SharePoint Online cmdlets can run.
 
 ## SYNTAX
@@ -36,7 +36,7 @@ Connect-SPOService [-Url] <UrlCmdletPipeBind> [[-Credential] <CredentialCmdletPi
 
 ## DESCRIPTION
 
-The `Connect-SPOService` cmdlet connects the SharePoint Online administrator or the SharePoint Embedded administrator to the SharePoint Online Administration Center.
+The `Connect-SPOService` cmdlet connects the SharePoint Online Administrator or the SharePoint Embedded Administrator to the SharePoint Online Administration Center.
 
 Only a single SharePoint Online service connection is maintained from any single Windows PowerShell session.
 In other words, this is a per-geo within an organization administrator connection.
@@ -45,9 +45,9 @@ The Windows PowerShell session will be set to serve the new SharePoint Online ad
 
 A delegated partner administrator has to swap connections for different organizations within the same Windows PowerShell session.
 
-You must be a SharePoint Online administrator or a SharePoint Embedded administrator to run the cmdlet.
+You must be a SharePoint Online Administrator or a SharePoint Embedded Administrator to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps).
 
 ## EXAMPLES
 
