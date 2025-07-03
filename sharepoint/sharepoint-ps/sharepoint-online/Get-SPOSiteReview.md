@@ -43,7 +43,7 @@ Specifies the entity that could cause oversharing and hence tracked by these rep
 Type: SiteAccessReportEntityEnum
 Parameter Sets: (All)
 Aliases:
-Accepted values: All, SharingLinks_Anyone, SharingLinks_PeopleInYourOrg, SharingLinks_Guests, SensitivityLabelForFiles, EveryoneExceptExternalUsersAtSite, EveryoneExceptExternalUsersForItems, PermissionedUsers
+Accepted values: All, SharingLinks_Anyone, SharingLinks_PeopleInYourOrg, SharingLinks_Guests, SensitivityLabelForFiles, EveryoneExceptExternalUsersAtSite, EveryoneExceptExternalUsersForItems, PermissionedUsers, PermissionsReport
 
 Required: False
 Position: Named
