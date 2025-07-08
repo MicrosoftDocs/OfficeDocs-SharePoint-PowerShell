@@ -191,6 +191,7 @@ Set-SPOTenant
  [-ReduceTempTokenLifetimeValue <Int32>]
  [-RequireAcceptingAccountMatchInvitedAccount <Boolean>]
  [-RequireAnonymousLinksExpireInDays <Int32>]
+ [-RequireOrganizationLinksExpireInDays <Int32>]
  [-RestrictedAccessControlforSitesErrorHelpLink <String>]
  [-ResyncContentSecurityPolicyConfigurationEntries <Boolean>]
  [-ReSyncTenantPrivacyProfile <SwitchParameter>]
@@ -1779,7 +1780,27 @@ Accept wildcard characters: False
 
 ### -RequireAnonymousLinksExpireInDays
 
-Specifies all anonymous links that have been created (or will be created) will expire after the set number of days.
+Specifies the upper bound for user-created anonymous link expiration periods. All links created after setting this policy will expire by the end of a period spanning the set number of days.
+
+The value can be from 0 to 730 days.
+
+To remove the expiration requirement, set the value to zero (0).
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequireOrganizationLinksExpireInDays
+
+Specifies the upper bound for user-created organization link expiration periods. All links created after setting this policy will expire by the end of a period spanning the set number of days.
 
 The value can be from 0 to 730 days.
 
