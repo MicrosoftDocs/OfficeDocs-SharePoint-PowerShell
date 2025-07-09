@@ -193,6 +193,7 @@ Set-SPOTenant
  [-RequireAnonymousLinksExpireInDays <Int32>]
  [-RequireOrganizationLinksExpireInDays <Int32>]
  [-RestrictedAccessControlforSitesErrorHelpLink <String>]
+ [-RestrictResourceAccountAccess <Boolean>]
  [-ResyncContentSecurityPolicyConfigurationEntries <Boolean>]
  [-ReSyncTenantPrivacyProfile <SwitchParameter>]
  [-SearchResolveExactEmailOrUPN <Boolean>]
@@ -4446,11 +4447,28 @@ Aliases:
 Applicable: SharePoint Online
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RestrictResourceAccountAccess
+
+Controls whether resource accounts used by Teams Rooms and Devices can retain access to files after the meeting or collaboration is complete. Setting this to True prevents devices from accessing files and other Microsoft 365 assets when not actively in use.
+
+PARAMVALUE: True | False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ## RELATED LINKS
 
