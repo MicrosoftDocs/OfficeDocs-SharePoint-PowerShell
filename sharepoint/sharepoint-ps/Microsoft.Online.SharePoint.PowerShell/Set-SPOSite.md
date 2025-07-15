@@ -16,15 +16,17 @@ ms.reviewer:
 
 Sets or updates one or more properties' values for a site collection.
 
-X
+## SYNTAX
 
 ### None (Default)
+
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### ParamSet1
+
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-Owner <String>] [-Title <String>] [-StorageQuota <Int64>]
  [-StorageQuotaWarningLevel <Int64>] [-ResourceQuota <Double>] [-ResourceQuotaWarningLevel <Double>]
