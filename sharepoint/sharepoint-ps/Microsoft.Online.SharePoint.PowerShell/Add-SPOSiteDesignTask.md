@@ -47,13 +47,15 @@ Add-SPOSiteDesignTask -SiteDesignId 501z8c32-4147-44d4-8607-26c2f67cae82 -WebUrl
 
 ### -SiteDesignId
 
+> Applicable: SharePoint Online
+
 The ID of the site design to apply.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 0
 Default value: None
@@ -63,13 +65,15 @@ Accept wildcard characters: False
 
 ### -WebUrl
 
+> Applicable: SharePoint Online
+
 The URL of the site collection where the site design will be applied.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 1
 Default value: None

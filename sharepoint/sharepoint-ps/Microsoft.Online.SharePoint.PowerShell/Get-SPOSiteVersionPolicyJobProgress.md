@@ -40,13 +40,15 @@ Example 1 gets the progress of setting version policy for existing document libr
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 Specifies the URL of the site collection.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 0
 Default value: None

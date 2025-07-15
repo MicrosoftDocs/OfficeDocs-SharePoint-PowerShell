@@ -44,13 +44,15 @@ Nestor Wilke i:0#.f|membership|nestorw@contoso.onmicrosoft.com   View
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 The ID of the site design to get scoping information.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SPOSiteDesignPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 0
 Default value: None

@@ -96,13 +96,15 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
+
+> Applicable: SharePoint Online
 {{ Fill UserPrincipalName Description }}
 
 ```yaml
 Type: System.String
 Parameter Sets: User
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 0

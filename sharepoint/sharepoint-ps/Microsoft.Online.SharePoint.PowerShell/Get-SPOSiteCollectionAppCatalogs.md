@@ -40,13 +40,15 @@ This example returns the Site Collection App Catalog for the site <https://conto
 
 ### -Site
 
+> Applicable: SharePoint Online
+
 Url of the site
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 0
 Default value: None

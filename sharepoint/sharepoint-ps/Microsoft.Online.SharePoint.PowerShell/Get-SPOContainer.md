@@ -126,6 +126,8 @@ Example 8 returns a tabular list of recently archived containers belonging to th
 
 ### -ArchiveStatus
 
+> Applicable: SharePoint Online
+
 The ArchiveStatus parameter is used to display containers in various stages of archiving. The following states are supported:
 
 - Archived – Displays containers in all archived states.
@@ -140,7 +142,7 @@ Type: Microsoft.Online.SharePoint.TenantAdministration.SPContainerArchiveStatusF
 Parameter Sets: Archive
 Aliases:
 Accepted values: NotArchived, FullyArchived, RecentlyArchived, Reactivating, Archived
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 1
@@ -151,13 +153,15 @@ Accept wildcard characters: False
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 Use this parameter to specify the Container ID.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SPOContainerPipeBind
 Parameter Sets: Identity
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -168,13 +172,15 @@ Accept wildcard characters: False
 
 ### -OwningApplicationId
 
+> Applicable: SharePoint Online
+
 This parameter specifies the ID of the SharePoint Embedded application. Use the `Get-SPOApplication` command to retrieve the OwningApplicationId.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: OwningApplicationId, Sort, Archive
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 0
@@ -185,13 +191,15 @@ Accept wildcard characters: False
 
 ### -Paged
 
+> Applicable: SharePoint Online
+
 This parameter can be used when there are more than 200 containers in a given SharePoint Embedded application. Using `-Paged` will provide a paging token that will display the next 200 Containers.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: OwningApplicationId, Sort, Archive
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: 1
@@ -203,13 +211,15 @@ Accept wildcard characters: False
 
 ### -PagingToken
 
+> Applicable: SharePoint Online
+
 Use this parameter to provide the paging token to view the remaining containers as shown in Example 4. If there are no more containers to display, the cmdlet output will return the message `End of containers view.` Otherwise, use the given paging token to retrieve the next batch of up to 200 containers. For displaying the next set of archived containers, `-ArchiveStatus` paramter needs to be used along with this parameter.
 
 ```yaml
 Type: System.String
 Parameter Sets: OwningApplicationId, Sort, Archive
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: 2

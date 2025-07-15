@@ -25,12 +25,14 @@ Remove-SPOContentSecurityPolicy [-Source] <String> [-WhatIf] [-Confirm] [<Common
 
 ## DESCRIPTION
 
-Removes the given source from the **Content Security Policy** configuration. 
+Removes the given source from the **Content Security Policy** configuration.
 In multi-geo environments, **Content Security Policy** configuration is unique to each geo.
 
 ## PARAMETERS
 
 ### -Source
+
+> Applicable: SharePoint Online
 
 Source to be removed from the **Content Security Policy** configuration.
 
@@ -38,7 +40,7 @@ Source to be removed from the **Content Security Policy** configuration.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 0

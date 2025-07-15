@@ -63,13 +63,15 @@ Example 3 creates a new site collection for the current company with specified s
 
 ### -CompatibilityLevel
 
+> Applicable: SharePoint Online
+
 This parameter no longer has any effect and only accepts a value of '15'.
 
 ```yaml
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -95,13 +97,15 @@ Accept wildcard characters: False
 
 ### -LocaleId
 
+> Applicable: SharePoint Online
+
 Specifies the language of this site collection. For more information, see Locale IDs Assigned by Microsoft (<https://go.microsoft.com/fwlink/p/?LinkId=242911>). The Template and LocaleId parameters must be a valid combination as returned from the `Get-SPOWebTemplate` cmdlet.
 
 ```yaml
 Type: System.UInt32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -112,13 +116,15 @@ Accept wildcard characters: False
 
 ### -NoWait
 
+> Applicable: SharePoint Online
+
 Specifies to continue executing script immediately.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -129,13 +135,15 @@ Accept wildcard characters: False
 
 ### -Owner
 
+> Applicable: SharePoint Online
+
 Specifies the user name of the site collection's primary owner. The owner must be a email-enabled user instead of a security group or an email-enabled security group.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -146,13 +154,15 @@ Accept wildcard characters: False
 
 ### -ResourceQuota
 
+> Applicable: SharePoint Online
+
 Specifies the quota for this site collection in Sandboxed Solutions units. This value must not exceed the company's aggregate available Sandboxed Solutions quota. The default value is 0. For more information, see [Resource Usage Limits on Sandboxed Solutions in SharePoint](/previous-versions/office/developer/sharepoint-2010/gg615462(v=office.14)). Note that this parameter is now obsolete and has been deprecated.
 
 ```yaml
 Type: System.Double
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -163,13 +173,15 @@ Accept wildcard characters: False
 
 ### -StorageQuota
 
+> Applicable: SharePoint Online
+
 Specifies the storage quota for this site collection in megabytes. This value must not exceed the company's available quota.
 
 ```yaml
 Type: System.Int64
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -180,13 +192,15 @@ Accept wildcard characters: False
 
 ### -Template
 
+> Applicable: SharePoint Online
+
 Specifies the site collection template type. Use the `Get-SPOWebTemplate` cmdlet to get the list of valid templates. If no template is specified, one can be added later. The Template and LocaleId parameters must be a valid combination as returned from the `Get-SPOWebTemplate` cmdlet.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -197,13 +211,15 @@ Accept wildcard characters: False
 
 ### -TimeZoneId
 
+> Applicable: SharePoint Online
+
 Specifies the time zone of the site collection. For more information, see [RegionalSettings.TimeZones property](/previous-versions/office/sharepoint-csom/jj171282(v=office.15)).
 
 ```yaml
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -214,13 +230,15 @@ Accept wildcard characters: False
 
 ### -Title
 
+> Applicable: SharePoint Online
+
 Specifies the title of the site collection.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -231,13 +249,15 @@ Accept wildcard characters: False
 
 ### -Url
 
+> Applicable: SharePoint Online
+
 Specifies the full URL of the new site collection. It must be in a valid managed path in the company's site. For example, for company contoso, valid managed paths are <https://contoso.sharepoint.com/sites> and <https://contoso.sharepoint.com/teams.>
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.UrlCmdletPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

@@ -58,13 +58,15 @@ New-SPOAppBillingPolicy -ApplicationId 50785fde-3082-47ac-a36d-06282ac5c7da  -Az
 
 ### -ApplicationID
 
+> Applicable: SharePoint Online
+
 This parameter specifies the ID of the  application.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -75,13 +77,15 @@ Accept wildcard characters: False
 
 ### -AzureRegion
 
+> Applicable: SharePoint Online
+
 The region of the Azure Subscription.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -92,13 +96,15 @@ Accept wildcard characters: False
 
 ### -AzureSubscriptionId
 
+> Applicable: SharePoint Online
+
 The unique identifier of the Azure Active Directory profile (Microsoft Entra ID) for billing purposes.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -109,13 +115,15 @@ Accept wildcard characters: False
 
 ### -ResourceGroup
 
+> Applicable: SharePoint Online
+
 Resource Group Name associated with the Azure Subscription
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -126,6 +134,8 @@ Accept wildcard characters: False
 
 ### -UsageCharges
 
+> Applicable: SharePoint Online
+
 This parameters determined who is charged for the usage of the application. This parameter supports two values  - AppOwnerIsCharged or ConsumingTenantoftheAppischarged.
 - AppOwnerIsCharged : The tenant owning the application is charged for the usage
 - ConsumingTenantoftheAppischarged : The tenant using the application is charged for the usage.
@@ -134,7 +144,7 @@ This parameters determined who is charged for the usage of the application. This
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

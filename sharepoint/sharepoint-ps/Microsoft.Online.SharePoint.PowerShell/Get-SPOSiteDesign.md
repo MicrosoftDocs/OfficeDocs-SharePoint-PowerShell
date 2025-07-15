@@ -47,13 +47,15 @@ Description         : Use this design to apply Contoso theme and create
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 The ID of the site design to retrieve.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SPOSiteDesignPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: 0
 Default value: None

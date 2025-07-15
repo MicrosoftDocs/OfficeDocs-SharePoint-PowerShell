@@ -56,13 +56,15 @@ This example makes guest user adelev_fabrikam.onmicrosoft.com a SharePoint Onlin
 
 ### -IsSiteCollectionAdmin
 
+> Applicable: SharePoint Online
+
 Specifies whether the user is a site collection administrator.
 
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -72,13 +74,15 @@ Accept wildcard characters: False
 
 ### -LoginName
 
+> Applicable: SharePoint Online
+
 Specifies the user name.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -88,13 +92,15 @@ Accept wildcard characters: False
 
 ### -Site
 
+> Applicable: SharePoint Online
+
 Specifies the full URL of the site collection. It must be in a valid managed path in the company's site.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None

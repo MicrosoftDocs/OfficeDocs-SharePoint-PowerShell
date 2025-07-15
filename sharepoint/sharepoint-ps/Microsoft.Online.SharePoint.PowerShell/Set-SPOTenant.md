@@ -655,13 +655,15 @@ This example disables the Power Apps Adaptive Card Extension.
 
 ### -AllOrganizationSecurityGroupId
 
+> Applicable: SharePoint Online
+
 Sets the All-Organization Security Group by object ID. This group is then used for other features, such as "EnableDiscoverableByOrganizationForVideos", if enabled. If you change the group ID associated with the All-Organization Security Group, it will only be effective on new shares or permission events.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -686,6 +688,8 @@ Accept wildcard characters: False
 
 ### -AllowClassicPublishingSiteCreation
 
+> Applicable: SharePoint Online
+
 This parameter allows creation of classic publishing site collections (templates BLANKINTERNETCONTAINER#0, CMSPUBLISHING#0 and BLANKINTERNET#0) and activation of classic publishing features in sites.
 
 The valid values are:
@@ -697,7 +701,7 @@ The valid values are:
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -707,6 +711,8 @@ Accept wildcard characters: False
 
 ### -AllowCommentsTextOnEmailEnabled
 
+> Applicable: SharePoint Online
+
 When this parameter is true, the email notification that a user receives when is mentioned, includes the surrounding document context. Set it to false to disable this feature.
 
 PARAMVALUE: True | False
@@ -715,7 +721,7 @@ PARAMVALUE: True | False
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -725,13 +731,15 @@ Accept wildcard characters: False
 
 ### -AllowDownloadingNonWebViewableFiles
 
+> Applicable: SharePoint Online
+
 This parameter has been deprecated.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -741,6 +749,8 @@ Accept wildcard characters: False
 
 ### -AllowEditing
 
+> Applicable: SharePoint Online
+
 Prevents users from editing Office files in the browser and copying and pasting Office file contents out of the browser window.
 
 PARAMVALUE: True | False
@@ -749,7 +759,7 @@ PARAMVALUE: True | False
 Type: System.Boolean
 Parameter Sets: ParamSetMultipleSites
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -758,6 +768,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowEveryoneExceptExternalUsersClaimInPrivateSite
+
+> Applicable: SharePoint Online
 
 When this parameter is true, the "Everyone except external users" claim is available in the People Picker of a private site. Set it to false to disable this feature.
 
@@ -770,7 +782,7 @@ The valid values are:
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -779,6 +791,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowGuestUserShareToUsersNotInSiteCollection
+
+> Applicable: SharePoint Online
 
 The AllowGuestUserShareToUsersNotInSiteCollection settings (defaulted to false) will allow guests to share to users not in the site.
 
@@ -793,7 +807,7 @@ Note: When the value is set to True, you will also need to enable [SharePoint an
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -802,6 +816,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowOverrideForBlockUserInfoVisibility
+
+> Applicable: SharePoint Online
 
 Allow organization level policy for Block User Info Visibility to be overridden for a SharePoint site or OneDrive. Use Set-SPOSite to override the policy for a SharePoint site or OneDrive.
 
@@ -815,7 +831,7 @@ The valid values are:
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -915,6 +931,8 @@ Accept wildcard characters: False
 
 ### -ApplyAppEnforcedRestrictionsToAdHocRecipients
 
+> Applicable: SharePoint Online
+
 When the feature is enabled, all guest users are subject to conditional access policy. By default guest users who are accessing SharePoint Online files with pass code are exempt from the conditional access policy.
 
 The valid values are:
@@ -926,7 +944,7 @@ The valid values are:
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1026,6 +1044,8 @@ Accept wildcard characters: False
 
 ### -BccExternalSharingInvitations
 
+> Applicable: SharePoint Online
+
 When the feature is enabled, all external sharing invitations that are sent will blind copy the e-mail messages listed in the BccExternalSharingsInvitationList.
 
 The valid values are:
@@ -1037,7 +1057,7 @@ The valid values are:
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1046,6 +1066,8 @@ Accept wildcard characters: False
 ```
 
 ### -BccExternalSharingInvitationsList
+
+> Applicable: SharePoint Online
 
 Specifies a list of e-mail addresses to be BCC'd when the BCC for External Sharing feature is enabled.
 Multiple addresses can be specified by creating a comma separated list with no spaces.
@@ -1059,7 +1081,7 @@ The valid values are:
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1114,6 +1136,8 @@ Accept wildcard characters: False
 
 ### -BlockDownloadLinksFileType
 
+> Applicable: SharePoint Online
+
 The valid values are:
 
 - WebPreviewableFiles
@@ -1125,7 +1149,7 @@ The valid values are:
 Type: Microsoft.Online.SharePoint.TenantManagement.BlockDownloadLinksFileTypes
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1135,6 +1159,8 @@ Accept wildcard characters: False
 
 ### -BlockSendLabelMismatchEmail
 
+> Applicable: SharePoint Online
+
 When a sensitivity label mismatch occurs between the label on the document uploaded and the label on the site, SharePoint Online captures an audit record, and sends an Incompatible sensitivity label detected email notification to the person who uploaded the document and the site owner. The notification contains details of the document which caused the problem and the label assigned to the document and to the site. The comparison happens between the priority of these two labels.
 
 PARAMVALUE: True | False
@@ -1143,7 +1169,7 @@ PARAMVALUE: True | False
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1153,13 +1179,15 @@ Accept wildcard characters: False
 
 ### -BlockUserInfoVisibility
 
+> Applicable: SharePoint Online
+
 This feature has not yet been rolled out to Production. Attempting to set this parameter before rollout is complete will result in an error message. More details on this feature will be available on release.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1168,6 +1196,8 @@ Accept wildcard characters: False
 ```
 
 ### -BlockUserInfoVisibilityInOneDrive
+
+> Applicable: SharePoint Online
 
 Blocks users from accessing User Info if they have Limited Access permission only to the OneDrive. The policy applies to all OneDrives in the organization.
 
@@ -1185,7 +1215,7 @@ The valid values are:
 Type: Microsoft.Online.SharePoint.TenantAdministration.TenantBrowseUserInfoPolicyValue
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1194,6 +1224,8 @@ Accept wildcard characters: False
 ```
 
 ### -BlockUserInfoVisibilityInSharePoint
+
+> Applicable: SharePoint Online
 
 Blocks users from accessing User Info if they have Limited Access permission only to a SharePoint site. The policy applies to all SharePoint sites in the organization.
 
@@ -1207,7 +1239,7 @@ The valid values are:
 Type: Microsoft.Online.SharePoint.TenantAdministration.TenantBrowseUserInfoPolicyValue
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1216,6 +1248,8 @@ Accept wildcard characters: False
 ```
 
 ### -BusinessConnectivityServiceDisabled
+
+> Applicable: SharePoint Online
 Prevents access to features that depend on the Business Connectivity Service (BCS), including external lists, external columns, and external content types.
 
 PARAMVALUE: True | False
@@ -1224,7 +1258,7 @@ PARAMVALUE: True | False
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1234,6 +1268,8 @@ Accept wildcard characters: False
 
 ### -CommentsOnFilesDisabled
 
+> Applicable: SharePoint Online
+
 Disables or enables commenting functionality on the files.
 PARAMVALUE: True | False
 
@@ -1241,7 +1277,7 @@ PARAMVALUE: True | False
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1251,6 +1287,8 @@ Accept wildcard characters: False
 
 ### -CommentsOnListItemsDisabled
 
+> Applicable: SharePoint Online
+
 Disables or enables commenting functionality on list items.
 PARAMVALUE: True | False
 
@@ -1258,7 +1296,7 @@ PARAMVALUE: True | False
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1268,6 +1306,8 @@ Accept wildcard characters: False
 
 ### -CommentsOnSitePagesDisabled
 
+> Applicable: SharePoint Online
+
 Disables or enables commenting functionality on the site pages.
 PARAMVALUE: True | False
 
@@ -1275,7 +1315,7 @@ PARAMVALUE: True | False
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1285,6 +1325,8 @@ Accept wildcard characters: False
 
 ### -ConditionalAccessPolicy
 
+> Applicable: SharePoint Online
+
 Please read [Control access from unmanaged devices](/sharepoint/control-access-from-unmanaged-devices ) documentation here to understand Conditional Access Policy usage in SharePoint Online.
 
 PARAMVALUE: AllowFullAccess | AllowLimitedAccess | BlockAccess
@@ -1293,7 +1335,7 @@ PARAMVALUE: AllowFullAccess | AllowLimitedAccess | BlockAccess
 Type: Microsoft.Online.SharePoint.TenantManagement.SPOConditionalAccessPolicyType
 Parameter Sets: ParamSetMultipleSites
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1303,13 +1345,15 @@ Accept wildcard characters: False
 
 ### -ConditionalAccessPolicyErrorHelpLink
 
+> Applicable: SharePoint Online
+
 A Link for help when Conditional Access Policy blocks a user. This should be in a valid URL format. A valid URL format that begins with https:// or https://.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1415,6 +1459,8 @@ Accept wildcard characters: False
 
 ### -CoreLoopDefaultSharingLinkRole
 
+> Applicable: SharePoint Online
+
 This parameter sets the default share link role for Loop and Whiteboard files on SharePoint sites.
 
 The valid values are:
@@ -1429,7 +1475,7 @@ The valid values are:
 Type: Microsoft.Online.SharePoint.TenantManagement.SharingRole
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1438,6 +1484,8 @@ Accept wildcard characters: False
 ```
 
 ### -CoreLoopDefaultSharingLinkScope
+
+> Applicable: SharePoint Online
 
 This parameter sets the default share link scope for Loop and Whiteboard files on SharePoint sites.
 
@@ -1452,7 +1500,7 @@ The valid values are:
 Type: Microsoft.SharePoint.Client.Sharing.SharingScope
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1507,13 +1555,15 @@ Accept wildcard characters: False
 
 ### -CustomizedExternalSharingServiceUrl
 
+> Applicable: SharePoint Online
+
 Specifies a URL that will be appended to the error message that is surfaced when a user is blocked from sharing externally by policy. This URL can be used to direct users to internal portals to request help or to inform them about your organization's policies. An example value is "<https://www.contoso.com/sharingpolicies".>
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1538,6 +1588,8 @@ Accept wildcard characters: False
 
 ### -DefaultLinkPermission
 
+> Applicable: SharePoint Online
+
 Lets administrators choose the default permission of the link in the sharing dialog box in OneDrive for Business and SharePoint Online. This applies to anonymous access, internal and direct links.
 
 The valid values are View and Edit (default).
@@ -1546,7 +1598,7 @@ The valid values are View and Edit (default).
 Type: Microsoft.Online.SharePoint.TenantManagement.SharingPermissionType
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1571,6 +1623,8 @@ Accept wildcard characters: False
 
 ### -DefaultSharingLinkType
 
+> Applicable: SharePoint Online
+
 Lets administrators choose the default link type in the sharing dialog box in OneDrive for Business and SharePoint Online.
 
 For additional information about how to change the default link type, see Change the default link type when users get links for sharing.
@@ -1589,7 +1643,7 @@ The valid values are:
 Type: Microsoft.Online.SharePoint.TenantManagement.SharingLinkType
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1629,6 +1683,8 @@ Accept wildcard characters: False
 
 ### -DelegateRestrictedAccessControlManagement
 
+> Applicable: SharePoint Online
+
 Allows SharePoint administrators to delegate the management of Restricted access control policy on sites to site admins and owners.
 
 The valid values are:
@@ -1639,7 +1695,7 @@ The valid values are:
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1648,6 +1704,8 @@ Accept wildcard characters: False
 ```
 
 ### -DelegateRestrictedContentDiscoverabilityManagement
+
+> Applicable: SharePoint Online
 
 Allows SharePoint administrators to delegate the management of Restricted content discoverability policy on sites to site admins and owners.
 
@@ -1659,7 +1717,7 @@ The valid values are:
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1669,6 +1727,8 @@ Accept wildcard characters: False
 
 ### -DisableAddShortcutsToOneDrive
 
+> Applicable: SharePoint Online
+
 When the feature is disabled ($true), the option [Add shortcut to My files](https://support.microsoft.com/office/add-shortcuts-to-shared-folders-in-onedrive-for-work-or-school-d66b1347-99b7-4470-9360-ffc048d35a33) will be removed; any folders that have already been added will remain on the user's computer.
 
 PARAMVALUE: True | False
@@ -1677,7 +1737,7 @@ PARAMVALUE: True | False
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1702,6 +1762,8 @@ Accept wildcard characters: False
 
 ### -DisableCustomAppAuthentication
 
+> Applicable: SharePoint Online
+
 Prevents apps using an Azure Access Control (ACS) app-only access token to access SharePoint. ACS, a service of Microsoft Entra ID, has been retired on November 7, 2018. This retirement does not impact the SharePoint add-in model, which uses the https://accounts.accesscontrol.windows.net hostname (which is not impacted by this retirement). For new tenants, apps using an ACS app-only access token are disabled by default. We recommend using the Microsoft Entra app-only model which is modern and more secure. Note that marking this property to $true doesn't prevent creating apps in SharePoint that use an Azure Access Control (ACS) app-only access token. Marking this property to $true only ensures that such apps can't access SharePoint anymore.
 
 Accepts a value of true or false. By default this feature is set to true.
@@ -1710,7 +1772,7 @@ Accepts a value of true or false. By default this feature is set to true.
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1719,6 +1781,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisabledAdaptiveCardExtensionIds
+
+> Applicable: SharePoint Online
 
 Allows administrators to prevent certain Adaptive Card Extensions from being added to pages or rendering on pages on which they were previously added. Currently, only the following Adaptive Card Extensions can be disabled in such a manner:
 
@@ -1734,7 +1798,7 @@ To re-enable some disabled Adaptive Card Extensions, use the `Set-SPOTenant` wit
 Type: System.Guid[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1743,6 +1807,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableDocumentLibraryDefaultLabeling
+
+> Applicable: SharePoint Online
 
 This switch allows tenant admins to disable the capability of configuring a default sensitivity label for a document library.
 
@@ -1755,7 +1821,7 @@ PARAMVALUE: True | False
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1764,6 +1830,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisabledWebPartIds
+
+> Applicable: SharePoint Online
 
 Allows administrators to prevent certain web parts from being added to pages or rendering on pages on which they were previously added. Currently, only the following web parts can be disabled in such a manner:
 
@@ -1782,7 +1850,7 @@ To re-enable some disabled web parts, use the Set-SPOTenant with the -DisabledWe
 Type: System.Guid[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1807,6 +1875,8 @@ Accept wildcard characters: False
 
 ### -DisableOutlookPSTVersionTrimming
 
+> Applicable: SharePoint Online
+
 This parameter has no effect and it was used to opt-out of PST files retention policy changes as communicated in MC256835 (May 2021).
 Starting August 16, 2021, the service started retaining 30 days worth of versions for any PST files stored in OneDrive for Business and SharePoint Online team site document libraries. This change was introduced to prevent cases of previous versions of PST files quickly consuming available storage. The change only impacts previous versions of PST files stored in your document library storage. As a best practice, PST files should not be uploaded on OneDrive for Business and SharePoint Online team site document libraries due to the impact on storage and network bandwidth.
 
@@ -1816,7 +1886,7 @@ PARAMVALUE: True | False
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1841,6 +1911,8 @@ Accept wildcard characters: False
 
 ### -DisableSharePointStoreAccess
 
+> Applicable: SharePoint Online
+
 This feature allows the SharePoint Administrators to disable SharePoint Store access for all users in the tenant.
 
 Accepts a value of true (enabled) to hide the SharePoint app store or false (disabled) to show the SharePoint app store. By default this feature is set to false.
@@ -1849,7 +1921,7 @@ Accepts a value of true (enabled) to hide the SharePoint app store or false (dis
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1904,6 +1976,8 @@ Accept wildcard characters: False
 
 ### -DisallowInfectedFileDownload
 
+> Applicable: SharePoint Online
+
 Prevents the Download button from being displayed on the Virus Found warning page.
 
 Accepts a value of true (enabled) to hide the Download button or false (disabled) to display the Download button. By default this feature is set to false.
@@ -1912,7 +1986,7 @@ Accepts a value of true (enabled) to hide the Download button or false (disabled
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1921,6 +1995,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayStartASiteOption
+
+> Applicable: SharePoint Online
 
 Determines whether tenant users see the Start a Site menu option.
 
@@ -1933,7 +2009,7 @@ The valid values are:
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2033,13 +2109,15 @@ Accept wildcard characters: False
 
 ### -EmailAttestationReAuthDays
 
+> Applicable: SharePoint Online
+
 Sets the number of days for email attestation re-authentication. Value can be from 1 to 365 days.
 
 ```yaml
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2048,6 +2126,8 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAttestationRequired
+
+> Applicable: SharePoint Online
 
 Sets email attestation to required.
 
@@ -2059,7 +2139,7 @@ PARAMVALUE: True | False
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2069,6 +2149,8 @@ Accept wildcard characters: False
 
 ### -EnableAIPIntegration
 
+> Applicable: SharePoint Online
+
 This parameter enables SharePoint to process the content of files stored in SharePoint and OneDrive with sensitivity labels that include encryption. For more information, see [Enable sensitivity labels for Office files in SharePoint and OneDrive](/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 PARAMVALUE: True | False
@@ -2077,7 +2159,7 @@ PARAMVALUE: True | False
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2102,6 +2184,8 @@ Accept wildcard characters: False
 
 ### -EnableAutoNewsDigest
 
+> Applicable: SharePoint Online
+
 Enable or disable auto news digest. [Documentation](https://aka.ms/autonewsdigest) for auto news digest.
 
 PARAMVALUE: True | False
@@ -2110,7 +2194,7 @@ PARAMVALUE: True | False
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2120,6 +2204,8 @@ Accept wildcard characters: False
 
 ### -EnableAzureADB2BIntegration
 
+> Applicable: SharePoint Online
+
 Enables OneDrive and SharePoint integration with Microsoft Entra B2B. For more information, see [SharePoint and OneDrive integration with Microsoft Entra B2B](/sharepoint/sharepoint-azureb2b-integration).
 
 PARAMVALUE: True | False
@@ -2128,7 +2214,7 @@ PARAMVALUE: True | False
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2153,6 +2239,8 @@ Accept wildcard characters: False
 
 ### -EnableGuestSignInAcceleration
 
+> Applicable: SharePoint Online
+
 Accelerates guest-enabled site collections as well as member-only site collections when the SignInAccelerationDomain parameter is set.
 
 > [!NOTE]
@@ -2162,7 +2250,7 @@ Accelerates guest-enabled site collections as well as member-only site collectio
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2187,6 +2275,8 @@ Accept wildcard characters: False
 
 ### -EnableMinimumVersionRequirement
 
+> Applicable: SharePoint Online
+
 This parameter was used to opt-out of the versioning setting update. It has no effect as of today as versioning setting has already been rolled out.
 
 PARAMVALUE: True | False
@@ -2195,7 +2285,7 @@ PARAMVALUE: True | False
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2220,6 +2310,8 @@ Accept wildcard characters: False
 
 ### -EnablePromotedFileHandlers
 
+> Applicable: SharePoint Online
+
 This parameter is reserved for Microsoft internal use.
 
 PARAMVALUE: True | False
@@ -2228,7 +2320,7 @@ PARAMVALUE: True | False
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2253,6 +2345,8 @@ Accept wildcard characters: False
 
 ### -EnableSensitivityLabelforPDF
 
+> Applicable: SharePoint Online
+
 Allows tenant admins to turn on support for PDFs with sensitivity labels for the following scenarios:
 
 - Applying a sensitivity label in Office for the web.
@@ -2269,7 +2363,7 @@ The valid values are:
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2369,6 +2463,8 @@ Accept wildcard characters: False
 
 ### -ExternalServicesEnabled
 
+> Applicable: SharePoint Online
+
 Enables external services for a tenant.
 External services are defined as services that are not in the Office 365 datacenters.
 
@@ -2381,7 +2477,7 @@ The valid values are:
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2390,6 +2486,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalUserExpirationRequired
+
+> Applicable: SharePoint Online
 
 Specifies whether to enable the external user expiration policy, where external users will be expired and removed from the site collection in a given number of days.
 
@@ -2403,7 +2501,7 @@ False (default) - Disables the policy.
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2413,13 +2511,15 @@ Accept wildcard characters: False
 
 ### -ExternalUserExpireInDays
 
+> Applicable: SharePoint Online
+
 Specifies the number of days before an external user will expire and be removed from the site collection if the policy is enabled. Value can be from 30 to 730 days.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2428,6 +2528,8 @@ Accept wildcard characters: False
 ```
 
 ### -FileAnonymousLinkType
+
+> Applicable: SharePoint Online
 
 Anonymous access links can allow recipients to only view or view and edit. The value can be set separately for folders and files.
 
@@ -2440,7 +2542,7 @@ The valid values are:
 Type: Microsoft.SharePoint.Client.AnonymousLinkType
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2450,13 +2552,15 @@ Accept wildcard characters: False
 
 ### -FilePickerExternalImageSearchEnabled
 
+> Applicable: SharePoint Online
+
 For Webparts that support inserting images, like for example Image or Hero webpart, the Web search (Powered by Bing) option will be available if enabled (the default).
 
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2465,6 +2569,8 @@ Accept wildcard characters: False
 ```
 
 ### -FolderAnonymousLinkType
+
+> Applicable: SharePoint Online
 
 Users can configure folder anonymous access links that allow recipients to view, view and upload, or view, edit, and upload files.
 
@@ -2478,7 +2584,7 @@ The valid values are:
 Type: Microsoft.SharePoint.Client.AnonymousLinkType
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2518,6 +2624,8 @@ Accept wildcard characters: False
 
 ### -IncludeAtAGlanceInShareEmails
 
+> Applicable: SharePoint Online
+
 Enable or disable the At A Glance feature in sharing e-mails. This provides the key points and time to read for the shared item if available.
 
 PARAMVALUE: True | False
@@ -2526,7 +2634,7 @@ PARAMVALUE: True | False
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2551,6 +2659,8 @@ Accept wildcard characters: False
 
 ### -IPAddressAllowList
 
+> Applicable: SharePoint Online
+
 Configures multiple IP addresses or IP address ranges (IPv4 or IPv6), that are recognized as trusted.
 
 Use commas to separate multiple IP addresses or IP address ranges. Verify there are no overlapping IP addresses and ensure IP ranges use Classless Inter-Domain Routing (CIDR) notation. For example, 172.16.0.0, 192.168.1.0/27.
@@ -2562,7 +2672,7 @@ Use commas to separate multiple IP addresses or IP address ranges. Verify there 
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2571,6 +2681,8 @@ Accept wildcard characters: False
 ```
 
 ### -IPAddressEnforcement
+
+> Applicable: SharePoint Online
 
 Allows access from network locations that are defined by an administrator.
 
@@ -2582,7 +2694,7 @@ Before the IPAddressEnforcement parameter is set, make sure you add a valid IPv4
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2592,6 +2704,8 @@ Accept wildcard characters: False
 
 ### -IPAddressWACTokenLifetime
 
+> Applicable: SharePoint Online
+
 Allows to set the session timeout. If you are a tenant administrator and you begin IP address enforcement for OneDrive for Business in Office 365, this enforcement automatically activates a tenant parameter IPAddressWACTokenLifetime. The default value is 15 minutes, when IP Address Enforcement is True.
 
 PARAMVALUE: Int32
@@ -2600,7 +2714,7 @@ PARAMVALUE: Int32
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2685,6 +2799,8 @@ Accept wildcard characters: False
 
 ### -IsSharePointAddInsBlocked
 
+> Applicable: SharePoint Online
+
 When this feature is enabled, all functionalities of the add-ins will be restricted, preventing them from running or installing.
 
 The valid values are:
@@ -2696,7 +2812,7 @@ The valid values are:
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2705,6 +2821,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsSharePointAddInsDisabled
+
+> Applicable: SharePoint Online
 
 When the feature is enabled, all the add-ins features will be disabled.
 
@@ -2717,7 +2835,7 @@ The valid values are:
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2726,6 +2844,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsWBFluidEnabled
+
+> Applicable: SharePoint Online
 
 Sets whether Whiteboard is enabled or disabled for OneDrive for Business users. Whiteboard on OneDrive for Business is automatically enabled for applicable Microsoft 365 tenants but can be disabled.
 
@@ -2738,7 +2858,7 @@ The valid values are:
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2748,6 +2868,8 @@ Accept wildcard characters: False
 
 ### -LabelMismatchEmailHelpLink
 
+> Applicable: SharePoint Online
+
 This parameter allows tenant admins to customize the "Help Link" in email with the subject "Incompatible sensitivity label detected." When a sensitivity label mismatch occurs between the label on the document uploaded and the label on the site, SharePoint Online captures an audit record and sends an Incompatible sensitivity label detected email notification to the person who uploaded the document and the site owner. The notification contains details of the document which caused the problem and the label assigned to the document and to the site. The comparison happens between the priority of these two labels.
 
 The value can be any valid URL.
@@ -2756,7 +2878,7 @@ The value can be any valid URL.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2765,6 +2887,8 @@ Accept wildcard characters: False
 ```
 
 ### -LegacyAuthProtocolsEnabled
+
+> Applicable: SharePoint Online
 
 By default this value is set to $True, which means that authentication using legacy protocols is enabled.
 
@@ -2780,7 +2904,7 @@ Setting this parameter to $False prevents Office clients using non-modern authen
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2805,6 +2929,8 @@ Accept wildcard characters: False
 
 ### -LimitedAccessFileType
 
+> Applicable: SharePoint Online
+
 Allows users to preview only Office files in the browser. This option increases security, but may be a barrier to user productivity.
 
 The following parameters can be used with `-ConditionalAccessPolicy AllowLimitedAccess` for both the organization-wide setting and the site-level setting.
@@ -2819,7 +2945,7 @@ PARAMVALUE: OfficeOnlineFilesOnly | WebPreviewableFiles | OtherFiles
 Type: Microsoft.Online.SharePoint.TenantManagement.SPOLimitedAccessFileType
 Parameter Sets: ParamSetMultipleSites
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2844,6 +2970,8 @@ Accept wildcard characters: False
 
 ### -MarkNewFilesSensitiveByDefault
 
+> Applicable: SharePoint Online
+
 If external sharing is turned on, sensitive content could be shared and accessed by guests before the Office DLP rule finishes processing, you can address this issue by configuring this parameter.
 
 Possible values are
@@ -2857,7 +2985,7 @@ For more information see [Mark new files as sensitive by default](/sharepoint/se
 Type: Microsoft.Online.SharePoint.TenantManagement.SensitiveByDefaultState
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2882,13 +3010,15 @@ Accept wildcard characters: False
 
 ### -MaxCompatibilityLevel
 
+> Applicable: SharePoint Online
+
 The only valid value is "15".
 
 ```yaml
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2897,6 +3027,8 @@ Accept wildcard characters: False
 ```
 
 ### -MediaTranscription
+
+> Applicable: SharePoint Online
 
 When the feature is enabled, videos can have transcripts generated on demand or generated automatically in certain scenarios. This is the default because the policy is default on. If a video owner decides they don't want the transcript, they can always hide or delete it from that video.
 Possible values:
@@ -2908,7 +3040,7 @@ Possible values:
 Type: Microsoft.Online.SharePoint.TenantManagement.MediaTranscriptionPolicyType
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2917,6 +3049,8 @@ Accept wildcard characters: False
 ```
 
 ### -MediaTranscriptionAutomaticFeatures
+
+> Applicable: SharePoint Online
 
 When the feature is enabled, videos can have transcripts generated automatically on upload. The policy is default on. If a tenant admin decides to disable the feature, he can do so by disabling the policy at tenant level. This feature can not be enabled or disabled at site level.
 Possible values:
@@ -2928,7 +3062,7 @@ Possible values:
 Type: Microsoft.Online.SharePoint.TenantManagement.MediaTranscriptionAutomaticFeaturesPolicyType
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2938,13 +3072,15 @@ Accept wildcard characters: False
 
 ### -MinCompatibilityLevel
 
+> Applicable: SharePoint Online
+
 The only valid value is "15".
 
 ```yaml
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2953,6 +3089,8 @@ Accept wildcard characters: False
 ```
 
 ### -NoAccessRedirectUrl
+
+> Applicable: SharePoint Online
 
 Specifies the URL of the redirected site for those site collections which have the locked state "NoAccess."
 
@@ -2965,7 +3103,7 @@ The valid values are:
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2975,6 +3113,8 @@ Accept wildcard characters: False
 
 ### -NotificationsInOneDriveForBusinessEnabled
 
+> Applicable: SharePoint Online
+
 Enables or disables notifications in OneDrive for Business.
 
 PARAMVALUE: True | False
@@ -2983,7 +3123,7 @@ PARAMVALUE: True | False
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -2993,6 +3133,8 @@ Accept wildcard characters: False
 
 ### -NotificationsInSharePointEnabled
 
+> Applicable: SharePoint Online
+
 Enables or disables notifications in SharePoint.
 
 PARAMVALUE: True | False
@@ -3001,7 +3143,7 @@ PARAMVALUE: True | False
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3015,6 +3157,8 @@ This parameter has been deprecated since SharePoint Online legacy invitation flo
 
 ### -NotifyOwnersWhenItemsReshared
 
+> Applicable: SharePoint Online
+
 When this parameter is set to $true and another user re-shares a document from a user's OneDrive for Business, the OneDrive for Business owner is notified by e-mail.
 
 For additional information about how to configure notifications for external sharing, see Configure notifications for external sharing for OneDrive for Business.
@@ -3025,7 +3169,7 @@ The valid values are $true and $false.
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3034,6 +3178,8 @@ Accept wildcard characters: False
 ```
 
 ### -ODBAccessRequests
+
+> Applicable: SharePoint Online
 
 Lets administrators set policy on access requests and requests to share in OneDrive for Business.
 
@@ -3047,7 +3193,7 @@ The valid values are:
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3056,6 +3202,8 @@ Accept wildcard characters: False
 ```
 
 ### -ODBMembersCanShare
+
+> Applicable: SharePoint Online
 
 Lets administrators set policy on re-sharing behavior in OneDrive for Business.
 
@@ -3069,7 +3217,7 @@ The valid values are:
 Type: Microsoft.SharePoint.Client.SharingState
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3094,6 +3242,8 @@ Accept wildcard characters: False
 
 ### -OfficeClientADALDisabled
 
+> Applicable: SharePoint Online
+
 When set to true this will disable the ability to use Modern Authentication that leverages ADAL across the tenant.
 
 The valid values are:
@@ -3105,7 +3255,7 @@ The valid values are:
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3175,6 +3325,8 @@ Accept wildcard characters: False
 
 ### -OneDriveForGuestsEnabled
 
+> Applicable: SharePoint Online
+
 Lets OneDrive for Business creation for administrator managed guest users. Administrator managed Guest users use credentials in the resource tenant to access the resources.
 
 The valid values are:
@@ -3186,7 +3338,7 @@ The valid values are:
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3195,6 +3347,8 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveLoopDefaultSharingLinkRole
+
+> Applicable: SharePoint Online
 
 This parameter sets the default share link role for Loop and Whiteboard files on OneDrive sites.
 
@@ -3210,7 +3364,7 @@ The valid values are:
 Type: Microsoft.Online.SharePoint.TenantManagement.SharingRole
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3219,6 +3373,8 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveLoopDefaultSharingLinkScope
+
+> Applicable: SharePoint Online
 
 Gets or sets default share link scope for Loop and Whiteboard files on OneDrive sites.
 
@@ -3233,7 +3389,7 @@ The valid values are:
 Type: Microsoft.SharePoint.Client.Sharing.SharingScope
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3288,6 +3444,8 @@ Accept wildcard characters: False
 
 ### -OneDriveStorageQuota
 
+> Applicable: SharePoint Online
+
 Sets a default OneDrive for Business storage quota for the tenant. It will be used for new OneDrive for Business sites created.
 
 A typical use will be to reduce the amount of storage associated with OneDrive for Business to a level below what the License entitles the users. For example, it could be used to set the quota to 10 gigabytes (GB) by default.
@@ -3300,7 +3458,7 @@ If the value is set larger than the Maximum allowed OneDrive for Business quota,
 Type: System.Int64
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3310,6 +3468,8 @@ Accept wildcard characters: False
 
 ### -OrphanedPersonalSitesRetentionPeriod
 
+> Applicable: SharePoint Online
+
 Specifies the number of days after a user's Active Directory account is deleted that their OneDrive for Business content will be deleted.
 
 The value range is in days, between 30 and 3650. The default value is 30.
@@ -3318,7 +3478,7 @@ The value range is in days, between 30 and 3650. The default value is 30.
 Type: Microsoft.Online.SharePoint.TenantAdministration.SyntexFeatureScopeValue
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3328,6 +3488,8 @@ Accept wildcard characters: False
 
 ### -OwnerAnonymousNotification
 
+> Applicable: SharePoint Online
+
 Enables or disables owner anonymous notification. If enabled, an email notification will be sent to the OneDrive for Business owners when anonymous links are created or changed.
 
 PARAMVALUE: True | False
@@ -3336,7 +3498,7 @@ PARAMVALUE: True | False
 Type: System.String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3345,6 +3507,8 @@ Accept wildcard characters: False
 ```
 
 ### -PermissiveBrowserFileHandlingOverride
+
+> Applicable: SharePoint Online
 
 Enables the Permissive browser file handling. By default, the browser file handling is set to Strict. The Strict setting adds headers that force the browser to download certain types of files. The forced download improves security by disallowing the automatic execution of Web content. When the setting is set to Permissive, no headers are added and certain types of files can be executed in the browser instead of download.
 
@@ -3357,7 +3521,7 @@ The valid values are:
 Type: Microsoft.Online.SharePoint.TenantAdministration.SelectedSitesListOperations
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3367,6 +3531,8 @@ Accept wildcard characters: False
 
 ### -PreventExternalUsersFromResharing
 
+> Applicable: SharePoint Online
+
 Prevents external users from resharing files, folders, and sites that they do not own.
 
 PARAMVALUE: True | False
@@ -3375,7 +3541,7 @@ PARAMVALUE: True | False
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3384,6 +3550,8 @@ Accept wildcard characters: False
 ```
 
 ### -ProvisionSharedWithEveryoneFolder
+
+> Applicable: SharePoint Online
 
 Creates a Shared with Everyone folder in every user's new OneDrive for Business document library.
 
@@ -3398,7 +3566,7 @@ The default behavior of the Shared with Everyone folder changed in August 2015.
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3408,6 +3576,8 @@ Accept wildcard characters: False
 
 ### -PublicCdnAllowedFileTypes
 
+> Applicable: SharePoint Online
+
 Sets public CDN allowed file types, if the public CDN is enabled.
 
 PARAMVALUE: String
@@ -3416,7 +3586,7 @@ PARAMVALUE: String
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3426,6 +3596,8 @@ Accept wildcard characters: False
 
 ### -PublicCdnEnabled
 
+> Applicable: SharePoint Online
+
 Enables or disables the public CDN.
 
 PARAMVALUE: True | False
@@ -3434,7 +3606,7 @@ PARAMVALUE: True | False
 Type: Microsoft.Online.SharePoint.TenantAdministration.SyntexFeatureScopeValue
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3448,6 +3620,8 @@ This parameter has been deprecated since SharePoint Online legacy invitation flo
 
 ### -RequireAnonymousLinksExpireInDays
 
+> Applicable: SharePoint Online
+
 Specifies the upper bound for user-created anonymous link expiration periods. All links created after setting this policy will expire by the end of a period spanning the set number of days.
 
 The value can be from 0 to 730 days.
@@ -3458,7 +3632,7 @@ To remove the expiration requirement, set the value to zero (0).
 Type: System.String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3467,6 +3641,8 @@ Accept wildcard characters: False
 ```
 
 ### -RequireOrganizationLinksExpireInDays
+
+> Applicable: SharePoint Online
 
 Specifies the upper bound for user-created organization link expiration periods. All links created after setting this policy will expire by the end of a period spanning the set number of days.
 
@@ -3478,7 +3654,7 @@ To remove the expiration requirement, set the value to zero (0).
 Type: Microsoft.Online.SharePoint.TenantAdministration.SelectedSitesListOperations
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3487,6 +3663,8 @@ Accept wildcard characters: False
 ```
 
 ### -ReSyncTenantPrivacyProfile
+
+> Applicable: SharePoint Online
 
 The 'SyncPrivacyProfileProperties' parameter is obsolete and renamed ReSyncTenantPrivacyProfile.
 
@@ -3500,7 +3678,7 @@ Running 'Set-SPOTenant - ReSyncTenantPrivacyProfile' will force a sync from the 
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3509,6 +3687,8 @@ Accept wildcard characters: False
 ```
 
 ### -SearchResolveExactEmailOrUPN
+
+> Applicable: SharePoint Online
 
 Removes the search capability from People Picker. Note, recently resolved names will still appear in the list until browser cache is cleared or expired. This also does not allow SharePoint users to search for security groups or SharePoint groups.
 
@@ -3523,7 +3703,7 @@ The valid values are:
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3533,6 +3713,8 @@ Accept wildcard characters: False
 
 ### -SharingAllowedDomainList
 
+> Applicable: SharePoint Online
+
 Specifies a list of email domains that are allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
 For additional information about how to restrict a domain sharing, see [Restricted Domains Sharing in Office 365 SharePoint Online and OneDrive for Business](https://support.office.com/en-US/article/Restricted-Domains-Sharing-in-Office-365-SharePoint-Online-and-OneDrive-for-Business-5d7589cd-0997-4a00-a2ba-2320ec49c4e9).
@@ -3541,7 +3723,7 @@ For additional information about how to restrict a domain sharing, see [Restrict
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3551,6 +3733,8 @@ Accept wildcard characters: False
 
 ### -SharingBlockedDomainList
 
+> Applicable: SharePoint Online
+
 Specifies a list of email domains that are blocked or prohibited for sharing with the external collaborators. Use space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
 For additional information about how to restrict a domain sharing, see [Restricted Domains Sharing in Office 365 SharePoint Online and OneDrive for Business](https://support.office.com/en-US/article/Restricted-Domains-Sharing-in-Office-365-SharePoint-Online-and-OneDrive-for-Business-5d7589cd-0997-4a00-a2ba-2320ec49c4e9).
@@ -3559,7 +3743,7 @@ For additional information about how to restrict a domain sharing, see [Restrict
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3796,6 +3980,8 @@ Accept wildcard characters: False
 
 ### -SharingCapability
 
+> Applicable: SharePoint Online
+
 Determines what level of sharing is available for OneDrive and SharePoint sites.
 
 The valid values are:
@@ -3811,7 +3997,7 @@ For more information about sharing, see [Manage sharing settings](/sharepoint/tu
 Type: Microsoft.Online.SharePoint.TenantManagement.SharingCapabilities
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3820,6 +4006,8 @@ Accept wildcard characters: False
 ```
 
 ### -SharingDomainRestrictionMode
+
+> Applicable: SharePoint Online
 
 Specifies the external sharing mode for domains.
 
@@ -3835,7 +4023,7 @@ For additional information about how to restrict a domain sharing, see [Restrict
 Type: Microsoft.Online.SharePoint.TenantManagement.SharingDomainRestrictionModes
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3844,6 +4032,8 @@ Accept wildcard characters: False
 ```
 
 ### -ShowAllUsersClaim
+
+> Applicable: SharePoint Online
 
 Enables the administrator to hide the All Users claim groups in People Picker.
 
@@ -3861,7 +4051,7 @@ The valid values are:
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3870,6 +4060,8 @@ Accept wildcard characters: False
 ```
 
 ### -ShowEveryoneClaim
+
+> Applicable: SharePoint Online
 
 Enables the administrator to hide the Everyone claim in the People Picker.
 When users share an item with Everyone, it is accessible to all authenticated users in the tenant's Microsoft Entra ID, including any active external users who have previously accepted invitations.
@@ -3885,7 +4077,7 @@ The valid values are:
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3894,6 +4086,8 @@ Accept wildcard characters: False
 ```
 
 ### -ShowEveryoneExceptExternalUsersClaim
+
+> Applicable: SharePoint Online
 
 Enables the administrator to hide the "Everyone except external users" claim in the People Picker.
 When users share an item with "Everyone except external users", it is accessible to all organization members in the tenant's Microsoft Entra ID, but not to any users who have previously accepted invitations.
@@ -3907,7 +4101,7 @@ The valid values are:
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3947,6 +4141,8 @@ Accept wildcard characters: False
 
 ### -ShowPeoplePickerSuggestionsForGuestUsers
 
+> Applicable: SharePoint Online
+
 Shows people picker suggestions for guest users. To enable the option to search for existing guest users at Tenant Level, set this parameter to $true.
 
 PARAMVALUE: True | False
@@ -3955,7 +4151,7 @@ PARAMVALUE: True | False
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3964,6 +4160,8 @@ Accept wildcard characters: False
 ```
 
 ### -SignInAccelerationDomain
+
+> Applicable: SharePoint Online
 
 Specifies the home realm discovery value to be sent to Microsoft Entra ID during the user sign-in process.
 
@@ -3985,7 +4183,7 @@ The valid values are:
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -3995,6 +4193,8 @@ Accept wildcard characters: False
 
 ### -SiteOwnerManageLegacyServicePrincipalEnabled
 
+> Applicable: SharePoint Online
+
 Allows or disallows the site collection admins to manage the Azure Access Control (ACS) service principal.
 
 When the value is set to false, the service principal can only be created or updated by the SharePoint tenant admin. If the value is set to true, both the SharePoint tenant admin and site collection admin will be able to create or update the service principal through SharePoint.
@@ -4003,7 +4203,7 @@ When the value is set to false, the service principal can only be created or upd
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -4028,6 +4228,8 @@ Accept wildcard characters: False
 
 ### -SocialBarOnSitePagesDisabled
 
+> Applicable: SharePoint Online
+
 Disables or enables the Social Bar.
 
 The Social Bar will appear on all modern SharePoint pages with the exception of the home page of a site. It will give users the ability to like a page, see the number of views, likes, and comments on a page, and see the people who have liked a page.
@@ -4038,7 +4240,7 @@ PARAMVALUE: True | False
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -4047,6 +4249,8 @@ Accept wildcard characters: False
 ```
 
 ### -SpecialCharactersStateInFileFolderNames
+
+> Applicable: SharePoint Online
 
 Permits the use of special characters in file and folder names in SharePoint Online and OneDrive for Business document libraries.
 
@@ -4063,7 +4267,7 @@ The valid values are:
 Type: Microsoft.Online.SharePoint.TenantManagement.SpecialCharactersState
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -4072,6 +4276,8 @@ Accept wildcard characters: False
 ```
 
 ### -StartASiteFormUrl
+
+> Applicable: SharePoint Online
 
 Specifies URL of the form to load in the Start a Site dialog.
 
@@ -4084,7 +4290,7 @@ The valid values are:
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -4188,6 +4394,8 @@ Accept wildcard characters: False
 
 ### -UseFindPeopleInPeoplePicker
 
+> Applicable: SharePoint Online
+
 This feature enables tenant admins to enable ODB and SPO to respect Exchange supports Address Book Policy (ABP) policies in the people picker.
 
 PARAMVALUE: True | False
@@ -4199,7 +4407,7 @@ PARAMVALUE: True | False
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -4207,6 +4415,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -UsePersistentCookiesForExplorerView
+
+> Applicable: SharePoint Online
 > [!NOTE]
 > This setting is not used anymore with Internet Explorer (IE) retired and the parameter would be removed soon. Users need to select "Yes" when prompted for "Stay signed in?" at the time of sign-in for "View in File Explorer" to work with Microsoft Edge.
 
@@ -4227,7 +4437,7 @@ The valid values are:
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None

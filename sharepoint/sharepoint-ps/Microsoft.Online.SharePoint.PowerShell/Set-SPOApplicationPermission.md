@@ -62,13 +62,15 @@ Example 3 sets guest application permissions to None for the guest application w
 
 ### -ApplicationId
 
+> Applicable: SharePoint
+
 Use this parameter to specify the guest application ID. A guest application is any application within the tenant's enterprise applications.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint
+
 
 Required: True
 Position: 1
@@ -79,13 +81,15 @@ Accept wildcard characters: False
 
 ### -OwningApplicationId
 
+> Applicable: SharePoint
+
 Use this parameter to specify the Owning Application where guest application access is granted.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint
+
 
 Required: True
 Position: 0
@@ -96,13 +100,15 @@ Accept wildcard characters: False
 
 ### -PermissionAppOnly
 
+> Applicable: SharePoint
+
 Use this parameter to specify the app-only permissions of the guest application.
 
 ```yaml
 Type: System.String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint
+
 
 Required: True
 Position: 2
@@ -113,13 +119,15 @@ Accept wildcard characters: False
 
 ### -PermissionDelegated
 
+> Applicable: SharePoint
+
 This parameter specifies delegated permissions which are not supported for guest applications at this time.
 
 ```yaml
 Type: System.String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint
+
 
 Required: False
 Position: 3

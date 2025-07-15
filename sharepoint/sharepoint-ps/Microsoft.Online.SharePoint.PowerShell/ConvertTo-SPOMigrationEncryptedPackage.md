@@ -58,6 +58,8 @@ Same as example1 but without log file and using an encryption type SHA384
 
 ### -EncryptionParameters
 
+> Applicable: SharePoint Online
+
 Parameters of the encryption, it doesn't accept wildcard characters.
 It accepts parameters like SHA384, SHA256, etc.
 
@@ -65,7 +67,7 @@ It accepts parameters like SHA384, SHA256, etc.
 Type: Microsoft.Online.SharePoint.Migration.EncryptionParameters
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -76,13 +78,15 @@ Accept wildcard characters: False
 
 ### -MigrationSourceLocations
 
+> Applicable: SharePoint Online
+
 Possible Source locations to migrate
 
 ```yaml
 Type: Microsoft.Online.SharePoint.Migration.MigrationPackageLocation
 Parameter Sets: ImplicitSourceParameterSet
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -93,13 +97,15 @@ Accept wildcard characters: False
 
 ### -NoLogFile
 
+> Applicable: SharePoint Online
+
 Switch Parameter to determine if you should get or not a log file.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -110,13 +116,15 @@ Accept wildcard characters: False
 
 ### -SourceFilesPath
 
+> Applicable: SharePoint Online
+
 Defines the temporary Path where are located the XML source files.
 
 ```yaml
 Type: System.String
 Parameter Sets: ExplicitSourceParameterSet
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -127,13 +135,15 @@ Accept wildcard characters: False
 
 ### -SourcePackagePath
 
+> Applicable: SharePoint Online
+
 Defines the source package path location.
 
 ```yaml
 Type: System.String
 Parameter Sets: ExplicitSourceParameterSet
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -144,13 +154,15 @@ Accept wildcard characters: False
 
 ### -TargetFilesPath
 
+> Applicable: SharePoint Online
+
 Defines the temporary Path where are located the XML source files.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -161,13 +173,15 @@ Accept wildcard characters: False
 
 ### -TargetPackagePath
 
+> Applicable: SharePoint Online
+
 Defines the source package path location of the package to be encrypted.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

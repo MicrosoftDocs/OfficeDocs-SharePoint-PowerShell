@@ -56,6 +56,8 @@ Example 3 sets manual version histroy limits on the document library called "Doc
 ## PARAMETERS
 
 ### -EnableAutoExpirationVersionTrim
+
+> Applicable: SharePoint Online
 Global and SharePoint Administrators can set document library level version history limits settings that universally apply to new versions created.
 
 When version history limits are managed automatically, SharePoint employs an algorithm behind the scenes that deletes (thins out) intermittent older versions that are least likely to be needed, while preserving sufficient high-value versions - more versions in the recent past and fewer farther back in time - in case restores are required.
@@ -78,7 +80,7 @@ PARAMVALUE: $true | $false
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -87,6 +89,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExpireVersionsAfterDays
+
+> Applicable: SharePoint Online
 When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), admins will need to set the limits to the number of major versions (`MajorVersionLimit`), the number of major with minor versions (`MajorWithMinorVersionsLimit`) and the time period the versions are stored (`ExpireVersionsAfterDays`). Please check the description of `EnableAutoExpirationVersionTrim` for more details.
 
 PARAMVALUE: Int32
@@ -95,7 +99,7 @@ PARAMVALUE: Int32
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -120,6 +124,8 @@ Accept wildcard characters: False
 ```
 
 ### -MajorVersionLimit
+
+> Applicable: SharePoint Online
 When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), admins will need to set the limits to the number of major versions (`MajorVersionLimit`) and the time period the versions are stored (`ExpireVersionsAfterDays`). Please check the description of `EnableAutoExpirationVersionTrim` for more details.
 
 PARAMVALUE: Int32
@@ -128,7 +134,7 @@ PARAMVALUE: Int32
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -137,6 +143,8 @@ Accept wildcard characters: False
 ```
 
 ### -MajorWithMinorVersionsLimit
+
+> Applicable: SharePoint Online
 When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), admins will need to set the limits to the number of major versions (`MajorVersionLimit`), the number of major with minor versions (`MajorWithMinorVersionsLimit`) and the time period the versions are stored (`ExpireVersionsAfterDays`). Please check the description of `EnableAutoExpirationVersionTrim` for more details.
 
 PARAMVALUE: Int32
@@ -145,7 +153,7 @@ PARAMVALUE: Int32
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -155,13 +163,15 @@ Accept wildcard characters: False
 
 ### -Site
 
+> Applicable: SharePoint Online
+
 Specifies the URL of the site.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 0
 Default value: None

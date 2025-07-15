@@ -45,13 +45,15 @@ This example removes the research site from the marketing hub site.
 
 ### -Site
 
+> Applicable: SharePoint Online
+
 URL of the site to remove from the hub site.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 0

@@ -50,13 +50,15 @@ This example registers the DEP used with SharePoint Online and OneDrive for Busi
 
 ### -PrimaryKeyName
 
+> Applicable: SharePoint Online
+
 The name of the primary key
 
 ```yaml
 Type: System.String
 Parameter Sets: BYOK_MultipleParameters
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -66,13 +68,15 @@ Accept wildcard characters: False
 
 ### -PrimaryKeyVaultName
 
+> Applicable: SharePoint Online
+
 The name of the primary key vault
 
 ```yaml
 Type: System.String
 Parameter Sets: BYOK_MultipleParameters
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -97,13 +101,15 @@ Accept wildcard characters: False
 
 ### -PrimaryKeyVersion
 
+> Applicable: SharePoint Online
+
 The version of the primary key
 
 ```yaml
 Type: System.Guid
 Parameter Sets: BYOK_MultipleParameters
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -113,13 +119,15 @@ Accept wildcard characters: False
 
 ### -SecondaryKeyName
 
+> Applicable: SharePoint Online
+
 The name of the secondary key
 
 ```yaml
 Type: System.String
 Parameter Sets: BYOK_MultipleParameters
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -129,13 +137,15 @@ Accept wildcard characters: False
 
 ### -SecondaryKeyVaultName
 
+> Applicable: SharePoint Online
+
 The name of the secondary key vault
 
 ```yaml
 Type: System.String
 Parameter Sets: BYOK_MultipleParameters
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -160,13 +170,15 @@ Accept wildcard characters: False
 
 ### -SecondaryKeyVersion
 
+> Applicable: SharePoint Online
+
 The version of the secondary key
 
 ```yaml
 Type: System.Guid
 Parameter Sets: BYOK_MultipleParameters
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -175,13 +187,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Online
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -191,13 +205,15 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
+> Applicable: SharePoint Online
+
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None

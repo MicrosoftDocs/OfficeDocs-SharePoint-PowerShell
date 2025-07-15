@@ -43,13 +43,15 @@ Remove-SPOSiteDesignTask -Identity 501z8c32-4147-44d4-8607-26c2f67cae82
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 The ID of the site design to apply.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SPOSiteDesignTaskPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 0
 Default value: None

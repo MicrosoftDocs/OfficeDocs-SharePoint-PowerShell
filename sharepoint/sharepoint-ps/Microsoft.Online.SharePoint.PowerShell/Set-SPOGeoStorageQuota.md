@@ -48,13 +48,15 @@ Sets the SharePoint Online Storage Quota on the **NORTH CENTRAL US** location to
 
 ### -GeoLocation
 
+> Applicable: SharePoint Online
+
 The desired Geo Location to set.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -65,13 +67,15 @@ Accept wildcard characters: False
 
 ### -StorageQuotaMB
 
+> Applicable: SharePoint Online
+
 SharePoint Online Storage Quota in MegaBytes.
 
 ```yaml
 Type: System.Int64
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

@@ -75,13 +75,15 @@ Example 3 returns one user or security group account inside group Team Site Memb
 
 ### -Group
 
+> Applicable: SharePoint Online
+
 Specifies the group to get the users from.
 
 ```yaml
 Type: System.String
 Parameter Sets: ByGroup
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -92,13 +94,15 @@ Accept wildcard characters: False
 
 ### -Limit
 
+> Applicable: SharePoint Online
+
 Specifies the maximum number of users returned. The default value is to return 500 users. To return all users specify the value "All".
 
 ```yaml
 Type: System.String
 Parameter Sets: All, ByGroup
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -109,13 +113,15 @@ Accept wildcard characters: False
 
 ### -LoginName
 
+> Applicable: SharePoint Online
+
 Specifies the user name.
 
 ```yaml
 Type: System.String
 Parameter Sets: ByLogin
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -126,13 +132,15 @@ Accept wildcard characters: False
 
 ### -Site
 
+> Applicable: SharePoint Online
+
 Specifies the URL of the site collection to get the user from.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

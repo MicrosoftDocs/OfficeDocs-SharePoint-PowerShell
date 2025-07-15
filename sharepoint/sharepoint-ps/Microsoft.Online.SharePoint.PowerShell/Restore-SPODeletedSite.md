@@ -42,13 +42,15 @@ This example restores a SharePoint Online deleted site collection named "<https:
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 Specifies the URL of the site collection to restore.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -59,13 +61,15 @@ Accept wildcard characters: False
 
 ### -NoWait
 
+> Applicable: SharePoint Online
+
 Specifies to continue executing script immediately.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named

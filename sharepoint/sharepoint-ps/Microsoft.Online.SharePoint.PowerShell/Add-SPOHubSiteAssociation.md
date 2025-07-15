@@ -40,13 +40,15 @@ This example associates the research site with the marketing hub site.
 
 ### -HubSite
 
+> Applicable: SharePoint Online
+
 URL or Site ID of the hub site.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoHubSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -57,13 +59,15 @@ Accept wildcard characters: False
 
 ### -Site
 
+> Applicable: SharePoint Online
+
 URL of the site to join to the hub site.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 0

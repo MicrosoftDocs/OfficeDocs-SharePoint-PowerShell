@@ -57,6 +57,8 @@ This example removes a recently-removed organizational assets library from a CDN
 
 ### -CdnType
 
+> Applicable: SharePoint Online
+
 Specifies the CDN type. The valid values are: Public or Private.
 
 ```yaml
@@ -64,7 +66,7 @@ Type: Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnType
 Parameter Sets: (All)
 Aliases:
 Accepted values: Public, Private
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -74,6 +76,8 @@ Accept wildcard characters: False
 ```
 
 ### -OriginUrl
+
+> Applicable: SharePoint Online
 
 Specifies a path to the doc library to be configured. It can be provided in two ways: relative path, or a mask.
 
@@ -87,7 +91,7 @@ Mask - Mask allows to configure a partial URL match. It must start with */, and 
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -98,13 +102,15 @@ Accept wildcard characters: False
 
 ### -Confirm
 
+> Applicable: SharePoint Online
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -115,6 +121,8 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
+> Applicable: SharePoint Online
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -122,7 +130,7 @@ The cmdlet is not run.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named

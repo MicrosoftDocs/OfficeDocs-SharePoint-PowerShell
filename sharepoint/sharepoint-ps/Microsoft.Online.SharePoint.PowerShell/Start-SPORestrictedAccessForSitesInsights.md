@@ -50,13 +50,15 @@ Example 2 generates the restricted access control report which contains insights
 
 ### -ActionsBlockedByPolicy
 
+> Applicable: SharePoint Online
+
 It is an optional parameter, and it specifies the type of report generation to be triggered.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -67,13 +69,15 @@ Accept wildcard characters: False
 
 ### -Force
 
+> Applicable: SharePoint Online
+
 It is an optional parameter which is used to bypass confirmation prompts and execute the command without interruptions.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -84,13 +88,15 @@ Accept wildcard characters: False
 
 ### -RACProtectedSites
 
+> Applicable: SharePoint Online
+
 It is an optional parameter, and it specifies the type of report generation to be triggered.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named

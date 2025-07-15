@@ -50,6 +50,8 @@ This example triggers the reactivation of a site. If the site is reactivated fro
 
 ### -ArchiveState
 
+> Applicable: SharePoint Online
+
 Sets the archived state of the site. Valid values are Archived, Active.
 
 ```yaml
@@ -57,7 +59,7 @@ Type: Microsoft.Online.SharePoint.PowerShell.SPOArchiveState
 Parameter Sets: (All)
 Aliases:
 Accepted values: Archived, Active
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 1

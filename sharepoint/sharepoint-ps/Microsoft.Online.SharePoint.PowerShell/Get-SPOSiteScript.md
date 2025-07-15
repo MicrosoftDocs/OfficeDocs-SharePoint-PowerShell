@@ -56,13 +56,15 @@ Version     : 1
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 The ID of the site script to get information about.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SPOSiteScriptPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: 0
 Default value: None

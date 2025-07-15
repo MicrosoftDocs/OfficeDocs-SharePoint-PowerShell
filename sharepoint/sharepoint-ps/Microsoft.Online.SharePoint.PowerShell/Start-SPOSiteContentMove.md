@@ -70,13 +70,15 @@ Starts a site geo move for <https://contosoenergy.sharepoint.com/sites/hr> and a
 
 ### -DestinationDataLocation
 
+> Applicable: SharePoint Online
+
 Defines the new destination of the content that you want to move. This is the 3 letter data location value.
 
 ```yaml
 Type: System.String
 Parameter Sets: UrlAndDestinationDataLocation
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 1
 Default value: None
@@ -86,13 +88,15 @@ Accept wildcard characters: False
 
 ### -DestinationUrl
 
+> Applicable: SharePoint Online
+
 Destination URL is optional in cases where the administrator wants to perform a site rename as part of the move.
 
 ```yaml
 Type: System.String
 Parameter Sets: UrlAndDestinationUrl
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 1
 Default value: None
@@ -118,13 +122,15 @@ Accept wildcard characters: False
 
 ### -PreferredMoveBeginDate
 
+> Applicable: SharePoint Online
+
 Specifies what is the preferred Date and time to start the move job. This is a preference and will be honored based on system resource availability.
 
 ```yaml
 Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: 2
 Default value: None
@@ -134,13 +140,15 @@ Accept wildcard characters: False
 
 ### -PreferredMoveEndDate
 
+> Applicable: SharePoint Online
+
 Specifies what is the preferred Date and time to stop the move job from starting. This is a preference and will be honored based on system resource availability. If a the move is already in progress, we will complete the move.
 
 ```yaml
 Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: 3
 Default value: None
@@ -150,13 +158,15 @@ Accept wildcard characters: False
 
 ### -Reserved
 
+> Applicable: SharePoint Online
+
 Reserved for Microsoft Internal use.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: 4
 Default value: None
@@ -166,13 +176,15 @@ Accept wildcard characters: False
 
 ### -SourceSiteUrl
 
+> Applicable: SharePoint Online
+
 Specifies the source URL of the site collection you want to move.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 0
 Default value: None
@@ -242,13 +254,15 @@ Accept wildcard characters: False
 
 ### -ValidationOnly
 
+> Applicable: SharePoint Online
+
 This parameter will perform a validation check on whether the site can be moved and will not execute the move.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: 5
 Default value: None

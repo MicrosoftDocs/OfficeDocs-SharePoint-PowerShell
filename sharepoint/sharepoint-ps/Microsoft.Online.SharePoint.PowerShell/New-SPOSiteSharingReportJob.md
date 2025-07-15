@@ -40,13 +40,15 @@ New-SPOSiteSharingReportJob -Site $site -ReportStorageWebUrl 'https://contoso.sh
 
 ### -ReportStorageFolderUrl
 
+> Applicable: SharePoint Online
+
 Location to where the report will be exported.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 2
 Default value: None
@@ -56,13 +58,15 @@ Accept wildcard characters: False
 
 ### -ReportStorageWebUrl
 
+> Applicable: SharePoint Online
+
 Report web storage URL.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 1
 Default value: None
@@ -72,13 +76,15 @@ Accept wildcard characters: False
 
 ### -Site
 
+> Applicable: SharePoint Online
+
 Specifies the site.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 0
 Default value: None

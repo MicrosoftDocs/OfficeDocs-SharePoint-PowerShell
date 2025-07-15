@@ -53,13 +53,15 @@ $finalPackages = ConvertTo-SPOMigrationTargetedPackage -ParallelImport -SourceFi
 
 ### -AzureADUserCredentials
 
+> Applicable: SharePoint Online
+
 Receives Microsoft Entra User Credentials
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.CredentialCmdletPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -70,13 +72,15 @@ Accept wildcard characters: False
 
 ### -Credentials
 
+> Applicable: SharePoint Online
+
 Fill out the Regular Credentials (Get-Credential)
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.CredentialCmdletPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -87,13 +91,15 @@ Accept wildcard characters: False
 
 ### -NoAzureADLookup
 
+> Applicable: SharePoint Online
+
 Switch parameter that says if the command should or should not look up for Microsoft Entra ID.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -104,13 +110,15 @@ Accept wildcard characters: False
 
 ### -NoLogFile
 
+> Applicable: SharePoint Online
+
 Switch Parameter to determine if you should get or not a log file.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -121,13 +129,15 @@ Accept wildcard characters: False
 
 ### -OutputPackagePath
 
+> Applicable: SharePoint Online
+
 Output package path
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: 2
@@ -138,13 +148,15 @@ Accept wildcard characters: False
 
 ### -ParallelImport
 
+> Applicable: SharePoint Online
+
 Switch parameter to boost file share migration performance.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -155,13 +167,15 @@ Accept wildcard characters: False
 
 ### -PartitionSizeInBytes
 
+> Applicable: SharePoint Online
+
 Define the partition size in Bytes where it will be located the target package.
 
 ```yaml
 Type: System.Int64
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -172,13 +186,15 @@ Accept wildcard characters: False
 
 ### -SourceFilesPath
 
+> Applicable: SharePoint Online
+
 Defines the temporary Path where are located the XML source files.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 0
@@ -189,13 +205,15 @@ Accept wildcard characters: False
 
 ### -SourcePackagePath
 
+> Applicable: SharePoint Online
+
 Defines the source package path location.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 1
@@ -206,13 +224,15 @@ Accept wildcard characters: False
 
 ### -TargetDocumentLibraryPath
 
+> Applicable: SharePoint Online
+
 Defines the target document library path.
 
 ```yaml
 Type: System.String
 Parameter Sets: DocumentLibraryImport
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -223,13 +243,15 @@ Accept wildcard characters: False
 
 ### -TargetDocumentLibrarySubFolderPath
 
+> Applicable: SharePoint Online
+
 Defines the target document library subfolder path.
 
 ```yaml
 Type: System.String
 Parameter Sets: DocumentLibraryImport
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -240,6 +262,8 @@ Accept wildcard characters: False
 
 ### -TargetEnvironment
 
+> Applicable: SharePoint Online
+
 Defines the Target environment: Production, ProductionChina, None or OnPremises.
 
 ```yaml
@@ -247,7 +271,7 @@ Type: Microsoft.Online.SharePoint.Migration.TargetEnvironment
 Parameter Sets: (All)
 Aliases:
 Accepted values: Production, ProductionChina, None, OnPremises
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -258,13 +282,15 @@ Accept wildcard characters: False
 
 ### -TargetListPath
 
+> Applicable: SharePoint Online
+
 Defines the Target list path
 
 ```yaml
 Type: System.String
 Parameter Sets: ListImport
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -275,13 +301,15 @@ Accept wildcard characters: False
 
 ### -TargetWebUrl
 
+> Applicable: SharePoint Online
+
 Defines the Target Web URL of the package.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 3
@@ -292,13 +320,15 @@ Accept wildcard characters: False
 
 ### -UserMappingFile
 
+> Applicable: SharePoint Online
+
 Defines the file mapping of the user.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named

@@ -71,6 +71,8 @@ Example 3 enables administrator to download the Copilot agent insight report of 
 
 ### -Action
 
+> Applicable: SharePoint Online
+
 It determines whether a report would be viewed or downloaded. If the value of `-Action` is set as `View`, it will display the output on the PowerShell screen. Else if the value of `-Action` is set as `Download`, it will download the full report in CSV format to the same path from where the command was run.
 
 ```yaml
@@ -78,8 +80,8 @@ Type: ActionType
 Parameter Sets: (All)
 Aliases:
 Accepted values: View, Download
-Applicable: SharePoint Online
- 
+
+
 Required: False
 Position: Named
 Default value: View
@@ -88,6 +90,8 @@ Accept wildcard characters: False
 ```
 
 ### -Content
+
+> Applicable: SharePoint Online
 
 It specifies the kind of report to view or download. There are 3 kinds of sub-reports: CopilotAgentsOnSites, TopSites, SiteDistribution.
 
@@ -132,10 +136,10 @@ Type: Microsoft.Online.SharePoint.TenantAdministration.SPOCopilotAgentInsightTyp
 Parameter Sets: (All)
 Aliases:
 Accepted values: CopilotAgentsOnSites, TopSites, SiteDistribution
-Applicable: SharePoint Online
+
 
 Required: False
-Position: Named 
+Position: Named
 Default value: CopilotAgentsOnSites
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -143,14 +147,16 @@ Accept wildcard characters: False
 
 ### -ReportId
 
+> Applicable: SharePoint Online
+
 It specifies the unique Id of the report to be viewed or downloaded.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
- 
+
+
 Required: False
 Position: Named
 Default value: None

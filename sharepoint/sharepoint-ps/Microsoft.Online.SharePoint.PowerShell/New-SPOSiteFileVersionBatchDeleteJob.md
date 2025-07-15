@@ -103,13 +103,15 @@ Accept wildcard characters: False
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 Specifies the URL of the site collection.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 0
 Default value: None

@@ -47,13 +47,15 @@ Example 1 attaches the billing profile of Azure subscription ID "5a8a4d9f", reso
 
 ### -AzureSubscriptionId
 
+> Applicable: SharePoint Online
+
 This parameter describes the Azure subscription ID to which the container type needs to be associated.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -64,13 +66,15 @@ Accept wildcard characters: False
 
 ### -ContainerTypeId
 
+> Applicable: SharePoint Online
+
 This parameter specifies the ID of the container type corresponding to the SharePoint Embedded application.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -81,13 +85,15 @@ Accept wildcard characters: False
 
 ### -Region
 
+> Applicable: SharePoint Online
+
 This parameter describes the region to which the billing profile of the container type is associated with.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -98,13 +104,15 @@ Accept wildcard characters: False
 
 ### -ResourceGroup
 
+> Applicable: SharePoint Online
+
 This parameter describes the resource group to be used for the associated container type.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named

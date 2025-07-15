@@ -138,6 +138,8 @@ This example clears the ExcludedFileExtension list and lets all file types synce
 
 ### -BlockMacSync
 
+> Applicable: SharePoint Online
+
 Block Mac sync clients-- the Beta version and the new sync client (OneDrive.exe).
 The values for this parameter are True and False. The default value is False.
 
@@ -145,7 +147,7 @@ The values for this parameter are True and False. The default value is False.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Blocking
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -156,11 +158,13 @@ Accept wildcard characters: False
 
 ### -DisableReportProblemDialog
 
+> Applicable: SharePoint Online
+
 ```yaml
 Type: System.Boolean
 Parameter Sets: ReportProblemDialogFeature
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -171,13 +175,15 @@ Accept wildcard characters: False
 
 ### -DomainGuids
 
+> Applicable: SharePoint Online
+
 Sets the [domain GUID](/powershell/module/activedirectory/get-addomain) of the computer domain membership to add to the safe recipient list. Requires a minimum of one domain GUID. The maximum number of domain GUIDs allowed is 125.
 
 ```yaml
 Type: System.String
 Parameter Sets: Blocking
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -188,13 +194,15 @@ Accept wildcard characters: False
 
 ### -Enable
 
+> Applicable: SharePoint Online
+
 Enables the feature to block sync originating from domains that are not present in the safe recipients list.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Blocking
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -205,6 +213,8 @@ Accept wildcard characters: False
 
 ### -ExcludedFileExtensions
 
+> Applicable: SharePoint Online
+
 Blocks certain file types from syncing with the new sync client (OneDrive.exe).
 
 > [!NOTE]
@@ -214,7 +224,7 @@ Blocks certain file types from syncing with the new sync client (OneDrive.exe).
 Type: System.String
 Parameter Sets: FileExclusion
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named

@@ -62,13 +62,15 @@ The command in this example returns all deleted site collections from the Recycl
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 Specifies the URL of the deleted site collection to be returned.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: 1
@@ -79,13 +81,15 @@ Accept wildcard characters: False
 
 ### -IncludeOnlyPersonalSite
 
+> Applicable: SharePoint Online
+
 Use this switch parameter to only include Personal Sites in the returned results.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ParameterSetPersonalSitesOnly
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -96,13 +100,15 @@ Accept wildcard characters: False
 
 ### -IncludePersonalSite
 
+> Applicable: SharePoint Online
+
 Use this switch parameter to include Personal Sites with the returned results.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ParameterSetAllSites
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -113,6 +119,8 @@ Accept wildcard characters: False
 
 ### -Limit
 
+> Applicable: SharePoint Online
+
 Specifies the maximum number of site collections to return.
 It can be any number.
 To retrieve all site collections, use ALL.
@@ -122,7 +130,7 @@ The default value is 200.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named

@@ -44,13 +44,15 @@ Example 1 removes a user who has the e-mail address joe.healy@contoso.com from t
 
 ### -LoginName
 
+> Applicable: SharePoint Online
+
 Specifies the login name of the user which user profile is deleted.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

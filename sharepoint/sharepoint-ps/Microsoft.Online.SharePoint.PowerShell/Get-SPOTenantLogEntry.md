@@ -99,13 +99,15 @@ This example retrieves log entries recorded over that previous 14 days that have
 
 ### -CorrelationId
 
+> Applicable: SharePoint Online
+
 Specifies the Correlation ID as a filter.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: CorrelationId
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -116,13 +118,15 @@ Accept wildcard characters: False
 
 ### -EndTimeInUtc
 
+> Applicable: SharePoint Online
+
 Specifies the end time in UTC to search for logs.
 
 ```yaml
 Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: 1
@@ -133,13 +137,15 @@ Accept wildcard characters: False
 
 ### -MaxRows
 
+> Applicable: SharePoint Online
+
 Specifies the maximum number of rows in the descending order of timestamp. The value must be less than 5000. The default value is 1000.
 
 ```yaml
 Type: System.UInt32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: 2
@@ -150,13 +156,15 @@ Accept wildcard characters: False
 
 ### -Source
 
+> Applicable: SharePoint Online
+
 Specifies the component that logs the errors.
 
 ```yaml
 Type: System.Int32
 Parameter Sets: Source
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -167,13 +175,15 @@ Accept wildcard characters: False
 
 ### -StartTimeInUtc
 
+> Applicable: SharePoint Online
+
 Specifies the start time in Coordinated Universal Time (UTC) to search for the logs (for example, 01032011:12:00).
 
 ```yaml
 Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: 0
@@ -184,13 +194,15 @@ Accept wildcard characters: False
 
 ### -User
 
+> Applicable: SharePoint Online
+
 Specifies the log-on identity as a filter.
 
 ```yaml
 Type: System.String
 Parameter Sets: User
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

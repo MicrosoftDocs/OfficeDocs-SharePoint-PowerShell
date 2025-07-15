@@ -60,13 +60,15 @@ This example returns a collection of monitoring error message(s) for application
 
 ### -EndTimeInUtc
 
+> Applicable: SharePoint Online
+
 Specifies the end time in UTC to search for monitoring errors. If no end time is given, the default value current time in UTC is used.
 
 ```yaml
 Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -77,13 +79,15 @@ Accept wildcard characters: False
 
 ### -ProductId
 
+> Applicable: SharePoint Online
+
 Specifies the application's GUID.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -94,13 +98,15 @@ Accept wildcard characters: False
 
 ### -StartTimeInUtc
 
+> Applicable: SharePoint Online
+
 Specifies the start time in UTC to search for monitoring errors. If no start time is given, the default value 72 hours before the current time is used.
 
 ```yaml
 Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named

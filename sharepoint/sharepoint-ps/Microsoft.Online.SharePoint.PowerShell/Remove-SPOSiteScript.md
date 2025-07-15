@@ -40,13 +40,15 @@ Removes a site script.
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 The ID of the site script to remove.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SPOSiteScriptPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 0
 Default value: None

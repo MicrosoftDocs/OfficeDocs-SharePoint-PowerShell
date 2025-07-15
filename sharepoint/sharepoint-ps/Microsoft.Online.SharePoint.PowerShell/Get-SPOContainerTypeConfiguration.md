@@ -42,13 +42,15 @@ This example returns a list of configurations set on a container type '4f0af585-
 
 ### -ContainerTypeId
 
+> Applicable: SharePoint Online
+
 This parameter specifies the ID of the SharePoint Embedded container type. Use the `Get-SPOContainerType` command to retrieve the ContainerTypeId.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

@@ -51,13 +51,15 @@ Set-SPOSiteOffice365Group -Site https://contoso.sharepoint.com/sites/classicsite
 
 ### -Alias
 
+> Applicable: SharePoint Online
+
 Specifies the email alias for the new Microsoft 365 Group that will be created.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 2
@@ -67,6 +69,8 @@ Accept wildcard characters: False
 ```
 
 ### -Classification
+
+> Applicable: SharePoint Online
 
 Specifies the classification value, if classifications are set for the organization. If no value is provided, the default classification will be set, if one is configured.
 
@@ -78,7 +82,7 @@ See [Manage Office 365 Groups with PowerShell](https://support.office.com/en-us/
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: 5
@@ -89,13 +93,15 @@ Accept wildcard characters: False
 
 ### -Description
 
+> Applicable: SharePoint Online
+
 Specifies the group's description.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: 4
@@ -106,13 +112,15 @@ Accept wildcard characters: False
 
 ### -DisplayName
 
+> Applicable: SharePoint Online
+
 Specifies the name of the new Microsoft 365 Group that will be created.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 1
@@ -123,13 +131,15 @@ Accept wildcard characters: False
 
 ### -IsPublic
 
+> Applicable: SharePoint Online
+
 Determines the Microsoft 365 Group's privacy setting.  If switch is included, the group will be public, otherwise it will be private.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: 3
@@ -140,13 +150,15 @@ Accept wildcard characters: False
 
 ### -KeepOldHomepage
 
+> Applicable: SharePoint Online
+
 For sites that already have a modern page set as homepage, you can specify whether you want to keep it as the homepage.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: 6

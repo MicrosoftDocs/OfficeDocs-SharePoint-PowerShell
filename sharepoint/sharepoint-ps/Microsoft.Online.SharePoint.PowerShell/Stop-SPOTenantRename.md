@@ -46,13 +46,15 @@ Cancels the rename of the SharePoint domain name with the reason "Rescheduling".
 
 ### -Comment
 
+> Applicable: SharePoint Online
+
 Specifies an additional comment why the job is being canceled.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -63,13 +65,15 @@ Accept wildcard characters: False
 
 ### -Reason
 
+> Applicable: SharePoint Online
+
 Specifies the reason why the job is being canceled.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

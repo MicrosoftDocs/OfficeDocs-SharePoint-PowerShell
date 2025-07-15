@@ -43,13 +43,15 @@ This example adds a SiteCollection app catalog to the specified site.
 
 ### -Site
 
+> Applicable: SharePoint Online
+
 Url of the site to add the app catalog to.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -60,6 +62,8 @@ Accept wildcard characters: False
 
 ### -Confirm
 
+> Applicable: SharePoint Online
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -67,7 +71,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -78,6 +82,8 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
+> Applicable: SharePoint Online
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -85,7 +91,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named

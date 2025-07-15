@@ -40,13 +40,15 @@ This example shows how to you can setup a new Public CDN on a document library i
 
 ### -Url
 
+> Applicable: SharePoint Online
+
 Specify the URL that will be enabled for Public CDN in your tenant
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 0
@@ -57,13 +59,15 @@ Accept wildcard characters: False
 
 ### -Confirm
 
+> Applicable: SharePoint Online
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -74,6 +78,8 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
+> Applicable: SharePoint Online
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -81,7 +87,7 @@ The cmdlet is not run.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named

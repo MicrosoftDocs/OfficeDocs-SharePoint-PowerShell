@@ -69,13 +69,15 @@ Starts the **simulation** rename of the SPO site with name "samplesite" to "rena
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 Specifies the original URL of the site collection.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -86,13 +88,15 @@ Accept wildcard characters: False
 
 ### -NewSiteTitle
 
+> Applicable: SharePoint Online
+
 Specifies the new Title of the site.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 2
@@ -103,13 +107,15 @@ Accept wildcard characters: False
 
 ### -NewSiteUrl
 
+> Applicable: SharePoint Online
+
 Specifies the new desired URL.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -120,13 +126,15 @@ Accept wildcard characters: False
 
 ### -Reserved
 
+> Applicable: SharePoint Online
+
 Reserved for Microsoft internal use.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -167,13 +175,15 @@ Accept wildcard characters: False
 
 ### -SuppressMarketplaceAppCheck
 
+> Applicable: SharePoint Online
+
 Suppress checking compatibility of marketplace SharePoint Add-ins deployed to the associated site.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -184,13 +194,15 @@ Accept wildcard characters: False
 
 ### -SuppressWorkflow2013Check
 
+> Applicable: SharePoint Online
+
 Suppress checking compatibility of SharePoint 2013 Workflows deployed to the associated site.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -201,13 +213,15 @@ Accept wildcard characters: False
 
 ### -ValidationOnly
 
+> Applicable: SharePoint Online
+
 Verifies that the site address can be changed.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -217,13 +231,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Online
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -233,6 +249,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Online
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -240,7 +258,7 @@ The cmdlet is not run.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named

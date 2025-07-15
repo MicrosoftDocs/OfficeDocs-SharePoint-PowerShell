@@ -50,6 +50,8 @@ Add-SPOOrgAssetsLibrary -LibraryURL https://contoso.sharepoint.com/sites/brandin
 
 ### -CdnType
 
+> Applicable: SharePoint Online
+
 Specifies the CDN type. The valid values are public or private.
 
 Note: The manually configured Private CDN is in the process of being deprecated. For more information, see [Use the Office 365 Content Delivery Network (CDN) with SharePoint Online](/microsoft-365/enterprise/use-microsoft-365-cdn-with-spo).
@@ -58,7 +60,7 @@ Note: The manually configured Private CDN is in the process of being deprecated.
 Type: Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnType
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Accepted values: Public, Private
 
 Required: False
@@ -85,13 +87,15 @@ Accept wildcard characters: False
 
 ### -LibraryUrl
 
+> Applicable: SharePoint Online
+
 Indicates the absolute URL of the library to be designated as a central location for organization assets.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -139,13 +143,15 @@ Accept wildcard characters: False
 
 ### -ThumbnailUrl
 
+> Applicable: SharePoint Online
+
 Indicates the URL of the background image used when the library is publicly displayed. If no thumbnail URL is indicated, the card will have a gray background.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named

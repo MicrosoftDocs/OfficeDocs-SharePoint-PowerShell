@@ -2,7 +2,7 @@
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Set-SPOApplication
-Applicable: SharePoint Embedded
+
 title: Set-SPOApplication
 schema: 2.0.0
 author: ShreyasSar26

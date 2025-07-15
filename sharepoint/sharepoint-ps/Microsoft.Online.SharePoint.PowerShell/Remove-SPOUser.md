@@ -42,13 +42,15 @@ This example removes a user who has the email address joe.healy@contoso.com from
 
 ### -Group
 
+> Applicable: SharePoint Online
+
 Specifies the group to remove the user from. If not specified, the cmdlet removes the user from all groups.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -59,13 +61,15 @@ Accept wildcard characters: False
 
 ### -LoginName
 
+> Applicable: SharePoint Online
+
 Specifies the user name.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -76,13 +80,15 @@ Accept wildcard characters: False
 
 ### -Site
 
+> Applicable: SharePoint Online
+
 Specifies the site collection to remove the user from.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

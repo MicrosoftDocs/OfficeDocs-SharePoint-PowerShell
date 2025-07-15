@@ -40,13 +40,15 @@ This example removes the site collection app catalog from the site <https://cont
 
 ### -Site
 
+> Applicable: SharePoint Online
+
 Url of the site collection.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 0
 Default value: None

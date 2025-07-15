@@ -64,13 +64,15 @@ Example 3 returns all the installed applications that have a space in the name a
 
 ### -Name
 
+> Applicable: SharePoint Online
+
 Specifies the application's name.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: 2
@@ -81,13 +83,15 @@ Accept wildcard characters: False
 
 ### -ProductId
 
+> Applicable: SharePoint Online
+
 Specifies the application's GUID.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: 1

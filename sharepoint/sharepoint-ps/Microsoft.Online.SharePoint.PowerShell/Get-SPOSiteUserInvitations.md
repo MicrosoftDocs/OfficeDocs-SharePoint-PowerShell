@@ -40,13 +40,15 @@ This example retrieves email invites stored in the ContosoWeb1 site to the user 
 
 ### -EmailAddress
 
+> Applicable: SharePoint Online
+
 Email Address of the user.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 2
 Default value: None
@@ -56,13 +58,15 @@ Accept wildcard characters: False
 
 ### -Site
 
+> Applicable: SharePoint Online
+
 Specifies the URL of the site collection.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 1
 Default value: None

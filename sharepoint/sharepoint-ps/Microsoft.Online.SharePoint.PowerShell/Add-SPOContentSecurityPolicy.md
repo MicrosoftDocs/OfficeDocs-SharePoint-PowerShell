@@ -35,13 +35,15 @@ In multi-geo environments, **Content Security Policy** configuration is unique t
 
 ### -Source
 
+> Applicable: SharePoint Online
+
 Source to be added to the **Content Security Policy** configuration.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 0
