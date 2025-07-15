@@ -60,13 +60,15 @@ Example 2 generates the Copilot agent insight report for a specified duration of
 
 ### -Force
 
+> Applicable: SharePoint Online
+
 It is an optional parameter which is used to bypass confirmation prompts and execute the command without interruptions.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -77,13 +79,15 @@ Accept wildcard characters: False
 
 ### -ReportPeriodInDays
 
+> Applicable: SharePoint Online
+
 It specifies the duration of the Copilot agent insight report in days. The possible values of ReportPeriodInDays are: 1, 7, 14, 28. If this parameter is not provided, it generates the report for a default duration of 1 day.
 
 ```yaml
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named

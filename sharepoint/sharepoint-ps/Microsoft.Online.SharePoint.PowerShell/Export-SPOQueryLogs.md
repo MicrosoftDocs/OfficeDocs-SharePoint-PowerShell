@@ -63,13 +63,15 @@ Example 2 exports the query log from the starting time 21. October 2018, for a u
 
 ### -LoginName
 
+> Applicable: SharePoint Online
+
 Specifies the login name of the user to export.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -80,13 +82,15 @@ Accept wildcard characters: False
 
 ### -OutputFolder
 
+> Applicable: SharePoint Online
+
 Target folder where the CSV file is generated.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -97,13 +101,15 @@ Accept wildcard characters: False
 
 ### -StartTime
 
+> Applicable: SharePoint Online
+
 Specifies from which point of time to export the logs from. Use the date format YYYY-MM-DD.
 
 ```yaml
 Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named

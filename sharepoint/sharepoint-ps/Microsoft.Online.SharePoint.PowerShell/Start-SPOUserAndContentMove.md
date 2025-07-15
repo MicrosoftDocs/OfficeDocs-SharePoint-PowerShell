@@ -58,13 +58,15 @@ This example moves the user username@contoso.onmicrosoft.com from their current 
 
 ### -DestinationDataLocation
 
+> Applicable: SharePoint Online
+
 Defines the destination location where you want to move the user. Note that you may only move a user to their preferred data location. Thus before moving a user, you must change their preferred data location.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 2
@@ -75,13 +77,15 @@ Accept wildcard characters: False
 
 ### -Notify
 
+> Applicable: SharePoint Online
+
 Provides an SPO notification that the user is being moved.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: 5
@@ -92,13 +96,15 @@ Accept wildcard characters: False
 
 ### -PreferredMoveBeginDate
 
+> Applicable: SharePoint Online
+
 Specifies what is the preferred date and time to begin the move.
 
 ```yaml
 Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: 3
@@ -109,13 +115,15 @@ Accept wildcard characters: False
 
 ### -PreferredMoveEndDate
 
+> Applicable: SharePoint Online
+
 Specifies what is the preferred date and time to stop stop the move. Recommened when administrators are scripting large scale moves that they wish to complete within a timeframe.
 
 ```yaml
 Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: 4
@@ -141,13 +149,15 @@ Accept wildcard characters: False
 
 ### -UserPrincipalName
 
+> Applicable: SharePoint Online
+
 UserPrincipalName or UPN defined for the specific user on the SPO tenant
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 1
@@ -158,13 +168,15 @@ Accept wildcard characters: False
 
 ### -ValidationOnly
 
+> Applicable: SharePoint Online
+
 Use this parameter to validate if the user is able to be moved. This parameter is recommended for any user move.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: 7

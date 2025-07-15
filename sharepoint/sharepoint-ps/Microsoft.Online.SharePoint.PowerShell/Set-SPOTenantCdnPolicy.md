@@ -49,6 +49,8 @@ This example sets the ExcludeRestrictedSiteClassifications policy for the select
 
 ### -CdnType
 
+> Applicable: SharePoint Online
+
 The CdnType parameter specifies the CDN type. The valid values are Public or Private.
 
 ```yaml
@@ -56,7 +58,7 @@ Type: Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnType
 Parameter Sets: (All)
 Aliases:
 Accepted values: Public, Private
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -65,6 +67,8 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyType
+
+> Applicable: SharePoint Online
 
 The PolicyType specifies the type of policy to set.
 
@@ -79,7 +83,7 @@ Type: Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnPolicyType
 Parameter Sets: (All)
 Aliases:
 Accepted values: IncludeFileExtensions, ExcludeRestrictedSiteClassifications, ExcludeIfNoScriptDisabled, ExcludeRestrictedSiteClassificationsFileExtensions
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -89,13 +93,15 @@ Accept wildcard characters: False
 
 ### -PolicyValue
 
+> Applicable: SharePoint Online
+
 A String representing the value of the policy type defined by the PolicyType parameter.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None

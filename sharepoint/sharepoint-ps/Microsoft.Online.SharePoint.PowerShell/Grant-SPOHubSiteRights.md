@@ -45,13 +45,15 @@ This example shows how to grant rights to Nestor (a user at the fictional Contos
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 URL of the hub site.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoHubSitePipeBind
 Parameter Sets: (All)
 Aliases: HubSite
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 0
@@ -62,13 +64,15 @@ Accept wildcard characters: False
 
 ### -Principals
 
+> Applicable: SharePoint Online
+
 One or more principals to add permissions for.
 
 ```yaml
 Type: System.String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -79,6 +83,8 @@ Accept wildcard characters: False
 
 ### -Rights
 
+> Applicable: SharePoint Online
+
 Always set to the value **Join**. Any user or group with **Join** permissions can view and join the hub site.
 
 ```yaml
@@ -86,7 +92,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 Accepted values: Join
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

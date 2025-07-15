@@ -40,13 +40,15 @@ Updates the jdoe@contoso.com's UserType on all SharePoint Online sites in the te
 
 ### -LoginName
 
+> Applicable: SharePoint Online
+
 The login name of the target user to update across SharePoint Online.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 1

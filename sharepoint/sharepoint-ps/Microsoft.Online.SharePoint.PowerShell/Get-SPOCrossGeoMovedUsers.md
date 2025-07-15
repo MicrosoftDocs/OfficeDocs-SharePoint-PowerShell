@@ -47,6 +47,8 @@ Get the cross users that have been moved out the current SPO site
 ## PARAMETERS
 
 ### -Direction
+
+> Applicable: SharePoint Online
 Used to specify move direction.
 
 Possible values
@@ -59,7 +61,7 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 Accepted values: MoveIn, MoveOut
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

@@ -39,13 +39,15 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -FileUrl
 
+> Applicable: SharePoint Online
+
 Full URL for the file.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 0

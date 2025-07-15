@@ -41,13 +41,15 @@ Revoke-SPOSiteDesignRights 44252d09-62c4-4913-9eb0-a2a8b8d7f863 `
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 The ID of the site design from which to revoke rights.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SPOSiteDesignPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 0
 Default value: None
@@ -57,13 +59,15 @@ Accept wildcard characters: False
 
 ### -Principals
 
+> Applicable: SharePoint Online
+
 One or more principals to revoke rights on the specified site design.
 
 ```yaml
 Type: System.String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None

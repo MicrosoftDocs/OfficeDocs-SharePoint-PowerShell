@@ -100,13 +100,15 @@ Set-SPOBuiltInSiteTemplateSettings -Identity "00000000-0000-0000-0000-0000000000
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 Specifies the ID for the site template you wish to change.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SPOBuiltInSiteTemplateSettingsPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 0
 Default value: None
@@ -116,13 +118,15 @@ Accept wildcard characters: False
 
 ### -IsHidden
 
+> Applicable: SharePoint Online
+
 Specifies whether the site template is hidden ($true) or displayed ($false). All site templates are displayed by default.
 
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None

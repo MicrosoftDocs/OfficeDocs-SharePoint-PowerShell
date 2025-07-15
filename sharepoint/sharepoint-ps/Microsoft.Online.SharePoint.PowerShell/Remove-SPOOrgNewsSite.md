@@ -39,13 +39,15 @@ This example removes <https://contoso.sharepoint.com/sites/Marketing> from the l
 
 ### -OrgNewsSiteUrl
 
+> Applicable: SharePoint Online
+
 The URL of a site to be marked as an organizational news site.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

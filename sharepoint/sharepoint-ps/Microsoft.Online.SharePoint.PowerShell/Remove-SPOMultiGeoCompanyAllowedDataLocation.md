@@ -39,13 +39,15 @@ Removes AUS (Australia) as an allowed mutli-geo location.
 
 ### -Location
 
+> Applicable: SharePoint Online
+
 The Preferred Data Location (PDL) to remove.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 0
 Default value: None
@@ -55,6 +57,8 @@ Accept wildcard characters: False
 
 ### -Confirm
 
+> Applicable: SharePoint Online
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -62,7 +66,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -71,6 +75,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Online
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -78,7 +84,7 @@ The cmdlet is not run.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None

@@ -58,13 +58,15 @@ This example runs the Missing Galleries Check rule in repair mode on the <https:
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 Specifies the SharePoint Online site collection on which to run the repairs.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -74,6 +76,8 @@ Accept wildcard characters: False
 ```
 
 ### -RuleId
+
+> Applicable: SharePoint Online
 
 Specifies a health check rule to run.
 
@@ -90,7 +94,7 @@ For example:
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -101,13 +105,15 @@ Accept wildcard characters: False
 
 ### -RunAlways
 
+> Applicable: SharePoint Online
+
 Displays a message that explains the effect of the command instead of executing the command.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -118,13 +124,15 @@ Accept wildcard characters: False
 
 ### -Confirm
 
+> Applicable: SharePoint Online
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -135,6 +143,8 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
+> Applicable: SharePoint Online
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -142,7 +152,7 @@ The cmdlet is not run.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named

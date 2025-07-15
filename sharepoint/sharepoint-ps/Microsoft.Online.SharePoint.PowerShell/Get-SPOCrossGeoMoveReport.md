@@ -41,13 +41,15 @@ This example returns the failed site moves between geo locations.
 
 ### -Limit
 
+> Applicable: SharePoint Online
+
 Limit the number of items to return for the report.
 
 ```yaml
 Type: System.UInt32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -56,6 +58,8 @@ Accept wildcard characters: False
 ```
 
 ### -MoveDirection
+
+> Applicable: SharePoint Online
 
 The direction of the move to limit the report to. Valid values are:
 
@@ -67,7 +71,7 @@ The direction of the move to limit the report to. Valid values are:
 Type: Microsoft.Online.SharePoint.PowerShell.MoveDirection
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -77,13 +81,15 @@ Accept wildcard characters: False
 
 ### -MoveEndTime
 
+> Applicable: SharePoint Online
+
 The end time to limit the move report to.
 
 ```yaml
 Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -92,6 +98,8 @@ Accept wildcard characters: False
 ```
 
 ### -MoveJobType
+
+> Applicable: SharePoint Online
 
 The type of job to limit the report to. Valid values are:
 
@@ -104,7 +112,7 @@ Type: Microsoft.Online.SharePoint.PowerShell.JobType
 Parameter Sets: (All)
 Aliases:
 Accepted values: UserMove, GroupMove, SiteMove
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -114,13 +122,15 @@ Accept wildcard characters: False
 
 ### -MoveStartTime
 
+> Applicable: SharePoint Online
+
 The start time to limit the move report to.
 
 ```yaml
 Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -129,6 +139,8 @@ Accept wildcard characters: False
 ```
 
 ### -MoveState
+
+> Applicable: SharePoint Online
 
 The type of state to limit the report to. Valid values are:
 
@@ -147,7 +159,7 @@ Type: Microsoft.Online.SharePoint.PowerShell.MoveState
 Parameter Sets: (All)
 Aliases:
 Accepted values: NotStarted, InProgress, Success, Failed, Stopped, Queued, NotSupported, Rescheduled, All
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None

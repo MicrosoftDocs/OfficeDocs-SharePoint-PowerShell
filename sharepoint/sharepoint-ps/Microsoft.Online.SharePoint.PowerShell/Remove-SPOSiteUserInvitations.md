@@ -41,11 +41,13 @@ This example removes the user with the mail address "someone@contoso.com" from t
 
 ### -CountOnly
 
+> Applicable: SharePoint Online
+
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: 3
 Default value: None
@@ -55,13 +57,15 @@ Accept wildcard characters: False
 
 ### -EmailAddress
 
+> Applicable: SharePoint Online
+
 Email Address of the user.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 2
 Default value: None
@@ -71,13 +75,15 @@ Accept wildcard characters: False
 
 ### -Site
 
+> Applicable: SharePoint Online
+
 Specifies the URL of the site collection.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 1
 Default value: None

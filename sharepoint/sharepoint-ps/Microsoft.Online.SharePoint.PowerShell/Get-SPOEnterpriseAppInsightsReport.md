@@ -80,6 +80,8 @@ Example 3 enables administrator to download the enterprise application insights 
 
 ### -Action
 
+> Applicable: SharePoint Online
+
 It is an optional parameter, and it specifies whether to view or download a specific report.
 
 ```yaml
@@ -87,7 +89,7 @@ Type: Microsoft.Online.SharePoint.PowerShell.GetSPOEnterpriseAppInsightsReport+A
 Parameter Sets: (All)
 Aliases:
 Accepted values: View, Download
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -98,13 +100,15 @@ Accept wildcard characters: False
 
 ### -ReportId
 
+> Applicable: SharePoint Online
+
 It is an optional parameter, and it specifies the unique Id of the report to be viewed or downloaded.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named

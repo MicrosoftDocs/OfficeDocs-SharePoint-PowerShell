@@ -102,13 +102,15 @@ Authenticates using the Microsoft Authentication Library (MSAL) and connects to 
 
 ### -AuthenticationUrl
 
+> Applicable: SharePoint Online
+
 Location for Microsoft Entra Cross-Tenant Authentication service. Can be optionally used if non-default Cross-Tenant Authentication Service is used.
 
 ```yaml
 Type: System.String
 Parameter Sets: AuthenticationUrl
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -119,13 +121,15 @@ Accept wildcard characters: False
 
 ### -ClientTag
 
+> Applicable: SharePoint Online
+
 Permits appending a client tag to existing client tag. Used optionally in the CSOM http traffic to identify used script or solution.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -136,13 +140,15 @@ Accept wildcard characters: False
 
 ### -Credential
 
+> Applicable: SharePoint Online
+
 Specifies the credentials to use to connect. If no credentials are presented, a dialog will prompt for the credentials. The credentials must be those of a SharePoint Online administrator who can access the SharePoint Online Administration Center site.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.CredentialCmdletPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -153,6 +159,8 @@ Accept wildcard characters: False
 
 ### -ModernAuth
 
+> Applicable: SharePoint Online
+
  Ensures that SharePoint Online tenant administration cmdlets can connect to the service using modern TLS protocols.
 
 To use it you also need to provide the **AuthenticationUrl** parameter.
@@ -161,7 +169,7 @@ To use it you also need to provide the **AuthenticationUrl** parameter.
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -169,6 +177,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -Region
+
+> Applicable: SharePoint Online
 
 The valid values are: Default | ITAR | Germany | China
 
@@ -180,7 +190,7 @@ The default value is "default".
 Type: Microsoft.Online.SharePoint.PowerShell.AADCrossTenantAuthenticationLocation
 Parameter Sets: AuthenticationLocation
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -191,13 +201,15 @@ Accept wildcard characters: False
 
 ### -Url
 
+> Applicable: SharePoint Online
+
 Specifies the URL of the SharePoint Online Administration Center site.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.UrlCmdletPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -208,13 +220,15 @@ Accept wildcard characters: False
 
 ### -UseSystemBrowser
 
+> Applicable: SharePoint Online
+
  Used to authenticate the user using the Microsoft Authentication Library (MSAL).
 
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None

@@ -40,13 +40,15 @@ This example removes the site with the given id from its parent Hub.
 
 ### -HubsiteId
 
+> Applicable: SharePoint Online
+
 Id of the Hub site to be removed from its parent Hub.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 0
 Default value: None

@@ -57,13 +57,15 @@ This example requests that many users to be queued for the creation of a Persona
 
 ### -NoWait
 
+> Applicable: SharePoint Online
+
 Continues without the status being polled. Polling the action can slow it's progress if lots of user emails are specified.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -74,6 +76,8 @@ Accept wildcard characters: False
 
 ### -UserEmails
 
+> Applicable: SharePoint Online
+
 Specifies one or more user logins to be enqueued for the creation of a Personal Site. The Personal site is created by a Timer Job later. You can specify between 1 and 200 users.
 > [!NOTE]
 > If you're pre-provisioning OneDrive for a large number of users, it might take multiple days for the OneDrive locations to be created.
@@ -82,7 +86,7 @@ Specifies one or more user logins to be enqueued for the creation of a Personal 
 Type: System.String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

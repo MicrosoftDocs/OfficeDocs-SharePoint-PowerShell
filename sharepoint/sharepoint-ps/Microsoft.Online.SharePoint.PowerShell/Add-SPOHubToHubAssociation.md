@@ -41,13 +41,15 @@ This example associates the source hub site with the HubSiteId 7b6fd3a3-b029-4eb
 
 ### -Source
 
+> Applicable: SharePoint Online
+
 HubSiteId of the Source Hub site to be associated with the Target Hub Site.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 0
 Default value: None
@@ -57,13 +59,15 @@ Accept wildcard characters: False
 
 ### -Target
 
+> Applicable: SharePoint Online
+
 HubSiteId of the Target Hub to associate the source Hub to.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -85,7 +89,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
-SPOHubToHubAssociation is just a placeholder and not yet ready for production. 
+SPOHubToHubAssociation is just a placeholder and not yet ready for production.
 
 ## RELATED LINKS
 

@@ -44,13 +44,15 @@ This example will remove a regular label with admin defined encryption from the 
 
 ### -FileUrl
 
+> Applicable: SharePoint Online
+
 Full URL for the file.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 0
@@ -61,13 +63,15 @@ Accept wildcard characters: False
 
 ### -JustificationText
 
+> Applicable: SharePoint Online
+
 Text that explains the reason to run this cmdlet on the given file.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 1

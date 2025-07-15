@@ -42,13 +42,15 @@ Example 1 places the container with the given ID into the recycle bin. The conta
 
 ### -ContainerTypeId
 
+> Applicable: SharePoint Online
+
 This parameter specifies the ID of the container type corresponding to the SharePoint Embedded application. Use the `Get-SPOContainertype` command to retrieve the ID.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

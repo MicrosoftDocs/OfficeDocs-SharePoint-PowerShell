@@ -66,13 +66,15 @@ Example 1 shows how a SharePoint Administrator can check the status of a copy op
 
 ### -DestinationSite
 
+> Applicable: SharePoint Online
+
 Specifies the URL of the destination SharePoint site to which the SharePoint page has been copied to.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -83,13 +85,15 @@ Accept wildcard characters: False
 
 ### -WorkItemId
 
+> Applicable: SharePoint Online
+
 Specifies the GUID of the work item created for the copy job if it is asynchronous.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

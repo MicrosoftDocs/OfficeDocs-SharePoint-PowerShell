@@ -56,6 +56,8 @@ Returns a single user from SharePoint Online in a multi-geo tenant and validates
 
 ### -ValidDataLocation
 
+> Applicable: SharePoint Online
+
 Use this parameter to validate the location of the data. The acceptable values for this parameter are:
 
 - $False
@@ -65,7 +67,7 @@ Use this parameter to validate the location of the data. The acceptable values f
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

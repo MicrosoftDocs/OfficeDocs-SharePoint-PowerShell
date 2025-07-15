@@ -43,13 +43,15 @@ Remove-SPOOrgAssetsLibrary -ListId 58454454-6546-6466-9769-646464623988
 
 ### -LibraryUrl
 
+> Applicable: SharePoint Online
+
 Indicates the server relative URL of the library to be removed as a central location for organization assets.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -59,13 +61,15 @@ Accept wildcard characters: False
 
 ### -ListId
 
+> Applicable: SharePoint Online
+
 Indicates the library ID for the library to be removed as a central location for organization assets.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None

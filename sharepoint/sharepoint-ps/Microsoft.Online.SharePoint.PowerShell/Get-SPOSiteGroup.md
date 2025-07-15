@@ -44,13 +44,15 @@ This example returns all the groups on the specified site collection <https://co
 
 ### -Group
 
+> Applicable: SharePoint Online
+
 Specifies the group name.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -61,13 +63,15 @@ Accept wildcard characters: False
 
 ### -Limit
 
+> Applicable: SharePoint Online
+
 Specifies the maximum number of groups to return. The default value is 200.
 
 ```yaml
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -78,13 +82,15 @@ Accept wildcard characters: False
 
 ### -Site
 
+> Applicable: SharePoint Online
+
 Specifies the site collection scope.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

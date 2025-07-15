@@ -82,13 +82,15 @@ Add-SPOTheme -Identity "Custom Cyan" -Palette $themepalette -IsInverted $false -
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 Specifies the name of the theme. This must uniquely identify the theme.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoThemePipeBind
 Parameter Sets: (All)
 Aliases: Name
-Applicable: SharePoint Online
+
 Required: True
 Position: 0
 Default value: None
@@ -98,13 +100,15 @@ Accept wildcard characters: False
 
 ### -IsInverted
 
+> Applicable: SharePoint Online
+
 Specifies whether the theme is inverted, with a dark background and a light foreground.
 
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases: None
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -114,13 +118,15 @@ Accept wildcard characters: False
 
 ### -Overwrite
 
+> Applicable: SharePoint Online
+
 Overwrites a theme of the same name in case it exists.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: None
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -130,13 +136,15 @@ Accept wildcard characters: False
 
 ### -Palette
 
+> Applicable: SharePoint Online
+
 Specifies the palette of colors in the theme, as a dictionary of theme slot values.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoThemePalettePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None

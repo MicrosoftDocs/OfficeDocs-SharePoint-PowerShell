@@ -339,13 +339,15 @@ Accept wildcard characters: False
 
 ### -AddRestrictedAccessControlGroups
 
+> Applicable: SharePoint Online
+
 Specifies the IDs of groups to be added to an access restriction policy and gain access.
 
 ```yaml
 Type: System.Guid[]
 Parameter Sets: AddRestrictedAccessControlGroups
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -355,6 +357,8 @@ Accept wildcard characters: False
 
 ### -AllowDownloadingNonWebViewableFiles
 
+> Applicable: SharePoint Online
+
 Specifies if non web viewable files can be downloaded.
 
 PARAMVALUE: False | True
@@ -363,7 +367,7 @@ PARAMVALUE: False | True
 Type: System.Boolean
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -373,6 +377,8 @@ Accept wildcard characters: False
 
 ### -AllowEditing
 
+> Applicable: SharePoint Online
+
 Prevents users from editing Office files in the browser and copying and pasting Office file contents out of the browser window.
 
 PARAMVALUE: False | True
@@ -381,7 +387,7 @@ PARAMVALUE: False | True
 Type: System.Boolean
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -390,6 +396,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowFileArchive
+
+> Applicable: SharePoint Online
 
 This setting enables or disables the file archive feature for a SharePoint site. If this parameter is passed as true for a site and Microsoft 365 Archive is enabled at the tenant-level, then the site will allow file archive.
 
@@ -401,7 +409,7 @@ If set to True, the feature will be enable. Feature is disabled by default.
 Type: System.Boolean
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -412,6 +420,8 @@ Accept wildcard characters: False
 
 ### -AllowSelfServiceUpgrade
 
+> Applicable: SharePoint Online
+
 Determines whether site collection administrators can upgrade their site collections.
 
 PARAMVALUE: False | True
@@ -420,7 +430,7 @@ PARAMVALUE: False | True
 Type: System.Boolean
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -429,6 +439,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled
+
+> Applicable: SharePoint Online
 Enables or disables web property bag updates. When `AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled` is set to `$true`, the web property bag can be updated even if the Add And Customize Pages right is denied on the site collection.
 
 PARAMVALUE: True | False
@@ -437,7 +449,7 @@ PARAMVALUE: True | False
 Type: System.Boolean
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -447,6 +459,8 @@ Accept wildcard characters: False
 
 ### -AnonymousLinkExpirationInDays
 
+> Applicable: SharePoint Online
+
 Specifies all anonymous/anyone links that have been created (or will be created) will expire after the set number of days. Only applies if OverrideTenantAnonymousLinkExpirationPolicy is set to true.
 
 The valid number should be between 1 and 730. To remove the expiration requirement, set the value to zero (0).
@@ -455,7 +469,7 @@ The valid number should be between 1 and 730. To remove the expiration requireme
 Type: System.Int32
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -465,13 +479,15 @@ Accept wildcard characters: False
 
 ### -ApplyToExistingDocumentLibraries
 
+> Applicable: SharePoint Online
+
 Create a job to apply the version history limits setting to existing document libraries.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: SetSiteFileVersionPolicy
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -481,13 +497,15 @@ Accept wildcard characters: False
 
 ### -ApplyToNewDocumentLibraries
 
+> Applicable: SharePoint Online
+
 Apply the version history limits setting to new document libraries.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: SetSiteFileVersionPolicy
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -496,6 +514,8 @@ Accept wildcard characters: False
 ```
 
 ### -AuthenticationContextAccessType
+
+> Applicable: SharePoint Online
 
 Controls whether Authentication Context Limited Access is enabled for a site.
 
@@ -508,7 +528,7 @@ The valid values are:
 Type: Microsoft.Online.SharePoint.TenantManagement.SPOAuthenticationContextPolicyAccessType
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -518,13 +538,15 @@ Accept wildcard characters: False
 
 ### -AuthenticationContextName
 
+> Applicable: SharePoint Online
+
 The conditional access authentication context name.
 
 ```yaml
 Type: System.String
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -533,6 +555,8 @@ Accept wildcard characters: False
 ```
 
 ### -BlockDownloadLinksFileType
+
+> Applicable: SharePoint Online
 
 The valid values are:
 
@@ -547,7 +571,7 @@ The site's value is compared with the tenant level setting and the stricter one 
 Type: Microsoft.Online.SharePoint.TenantManagement.BlockDownloadLinksFileTypes
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -556,6 +580,8 @@ Accept wildcard characters: False
 ```
 
 ### -BlockDownloadPolicy
+
+> Applicable: SharePoint Online
 
 As a SharePoint administrator in Microsoft 365, you can block the download of files from SharePoint sites or OneDrive. This feature does not need Microsoft Entra Conditional Access policies. This feature can be set for individual sites but not at the organization level.
 
@@ -567,7 +593,7 @@ PARAMVALUE: False | True
 Type: System.Boolean
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -607,13 +633,15 @@ Accept wildcard characters: False
 
 ### -ClearRestrictedAccessControl
 
+> Applicable: SharePoint Online
+
 Clears the list of groups that are given access via an access restriction policy.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ClearRestrictedAccessControl
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -638,6 +666,8 @@ Accept wildcard characters: False
 
 ### -CommentsOnSitePagesDisabled
 
+> Applicable: SharePoint Online
+
 Use this parameter to disable Comments section on Site Pages.
 The parameter can't be used for Groups Site Collections.
 
@@ -647,7 +677,7 @@ PARAMVALUE: False | True
 Type: System.Boolean
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -656,6 +686,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalAccessPolicy
+
+> Applicable: SharePoint Online
 
 Please read [Control access from unmanaged devices](/sharepoint/control-access-from-unmanaged-devices) documentation here to understand Conditional Access Policy usage in SharePoint Online.
 
@@ -670,7 +702,7 @@ Possible values:
 Type: Microsoft.Online.SharePoint.TenantManagement.SPOConditionalAccessPolicyType
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -679,6 +711,8 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultLinkPermission
+
+> Applicable: SharePoint Online
 
 The default link permission for the site collection. To be replaced by DefaultShareLinkRole.
 
@@ -692,7 +726,7 @@ PARAMVALUE: None | View | Edit
 Type: Microsoft.Online.SharePoint.TenantManagement.SharingPermissionType
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -702,6 +736,8 @@ Accept wildcard characters: False
 
 ### -DefaultLinkToExistingAccess
 
+> Applicable: SharePoint Online
+
 When set to TRUE, the DefaultSharingLinkType will be overriden and the default sharing link will a People with Existing Access link (which does not modify permissions). When set to FALSE (the default), the DefaultSharingLinkType parameter controls the default sharing link type.
 
 PARAMVALUE: False | True
@@ -710,7 +746,7 @@ PARAMVALUE: False | True
 Type: System.Boolean
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -735,6 +771,8 @@ Accept wildcard characters: False
 
 ### -DefaultShareLinkRole
 
+> Applicable: SharePoint Online
+
 The default share link role for the site collection. It replaces `DefaultLinkPermission`.
 
 The valid values are:
@@ -749,7 +787,7 @@ The valid values are:
 Type: Microsoft.Online.SharePoint.TenantManagement.SharingRole
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -758,6 +796,8 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultShareLinkScope
+
+> Applicable: SharePoint Online
 
 The default share link scope on the site. It replaces `DefaultSharingLinkType`.
 
@@ -772,7 +812,7 @@ The valid values are:
 Type: Microsoft.SharePoint.Client.Sharing.SharingScope
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -781,6 +821,8 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultSharingLinkType
+
+> Applicable: SharePoint Online
 
 The default link type for the site collection. To be replaced by DefaultShareLinkScope.
 
@@ -795,7 +837,7 @@ PARAMVALUE: None | AnonymousAccess | Internal | Direct
 Type: Microsoft.Online.SharePoint.TenantManagement.SharingLinkType
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -804,6 +846,8 @@ Accept wildcard characters: False
 ```
 
 ### -DenyAddAndCustomizePages
+
+> Applicable: SharePoint Online
 
 Determines whether the Add And Customize Pages right is denied on the site collection.
 For more information about permission levels, see User permissions and permission levels in SharePoint.
@@ -814,7 +858,7 @@ PARAMVALUE: False | True
 Type: System.Boolean
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -823,6 +867,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableAppViews
+
+> Applicable: SharePoint Online
 
 **Note**: This parameter has been retired and no longer functions.
 
@@ -837,7 +883,7 @@ Possible values:
 Type: Microsoft.Online.SharePoint.TenantAdministration.AppViewsPolicy
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -846,6 +892,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCompanyWideSharingLinks
+
+> Applicable: SharePoint Online
 
 Disables People in your organization links. For more information, see [People in your organization sharing links](/microsoft-365/solutions/microsoft-365-limit-sharing#people-in-your-organization-sharing-links).
 
@@ -859,7 +907,7 @@ Possible values
 Type: Microsoft.Online.SharePoint.TenantAdministration.CompanyWideSharingLinksPolicy
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -868,6 +916,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableFlows
+
+> Applicable: SharePoint Online
 
 **Note**: This parameter has been retired and no longer functions.
 
@@ -881,7 +931,7 @@ Possible values
 Type: Microsoft.Online.SharePoint.TenantAdministration.FlowsPolicy
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -891,13 +941,15 @@ Accept wildcard characters: False
 
 ### -DisableSharingForNonOwners
 
+> Applicable: SharePoint Online
+
 This parameter prevents non-owners from inviting new users to the site.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ParamSet3
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -906,6 +958,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAutoExpirationVersionTrim
+
+> Applicable: SharePoint Online
 
 SharePoint Administrators can set site-level version history limit settings that universally apply to new versions created on all new document libraries created on the site. Also can create request to set the version setting for existing libraries that enabled versioning.
 
@@ -929,7 +983,7 @@ PARAMVALUE: False | True
 Type: System.Boolean
 Parameter Sets: SetSiteFileVersionPolicy
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -939,6 +993,8 @@ Accept wildcard characters: False
 
 ### -EnablePWA
 
+> Applicable: SharePoint Online
+
 Determines whether site can include Project Web App.
 For more information about Project Web App, see Plan SharePoint groups in Project Server.
 
@@ -946,7 +1002,7 @@ For more information about Project Web App, see Plan SharePoint groups in Projec
 Type: System.Boolean
 Parameter Sets: ParamSet2
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -956,6 +1012,8 @@ Accept wildcard characters: False
 
 ### -ExcludeBlockDownloadPolicySiteOwners
 
+> Applicable: SharePoint Online
+
 Controls if site owners are excluded from block download policy.
 
 PARAMVALUE: False | True
@@ -964,7 +1022,7 @@ PARAMVALUE: False | True
 Type: System.Boolean
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -974,13 +1032,15 @@ Accept wildcard characters: False
 
 ### -ExcludeBlockDownloadSharePointGroups
 
+> Applicable: SharePoint Online
+
 Specifies the groups excluded from the block download policy.
 
 ```yaml
 Type: System.String[]
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -990,13 +1050,15 @@ Accept wildcard characters: False
 
 ### -ExcludedBlockDownloadGroupIds
 
+> Applicable: SharePoint Online
+
 Exempts users from specified groups from the block download policy and they can fully download any content for the site.
 
 ```yaml
 Type: System.Guid[]
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1006,6 +1068,8 @@ Accept wildcard characters: False
 
 ### -ExpireVersionsAfterDays
 
+> Applicable: SharePoint Online
+
 When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), admins will need to set the limits to the number of major versions (`MajorVersionLimit`), the number of major with minor versions (`MajorWithMinorVersionsLimit`) and the time period the versions are stored (`ExpireVersionsAfterDays`). Please check the description of `EnableAutoExpirationVersionTrim` for more details.
 
 PARAMVALUE: Int32
@@ -1014,7 +1078,7 @@ PARAMVALUE: Int32
 Type: System.Int32
 Parameter Sets: SetSiteFileVersionPolicy
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1024,6 +1088,8 @@ Accept wildcard characters: False
 
 ### -ExternalUserExpirationInDays
 
+> Applicable: SharePoint Online
+
 Specifies all external user expiration which will expire after the set number of days. Only applies if OverrideTenantExternalUserExpirationPolicy is set to true.
 
 The maximum value is 730. To remove the expiration requirement, set the value to zero (0).
@@ -1032,7 +1098,7 @@ The maximum value is 730. To remove the expiration requirement, set the value to
 Type: System.Int32
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1041,6 +1107,8 @@ Accept wildcard characters: False
 ```
 
 ### -HidePeoplePreviewingFiles
+
+> Applicable: SharePoint Online
 
 This setting disables the feature in OneDrive and SharePoint file previewing that displays the presence of other users on the file. It does not affect any experiences outside of the previewer.
 
@@ -1052,7 +1120,7 @@ If set to True, the presence of other users on the file will no longer be displa
 Type: System.Boolean
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1061,6 +1129,8 @@ Accept wildcard characters: False
 ```
 
 ### -HidePeopleWhoHaveListsOpen
+
+> Applicable: SharePoint Online
 
 This setting disables the feature in Microsoft Lists that displays the presence of other users on the list and its items when they are viewing.
 
@@ -1072,7 +1142,7 @@ If set to True, the presence of other users on the list and its items will no lo
 Type: System.Boolean
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1082,13 +1152,15 @@ Accept wildcard characters: False
 
 ### -HubSiteId
 
+> Applicable: SharePoint Online
+
 Sets the hub site for a specified SharePoint site.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1098,13 +1170,15 @@ Accept wildcard characters: False
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 Specifies the URL of the site collection to update.
 
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 1
 Default value: None
@@ -1114,13 +1188,15 @@ Accept wildcard characters: False
 
 ### -InformationBarriersMode
 
+> Applicable: SharePoint Online
+
 Specifies the information barrier mode.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1130,13 +1206,15 @@ Accept wildcard characters: False
 
 ### -InheritVersionPolicyFromTenant
 
+> Applicable: SharePoint Online
+
 Clear the file version setting at site level. The new document libraries will use the Tenant Level setting. It won't impact the existing document libraries.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: InheritVersionPolicyFromTenant
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1145,6 +1223,8 @@ Accept wildcard characters: False
 ```
 
 ### -LimitedAccessFileType
+
+> Applicable: SharePoint Online
 
 The following parameters can be used with -ConditionalAccessPolicy AllowLimitedAccess for both the organization-wide setting and the site-level setting.
 
@@ -1158,7 +1238,7 @@ The following parameters can be used with -ConditionalAccessPolicy AllowLimitedA
 Type: Microsoft.Online.SharePoint.TenantManagement.SPOLimitedAccessFileType
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1199,6 +1279,8 @@ Accept wildcard characters: False
 
 ### -LockState
 
+> Applicable: SharePoint Online
+
 Sets the lock state on a site.
 Valid values are: NoAccess, ReadOnly and Unlock.
 When the lock state of a site is ReadOnly, a message will appear on the site stating that the site is under maintenance and it is read-only.
@@ -1211,7 +1293,7 @@ It isn't possible to set the lock state on the root site collection.
 Type: System.String
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1220,6 +1302,8 @@ Accept wildcard characters: False
 ```
 
 ### -LoopDefaultSharingLinkRole
+
+> Applicable: SharePoint Online
 
 Gets or sets default share link role for fluid on the site.
 
@@ -1235,7 +1319,7 @@ The valid values are:
 Type: Microsoft.Online.SharePoint.TenantManagement.SharingRole
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1244,6 +1328,8 @@ Accept wildcard characters: False
 ```
 
 ### -LoopDefaultSharingLinkScope
+
+> Applicable: SharePoint Online
 
 Gets or sets default share link scope for fluid on the site.
 
@@ -1258,7 +1344,7 @@ The valid values are:
 Type: Microsoft.SharePoint.Client.Sharing.SharingScope
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1268,6 +1354,8 @@ Accept wildcard characters: False
 
 ### -MajorVersionLimit
 
+> Applicable: SharePoint Online
+
 When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), admins will need to set the limits to the number of major versions (`MajorVersionLimit`) and the time period the versions are stored (`ExpireVersionsAfterDays`). Please check the description of `EnableAutoExpirationVersionTrim` for more details.
 
 PARAMVALUE: Int32
@@ -1276,7 +1364,7 @@ PARAMVALUE: Int32
 Type: System.Int32
 Parameter Sets: SetSiteFileVersionPolicy
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1286,6 +1374,8 @@ Accept wildcard characters: False
 
 ### -MajorWithMinorVersionsLimit
 
+> Applicable: SharePoint Online
+
 When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), admins will need to set the limits to the number of major versions (`MajorVersionLimit`), the number of major with minor versions (`MajorWithMinorVersionsLimit`) and the time period the versions are stored (`ExpireVersionsAfterDays`). Please check the description of `EnableAutoExpirationVersionTrim` for more details.
 
 PARAMVALUE: Int32
@@ -1294,7 +1384,7 @@ PARAMVALUE: Int32
 Type: System.Int32
 Parameter Sets: SetSiteFileVersionPolicy
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1303,6 +1393,8 @@ Accept wildcard characters: False
 ```
 
 ### -MediaTranscription
+
+> Applicable: SharePoint Online
 
 When the feature is enabled, videos can have transcripts generated on demand or generated automatically in certain scenarios. This is the default because the policy is default on. If a video owner decides they don't want the transcript, they can always hide or delete it from that video.
 Possible values:
@@ -1314,7 +1406,7 @@ Possible values:
 Type: Microsoft.Online.SharePoint.TenantManagement.MediaTranscriptionPolicyType
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1324,13 +1416,15 @@ Accept wildcard characters: False
 
 ### -NoWait
 
+> Applicable: SharePoint Online
+
 Specifies to continue executing script immediately.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1339,6 +1433,8 @@ Accept wildcard characters: False
 ```
 
 ### -OverrideBlockUserInfoVisibility
+
+> Applicable: SharePoint Online
 
 Choose whether to override the Block User Info Visibility policy on this site.
 
@@ -1353,7 +1449,7 @@ PARAMVALUE:
 Type: Microsoft.Online.SharePoint.TenantAdministration.SiteUserInfoVisibilityPolicyValue
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1363,6 +1459,8 @@ Accept wildcard characters: False
 
 ### -OverrideSharingCapability
 
+> Applicable: SharePoint Online
+
 Determines whether it should override the sharing capability on its partition. For example, if the tenant sharing capability is `ExternalUserAndGuestSharing`, the core partition sharing capability is `Disabled`, and the sharing capability defined on the site collection is `ExternalUserAndGuestSharing`, the effective site sharing capability should be `Disabled` (the most restrictive one among tenant, partition, and site collecction) if `OverrideSharingCapability` is `false`. If `OverrideSharingCapability` is `true`, it skips checking partition sharing capability and the effective site sharing capability should be `ExternalUserAndGuestSharing`.
 
 PARAMVALUE: False | True
@@ -1371,7 +1469,7 @@ PARAMVALUE: False | True
 Type: System.Boolean
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1380,6 +1478,8 @@ Accept wildcard characters: False
 ```
 
 ### -OverrideTenantAnonymousLinkExpirationPolicy
+
+> Applicable: SharePoint Online
 
 Choose whether to override the anonymous or anyone link expiration policy on this site.
 
@@ -1393,7 +1493,7 @@ PARAMVALUE: None | False | True
 Type: System.Boolean
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1402,6 +1502,8 @@ Accept wildcard characters: False
 ```
 
 ### -OverrideTenantExternalUserExpirationPolicy
+
+> Applicable: SharePoint Online
 
 Choose whether to override the external user expiration policy on this site.
 
@@ -1415,7 +1517,7 @@ Possible values:
 Type: System.Boolean
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1425,13 +1527,15 @@ Accept wildcard characters: False
 
 ### -Owner
 
+> Applicable: SharePoint Online
+
 Specifies the owner of the site collection. Changing the Owner of a OneDrive is not supported and causes many experiences to break.
 
 ```yaml
 Type: System.String
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1441,6 +1545,8 @@ Accept wildcard characters: False
 
 ### -ReadOnlyForBlockDownloadPolicy
 
+> Applicable: SharePoint Online
+
 Controls if read-only should be enabled for block download policy.
 
 PARAMVALUE: False | True
@@ -1449,7 +1555,7 @@ PARAMVALUE: False | True
 Type: System.Boolean
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1510,13 +1616,15 @@ Accept wildcard characters: False
 
 ### -RemoveRestrictedAccessControlGroups
 
+> Applicable: SharePoint Online
+
 Specifies the IDs of groups to be removed from access restriction policy and lose access.
 
 ```yaml
 Type: System.Guid[]
 Parameter Sets: RemoveRestrictedAccessControlGroups
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1526,6 +1634,8 @@ Accept wildcard characters: False
 
 ### -RequestFilesLinkEnabled
 
+> Applicable: SharePoint Online
+
 Enables or disables the Request Files link on the site.
 
 PARAMVALUE: False | True
@@ -1534,7 +1644,7 @@ PARAMVALUE: False | True
 Type: System.Boolean
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1544,6 +1654,8 @@ Accept wildcard characters: False
 
 ### -RequestFilesLinkExpirationInDays
 
+> Applicable: SharePoint Online
+
 Specifies the number of days before a Request Files link expires for the site.
 
 The value can be from 0 to 730 days.
@@ -1552,7 +1664,7 @@ The value can be from 0 to 730 days.
 Type: System.Int32
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1579,13 +1691,15 @@ Accept wildcard characters: False
 
 ### -ResourceQuotaWarningLevel
 
+> Applicable: SharePoint Online
+
 Specifies the warning level in megabytes of the site collection to warn the site collection administrator that the site is approaching the resource quota.
 
 ```yaml
 Type: System.Double
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1595,6 +1709,8 @@ Accept wildcard characters: False
 
 ### -RestrictContentOrgWideSearch
 
+> Applicable: SharePoint Online
+
 Controls whether org-wide content search is enabled for a site.
 
 PARAMVALUE: False | True
@@ -1603,7 +1719,7 @@ PARAMVALUE: False | True
 Type: System.Boolean
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1613,6 +1729,8 @@ Accept wildcard characters: False
 
 ### -RestrictedAccessControl
 
+> Applicable: SharePoint Online
+
 Sets access restriction policy by group membership.
 
 PARAMVALUE: False | True
@@ -1621,7 +1739,7 @@ PARAMVALUE: False | True
 Type: System.Boolean
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1631,13 +1749,15 @@ Accept wildcard characters: False
 
 ### -RestrictedAccessControlGroups
 
+> Applicable: SharePoint Online
+
 Specifies the IDs of groups that have access under an access restriction policy.
 
 ```yaml
 Type: System.Guid[]
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1663,13 +1783,15 @@ Accept wildcard characters: False
 
 ### -RestrictedToGeo
 
+> Applicable: SharePoint Online
+
 PARAMVALUE: NoRestriction | BlockMoveOnly | BlockFull | Unknown
 
 ```yaml
 Type: Microsoft.Online.SharePoint.TenantAdministration.RestrictedToRegion
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1679,13 +1801,15 @@ Accept wildcard characters: False
 
 ### -SandboxedCodeActivationCapability
 
+> Applicable: SharePoint Online
+
 PARAMVALUE: Unknown | Check | Disabled | Enabled
 
 ```yaml
 Type: Microsoft.Online.SharePoint.TenantAdministration.SandboxedCodeActivationCapabilities
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1695,13 +1819,15 @@ Accept wildcard characters: False
 
 ### -SensitivityLabel
 
+> Applicable: SharePoint Online
+
 Used to specify the unique identifier (GUID) of the SensitivityLabel.
 
 ```yaml
 Type: System.String
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1711,6 +1837,8 @@ Accept wildcard characters: False
 
 ### -SharingAllowedDomainList
 
+> Applicable: SharePoint Online
+
 Specifies a list of email domains that are allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
 For additional information about how to restrict a domain sharing, see [Restrict sharing of SharePoint and OneDrive content by domain](/sharepoint/restricted-domains-sharing).
@@ -1719,7 +1847,7 @@ For additional information about how to restrict a domain sharing, see [Restrict
 Type: System.String
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1729,6 +1857,8 @@ Accept wildcard characters: False
 
 ### -SharingBlockedDomainList
 
+> Applicable: SharePoint Online
+
 Specifies a list of email domains that are blocked or prohibited for sharing with the external collaborators. Use space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
 For additional information about how to restrict a domain sharing, see [Restrict sharing of SharePoint and OneDrive content by domain](/sharepoint/restricted-domains-sharing).
@@ -1737,7 +1867,7 @@ For additional information about how to restrict a domain sharing, see [Restrict
 Type: System.String
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1746,6 +1876,8 @@ Accept wildcard characters: False
 ```
 
 ### -SharingCapability
+
+> Applicable: SharePoint Online
 
 Determines what level of sharing is available for the site.
 
@@ -1762,7 +1894,7 @@ For more information about sharing, see Turn external sharing on or off for Shar
 Type: Microsoft.Online.SharePoint.TenantManagement.SharingCapabilities
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1771,6 +1903,8 @@ Accept wildcard characters: False
 ```
 
 ### -SharingDomainRestrictionMode
+
+> Applicable: SharePoint Online
 
 Specifies the sharing mode for external domains.
 
@@ -1786,7 +1920,7 @@ For additional information about how to restrict a domain sharing, see [Restrict
 Type: Microsoft.Online.SharePoint.TenantManagement.SharingDomainRestrictionModes
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1796,6 +1930,8 @@ Accept wildcard characters: False
 
 ### -ShowPeoplePickerSuggestionsForGuestUsers
 
+> Applicable: SharePoint Online
+
 To enable the option to search for existing guest users at site collection level, set this parameter to $true.
 
 PARAMVALUE: False | True
@@ -1804,7 +1940,7 @@ PARAMVALUE: False | True
 Type: System.Boolean
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1813,6 +1949,8 @@ Accept wildcard characters: False
 ```
 
 ### -SocialBarOnSitePagesDisabled
+
+> Applicable: SharePoint Online
 
 Disables or enables the Social Bar for Site Collection.
 
@@ -1824,7 +1962,7 @@ PARAMVALUE: False | True
 Type: System.Boolean
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1834,13 +1972,15 @@ Accept wildcard characters: False
 
 ### -StorageQuota
 
+> Applicable: SharePoint Online
+
 Specifies the storage quota in megabytes of the site collection.
 
 ```yaml
 Type: System.Int64
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1850,13 +1990,15 @@ Accept wildcard characters: False
 
 ### -StorageQuotaReset
 
+> Applicable: SharePoint Online
+
 Resets the OneDrive for Business storage quota to the tenant's new default storage space.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1866,13 +2008,15 @@ Accept wildcard characters: False
 
 ### -StorageQuotaWarningLevel
 
+> Applicable: SharePoint Online
+
 Specifies the warning level in megabytes of the site collection to warn the site collection administrator that the site is approaching the storage quota.
 
 ```yaml
 Type: System.Int64
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1882,13 +2026,15 @@ Accept wildcard characters: False
 
 ### -Title
 
+> Applicable: SharePoint Online
+
 Specifies the title of the site collection.
 
 ```yaml
 Type: System.String
 Parameter Sets: ParamSet1
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1913,13 +2059,15 @@ Accept wildcard characters: False
 
 ### -Confirm
 
+> Applicable: SharePoint Online
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -1929,13 +2077,15 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
+> Applicable: SharePoint Online
+
 The WhatIf switch doesn't work on this cmdlet.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None

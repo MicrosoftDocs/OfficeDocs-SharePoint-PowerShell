@@ -66,13 +66,15 @@ Accept wildcard characters: False
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 Specifies the `<ContainerId>` of the Container to be permanently deleted.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SPOContainerPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 0

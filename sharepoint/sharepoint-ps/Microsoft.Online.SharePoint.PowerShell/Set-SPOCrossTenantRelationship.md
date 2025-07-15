@@ -40,13 +40,15 @@ This cmdlet sends a trust request to the Contoso tenant.
 ## PARAMETERS
 
 ### -PartnerCrossTenantHostUrl
+
+> Applicable: SharePoint Online
 The cross-tenant URL of the partner tenant. The partner tenant can determine this for you by running `Get-SPOCrossTenantHostUrl` on each of the tenants.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 2
@@ -56,6 +58,8 @@ Accept wildcard characters: False
 ```
 
 ### -PartnerRole
+
+> Applicable: SharePoint Online
 Roles of the partner tenant you're establishing trust with. Use *source* if the partner tenant is the source of the OneDrive migrations, and *target* if the partner tenant is the destination.
 
 ```yaml
@@ -63,7 +67,7 @@ Type: Microsoft.SharePoint.Client.Administration.OrgRelationRole
 Parameter Sets: (All)
 Aliases:
 Accepted values: None, Source, Target
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 1
@@ -74,12 +78,14 @@ Accept wildcard characters: False
 
 ### -Scenario
 
+> Applicable: SharePoint Online
+
 ```yaml
 Type: Microsoft.SharePoint.Client.Administration.OrgRelationScenario
 Parameter Sets: (All)
 Aliases:
 Accepted values: None, MnA
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 0

@@ -44,13 +44,15 @@ Grant-SPOSiteDesignRights `
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 The ID of the site design to get scoping information.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SPOSiteDesignPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 0
 Default value: None
@@ -60,13 +62,15 @@ Accept wildcard characters: False
 
 ### -Principals
 
+> Applicable: SharePoint Online
+
 One or more principles to add permissions for.
 
 ```yaml
 Type: System.String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -76,6 +80,8 @@ Accept wildcard characters: False
 
 ### -Rights
 
+> Applicable: SharePoint Online
+
 Always set to the value **View**. Any user or group with view permissions can view and use the site design.
 
 ```yaml
@@ -83,7 +89,7 @@ Type: Microsoft.Online.SharePoint.PowerShell.SPOSiteDesignPrincipalRights
 Parameter Sets: (All)
 Aliases:
 Accepted values: View
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None

@@ -44,13 +44,15 @@ This example shows how to revoke rights so that Nestor can no longer join sites 
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 URL of the hub site.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoHubSitePipeBind
 Parameter Sets: (All)
 Aliases: HubSite
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 0
@@ -61,13 +63,15 @@ Accept wildcard characters: False
 
 ### -Principals
 
+> Applicable: SharePoint Online
+
 One or more principals to revoke the permissions for.
 
 ```yaml
 Type: System.String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

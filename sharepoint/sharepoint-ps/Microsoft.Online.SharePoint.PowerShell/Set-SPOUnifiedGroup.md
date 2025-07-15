@@ -40,13 +40,15 @@ Sets the PDL for the Office 365 Group named 'EUTeam' to EUR (Europe).
 
 ### -GroupAlias
 
+> Applicable: SharePoint Online
+
 The alias of the Office 365 Group.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 0
 Default value: None
@@ -56,13 +58,15 @@ Accept wildcard characters: False
 
 ### -PreferredDataLocation
 
+> Applicable: SharePoint Online
+
 The Preferred Data Location for the Office 365 Group.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 1
 Default value: None

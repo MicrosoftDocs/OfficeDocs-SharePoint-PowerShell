@@ -55,13 +55,15 @@ Tenant admin can also reset to replicate all the content types.
 
 ### -ReplicateAllContentTypes
 
+> Applicable: SharePoint Online
+
 The ReplicateAllContentTypes parameter specifies whether all content types should be replicated.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ReplicateAllContentTypes
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -71,13 +73,15 @@ Accept wildcard characters: False
 
 ### -ReplicatedContentTypes
 
+> Applicable: SharePoint Online
+
 Specifies a comma separated list of content types that should be replicated.
 
 ```yaml
 Type: System.String[]
 Parameter Sets: ReplicateSelectedContentTypes
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None

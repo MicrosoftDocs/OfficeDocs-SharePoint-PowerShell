@@ -40,13 +40,15 @@ This example removes the site collection app catalog from the site with the id '
 
 ### -SiteId
 
+> Applicable: SharePoint Online
+
 Guid of the site collection.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None

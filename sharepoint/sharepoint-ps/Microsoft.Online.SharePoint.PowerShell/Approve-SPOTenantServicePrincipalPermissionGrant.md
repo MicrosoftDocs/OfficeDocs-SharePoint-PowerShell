@@ -42,13 +42,15 @@ Adds a permission scope for the 'Microsoft Graph' resource with scope claim 'Mai
 
 ### -Resource
 
+> Applicable: SharePoint Online
+
 Resource of the permission request to add.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 1
@@ -59,13 +61,15 @@ Accept wildcard characters: False
 
 ### -Scope
 
+> Applicable: SharePoint Online
+
 Scope of the permission request to add.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 2

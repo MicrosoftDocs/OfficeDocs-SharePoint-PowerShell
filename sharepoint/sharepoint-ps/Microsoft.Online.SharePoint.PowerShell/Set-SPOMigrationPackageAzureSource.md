@@ -82,13 +82,15 @@ This example uses existing migration package containers in Azure storage to snap
 
 ### -AccountKey
 
+> Applicable: SharePoint Online
+
 The account key for the Azure Storage account.
 
 ```yaml
 Type: System.String
 Parameter Sets: ImplicitSourceExplicitAzure, ExplicitSourceExplicitAzure
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -98,13 +100,15 @@ Accept wildcard characters: False
 
 ### -AccountName
 
+> Applicable: SharePoint Online
+
 The account name for the Azure Storage account.
 
 ```yaml
 Type: System.String
 Parameter Sets: ImplicitSourceExplicitAzure, ExplicitSourceExplicitAzure
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -114,13 +118,15 @@ Accept wildcard characters: False
 
 ### -AzureQueueName
 
+> Applicable: SharePoint Online
+
 An optional name of the Azure Storage Reporting Queue where import operations lists events during import. This value must be in lower case and conform to Azure's queue naming rules.
 
 ```yaml
 Type: System.String
 Parameter Sets: ImplicitSourceExplicitAzure, ExplicitSourceExplicitAzure
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -130,13 +136,15 @@ Accept wildcard characters: False
 
 ### -EncryptionMetaInfo
 
+> Applicable: SharePoint Online
+
 PARAMVALUE: MigrationFileEncryptionInfo[]
 
 ```yaml
 Type: Microsoft.Online.SharePoint.Migration.MigrationFileEncryptionInfo[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -146,13 +154,15 @@ Accept wildcard characters: False
 
 ### -EncryptionParameters
 
+> Applicable: SharePoint Online
+
 An EncryptionParameters object. See [New-SPOMigrationEncryptionParameters](/powershell/module/sharepoint-online/new-spomigrationencryptionparameters) for more information.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.Migration.EncryptionParameters
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -163,13 +173,15 @@ Accept wildcard characters: False
 
 ### -FileContainerName
 
+> Applicable: SharePoint Online
+
 The optional name of the Azure Blob Storage container that will be created if it does not currently exist. It will hold the uploaded package content files. The value must be in lower case and conform to Azure's container naming rules. If this not supplied a name will be generated using the format \<GUID\>-files.
 
 ```yaml
 Type: System.String
 Parameter Sets: ImplicitSourceExplicitAzure, ExplicitSourceExplicitAzure
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -179,13 +191,15 @@ Accept wildcard characters: False
 
 ### -MigrationPackageAzureLocations
 
+> Applicable: SharePoint Online
+
 A set of fully qualified URLs and SAS tokens representing the Azure Blob Storage containers that hold the package content and metadata files and an optional Azure Storage Reporting Queue. This object is returned during successful processing of the `Set-SPOMigrationPackageAzureSource`
 
 ```yaml
 Type: Microsoft.Online.SharePoint.Migration.MigrationPackageAzureLocations
 Parameter Sets: ImplicitSourceImplicitAzure, ExplicitSourceImplicitAzure
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -195,13 +209,15 @@ Accept wildcard characters: False
 
 ### -MigrationSourceLocations
 
+> Applicable: SharePoint Online
+
 Possible Source locations to migrate.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.Migration.MigrationPackageLocation
 Parameter Sets: ImplicitSourceExplicitAzure, ImplicitSourceImplicitAzure
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -211,13 +227,15 @@ Accept wildcard characters: False
 
 ### -NoLogFile
 
+> Applicable: SharePoint Online
+
 Indicates to not create a log file. The default is to create a new CopyMigrationPackage log file within the directory specified within the SourcePackagePath parameter.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -227,13 +245,15 @@ Accept wildcard characters: False
 
 ### -NoSnapshotCreation
 
+> Applicable: SharePoint Online
+
 Indicates to not perform snapshots on the content in the containers. The default is to snapshot each of the packages files in the containers.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -243,13 +263,15 @@ Accept wildcard characters: False
 
 ### -NoUpload
 
+> Applicable: SharePoint Online
+
 Indicates to not upload the package files. The default is to upload all the package files.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -259,11 +281,13 @@ Accept wildcard characters: False
 
 ### -Overwrite
 
+> Applicable: SharePoint Online
+
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -273,13 +297,15 @@ Accept wildcard characters: False
 
 ### -PackageContainerName
 
+> Applicable: SharePoint Online
+
 The optional name of the Azure Blob Storage container that will be created if it does not currently exist. It will hold the uploaded package metadata files. The value must be in lower case and conform to Azure's container naming rules. If this not supplied a name will be generated using the format \<GUID\>-package.
 
 ```yaml
 Type: System.String
 Parameter Sets: ImplicitSourceExplicitAzure, ExplicitSourceExplicitAzure
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -304,13 +330,15 @@ Accept wildcard characters: False
 
 ### -SourceFilesPath
 
+> Applicable: SharePoint Online
+
 The directory location where the package's source content files exist.
 
 ```yaml
 Type: System.String
 Parameter Sets: ExplicitSourceExplicitAzure, ExplicitSourceImplicitAzure
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -320,13 +348,15 @@ Accept wildcard characters: False
 
 ### -SourcePackagePath
 
+> Applicable: SharePoint Online
+
 The directory location where the package's metadata files exist.
 
 ```yaml
 Type: System.String
 Parameter Sets: ExplicitSourceExplicitAzure, ExplicitSourceImplicitAzure
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None

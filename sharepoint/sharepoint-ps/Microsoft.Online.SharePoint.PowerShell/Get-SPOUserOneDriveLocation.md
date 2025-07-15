@@ -40,13 +40,15 @@ Get the current location the user's OneDrive location, url, and site ID.
 
 ### -UserPrincipalName
 
+> Applicable: SharePoint Online
+
 UserPrincipalName or UPN defined for the specific user on the SPO tenant.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

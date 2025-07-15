@@ -53,13 +53,15 @@ Adds the user **admin\@contoso.onmicrosoft.com** as administrator to the SharePo
 
 ### -GroupAlias
 
+> Applicable: SharePoint Online
+
 Use this parameter to add a security group or a mail-enabled security group as a geo admin. (Distribution groups and Microsoft 365 Groups are not supported).
 
 ```yaml
 Type: System.String
 Parameter Sets: Group
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 0
@@ -70,13 +72,15 @@ Accept wildcard characters: False
 
 ### -ObjectId
 
+> Applicable: SharePoint Online
+
 Not all security groups have a group alias. If you want to add a security group that does not have an alias, run Get-MsolGroup to retrieve a list of groups, find your security group's ObjectID, and then use this parameter. For more information, see [Add or remove a geo administrator in Microsoft 365 Multi-Geo](/office365/enterprise/add-a-sharepoint-geo-admin).
 
 ```yaml
 Type: System.Guid
 Parameter Sets: ObjectId
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 0
@@ -87,13 +91,15 @@ Accept wildcard characters: False
 
 ### -UserPrincipalName
 
+> Applicable: SharePoint Online
+
 UserPrincipalName or UPN defined for the specific user on the SharePoint Online tenant.
 
 ```yaml
 Type: System.String
 Parameter Sets: User
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 0

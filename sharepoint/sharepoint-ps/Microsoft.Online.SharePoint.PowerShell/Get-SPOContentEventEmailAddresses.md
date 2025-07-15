@@ -41,6 +41,8 @@ In Example 1, the system will display the email addresses categorized under rans
 
 ### -Category
 
+> Applicable: SharePoint Online
+
 Specifies the content event category.
 
 ```yaml
@@ -48,7 +50,7 @@ Type: Microsoft.SharePoint.Administration.TenantAdmin.ContentEventCategory
 Parameter Sets: (All)
 Aliases:
 Accepted values: Unknown, Ransomware, HighVolumeDownload, HighVolumeDelete, HighVolumeShare
-Applicable: SharePoint Online
+
 Required: False
 Position: 0
 Default value: None

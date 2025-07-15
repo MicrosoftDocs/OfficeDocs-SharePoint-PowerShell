@@ -53,13 +53,15 @@ Example 2 returns a list of all the French site templates.
 
 ### -CompatibilityLevel
 
+> Applicable: SharePoint Online
+
 Specifies the compatibility level of the site template.
 
 ```yaml
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -70,13 +72,15 @@ Accept wildcard characters: False
 
 ### -LocaleId
 
+> Applicable: SharePoint Online
+
 Specifies the Locale ID of the site template.
 
 ```yaml
 Type: System.UInt32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: 0
@@ -87,13 +91,15 @@ Accept wildcard characters: False
 
 ### -Name
 
+> Applicable: SharePoint Online
+
 Specifies the name of the site template.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -104,13 +110,15 @@ Accept wildcard characters: False
 
 ### -Title
 
+> Applicable: SharePoint Online
+
 Specifies the Locale ID of the site template.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named

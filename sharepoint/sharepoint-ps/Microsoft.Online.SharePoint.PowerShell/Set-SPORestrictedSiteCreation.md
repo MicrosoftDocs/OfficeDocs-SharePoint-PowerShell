@@ -76,6 +76,8 @@ Example 5 clears the policy for the `OneDrive` site type so that it no longer ap
 
 ### -Enabled
 
+> Applicable: SharePoint Online
+
 PARAMVALUE: true | false
 Enables or disables Restricted Site Creation feature in tenant.
 
@@ -83,7 +85,7 @@ Enables or disables Restricted Site Creation feature in tenant.
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -92,6 +94,8 @@ Accept wildcard characters: False
 ```
 
 ### -Mode
+
+> Applicable: SharePoint Online
 
 Specifies whether policies allow or deny users from creating sites.
 PARAMVALUE: Deny | Allow
@@ -106,7 +110,7 @@ Type: Microsoft.SharePoint.Administration.SPOnlineProvisioning.RestrictedSiteCre
 Parameter Sets: (All)
 Aliases:
 Accepted values: Deny, Allow
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -116,6 +120,8 @@ Accept wildcard characters: False
 
 ### -RestrictedSiteCreationGroups
 
+> Applicable: SharePoint Online
+
 A comma-separated list of up to 10 Microsoft Entra security group IDs. When paired with the `–SiteType` parameter, defines a new policy which applies to the specified groups.
 Set to the empty string ("") to clear the policy for a site type.
 
@@ -123,7 +129,7 @@ Set to the empty string ("") to clear the policy for a site type.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -132,6 +138,8 @@ Accept wildcard characters: False
 ```
 
 ### -SiteType
+
+> Applicable: SharePoint Online
 
 When paired with the `–RestrictedSiteCreationGroups` parameter, creates a new policy which applies to the specified types of sites.
 
@@ -148,7 +156,7 @@ Type: Microsoft.SharePoint.Administration.SPOnlineProvisioning.RestrictedSiteCre
 Parameter Sets: (All)
 Aliases:
 Accepted values: All, SharePoint, OneDrive, Team, Communication
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None

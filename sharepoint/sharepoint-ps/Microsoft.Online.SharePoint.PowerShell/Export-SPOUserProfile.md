@@ -42,13 +42,15 @@ Example 1 exports user data who has the e-mail address joe.healy@contoso.com to 
 
 ### -LoginName
 
+> Applicable: SharePoint Online
+
 Specifies the login name of the user whose data is exported.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -59,13 +61,15 @@ Accept wildcard characters: False
 
 ### -OutputFolder
 
+> Applicable: SharePoint Online
+
 Specifies the output folder location where the CSV file is created.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named

@@ -74,13 +74,15 @@ $jobs = $finalPackages | % {Invoke-SPOMigrationEncryptUploadSubmit -SourceFilesP
 
 ### -Credentials
 
+> Applicable: SharePoint Online
+
 Parameter to fill out credentials of the SPO tenant.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.CredentialCmdletPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -91,13 +93,15 @@ Accept wildcard characters: False
 
 ### -MigrationSourceLocations
 
+> Applicable: SharePoint Online
+
 Migration Location where the package lies.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.Migration.MigrationPackageLocation
 Parameter Sets: ImplicitSourceParameterSet
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -108,13 +112,15 @@ Accept wildcard characters: False
 
 ### -NoLogFile
 
+> Applicable: SharePoint Online
+
 Controls if a log will be created or not
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -140,13 +146,15 @@ Accept wildcard characters: False
 
 ### -SourceFilesPath
 
+> Applicable: SharePoint Online
+
 Source files Path, string
 
 ```yaml
 Type: System.String
 Parameter Sets: ExplicitSourceParameterSet
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -157,13 +165,15 @@ Accept wildcard characters: False
 
 ### -SourcePackagePath
 
+> Applicable: SharePoint Online
+
 Source Package Path.
 
 ```yaml
 Type: System.String
 Parameter Sets: ExplicitSourceParameterSet
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -174,13 +184,15 @@ Accept wildcard characters: False
 
 ### -TargetWebUrl
 
+> Applicable: SharePoint Online
+
 Target web URL
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

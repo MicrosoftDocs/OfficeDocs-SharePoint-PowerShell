@@ -50,13 +50,15 @@ Remove-SPOAppBillingPolicy -ApplicationId 1653hhd-87100luhw-786265gk-00asa00
 
 ### -ApplicationID
 
+> Applicable: SharePoint Online
+
 This parameter specifies the ID of the  application.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

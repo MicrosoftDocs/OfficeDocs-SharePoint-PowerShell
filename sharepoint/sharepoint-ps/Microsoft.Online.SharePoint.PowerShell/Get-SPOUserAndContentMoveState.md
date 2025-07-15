@@ -104,13 +104,15 @@ Obtains the status of the move for jezz@contoso.com
 
 ### -Limit
 
+> Applicable: SharePoint Online
+
 Get the limit of user on a single call of the parameter
 
 ```yaml
 Type: System.UInt32
 Parameter Sets: MoveReport
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -138,13 +140,15 @@ Accept wildcard characters: False
 
 ### -MoveEndTime
 
+> Applicable: SharePoint Online
+
 Allows you to obtain the moves that are scheduled to end by a particular time, as defined in UTC
 
 ```yaml
 Type: System.DateTime
 Parameter Sets: MoveReport
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -155,13 +159,15 @@ Accept wildcard characters: False
 
 ### -MoveStartTime
 
+> Applicable: SharePoint Online
+
 Allows you to obtain the moves that are scheduled to begin at a particular time, as defined in UTC
 
 ```yaml
 Type: System.DateTime
 Parameter Sets: MoveReport
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -172,6 +178,8 @@ Accept wildcard characters: False
 
 ### -MoveState
 
+> Applicable: SharePoint Online
+
 Move State current status.
 
 ```yaml
@@ -179,7 +187,7 @@ Type: Microsoft.Online.SharePoint.PowerShell.MoveState
 Parameter Sets: MoveReport
 Aliases:
 Accepted values: NotStarted, InProgress, Success, Failed, Stopped, Queued, NotSupported, Rescheduled, All
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -190,13 +198,15 @@ Accept wildcard characters: False
 
 ### -OdbMoveId
 
+> Applicable: SharePoint Online
+
 OneDrive GUID MoveID that you get when you start a job.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: OdbMoveId
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -207,13 +217,15 @@ Accept wildcard characters: False
 
 ### -UserPrincipalName
 
+> Applicable: SharePoint Online
+
 User Principal name is the unique property on Microsoft Entra ID for each user.
 
 ```yaml
 Type: String
 Parameter Sets: UserPrincipalName
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

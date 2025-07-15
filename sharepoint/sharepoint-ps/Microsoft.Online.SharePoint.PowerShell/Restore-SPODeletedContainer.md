@@ -44,13 +44,15 @@ Example 1 restores the Container with `ContainerId` `b66f5b2e-4cbd-4754-9ad3-829
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 Use this parameter to specify the `ContainerId` of the deleted container to be restored.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SPOContainerPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 0
