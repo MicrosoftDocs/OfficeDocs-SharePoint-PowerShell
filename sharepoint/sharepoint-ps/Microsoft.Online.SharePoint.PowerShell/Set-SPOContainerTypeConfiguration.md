@@ -152,6 +152,8 @@ Accept wildcard characters: False
 
 ### -DiscoverabilityDisabled
 
+> Applicable: SharePoint Embedded
+
 As a SharePoint Administrator in Microsoft 365, you can control how your content appears in the Microsoft 365 experience. When this value is true, the SharePoint Embedded application content is hidden throughout the Microsoft 365 environment, including on office.com, onedrive.com, in recommended sections, or through other Microsoft intelligent file discovery features.
 If you opt into the Microsoft 365 experience, your files will be integrated into Microsoft 365 environment, participating in intelligent file discovery.
 
@@ -161,7 +163,7 @@ PARAMVALUE: True | False
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Embedded
+
 Required: False
 Position: Named
 Default value: None
@@ -207,6 +209,8 @@ Accept wildcard characters: False
 
 ### -SharingRestricted
 
+> Applicable: SharePoint Embedded
+
 SharePoint Embedded offers a role-based sharing model that allows developers to configure file-sharing permissions based on container permission roles, offering a choice between a restrictive and an open sharing model. The open sharing model allows any container members and guest users with edit permissions to share files. The restrictive sharing model allows only container members who are either Owners or Managers to share files.
 
 PARAMVALUE: True | False
@@ -215,7 +219,7 @@ PARAMVALUE: True | False
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Embedded
+
 Required: False
 Position: Named
 Default value: None

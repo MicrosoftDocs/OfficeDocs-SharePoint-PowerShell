@@ -75,6 +75,8 @@ We do not support sites that currently have or have had in the past enabled the 
 
 ### -DesignPackageId
 
+> Applicable: SharePoint Online
+
 GUID identifying the [communication site design](https://support.office.com/article/what-is-a-sharepoint-communication-site-94a33429-e580-45c3-a090-5512a8070732). **This is not a required input.** If no input is provided, the topic design will be applied to the new home page. here are the IDs for the supported design packages:
 
 1. Topic: 96c933ac-3698-44c7-9f4a-5fd17d71af9e
@@ -85,7 +87,7 @@ GUID identifying the [communication site design](https://support.office.com/arti
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -95,13 +97,15 @@ Accept wildcard characters: False
 
 ### -SiteUrl
 
+> Applicable: SharePoint Online
+
 URL of the site for enabling the modern communication site experience. **This is a required parameter**
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

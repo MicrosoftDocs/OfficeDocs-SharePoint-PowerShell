@@ -50,13 +50,15 @@ Get the storage size quota of the current location.
 
 ### -AllLocations
 
+> Applicable: SharePoint Online
+
 Use this parameter to retrieve the storage size quota of all locations.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named

@@ -52,13 +52,15 @@ Example 2 sets Melissa.kerr@contoso.com as the owner of the ProjectViewers group
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 Specifies the name of the group.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -68,13 +70,15 @@ Accept wildcard characters: False
 
 ### -Name
 
+> Applicable: SharePoint Online
+
 Specifies the new name of the group.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -84,13 +88,15 @@ Accept wildcard characters: False
 
 ### -Owner
 
+> Applicable: SharePoint Online
+
 Specifies the owner (individual or a security group) of the group to be created.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -99,6 +105,8 @@ Accept wildcard characters: False
 ```
 
 ### -PermissionLevelsToAdd
+
+> Applicable: SharePoint Online
 
 Specifies the permission levels to grant to the group.
 
@@ -109,7 +117,7 @@ Specifies the permission levels to grant to the group.
 Type: System.String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -118,6 +126,8 @@ Accept wildcard characters: False
 ```
 
 ### -PermissionLevelsToRemove
+
+> Applicable: SharePoint Online
 
 Specifies the permission levels to remove from the group.
 
@@ -128,7 +138,7 @@ Specifies the permission levels to remove from the group.
 Type: System.String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -138,13 +148,15 @@ Accept wildcard characters: False
 
 ### -Site
 
+> Applicable: SharePoint Online
+
 Specifies the site collection the group belongs to.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None

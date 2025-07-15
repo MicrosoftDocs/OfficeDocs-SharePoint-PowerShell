@@ -68,13 +68,15 @@ Set-SPOSiteScript -Identity edaec4ec-71e2-4026-ac1e-6686bb30190d -Content $newna
 
 ### -Content
 
+> Applicable: SharePoint Online
+
 The JSON value that describes the script. For more information, see the [JSON reference](/sharepoint/dev/declarative-customization/site-design-json-schema).
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -84,13 +86,15 @@ Accept wildcard characters: False
 
 ### -Description
 
+> Applicable: SharePoint Online
+
 A description of the script.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -100,13 +104,15 @@ Accept wildcard characters: False
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 The id of the site design.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SPOSiteScriptPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -116,13 +122,15 @@ Accept wildcard characters: False
 
 ### -Title
 
+> Applicable: SharePoint Online
+
 The display name of the site design.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -132,13 +140,15 @@ Accept wildcard characters: False
 
 ### -Version
 
+> Applicable: SharePoint Online
+
 A version number of the script.
 
 ```yaml
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None

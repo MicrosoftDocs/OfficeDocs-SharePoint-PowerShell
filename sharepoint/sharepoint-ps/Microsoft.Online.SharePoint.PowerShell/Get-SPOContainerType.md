@@ -61,13 +61,15 @@ Example 2 returns the detailed properties of container type 4f0af585.
 
 ### -ContainerTypeId
 
+> Applicable: SharePoint Online
+
 This parameter specifies the ID of the container type corresponding to the SharePoint Embedded application.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: 0

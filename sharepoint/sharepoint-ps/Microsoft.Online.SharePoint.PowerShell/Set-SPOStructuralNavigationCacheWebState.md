@@ -43,13 +43,15 @@ This example disables caching for the web https://contoso.sharepoint.com/sites/p
 ## PARAMETERS
 
 ### -IsEnabled
+
+> Applicable: SharePoint Online
 $true to enable caching, $false to disable caching.
 
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -58,13 +60,15 @@ Accept wildcard characters: False
 ```
 
 ### -WebUrl
+
+> Applicable: SharePoint Online
 Specifies the absolute URL for the web that needs its caching state to be set.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None

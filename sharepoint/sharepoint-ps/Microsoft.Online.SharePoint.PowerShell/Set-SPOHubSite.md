@@ -47,13 +47,15 @@ This example updates the name of the hub displayed in the SharePoint user interf
 
 ### -Description
 
+> Applicable: SharePoint Online
+
 A description of the hub site.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -94,13 +96,15 @@ Accept wildcard characters: False
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 URL of the hub site.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoHubSitePipeBind
 Parameter Sets: (All)
 Aliases: HubSite
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 0
@@ -111,13 +115,15 @@ Accept wildcard characters: False
 
 ### -LogoUrl
 
+> Applicable: SharePoint Online
+
 The URL of a logo to use in the hub navigation.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -128,13 +134,15 @@ Accept wildcard characters: False
 
 ### -RequiresJoinApproval
 
+> Applicable: SharePoint Online
+
 Determines if joining a Hub site requires approval.
 
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -145,13 +153,15 @@ Accept wildcard characters: False
 
 ### -SiteDesignId
 
+> Applicable: SharePoint Online
+
 Site Design ID, for example db752673-18fd-44db-865a-aa3e0b28698e
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -162,13 +172,15 @@ Accept wildcard characters: False
 
 ### -Title
 
+> Applicable: SharePoint Online
+
 The display name of the hub.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named

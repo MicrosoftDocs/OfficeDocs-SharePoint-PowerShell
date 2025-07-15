@@ -49,13 +49,15 @@ This example enables the browser idle sign-out policy, sets a warning at 45 minu
 
 ### -Enabled
 
+> Applicable: SharePoint Online
+
 Enables the browser idle sign-out policy
 
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None

@@ -53,13 +53,15 @@ C:\> Add-SPOSiteScript `
 
 ### -IncludeBranding
 
+> Applicable: SharePoint Online
+
 A switch that if provided, extracts the configuration of the site's branding.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -69,6 +71,8 @@ Accept wildcard characters: False
 
 ### -IncludedLists
 
+> Applicable: SharePoint Online
+
 An array of one or more lists. Each is identified by the list url.
 
 Note: Currently, navigation nodes are not exported.
@@ -77,7 +81,7 @@ Note: Currently, navigation nodes are not exported.
 Type: System.String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -87,13 +91,15 @@ Accept wildcard characters: False
 
 ### -IncludeLinksToExportedItems
 
+> Applicable: SharePoint Online
+
 A switch that if provided, extracts navigation links. In order to export navigation links pointing to lists, the list needs to be included in the request as well.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -103,13 +109,15 @@ Accept wildcard characters: False
 
 ### -IncludeRegionalSettings
 
+> Applicable: SharePoint Online
+
 A switch that if provided, extracts the site's regional settings.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -119,13 +127,15 @@ Accept wildcard characters: False
 
 ### -IncludeSiteExternalSharingCapability
 
+> Applicable: SharePoint Online
+
 A switch that if provided, extracts the site's external sharing capability.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -135,13 +145,15 @@ Accept wildcard characters: False
 
 ### -IncludeTheme
 
+> Applicable: SharePoint Online
+
 A switch that if provided, extracts the site's custom theme by using the themeJson property.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -151,13 +163,15 @@ Accept wildcard characters: False
 
 ### -WebUrl
 
+> Applicable: SharePoint Online
+
 The url that starts with HTTPS of the site to retrieve the site script.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None

@@ -43,13 +43,15 @@ This example returns a scheduled site design whose ID is 501z8c32-4147-44d4-8607
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 The ID of the scheduled site design to apply.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SPOSiteDesignTaskPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: 0
 Default value: None
@@ -59,13 +61,15 @@ Accept wildcard characters: False
 
 ### -WebUrl
 
+> Applicable: SharePoint Online
+
 The URL of the site collection where the site design will be applied.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: 1
 Default value: None

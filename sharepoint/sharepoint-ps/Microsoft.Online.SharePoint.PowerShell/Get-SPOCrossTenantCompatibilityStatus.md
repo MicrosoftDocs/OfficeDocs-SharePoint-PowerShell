@@ -42,13 +42,15 @@ Gets the compatibility status with the partner tenant Contoso.
 ## PARAMETERS
 
 ### -PartnerCrossTenantHostUrl
+
+> Applicable: SharePoint Online
 The cross-tenant URL of the partner tenant. The partner tenant can determine this for you by running `Get-SPOCrossTenantHostUrl` on each of the tenants.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 0

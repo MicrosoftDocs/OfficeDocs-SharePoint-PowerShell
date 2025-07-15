@@ -45,13 +45,15 @@ This example registers the marketing site on Contoso as hub site without setting
 
 ### -Principals
 
+> Applicable: SharePoint Online
+
 Specifies one or more principals (user or group) to be granted rights to the specified HubSite. Can be used to filter who can associate sites to this hub site.
 
 ```yaml
 Type: System.String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -62,13 +64,15 @@ Accept wildcard characters: False
 
 ### -Site
 
+> Applicable: SharePoint Online
+
 Specifies the URL of the site collection to which to enable the hub site features.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 0

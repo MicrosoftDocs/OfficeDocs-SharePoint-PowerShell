@@ -43,13 +43,15 @@ Example 1 cancels further processing of the trim job for the site collection.
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 Specifies the URL of the site collection.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 0
 Default value: None

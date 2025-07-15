@@ -48,13 +48,15 @@ Equivalent to the one above
 
 ### -UserPrincipalName
 
+> Applicable: SharePoint Online
+
 UserPrincipalName or UPN defined for the specific user on the SPO tenant
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 1

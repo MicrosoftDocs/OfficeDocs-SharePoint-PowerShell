@@ -39,13 +39,15 @@ Returns the PDL for the Office 365 Group named 'EUTeam'.
 
 ### -GroupAlias
 
+> Applicable: SharePoint Online
+
 The alias of the Office 365 Group.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 0
 Default value: None

@@ -44,13 +44,15 @@ Remove-SPOSiteDesign 21209d88-38de-4844-9823-f1f600a1179a
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 The ID of the site design to remove.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SPOSiteDesignPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 0
 Default value: None

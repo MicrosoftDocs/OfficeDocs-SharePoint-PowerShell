@@ -40,13 +40,15 @@ This example creates the Hive for a SDN Provider.
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 Identity of the provider.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 0
@@ -57,13 +59,15 @@ Accept wildcard characters: False
 
 ### -License
 
+> Applicable: SharePoint Online
+
 License key provided by the provider.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 1
@@ -74,13 +78,15 @@ Accept wildcard characters: False
 
 ### -Confirm
 
+> Applicable: SharePoint Online
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -91,6 +97,8 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
+> Applicable: SharePoint Online
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -98,7 +106,7 @@ The cmdlet is not run.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named

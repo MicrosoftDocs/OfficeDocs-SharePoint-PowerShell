@@ -49,13 +49,15 @@ This example restores the DEP used with SharePoint Online and OneDrive for Busin
 
 ### -PrimaryKeyName
 
+> Applicable: SharePoint Online
+
 The name of the primary key.
 
 ```yaml
 Type: System.String
 Parameter Sets: BYOK_MultipleParameters
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -65,13 +67,15 @@ Accept wildcard characters: False
 
 ### -PrimaryKeyVaultName
 
+> Applicable: SharePoint Online
+
 The name of the primary key vault.
 
 ```yaml
 Type: System.String
 Parameter Sets: BYOK_MultipleParameters
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -96,13 +100,15 @@ Accept wildcard characters: False
 
 ### -PrimaryKeyVersion
 
+> Applicable: SharePoint Online
+
 The version of the primary key.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: BYOK_MultipleParameters
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -112,13 +118,15 @@ Accept wildcard characters: False
 
 ### -SecondaryKeyName
 
+> Applicable: SharePoint Online
+
 The name of the secondary key.
 
 ```yaml
 Type: System.String
 Parameter Sets: BYOK_MultipleParameters
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -128,13 +136,15 @@ Accept wildcard characters: False
 
 ### -SecondaryKeyVaultName
 
+> Applicable: SharePoint Online
+
 The name of the secondary key vault.
 
 ```yaml
 Type: System.String
 Parameter Sets: BYOK_MultipleParameters
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -159,13 +169,15 @@ Accept wildcard characters: False
 
 ### -SecondaryKeyVersion
 
+> Applicable: SharePoint Online
+
 The version of the secondary key.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: BYOK_MultipleParameters
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None

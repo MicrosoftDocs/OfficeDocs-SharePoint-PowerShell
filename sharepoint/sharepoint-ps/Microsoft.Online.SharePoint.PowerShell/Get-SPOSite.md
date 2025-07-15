@@ -162,6 +162,8 @@ This example retrieves all sites filtering by the specified owner using a variab
 
 ### -ArchiveStatus
 
+> Applicable: SharePoint Online
+
 Displays sites of a specific archive status. For example, NotArchived, RecentlyArchived, FullyArchived, Archived, or Reactivating.
 
 ```yaml
@@ -169,7 +171,7 @@ Type: Microsoft.Online.SharePoint.PowerShell.ArchiveStatusFilterType
 Parameter Sets: ParamSet2
 Aliases:
 Accepted values: NotArchived, FullyArchived, RecentlyArchived, Reactivating, Archived
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -179,6 +181,8 @@ Accept wildcard characters: False
 ```
 
 ### -Detailed
+
+> Applicable: SharePoint Online
 
 Use this parameter to get additional property information on a site collection. You will notice a slower response time when the Detailed parameter is used.
 
@@ -203,7 +207,7 @@ Returns the effective access level, which is the site policy and the tenant poli
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ParamSet1, ParamSet2
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -214,6 +218,8 @@ Accept wildcard characters: False
 
 ### -DisableSharingForNonOwnersStatus
 
+> Applicable: SharePoint Online
+
 This parameter prevents non-owners from sharing.
 
 > [!NOTE]
@@ -223,7 +229,7 @@ This parameter prevents non-owners from sharing.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ParamSet3
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -233,6 +239,8 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
+
+> Applicable: SharePoint Online
 
 Specifies the script block of the server-side filter to apply. The type must be a valid filter name and value must be in the form `{ PropertyName <operator> "filterValue"}`. Valid operators are as follows: -eq, -ne, -like, -notlike.
  Currently, you can filter by these properties: Owner, Template (can be used to filter if it is the only property present in the filter), LockState, Url.
@@ -244,7 +252,7 @@ Note: The operator values are case-sensitive.
 Type: System.String
 Parameter Sets: ParamSet2
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -255,6 +263,8 @@ Accept wildcard characters: False
 
 ### -GroupIdDefined
 
+> Applicable: SharePoint Online
+
 Filters the list of sites returned to sites with a Group ID (ie: Sites connected to an Microsoft 365 Group) when the value is set to $true.  Filters the list of sites to only sites without a Group ID when the value is $false.
 
 The values are **$true**, **$false**, and **not defined**. By default, the value is **not defined**, which means that the filter does not apply.
@@ -263,7 +273,7 @@ The values are **$true**, **$false**, and **not defined**. By default, the value
 Type: System.Boolean
 Parameter Sets: ParamSet2
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -274,13 +284,15 @@ Accept wildcard characters: False
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 Specifies the URL of the site collection.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: ParamSet1, ParamSet3
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: 0
@@ -291,6 +303,8 @@ Accept wildcard characters: False
 
 ### -IncludePersonalSite
 
+> Applicable: SharePoint Online
+
 Displays personal sites when value is set to $true.
 
 The values are $true and $false. By default, the value is $false which means no personal sites will be returned.
@@ -299,7 +313,7 @@ The values are $true and $false. By default, the value is $false which means no 
 Type: System.Boolean
 Parameter Sets: ParamSet2
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -310,13 +324,15 @@ Accept wildcard characters: False
 
 ### -Limit
 
+> Applicable: SharePoint Online
+
 Specifies the maximum number of site collections to return. It can be any number. To retrieve all site collections, use ALL. The default value is 200. If this parameter is provided, then some site collection properties will not be populated and may contain a default value.
 
 ```yaml
 Type: System.String
 Parameter Sets: ParamSet1, ParamSet2
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -327,13 +343,15 @@ Accept wildcard characters: False
 
 ### -Template
 
+> Applicable: SharePoint Online
+
 Displays sites of a specific template. For example, STS, STS#0, STS#1, STS#3, GROUP#0, SRCHCEN#0 or SITEPAGEPUBLISHING#0.
 
 ```yaml
 Type: System.String
 Parameter Sets: ParamSet2
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named

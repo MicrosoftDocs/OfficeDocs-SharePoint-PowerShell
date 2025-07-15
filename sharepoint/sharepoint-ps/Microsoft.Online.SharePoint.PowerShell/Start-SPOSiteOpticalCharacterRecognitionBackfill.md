@@ -50,13 +50,15 @@ Starts OCR process for all content that hasn't been processed before in the sele
 
 ### -Site
 
+> Applicable: SharePoint Online
+
 Specifies the site where OCR process should be enabled on.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

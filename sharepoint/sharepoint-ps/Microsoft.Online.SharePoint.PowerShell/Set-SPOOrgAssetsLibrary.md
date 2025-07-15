@@ -81,13 +81,15 @@ Accept wildcard characters: False
 
 ### -LibraryUrl
 
+> Applicable: SharePoint Online
+
 Indicates the server relative URL of the library to be modified.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -96,6 +98,8 @@ Accept wildcard characters: False
 ```
 
 ### -OrgAssetType
+
+> Applicable: SharePoint Online
 
 Indicates the type of content in this library. Currently supported values are "ImageDocumentLibrary" and "OfficeTemplateLibrary".
 
@@ -108,7 +112,7 @@ In order to benefit from both UIs you can choose "ImageDocumentLibrary,OfficeTem
 Type: Microsoft.Online.SharePoint.PowerShell.OrganizationAssetType
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Accepted values: ImageDocumentLibrary, OfficeTemplateLibrary, OfficeFontLibrary, BrandKitLibrary
 Required: False
 Position: Named
@@ -119,13 +123,15 @@ Accept wildcard characters: False
 
 ### -ThumbnailUrl
 
+> Applicable: SharePoint Online
+
 Indicates the URL of the background image used when the library is publicly displayed. If no thumbnail URL is indicated, the card will have a gray background.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None

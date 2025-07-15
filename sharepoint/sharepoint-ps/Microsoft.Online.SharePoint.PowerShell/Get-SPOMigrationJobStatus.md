@@ -46,13 +46,15 @@ You can obtain the Job id when submit package data to create new SPO migration j
 
 ### -Credentials
 
+> Applicable: SharePoint Online
+
 The credentials of a site collection administrator to use to connect to the site collection. The credentials should supply the username in UPN format (e.g. user@company.onmicrosoft.com). If this property is not set, the current tenant admin credentials from the session's previous call to `Connect-SPOService` will be used to connect to the site collection.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.CredentialCmdletPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -63,13 +65,15 @@ Accept wildcard characters: False
 
 ### -JobId
 
+> Applicable: SharePoint Online
+
 (optional) The ID of a migration job that exists on the target site collection.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -80,13 +84,15 @@ Accept wildcard characters: False
 
 ### -NoLogFile
 
+> Applicable: SharePoint Online
+
 (optional) Indicates to not create a log file. The default is to create a new DeleteMigrationJob log file within the current directory.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -97,13 +103,15 @@ Accept wildcard characters: False
 
 ### -TargetWebUrl
 
+> Applicable: SharePoint Online
+
 The fully qualified target web URL where the package will be imported. This must include the same TargetWebUrl that was used during `ConvertTo-SPOMigrationTargetedPackage`.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

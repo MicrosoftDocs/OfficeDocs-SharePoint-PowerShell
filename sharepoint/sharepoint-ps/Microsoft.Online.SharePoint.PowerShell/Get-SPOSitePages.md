@@ -50,13 +50,15 @@ Example 1 demonstrates how a SharePoint Administrator can retrieve all the Share
 
 ### -Site
 
+> Applicable: SharePoint Online
+
 Specifies the URL of the SharePoint site from which to fetch the SharePoint pages.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

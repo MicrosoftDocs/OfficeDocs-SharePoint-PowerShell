@@ -47,13 +47,15 @@ This example immediately removes the site collection named <https://contoso.shar
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 Specifies the URL of the site collection to remove.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -64,13 +66,15 @@ Accept wildcard characters: False
 
 ### -NoWait
 
+> Applicable: SharePoint Online
+
 Specifies to continue executing script immediately.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -81,13 +85,15 @@ Accept wildcard characters: False
 
 ### -Confirm
 
+> Applicable: SharePoint Online
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -98,6 +104,8 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
+> Applicable: SharePoint Online
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -105,7 +113,7 @@ The cmdlet is not run.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named

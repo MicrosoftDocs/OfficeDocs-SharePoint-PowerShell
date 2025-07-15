@@ -69,13 +69,15 @@ This example returns rename jobs that were initiated by a tenant rename.
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 The urls of the site to be renamed.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: SourceSiteUrl
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -85,13 +87,15 @@ Accept wildcard characters: False
 
 ### -ParentOperationId
 
+> Applicable: SharePoint Online
+
 The parent operation id that initiated the site to be renamed. For example, the tenant rename job id.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: ParentId
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -100,6 +104,8 @@ Accept wildcard characters: False
 ```
 
 ### -State
+
+> Applicable: SharePoint Online
 
 The state of the rename job, possible values are
 
@@ -114,7 +120,7 @@ Type: Microsoft.Online.SharePoint.PowerShell.RenameState
 Parameter Sets: ParentId, RenameReport
 Aliases:
 Accepted values: Queued, InProgress, Success, Failed, Suspended, Canceling, Canceled
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -124,6 +130,8 @@ Accept wildcard characters: False
 
 ### -Confirm
 
+> Applicable: SharePoint Online
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -131,7 +139,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -141,6 +149,8 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
+> Applicable: SharePoint Online
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -148,7 +158,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None

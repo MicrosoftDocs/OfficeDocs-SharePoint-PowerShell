@@ -42,6 +42,8 @@ In Example 1, the email addresses joe.doe@contoso.com and john.dow@contoso.com h
 
 ### -Category
 
+> Applicable: SharePoint Online
+
 Specifies the content event category.
 
 ```yaml
@@ -49,7 +51,7 @@ Type: Microsoft.SharePoint.Administration.TenantAdmin.ContentEventCategory
 Parameter Sets: (All)
 Aliases:
 Accepted values: Unknown, Ransomware, HighVolumeDownload, HighVolumeDelete, HighVolumeShare
-Applicable: SharePoint Online
+
 Required: True
 Position: 0
 Default value: None

@@ -154,13 +154,15 @@ Accept wildcard characters: False
 ```
 
 ### -SourceSiteUrl
+
+> Applicable: SharePoint Online
 Specifies the source URL of the site collection.
 
 ```yaml
 Type: System.String
 Parameter Sets: SourceSiteUrl
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

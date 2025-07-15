@@ -56,13 +56,15 @@ This example creates a new set of migration source package metadata files in the
 
 ### -IgnoreHidden
 
+> Applicable: SharePoint Online
+
 Switch to ignore hidden files and folders.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -73,13 +75,15 @@ Accept wildcard characters: False
 
 ### -IncludeFileSharePermissions
 
+> Applicable: SharePoint Online
+
 Used to include permissions and sharing information into the generated manifest files in the package metadata.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -90,13 +94,15 @@ Accept wildcard characters: False
 
 ### -NoAzureADLookup
 
+> Applicable: SharePoint Online
+
 Switch to not lookup local user accounts in Microsoft Entra ID.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -107,13 +113,15 @@ Accept wildcard characters: False
 
 ### -NoLogFile
 
+> Applicable: SharePoint Online
+
 Used to not create a log file. The default is to create a new CreateMigrationPackage log file within the directory specified within the OutputPackagePath parameter.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -124,13 +132,15 @@ Accept wildcard characters: False
 
 ### -OutputPackagePath
 
+> Applicable: SharePoint Online
+
 The directory location where the output package metadata files will be saved. If the directory does not exist, it will be created.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 1
@@ -141,13 +151,15 @@ Accept wildcard characters: False
 
 ### -ReplaceInvalidCharacters
 
+> Applicable: SharePoint Online
+
 Switch to replace characters in file and folder names that would be invalid in SharePoint Online.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -158,13 +170,15 @@ Accept wildcard characters: False
 
 ### -SourceFilesPath
 
+> Applicable: SharePoint Online
+
 The directory location where the source content files exist. This directory will be enumerated to create the package metadata files.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 0
@@ -175,13 +189,15 @@ Accept wildcard characters: False
 
 ### -TargetDocumentLibraryPath
 
+> Applicable: SharePoint Online
+
 The web relative document library to use as the document library part of the base URL in the package metadata. If this is not supplied, "Documents" will be used within the package metadata instead.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: 3
@@ -192,13 +208,15 @@ Accept wildcard characters: False
 
 ### -TargetDocumentLibrarySubFolderPath
 
+> Applicable: SharePoint Online
+
 Specifies the document library relative subfolder to use as the folder path part of the base URL in the package metadata. If this is not provided, no value will be used within the package metadata. The files will be homed under the document library root.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: 4
@@ -209,13 +227,15 @@ Accept wildcard characters: False
 
 ### -TargetWebUrl
 
+> Applicable: SharePoint Online
+
 The fully qualified web URL to use as the web address part of the base URL in the package metadata. If this is not provided, "`https://fileserver/sites/user`" will be used instead within the package metadata.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: 2

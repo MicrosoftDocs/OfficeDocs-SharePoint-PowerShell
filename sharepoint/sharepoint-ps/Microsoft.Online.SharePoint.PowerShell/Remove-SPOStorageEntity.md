@@ -41,13 +41,15 @@ This example removes the value of my custom value.
 
 ### -Key
 
+> Applicable: SharePoint Online
+
 The key in the property bag that should be removed.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 1
 Default value: None
@@ -57,13 +59,15 @@ Accept wildcard characters: False
 
 ### -Site
 
+> Applicable: SharePoint Online
+
 URL to the tenant or site collection app catalog.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 0
 Default value: None

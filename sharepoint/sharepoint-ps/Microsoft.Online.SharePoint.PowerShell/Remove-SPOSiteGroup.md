@@ -44,13 +44,15 @@ This example removes a group named GroupToRemove from the site collection <https
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 Specifies the name of the group to remove.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -61,13 +63,15 @@ Accept wildcard characters: False
 
 ### -Site
 
+> Applicable: SharePoint Online
+
 Specifies the site collection to remove the group from.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

@@ -40,6 +40,8 @@ The example returns a CDN with a type of public.
 
 ### -CdnType
 
+> Applicable: SharePoint Online
+
 Specifies the CDN type. The valid values are Public or Private.
 
 ```yaml
@@ -47,7 +49,7 @@ Type: Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnType
 Parameter Sets: (All)
 Aliases:
 Accepted values: Public, Private
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

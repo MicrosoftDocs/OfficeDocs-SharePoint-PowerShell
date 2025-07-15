@@ -42,13 +42,15 @@ Verifies the encryption of the site https://contoso.sharepoint.com/sites/Researc
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 The URL of the Site Collection.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 0
 Default value: None

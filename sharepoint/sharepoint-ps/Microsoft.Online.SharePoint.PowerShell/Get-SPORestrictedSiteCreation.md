@@ -50,6 +50,8 @@ Example 2 returns a comma-separated list of the IDs of the Microsoft Entra secur
 ## PARAMETERS
 
 ### -SiteType
+
+> Applicable: SharePoint Online
 When provided, only return the Microsoft Entra security groups configured for the specified site type.
 
 PARAMVALUE: All | SharePoint | OneDrive | Team | Communication
@@ -64,7 +66,7 @@ Type: Microsoft.SharePoint.Administration.SPOnlineProvisioning.RestrictedSiteCre
 Parameter Sets: (All)
 Aliases:
 Accepted values: All, SharePoint, OneDrive, Team, Communication
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None

@@ -86,13 +86,15 @@ This will report on any currently queued or in progress jobs and not wait for al
 
 ### -AzureQueueUri
 
+> Applicable: SharePoint Online
+
 An optional fully qualified URL and SAS token representing the Azure Storage Reporting Queue where import operations will list events during import.
 
 ```yaml
 Type: System.String
 Parameter Sets: AzureLocationsInline
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -103,13 +105,15 @@ Accept wildcard characters: False
 
 ### -Credentials
 
+> Applicable: SharePoint Online
+
 Optional credentials of a site collection administrator to use to connect to the site collection. The credentials should supply the username in UPN format (e.g. user@company.onmicrosoft.com). If this property is not set, the current tenant admin credentials from the session's previous call to `Connect-SPOService` will be used to connect to the site collection.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.CredentialCmdletPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -120,13 +124,15 @@ Accept wildcard characters: False
 
 ### -DontWaitForEndJob
 
+> Applicable: SharePoint Online
+
 Tells the cmdlet to not wait for the job to end. It will only process as many messages as are currently in the queue and then terminate. If this flag is set to $false, it will wait for the job to end before terminating.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -137,13 +143,15 @@ Accept wildcard characters: False
 
 ### -EncryptionParameters
 
+> Applicable: SharePoint Online
+
 An EncryptionParameters object. See New-SPOMigrationEncryptionParameters https://learn.microsoft.com/powershell/module/sharepoint-online/new-spomigrationencryptionparameters for more information.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.Migration.EncryptionParameters
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -154,13 +162,15 @@ Accept wildcard characters: False
 
 ### -JobIds
 
+> Applicable: SharePoint Online
+
 Id of a previously created migration job that exists on the target site collection.
 
 ```yaml
 Type: System.Guid[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -171,13 +181,15 @@ Accept wildcard characters: False
 
 ### -MigrationPackageAzureLocations
 
+> Applicable: SharePoint Online
+
 A set of fully qualified URLs and SAS tokens representing the Azure Blob Storage containers that hold the package content and metadata files and an optional Azure Storage Reporting Queue. This object is returned during successful processing of the `Set-SPOMigrationPackageAzureSource`
 
 ```yaml
 Type: Microsoft.Online.SharePoint.Migration.MigrationPackageAzureLocations
 Parameter Sets: AzureLocationsImplicit
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -188,13 +200,15 @@ Accept wildcard characters: False
 
 ### -NoLogFile
 
+> Applicable: SharePoint Online
+
 Indicates to not create a log file. The default is to create a new CopyMigrationPackage log file within the directory specified within the SourcePackagePath parameter.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -205,13 +219,15 @@ Accept wildcard characters: False
 
 ### -TargetWebUrl
 
+> Applicable: SharePoint Online
+
 The fully qualified target web URL where the package will be imported into. This must include the same TargetWebURL that was used during `ConvertTo-SPOMigrationTargetedPackage`.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named

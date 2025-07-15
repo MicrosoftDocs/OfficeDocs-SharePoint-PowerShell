@@ -71,13 +71,15 @@ In Example 4, the cmdlet creates a standard container type, ContosoLegal that ha
 
 ### -ApplicationRedirectUrl
 
+> Applicable: SharePoint Online
+
 This parameter specifies the url of that the application should be redirected to.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -88,13 +90,15 @@ Accept wildcard characters: False
 
 ### -ContainerTypeName
 
+> Applicable: SharePoint Online
+
 This parameter names your container type for your SharePoint Embedded application.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 0
@@ -105,13 +109,15 @@ Accept wildcard characters: False
 
 ### -IsGovernableByAdmin
 
+> Applicable: SharePoint Online
+
 Using `-GovernableByAdmin`, you can decide whether consuming tenant administrators of the application should be provided management capabilities on Microsoft-enabled administrator support, through SharePoint admin center and PowerShell. When not passed, the value is set to True. When set to False, the consuming tenant administrator can perform only read-only actions on containers of the container type, in both SharePoint admin center and PowerShell.
 
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -122,13 +128,15 @@ Accept wildcard characters: False
 
 ### -IsPassThroughBilling
 
+> Applicable: SharePoint Online
+
 This parameter is used to create a direct to customer billed container type.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -139,13 +147,15 @@ Accept wildcard characters: False
 
 ### -OwningApplicationId
 
+> Applicable: SharePoint Online
+
 This parameter specifies the ID of the SharePoint Embedded application.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -156,13 +166,15 @@ Accept wildcard characters: False
 
 ### -TrialContainerType
 
+> Applicable: SharePoint Online
+
 This parameter is used to specify that the cmdlet is used to create a trial container type and thereby the billing profile need not be provided.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named

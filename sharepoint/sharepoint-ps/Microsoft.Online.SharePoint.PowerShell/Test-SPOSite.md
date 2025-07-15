@@ -46,13 +46,15 @@ This example runs all the site collection health checks on the <https://contoso.
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 Specifies the SharePoint Online site collection to test.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -63,13 +65,15 @@ Accept wildcard characters: False
 
 ### -RuleId
 
+> Applicable: SharePoint Online
+
 Specifies the health check rule to run.
 
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -80,13 +84,15 @@ Accept wildcard characters: False
 
 ### -RunAlways
 
+> Applicable: SharePoint Online
+
 Forces a rule to run even if a health check was run.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named

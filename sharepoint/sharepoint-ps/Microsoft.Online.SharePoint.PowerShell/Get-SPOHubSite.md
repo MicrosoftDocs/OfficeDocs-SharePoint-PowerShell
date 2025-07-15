@@ -66,13 +66,15 @@ This example begins with the online-marketing site. The cmdlet finds the associa
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 URL of the hub site. If not specified, the cmdlet lists all hub sites in the tenant.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoHubSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: 0

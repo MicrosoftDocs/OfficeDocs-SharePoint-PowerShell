@@ -50,13 +50,15 @@ Example 2 adds a user who has the e-mail address melissa.kerr@contoso.com to the
 
 ### -Group
 
+> Applicable: SharePoint Online
+
 Specifies the name of the SharePoint group to add the user or the security group to.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -67,13 +69,15 @@ Accept wildcard characters: False
 
 ### -LoginName
 
+> Applicable: SharePoint Online
+
 Specifies the login name of the user to add.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -84,13 +88,15 @@ Accept wildcard characters: False
 
 ### -Site
 
+> Applicable: SharePoint Online
+
 Specifies the URL of the site collection to which you want to add the user.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

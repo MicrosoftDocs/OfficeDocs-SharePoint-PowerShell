@@ -44,13 +44,15 @@ Add-SPOSiteScript `
 
 ### -ListUrl
 
+> Applicable: SharePoint Online
+
 The url of the list to be referenced for the JSON output.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: 0
 Default value: None

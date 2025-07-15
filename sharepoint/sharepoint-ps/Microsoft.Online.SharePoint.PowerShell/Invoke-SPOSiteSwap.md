@@ -82,13 +82,15 @@ Archives the existing Search Center site at <https://contoso.sharepoint.com/sear
 
 ### -ArchiveUrl
 
+> Applicable: SharePoint Online
+
 URL that the target site will be archived to. There should be no existing site, including a deleted site in the Recycle Bin, at this location before performing the swap.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 2
@@ -99,13 +101,15 @@ Accept wildcard characters: False
 
 ### -DisableRedirection
 
+> Applicable: SharePoint Online
+
 Disables the site redirect from being created at the Source URL location.
 
 ```yaml
 Type: Switch Parameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -115,6 +119,8 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: SharePoint Online
 
 Overrides and ignores any warnings that have been identified by the Page Diagnostic Tool that are preventing a swap from being initiated.
 
@@ -126,7 +132,7 @@ Any errors identified by the Page Diagnostic Tool will still always prevent a sw
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -137,13 +143,15 @@ Accept wildcard characters: False
 
 ### -NoWait
 
+> Applicable: SharePoint Online
+
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -153,6 +161,8 @@ Accept wildcard characters: False
 ```
 
 ### -SourceUrl
+
+> Applicable: SharePoint Online
 
 URL of the source site. The site at this location must exist before performing the swap.
 
@@ -164,7 +174,7 @@ If the target is the search center site at `https://tenant-name.sharepoint.com/s
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: 0
@@ -174,6 +184,8 @@ Accept wildcard characters: False
 ```
 
 ### -TargetUrl
+
+> Applicable: SharePoint Online
 
 URL of the target site that the source site will be swapped to. The site at this location must exist before performing the swap.
 
@@ -186,7 +198,7 @@ The target site must be either:
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: 1

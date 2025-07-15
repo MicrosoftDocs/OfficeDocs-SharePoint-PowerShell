@@ -37,13 +37,15 @@ This example checks if structural navigation caching is enabled for the entire s
 ## PARAMETERS
 
 ### -SiteUrl
+
+> Applicable: SharePoint Online
 Specifies the absolute URL for the site collection's root web being checked for its caching state.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None

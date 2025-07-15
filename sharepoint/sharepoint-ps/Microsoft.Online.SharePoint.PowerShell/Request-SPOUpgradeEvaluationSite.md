@@ -56,13 +56,15 @@ This example requests a site upgrade evaluation for the marketing site <https://
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 Specifies the SharePoint Online site collection for which you want to request a copy for the new Upgrade or Evaluation site collection.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -73,13 +75,15 @@ Accept wildcard characters: False
 
 ### -NoEmail
 
+> Applicable: SharePoint Online
+
 Specifies that the system not send the requester and site collection administrators an email message at the end of the upgrade evaluation site creation process.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -90,13 +94,15 @@ Accept wildcard characters: False
 
 ### -NoUpgrade
 
+> Applicable: SharePoint Online
+
 Specifies that the system not perform an upgrade as part of the evaluation site creation process.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -107,13 +113,15 @@ Accept wildcard characters: False
 
 ### -Confirm
 
+> Applicable: SharePoint Online
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -124,6 +132,8 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
+> Applicable: SharePoint Online
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -131,7 +141,7 @@ The cmdlet is not run.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named

@@ -47,6 +47,8 @@ Starts the rename of the SharePoint domain name to Fabrikam which is scheduled f
 
 ### -DomainName
 
+> Applicable: SharePoint Online
+
 Specifies the domain name that the current SharePoint domain name will be renamed to. This is the part before "sharepoint.com" or "onmicrosoft.com".
 
 > [!NOTE]
@@ -56,7 +58,7 @@ Specifies the domain name that the current SharePoint domain name will be rename
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -67,13 +69,15 @@ Accept wildcard characters: False
 
 ### -ScheduledDateTime
 
+> Applicable: SharePoint Online
+
 Specifies the date-time that the job will be started. This should be at least 24 hours in the future, but no more than 30 days.
 
 ```yaml
 Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -83,13 +87,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Online
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -99,6 +105,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Online
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -106,7 +114,7 @@ The cmdlet is not run.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None

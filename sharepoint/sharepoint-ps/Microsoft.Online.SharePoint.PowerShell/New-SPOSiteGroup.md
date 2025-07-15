@@ -53,13 +53,15 @@ This example creates a group named NewGroupName with the Design permission level
 
 ### -Group
 
+> Applicable: SharePoint Online
+
 Specifies the name of the group to add.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -70,6 +72,8 @@ Accept wildcard characters: False
 
 ### -PermissionLevels
 
+> Applicable: SharePoint Online
+
 Specifies the permission levels to grant to the newly created group. It can be any permission level that exists on the site collection on which the group is being created.
 
 > [!NOTE]
@@ -79,7 +83,7 @@ Specifies the permission levels to grant to the newly created group. It can be a
 Type: System.String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -90,13 +94,15 @@ Accept wildcard characters: False
 
 ### -Site
 
+> Applicable: SharePoint Online
+
 Specifies the site collection to add the group to.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

@@ -87,13 +87,15 @@ Add-SPOSiteDesign -Title "Communication Site with External Users and Guest Shari
 
 ### -Content
 
+> Applicable: SharePoint Online
+
 The JSON value that describes the script. For more information, see the [JSON reference](/sharepoint/dev/declarative-customization/site-design-json-schema).
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -103,13 +105,15 @@ Accept wildcard characters: False
 
 ### -Description
 
+> Applicable: SharePoint Online
+
 A description of the script.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -119,13 +123,15 @@ Accept wildcard characters: False
 
 ### -Title
 
+> Applicable: SharePoint Online
+
 The display name of the site design.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None

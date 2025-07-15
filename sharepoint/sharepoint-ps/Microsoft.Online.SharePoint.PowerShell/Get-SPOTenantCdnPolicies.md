@@ -48,6 +48,8 @@ This example returns private CDN policies of your tenant.
 
 ### -CdnType
 
+> Applicable: SharePoint Online
+
 Type of CDN on the current SPO Tenant (Public,Private)
 
 ```yaml
@@ -55,7 +57,7 @@ Type: Microsoft.Online.SharePoint.TenantAdministration.SPOTenantCdnType
 Parameter Sets: (All)
 Aliases:
 Accepted values: Public, Private
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

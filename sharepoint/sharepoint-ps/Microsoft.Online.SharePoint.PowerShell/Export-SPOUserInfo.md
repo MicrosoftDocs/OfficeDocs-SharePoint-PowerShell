@@ -56,13 +56,15 @@ Example 2 exports user data who has email address joe.healy@contoso.com from all
 
 ### -LoginName
 
+> Applicable: SharePoint Online
+
 Specifies the login name of the user to export.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -73,13 +75,15 @@ Accept wildcard characters: False
 
 ### -OutputFolder
 
+> Applicable: SharePoint Online
+
 Target folder where the CSV file is generated.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -90,13 +94,15 @@ Accept wildcard characters: False
 
 ### -Site
 
+> Applicable: SharePoint Online
+
 Specifies the URL of the site collection to which you want to export the user.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named

@@ -57,13 +57,15 @@ Tenant admin can also reset to replicate all the groups.
 
 ### -ReplicateAllGroups
 
+> Applicable: SharePoint Online
+
 This parameter specifies whether all groups should be replicated.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ReplicateAllGroups
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None
@@ -73,13 +75,15 @@ Accept wildcard characters: False
 
 ### -ReplicatedGroups
 
+> Applicable: SharePoint Online
+
 Specifies a comma-separated list of groups that should be replicated.
 
 ```yaml
 Type: System.String[]
 Parameter Sets: ReplicateSelectedGroups
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
 Position: Named
 Default value: None

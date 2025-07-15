@@ -110,13 +110,15 @@ Example 4 demonstrates how a SharePoint Administrator can move the SharePoint pa
 
 ### -DeleteSourcePage
 
+> Applicable: SharePoint Online
+
 Indicates whether to delete the source SharePoint page(s) after copying. If specified, the operation will move the SharePoint page(s) instead of copying.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: False
 Position: Named
@@ -127,13 +129,15 @@ Accept wildcard characters: False
 
 ### -DestinationSite
 
+> Applicable: SharePoint Online
+
 Specifies the URL of the destination SharePoint site where the SharePoint pages will be copied to.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -144,13 +148,15 @@ Accept wildcard characters: False
 
 ### -PageName
 
+> Applicable: SharePoint Online
+
 Specifies the name of the SharePoint page to copy. This parameter is required when not using the `-AllPages` switch. Note that `-PageName` refers to the name of a SharePoint page that ends with the suffix .aspx, such as page.aspx.
 
 ```yaml
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
@@ -161,13 +167,15 @@ Accept wildcard characters: False
 
 ### -SourceSite
 
+> Applicable: SharePoint Online
+
 Specifies the URL of the source SharePoint site containing the SharePoint pages to copy.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 
 Required: True
 Position: Named
