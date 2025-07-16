@@ -257,7 +257,6 @@ Sets a container type-specific list of security groups who are allowed to share 
 
 Each security group is denoted by its GUID object ID. To set this list to be a specific security group, you need to enter its GUID as the parameter. You can enter multiple GUIDs by using a comma to separate them. To skip the check and allow all security groups to share to authenticated guests, set this allow list to a null array.
 
-
 ```yaml
 Type: System.Guid[]
 Parameter Sets: (All)

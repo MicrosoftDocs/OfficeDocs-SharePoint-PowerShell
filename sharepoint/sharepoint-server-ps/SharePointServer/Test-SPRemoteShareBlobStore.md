@@ -25,7 +25,7 @@ The test verifies the permissions of the Remote Share BLOB stores and identifies
 
 ## EXAMPLES
 
-### -------------EXAMPLE 1------------- 
+### EXAMPLE 1
 ```powershell
 Test-SPRemoteShareBlobStore -ContentDatabase "WSS_Content"
 ```
@@ -33,7 +33,7 @@ Test-SPRemoteShareBlobStore -ContentDatabase "WSS_Content"
 Tests all the Remote Share BLOB Stores in the WSS_Content content database.
 The log file is written to the default SharePoint trace log path.
 
-### -------------EXAMPLE 2------------- 
+### EXAMPLE 2
 ```powershell
 Test-SPRemoteShareBlobStore -ContentDatabase "WSS_Content" -LogPath C:\Logs\SharePointBlobTest.txt
 ```
@@ -44,6 +44,9 @@ The log file is written to C:\Logs\SharePointBlobTest.txt.
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -55,7 +58,6 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -65,13 +67,15 @@ Accept wildcard characters: False
 ```
 
 ### -ContentDatabase
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies a content database to get the Remote Share BLOB Store.
 
 ```yaml
 Type: SPContentDatabasePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -81,6 +85,9 @@ Accept wildcard characters: False
 ```
 
 ### -LogPath
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the path of the log file that contains the results of the test.
 If this parameter is not specified, the log file will be written to the default SharePoint trace log path.
 
@@ -88,7 +95,6 @@ If this parameter is not specified, the log file will be written to the default 
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -98,13 +104,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -114,6 +122,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -121,7 +132,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

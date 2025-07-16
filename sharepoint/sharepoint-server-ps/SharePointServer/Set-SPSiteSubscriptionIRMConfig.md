@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the Information Rights Management (IRM) settings.
 
-
 ## SYNTAX
 
 ```
@@ -26,10 +25,9 @@ Use the Identity parameter of the `Set-SPSiteSubscriptionIRMConfig` cmdlet to se
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### --------------------EXAMPLE 1---------------------
+### EXAMPLE 1
 ```powershell
 site = Get-SPSite  HYPERLINK "https://<myspserver>" https:// <myspserver>
 $subscription = $site.SiteSubscription
@@ -38,8 +36,7 @@ Set-SPSiteSubscriptionIRMConfig -Identity $subscription -IrmEnabled -Certificate
 
 This example enables IRM for the tenant and configures it to use the specified RMS server.
 
-
-### --------------------EXAMPLE 2---------------------
+### EXAMPLE 2
 ```powershell
 site = Get-SPSite  HYPERLINK "https://myspserver" https:// <myspserver>
 $subscription = $site.SiteSubscription
@@ -48,17 +45,18 @@ Set- SPSiteSubscriptionIRMConfig -Identity $subscription -IrmEnabled:$false
 
 This example disables IRM for the tenant.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies a site subscription for a particular tenant.
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -68,6 +66,9 @@ Accept wildcard characters: False
 ```
 
 ### -IrmEnabled
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether IRM is enabled in the tenant.
 
 The default value is false.
@@ -75,8 +76,7 @@ The default value is false.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -86,6 +86,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -97,8 +100,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -108,13 +110,15 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateServerUrl
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the address of the RMS certificate server to use for the tenant.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -124,6 +128,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -131,7 +138,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -141,13 +147,15 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that the output object can be passed through the pipeline.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -157,6 +165,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -164,7 +175,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

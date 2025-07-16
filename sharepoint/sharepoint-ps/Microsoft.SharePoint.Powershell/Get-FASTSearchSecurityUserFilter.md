@@ -29,7 +29,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1-----------------
+### EXAMPLE 1
 ```
 Get-FASTSearchSecurityUserFilter -Identity ln1 -User user1
 ```
@@ -39,13 +39,15 @@ This example gets the search security filter for user "user1" in user store "ln1
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: FAST Server for SharePoint 2010
+
 The identity of the user store containing the user.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: 1
@@ -55,13 +57,15 @@ Accept wildcard characters: False
 ```
 
 ### -User
+
+> Applicable: FAST Server for SharePoint 2010
+
 The identifier of the user or group.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: 2
@@ -71,13 +75,15 @@ Accept wildcard characters: False
 ```
 
 ### -Worker
+
+> Applicable: FAST Server for SharePoint 2010
+
 The optional Worker parameter specifies the WorkerPoolNode object for the security worker that is to handle the request.
 
 ```yaml
 Type: WorkerPoolNode
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 9999

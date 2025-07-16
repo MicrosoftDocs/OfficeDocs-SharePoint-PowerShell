@@ -2,7 +2,7 @@
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 module name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spprojectodataconfiguration
-Applicable: SharePoint Server Subscription Edition
+
 title: Set-SPProjectOdataConfiguration
 schema: 2.0.0
 ---
@@ -25,56 +25,53 @@ Set-SPProjectOdataConfiguration [-AcceptCountRequests <Boolean>] [-AcceptProject
 The `Set-SPProjectOdataConfiguration` cmdlet sets the settings for how the OData service is configured for an instance of Project Web App.
 It allows the user to configure the settings for a list of parameters that specify paging, the enabling of various querying functionality, whether MaxResultsPerCollection has been enabled and whether verbose errors are enabled.
 Paging can be specified per entity.
-If no paging overrides exist for a given entity, the DefaultMaxPageSize parameter is used. 
+If no paging overrides exist for a given entity, the DefaultMaxPageSize parameter is used.
 MaxResultsPerCollection cannot be used in conjunction with paging.
 
 For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
 
-
 ## EXAMPLES
 
-### ----------------------EXAMPLE 1-----------------------
+### EXAMPLE 1
 ```powershell
 Set-SPProjectOdataConfiguration -ClearEntityPageSizeOverrides
 ```
 
 This example clears any page size overrides that have been set for any specific entities.
 
-
-### ----------------------EXAMPLE 2-----------------------
+### EXAMPLE 2
 ```powershell
 Set-SPProjectOdataConfiguration -AcceptProjectionRequests $true
 ```
 
 This example sets AcceptProjectionRequests to true.
 
-
-### ----------------------EXAMPLE 3-----------------------
+### EXAMPLE 3
 ```powershell
 Set-SPProjectOdataConfiguration -DefaultMaxPageSize 50
 ```
 
 This example sets the default maximum page size to 50 rows.
 
-
-### ----------------------EXAMPLE 4-----------------------
+### EXAMPLE 4
 ```powershell
 Set-SPProjectOdataConfiguration -EntitySetName Assignments -PageSizeOverride 100
 ```
 
 This example sets the page size override for the Assignments entity.
 
-
 ## PARAMETERS
 
 ### -AcceptCountRequests
+
+> Applicable: SharePoint Server Subscription Edition
+
 Sets whether requests with the $count path segment or the $inlinecount query options are accepted.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -84,14 +81,16 @@ Accept wildcard characters: False
 ```
 
 ### -AcceptProjectionRequests
-Sets whether projection requests should be accepted. 
+
+> Applicable: SharePoint Server Subscription Edition
+
+Sets whether projection requests should be accepted.
 Projection requests are made by using the $select query option.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -101,6 +100,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -112,8 +114,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -123,13 +124,15 @@ Accept wildcard characters: False
 ```
 
 ### -ClearEntityPageSizeOverrides
+
+> Applicable: SharePoint Server Subscription Edition
+
 Clears all page-size overrides that had been set for any entities.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -139,14 +142,16 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultMaxPageSize
-Sets the default page size. 
+
+> Applicable: SharePoint Server Subscription Edition
+
+Sets the default page size.
 This is used for any entities that do not have an override set using the PageSizeOverride parameter.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -156,13 +161,15 @@ Accept wildcard characters: False
 ```
 
 ### -EntitySetName
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the entity name that is used to set a page size override with PageSizeOverride.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -172,14 +179,16 @@ Accept wildcard characters: False
 ```
 
 ### -MaxResultsPerCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Sets the integer value that indicates the maximum number of results per entity.
 This parameter cannot be used in conjunction with paging.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -189,13 +198,15 @@ Accept wildcard characters: False
 ```
 
 ### -PageSizeOverride
+
+> Applicable: SharePoint Server Subscription Edition
+
 Overrides the page size that is used for a specific entity.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -205,13 +216,15 @@ Accept wildcard characters: False
 ```
 
 ### -UseVerboseErrors
+
+> Applicable: SharePoint Server Subscription Edition
+
 Sets the service to use more verbose error messages (for example, stack trace).
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

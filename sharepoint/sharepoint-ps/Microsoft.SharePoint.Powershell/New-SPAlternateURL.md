@@ -7,7 +7,7 @@ title: New-SPAlternateURL
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # New-SPAlternateURL
@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 
 Creates a new public or internal URL for the specified Web application zone or resource.
-
 
 
 ## SYNTAX
@@ -54,7 +53,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE----------------------- 
+### EXAMPLE
 ```
 #create the public URL
 New-SPAlternateURL https://www.contoso.com -Zone "Internet"
@@ -70,6 +69,9 @@ When a reverse proxy is being set up to handle public URL SSL termination, alter
 ## PARAMETERS
 
 ### -Url
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the public URL that users access to sign in to the Web application.
 
 The type must be a valid URL, in the form https://server_name.
@@ -77,8 +79,7 @@ The type must be a valid URL, in the form https://server_name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -88,6 +89,9 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name, URL, or GUID of the Web application for which to create the mapping.
 
 The type must be a valid name, URL, in the form WebApplication-1212, https://server_name, or GUID, in the form 1234-5678-9876-0987.
@@ -95,8 +99,7 @@ The type must be a valid name, URL, in the form WebApplication-1212, https://ser
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: WebApplication
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -106,14 +109,16 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceName
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the resource name, if the alternate URL is for an external resource.
 If no value is specified, the value is left blank.
 
 ```yaml
 Type: String
 Parameter Sets: ResourceName
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -123,6 +128,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -134,8 +142,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -145,6 +152,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -152,7 +162,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -162,14 +171,16 @@ Accept wildcard characters: False
 ```
 
 ### -Internal
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Makes this alternate URL an internal URL.
 If this parameter is not provided, the URL is a public URL.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -179,6 +190,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -186,7 +200,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -196,6 +209,9 @@ Accept wildcard characters: False
 ```
 
 ### -Zone
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies one of the five zones with which the alternate URL is associated.
 
 The type must be a valid zone: Default, Intranet, Internet, Extranet, or Custom.
@@ -203,8 +219,7 @@ The type must be a valid zone: Default, Intranet, Internet, Extranet, or Custom.
 ```yaml
 Type: SPUrlZone
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

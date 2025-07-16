@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 Changes properties of an existing routing rule.
 
-
 ## SYNTAX
 
 ```
@@ -29,10 +28,9 @@ Use the `Set-SPRoutingRule` cmdlet to change properties of an existing routing r
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### EXAMPLE
 ```
 $wa = Get-SPWebApplication https://webAppUrl
 $rm = Get-SPRequestManagementSettings -Identity $wa
@@ -47,17 +45,18 @@ Set-SPRoutingRule -Identity $rule -Criteria $criteriaNew
 
 This example sets a routing rule for the specified identity by using the $rule variable.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of the request management settings object to set.
 
 ```yaml
 Type: SPRoutingRulePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -67,6 +66,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -74,8 +76,7 @@ When the Global parameter is used, all objects are contained in the global store
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -85,13 +86,15 @@ Accept wildcard characters: False
 ```
 
 ### -Criteria
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the criteria for the rule to match.
 
 ```yaml
 Type: SPRequestManagementRuleCriteriaPipeBind[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -101,13 +104,15 @@ Accept wildcard characters: False
 ```
 
 ### -ExecutionGroup
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the group in which the rule will be placed.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -117,13 +122,15 @@ Accept wildcard characters: False
 ```
 
 ### -Expiration
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the expiration date and time of the rule.
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -133,13 +140,15 @@ Accept wildcard characters: False
 ```
 
 ### -MachinePool
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the pool of machines to which a request will be routed if the changed rule is matched.
 
 ```yaml
 Type: SPRoutingMachinePoolPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

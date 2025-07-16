@@ -75,7 +75,6 @@ Type: Microsoft.Online.SharePoint.PowerShell.SpoHubSitePipeBind
 Parameter Sets: (All)
 Aliases: HubSite
 
-
 Required: True
 Position: 0
 Default value: None
@@ -94,7 +93,6 @@ Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
-
 Required: False
 Position: Named
 Default value: None
@@ -112,7 +110,6 @@ The cmdlet is not run.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 
 Required: False
 Position: Named

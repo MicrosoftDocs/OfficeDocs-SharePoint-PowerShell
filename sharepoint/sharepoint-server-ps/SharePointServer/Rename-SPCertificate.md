@@ -25,7 +25,7 @@ This name will only be visible to SharePoint farm administrators, not to end use
 
 ## EXAMPLES
 
-### ------------EXAMPLE-----------
+### EXAMPLE
 ```powershell
 Rename-SPCertificate -Identity "Team Sites Certificate" -NewFriendlyName "OneDrive Certificate"
 ```

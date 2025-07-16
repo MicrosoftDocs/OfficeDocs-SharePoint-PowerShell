@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Completely deletes the specified Web.
 
-
 ## SYNTAX
 
 ```
@@ -25,20 +24,21 @@ The **Remove-SPWeb** cmdlet completely deletes the Web specified by the Identity
 
 Deleting the top level Web site of a site collection causes the entire site collection to be removed.
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE-----------------------
+### EXAMPLE
 ```powershell
 Remove-SPWeb https://sitename/subsite
 ```
 
 This example completely deletes a subsite.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the identity of the Web to delete.
 
 The type must be a valid full URL, in the form https://server_name/site_name, or an SPWeb object.
@@ -46,8 +46,7 @@ The type must be a valid full URL, in the form https://server_name/site_name, or
 ```yaml
 Type: SPWebPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -57,13 +56,16 @@ Accept wildcard characters: False
 ```
 
 ### -CheckComplianceFlags
-Specifies if compliance flags are enabled. 
+
+> Applicable: SharePoint Server Subscription Edition
+
+Specifies if compliance flags are enabled.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
+
 Required: False
 Position: Named
 Default value: None
@@ -72,6 +74,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -79,8 +84,7 @@ When the Global parameter is used, all objects are contained in the global store
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -90,6 +94,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -97,7 +104,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -107,6 +113,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -114,7 +123,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -124,13 +132,15 @@ Accept wildcard characters: False
 ```
 
 ### -Recycle
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies if the SPWeb object should be recycled.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

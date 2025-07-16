@@ -7,14 +7,13 @@ title: Remove-SPUserSettingsProvider
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # Remove-SPUserSettingsProvider
 
 ## SYNOPSIS
 Removes a User Settings Provider.
-
 
 ## SYNTAX
 
@@ -28,27 +27,27 @@ Use the `Remove-SPUserSettingsProvider` cmdlet to remove a User Settings Provide
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ----------------------EXAMPLE-----------------------
+### EXAMPLE
 ```
 Remove-SPUserSettingsProvider -Identity "234bf0ed-70db-4158-a332-4dfd683b4148"
 ```
 
 This example removes a specific User Settings Provider by using the GUID, 234bf0ed-70db-4158-a332-4dfd683b4148.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the GUID ID for a User Settings Provider to remove.
 
 ```yaml
 Type: SPUserSettingsProviderPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -58,6 +57,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -69,8 +71,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

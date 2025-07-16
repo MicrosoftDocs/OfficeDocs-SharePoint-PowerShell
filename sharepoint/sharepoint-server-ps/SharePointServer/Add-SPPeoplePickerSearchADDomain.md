@@ -25,14 +25,14 @@ This Add-SPPeoplePickerSearchADDomain cmdlet adds a forest or domain with domain
 
 ## EXAMPLES
 
-### -------------EXAMPLE 1------------- 
+### EXAMPLE 1
 ```powershell
 Add-SPPeoplePickerSearchADDomain -WebApplication http://MyOfficeApp1 -DomainName "corp.contoso.com" -IsForest
 ```
 
 This example adds forest corp.contoso.com to the People Picker search Active Directory domain list of the Web application MyOfficeApp1.
 
-### -------------EXAMPLE 2------------- 
+### EXAMPLE 2
 ```powershell
 Add-SPPeoplePickerSearchADDomain -WebApplication http://MyOfficeApp1 -DomainName "corp.contoso.com" -Credential (New-Object System.Management.Automation.PSCredential "contoso\user", (ConvertTo-SecureString "password" -AsPlainText -Force))
 ```
@@ -42,6 +42,9 @@ This example adds domain corp.contoso.com to the People Picker search Active Dir
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -54,7 +57,6 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -64,6 +66,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+
+> Applicable: SharePoint Server Subscription Edition
+
 The login name and password used by People Picker for authenticating to a forest or domain that it doesn't have a two-way trust relationship with.
 
 This parameter is not neccessary if it has a two-way trust relationship with the forest or domain specified by the DomainName parameter.
@@ -74,7 +79,6 @@ If this parameter is not specified, then no login name and password will be used
 Type: PSCredential
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -84,13 +88,15 @@ Accept wildcard characters: False
 ```
 
 ### -DomainName
+
+> Applicable: SharePoint Server Subscription Edition
+
 Name of the forest or domain.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -100,13 +106,15 @@ Accept wildcard characters: False
 ```
 
 ### -Index
+
+> Applicable: SharePoint Server Subscription Edition
+
 The position to insert the forest or domain in the list begin from 0.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -116,13 +124,15 @@ Accept wildcard characters: False
 ```
 
 ### -IsForest
+
+> Applicable: SharePoint Server Subscription Edition
+
 Whether the name specified by the DomainName parameter is an active directory forest or an Active Directory domain.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -132,13 +142,15 @@ Accept wildcard characters: False
 ```
 
 ### -SecureSocketsLayer
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether the newly added forest or domain should enable Secure LDAP (LDAPS).
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -148,13 +160,15 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 The Web application to add the People Picker forest/domain search setting to.
 
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -164,13 +178,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -180,6 +196,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -187,7 +206,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

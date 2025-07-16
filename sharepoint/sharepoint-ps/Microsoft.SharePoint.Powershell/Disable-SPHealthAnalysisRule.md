@@ -17,7 +17,6 @@ ms.reviewer:
 Disables health analyzer rules.
 
 
-
 ## SYNTAX
 
 ```
@@ -37,7 +36,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------------------EXAMPLE 1--------------------------- 
+### EXAMPLE 1
 ```
 Disable-SPHealthAnalysisRule -Identity "CustomRule"
 ```
@@ -47,6 +46,9 @@ This example disables the health analyzer rule named CustomRule.
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name or GUID of the health analyzer rule to disable.
 
 The type must be a valid name; an instance of a valid SPHealthAnalysisRule object, or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
@@ -54,8 +56,7 @@ The type must be a valid name; an instance of a valid SPHealthAnalysisRule objec
 ```yaml
 Type: SPHealthAnalysisRuleInstancePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -65,6 +66,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -76,8 +80,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -87,6 +90,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -94,7 +100,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -104,6 +109,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -111,7 +119,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

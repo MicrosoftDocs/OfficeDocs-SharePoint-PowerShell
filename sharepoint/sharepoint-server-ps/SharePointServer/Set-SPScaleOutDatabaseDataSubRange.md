@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a subrange for a specified scale-out database.
 
-
 ## SYNTAX
 
 ### UnattachedDatabase
@@ -37,10 +36,9 @@ A subrange is a subset of a range of data.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### EXAMPLE
 ```powershell
 $databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
 $database = $databases[0]
@@ -50,17 +48,18 @@ Set-SPScaleOutDatabaseDataSubRange -Database $database -Range $state.Range -SubR
 
 This example creates a read-only subrange that starts from the data range start point and ends at the data range end point on the first scale-out database of the specified service application.
 
-
 ## PARAMETERS
 
 ### -ConnectionString
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the connection string for the scale-out database to create the new data sub-range.
 
 ```yaml
 Type: String
 Parameter Sets: UnattachedDatabase
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -70,13 +69,15 @@ Accept wildcard characters: False
 ```
 
 ### -Database
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the scale-out database to create the data subrange.
 
 ```yaml
 Type: SPDatabasePipeBind
 Parameter Sets: AttachedDatabase
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -86,13 +87,15 @@ Accept wildcard characters: False
 ```
 
 ### -IsUpperSubRange
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether to create the data subrange on the upper or lower side of the data range.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -102,13 +105,15 @@ Accept wildcard characters: False
 ```
 
 ### -Range
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the expected current range of the scale-out database prior to this operation.
 
 ```yaml
 Type: SPScaleOutDataRange
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -118,6 +123,9 @@ Accept wildcard characters: False
 ```
 
 ### -SubRangeMode
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the mode of the data subrange to be created.
 The data subrange mode values are the following:
 
@@ -129,8 +137,7 @@ The data subrange mode values are the following:
 ```yaml
 Type: SPScaleOutDatabaseSubRangeMode
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -140,6 +147,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -151,8 +161,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -162,6 +171,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -169,7 +181,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -179,14 +190,16 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreSubRangePointOnBoundary
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether to complete without any errors if the new subrange's start and end points are the same.
 If this parameter is specified, no errors are displayed.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -196,13 +209,15 @@ Accept wildcard characters: False
 ```
 
 ### -IsAzureDatabase
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether the database is hosted on SQL Azure.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: UnattachedDatabase
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -212,6 +227,9 @@ Accept wildcard characters: False
 ```
 
 ### -SubRangePoint
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the start or end point of the data subrange to be created as defined by the following criteria:
 
 --The start point if the data sub-range is created on the upper side of the data range.
@@ -222,8 +240,7 @@ The maximum value is NULL.
 ```yaml
 Type: Byte[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -233,6 +250,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -240,7 +260,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

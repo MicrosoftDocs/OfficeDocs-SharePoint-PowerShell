@@ -25,7 +25,7 @@ Use the Copy-SPTaxonomyGroups cmdlet to copy specified Metadata groups from an o
 
 ## EXAMPLES
 
-### ------------Example 1 -----------
+### Example 1
 ```powershell
 $credential = Get-Credential
 Copy-SPTaxonomyGroups -LocalTermStoreName "Managed Metadata Service Application Proxy" -LocalSiteUrl "https://sharepoint" -RemoteSiteUrl "https://contoso.sharepoint.com" -GroupNames "Group1","Group2" -Credential $credential
@@ -36,6 +36,8 @@ This example copies two taxonomy groups "Group1" and "Group2" from local Term St
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
 
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
@@ -48,8 +50,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -59,13 +60,15 @@ Accept wildcard characters: False
 ```
 
 ### -AuthEndpoint
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the Azure Active Directory Graph API authentication endpoint. By default, the well-known endpoint will be used.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -75,6 +78,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the Taxonomy Term Store administrator credential of remote SharePoint Online Term Store.
 
 Writes data to remote Term Store, so a Term Store Administrator's credential is needed to perform the operations.
@@ -82,8 +88,7 @@ Writes data to remote Term Store, so a Term Store Administrator's credential is 
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -93,13 +98,15 @@ Accept wildcard characters: False
 ```
 
 ### -GraphApiEndpoint
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the Azure Active Directory Graph API endpoint. By default, the well-known endpoint will be used.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -109,13 +116,15 @@ Accept wildcard characters: False
 ```
 
 ### -GroupNames
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name array of Taxonomy groups in local on-premises term store that will be copied to remote SharePoint Online Term store.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -125,13 +134,15 @@ Accept wildcard characters: False
 ```
 
 ### -LocalSiteUrl
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the Url of local SharePoint on-premises site that contains the local Taxonomy Term Store.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -141,13 +152,15 @@ Accept wildcard characters: False
 ```
 
 ### -LocalTermStoreName
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of local Taxonomy Term Store in the SharePoint on-premises farm.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -157,13 +170,15 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteSiteUrl
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the Url of remote SharePoint Online site that contains remote Taxonomy Term Store.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named

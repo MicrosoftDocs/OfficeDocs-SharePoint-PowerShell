@@ -25,7 +25,7 @@ New-SPODataConnectionSetting -ServiceContext <SPServiceContextPipeBind> -Name <S
 
 ## EXAMPLES
 
-### -------------EXAMPLE 1------------- 
+### EXAMPLE 1
 ```powershell
 {{ Add example code here }}
 ```
@@ -35,6 +35,9 @@ New-SPODataConnectionSetting -ServiceContext <SPServiceContextPipeBind> -Name <S
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -47,7 +50,6 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -57,13 +59,16 @@ Accept wildcard characters: False
 ```
 
 ### -AuthenticationMode
+
+> Applicable: SharePoint Server Subscription Edition
+
 {{ Fill AuthenticationMode Description }}
 
 ```yaml
 Type: ODataAuthenticationMode
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
+
 Accepted values: PassThrough, RevertToSelf, Credentials, WindowsCredentials, DigestCredentials, ClientCertificate, Anonymous
 
 Required: True
@@ -74,13 +79,15 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionProvider
+
+> Applicable: SharePoint Server Subscription Edition
+
 {{ Fill ExtensionProvider Description }}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -90,13 +97,15 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: SharePoint Server Subscription Edition
+
 {{ Fill Name Description }}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -106,13 +115,15 @@ Accept wildcard characters: False
 ```
 
 ### -SecureStoreTargetApplicationId
+
+> Applicable: SharePoint Server Subscription Edition
+
 {{ Fill SecureStoreTargetApplicationId Description }}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -122,13 +133,15 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceAddressURL
+
+> Applicable: SharePoint Server Subscription Edition
+
 {{ Fill ServiceAddressURL Description }}
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -138,13 +151,15 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceContext
+
+> Applicable: SharePoint Server Subscription Edition
+
 {{ Fill ServiceContext Description }}
 
 ```yaml
 Type: SPServiceContextPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named

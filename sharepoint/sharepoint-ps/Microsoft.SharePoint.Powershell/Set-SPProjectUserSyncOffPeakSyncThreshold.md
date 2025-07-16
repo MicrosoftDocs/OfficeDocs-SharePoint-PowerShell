@@ -35,24 +35,25 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### EXAMPLE
 ```
 Set-SPProjectUserSyncOffPeakSyncThreshold -URL https://contoso/PWA -Threshold 900000
 ```
 
 This example sets the sync off-peak threshold for the Project Web App instance at https://contoso-AppSrv/PWA to 900000.
 
-
 ## PARAMETERS
 
 ### -Url
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 The URL of the Project Web App instance where you want to set the threshold.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: True
 Position: 2
@@ -62,13 +63,15 @@ Accept wildcard characters: False
 ```
 
 ### -Threshold
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 A whole number consisting of the number of projects multiplied by the number of users.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: True
 Position: 3
@@ -78,6 +81,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -89,8 +95,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: False
 Position: Named

@@ -62,7 +62,6 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -84,7 +83,6 @@ Type: System.String[]
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -102,7 +100,6 @@ Specifies the site collection to add the group to.
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: Named

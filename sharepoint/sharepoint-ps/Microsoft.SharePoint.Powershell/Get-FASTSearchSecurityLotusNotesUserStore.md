@@ -29,7 +29,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1-----------------
+### EXAMPLE 1
 ```
 Get-FASTSearchSecurityLotusNotesUserStore -Identity ln1
 ```
@@ -39,14 +39,16 @@ This example gets the Lotus Notes user store with the identity "ln1".
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: FAST Server for SharePoint 2010
+
 The identity of the Lotus Notes user store to get.
 If not specified, a list of all Lotus Notes user stores is returned.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 1

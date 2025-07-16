@@ -52,7 +52,6 @@ While you only need to be a SharePoint Embedded Administrator to set the basic i
 
 For permissions and the most current information about Windows PowerShell for SharePoint Embedded Containers, see the documentation at [Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
-
 ## EXAMPLES
 
 ### Example 1
@@ -62,7 +61,6 @@ Set-SPOContainerType -ContainerTypeId da1d89b3-b4cf-4c0a-8e1c-0d131c57544f -Owni
 ```
 
 Example 1 sets the container type name as 'Red Container Type'
-
 
 ### Example 2
 
@@ -78,7 +76,6 @@ In Example 2, the billing profile of the container type is updated.
 Set-SPOContainerType -ContainerTypeId 01f62754-0873-4ec6-ab4a-3eed48ba8be7 -OwningApplicationId 994b9586-253e-4a77-b51 - ContainerTypeName 'Blue Container Type'
 ```
 In Example 3, the trial container type name is updated as 'Blue Container Type'
-
 
 ## PARAMETERS
 

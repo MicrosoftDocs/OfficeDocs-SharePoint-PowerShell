@@ -27,7 +27,7 @@ Use the Enable-SPWebTemplateEnabledForSiteMaster cmdlet to create a site master 
 
 ## EXAMPLES
 
-### Example 1 
+### Example 1
 ```
 Enable-SPWebTemplateForSiteMaster -Template STS#0 -CompatibilityLevel 15
 ```
@@ -37,6 +37,9 @@ This example creates a site master in the database using the Team Site template.
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -44,8 +47,7 @@ When the Global parameter is used, all objects are contained in the global store
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -55,6 +57,9 @@ Accept wildcard characters: False
 ```
 
 ### -CompatibilityLevel
+
+> Applicable: SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the version of templates to use when creating a new SPSite object. This value sets the initial CompatibilityLevel value for the site collection.
 
 When this parameter is not specified, the CompatibilityLevel parameter will default to the highest possible version for the web application depending on the SiteCreationMode setting.
@@ -62,8 +67,7 @@ When this parameter is not specified, the CompatibilityLevel parameter will defa
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -73,13 +77,15 @@ Accept wildcard characters: False
 ```
 
 ### -Template
+
+> Applicable: SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of the template. For example, SPSPERS#2.
 
 ```yaml
 Type: SPWebTemplatePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named

@@ -7,7 +7,7 @@ title: Reset-SPSites
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # Reset-SPSites
@@ -29,10 +29,9 @@ It also ensures that all site collections in the content database are registered
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016, SharePoint Server 2019 reference (https://go.microsoft.com/fwlink/p/?LinkId=671715).
 
-
 ## EXAMPLES
 
-### ----------------------EXAMPLE-----------------------
+### EXAMPLE
 ```
 $contentdb = Get-SPContentDatabase ContentDbName
 Reset-SPSites -Identity $contentDb
@@ -40,10 +39,12 @@ Reset-SPSites -Identity $contentDb
 
 Synchronizes the sites in the content database named ContentDbName with the configuration database.
 
-
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -55,8 +56,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -66,13 +66,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -82,13 +84,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: SharePoint Server 2016, SharePoint Server 2019
+
 Specifies a specific content database. This could either be ID or Name of the content database or a valid instance of a content database.
 
 ```yaml
 Type: SPContentDatabasePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 0
@@ -98,6 +102,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2016, SharePoint Server 2019
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -105,7 +112,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

@@ -7,14 +7,13 @@ title: Receive-SPServiceApplicationConnectionInfo
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # Receive-SPServiceApplicationConnectionInfo
 
 ## SYNOPSIS
 Configures this farm to receive service information from another farm.
-
 
 ## SYNTAX
 
@@ -28,10 +27,9 @@ The `Receive-SPServiceApplicationConnectionInfo` cmdlet retrieves the list of se
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE-----------------------
+### EXAMPLE
 ```
 Receive-SPServiceApplicationConnectionInfo -FarmUrl https://FarmB/topology/topology.svc
 ```
@@ -40,10 +38,12 @@ This example retreives a list of service applications published by a given farm.
 
 The FarmURL parameter can be obtained by the `Get-SPTopologyServiceApplication` cmdlet.
 
-
 ## PARAMETERS
 
 ### -FarmUrl
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the URL of the farm from which to receive service application information.
 
 The type must be a valid URL, in the form https://site_name.
@@ -51,8 +51,7 @@ The type must be a valid URL, in the form https://site_name.
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -62,6 +61,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -73,8 +75,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -84,13 +85,15 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies a filter to use.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

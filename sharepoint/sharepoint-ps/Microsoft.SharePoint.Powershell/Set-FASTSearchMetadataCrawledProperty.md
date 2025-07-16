@@ -40,7 +40,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 C:\PS>$description = Get-FASTSearchMetadataCrawledProperty -Name Description
 $description # Before
@@ -53,13 +53,15 @@ This example automatically maps a crawled property to the full text index "conte
 ## PARAMETERS
 
 ### -CrawledProperty
+
+> Applicable: FAST Server for SharePoint 2010
+
 An object representing the crawled property to update.
 
 ```yaml
 Type: CrawledProperty
 Parameter Sets: CrawledProperty
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: Named
@@ -69,13 +71,15 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: FAST Server for SharePoint 2010
+
 The name of the crawled property to update.
 
 ```yaml
 Type: String
 Parameter Sets: Name
 Aliases: CrawledPropertyName, N
-Applicable: FAST Server for SharePoint 2010
 
 Required: True
 Position: Named
@@ -85,6 +89,9 @@ Accept wildcard characters: False
 ```
 
 ### -Propset
+
+> Applicable: FAST Server for SharePoint 2010
+
 The property set GUID of the crawled property which is being updated.
 
 The GUID controls which category the crawled property is part of.
@@ -94,8 +101,7 @@ The accepted GUID format is "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" or a System.G
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -105,6 +111,9 @@ Accept wildcard characters: False
 ```
 
 ### -VariantType
+
+> Applicable: FAST Server for SharePoint 2010
+
 An integer value specifying the variant type of the updated crawled property.
 
 See https://go.microsoft.com/fwlink/?LinkId=163232 (https://go.microsoft.com/fwlink/?LinkId=163232) for a list of common variant types.
@@ -112,8 +121,7 @@ See https://go.microsoft.com/fwlink/?LinkId=163232 (https://go.microsoft.com/fwl
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -123,13 +131,15 @@ Accept wildcard characters: False
 ```
 
 ### -IsMappedToContents
+
+> Applicable: FAST Server for SharePoint 2010
+
 This Boolean parameter specifies whether or not the content of the crawled property should be automatically mapped into the default full text index.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named

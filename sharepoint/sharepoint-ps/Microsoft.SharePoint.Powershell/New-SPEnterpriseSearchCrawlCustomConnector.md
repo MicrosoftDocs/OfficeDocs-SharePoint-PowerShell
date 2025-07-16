@@ -7,7 +7,7 @@ title: New-SPEnterpriseSearchCrawlCustomConnector
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # New-SPEnterpriseSearchCrawlCustomConnector
@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ 
+### EXAMPLE
 ```
 $ssa = Get-SPEnterpriseSearchServiceApplication
 New-SPEnterpriseSearchCrawlCustomConnector -SearchApplication $ssa -ModelFilePath \\models\myFileTypeModel.mft -Protocol "mftml://"
@@ -43,13 +43,15 @@ This example creates a custom connector for a file type whose model is located a
 ## PARAMETERS
 
 ### -ModelFilePath
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the path to a model file.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -59,13 +61,15 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the string version of the protocol; for example, dctm://.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -75,6 +79,9 @@ Accept wildcard characters: False
 ```
 
 ### -SearchApplication
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the search application that is associated with the protocol.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application name (for example, SearchApp1); or an instance of a valid SearchServiceApplication object
@@ -82,8 +89,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -93,6 +99,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -104,8 +113,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -115,6 +123,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -122,7 +133,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -132,13 +142,15 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the display name of the custom connector that appears on the SharePoint Central Administration Web site.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -148,6 +160,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -155,7 +170,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

@@ -6,7 +6,7 @@ applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 title: Remove-FASTSearchResource
 ---
 
@@ -29,7 +29,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 Remove-FASTSearchResource dictionaries\spellcheck\check_en.aut
 ```
@@ -39,13 +39,15 @@ This example deletes the resource dictionaries\spellcheck\check_en.aut from the 
 ## PARAMETERS
 
 ### -Path
+
+> Applicable: FAST Server for SharePoint 2010
+
 Partial URI within the resource store of the file which will be deleted.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: ResourceURI
-Applicable: FAST Server for SharePoint 2010
 
 Required: True
 Position: 1

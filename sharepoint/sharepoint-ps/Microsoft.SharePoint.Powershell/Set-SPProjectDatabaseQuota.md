@@ -35,27 +35,27 @@ Microsoft internal use only.
 
 For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
 
-
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### EXAMPLE
 ```
  {{ Add example code here }}
 ```
 
 {{ Add example description here }}
 
-
 ## PARAMETERS
 
 ### -Settings
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Microsoft internal use only.
 
 ```yaml
 Type: ProjectDatabaseQuotaSettings
 Parameter Sets: settings
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: True
 Position: 2
@@ -65,13 +65,15 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Microsoft internal use only.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: options
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -81,13 +83,15 @@ Accept wildcard characters: False
 ```
 
 ### -MaxDbSize
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Microsoft internal use only.
 
 ```yaml
 Type: Int32
 Parameter Sets: options
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -97,13 +101,15 @@ Accept wildcard characters: False
 ```
 
 ### -ReadOnlyLimit
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Microsoft internal use only.
 
 ```yaml
 Type: Int32
 Parameter Sets: options
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -113,13 +119,15 @@ Accept wildcard characters: False
 ```
 
 ### -ReadOnlyWarningThreshold
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Microsoft internal use only.
 
 ```yaml
 Type: Int32
 Parameter Sets: options
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -129,13 +137,15 @@ Accept wildcard characters: False
 ```
 
 ### -Url
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Microsoft internal use only.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -145,13 +155,15 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Microsoft internal use only.
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: False
 Position: Named

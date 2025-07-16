@@ -13,7 +13,7 @@ ms.reviewer:
 # Test-SPO365LinkSettings
 
 ## SYNOPSIS
-Validates whether the configured Office 365 hybrid site uses a valid template. 
+Validates whether the configured Office 365 hybrid site uses a valid template.
 
 ## SYNTAX
 
@@ -37,6 +37,9 @@ This example test a template using the contoso-my.sharepoint site.
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -48,8 +51,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -58,13 +60,15 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 ### -MySiteHostUrl
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 The root URL for the redirected pages
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -75,7 +79,6 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
-
 
 ## RELATED LINKS
 [Get-SPO365LinkSettings](Get-SPO365LinkSettings.md)

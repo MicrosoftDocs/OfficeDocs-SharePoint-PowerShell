@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Updates the secure store provider.
 
-
 ## SYNTAX
 
 ```
@@ -28,10 +27,9 @@ You can then set the secure store provider.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------
+### EXAMPLE
 ```powershell
 [Reflection.Assembly]::LoadFrom("C:\ContosoFolder\contosoSecureStore.dll")
 $type = [Contoso.SecureStore.ContosoSecureStoreProvider]
@@ -40,17 +38,18 @@ Set-SPSecureStoreDefaultProvider -Type $type
 
 This example sets the custom implemented secure store provider.
 
-
 ## PARAMETERS
 
 ### -Type
+
+> Applicable: SharePoint Server Subscription Edition
+
 The type must be a secure store provider type enclosed in square brackets; for example, \[Reflection.Assembly\].
 
 ```yaml
 Type: Type
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -60,6 +59,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -71,8 +73,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

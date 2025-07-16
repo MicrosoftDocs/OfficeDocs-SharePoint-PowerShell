@@ -2,7 +2,7 @@
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/merge-spusagelog
-Applicable: SharePoint Server Subscription Edition
+
 title: Merge-SPUsageLog
 schema: 2.0.0
 ---
@@ -31,7 +31,7 @@ This cmdlet requires PowerShell Remoting to be enabled.
 
 ## EXAMPLES
 
-### ------------Example 1 -----------
+### Example 1
 ```powershell
 Merge-SPUsageLog -Identity 'Timer Jobs' -Servers SPSERVER1
 ```
@@ -41,6 +41,9 @@ Merges the Usage log for the Usage Definition 'Timer Jobs' from the specified se
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -48,8 +51,7 @@ When the Global parameter is used, all objects are contained in the global store
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -59,13 +61,15 @@ Accept wildcard characters: False
 ```
 
 ### -DiagnosticLogPath
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the file to write diagnostic information to. A relative path is supported.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -75,6 +79,9 @@ Accept wildcard characters: False
 ```
 
 ### -EndTime
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the end time of the log entries returned.
 
 The type must be a valid DateTime format that is culture-specific to the administrative language, that is, 2/16/2007 12:15:12 for English-US.
@@ -86,8 +93,7 @@ If you want to specify UTC time, you must add a "Z" to the end of the parameter.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -97,13 +103,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of usage log file.
 
 ```yaml
 Type: SPUsageDefinitionPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 0
@@ -113,13 +121,15 @@ Accept wildcard characters: False
 ```
 
 ### -OverWrite
+
+> Applicable: SharePoint Server Subscription Edition
+
 Overwrites the diagnostic log file if it already exists at the specified path.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -129,13 +139,15 @@ Accept wildcard characters: False
 ```
 
 ### -Partial
+
+> Applicable: SharePoint Server Subscription Edition
+
 Not used.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -145,6 +157,9 @@ Accept wildcard characters: False
 ```
 
 ### -Servers
+
+> Applicable: SharePoint Server Subscription Edition
+
 The server address or addresses to filter on.
 
 To obtain a list of valid addresses in the farm use Get-SPServer | Select Address.
@@ -152,8 +167,7 @@ To obtain a list of valid addresses in the farm use Get-SPServer | Select Addres
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -163,6 +177,9 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the start time of the log entries returned.
 
 The type must be a valid DateTime format that is culture-specific to the administrative language, such as "2/16/2007 12:15:12" for English-US.
@@ -174,8 +191,7 @@ If you want to specify UTC time, you must add a "Z" to the end of the parameter.
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

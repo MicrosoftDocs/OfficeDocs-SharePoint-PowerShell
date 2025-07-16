@@ -14,7 +14,6 @@ schema: 2.0.0
 Returns the endpoint of a service application.
 
 
-
 ## SYNTAX
 
 ### Identity
@@ -41,7 +40,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -------------------EXAMPLE-------------------- 
+### EXAMPLE
 ```powershell
 Get-SPServiceApplicationEndpoint -ServiceApplication "ServiceSubApp1"
 ```
@@ -51,6 +50,9 @@ This example returns the SPServiceEndpoint object based on the specified service
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the service endpoint to get.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URI of an endpoint address, in the form https://sitename:8003/servicemodelsamples/service; or an instance of a valid SPServiceEndpoint object.
@@ -58,8 +60,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPServiceEndpointPipeBind
 Parameter Sets: Identity
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -69,6 +70,9 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the service application to update.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a subscription settings service application (for example, SubscriptionSettingsApp1); or an instance of a valid SPServiceApplication object.
@@ -76,8 +80,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPServiceApplicationPipeBind
 Parameter Sets: Name
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -87,6 +90,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -98,8 +104,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -109,6 +114,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the service application endpoint.
 
 The type must be a valid name of an service application endpoint; for example, SvcAppEndpoint1.
@@ -116,8 +124,7 @@ The type must be a valid name of an service application endpoint; for example, S
 ```yaml
 Type: String
 Parameter Sets: Name
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

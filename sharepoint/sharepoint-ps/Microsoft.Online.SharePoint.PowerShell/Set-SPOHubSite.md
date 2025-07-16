@@ -56,7 +56,6 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -105,7 +104,6 @@ Type: Microsoft.Online.SharePoint.PowerShell.SpoHubSitePipeBind
 Parameter Sets: (All)
 Aliases: HubSite
 
-
 Required: True
 Position: 0
 Default value: None
@@ -123,7 +121,6 @@ The URL of a logo to use in the hub navigation.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: Named
@@ -143,7 +140,6 @@ Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -162,7 +158,6 @@ Type: System.Guid
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -180,7 +175,6 @@ The display name of the hub.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: Named

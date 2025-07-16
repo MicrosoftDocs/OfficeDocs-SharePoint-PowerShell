@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a new Secure Store target application.
 
-
 ## SYNTAX
 
 ```
@@ -26,20 +25,21 @@ The `New-SPSecureStoreTargetApplication` cmdlet creates a new Secure Store Targe
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 New-SPSecureStoreTargetApplication -Name "ContosoTargetApplication" -FriendlyName "Contoso Target Application" -ApplicationType Group
 ```
 
 This example creates a new group type target application with the given name and friendly display name.
 
-
 ## PARAMETERS
 
 ### -ApplicationType
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the type of target application.
 
 The type must be one of the following: Individual, Group, IndividualWithTicketing, GroupWithTicketing, RestrictedIndividual, or RestrictedGroup.
@@ -47,8 +47,7 @@ The type must be one of the following: Individual, Group, IndividualWithTicketin
 ```yaml
 Type: TargetApplicationType
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -58,13 +57,15 @@ Accept wildcard characters: False
 ```
 
 ### -FriendlyName
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the new target application.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -74,13 +75,15 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the display name of the new target application.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -90,6 +93,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -101,8 +107,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -112,13 +117,15 @@ Accept wildcard characters: False
 ```
 
 ### -ContactEmail
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the contact information for the target application.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -128,6 +135,9 @@ Accept wildcard characters: False
 ```
 
 ### -SetCredentialsUri
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the URI for setting the user application credentials.
 
 The type must be a valid URI, in the form file:\\\\server_name\sitedocs.
@@ -135,8 +145,7 @@ The type must be a valid URI, in the form file:\\\\server_name\sitedocs.
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -146,6 +155,9 @@ Accept wildcard characters: False
 ```
 
 ### -TimeoutInMinutes
+
+> Applicable: SharePoint Server Subscription Edition
+
 The time, in minutes, a ticket is valid if it is not redeemed by the target application.
 Make sure that the ticket time-out value is long enough to last between the time when the ticket is issued to the time that it is redeemed The default value is 2.
 
@@ -154,8 +166,7 @@ The type must be a valid integer.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

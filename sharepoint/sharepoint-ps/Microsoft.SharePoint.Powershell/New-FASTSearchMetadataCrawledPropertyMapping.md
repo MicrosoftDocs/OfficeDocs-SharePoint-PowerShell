@@ -6,7 +6,7 @@ applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 title: New-FASTSearchMetadataCrawledPropertyMapping
 ---
 
@@ -36,7 +36,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 C:\PS>$sitetitle_managedproperty = Get-FASTSearchMetadataManagedProperty -Name sitetitle
 $internaltitle_crawledproperty = Get-FASTSearchMetadataCrawledProperty -name internaltitle
@@ -49,7 +49,7 @@ Note that both the crawled property and the managed property already exist, and 
 As a result, the crawled property "internaltitle" will now be mapped to "sitetitle" and stored in the FAST Search Server 2010 for SharePoint system.
 The managed property can then be included in a full text index to make it searchable.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 2 (FAST Server for SharePoint 2010)
 ```
 C:\PS>$extended_title = New-FASTSearchMetadataManagedproperty -name ExtendedTitle -Type 1
 $title = Get-FASTSearchMetadataManagedProperty -name title
@@ -66,13 +66,15 @@ More crawled properties can be added to this new managed property later without 
 ## PARAMETERS
 
 ### -CrawledProperty
+
+> Applicable: FAST Server for SharePoint 2010
+
 The crawled property that is mapped to a managed property.
 
 ```yaml
 Type: CrawledProperty
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: Named
@@ -82,13 +84,15 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedProperty
+
+> Applicable: FAST Server for SharePoint 2010
+
 The managed property to which a crawled property is mapped.
 
 ```yaml
 Type: ManagedProperty
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: Named

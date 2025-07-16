@@ -14,7 +14,6 @@ schema: 2.0.0
 Moves deleted site collections from one content database to another.
 
 
-
 ## SYNTAX
 
 ```
@@ -30,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ----------EXAMPLE---------- 
+### EXAMPLE
 ```powershell
 Move-SPDeletedSite -Identity 610857cb-8414-4a89-8bf3-ad3628f6c86c -DestinationDatabase "ContentDB2"
 ```
@@ -40,14 +39,16 @@ This example moves deleted site collections from the specified GUID to the datab
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the identity of the site collection to be moved.
 For example, https://servername/sites/sitename.
 
 ```yaml
 Type: SPDeletedSitePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -57,14 +58,16 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationDatabase
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the content database that the site collection should be moved to.
 For example, ContentDB2.
 
 ```yaml
 Type: SPContentDatabasePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -74,6 +77,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -85,8 +91,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -96,6 +101,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -103,7 +111,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -113,14 +120,16 @@ Accept wildcard characters: False
 ```
 
 ### -ContentDatabase
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the SQL Server content database where the site collection data will be stored.
 If no content database is specified, the content database with the greatest unused site collection capacity and whose database status is ready will be used.
 
 ```yaml
 Type: SPContentDatabasePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -130,6 +139,9 @@ Accept wildcard characters: False
 ```
 
 ### -RbsProviderMapping
+
+> Applicable: SharePoint Server Subscription Edition
+
 Used to move a Remote BLOB Storage (RBS)-enabled site collection from one RBS-enabled content database to another RBS-enabled content database without moving the underlying Binary Large Object (BLOB) content.
 If the content database has more than one RBS provider associated with it, you must specify all providers.
 The same providers must be enabled on the target content database and the source content database.
@@ -137,8 +149,7 @@ The same providers must be enabled on the target content database and the source
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -148,6 +159,9 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the URL, GUID, or name of the Web application from which to list sites.
 
 The type must be a valid URL in the form https://server_name; a valid GUID, for example, 12345678-90ab-cdef-1234-567890bcdefgh; or the Web application name, for example, WebApplication1212.
@@ -155,8 +169,7 @@ The type must be a valid URL in the form https://server_name; a valid GUID, for 
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -166,6 +179,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -173,7 +189,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

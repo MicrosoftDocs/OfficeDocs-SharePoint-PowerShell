@@ -52,7 +52,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------EXAMPLE 1------------
+### EXAMPLE 1
 
 ```powershell
 $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
@@ -61,7 +61,7 @@ Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy $proxy -Ac
 
 This example refreshes the feed for a specific user by using the AccountName parameter.
 
-### ------------EXAMPLE 2------------
+### EXAMPLE 2
 
 ```powershell
 $site = (Get-SPWebApplication -IncludeCentralAdministration | ?{$_.IsAdministrationWebApplication -eq $true}).Sites[0]
@@ -76,7 +76,7 @@ while($profiles.MoveNext()) {
 
 This example refreshes the feeds for all users in the User Profile Service Application.
 
-### ------------EXAMPLE 3------------
+### EXAMPLE 3
 
 ```powershell
 Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy $proxy -SiteUrl https://sharepoint.contoso.com
@@ -88,13 +88,14 @@ This example refreshes the feed on the site https://sharepoint.contoso.com.
 
 ### -AccountName
 
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the user's account name for the User Profile Service application.
 
 ```yaml
 Type: String
 Parameter Sets: (All), Default
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -104,6 +105,8 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileServiceApplicationProxy
+
+> Applicable: SharePoint Server Subscription Edition
 
 Specifies the User Profile Service application proxy to update.
 
@@ -117,7 +120,6 @@ The type must be in one of the following forms:
 Type: SPServiceApplicationProxyPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -127,6 +129,8 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
 
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
@@ -140,7 +144,6 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -151,14 +154,15 @@ Accept wildcard characters: False
 
 ### -SiteSubscription
 
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the account under which this service should run.
 This parameter is mandatory in a hosted-environment and optional in a non-hosted environment.
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
-Parameter Sets: (All), Default
+Parameter Sets: (All), Default, FollowableList
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -167,20 +171,9 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: SPSiteSubscriptionPipeBind
-Parameter Sets: FollowableList
-Aliases:
-Applicable: SharePoint Server Subscription Edition
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -SiteUrl
+
+> Applicable: SharePoint Server Subscription Edition
 
 Specifies the Site's URL to repopulate the site feeds. If you don't specify this parameter, you must specify the AccountName parameter. If neither parameter is specified, an error message is displayed.
 
@@ -188,7 +181,6 @@ Specifies the Site's URL to repopulate the site feeds. If you don't specify this
 Type: String
 Parameter Sets: (All), Default
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -199,13 +191,14 @@ Accept wildcard characters: False
 
 ### -ListId
 
+> Applicable: SharePoint Server Subscription Edition
+
 The ListId of the FollowableList.
 
 ```yaml
 Type: Guid
 Parameter Sets: FollowableList
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -216,13 +209,14 @@ Accept wildcard characters: False
 
 ### -ListRootFolderUrl
 
+> Applicable: SharePoint Server Subscription Edition
+
 The RootFolderUrl of the FollowableList.
 
 ```yaml
 Type: String
 Parameter Sets: FollowableList
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -233,13 +227,14 @@ Accept wildcard characters: False
 
 ### -SiteId
 
+> Applicable: SharePoint Server Subscription Edition
+
 The SiteId containing the FollowableList.
 
 ```yaml
 Type: Guid
 Parameter Sets: FollowableList
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -250,13 +245,14 @@ Accept wildcard characters: False
 
 ### -WebId
 
+> Applicable: SharePoint Server Subscription Edition
+
 The WebId containing the FollowableList.
 
 ```yaml
 Type: Guid
 Parameter Sets: FollowableList
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named

@@ -17,7 +17,6 @@ ms.reviewer:
 Retrieves mobile messaging accounts for the specified Web application.
 
 
-
 ## SYNTAX
 
 ```
@@ -33,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE----------------- 
+### EXAMPLE
 ```
 Get-SPMobileMessagingAccount -WebApplication https://sitename
 ```
@@ -43,6 +42,9 @@ This example retrieves the current mobile account settings information of the We
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies whether to return either Short Message Service (SMS) or Multimedia Messaging Service (MMS) account information.
 Valid values are:SMS and MMS.
 If you do not specify this parameter, account information is returned for both SMS and MMS.
@@ -51,7 +53,6 @@ If you do not specify this parameter, account information is returned for both S
 Type: SPMobileMessagingAccountPipeBind
 Parameter Sets: (All)
 Aliases: ServiceType, AccountType
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 1
@@ -61,6 +62,9 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the identity of the Web application to delete.
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid Web application name (for example, WebApplication1212); or a valid name (for example, WebApp2423).
 
@@ -69,8 +73,7 @@ You either must specify WebApplication or must use the HostHeader switch and spe
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -80,6 +83,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -91,8 +97,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

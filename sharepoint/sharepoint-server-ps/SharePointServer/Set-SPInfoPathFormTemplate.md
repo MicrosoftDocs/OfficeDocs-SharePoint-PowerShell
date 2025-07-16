@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets properties of a InfoPath form template.
 
-
 ## SYNTAX
 
 ```
@@ -26,20 +25,21 @@ The `Set-SPInfoPathFormsTemplate` cmdlet modifies the category of an InfoPath fo
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ---------------EXAMPLE--------------
+### EXAMPLE
 ```powershell
 Set-InfoPathFormTemplate -Identity "Sample.xsn" -Category "WorkFlowCategory"
 ```
 
 This example modifies the category property of a form template for a specified name.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the InfoPath form template to update.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a form template (for example, InfoPathFormTemplate1); a valid name of a form template files (for example, FormTemplateFile1.xsn); or an instance of a valid SPFormTemplate object.
@@ -47,8 +47,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPFormTemplatePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -58,6 +57,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -69,8 +71,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -80,6 +81,9 @@ Accept wildcard characters: False
 ```
 
 ### -Category
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the category of the form template.
 The category name can have a maximum of 255 characters.
 
@@ -88,8 +92,7 @@ The type must be a valid name of a form template category; for example, FormTemp
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -99,6 +102,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -106,7 +112,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -116,6 +121,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -123,7 +131,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

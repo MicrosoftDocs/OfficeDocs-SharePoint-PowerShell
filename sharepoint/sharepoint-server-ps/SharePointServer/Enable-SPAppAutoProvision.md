@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1-------- 
+### EXAMPLE 1
 ```powershell
 Enable-SPAppAutoProvision
 ```
@@ -36,7 +36,7 @@ This example enables auto provisioning for the farm.
 The app auto provisioning is enabled by default.
 This setting overrides site subscription level setting.
 
-### --------------EXAMPLE 2-------- 
+### EXAMPLE 2
 ```powershell
 $subscription = Get-SPSiteSubscription https://Contoso.com
 Enable-SPAppAutoProvision -SiteSubscription $subscription
@@ -48,6 +48,9 @@ The app auto provisioning is enabled by default.
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -59,8 +62,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -70,13 +72,15 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSubscription
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the site collection for which auto provisioning is to be enabled.
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

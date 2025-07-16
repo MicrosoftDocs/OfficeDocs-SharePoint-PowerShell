@@ -6,7 +6,7 @@ applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 title: Remove-FASTSearchMetadataManagedProperty
 ---
 
@@ -37,7 +37,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 Remove-FASTSearchMetadataManagedProperty -Name title
 ```
@@ -45,7 +45,7 @@ Remove-FASTSearchMetadataManagedProperty -Name title
 This example removes the managed property named "title" from the system.
 It will ask for confirmation before going through with the removal unless Force is specified.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 2 (FAST Server for SharePoint 2010)
 ```
 $createdby = Get-FASTSearchMetadataManagedProperty -name CreatedBy
 Remove-FASTSearchMetadataManagedProperty -ManagedProperty $createdby -Force
@@ -59,13 +59,15 @@ No confirmation is required, since the Force parameter is specified.
 ## PARAMETERS
 
 ### -Name
+
+> Applicable: FAST Server for SharePoint 2010
+
 The name of the managed property to remove.
 
 ```yaml
 Type: String
 Parameter Sets: Name
 Aliases: ManagedPropertyName, N
-Applicable: FAST Server for SharePoint 2010
 
 Required: True
 Position: 1
@@ -75,13 +77,15 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedProperty
+
+> Applicable: FAST Server for SharePoint 2010
+
 An object that represents the managed property to remove.
 
 ```yaml
 Type: ManagedProperty
 Parameter Sets: ManagedProperty
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: Named
@@ -91,6 +95,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: FAST Server for SharePoint 2010
+
 Activates user prompting to confirm the operation.
 If set, prompting is activated.
 If Confirm is false (-Confirm:$false), confirmation prompting is not used.
@@ -101,7 +108,6 @@ In cases where Confirm is not specified, the cmdlet will prompt if the $ConfirmP
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: FAST Server for SharePoint 2010
 
 Required: False
 Position: Named
@@ -111,13 +117,15 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: FAST Server for SharePoint 2010
+
 Overrides any user prompting settings, so that confirmation of the operation is not required.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -127,6 +135,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: FAST Server for SharePoint 2010
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: get-help about_commonparameters
 
@@ -134,7 +145,6 @@ For more information, type the following command: get-help about_commonparameter
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: FAST Server for SharePoint 2010
 
 Required: False
 Position: Named

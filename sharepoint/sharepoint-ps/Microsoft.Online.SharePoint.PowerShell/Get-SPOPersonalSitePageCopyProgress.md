@@ -61,7 +61,6 @@ Get-SPOPersonalSitePageCopyProgress -DestinationSite 'https://contoso.sharepoint
 
 Example 1 shows how a SharePoint Administrator can check the status of a copy operation using a work item ID.
 
-
 ## PARAMETERS
 
 ### -DestinationSite
@@ -74,7 +73,6 @@ Specifies the URL of the destination SharePoint site to which the SharePoint pag
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: Named
@@ -93,7 +91,6 @@ Specifies the GUID of the work item created for the copy job if it is asynchrono
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: Named

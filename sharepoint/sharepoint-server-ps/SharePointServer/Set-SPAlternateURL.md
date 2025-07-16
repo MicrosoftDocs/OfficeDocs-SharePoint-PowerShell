@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Configures the specified alternate URL.
 
-
 ## SYNTAX
 
 ```
@@ -26,44 +25,42 @@ This cmdlet can be used to change only the zone of internal URLs and cannot be u
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Set-SPAlternateURL -Identity https://www.contoso.com -Zone "Internet"
 ```
 
 This example changes the zone of the alternate URL https://www.contoso.com.
 
-
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Set-SPAlternateURL -Identity https://www.contoso.com -Url https://sharepoint.contoso.com -Zone "Default"
 ```
 
 This example changes the URL and zone of the alternate URL https://www.contoso.com.
 
-
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Get-SPAlternateURL https://www.contoso.com | Set-SPAlternateURL -Zone "Internet"
 ```
 
 This example changes the zone of the alternate URL https://www.contoso.com.
 
-
-### ------------------EXAMPLE 4------------------
+### EXAMPLE 4
 ```powershell
 Get-SPWebApplication |%{ Get-SPAlternateURL -WebApplication $_ -Zone "Extranet" } | Set-SPAlternateURL -Zone "Intranet"
 ```
 
 This example changes the zone of the alternate URL for the specified Web application from Extranet to Intranet.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the URL or GUID of the alternate URL to change.
 
 The type must be a valid URL, in the form https://server_name/WebApplication/site, or a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh.
@@ -71,8 +68,7 @@ The type must be a valid URL, in the form https://server_name/WebApplication/sit
 ```yaml
 Type: SPAlternateUrlPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -82,13 +78,15 @@ Accept wildcard characters: False
 ```
 
 ### -Url
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the new alternate URL.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -98,6 +96,9 @@ Accept wildcard characters: False
 ```
 
 ### -Zone
+
+> Applicable: SharePoint Server Subscription Edition
+
 Sets the supplied alternate URL as one of the five zones.
 
 The type must be any one of the following values: Default, Intranet, Internet, Extranet, or Custom.
@@ -105,8 +106,7 @@ The type must be any one of the following values: Default, Intranet, Internet, E
 ```yaml
 Type: SPUrlZone
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -116,6 +116,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -127,8 +130,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -138,6 +140,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -145,7 +150,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -155,6 +159,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -162,7 +169,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

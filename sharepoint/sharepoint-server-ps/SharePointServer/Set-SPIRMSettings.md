@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the Information Rights Management (IRM) settings.
 
-
 ## SYNTAX
 
 ### UseSpecifiedCertificateUrl
@@ -38,24 +37,23 @@ Use the `Set-SPIRMSettings` cmdlet to set the Information Rights Management (IRM
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### --------------EXAMPLE 1------------
+### EXAMPLE 1
 ```powershell
 Set-SPIRMSettings -RmsEnabled -UseActiveDirectoryDiscovery
 ```
 
 This example enables IRM for the farm and configures it to use the default RMS server configured in Active Directory.
 
-### --------------EXAMPLE 2------------
+### EXAMPLE 2
 ```powershell
 Set-SPIRMSettings -RmsEnabled -CertificateServerUrl https://myrmsserver
 ```
 
 This example enables IRM for the farm and specifies the URL of the RMS server to use.
 
-### --------------EXAMPLE 3------------
+### EXAMPLE 3
 ```powershell
 site = Get-SPSite http://myspserver
 $subscription = $site.SiteSubscription
@@ -64,24 +62,25 @@ Set-SPIRMSettings -SiteSubscription $subscription -RmsEnabled -CertificateServer
 
 This example enables IRM for the specified tenant and specifies the URL of the RMS server to use.
 
-### --------------EXAMPLE 4------------
+### EXAMPLE 4
 ```powershell
 Set-SPIRMSettings -RmsEnabled:$false
 ```
 
 This example disables IRM for the farm.
 
-
 ## PARAMETERS
 
 ### -CertificateServerUrl
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the address of the RMS certificate server to use for the tenant.
 
 ```yaml
 Type: Uri
 Parameter Sets: UseSpecifiedCertificateUrl
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -91,6 +90,9 @@ Accept wildcard characters: False
 ```
 
 ### -IrmEnabled
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether or not IRM is enabled in the tenant.
 
 The default value is false.
@@ -98,8 +100,7 @@ The default value is false.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -109,6 +110,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -120,8 +124,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -131,14 +134,16 @@ Accept wildcard characters: False
 ```
 
 ### -CertificatePassword
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the password to access the Service Authentication Certificate.
 This password is required in order to install the certificate in the machine certificate store.
 
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -148,6 +153,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -155,7 +163,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -165,6 +172,9 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceAuthenticationCertificate
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the service authentication certificate.
 
 If the parameter is specified and not null, the authentication certificate is used when connecting from this farm to the RMS server.
@@ -173,8 +183,7 @@ If the parameter is not specified, the local farm connects to RMS server using i
 ```yaml
 Type: X509Certificate2
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -184,6 +193,9 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionScopeSettingsEnabled
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether or not IRM can be configured at the site subscription scope.
 
 Site subscriptions can only configure custom IRM settings if IRM is enabled at the Farm scope.
@@ -191,8 +203,7 @@ Site subscriptions can only configure custom IRM settings if IRM is enabled at t
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -202,13 +213,15 @@ Accept wildcard characters: False
 ```
 
 ### -UseActiveDirectoryDiscovery
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether or not the RMS service should be used for discovery that will determine the address of the RMS server in the domain.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: UseServiceDiscovery
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -218,6 +231,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -225,7 +241,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -235,6 +250,9 @@ Accept wildcard characters: False
 ```
 
 ### -UseOauth
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether OAuth should be used.
 
 The valid values are True and False.
@@ -242,8 +260,7 @@ The valid values are True and False.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

@@ -6,7 +6,7 @@ applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 title: Remove-FASTSearchSecurityAliaser
 ---
 
@@ -29,7 +29,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 Remove-FASTSearchSecurityAliaser -Identity xmlalias2
 ```
@@ -37,7 +37,7 @@ Remove-FASTSearchSecurityAliaser -Identity xmlalias2
 This example deletes an XML aliaser.
 A prompt is displayed to confirm the request.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 2 (FAST Server for SharePoint 2010)
 ```
 Remove-FASTSearchSecurityAliaser -Identity xmlalias4 -Confirm:$False
 ```
@@ -47,13 +47,15 @@ This example deletes an XML aliaser without displaying a prompt.
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: FAST Server for SharePoint 2010
+
 The identity of the regular expression or XML aliaser to remove.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: 1
@@ -63,13 +65,15 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityAliaserToRemove
+
+> Applicable: FAST Server for SharePoint 2010
+
 A SecurityXMLAliaser or SecurityRegexAliaser object whose identity is used as the aliaser identity to remove.
 
 ```yaml
 Type: SecurityAliaser
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 10000
@@ -79,6 +83,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: FAST Server for SharePoint 2010
+
 Activates user prompting to confirm the operation.
 If set, prompting is activated and you must confirm the remove request.
 
@@ -89,7 +96,6 @@ For example: -confirm:$false
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: FAST Server for SharePoint 2010
 
 Required: False
 Position: Named
@@ -99,6 +105,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: FAST Server for SharePoint 2010
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: get-help about_commonparameters
 
@@ -106,7 +115,6 @@ For more information, type the following command: get-help about_commonparameter
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: FAST Server for SharePoint 2010
 
 Required: False
 Position: Named

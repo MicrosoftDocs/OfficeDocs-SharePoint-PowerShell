@@ -25,26 +25,23 @@ The `Set-SPStateServiceDatabase` cmdlet manages the credentials that are used to
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### --------------------EXAMPLE 1---------------------
+### EXAMPLE 1
 ```powershell
 Set-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b -Weight 10
 ```
 
 This example updates the database weight to the maximum (10).
 
-
-### --------------------EXAMPLE 2---------------------
+### EXAMPLE 2
 ```powershell
 Set-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b -ServiceApplication "StateSvcApp1"
 ```
 
 This example updates the associated service application for a state service database.
 
-
-### --------------------EXAMPLE 3---------------------
+### EXAMPLE 3
 ```powershell
 $cred = Get-Credential
 Set-SPStateServiceDatabase -Identity "StateSvcDB1" -DatabaseCredentials $cred
@@ -52,10 +49,12 @@ Set-SPStateServiceDatabase -Identity "StateSvcDB1" -DatabaseCredentials $cred
 
 This example updates the SQL Authentication credentials that are used for a given database.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the state service database to update.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a state database (for example, StateSvcDB1); or an instance of a valid SPStateServiceDatabase object.
@@ -64,7 +63,6 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPStateDatabasePipeBind
 Parameter Sets: (All)
 Aliases: Name
-Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -74,6 +72,9 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the state service application to which to add the state database.
 
 The type must be a valid name of a state service application (for example, StateServiceApp1); a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or an instance of a valid SPStateServiceApplication object.
@@ -82,7 +83,6 @@ The type must be a valid name of a state service application (for example, State
 Type: SPStateServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: Application
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 1
@@ -92,6 +92,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -103,8 +106,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -114,6 +116,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -121,7 +126,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -131,6 +135,9 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseCredentials
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the database credentials for SQL Authentication used to access the state service database.
 If this parameter is not specified, Windows authentication is used.
 
@@ -139,8 +146,7 @@ The type must be a valid PSCredential object.
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -150,6 +156,9 @@ Accept wildcard characters: False
 ```
 
 ### -Weight
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the weight for the state database.
 The default value is 1.
 
@@ -158,8 +167,7 @@ The type must be a valid integer in the range of 1 to 10.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -169,6 +177,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -176,7 +187,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

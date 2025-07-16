@@ -44,35 +44,35 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1-----------------
+### EXAMPLE 1
 ```
 Get-FASTSearchMetadataCrawledProperty
 ```
 
 Calling Get-FASTSearchMetadataCrawledProperty without any parameters returns all known crawled properties in the FAST Search Server 2010 for SharePoint system.
 
-### ---------------EXAMPLE 2-----------------
+### EXAMPLE 2
 ```
 Get-FASTSearchMetadataCrawledProperty -Name viewurl
 ```
 
 This example retrieves a crawled property with the exact name "viewurl".
 
-### ---------------EXAMPLE 3-----------------
+### EXAMPLE 3
 ```
 Get-FASTSearchMetadataCrawledProperty -filter 4
 ```
 
 This example retrieves and returns any crawled property that includes a "4" in its name.
 
-### ---------------EXAMPLE 4-----------------
+### EXAMPLE 4
 ```
 Get-FASTSearchMetadataCrawledproperty -filter url -count 2
 ```
 
 This example retrieves the first two crawled properties with the name "url".
 
-### ---------------EXAMPLE 5-----------------
+### EXAMPLE 5
 ```
 Get-FASTSearchMetadataCrawledproperty |ForEach-Object{ if ($_.IsMappedToContents) {$_.Name} }
 ```
@@ -80,7 +80,7 @@ Get-FASTSearchMetadataCrawledproperty |ForEach-Object{ if ($_.IsMappedToContents
 This example returns the names of all crawled properties that have the IsMappedToContents parameter set to "true".
 The example first retrieves all configured crawled properties, and then iterates over them to find those with IsMappedToContents set to "true"
 
-### ---------------EXAMPLE 6-----------------
+### EXAMPLE 6
 ```
 Get-FASTSearchMetadataCrawledproperty -offset 0 -count 2
 Get-FASTSearchMetadataCrawledproperty -offset 2 -count 2
@@ -90,7 +90,7 @@ Get-FASTSearchMetadataCrawledproperty -offset 4 -count 2
 This example generates a list of two crawled properties each time the cmdlet is run.
 The Offset is increased by the Count value to start returning crawled properties where the last run ended.
 
-### ---------------EXAMPLE 7----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 7 (FAST Server for SharePoint 2010)
 ```
 Get-FASTSearchMetadataCrawledProperty -filter url| where-object {($_.Name -eq "url") -and ($_.VariantType -eq 31) -and ($_.Propset -eq "63e90878-0292-490d-8b7c-f3905a8b65fd")}
 ```
@@ -101,6 +101,9 @@ The command returns the "url" crawled property in the "Enterprise Crawler" categ
 ## PARAMETERS
 
 ### -Name
+
+> Applicable: FAST Server for SharePoint 2010
+
 The name of crawled property to retrieve.
 
 The Name parameter supports wildcards.
@@ -109,8 +112,7 @@ Combine the Name parameter with the Offset and Count parameters to control the r
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 1
@@ -120,6 +122,9 @@ Accept wildcard characters: False
 ```
 
 ### -Count
+
+> Applicable: FAST Server for SharePoint 2010
+
 The maximum number of crawled properties to return (starting from the first returned crawled property, or from the index given by the Offset parameter).
 
 If the Filter or Name parameter is specified, these will only be applied after the result set has been narrowed down to the range \[Offset, Offset + Count\].
@@ -127,8 +132,7 @@ If the Filter or Name parameter is specified, these will only be applied after t
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -138,6 +142,9 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
+
+> Applicable: FAST Server for SharePoint 2010
+
 The term used to search for configured crawled properties.
 
 The Filter parameter does not support wildcards.
@@ -146,8 +153,7 @@ Matching is case-insensitive, and matches a string anywhere within the name attr
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -157,13 +163,15 @@ Accept wildcard characters: False
 ```
 
 ### -Offset
+
+> Applicable: FAST Server for SharePoint 2010
+
 The offset in the result set from which to start returning results.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named

@@ -2,7 +2,7 @@
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spsitemaster
-Applicable: SharePoint Server Subscription Edition
+
 title: Get-SPSiteMaster
 schema: 2.0.0
 ---
@@ -38,7 +38,7 @@ Typically the following information is displayed:
 
 ## EXAMPLES
 
-### ------------Example 1 -----------
+### Example 1
 ```powershell
 Get-SPSiteMaster -ContentDatabase WSS_Content
 ```
@@ -48,6 +48,9 @@ This example returns the site master in the database WSS_Content.
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -55,8 +58,7 @@ When the Global parameter is used, all objects are contained in the global store
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -66,13 +68,15 @@ Accept wildcard characters: False
 ```
 
 ### -ContentDatabase
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the database to get the list of Site Masters. For example, WSS_Content.
 
 ```yaml
 Type: SPContentDatabasePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 0

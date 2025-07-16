@@ -24,7 +24,7 @@ Use the Stop-SPTaxonomyReplication cmdlet to terminate Hybrid SharePoint Taxonom
 
 ## EXAMPLES
 
-### ------------------EXAMPLE-----------------------
+### EXAMPLE
 ```powershell
 Stop-SPTaxonomyReplication -Credential (Get-Credential)
 ```
@@ -34,6 +34,9 @@ This example performs a full replication and deletes the Taxonomy Groups Replica
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -41,8 +44,7 @@ When the Global parameter is used, all objects are contained in the global store
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -52,6 +54,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+
+> Applicable: SharePoint Server Subscription Edition
+
 This is the Taxonomy Term Store administrator credential of remote SharePoint Online Term Store.
 
 Fetches full taxonomy data properties, so a Term Store Administrator's credential is needed to perform the operations.
@@ -59,8 +64,7 @@ Fetches full taxonomy data properties, so a Term Store Administrator's credentia
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named

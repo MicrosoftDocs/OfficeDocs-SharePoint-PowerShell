@@ -24,7 +24,7 @@ The \`Remove-SPCertificateNotificationContact\` cmdlet deletes an email address 
 
 ## EXAMPLES
 
-### ------------EXAMPLE-----------
+### EXAMPLE
 ```powershell
 Remove-SPCertificateNotificationContact -EmailAddress sharepoint-admins@example.com
 ```

@@ -26,7 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE----------------- 
+### EXAMPLE
 ```powershell
 Get-SPInfoPathWebServiceProxy -Identity "https://server_name"
 ```
@@ -36,6 +36,9 @@ This example displays the Web service proxy settings for a specified Web applica
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the SharePoint Web application to get.
 
 The type must be a valid URL, in the form https://server_name, or a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh.
@@ -43,8 +46,7 @@ The type must be a valid URL, in the form https://server_name, or a valid GUID, 
 ```yaml
 Type: SPWebServiceProxyPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -54,6 +56,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -65,8 +70,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

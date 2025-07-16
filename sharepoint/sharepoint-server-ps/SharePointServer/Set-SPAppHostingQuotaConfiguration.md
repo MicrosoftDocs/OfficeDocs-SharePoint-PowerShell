@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets hosting quotas for an app.
 
-
 ## SYNTAX
 
 ```
@@ -26,36 +25,34 @@ Use the Set-SPAppHostingQuotaConfiguration cmdlet to set hosting quotas for a sp
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016, SharePoint Server 2019 reference (https://go.microsoft.com/fwlink/p/?LinkId=671715).
 
-
 ## EXAMPLES
 
-### ----------------EXAMPLE 1----------
+### EXAMPLE 1
 ```powershell
 Set-SPAppHostingQuotaConfiguration -Identity 586d4a32-98c3-42ce-80be-3c76c10c250c -AppInstanceCountQuota 50 -AppHostingLicenseQuota 25
 ```
 
 This example sets hosting Quotas for the SiteSubscriptionId "586d4a32-98c3-42ce-80be-3c76c10c250c" with hosted appinstance limit as 50 and hosted apps licenses assigned as 25.
 
-
-### ----------------EXAMPLE 2----------
+### EXAMPLE 2
 ```powershell
 Get-SPSiteSubscription | Set-SPAppHostingQuotaConfiguration -Identity $_ -AppInstanceCountQuota 50 -AppHostingLicenseQuota 25
 ```
 
 This example sets hosting Quotas for all SiteSubscriptions in the farm with hosted apps limit as 50 and hosted apps licenses assigned as 25.
 
-
 ## PARAMETERS
 
 ### -AppHostingLicenseQuota
-Specifies the app licensing quota.
 
+> Applicable: SharePoint Server Subscription Edition
+
+Specifies the app licensing quota.
 
 ```yaml
 Type: Double
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -65,13 +62,15 @@ Accept wildcard characters: False
 ```
 
 ### -AppInstanceCountQuota
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the number instances of an app.
 
 ```yaml
 Type: Double
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -81,16 +80,17 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
-
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -100,14 +100,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
 
+> Applicable: SharePoint Server Subscription Edition
+
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -117,15 +118,16 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
-
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -135,13 +137,15 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSubscription
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the Site Subscription.
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named

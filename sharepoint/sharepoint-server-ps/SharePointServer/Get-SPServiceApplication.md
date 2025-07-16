@@ -14,7 +14,6 @@ schema: 2.0.0
 Returns the specified service application.
 
 
-
 ## SYNTAX
 
 ```
@@ -30,21 +29,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1---------------------- 
+### EXAMPLE 1
 ```powershell
 Get-SPServiceApplication
 ```
 
 This example returns all service applications in the farm.
 
-### ------------------EXAMPLE 2---------------------- 
+### EXAMPLE 2
 ```powershell
 Get-SPServiceApplication -Identity e2c2be70-6382-4ce7-8a44-ae7dadff5597
 ```
 
 This example returns the service application that has the Identity "e2c2be70-6382-4ce7-8a44-ae7dadff5597".
 
-### ------------------EXAMPLE 3---------------------- 
+### EXAMPLE 3
 ```powershell
 Get-SPServiceApplication -Name AccountingServiceApp
 ```
@@ -56,13 +55,15 @@ You can use either the Identity or the Name parameter but if you use both, the c
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the GUID of the service application to get.
 
 ```yaml
 Type: SPServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: 1
@@ -72,6 +73,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -83,8 +87,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -94,13 +97,15 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the friendly name of the new usage application.The type must be a valid name of a usage application; for example, UsageApplication1.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

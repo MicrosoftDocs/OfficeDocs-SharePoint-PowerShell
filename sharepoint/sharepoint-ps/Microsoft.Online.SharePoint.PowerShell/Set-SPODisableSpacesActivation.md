@@ -41,7 +41,6 @@ PS C:\> Set-SPODisableSpacesActivation -Disable:$true -Identity https://contoso.
 
 This example disables the SharePoint Spaces activation for a site.
 
-
 ## PARAMETERS
 
 ### -Disable

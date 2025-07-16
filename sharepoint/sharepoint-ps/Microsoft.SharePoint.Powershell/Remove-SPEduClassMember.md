@@ -7,14 +7,13 @@ title: Remove-SPEduClassMember
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # Remove-SPEduClassMember
 
 ## SYNOPSIS
 Do not use
-
 
 ## SYNTAX
 
@@ -26,10 +25,9 @@ Remove-SPEduClassMember [-AssignmentCollection <SPAssignmentCollection>] -ClassI
 ## DESCRIPTION
 Do not use
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------
+### EXAMPLE
 ```
 Do not use
 ```
@@ -37,13 +35,15 @@ Do not use
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013
+
 Do not use
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -53,13 +53,15 @@ Accept wildcard characters: False
 ```
 
 ### -ClassId
+
+> Applicable: SharePoint Server 2013
+
 Do not use
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: True
 Position: Named
@@ -69,13 +71,15 @@ Accept wildcard characters: False
 ```
 
 ### -Site
+
+> Applicable: SharePoint Server 2013
+
 Do not use
 
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: True
 Position: Named
@@ -85,13 +89,15 @@ Accept wildcard characters: False
 ```
 
 ### -UserAlias
+
+> Applicable: SharePoint Server 2013
+
 Do not use
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: True
 Position: Named

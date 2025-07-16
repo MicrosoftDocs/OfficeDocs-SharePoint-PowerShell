@@ -7,14 +7,13 @@ title: New-SPProjectServiceApplicationProxy
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # New-SPProjectServiceApplicationProxy
 
 ## SYNOPSIS
 Creates a proxy for a Project Server Service application.
-
 
 ## SYNTAX
 
@@ -28,28 +27,28 @@ The `New-SPProjectServiceApplicationProxy` cmdlet creates a proxy for a Project 
 
 For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
 
-
 ## EXAMPLES
 
-### -------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```
 New-SPProjectServiceApplicationProxy -Name PsiApplicationProxy -ServiceApplication PsiApplication
 ```
 
 This example creates a Project Server Service application proxy with the name PsiApplicationProxy for the application PsiApplication.
 
-
-### -------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```
 Get-SPServiceApplication | ?{ $_.Name -eq "PsiApplication" } | New-SPProjectServiceApplicationProxy -Name "PsiApplicationProxy" -Default
 ```
 
 This example creates a Project Server Service application proxy with the name PsiApplicationProxy for the application PsiApplication and adds the proxy to the Default proxy group.
 
-
 ## PARAMETERS
 
 ### -Name
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Specifies the name of the new proxy.
 
 The type must be a valid name of a Project Server Service application proxy; for example, ProjectSvcProxy1.
@@ -57,8 +56,7 @@ The type must be a valid name of a Project Server Service application proxy; for
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -68,6 +66,9 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceApplication
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Specifies the Project Server Service application to associate with the new proxy.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a Project Server service application (for example, ProjectWebApp1); or an instance of a valid PsiServiceApplication object.
@@ -76,7 +77,6 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: PsiServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: sa
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: True
 Position: Named
@@ -86,6 +86,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -97,8 +100,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: False
 Position: Named

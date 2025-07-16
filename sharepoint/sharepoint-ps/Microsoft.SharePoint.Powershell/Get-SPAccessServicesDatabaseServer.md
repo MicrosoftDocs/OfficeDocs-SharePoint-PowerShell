@@ -36,25 +36,26 @@ Returns the SQL Server instances that are available for use with Access Services
 
 ## EXAMPLES
 
-### Example 1 
+### Example 1
 ```
 Get-SPAccessServicesDatabaseServer
 ```
 
 Returns all SQL Server instances available for use.
 
-
-### Example 2 
+### Example 2
 ```
 Get-SPAccessServicesDatabaseServer -DatabaseServer ACCSQL -ServiceContext https://siteUrl -DatabaseServergroup DEFAULT
 ```
 
 Returns the database server ACCSQL from the DEFAULT database server group using the service context from https://siteUrl.
 
-
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -62,8 +63,7 @@ When the Global parameter is used, all objects are contained in the global store
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -73,13 +73,15 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServer
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies an existing Database Server associated with Access Services.
 
 ```yaml
 Type: AccessServicesDatabaseServerPipeBind
 Parameter Sets: GetSingleDatabaseServerParamterSet
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -89,13 +91,15 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServerGroup
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 The name of the database server group.
 
 ```yaml
 Type: AccessServicesDatabaseServerGroupPipeBind
-Parameter Sets: GetSingleDatabaseServerParamterSet
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Parameter Sets: GetSingleDatabaseServerParamterSet, GetDatabaseServersParameterSet
+Aliases:
 
 Required: True
 Position: Named
@@ -104,27 +108,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: AccessServicesDatabaseServerGroupPipeBind
-Parameter Sets: GetDatabaseServersParameterSet
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ServiceContext
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the service context to retrieve Access Services database server information from.
 
 ```yaml
 Type: SPServiceContextPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 0

@@ -2,7 +2,7 @@
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 module name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/test-spprojectserviceapplication
-Applicable: SharePoint Server Subscription Edition
+
 title: Test-SPProjectServiceApplication
 schema: 2.0.0
 ---
@@ -25,7 +25,7 @@ This cmdlet runs a series of health checks against the Project Service Applicati
 
 ## EXAMPLES
 
-### ---------------EXAMPLE--------------
+### EXAMPLE
 ```powershell
 $sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Project Application Services'}
 Test-SPProjectServiceApplication -Identity $sa
@@ -36,6 +36,9 @@ This example runs all health checks again the service application named "Project
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -43,8 +46,7 @@ When the Global parameter is used, all objects are contained in the global store
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -54,13 +56,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 The name of the Project Service Application to test against.
 
 ```yaml
 Type: PsiServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 0
@@ -70,6 +74,9 @@ Accept wildcard characters: False
 ```
 
 ### -Rule
+
+> Applicable: SharePoint Server Subscription Edition
+
 Which rule to run against the service application.
 
 Valid rules are:
@@ -87,9 +94,8 @@ DatabasePermissions
 ```yaml
 Type: ProjectServiceApplicationHealthRuleName
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: All, QueueServiceInternalState, QueueInFlightJobs, CalcServiceWorkerState, DatabasePermissions
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 1

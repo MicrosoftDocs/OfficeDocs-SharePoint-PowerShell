@@ -27,7 +27,7 @@ These include default properties for creating and renewing certificates and cert
 
 ## EXAMPLES
 
-### ------------EXAMPLE-----------
+### EXAMPLE
 ```powershell
 Get-SPCertificateSettings
 ```

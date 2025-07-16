@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 Sets routing target properties.
 
-
 ## SYNTAX
 
 ```
@@ -32,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### EXAMPLE
 ```
 $wa = Get-SPWebApplication -Identity https://webAppUrl
 $rm = Get-SPRequestManagementSettings -Identity $wa
@@ -45,13 +44,15 @@ This example sets the "Availability" routing target property to Unavailable for 
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of the request management settings object to set.
 
 ```yaml
 Type: SPRoutingMachineInfoPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -61,6 +62,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -72,8 +76,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -83,6 +86,9 @@ Accept wildcard characters: False
 ```
 
 ### -Availability
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies whether or not the specified computer will be available for routing.
 
 The valid values are:
@@ -93,8 +99,7 @@ The valid values are:
 ```yaml
 Type: SPRoutingMachineAvailability
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -104,13 +109,15 @@ Accept wildcard characters: False
 ```
 
 ### -ClearOutgoingPort
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Clears the outgoing port if it is set.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -120,14 +127,15 @@ Accept wildcard characters: False
 ```
 
 ### -OutgoingPort
-Specifies the port used by Request Manager to make an outgoing connection.
 
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
+Specifies the port used by Request Manager to make an outgoing connection.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -137,6 +145,9 @@ Accept wildcard characters: False
 ```
 
 ### -OutgoingScheme
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Determines the schema of outgoing connections.
 
 The valid values are:
@@ -148,8 +159,7 @@ The valid values are:
 ```yaml
 Type: SPRoutingOutgoingScheme
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -159,14 +169,16 @@ Accept wildcard characters: False
 ```
 
 ### -StaticWeight
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies whether the static weight of a computer routing is used by Request Manager.
 If the static weight is higher, more requests will be routed to the computer.
 
 ```yaml
 Type: Double
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

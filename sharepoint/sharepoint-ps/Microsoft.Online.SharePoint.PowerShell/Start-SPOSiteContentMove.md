@@ -119,7 +119,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -PreferredMoveBeginDate
 
 > Applicable: SharePoint Online

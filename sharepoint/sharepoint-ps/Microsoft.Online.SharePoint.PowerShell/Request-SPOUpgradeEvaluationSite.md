@@ -65,7 +65,6 @@ Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -83,7 +82,6 @@ Specifies that the system not send the requester and site collection administrat
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: Named
@@ -103,7 +101,6 @@ Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -121,7 +118,6 @@ Prompts you for confirmation before running the cmdlet.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
 
 Required: False
 Position: Named
@@ -141,7 +137,6 @@ The cmdlet is not run.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 
 Required: False
 Position: Named

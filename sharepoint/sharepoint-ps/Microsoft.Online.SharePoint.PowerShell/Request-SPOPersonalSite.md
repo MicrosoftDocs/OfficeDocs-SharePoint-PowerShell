@@ -66,7 +66,6 @@ Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -86,7 +85,6 @@ Specifies one or more user logins to be enqueued for the creation of a Personal 
 Type: System.String[]
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: Named

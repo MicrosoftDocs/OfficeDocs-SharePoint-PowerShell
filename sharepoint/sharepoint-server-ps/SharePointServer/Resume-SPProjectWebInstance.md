@@ -2,7 +2,7 @@
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 module name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/resume-spprojectwebinstance
-Applicable: SharePoint Server Subscription Edition
+
 title: Resume-SPProjectWebInstance
 schema: 2.0.0
 ---
@@ -26,10 +26,9 @@ The database must be set to read-write before you run this cmdlet, or this cmdle
 
 For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
 
-
 ## EXAMPLES
 
-### ----------------------EXAMPLE-----------------------
+### EXAMPLE
 ```powershell
 $sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Project Application Services'}
 $instance = Get-SPProjectWebInstance -ServiceApplication $sa
@@ -41,14 +40,16 @@ Resumes the Project Web Server Instance in the Project Web Application Service A
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the instance of Project Web App to be switched to read-write mode.
 It can be the unique id of the instance, the URL of the Project Web App site, the site collection object that contains the Project Web App site (an SPSite), or the Project Web App instance object itself (a PSSite).
 
 ```yaml
 Type: ProjectInstancePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -58,6 +59,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -69,8 +73,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

@@ -28,13 +28,13 @@ Returns an Access Services database.
 
 ## EXAMPLES
 
-### Example 1 
+### Example 1
 ```
 Get-SPAccessServicesDatabase -Identity https://apps-eec88dc5f597c6.contoso-apps.com/sites/team/accessApp
 ```
 Using the App Web, this example returns the Access database named 'accessApp'.
 
-### Example 2 
+### Example 2
 ```
 Get-SPAccessServicesDatabase -ContentDb WSS_Content
 ```
@@ -43,13 +43,15 @@ This example returns all Access databases associated with sites in the content d
 ## PARAMETERS
 
 ### -AccessAppsOnly
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Returns only Access Apps.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: 2
@@ -59,6 +61,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -66,8 +71,7 @@ When the Global parameter is used, all objects are contained in the global store
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -77,13 +81,15 @@ Accept wildcard characters: False
 ```
 
 ### -ContentDb
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 The Content Database to return Access Apps from.
 
 ```yaml
 Type: SPContentDatabasePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: 1
@@ -93,13 +99,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 The URL to the Access App. Must be the App Web URL.
 
 ```yaml
 Type: AccessServicesDatabasePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: 0

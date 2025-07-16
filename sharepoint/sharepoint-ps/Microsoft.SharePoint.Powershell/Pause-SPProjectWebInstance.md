@@ -7,14 +7,13 @@ title: Pause-SPProjectWebInstance
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # Pause-SPProjectWebInstance
 
 ## SYNOPSIS
 Switches the specified instance of Project Web App to read-only, preventing any changes from being made through the Project Server PSI or CSOM.
-
 
 ## SYNTAX
 
@@ -28,10 +27,9 @@ Switches the specified instance of Project Web App to read-only, preventing any 
 
 For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE-----------------------
+### EXAMPLE
 ```
 $sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Project Application Services'}
 $instance = Get-SPProjectWebInstance -ServiceApplication $sa
@@ -43,14 +41,16 @@ Pauses the Project Web Server Instance in the Project Web Application Service Ap
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Specifies the instance of Project Web App to be switched to read-only mode.
 It can be the unique id of the instance, the URL of the Project Web App site, the site collection object that contains the Project Web App site (an SPSite), or the Project Web App instance object itself (a PSSite).
 
 ```yaml
 Type: ProjectInstancePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -60,6 +60,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -71,8 +74,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: False
 Position: Named

@@ -37,7 +37,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE-------------------
+### EXAMPLE
 ```powershell
 Update-SPProfilePhotoStore -MySiteHostLocation https://mysites
 ```
@@ -47,13 +47,15 @@ This example uploads photos to a specified My Site host location.
 ## PARAMETERS
 
 ### -MySiteHostLocation
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the URL for the My Site host location where the photos are to be uploaded.
 
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -63,6 +65,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -74,8 +79,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -85,13 +89,15 @@ Accept wildcard characters: False
 ```
 
 ### -CreateThumbnailsForImportedPhotos
+
+> Applicable: SharePoint Server Subscription Edition
+
 Creates thumbnails for all the imported user profile pictures.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -101,14 +107,16 @@ Accept wildcard characters: False
 ```
 
 ### -NewBaseUri
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the new URL for profile pictures.
 For example, https://server2/.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -118,6 +126,9 @@ Accept wildcard characters: False
 ```
 
 ### -NoDelete
+
+> Applicable: SharePoint Server Subscription Edition
+
 When the value is set to true, imported user profile picture files will be preserverd after creating thumbnails for them.
 > [!NOTE]
 > This will only work when CreateThumbnailsForImportedPhotos is set to `$true`
@@ -125,8 +136,7 @@ When the value is set to true, imported user profile picture files will be prese
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -136,14 +146,16 @@ Accept wildcard characters: False
 ```
 
 ### -OldBaseUri
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the old URL for profile pictures.
 For example, https://server1/.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

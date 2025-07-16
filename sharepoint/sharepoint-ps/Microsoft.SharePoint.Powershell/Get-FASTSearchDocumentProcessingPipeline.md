@@ -31,14 +31,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1-----------------
+### EXAMPLE 1
 ```
 Get-FASTSearchDocumentProcessingPipeline
 ```
 
 This example retrieves all FAST Search Server 2010 for SharePoint document processing pipelines.
 
-### ---------------EXAMPLE 2-----------------
+### EXAMPLE 2
 ```
 Get-FASTSearchDocumentProcessingPipeline -Name "Office14 (webcluster)"
 ```
@@ -48,13 +48,15 @@ This example retrieves a single FAST Search Server 2010 for SharePoint document 
 ## PARAMETERS
 
 ### -Name
+
+> Applicable: FAST Server for SharePoint 2010
+
 The name of the document processing pipeline to retrieve.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 1

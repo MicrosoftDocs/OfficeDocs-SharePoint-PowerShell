@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 Sets properties of a content deployment path.
 
-
 ## SYNTAX
 
 ```
@@ -32,20 +31,21 @@ The `Set-SPContentDeploymentPath` cmdlet sets the properties of a content deploy
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### EXAMPLE
 ```
 Get-SPContentDeploymentPath "Path 1" | Set-SPContentDeploymentPath -PathEnabled:$false
 ```
 
 This example sets the deployment path Path 1 to be disabled.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the content deployment path to update.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a content deployment job (for example; DeployPath1); or an instance of a valid SPContentDeploymentPath object.
@@ -53,8 +53,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPContentDeploymentPathPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -64,6 +63,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -75,8 +77,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -86,6 +87,9 @@ Accept wildcard characters: False
 ```
 
 ### -Authentication
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Sets the Windows-based authentication type that the source front-end Web server uses to communicate with the destination Web application.
 
 The type must be one of the following values: WindowsAuth or BasicAuth.
@@ -93,8 +97,7 @@ The type must be one of the following values: WindowsAuth or BasicAuth.
 ```yaml
 Type: PathAuthenticationOption
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -104,13 +107,15 @@ Accept wildcard characters: False
 ```
 
 ### -CompressionEnabled
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Turns on compression during the export.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -120,6 +125,9 @@ Accept wildcard characters: False
 ```
 
 ### -DeploySecurityInformation
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the user and group information to include during the export operation for this content deployment path.
 The default value is All.
 
@@ -131,8 +139,7 @@ No user information defined in the DAP or LDAP servers is included.
 ```yaml
 Type: SPIncludeSecurity
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -142,13 +149,15 @@ Accept wildcard characters: False
 ```
 
 ### -DeployUserNamesEnabled
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specify to enable event receivers during import.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -158,6 +167,9 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Sets the description for the content deployment path.
 The description can contain a maximum of 4096 alphanumeric characters.
 
@@ -166,8 +178,7 @@ The type must be a valid string.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -177,6 +188,9 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationCentralAdministrationURL
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the SharePoint Central Administration URL for the destination farm.
 
 The type must be a valid URL, in the form http://server_name.
@@ -184,8 +198,7 @@ The type must be a valid URL, in the form http://server_name.
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -195,13 +208,15 @@ Accept wildcard characters: False
 ```
 
 ### -EventReceiversEnabled
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Turns on event receivers during import.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -211,6 +226,9 @@ Accept wildcard characters: False
 ```
 
 ### -KeepTemporaryFilesOptions
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies that temporary files are kept after content deployment is finished.
 
 The type must be one of the following values: Never, Always, or OnFailure.
@@ -218,8 +236,7 @@ The type must be one of the following values: Never, Always, or OnFailure.
 ```yaml
 Type: TemporaryFilesOption
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -229,6 +246,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of the content deployment path.
 
 The type must be a valid name of a content deployment path; for example, DeploymentPath1.
@@ -236,8 +256,7 @@ The type must be a valid name of a content deployment path; for example, Deploym
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -247,6 +266,9 @@ Accept wildcard characters: False
 ```
 
 ### -PathAccount
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the user ID that is an administrator on the Central Administration page on the destination farm.
 
 The type must be a valid SharePoint user.
@@ -254,8 +276,7 @@ The type must be a valid SharePoint user.
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -265,13 +286,15 @@ Accept wildcard characters: False
 ```
 
 ### -PathEnabled
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Enables the content deployment path.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -281,6 +304,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -288,7 +314,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -298,13 +323,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

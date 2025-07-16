@@ -16,7 +16,6 @@ ms.reviewer:
 
 Returns the properties of apps for Office.
 
-
 ## SYNTAX
 
 ### AppsForOfficeSettingsInSiteSubscription
@@ -40,17 +39,16 @@ Use the `Get-SPOfficeStoreAppsDefaultActivation` cmdlet to return settings for a
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
 
-
 ## EXAMPLES
 
-### -----------------------EXAMPLE 1-----------------------------
+### EXAMPLE 1
 ```
 Get-SPOfficeStoreAppsDefaultActivation -WebApplication https://sphvm-8044
 ```
 
 This examples returns the setting for the web application https://sphvm-8044.
 
-### -----------------------EXAMPLE 2-----------------------------
+### EXAMPLE 2
 ```
 Get-SPOfficeStoreAppsDefaultActivation -SiteSubscription efca5b88-b3a3-448d-afbc-ef620f4744f1
 ```
@@ -60,14 +58,15 @@ This examples returns the Subscription ID setting for the tenant
 ## PARAMETERS
 
 ### -SiteSubscription
-Specifies the Site Group to which the settings apply.
 
+> Applicable: SharePoint Server 2013, SharePoint Server 2016
+
+Specifies the Site Group to which the settings apply.
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: AppsForOfficeSettingsInSiteSubscription
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Aliases:
 
 Required: True
 Position: Named
@@ -77,14 +76,15 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
-Specifies the URL, GUID, or name of the web application to which the setting applies.
 
+> Applicable: SharePoint Server 2013, SharePoint Server 2016
+
+Specifies the URL, GUID, or name of the web application to which the setting applies.
 
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: AppsForOfficeSettingsInWebApplication
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Aliases:
 
 Required: True
 Position: Named
@@ -94,6 +94,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -102,12 +105,10 @@ When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are au
 When the Global parameter is used, all objects are contained in the global store.
 If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
-
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Aliases:
 
 Required: False
 Position: Named

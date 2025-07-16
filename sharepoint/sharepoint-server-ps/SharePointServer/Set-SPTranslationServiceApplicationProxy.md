@@ -25,7 +25,7 @@ Use the `Set-SPTranslationServiceApplicationProxy` cmdlet to set properties on a
 
 ## EXAMPLES
 
-### -------------EXAMPLE---------
+### EXAMPLE
 ```powershell
 Set-SPTranslationServiceApplicationProxy TranslationServiceProxy -DefaultProxyGroup
 ```
@@ -35,6 +35,9 @@ This example adds the Machine Translation Service application proxy named Transl
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the GUID of the service application proxy.
 
 The type must be a valid GUID in the form, 12345678-90ab-cdef-1234-567890bcdefgh.
@@ -42,8 +45,7 @@ The type must be a valid GUID in the form, 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: TranslationServiceApplicationProxyPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -53,6 +55,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -64,8 +69,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -75,6 +79,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -82,7 +89,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -92,13 +98,15 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProxyGroup
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that the Machine Translation Service application proxy be added to the default proxy group for the local farm.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -108,6 +116,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumGroupSize
+
+> Applicable: SharePoint Server Subscription Edition
+
 Maximum number of bytes the proxy will send to the service in a single request.
 The valid values are 131072 to 10485760.
 The default value is 2097152.
@@ -117,8 +128,7 @@ We do not recommend use of this parameter.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -128,6 +138,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumItemCount
+
+> Applicable: SharePoint Server Subscription Edition
+
 Maximum number of documents to be translated that the proxy will send to the service in a single request.
 The valid values are 1 to 40960.
 The default value is 9000.
@@ -137,8 +150,7 @@ We do not recommend use of this parameter.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -148,6 +160,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -155,7 +170,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

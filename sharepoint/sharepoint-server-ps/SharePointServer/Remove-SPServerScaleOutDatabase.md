@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a specific scale-out database.
 
-
 ## SYNTAX
 
 ```
@@ -24,10 +23,9 @@ Remove-SPServerScaleOutDatabase -Database <SPDatabasePipeBind>
 ## DESCRIPTION
 Use the Remove-SPServerScaleOutDatabase cmdlet to remove a specific scale-out database from a specified service application.
 
-
 ## EXAMPLES
 
-### -----------------------EXAMPLE-----------------------------
+### EXAMPLE
 ```powershell
 $sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Managed Metadata Service'}
 $database = Get-SPServerScaleOutDatabase -ServiceApplication $sa
@@ -36,17 +34,18 @@ Remove-SPServerScaleOutDatabase -Database $database -ServiceApplication $sa
 
 This example removes the specified scale-out database from the Managed Metadata Service application.
 
-
 ## PARAMETERS
 
 ### -Database
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the scale-out database to remove.
 
 ```yaml
 Type: SPDatabasePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -56,13 +55,15 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the service application of the scale-out database to remove.
 
 ```yaml
 Type: SPServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -72,6 +73,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -79,8 +83,7 @@ When the Global parameter is used, all objects are contained in the global store
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -90,13 +93,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -106,13 +111,15 @@ Accept wildcard characters: False
 ```
 
 ### -DeleteData
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether to delete data when the scale out database is removed.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -122,6 +129,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -129,7 +139,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

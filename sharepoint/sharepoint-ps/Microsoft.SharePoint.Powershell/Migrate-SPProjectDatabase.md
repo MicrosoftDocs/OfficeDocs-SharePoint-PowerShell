@@ -7,7 +7,7 @@ title: Migrate-SPProjectDatabase
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # Migrate-SPProjectDatabase
@@ -30,7 +30,7 @@ Both the Project Server 2013 database and the SharePoint Server 2016 database mu
 Server and the SharePoint farm account must have full access to the Project Server 2013 database. During the migration process the Project Server 2013 database will be modified and cannot be mounted back to a Project Server 2013.
 ## EXAMPLES
 
-### Example 1 
+### Example 1
 ```
 Migrate-SPProjectDatabase -DatabaseName ProjectDB1 -SiteCollection "https://contoso1/sites/PWA"
 ```
@@ -40,6 +40,9 @@ This example will look for a Project Server 2013 database named ProjectDB1 on th
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: Project Server 2016
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -47,8 +50,7 @@ When the Global parameter is used, all objects are contained in the global store
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2016
+Aliases:
 
 Required: False
 Position: Named
@@ -58,13 +60,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: Project Server 2016
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: Project Server 2016
 
 Required: False
 Position: Named
@@ -74,13 +78,15 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
+
+> Applicable: Project Server 2016
+
 The name of the Project Server 2013 database.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2016
+Aliases:
 
 Required: True
 Position: Named
@@ -90,13 +96,15 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServer
+
+> Applicable: Project Server 2016
+
 The name of the instance of SQL Server hosting the Project Server 2013 database.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2016
+Aliases:
 
 Required: False
 Position: Named
@@ -106,13 +114,15 @@ Accept wildcard characters: False
 ```
 
 ### -FailoverPartner
+
+> Applicable: Project Server 2016
+
 The name of the SQL Server failover partner for the Project Server 2013 database.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2016
+Aliases:
 
 Required: False
 Position: Named
@@ -122,13 +132,15 @@ Accept wildcard characters: False
 ```
 
 ### -Overwrite
+
+> Applicable: Project Server 2016
+
 Specifies to overwrite any Project data from previous attempts.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2016
+Aliases:
 
 Required: False
 Position: Named
@@ -138,13 +150,15 @@ Accept wildcard characters: False
 ```
 
 ### -SQLLogon
+
+> Applicable: Project Server 2016
+
 SQL Server authentication credentials if needed.
 
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2016
+Aliases:
 
 Required: False
 Position: Named
@@ -154,13 +168,15 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCollection
+
+> Applicable: Project Server 2016
+
 The URL of the site collection to which you want to copy the Project data.
 
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2016
+Aliases:
 
 Required: True
 Position: Named
@@ -170,6 +186,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: Project Server 2016
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -177,7 +196,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: Project Server 2016
 
 Required: False
 Position: Named

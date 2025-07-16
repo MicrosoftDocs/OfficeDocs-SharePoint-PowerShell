@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Uninstalls the specified Web Part package.
 
-
 ## SYNTAX
 
 ```
@@ -28,14 +27,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Uninstall-SPWebPartPack  "mypart.wpp" -WebApplication https://portal
 ```
 
 This example uninstalls mypart.wpp to from the Web application https://portal.
 
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Get-SPWebPartPack -WebApplication https://portal | Uninstall-SPWebPartPack
 ```
@@ -45,13 +44,15 @@ This example uninstalls all Web part packages from the Web application https://p
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the Web Part package in the farm's configuration database.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -61,6 +62,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -72,8 +76,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -83,6 +86,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -90,7 +96,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -100,6 +105,9 @@ Accept wildcard characters: False
 ```
 
 ### -Language
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the language ID of the Web Part package to delete.
 If no language is specified, the Web Part package is uninstalled for all languages.
 
@@ -108,8 +116,7 @@ The type must be a valid language identifier, in the form 1033.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -119,6 +126,9 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the Web application from which to uninstall the Web Part package.
 If no Web application is specified, the Web Part package is uninstalled from all Web applications.
 
@@ -127,8 +137,7 @@ The type must be a valid name, in the form WebApplication-1212, or a URL, in the
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -138,6 +147,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -145,7 +157,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -155,13 +166,15 @@ Accept wildcard characters: False
 ```
 
 ### -CompatibilityLevel
+
+> Applicable: SharePoint Server Subscription Edition
+
 {{Fill CompatibilityLevel Description}}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

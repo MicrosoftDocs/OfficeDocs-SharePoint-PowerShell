@@ -417,7 +417,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
 ### -AllowSelfServiceUpgrade
 
 > Applicable: SharePoint Online

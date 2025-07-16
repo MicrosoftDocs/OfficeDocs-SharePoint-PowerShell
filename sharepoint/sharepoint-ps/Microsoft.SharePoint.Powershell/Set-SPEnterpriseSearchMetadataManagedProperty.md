@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 Sets the properties of a metadata managed property.
 
-
 ## SYNTAX
 
 ```
@@ -35,10 +34,9 @@ SPEnterpriseSearchMetadataManagedProperty represents a managed property in the e
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------
+### EXAMPLE
 ```
 $ssa = Get-SPEnterpriseSearchServiceApplication
 Set-SPEnterpriseSearchMetadataManagedProperty -SearchApplication $ssa -Identity UserName -EnabledForScoping $true
@@ -46,10 +44,12 @@ Set-SPEnterpriseSearchMetadataManagedProperty -SearchApplication $ssa -Identity 
 
 This example sets the EnabledForScoping property to true for the managed property named UserName in the default search service application.
 
-
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -58,12 +58,10 @@ When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are au
 When the Global parameter is used, all objects are contained in the global store.
 If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
-
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -73,15 +71,16 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
-
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -91,17 +90,18 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultForQueryIndependentRank
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies that the managed property is mandatory when it is used in query-independent rank (relevance).
 
 Note:
 Null indicates that the value is unchanged.
 
-
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
 Aliases: def
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -111,18 +111,19 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Adds a description to the metadata managed property.
 
 The type must be a valid string.
 
 Note: Null indicates that the value is unchanged.
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: d
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -132,6 +133,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledForQueryIndependentRank
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies that the managed property is mandatory when it is used in the custom ranking model for the query-independent work of ranking.
 
 The type must be one of the following query-independent ranking features in the custom model XML:
@@ -142,12 +146,10 @@ The type must be one of the following query-independent ranking features in the 
 
 Note: Null indicates that the value is unchanged.
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: qir
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -157,16 +159,17 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledForScoping
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies that the managed property can be used in a scope definition.
 
 Note: Null indicates that the value is unchanged.
-
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: e
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -176,16 +179,17 @@ Accept wildcard characters: False
 ```
 
 ### -FullTextQueriable
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies that the managed property can be used in enterprise search SQL queries.
 
 Note: Null indicates that the value is unchanged.
-
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: f
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -195,16 +199,17 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the managed property to update.
 
 The type must be a valid name of a managed property, for example, ManagedProperty1, or an instance of a valid ManagedProperty object
 
-
 ```yaml
 Type: ManagedPropertyPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -214,13 +219,15 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeInAlertSignature
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies whether this managed property should be included in alert signature.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: ia
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -230,16 +237,17 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeInMd5
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies that the managed property is included in the hash used by the crawler to determine whether a document has changed.
 
 Note: Null indicates that the value is unchanged.
-
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: im5
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -249,18 +257,19 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies a name for the managed property.
 
 The type must be a valid managed property name, for example ManagedProperty1.
 
 Note: Null indicates that the value is unchanged.
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: n
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -270,17 +279,18 @@ Accept wildcard characters: False
 ```
 
 ### -NameNormalized
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies if the values of the managed property should be normalized, that is, enable to return results independent of letter casing and diacritics used in the query.
 If value is set to true, the values are normalized.
 
 Note: Null indicates that the value is unchanged.
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: nn
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -290,16 +300,17 @@ Accept wildcard characters: False
 ```
 
 ### -NoWordBreaker
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies that the values for this managed property are processed by a word breaker.
 
 Note: Null indicates that the value is unchanged.
-
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: nw
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -309,14 +320,15 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveDuplicates
-Specifies that duplicate values for the managed property are removed.
 
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
+Specifies that duplicate values for the managed property are removed.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: rd
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -326,17 +338,18 @@ Accept wildcard characters: False
 ```
 
 ### -RespectPriority
-Specifies that when a mapped crawled property contains multiple values and RespectPriority is set to true, only the first mapped crawled property is copied. 
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
+Specifies that when a mapped crawled property contains multiple values and RespectPriority is set to true, only the first mapped crawled property is copied.
 Otherwise, all mapped crawled properties that have a value are copied.
 
 Note: Null indicates that the value is unchanged.
-
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: rp
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -346,16 +359,17 @@ Accept wildcard characters: False
 ```
 
 ### -Retrievable
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies whether the values for this managed property are retrievable or not.
 
 Note: Null indicates that the value is unchanged.
-
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: r
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -365,13 +379,15 @@ Accept wildcard characters: False
 ```
 
 ### -SafeForAnonymous
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies whether it is acceptable to display the contents of the property in search results for anonymous searches.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: sfa
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -381,16 +397,17 @@ Accept wildcard characters: False
 ```
 
 ### -SearchApplication
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the search application that contains the managed property collection.
 
 The type must be a valid search application name, for example, SearchApp1, or an instance of a valid SearchServiceApplication object.
 
-
 ```yaml
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -400,16 +417,17 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies that the managed properties returned are to be within the scope of a site collection (SPSite).
 
 The type must be a valid GUID that specifies the property set in the form 12345678-90ab-cdef-1234-567890bcdefgh.
 
-
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -419,16 +437,17 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies that the managed properties returned are to be within the scope of a tenant.
 
 The type must be a valid GUID that specifies the property set in the form 12345678-90ab-cdef-1234-567890bcdefgh.
 
-
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -438,16 +457,17 @@ Accept wildcard characters: False
 ```
 
 ### -UserFlags
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Reserved for future use.
 
 Note: Null indicates that the value is unchanged.
-
 
 ```yaml
 Type: Int16
 Parameter Sets: (All)
 Aliases: u
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -457,15 +477,16 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
-
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

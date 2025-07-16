@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 Sets Request Manager properties.
 
-
 ## SYNTAX
 
 ```
@@ -31,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### EXAMPLE
 ```
 $wa = Get-SPWebApplication https://webAppUrl
 $req = $wa | Get-SPRequestManagementSettings
@@ -43,13 +42,15 @@ This example disables throttling on the specified Web Application.
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the Request Manager object for which settings will be applied.
 
 ```yaml
 Type: SPRequestManagementSettingsPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -59,6 +60,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -66,8 +70,7 @@ When the Global parameter is used, all objects are contained in the global store
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -77,13 +80,15 @@ Accept wildcard characters: False
 ```
 
 ### -RoutingEnabled
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies whether routing is enabled or disabled for the Request Manager object.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -93,6 +98,9 @@ Accept wildcard characters: False
 ```
 
 ### -RoutingScheme
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the routing scheme.
 
 The value is one of the following:
@@ -104,8 +112,7 @@ The value is one of the following:
 ```yaml
 Type: SPRoutingScheme
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -115,13 +122,15 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottlingEnabled
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies whether throttling is enabled or disabled for the Request Manager object.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

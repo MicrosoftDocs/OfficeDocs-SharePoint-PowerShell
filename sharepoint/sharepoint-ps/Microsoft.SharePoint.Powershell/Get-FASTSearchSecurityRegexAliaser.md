@@ -29,7 +29,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1-----------------
+### EXAMPLE 1
 ```
 Get-FASTSearchSecurityRegexAliaser -Identity regex1
 ```
@@ -39,11 +39,13 @@ This example retrieves a regular expression aliaser with an identity of "regex1"
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: FAST Server for SharePoint 2010
+
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 1

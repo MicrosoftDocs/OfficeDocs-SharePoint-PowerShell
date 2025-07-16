@@ -17,7 +17,6 @@ ms.reviewer:
 Retrieves available SharePoint Feature sets or the Feature set assigned to a given site subscription.
 
 
-
 ## SYNTAX
 
 ### FeaturePack
@@ -45,14 +44,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------ 
+### EXAMPLE 1
 ```
 Get- SPSiteSubscriptionFeaturePack
 ```
 
 This example returns all defined Feature sets in the local farm.
 
-### ------------------EXAMPLE 2------------------ 
+### EXAMPLE 2
 ```
 Get-SPSiteSubscriptionFeaturePack -SiteSubscription https://contoso.com | ForEach{ $_.FeatureDefinitions }
 ```
@@ -62,13 +61,15 @@ This example returns the list (name, ID, and scope) of all Features allowed in t
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies a valid name or GUID of the Feature set.
 
 ```yaml
 Type: SPSiteSubscriptionFeaturePackPipeBind
 Parameter Sets: FeaturePack
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: 1
@@ -78,6 +79,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -89,8 +93,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -100,13 +103,15 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSubscription
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 If provided, ensures that the returned Feature set is the Feature set that is currently assigned to the given site subscription.
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: SiteSubscription
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

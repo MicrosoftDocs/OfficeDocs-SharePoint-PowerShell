@@ -7,14 +7,13 @@ title: New-SPEnterpriseSearchQueryScopeRule
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # New-SPEnterpriseSearchQueryScopeRule
 
 ## SYNOPSIS
 Adds a shared scope rule to a query scope.
-
 
 ## SYNTAX
 
@@ -39,10 +38,9 @@ SPEnterpriseSearchQueryScopeRule represents a query results scope rule that can 
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------
+### EXAMPLE
 ```
 C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
 C:\PS>$scope = Get-SPEnterpriseSearchQueryScope -Identity MustCrawl -SearchApplication $ssa
@@ -51,10 +49,12 @@ New-SPEnterpriseSearchQueryScopeRule -Scope $scope -RuleType AllContent -Url htt
 
 This example creates a new scope rule of type AllContent for the URL https://criticalSite.
 
-
 ## PARAMETERS
 
 ### -RuleType
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the type of scope rule to create.
 
 The type must be one of the following values: AllContent, Url, or PropertyQuery.
@@ -63,7 +63,6 @@ The type must be one of the following values: AllContent, Url, or PropertyQuery.
 Type: String
 Parameter Sets: (All)
 Aliases: type
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -73,6 +72,9 @@ Accept wildcard characters: False
 ```
 
 ### -Scope
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Applies the query scope rule to the specified scope.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a scope (for example, Scope1); or an instance of a valid Scope object.
@@ -81,7 +83,6 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: ScopePipeBind
 Parameter Sets: (All)
 Aliases: s
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -91,6 +92,9 @@ Accept wildcard characters: False
 ```
 
 ### -Url
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the results URL that is associated with the query scope rule.
 
 The type must be a valid URL, in the form https://server_name.
@@ -99,7 +103,6 @@ The type must be a valid URL, in the form https://server_name.
 Type: Uri
 Parameter Sets: (All)
 Aliases: u
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -109,6 +112,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -120,8 +126,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -131,6 +136,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -138,7 +146,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -148,6 +155,9 @@ Accept wildcard characters: False
 ```
 
 ### -FilterBehavior
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the type of scope rule to create for the query scope.
 The default value is Include.
 
@@ -157,7 +167,6 @@ The type must be one of the following values: Exclude, Include, or Require.
 Type: String
 Parameter Sets: (All)
 Aliases: f
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -167,6 +176,9 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedProperty
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the managed property to use for the PropertyQuery scope rule.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a managed property (for example, ManagedProperty1); or an instance of a valid ManagedProperty object.
@@ -175,7 +187,6 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: ManagedPropertyPipeBind
 Parameter Sets: (All)
 Aliases: mname
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -185,13 +196,15 @@ Accept wildcard characters: False
 ```
 
 ### -MatchingString
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the string to use when matching the URL rule type.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: text
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -201,13 +214,15 @@ Accept wildcard characters: False
 ```
 
 ### -PropertyValue
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the property value to use when matching the PropertyQuery rule type.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: value
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -217,6 +232,9 @@ Accept wildcard characters: False
 ```
 
 ### -SearchApplication
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the search application that contains the query scope rule collection.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application name (for example, SearchApp1); or an instance of a valid SearchServiceApplication object.
@@ -224,8 +242,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -235,13 +252,15 @@ Accept wildcard characters: False
 ```
 
 ### -UrlScopeRuleType
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the value to use when matching the URL rule type.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: ut
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -251,6 +270,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -258,7 +280,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

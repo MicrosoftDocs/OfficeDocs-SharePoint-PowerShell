@@ -50,7 +50,6 @@ Type: Microsoft.Online.SharePoint.PowerShell.CredentialCmdletPipeBind
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -68,7 +67,6 @@ Id of a previously created migration job that exists on the target site collecti
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: 1
@@ -88,7 +86,6 @@ Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -106,7 +103,6 @@ The fully qualified URL of the site collection where the job will be deleted if 
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: 0

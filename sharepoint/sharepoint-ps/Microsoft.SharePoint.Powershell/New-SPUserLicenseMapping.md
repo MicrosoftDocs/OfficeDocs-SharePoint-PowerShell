@@ -7,14 +7,13 @@ title: New-SPUserLicenseMapping
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # New-SPUserLicenseMapping
 
 ## SYNOPSIS
 Creates a license mapping object.
-
 
 ## SYNTAX
 
@@ -58,10 +57,9 @@ After the object is created you can pipe the result to the `Add-SPUserLicenseMap
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ----------------------- EXAMPLE---------------------------)
+### EXAMPLE)
 ```
 $a = New-SPUserLicenseMapping -SecurityGroup EntSecGroup -License Enterprise
 $a | Add-SPUserLicenseMapping
@@ -69,18 +67,19 @@ $a | Add-SPUserLicenseMapping
 
 This example creates a license mapping object for the Active Directory secured group named 'EntSecGroup' and then pipes the result to the `Add-SPUserLicenseMapping` cmdlet.
 
-
 ## PARAMETERS
 
 ### -Claim
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the claims principal to license.
 The value must be an authentic claims principal.
 
 ```yaml
 Type: SPClaim
 Parameter Sets: TrustIdentity
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -90,14 +89,16 @@ Accept wildcard characters: False
 ```
 
 ### -ClaimType
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the type of the claim.
 The value must be an authentic name of a claim type.
 
 ```yaml
 Type: String
 Parameter Sets: ClaimsValues
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -107,14 +108,16 @@ Accept wildcard characters: False
 ```
 
 ### -License
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of a supported SharePoint user license.
 For the full list of supported licenses on a SharePoint farm, see the `Get-SPUserLicense` cmdlet.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -124,14 +127,16 @@ Accept wildcard characters: False
 ```
 
 ### -OriginalIssuer
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the original issuer of the claim.
 The value must be the authentic name of an original issuer.
 
 ```yaml
 Type: String
 Parameter Sets: ClaimsValues
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -141,14 +146,16 @@ Accept wildcard characters: False
 ```
 
 ### -Role
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of a forms-based role.
 The value must be an authentic name of a forms-based role.
 
 ```yaml
 Type: String
 Parameter Sets: FormsAuth
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -158,14 +165,16 @@ Accept wildcard characters: False
 ```
 
 ### -RoleProviderName
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of a role provider.
 The value must be an authentic name of a role provider.
 
 ```yaml
 Type: String
 Parameter Sets: FormsAuth
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -175,14 +184,16 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityGroup
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of an AD DS security group.
 The value must be a name of an Active Directory security group.
 
 ```yaml
 Type: String
 Parameter Sets: WindowsAuth
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -192,14 +203,16 @@ Accept wildcard characters: False
 ```
 
 ### -Value
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the value of the claim.
 The value must be an authentic claim value.
 
 ```yaml
 Type: String
 Parameter Sets: ClaimsValues
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -209,6 +222,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -220,8 +236,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -231,6 +246,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -238,7 +256,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -248,14 +265,16 @@ Accept wildcard characters: False
 ```
 
 ### -ValueType
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the value type of the claim.
 The value must be an authentic name of a claim value type.
 
 ```yaml
 Type: String
 Parameter Sets: ClaimsValues
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -265,6 +284,9 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the URL, GUID, web application name, or web application object instance where the mapping is to be added.
 If you omit this parameter, the mapping is applied to the entire farm.
 
@@ -273,8 +295,7 @@ The type must be an URL in the form http://server_name or http://server_name/sit
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -284,6 +305,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -291,7 +315,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

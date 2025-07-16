@@ -35,7 +35,7 @@ This Set-SPPeoplePickerConfig cmdlet sets the following settings of People Picke
 
 ## EXAMPLES
 
-### -------------EXAMPLE 1------------- 
+### EXAMPLE 1
 ```powershell
 Set-SPPeoplePickerConfig -WebApplication http://MyOfficeApp1 -ActiveDirectoryCustomFilter "((Title=Manager))" -ActiveDirectoryCustomQuery (sn={0}*) -ActiveDirectorySearchTimeout 60 -PeopleEditorOnlyResolveWithinSiteCollection -OnlySearchWithinSiteCollection -NoWindowsAccountsForNonWindowsAuthenticationMode
 ```
@@ -51,13 +51,15 @@ This example sets the following settings to the People Picker of Web application
 ## PARAMETERS
 
 ### -ActiveDirectoryCustomFilter
+
+> Applicable: SharePoint Server Subscription Edition
+
 The Lightweight Directory Access Protocol (LDAP) query string to create a customized filter for displaying query results.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -67,13 +69,15 @@ Accept wildcard characters: False
 ```
 
 ### -ActiveDirectoryCustomQuery
+
+> Applicable: SharePoint Server Subscription Edition
+
 The Lightweight Directory Access Protocol (LDAP) query string appended to the People Picker query to Active Directory.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -83,13 +87,15 @@ Accept wildcard characters: False
 ```
 
 ### -ActiveDirectorySearchTimeout
+
+> Applicable: SharePoint Server Subscription Edition
+
 The amount of seconds of time before Active Directory search times out.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -99,6 +105,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -111,7 +120,6 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -121,13 +129,15 @@ Accept wildcard characters: False
 ```
 
 ### -NoWindowsAccountsForNonWindowsAuthenticationMode
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the People Picker control return only non-Active Directory users when the Web application uses form-based authentication.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -137,13 +147,15 @@ Accept wildcard characters: False
 ```
 
 ### -OnlySearchWithinSiteCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the People Picker control should only return the site collection users when using the "Select People and Groups" dialog box.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -153,13 +165,15 @@ Accept wildcard characters: False
 ```
 
 ### -PeopleEditorOnlyResolveWithinSiteCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the People Picker control should only return the site collection users when click the "Check Names" button.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -169,13 +183,15 @@ Accept wildcard characters: False
 ```
 
 ### -SecureSocketsLayer
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether to enable Secure LDAP (LDAPS) for secure communication in the SharePoint People Picker.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -185,13 +201,15 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 The Web application to set People Picker settings to.
 
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -201,13 +219,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -217,6 +237,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -224,7 +247,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Updates the properties of a usage service.
 
-
 ## SYNTAX
 
 ```
@@ -27,10 +26,9 @@ If the Identity parameter is not specified, the cmdlet applies the changes to th
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### --------------------EXAMPLE-----------------
+### EXAMPLE
 ```powershell
 Set-SPUsageService -LoggingEnabled $false
 Set-SPUsageService -UsageLogLocation "D:\\testusagelogdir"
@@ -39,10 +37,12 @@ Set-SPUsageService -UsageLogCutTime 5
 
 The examples disables usage logging, changes the directory where usage files are stored and creates a new usage log file every 5 minutes.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the usage service to update.
 
 The type must be in one of the following forms:
@@ -54,8 +54,7 @@ The type must be in one of the following forms:
 ```yaml
 Type: SPUsageServicePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: 1
@@ -65,6 +64,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -76,8 +78,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -87,6 +88,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -94,7 +98,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -104,13 +107,15 @@ Accept wildcard characters: False
 ```
 
 ### -LoggingEnabled
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that usage data is logged to usage files.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -120,6 +125,9 @@ Accept wildcard characters: False
 ```
 
 ### -UsageLogCutTime
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the time, in minutes, of usage data that is collected per usage log file.
 The default time is 5 minutes.
 
@@ -128,8 +136,7 @@ The value must be an integer in the range of 1 to 1440.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -139,6 +146,9 @@ Accept wildcard characters: False
 ```
 
 ### -UsageLogLocation
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the path on every computer in the farm where usage log files are created.
 
 The value must be a valid local path in the following form:
@@ -148,8 +158,7 @@ The value must be a valid local path in the following form:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -159,6 +168,9 @@ Accept wildcard characters: False
 ```
 
 ### -UsageLogMaxFileSizeKB
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the maximum size of a single usage file that is applied to all the usage providers.
 
 The minimum value is 512 kilobytes (KB) and the maximum value is 65536 KB.
@@ -166,8 +178,7 @@ The minimum value is 512 kilobytes (KB) and the maximum value is 65536 KB.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -177,14 +188,16 @@ Accept wildcard characters: False
 ```
 
 ### -UsageLogMaxSpaceGB
+
+> Applicable: SharePoint Server Subscription Edition
+
 The maximum amount of space (measured in gigabytes) allowed for usage logs.
 Althought the parameter is present in later SharePoint Server versions, it is applicable only to SharePoint Server 2010.
 
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -194,6 +207,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -201,7 +217,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

@@ -59,13 +59,15 @@ Retrieves the ObjectGuid values of the Domain Users and Domain Admins Active Dir
 ## PARAMETERS
 
 ### -Url
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Specifies the URL of the Project Web App instance to enable Active Directory Enterprise Resource Sync.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -75,13 +77,15 @@ Accept wildcard characters: False
 ```
 
 ### -GroupUids
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 The Active Directory Group GUID to synchronize the Enterprise Resource Pool with.
 
 ```yaml
 Type: System.Collections.Generic.IEnumerable`1[System.Guid]
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: True
 Position: 2
@@ -91,6 +95,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: Project Server 2013, Project Server 2016
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -102,8 +109,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016
+Aliases:
 
 Required: False
 Position: Named

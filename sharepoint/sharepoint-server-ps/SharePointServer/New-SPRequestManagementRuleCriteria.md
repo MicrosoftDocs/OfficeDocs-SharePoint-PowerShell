@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates criteria for the rule to match.
 
-
 ## SYNTAX
 
 ### CustomPropertyParameterSet
@@ -36,10 +35,9 @@ For more information about how to use parameter sets, see [Cmdlet parameter sets
 
 Use the `New-SPRequestManagementRuleCriteria` cmdlet to create criteria for the rule to match.
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE-----------------------
+### EXAMPLE
 ```powershell
 New-SPRequestManagementRuleCriteria -Property Host -Value Client01 -MatchType Equals
 ```
@@ -49,13 +47,15 @@ This example creates a new rule that matches the Host 'Client01'.
 ## PARAMETERS
 
 ### -Value
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies a value for the rule to match.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -65,13 +65,15 @@ Accept wildcard characters: False
 ```
 
 ### -CustomHeader
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the custom header for the rule.
 
 ```yaml
 Type: String
 Parameter Sets: CustomPropertyParameterSet
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 2
@@ -81,6 +83,9 @@ Accept wildcard characters: False
 ```
 
 ### -Property
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies a header for a value to match.
 
 The following are the valid values:
@@ -104,8 +109,7 @@ The following are the valid values:
 ```yaml
 Type: SPRequestManagementRulePropertyType
 Parameter Sets: StandardParameterSet
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 2
@@ -115,13 +119,15 @@ Accept wildcard characters: False
 ```
 
 ### -CaseSensitive
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether or not the match is case sensitive.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: 3
@@ -131,6 +137,9 @@ Accept wildcard characters: False
 ```
 
 ### -MatchType
+
+> Applicable: SharePoint Server Subscription Edition
+
 Defines operators for the match.
 
 The following are the valid values:
@@ -146,8 +155,7 @@ The following are the valid values:
 ```yaml
 Type: SPRequestManagementRuleMatchType
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: 3
@@ -157,6 +165,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -168,8 +179,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

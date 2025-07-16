@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Configures the specified web application.
 
-
 ## SYNTAX
 
 ### UpdateGeneralSettings (Default)
@@ -82,13 +81,15 @@ This example sets the http://servername web application to use the SMTP server m
 ## PARAMETERS
 
 ### -AdditionalClaimProvider
+
+> Applicable: SharePoint Server Subscription Edition
+
 Adds a specific claim provider to the defined web application.
 
 ```yaml
 Type: SPClaimProviderPipeBind[]
 Parameter Sets: UpdateClaimSettings
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -98,6 +99,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowLegacyEncryption
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that older SSL and TLS protocol versions and cipher suites are allowed to be used with this IIS website.
 Legacy encryption is weaker than modern encryption and is not recommended.
 
@@ -110,7 +114,6 @@ This parameter is only valid when used with the SecureSocketsLayer parameter.
 Type: SwitchParameter
 Parameter Sets: UpdateIISSettings
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -120,6 +123,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -131,8 +137,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -142,14 +147,16 @@ Accept wildcard characters: False
 ```
 
 ### -AuthenticationMethod
+
+> Applicable: SharePoint Server Subscription Edition
+
 Use to set a web application to classic Windows authentication.
 The valid values are NTLM or Kerberos.
 
 ```yaml
 Type: String
 Parameter Sets: UpdateClaimSettings
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -159,13 +166,15 @@ Accept wildcard characters: False
 ```
 
 ### -AuthenticationProvider
+
+> Applicable: SharePoint Server Subscription Edition
+
 Defines the authentication provider(s) that applies to the web application.
 
 ```yaml
 Type: SPAuthenticationProviderPipeBind[]
 Parameter Sets: UpdateClaimSettings
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -175,6 +184,9 @@ Accept wildcard characters: False
 ```
 
 ### -Certificate
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the certificate that will be used for the Secure Sockets Layer (SSL) binding of this IIS website, or for authenticating to an SMTP server to send email.
 
 When configuring the Secure Sockets Layer (SSL) binding of this IIS website, this parameter is only valid when used with the SecureSocketsLayer parameter.
@@ -184,7 +196,6 @@ When configuring SMTP authentication, this parameter is only valid when the Disa
 Type: SPServerCertificatePipeBind
 Parameter Sets: UpdateIISSettings, UpdateMailSettings
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -194,13 +205,15 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultQuotaTemplate
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the new default site quota template for this web application.
 
 ```yaml
 Type: String
 Parameter Sets: UpdateGeneralSettings
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -210,13 +223,15 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultTimeZone
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the default time zone for new site collections in this web application.
 
 ```yaml
 Type: Int32
 Parameter Sets: UpdateGeneralSettings
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -226,6 +241,9 @@ Accept wildcard characters: False
 ```
 
 ### -DisableSMTPEncryption
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether to turn on or off SMTP Encryption.
 
 The default value is false.
@@ -233,8 +251,7 @@ The default value is false.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: UpdateMailSettings
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -244,13 +261,15 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: SharePoint Server Subscription Edition
+
 Suppresses confirmation messages involved in settings for a web application.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: UpdateClaimSettings
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -260,6 +279,9 @@ Accept wildcard characters: False
 ```
 
 ### -HostHeader
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the host header binding for this IIS website.
 A host header binding allows multiple IIS websites to share the same port number.
 Web requests sent to a shared port number are routed to the correct IIS website based on the value of the HTTP host header sent by the client.
@@ -270,7 +292,6 @@ If no host header binding is specified, then all web requests sent to this port 
 Type: String
 Parameter Sets: UpdateIISSettings
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -280,6 +301,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name or URL of the web application.
 
 The type must be a valid name, in the form WebApplication-1212, or URL, in the form https://example.contoso.com.
@@ -287,8 +311,7 @@ The type must be a valid name, in the form WebApplication-1212, or URL, in the f
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -298,13 +321,15 @@ Accept wildcard characters: False
 ```
 
 ### -NotProvisionGlobally
+
+> Applicable: SharePoint Server Subscription Edition
+
 Only provisions the web application on the local server with the changes specified by this cmdlet. Web applications on other servers in the farm will not be provisioned with these changes.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -314,14 +339,16 @@ Accept wildcard characters: False
 ```
 
 ### -OutgoingEmailAddress
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the new outgoing e-mail address for e-mail messages sent from this web application.
 The type must be a valid address; for example, someone@example.com.
 
 ```yaml
 Type: String
 Parameter Sets: UpdateMailSettings
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -331,6 +358,9 @@ Accept wildcard characters: False
 ```
 
 ### -Port
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the port on which this web application can be accessed.
 This can be any valid port number.
 
@@ -340,7 +370,6 @@ If you specify a port number that has already been assigned, IIS does not start 
 Type: Int32
 Parameter Sets: UpdateIISSettings
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -350,6 +379,9 @@ Accept wildcard characters: False
 ```
 
 ### -ReplyToEmailAddress
+
+> Applicable: SharePoint Server Subscription Edition
+
 Configures the reply e-mail address.
 
 The type must be a valid address; for example, someone@example.com.
@@ -358,7 +390,6 @@ The type must be a valid address; for example, someone@example.com.
 Type: String
 Parameter Sets: UpdateMailSettings
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -368,6 +399,9 @@ Accept wildcard characters: False
 ```
 
 ### -SecureSocketsLayer
+
+> Applicable: SharePoint Server Subscription Edition
+
 Enables Secure Sockets Layer (SSL) encryption for this web application.
 If you choose to use SSL, you must import a server certificate to SharePoint and assign it to the IIS website for this web application.
 Until this is done, the web application will be inaccessible from this IIS website.
@@ -380,7 +414,6 @@ If this parameter is omitted or set to False, this web application will use HTTP
 Type: SwitchParameter
 Parameter Sets: UpdateIISSettings
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -390,6 +423,9 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceApplicationProxyGroup
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies a custom service application proxy group for the web application to use.
 The web application will use the proxies in this proxy group to connect to service applications.
 If this parameter is not specified, the farm's default proxy group is used.
@@ -398,7 +434,6 @@ If this parameter is not specified, the farm's default proxy group is used.
 Type: SPServiceApplicationProxyGroupPipeBind
 Parameter Sets: UpdateGeneralSettings
 Aliases: ProxyGroup
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -408,13 +443,15 @@ Accept wildcard characters: False
 ```
 
 ### -SignInRedirectProvider
+
+> Applicable: SharePoint Server Subscription Edition
+
 Sets the sign-in redirect URL to point to the URL that is defined in the specified authentication provider.
 
 ```yaml
 Type: SPTrustedIdentityTokenIssuerPipeBind
 Parameter Sets: UpdateClaimSettings
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -424,13 +461,15 @@ Accept wildcard characters: False
 ```
 
 ### -SignInRedirectURL
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the sign-in redirect URL for the web application.
 
 ```yaml
 Type: String
 Parameter Sets: UpdateClaimSettings
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -440,6 +479,9 @@ Accept wildcard characters: False
 ```
 
 ### -SMTPCredentials
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies credentials to authenticate to the SMTP server.
 Set the value to $null to connect to the SMTP server anonymously.
 If this parameter isn't specified, the existing authentication settings will be preserved.
@@ -450,7 +492,6 @@ You must use the `Set-SPApplicationCredentialKey` PowerShell cmdlet to set an id
 Type: PSCredential
 Parameter Sets: UpdateMailSettings
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -460,14 +501,16 @@ Accept wildcard characters: False
 ```
 
 ### -SMTPServer
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the new outbound SMTP server that this web application will use.
 Set to $null to clear the server setting.
 
 ```yaml
 Type: String
 Parameter Sets: UpdateMailSettings
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -492,13 +535,15 @@ Accept wildcard characters: False
 ```
 
 ### -Url
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the load-balanced URL for the web application zone.
 
 ```yaml
 Type: String
 Parameter Sets: UpdateIISSettings
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -508,6 +553,9 @@ Accept wildcard characters: False
 ```
 
 ### -UseServerNameIndication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that the Secure Sockets Layer (SSL) binding of this IIS website should use Server Name Indication (SNI).
 Server Name Indication allows multiple IIS websites with unique host headers and unique server certificates to share the same SSL port.
 If Server Name Indication isn't used, all IIS websites sharing the same SSL port must share the same SSL certificate.
@@ -516,7 +564,6 @@ If Server Name Indication isn't used, all IIS websites sharing the same SSL port
 Type: SwitchParameter
 Parameter Sets: UpdateIISSettings
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -526,6 +573,9 @@ Accept wildcard characters: False
 ```
 
 ### -Zone
+
+> Applicable: SharePoint Server Subscription Edition
+
 When configuring zone-specific settings, the zone to configure must be specified.
 This zone must already exist.
 
@@ -535,7 +585,6 @@ The type must be any one of the following values: Default, Intranet, Internet, E
 Type: SPUrlZone
 Parameter Sets: UpdateClaimSettings, UpdateIISSettings
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -545,6 +594,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -552,7 +604,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -562,6 +613,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -569,7 +623,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

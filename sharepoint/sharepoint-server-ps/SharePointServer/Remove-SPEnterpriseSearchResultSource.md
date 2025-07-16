@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Deletes a result source.
 
-
 ## SYNTAX
 
 ```
@@ -24,13 +23,12 @@ Remove-SPEnterpriseSearchResultSource [-Identity] <ResultSourcePipeBind> -Owner 
 ## DESCRIPTION
 This cmdlet deletes a specified result source.
 This cmdlet supports the same delete operations as are supported through the "Manage Result Sources" page in Central Administration.
-The result source cannot be a built-in source (a built-in source has the BuiltIn property set to true). 
+The result source cannot be a built-in source (a built-in source has the BuiltIn property set to true).
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
-
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 $ssa = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application"
 $owner = Get-SPEnterpriseSearchOwner -Level SSA
@@ -39,8 +37,7 @@ Remove-SPEnterpriseSearchResultSource -Identity "Custom SharePoint Result Source
 
 This example deletes the search service application level result source with the name "Custom SharePoint Result Source".
 
-
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 $ssa = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application"
 $owner = Get-SPEnterpriseSearchOwner -Level SSA
@@ -49,8 +46,7 @@ Remove-SPEnterpriseSearchResultSource -Identity 12345678-90ab-cdef-1234-567890bc
 
 This example deletes the search service application level result source with the id 12345678-90ab-cdef-1234-567890bcdefgh.
 
-
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 $ssa = Get-SPEnterpriseSearchServiceApplication -Identity "Search Service Application"
 $owner = Get-SPEnterpriseSearchOwner -Level SSA
@@ -60,20 +56,20 @@ Remove-SPEnterpriseSearchResultSource -Identity $resultSource -SearchApplication
 
 This example deletes the search service application level result source with the name "Custom SharePoint Result Source", by specifying a Source instance.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the result source to delete.
 The result source cannot be a built in source.
 The type must be a valid GUID string, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a result source (for example, "Custom SharePoint Result Source"); or an instance of a valid Source object.
 
-
 ```yaml
 Type: ResultSourcePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -83,14 +79,15 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
-Specifies the search object owner that defines the scope at which the corresponding result source is available.
 
+> Applicable: SharePoint Server Subscription Edition
+
+Specifies the search object owner that defines the scope at which the corresponding result source is available.
 
 ```yaml
 Type: SearchObjectOwner
 Parameter Sets: (All)
 Aliases: o
-Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -100,15 +97,16 @@ Accept wildcard characters: False
 ```
 
 ### -SearchApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the search application.
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application name (for example, SearchApp1); or an instance of a valid SearchServiceApplication object.
-
 
 ```yaml
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -118,16 +116,17 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
-
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -137,6 +136,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -144,7 +146,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -154,6 +155,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -161,7 +165,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

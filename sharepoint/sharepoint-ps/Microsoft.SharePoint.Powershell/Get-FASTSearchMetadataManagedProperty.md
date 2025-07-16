@@ -33,7 +33,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1-----------------
+### EXAMPLE 1
 ```
 Get-FASTSearchMetadataManagedProperty -name title
 ```
@@ -41,7 +41,7 @@ Get-FASTSearchMetadataManagedProperty -name title
 This example retrieves a managed property named "title".
 It returns an object representing the managed property.
 
-### ---------------EXAMPLE 2-----------------
+### EXAMPLE 2
 ```
 Get-FASTSearchMetadataManagedProperty -name content*
 ```
@@ -52,6 +52,9 @@ It returns a list of managed property objects.
 ## PARAMETERS
 
 ### -Name
+
+> Applicable: FAST Server for SharePoint 2010
+
 The name of the managed property to retrieve.
 This option supports wildcards, and the matching is case-insensitive.
 
@@ -59,7 +62,6 @@ This option supports wildcards, and the matching is case-insensitive.
 Type: String
 Parameter Sets: (All)
 Aliases: ManagedPropertyName, N
-Applicable: FAST Server for SharePoint 2010
 
 Required: False
 Position: 1

@@ -28,7 +28,7 @@ The tags and notes are written into separate files, and then the two are compres
 
 ## EXAMPLES
 
-### ----------------EXAMPLE----------------- 
+### EXAMPLE
 ```
 Export-SPTagsAndNotesData -Site https://site.contoso.com -FilePath C:\TagsAndNotes.zip
 ```
@@ -38,6 +38,9 @@ This example creates a new ZIP file called TagsAndNotes.zip, on the root of C: d
 ## PARAMETERS
 
 ### -Site
+
+> Applicable: SharePoint Server 2016, SharePoint Server 2019
+
 URL of the root site where you want to export the tags and notes from.
 
 You must specify a valid URL to an existing SharePoint root site.
@@ -46,8 +49,7 @@ For example: https://site.contoso.com
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -57,6 +59,9 @@ Accept wildcard characters: False
 ```
 
 ### -FilePath
+
+> Applicable: SharePoint Server 2016, SharePoint Server 2019
+
 File name, including full path, that you want export the tags and notes to.
 
 The cmdlet will create a new ZIP file with the name you specified.
@@ -65,8 +70,7 @@ If the file already exists, the cmdlet won't perform the export and will ask you
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 2
@@ -76,13 +80,15 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2016, SharePoint Server 2019
+
 {{Fill AssignmentCollection Description}}
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

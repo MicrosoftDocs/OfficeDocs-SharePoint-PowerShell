@@ -54,7 +54,6 @@ Type: System.String[]
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -72,7 +71,6 @@ Specifies the URL of the site collection to which to enable the hub site feature
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: 0

@@ -14,7 +14,6 @@ schema: 2.0.0
 Displays all globally installed site templates that match the given identity.
 
 
-
 ## SYNTAX
 
 ```
@@ -29,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- 
+### EXAMPLE 1
 ```powershell
 $template = Get-SPWebTemplate "STS#0"
 New-SPSite https://contoso.com -OwnerAlias "DOMAIN\JDOE" -Template $template
@@ -37,7 +36,7 @@ New-SPSite https://contoso.com -OwnerAlias "DOMAIN\JDOE" -Template $template
 
 This example creates a site collection by using the team site Web template (ID=STS#0).
 
-### --------------EXAMPLE 2----------------- 
+### EXAMPLE 2
 ```powershell
 Get-SPWebTemplate "STS*"
 ```
@@ -47,6 +46,9 @@ This example displays basic information about all the STS templates.
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the Web template to display.
 
 The type must be the ID or full or partial name of the Web template.
@@ -54,8 +56,7 @@ The type must be the ID or full or partial name of the Web template.
 ```yaml
 Type: SPWebTemplatePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: 1
@@ -65,6 +66,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -76,8 +80,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -87,6 +90,9 @@ Accept wildcard characters: False
 ```
 
 ### -CompatibilityLevel
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the version of templates to use when creating a new SPSite object.
 This value sets the initial CompatibilityLevel value for the site collection.
 The values for this parameter can be either SharePoint Server or SharePoint Server.
@@ -95,8 +101,7 @@ When this parameter is not specified, the CompatibilityLevel will default to the
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

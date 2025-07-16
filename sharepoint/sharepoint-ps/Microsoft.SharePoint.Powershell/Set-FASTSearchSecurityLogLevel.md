@@ -31,14 +31,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 Set-FASTSearchSecurityLogLevel -DefaultLogLevel debug -IncludeExceptionStack $True
 ```
 
 This example sets the default log level to the "Debug" level and enables the setting to include the exception stack in the log.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 2 (FAST Server for SharePoint 2010)
 ```
 Set-FASTSearchSecurityLogLevel -WarningNameSpaceLogLevel Microsoft
 ```
@@ -48,13 +48,15 @@ This example sets the log level setting for the "Microsoft" namespace to the "Wa
 ## PARAMETERS
 
 ### -GeneralSetting
+
+> Applicable: FAST Server for SharePoint 2010
+
 A LogLevelSetting whose property values are used for the LogLevelSetting being updated.
 
 ```yaml
 Type: LogLevelSetting
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 9999
@@ -64,6 +66,9 @@ Accept wildcard characters: False
 ```
 
 ### -DebugNameSpaceLogLevel
+
+> Applicable: FAST Server for SharePoint 2010
+
 A list of C# namespaces.
 Any class contained in that namespace logs all messages to the log.
 
@@ -73,8 +78,7 @@ If you specify the same class in more than one name space log level, the log lev
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -84,6 +88,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultLogLevel
+
+> Applicable: FAST Server for SharePoint 2010
+
 Specifies the type of log messages that each class writes to the log, unless the class is contained in a namespace explicitly specified in ErrorLogLevelNameSpaces, WarningLogLevelNameSpaces, InfoLogLevelNameSpaces, and DebugLogLevelNameSpaces.
 
 Valid values are:
@@ -96,8 +103,7 @@ Valid values are:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -107,6 +113,9 @@ Accept wildcard characters: False
 ```
 
 ### -ErrorNameSpaceLogLevel
+
+> Applicable: FAST Server for SharePoint 2010
+
 A list of C# namespaces.
 Any class included in the namespace only logs error messages.
 
@@ -116,8 +125,7 @@ If you specify the same class in more than one namespace log level, the log leve
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -127,14 +135,16 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeExceptionStack
+
+> Applicable: FAST Server for SharePoint 2010
+
 Whether or not to include the exception stack in the log.
 Set to $True to include the exception stack.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -144,6 +154,9 @@ Accept wildcard characters: False
 ```
 
 ### -InfoNameSpaceLogLevel
+
+> Applicable: FAST Server for SharePoint 2010
+
 A list of C# namespaces.
 Any class contained in that namespace only logs error, warning, and info messages.
 
@@ -153,8 +166,7 @@ If you specify the same class in more than one namespace log level, the log leve
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -164,6 +176,9 @@ Accept wildcard characters: False
 ```
 
 ### -WarningNameSpaceLogLevel
+
+> Applicable: FAST Server for SharePoint 2010
+
 A list of C# namespaces.
 Any class included in the namespace only logs error and warning messages.
 
@@ -173,8 +188,7 @@ If you specify the same class in more one than namespace log level, the log leve
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named

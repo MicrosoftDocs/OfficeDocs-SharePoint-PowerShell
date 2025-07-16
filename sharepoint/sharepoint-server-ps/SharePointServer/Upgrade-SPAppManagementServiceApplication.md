@@ -2,7 +2,7 @@
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/upgrade-spappmanagementserviceapplication
-Applicable: SharePoint Server Subscription Edition
+
 title: Upgrade-SPAppManagementServiceApplication
 schema: 2.0.0
 ---
@@ -32,23 +32,24 @@ Do Not Use
 
 ## EXAMPLES
 
-### --------------EXAMPLE-----------------
+### EXAMPLE
 ```powershell
 Do Not Use
 ```
 
 
-
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Do Not Use
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -58,13 +59,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -74,13 +77,15 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseIds
+
+> Applicable: SharePoint Server Subscription Edition
+
 Do Not Use
 
 ```yaml
 Type: Guid[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -90,13 +95,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Do Not Use
 
 ```yaml
 Type: SPServiceApplicationPipeBind
 Parameter Sets: AppManagementSvcAppById
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: 0
@@ -106,13 +113,15 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: SharePoint Server Subscription Edition
+
 Do Not Use
 
 ```yaml
 Type: String
 Parameter Sets: AppManagementSvcAppByName
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -122,6 +131,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -129,7 +141,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

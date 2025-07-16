@@ -14,7 +14,6 @@ schema: 2.0.0
 Adds a claim mapping to a trusted security token service (STS) identity provider.
 
 
-
 ## SYNTAX
 
 ```
@@ -30,13 +29,13 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ 
+### EXAMPLE
 ```powershell
 $trustedIdentityTokenIssuer = Get-SPTrustedIdentityTokenIssuer -Name "LiveIDSTS"
 
-$trustedIdentityTokenIssuer.ClaimTypes.Add("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier")  
+$trustedIdentityTokenIssuer.ClaimTypes.Add("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier")
 
-$trustedIdentityTokenIssuer.Update()  
+$trustedIdentityTokenIssuer.Update()
 
 $mapping = New-SPClaimTypeMapping -IncomingClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier" -IncomingClaimTypeDisplayName "PUID" -LocalClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/thumbprint"
 
@@ -48,6 +47,9 @@ This example adds a claim mapping to a trusted identity token issuer.
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the STS for the farm that will issue the security token for the identity provider.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or a valid name of a claim mapping rule (for example, ClaimMap1); or an instance of a valid SPClaimMapping object.
@@ -55,8 +57,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPClaimMappingPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -66,6 +67,9 @@ Accept wildcard characters: False
 ```
 
 ### -TrustedIdentityTokenIssuer
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the farm trust Token Issuer (STS authentication provider).
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890abcdef; or a valid name of an authentication provider (for example, MyIDprovider1); or an instance of a valid SPTrustedIdentityTokenIssuer object.
@@ -73,8 +77,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890abcdef;
 ```yaml
 Type: SPTrustedIdentityTokenIssuerPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 2
@@ -84,6 +87,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -95,8 +101,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -106,13 +111,15 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: SharePoint Server Subscription Edition
+
 Overwrites the claim mapping rule if it exists.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

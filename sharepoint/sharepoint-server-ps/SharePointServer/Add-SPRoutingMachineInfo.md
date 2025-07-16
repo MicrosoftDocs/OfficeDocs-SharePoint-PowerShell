@@ -14,7 +14,6 @@ schema: 2.0.0
 Adds a new routing target to the farm.
 
 
-
 ## SYNTAX
 
 ```
@@ -29,7 +28,7 @@ Use the Add-SPRoutingMachineInfo cmdlet to add a new routing target to the farm 
 
 ## EXAMPLES
 
-### -------------EXAMPLE-------------- 
+### EXAMPLE
 ```powershell
 $web=Get-SPWebApplication -Identity <URL of web application>
 $rm=Get-SPRequestManagementSettings -Identity $web
@@ -41,13 +40,15 @@ This example adds a routing target for a specified identity to the farm.
 ## PARAMETERS
 
 ### -RequestManagementSettings
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the request management settings object to add to the routing target.
 
 ```yaml
 Type: SPRequestManagementSettingsPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -57,13 +58,15 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the computer to add to the route.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 2
@@ -73,6 +76,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -84,8 +90,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -95,6 +100,9 @@ Accept wildcard characters: False
 ```
 
 ### -Availability
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether or not the added computer will be available for routing.
 
 The valid values are:
@@ -105,8 +113,7 @@ The valid values are:
 ```yaml
 Type: SPRoutingMachineAvailability
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -116,13 +123,15 @@ Accept wildcard characters: False
 ```
 
 ### -OutgoingPort
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the port used by Request Manager to make an outgoing connection.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -132,6 +141,9 @@ Accept wildcard characters: False
 ```
 
 ### -OutgoingScheme
+
+> Applicable: SharePoint Server Subscription Edition
+
 Determines the Http scheme of outgoing connections.
 
 The valid values are:
@@ -143,8 +155,7 @@ The valid values are:
 ```yaml
 Type: SPRoutingOutgoingScheme
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -154,14 +165,16 @@ Accept wildcard characters: False
 ```
 
 ### -StaticWeight
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the static weight of a computer routing that is used by Request Manager.
 If the static weight is higher, more requests will be routed to the computer.
 
 ```yaml
 Type: Double
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

@@ -40,7 +40,6 @@ You must be a SharePoint Administrator to run this cmdlet. For permissions and t
 Set-SPOApplicationPermission -OwningApplicationId a187e399-0c36-4b98-8f04-1edc167a0996 -ApplicationId 12345678-1234-1234-abcd-abcdefghijkl -PermissionAppOnly Read, Write
 ```
 
-
 Example 1 gives the guest application with ID `12345678-1234-1234-abcd-abcdefghijkl` app-only Read, Write permissions to access the owning application Microsoft Loop of ID `a187e399-0c36-4b98-8f04-1edc167a0996`.
 
 ### Example 2
@@ -71,7 +70,6 @@ Type: System.Guid
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: 1
 Default value: None
@@ -89,7 +87,6 @@ Use this parameter to specify the Owning Application where guest application acc
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: 0
@@ -109,7 +106,6 @@ Type: System.String[]
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: 2
 Default value: None
@@ -128,14 +124,12 @@ Type: System.String[]
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### CommonParameters
 

@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets properties of a machine pool.
 
-
 ## SYNTAX
 
 ```
@@ -28,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### EXAMPLE
 ```powershell
 $wa = Get-SPWebApplication -Identity https://webAppUrl
 $rm = Get-SPRequestManagementSettings -Identity $wa
@@ -41,13 +40,15 @@ This example sets the routing machine pool on the specified Web Application. Usi
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the request management settings object to set.
 
 ```yaml
 Type: SPRoutingMachinePoolPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -57,6 +58,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -68,8 +72,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -79,13 +82,15 @@ Accept wildcard characters: False
 ```
 
 ### -MachineTargets
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the routing targets collection that the machine pool will contain.
 
 ```yaml
 Type: SPRoutingRuleTargetPipeBind[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

@@ -35,14 +35,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 Set-FASTSearchSecurityPublicFilter -Filter docacl:unknown
 ```
 
 This example updates the search security filter that is used to find documents that all users have access to.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 2 (FAST Server for SharePoint 2010)
 ```
 C:\PS>$pubfilter | Set-FASTSearchSecurityPublicFilter
 ```
@@ -54,13 +54,15 @@ In this example, the $pubfilterGeneralSetting was created with this command: $pu
 ## PARAMETERS
 
 ### -Filter
+
+> Applicable: FAST Server for SharePoint 2010
+
 The search security filter that is used to find documents that all users have access to.
 
 ```yaml
 Type: String
 Parameter Sets: ProcessFilter
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 1
@@ -70,13 +72,15 @@ Accept wildcard characters: False
 ```
 
 ### -GeneralSetting
+
+> Applicable: FAST Server for SharePoint 2010
+
 A PublicFilterSetting whose property values are used for the PublicFilterSetting being updated.
 
 ```yaml
 Type: PublicFilterSetting
 Parameter Sets: ProcessPipelineSetting
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 9999

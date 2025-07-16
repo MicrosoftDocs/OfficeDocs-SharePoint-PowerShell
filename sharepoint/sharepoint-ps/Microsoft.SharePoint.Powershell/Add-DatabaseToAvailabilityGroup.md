@@ -34,16 +34,16 @@ Use the Add-DatabaseToAvailabilityGroup cmdlet to add an availability group to t
 
 ## EXAMPLES
 
-### Example 1 
+### Example 1
 ```
-Add-DatabaseToAvailabilityGroup -AGName MyAvailabilityGroup -DatabaseName WSS_Content -FileShare \\backup\share\ 
+Add-DatabaseToAvailabilityGroup -AGName MyAvailabilityGroup -DatabaseName WSS_Content -FileShare \\backup\share\
 ```
 
 This example adds the database WSS_Content to the availability group named "MyAvailabilityGroup".
 
 ### Example 2
 ```
-Add-DatabaseToAvailabilityGroup -AGName MyAvailabilityGroup -ProcessAllDatabases -FileShare \\backup\share\ 
+Add-DatabaseToAvailabilityGroup -AGName MyAvailabilityGroup -ProcessAllDatabases -FileShare \\backup\share\
 ```
 
 This example adds all SharePoint databases attached to the farm to the availability group named "MyAvailabilityGroup"
@@ -51,13 +51,15 @@ This example adds all SharePoint databases attached to the farm to the availabil
 ## PARAMETERS
 
 ### -AGName
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 The name of the availability group from which the databases are being added.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 0
@@ -67,15 +69,17 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
-**NOTE:** When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur. 
+**NOTE:** When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -85,14 +89,16 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
-The name of the database to be added to the availability group. 
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
+The name of the database to be added to the availability group.
 **Note:** This parameter should not be used in conjunction with the **ProcessAllDatabases** parameter.
 
 ```yaml
 Type: String
 Parameter Sets: Default
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -102,13 +108,15 @@ Accept wildcard characters: False
 ```
 
 ### -FileShare
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 When a database is being added to the availability group, backup / restores are done from this location to propagate the database to all replicas.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -118,13 +126,15 @@ Accept wildcard characters: False
 ```
 
 ### -ProcessAllDatabases
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Adds all databases from the current SharePoint farm into the availability group.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AllDatabases
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named

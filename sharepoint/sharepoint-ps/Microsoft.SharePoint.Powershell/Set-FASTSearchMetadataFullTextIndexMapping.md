@@ -40,7 +40,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 C:\PS>$content = get-fastsearchmetadatafulltextindex -name content
 $sitetitle = Get-FASTSearchMetadataManagedProperty -name sitetitle
@@ -57,6 +57,9 @@ Finally, the example calls the Set-FASTSearchMetadataFullTextIndexMapping cmdlet
 ## PARAMETERS
 
 ### -Level
+
+> Applicable: FAST Server for SharePoint 2010
+
 The importance level to use for this mapping.
 Valid values are 1 through 7.
 
@@ -64,7 +67,6 @@ Valid values are 1 through 7.
 Type: Int32
 Parameter Sets: (All)
 Aliases: ImportanceLevel, L
-Applicable: FAST Server for SharePoint 2010
 
 Required: True
 Position: Named
@@ -74,13 +76,15 @@ Accept wildcard characters: False
 ```
 
 ### -Mapping
+
+> Applicable: FAST Server for SharePoint 2010
+
 The full text index object to update.
 
 ```yaml
 Type: FullTextIndexMapping
 Parameter Sets: (All)
 Aliases: FullTextIndexMapping, M
-Applicable: FAST Server for SharePoint 2010
 
 Required: True
 Position: Named

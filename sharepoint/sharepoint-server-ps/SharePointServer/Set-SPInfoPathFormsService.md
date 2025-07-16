@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets parameters for InfoPath Forms Services in SharePoint Server.
 
-
 ## SYNTAX
 
 ```
@@ -32,17 +31,16 @@ The `Set-SPInfoPathFormsService` cmdlet modifies the settings for InfoPath Forms
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### --------------EXAMPLE 1-----------------
+### EXAMPLE 1
 ```powershell
 Set-SPInfoPathFormsService -AllowUserFormBrowserEnabling $true -AllowUserFormBrowserRendering $false
 ```
 
 This example modifies the AllowUserFormBrowserEnabling and AllowUserFormBrowserRendering parameter values.
 
-### --------------EXAMPLE 2-----------------
+### EXAMPLE 2
 ```powershell
 Set-SPInfoPathFormsService -AllowViewState $true -ViewStateThreshold 40961
 ```
@@ -52,6 +50,9 @@ This example modifies the AllowViewState and ViewStateThreshold parameter values
 ## PARAMETERS
 
 ### -ActiveSessionTimeout
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the duration, in minutes, that a form's session state can remain active.
 The default value is 1440.
 
@@ -60,8 +61,7 @@ The type must be a non-negative integer value in the range from 0 through 999,99
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -71,6 +71,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowEmbeddedSqlForDataConnections
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies a value that indicates whether embedded SQL authentication can be used by browser-enabled InfoPath form templates.
 
 The type must be one of the following values: True, False (default)
@@ -78,8 +81,7 @@ The type must be one of the following values: True, False (default)
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -89,6 +91,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUdcAuthenticationForDataConnections
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that authentication information in a universal data connection (.udcx file) can be used.
 
 The type must be one of the following values: True (default), False
@@ -96,8 +101,7 @@ The type must be one of the following values: True (default), False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -107,6 +111,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUserFormBrowserEnabling
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that users can browser enable form templates that do not contain form code, require full trust, enable rendering on a mobile device, or use a data connection managed by a server administrator.
 
 The type must be one of the following values: True (default), False
@@ -114,8 +121,7 @@ The type must be one of the following values: True (default), False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -125,6 +131,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUserFormBrowserRendering
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that browser-enabled form templates will be rendered by InfoPath Forms Services.
 
 The type must be one of the following values: True (default), False
@@ -132,8 +141,7 @@ The type must be one of the following values: True (default), False
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -143,6 +151,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUserFormCrossDomainDataConnections
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that data connections to data sources located in a different domain can be queried.
 
 The type must be one of the following values: True, False (default)
@@ -150,8 +161,7 @@ The type must be one of the following values: True, False (default)
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -161,6 +171,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowViewState
+
+> Applicable: SharePoint Server Subscription Edition
+
 Defines the location to store form session state: View state when True, or Session State Service when False.
 
 The type must be one of the following values: True, False (default)
@@ -168,8 +181,7 @@ The type must be one of the following values: True, False (default)
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -179,6 +191,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -190,8 +205,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -201,6 +215,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -208,7 +225,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -218,6 +234,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultDataConnectionTimeout
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the default data connection timeout in milliseconds.
 The default value is 10000 (10 seconds).
 
@@ -226,8 +245,7 @@ The type must be a non-negative integer and less than or equal to the value set 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -237,6 +255,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the InfoPath Forms Services service to update.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of an InfoPath Forms Services service (for example, FormsService1); or an instance of a valid SPFormsService object.
@@ -244,8 +265,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPFormsServicePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -255,6 +275,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxDataConnectionResponseSize
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the maximum size allowed for a data connection response.
 The default value is 15000 kilobytes (KB).
 
@@ -263,8 +286,7 @@ The type must be a non-negative integer.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -274,14 +296,16 @@ Accept wildcard characters: False
 ```
 
 ### -MaxDataConnectionRoundTrip
+
+> Applicable: SharePoint Server Subscription Edition
+
 Sets a threshold, in milliseconds, for the maximum time it takes from the start of a data request to the return of the data request on the server (the data connection round trip).
 If the data connection round trip time exceeds this threshold, an event is logged in the Operational log.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -291,6 +315,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxDataConnectionTimeout
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the maximum data connection timeout in milliseconds.
 The default value is 20000 (20 seconds).
 
@@ -299,8 +326,7 @@ The type must be a non-negative integer and less than or equal to 999999.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -310,6 +336,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxFormLoadTime
+
+> Applicable: SharePoint Server Subscription Edition
+
 Sets a threshold, in milliseconds, for maximum form load time.
 If form load time exceeds this threshold, an event is logged in the Operational log.
 
@@ -318,8 +347,7 @@ The MaxFormLoadTime parameter measures the time it takes for a form to open, sta
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -329,6 +357,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxPostbacksPerSession
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the value of the maximum postbacks that an instance of a browser-enabled InfoPath form template can make to the InfoPath Forms Services service.
 The default value is 20.
 
@@ -337,8 +368,7 @@ The type must be a non-negative integer and less than or equal to 999999.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -348,6 +378,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxUserActionsPerPostback
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the maximum user actions per postback.
 The default value is 200.
 
@@ -356,8 +389,7 @@ The type must be a non-negative integer and less than or equal to 999999.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -367,6 +399,9 @@ Accept wildcard characters: False
 ```
 
 ### -MemoryCacheSize
+
+> Applicable: SharePoint Server Subscription Edition
+
 Sets the size, in megabytes (MB), of the cache for solutions in memory.
 
 The default value is 250 MB.
@@ -374,8 +409,7 @@ The default value is 250 MB.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -385,6 +419,9 @@ Accept wildcard characters: False
 ```
 
 ### -RequireSslForDataConnections
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the Secure Sockets Layer (SSL) requirement value.
 If data connections in browser-enabled form templates require basic authentication or digest authentication, a password is sent over the network.
 Set this value to True to require an SSL-encrypted connection for these authentication types.
@@ -394,8 +431,7 @@ The type must be one of the following values: True (default), False.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -405,6 +441,9 @@ Accept wildcard characters: False
 ```
 
 ### -ViewStateThreshold
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the maximum size in kilobytes of the session state when stored in the form view.
 The default value is 40.
 
@@ -413,8 +452,7 @@ The type must be a non-negative integer and less than or equal to 99,999,999.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -424,6 +462,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -431,7 +472,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -441,6 +481,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxSizeOfUserFormState
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the value of the maximum size in kilobytes of session state an instance of a browser-enabled InfoPath form template can use. The default value is 4096.
 
 The type must be a non-negative integer and less than or equal to 999999.
@@ -448,8 +491,7 @@ The type must be a non-negative integer and less than or equal to 999999.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

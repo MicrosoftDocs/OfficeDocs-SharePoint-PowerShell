@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets parameters for an existing SharePoint Web service application.
 
-
 ## SYNTAX
 
 ```
@@ -26,20 +25,21 @@ The `Set-SPInfoPathWebServiceProxy` cmdlet configures exposed parameters for an 
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### --------------EXAMPLE-----------------
+### EXAMPLE
 ```powershell
 Set-SPInfoPathWebServiceProxy -Identity "https://server_name" -AllowWebServiceProxy $true
 ```
 
 This example sets the Web service proxy for a Web application.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the SharePoint Web service application proxy to update.
 
 The type must be a valid URL, in the form https://server_name; a valid name of a Web application (for example, WebApp1); a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or an instance of a valid SPWebServiceProxy object.
@@ -47,8 +47,7 @@ The type must be a valid URL, in the form https://server_name; a valid name of a
 ```yaml
 Type: SPWebServiceProxyPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -58,6 +57,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowForUserForms
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that a form opened in the InfoPath  client can use the InfoPath Forms Services Web service proxy to connect to a Web service.
 This parameter can be set only when AllowWebServiceProxy is set to True.
 
@@ -66,8 +68,7 @@ The type must be one of the following: True, False The default value is False.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -77,6 +78,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowWebServiceProxy
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that browser-enabled form templates can use the InfoPath Forms Services Web service proxy to connect to a Web service.
 
 The type must be one of the following: True, False The default value is False.
@@ -84,8 +88,7 @@ The type must be one of the following: True, False The default value is False.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -95,6 +98,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -106,8 +112,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -117,6 +122,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -124,7 +132,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -134,6 +141,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -141,7 +151,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

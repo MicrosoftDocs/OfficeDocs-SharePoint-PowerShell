@@ -6,7 +6,7 @@ applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 title: New-FASTSearchMetadataCategory
 ---
 
@@ -31,7 +31,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 C:\PS>$guid = [guid]::NewGuid()
 New-FASTSearchMetadataCategory -Name ExampleCategory -Propset $guid
@@ -45,13 +45,15 @@ See Set-FASTSearchMetadataCategory for descriptions of category properties.
 ## PARAMETERS
 
 ### -Name
+
+> Applicable: FAST Server for SharePoint 2010
+
 The name of the new category.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: Named
@@ -61,6 +63,9 @@ Accept wildcard characters: False
 ```
 
 ### -Propset
+
+> Applicable: FAST Server for SharePoint 2010
+
 The property set Global Unique Identifier (GUID) assigned to this category.
 A GUID is a 128-bit integer that has a very low probability of being duplicated.
 The GUID can be specified either in the form of a System.Guid object, or as a 128-bit integer with the format "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx".
@@ -69,8 +74,7 @@ A crawled property can only be mapped to one category at a time.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: Named

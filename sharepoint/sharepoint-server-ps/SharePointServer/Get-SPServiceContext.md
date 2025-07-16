@@ -14,7 +14,6 @@ schema: 2.0.0
 Returns a service context.
 
 
-
 ## SYNTAX
 
 ### Site
@@ -41,7 +40,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ----------------EXAMPLE--------------- 
+### EXAMPLE
 ```powershell
 $sitesub = Get-SPSiteSubscription https://my.contoso.com/
 Get-SPServiceContext $sitesub
@@ -52,6 +51,9 @@ This example returns the service context for a site in a hosted environment.
 ## PARAMETERS
 
 ### -Site
+
+> Applicable: SharePoint Server Subscription Edition
+
 Returns the service context for only the Web application that contains the specified site collection.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form https://server_name; or an instance of a valid SPSite object.
@@ -59,8 +61,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: Site
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -70,6 +71,9 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSubscription
+
+> Applicable: SharePoint Server Subscription Edition
+
 Returns all of the service contexts for all Web applications in which the specified site subscription has site collections.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a site subscription (for example, SiteSubscriptionConfig1); or an instance of a valid SiteSubscription object.
@@ -77,8 +81,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: SiteSubscription
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -88,6 +91,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -99,8 +105,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

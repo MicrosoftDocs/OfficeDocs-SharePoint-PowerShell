@@ -6,7 +6,7 @@ applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 title: New-FASTSearchSecurityClaimsUserStore
 ---
 
@@ -29,7 +29,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 New-FASTSearchSecurityClaimsUserStore -Identity clm
 ```
@@ -38,7 +38,7 @@ This example creates a new security claims user store with a user store Identity
 
 This example uses default values for all parameters except the required Identity parameter.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 2 (FAST Server for SharePoint 2010)
 ```
 Get-FASTSearchSecurityClaimsUserStore -Identity clm | New-FASTSearchSecurityClaimsUserStore -Identity cl2
 ```
@@ -49,13 +49,15 @@ The New-FASTSearchSecurityClaimsUserStore cmdlet uses the ObjectToClone value on
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: FAST Server for SharePoint 2010
+
 The user store identity.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: 1
@@ -65,13 +67,15 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
+> Applicable: FAST Server for SharePoint 2010
+
 A brief explanation of the user store.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 2
@@ -81,13 +85,15 @@ Accept wildcard characters: False
 ```
 
 ### -Issuer
+
+> Applicable: FAST Server for SharePoint 2010
+
 The Microsoft SharePoint Server Security Token Service (STS) claims provider that issued the claims.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 3
@@ -97,13 +103,15 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectToClone
+
+> Applicable: FAST Server for SharePoint 2010
+
 A claims user store object whose property values are used as a baseline to create another claims user store.
 
 ```yaml
 Type: ClaimsUserStore
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named

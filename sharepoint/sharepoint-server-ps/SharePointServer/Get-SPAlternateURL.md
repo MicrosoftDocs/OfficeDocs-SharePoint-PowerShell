@@ -14,7 +14,6 @@ schema: 2.0.0
 Returns all alternate URLs that match a given set of criteria.
 
 
-
 ## SYNTAX
 
 ### ResourceName
@@ -45,14 +44,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- 
+### EXAMPLE 1
 ```powershell
 Get-SPAlternateURL -WebApplication https://sitename
 ```
 
 This example displays all the alternate URLs on a given Web application.
 
-### --------------EXAMPLE 2----------------- 
+### EXAMPLE 2
 ```powershell
 Get-SPAlternateURL -ResourceName "MyResource"
 ```
@@ -62,6 +61,9 @@ This example displays all the alternate URLs for a given resource.
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the URL or GUID of the alternate URL to get.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh, or a valid URL, in the form https://server_name.
@@ -69,8 +71,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPAlternateUrlPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: 1
@@ -80,13 +81,15 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceName
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the resource from which to list alternate URLs.
 
 ```yaml
 Type: String
 Parameter Sets: ResourceName
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -96,13 +99,15 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the Web application from which to list alternate URLs.
 
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: WebApplication
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -112,6 +117,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -123,8 +131,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -134,6 +141,9 @@ Accept wildcard characters: False
 ```
 
 ### -Zone
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies one of the five zones with which the alternate URLs is associated.
 
 Must be a valid zone: Default, Intranet, Internet, Extranet, or Custom
@@ -141,8 +151,7 @@ Must be a valid zone: Default, Intranet, Internet, Extranet, or Custom
 ```yaml
 Type: SPUrlZone
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

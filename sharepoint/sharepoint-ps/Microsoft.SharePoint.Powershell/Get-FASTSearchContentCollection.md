@@ -29,14 +29,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1-----------------
+### EXAMPLE 1
 ```
 Get-FASTSearchContentCollection
 ```
 
 This example retrieves all FAST Search Server 2010 for SharePoint content collections.
 
-### ---------------EXAMPLE 2-----------------
+### EXAMPLE 2
 ```
 Get-FASTSearchContentCollection -Name newscollection
 ```
@@ -46,13 +46,15 @@ This example retrieves the "newscollection" content collection.
 ## PARAMETERS
 
 ### -Name
+
+> Applicable: FAST Server for SharePoint 2010
+
 The name of the FAST Search Server 2010 for SharePoint collection to retrieve.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 1

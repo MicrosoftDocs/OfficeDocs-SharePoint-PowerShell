@@ -14,7 +14,6 @@ schema: 2.0.0
 Returns the state information about the specified scale-out database.
 
 
-
 ## SYNTAX
 
 ### UnattachedDatabase
@@ -41,7 +40,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ----------------EXAMPLE-------------- 
+### EXAMPLE
 ```powershell
 $databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
 $database = $databases[0]
@@ -54,13 +53,15 @@ This example gets the data state of the scale-out database for the first scale-o
 ## PARAMETERS
 
 ### -ConnectionString
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the connection string for the scale-out database from which to return the state information.
 
 ```yaml
 Type: String
 Parameter Sets: UnattachedDatabase
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -70,13 +71,15 @@ Accept wildcard characters: False
 ```
 
 ### -Database
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the scale-out database to return the state information about.
 
 ```yaml
 Type: SPDatabasePipeBind
 Parameter Sets: AttachedDatabase
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -86,6 +89,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -97,8 +103,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -108,6 +113,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -115,7 +123,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -125,13 +132,15 @@ Accept wildcard characters: False
 ```
 
 ### -IsAzureDatabase
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether the state information of the scale-out database is in the form of a Microsoft SQL Azure Database.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: UnattachedDatabase
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -141,6 +150,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -148,7 +160,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

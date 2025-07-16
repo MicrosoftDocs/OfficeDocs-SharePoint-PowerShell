@@ -38,14 +38,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1-----------------
+### EXAMPLE 1
 ```
 Get-FASTSearchSecurityWorkerNode -Identity localhost
 ```
 
 This example gets the status and complete URI for the worker with "localhost" in its URI.
 
-### ---------------EXAMPLE 2-----------------
+### EXAMPLE 2
 ```
 Get-FASTSearchSecurityWorkerNode
 ```
@@ -55,14 +55,16 @@ This example returns a list of all workers, both active and inactive.
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: FAST Server for SharePoint 2010
+
 The identity of the worker to get.
 This is a URI or a partial URI, the server name for example.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 1
@@ -72,13 +74,15 @@ Accept wildcard characters: False
 ```
 
 ### -Active
+
+> Applicable: FAST Server for SharePoint 2010
+
 If specified, get a list of all active workers.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 2
@@ -88,6 +92,9 @@ Accept wildcard characters: False
 ```
 
 ### -Dead
+
+> Applicable: FAST Server for SharePoint 2010
+
 If specified, get a list of all inactive workers.
 A worker is "dead" if it does not respond to requests from the security manager.
 This may occur if a worker machine goes down, or if there are network problems.
@@ -95,8 +102,7 @@ This may occur if a worker machine goes down, or if there are network problems.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 3

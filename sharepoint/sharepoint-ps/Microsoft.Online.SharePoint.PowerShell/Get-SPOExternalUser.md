@@ -69,7 +69,6 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: 4
 Default value: None
@@ -90,7 +89,6 @@ Type: System.Int32
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: 3
 Default value: None
@@ -109,7 +107,6 @@ Type: System.Int32
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: 2
 Default value: None
@@ -127,7 +124,6 @@ Shows users who have accepted an invite but not using the account the invite was
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: Named
@@ -149,7 +145,6 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: 6
 Default value: None
@@ -167,7 +162,6 @@ Specifies the sort results in Ascending or Descending order on the SPOUser.Email
 Type: Microsoft.Online.SharePoint.TenantManagement.SortOrder
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: 5

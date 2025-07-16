@@ -14,7 +14,6 @@ schema: 2.0.0
 Returns all site collections that match the specified criteria.
 
 
-
 ## SYNTAX
 
 ### AllSitesInIdentity
@@ -72,21 +71,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1--------------------- 
+### EXAMPLE 1
 ```powershell
 Get-SPSite 'https://<site name>' | Get-SPWeb -Limit All | Select Title
 ```
 
 This example gets the collection of subweb titles in site collection at https://\<site name\>.
 
-### ------------------EXAMPLE 2--------------------- 
+### EXAMPLE 2
 ```powershell
 Get-SPSite -ContentDatabase "b399a366-d899-4cff-8a9b-8c0594ee755f" | Format-Table -Property Url, Owner, SecondaryContact
 ```
 
 This example gets a subset of data from all sites in the content database b399a366-d899-4cff-8a9b-8c0594ee755f.
 
-### ------------------EXAMPLE 3--------------------- 
+### EXAMPLE 3
 ```powershell
 Start-SPAssignment -Global
 $s = Get-SPSite -Identity https://<MyApp>/Sites/Site1
@@ -100,7 +99,7 @@ The previous example uses the Global method of assignment collection.
 The Global method is easy to use but the contents of this object grows quickly.
 Be careful not to run a Get-SPSite command that returns many results while global assignment is enabled.
 
-### ------------------EXAMPLE 4--------------------- 
+### EXAMPLE 4
 ```powershell
 $GC = Start-SPAssignment
 $Sites = $GC | Get-SPSite -Filter {$_.Owner -eq "DOMAIN\JDow"} -Limit 50
@@ -111,14 +110,14 @@ This example gets the first 50 sites owned by user DOMAIN\JDow by using a server
 
 This example uses advanced assignment collection methods.
 
-### ------------------EXAMPLE 5--------------------- 
+### EXAMPLE 5
 ```powershell
 Get-SPWebApplication https://<site name> | Get-SPSite -Limit All |ForEach-Object {$sum=0}{ $sum+=$_.Usage.Storage }{$sum}
 ```
 
 This example shows a command that returns the sum of the disk space usage for all sites in a given web application.
 
-### ------------------EXAMPLE 6--------------------- 
+### EXAMPLE 6
 ```powershell
 Get-SPSite -Identity "https://localserver/(my|personal)/sites" -Regex
 ```
@@ -127,21 +126,21 @@ This example returns all sites that match the given regular expression.
 
 The Quotes on the Identity parameter are required when the Regex parameter is used.
 
-### ------------------EXAMPLE 7--------------------- 
+### EXAMPLE 7
 ```powershell
 Get-SPSite https://<site name>/sites/teams/* -Limit 100
 ```
 
 This example gets up to 100 of the sites under the URL https://sitename/sites/teams.
 
-### ------------------EXAMPLE 8--------------------- 
+### EXAMPLE 8
 ```powershell
 Get-SPSite | select url, @{Expression={$_.Usage.Storage}}
 ```
 
 This example gets the amount of storage used by a site collection, by using the storage field of the .UsageInfo property.
 
-### ------------------EXAMPLE 9--------------------- 
+### EXAMPLE 9
 ```powershell
 Get-SPSite -Limit all -CompatibilityLevel 14
 ```
@@ -151,6 +150,9 @@ This example returns all SharePoint Server mode site collections.
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the URL or GUID of the site collection to get.
 
 The type must be a valid URL, in the form, https://server_name or https://server_name/sites/sitename, or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
@@ -158,8 +160,7 @@ The type must be a valid URL, in the form, https://server_name or https://server
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: AllSitesInIdentity
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -169,6 +170,9 @@ Accept wildcard characters: False
 ```
 
 ### -ContentDatabase
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the GUID of the content database from which to list site collections.
 
 The type must be a valid database name, in the form, SPContentDB01, or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
@@ -176,8 +180,7 @@ The type must be a valid database name, in the form, SPContentDB01, or a valid G
 ```yaml
 Type: SPContentDatabasePipeBind
 Parameter Sets: AllSitesInContentDB
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -187,6 +190,9 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSubscription
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the site subscription from which to get site collections.
 
 The type must be a valid URL, in the form, https://server_name or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
@@ -194,8 +200,7 @@ The type must be a valid URL, in the form, https://server_name or a valid GUID (
 ```yaml
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: AllSitesInSiteSubscription
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -205,6 +210,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -212,8 +220,7 @@ When the Global parameter is used, all objects are contained in the global store
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -223,6 +230,9 @@ Accept wildcard characters: False
 ```
 
 ### -CompatibilityLevel
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the version of templates to use when creating a new SPSite object.
 This value sets the initial CompatibilityLevel value for the site collection.
 The values for this parameter can be either SharePoint Server or SharePoint Server.
@@ -231,8 +241,7 @@ When this parameter is not specified, the CompatibilityLevel will default to the
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -242,6 +251,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -249,7 +261,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -259,6 +270,9 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the script block of the server-side filter to apply.
 
 The type must be a valid filter name and value in the form {$_PropertyName \<operator\> "filterValue"}.
@@ -268,8 +282,7 @@ Valid operators are: EQ, NE, LIKE, NOTLIKE.
 ```yaml
 Type: ScriptBlock
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -279,6 +292,9 @@ Accept wildcard characters: False
 ```
 
 ### -Limit
+
+> Applicable: SharePoint Server Subscription Edition
+
 Limits the maximum number of site collections to return.
 The default value is 200.
 
@@ -288,8 +304,7 @@ Specify ALL to return all site collections for the given scope.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -299,13 +314,15 @@ Accept wildcard characters: False
 ```
 
 ### -Regex
+
+> Applicable: SharePoint Server Subscription Edition
+
 When used, the URL provided for the Identity parameter is treated as a regular expression.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AllSitesInIdentity
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -315,6 +332,9 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the URL, GUID, or name of the web application from which to list sites.
 
 The type must be a valid URL, in the form, https://server_name, a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh); or the name of the web application (for example, WebApplication1212).
@@ -322,8 +342,7 @@ The type must be a valid URL, in the form, https://server_name, a valid GUID (fo
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: AllSitesInWebApplication
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -333,6 +352,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -340,7 +362,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -350,6 +371,9 @@ Accept wildcard characters: False
 ```
 
 ### -NeedsB2BUpgrade
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether the site needs to be upgraded.
 
 The valid values are True and False.
@@ -357,8 +381,7 @@ The valid values are True and False.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AllSitesInContentDB
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

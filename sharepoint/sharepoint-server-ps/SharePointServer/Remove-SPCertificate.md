@@ -37,7 +37,7 @@ Those exported files will still exist.
 
 ## EXAMPLES
 
-### ------------EXAMPLE-----------
+### EXAMPLE
 ```powershell
 Remove-SPCertificate -Identity "Team Sites Certificate"
 ```

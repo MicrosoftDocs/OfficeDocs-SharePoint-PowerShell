@@ -17,7 +17,6 @@ ms.reviewer:
 Exports a site, list, or library.
 
 
-
 ## SYNTAX
 
 ```
@@ -35,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------------EXAMPLE-----------------------. 
+### EXAMPLE.
 ```
 Export-SPWeb https://site -Path "C:\Temp\export.cmp"
 ```
@@ -45,6 +44,9 @@ This example exports the site at https://site/ to a file called site export.cmp 
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the URL or GUID of the Web to be exported.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a SharePoint site (for example, MySPSite1); or an instance of a valid SPWeb object.
@@ -52,8 +54,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPWebPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -63,6 +64,9 @@ Accept wildcard characters: False
 ```
 
 ### -Path
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of the export file.
 
 If the NoFileCompression parameter is used, a directory must be specified; otherwise, any file format is valid.
@@ -70,8 +74,7 @@ If the NoFileCompression parameter is used, a directory must be specified; other
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -81,11 +84,13 @@ Accept wildcard characters: False
 ```
 
 ### -AppLogFilePath
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -95,6 +100,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -106,8 +114,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -117,14 +124,16 @@ Accept wildcard characters: False
 ```
 
 ### -CompressionSize
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Sets the maximum file size for the compressed export files.
 If the total size of the exported package is greater than this size, the exported package will be split into multiple files.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -134,6 +143,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -141,7 +153,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -151,6 +162,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Forcefully overwrites the export package if it already exists.
 
 The type must be either of the following values:
@@ -164,8 +178,7 @@ The default value is False.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -175,13 +188,15 @@ Accept wildcard characters: False
 ```
 
 ### -HaltOnError
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Stops the export process when an error occurs.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -191,13 +206,15 @@ Accept wildcard characters: False
 ```
 
 ### -HaltOnWarning
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Stops the export process when a warning occurs.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -208,13 +225,14 @@ Accept wildcard characters: False
 
 ### -IncludeUserSecurity
 
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Preserves the user security settings.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -224,6 +242,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeVersions
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Indicates the type of file and list item version history to be included in the export operation.
 If the IncludeVersions parameter is absent, the Export-SPWeb cmdlet by default uses a value of 1.
 
@@ -244,8 +265,7 @@ All, CurrentVersion, LastMajor, LastMajorAndMinor
 ```yaml
 Type: SPIncludeVersions
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -255,6 +275,9 @@ Accept wildcard characters: False
 ```
 
 ### -ItemUrl
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the URL of the Web application, GUID, or object to be exported.
 
 The type must be a valid URL; for example, https://server_name.
@@ -262,8 +285,7 @@ The type must be a valid URL; for example, https://server_name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -273,6 +295,9 @@ Accept wildcard characters: False
 ```
 
 ### -NoFileCompression
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Either enables or disables file compression in the export package.
 The export package is stored in the folder specified by the Path parameter or Identity parameter.
 We recommend that you use this parameter for performance reasons.
@@ -281,8 +306,7 @@ If compression is enabled, the export process can increase by approximately 30 p
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -292,6 +316,9 @@ Accept wildcard characters: False
 ```
 
 ### -NoLogFile
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Suppresses the generation of an export log file.
 If this parameter is not specified, the Export-SPWeb cmdlet will generate an export log file in the same location as the export package.
 The log file uses Unified Logging Service (ULS).
@@ -302,8 +329,7 @@ However, for performance reasons, you might not want to generate a log file.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -313,14 +339,16 @@ Accept wildcard characters: False
 ```
 
 ### -UseSqlSnapshot
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies a SQL Database Snapshot will be created when the export process begins, and all exported data will be retrieved directly from the database snapshot.
 This snapshot will be automatically deleted when export completes.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -330,6 +358,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -337,7 +368,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -347,13 +377,15 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeAlerts
+
+> Applicable: SharePoint Server 2016, SharePoint Server 2019
+
 Indicates if alerts are turned on.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

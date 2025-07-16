@@ -2,7 +2,7 @@
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 module name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/reset-spprojecteventservicesettings
-Applicable: SharePoint Server Subscription Edition
+
 title: Reset-SPProjectEventServiceSettings
 schema: 2.0.0
 ---
@@ -11,7 +11,6 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Resets the Microsoft Project Server Events Service 2016 settings to the default values. The Microsoft Project Server Events Service 2016 needs to be restarted for the changes to take effect.
-
 
 ## SYNTAX
 
@@ -22,20 +21,21 @@ Reset-SPProjectEventServiceSettings [-AssignmentCollection <SPAssignmentCollecti
 ## DESCRIPTION
 Resets the Microsoft Project Server Events Service 2016 settings to the default values. The Microsoft Project Server Events Service 2016 needs to be restarted for the changes to take effect.
 
-
 ## EXAMPLES
 
-### ----------------------EXAMPLE-----------------------
+### EXAMPLE
 ```powershell
 Reset-SPProjectEventServiceSettings
 ```
 
 Resets the Microsoft Project Server Events Service 2016 settings to the default values. The Microsoft Project Server Events Service 2016 needs to be restarted for the changes to take effect.
 
-
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -47,8 +47,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

@@ -31,27 +31,26 @@ Backup-SPEnterpriseSearchServiceApplicationIndex [-SearchApplication] <SearchSer
 
 ## DESCRIPTION
 
-This cmdlet will take a backup of the search index to a specified backup location. 
-The cmdlet has to be run in two phases. 
-Phase one will take a backup of what is present in the index at the time that the backup cmdlet is run. 
+This cmdlet will take a backup of the search index to a specified backup location.
+The cmdlet has to be run in two phases.
+Phase one will take a backup of what is present in the index at the time that the backup cmdlet is run.
 Phase two will take a differential backup of what was added to the index after you started the first phase index backup.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------ 
+### EXAMPLE 1
 ```powershell
 $ssa = Get-SPEnterpriseSearchServiceApplication
 Backup-SPEnterpriseSearchServiceApplicationIndex -Phase 1 -SearchApplication $ssa -BackupFolder "\\backuphost\backupfolder" -BackupHandleFile "\\backuphost\backupfolder\backuphandle.txt" -Retries 3
 ```
 
-This example starts a Phase 1 backup of the search index for the default search application, and stores the backup at the location \\\\backuphost\backupfolder. 
+This example starts a Phase 1 backup of the search index for the default search application, and stores the backup at the location \\\\backuphost\backupfolder.
 The cmdlet stores a handle file backuphandle.txt that is used by the second phase cmdlet.
 
-### ------------------EXAMPLE 2------------------ 
+### EXAMPLE 2
 ```powershell
 $ssa = Get-SPEnterpriseSearchServiceApplication
 Backup-SPEnterpriseSearchServiceApplicationIndex -Phase 1 $ssa -BackupFolder "\\backuphost\backupfolder" -BackupHandleFile "\\backuphost\backupfolder\backuphandle.txt" -Retries 3
@@ -59,25 +58,27 @@ Backup-SPEnterpriseSearchServiceApplicationIndex -Phase 1 $ssa -BackupFolder "\\
 
 This example checks the backup status and progress by re-running the cmdlet for Phase 1.
 
-### ------------------EXAMPLE 3------------------ 
+### EXAMPLE 3
 ```powershell
 $ssa = Get-SPEnterpriseSearchServiceApplication
 Backup-SPEnterpriseSearchServiceApplicationIndex -Phase 2 -SearchApplication $ssa -BackupFolder "\\backuphost\backupfolder" -BackupHandleFile "\\backuphost\backupfolder\backuphandle.txt" -Retries 3
 ```
 
-This example starts the Phase 2 of the search index backup by using the same backup location and backup handle file as used for Phase 1. 
+This example starts the Phase 2 of the search index backup by using the same backup location and backup handle file as used for Phase 1.
 The Search Service Application must be paused before the second phase can be started.
 
 ## PARAMETERS
 
 ### -Phase
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the phase of the backup job.
 
 ```yaml
 Type: Int32
 Parameter Sets: RunBackup
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -87,13 +88,15 @@ Accept wildcard characters: False
 ```
 
 ### -SearchApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Name of the search service application to be backed up
 
 ```yaml
 Type: SearchServiceApplication
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 2
@@ -103,13 +106,15 @@ Accept wildcard characters: False
 ```
 
 ### -BackupFolder
+
+> Applicable: SharePoint Server Subscription Edition
+
 Full UNC path of the backup files should be written.
 
 ```yaml
 Type: String
 Parameter Sets: RunBackup
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 3
@@ -119,13 +124,15 @@ Accept wildcard characters: False
 ```
 
 ### -BackupHandleFile
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies a file handle for an ongoing backup job.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 4
@@ -135,13 +142,15 @@ Accept wildcard characters: False
 ```
 
 ### -Retries
+
+> Applicable: SharePoint Server Subscription Edition
+
 Number of times to retry if temporary failure occurs.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: 5
@@ -151,6 +160,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -162,8 +174,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -173,6 +184,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -180,7 +194,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -190,6 +203,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -197,7 +213,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -207,13 +222,15 @@ Accept wildcard characters: False
 ```
 
 ### -Abort
+
+> Applicable: SharePoint Server Subscription Edition
+
 {{Fill Abort Description}}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AbortBackup
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -223,13 +240,15 @@ Accept wildcard characters: False
 ```
 
 ### -PeerToPeer
+
+> Applicable: SharePoint Server Subscription Edition
+
 {{Fill PeerToPeer Description}}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -239,13 +258,15 @@ Accept wildcard characters: False
 ```
 
 ### -SpecifiedBackupHandle
+
+> Applicable: SharePoint Server Subscription Edition
+
 {{Fill SpecifiedBackupHandle Description}}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

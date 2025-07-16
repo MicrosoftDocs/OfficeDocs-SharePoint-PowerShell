@@ -17,7 +17,6 @@ ms.reviewer:
 Returns all the routing targets.
 
 
-
 ## SYNTAX
 
 ```
@@ -33,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------EXAMPLE------------ 
+### EXAMPLE
 ```
 C:\PS>$web=Get-SPWebApplication -Identity <URL of web application>
 
@@ -47,13 +46,15 @@ This example returns a routing target for a specified identity.
 ## PARAMETERS
 
 ### -RequestManagementSettings
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of the request management settings object to return.
 
 ```yaml
 Type: SPRequestManagementSettingsPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -63,6 +64,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -74,8 +78,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -85,6 +88,9 @@ Accept wildcard characters: False
 ```
 
 ### -Availability
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies whether or not the specified computer will be available for routing.
 If no value is specified, all computers are returned.
 
@@ -98,8 +104,7 @@ The valid values are:
 ```yaml
 Type: SPRoutingMachineAvailability
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -109,13 +114,15 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of the computer for which you want to return routing information.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

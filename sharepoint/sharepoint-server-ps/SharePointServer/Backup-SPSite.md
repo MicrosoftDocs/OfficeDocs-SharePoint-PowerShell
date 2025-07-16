@@ -14,7 +14,6 @@ schema: 2.0.0
 Performs a backup of a site collection.
 
 
-
 ## SYNTAX
 
 ```
@@ -32,15 +31,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -------------------EXAMPLE 1-------------------- 
+### EXAMPLE 1
 ```powershell
 Backup-SPSite https://server_name/sites/site_name -Path C:\Backup\site_name.bak
 ```
 
 This example backs up a site collection at https://server_name/sites/site_name to the C:\Backup\site_name.bak file.
 
-
-### -------------------EXAMPLE 2-------------------- 
+### EXAMPLE 2
 ```powershell
 Get-SPSiteAdministration https://server_name/sites/site_name | Backup-SPSite -Path C:\Backup\site_name.bak
 ```
@@ -48,14 +46,14 @@ Get-SPSiteAdministration https://server_name/sites/site_name | Backup-SPSite -Pa
 This example backs up a site collection at https://server_name/sites/site_name to the C:\Backup\site_name.bak file.
 Same result as Example 1, but a different way of performing the operation.
 
-### -------------------EXAMPLE 3-------------------- 
+### EXAMPLE 3
 ```powershell
 Backup-SPSite https://server_name/sites/site_name -Path C:\Backup\site_name.bak -UseSqlSnapshot
 ```
 
 This example backs up a site collection using database snapshots to ensure backup integrity.
 
-### -------------------EXAMPLE 4-------------------- 
+### EXAMPLE 4
 ```powershell
 Backup-SPSite https://server_name/sites/site_name -Path C:\Backup\site_name.bak -NoSiteLock
 ```
@@ -65,6 +63,9 @@ This example backs up a site collection and prevents placing the site into a rea
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the URL or GUID of the site collection to be backed up.
 
 For example, a valid URL, such as https://server_name/sites/site_name or a GUID such as, "01234567-89ab-cdef-0123-456789abcdef"
@@ -72,8 +73,7 @@ For example, a valid URL, such as https://server_name/sites/site_name or a GUID 
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -83,13 +83,15 @@ Accept wildcard characters: False
 ```
 
 ### -Path
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the full path to the backup file (that is, C:\Backup\site_name.bak.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -99,6 +101,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -110,8 +115,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -121,6 +125,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -128,7 +135,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -138,13 +144,15 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specify to overwrite an existing backup file if it already exists.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -154,6 +162,9 @@ Accept wildcard characters: False
 ```
 
 ### -NoSiteLock
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the site collection to remain read and write during the backup.
 
 If  the NoSiteLock parameter is not specified, then a site collection that has a site collection lock setting of "none" or "no additions" will be temporarily set to "read only" while the site collection backup is performed.
@@ -165,8 +176,7 @@ If users are writing to the site collection while the site collection is being b
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -176,6 +186,9 @@ Accept wildcard characters: False
 ```
 
 ### -UseSqlSnapshot
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies a SQL Database Snapshot will be created when the backup begins, and all site collection data will be retrieved directly from the database snapshot.
 This snapshot will be deleted automatically when the backup completes
 
@@ -186,8 +199,7 @@ It is not necessary to specify the NoSiteLock parameter when specifying the UseS
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -197,6 +209,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -204,7 +219,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -214,13 +228,15 @@ Accept wildcard characters: False
 ```
 
 ### -UseABSDocStreamInfo
+
+> Applicable: SharePoint Server Subscription Edition
+
 Do not use.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

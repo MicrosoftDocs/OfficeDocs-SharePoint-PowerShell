@@ -14,7 +14,6 @@ schema: 2.0.0
 Returns the SharePoint Features based on a given scope.
 
 
-
 ## SYNTAX
 
 ### FarmFeatures
@@ -65,13 +64,13 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- 
+### EXAMPLE 1
 ```powershell
 Get-SPFeature -Limit ALL | Where-Object {$_.Scope -eq "SITE"}
 ```
 This example returns a list of all installed SITE scoped Features.
 
-### --------------EXAMPLE 2----------------- 
+### EXAMPLE 2
 ```powershell
 Get-SPSite https://somesite | Get-SPWeb -Limit ALL |%{ Get-SPFeature -Web $_ } | Select DisplayName,ID -Unique
 ```
@@ -81,6 +80,9 @@ This example returns the name and identifier (ID) of each uniquely enabled Featu
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the Feature to retrieve.
 
 The type must be the full or partial name, in the form  Feature1, or a GUID, in the form  1234-4567-9879, of the Feature to get.
@@ -88,8 +90,7 @@ The type must be the full or partial name, in the form  Feature1, or a GUID, in 
 ```yaml
 Type: SPFeatureDefinitionPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: 1
@@ -99,6 +100,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -106,8 +110,7 @@ When the Global parameter is used, all objects are contained in the global store
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -117,13 +120,15 @@ Accept wildcard characters: False
 ```
 
 ### -Farm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that if this parameter is used, only enabled farm Features are displayed.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: FarmFeatures
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -133,6 +138,9 @@ Accept wildcard characters: False
 ```
 
 ### -Limit
+
+> Applicable: SharePoint Server Subscription Edition
+
 Limits the display results. If "All" is specified, all Features are displayed.
 
 The type must be a valid number greater than 0. The default value is 200.
@@ -140,8 +148,7 @@ The type must be a valid number greater than 0. The default value is 200.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -151,6 +158,9 @@ Accept wildcard characters: False
 ```
 
 ### -Site
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the site collection from which to get enabled Features.
 
 The type must be a valid URL for a site collection, in the form https://server_name .
@@ -158,8 +168,7 @@ The type must be a valid URL for a site collection, in the form https://server_n
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: SiteFeatures
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -169,6 +178,9 @@ Accept wildcard characters: False
 ```
 
 ### -Web
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the URL or GUID of the Web.
 
 The type must be a valid URL, in the form  https://server_name , or a GUID, in the form 1234-5678-9876-0987.
@@ -176,8 +188,7 @@ The type must be a valid URL, in the form  https://server_name , or a GUID, in t
 ```yaml
 Type: SPWebPipeBind
 Parameter Sets: WebFeatures
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -187,6 +198,9 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the Web application from which to get enabled Features.
 
 The type must be a valid URL to the Web application in the form https://server_name .
@@ -194,8 +208,7 @@ The type must be a valid URL to the Web application in the form https://server_n
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: WebApplicationFeatures
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -205,13 +218,15 @@ Accept wildcard characters: False
 ```
 
 ### -CompatibilityLevel
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the version of templates to use when creating a new SPSite object. This value sets the initial CompatibilityLevel value for the site collection. When this parameter is not specified, the CompatibilityLevel will default to the highest possible version for the web application depending on the CompatibilityRange setting.
 
 ```yaml
 Type: Int32
 Parameter Sets: FarmFeatureDefinitions
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -221,13 +236,15 @@ Accept wildcard characters: False
 ```
 
 ### -Sandboxed
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies to retrieve Sandbox features.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SiteFeatures
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

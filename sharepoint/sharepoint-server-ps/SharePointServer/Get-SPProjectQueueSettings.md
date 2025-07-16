@@ -2,7 +2,7 @@
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 module name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spprojectqueuesettings
-Applicable: SharePoint Server Subscription Edition
+
 title: Get-SPProjectQueueSettings
 schema: 2.0.0
 ---
@@ -39,7 +39,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ## EXAMPLES
 
-### --------------------EXAMPLE--------------------- 
+### EXAMPLE
 ```powershell
 Get-SPProjectQueueSettings -ServiceApplication "Project Service Application"
 ```
@@ -49,6 +49,9 @@ This example retrieves the queue settings for the "Project Service Application" 
 ## PARAMETERS
 
 ### -ServiceApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the Project Server service application to target.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefg; a valid name of a Project Server Service Application (for example, ProjectServiceApp1); or an instance of a valid PsiServiceApplication object.
@@ -57,7 +60,6 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefg;
 Type: PsiServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: sa
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -67,6 +69,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -78,8 +83,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

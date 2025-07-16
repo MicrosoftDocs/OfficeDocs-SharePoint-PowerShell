@@ -24,7 +24,7 @@ The \`Unregister-SPRemoteShareBlobStore\` cmdlet unregisters a Remote Share BLOB
 
 ## EXAMPLES
 
-### -------------EXAMPLE 1------------- 
+### EXAMPLE 1
 ```powershell
 Register-SPRemoteShareBlobStore -RemoteShareBlobStore "RemoteBlobStore" -Force
 ```
@@ -34,6 +34,9 @@ This example forcely unregisters "RemoteBlobStore" from the farm
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -45,7 +48,6 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -55,6 +57,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: SharePoint Server Subscription Edition
+
 This switch forces unregistration even if there are BLOBs still in use in the Remote Share BLOB Store.
 If there are BLOBs still in use in the BLOB store being unregistered, this cmdlet will throw an exception to prevent unintentionally unregistering a BLOB store in use.
 
@@ -67,7 +72,6 @@ It's recommended to first migrate BLOBs and then unregister the Remote Share BLO
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -77,6 +81,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteShareBlobStore
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the identity of the Remote Share BLOB Store to unregister.
 
 It can either be the Remote Share BLOB Store object or the Remote Share BLOB Store name.
@@ -85,7 +92,6 @@ It can either be the Remote Share BLOB Store object or the Remote Share BLOB Sto
 Type: SPRemoteShareBlobStorePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -95,13 +101,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -111,6 +119,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -118,7 +129,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

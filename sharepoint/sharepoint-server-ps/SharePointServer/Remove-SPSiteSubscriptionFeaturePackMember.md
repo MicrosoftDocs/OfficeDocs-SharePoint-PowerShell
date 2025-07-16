@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a feature definition from the provided SharePoint Feature set.
 
-
 ## SYNTAX
 
 ### AllFeatureDefinitions
@@ -39,10 +38,9 @@ If the AllFeatureDefinitions flag is provided, all feature definitions are remov
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE 1-----------------------
+### EXAMPLE 1
 ```powershell
 $FS = Get-SPSiteSubscriptionFeaturePack "30daa535-b0fe-4d10-84b0-fb04029d161a"
 Remove-SPSiteSubscriptionFeaturePackMember -Identity $fs -FeatureDefinition (Get-SPFeature "PublishingSite")
@@ -50,18 +48,19 @@ Remove-SPSiteSubscriptionFeaturePackMember -Identity $fs -FeatureDefinition (Get
 
 This example removes the PublishingSite feature from the Feature set that has ID 30daa535-b0fe-4d10-84b0-fb04029d161a.
 
-
-### ------------------EXAMPLE 2-----------------------
+### EXAMPLE 2
 ```powershell
 Get-SPSiteSubscriptionFeaturePack "30daa535-b0fe-4d10-84b0-fb04029d161a" | Remove-SPSiteSubscriptionFeaturePackMember -AllFeatureDefinitions
 ```
 
 This example removes all features from the Feature set 30daa535-b0fe-4d10-84b0-fb04029d161a.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the Feature set from which to remove a feature.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or a valid name of a feature set (for example, FeatureSet1); or an instance of a valid SPFeatureSet object.
@@ -69,8 +68,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPSiteSubscriptionFeaturePackPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -80,13 +78,15 @@ Accept wildcard characters: False
 ```
 
 ### -AllFeatureDefinitions
+
+> Applicable: SharePoint Server Subscription Edition
+
 Clears all features from the Feature set.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AllFeatureDefinitions
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -96,13 +96,15 @@ Accept wildcard characters: False
 ```
 
 ### -FeatureDefinition
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the feature definition to be removed.
 
 ```yaml
 Type: SPFeatureDefinitionPipeBind
 Parameter Sets: SingleFeatureDefinition
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -112,6 +114,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -123,8 +128,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -134,6 +138,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -141,7 +148,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -151,6 +157,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -158,7 +167,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

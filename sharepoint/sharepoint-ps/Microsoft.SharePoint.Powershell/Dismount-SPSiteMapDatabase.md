@@ -27,7 +27,7 @@ Do not use.
 
 ## EXAMPLES
 
-### ------------EXAMPLE------------------
+### EXAMPLE
 ```
 
 ```
@@ -37,13 +37,15 @@ Do not use.
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2016
+
 Do not use.
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2016
+Aliases:
 
 Required: False
 Position: Named
@@ -53,13 +55,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2016
+
 Do not use.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -69,13 +73,15 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseId
+
+> Applicable: SharePoint Server 2016
+
 Do not use.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2016
+Aliases:
 
 Required: True
 Position: 0
@@ -85,13 +91,15 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2016
+
 Do not use.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2016
 
 Required: False
 Position: Named

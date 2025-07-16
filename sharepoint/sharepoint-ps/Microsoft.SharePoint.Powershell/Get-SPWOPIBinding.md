@@ -17,7 +17,6 @@ ms.reviewer:
 Returns a list of bindings that were created by using New-SPWOPIBinding on the current SharePoint farm where this cmdlet is run.
 
 
-
 ## SYNTAX
 
 ```
@@ -33,14 +32,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- 
+### EXAMPLE 1
 ```
 Get-SPWOPIBinding -Server "Server.corp.Contoso.com"
 ```
 
 This example returns a list of bindings that were created on the current SharePoint farm where this cmdlet is run for the WOPI application "Server.corp.Contoso.com."  The WOPI application may be the server that runs Office Web Apps Server.
 
-### --------------EXAMPLE 2----------------- 
+### EXAMPLE 2
 ```
 Get-SPWOPIZone | Get-SPWOPIBinding
 ```
@@ -50,13 +49,15 @@ This example returns a list of bindings that were created on the current SharePo
 ## PARAMETERS
 
 ### -Action
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the action to return bindings for.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -66,13 +67,15 @@ Accept wildcard characters: False
 ```
 
 ### -Application
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the application to return bindings for.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -82,6 +85,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -93,8 +99,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -104,13 +109,15 @@ Accept wildcard characters: False
 ```
 
 ### -Extension
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the file name extension to return bindings for.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -120,13 +127,15 @@ Accept wildcard characters: False
 ```
 
 ### -ProgId
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the programmatic identifier (ProgID) for an application to return bindings for.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -136,13 +145,15 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of WOPI application (such as a server that runs Office Web Apps Server) to return bindings for.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -152,13 +163,15 @@ Accept wildcard characters: False
 ```
 
 ### -WOPIZone
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the zone to return bindings for.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

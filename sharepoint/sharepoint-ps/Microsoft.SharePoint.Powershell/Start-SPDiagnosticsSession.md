@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 Starts a diagnostic session to report diagnostic information to the usage database.
 
-
 ## SYNTAX
 
 ```
@@ -29,10 +28,9 @@ After a diagnostic session starts, all Windows PowerShell for SharePoint cmdlets
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### -------------EXAMPLE-------
+### EXAMPLE
 ```
 $correlationId = [guid]::NewGuid()
 Start-SPDiagnosticsSession -CorrelationId $correlationId -Dashboard:$true -TraceLevel Verbose
@@ -40,10 +38,12 @@ Start-SPDiagnosticsSession -CorrelationId $correlationId -Dashboard:$true -Trace
 
 This example starts a diagnostic session for a specified correlation ID with the trace level of verbose.
 
-
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -55,8 +55,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -66,13 +65,15 @@ Accept wildcard characters: False
 ```
 
 ### -CorrelationId
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the correlation ID to be used for the diagnostic session.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -82,13 +83,15 @@ Accept wildcard characters: False
 ```
 
 ### -Dashboard
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies that diagnostics behave as if the developer dashboard were enabled.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -98,6 +101,9 @@ Accept wildcard characters: False
 ```
 
 ### -TraceLevel
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the Unified Logging Service (ULS) trace level override.
 
 --High
@@ -108,12 +114,10 @@ Specifies the Unified Logging Service (ULS) trace level override.
 --VerboseEx
 --None
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

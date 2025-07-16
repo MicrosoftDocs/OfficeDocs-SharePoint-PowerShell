@@ -14,7 +14,6 @@ schema: 2.0.0
 Retrieves accounts registered in the configuration database.
 
 
-
 ## SYNTAX
 
 ### Server
@@ -47,7 +46,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE----------------- 
+### EXAMPLE
 ```powershell
 Get-SPManagedAccount
 ```
@@ -57,6 +56,9 @@ This example displays all the managed accounts in the farm.
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the full name or partial name of the managed accounts to retrieve.
 
 The type must be a valid account name, in the form Domain\User, or a GUID, in the form 1234-3456-09876.
@@ -64,8 +66,7 @@ The type must be a valid account name, in the form Domain\User, or a GUID, in th
 ```yaml
 Type: SPManagedAccountPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: 1
@@ -75,6 +76,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -86,8 +90,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -97,13 +100,15 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the scope to a server.
 
 ```yaml
 Type: SPServerPipeBind
 Parameter Sets: Server
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -113,13 +118,15 @@ Accept wildcard characters: False
 ```
 
 ### -Service
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the scope to a service.
 
 ```yaml
 Type: SPServicePipeBind
 Parameter Sets: Service
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -129,13 +136,15 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the scope to a Web application.
 
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: WebApplication
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

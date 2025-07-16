@@ -27,23 +27,24 @@ Do not use
 
 ## EXAMPLES
 
-### Example 1 
+### Example 1
 ```
 Do not use
 ```
-
 
 
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013
+
 Do not use
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -53,14 +54,16 @@ Accept wildcard characters: False
 ```
 
 ### -Service
+
+> Applicable: SharePoint Server 2013
+
 Do not use
 
 ```yaml
 Type: Services
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Lync, Exchange, StudyGroup
-Applicable: SharePoint Server 2013
 
 Required: True
 Position: 0
@@ -70,13 +73,15 @@ Accept wildcard characters: False
 ```
 
 ### -Site
+
+> Applicable: SharePoint Server 2013
+
 Do not use
 
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: True
 Position: Named

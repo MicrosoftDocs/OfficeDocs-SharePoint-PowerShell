@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the properties of a search service instance.
 
-
 ## SYNTAX
 
 ```
@@ -26,10 +25,9 @@ This cmdlet updates properties of the search service instance for a farm.
 
     For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016, SharePoint Server 2019 reference [https://go.microsoft.com/fwlink/p/?LinkId=671715](https://go.microsoft.com/fwlink/p/?LinkId=671715).
 
-
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### EXAMPLE
 ```powershell
 $si = Get-SPEnterpriseSearchServiceInstance -Local
 Set-SPEnterpriseSearchServiceInstance -Identity $si -DefaultIndexLocation F:\SearchIndex
@@ -39,16 +37,17 @@ Sets the default index location to F:\SearchIndex.
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the search service instance to update.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a query server (for example, MyQueryServer); or an instance of a valid SearchServiceInstance object.
 
-
 ```yaml
 Type: SearchServiceInstancePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -58,16 +57,17 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
-
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -77,14 +77,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
 
+> Applicable: SharePoint Server Subscription Edition
+
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -94,6 +95,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultIndexLocation
+
+> Applicable: SharePoint Server Subscription Edition
+
 > [!NOTE]
 > On SharePoint Server 2013 and SharePoint Server 2016, SharePoint Server 2019 this parameter is obsolete and has no function. You should not use this parameter.
 
@@ -105,12 +109,10 @@ The type must be a valid path in either of the following forms:
 
 - \\\\server_name\folder_name
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -120,15 +122,16 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
-
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
