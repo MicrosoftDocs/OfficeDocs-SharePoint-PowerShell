@@ -3,20 +3,12 @@
         "conceptualToc": "docs-conceptual/toc.yml",
         "conceptualTocUrl": "/powershell/sharepoint/toc.json",
         "referenceTocUrl": "/powershell/module/sharepoint-ps/toc.json",
-        "packageRoot": "sharepoint-ps",
-        "modules": {
-            "sharepoint-online": {},
-            "sharepoint-server": {},
-            "sharepoint-pnp": {}
-        }
+        "packageRoot": "sharepoint-ps"
     },
         "sharepoint-server-ps": {
             "conceptualToc": "docs-conceptual/toc.yml",
             "conceptualTocUrl": "/powershell/sharepoint/toc.json",
             "referenceTocUrl": "/powershell/module/sharepoint-ps/toc.json",
-            "packageRoot": "sharepoint-server-ps",
-            "modules": {
-                "sharepoint-server": {}
-            }
-    }   
+            "packageRoot": "sharepoint-server-ps"
+    }
 }
