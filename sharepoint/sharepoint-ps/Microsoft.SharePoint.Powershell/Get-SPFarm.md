@@ -16,7 +16,6 @@ ms.reviewer:
 
 Returns the local SharePoint farm.
 
-
 ## SYNTAX
 
 ```
@@ -31,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-###
+### EXAMPLE 1
 ```
 C:\PS>$f = Get-SPFarm
 ```

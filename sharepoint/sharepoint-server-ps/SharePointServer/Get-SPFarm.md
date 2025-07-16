@@ -13,7 +13,6 @@ schema: 2.0.0
 
 Returns the local SharePoint farm.
 
-
 ## SYNTAX
 
 ```
@@ -28,7 +27,8 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-###
+### EXAMPLE 1
+
 ```powershell
 $f = Get-SPFarm
 ```
