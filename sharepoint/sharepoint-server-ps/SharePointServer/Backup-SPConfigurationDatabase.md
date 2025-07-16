@@ -14,7 +14,6 @@ schema: 2.0.0
 Performs a farm-level configuration-only backup.
 
 
-
 ## SYNTAX
 
 ### DefaultSet
@@ -46,14 +45,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -------------------EXAMPLE 1-------------------- 
+### EXAMPLE 1
 ```powershell
 Backup-SPConfigurationDatabase -DatabaseName SharePoint_Config -DatabaseServer SqlServer1 -Directory \\server\share\Backup -ShowTree
 ```
 
 This example displays components that are available for inclusion in a configuration-only backup.
 
-### -------------------EXAMPLE 2-------------------- 
+### EXAMPLE 2
 ```powershell
 Backup-SPConfigurationDatabase -DatabaseName SharePoint_Config -DatabaseServer SqlServer1 -Directory \\server\share\Backup -Verbose
 ```
@@ -63,6 +62,9 @@ This example performs a configuration-only backup with verbose output.
 ## PARAMETERS
 
 ### -Directory
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the path where SharePoint Products stores the backup package it generates.
 If you have a computer on which SQL Server and an instance of SharePoint Products are installed, you can use local drive paths.
 This includes a basic installation.
@@ -81,8 +83,7 @@ The spbr* folders are automatically created.
 ```yaml
 Type: String
 Parameter Sets: DefaultSet
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -92,6 +93,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -103,8 +107,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -114,6 +117,9 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseCredentials
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the ID and password that corresponds to the administrator user name for the SQL Server database.
 
 This parameter should only be specified if SQL authentication is used to connect to the database.
@@ -122,8 +128,7 @@ If Windows authentication is used to connect to the database, then this paramete
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -133,13 +138,15 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the configuration database name.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -149,6 +156,9 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServer
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the SQL database server that contains the configuration database.
 The default value is the local computer name.
 
@@ -157,8 +167,7 @@ The type must be a valid database server; for example, DS.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -168,6 +177,9 @@ Accept wildcard characters: False
 ```
 
 ### -Item
+
+> Applicable: SharePoint Server Subscription Edition
+
 Indicates the part of the farm to back up.
 You may use the full farm path notation as displayed by the ShowTree parameter or the name of the target component in the path if the component has a unique name.
 If multiple items match the name, the full path must be provided.
@@ -178,8 +190,7 @@ If the Item parameter is not specified, the entire farm configuration is backed 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -189,6 +200,9 @@ Accept wildcard characters: False
 ```
 
 ### -ShowTree
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays which objects in the farm will be backed up based on the other parameters passed to the backup cmdlet, namely the Item parameter.
 Items that will be excluded from the backup based on the other parameters passed to the Backup-SPConfigurationDatabase cmdlet will be preceded with an asterisk character (*).
 Items that cannot be backed up will be enclosed in square brackets (\[ \]).
@@ -197,8 +211,7 @@ A backup will not be performed if the ShowTree parameter is present.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ShowTree
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named

@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the site subscription configuration settings for a specified Metadata Service application.
 
-
 ## SYNTAX
 
 ```
@@ -27,20 +26,21 @@ Use the `Set-SPSiteSubscriptionMetadataConfig` cmdlet to set the site subscripti
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### EXAMPLE
 ```powershell
 Set-SPSiteSubscriptionMetadataConfig -Identity $siteSubscriptionPipeBind1 -ServiceProxy "MetadataServiceProxy2" -HubUri "https://sitename" -SyndicationErrorReportEnabled:$false
 ```
 
 This example sets the content type syndication hub and disables syndication error reporting for a specific site subscription on an existing partitioned Metadata Service application.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the site subscription for which to set the Metadata Service application settings.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a site subscription (for example, SiteSubscriptionConfig1); or an instance of a valid SiteSubscription object.
@@ -48,8 +48,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -59,6 +58,9 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceProxy
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the local metadata service proxy for the service application that contains the site subscription-specific settings.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of the service application proxy (for example, ServiceAppProxy1); or an instance of a valid SPMetadataServiceProxy object.
@@ -66,8 +68,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPMetadataServiceProxyCmdletPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -77,6 +78,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -88,8 +92,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -99,6 +102,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -106,7 +112,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -116,13 +121,15 @@ Accept wildcard characters: False
 ```
 
 ### -DoNotUnpublishAllPackages
+
+> Applicable: SharePoint Server Subscription Edition
+
 {{ Fill DoNotUnpublishAllPackages description}}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -132,6 +139,9 @@ Accept wildcard characters: False
 ```
 
 ### -HubUri
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the URI of the syndication hub.
 
 The type must be a valid URI, in the form file:\\\\server_name\sitedocs.
@@ -139,8 +149,7 @@ The type must be a valid URI, in the form file:\\\\server_name\sitedocs.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -150,13 +159,15 @@ Accept wildcard characters: False
 ```
 
 ### -SyndicationErrorReportEnabled
+
+> Applicable: SharePoint Server Subscription Edition
+
 Enables error reporting for content type syndication.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -166,6 +177,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -173,7 +187,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

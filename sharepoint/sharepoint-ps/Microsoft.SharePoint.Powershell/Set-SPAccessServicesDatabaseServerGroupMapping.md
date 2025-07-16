@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 Sets or creates the Access Services database server group mapping.
 
-
 ## SYNTAX
 
 ### ClearDatabaseServerGroupMappingParameterSetName
@@ -38,14 +37,14 @@ This cmdlet allows you to set the database server group to package source mappin
 
 ## EXAMPLES
 
-### --------------------EXAMPLE 1---------------------
+### EXAMPLE 1
 ```
 $site = (Get-SPWebApplication -IncludeCentralAdministration | ?{$_.IsAdministrationWebApplication -eq $true}).Sites[0]
 Set-SPAccessServicesDatabaseServerGroupMapping -ServiceContext $site -DatabaseServiceGroup GROUP2
 ```
 Creates an Access Services database group named GROUP2.
 
-### --------------------EXAMPLE 1---------------------
+### EXAMPLE 1
 ```
 $site = (Get-SPWebApplication -IncludeCentralAdministration | ?{$_.IsAdministrationWebApplication -eq $true}).Sites[0]
 Set-SPAccessServicesDatabaseServerGroupMapping -ServiceContext $site -DatabaseServiceGroup GROUP2 -CorporateCatalog
@@ -56,6 +55,9 @@ Sets the database group named GROUP2 associating the group with packages from th
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -67,8 +69,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -78,13 +79,15 @@ Accept wildcard characters: False
 ```
 
 ### -ClearMapping
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Clears the database group mapping.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ClearDatabaseServerGroupMappingParameterSetName
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -94,13 +97,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -110,13 +115,15 @@ Accept wildcard characters: False
 ```
 
 ### -CorporateCatalog
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Associates the database server group with packages uploaded to the corporate catalog (SharePoint Add-ins).
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -126,13 +133,15 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServerGroup
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 The name of the database server group to set or create.
 
 ```yaml
 Type: AccessServicesDatabaseServerGroupPipeBind
 Parameter Sets: SetDatabaseServerGroupMappingParameter
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -142,13 +151,15 @@ Accept wildcard characters: False
 ```
 
 ### -DeveloperSite
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Associates the database server group with packages that came from the Developer Site. A Developer Site is one type of SharePoint template, intended as a site for developers to build, test and publish Office Add-ins.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -158,13 +169,15 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectModel
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Associates the database server group with packages uploaded via the server-side object model.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -174,13 +187,15 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteObjectModel
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Associates the database server group with packages that are uploaded via the client-side object model.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -190,13 +205,15 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceContext
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the service context which is in the form of an instance of an SPServiceContext object, an SPSiteAdministration object identifier, or a SPSite object. An example of a service context value is an identifier from the ID field, a string identifier, a URI, or a string representation of a GUID.
 
 ```yaml
 Type: SPServiceContextPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 0
@@ -206,13 +223,15 @@ Accept wildcard characters: False
 ```
 
 ### -StoreFront
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Associates the SharePoint Marketplace with the database server group.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -222,6 +241,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -229,7 +251,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

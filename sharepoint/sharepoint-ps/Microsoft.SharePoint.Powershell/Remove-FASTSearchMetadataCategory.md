@@ -6,7 +6,7 @@ applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 title: Remove-FASTSearchMetadataCategory
 ---
 
@@ -38,7 +38,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 Remove-FASTSearchMetadataCategory -name SharePoint
 ```
@@ -47,7 +47,7 @@ This example deletes the category named "SharePoint".
 Confirmation of the operation is requested.
 All crawled properties mapped to the "SharePoint" category are also removed.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 2 (FAST Server for SharePoint 2010)
 ```
 C:\PS>$category = Get-FASTSearchMetadataCategory -name Office
 Remove-FASTSearchMetadataCategory -category $category -force
@@ -59,13 +59,15 @@ Since Force is specified, confirmation of the operation is not required.
 ## PARAMETERS
 
 ### -Name
+
+> Applicable: FAST Server for SharePoint 2010
+
 The name of the category to delete.
 
 ```yaml
 Type: String
 Parameter Sets: Name
 Aliases: CategoryName, N
-Applicable: FAST Server for SharePoint 2010
 
 Required: True
 Position: 1
@@ -75,13 +77,15 @@ Accept wildcard characters: False
 ```
 
 ### -Category
+
+> Applicable: FAST Server for SharePoint 2010
+
 A category object to be deleted.
 
 ```yaml
 Type: Category
 Parameter Sets: Category
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: Named
@@ -91,6 +95,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: FAST Server for SharePoint 2010
+
 Activates user prompting to confirm the operation.
 If set, prompting is activated.
 
@@ -102,7 +109,6 @@ In cases where Confirm is not specified, the cmdlet will prompt if the $ConfirmP
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: FAST Server for SharePoint 2010
 
 Required: False
 Position: Named
@@ -112,13 +118,15 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: FAST Server for SharePoint 2010
+
 Overrides any user prompting settings, so that confirmation of the operation is not required.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -128,6 +136,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: FAST Server for SharePoint 2010
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: get-help about_commonparameters
 
@@ -135,7 +146,6 @@ For more information, type the following command: get-help about_commonparameter
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: FAST Server for SharePoint 2010
 
 Required: False
 Position: Named

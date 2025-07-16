@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the properties of a crawl content source for a Search service application.
 
-
 ## SYNTAX
 
 ### MonthlyDate
@@ -84,10 +83,9 @@ Search service application administrators can still configure full crawls as nee
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### EXAMPLE
 ```powershell
 $ssa = Get-SPEnterpriseSearchServiceApplication
 $cs = Get-SPEnterpriseSearchCrawlContentSource -Identity 'Local SharePoint Sites' -SearchApplication $ssa
@@ -97,10 +95,12 @@ $cs | Set-SPEnterpriseSearchCrawlContentSource -ScheduleType Incremental -DailyC
 
 This example returns the "Local SharePoint Sites" content source and creates a schedule to run a full crawl every 30 days and an incremental crawl every hour every day.
 
-
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -109,12 +109,10 @@ When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are au
 When the Global parameter is used, all objects are contained in the global store.
 If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
-
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -124,15 +122,16 @@ Accept wildcard characters: False
 ```
 
 ### -BDCApplicationProxyGroup
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the proxy to use for a business type content source.
 This proxy group must contain a default Business Data Connectivity Metadata Store proxy.
-
 
 ```yaml
 Type: SPServiceApplicationProxyGroupPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -142,15 +141,16 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
-
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -160,17 +160,18 @@ Accept wildcard characters: False
 ```
 
 ### -CrawlPriority
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the priority of this content source.
 
 The type must be one of the following integers: 1= Normal, 2=High.
-
 
 ```yaml
 Type: CrawlPriority
 Parameter Sets: (All)
 Aliases: p
 Accepted values: Normal, High
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -180,14 +181,15 @@ Accept wildcard characters: False
 ```
 
 ### -CrawlScheduleDaysOfMonth
-Specifies the days on which to crawl when the MonthlyCrawlSchedule parameter is set.
 
+> Applicable: SharePoint Server Subscription Edition
+
+Specifies the days on which to crawl when the MonthlyCrawlSchedule parameter is set.
 
 ```yaml
 Type: Int32
 Parameter Sets: MonthlyDate
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -197,15 +199,16 @@ Accept wildcard characters: False
 ```
 
 ### -CrawlScheduleDaysOfWeek
-Specifies the days on which to crawl when the WeeklyCrawlSchedule parameter is set.
 
+> Applicable: SharePoint Server Subscription Edition
+
+Specifies the days on which to crawl when the WeeklyCrawlSchedule parameter is set.
 
 ```yaml
 Type: DaysOfWeek
 Parameter Sets: Weekly
-Aliases: 
+Aliases:
 Accepted values: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Weekdays, Saturday, Weekends, Everyday
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -215,15 +218,16 @@ Accept wildcard characters: False
 ```
 
 ### -CrawlScheduleMonthsOfYear
-Specifies the months on which to crawl when the MonthlyCrawlSchedule parameter is set.
 
+> Applicable: SharePoint Server Subscription Edition
+
+Specifies the months on which to crawl when the MonthlyCrawlSchedule parameter is set.
 
 ```yaml
 Type: MonthsOfYear
 Parameter Sets: MonthlyDate
 Aliases: month
 Accepted values: January, February, March, April, May, June, July, August, September, October, November, December, AllMonths
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -233,14 +237,15 @@ Accept wildcard characters: False
 ```
 
 ### -CrawlScheduleRepeatDuration
-Specifies the number of times to repeat the crawl schedule.
 
+> Applicable: SharePoint Server Subscription Edition
+
+Specifies the number of times to repeat the crawl schedule.
 
 ```yaml
 Type: Int32
 Parameter Sets: MonthlyDate, Weekly, Daily
 Aliases: duration
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -250,14 +255,15 @@ Accept wildcard characters: False
 ```
 
 ### -CrawlScheduleRepeatInterval
-Specifies the number of minutes between each repeat interval for the crawl schedule
 
+> Applicable: SharePoint Server Subscription Edition
+
+Specifies the number of minutes between each repeat interval for the crawl schedule
 
 ```yaml
 Type: Int32
 Parameter Sets: MonthlyDate, Weekly, Daily
 Aliases: interval
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -267,18 +273,19 @@ Accept wildcard characters: False
 ```
 
 ### -CrawlScheduleRunEveryInterval
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the interval between crawls.
 
 When the DailyCrawlSchedule parameter is set, specifies the number of days between crawls.
 
 When the WeeklyCrawlSchedule parameter is set, specifies the number of weeks between crawls.
 
-
 ```yaml
 Type: Int32
 Parameter Sets: Weekly, Daily
 Aliases: every
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -288,15 +295,16 @@ Accept wildcard characters: False
 ```
 
 ### -CrawlScheduleStartDateTime
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the initial date of the crawl.
 The default value is midnight on the current day.
-
 
 ```yaml
 Type: DateTime
 Parameter Sets: MonthlyDate, Weekly, Daily
 Aliases: start
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -306,14 +314,15 @@ Accept wildcard characters: False
 ```
 
 ### -CustomProtocol
-Specifies the custom protocol, handled by the custom connector, to use for this content source.
 
+> Applicable: SharePoint Server Subscription Edition
+
+Specifies the custom protocol, handled by the custom connector, to use for this content source.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -323,14 +332,15 @@ Accept wildcard characters: False
 ```
 
 ### -DailyCrawlSchedule
-Base schedule on days between crawls.
 
+> Applicable: SharePoint Server Subscription Edition
+
+Base schedule on days between crawls.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Daily
 Aliases: daily
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -340,14 +350,15 @@ Accept wildcard characters: False
 ```
 
 ### -EnableContinuousCrawls
-Specifies the value of the EnableContinuousCrawls parameter: True or False.
 
+> Applicable: SharePoint Server Subscription Edition
+
+Specifies the value of the EnableContinuousCrawls parameter: True or False.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -357,16 +368,17 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the crawl content source to update.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a ContentSource object (for example, ContentSource1); or an instance of a valid ContentSource object.
 
-
 ```yaml
 Type: ContentSourcePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 0
@@ -376,14 +388,15 @@ Accept wildcard characters: False
 ```
 
 ### -LOBSystemSet
-Specifies a comma-separated list of Business Data Connectivity Metadata Store system names and system instance names for a business type content source.
 
+> Applicable: SharePoint Server Subscription Edition
+
+Specifies a comma-separated list of Business Data Connectivity Metadata Store system names and system instance names for a business type content source.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -393,14 +406,15 @@ Accept wildcard characters: False
 ```
 
 ### -MaxPageEnumerationDepth
-Specifies, for a web or custom type content source, the number of page hops that the crawler can make from the start address to a content item.
 
+> Applicable: SharePoint Server Subscription Edition
+
+Specifies, for a web or custom type content source, the number of page hops that the crawler can make from the start address to a content item.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -410,14 +424,15 @@ Accept wildcard characters: False
 ```
 
 ### -MaxSiteEnumerationDepth
-Specifies, for a web or custom type content source, the number of site hops that the crawler can take from the start address to a content item.
 
+> Applicable: SharePoint Server Subscription Edition
+
+Specifies, for a web or custom type content source, the number of site hops that the crawler can take from the start address to a content item.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -427,14 +442,15 @@ Accept wildcard characters: False
 ```
 
 ### -MonthlyCrawlSchedule
-Base the schedule on months between crawls.
 
+> Applicable: SharePoint Server Subscription Edition
+
+Base the schedule on months between crawls.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: MonthlyDate
 Aliases: monthly
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -444,16 +460,17 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the new display name for the content source.
 
 The type must be a valid name of a content source; for example, ContentSource1.
-
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: n
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -463,14 +480,15 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveCrawlSchedule
-Deletes the specified crawl.
 
+> Applicable: SharePoint Server Subscription Edition
+
+Deletes the specified crawl.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RemoveSchedule
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -480,17 +498,18 @@ Accept wildcard characters: False
 ```
 
 ### -ScheduleType
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the type of crawl schedule.
 
 The type must be one of the following values: Full or Incremental.
 
-
 ```yaml
 Type: ContentSourceCrawlScheduleType
-Parameter Sets: MonthlyDate, Weekly, RemoveSchedule
-Aliases: 
+Parameter Sets: Daily, MonthlyDate, Weekly, RemoveSchedule
+Aliases:
 Accepted values: Full, Incremental, Full, Incremental
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -499,31 +518,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: ContentSourceCrawlScheduleType
-Parameter Sets: Daily
-Aliases: 
-Accepted values: Full, Incremental, Full, Incremental
-Applicable: SharePoint Server Subscription Edition
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SearchApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the search application that contains the content source.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application name (for example, SearchApp1); or an instance of a valid SearchServiceApplication object.
 
-
 ```yaml
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -533,16 +539,17 @@ Accept wildcard characters: False
 ```
 
 ### -StartAddresses
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the comma-separated list of URLs at which to start a crawl for this content source.
 
 The type must be a valid URL, in the form https://server_name.
-
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: s
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -552,17 +559,18 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the URL for the page to modify the settings for a custom content source.
 The string that specifies the URL can contain a maximum of 1,024 characters.
 
 The type must be a valid URL, in the form https://server_name.
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: t
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -572,14 +580,15 @@ Accept wildcard characters: False
 ```
 
 ### -WeeklyCrawlSchedule
-Base the schedule on weeks between crawls.
 
+> Applicable: SharePoint Server Subscription Edition
+
+Base the schedule on weeks between crawls.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Weekly
 Aliases: weekly
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -589,15 +598,16 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
-
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

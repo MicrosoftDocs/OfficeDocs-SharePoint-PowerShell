@@ -24,7 +24,7 @@ The \`Add-SPCertificateNotificationContact\` cmdlet adds an email address to the
 
 ## EXAMPLES
 
-### ------------EXAMPLE-----------
+### EXAMPLE
 ```powershell
 Add-SPCertificateNotificationContact -EmailAddress sharepoint-admins@example.com
 ```

@@ -98,7 +98,6 @@ For technical information, type: "get-help Set-SPOStructuralNavigationCacheSiteS
 
 For online help, type: "get-help Set-SPOStructuralNavigationCacheSiteState -online"
 
-
 ## RELATED LINKS
 [Get-SPOStructuralNavigationCacheWebState](Get-SPOStructuralNavigationCacheWebState.md)
 

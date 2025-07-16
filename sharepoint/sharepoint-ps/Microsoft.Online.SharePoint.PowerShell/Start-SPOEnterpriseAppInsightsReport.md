@@ -66,7 +66,6 @@ Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -84,7 +83,6 @@ It is an optional parameter, and it specifies the duration of the enterprise app
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: Named

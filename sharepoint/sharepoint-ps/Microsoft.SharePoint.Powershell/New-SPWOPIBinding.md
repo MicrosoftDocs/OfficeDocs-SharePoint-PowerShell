@@ -7,14 +7,13 @@ title: New-SPWOPIBinding
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # New-SPWOPIBinding
 
 ## SYNOPSIS
 Creates a new binding to associate file name extensions or applications with actions on the current SharePoint farm where this cmdlet is run.
-
 
 ## SYNTAX
 
@@ -35,27 +34,28 @@ If you run `New-SPWOPIBinding` for an application or file name extension where t
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE 1-----------------------
+### EXAMPLE 1
 ```
 New-SPWOPIBinding -ServerName "Server.corp.Contoso.com"
 ```
 
 This example creates bindings for all the applications and file name extensions that the WOPI application supports on the current SharePoint farm where this cmdlet is run.
 
-### ------------------EXAMPLE 2-----------------------
+### EXAMPLE 2
 ```
 New-SPWOPIBinding -ServerName "Server.corp.Contoso.com" -Application "Excel"
 ```
 
 This example associates Excel with all the actions that the WOPI application supports for Excel on the current SharePoint farm where this cmdlet is run.
 
-
 ## PARAMETERS
 
 ### -ServerName
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name or fully qualified domain name (FQDN) of the WOPI application (such as a server that runs Office Web Apps Server).
 
 This can also be an FQDN of a load balanced endpoint for multiple Office Web Apps servers.
@@ -63,8 +63,7 @@ This can also be an FQDN of a load balanced endpoint for multiple Office Web App
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -74,6 +73,9 @@ Accept wildcard characters: False
 ```
 
 ### -Action
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the action to bind.
 
 For example, "view," "edit," and "embedview." For a list of actions that the WOPI application supports, run `Get-SPWOPIBinding`.
@@ -84,8 +86,7 @@ If you specify some actions but not others, some SharePoint features may not wor
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -95,6 +96,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowHTTP
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies that the cmdlet can use HTTP for discovery of what the WOPI application supports.
 
 If this is specified as True, the discovery information from the WOPI application will be sent on a nonsecure connection.
@@ -102,8 +106,7 @@ If this is specified as True, the discovery information from the WOPI applicatio
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -113,6 +116,9 @@ Accept wildcard characters: False
 ```
 
 ### -Application
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies applications to bind.
 
 Possible applications are as follows: "Word," "Excel," "PowerPoint," or "OneNote." Run `Get-SPWOPIBinding` to get the full list of application the WOPI application supports.
@@ -120,8 +126,7 @@ Possible applications are as follows: "Word," "Excel," "PowerPoint," or "OneNote
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -131,6 +136,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -138,8 +146,7 @@ When the Global parameter is used, all objects are contained in the global store
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -149,6 +156,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -156,7 +166,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -166,6 +175,9 @@ Accept wildcard characters: False
 ```
 
 ### -Extension
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the file name extensions to bind.
 
 Run `Get-SPWOPIBinding` to get the list of file name extensions the WOPI application supports.
@@ -173,8 +185,7 @@ Run `Get-SPWOPIBinding` to get the list of file name extensions the WOPI applica
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -184,6 +195,9 @@ Accept wildcard characters: False
 ```
 
 ### -FileName
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the path of the xml file that contains the discover information for the WOPI application.
 
 You can load discovery information from an xml file instead of requesting from the WOPI application directly.
@@ -191,8 +205,7 @@ You can load discovery information from an xml file instead of requesting from t
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -202,6 +215,9 @@ Accept wildcard characters: False
 ```
 
 ### -ProgId
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the programmatic identifier (ProgID) for an application to bind.
 
 Run `Get-SPWOPIBinding` to get the list of ProgIDs that the WOPI application supports.
@@ -211,8 +227,7 @@ You may only want to use this parameter to associate an action to an OneNote fol
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -222,6 +237,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -229,7 +247,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

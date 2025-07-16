@@ -25,18 +25,16 @@ The `Set-SPVisioSafeDataProvider` cmdlet sets the Description property of a safe
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### -------------------EXAMPLE 1----------------------
+### EXAMPLE 1
 ```powershell
 Set-SPVisioSafeDataProvider -VisioServiceApplication "VGS1" -DataProviderID "SQLOLEDB" -DataProviderType 1 -Description "SQL OLEDB Driver!"
 ```
 
 This example sets the description property of a safe data provider for a specific Visio Services application.
 
-
-### -------------------EXAMPLE 2----------------------
+### EXAMPLE 2
 ```powershell
 Get-SPVisioServiceApplication -Identity "VGS1" | Set-SPVisioSafeDataProvider -DataProviderID "SQLOLEDB" -DataProviderType 1 -Description "SQL OLEDB Driver!"
 ```
@@ -44,10 +42,12 @@ Get-SPVisioServiceApplication -Identity "VGS1" | Set-SPVisioSafeDataProvider -Da
 This example sets the Description property of a safe data provider for a specific Visio Services application.
 The result is piped from the `Set-SPVisioSafeDataProvider` cmdlet.
 
-
 ## PARAMETERS
 
 ### -DataProviderId
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the data provider to update.
 The combination of DataProviderID and DataProviderType uniquely identifies a data provider for a Visio Services application.
 The string that identifies the data provider can be a maximum of 255 alphanumeric characters.
@@ -58,8 +58,7 @@ The type must be a valid string that identifies the data provider.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -69,6 +68,9 @@ Accept wildcard characters: False
 ```
 
 ### -DataProviderType
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the supported type of the data provider to get.
 Custom data types are supported; for example, Excel services.
 
@@ -77,8 +79,7 @@ The type must be a valid identity of a data provider type.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -88,6 +89,9 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the description of the safe data provider to set.
 
 The type must be a string with a maximum of 4096 characters.
@@ -95,8 +99,7 @@ The type must be a string with a maximum of 4096 characters.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -106,6 +109,9 @@ Accept wildcard characters: False
 ```
 
 ### -VisioServiceApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the Visio Services application that contains the SPVisioSafeDataProvider object.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a Visio Services application (for example, MyVisioService1); or an instance of a valid SPVisioServiceApplication object.
@@ -113,8 +119,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPVisioServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -124,6 +129,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -135,8 +143,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

@@ -14,7 +14,6 @@ schema: 2.0.0
 Returns one or more content databases.
 
 
-
 ## SYNTAX
 
 ### DefaultSet
@@ -57,21 +56,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ----------------EXAMPLE 1------------ 
+### EXAMPLE 1
 ```powershell
 Get-SPContentDatabase -WebApplication https://webAppUrl
 ```
 
 This example returns all content databases used by the sitename Web application.
 
-### ----------------EXAMPLE 2------------ 
+### EXAMPLE 2
 ```powershell
 Get-SPContentDatabase -Site https://siteUrl
 ```
 
 This example returns the content database that contains the site collection at https://siteUrl.
 
-### ----------------EXAMPLE 3------------ 
+### EXAMPLE 3
 ```powershell
 PS C:\>Get-SPContentDatabase -DaysSinceLastProfileSync 7
 ```
@@ -80,6 +79,9 @@ This example returns all content databases that were last synchronized with the 
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies a specific content database to get.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a SharePoint content database (for example, SPContentDB1); or an instance of a valid SPContentDatabase object.
@@ -87,8 +89,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPContentDatabasePipeBind
 Parameter Sets: DefaultSet
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: 1
@@ -98,6 +99,9 @@ Accept wildcard characters: False
 ```
 
 ### -Site
+
+> Applicable: SharePoint Server Subscription Edition
+
 Returns the content database for the specified site collection.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form https://server_name; or an instance of a valid SPSite object.
@@ -105,8 +109,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: ContentDatabasesOfSite
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -116,6 +119,9 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Returns the content databases for the specified Web application.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of SharePoint Web application (for example, MyOfficeApp1); or an instance of a valid SPWebApplication object.
@@ -123,8 +129,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: AllContentDatabasesInWebApplication
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -134,6 +139,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -141,8 +149,7 @@ When the Global parameter is used, all objects are contained in the global store
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -152,13 +159,15 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectAsUnattachedDatabase
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that only unattached databases in the farm are returned.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Unattached
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -168,6 +177,9 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseCredentials
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the PSCredential object that contains the user name and password to be used for database SQL Server Authentication.
 
 The type must be a valid PSCredential object.
@@ -175,8 +187,7 @@ The type must be a valid PSCredential object.
 ```yaml
 Type: PSCredential
 Parameter Sets: Unattached
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -186,13 +197,15 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the database in the farm.
 
 ```yaml
 Type: String
 Parameter Sets: Unattached
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -202,13 +215,15 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServer
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the database server in the farm.
 
 ```yaml
 Type: String
 Parameter Sets: Unattached
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -232,8 +247,10 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-
 ### -NoStatusFilter
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether a status filter is turned on.
 
 The valid values are True or False. The default value is False.
@@ -241,8 +258,7 @@ The valid values are True or False. The default value is False.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DefaultSet, AllContentDatabasesInWebApplication
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

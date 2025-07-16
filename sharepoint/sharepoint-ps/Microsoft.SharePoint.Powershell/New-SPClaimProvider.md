@@ -7,7 +7,7 @@ title: New-SPClaimProvider
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # New-SPClaimProvider
@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 
 Registers a new claim provider in the farm.
-
 
 
 ## SYNTAX
@@ -32,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------ 
+### EXAMPLE 1
 ```
 New-SPClaimProvider -Name "MyClaimProvider" -Type "MyClaimProvider.Providers.CustomProvider" -Default
 ```
@@ -42,6 +41,9 @@ This example registers a claim provider to all Web applications and zones.
 ## PARAMETERS
 
 ### -AssemblyName
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 The type must be a valid name of an assembly; for example, ClaimAssembly1.
 
 Specifies the name of the assembly with the claim provider.
@@ -49,8 +51,7 @@ Specifies the name of the assembly with the claim provider.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -60,6 +61,9 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the description of the claim provider.
 
 The type must be a valid name of an assembly; for example, ClaimAssembly1.
@@ -67,8 +71,7 @@ The type must be a valid name of an assembly; for example, ClaimAssembly1.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -78,6 +81,9 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the display name of the new claim provider.
 
 The type must be a valid name of a claim provider; for example, ClaimProvider1.
@@ -85,8 +91,7 @@ The type must be a valid name of a claim provider; for example, ClaimProvider1.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -96,6 +101,9 @@ Accept wildcard characters: False
 ```
 
 ### -Type
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the type of the claim.
 
 The type must be a valid name of a claim type; for example MyClaimProvider.Providers.CustomProvider.
@@ -103,8 +111,7 @@ The type must be a valid name of a claim type; for example MyClaimProvider.Provi
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -114,6 +121,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -125,8 +135,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -136,13 +145,15 @@ Accept wildcard characters: False
 ```
 
 ### -Default
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies that the claim provider applies to all Web applications and zones.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -152,13 +163,15 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Turns on the claim provider.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

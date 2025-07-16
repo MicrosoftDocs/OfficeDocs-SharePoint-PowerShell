@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a new connection to a managed metadata service application.
 
-
 ## SYNTAX
 
 ```
@@ -22,42 +21,40 @@ New-SPMetadataServiceApplicationProxy -Name <String> [-AssignmentCollection <SPA
  [-ServiceApplication <SPMetadataServiceCmdletPipeBind>] [-Uri <String>] [-WhatIf] [<CommonParameters>]
 ```
 
-
 ## DESCRIPTION
 Use the `New-SPMetadataServiceApplicationProxy` cmdlet to create a new connection to a managed metadata service application.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### -------------------EXAMPLE 1----------------
+### EXAMPLE 1
 ```
 New-SPMetadataServiceApplicationProxy -Name "MetadataServiceProxy1" -ServiceApplication "MetadataServiceApp1"
 ```
 
 This example creates a connection to a managed metadata service application in the local farm.
 
-
-### -------------------EXAMPLE 2----------------
+### EXAMPLE 2
 ```
 New-SPMetadataServiceApplicationProxy -Name "MetadataServiceProxy3" -ServiceApplication "MetadataServiceApp3" -PartitionMode
 ```
 
 This example creates a partitioned connection to a managed metadata service application in the local farm.
 
-
 ## PARAMETERS
 
 ### -Name
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the display name of the service application proxy to create.
 The name can contain a maximum of 128 characters.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -67,6 +64,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -78,8 +78,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -89,6 +88,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -96,7 +98,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -106,13 +107,15 @@ Accept wildcard characters: False
 ```
 
 ### -ContentTypePushdownEnabled
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies that existing instances of changed content types in subsites and libraries will be updated.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -122,13 +125,15 @@ Accept wildcard characters: False
 ```
 
 ### -ContentTypeSyndicationEnabled
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies that this connection will provide access to the content types that are associated with the managed metadata service application.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -138,13 +143,15 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProxyGroup
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies that the connection be added to the default proxy group for the farm.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -154,13 +161,15 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultKeywordTaxonomy
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies that new enterprise keywords will be stored in the term store associated with the managed metadata service application.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -170,13 +179,15 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultSiteCollectionTaxonomy
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies that the term set that is created when you create a new managed metadata column will be stored in the term store associated with the managed metadata application.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -186,6 +197,9 @@ Accept wildcard characters: False
 ```
 
 ### -PartitionMode
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies that the service application restrict data by subscription.
 
 This property cannot be changed after the service application proxy has been created.
@@ -193,8 +207,7 @@ This property cannot be changed after the service application proxy has been cre
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -204,6 +217,9 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceApplication
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the local managed metadata service application to connect to.
 The service application must exist on the local farm.
 
@@ -212,8 +228,7 @@ The type must be a valid GUID; a valid name of the service application; or an in
 ```yaml
 Type: SPMetadataServiceCmdletPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -223,6 +238,9 @@ Accept wildcard characters: False
 ```
 
 ### -Uri
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the URI of a remote managed metadata service application to connect to.
 
 To specify the managed metadata service application that this proxy is connecting to, you must set only the URI parameter or only the ServiceApplication parameter.
@@ -232,8 +250,7 @@ The type must be a valid URL, in the form urn:schemas-microsoft-com:sharepoint:s
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -243,6 +260,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -250,7 +270,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

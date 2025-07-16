@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Configures the specified subsite.
 
-
 ## SYNTAX
 
 ```
@@ -29,17 +28,19 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE-----------------------
+### EXAMPLE
 ```powershell
 Get-SPWeb https://sitename/subweb | Set-SPWeb -Description "My Site Description"
 ```
 
 This example sets the description of an existing subsite.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 The URL of the Web or SPWeb object that represents the Web.
 
 The type must be a  valid URL, in the form https://server_name, or an SPWeb object.
@@ -47,8 +48,7 @@ The type must be a  valid URL, in the form https://server_name, or an SPWeb obje
 ```yaml
 Type: SPWebPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -58,13 +58,15 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the new description of the Web.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -74,14 +76,16 @@ Accept wildcard characters: False
 ```
 
 ### -RelativeUrl
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the new relative URL for the Web.
 This is the URL path after the site collection URL.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -91,13 +95,15 @@ Accept wildcard characters: False
 ```
 
 ### -Theme
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the new theme to apply to the Web.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -107,14 +113,16 @@ Accept wildcard characters: False
 ```
 
 ### -Template
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the new template to apply to the Web.
 This cannot be done if the template is already applied.
 
 ```yaml
 Type: SPWebTemplatePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -124,6 +132,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -135,8 +146,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -146,6 +156,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -153,7 +166,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -163,6 +175,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -170,7 +185,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

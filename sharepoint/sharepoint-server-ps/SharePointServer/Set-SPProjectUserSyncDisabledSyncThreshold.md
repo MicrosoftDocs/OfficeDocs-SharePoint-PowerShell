@@ -2,7 +2,7 @@
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 module name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spprojectusersyncdisabledsyncthreshold
-Applicable: SharePoint Server Subscription Edition
+
 title: Set-SPProjectUserSyncDisabledSyncThreshold
 schema: 2.0.0
 ---
@@ -32,24 +32,25 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### EXAMPLE
 ```powershell
 Set-SPProjectUserSyncDisabledSyncThreshold -URL http//contoso-AppSrv/PWA -Threshold 400
 ```
 
 This example sets the sync disable threshold for the Project Web App instance at http//contoso-AppSrv/PWA to 400.
 
-
 ## PARAMETERS
 
 ### -Url
+
+> Applicable: SharePoint Server Subscription Edition
+
 The URL of the Project Web App instance where you want to set the threshold.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 2
@@ -59,13 +60,15 @@ Accept wildcard characters: False
 ```
 
 ### -Threshold
+
+> Applicable: SharePoint Server Subscription Edition
+
 A whole number consisting of the number of projects multiplied by the number of users.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 3
@@ -75,6 +78,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -86,8 +92,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

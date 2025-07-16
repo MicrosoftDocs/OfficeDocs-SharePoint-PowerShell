@@ -17,7 +17,6 @@ ms.reviewer:
 Connects the local server computer to a farm.
 
 
-
 ## SYNTAX
 
 ```
@@ -40,7 +39,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ 
+### EXAMPLE
 ```
 Connect-SPConfigurationDatabase -DatabaseServer "ServerName\InstanceName" -DatabaseName "SharePointConfigurationDatabaseName" -Passphrase (ConvertTo-SecureString "MyP@ssw0rd" -AsPlainText -Force)
 Start-Service SPTimerv4
@@ -51,6 +50,9 @@ This example joins the local server computer to a farm that is configured to use
 ## PARAMETERS
 
 ### -DatabaseName
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of the configuration database to which to connect the server.
 
 The type must be a valid database name; for example, DB1.
@@ -58,8 +60,7 @@ The type must be a valid database name; for example, DB1.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -69,14 +70,16 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServer
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the server on which to create the configuration database.
 The default value is the local computer name.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -86,6 +89,9 @@ Accept wildcard characters: False
 ```
 
 ### -Passphrase
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the secure password phrase for connecting the current server to the configuration database.
 
 The type must be a valid secure string; for example, MyBDCApp1serverkey.
@@ -93,8 +99,7 @@ The type must be a valid secure string; for example, MyBDCApp1serverkey.
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 9
@@ -104,6 +109,9 @@ Accept wildcard characters: False
 ```
 
 ### -SkipRegisterAsDistributedCacheHost
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 By default all the servers in the farm are registered as a cache host (that is, DistributedCacheService is running by default).
 
 Use this parameter to not register the server computer as a distributed cache host.
@@ -112,8 +120,7 @@ If you want to have a dedicated cache host, then use this parameter to make sure
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: 10
@@ -123,6 +130,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -134,8 +144,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -145,6 +154,9 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseCredentials
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the PSCredential object that contains the user name and password to be used for database SQL authentication.
 If this parameter is not specified, the current user is used.
 
@@ -153,8 +165,7 @@ The type must be a valid PSCredential object.
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -164,13 +175,15 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseFailOverPartner
+
+> Applicable: SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the Database Mirroring partner for a SQL Server instance.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -180,13 +193,15 @@ Accept wildcard characters: False
 ```
 
 ### -LocalServerRole
+
+> Applicable: SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the MinRole assigned to the local server.
 
 ```yaml
 Type: SPServerRole
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

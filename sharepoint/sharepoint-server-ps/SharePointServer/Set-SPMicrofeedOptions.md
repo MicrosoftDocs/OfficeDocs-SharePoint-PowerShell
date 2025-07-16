@@ -2,7 +2,7 @@
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 module name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spmicrofeedoptions
-Applicable: SharePoint Server Subscription Edition
+
 title: Set-SPMicrofeedOptions
 schema: 2.0.0
 ---
@@ -10,8 +10,7 @@ schema: 2.0.0
 # Set-SPMicrofeedOptions
 
 ## SYNOPSIS
-Sets the feed cache settings. 
-
+Sets the feed cache settings.
 
 ## SYNTAX
 
@@ -25,10 +24,9 @@ Set-SPMicrofeedOptions [-AssignmentCollection <SPAssignmentCollection>] [-AsyncR
 ## DESCRIPTION
 Use the Set-SPMicrofeedOptions cmdlet to set the feed cache settings for the current user profile application.
 
-
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### EXAMPLE
 ```powershell
 $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
 Set-SPMicrofeedOptions -ProfileServiceApplicationProxy $proxy -MaxTags 4
@@ -36,18 +34,19 @@ Set-SPMicrofeedOptions -ProfileServiceApplicationProxy $proxy -MaxTags 4
 
 This example sets the maximum tags per post and reply to 4 for the specified User Profile Service Application Proxy.
 
-
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
-**NOTE:** When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur. 
+**NOTE:** When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -57,15 +56,16 @@ Accept wildcard characters: False
 ```
 
 ### -AsyncRefs
-Performs reference-posts via async threads. If the value is set to True, each @mention in a thread is handled in its own .NET threadpool async thread.
 
+> Applicable: SharePoint Server Subscription Edition
+
+Performs reference-posts via async threads. If the value is set to True, each @mention in a thread is handled in its own .NET threadpool async thread.
 
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -75,13 +75,15 @@ Accept wildcard characters: False
 ```
 
 ### -MaxCacheMs
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the permissible range of cache loop up time.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -91,13 +93,15 @@ Accept wildcard characters: False
 ```
 
 ### -MaxMentions
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the maximum number @mentions per post and reply.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -107,13 +111,15 @@ Accept wildcard characters: False
 ```
 
 ### -MaxPostLength
+
+> Applicable: SharePoint Server Subscription Edition
+
 Sets the maximum number of characters in a Microfeed post.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -123,13 +129,15 @@ Accept wildcard characters: False
 ```
 
 ### -MaxTags
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the maximum number #tags per post and reply.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -139,13 +147,15 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileServiceApplicationProxy
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the unique identifier for the proxy.
 
 ```yaml
 Type: SPServiceApplicationProxyPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -155,13 +165,15 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSubscription
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the account under which this service should run. This parameter is mandatory in a hosted-environment and optional in a non-hosted environment.
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

@@ -28,14 +28,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1-----------------
+### EXAMPLE 1
 ```
 Get-FASTSearchSecurityUserStore -Identity ln1
 ```
 
 This example gets the user store with an identity of "ln1".
 
-### ---------------EXAMPLE 2-----------------
+### EXAMPLE 2
 ```
 Get-FASTSearchSecurityUserStore
 ```
@@ -45,14 +45,16 @@ This example gets a list of all user stores.
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: FAST Server for SharePoint 2010
+
 The identity of the user store to get.
 If not specified, the cmdlet gets a list of all user stores.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 1

@@ -29,7 +29,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1-----------------
+### EXAMPLE 1
 ```
 Get-FASTSearchSecurityLogLevel
 ```
@@ -39,13 +39,15 @@ This example gets the configuration information for the log level's general sett
 ## PARAMETERS
 
 ### -Worker
+
+> Applicable: FAST Server for SharePoint 2010
+
 The optional Worker parameter specifies the WorkerPoolNode object for the security worker that is to handle the request.
 
 ```yaml
 Type: WorkerPoolNode
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 9999

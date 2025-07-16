@@ -81,7 +81,6 @@ Parameter Sets: (All)
 Aliases:
 Accepted values: View, Download
 
-
 Required: False
 Position: Named
 Default value: View
@@ -137,7 +136,6 @@ Parameter Sets: (All)
 Aliases:
 Accepted values: CopilotAgentsOnSites, TopSites, SiteDistribution
 
-
 Required: False
 Position: Named
 Default value: CopilotAgentsOnSites
@@ -155,7 +153,6 @@ It specifies the unique Id of the report to be viewed or downloaded.
 Type: System.Guid
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: Named

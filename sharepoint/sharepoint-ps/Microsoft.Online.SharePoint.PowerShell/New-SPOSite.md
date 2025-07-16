@@ -72,7 +72,6 @@ Type: System.Int32
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -106,7 +105,6 @@ Type: System.UInt32
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -124,7 +122,6 @@ Specifies to continue executing script immediately.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: Named
@@ -144,7 +141,6 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -162,7 +158,6 @@ Specifies the quota for this site collection in Sandboxed Solutions units. This 
 Type: System.Double
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: Named
@@ -182,7 +177,6 @@ Type: System.Int64
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -200,7 +194,6 @@ Specifies the site collection template type. Use the `Get-SPOWebTemplate` cmdlet
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: Named
@@ -220,7 +213,6 @@ Type: System.Int32
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -239,7 +231,6 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -257,7 +248,6 @@ Specifies the full URL of the new site collection. It must be in a valid managed
 Type: Microsoft.Online.SharePoint.PowerShell.UrlCmdletPipeBind
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: Named

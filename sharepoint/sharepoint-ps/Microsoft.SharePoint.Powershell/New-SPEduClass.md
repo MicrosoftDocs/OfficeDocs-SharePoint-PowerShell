@@ -7,7 +7,7 @@ title: New-SPEduClass
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # New-SPEduClass
@@ -28,23 +28,24 @@ Do not use
 
 ## EXAMPLES
 
-### Example 1 
+### Example 1
 ```
 Do not use
 ```
-
 
 
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013
+
 Do not use
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -54,13 +55,15 @@ Accept wildcard characters: False
 ```
 
 ### -Building
+
+> Applicable: SharePoint Server 2013
+
 Do not use
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -70,13 +73,15 @@ Accept wildcard characters: False
 ```
 
 ### -ClassId
+
+> Applicable: SharePoint Server 2013
+
 Do not use
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: True
 Position: Named
@@ -86,13 +91,15 @@ Accept wildcard characters: False
 ```
 
 ### -ClassName
+
+> Applicable: SharePoint Server 2013
+
 {Do not use
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: True
 Position: Named
@@ -102,13 +109,15 @@ Accept wildcard characters: False
 ```
 
 ### -DayOfWeek
+
+> Applicable: SharePoint Server 2013
+
 Do not use
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -118,13 +127,15 @@ Accept wildcard characters: False
 ```
 
 ### -EndDate
+
+> Applicable: SharePoint Server 2013
+
 Do not use
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -134,13 +145,15 @@ Accept wildcard characters: False
 ```
 
 ### -EndTime
+
+> Applicable: SharePoint Server 2013
+
 Do not use
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -150,13 +163,15 @@ Accept wildcard characters: False
 ```
 
 ### -Room
+
+> Applicable: SharePoint Server 2013
+
 Do not use
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -166,13 +181,15 @@ Accept wildcard characters: False
 ```
 
 ### -Site
+
+> Applicable: SharePoint Server 2013
+
 Do not use
 
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: True
 Position: Named
@@ -182,13 +199,15 @@ Accept wildcard characters: False
 ```
 
 ### -StartDate
+
+> Applicable: SharePoint Server 2013
+
 Do not use
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -198,13 +217,15 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
+
+> Applicable: SharePoint Server 2013
+
 Do not use
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -214,13 +235,15 @@ Accept wildcard characters: False
 ```
 
 ### -Year
+
+> Applicable: SharePoint Server 2013
+
 Do not use
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named

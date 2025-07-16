@@ -51,7 +51,6 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -69,7 +68,6 @@ Specifies the output folder location where the CSV file is created.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: Named

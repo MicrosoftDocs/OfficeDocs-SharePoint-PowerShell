@@ -49,7 +49,6 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: 2
 Default value: None
@@ -68,7 +67,6 @@ Parameter Sets: (All)
 Aliases:
 Accepted values: None, Source, Target
 
-
 Required: True
 Position: 1
 Default value: None
@@ -85,7 +83,6 @@ Type: Microsoft.SharePoint.Client.Administration.OrgRelationScenario
 Parameter Sets: (All)
 Aliases:
 Accepted values: None, MnA
-
 
 Required: True
 Position: 0

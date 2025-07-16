@@ -14,7 +14,6 @@ schema: 2.0.0
 Creates a new configuration database.
 
 
-
 ## SYNTAX
 
 ```
@@ -35,21 +34,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1----------------------- 
+### EXAMPLE 1
 ```powershell
 New-SPConfigurationDatabase -DatabaseName "SharePointConfigDB1" -DatabaseServer "SQL-01" -Passphrase (ConvertTo-SecureString "MyPassword" -AsPlainText -force) -FarmCredentials (Get-Credential)
 ```
 
 This example prompts the user to provide user credentials for the default Farm Administrator account.
 
-### ------------------EXAMPLE 2----------------------- 
+### EXAMPLE 2
 ```powershell
 New-SPConfigurationDatabase -DatabaseName "SharePointConfigDB1" -DatabaseServer "SQL-01" -Passphrase (ConvertTo-SecureString "MyPassword" -AsPlainText -force) -FarmCredentials (Get-Credential) -SkipRegisterAsDistributedCacheHost
 ```
 
 This example prompts the user to provide user credentials for the default Farm Administrator account and skips registering the server as Distributed Cache host. Applies to SharePoint Server 2013 and SharePoint Server 2016, SharePoint Server 2019 only.
 
-### ------------------EXAMPLE 3----------------------- 
+### EXAMPLE 3
 ```powershell
 New-SPConfigurationDatabase -DatabaseName "SharePointConfigDB1" -DatabaseServer "SQL-01" -Passphrase (ConvertTo-SecureString "MyPassword" -AsPlainText -force) -FarmCredentials (Get-Credential) -LocalServerRole Custom
 ```
@@ -59,13 +58,15 @@ This example prompts the user to provide user credentials for the default Farm A
 ## PARAMETERS
 
 ### -DatabaseName
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the new configuration database.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -75,14 +76,16 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServer
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the database server on which to create the configuration database.
 If no value is specified, the default value is used.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 2
@@ -92,14 +95,16 @@ Accept wildcard characters: False
 ```
 
 ### -DirectoryDomain
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the directory domain for the new farm.
 If no domain is specified, the domain in which the local computer is located is used.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: 3
@@ -109,14 +114,16 @@ Accept wildcard characters: False
 ```
 
 ### -DirectoryOrganizationUnit
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the directory organizational unit for the new configuration database.
 If no organizational unit is specified, the organizational unit in which the local computer is located is used.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: 4
@@ -126,14 +133,16 @@ Accept wildcard characters: False
 ```
 
 ### -AdministrationContentDatabaseName
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name for the Central Administration content database for the new farm.
 If no name is specified, a default name is used.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: 5
@@ -143,6 +152,9 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseCredentials
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the Credential object for the database user.
 Use this parameter if you use SQL Server Authentication.
 If no database credentials are provided, Windows authentication is used.
@@ -150,8 +162,7 @@ If no database credentials are provided, Windows authentication is used.
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: 6
@@ -161,13 +172,15 @@ Accept wildcard characters: False
 ```
 
 ### -FarmCredentials
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies credentials for the Farm Administrator account.
 
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 7
@@ -177,14 +190,16 @@ Accept wildcard characters: False
 ```
 
 ### -Passphrase
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the secure password phrase for the new farm.
 This passphrase is used to join other machines to this farm.
 
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 8
@@ -194,6 +209,9 @@ Accept wildcard characters: False
 ```
 
 ### -SkipRegisterAsDistributedCacheHost
+
+> Applicable: SharePoint Server Subscription Edition
+
 By default all the servers in the farm are registered as a cache host (that is, DistributedCacheService is running by default).
 
 Use this parameter to not register the server computer as a distributed cache host.
@@ -202,8 +220,7 @@ If you want to have a dedicated cache host, then use this parameter to make sure
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: 9
@@ -213,6 +230,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -224,8 +244,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -235,13 +254,15 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseFailOverServer
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the SQL Server Database Mirror partner server for the Configuration and Central Administration database.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -251,6 +272,9 @@ Accept wildcard characters: False
 ```
 
 ### -LocalServerRole
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the Server Role. Valid options for all versions of SharePoint Server 2016, SharePoint Server 2019 are:
 `Custom`, `SingleServerFarm`, `Application`, `WebFrontEnd`, `DistributedCache`, `Search`
 
@@ -260,8 +284,7 @@ With the addition of Feature Pack 1, new options include:
 ```yaml
 Type: SPServerRole
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -271,13 +294,15 @@ Accept wildcard characters: False
 ```
 
 ### -ServerRoleOptional
+
+> Applicable: SharePoint Server Subscription Edition
+
 Configures the farm to not require a server role to be specified. If no server role is specified, the server defaults to the Custom role.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -287,13 +312,15 @@ Accept wildcard characters: False
 ```
 
 ### -SiteMapDatabaseName
+
+> Applicable: SharePoint Server Subscription Edition
+
 Do not use. Specifies the database name of the Site Map site.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -303,13 +330,15 @@ Accept wildcard characters: False
 ```
 
 ### -SiteMapDatabaseServer
+
+> Applicable: SharePoint Server Subscription Edition
+
 Do not use. Specifies the database server name of the Site Map site.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -319,6 +348,9 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseConnectionEncryption
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether TLS encryption is used for the connection between SharePoint and the database.
 Mandatory requires that TLS encryption is used. If TLS encryption can't be successfully negotiated, the connection will fail.
 Optional allows TLS encryption to be used. If the database server requires TLS encryption, then TLS encryption will be used. Otherwise, TLS encryption will not be used.
@@ -329,7 +361,7 @@ Databases mounted to SharePoint before the Version 24H2 feature update was insta
 Type: SqlConnectionEncryptOption
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
+
 Required: False
 Position: Named
 Default value: Mandatory
@@ -338,13 +370,16 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServerCertificateHostName
+
+> Applicable: SharePoint Server Subscription Edition
+
 Sets the host name to use when validating the server certificate for the connection.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
+
 Required: False
 Position: Named
 Default value: None

@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------------EXAMPLE 1---------------------------- 
+### EXAMPLE 1
 ```powershell
 $map1 = New-SPClaimTypeMapping -IncomingClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress" -IncomingClaimTypeDisplayName "EmailAddress" -SameAsIncoming
 $map2 = New-SPClaimTypeMapping -IncomingClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier" -IncomingClaimTypeDisplayName "PUID" -LocalClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/thumbprint"
@@ -40,6 +40,9 @@ This example creates a claim map from an incoming token to a SharePoint token.
 ## PARAMETERS
 
 ### -IncomingClaimType
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the URI of the incoming claim type.
 
 The type must be a valid URI, in the form http://schemas.microsoft.com/email.
@@ -47,8 +50,7 @@ The type must be a valid URI, in the form http://schemas.microsoft.com/email.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -58,6 +60,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncomingClaimTypeDisplayName
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the display name of the incoming claim type.
 
 The type must be a valid name of an incoming claim type; for example, Email.
@@ -65,8 +70,7 @@ The type must be a valid name of an incoming claim type; for example, Email.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 2
@@ -76,6 +80,9 @@ Accept wildcard characters: False
 ```
 
 ### -LocalClaimType
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the URI of the local claim type.
 If the SameAsIncoming parameter is False, this is a required parameter.
 
@@ -84,8 +91,7 @@ The type must be a valid URI, in the form http://schemas.microsoft.com/email.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: 3
@@ -95,6 +101,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -106,8 +115,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -117,13 +125,15 @@ Accept wildcard characters: False
 ```
 
 ### -SameAsIncoming
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that the claim type specified in the IncomingClaimType parameter is used for the LocalClaimType parameter.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

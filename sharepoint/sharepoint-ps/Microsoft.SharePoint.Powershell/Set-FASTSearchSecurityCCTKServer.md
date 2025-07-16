@@ -29,7 +29,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1---------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 Set-FASTSearchSecurityCCTKServer -Port 13271 -Enable $true
 ```
@@ -39,13 +39,15 @@ This example updates the CCTK server port number and enables the CCTK server to 
 ## PARAMETERS
 
 ### -Port
+
+> Applicable: FAST Server for SharePoint 2010
+
 The port number that the security manager listens to for handling CCTK requests.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 1
@@ -55,13 +57,15 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
+
+> Applicable: FAST Server for SharePoint 2010
+
 A Boolean flag to determine if the CCTK service will accept requests.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 2
@@ -71,13 +75,15 @@ Accept wildcard characters: False
 ```
 
 ### -GeneralSetting
+
+> Applicable: FAST Server for SharePoint 2010
+
 A CCTKServerSetting instance whose property values are used for the CCTKServerSetting being updated.
 
 ```yaml
 Type: CCTKServerSetting
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 9999

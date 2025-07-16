@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 Sets the parameters of a site subscription.
 
-
 ## SYNTAX
 
 ### Default
@@ -43,10 +42,9 @@ The `Set-SPSiteSubscriptionProfileConfig` cmdlet sets the parameters of a site s
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### EXAMPLE
 ```
 $sub = Get-SPSiteSubscription http://contoso/my
 Set-SPSiteSubscriptionProfileConfig -Identity $sub -SiteNamingConflictResolution 3 -SynchronizationOU OrgUnit1
@@ -54,10 +52,12 @@ Set-SPSiteSubscriptionProfileConfig -Identity $sub -SiteNamingConflictResolution
 
 This example sets the parameter of the site subscription SiteNamingConflictResolution to always avoid any conflicts and parameter SynchronizationOU to OrgUnit1.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the proxy of the User Profile Service application that contains the site subscription to update.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a User Profile Service application proxy (for example, UserProfileSvcProxy1); or an instance of a valid SPServiceApplicationProxy object.
@@ -65,8 +65,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -76,15 +75,17 @@ Accept wildcard characters: False
 ```
 
 ### -MySiteHostLocation
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the site collection where the My Site host for the site subscription is provisioned.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or a valid URL, in the form https://server_name; or an instance of a valid SPSite object.
 
 ```yaml
 Type: SPSitePipeBind
-Parameter Sets: Default
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Parameter Sets: Default, MySiteSettings
+Aliases:
 
 Required: False
 Position: Named
@@ -93,27 +94,16 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: SPSitePipeBind
-Parameter Sets: MySiteSettings
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -ProfileServiceApplicationProxy
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of the proxy for the User Profile Service application.
 
 ```yaml
 Type: SPServiceApplicationProxyPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -123,6 +113,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -134,8 +127,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -145,6 +137,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -152,7 +147,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -162,6 +156,9 @@ Accept wildcard characters: False
 ```
 
 ### -MySiteManagedPath
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the managed path where personal sites will be created.
 
 The type must be a valid URL, in the form https://server_name.
@@ -169,8 +166,7 @@ The type must be a valid URL, in the form https://server_name.
 ```yaml
 Type: SPPrefixPipeBind
 Parameter Sets: MySiteSettings
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -180,6 +176,9 @@ Accept wildcard characters: False
 ```
 
 ### -SiteNamingConflictResolution
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the format to use to name personal sites.
 
 Use one of the following integer values:
@@ -198,8 +197,7 @@ The default value is 1 (do not resolve conflicts).
 ```yaml
 Type: String
 Parameter Sets: MySiteSettings
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -209,6 +207,9 @@ Accept wildcard characters: False
 ```
 
 ### -SynchronizationOU
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the organizational unit that serves the site subscription.
 
 The type must be a valid name of an organizational unit; for example, OrgUnit1.
@@ -216,8 +217,7 @@ The type must be a valid name of an organizational unit; for example, OrgUnit1.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -227,6 +227,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -234,7 +237,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

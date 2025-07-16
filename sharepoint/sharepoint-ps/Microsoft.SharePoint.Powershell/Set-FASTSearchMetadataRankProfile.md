@@ -46,7 +46,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 Set-FASTSearchMetadataRankProfile -Name ExtraRankProfile -QualityWeight 100 -AuthorityWeight 200 -QueryAuthorityWeight 10 -FreshnessWeight 0
 ```
@@ -56,7 +56,7 @@ You can specify one or more weights to modify at a time.
 
 This example turns off the freshness relevancy component by setting the weight to 0, while adjusting the other components.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 2 (FAST Server for SharePoint 2010)
 ```
 C:\PS>$processingtime = Get-FASTSearchMetadataManagedProperty -name Processingtime
 Set-FASTSearchMetadataRankProfile -Name ExtraRankProfile -FreshnessManagedPropertyReference $processingtime
@@ -67,7 +67,7 @@ This example changes the "ExtraRankProfile" rank profile so that it no longer de
 Instead, freshness is based on when the item was last processed (fed) into the FAST Search Server 2010 for SharePoint system.
 The time the item was processed is stored in the "processingtime" managed property by default.
 
-### ---------------EXAMPLE 3----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 3 (FAST Server for SharePoint 2010)
 ```
 Set-FASTSearchMetadataRankProfile -Name ExtraRankProfile -StopWordThreshold 100000
 ```
@@ -77,7 +77,7 @@ The stop word threshold determines if the query term is too common to be taken i
 
 Lowering the stop word threshold means that more terms may be ignored when calculating relevancy, which can have a positive impact on performance.
 
-### ---------------EXAMPLE 4----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 4 (FAST Server for SharePoint 2010)
 ```
 C:\PS>$rankprofile = Get-FASTSearchMetadataRankProfile -Name default
 $rankprofile.GetQualityComponents()
@@ -86,7 +86,7 @@ $rankprofile.GetQualityComponents()
 The quality rank metric is an importance score assigned to a document, independent of query terms.
 This example lists the managed properties involved in calculating the quality rank by calling the GetQualityComponents() method call on the rank profile.
 
-### ---------------EXAMPLE 5----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 5 (FAST Server for SharePoint 2010)
 ```
 C:\PS>$new_rank_component = New-FASTSearchMetadataManagedProperty -Name sitecredibility
 $rankprofile = Get-FASTSearchMetadataRankProfile -Name default
@@ -103,13 +103,15 @@ The next step would be to populate "sitecredibility" with a suitable crawled pro
 ## PARAMETERS
 
 ### -Name
+
+> Applicable: FAST Server for SharePoint 2010
+
 The name of the rank profile to modify.
 
 ```yaml
 Type: String
 Parameter Sets: Name
 Aliases: RankProfileName, N
-Applicable: FAST Server for SharePoint 2010
 
 Required: True
 Position: Named
@@ -119,13 +121,15 @@ Accept wildcard characters: False
 ```
 
 ### -RankProfile
+
+> Applicable: FAST Server for SharePoint 2010
+
 An object representing a rank profile.
 
 ```yaml
 Type: RankProfile
 Parameter Sets: RankProfile
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: Named
@@ -135,6 +139,9 @@ Accept wildcard characters: False
 ```
 
 ### -AuthorityWeight
+
+> Applicable: FAST Server for SharePoint 2010
+
 This integer parameter sets the authority weight component of the rank profile.
 
 Ranking on authority takes the connections between items into account when calculating a relevancy score.
@@ -145,8 +152,7 @@ The authority relevancy score is calculated regularly by the Webanalyzer compone
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -156,6 +162,9 @@ Accept wildcard characters: False
 ```
 
 ### -FreshnessManagedPropertyReference
+
+> Applicable: FAST Server for SharePoint 2010
+
 This parameter specifies which managed properties to use when calculating freshness.
 
 The managed property must be represented with a ManagedPropertyImpl object (e.g., as returned from Get-FASTSearchMetadataManagedProperty).
@@ -168,8 +177,7 @@ Items with an older datetime value in the specified managed property get a lower
 ```yaml
 Type: ManagedProperty
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -179,6 +187,9 @@ Accept wildcard characters: False
 ```
 
 ### -FreshnessResolution
+
+> Applicable: FAST Server for SharePoint 2010
+
 This integer parameter sets the size of the freshness boost tick.
 
 The tick is the smallest amount of time the freshness relevancy considers to be a different value.
@@ -202,8 +213,7 @@ Valid values are:
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -213,6 +223,9 @@ Accept wildcard characters: False
 ```
 
 ### -FreshnessWeight
+
+> Applicable: FAST Server for SharePoint 2010
+
 This integer parameter sets the weight of the freshness relevancy component when calculating the relevance of a result.
 
 The freshness rank value goes down the older the document is.
@@ -224,8 +237,7 @@ Set this value to 0 to ignore item freshness when calculating relevancy.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -235,6 +247,9 @@ Accept wildcard characters: False
 ```
 
 ### -PositionStopWordThreshold
+
+> Applicable: FAST Server for SharePoint 2010
+
 This integer parameter sets the position stop word threshold.
 
 If a query term occurs more often than position-stop-word-threshold (independent of the number of items it occurs in), then proximity relevancy calculations are not done for that term.
@@ -247,8 +262,7 @@ This will decrease CPU use when searching.
 ```yaml
 Type: Int64
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -258,6 +272,9 @@ Accept wildcard characters: False
 ```
 
 ### -QualityWeight
+
+> Applicable: FAST Server for SharePoint 2010
+
 This integer parameter sets the weight of the quality component of the relevancy model.
 
 Quality denotes the assigned importance of a document.
@@ -271,8 +288,7 @@ The GetQualityComponents() method available on the RankProfileImpl object lists 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -282,6 +298,9 @@ Accept wildcard characters: False
 ```
 
 ### -QueryAuthorityWeight
+
+> Applicable: FAST Server for SharePoint 2010
+
 This integer parameter sets the weight of the query authority relevancy component.
 
 The query authority increases for an item when a user clicks through to it from search results.
@@ -290,8 +309,7 @@ The more popular the item is for a given query, the higher the query authority r
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -301,13 +319,15 @@ Accept wildcard characters: False
 ```
 
 ### -RankModelName
+
+> Applicable: FAST Server for SharePoint 2010
+
 The name of a rank profile to modify.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -317,6 +337,9 @@ Accept wildcard characters: False
 ```
 
 ### -StopWordThreshold
+
+> Applicable: FAST Server for SharePoint 2010
+
 This integer parameter sets the stop word threshold of the rank profile.
 
 A stop word is a search term that is so common in the result set that it is not counted as part of the relevancy calculation.
@@ -329,8 +352,7 @@ A low StopWordThreshold value gives better search performance, but a lower resul
 ```yaml
 Type: Int64
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named

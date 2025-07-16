@@ -14,7 +14,6 @@ schema: 2.0.0
 Returns the claim-to-user license mappings.
 
 
-
 ## SYNTAX
 
 ```
@@ -34,21 +33,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- 
+### EXAMPLE 1
 ```powershell
 Get-SPUserLicenseMapping
 ```
 
 This example returns all claim-to-user license mappings for the entire SharePoint farm.
 
-### ---------------EXAMPLE 2 ----------------- 
+### EXAMPLE 2
 ```powershell
 Get-SPUserLicenseMapping -WebApplication "SharePoint - 80"
 ```
 
 This example returns all claim-to-user license mappings for the web application with the name "SharePoint - 80".
 
-### ---------------EXAMPLE 3 ----------------- 
+### EXAMPLE 3
 ```powershell
 Get-SPUserLicenseMapping -WebApplication https://<server_name>/sitename
 ```
@@ -58,6 +57,9 @@ This example returns all claim-to-user license mappings for the Web application 
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -69,8 +71,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -80,14 +81,16 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the URL, GUID, web application name, or instance of a web application object from which to get the user license mappings.
 The type must be an URL in the form https://server_name or https://server_name/sites/sitename, a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh), a web application name (that is, SharePoint - 80), or an instance of a web application object.
 
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

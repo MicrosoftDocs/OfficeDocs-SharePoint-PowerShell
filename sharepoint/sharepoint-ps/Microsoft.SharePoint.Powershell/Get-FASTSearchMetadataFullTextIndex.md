@@ -32,7 +32,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1-----------------
+### EXAMPLE 1
 ```
 Get-FASTSearchMetadataFullTextIndex -Name content
 ```
@@ -42,13 +42,15 @@ This example retrieves the full text index named "content".
 ## PARAMETERS
 
 ### -Name
+
+> Applicable: FAST Server for SharePoint 2010
+
 The name of the full text index to retrieve.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: FullTextIndexName, N
-Applicable: FAST Server for SharePoint 2010
 
 Required: False
 Position: 1

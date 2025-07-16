@@ -7,7 +7,7 @@ title: Mount-SPStateServiceDatabase
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # Mount-SPStateServiceDatabase
@@ -31,7 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- 
+### EXAMPLE 1
 ```
 Mount-SPStateServiceDatabase -Name "statedata1" -DatabaseServer "localhost"
 ```
@@ -42,7 +42,7 @@ This example is used in least privilege scenarios when an administrator cannot c
 The database must already exist and be empty.
 The database cannot be used until the Initialize-SPStateServiceDatabase cmdlet is run, so errors could occur with this example.
 
-### --------------EXAMPLE 2----------------- 
+### EXAMPLE 2
 ```
 Mount-SPStateServiceDatabase -Name "statedata1" -DatabaseServer "localhost" -ServiceApplication "ServiceApp1" -Weight 10 | Initialize-SPStateServiceDatabase
 ```
@@ -53,13 +53,15 @@ The result is immediately piped to the Initialize-SPStateServiceDatabase cmdlet 
 ## PARAMETERS
 
 ### -Name
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the database name that is created in the SQL Server database.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -69,6 +71,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -80,8 +85,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -91,6 +95,9 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseCredentials
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the database credentials for SQL Authentication used to access the state service database.
 If this parameter is not specified, Windows authentication is used.
 
@@ -99,8 +106,7 @@ The type must be a valid PSCredential object.
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -110,6 +116,9 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServer
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of the host server for the state service database.
 
 The type must be a valid SQL Server host name; for example, SQLServerHost1.
@@ -117,8 +126,7 @@ The type must be a valid SQL Server host name; for example, SQLServerHost1.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -128,6 +136,9 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceApplication
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the state service application to which to add the state database.
 
 The type must be a valid name of a state service application (for example, StateServiceApp1); a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or an instance of a valid SPStateServiceApplication object.
@@ -135,8 +146,7 @@ The type must be a valid name of a state service application (for example, State
 ```yaml
 Type: SPStateServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -146,6 +156,9 @@ Accept wildcard characters: False
 ```
 
 ### -Weight
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the weight for the state database used to load balance the allocation of new data.
 The default value is 1.
 
@@ -154,8 +167,7 @@ The type must be a valid integer in the range of 1 to 10.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

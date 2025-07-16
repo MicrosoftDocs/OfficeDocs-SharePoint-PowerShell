@@ -56,7 +56,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------EXAMPLE-------- 
+### EXAMPLE
 ```powershell
 $ssap = Get-SPEnterpriseSearchServiceApplicationProxy
 $hostname = hostname
@@ -73,14 +73,16 @@ The example defines the variable $web as the SPWeb with URL https://hostname, an
 ## PARAMETERS
 
 ### -ResultSource
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the Result Source to associate with the imported queries.
 The type must be an instance of a valid Source object.
 
 ```yaml
 Type: Source
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -90,14 +92,16 @@ Accept wildcard characters: False
 ```
 
 ### -SearchApplicationProxy
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the proxy for the search application to which the queries file should be imported.
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application proxy name (for example, SearchAppProxy1); or an instance of a valid SearchServiceApplicationProxy object.
 
 ```yaml
 Type: SearchServiceApplicationProxyPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -107,14 +111,16 @@ Accept wildcard characters: False
 ```
 
 ### -Web
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the SPWeb to associate with the imported queries.
 The type must be an instance of a valid SPWeb object.
 
 ```yaml
 Type: SPWeb
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -124,6 +130,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -135,8 +144,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -146,6 +154,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -153,7 +164,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -163,13 +173,15 @@ Accept wildcard characters: False
 ```
 
 ### -Filename
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the full UNC (Universal Naming Convention) path of the file to import.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -179,6 +191,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -186,7 +201,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

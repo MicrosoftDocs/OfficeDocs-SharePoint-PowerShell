@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -----------------------EXAMPLE-----------------------------
+### EXAMPLE
 
 ```powershell
 Remove-SPOSiteGroup -Site https://contoso.sharepoint.com/sites/marketing -Identity GroupToRemove
@@ -53,7 +53,6 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -71,7 +70,6 @@ Specifies the site collection to remove the group from.
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: Named

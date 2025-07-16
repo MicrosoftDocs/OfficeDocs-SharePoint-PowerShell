@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 Sets the identity providers of a Web application.
 
-
 ## SYNTAX
 
 ### ImportCertificateParameterSet
@@ -44,15 +43,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -------------------------EXAMPLE 1----------------------
+### EXAMPLE 1
 ```
 Set-SPTrustedIdentityTokenIssuer "LiveIDSTS" -Certificate (Get-ChildItem"cert:Certificates (LocalComputer)\Personal\Certificates -Name "LiveID Cert")
 ```
 
 This example sets the identity provider to LiveIDSTS.
 
-
-### -------------------------EXAMPLE 2----------------------
+### EXAMPLE 2
 ```
 C:\PS>$ip = @( (Get-SPTrustedIdentityTokenIssuer "LiveID STS"), (New-SPTrustedIdentityTokenIssuer -ASPNetMembershipProvider "myMembershipProvider" -ASPNetRoleProvider "myRoleProvider"), (Get-SPTrustedIdentityTokenIssuer "NTLM")) )
 New-SPWebApplication https://contoso.com -IdentityProvider $ip
@@ -61,10 +59,12 @@ New-SPWebApplication https://contoso.com -IdentityProvider $ip
 This example sets the identity provider using the .ASPNetMembership and Role parameters.
 When these parameters are used, a variable must be set; otherwise, the values do not take effect.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the identity provider to update.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or a valid name of identity provider (for example, LiveID STS); or an instance of a valid SPIdentityProvider object.
@@ -72,8 +72,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPTrustedIdentityTokenIssuerPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -83,6 +82,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -94,8 +96,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -105,6 +106,9 @@ Accept wildcard characters: False
 ```
 
 ### -ClaimProvider
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the IP STS that can resolve and search claims for claims people picker.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or a valid name of a claim provider (for example, MyIDprovider1); or an instance of a valid SPClaimProvider object.
@@ -112,8 +116,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPClaimProviderPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -123,6 +126,9 @@ Accept wildcard characters: False
 ```
 
 ### -ClaimsMappings
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the mapping of the claims from the original token to the SharePoint token.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or a valid name of a claim mapping rule (for example, Email); or an instance of a valid SPClaimMapping object.
@@ -130,8 +136,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPClaimMappingPipeBind[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -141,6 +146,9 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies a description for the new identity provider.
 
 The type must be a valid string; for example, LiveID STS.
@@ -148,8 +156,7 @@ The type must be a valid string; for example, LiveID STS.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -159,6 +166,9 @@ Accept wildcard characters: False
 ```
 
 ### -ImportTrustCertificate
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the X.509 certificate object from trusted authentication provider farm.
 
 The type must be a name of a valid X.509 certificate; for example, Certificate1.
@@ -166,8 +176,7 @@ The type must be a name of a valid X.509 certificate; for example, Certificate1.
 ```yaml
 Type: X509Certificate2
 Parameter Sets: ImportCertificateParameterSet
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -177,11 +186,13 @@ Accept wildcard characters: False
 ```
 
 ### -MetadataEndPoint
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 ```yaml
 Type: Uri
 Parameter Sets: MetadataEndPointParameterSet
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -191,6 +202,9 @@ Accept wildcard characters: False
 ```
 
 ### -Realm
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the realm, or resource partition, associated with this trust.
 
 The type must be a name of a valid realm; for example, MD_REALM.
@@ -198,8 +212,7 @@ The type must be a name of a valid realm; for example, MD_REALM.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -209,6 +222,9 @@ Accept wildcard characters: False
 ```
 
 ### -SignInUrl
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the sign-in URLs for this trusted identity provider STS.
 
 The type must be a valid URL, in the form https://int.live.com/.
@@ -216,8 +232,7 @@ The type must be a valid URL, in the form https://int.live.com/.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -227,14 +242,16 @@ Accept wildcard characters: False
 ```
 
 ### -UseWReply
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Includes a WReply with the token request.
 Wreply is a URL at the relying party to which the requestor is redirected once sign-out processing is complete.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -244,13 +261,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -260,13 +279,15 @@ Accept wildcard characters: False
 ```
 
 ### -RegisteredIssuerName
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 {{Fill RegisteredIssuerName Description}}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -276,6 +297,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -283,7 +307,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

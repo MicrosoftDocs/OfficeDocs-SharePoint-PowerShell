@@ -53,7 +53,6 @@ Parameter Sets: (All)
 Aliases:
 Accepted values: Public, Private
 
-
 Required: True
 Position: Named
 Default value: None
@@ -73,7 +72,6 @@ Relative-Relative path depends on the OriginScope.  If the originScope is Tenant
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: Named
@@ -111,7 +109,6 @@ The cmdlet is not run.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 
 Required: False
 Position: Named

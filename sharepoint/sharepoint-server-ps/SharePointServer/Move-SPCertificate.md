@@ -24,7 +24,7 @@ Moves the specified certificate to a different certificate store.
 
 ## EXAMPLES
 
-### ------------EXAMPLE-----------
+### EXAMPLE
 ```powershell
 Move-SPCertificate -Identity "Team Site Certificate" -NewStore EndEntity
 ```

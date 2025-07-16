@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 Moves a specified percentage of partitions from one scale-out database to another.
 
-
 ## SYNTAX
 
 ### NewDatabase
@@ -45,7 +44,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1---------------
+### EXAMPLE 1
 ```
 $databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
 $database = $databases[0]
@@ -56,7 +55,7 @@ This example creates a new scale-out database named Database2 on the MyDatabaseS
 
 The example also moves 30% of the data from the upper side of the data range in the first scale-out database of the given service application.
 
-### ---------------EXAMPLE 2---------------
+### EXAMPLE 2
 
 ```
 $ssa = Get-SPEnterpriseSearchServiceApplication
@@ -71,13 +70,15 @@ This example scales out the Search Analytics database, moving 33% of data to the
 ## PARAMETERS
 
 ### -NewDatabaseName
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of a new scale-out database that you are creating.
 
 ```yaml
 Type: String
 Parameter Sets: NewDatabase
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -87,13 +88,15 @@ Accept wildcard characters: False
 ```
 
 ### -SourceDatabase
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 The source scale-out database to move data from.
 
 ```yaml
 Type: SPDatabasePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -103,13 +106,15 @@ Accept wildcard characters: False
 ```
 
 ### -SourceServiceApplication
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 The service application in which the data move operation will take place.
 
 ```yaml
 Type: SPServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -119,13 +124,15 @@ Accept wildcard characters: False
 ```
 
 ### -TargetDatabase
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 The target scale-out database to move data to.
 
 ```yaml
 Type: SPDatabasePipeBind
 Parameter Sets: ExistingDatabase
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -135,6 +142,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -146,8 +156,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -157,6 +166,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -164,7 +176,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -174,14 +185,16 @@ Accept wildcard characters: False
 ```
 
 ### -MoveLowerHalf
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies whether to move the lower or the upper side of the data range from the source scale-out database.
 If this parameter is not specified, the default behavior is to move the upper side of the source scale-out database data range.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -191,6 +204,9 @@ Accept wildcard characters: False
 ```
 
 ### -NewDatabaseCredentials
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the credentials to use when creating the scale-out database.
 These credentials will have owner rights on the newly created scale-out database.
 If a value is not provided, the current user's credentials will be used by default.
@@ -198,8 +214,7 @@ If a value is not provided, the current user's credentials will be used by defau
 ```yaml
 Type: PSCredential
 Parameter Sets: NewDatabase
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -209,14 +224,16 @@ Accept wildcard characters: False
 ```
 
 ### -NewDatabaseFailoverServer
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the failover server name of the new scale-out database to be created.
 If a value is not provided, the new scale-out database does not have a failover server.
 
 ```yaml
 Type: String
 Parameter Sets: NewDatabase
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -226,14 +243,16 @@ Accept wildcard characters: False
 ```
 
 ### -NewDatabaseServer
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of the server of the new scale-out database to be created.
 If a value is not provided, the default database server is used.
 
 ```yaml
 Type: String
 Parameter Sets: NewDatabase
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -243,14 +262,16 @@ Accept wildcard characters: False
 ```
 
 ### -SourcePercentage
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the percentage of data in the source scale-out database to move.
 If a value is not provided, the default value of 50 percent is used.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -260,6 +281,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -267,7 +291,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

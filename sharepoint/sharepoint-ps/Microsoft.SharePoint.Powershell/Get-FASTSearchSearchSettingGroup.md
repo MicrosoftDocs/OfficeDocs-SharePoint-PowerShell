@@ -29,14 +29,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1-----------------
+### EXAMPLE 1
 ```
 Get-FASTSearchSearchSettingGroup
 ```
 
 This example retrieves all FAST Search Server 2010 for SharePoint search setting groups.
 
-### ---------------EXAMPLE 2-----------------
+### EXAMPLE 2
 ```
 Get-FASTSearchSearchSettingGroup -Name marketinggroup
 ```
@@ -46,13 +46,15 @@ This example retrieves the "marketinggroup" search setting group.
 ## PARAMETERS
 
 ### -Name
+
+> Applicable: FAST Server for SharePoint 2010
+
 The name of the search setting group to retrieve.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named

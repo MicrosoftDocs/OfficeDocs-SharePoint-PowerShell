@@ -7,14 +7,13 @@ title: Reset-SPProjectPCSSettings
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # Reset-SPProjectPCSSettings
 
 ## SYNOPSIS
 Resets the settings for the Project Calculation Engine on Project Server.
-
 
 ## SYNTAX
 
@@ -29,10 +28,9 @@ The cmdlet requires you to identify the Project Server service application.
 
 For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
 
-
 ## EXAMPLES
 
-### ----------------------EXAMPLE-----------------------
+### EXAMPLE
 ```
 $sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Project Application Services'}
 Reset-SPProjectPCSSettings -ServiceApplication $sa
@@ -40,17 +38,18 @@ Reset-SPProjectPCSSettings -ServiceApplication $sa
 
 This cmdlet resets the settings for the Project Calculation Engine that is running on a Project Server Service Application.
 
-
 ## PARAMETERS
 
 ### -ServiceApplication
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 The Project Server service application for which the settings are to be read.
 
 ```yaml
 Type: PsiServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: sa
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -60,6 +59,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -71,8 +73,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: False
 Position: Named

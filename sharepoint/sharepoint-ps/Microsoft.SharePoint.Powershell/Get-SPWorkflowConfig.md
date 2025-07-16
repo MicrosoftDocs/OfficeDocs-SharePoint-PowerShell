@@ -17,7 +17,6 @@ ms.reviewer:
 Returns workflow settings for the specified Web application.
 
 
-
 ## SYNTAX
 
 ### SiteCollection
@@ -43,7 +42,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE----------------- 
+### EXAMPLE
 ```
 Get-SPWorkFlowConfig -webapplication https://sitename
 ```
@@ -55,6 +54,9 @@ To get farm-level workflow settings for event delivery time-out, postpone thresh
 ## PARAMETERS
 
 ### -SiteCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name or URL of the site collection.
 
 The only other parameter that is used with the SiteCollection parameter is the DeclarativeWorkflowsEnabled parameter.
@@ -63,8 +65,7 @@ No other parameters are used.
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: SiteCollection
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -74,6 +75,9 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name or URL of the Web application.
 
 The type must be a valid name, in the form WebApplication-1212, or a URL, in the form https://server_name/WebApplication-1212.
@@ -81,8 +85,7 @@ The type must be a valid name, in the form WebApplication-1212, or a URL, in the
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: WebApplication
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -92,6 +95,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -103,8 +109,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

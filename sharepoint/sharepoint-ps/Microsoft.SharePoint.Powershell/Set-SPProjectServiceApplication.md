@@ -30,17 +30,19 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### EXAMPLE
 ```
 Set- SPProjectServiceApplication -Identity PSIServiceApp -ApplicationPool newapppool RegisterTimerJob
 ```
 
 This example updates the application pool and re-registers the timer job for a Project Server Service application.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Specifies the Project Server Service application to update.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a Project Server service application (for example, ProjectWebApp1); or an instance of a valid PsiServiceApplication object.
@@ -48,8 +50,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: PsiServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -59,6 +60,9 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationPool
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Specifies the existing IIS application pool to run the web service in for the service application.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of an application pool (for example, AppPoolName1); or an instance of a valid IISWebServiceApplicationPool object.
@@ -66,8 +70,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPIisWebServiceApplicationPoolPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -77,6 +80,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -88,8 +94,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: False
 Position: Named

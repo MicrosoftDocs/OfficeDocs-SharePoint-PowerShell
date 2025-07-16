@@ -13,8 +13,7 @@ ms.reviewer:
 # Set-SPAccessServicesApplication
 
 ## SYNOPSIS
-Sets the properties of a Access Services service application. 
-
+Sets the properties of a Access Services service application.
 
 ## SYNTAX
 
@@ -28,10 +27,9 @@ Set-SPAccessServicesApplication [-Identity] <SPServiceApplicationPipeBind>
 ## DESCRIPTION
 Use the `Set-SPAccessServicesApplication` cmdlet to set the properties of an Access Services service application.
 
-
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### EXAMPLE
 ```
 $sa = Get-SPAccessServicesApplication
 Set-SPAccessServicesApplication -Identity $sa -SessionsPerUserMax 50
@@ -39,10 +37,12 @@ Set-SPAccessServicesApplication -Identity $sa -SessionsPerUserMax 50
 
 Sets the maximum number of sessions per user to 50.
 
-
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -54,8 +54,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -65,13 +64,15 @@ Accept wildcard characters: False
 ```
 
 ### -CacheTimeout
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Sets the cache timeout value in seconds. The default is 300.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -81,13 +82,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -97,6 +100,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the Access Service service application to update.
 
 The type must be a valid GUID or the name of a valid managed metadata service application.
@@ -104,8 +110,7 @@ The type must be a valid GUID or the name of a valid managed metadata service ap
 ```yaml
 Type: SPServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 0
@@ -116,13 +121,14 @@ Accept wildcard characters: False
 
 ### -PrivateBytesMax
 
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Sets the maximum private bytes that can be used by Access Services. The default value is -1 (no limit).
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -133,13 +139,14 @@ Accept wildcard characters: False
 
 ### -RecoveryPointObjective
 
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Not used.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -149,13 +156,15 @@ Accept wildcard characters: False
 ```
 
 ### -RequestDurationMax
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Sets the timeout value for requests in seconds. Default is 30.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -165,13 +174,15 @@ Accept wildcard characters: False
 ```
 
 ### -SessionsPerAnonymousUserMax
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Sets the number of sessions per anonymous user. The default is 25.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -181,13 +192,15 @@ Accept wildcard characters: False
 ```
 
 ### -SessionsPerUserMax
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Sets the number of sessions per user. The default is 10.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -197,6 +210,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -204,7 +220,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

@@ -62,7 +62,6 @@ Type: System.String
 Parameter Sets: Group
 Aliases:
 
-
 Required: True
 Position: 0
 Default value: None
@@ -81,7 +80,6 @@ Type: System.Guid
 Parameter Sets: ObjectId
 Aliases:
 
-
 Required: True
 Position: 0
 Default value: None
@@ -99,7 +97,6 @@ UserPrincipalName or UPN defined for the specific user on the SharePoint Online 
 Type: System.String
 Parameter Sets: User
 Aliases:
-
 
 Required: True
 Position: 0

@@ -27,22 +27,23 @@ Not in use
 
 ## EXAMPLES
 
-### Example 1 
+### Example 1
 ```
 Not in use
 ```
 
-
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013
+
 Not in use
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -52,13 +53,15 @@ Accept wildcard characters: False
 ```
 
 ### -ClassId
+
+> Applicable: SharePoint Server 2013
+
 Not in use
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: True
 Position: Named
@@ -68,13 +71,15 @@ Accept wildcard characters: False
 ```
 
 ### -Role
+
+> Applicable: SharePoint Server 2013
+
 Not in use
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: True
 Position: Named
@@ -84,13 +89,15 @@ Accept wildcard characters: False
 ```
 
 ### -Site
+
+> Applicable: SharePoint Server 2013
+
 Not in use
 
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: True
 Position: Named
@@ -100,13 +107,15 @@ Accept wildcard characters: False
 ```
 
 ### -UserAlias
+
+> Applicable: SharePoint Server 2013
+
 Not in use
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: True
 Position: Named

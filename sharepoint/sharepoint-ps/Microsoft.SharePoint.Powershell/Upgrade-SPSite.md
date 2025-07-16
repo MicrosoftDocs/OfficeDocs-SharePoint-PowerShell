@@ -38,14 +38,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -------------EXAMPLE 1----------
+### EXAMPLE 1
 ```
 Upgrade-SPSite https://<site name>/sites/testsite
 ```
 
 This example upgrades the existing https://\<site name\>/sites/testsite site collection by using only available build-to-build upgrade actions that are associated with the current site collection operating mode. The SPSite.CompatibilityLevel will not be changed by this operation.
 
-### -------------EXAMPLE 2----------
+### EXAMPLE 2
 ```
 Upgrade-SPSite https://<site name>/sites/testsite -VersionUpgrade
 ```
@@ -55,13 +55,15 @@ This example upgrades the existing https://\<site name\>/sites/testsite site col
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the SPSite object to run upgrade operations against.
 
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -71,6 +73,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -82,8 +87,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -93,6 +97,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -100,7 +107,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -110,13 +116,15 @@ Accept wildcard characters: False
 ```
 
 ### -Email
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies whether to send mail on completion of the site collection upgrade.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -126,13 +134,15 @@ Accept wildcard characters: False
 ```
 
 ### -QueueOnly
-Specifies to put the site into the queue for a delayed upgrade that is managed by a timer job. 
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
+Specifies to put the site into the queue for a delayed upgrade that is managed by a timer job.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -142,13 +152,15 @@ Accept wildcard characters: False
 ```
 
 ### -Unthrottled
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies a farm administrator to bypass the throttle which permits a site collection to be upgraded even if there are "too many" site collections in the throttle to be upgraded.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -158,6 +170,9 @@ Accept wildcard characters: False
 ```
 
 ### -VersionUpgrade
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies to perform a version-to-version upgrade on the SPSite object.
 When this parameter is set, it internally triggers all available build-to-build actions that are associated with the current site collection operating mode.
 Version-to-version actions follow to bring site collections to the next site collection operating mode inclusive of all new build-to-build actions that are associated with the new site collection operating mode.
@@ -166,8 +181,7 @@ When this parameter is not set, it triggers only available build-to-build upgrad
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -177,6 +191,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -184,7 +201,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -194,6 +210,9 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
+
+> Applicable: SharePoint Server 2016, SharePoint Server 2019
+
 Specifies what priority to upgrade the site.
 
 The valid values are:
@@ -207,8 +226,7 @@ The valid values are:
 ```yaml
 Type: Byte
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

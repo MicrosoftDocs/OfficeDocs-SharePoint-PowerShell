@@ -29,14 +29,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 Set-FASTSearchSecurityClaimsUserStore -Identity clm -Description "SharePoint Users"
 ```
 
 This example updates the description of the "clm" claims user store.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 2 (FAST Server for SharePoint 2010)
 ```
 Get-FASTSearchSecurityClaimsUserStore -Identity cl2 | Set-FASTSearchSecurityClaimsUserStore -Issuer Windows
 ```
@@ -47,13 +47,15 @@ The Set-FASTSearchSecurityClaimsUserStore cmdlet updates the SecurityContent val
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: FAST Server for SharePoint 2010
+
 The user store identity.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: 1
@@ -63,13 +65,15 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityContent
+
+> Applicable: FAST Server for SharePoint 2010
+
 A claims user store object whose property values are used to update another claims user store.
 
 ```yaml
 Type: ClaimsUserStore
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 1
@@ -79,13 +83,15 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
+> Applicable: FAST Server for SharePoint 2010
+
 A brief explanation of the user store.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 2
@@ -95,13 +101,15 @@ Accept wildcard characters: False
 ```
 
 ### -Issuer
+
+> Applicable: FAST Server for SharePoint 2010
+
 The Microsoft SharePoint Server Security Token Service (STS) claims provider that issued the claims.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 3

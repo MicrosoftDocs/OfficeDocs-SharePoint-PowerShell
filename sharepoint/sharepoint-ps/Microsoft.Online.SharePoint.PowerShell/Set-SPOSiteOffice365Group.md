@@ -60,7 +60,6 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: 2
 Default value: None
@@ -83,7 +82,6 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: 5
 Default value: None
@@ -101,7 +99,6 @@ Specifies the group's description.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: 4
@@ -121,7 +118,6 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: 1
 Default value: None
@@ -140,7 +136,6 @@ Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: 3
 Default value: None
@@ -158,7 +153,6 @@ For sites that already have a modern page set as homepage, you can specify wheth
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: 6

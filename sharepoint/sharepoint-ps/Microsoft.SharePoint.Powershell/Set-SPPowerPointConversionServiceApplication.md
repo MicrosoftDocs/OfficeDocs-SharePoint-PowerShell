@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 Configures settings for a PowerPoint Conversion Service application.
 
-
 ## SYNTAX
 
 ```
@@ -28,35 +27,34 @@ Set-SPPowerPointConversionServiceApplication [-Identity] <SPPowerPointConversion
 ## DESCRIPTION
 Use the `Set-SPPowerPointConversionServiceApplication` cmdlet to set properties and settings for an instance of a PowerPoint Conversion Service application that is in a farm.
 
-
 ## EXAMPLES
 
-### --------------------EXAMPLE 1---------------------
+### EXAMPLE 1
 ```
 Set-SPPowerPointConversionServiceApplication -Identity "MyWorkgroupPPTApp" -CacheExpirationPeriodInSeconds 1200
 ```
 
 This example establishes new operational defaults for the conversion cache expiration.
 
-
-### --------------------EXAMPLE 2---------------------
+### EXAMPLE 2
 ```
 Set-SPPowerPointConversionServiceApplication -Identity "MyWorkgroupPPTApp" -DisableBinaryScan:$false
 ```
 
 This example disables binary scanning of documents.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the unique name of this PowerPoint Conversion Service application.
 
 ```yaml
 Type: SPPowerPointConversionServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -66,6 +64,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -77,8 +78,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -88,14 +88,16 @@ Accept wildcard characters: False
 ```
 
 ### -CacheExpirationPeriodInSeconds
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the maximum time, in seconds, that items remain in the back-end server cache.
 The default value is 600 seconds (10 minutes).
 
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -105,14 +107,16 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumConversionsPerWorker
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the maximum number of presentations that a conversion worker process can convert before recycling.
 The default value is 5.
 
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -122,14 +126,16 @@ Accept wildcard characters: False
 ```
 
 ### -WorkerKeepAliveTimeoutInSeconds
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the maximum time, in seconds, that a conversion worker process can be unresponsive before being terminated.
 The default value is 120 seconds.
 
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -139,6 +145,9 @@ Accept wildcard characters: False
 ```
 
 ### -WorkerProcessCount
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the number of active instances of the conversion worker process on each back-end.
 This value must be less than the Windows Communication Foundation (WCF) connection limit for this computer.
 The default value is 3.
@@ -146,8 +155,7 @@ The default value is 3.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -157,14 +165,16 @@ Accept wildcard characters: False
 ```
 
 ### -WorkerTimeoutInSeconds
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the maximum time, in seconds, that a conversion worker process is given for any single conversion.
 The default is 300 seconds (5 minutes).
 
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

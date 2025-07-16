@@ -31,14 +31,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1-----------------
+### EXAMPLE 1
 ```
 Get-FASTSearchSecurityAliaser
 ```
 
 This example gets a list of all XML and regular expression principal aliasers.
 
-### ---------------EXAMPLE 2-----------------
+### EXAMPLE 2
 ```
 Get-FASTSearchSecurityAliaser -Identity xmlalias4
 ```
@@ -48,6 +48,9 @@ This example gets the principal aliaser with the ID "xmlalias4".
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: FAST Server for SharePoint 2010
+
 The identity of a regular expression or XML aliaser to get.
 
 If not specified, the cmdlet gets a list of all aliasers.
@@ -55,8 +58,7 @@ If not specified, the cmdlet gets a list of all aliasers.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 1

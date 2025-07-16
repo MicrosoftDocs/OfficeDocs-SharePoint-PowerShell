@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets SharePoint Designer features.
 
-
 ## SYNTAX
 
 ```
@@ -29,27 +28,27 @@ The `Set-SPDesignerSettings` cmdlet sets SharePoint Designer features on a speci
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### -------------------EXAMPLE--------------------
+### EXAMPLE
 ```powershell
 Set-SPDesignerSettings -WebApplication https://contoso -AllowRevertFromTemplate $False -AllowMasterPageEditing $False
 ```
 
 This example disables the ability to detach pages from existing site definitions and to edit master pages and page layouts.
 
-
 ## PARAMETERS
 
 ### -WebApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the Web application in which the settings will apply.
 
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -59,14 +58,16 @@ Accept wildcard characters: False
 ```
 
 ### -AllowDesigner
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether to allow users to edit sites in a web application by using SharePoint Designer.
 The default value is True
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -76,14 +77,16 @@ Accept wildcard characters: False
 ```
 
 ### -AllowMasterPageEditing
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether to allow site administrators to customize master pages and layout pages using SharePoint Designer.
 The default value is True.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -93,14 +96,16 @@ Accept wildcard characters: False
 ```
 
 ### -AllowRevertFromTemplate
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether to allow site administrators to detach pages from the original site definition using SharePoint Designer.
 The default value is True.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -110,6 +115,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -121,8 +129,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -132,6 +139,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -139,7 +149,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -149,14 +158,16 @@ Accept wildcard characters: False
 ```
 
 ### -ShowURLStructure
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether to allow site administrators to manage the URL structure of their Web sites by using SharePoint Designer.
 The default value is True.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -166,6 +177,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -173,7 +187,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -183,13 +196,15 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCreateDeclarativeWorkflow
+
+> Applicable: SharePoint Server Subscription Edition
+
 Allows the creation of declarative workflows.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -199,13 +214,15 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSaveDeclarativeWorkflowAsTemplate
+
+> Applicable: SharePoint Server Subscription Edition
+
 Allows saving declarative workflows as a template.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -215,13 +232,15 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSavePublishDeclarativeWorkflow
+
+> Applicable: SharePoint Server Subscription Edition
+
 Allows saving of published declarative workflows.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -231,6 +250,9 @@ Accept wildcard characters: False
 ```
 
 ### -DesignerDownloadUrl
+
+> Applicable: SharePoint Server Subscription Edition
+
 Sets the URL to the SharePoint Designer download. The default value is:
 
 https://go.microsoft.com/fwlink/?LinkId=328584
@@ -238,8 +260,7 @@ https://go.microsoft.com/fwlink/?LinkId=328584
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -249,15 +270,17 @@ Accept wildcard characters: False
 ```
 
 ### -RequiredDesignerVersion
-Sets the required version of SharePoint Designer. The default value is 
+
+> Applicable: SharePoint Server Subscription Edition
+
+Sets the required version of SharePoint Designer. The default value is
 
 15.0.0.0
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

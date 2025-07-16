@@ -74,7 +74,6 @@ For technical information, type: "get-help Get-SPOStructuralNavigationCacheSiteS
 
 For online help, type: "get-help Get-SPOStructuralNavigationCacheSiteState -online"
 
-
 ## RELATED LINKS
 
 [Get-SPOStructuralNavigationCacheWebState](Get-SPOStructuralNavigationCacheWebState.md)

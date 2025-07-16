@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a PowerPoint Conversion Service application proxy.
 
-
 ## SYNTAX
 
 ```
@@ -25,7 +24,6 @@ New-SPPowerPointConversionServiceApplicationProxy [-Name] <String>
 Use the `New-SPPowerPointConversionServiceApplicationProxy` cmdlet to create a PowerPoint Conversion Service application proxy.
 The service application proxy is instantiated on the front-end web server and acts as an intermediary between the client computer and the service application back end.
 
-
 ## EXAMPLES
 
 ### Example
@@ -35,17 +33,18 @@ New-SPPowerPointConversionServiceApplicationProxy -Name "PowerPoint Conversion S
 
 This example creates a new instance of the PowerPoint Conversion Service application proxy named _PowerPoint Conversion Service application proxy_, binds it to the _PowerPoint Conversion Service Application_ service application, and then adds it to the default service application proxy group
 
-
 ## PARAMETERS
 
 ### -Name
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the service application proxy.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -55,13 +54,15 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the service application to bind.
 
 ```yaml
 Type: SPPowerPointConversionServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -71,14 +72,16 @@ Accept wildcard characters: False
 ```
 
 ### -AddToDefaultGroup
+
+> Applicable: SharePoint Server Subscription Edition
+
 Adds the newly created proxy to the default service application proxy group.
 If not specified, the proxy is not added to a group.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -88,6 +91,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -99,8 +105,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -110,6 +115,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -117,7 +125,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -127,6 +134,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -134,7 +144,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

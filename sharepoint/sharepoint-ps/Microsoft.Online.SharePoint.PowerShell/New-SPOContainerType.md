@@ -24,13 +24,11 @@ New-SPOContainerType [-ContainerTypeName] <String> -OwningApplicationId <Guid>
  [-IsGovernableByAdmin <Boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-
 ## DESCRIPTION
 
 This cmdlet creates a new standard or trial container type. A standard container type, by definition, has a billing profile associated with it and can be either regular billed or direct to consumer billed. A trial container type does not have a billing profile. In case of regular billing, the next step after creation is the addition of a billing profile using the [Add-SPOContainerTypeBilling](./Add-SPOContainerTypeBilling.md) cmdlet. With the use of `-IsPassThroughBilling`, you can create a direct to customer billed container type. There is no need to attach a billing profile in case this case. `–TrialContainerType` when used creates a trial container type that has a validity of 30 days.
 
 You must be a SharePoint Embedded Administrator to run this cmdlet.
-
 
 ## EXAMPLES
 
@@ -66,7 +64,6 @@ New-SPOContainerType -ContainerTypeName ContosoLegal -OwningApplicationId a735e4
 
 In Example 4, the cmdlet creates a standard container type, ContosoLegal that has opted out of management through Microsoft-enabled administrator platforms.
 
-
 ## PARAMETERS
 
 ### -ApplicationRedirectUrl
@@ -79,7 +76,6 @@ This parameter specifies the url of that the application should be redirected to
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: Named
@@ -99,7 +95,6 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: 0
 Default value: None
@@ -117,7 +112,6 @@ Using `-GovernableByAdmin`, you can decide whether consuming tenant administrato
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: Named
@@ -137,7 +131,6 @@ Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -156,7 +149,6 @@ Type: System.Guid
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -174,7 +166,6 @@ This parameter is used to specify that the cmdlet is used to create a trial cont
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: Named
@@ -216,8 +207,6 @@ Accept wildcard characters: False
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
-
-
 
 ## RELATED LINKS
 

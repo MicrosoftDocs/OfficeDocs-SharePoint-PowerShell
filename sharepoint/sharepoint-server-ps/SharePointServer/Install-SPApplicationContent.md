@@ -14,7 +14,6 @@ schema: 2.0.0
 Copies shared application data to existing Web application folders.
 
 
-
 ## SYNTAX
 
 ```
@@ -30,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------------------EXAMPLE-------------------- 
+### EXAMPLE
 ```powershell
 Install-SPApplicationContent
 ```
@@ -40,6 +39,9 @@ This example copies data to a Web application in the existing folders.
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -51,8 +53,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -70,6 +71,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
-During a Cummulative Update installation if you face a situation where the full PSConfig cannot run then this cmdlet should be executed on all SharePoint servers to keep the Farm in a supported state. 
+During a Cummulative Update installation if you face a situation where the full PSConfig cannot run then this cmdlet should be executed on all SharePoint servers to keep the Farm in a supported state.
 
 ## RELATED LINKS

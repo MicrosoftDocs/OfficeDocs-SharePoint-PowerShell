@@ -2,7 +2,7 @@
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 module name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spprojectpcssettings
-Applicable: SharePoint Server Subscription Edition
+
 title: Set-SPProjectPCSSettings
 schema: 2.0.0
 ---
@@ -29,27 +29,27 @@ The settings have maximum and minimum values that are enforced by Project Server
 
 For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
 
-
 ## EXAMPLES
 
-### ----------------------EXAMPLE-----------------------
+### EXAMPLE
 ```powershell
 Set-SPProjectPCSSettings -sa "Project Service Application" -MaximumSessionsPerUser 500
 ```
 
 This example sets 500 as the maximum allowed Project Calculation Engine sessions that a user can open on the "Project Service Application" service application.
 
-
 ## PARAMETERS
 
 ### -ServiceApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 The Project Server service application for which the settings are to be read.
 
 ```yaml
 Type: PsiServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: sa
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -59,6 +59,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -70,8 +73,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -81,13 +83,15 @@ Accept wildcard characters: False
 ```
 
 ### -CachePersistence
+
+> Applicable: SharePoint Server Subscription Edition
+
 The maximum length of time before the Project Calculation Engine can begin to remove temporary cache files of projects opened on the Project Server service application.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -97,13 +101,15 @@ Accept wildcard characters: False
 ```
 
 ### -EditingSessionTimeout
+
+> Applicable: SharePoint Server Subscription Edition
+
 The maximum length of time that a user can be idle in a Project Calculation Engine session before a timeout occurs.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -113,13 +119,15 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumIdleWorkersCount
+
+> Applicable: SharePoint Server Subscription Edition
+
 The maximum number of idle Project Calculation Engine sessions available at a given time.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -129,13 +137,15 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumProjectSize
+
+> Applicable: SharePoint Server Subscription Edition
+
 The maximum size of a project that can be opened by the Project Calculation Engine.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -145,13 +155,15 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumSessionsPerUser
+
+> Applicable: SharePoint Server Subscription Edition
+
 The maximum number of sessions that a user is allowed to open.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -161,13 +173,15 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumWorkersCount
+
+> Applicable: SharePoint Server Subscription Edition
+
 The maximum number of Project Calculation Engine sessions that can be created.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -177,13 +191,15 @@ Accept wildcard characters: False
 ```
 
 ### -MinimumMemoryRequired
+
+> Applicable: SharePoint Server Subscription Edition
+
 The minimum memory required before launching a new Project Calculation Engine session.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -193,13 +209,15 @@ Accept wildcard characters: False
 ```
 
 ### -RequestTimeLimits
+
+> Applicable: SharePoint Server Subscription Edition
+
 The maximum allowable time for a request to the Project Calculation Engine to complete before the Project Calculation Engine session is terminated.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -209,13 +227,15 @@ Accept wildcard characters: False
 ```
 
 ### -NetTcpPort
+
+> Applicable: SharePoint Server Subscription Edition
+
 The TCP port to use with the PCS service.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

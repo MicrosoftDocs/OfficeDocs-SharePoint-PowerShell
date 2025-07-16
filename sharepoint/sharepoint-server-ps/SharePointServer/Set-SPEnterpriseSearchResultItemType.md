@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets properties of a result item type.
 
-
 ## SYNTAX
 
 ```
@@ -42,10 +41,9 @@ Example use cases:
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### EXAMPLE
 ```powershell
 $web = Get-SPWeb https://webUrl
 $tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite -SPWeb $web
@@ -58,12 +56,12 @@ $ruleCollection = Get-SPEnterpriseSearchPropertyRuleCollection
 $ruleCollection.Add($rule)
 $displayProperties = "WorkId,Rank,Title,Size,Path,Description,SiteName,HitHighlightedSummary,HitHighlightedProperties,ViewsLifeTime"
 $displaytemplateUrl = "~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_MyCustomDisplayTemplate.js"
-Set-SPEnterpriseSearchResultItemType 
+Set-SPEnterpriseSearchResultItemType
 -Identity $resultType `
 -SearchApplication $ssa `
 -Name "CustomResultType" `
 -Rules $ruleCollection `
--RulePriority 1 
+-RulePriority 1
 -DisplayProperties $displayProperties `
 -DisplayTemplateUrl $displaytemplateUrl `
 -Owner $tenantOwner
@@ -79,18 +77,19 @@ Next, the example defines which properties of the result item type that shall be
 
 Finally, the example uses the `Set-SPEnterpriseSearchResultItemType` cmdlet to modify the result item type.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the result item type to update.
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh.
 
 ```yaml
 Type: ResultItemTypePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -100,13 +99,15 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the search object owner that defines the scope at which the result item type was created.
 
 ```yaml
 Type: SearchObjectOwner
 Parameter Sets: (All)
 Aliases: o
-Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -116,6 +117,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -127,8 +131,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -138,6 +141,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -145,7 +151,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -155,13 +160,15 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayProperties
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies which result properties to display.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: dp
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -171,13 +178,15 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayTemplateUrl
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the URL of the display template that shall be used for rendering the results.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: url
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -187,13 +196,15 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the result item type.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: n
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -203,13 +214,15 @@ Accept wildcard characters: False
 ```
 
 ### -OptimizeForFrequentUse
+
+> Applicable: SharePoint Server Subscription Edition
+
 {{ Fill OptimizeForFrequentUse Description }}
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: opt
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -219,13 +232,15 @@ Accept wildcard characters: False
 ```
 
 ### -RulePriority
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies which priority the collection of rules has compared to other rules.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: priority
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -235,13 +250,15 @@ Accept wildcard characters: False
 ```
 
 ### -Rules
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the collection of rules to evaluate the result properties against.
 
 ```yaml
 Type: PropertyRuleCollection
 Parameter Sets: (All)
 Aliases: rule
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -251,14 +268,16 @@ Accept wildcard characters: False
 ```
 
 ### -SearchApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the search application.
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application name (for example, SearchApp1); or an instance of a valid SearchServiceApplication object.
 
 ```yaml
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -268,14 +287,16 @@ Accept wildcard characters: False
 ```
 
 ### -SearchApplicationProxy
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the proxy of the search application that contains the result item type.
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application proxy name (for example, SearchAppProxy1); or an instance of a valid SearchServiceApplicationProxy object.
 
 ```yaml
 Type: SearchServiceApplicationProxyPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -285,13 +306,15 @@ Accept wildcard characters: False
 ```
 
 ### -SourceID
+
+> Applicable: SharePoint Server Subscription Edition
+
 Identifies the search result source that the result item type applies to.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases: sid
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -301,6 +324,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -308,7 +334,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

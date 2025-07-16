@@ -53,7 +53,6 @@ Type: Microsoft.Online.SharePoint.PowerShell.SpoHubSitePipeBind
 Parameter Sets: (All)
 Aliases: HubSite
 
-
 Required: True
 Position: 0
 Default value: None
@@ -71,7 +70,6 @@ One or more principals to revoke the permissions for.
 Type: System.String[]
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: Named

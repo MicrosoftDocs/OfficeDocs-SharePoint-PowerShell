@@ -7,14 +7,13 @@ title: Remove-SPWOPIBinding
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # Remove-SPWOPIBinding
 
 ## SYNOPSIS
 Removes bindings for applications, file name extensions and their associated actions on the current SharePoint farm where this cmdlet is run.
-
 
 ## SYNTAX
 
@@ -38,7 +37,7 @@ Remove-SPWOPIBinding [-All] [-AssignmentCollection <SPAssignmentCollection>] [-C
 ```
 
 ## DESCRIPTION
-The `Remove-SPWOPIBinding` cmdlet removes bindings for applications, file name extensions and their associated actions on the current SharePoint farm where this cmdlet is run. 
+The `Remove-SPWOPIBinding` cmdlet removes bindings for applications, file name extensions and their associated actions on the current SharePoint farm where this cmdlet is run.
 After you run this cmdlet, you can use `New-SPWOPIBinding` to re-create the bindings as needed.
 If you remove all the bindings for an application, users cannot use Office Web Apps or the SharePoint Share by link feature for that application.
 If you remove all the bindings on the SharePoint farm where this cmdlet is run, users cannot use Office Web Apps or the SharePoint Share by link feature for any applications in the SharePoint library.
@@ -47,43 +46,41 @@ If you want to stop using Office Web Apps for default clicks, but must preserve 
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### --------------EXAMPLE 1-----------------
+### EXAMPLE 1
 ```
 Remove-SPWOPIBinding -Application "Excel"
 ```
 
 This example removes all bindings for Excel on the current SharePoint farm where this cmdlet is run.
 
-
-### --------------EXAMPLE 2-----------------
+### EXAMPLE 2
 ```
 Remove-SPWOPIBinding -All:$true
 ```
 
 This example removes all bindings on the current SharePoint farm where this cmdlet is run.
 
-
-### --------------EXAMPLE 3-----------------
+### EXAMPLE 3
 ```
 Get-SPWOPIBinding -Action "MobileView" | Remove-SPWOPIBinding
 ```
 
 This example removes all bindings for Office Mobile Web Apps on the current SharePoint farm where this cmdlet is run.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the binding.
 
 ```yaml
 Type: SPWopiBindingPipeBind
 Parameter Sets: Identity
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: 1
@@ -93,6 +90,9 @@ Accept wildcard characters: False
 ```
 
 ### -Action
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the action to remove bindings for.
 For example, "view," "edit," and "embedview." For a list of actions run `Get-SPWOPIBinding`.
 Most typically you will not use this parameter.
@@ -101,8 +101,7 @@ If you specify some actions but not others, some features in SharePoint may not 
 ```yaml
 Type: String
 Parameter Sets: Filter
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -112,13 +111,15 @@ Accept wildcard characters: False
 ```
 
 ### -All
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Removes all bindings.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RemoveAll
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -128,14 +129,16 @@ Accept wildcard characters: False
 ```
 
 ### -Application
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies application to remove bindings for.
 Possible applications are as follows: "Word," "Excel," "PowerPoint," or "OneNote." Run `Get-SPWOPIBinding` to get the list of applications.
 
 ```yaml
 Type: String
 Parameter Sets: Filter
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -145,6 +148,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -156,8 +162,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -167,6 +172,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`.
 
@@ -174,7 +182,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -184,14 +191,16 @@ Accept wildcard characters: False
 ```
 
 ### -Extension
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the file name extensions to remove bindings for.
 Run `Get-SPWOPIBinding` to get the list of file name extensions.
 
 ```yaml
 Type: String
 Parameter Sets: Filter
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -201,6 +210,9 @@ Accept wildcard characters: False
 ```
 
 ### -ProgId
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the programmatic identifier (ProgID) for an application to remove bindings for.
 Run `Get-SPWOPIBinding` to get the list of ProgIDs.
 You may only want to use this parameter to remove bindings for OneNote.
@@ -208,8 +220,7 @@ You may only want to use this parameter to remove bindings for OneNote.
 ```yaml
 Type: String
 Parameter Sets: Filter
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -219,13 +230,15 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of WOPI application (like Office Web Apps Server) to remove bindings for.
 
 ```yaml
 Type: String
 Parameter Sets: Filter
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -235,6 +248,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -242,7 +258,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -252,13 +267,15 @@ Accept wildcard characters: False
 ```
 
 ### -WOPIZone
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the zone to remove bindings for.
 
 ```yaml
 Type: String
 Parameter Sets: Filter
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

@@ -57,7 +57,6 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -75,7 +74,6 @@ SharePoint Online Storage Quota in MegaBytes.
 Type: System.Int64
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: Named

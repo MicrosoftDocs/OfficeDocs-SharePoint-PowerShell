@@ -150,7 +150,6 @@ PARAMVALUE: All | SharePoint | OneDrive | Team | Communication
 - Team - Only SharePoint team sites (group-connected and classic)
 - Communication - Only SharePoint communication sites
 
-
 ```yaml
 Type: Microsoft.SharePoint.Administration.SPOnlineProvisioning.RestrictedSiteCreationSiteType
 Parameter Sets: (All)

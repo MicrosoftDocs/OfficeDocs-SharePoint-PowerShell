@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the trace and event level for a set of categories.
 
-
 ## SYNTAX
 
 ```
@@ -27,44 +26,42 @@ If an event or trace associated with a category occurs and is equally severe or 
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE 1-----------------------
+### EXAMPLE 1
 ```powershell
 set-sploglevel -TraceSeverity Monitorable
 ```
 
 This example sets the TraceSeverity values for all categories to Monitorable.
 
-
-### ------------------EXAMPLE 2-----------------------
+### EXAMPLE 2
 ```powershell
 Set-SPLogLevel -TraceSeverity High -EventSeverity Warning -Identity "Cat1"
 ```
 
 This example sets the EventSeverity and TraceSeverity values for a single category.
 
-
-### ------------------EXAMPLE 3-----------------------
+### EXAMPLE 3
 ```powershell
 "Cat1", "Cat2", "Cat3" | Set-SPLogLevel -EventSeverity Error
 ```
 
 This example sets the EventSeverity values for multiple categories.
 
-
-### ------------------EXAMPLE 4-----------------------
+### EXAMPLE 4
 ```powershell
 Set-SPLogLevel -EventSeverity Warning -Identity "AreaName:*"
 ```
 
 This example sets the EventSeverity values for all categories in the same area.
 
-
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -76,8 +73,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -87,6 +83,9 @@ Accept wildcard characters: False
 ```
 
 ### -EventSeverity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the category level to be set.
 The category level is any one of the following values:
 
@@ -100,8 +99,7 @@ The category level is any one of the following values:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -111,14 +109,16 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name(s) of the category or set of categories to set the throttle for; for example, "Unified Logging Service".
 If the Identity parameter is not specified, the event-throttling setting is applied to all categories in the farm.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -128,14 +128,16 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
+
+> Applicable: SharePoint Server Subscription Edition
+
 The InputObject is pipelined to the cmdlet and can be a string in a format identical to the Identity parameter, or can be an SPDiagnosticsCategory object.
 The user can retrieve one or more categories from the `Get-SPLogLevel` cmdlet, modify the category values and then pipeline them into the `Set-SPLogLevel` cmdlet.
 
 ```yaml
 Type: PSObject
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -145,6 +147,9 @@ Accept wildcard characters: False
 ```
 
 ### -TraceSeverity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies trace throttle to set the specified categor(ies) to.
 The trace log files are text files that are written to the trace log path that is defined on the Diagnostic Logging Settings page on the SharePoint Central Administration site.
 The type must be any one of the following values:
@@ -160,8 +165,7 @@ The type must be any one of the following values:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

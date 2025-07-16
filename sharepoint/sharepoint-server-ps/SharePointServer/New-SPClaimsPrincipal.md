@@ -14,7 +14,6 @@ schema: 2.0.0
 Creates a claims principal.
 
 
-
 ## SYNTAX
 
 ### STSIdentity
@@ -59,28 +58,28 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -------------------------EXAMPLE 1----------------------------- 
+### EXAMPLE 1
 ```powershell
 New-SPSite https://sitename/sites/newsite -owner (New-SPClaimsPrincipal contoso\johndoe -TrustedIdentityTokenIssuer "NTLM")
 ```
 
 This example creates a claim principal for a Windows user.
 
-### -------------------------EXAMPLE 2----------------------------- 
+### EXAMPLE 2
 ```powershell
 New-SPSite https://localhost/sites/newsite -owner (New-SPClaimsPrincipal contoso\allusers -TrustedIdentityTokenIssuer "NTLM")
 ```
 
 This example creates a claim principal for a Windows group.
 
-### -------------------------EXAMPLE 3----------------------------- 
+### EXAMPLE 3
 ```powershell
 New-SPSite https://sitename/sites/newsite -owner (New-SPClaimsPrincipal -ClaimValue "john@contoso.com" -ClaimType Email -TrustedIdentityTokenIssuer "LiveID STS" -IdentifierClaim Yes)
 ```
 
 This example creates a claim principal for a trusted identity token issuer claim.
 
-### -------------------------EXAMPLE 4----------------------------- 
+### EXAMPLE 4
 ```powershell
 $ip = New-SPIdentityProvider -ASPNetMembershipProvider "myMembershipProvider" -ASPNetRoleProvider "myRoleProvider"
 New-SPSite https://sitename/sites/newsite -owner (New-SPClaimsPrincipal "john@contoso.com" -TrustedIdentityTokenIssuer $ip)
@@ -88,14 +87,14 @@ New-SPSite https://sitename/sites/newsite -owner (New-SPClaimsPrincipal "john@co
 
 This example creates a claim principal for a ASPNet Membership User.
 
-### -------------------------EXAMPLE 5----------------------------- 
+### EXAMPLE 5
 ```powershell
 New-SPSite https://sitename/sites/newsite -owner (New-SPClaimsPrincipal "Sales Manager Role" -IdentityProvider "myRoleProvider")
 ```
 
 This example creates a claim principal for a ASPNet Role.
 
-### -------------------------EXAMPLE 6----------------------------- 
+### EXAMPLE 6
 ```powershell
 $cp = New-SPClaimsPrincipal -Identity "redmond\SiteOwner" -IdentityType 1
 New-SPSite https://servername:port -OwnerAlias $cp.ToEncodedString() -Template "STS#0"
@@ -106,6 +105,9 @@ This example creates a claim principal for a Basic Claim Role, which is also cal
 ## PARAMETERS
 
 ### -ClaimValue
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the claim value of the claims object.
 The claims value specifies the user, group, or computer that the claim is authenticating.
 
@@ -114,8 +116,7 @@ The type must be a valid claim value; for example, john@contoso.com.
 ```yaml
 Type: String
 Parameter Sets: STSIdentity, ClaimProvider
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -125,6 +126,9 @@ Accept wildcard characters: False
 ```
 
 ### -EncodedClaim
+
+> Applicable: SharePoint Server Subscription Edition
+
 Converts a simple claim to a full encoded claim.
 
 The type must be a valid claim value; for example, i:001w|redmond\user.
@@ -132,8 +136,7 @@ The type must be a valid claim value; for example, i:001w|redmond\user.
 ```yaml
 Type: String
 Parameter Sets: BasicClaim
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -143,6 +146,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the new claims principal.
 
 The type must be a valid name of a claims principal.
@@ -150,8 +156,7 @@ The type must be a valid name of a claims principal.
 ```yaml
 Type: String
 Parameter Sets: IdentityType, TrustIdentity
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -161,6 +166,9 @@ Accept wildcard characters: False
 ```
 
 ### -ClaimType
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the type of claim to create.
 The value I indicates a unique user identity claim, and the value C indicates all other claims.
 
@@ -168,9 +176,8 @@ The type must be either of the following values: I or C.
 
 ```yaml
 Type: String
-Parameter Sets: STSIdentity
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Parameter Sets: STSIdentity, ClaimProvider
+Aliases:
 
 Required: False
 Position: 2
@@ -179,20 +186,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: String
-Parameter Sets: ClaimProvider
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
-
-Required: True
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -TrustedIdentityTokenIssuer
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the ID of the authentication provider.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or a valid name of an Authentication provider (for example, MyAuthprovider1); or an instance of a valid SPTrustedIdentityTokenIssuer object.
@@ -200,8 +197,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPTrustedIdentityTokenIssuerPipeBind
 Parameter Sets: STSIdentity, TrustIdentity
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 2
@@ -211,6 +207,9 @@ Accept wildcard characters: False
 ```
 
 ### -IdentityType
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the type of the new claims principal.
 
 The type must be one of the following: WindowsSamAccountName, WindowsSecurityGroupSid, FormsUser, FormsRole, or EncodedClaim.
@@ -218,8 +217,7 @@ The type must be one of the following: WindowsSamAccountName, WindowsSecurityGro
 ```yaml
 Type: SPIdentifierTypes
 Parameter Sets: IdentityType
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 2
@@ -229,13 +227,15 @@ Accept wildcard characters: False
 ```
 
 ### -IdentifierClaim
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies if the new claim is an identity claim.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: STSIdentity
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: 4
@@ -245,6 +245,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -256,8 +259,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -267,6 +269,9 @@ Accept wildcard characters: False
 ```
 
 ### -ClaimProvider
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the security token service identity provider that will contain the claims principal.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or a valid name of identity provider (for example, MyIDprovider1); or an instance of a valid SPIdentityProvider object.
@@ -274,8 +279,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPClaimProvider
 Parameter Sets: ClaimProvider
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named

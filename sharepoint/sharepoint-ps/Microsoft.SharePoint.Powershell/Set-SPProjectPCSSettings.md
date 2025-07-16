@@ -32,27 +32,27 @@ The settings have maximum and minimum values that are enforced by Project Server
 
 For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
 
-
 ## EXAMPLES
 
-### ----------------------EXAMPLE-----------------------
+### EXAMPLE
 ```
 Set-SPProjectPCSSettings -sa "Project Service Application" -MaximumSessionsPerUser 500
 ```
 
 This example sets 500 as the maximum allowed Project Calculation Engine sessions that a user can open on the "Project Service Application" service application.
 
-
 ## PARAMETERS
 
 ### -ServiceApplication
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 The Project Server service application for which the settings are to be read.
 
 ```yaml
 Type: PsiServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: sa
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -62,6 +62,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -73,8 +76,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -84,13 +86,15 @@ Accept wildcard characters: False
 ```
 
 ### -CachePersistence
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 The maximum length of time before the Project Calculation Engine can begin to remove temporary cache files of projects opened on the Project Server service application.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -100,13 +104,15 @@ Accept wildcard characters: False
 ```
 
 ### -EditingSessionTimeout
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 The maximum length of time that a user can be idle in a Project Calculation Engine session before a timeout occurs.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -116,13 +122,15 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumIdleWorkersCount
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 The maximum number of idle Project Calculation Engine sessions available at a given time.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -132,13 +140,15 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumProjectSize
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 The maximum size of a project that can be opened by the Project Calculation Engine.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -148,13 +158,15 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumSessionsPerUser
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 The maximum number of sessions that a user is allowed to open.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -164,13 +176,15 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumWorkersCount
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 The maximum number of Project Calculation Engine sessions that can be created.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -180,13 +194,15 @@ Accept wildcard characters: False
 ```
 
 ### -MinimumMemoryRequired
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 The minimum memory required before launching a new Project Calculation Engine session.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -196,13 +212,15 @@ Accept wildcard characters: False
 ```
 
 ### -RequestTimeLimits
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 The maximum allowable time for a request to the Project Calculation Engine to complete before the Project Calculation Engine session is terminated.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -212,13 +230,15 @@ Accept wildcard characters: False
 ```
 
 ### -NetTcpPort
+
+> Applicable: Project Server 2016, Project Server 2019
+
 The TCP port to use with the PCS service.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2016, Project Server 2019
+Aliases:
 
 Required: False
 Position: Named

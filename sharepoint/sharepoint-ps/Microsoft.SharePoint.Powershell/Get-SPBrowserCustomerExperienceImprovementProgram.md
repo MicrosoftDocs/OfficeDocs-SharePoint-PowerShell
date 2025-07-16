@@ -17,7 +17,6 @@ ms.reviewer:
 Returns the current opt-in state for the browser Customer Experience Improvement Program.
 
 
-
 ## SYNTAX
 
 ### Farm
@@ -49,14 +48,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1----------------------- 
+### EXAMPLE 1
 ```
 Get-SPBrowserCustomerExperienceImprovementProgram -WebApplication https://WebAppexample1
 ```
 
 This example returns the current Customer Experience Improvement Program opt-in state for the Web application, WebAppexample1.
 
-### ------------------EXAMPLE 2----------------------- 
+### EXAMPLE 2
 ```
 Get-SPSiteSubscription https://SiteSubscription1 | Get-SPBrowserCustomerExperienceImprovementProgram
 ```
@@ -66,13 +65,15 @@ The following example returns the Customer Experience Improvement Program opt-in
 ## PARAMETERS
 
 ### -Farm
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies that the opt-in state for the farm is returned by this cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Farm
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -82,6 +83,9 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSubscription
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Returns the opt-in state for the specified site subscription.
 
 The type must be a valid URL, in the form https://server_name; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a site subscription (for example, SiteSubscription1); or an instance of a valid SiteSubscription object.
@@ -89,8 +93,7 @@ The type must be a valid URL, in the form https://server_name; a valid GUID, in 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: SiteSubscription
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -100,6 +103,9 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Returns the opt-in state for the specified SharePoint Web application.
 
 The type must be a valid URL, in the form https://server_name; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of SharePoint Web application (for example, MyOfficeApp1); or an instance of a valid SPWebApplication object.
@@ -107,8 +113,7 @@ The type must be a valid URL, in the form https://server_name; a valid GUID, in 
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: WebApplication
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -118,6 +123,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -125,8 +133,7 @@ When the Global parameter is used, all objects are contained in the global store
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

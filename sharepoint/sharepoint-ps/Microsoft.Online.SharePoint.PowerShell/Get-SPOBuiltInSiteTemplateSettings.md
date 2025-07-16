@@ -32,7 +32,6 @@ The `Get-SPOBuiltInSiteTemplateSettings` cmdlet displays the current state of Mi
 > - The minimum SharePoint PowerShell version required is 16.0.21610.12000.
 > - For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
-
 ## EXAMPLES
 
 ### Check which Microsoft templates are hidden
@@ -44,7 +43,6 @@ Get-SPOBuiltInSiteTemplateSettings
 
 >[!NOTE]
 > If a site template has never been hidden, it will not show up in the list. If a site template has been hidden, then changed back to displayed (i.e. currently set to True), then it will show up in the list.
-
 
 ## PARAMETERS
 

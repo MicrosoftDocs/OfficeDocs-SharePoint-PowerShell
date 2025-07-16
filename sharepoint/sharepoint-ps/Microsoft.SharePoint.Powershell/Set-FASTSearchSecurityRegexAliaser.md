@@ -31,14 +31,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 Set-FASTSearchSecurityRegexAliaser -Identity regex1 -OutputUserStoreIds ln2, ln3
 ```
 
 This example modifies the output user store ids for the "regex1" regular expression aliaser.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 2 (FAST Server for SharePoint 2010)
 ```
 New-FASTSearchSecurityRegexAliaserPattern -Regex .* -InputPropertyName mail -MapToUsername "\1" | Set-FASTSearchSecurityRegexAliaser -Identity regexalias1
 ```
@@ -49,13 +49,15 @@ The regular expression pattern can be used to map the "mail" property of a Micro
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: FAST Server for SharePoint 2010
+
 The identity of the aliaser to update.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: 1
@@ -65,14 +67,16 @@ Accept wildcard characters: False
 ```
 
 ### -CaseSensitive
+
+> Applicable: FAST Server for SharePoint 2010
+
 Specifies whether the regular expressions patterns defined in the RegExAliasPatternMapConfig list are matched based on case sensitivity matching rules.
 The default is true.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -82,13 +86,15 @@ Accept wildcard characters: False
 ```
 
 ### -InputUserStoreId
+
+> Applicable: FAST Server for SharePoint 2010
+
 The identity of the mapped-from user store.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -98,13 +104,15 @@ Accept wildcard characters: False
 ```
 
 ### -OutputUserStoreIds
+
+> Applicable: FAST Server for SharePoint 2010
+
 A comma-separated list of mapped-to user store identities.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -114,6 +122,9 @@ Accept wildcard characters: False
 ```
 
 ### -Patterns
+
+> Applicable: FAST Server for SharePoint 2010
+
 List of RegExAliasPatternMapConfig instances containing the regular expression patterns using for the mapping.
 
 Use the New-RegExAliasPatternMapConfig cmdlet to create patterns.
@@ -121,8 +132,7 @@ Use the New-RegExAliasPatternMapConfig cmdlet to create patterns.
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.SharePoint.Search.Extended.Security.Config.RegExAliasPatternMapConfig]
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -132,13 +142,15 @@ Accept wildcard characters: False
 ```
 
 ### -RegexAliaser
+
+> Applicable: FAST Server for SharePoint 2010
+
 A SecurityRegexAliaser object whose property values are used for the SecurityRegexAliaser aliaser being created.
 
 ```yaml
 Type: SecurityRegexAliaser
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -148,13 +160,15 @@ Accept wildcard characters: False
 ```
 
 ### -UnicodeCaseSensitive
+
+> Applicable: FAST Server for SharePoint 2010
+
 Specifies whether the regular expressions patterns defined in the RegExAliasPatternMapConfig list are matched based on Unicode case sensitivity matching rules.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named

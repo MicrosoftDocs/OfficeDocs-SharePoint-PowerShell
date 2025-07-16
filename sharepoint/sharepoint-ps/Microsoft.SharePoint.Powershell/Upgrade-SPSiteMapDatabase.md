@@ -27,7 +27,7 @@ Do not use.
 
 ## EXAMPLES
 
-### -------------EXAMPLE 1----------
+### EXAMPLE 1
 ```
 #Do not use
 ```
@@ -37,13 +37,15 @@ Do not use.
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2016, SharePoint Server 2019
+
 Do not use.
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -53,13 +55,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -69,13 +73,15 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseId
+
+> Applicable: SharePoint Server 2016, SharePoint Server 2019
+
 Do not use.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 0
@@ -85,6 +91,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2016, SharePoint Server 2019
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -92,7 +101,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

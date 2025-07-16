@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a trust between a server to server principal.
 
-
 ## SYNTAX
 
 ### ImportCertificateParameterSet
@@ -38,27 +37,27 @@ Use the `New-SPTrustedSecurityTokenIssuer` cmdlet to establish a trust between a
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### -----------EXAMPLE-----------
+### EXAMPLE
 ```powershell
 New-SPTrustedSecurityTokenIssuer -Name "SPFarmA" -MetadataEndPoint https://mysite/my/_layouts/metadata/test/1/ -isSelfIssuer "false"
 ```
 
 This example creates a new trusted security token named SPFarmA.
 
-
 ## PARAMETERS
 
 ### -Name
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the issuer.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -68,13 +67,15 @@ Accept wildcard characters: False
 ```
 
 ### -Certificate
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the X509Certificate object that represents the public key of the signing certificate of the security token issuer.
 
 ```yaml
 Type: X509Certificate2
 Parameter Sets: ImportCertificateParameterSet
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -84,13 +85,15 @@ Accept wildcard characters: False
 ```
 
 ### -MetadataEndPoint
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the URI for the metadata endpoint of the issuer.
 
 ```yaml
 Type: Uri
 Parameter Sets: MetadataEndPointParameterSet
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -100,6 +103,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -111,8 +117,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -122,6 +127,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -129,7 +137,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -139,13 +146,15 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the description of the issuer.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -155,13 +164,15 @@ Accept wildcard characters: False
 ```
 
 ### -IsTrustBroker
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether the trust is established with a self-issuer partner app (that is, Exchange Server or Lync).
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -171,13 +182,15 @@ Accept wildcard characters: False
 ```
 
 ### -RegisteredIssuerName
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the registered token issuer instead of using metadata endpoint.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -187,6 +200,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -194,7 +210,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

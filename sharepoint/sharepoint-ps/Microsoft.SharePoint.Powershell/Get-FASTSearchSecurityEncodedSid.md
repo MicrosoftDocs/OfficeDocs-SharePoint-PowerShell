@@ -28,14 +28,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1-----------------
+### EXAMPLE 1
 ```
 Get-FASTSearchSecurityEncodedSid -SID S-1-5-7
 ```
 
 This example returns an encoded security identifier and user name for the Windows SID, "5-1-5-7".
 
-### ---------------EXAMPLE 2-----------------
+### EXAMPLE 2
 ```
 Get-FASTSearchSecurityEncodedSid -User users
 ```
@@ -45,13 +45,15 @@ This example returns the encoded security identifier for the Windows built-in "U
 ## PARAMETERS
 
 ### -SID
+
+> Applicable: FAST Server for SharePoint 2010
+
 The Windows security identifier to encode.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 1
@@ -61,13 +63,15 @@ Accept wildcard characters: False
 ```
 
 ### -User
+
+> Applicable: FAST Server for SharePoint 2010
+
 The user or group identifier to encode.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 2

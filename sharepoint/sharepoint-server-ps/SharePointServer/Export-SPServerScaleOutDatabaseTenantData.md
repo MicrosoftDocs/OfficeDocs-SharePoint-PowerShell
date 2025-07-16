@@ -25,10 +25,9 @@ Export-SPServerScaleOutDatabaseTenantData [-AssignmentCollection <SPAssignmentCo
 
 Use the Export-SPServerScaleOutDatabaseTenantData cmdlet to export the data of the specified subscription id to the specified file from the specified service application.
 
-
 ## EXAMPLES
 
-### ----------EXAMPLE------- 
+### EXAMPLE
 ```powershell
 Export-SPServerScaleOutDatabaseTenantData -FilePath "C:\TenantData.dat" -ServiceApplication $serviceApplication -SiteSubscriptionId "5CAF2F99-A75F-4239-B9CD-7FE63D1CE904"
 ```
@@ -38,13 +37,15 @@ This example exports data for the site subscription with id 5CAF2F99-A75F-4239-B
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 {{Fill AssignmentCollection Description}}
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -54,13 +55,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -70,13 +73,15 @@ Accept wildcard characters: False
 ```
 
 ### -FilePath
+
+> Applicable: SharePoint Server Subscription Edition
+
 {{Fill FilePath Description}}
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -86,13 +91,15 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: SharePoint Server Subscription Edition
+
 {{Fill Force Description}}
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -102,13 +109,15 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 {{Fill ServiceApplication Description}}
 
 ```yaml
 Type: SPServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -118,13 +127,15 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSubscriptionId
+
+> Applicable: SharePoint Server Subscription Edition
+
 {{Fill SiteSubscriptionId Description}}
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -134,6 +145,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -141,7 +155,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

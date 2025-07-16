@@ -96,7 +96,6 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -151,7 +150,6 @@ Indicates the URL of the background image used when the library is publicly disp
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: Named

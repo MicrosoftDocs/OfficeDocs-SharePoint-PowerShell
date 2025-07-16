@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 Do not use
 
-
 ## SYNTAX
 
 ```
@@ -24,29 +23,29 @@ Set-SPEduServiceSetting [[-Enabled] <Boolean>] [-AssignmentCollection <SPAssignm
 ```
 
 ## DESCRIPTION
-Do not use 
-
+Do not use
 
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### EXAMPLE
 ```
-Do not use 
+Do not use
 ```
-
 
 
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-Do not use 
+
+> Applicable: SharePoint Server 2013
+
+Do not use
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -56,13 +55,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2013
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -72,13 +73,15 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-Do not use 
+
+> Applicable: SharePoint Server 2013
+
+Do not use
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: 0
@@ -88,14 +91,16 @@ Accept wildcard characters: False
 ```
 
 ### -Service
-Do not use 
+
+> Applicable: SharePoint Server 2013
+
+Do not use
 
 ```yaml
 Type: Services
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Lync, Exchange, StudyGroup
-Applicable: SharePoint Server 2013
 
 Required: True
 Position: Named
@@ -105,13 +110,15 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-Do not use 
+
+> Applicable: SharePoint Server 2013
+
+Do not use
 
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: True
 Position: Named
@@ -121,6 +128,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2013
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -128,7 +138,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013
 
 Required: False
 Position: Named

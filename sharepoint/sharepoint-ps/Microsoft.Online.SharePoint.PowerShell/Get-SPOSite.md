@@ -123,7 +123,6 @@ Get-SPOSite -Filter { Url -like "contoso.sharepoint.com/sites/18" }
 
 This example uses server side filtering to return sites matching 18.
 
-
 ### EXAMPLE 8
 
 ```powershell
@@ -140,14 +139,12 @@ Get-SPOSite -Limit ALL | ?{$_.IsTeamsChannelConnected -eq $true}
 
 This example uses client-side filtering to return a list of sites connected to a Microsoft Teams Private or Shared channel.
 
-
 ### EXAMPLE 10
 
 ```powershell
 Get-SPOSite -Limit ALL -GroupIdDefined $true
 ```
 This example uses server-side filtering to return all sites that have an associated Microsoft 365 Group.
-
 
 ### EXAMPLE 11
 
@@ -156,7 +153,6 @@ $userUPN="joe.healy@contoso.com"
 Get-SPOSite -Filter "Owner -like '$($userUPN)'"
 ```
 This example retrieves all sites filtering by the specified owner using a variable.
-
 
 ## PARAMETERS
 
@@ -171,7 +167,6 @@ Type: Microsoft.Online.SharePoint.PowerShell.ArchiveStatusFilterType
 Parameter Sets: ParamSet2
 Aliases:
 Accepted values: NotArchived, FullyArchived, RecentlyArchived, Reactivating, Archived
-
 
 Required: False
 Position: Named
@@ -208,7 +203,6 @@ Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ParamSet1, ParamSet2
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -229,7 +223,6 @@ This parameter prevents non-owners from sharing.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ParamSet3
 Aliases:
-
 
 Required: False
 Position: Named
@@ -253,7 +246,6 @@ Type: System.String
 Parameter Sets: ParamSet2
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -274,7 +266,6 @@ Type: System.Boolean
 Parameter Sets: ParamSet2
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -292,7 +283,6 @@ Specifies the URL of the site collection.
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: ParamSet1, ParamSet3
 Aliases:
-
 
 Required: False
 Position: 0
@@ -314,7 +304,6 @@ Type: System.Boolean
 Parameter Sets: ParamSet2
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -333,7 +322,6 @@ Type: System.String
 Parameter Sets: ParamSet1, ParamSet2
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -351,7 +339,6 @@ Displays sites of a specific template. For example, STS, STS#0, STS#1, STS#3, GR
 Type: System.String
 Parameter Sets: ParamSet2
 Aliases:
-
 
 Required: False
 Position: Named

@@ -30,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE-----------------
+### EXAMPLE
 ```powershell
 $ssa = Get-SPEnterpriseSearchServiceApplication
 Set-SpEnterpriseSEarchQuerySpellingCorrection -SearchApplication $ssa -SpellingDictionary dynamic
@@ -38,10 +38,12 @@ Set-SpEnterpriseSEarchQuerySpellingCorrection -SearchApplication $ssa -SpellingD
 
 This example sets the dictionary named dynamic to be used for query spelling correction for the default search service application.
 
-
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -50,12 +52,10 @@ When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are au
 When the Global parameter is used, all objects are contained in the global store.
 If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
-
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -65,14 +65,15 @@ Accept wildcard characters: False
 ```
 
 ### -ContentAlignmentEnabled
-A Boolean value to enable or deactivate the content alignment process.
 
+> Applicable: SharePoint Server Subscription Edition
+
+A Boolean value to enable or deactivate the content alignment process.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -82,15 +83,16 @@ Accept wildcard characters: False
 ```
 
 ### -DiacriticsInSuggestionsEnabled
-A switch to enable or disable spelling suggestions that contain diacritics (for example, German umlaut umlaut). 
-The default setting is true.
 
+> Applicable: SharePoint Server Subscription Edition
+
+A switch to enable or disable spelling suggestions that contain diacritics (for example, German umlaut umlaut).
+The default setting is true.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -100,14 +102,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Specifies an object that represents the current status for the query spelling correction.
 
+> Applicable: SharePoint Server Subscription Edition
+
+Specifies an object that represents the current status for the query spelling correction.
 
 ```yaml
 Type: QuerySpellingCorrectionPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -117,15 +120,16 @@ Accept wildcard characters: False
 ```
 
 ### -MaxDictionarySize
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the maximal number of terms in a content-aligned spelling dictionary.
 In a multi-tenant environment, this number is valid per tenant.
-
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -135,15 +139,16 @@ Accept wildcard characters: False
 ```
 
 ### -MaxProcessingTime
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the maximum runtime for compiling a content-aligned spelling dictionary.
 The default value is 6 hours.
-
 
 ```yaml
 Type: TimeSpan
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -153,14 +158,15 @@ Accept wildcard characters: False
 ```
 
 ### -SearchApplication
-Specifies the search service application that contains the QSC components.
 
+> Applicable: SharePoint Server Subscription Edition
+
+Specifies the search service application that contains the QSC components.
 
 ```yaml
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -170,15 +176,16 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityTrimmingEnabled
-A Boolean value to enable or deactivate the security check for spelling suggestions. 
-If enabled, only spelling suggestions that deliver at least one document for the current user are shown.
 
+> Applicable: SharePoint Server Subscription Edition
+
+A Boolean value to enable or deactivate the security check for spelling suggestions.
+If enabled, only spelling suggestions that deliver at least one document for the current user are shown.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -188,17 +195,18 @@ Accept wildcard characters: False
 ```
 
 ### -SpellingDictionary
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the dictionary to be used for query spelling correction.
 The two available values are dynamic and static.
 When value is set to dynamic, the query spelling correction uses the content-aligned dictionary.
 When value is set to static, the query spelling correction uses the out of the box static spelling dictionaries.
 
-
 ```yaml
 Type: SpellingDictionaryType
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -208,15 +216,16 @@ Accept wildcard characters: False
 ```
 
 ### -TermFrequencyThreshold
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the minimum number of documents that must contain the most frequently used term in the document collection for the content-alignment process to be executed.
 In a multi-tenant environment, this number is valid per tenant.
-
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

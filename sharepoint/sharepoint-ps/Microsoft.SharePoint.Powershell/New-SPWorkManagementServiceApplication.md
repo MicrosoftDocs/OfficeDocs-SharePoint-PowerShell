@@ -7,14 +7,13 @@ title: New-SPWorkManagementServiceApplication
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # New-SPWorkManagementServiceApplication
 
 ## SYNOPSIS
 Creates a new Work Management Service application.
-
 
 ## SYNTAX
 
@@ -32,25 +31,26 @@ Note: This functionality has been removed from SharePoint Server 2016, SharePoin
 
 ## EXAMPLES
 
-### ------------------EXAMPLE-----------------------
+### EXAMPLE
 ```
 New-SPWorkManagementServiceApplication -Name 'Work Management Service Application' -ApplicationPool 'SharePoint Web Services Default'
 ```
 
 This example creates a new Work Management Service Application using the Application Pool named SharePoint Web Services Default.
 
-
 ## PARAMETERS
 
 ### -ApplicationPool
+
+> Applicable: SharePoint Server 2013
+
 Specifies the name of an application pool to use; for example, SharePoint - 1213.
 If no value is specified, the default application pool is used.
 
 ```yaml
 Type: SPIisWebServiceApplicationPoolPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: True
 Position: Named
@@ -60,13 +60,15 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: SharePoint Server 2013
+
 Specifies the name of the Work Management Service application to be created.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: True
 Position: Named
@@ -76,6 +78,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -83,8 +88,7 @@ When the Global parameter is used, all objects are contained in the global store
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -94,6 +98,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2013
+
 Prompts you for confirmation before executing the command.
 
 For more information, type the following command: `get-help about_commonparameters`
@@ -102,7 +109,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -112,13 +118,15 @@ Accept wildcard characters: False
 ```
 
 ### -Proxy
+
+> Applicable: SharePoint Server 2013
+
 Specifies whether to add the Work Management Service application to the proxy group.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -128,6 +136,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2013
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -135,7 +146,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013
 
 Required: False
 Position: Named

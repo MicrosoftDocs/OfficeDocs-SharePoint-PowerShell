@@ -47,7 +47,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -----------EXAMPLE 1----------- 
+### EXAMPLE 1
 ```
 Get-SPAppInstance -Web https://localhost
 ```
@@ -55,7 +55,7 @@ Get-SPAppInstance -Web https://localhost
 This example returns a collection if more than one app is installed on https://localhost.
 If only one app is installed, a single object is returned.
 
-### -----------EXAMPLE 2----------- 
+### EXAMPLE 2
 ```
 Get-SPAppInstance -AppInstanceId $instance.Id
 ```
@@ -65,13 +65,15 @@ This example returns the ID of an instance of an app.
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the App instance for which to find metadata.
 
 ```yaml
 Type: SPAppInstance
 Parameter Sets: IdentityParameterSet
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -81,6 +83,9 @@ Accept wildcard characters: False
 ```
 
 ### -Site
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Sets the query scope to a site.
 
 Subsites are not included.
@@ -88,8 +93,7 @@ Subsites are not included.
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: SiteAndIdParameterSet
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -99,6 +103,9 @@ Accept wildcard characters: False
 ```
 
 ### -App
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the App.
 
 This parameter returns metadata for all instances of an app.
@@ -106,8 +113,7 @@ This parameter returns metadata for all instances of an app.
 ```yaml
 Type: SPApp
 Parameter Sets: WebParameterSet
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -117,6 +123,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -128,8 +137,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -139,13 +147,15 @@ Accept wildcard characters: False
 ```
 
 ### -AppInstanceId
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the App Instance ID to display.
 
 ```yaml
 Type: Guid
 Parameter Sets: SiteAndIdParameterSet
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -155,13 +165,15 @@ Accept wildcard characters: False
 ```
 
 ### -Web
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the SPWeb object.
 
 ```yaml
 Type: SPWebPipeBind
 Parameter Sets: WebParameterSet
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named

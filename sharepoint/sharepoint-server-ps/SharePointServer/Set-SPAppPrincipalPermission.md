@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the permissions on a given app principal.
 
-
 ## SYNTAX
 
 ```
@@ -27,10 +26,9 @@ Use the `Set-SPAppPrincipalPermission` cmdlet to set the permissions on a given 
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ---------------EXAMPLE-------------
+### EXAMPLE
 ```powershell
 $clientID = "11111111-2222-3333-4444-555555555555"
 $site = Get-SPSite https://siteUrl
@@ -45,13 +43,15 @@ This example sets the App Principal permission to Manage with a scope of Site.
 ## PARAMETERS
 
 ### -AppPrincipal
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the AppPrincipal object.
 
 ```yaml
 Type: SPAppPrincipal
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -61,6 +61,9 @@ Accept wildcard characters: False
 ```
 
 ### -Right
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the permission level for the principal object.
 
 The value is any of the following levels:
@@ -76,8 +79,7 @@ The value is any of the following levels:
 ```yaml
 Type: SPCmdletAppPrincipalPermissionKind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -87,6 +89,9 @@ Accept wildcard characters: False
 ```
 
 ### -Scope
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the scope to which to apply the principal permission.
 
 The value is any of the following scopes:
@@ -100,8 +105,7 @@ The value is any of the following scopes:
 ```yaml
 Type: SPCmdletAppPrincipalPermissionScope
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -111,13 +115,15 @@ Accept wildcard characters: False
 ```
 
 ### -Site
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the site (that is, SPWeb object) that the AppPrincipalPermission is being set.a
 
 ```yaml
 Type: SPWebPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -127,6 +133,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -138,8 +147,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -149,6 +157,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -156,7 +167,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -166,6 +176,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -173,7 +186,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -183,6 +195,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAppOnlyPolicy
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies if the app only policy is turned on for the app principal.
 
 The valid values are True and False. The default value is False.
@@ -190,8 +205,7 @@ The valid values are True and False. The default value is False.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

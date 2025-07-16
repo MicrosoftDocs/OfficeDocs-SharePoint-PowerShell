@@ -33,14 +33,14 @@ If no parameters are specified, all certificates in the farm are returned.
 
 ## EXAMPLES
 
-### ------------EXAMPLE 1-----------
+### EXAMPLE 1
 ```powershell
 Get-SPCertificate -DisplayName "Team Sites Certificate"
 ```
 
 This example gets all certificates in the farm with the display name "Team Sites Certificate".
 
-### ------------EXAMPLE 2-----------
+### EXAMPLE 2
 ```powershell
 Get-SPCertificate -InUse -DaysToExpiration 30
 ```

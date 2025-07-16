@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the configuration properties of a site subscription.
 
-
 ## SYNTAX
 
 ```
@@ -26,20 +25,21 @@ The `Set-SPSiteSubscriptionConfig` cmdlet sets the configuration properties of a
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### EXAMPLE
 ```powershell
 Set-SPSiteSubscriptionConfig https://contoso.com -FeaturePack 12345678-90ab-cdef-1234-567890abcdef
 ```
 
 This example sets the Feature set of the entire site subscription that contains https://contoso.com with a Feature pack GUID.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the site subscription configuration to update.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; an SPSite (object or URL) of a site collection that is a member of the site subscription; or an instance of a valid SiteSubscription object.
@@ -47,8 +47,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -58,6 +57,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -69,8 +71,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -80,6 +81,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -87,7 +91,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -97,13 +100,15 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the output object can be passed through the pipeline.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -113,6 +118,9 @@ Accept wildcard characters: False
 ```
 
 ### -UserAccountDirectoryPath
+
+> Applicable: SharePoint Server Subscription Edition
+
 Sets the site user account directory path to a specific organizational unit (OU) that is in the same domain as the site subscription.
 
 The type must be a name of a distinguished OU; for example, OU=Contoso1, DC=OSGCorp,DC=local.
@@ -120,8 +128,7 @@ The type must be a name of a distinguished OU; for example, OU=Contoso1, DC=OSGC
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -131,6 +138,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -138,7 +148,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -148,13 +157,15 @@ Accept wildcard characters: False
 ```
 
 ### -FeaturePack
+
+> Applicable: SharePoint Server Subscription Edition
+
 {{Fill FeaturePack Description}}
 
 ```yaml
 Type: SPSiteSubscriptionFeaturePackPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

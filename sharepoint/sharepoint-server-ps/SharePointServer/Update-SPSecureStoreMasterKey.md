@@ -24,19 +24,17 @@ The `Update-SPSecureStoreApplicationServerKey` cmdlet changes the master key of 
 
 Updating the master key is required when:
 
-
 --A new instance of a service application is created and the database for the Secure Store service application is new or empty.
 
 --The master key or passphrase has been compromised.
 
 --Security guidelines require that the passphrase or key be replaced.
 
-
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------
+### EXAMPLE
 ```powershell
 $newPassPhrase = "abcDEF123!"
 $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'Secure Store Service Application Proxy'}
@@ -48,6 +46,9 @@ This example creates a new master key for the given service application.
 ## PARAMETERS
 
 ### -Passphrase
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the passphrase that is used for the Secure Store database.
 The passphrase that you enter is not stored.
 Make sure that you write down the passphrase and store it in a secure location.
@@ -56,8 +57,7 @@ The passphrase will be required to add new Secure Store service servers.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -67,13 +67,15 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceApplicationProxy
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the proxy of the Secure Store service application that contains the master key to update.
 
 ```yaml
 Type: SPServiceApplicationProxyPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -83,6 +85,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -94,8 +99,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

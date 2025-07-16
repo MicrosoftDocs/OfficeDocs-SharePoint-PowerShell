@@ -31,14 +31,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1-----------------
+### EXAMPLE 1
 ```
 Get-FASTSearchMetadataRankProfile -Name newdefault
 ```
 
 This example retrieves the rank profile named "newdefault".
 
-### ---------------EXAMPLE 2-----------------
+### EXAMPLE 2
 ```
 Get-FASTSearchMetadataRankProfile -Name *?default
 ```
@@ -49,6 +49,9 @@ It will not match the default rankprofile named "default".
 ## PARAMETERS
 
 ### -Name
+
+> Applicable: FAST Server for SharePoint 2010
+
 The name of the rank profile to retrieve.
 This option supports wildcards, and matching is case-insensitive.
 
@@ -56,7 +59,6 @@ This option supports wildcards, and matching is case-insensitive.
 Type: String
 Parameter Sets: (All)
 Aliases: RankProfileName, N
-Applicable: FAST Server for SharePoint 2010
 
 Required: False
 Position: 1

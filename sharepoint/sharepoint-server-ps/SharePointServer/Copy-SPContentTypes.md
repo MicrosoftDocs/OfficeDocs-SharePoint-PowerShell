@@ -25,16 +25,19 @@ This cmdlet is used in hybrid scenarios with SharePoint Online to copy Content T
 
 ## EXAMPLES
 
-### ------------Example 1 -----------
+### Example 1
 ```powershell
-Copy-SPContentTypes -LocalSiteUrl https://localsite/ -LocalTermStoreName "managed metadata service application proxy" -RemoteSiteUrl https://contoso.sharepoint.com/ -ContentTypeNames @("ContentTypeA", "ContentTypeB") -Credential (Get-Credential) 
+Copy-SPContentTypes -LocalSiteUrl https://localsite/ -LocalTermStoreName "managed metadata service application proxy" -RemoteSiteUrl https://contoso.sharepoint.com/ -ContentTypeNames @("ContentTypeA", "ContentTypeB") -Credential (Get-Credential)
 ```
 
-This example migrates the specified content types named: ContentTypeA, ContentTypeB on the local site https://localsite/ whose term store named "managed metadata service application proxy" to the hub site of remote site https://contoso.sharepoint.com/. If the remote site is a hub site, the migration target will be itself. 
+This example migrates the specified content types named: ContentTypeA, ContentTypeB on the local site https://localsite/ whose term store named "managed metadata service application proxy" to the hub site of remote site https://contoso.sharepoint.com/. If the remote site is a hub site, the migration target will be itself.
 
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 **NOTE**: When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -42,8 +45,7 @@ Manages objects for the purpose of proper disposal. Use of objects, such as SPWe
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -53,13 +55,15 @@ Accept wildcard characters: False
 ```
 
 ### -AuthEndpoint
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the AuthEndpoint to use, but not the default one.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -69,13 +73,15 @@ Accept wildcard characters: False
 ```
 
 ### -ContentTypeNames
-Specifies the content type names to be migrated. Can be in a form of an array. 
+
+> Applicable: SharePoint Server Subscription Edition
+
+Specifies the content type names to be migrated. Can be in a form of an array.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -85,13 +91,15 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the administrator account credential of the target SharePoint Online site.
 
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -101,13 +109,15 @@ Accept wildcard characters: False
 ```
 
 ### -GraphApiEndPoint
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the GraphApiEndpoint to use, but not the default one.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -117,13 +127,15 @@ Accept wildcard characters: False
 ```
 
 ### -LocalSiteUrl
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the migration source. Can be a local site or a local hubsite.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -133,13 +145,15 @@ Accept wildcard characters: False
 ```
 
 ### -LocalTermStoreName
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the local term store of the local site.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -149,13 +163,15 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteSiteUrl
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the migration target. You can input a remote site url or remote hub site url, both will be processed to be the hub site url.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named

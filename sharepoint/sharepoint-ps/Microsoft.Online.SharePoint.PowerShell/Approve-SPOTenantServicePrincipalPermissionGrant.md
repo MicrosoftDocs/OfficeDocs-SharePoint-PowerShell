@@ -37,7 +37,6 @@ Approve-SPOTenantServicePrincipalPermissionGrant -Resource "Microsoft Graph" -Sc
 
 Adds a permission scope for the 'Microsoft Graph' resource with scope claim 'Mail.Read'.
 
-
 ## PARAMETERS
 
 ### -Resource
@@ -50,7 +49,6 @@ Resource of the permission request to add.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: 1
@@ -69,7 +67,6 @@ Scope of the permission request to add.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: 2

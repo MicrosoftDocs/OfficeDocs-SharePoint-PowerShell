@@ -57,7 +57,6 @@ For any parameters that are passed in, the `Set-SPOContainer` cmdlet sets or upd
 
 You must be a SharePoint Embedded Administrator to run the cmdlet.
 
-
 For permissions and the most current information about Windows PowerShell for SharePoint Embedded Containers, see the online documentation at [Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
 ## EXAMPLES
@@ -124,7 +123,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -BlockDownloadPolicy
 

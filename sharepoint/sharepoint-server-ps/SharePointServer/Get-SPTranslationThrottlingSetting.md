@@ -20,11 +20,11 @@ Get-SPTranslationThrottlingSetting [-AssignmentCollection <SPAssignmentCollectio
 ```
 
 ## DESCRIPTION
-Use the Get-SPTranslationThrottlingSetting cmdlet to display the time duration for timer jobs. 
+Use the Get-SPTranslationThrottlingSetting cmdlet to display the time duration for timer jobs.
 
 ## EXAMPLES
 
-### ------------Example 1 -----------
+### Example 1
 ```powershell
 Get-SPTranslationThrottlingSetting
 ```
@@ -34,6 +34,9 @@ This example displays all the time duration and timer jobs for the farm.
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 **NOTE:** When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
@@ -41,8 +44,7 @@ Manages objects for the purpose of proper disposal. Use of objects, such as SPWe
 ``yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -52,13 +54,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -68,13 +72,15 @@ Accept wildcard characters: False
 ```
 
 ### -Farm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the farm
 
 ```yaml
 Type: SPFarm
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -84,6 +90,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -91,7 +100,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets a global property or a collection of global properties for the local farm.
 
-
 ## SYNTAX
 
 ```
@@ -36,10 +35,9 @@ The parameter name added to the PSCustomObject object must match exactly the inp
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ---------------------EXAMPLE--------------------------
+### EXAMPLE
 ```powershell
 Set-SPFarmConfig -WorkflowBatchSize 50
 ```
@@ -49,6 +47,9 @@ This example sets the WorkflowBatdhSize to 50.
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -56,8 +57,7 @@ When the Global parameter is used, all objects are contained in the global store
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -67,6 +67,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -74,7 +77,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -84,6 +86,9 @@ Accept wildcard characters: False
 ```
 
 ### -DataFormWebPartAutoRefreshEnabled
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether any DataFormWebPart on any page in this farm is allowed to periodically refresh its contents asynchronously (after the page has finished rendering).
 
 When set to false, all DataFormWebParts will ignore the automatic refresh interval provided in Web Part properties.
@@ -91,8 +96,7 @@ When set to false, all DataFormWebParts will ignore the automatic refresh interv
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -102,13 +106,15 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: SharePoint Server Subscription Edition
+
 Forces the deletion or updating of the service connection point.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -118,13 +124,15 @@ Accept wildcard characters: False
 ```
 
 ### -InstalledProductsRefresh
+
+> Applicable: SharePoint Server Subscription Edition
+
 Updates the current machine license state with the list of products that are installed in the farm.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -134,6 +142,9 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceConnectionPointBindingInformation
+
+> Applicable: SharePoint Server Subscription Edition
+
 Adds or updates the service connection point for the current farm in Active Directory Domain Service (AD  DS).
 
 The type must be an array of strings that are key value pairs that will be added to the service connection point.
@@ -141,8 +152,7 @@ The type must be an array of strings that are key value pairs that will be added
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -152,13 +162,15 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceConnectionPointDelete
+
+> Applicable: SharePoint Server Subscription Edition
+
 Delete the service connection point for the current farm in AD DS.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -168,6 +180,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -175,7 +190,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -185,6 +199,9 @@ Accept wildcard characters: False
 ```
 
 ### -WorkflowBatchSize
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the paging size for events delivered to a single workflow instance.
 
 For each request, the events are streamed out 100 at a time.
@@ -195,8 +212,7 @@ Throttle will override batch size; if the workflow instance cannot be started or
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -206,6 +222,9 @@ Accept wildcard characters: False
 ```
 
 ### -WorkflowEventDeliveryTimeout
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the time as an integer in which a workflow job must run without the job timing out.
 
 If the workflow job does time out, it gets put back in the queue to be run again.
@@ -216,8 +235,7 @@ Any workflow job that does time out is placed back in the queue to run again.The
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -227,13 +245,15 @@ Accept wildcard characters: False
 ```
 
 ### -WorkflowPostponeThreshold
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the number of workflows that can be running in IIS against a content database at a time before new workflow instances get postponed into a queue.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -243,13 +263,15 @@ Accept wildcard characters: False
 ```
 
 ### -ASPScriptOptimizationEnabled
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies if ASP Script optimization is enabled. The default value is false (off).
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -259,13 +281,15 @@ Accept wildcard characters: False
 ```
 
 ### -UserAccountDirectoryPathIsImmutable
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies if the `UserAccountDirectoryPath` property on an `SPSite` object is immutable.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -275,13 +299,15 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultActivateOnSiteMasterValue
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether to activate site master as default.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -291,13 +317,15 @@ Accept wildcard characters: False
 ```
 
 ### -MaxSiteSubscriptionSettingsValueLength
+
+> Applicable: SharePoint Server Subscription Edition
+
 Sets the maximum size of a SiteSubscription property value.
 
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -307,13 +335,15 @@ Accept wildcard characters: False
 ```
 
 ### -MaxTenantStoreValueLength
+
+> Applicable: SharePoint Server Subscription Edition
+
 Sets the maximum size of a Tenant Store property value.
 
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -323,13 +353,15 @@ Accept wildcard characters: False
 ```
 
 ### -SiteMasterMode
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies if site master mode is turned on or off. The default value is off.
 
 ```yaml
 Type: SPSiteMasterMode
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -339,6 +371,9 @@ Accept wildcard characters: False
 ```
 
 ### -SiteMasterValidationIntervalInHours
+
+> Applicable: SharePoint Server Subscription Edition
+
 Determines the length of time, in hours, to validate the Site Master.
 
 The default value is 24.
@@ -346,8 +381,7 @@ The default value is 24.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

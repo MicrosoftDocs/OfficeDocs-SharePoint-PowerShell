@@ -30,7 +30,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1-----------------
+### EXAMPLE 1
 ```
 Get-FASTSearchSecurityClaimsUserStore -Identity clm
 ```
@@ -40,6 +40,9 @@ This example retrieves the claims user store with the identity "clm".
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: FAST Server for SharePoint 2010
+
 The identity of a claims user store to display.
 
 If an Identity is not specified, all claims user stores are displayed.
@@ -47,8 +50,7 @@ If an Identity is not specified, all claims user stores are displayed.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 1

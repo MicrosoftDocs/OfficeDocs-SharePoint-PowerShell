@@ -68,7 +68,6 @@ Type: Microsoft.Online.SharePoint.Migration.EncryptionParameters
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -86,7 +85,6 @@ Possible Source locations to migrate
 Type: Microsoft.Online.SharePoint.Migration.MigrationPackageLocation
 Parameter Sets: ImplicitSourceParameterSet
 Aliases:
-
 
 Required: True
 Position: Named
@@ -106,7 +104,6 @@ Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -124,7 +121,6 @@ Defines the temporary Path where are located the XML source files.
 Type: System.String
 Parameter Sets: ExplicitSourceParameterSet
 Aliases:
-
 
 Required: True
 Position: Named
@@ -144,7 +140,6 @@ Type: System.String
 Parameter Sets: ExplicitSourceParameterSet
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -163,7 +158,6 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -181,7 +175,6 @@ Defines the source package path location of the package to be encrypted.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: Named

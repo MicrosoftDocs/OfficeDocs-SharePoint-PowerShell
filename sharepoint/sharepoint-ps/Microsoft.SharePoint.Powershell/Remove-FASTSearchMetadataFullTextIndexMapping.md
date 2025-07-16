@@ -6,7 +6,7 @@ applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 title: Remove-FASTSearchMetadataFullTextIndexMapping
 ---
 
@@ -31,7 +31,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 $fulltextindex = Get-FASTSearchMetadataFullTextIndex -Name content
 $managedproperty = Get-FASTSearchMetadataManagedProperty -Name CreatedBy
@@ -45,13 +45,15 @@ Since the cmdlet takes an object of the mapping, the example first retrieves the
 ## PARAMETERS
 
 ### -Mapping
+
+> Applicable: FAST Server for SharePoint 2010
+
 An object representing the full text index mapping to be removed.
 
 ```yaml
 Type: FullTextIndexMapping
 Parameter Sets: (All)
 Aliases: FullTextIndexMapping, M
-Applicable: FAST Server for SharePoint 2010
 
 Required: True
 Position: 1

@@ -40,7 +40,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ 
+### EXAMPLE
 ```powershell
 $sa = New-SPBusinessDataCatalogServiceApplication -ApplicationPool "SharePoint Web Services Default" -DatabaseName "ContosoBdcDB" -DatabaseServer "CONTOSO\SharePoint" -Name "ContosoServiceApp"
 New-SPBusinessDataCatalogServiceApplicationProxy -Name "ContosoServiceAppProxy" -ServiceApplication $sa
@@ -51,13 +51,15 @@ This example creates a new Business Data Connectivity service application proxy 
 ## PARAMETERS
 
 ### -Name
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies a display name for the new Business Data Connectivity service application proxy.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -67,13 +69,15 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the Business Data Connectivity service application associated with the new proxy.
 
 ```yaml
 Type: SPServiceApplicationPipeBind
 Parameter Sets: PipeBind
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -83,6 +87,9 @@ Accept wildcard characters: False
 ```
 
 ### -Uri
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the URI of a remote service application to which to connect.
 
 The type must be a valid URI, in the form file:\\\\server_name\sitedocs.
@@ -90,8 +97,7 @@ The type must be a valid URI, in the form file:\\\\server_name\sitedocs.
 ```yaml
 Type: Uri
 Parameter Sets: Uri
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -101,6 +107,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -112,8 +121,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -123,6 +131,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -130,7 +141,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -140,13 +150,15 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProxyGroup
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that the service application proxy is added to the default proxy group for the farm.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -156,6 +168,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -163,7 +178,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -173,6 +187,9 @@ Accept wildcard characters: False
 ```
 
 ### -PartitionMode
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies if partition mode is to be turned on.
 
 The valid values are True and False. The default value is False.
@@ -180,8 +197,7 @@ The valid values are True and False. The default value is False.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Uri
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

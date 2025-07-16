@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 Sets settings for the app profile.
 
-
 ## SYNTAX
 
 ```
@@ -28,20 +27,21 @@ Use the `Set-SPAppScaleProfile` cmdlet to set settings for an app profile.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### -----------------EXAMPLE-----------
+### EXAMPLE
 ```
 Set-SPAppScaleProfile -MaxDatabaseSize "2 GB" -RemoteWebSiteInstanceCount 1
 ```
 
 This example sets the farm level app scale profile.
 
-
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -53,8 +53,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -64,13 +63,15 @@ Accept wildcard characters: False
 ```
 
 ### -MaxDatabaseSize
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the database size of the app profile.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -80,13 +81,15 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteWebSiteInstanceCount
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies whether a remote site can access the profilefrom.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

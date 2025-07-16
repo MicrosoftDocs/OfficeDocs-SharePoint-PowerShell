@@ -2,7 +2,7 @@
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 module name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/enable-spprojectactivedirectoryenterpriseresourcepoolsync
-Applicable: SharePoint Server Subscription Edition
+
 title: Enable-SPProjectActiveDirectoryEnterpriseResourcePoolSync
 schema: 2.0.0
 ---
@@ -56,13 +56,15 @@ Retrieves the ObjectGuid values of the Domain Users and Domain Admins Active Dir
 ## PARAMETERS
 
 ### -Url
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the URL of the Project Web App instance to enable Active Directory Enterprise Resource Sync.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -72,13 +74,15 @@ Accept wildcard characters: False
 ```
 
 ### -GroupUids
+
+> Applicable: SharePoint Server Subscription Edition
+
 The Active Directory Group GUID to synchronize the Enterprise Resource Pool with.
 
 ```yaml
 Type: System.Collections.Generic.IEnumerable`1[System.Guid]
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 2
@@ -88,6 +92,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -99,8 +106,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

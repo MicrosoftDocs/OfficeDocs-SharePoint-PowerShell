@@ -2,7 +2,7 @@
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spsitemaster
-Applicable: SharePoint Server Subscription Edition
+
 title: New-SPSiteMaster
 schema: 2.0.0
 ---
@@ -11,7 +11,6 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Creates a site master.
-
 
 ## SYNTAX
 
@@ -24,20 +23,21 @@ New-SPSiteMaster [-ContentDatabase] <SPContentDatabasePipeBind>
 ## DESCRIPTION
 Use the New-SPSiteMaster cmdlet to create a site master information in the farm.
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE-----------------------
+### EXAMPLE
 ```powershell
 New-SPSiteMaster -ContentDatabase WSS_Content -Template STS#0
 ```
 
 This example creates a site master in the database WSS_Content.
 
-
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -45,8 +45,7 @@ When the Global parameter is used, all objects are contained in the global store
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -56,6 +55,9 @@ Accept wildcard characters: False
 ```
 
 ### -CompatibilityLevel
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the version of templates to use when creating a new SPSite object. This value sets the initial CompatibilityLevel value for the site collection.
 
 When this parameter is not specified, the CompatibilityLevel will default to the highest possible version for the web application depending on the SiteCreationMode setting.
@@ -63,8 +65,7 @@ When this parameter is not specified, the CompatibilityLevel will default to the
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -74,13 +75,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -90,13 +93,15 @@ Accept wildcard characters: False
 ```
 
 ### -ContentDatabase
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the database to create the site master in. For example, WSS_Content.
 
 ```yaml
 Type: SPContentDatabasePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 0
@@ -106,13 +111,15 @@ Accept wildcard characters: False
 ```
 
 ### -Language
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the locale ID to use. For example, use 1033 for English.
 
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -122,6 +129,9 @@ Accept wildcard characters: False
 ```
 
 ### -Template
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the template.
 
 The values are the following:
@@ -143,8 +153,7 @@ The values are the following:
 ```yaml
 Type: SPWebTemplatePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -154,6 +163,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -161,7 +173,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

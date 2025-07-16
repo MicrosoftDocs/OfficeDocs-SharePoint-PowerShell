@@ -17,7 +17,6 @@ ms.reviewer:
 Returns a list of the SharePoint-related products installed in the farm and the versions of all updates installed for each product.
 
 
-
 ## SYNTAX
 
 ### Local
@@ -44,7 +43,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE----------------- 
+### EXAMPLE
 ```
 Get-SPProduct -Local
 ```
@@ -54,6 +53,9 @@ This example displays the SharePoint-related products installed on the local ser
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -65,8 +67,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -76,14 +77,16 @@ Accept wildcard characters: False
 ```
 
 ### -Local
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Returns product and update information for only the local computer.
 If you use the Local parameter, you cannot use the Server parameter.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Local
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -93,14 +96,16 @@ Accept wildcard characters: False
 ```
 
 ### -Server
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Returns product and update information for a specified server.
 If you use the Server parameter, you cannot use the Local parameter.
 
 ```yaml
 Type: SPServerPipeBind
 Parameter Sets: Server
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

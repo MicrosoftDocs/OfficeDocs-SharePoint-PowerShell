@@ -23,17 +23,16 @@ Get-SPEnterpriseSearchVssDataPath [-AssignmentCollection <SPAssignmentCollection
 
 ## DESCRIPTION
 
-This cmdlet retrieves the index paths for all active index components on the current server. 
-This list is required as input by the Search VSS Writer in order to perform VSS backup of the current server. 
+This cmdlet retrieves the index paths for all active index components on the current server.
+This list is required as input by the Search VSS Writer in order to perform VSS backup of the current server.
 This cmdlet will typically be called from a VSS script, and rarely used directly.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE----------------- 
+### EXAMPLE
 ```
 Get-SPEnterpriseSearchVssDataPath
 ```
@@ -43,6 +42,9 @@ This example gets the index paths for all active index components on the current
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -54,8 +56,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

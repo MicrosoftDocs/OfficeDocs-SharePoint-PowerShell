@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 Tests a content database.
 
-
 ## SYNTAX
 
 ### ContentDatabaseById
@@ -48,15 +47,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ----------------------------EXAMPLE 1-----------------------
+### EXAMPLE 1
 ```
 Test-SPContentDatabase -name WSS_Content_DB -webapplication https://sitename
 ```
 
 This example tests the WSS_Content_DB content database against the sitename Web application and returns a list of issues.
 
-
-### ----------------------------EXAMPLE 2-----------------------
+### EXAMPLE 2
 ```
 $DB = Get-SPContentDatabase -site https://contoso.com
 Test-SPContentDatabase $DB -showrowcounts
@@ -68,13 +66,15 @@ Together with displaying the list of issues, by specifying the ShowRowCounts par
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies an existing connected SharePoint content database to one of the two parameter sets in the form of a GUID or database name if it is unique.
 
 ```yaml
 Type: SPContentDatabasePipeBind
 Parameter Sets: ContentDatabaseById
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -84,6 +84,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the existing content database to test.
 
 The type must be a valid name of a SharePoint content database; for example, SPContentDB1.
@@ -91,8 +94,7 @@ The type must be a valid name of a SharePoint content database; for example, SPC
 ```yaml
 Type: String
 Parameter Sets: ContentDatabaseByName
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -102,6 +104,9 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the SharePoint Web application to use to test the content database.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or a valid name of SharePoint Web application (for example, MyOfficeApp1); or an instance of a valid SPWebApplication object.
@@ -109,8 +114,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: ContentDatabaseByName
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -120,6 +124,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -131,8 +138,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -142,6 +148,9 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseCredentials
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the PSCredential object that contains the user name and password to be used for database SQL Server Authentication.
 
 The type must be a valid PSCredential object.
@@ -149,8 +158,7 @@ The type must be a valid PSCredential object.
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -160,6 +168,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendedCheck
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Checks for inconsistent authentication modes during database-attach upgrade process.
 
 The selected mode, claims or classic, must be the same in both versions.
@@ -167,8 +178,7 @@ The selected mode, claims or classic, must be the same in both versions.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -178,6 +188,9 @@ Accept wildcard characters: False
 ```
 
 ### -ServerInstance
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the instance of the database service to use to test the specified content database.
 
 The type must be a valid GUID, such as 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a SQL Server instance (for example, DBSvrInstance1); or an instance of a valid SPDatabaseServiceInstance object.
@@ -185,8 +198,7 @@ The type must be a valid GUID, such as 12345678-90ab-cdef-1234-567890bcdefgh; a 
 ```yaml
 Type: SPDatabaseServiceInstancePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -196,6 +208,9 @@ Accept wildcard characters: False
 ```
 
 ### -ShowLocation
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the locations where missing templates and features are being used within the database.
 Typically, reported locations are scoped within the site collections that are within the specified content database.
 
@@ -204,8 +219,7 @@ The use of the parameter significantly increases the time to complete the test p
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -215,13 +229,15 @@ Accept wildcard characters: False
 ```
 
 ### -ShowRowCounts
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Returns database statistics which are row counts for tables in the content database.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

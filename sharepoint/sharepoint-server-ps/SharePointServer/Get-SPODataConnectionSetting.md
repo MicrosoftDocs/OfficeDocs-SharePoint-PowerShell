@@ -2,7 +2,7 @@
 external help file: sharepointonline.xml
 module name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spodataconnectionsetting
-Applicable: SharePoint Server Subscription Edition
+
 title: Get-SPODataConnectionSetting
 schema: 2.0.0
 ---
@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 
 Returns Business Connectivity Services OData connection properties.
-
 
 ## SYNTAX
 
@@ -31,36 +30,35 @@ You cannot use this command in the SharePoint Online Management Shell.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://go.microsoft.com/fwlink/p/?LinkId=251831).
 
-
 ## EXAMPLES
 
-### -----------------------EXAMPLE 1-----------------------------
+### EXAMPLE 1
 ```powershell
 Get-SPODataConnectionSetting -ServiceContext  "http://contoso" -Name "ContosoServiceApp"
 ```
 
 This example returns properties of the BCS connection named ContosoServiceApp
 
-### -----------------------EXAMPLE 2-----------------------------
+### EXAMPLE 2
 ```powershell
 Get-SPODataConnectionSetting -ServiceContext "http://contoso"
 ```
 
 This example returns a list of BCS connections for the service context named http://contoso
 
-
 ## PARAMETERS
 
 ### -ServiceContext
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the service context which is in the form of an instance of an SPServiceContext object, an SPSiteAdministration object identifier, or a SPSite object.
 An example of a service context value is an identifier from the ID field, a string identifier, a URI, or a string representation of a GUID.
-
 
 ```yaml
 Type: SPServiceContextPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -70,6 +68,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -78,12 +79,10 @@ When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are au
 When the Global parameter is used, all objects are contained in the global store.
 If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
-
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -93,14 +92,15 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the Business Connectivity Services connection object.
 
+> Applicable: SharePoint Server Subscription Edition
+
+Specifies the name of the Business Connectivity Services connection object.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Updates a trust with the farm.
 
-
 ## SYNTAX
 
 ### ImportCertificateParameterSet
@@ -35,10 +34,9 @@ If a certificate file is used, it must have only one X509 certificate without pr
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 $cert = Get-PfxCertificate C:\LiveIDSigningCert.pfx
 Set-SPTrustedServiceTokenIssuer "WFEFarm1" - Description "WFE Farm 1" - ImportTrustCertificate $cert
@@ -46,18 +44,19 @@ Set-SPTrustedServiceTokenIssuer "WFEFarm1" - Description "WFE Farm 1" - ImportTr
 
 This example updates a SharePoint Farm trust using the trust certificate from a file.
 
-
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Set-SPTrustedServiceTokenIssuer "WFEFarm1" - Description "WFE Farm 1" -FederationMetadataUrl "https://liveid.com/STS/2007/03/fedmetadata.xml"
 ```
 
 This example updates a SharePoint farm trust using the trust certificate from the federation metadata endpoint URL.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the trusted service token issuer to update.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a trusted service token issuer (for example, WFEFarm1); or an instance of a valid SPTrustedRootAuthority object.
@@ -65,8 +64,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPTrustedServiceTokenIssuerPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -76,6 +74,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -87,8 +88,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -98,6 +98,9 @@ Accept wildcard characters: False
 ```
 
 ### -Certificate
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the X.509 certificate object from trusted authentication provider farm.
 
 The type must be a name of a valid X.509 certificate; for example, Certificate1.
@@ -105,8 +108,7 @@ The type must be a name of a valid X.509 certificate; for example, Certificate1.
 ```yaml
 Type: X509Certificate2
 Parameter Sets: ImportCertificateParameterSet
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -116,6 +118,9 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies a description for the trust.
 
 The type must be a valid string; for example, WFE Farm Trust1.
@@ -123,8 +128,7 @@ The type must be a valid string; for example, WFE Farm Trust1.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -134,13 +138,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -150,13 +156,15 @@ Accept wildcard characters: False
 ```
 
 ### -MetadataEndPoint
+
+> Applicable: SharePoint Server Subscription Edition
+
 {{Fill MetadataEndPoint Description}}
 
 ```yaml
 Type: Uri
 Parameter Sets: MetadataEndPointParameterSet
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -166,6 +174,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -173,7 +184,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

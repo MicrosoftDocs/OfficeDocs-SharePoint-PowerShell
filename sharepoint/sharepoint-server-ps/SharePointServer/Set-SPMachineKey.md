@@ -24,7 +24,7 @@ The \`Set-SPMachineKey\` cmdlet configures the ASP.NET view state decryption and
 
 ## EXAMPLES
 
-### -------------EXAMPLE 1------------- 
+### EXAMPLE 1
 ```powershell
 Set-SPMachineKey -WebApplication http://sitename
 ```
@@ -32,7 +32,7 @@ Set-SPMachineKey -WebApplication http://sitename
 This example sets the ASP.NET view state decryption and validation keys for web application 'http://sitename' to new randomly generated keys.
 The new keys are deployed to all servers in the farm.
 
-### -------------EXAMPLE 2------------- 
+### EXAMPLE 2
 ```powershell
 Set-SPMachineKey -WebApplication http://sitename -DecryptionKey '<Your Key!>' -ValidationKey '<Your Key!>' -Local
 ```
@@ -44,6 +44,9 @@ See **How to generate a `<machineKey> element`** in the [Resolving view state me
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -56,7 +59,6 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -66,6 +68,9 @@ Accept wildcard characters: False
 ```
 
 ### -DecryptionKey
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the new ASP.NET view state decryption key.
 The key should be represented as a 64-character long hexadecimal string (0-9 and A-F).
 
@@ -75,7 +80,6 @@ If this parameter is not specified, a random decryption key will be generated an
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -85,6 +89,9 @@ Accept wildcard characters: False
 ```
 
 ### -Local
+
+> Applicable: SharePoint Server Subscription Edition
+
 Deploy the new decryption and validation keys only to the local server.
 Other servers in the farm will continue to use the previous decryption and validation keys.
 Web sessions that are load balanced across multiple servers in the farm will fail if these keys are not synchronized on every server in the farm.
@@ -96,7 +103,6 @@ If this parameter is not specified, the new decryption and validation keys will 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -106,6 +112,9 @@ Accept wildcard characters: False
 ```
 
 ### -ValidationKey
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the new ASP.NET view state validation key.
 The key should be represented as a 64-character long hexadecimal string (0-9 and A-F).
 
@@ -115,7 +124,6 @@ If this parameter is not specified, a random decryption key will be generated an
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -125,13 +133,15 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name, URL, or GUID of the Web application.
 
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -141,13 +151,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -157,6 +169,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -164,7 +179,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

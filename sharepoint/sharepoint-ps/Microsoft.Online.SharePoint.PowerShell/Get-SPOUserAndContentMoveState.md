@@ -113,7 +113,6 @@ Type: System.UInt32
 Parameter Sets: MoveReport
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -149,7 +148,6 @@ Type: System.DateTime
 Parameter Sets: MoveReport
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -167,7 +165,6 @@ Allows you to obtain the moves that are scheduled to begin at a particular time,
 Type: System.DateTime
 Parameter Sets: MoveReport
 Aliases:
-
 
 Required: False
 Position: Named
@@ -188,7 +185,6 @@ Parameter Sets: MoveReport
 Aliases:
 Accepted values: NotStarted, InProgress, Success, Failed, Stopped, Queued, NotSupported, Rescheduled, All
 
-
 Required: False
 Position: Named
 Default value: None
@@ -207,7 +203,6 @@ Type: System.Guid
 Parameter Sets: OdbMoveId
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -225,7 +220,6 @@ User Principal name is the unique property on Microsoft Entra ID for each user.
 Type: String
 Parameter Sets: UserPrincipalName
 Aliases:
-
 
 Required: True
 Position: Named

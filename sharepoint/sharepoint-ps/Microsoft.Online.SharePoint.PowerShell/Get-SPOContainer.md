@@ -47,9 +47,7 @@ The `Get-SPOContainer` cmdlet retrieves details of an individual container, eith
 
 You must be a SharePoint Embedded Administrator to run this cmdlet.
 
-
 For permissions and the most current information about Windows PowerShell for SharePoint Embedded Containers, see the documentation at [Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
-
 
 > [!NOTE]
 > Containers in the Recycle Bin will not be retrieved by using the `Get-SPOContainer` cmdlet.
@@ -72,7 +70,6 @@ Example 1 returns the detailed properties of the Container with associated Conta
 Get-SPOContainer -OwningApplicationId 423poi45 | ft
 ```
 Example 2 returns a tabular list of Containers created under the SharePoint Embedded application with the `OwningApplicationId` of  `423poi45`.
-
 
 ### Example 3
 
@@ -121,7 +118,6 @@ Get-SPOContainer -OwningApplicationId 423poi45 -ArchiveStatus RecentlyArchived |
 
 Example 8 returns a tabular list of recently archived containers belonging to the SharePoint Embedded application with the OwningApplicationId of 423poi45.
 
-
 ## PARAMETERS
 
 ### -ArchiveStatus
@@ -136,13 +132,11 @@ The ArchiveStatus parameter is used to display containers in various stages of a
 - Reactivating – Displays containers in the "Reactivating" state.
 - NotArchived – Displays active containers
 
-
 ```yaml
 Type: Microsoft.Online.SharePoint.TenantAdministration.SPContainerArchiveStatusFilterProperties
 Parameter Sets: Archive
 Aliases:
 Accepted values: NotArchived, FullyArchived, RecentlyArchived, Reactivating, Archived
-
 
 Required: True
 Position: 1
@@ -162,7 +156,6 @@ Type: Microsoft.Online.SharePoint.PowerShell.SPOContainerPipeBind
 Parameter Sets: Identity
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -180,7 +173,6 @@ This parameter specifies the ID of the SharePoint Embedded application. Use the 
 Type: System.Guid
 Parameter Sets: OwningApplicationId, Sort, Archive
 Aliases:
-
 
 Required: True
 Position: 0
@@ -200,14 +192,12 @@ Type: System.Management.Automation.SwitchParameter
 Parameter Sets: OwningApplicationId, Sort, Archive
 Aliases:
 
-
 Required: False
 Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
 
 ### -PagingToken
 
@@ -219,7 +209,6 @@ Use this parameter to provide the paging token to view the remaining containers 
 Type: System.String
 Parameter Sets: OwningApplicationId, Sort, Archive
 Aliases:
-
 
 Required: False
 Position: 2
@@ -239,19 +228,6 @@ Aliases:
 Accepted values: Ascending, Descending
 
 Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: Microsoft.Online.SharePoint.TenantManagement.SortOrder
-Parameter Sets: Archive
-Aliases:
-Accepted values: Ascending, Descending
-
-Required: False
 Position: 1
 Default value: None
 Accept pipeline input: False
@@ -286,5 +262,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-SPODeletedContainer](./Remove-SPODeletedContainer.md)
 
 [Restore-SPODeletedContainer](./Restore-SPODeletedContainer.md)
-
 

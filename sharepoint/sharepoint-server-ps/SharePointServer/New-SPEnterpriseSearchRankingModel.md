@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a ranking model to a shared search application.
 
-
 ## SYNTAX
 
 ```
@@ -27,10 +26,9 @@ The name, description and identifier (ID) for the new ranking model are containe
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------
+### EXAMPLE
 ```powershell
 $ssa = Get-SPEnterpriseSearchServiceApplication
 $owner = Get-SPEnterpriseSearchOwner -Level SPWeb -SPWeb https://sharepoint/team
@@ -40,10 +38,12 @@ New-SPEnterpriseSearchRankingModel -SearchApplication $ssa -Owner $owner -Rankin
 
 This example creates a ranking model for the site https://sharepoint/team for the search service application Search Service Application from the file rankModel.xml which is stored in the current directory.
 
-
 ## PARAMETERS
 
 ### -Owner
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the scope where the ranking model is available.
 The available scopes are: SSA, Tenant, Site Collection or Site.
 A ranking model can be available in multiple scopes.
@@ -52,7 +52,6 @@ A ranking model can be available in multiple scopes.
 Type: SearchObjectOwner
 Parameter Sets: (All)
 Aliases: o
-Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -62,13 +61,15 @@ Accept wildcard characters: False
 ```
 
 ### -RankingModelXML
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the XML representation of the new ranking model.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -78,6 +79,9 @@ Accept wildcard characters: False
 ```
 
 ### -SearchApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the search application that contains the ranking model.
 
 The type must be a valid GUID in the 9bf36458-fc99-4f7b-b060-867e5a63adce, a valid search application name (for example, SearchApp1), or an instance of a valid SearchServiceApplication object.
@@ -85,8 +89,7 @@ The type must be a valid GUID in the 9bf36458-fc99-4f7b-b060-867e5a63adce, a val
 ```yaml
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -96,6 +99,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -107,8 +113,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -118,6 +123,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -125,7 +133,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -135,6 +142,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -142,7 +152,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

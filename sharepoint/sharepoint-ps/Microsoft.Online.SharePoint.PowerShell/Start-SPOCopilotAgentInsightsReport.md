@@ -69,7 +69,6 @@ Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -87,7 +86,6 @@ It specifies the duration of the Copilot agent insight report in days. The possi
 Type: System.Int32
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: Named

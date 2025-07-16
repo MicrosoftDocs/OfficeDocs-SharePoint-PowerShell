@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Shares the specified local service application outside the farm.
 
-
 ## SYNTAX
 
 ```
@@ -26,10 +25,9 @@ The `Publish-SPServiceApplication` cmdlet publishes the local service applicatio
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE-----------------------
+### EXAMPLE
 ```powershell
 Publish-SPServiceApplication 053c34be-d251-488c-8e94-644eae94da26 -Description "Connect to this TestServiceApplcation of you want to use FeatureA in your farm" -InfoLink https://testurl
 ```
@@ -39,10 +37,12 @@ This example publishes a service application to another farm.
 The service application GUID is unique to every farm.
 You can run the `Get-SPServiceApplication` cmdlet to see the GUID of the service applications and then use the result from the `Get-SPServiceApplication` cmdlet for other SPServiceApplication cmdlets; for example, `Grant-SPServiceApplication`.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the GUID of the service application to share outside the farm.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh.
@@ -50,8 +50,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -61,6 +60,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -72,8 +74,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -83,6 +84,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -90,7 +94,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -100,14 +103,16 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
+> Applicable: SharePoint Server Subscription Edition
+
 Describes the service application to share outside the farm.
 If no value is specified, the value is left blank.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -117,6 +122,9 @@ Accept wildcard characters: False
 ```
 
 ### -InfoLink
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the link to more information about the service application to share outside the farm.
 If no link is specified, no link is made available.
 
@@ -125,8 +133,7 @@ The type must be a valid URL, in the form  https://server_name/Site_Name/page_na
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -136,6 +143,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -143,7 +153,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

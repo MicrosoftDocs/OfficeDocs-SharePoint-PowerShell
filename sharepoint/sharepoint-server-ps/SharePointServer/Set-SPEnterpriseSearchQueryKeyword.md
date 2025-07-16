@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the properties of a keyword term for a shared search application.
 
-
 ## SYNTAX
 
 ```
@@ -31,20 +30,21 @@ You can use this cmdlet for keywords in site collections that are in SharePoint 
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------
+### EXAMPLE
 ```powershell
 Get-SPEnterpriseSearchQueryKeyword -Identity Engineering -Site https://myserver/sites/engineering | Set-SPEnterpriseSearchQueryKeyword -StartDate "12/25/2009" -EndDate "12/24/2010" -Site https://myserver/sites/engineering
 ```
 
 This example gets a reference to the keyword with the term Engineering from the site https://myserver/sites/engineering and sets the start dates and end dates for the keyword.
 
-
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -53,12 +53,10 @@ When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are au
 When the Global parameter is used, all objects are contained in the global store.
 If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
-
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -68,15 +66,16 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
-
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -86,16 +85,17 @@ Accept wildcard characters: False
 ```
 
 ### -Contact
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the user name associated with the new keyword.
 
 The type must be a valid user name; for example, KeywordUser1.
-
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: c
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -105,16 +105,17 @@ Accept wildcard characters: False
 ```
 
 ### -Definition
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the definition of the new keyword term.
 
 The type must be a valid string; for example, a keyword term definition.
-
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: d
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -124,17 +125,18 @@ Accept wildcard characters: False
 ```
 
 ### -EndDate
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the expiration date of the keyword term.
 The default value is MaxDate.
 
 The type must be a valid DateTime type, in the form 2010,12,05.
 
-
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases: e
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -144,16 +146,17 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the keyword term to update.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid string that contains a keyword term (for example, KeywordTerm1); or an instance of a valid Keyword object.
 
-
 ```yaml
 Type: KeywordPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -163,17 +166,18 @@ Accept wildcard characters: False
 ```
 
 ### -ReviewDate
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the review date of the keyword term.
 The default value is MaxDate.
 
 The type must be a valid DateTime type, in the form 2010,12,05.
 
-
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases: r
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -183,16 +187,17 @@ Accept wildcard characters: False
 ```
 
 ### -Site
+
+> Applicable: SharePoint Server Subscription Edition
+
 Associates the new keyword term to the specified results URL.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form https://server_name; or an instance of a valid SPSite object.
 
-
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -202,17 +207,18 @@ Accept wildcard characters: False
 ```
 
 ### -StartDate
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the activation date for the keyword term.
 The default value is the current date.
 
 The type must be a valid date, in the form 2010,12,05.
 
-
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
 Aliases: s
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -222,16 +228,17 @@ Accept wildcard characters: False
 ```
 
 ### -Term
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the keyword term that triggers keyword results.
 
 The type must be a valid string; for example, a keyword term.
-
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: t
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -241,15 +248,16 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
-
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

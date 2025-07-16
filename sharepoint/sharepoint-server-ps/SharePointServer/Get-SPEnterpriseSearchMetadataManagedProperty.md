@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ 
+### EXAMPLE
 ```powershell
 $ssa = Get-SPEnterpriseSearchServiceApplication
 Get-SPEnterpriseSearchMetadataManagedProperty -SearchApplication $ssa -Identity UserName
@@ -40,6 +40,9 @@ This example retrieves the managed property UserName from the default search ser
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the managed property to retrieve.
 
 The type must be a valid name of metadata property, for example MetadataProperty1, or an instance of a valid ManagedProperty object.
@@ -47,8 +50,7 @@ The type must be a valid name of metadata property, for example MetadataProperty
 ```yaml
 Type: ManagedPropertyPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: 1
@@ -58,6 +60,9 @@ Accept wildcard characters: False
 ```
 
 ### -SearchApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the search application that contains the managed property collection.
 
 The type must be a valid search application name, for example, SearchApp1, or an instance of a valid SearchServiceApplication object.
@@ -65,8 +70,7 @@ The type must be a valid search application name, for example, SearchApp1, or an
 ```yaml
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -76,6 +80,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -83,8 +90,7 @@ When the Global parameter is used, all objects are contained in the global store
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -94,14 +100,16 @@ Accept wildcard characters: False
 ```
 
 ### -Limit
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the maximum number of managed properties to return.
 Specify ALL to return all possible results.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -111,6 +119,9 @@ Accept wildcard characters: False
 ```
 
 ### -SiteCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that the managed properties returned are to be within the scope of a site collection (SPSite).
 
 The type must be a valid GUID that specifies the property set in the form 12345678-90ab-cdef-1234-567890bcdefgh.
@@ -118,8 +129,7 @@ The type must be a valid GUID that specifies the property set in the form 123456
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -129,6 +139,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that the managed properties returned are to be within the scope of a tenant.
 
 The type must be a valid GUID that specifies the property set in the form 12345678-90ab-cdef-1234-567890bcdefgh.
@@ -136,8 +149,7 @@ The type must be a valid GUID that specifies the property set in the form 123456
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

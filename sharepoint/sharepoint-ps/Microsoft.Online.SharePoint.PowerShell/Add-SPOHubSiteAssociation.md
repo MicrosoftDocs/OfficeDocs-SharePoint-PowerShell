@@ -49,7 +49,6 @@ Type: Microsoft.Online.SharePoint.PowerShell.SpoHubSitePipeBind
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -67,7 +66,6 @@ URL of the site to join to the hub site.
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: 0

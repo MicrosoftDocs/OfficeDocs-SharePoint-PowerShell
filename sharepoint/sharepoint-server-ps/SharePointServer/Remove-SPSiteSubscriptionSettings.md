@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes the settings service data for a specified site subscription, or finds and removes orphaned data.
 
-
 ## SYNTAX
 
 ### FindAllOrphans
@@ -28,7 +27,6 @@ Remove-SPSiteSubscriptionSettings [-Identity] <SPServiceApplicationPipeBind> -Si
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
-
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
@@ -43,10 +41,9 @@ If this cmdlet is run on a federated service application without specifying the 
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ------------EXAMPLE 1--------------
+### EXAMPLE 1
 ```powershell
 Remove-SPSiteSubscriptionSettings -FindAllOrphans -Whatif
 ```
@@ -54,18 +51,19 @@ Remove-SPSiteSubscriptionSettings -FindAllOrphans -Whatif
 This example finds all orphans and displays them on the screen.
 Remove the WhatIf parameter to remove these extra settings.
 
-
-### ------------EXAMPLE 2--------------
+### EXAMPLE 2
 ```powershell
 Remove-SPSubscriptionSettingsServiceApplication -FindAllOrphans -AlternativeSiteSubscriptions $SubscriptionList
 ```
 
 Use this example if the service application is consumed by a remote farm and you want the clean orphaned site subscription settings data (an array of all site subscriptions whose data must remain in the service application is assigned to the $SubscriptionList variable.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the site subscription settings service application that contains the service data to delete.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a subscription settings service application (for example, SubscriptionSettingsApp1); or an instance of a valid SPSubscriptionSettingsServiceApplication object.
@@ -73,8 +71,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -84,13 +81,15 @@ Accept wildcard characters: False
 ```
 
 ### -FindAllOrphans
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that orphaned settings stores in the service application are deleted.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: FindAllOrphans
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -100,6 +99,9 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSubscriptions
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the site subscriptions with the settings service data to delete.
 
 The type must be an array of valid GUIDs.
@@ -107,8 +109,7 @@ The type must be an array of valid GUIDs.
 ```yaml
 Type: Guid[]
 Parameter Sets: SpecifySiteSubscriptions
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -118,6 +119,9 @@ Accept wildcard characters: False
 ```
 
 ### -AlternativeSiteSubscriptions
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the complete collection or comma-separated list of site subscriptions that should exist in the settings service application.
 Any data not matching the items in this list will be removed.
 
@@ -129,8 +133,7 @@ The type must be an array of valid GUIDs.
 ```yaml
 Type: Guid[]
 Parameter Sets: FindAllOrphans
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -140,6 +143,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -151,8 +157,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -162,6 +167,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -169,7 +177,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -179,13 +186,15 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: SharePoint Server Subscription Edition
+
 Automatically bypasses the secondary warning provided by the cmdlet prior to the operation.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: FindAllOrphans
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -195,6 +204,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -202,7 +214,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

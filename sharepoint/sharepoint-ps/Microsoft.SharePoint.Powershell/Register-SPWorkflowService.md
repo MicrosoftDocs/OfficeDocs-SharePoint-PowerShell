@@ -7,14 +7,13 @@ title: Register-SPWorkflowService
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # Register-SPWorkflowService
 
 ## SYNOPSIS
 Registers a Workflow Manager farm with the SharePoint farm.
-
 
 ## SYNTAX
 
@@ -26,10 +25,9 @@ Register-SPWorkflowService [-AllowOAuthHttp] [-AssignmentCollection <SPAssignmen
 ## DESCRIPTION
 This cmdlet registers a Workflow Manager farm with the SharePoint farm in order to allow users to leverage SharePoint 2013 workflows.
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------
+### EXAMPLE
 ```
 Register-SPWorkflowService -SPSite https://site_name -WorkflowHostUri https://workflow.contoso.com:12290 -ScopeName SharePoint
 ```
@@ -38,13 +36,15 @@ Registers the Workflow Manager farm located at https://workflow.contoso.com:1229
 ## PARAMETERS
 
 ### -AllowOAuthHttp
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Allows connecting to Workflow Manager using HTTP rather than HTTPS. This is not recommended for security.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -54,6 +54,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -65,8 +68,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -76,13 +78,15 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Forces the registration, even if previously registered. Will overwrite the existing Scope.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -92,13 +96,15 @@ Accept wildcard characters: False
 ```
 
 ### -PartitionMode
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016
+
 Specifies to use a SharePoint multi-tenancy features when registering Workflow Manager.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Aliases:
 
 Required: False
 Position: Named
@@ -108,13 +114,15 @@ Accept wildcard characters: False
 ```
 
 ### -SPSite
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 The Site Collection used as a reference to register Workflow Manager with the SharePoint farm.
 
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -124,13 +132,15 @@ Accept wildcard characters: False
 ```
 
 ### -ScopeName
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 The name of the scope in Workflow Manager to use. if not specified, the default Scope will be used.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -140,13 +150,15 @@ Accept wildcard characters: False
 ```
 
 ### -WorkflowHostUri
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 The URI on which the Workflow Manager is hosted.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named

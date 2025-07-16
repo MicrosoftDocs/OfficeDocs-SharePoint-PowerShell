@@ -25,7 +25,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------EXAMPLE-----------
+### EXAMPLE
 ```powershell
 PS C:\>Get-SPCertificateAuthority
 ```

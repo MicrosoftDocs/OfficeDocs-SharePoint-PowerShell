@@ -14,7 +14,6 @@ schema: 2.0.0
 Returns a diagnostics provider.
 
 
-
 ## SYNTAX
 
 ```
@@ -30,14 +29,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE----------------------- 
+### EXAMPLE
 ```powershell
 Get-SPDiagnosticsProvider
 ```
 
 This example returns all the diagnostics providers in the farm.
 
-### ------------------EXAMPLE 2----------------------- 
+### EXAMPLE 2
 ```powershell
 Get-SPDiagnosticsProvider job-diagnostics-event-log-provider
 ```
@@ -47,6 +46,9 @@ This example returns the event log diagnostics provider.
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the diagnostics provider to get.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a diagnostic provider (for example, DiagnosticsProv1); or an instance of a valid SPDiagnosticsProvider object.
@@ -54,8 +56,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPDiagnosticsProviderPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: 1
@@ -65,6 +66,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -76,8 +80,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

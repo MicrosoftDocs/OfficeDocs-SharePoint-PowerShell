@@ -7,14 +7,13 @@ title: New-SPEnterpriseSearchIndexComponent
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # New-SPEnterpriseSearchIndexComponent
 
 ## SYNOPSIS
 Creates a new index component for the given topology and search service instance.
-
 
 ## SYNTAX
 
@@ -29,10 +28,9 @@ New-SPEnterpriseSearchIndexComponent -SearchServiceInstance <SearchServiceInstan
 Creates a new index component and adds it to an inactive search topology in a specific search service instance.
 The change is effectuated when the search topology is enabled.
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE-----------------
+### EXAMPLE
 ```
 $si = Get-SPEnterpriseSearchServiceInstance
 $ssa = Get-SPEnterpriseSearchServiceApplication
@@ -42,18 +40,18 @@ New-SPEnterpriseSearchIndexComponent -SearchTopology $topology -SearchServiceIns
 
 This example adds a new Search Index Component to the inactive topology for the existing Search Service Application. The directory of the Index Component is set to E:\Index with a Partition number of 1.
 
-
 ## PARAMETERS
 
 ### -SearchServiceInstance
-Specifies the search service instance that will host the new index component.
 
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
+Specifies the search service instance that will host the new index component.
 
 ```yaml
 Type: SearchServiceInstancePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -63,13 +61,15 @@ Accept wildcard characters: False
 ```
 
 ### -SearchTopology
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the search topology where the new index component should be added.
 
 ```yaml
 Type: SearchTopologyPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -79,6 +79,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -90,8 +93,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -101,6 +103,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -108,7 +113,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -118,13 +122,15 @@ Accept wildcard characters: False
 ```
 
 ### -IndexPartition
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the index partition number to assign to the new search index component.
 
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -134,19 +140,20 @@ Accept wildcard characters: False
 ```
 
 ### -RootDirectory
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the root directory that will hold the index location for the new search index component.
 This is needed if you want to isolate the index on dedicated discs in order to avoid I/O contention with other parts of the system, other system sharing the same disks, or because you do not want to risk the index filling up the OS disk (generally C: )
 
 If you specify the root directory to be the root of a volume, e.g.
-E:, the index will not be cleaned up if you delete the SSA. 
+E:, the index will not be cleaned up if you delete the SSA.
 You will then have to delete the SSA manually.
-
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -156,13 +163,15 @@ Accept wildcard characters: False
 ```
 
 ### -SearchApplication
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the search service application that contains the search topology.
 
 ```yaml
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -172,6 +181,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -179,7 +191,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

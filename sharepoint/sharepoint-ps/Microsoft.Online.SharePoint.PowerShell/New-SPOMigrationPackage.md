@@ -65,7 +65,6 @@ Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -83,7 +82,6 @@ Used to include permissions and sharing information into the generated manifest 
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: Named
@@ -103,7 +101,6 @@ Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -121,7 +118,6 @@ Used to not create a log file. The default is to create a new CreateMigrationPac
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: Named
@@ -141,7 +137,6 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: 1
 Default value: None
@@ -159,7 +154,6 @@ Switch to replace characters in file and folder names that would be invalid in S
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: Named
@@ -179,7 +173,6 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: 0
 Default value: None
@@ -197,7 +190,6 @@ The web relative document library to use as the document library part of the bas
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: 3
@@ -217,7 +209,6 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: 4
 Default value: None
@@ -235,7 +226,6 @@ The fully qualified web URL to use as the web address part of the base URL in th
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: 2

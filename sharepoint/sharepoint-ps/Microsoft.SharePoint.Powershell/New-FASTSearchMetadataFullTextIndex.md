@@ -6,7 +6,7 @@ applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 title: New-FASTSearchMetadataFullTextIndex
 ---
 
@@ -38,7 +38,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 New-FASTSearchMetadataFullTextIndex -Name CommonSharePoint -Description "Content from the common SharePoint site."
 ```
@@ -50,13 +50,15 @@ See New-FASTSearchMetadataFullTextIndexMapping for details about mapping propert
 ## PARAMETERS
 
 ### -Description
+
+> Applicable: FAST Server for SharePoint 2010
+
 Description of the full text index, including the type of content or which connector feeds the data.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: Named
@@ -66,13 +68,15 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: FAST Server for SharePoint 2010
+
 Name of the new full text index.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: Named

@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Updates the public key that is used to connect to the WOPI application on the current SharePoint farm where this cmdlet is run.
 
-
 ## SYNTAX
 
 ```
@@ -29,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE-----------------
+### EXAMPLE
 ```powershell
 Update-SPWOPIProofKey -ServerName "Server.corp.Contoso.com"
 ```
@@ -39,6 +38,9 @@ This example obtains the current public key from the WOPI application (such as a
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -50,8 +52,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -61,6 +62,9 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the WOPI application to obtain the key from.
 This may be a server that runs Office Web Apps Server.
 If this parameter is missing, public keys for all WOPI applications which are connected to the current SharePoint farm, are updated.
@@ -68,8 +72,7 @@ If this parameter is missing, public keys for all WOPI applications which are co
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
