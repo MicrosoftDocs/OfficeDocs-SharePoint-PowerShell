@@ -47,7 +47,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 Set-FASTSearchMetadataCategory -Name Titles -DiscoverNewProperties 1 -MapToContents 1
 ```
@@ -58,7 +58,7 @@ A crawled property is considered a member of the category if it has the same pro
 This example also sets MapToContents so that new crawled properties are mapped to the "content" full text index.
 If you do not want a newly discovered crawled property made available through the full text index, override this action by setting the specific crawled property's IsMappedToContents parameter to false.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 2 (FAST Server for SharePoint 2010)
 ```
 Set-FASTSearchMetadataCategory -Name ExtendedTitle -Newname Titles
 ```
@@ -68,13 +68,15 @@ This example changes the name of the category "ExtendedTitle" to "Titles".
 ## PARAMETERS
 
 ### -Category
+
+> Applicable: FAST Server for SharePoint 2010
+
 Specifies the category to be changed.
 
 ```yaml
 Type: Category
 Parameter Sets: Category
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: Named
@@ -84,13 +86,15 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: FAST Server for SharePoint 2010
+
 The name of the category to update.
 
 ```yaml
 Type: String
 Parameter Sets: Name
 Aliases: CategoryName, N
-Applicable: FAST Server for SharePoint 2010
 
 Required: True
 Position: Named
@@ -100,6 +104,9 @@ Accept wildcard characters: False
 ```
 
 ### -MapToContents
+
+> Applicable: FAST Server for SharePoint 2010
+
 If this parameter is set to true, all newly created or discovered properties (if automatic discovery is enabled) are added to the "content" full text index.
 
 The name of each crawled property is added to the "crawledpropertynames" managed property.
@@ -107,8 +114,7 @@ The name of each crawled property is added to the "crawledpropertynames" managed
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -118,13 +124,15 @@ Accept wildcard characters: False
 ```
 
 ### -DiscoverNewProperties
+
+> Applicable: FAST Server for SharePoint 2010
+
 If this parameter is set to true, previously unknown crawled properties mapped to this category (having the same property set identifier) are created and added to the category.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -134,13 +142,15 @@ Accept wildcard characters: False
 ```
 
 ### -NewName
+
+> Applicable: FAST Server for SharePoint 2010
+
 The new name for the category.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named

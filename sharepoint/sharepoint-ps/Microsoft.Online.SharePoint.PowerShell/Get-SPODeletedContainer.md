@@ -42,7 +42,6 @@ Get-SPODeletedContainer
 
 This example returns a list of the `ContainerId`, `ContainerName`, and `CreatedDate` of all deleted Containers in the Recycle Bin.
 
-
 ## PARAMETERS
 
 ### CommonParameters

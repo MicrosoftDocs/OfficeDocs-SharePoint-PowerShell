@@ -18,7 +18,6 @@ Returns the state information about the specified scale-out database.
 
 
 
-
 ## SYNTAX
 
 ### UnattachedDatabase
@@ -44,10 +43,9 @@ The database state information includes total count of partitions, total weight 
 
 
 
-
 ## EXAMPLES
 
-### ----------------EXAMPLE-------------- 
+### EXAMPLE
 ```
 C:\PS>$databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
 
@@ -58,22 +56,20 @@ Get-SPServerScaleOutDatabaseDataState -Database $database
 
 This example gets the data state of the scale-out database for the first scale-out database of the given service application.
 
-
 ## PARAMETERS
 
 ### -ConnectionString
 
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the connection string for the scale-out database from which to return the state information.
-
-
 
 
 
 ```yaml
 Type: String
 Parameter Sets: UnattachedDatabase
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -84,15 +80,15 @@ Accept wildcard characters: False
 
 ### -Database
 
-Specifies the scale-out database for which the command returns state information.
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
+Specifies the scale-out database for which the command returns state information.
 
 
 ```yaml
 Type: SPDatabasePipeBind
 Parameter Sets: AttachedDatabase
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -102,6 +98,8 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
@@ -113,12 +111,10 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 
 
 
-
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -129,15 +125,15 @@ Accept wildcard characters: False
 
 ### -Confirm
 
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
-
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -148,17 +144,16 @@ Accept wildcard characters: False
 
 ### -IsAzureDatabase
 
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies whether the state information of the scale-out database is in the form of a Microsoft Windows Azure SQL Database.
-
-
 
 
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: UnattachedDatabase
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -169,16 +164,16 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
-
 
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

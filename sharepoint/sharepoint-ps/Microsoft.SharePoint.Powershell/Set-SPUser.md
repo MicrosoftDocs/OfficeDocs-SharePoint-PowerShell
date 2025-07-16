@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 Configures properties of an existing user.
 
-
 ## SYNTAX
 
 ```
@@ -30,18 +29,16 @@ The `Set-SPUser` cmdlet configures properties of an existing user.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE 1-----------------------
+### EXAMPLE 1
 ```
 Set-SPUser -Identity 'Contoso\jdoe' -Web https://intranet.contoso.com -AddPermissionLevel "Contributor"
 ```
 
 This example sets a user (Contoso\jdoe) to be a contributor on https://intranet.contoso.com.
 
-
-### ------------------EXAMPLE 2-----------------------
+### EXAMPLE 2
 ```
 Set-SPUser -Identity 'Contoso\jdoe' -Web https://intranet.contoso.com -SyncFromAD
 ```
@@ -51,6 +48,9 @@ This updates the User Information List for the user 'contoso\jdoe' with the curr
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the GUID, login name, or SPUser object of the user to be returned.
 
 The type must be a GUID of an existing user in the form, 1234-5678-9876-0987.
@@ -59,7 +59,6 @@ The type must be a GUID of an existing user in the form, 1234-5678-9876-0987.
 Type: SPUserPipeBind
 Parameter Sets: (All)
 Aliases: UserAlias
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -69,6 +68,9 @@ Accept wildcard characters: False
 ```
 
 ### -AddPermissionLevel
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the permission level to add to the user.
 
 The value must be one of the following options:
@@ -96,8 +98,7 @@ Can view pages and list items and download documents.
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -107,6 +108,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -118,8 +122,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -129,14 +132,16 @@ Accept wildcard characters: False
 ```
 
 ### -ClearPermissions
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Deletes all assigned permissions from the user.
 If Clear and Add values exist, permissions are first cleared and then new permissions are added.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -146,6 +151,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -153,7 +161,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -163,6 +170,9 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the new display name of the user.
 
 The type must be a valid name.
@@ -170,8 +180,7 @@ The type must be a valid name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -181,13 +190,15 @@ Accept wildcard characters: False
 ```
 
 ### -Email
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the new email address of the user.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -197,13 +208,15 @@ Accept wildcard characters: False
 ```
 
 ### -Group
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Adds the user to an existing group in the given site.
 
 ```yaml
 Type: SPGroupPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -213,13 +226,15 @@ Accept wildcard characters: False
 ```
 
 ### -IsSiteCollectionAdmin
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies whether to set the user as a site collection administrator.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -229,14 +244,16 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-If not provided, indicates that this cmdlet has no output. 
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
+If not provided, indicates that this cmdlet has no output.
 If provided, this parameter indicates that the SPUser object for this user is to be returned.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -246,13 +263,15 @@ Accept wildcard characters: False
 ```
 
 ### -RemovePermissionLevel
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Removes the permission level from the user.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -262,13 +281,15 @@ Accept wildcard characters: False
 ```
 
 ### -SyncFromAD
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 If provided, specifies that user information will be synchronized from the user directory store. This switch only retrieves the `displayName` and `mail` value from the directory store. It supports Active Directory (Classic or Windows authentication), Forms-based Authentication, and SAML. FBA and SAML providers must support resolving from their directory store for this switch to work. The switch only supports SharePoint User objects.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -278,6 +299,9 @@ Accept wildcard characters: False
 ```
 
 ### -Web
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of the URL or GUID to be used as a scope.
 This parameter is not needed if the SPUser object is provided as the identity.
 
@@ -286,8 +310,7 @@ The value must be an authentic URL, in the form https://server_name, or GUID, in
 ```yaml
 Type: SPWebPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -297,6 +320,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -304,7 +330,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

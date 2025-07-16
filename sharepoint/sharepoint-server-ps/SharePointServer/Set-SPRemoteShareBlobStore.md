@@ -25,14 +25,14 @@ The \`Set-SPRemoteShareBlobStore\` cmdlet changes the setting of the registed Re
 
 ## EXAMPLES
 
-### -------------EXAMPLE 1------------- 
+### EXAMPLE 1
 ```powershell
 Set-SPRemoteShareBlobStore -RemoteShareBlobStore "RemoteStore" -Location "\\storage_name\blobstore\"
 ```
 
 This example sets the location of Remote Share BLOB Store "RemoteStore" to "\\\\storage_name\blobstore\"
 
-### -------------EXAMPLE 2------------- 
+### EXAMPLE 2
 ```powershell
 Set-SPRemoteShareBlobStore -RemoteShareBlobStore "RemoteStore" -BlobStoreCredential (Get-Credential)
 ```
@@ -42,6 +42,9 @@ This example prompts the user to provide BLOB store credentials for the specifie
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -53,7 +56,6 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -63,13 +65,15 @@ Accept wildcard characters: False
 ```
 
 ### -BlobStoreCredential
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the credentials to use to connect to the BLOB store.
 
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -79,6 +83,9 @@ Accept wildcard characters: False
 ```
 
 ### -Location
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the path of the SMB storage this BLOB store will use.
 You must use a Universal Naming Convention (UNC) share path.
 For example: \\\\storage_name\blobstore.
@@ -87,7 +94,6 @@ For example: \\\\storage_name\blobstore.
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -97,6 +103,9 @@ Accept wildcard characters: False
 ```
 
 ### -PoolCapacity
+
+> Applicable: SharePoint Server Subscription Edition
+
 The number of BLOB trunks in each BLOB pool.
 
 If this parameter is not specified, the current value will not be changed.
@@ -105,7 +114,6 @@ If this parameter is not specified, the current value will not be changed.
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -115,6 +123,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteShareBlobStore
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the identity of the Remote Share BLOB Store to unregister.
 
 It can either be the Remote Share BLOB Store object or the Remote Share BLOB Store name.
@@ -123,7 +134,6 @@ It can either be the Remote Share BLOB Store object or the Remote Share BLOB Sto
 Type: SPRemoteShareBlobStorePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -133,13 +143,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -149,6 +161,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -156,7 +171,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

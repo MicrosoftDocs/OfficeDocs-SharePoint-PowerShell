@@ -14,7 +14,6 @@ schema: 2.0.0
 Moves site collections from one content database to another.
 
 
-
 ## SYNTAX
 
 ```
@@ -29,7 +28,7 @@ The Move-SPSite cmdlet moves the data in the specified site collection from its 
 
 A no-access lock is applied to the site collection to prevent users from altering data within the site collection while the move is taking place.
 
-Once the move is complete, the site collection is returned to its original lock state. 
+Once the move is complete, the site collection is returned to its original lock state.
 
 An IIS reset is required on any server running the Microsoft SharePoint Foundation Web Application service for the site move to take effect. This is not required for SharePoint Server 2019.
 
@@ -38,24 +37,23 @@ The destination content database specified must already exist, must be attached 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
-
 ## EXAMPLES
 
-### ---------------------EXAMPLE 1----------------------- 
+### EXAMPLE 1
 ```powershell
 Move-SPSite https://servername/sites/sitename -DestinationDatabase ContentDb2
 ```
 
 This example moves the site collection https://servername/sites/sitename to the content database ContentDb2.
 
-### ---------------------EXAMPLE 2----------------------- 
+### EXAMPLE 2
 ```powershell
 Get-SPSite -ContentDatabase ContentDb1 | Move-SPSite -DestinationDatabase ContentDb2
 ```
 
 This example moves all site collections in ContentDb1 to ContentDb2.
 
-### ---------------------EXAMPLE 3----------------------- 
+### EXAMPLE 3
 ```powershell
 Get-SPSiteAdministration | where { $_.OwnerLoginName -eq "DOMAIN\username" } | Move-SPSite -DestinationDatabase ContentDb2
 ```
@@ -64,7 +62,7 @@ This example moves all site collections where DOMAIN\username is the site collec
 The Get-SPSiteAdministration cmdlet is used instead of the Get-SPSite cmdlet because you must have permission within the site collection to access the properties of the SPSite object.
 You can access the properties of the SPSiteAdministration object as a SharePoint farm administrator.
 
-### ---------------------EXAMPLE 4----------------------- 
+### EXAMPLE 4
 ```powershell
 Move-SPSite -Identity siteUrl -DestinationDatabase databaseName -RbsProviderMapping
        @{"sourceProvider1"="targetProvider1", "sourceProvider2"="targetProvider2"}
@@ -75,14 +73,16 @@ This example moves an RBS-enabled site collection from one RBS-enabled content d
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the identity of the site collection to be moved.
 For example, https://servername/sites/sitename.
 
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -92,14 +92,16 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationDatabase
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the content database that the site collection should be moved to.
 For example, ContentDB2.
 
 ```yaml
 Type: SPContentDatabasePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -109,6 +111,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -120,8 +125,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -131,6 +135,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -138,7 +145,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -148,6 +154,9 @@ Accept wildcard characters: False
 ```
 
 ### -RbsProviderMapping
+
+> Applicable: SharePoint Server Subscription Edition
+
 This parameter was added in SharePoint Server with Service Pack 1 (SP1) and SharePoint Foundation with Service Pack 1 (SP1).
 
 Used to move an RBS-enabled site collection from one RBS-enabled content database to another RBS-enabled content database without moving the underlying BLOB content.
@@ -157,8 +166,7 @@ The same providers must be enabled on the target content database and the source
 ```yaml
 Type: Hashtable
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -168,6 +176,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -175,7 +186,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -185,6 +195,9 @@ Accept wildcard characters: False
 ```
 
 ### -CopyEvents
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies if events of the EventCache table need to be copied to the destination Content Database.
 
 The valid values are True or False.
@@ -192,8 +205,7 @@ The valid values are True or False.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

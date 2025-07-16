@@ -29,7 +29,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1-----------------
+### EXAMPLE 1
 ```
 Get-FASTSearchSecurityUserStoreGroupExpansion -Identity ln1 -User user1
 ```
@@ -37,7 +37,7 @@ Get-FASTSearchSecurityUserStoreGroupExpansion -Identity ln1 -User user1
 This example gets all the groups in the "ln1" user store that are parents, grand-parents, etc.
 of the "user1" user.
 
-### ---------------EXAMPLE 2-----------------
+### EXAMPLE 2
 ```
 Get-FASTSearchSecurityWorkerNode workerserver | Get-FASTSearchSecurityUserStoreGroupExpansion -Identity ln2 -User user1
 ```
@@ -48,13 +48,15 @@ of the "user1" user.
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: FAST Server for SharePoint 2010
+
 The identity of the user store to look in.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: 1
@@ -64,13 +66,15 @@ Accept wildcard characters: False
 ```
 
 ### -User
+
+> Applicable: FAST Server for SharePoint 2010
+
 The user or group identifier to look up.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: 2
@@ -80,13 +84,15 @@ Accept wildcard characters: False
 ```
 
 ### -Worker
+
+> Applicable: FAST Server for SharePoint 2010
+
 The optional Worker parameter specifies the WorkerPoolNode object for the security worker that is to handle the request.
 
 ```yaml
 Type: WorkerPoolNode
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 9999

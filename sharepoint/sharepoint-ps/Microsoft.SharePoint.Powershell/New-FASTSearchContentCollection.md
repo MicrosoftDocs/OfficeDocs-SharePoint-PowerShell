@@ -6,7 +6,7 @@ applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 title: New-FASTSearchContentCollection
 ---
 
@@ -29,21 +29,21 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 New-FASTSearchContentCollection -Name newscollection
 ```
 
 This example creates a new FAST Search Server 2010 for SharePoint content collection named "newscollection".
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 2 (FAST Server for SharePoint 2010)
 ```
 New-FASTSearchContentCollection -Name newscollection -Description "A collection for news content"
 ```
 
 This example creates a new content collection named "newscollection", and attaches a description to it.
 
-### ---------------EXAMPLE 3----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 3 (FAST Server for SharePoint 2010)
 ```
 New-FASTSearchContentCollection -Name newscollection -Description "A collection for news content" -Pipeline "Office14 (webcluster)"
 ```
@@ -53,13 +53,15 @@ This example creates a new content collection, and uses the FAST Search Server 2
 ## PARAMETERS
 
 ### -Name
+
+> Applicable: FAST Server for SharePoint 2010
+
 The name of the FAST Search Server 2010 for SharePoint content collection to add.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: 1
@@ -69,13 +71,15 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
+> Applicable: FAST Server for SharePoint 2010
+
 A description of the content collection to add.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 2
@@ -85,13 +89,15 @@ Accept wildcard characters: False
 ```
 
 ### -Pipeline
+
+> Applicable: FAST Server for SharePoint 2010
+
 The FAST Search Server 2010 for SharePoint document processing pipeline used to feed content to the content collection.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 4

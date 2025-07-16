@@ -17,7 +17,6 @@ ms.reviewer:
 Manage or report site upgrade.
 
 
-
 ## SYNTAX
 
 ### ContentDB
@@ -46,7 +45,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -----------EXAMPLE 1---------- 
+### EXAMPLE 1
 ```
 C:\PS>$db = Get-SPContentDatabase -Identity wss_content
 
@@ -55,7 +54,7 @@ Get-SPSiteUpgradeSessionInfo -ContentDatabase $db
 
 This example returns siteupgradeinfo for every SPContentDatabase returned from Get-SPContentDatabase cmdlet.
 
-### -----------EXAMPLE 2---------- 
+### EXAMPLE 2
 ```
 C:\PS>$site=Get-SPSite -Identity https://localhost
 
@@ -67,13 +66,15 @@ This example returns siteupgradeinfo for every SPSite object returned from Get-S
 ## PARAMETERS
 
 ### -ContentDatabase
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the GUID of the content database from which to list site collections.The type must be a valid database name, in the form  SPContentDB01, or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
 
 ```yaml
 Type: SPContentDatabasePipeBind
 Parameter Sets: ContentDB
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -83,11 +84,13 @@ Accept wildcard characters: False
 ```
 
 ### -Site
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: Site
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -97,6 +100,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -108,8 +114,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -119,13 +124,15 @@ Accept wildcard characters: False
 ```
 
 ### -HideWaiting
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies to hide site collections that upgrade has not started.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ContentDB
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -135,13 +142,15 @@ Accept wildcard characters: False
 ```
 
 ### -ShowCompleted
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies to show site collections that has completed upgrade.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ContentDB
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -151,13 +160,15 @@ Accept wildcard characters: False
 ```
 
 ### -ShowFailed
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies to show site collections that have failed upgrade.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ContentDB
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -167,13 +178,15 @@ Accept wildcard characters: False
 ```
 
 ### -ShowInProgress
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays site collections that are in the process of being upgraded.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ContentDB
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -183,13 +196,15 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSubscription
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies to limit the result to site collections within the site subscription.
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: ContentDB
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

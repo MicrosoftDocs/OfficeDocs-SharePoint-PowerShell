@@ -39,7 +39,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 C:\PS>$title = Get-FASTSearchMetadataManagedProperty -Name title
 $extendedtitle = Get-FASTSearchMetadataManagedProperty -name extendedtitle
@@ -56,6 +56,9 @@ This replaces any existing crawled property mappings for the managed property "e
 ## PARAMETERS
 
 ### -CrawledPropertyMapping
+
+> Applicable: FAST Server for SharePoint 2010
+
 The list of crawled property mappings applied to the specified managed property.
 The order in the list controls which crawled property is used when multiple crawled properties exist.
 The list must consist of one or more Microsoft.SharePoint.Search.Extended.Administration.Schema.CrawledPropertyImpl objects.
@@ -63,8 +66,7 @@ The list must consist of one or more Microsoft.SharePoint.Search.Extended.Admini
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.SharePoint.Search.Extended.Administration.Schema.CrawledProperty]
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: Named
@@ -74,13 +76,15 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedProperty
+
+> Applicable: FAST Server for SharePoint 2010
+
 An object representing a managed property.
 
 ```yaml
 Type: ManagedProperty
 Parameter Sets: ManagedProperty
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: Named
@@ -90,13 +94,15 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: FAST Server for SharePoint 2010
+
 The name of the managed property whose crawled property mappings you are updating.
 
 ```yaml
 Type: String
 Parameter Sets: Name
 Aliases: ManagedPropertyName, N
-Applicable: FAST Server for SharePoint 2010
 
 Required: True
 Position: Named

@@ -32,7 +32,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 Set-FastSearchConfiguration -LogFile C:\log.txt
 ```
@@ -42,13 +42,15 @@ This example configures the local machine and writes the log output to C:\log.tx
 ## PARAMETERS
 
 ### -LogFile
+
+> Applicable: FAST Server for SharePoint 2010
+
 Specifies the full path of a file where all log messages will be written.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named

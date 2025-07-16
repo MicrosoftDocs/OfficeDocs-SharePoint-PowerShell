@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a throttling rule.
 
-
 ## SYNTAX
 
 ```
@@ -25,10 +24,9 @@ Use the `Remove-SPThrottlingRule` cmdlet to remove a throttling rule from the fa
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ----------------------EXAMPLE-----------------------
+### EXAMPLE
 ```powershell
 $web=Get-SPWebApplication -Identity <URL of web application>
 $rm=Get-SPRequestManagementSettings -Identity $web
@@ -39,17 +37,18 @@ Remove-SPThrottlingRule -Identity $throttlingrule
 
 This example removes a throttling rule for a specified identity by using the $throttlingrule variable.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the throttling rule object to remove.
 
 ```yaml
 Type: SPThrottlingRulePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -59,6 +58,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -70,8 +72,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

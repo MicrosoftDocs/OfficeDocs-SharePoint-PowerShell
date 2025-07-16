@@ -14,7 +14,6 @@ schema: 2.0.0
 Installs a SharePoint Feature by using the Feature.xml file.
 
 
-
 ## SYNTAX
 
 ### PathSet
@@ -51,14 +50,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- 
+### EXAMPLE 1
 ```powershell
 Install-SPFeature -path "MyCustomFeature"
 ```
 
 This example installs a new feature at $env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\15\TEMPLATE\FEATURES\MyCustomFeature/feature.xml.
 
-### --------------EXAMPLE 2----------------- 
+### EXAMPLE 2
 ```powershell
 Install-SPFeature -AllExistingFeatures -Whatif
 ```
@@ -66,14 +65,14 @@ Install-SPFeature -AllExistingFeatures -Whatif
 This example shows the unregistered features that are available on the file system and that are installed if this command is run without the WhatIf parameter.
 This is commonly done after an upgrade process.
 
-### --------------EXAMPLE 3----------------- 
+### EXAMPLE 3
 ```powershell
 Install-SPFeature -path "MyCustomFeature"  -CompatibilityLevel 14
 ```
 
 This example installs a new feature at $env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\14\TEMPLATE\FEATURES\MyCustomFeature\feature.xml.
 
-### --------------EXAMPLE 4----------------- 
+### EXAMPLE 4
 ```powershell
 Install-SPFeature -path "MyCustomFeature"  -CompatibilityLevel 15
 ```
@@ -83,6 +82,9 @@ This example installs a new feature at $env:ProgramFiles\Common Files\Microsoft 
 ## PARAMETERS
 
 ### -Path
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies an authentic file path; for example, MyFeature.
 
 The path to feature must be a literal path to the 14\Template\Features directory.
@@ -93,8 +95,7 @@ If the path to the feature is not found , the following error message is display
 ```yaml
 Type: String
 Parameter Sets: PathSet
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -104,13 +105,15 @@ Accept wildcard characters: False
 ```
 
 ### -AllExistingFeatures
+
+> Applicable: SharePoint Server Subscription Edition
+
 Scans for existing, but unregistered features, and then registers them with the farm.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: AllExistingFeatures
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -120,14 +123,16 @@ Accept wildcard characters: False
 ```
 
 ### -ScanForFeatures
+
+> Applicable: SharePoint Server Subscription Edition
+
 Scans and then displays a feature.
 The ScanForFeatures parameter does not install a feature.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ScanForFeatures
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -137,6 +142,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -148,8 +156,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -159,6 +166,9 @@ Accept wildcard characters: False
 ```
 
 ### -CompatibilityLevel
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the version of feature to install.
 When the version is not specified it will default to the web applications MaxVersion value.
 
@@ -167,8 +177,7 @@ The values for this can be either 14 or 15.
 ```yaml
 Type: Int32
 Parameter Sets: PathSet
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -178,6 +187,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -185,7 +197,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -195,13 +206,15 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: SharePoint Server Subscription Edition
+
 Forces the installation of an already installed feature.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -211,14 +224,16 @@ Accept wildcard characters: False
 ```
 
 ### -SolutionId
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the solution ID of the features.
 If the SolutionId parameter is not provided, all solution IDs are scanned.
 
 ```yaml
 Type: String
 Parameter Sets: AllExistingFeatures, ScanForFeatures
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -228,6 +243,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -235,7 +253,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

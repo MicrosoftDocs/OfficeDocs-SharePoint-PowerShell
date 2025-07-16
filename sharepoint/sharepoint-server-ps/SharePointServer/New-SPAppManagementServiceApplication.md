@@ -14,7 +14,6 @@ schema: 2.0.0
 Creates an App Management Service application.
 
 
-
 ## SYNTAX
 
 ```
@@ -31,7 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE---------- 
+### EXAMPLE
 ```powershell
 New-SPAppManagementServiceApplication -Name AppManagement -DatabaseServer MyDatabaseServer -DatabaseName AppManagementDB -ApplicationPool MyServiceAppPool
 ```
@@ -42,13 +41,15 @@ The new service application will run under the app pool named MyServiceAppPool
 ## PARAMETERS
 
 ### -ApplicationPool
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the application pool of the service application.
 
 ```yaml
 Type: SPIisWebServiceApplicationPoolPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -58,6 +59,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -69,8 +73,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -80,6 +83,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -87,7 +93,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -97,6 +102,9 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseCredentials
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the credentials to use when creating the service application database.
 These credentials will have owner rights on the newly created service application database.
 If a value is not provided, the current user's credentials are used by default.
@@ -104,8 +112,7 @@ If a value is not provided, the current user's credentials are used by default.
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -115,14 +122,16 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the service application database to be created.
 If a value is not provided, a default database name is provided.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -132,13 +141,15 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServer
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the server of the service application database to be created, If a value is not provided, the default database server is used.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -148,13 +159,15 @@ Accept wildcard characters: False
 ```
 
 ### -FailoverDatabaseServer
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the failover server of the service application database to be created, If a value is not provided, there will not be a failover server for the service application database.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -164,14 +177,16 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the service application to be created.
 If not provided, the default name is used.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -181,6 +196,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -188,7 +206,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -198,13 +215,15 @@ Accept wildcard characters: False
 ```
 
 ### -DeferUpgradeActions
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies if the upgrade process is to be deferred and manually completed.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

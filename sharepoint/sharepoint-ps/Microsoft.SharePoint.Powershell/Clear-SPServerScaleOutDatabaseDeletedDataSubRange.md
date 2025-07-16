@@ -16,7 +16,6 @@ ms.reviewer:
 
 Clears all partitions inside the specified deleted subrange.
 
-
 ## SYNTAX
 
 ```
@@ -30,10 +29,9 @@ Clear-SPServerScaleOutDatabaseDeletedDataSubRange -Database <SPDatabasePipeBind>
 Use the Clear-SPServerScaleOutDatabaseDeletedDataSubRange cmdlet to clear all partitions inside the specified deleted subrange that are contained within a specified scale-out database.
 
 
-
 ## EXAMPLES
 
-### --------------EXAMPLE-------------- 
+### EXAMPLE
 ```
 $databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
 $database = $databases[0]
@@ -46,18 +44,18 @@ Clear-SPServerScaleOutDatabaseDeletedDataSubRange -Database $database -Range $st
 This example creates a deleted subrange that starts from the data range start point and ends at the data range end point on the first scale-out database of the specified service application.
 The example then clears that subrange and all data in the partitions in the subrange.
 
-
 ## PARAMETERS
 
 ### -Database
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Specifies the scale-out database to clear the deleted subrange from.
 
 ```yaml
 Type: SPDatabasePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -68,13 +66,14 @@ Accept wildcard characters: False
 
 ### -IsUpperSubRange
 
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies whether the subrange with deleted mode is on the upper or lower side of the data range.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -85,13 +84,14 @@ Accept wildcard characters: False
 
 ### -Range
 
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the expected data range of the scale-out database.
 
 ```yaml
 Type: SPScaleOutDataRange
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -101,6 +101,8 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
@@ -113,8 +115,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -125,6 +126,8 @@ Accept wildcard characters: False
 
 ### -Confirm
 
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -132,7 +135,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -143,6 +145,8 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -150,7 +154,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

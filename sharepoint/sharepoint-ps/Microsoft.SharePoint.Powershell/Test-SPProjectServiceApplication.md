@@ -28,7 +28,7 @@ This cmdlet runs a series of health checks against the Project Service Applicati
 
 ## EXAMPLES
 
-### ---------------EXAMPLE--------------
+### EXAMPLE
 ```
 $sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Project Application Services'}
 Test-SPProjectServiceApplication -Identity $sa
@@ -39,6 +39,9 @@ This example runs all health checks again the service application named "Project
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -46,8 +49,7 @@ When the Global parameter is used, all objects are contained in the global store
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -57,13 +59,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 The name of the Project Service Application to test against.
 
 ```yaml
 Type: PsiServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: True
 Position: 0
@@ -73,6 +77,9 @@ Accept wildcard characters: False
 ```
 
 ### -Rule
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Which rule to run against the service application.
 
 Valid rules are:
@@ -90,9 +97,8 @@ DatabasePermissions
 ```yaml
 Type: ProjectServiceApplicationHealthRuleName
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: All, QueueServiceInternalState, QueueInFlightJobs, CalcServiceWorkerState, DatabasePermissions
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: 1

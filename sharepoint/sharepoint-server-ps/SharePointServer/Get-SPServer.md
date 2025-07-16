@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the server or servers in the farm that match the given identity.
 
-
 ## SYNTAX
 
 ```
@@ -28,14 +27,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- 
+### EXAMPLE 1
 ```powershell
 Get-SPServer
 ```
 
 This example returns all servers in the local farm in a list.
 
-### --------------EXAMPLE 2----------------- 
+### EXAMPLE 2
 ```powershell
 Get-SPServer | Where{ $_.NeedsUpgrade -eq $TRUE}
 ```
@@ -45,13 +44,15 @@ This example returns a list of all servers in the farm that need an upgrade.
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the address of the server to return.
 
 ```yaml
 Type: SPServerPipeBind
 Parameter Sets: (All)
 Aliases: Address
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 1
@@ -61,6 +62,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -72,8 +76,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

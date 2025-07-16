@@ -14,7 +14,6 @@ schema: 2.0.0
 Returns results from a Unified Logging Service (ULS) trace log.
 
 
-
 ## SYNTAX
 
 ### Directory
@@ -44,42 +43,42 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- 
+### EXAMPLE 1
 ```powershell
 Get-SPLogEvent -MinimumLevel "Warning"
 ```
 
 This example returns all log entries equal to or more severe than Warning from the default log directory.
 
-### --------------EXAMPLE 2----------------- 
+### EXAMPLE 2
 ```powershell
 Get-SPLogEvent -Directory "C:\Logs" | Where-Object {$_.Level -eq "Warning"}
 ```
 
 This example returns all warning entries from log files in the C:\Logs directory.
 
-### --------------EXAMPLE 3-----------------
+### EXAMPLE 3
 ```powershell
 Get-SPLogEvent -StartTime "12/04/2007 17:00" -EndTime "12/04/2007 18:00"
 ```
 
 This example returns error entries that occurred during a particular time range, which is culture-specific to the United States.
 
-### --------------EXAMPLE 4----------------- 
+### EXAMPLE 4
 ```powershell
 Get-SPLogEvent -ContextKey @("UserName" ,"SiteName")
 ```
 
 This example returns the contents of the most recent log file and adds the specified context key data.
 
-### --------------EXAMPLE 5----------------- 
+### EXAMPLE 5
 ```powershell
 Get-SPLogEvent | Where-Object {$_.Level -eq "Error" -and {$_.Area -eq "SharePoint Foundation "}
 ```
 
 This example returns all error entries related to SharePoint Foundation.
 
-### --------------EXAMPLE 6----------------- 
+### EXAMPLE 6
 ```powershell
 Get-SPLogEvent -ContextKey @("Name") | %{$_.ToString() + "'t" + $_.Context["Name"]}
 ```
@@ -89,6 +88,9 @@ This example returns the contents of the log file and adds context data.
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -100,8 +102,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -111,13 +112,15 @@ Accept wildcard characters: False
 ```
 
 ### -AsString
+
+> Applicable: SharePoint Server Subscription Edition
+
 Returns each record as a separate string
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -127,13 +130,15 @@ Accept wildcard characters: False
 ```
 
 ### -ContextKey
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that context data should be added to the results for the specified Context Keys, for example: `-ContextKey @("UserName", "SiteName")`.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -143,13 +148,15 @@ Accept wildcard characters: False
 ```
 
 ### -Directory
+
+> Applicable: SharePoint Server Subscription Edition
+
 Lists log files from an alternate directory (any directory other than the configured LogLocation directory).
 
 ```yaml
 Type: String
 Parameter Sets: Directory
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -159,14 +166,16 @@ Accept wildcard characters: False
 ```
 
 ### -MinimumLevel
+
+> Applicable: SharePoint Server Subscription Edition
+
 Returns records at or above the specified level.
 The valid values are Error or Warning.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -176,13 +185,15 @@ Accept wildcard characters: False
 ```
 
 ### -EndTime
+
+> Applicable: SharePoint Server Subscription Edition
+
 The type must be a valid DateTime format that is culture-specific to the administrative language, such as 2/16/2007 12:15:12 for English-US.
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -192,13 +203,15 @@ Accept wildcard characters: False
 ```
 
 ### -File
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies a specific file to query records from.
 
 ```yaml
 Type: String
 Parameter Sets: File
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -208,13 +221,15 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
+
+> Applicable: SharePoint Server Subscription Edition
+
 The type must be a valid DateTime format that is culture-specific to the administrative language, such as 2/16/2007 12:15:12 for English-US.
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

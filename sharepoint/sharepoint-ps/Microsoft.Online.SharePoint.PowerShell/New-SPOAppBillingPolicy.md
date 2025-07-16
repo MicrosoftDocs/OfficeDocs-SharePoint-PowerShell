@@ -67,7 +67,6 @@ Type: System.Guid
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -85,7 +84,6 @@ The region of the Azure Subscription.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: Named
@@ -105,7 +103,6 @@ Type: System.Guid
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -123,7 +120,6 @@ Resource Group Name associated with the Azure Subscription
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: Named
@@ -144,7 +140,6 @@ This parameters determined who is charged for the usage of the application. This
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: Named

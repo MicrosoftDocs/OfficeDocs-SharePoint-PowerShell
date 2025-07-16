@@ -14,7 +14,6 @@ schema: 2.0.0
 Adds a new security principal to an SPObjectSecurity object.
 
 
-
 ## SYNTAX
 
 ```
@@ -30,9 +29,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ 
+### EXAMPLE
 ```powershell
-$principal = New-SPClaimsPrincipal "CONTOSO\JaneDoe" -IdentityType WindowsSamAccountName 
+$principal = New-SPClaimsPrincipal "CONTOSO\JaneDoe" -IdentityType WindowsSamAccountName
 $sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'User Profile Service Application'}
 $security = Get-SPServiceApplicationSecurity $sa -Admin
 Grant-SPObjectSecurity $security $principal "Full Control"
@@ -46,14 +45,16 @@ The new user is an administrator for the service application $serviceApp.
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the SPObjectSecurity object to which the new security principal is added.
 You can use the Get-SPServiceApplicationSecurity cmdlet to get a SPObjectSecurity object .
 
 ```yaml
 Type: SPObjectSecurity
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -63,6 +64,9 @@ Accept wildcard characters: False
 ```
 
 ### -Principal
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the principal to whom the rights apply.
 
 The type must a valid name a principal; for example, Full Control.
@@ -70,8 +74,7 @@ The type must a valid name a principal; for example, Full Control.
 ```yaml
 Type: SPClaim
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 2
@@ -81,6 +84,9 @@ Accept wildcard characters: False
 ```
 
 ### -Rights
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the rights granted to the principal.
 
 The type must a valid array of strings that represents the rights granted to the principal.
@@ -88,8 +94,7 @@ The type must a valid array of strings that represents the rights granted to the
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 3
@@ -99,6 +104,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -110,8 +118,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -121,14 +128,16 @@ Accept wildcard characters: False
 ```
 
 ### -Replace
+
+> Applicable: SharePoint Server Subscription Edition
+
 Replaces the existing rights on the SPObjectSecurity object with the new rights specified.
 If this parameter is not specified, the new rights are added to the existing rights.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

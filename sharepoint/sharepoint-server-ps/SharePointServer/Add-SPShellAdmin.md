@@ -14,7 +14,6 @@ schema: 2.0.0
 Adds a user to the SharePoint_Shell_Access role for the specified database.
 
 
-
 ## SYNTAX
 
 ```
@@ -47,28 +46,28 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -------------------EXAMPLE 1------------------------- 
+### EXAMPLE 1
 ```powershell
 Add-SPShellAdmin -UserName CONTOSO\User1
 ```
 
 This example adds a new user named User1 to the SharePoint_Shell_Access role in the farm configuration database only, and also ensures the user is added to the WSS_Admin_WPG local group on each server in the farm.
 
-### -------------------EXAMPLE 2------------------------- 
+### EXAMPLE 2
 ```powershell
 Add-SPShellAdmin -UserName CONTOSO\User1 -database 4251d855-3c15-4501-8dd1-98f960359fa6
 ```
 
 This example adds a new user named User1 to the SharePoint_Shell_Access role in both the specified content database and the configuration database by passing a database GUID to the cmdlet.
 
-### -------------------EXAMPLE 3------------------------- 
+### EXAMPLE 3
 ```powershell
 Get-SPDatabase | Where-Object {$_.WebApplication -like "SPAdministrationWebApplication"} | Add-SPShellAdmin CONTOSO\User1
 ```
 
 This example adds a new user named User1 to the SharePoint_Shell_Access role in both the specified Central Administration content database and the configuration database.
 
-### -------------------EXAMPLE 4------------------------- 
+### EXAMPLE 4
 ```powershell
 Get-SPDatabase | ?{$_.Name -eq "WSS_Content"} | Add-SPShellAdmin -Username CONTOSO\User1
 ```
@@ -78,13 +77,15 @@ This example adds a new user named User1 to the SharePoint_Shell_Access role of 
 ## PARAMETERS
 
 ### -UserName
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the user to add to the SharePoint_Shell_Access role in the target database.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -94,6 +95,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -105,8 +109,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -116,6 +119,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -123,7 +129,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -133,6 +138,9 @@ Accept wildcard characters: False
 ```
 
 ### -Database
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the GUID of the database or the Database object that includes the SharePoint_Shell_Access role to which you want to add the user.
 If the database parameter is not specified, the configuration database is used.
 The farm configuration database is always included, even if you specify another database.
@@ -140,8 +148,7 @@ The farm configuration database is always included, even if you specify another 
 ```yaml
 Type: SPDatabasePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -151,6 +158,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -158,7 +168,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

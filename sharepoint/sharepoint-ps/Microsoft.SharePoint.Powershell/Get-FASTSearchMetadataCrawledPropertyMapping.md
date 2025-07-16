@@ -35,14 +35,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1-----------------
+### EXAMPLE 1
 ```
 C:\PS>Get-FASTSearchMetadataCrawledPropertyMapping -Name title
 ```
 
 This example returns a list of crawled properties that are mapped to the managed property named "title".
 
-### ---------------EXAMPLE 2-----------------
+### EXAMPLE 2
 ```
 $managedproperty = Get-FASTSearchMetadataManagedProperty -name title
 Get-FASTSearchMetadataCrawledPropertyMapping -ManagedProperty $managedproperty
@@ -51,7 +51,7 @@ Get-FASTSearchMetadataCrawledPropertyMapping -ManagedProperty $managedproperty
 This example first retrieves a ManagedPropertyImpl object, and then uses it to look up the corresponding crawled property mappings.
 It returns all crawled properties that are set up to map content into this managed property.
 
-### ---------------EXAMPLE 3-----------------
+### EXAMPLE 3
 ```
 $crawledproperty = Get-FASTSearchmetadataCrawledProperty -name title
 $crawledproperty.GetMappedManagedProperties()
@@ -63,13 +63,15 @@ This is useful when assessing how modifying a crawled property will impact the s
 ## PARAMETERS
 
 ### -Name
+
+> Applicable: FAST Server for SharePoint 2010
+
 The name of a managed property for finding crawled properties.
 
 ```yaml
 Type: String
 Parameter Sets: Name
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: 1
@@ -79,13 +81,15 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedProperty
+
+> Applicable: FAST Server for SharePoint 2010
+
 The managed property object for finding crawled properties.
 
 ```yaml
 Type: ManagedProperty
 Parameter Sets: ManagedProperty
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: Named

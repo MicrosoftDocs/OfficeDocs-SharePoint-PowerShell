@@ -14,8 +14,7 @@ schema: 2.0.0
 Returns the user account or accounts that match a given search criteria.
 
 
-
-## SYNTAX 
+## SYNTAX
 
 ```
 Get-SPUser [[-Identity] <SPUserPipeBind>] -Web <SPWebPipeBind> [-AssignmentCollection <SPAssignmentCollection>]
@@ -31,22 +30,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------ 
+### EXAMPLE 1
 ```powershell
 Get-SPUser -Web 'https://sharepoint.contoso.com' -Group 'Viewers'
 ```
 
 This example returns all members of the SharePoint group Viewers on the site https://sharepoint.contoso.com.
 
-
-### ------------------EXAMPLE 2------------------ 
+### EXAMPLE 2
 ```powershell
 Get-SPUser -Identity 'i:0#.w|contoso\jdoe' -Web 'https://sharepoint.contoso.com'
 ```
 
 This example returns the specific user identified via Windows Claims on the site https://sharepoint.contoso.com.
 
-### ------------------EXAMPLE 3------------------ 
+### EXAMPLE 3
 ```powershell
 Get-SPUser -Identity 'contoso\jdoe' -Web 'https://sharepoint.contoso.com'
 ```
@@ -56,6 +54,9 @@ This example returns the specific user identified via Classic Windows authentica
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the ID or login name of the user to be returned.
 
 The type must be a valid ID or login name, such as the format of 'CONTOSO\jdoe' for Classic Windows Authentication or 'i:0#.w|CONTOSO\jdoe' for Windows Claims.
@@ -64,7 +65,6 @@ The type must be a valid ID or login name, such as the format of 'CONTOSO\jdoe' 
 Type: SPUserPipeBind
 Parameter Sets: (All)
 Aliases: UserAlias
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: 1
@@ -74,6 +74,9 @@ Accept wildcard characters: False
 ```
 
 ### -Web
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the Web site to be used as a scope.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a SharePoint Foundation Web site (for example, MySPSite1); or an instance of a valid SPWeb object.
@@ -81,8 +84,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPWebPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -92,6 +94,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -103,8 +108,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -114,13 +118,15 @@ Accept wildcard characters: False
 ```
 
 ### -Group
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the user group to which the new user belongs.
 
 ```yaml
 Type: SPGroupPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -130,14 +136,16 @@ Accept wildcard characters: False
 ```
 
 ### -Limit
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the maximum number of users to return.
 The default value is 500.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

@@ -14,7 +14,6 @@ schema: 2.0.0
 Exports a Business Data Connectivity Model.
 
 
-
 ## SYNTAX
 
 ```
@@ -24,7 +23,7 @@ Export-SPBusinessDataCatalogModel -Identity <MetadataObject> -Path <String>
 ```
 
 ## DESCRIPTION
-The Export-SPBusinessDataCatalogModel cmdlet exports a Business Data Connectivity Model. 
+The Export-SPBusinessDataCatalogModel cmdlet exports a Business Data Connectivity Model.
 There are two types of Business Data Connectivity models: Model type (.bdcm) and Resource type (.bdcr).
 The Model type contains the base XML metadata, and can also include resource properties.
 The Resource type includes only resource properties.
@@ -33,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ 
+### EXAMPLE
 ```powershell
 $Model = Get-SPBusinessDataCatalogMetadataObject -BdcObjectType "Model" -Name "ContosoModel" -ServiceContext http://contoso
 Export-SPBusinessDataCatalogModel -Identity $Model -Path "C:\folder\model.bdcm"
@@ -44,13 +43,15 @@ This example gets a Business Data Connectivity Model from the Business Data Conn
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the Business Data Connectivity Metadata Store metadata object from which to export the Business Data Connectivity Model.
 
 ```yaml
 Type: MetadataObject
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -60,6 +61,9 @@ Accept wildcard characters: False
 ```
 
 ### -Path
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the path and name to use to create the export file.
 
 The type must be a valid path in either of the following forms:
@@ -71,8 +75,7 @@ The type must be a valid path in either of the following forms:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -82,6 +85,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -93,8 +99,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -104,13 +109,15 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: SharePoint Server Subscription Edition
+
 Overwrites the output file if the file exists.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -120,13 +127,15 @@ Accept wildcard characters: False
 ```
 
 ### -LocalizedNamesIncluded
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that names for business data fields in multiple languages are exported.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -136,14 +145,16 @@ Accept wildcard characters: False
 ```
 
 ### -ModelsIncluded
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that models are included in the exported Business Data Connectivity Model file.
 A model contains the base XML metadata for a system.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -153,13 +164,15 @@ Accept wildcard characters: False
 ```
 
 ### -PermissionsIncluded
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that permissions from the Business Data Connectivity Model are exported.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -169,13 +182,15 @@ Accept wildcard characters: False
 ```
 
 ### -PropertiesIncluded
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that properties from the application definition are exported.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -185,13 +200,15 @@ Accept wildcard characters: False
 ```
 
 ### -ProxiesIncluded
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that proxies for Business Data Connectivity Service applications are exported.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -201,6 +218,9 @@ Accept wildcard characters: False
 ```
 
 ### -SettingId
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the custom environment settings model slice to export.
 
 The type must be a valid string that identifies a model slice; for example, ModelSlice1.
@@ -208,8 +228,7 @@ The type must be a valid string that identifies a model slice; for example, Mode
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

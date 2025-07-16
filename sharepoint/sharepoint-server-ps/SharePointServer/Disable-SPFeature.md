@@ -14,7 +14,6 @@ schema: 2.0.0
 Disables an installed SharePoint Feature at a given scope.
 
 
-
 ## SYNTAX
 
 ```
@@ -31,14 +30,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- 
+### EXAMPLE 1
 ```powershell
 Disable-SPFeature -identity "MyCustom" -URL https://somesite
 ```
 
 This example disables the "MyCustom" Web site scoped feature at   https://somesite.
 
-### --------------EXAMPLE 2----------------- 
+### EXAMPLE 2
 ```powershell
 $w = Get-SPWeb https://somesite/myweb | ForEach{ $_.URL }
 Get-SPFeature -Web $w | ForEach-Object { Disable-SPFeature -Identity $_ -URL $w}
@@ -51,6 +50,9 @@ You do not need to use the SPAssignment cmdlets in this case because the Web obj
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the Feature or GUID to disable.
 
 The type must be the name of the Feature folder located in the "$env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\[14|15|16]\Template\Features" folder or GUID, in the format 21d186e1-7036-4092-a825-0eb6709e9281.
@@ -58,8 +60,7 @@ The type must be the name of the Feature folder located in the "$env:ProgramFile
 ```yaml
 Type: SPFeatureDefinitionPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -69,6 +70,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -80,8 +84,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -91,6 +94,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -98,7 +104,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -108,13 +113,15 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: SharePoint Server Subscription Edition
+
 Forces a Feature to be disabled.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -124,6 +131,9 @@ Accept wildcard characters: False
 ```
 
 ### -Url
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the URL of the Web application, site collection, or Web site to which the Feature is being disabled.
 
 The type must be a valid URL, such as https://server_name.
@@ -131,8 +141,7 @@ The type must be a valid URL, such as https://server_name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -142,6 +151,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -149,7 +161,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

@@ -28,8 +28,7 @@ This cmdlet is used to retrieve and return SharePoint Embedded applications from
 
 In addition to providing details about the application name, this cmdlet also returns essential information about guest applications and their associated permissions on the owning application. The cmdlet displays data related to the sharing capabilities, including the `OverrideTenantSharingCapability` status. Furthermore, the cmdlet lists all host URLs allowed to use the SharePoint Embedded application's declarative agent experience.
 
-You must be a SharePoint Embedded Administrator to run the cmdlet. 
-
+You must be a SharePoint Embedded Administrator to run the cmdlet.
 
 ## EXAMPLES
 
@@ -47,7 +46,7 @@ Example 1 returns all SharePoint Embedded applications registered in the specifi
 Get-SPOApplication -OwningApplicationId <OwningApplicationId>
 ```
 
-Example 2 provides details about the application corresponding to the owning application Id in the specified tenant. It returns applications, which includes the list of guest application IDs with permissions to the owning application, as well as the SharingCapability settings, the `OverrideTenantSharingCapability` status and the list of all Copilot embedded chat host URLs. 
+Example 2 provides details about the application corresponding to the owning application Id in the specified tenant. It returns applications, which includes the list of guest application IDs with permissions to the owning application, as well as the SharingCapability settings, the `OverrideTenantSharingCapability` status and the list of all Copilot embedded chat host URLs.
 
 ### Example 3
 
@@ -100,7 +99,7 @@ The following details are returned:
 - OverrideTenantSharingCapability
 
 - CopilotEmbeddedChatHosts
-  
+
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)

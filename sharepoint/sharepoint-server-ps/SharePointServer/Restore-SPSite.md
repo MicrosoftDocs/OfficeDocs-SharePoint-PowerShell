@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Restores a site collection.
 
-
 ## SYNTAX
 
 ### DatabaseFromPipebind
@@ -38,36 +37,35 @@ The `Restore-SPSite` cmdlet performs a restoration of the site collection to a l
 A content database may only contain one copy of a site collection.
 If a site collection is backed up and restored to a different URL location within the same Web application, an additional content database must be available to hold the restored copy of the site collection.
 
-
 ## EXAMPLES
 
-### ----------------------EXAMPLE 1----------------------
+### EXAMPLE 1
 ```powershell
 Restore-SPSite https://server_name/sites/site_name -Path C:\Backup\site_name.bak
 ```
 
 This example restores a site collection from the backup file C:\Backup\site_name.bak to the site collection URL https://server_name/sites/site_name.
 
-
-### ----------------------EXAMPLE 2----------------------
+### EXAMPLE 2
 ```powershell
 Restore-SPSite https://server_name/sites/site_name -Path C:\Backup\site_name.bak -Force -DatabaseServer SQLBE1 -DatabaseName SQLDB1
 ```
 
 This example restores a site collection backup from the backup file C:\Backup\site_name.bak, but overwrites the existing site collection at https://server_name/sites/site_name while specifying that the site collection must be stored in a specific content database.
 
-
-### ----------------------EXAMPLE 3----------------------
+### EXAMPLE 3
 ```powershell
 Restore-SPSite https://www.example.com -Path \\file_server\share\site_name.bak -HostHeaderWebApplication https://server_name
 ```
 
 This example restores a site collection backup from the backup file \\\\file_server\share\site_name.bak to the host-named site collection https://www.example.com on the Web application https://server_name.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the URL location to which the site collection is restored.
 
 A site collection does not have to already exist at the URL location to perform a restore.
@@ -79,8 +77,7 @@ The type must be a valid URL, in the form https://server_name/sites/site_name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -90,14 +87,16 @@ Accept wildcard characters: False
 ```
 
 ### -Path
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies a valid path to the location of the backup.
 For example, C:\Backup\site_name.bak.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -107,6 +106,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -118,8 +120,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -129,6 +130,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -136,7 +140,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -146,14 +149,16 @@ Accept wildcard characters: False
 ```
 
 ### -ContentDatabase
-Specifies the SQL Server content database where the site collection data will be stored. 
+
+> Applicable: SharePoint Server Subscription Edition
+
+Specifies the SQL Server content database where the site collection data will be stored.
 If no content database is specified, the content database with the greatest unused site collection capacity and whose database status is ready will be used.
 
 ```yaml
 Type: SPContentDatabasePipeBind
 Parameter Sets: DatabaseFromPipebind
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -163,6 +168,9 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the SQL Server content database where the site collection data will be stored.
 If no content database is specified, the content database with the greatest unused site collection capacity and whose database status is ready will be used.
 
@@ -171,8 +179,7 @@ The type must be a valid database name, in the form SQLDB1.
 ```yaml
 Type: String
 Parameter Sets: DatabaseParameter
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -182,6 +189,9 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServer
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the SQL Server containing the content database specified by the DatabaseName parameter.
 
 The type must be a valid database server name, in the form SQLBE1 and needs to be used in conjunction with the DatabaseName parameter.
@@ -189,8 +199,7 @@ The type must be a valid database server name, in the form SQLBE1 and needs to b
 ```yaml
 Type: String
 Parameter Sets: DatabaseParameter
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -200,13 +209,15 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that the existing site collection at the URL location is to be overwritten by this restoration.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -216,14 +227,16 @@ Accept wildcard characters: False
 ```
 
 ### -GradualDelete
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that the site collection being overwritten with the Force parameter should be gradually deleted over time by a timer job instead of all at once, which reduces its impact on SharePoint Products and SQL Server performance.
 This option is recommended for large site collections.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -233,6 +246,9 @@ Accept wildcard characters: False
 ```
 
 ### -HostHeaderWebApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 A valid URL assigned to the Web application by using alternate access mapping, such as https://server_name
 
 Restores a site collection as a host-named site collection instead of a path-based site collection.
@@ -241,8 +257,7 @@ When the HostHeaderWebApplication parameter is present, the value of the Identit
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -252,6 +267,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -259,7 +277,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -269,13 +286,15 @@ Accept wildcard characters: False
 ```
 
 ### -PreserveSiteID
+
+> Applicable: SharePoint Server Subscription Edition
+
 Preserves the original Site ID instead of creating a new one.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

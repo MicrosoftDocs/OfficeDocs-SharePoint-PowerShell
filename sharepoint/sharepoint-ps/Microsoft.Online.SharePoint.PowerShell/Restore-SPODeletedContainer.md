@@ -26,8 +26,6 @@ Restore-SPODeletedContainer [-Identity] <SPOContainerPipeBind> [<CommonParameter
 
 The `Restore-SPODeletedContainer` cmdlet recovers a previously deleted File Storage Container from the Recycle Bin. Restored Containers will be retrieved by the [`Get-SPOContainer`](./Get-SPOContainer.md) cmdlet. You must be at least a SharePoint Online Administrator to run this cmdlet.
 
-
-
 ## EXAMPLES
 
 ### Example 1
@@ -37,10 +35,7 @@ Restore-SPODeletedContainer -Identity b66f5b2e-4cbd-4754-9ad3-8291c2c81ade
 ```
 Example 1 restores the Container with `ContainerId` `b66f5b2e-4cbd-4754-9ad3-8291c2c81ade` from the Recycle Bin.
 
-
 ## PARAMETERS
-
-
 
 ### -Identity
 
@@ -52,7 +47,6 @@ Use this parameter to specify the `ContainerId` of the deleted container to be r
 Type: Microsoft.Online.SharePoint.PowerShell.SPOContainerPipeBind
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: 0

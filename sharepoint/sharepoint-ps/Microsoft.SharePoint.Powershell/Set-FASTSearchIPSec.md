@@ -39,14 +39,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 Set-FASTSearchIPSec -Create -UserName user1 -Password xxx
 ```
 
 This example sets up Internet Protocol security on the local machine.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 2 (FAST Server for SharePoint 2010)
 ```
 Set-FASTSearchIPSec -Remove
 ```
@@ -56,13 +56,15 @@ This example removes Internet Protocol security rules from the local machine.
 ## PARAMETERS
 
 ### -Create
+
+> Applicable: FAST Server for SharePoint 2010
+
 Specifies that IPsec rules will be created.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Create
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: Named
@@ -72,13 +74,15 @@ Accept wildcard characters: False
 ```
 
 ### -Password
+
+> Applicable: FAST Server for SharePoint 2010
+
 Specifies the password of the domain user that can look up machines in the domain controller.
 
 ```yaml
 Type: SecureString
 Parameter Sets: Create
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: Named
@@ -88,13 +92,15 @@ Accept wildcard characters: False
 ```
 
 ### -Remove
+
+> Applicable: FAST Server for SharePoint 2010
+
 Specifies that IPsec rules will be deleted.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Remove
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: Named
@@ -104,13 +110,15 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
+
+> Applicable: FAST Server for SharePoint 2010
+
 Specifies the username of the domain user that can look up machines in the domain controller.
 
 ```yaml
 Type: String
 Parameter Sets: Create
 Aliases: User
-Applicable: FAST Server for SharePoint 2010
 
 Required: True
 Position: Named
@@ -120,13 +128,15 @@ Accept wildcard characters: False
 ```
 
 ### -LogFile
+
+> Applicable: FAST Server for SharePoint 2010
+
 Specifies the full path of a file where all log messages will be written.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named

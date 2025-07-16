@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 Activates the RunTests method against a referenced SPSite object.
 
-
 ## SYNTAX
 
 ```
@@ -33,14 +32,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1------------
+### EXAMPLE 1
 ```
 Test-SPSite https://<site name>/sites/testsite
 ```
 
 This example runs all the site collection health checks on the https://\<site name\>/sites/testsite site collection.
 
-### --------------EXAMPLE 2------------
+### EXAMPLE 2
 ```
 Test-SPSite https://<site name</sites/testsite -Rule "ee967197-ccbe-4c00-88e4-e6fab81145e1"
 ```
@@ -50,13 +49,15 @@ This example runs just the "Missing Galleries Check" on the https://\<site name\
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the URL or GUID of the site to run a test.
 
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -66,6 +67,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -77,8 +81,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -88,13 +91,15 @@ Accept wildcard characters: False
 ```
 
 ### -RuleId
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies one specific site health rule to run.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -104,13 +109,15 @@ Accept wildcard characters: False
 ```
 
 ### -RunAlways
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Forces a rule to run even if a health check was run.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

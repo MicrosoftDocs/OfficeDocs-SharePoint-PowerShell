@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Configures the specified sites.
 
-
 ## SYNTAX
 
 ### SiteSubscription
@@ -43,28 +42,28 @@ The QuotaTemplate parameter is mutually exclusive to the MaxSize parameter and W
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### --------------------EXAMPLE 1---------------------
+### EXAMPLE 1
 ```powershell
 Get-SPSite https://sitename/sites/teams/* | Set-SPSite -SecondaryOwner "DOMAIN\Jdoe"
 ```
 
 This example sets the secondary owner on a set of site collections to DOMAIN\Jdoe.
 
-
-### --------------------EXAMPLE 2---------------------
+### EXAMPLE 2
 ```powershell
 Set-SPSite -identity "https://sitename" -MaxSize 4000000 -WarningSize 2000000
 ```
 
 This example configures the Quota settings for the site collection https://sitename.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the URL or GUID of the site collection to configure, or refers to an SPSite object that contains sites to configure.
 
 The type must be a valid URL, in the form https://server_name; a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; or an SPSite object.
@@ -72,8 +71,7 @@ The type must be a valid URL, in the form https://server_name; a valid GUID, in 
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -83,6 +81,9 @@ Accept wildcard characters: False
 ```
 
 ### -AdministrationSiteType
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the site type.
 
 Valid values are None or TentantAdministration.
@@ -90,8 +91,7 @@ Valid values are None or TentantAdministration.
 ```yaml
 Type: SPAdministrationSiteType
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -101,6 +101,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -112,8 +115,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -123,6 +125,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -130,7 +135,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -140,14 +144,16 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: SharePoint Server Subscription Edition
+
 Suppresses confirmation messages involved in setting the site subscription.
 This parameter is used in conjunction with the SiteSubscription parameter.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SiteSubscription
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -157,6 +163,9 @@ Accept wildcard characters: False
 ```
 
 ### -LockState
+
+> Applicable: SharePoint Server Subscription Edition
+
 Sets the lock state of this site collection.
 The valid lock states are
 
@@ -173,8 +182,7 @@ Users who attempt to access the site receive an access-denied message.
 ```yaml
 Type: String
 Parameter Sets: Default
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -184,6 +192,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxSize
+
+> Applicable: SharePoint Server Subscription Edition
+
 Sets the maximum storage size for the site collection in bytes.
 
 The integer value must be larger than the WarningSize value.
@@ -192,8 +203,7 @@ You cannot use this parameter if the site collection is using a quota template.
 ```yaml
 Type: Int64
 Parameter Sets: Default
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -203,6 +213,9 @@ Accept wildcard characters: False
 ```
 
 ### -OwnerAlias
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the alias name of the site collection administrator.
 
 The type must be a valid e-mail alias, in the form domain\username.
@@ -210,8 +223,7 @@ The type must be a valid e-mail alias, in the form domain\username.
 ```yaml
 Type: SPUserPipeBind
 Parameter Sets: Default
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -221,6 +233,9 @@ Accept wildcard characters: False
 ```
 
 ### -QuotaTemplate
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the new quota template for this site collection.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890abcdef or a string
@@ -228,8 +243,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890abcdef 
 ```yaml
 Type: SPQuotaTemplatePipeBind
 Parameter Sets: Default
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -239,6 +253,9 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryOwnerAlias
+
+> Applicable: SharePoint Server Subscription Edition
+
 Sets the alias of the secondary site collection administrator.
 
 The type must be a valid e-mail alias, in the form domain\username.
@@ -246,8 +263,7 @@ The type must be a valid e-mail alias, in the form domain\username.
 ```yaml
 Type: SPUserPipeBind
 Parameter Sets: Default
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -257,13 +273,15 @@ Accept wildcard characters: False
 ```
 
 ### -SharingType
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether external access a site collection should be disabled, limited to external users only, or enabled for external users and anonymous guests.
 
 ```yaml
 Type: String
 Parameter Sets: Default
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -273,13 +291,15 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSubscription
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the Site Group to get site collections.
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: SiteSubscription
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -289,6 +309,9 @@ Accept wildcard characters: False
 ```
 
 ### -Template
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the template for this site collection.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890abcdef.
@@ -296,8 +319,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890abcdef.
 ```yaml
 Type: SPWebTemplatePipeBind
 Parameter Sets: Default
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -307,13 +329,15 @@ Accept wildcard characters: False
 ```
 
 ### -Url
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the URL of the new site.
 
 ```yaml
 Type: String
 Parameter Sets: Default
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -323,13 +347,15 @@ Accept wildcard characters: False
 ```
 
 ### -UserAccountDirectoryPath
+
+> Applicable: SharePoint Server Subscription Edition
+
 Sets an organization unit to which to scope user accounts.
 
 ```yaml
 Type: String
 Parameter Sets: Default
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -339,6 +365,9 @@ Accept wildcard characters: False
 ```
 
 ### -WarningSize
+
+> Applicable: SharePoint Server Subscription Edition
+
 Sets the storage warning level for the site collection in bytes.
 
 The integer value must be between 0 and the MaxSize value.
@@ -347,8 +376,7 @@ You cannot use this parameter if the site collection is using a quota template.
 ```yaml
 Type: Int64
 Parameter Sets: Default
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -358,6 +386,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -365,7 +396,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

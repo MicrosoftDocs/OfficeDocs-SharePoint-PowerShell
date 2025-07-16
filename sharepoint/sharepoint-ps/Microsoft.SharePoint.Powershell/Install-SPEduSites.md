@@ -7,7 +7,7 @@ title: Install-SPEduSites
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # Install-SPEduSites
@@ -27,23 +27,24 @@ Do not use
 
 ## EXAMPLES
 
-### Example 1 
+### Example 1
 ```
 Do not use
 ```
-
 
 
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013
+
 Do not use
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -53,13 +54,15 @@ Accept wildcard characters: False
 ```
 
 ### -MySiteHost
+
+> Applicable: SharePoint Server 2013
+
 Do not use
 
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: True
 Position: 1
@@ -69,13 +72,15 @@ Accept wildcard characters: False
 ```
 
 ### -SearchCenter
+
+> Applicable: SharePoint Server 2013
+
 Do not use
 
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: True
 Position: 2
@@ -85,13 +90,15 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
+
+> Applicable: SharePoint Server 2013
+
 Do not use
 
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013
+Aliases:
 
 Required: True
 Position: 0

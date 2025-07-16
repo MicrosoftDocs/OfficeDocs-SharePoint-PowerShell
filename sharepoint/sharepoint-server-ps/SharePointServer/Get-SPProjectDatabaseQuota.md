@@ -2,7 +2,7 @@
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 module name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spprojectdatabasequota
-Applicable: SharePoint Server Subscription Edition
+
 title: Get-SPProjectDatabaseQuota
 schema: 2.0.0
 ---
@@ -25,7 +25,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ## EXAMPLES
 
-### ------------ Example 1 --------------------  
+### Example 1
 ```powershell
 
 ```
@@ -33,13 +33,15 @@ For permissions and the most current information about Windows PowerShell for Pr
 ## PARAMETERS
 
 ### -Url
+
+> Applicable: SharePoint Server Subscription Edition
+
 Microsoft internal use only.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -49,13 +51,15 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Microsoft internal use only.
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

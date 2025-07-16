@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a User Profile Service application proxy on the local farm.
 
-
 ## SYNTAX
 
 ### Application
@@ -38,10 +37,9 @@ The proxy is added to the default proxy group for the local farm.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### EXAMPLE
 ```powershell
 $sa = New-SPProfileServiceApplication -Name 'User Profile Service Application' -ApplicationPool 'SharePoint Web Services Default' -ProfileDBName Profile -SocialDBName Social -ProfileSyncDBname Sync
 New-SPProfileServiceApplicationProxy -Name 'User Profile Service Application Proxy' -ServiceApplication $sa -DefaultProxyGroup
@@ -49,10 +47,12 @@ New-SPProfileServiceApplicationProxy -Name 'User Profile Service Application Pro
 
 This example creates a new User Profile Service application proxy.
 
-
 ## PARAMETERS
 
 ### -ServiceApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the local User Profile Service application that is associated with the new proxy.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a subscription User Profile Service application (for example, ProfileSvcApp1); or an instance of a valid SPServiceApplication object.
@@ -60,8 +60,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPServiceApplicationPipeBind
 Parameter Sets: Application
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -71,14 +70,16 @@ Accept wildcard characters: False
 ```
 
 ### -Uri
+
+> Applicable: SharePoint Server Subscription Edition
+
 The URI of the remote user profile service application this proxy should communicate with.
 This value is required only if you plan to connect a User Profile Service application from a remote farm.
 
 ```yaml
 Type: Uri
 Parameter Sets: Uri
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -88,6 +89,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -99,8 +103,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -110,6 +113,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -117,7 +123,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -127,13 +132,15 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultProxyGroup
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that the User Profile Service application proxy be added to the default proxy group for the local farm.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -143,6 +150,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the display name for the new User Profile Service application.
 The name that you use must be a unique name of a User Profile Service application in this farm.
 The name can be a maximum of 128 characters.
@@ -152,8 +162,7 @@ The type must be a name of a valid User Profile Service application proxy; for e
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -163,14 +172,16 @@ Accept wildcard characters: False
 ```
 
 ### -PartitionMode
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that the service application restrict data by site group.
 After the PartitionMode parameter is set and the service application is created, it cannot be changed.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -180,6 +191,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -187,7 +201,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

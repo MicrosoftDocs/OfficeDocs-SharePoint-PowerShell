@@ -27,7 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ----------------EXAMPLE 1-------------------- 
+### EXAMPLE 1
 ```powershell
 $proxy = Get-SPServiceApplicationProxy | ? {$_.TypeName -eq 'User Profile Service Application Proxy'}
 Add-SPPluggableSecurityTrimmer -UserProfileApplicationProxyId $proxy.Id -PlugInId 0
@@ -38,6 +38,9 @@ This example adds a pluggable security trimmer that is related to the User Profi
 ## PARAMETERS
 
 ### -UserProfileApplicationProxyId
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the ID of the User Profile service application proxy to which you are adding the pluggable security trimmer.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh.
@@ -45,8 +48,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -56,13 +58,15 @@ Accept wildcard characters: False
 ```
 
 ### -PlugInId
+
+> Applicable: SharePoint Server Subscription Edition
+
 The index of the pluggable security trimmer must have an integer value greater than or equal to zero.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -72,6 +76,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -83,8 +90,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -94,6 +100,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -101,7 +110,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -111,6 +119,9 @@ Accept wildcard characters: False
 ```
 
 ### -QualifiedTypeName
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the qualified type name of the class that implements the pluggable security trimmer.
 
 The type must be a valid qualified type name, in the form Microsoft.Office.Server.SocialData.SocialSecurityTrimmer,Microsoft.Office.Server.UserProfiles,Version=14.0.0.0,Culture=neutral,PublicKeyToken=71e9bce111e9429c.
@@ -118,8 +129,7 @@ The type must be a valid qualified type name, in the form Microsoft.Office.Serve
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -129,6 +139,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -136,7 +149,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -146,13 +158,15 @@ Accept wildcard characters: False
 ```
 
 ### -CustomProperties
+
+> Applicable: SharePoint Server Subscription Edition
+
 {{Fill CustomProperties Description}}
 
 ```yaml
 Type: NameValueCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

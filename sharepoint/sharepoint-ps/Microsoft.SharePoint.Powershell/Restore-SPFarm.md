@@ -7,14 +7,13 @@ title: Restore-SPFarm
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # Restore-SPFarm
 
 ## SYNOPSIS
 Restores one or more items from a backup.
-
 
 ## SYNTAX
 
@@ -41,36 +40,35 @@ This cmdlet can also be used to apply a farm template to the entire farm.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### -------------------EXAMPLE 1-----------------------
+### EXAMPLE 1
 ```
 Restore-SPFarm -Directory \\file_server\share\Backup -BackupId 12345678-90ab-cdef-1234-567890abcdef -RestoreMethod new -ConfigurationOnly
 ```
 
 This example restores the configuration settings from the backup package in the \\\\file_server\share\Backup directory to the farm.
 
-
-### -------------------EXAMPLE 2-----------------------
+### EXAMPLE 2
 ```
 Restore-SPFarm -ShowTree -Directory \\file_server\share\Backup -BackupId 12345678-90ab-cdef-1234-567890abcdef -Item "Microsoft SharePoint Foundation Web Application" -Verbose
 ```
 
 This example show which components of the farm would be restored under the Microsoft SharePoint Foundation Web Application node, but does not actually restore them.
 
-
-### -------------------EXAMPLE 3-----------------------
+### EXAMPLE 3
 ```
 Restore-SPFarm -Directory C:\Backup -BackupId 12345678-90ab-cdef-1234-567890abcdef  -RestoreMethod overwrite -RestoreThreads 10 -Force
 ```
 
 This example restores a farm by using 10 threads and suppresses the overwrite warning.
 
-
 ## PARAMETERS
 
 ### -Directory
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the path where SharePoint Products stored the backup package.
 If you have a computer on which SQL Server and an instance of SharePoint Products are installed, you can use local drive paths.
 This includes a basic installation.
@@ -86,8 +84,7 @@ The spbr* folders are created automatically.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -97,6 +94,9 @@ Accept wildcard characters: False
 ```
 
 ### -RestoreMethod
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the method of restore to perform.
 
 The valid values are:
@@ -107,8 +107,7 @@ The valid values are:
 ```yaml
 Type: String
 Parameter Sets: DefaultSet
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -118,6 +117,9 @@ Accept wildcard characters: False
 ```
 
 ### -ShowTree
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays which objects in the farm will be restored based on the other parameters passed to the `Restore-SPFarm` cmdlet namely the Item and ConfigurationOnly parameters.
 Items that will be excluded from the restore based on the other parameters passed to the `Restore-SPFarm` cmdlet will be preceded with an asterisk (*).
 Items that cannot be restored will be enclosed in square brackets (\[ \]).
@@ -126,8 +128,7 @@ A restore operation will not be performed if the ShowTree parameter is present.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ShowTree
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -137,6 +138,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -148,8 +152,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -159,6 +162,9 @@ Accept wildcard characters: False
 ```
 
 ### -BackupId
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the GUID of the backup package that is to be restored.
 Each backup package has a unique GUID associated with it.
 The GUID can be seen by using the `Get-SPBackupHistory` cmdlet to view the backup history.
@@ -169,8 +175,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890abcdef.
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -180,13 +185,15 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigurationOnly
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies settings only (no data) will be restored from the backup package and applied to objects on the destination farm.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -196,6 +203,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -203,7 +213,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -213,6 +222,9 @@ Accept wildcard characters: False
 ```
 
 ### -FarmCredentials
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the credentials that will be used for all components being restored.
 For example, the application pool credentials for Web applications being restored.
 If an application pool being restored already exists in the farm, the credentials specified by the FarmCredentials parameter is ignored when restoring that application pool.
@@ -220,8 +232,7 @@ If an application pool being restored already exists in the farm, the credential
 ```yaml
 Type: PSCredential
 Parameter Sets: DefaultSet
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -231,13 +242,15 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Suppresses the prompt warning that you will overwrite components when you perform an overwrite restore operation.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DefaultSet
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -247,6 +260,9 @@ Accept wildcard characters: False
 ```
 
 ### -Item
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Indicates the part of the backup package to be restored.
 You can use the full farm path notation as displayed by the ShowTree parameter or the name of the target component in the path if it has a unique name.
 If multiple items match the name, the full path must be provided.
@@ -260,8 +276,7 @@ Farm\Microsoft SharePoint Foundation Web Application\SharePoint - 80
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -271,17 +286,19 @@ Accept wildcard characters: False
 ```
 
 ### -NewDatabaseServer
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies a valid SQL Database Server name.
 If specified, will be used as a default Database Server name for all databases within the restore operation.
 
-This parameter is only valid when restoring as new. 
+This parameter is only valid when restoring as new.
 It is not valid for overwrite restores.
 
 ```yaml
 Type: String
 Parameter Sets: DefaultSet
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -291,10 +308,13 @@ Accept wildcard characters: False
 ```
 
 ### -Percentage
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Requests that progress updates about the restore operation be displayed in increments of that percentage.
 For example, a value of 5 displays restore progress updates at every 5 percent completed, and a value of 10 displays restore progress updates at every 10 percent completed.
 
-Note: Progress will only be displayed in the output if the -Verbose parameter is specified. 
+Note: Progress will only be displayed in the output if the -Verbose parameter is specified.
 Otherwise, you may see the progress in the restore log file.
 
 This percentage is not precise and the actual progress updates might be lower or higher than requested.
@@ -308,8 +328,7 @@ The default value is 5.
 ```yaml
 Type: Int32
 Parameter Sets: DefaultSet
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -319,9 +338,12 @@ Accept wildcard characters: False
 ```
 
 ### -RestoreThreads
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 The number of threads that should be used during the restore.
 
-The fewer the restore threads, the easier it is to understand the restore log. 
+The fewer the restore threads, the easier it is to understand the restore log.
 However, the more restore threads, the more components can be restored in parallel, potentially resulting in a faster restore.
 
 The valid range is between 1 and 10.
@@ -330,8 +352,7 @@ The default value is 3.
 ```yaml
 Type: Int32
 Parameter Sets: DefaultSet
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -341,6 +362,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -348,7 +372,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

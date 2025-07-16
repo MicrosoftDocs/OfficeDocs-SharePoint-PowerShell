@@ -17,7 +17,6 @@ ms.reviewer:
 Creates a backup of an individual database, Web application, or the entire farm.
 
 
-
 ## SYNTAX
 
 ### DefaultSet
@@ -48,28 +47,28 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------------EXAMPLE 1--------------------- 
+### EXAMPLE 1
 ```
 Backup-SPFarm -Directory \\file_server\share\Backup -BackupMethod full -ConfigurationOnly
 ```
 
 This example backs up the configuration settings of the farm to the \\\\file_server\share\Backup directory.
 
-### --------------------EXAMPLE 2--------------------- 
+### EXAMPLE 2
 ```
 Backup-SPFarm -ShowTree -Item "Microsoft SharePoint Foundation Web Application" -Verbose
 ```
 
 This example shows which components of the farm would be backed up under the "Microsoft SharePoint Foundation Web Application" node, but do not actually back them up.
 
-### --------------------EXAMPLE 3--------------------- 
+### EXAMPLE 3
 ```
 Backup-SPFarm -Directory C:\Backup -BackupMethod full -BackupThreads 10 -Force
 ```
 
 This example performs a backup of a farm using 10 threads and forces the backup to be saved to the C:\Backup directory even though SharePoint estimates that it does not have sufficient space available.
 
-### --------------------EXAMPLE 4--------------------- 
+### EXAMPLE 4
 ```
 Backup-SPFarm -ShowTree
 ```
@@ -79,6 +78,9 @@ This example shows you the available objects to backup with `Backup-SPFarm`.
 ## PARAMETERS
 
 ### -BackupMethod
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the type of backup file to be created.
 
 If a backup is performed with the -ShowTree parameter, then the BackupMethod parameter is not used.
@@ -95,8 +97,7 @@ The type must be either of the following:
 ```yaml
 Type: String
 Parameter Sets: DefaultSet
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -106,6 +107,9 @@ Accept wildcard characters: False
 ```
 
 ### -Directory
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the path where SharePoint Products stores the backup package it generates.
 If you have a computer on which SQL Server and an instance of SharePoint Products are installed, you can use local drive paths.
 This includes a basic installation.
@@ -124,8 +128,7 @@ The spbr* folders are automatically created.
 ```yaml
 Type: String
 Parameter Sets: DefaultSet
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -135,6 +138,9 @@ Accept wildcard characters: False
 ```
 
 ### -ShowTree
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays which objects in the farm will be backed up based on the other parameters passed to the Backup-SPFarm cmdelt, namely the Item parameter.
 Items that will be excluded from the backup based on the other parameters passed to the Backup-SPFarm cmdlet will be preceded with an asterisk character (*).
 Items that cannot be backed up will be enclosed in square brackets (\[ \]).
@@ -143,8 +149,7 @@ A backup will not be performed if the ShowTree parameter is present.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ShowTree
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -154,6 +159,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -165,8 +173,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -176,6 +183,9 @@ Accept wildcard characters: False
 ```
 
 ### -BackupThreads
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the number of threads to be used during the backup.
 The fewer the threads, the easier the backup log file is to read and understand.
 The more the threads, the more components that can be backed up in parallet, potentially resulting in a faster backup operation.
@@ -188,8 +198,7 @@ If a backup is performed with the -ShowTree parameter, then the BackupMethod par
 ```yaml
 Type: Int32
 Parameter Sets: DefaultSet
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -199,6 +208,9 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigurationOnly
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 If set, the backup will contain configuration settings only (no data) for each of the objects to be backed up.
 
 SharePoint may overestimate the amount of space required for a configuration-only backup, which may result in SharePoint estimating that it doesn't have sufficient space to store the backup at the specified path. Use the `-Force` parameter in this situation to proceed with the backup if you have sufficient space to store the configuration-only backup.
@@ -206,8 +218,7 @@ SharePoint may overestimate the amount of space required for a configuration-onl
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -217,6 +228,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies to proceed with a backup operation even if the estimation is that the backup directory does not have sufficient space to hold the entire backup.
 
 If a backup is performed with the ShowTree parameter, then the Force parameter is not used.
@@ -224,8 +238,7 @@ If a backup is performed with the ShowTree parameter, then the Force parameter i
 ```yaml
 Type: SwitchParameter
 Parameter Sets: DefaultSet
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -235,6 +248,9 @@ Accept wildcard characters: False
 ```
 
 ### -Item
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Indicates the part of the farm to back up.
 You might use the full farm path notation as displayed by the ShowTree parameter or the name of the target component in the path if the component has a unique name.
 If multiple items are included in the same match, the full path must be provided.
@@ -247,8 +263,7 @@ The type must be a valid item; for example, Farm\Microsoft SharePoint Foundation
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -258,6 +273,9 @@ Accept wildcard characters: False
 ```
 
 ### -Percentage
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Requests progress updates about the backup operation to be displayed in increments of that percentage; for example, a value of 5 displays backup progress updates at every 5 percent completed, and a value of 10 displays backup progress updates at every 10 percent completed.
 To have progress outputs displayed, you must specify the Verbose parameter.
 
@@ -274,8 +292,7 @@ Valid values are an integer value between 1 and 100.
 ```yaml
 Type: Int32
 Parameter Sets: DefaultSet
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -285,6 +302,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -292,7 +312,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -302,13 +321,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

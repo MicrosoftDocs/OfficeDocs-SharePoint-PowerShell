@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a new Web service application pool.
 
-
 ## SYNTAX
 
 ```
@@ -25,10 +24,9 @@ The `New-SPServiceApplicationPool` cmdlet creates a new Web service application 
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### --------------------EXAMPLE-----------------------
+### EXAMPLE
 ```powershell
 New-SPServiceApplicationPool -Name 'SharePoint Web Services Default' -Account (Get-SPManagedAccount 'contoso\serviceAccount')
 ```
@@ -39,17 +37,18 @@ For the Account parameter, the name of a managed account in the farm can be give
 Use the `Get-SPManagedAccount` cmdlet to view the existing managed account in the farm.
 Also, a process account from the output of the `Get-SPProcessAccount` cmdlet can be used.
 
-
 ## PARAMETERS
 
 ### -Name
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the new Web service application pool.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -59,13 +58,15 @@ Accept wildcard characters: False
 ```
 
 ### -Account
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the credentials that will be the identity of the new application pool.
 
 ```yaml
 Type: SPProcessAccountPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 2
@@ -75,6 +76,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -86,8 +90,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -97,6 +100,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -104,7 +110,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -114,6 +119,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -121,7 +129,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

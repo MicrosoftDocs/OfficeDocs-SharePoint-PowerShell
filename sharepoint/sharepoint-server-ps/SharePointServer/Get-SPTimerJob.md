@@ -28,14 +28,14 @@ If no parameters are specified, this cmdlet returns all timer job definitions fo
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
-### ---------------------EXAMPLE 01--------------------- 
+### EXAMPLE 01
 ```powershell
 Get-SPTimerJob -WebApplication "https://servername" | select Name, DisplayName
 ```
 
 This example displays all timer jobs for a specified Web application.
 
-### ---------------------EXAMPLE 02---------------------
+### EXAMPLE 02
 ```powershell
 Get-SPTimerJob | select -ExpandProperty HistoryEntries
 ```
@@ -44,6 +44,9 @@ The above example will show you timer job run history
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the timer job to get.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a timer job (for example, TimerJob1); or an instance of a valid SPTimerJob object.
@@ -51,8 +54,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPTimerJobPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: 1
@@ -62,6 +64,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -73,8 +78,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -84,6 +88,9 @@ Accept wildcard characters: False
 ```
 
 ### -Type
+
+> Applicable: SharePoint Server Subscription Edition
+
 Filters to return timer jobs of a specified type.
 
 The type must be a name of a valid timer job type; for example, TimerJob1.
@@ -91,8 +98,7 @@ The type must be a name of a valid timer job type; for example, TimerJob1.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -102,6 +108,9 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Filters to return timer jobs defined for the scope of a specified SharePoint Web application.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a SharePoint Web application (for example, MyOfficeApp1); or an instance of a valid SPWebApplication object.
@@ -109,8 +118,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

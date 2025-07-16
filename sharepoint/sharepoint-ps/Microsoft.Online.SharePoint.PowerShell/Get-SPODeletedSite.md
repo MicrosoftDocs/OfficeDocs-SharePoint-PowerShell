@@ -71,7 +71,6 @@ Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: 1
 Default value: None
@@ -90,7 +89,6 @@ Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ParameterSetPersonalSitesOnly
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -108,7 +106,6 @@ Use this switch parameter to include Personal Sites with the returned results.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ParameterSetAllSites
 Aliases:
-
 
 Required: False
 Position: Named
@@ -130,7 +127,6 @@ The default value is 200.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: Named

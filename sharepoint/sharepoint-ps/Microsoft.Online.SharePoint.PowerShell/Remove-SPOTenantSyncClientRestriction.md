@@ -34,7 +34,7 @@ The `Remove-SPOTenantSyncClientRestriction` cmdlet does not have any parameters.
 
 ## EXAMPLES
 
-### -----------------------EXAMPLE-----------------------------
+### EXAMPLE
 
 ```powershell
 Remove-SPOTenantSyncClientRestriction

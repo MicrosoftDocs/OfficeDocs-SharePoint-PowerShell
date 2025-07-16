@@ -7,7 +7,7 @@ title: Install-SPSolution
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # Install-SPSolution
@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 
 Deploys an installed SharePoint solution in the farm.
-
 
 
 ## SYNTAX
@@ -46,17 +45,16 @@ Use the Add-SPSolution cmdlet to install a SharePoint solution package in the fa
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------ 
+### EXAMPLE 1
 ```
 Install-SPSolution -Identity contoso_solution.wsp -GACDeployment
 ```
 
 This example deploys the installed SharePoint solution contoso_solution.wsp in the farm and specifies that GAC can be deployed for the new SharePoint solution.
 
-### ------------------EXAMPLE 2------------------ 
+### EXAMPLE 2
 ```
 Install-SPSolution -Identity contoso_solution.wsp -GACDeployment -CompatibilityLevel {14,15}
 ```
@@ -66,15 +64,17 @@ This example deploys the installed SharePoint solution installs a previously add
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the SharePoint solution to deploy.
 
 The value must be an authentic GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; an authentic name of a SharePoint solution (for example, SPSolution1); or an instance of an authentic SPSolution object.
 
 ```yaml
 Type: SPSolutionPipeBind
-Parameter Sets: Deploy
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Parameter Sets: Deploy, Synchronize
+Aliases:
 
 Required: True
 Position: 1
@@ -83,27 +83,16 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: SPSolutionPipeBind
-Parameter Sets: Synchronize
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-```
-
 ### -AllWebApplications
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies that the new SharePoint solution is deployed for all SharePoint web applications in the farm.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Deploy
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -113,6 +102,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -124,8 +116,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -135,13 +126,15 @@ Accept wildcard characters: False
 ```
 
 ### -CASPolicies
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies that code access security (CAS) policies can be deployed for the new SharePoint solution.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Deploy
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -151,6 +144,8 @@ Accept wildcard characters: False
 ```
 
 ### -CompatibilityLevel
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Specifies whether to install into the solution, into a specific version directory based on CompatibilityLevel. The default behavior if this parameter is not specified is to install the solution only to the version directory based on the version tracked in the manifest of the solution's cab file.
 
@@ -165,8 +160,7 @@ Valid values are:
 ```yaml
 Type: String
 Parameter Sets: Deploy
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -176,6 +170,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -183,7 +180,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -193,13 +189,15 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Forces the deployment of the new SharePoint solution.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Deploy
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -209,6 +207,9 @@ Accept wildcard characters: False
 ```
 
 ### -FullTrustBinDeployment
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies that full trust Bin deployment is permitted.
 This parameter is to be used if the solution is fully trusted.
 
@@ -219,8 +220,7 @@ For additional information about bin assembly, see Assembly Element
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Deploy
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -230,13 +230,15 @@ Accept wildcard characters: False
 ```
 
 ### -GACDeployment
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies that global assembly cache (GAC) can be deployed for the new SharePoint solution.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Deploy
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -246,6 +248,9 @@ Accept wildcard characters: False
 ```
 
 ### -Language
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies a language for the solution when a solution language package is deployed.
 If this parameter is not specified, zero ("0") is assumed.
 Use zero for solutions that are valid for all languages.
@@ -253,8 +258,7 @@ Use zero for solutions that are valid for all languages.
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -264,13 +268,15 @@ Accept wildcard characters: False
 ```
 
 ### -Local
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Deploys the solution on the active server.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Deploy
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -280,13 +286,15 @@ Accept wildcard characters: False
 ```
 
 ### -Synchronize
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Synchronizes all solutions or the specified solution in the local farm.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Synchronize
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -296,6 +304,9 @@ Accept wildcard characters: False
 ```
 
 ### -Time
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies when the solution will be deployed.
 The default value is immediate deployment.
 
@@ -304,8 +315,7 @@ The type must be a valid DateTime value, in the form 2010, 5, 1.
 ```yaml
 Type: String
 Parameter Sets: Deploy
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -315,6 +325,8 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Deploys the SharePoint solution for the specified SharePoint web application.
 
@@ -329,8 +341,7 @@ The value must be in one of the following forms:
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: Deploy
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -340,6 +351,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -347,7 +361,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

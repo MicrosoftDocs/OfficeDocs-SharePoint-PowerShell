@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Updates the settings of the SharePoint security token service (STS) identity provider.
 
-
 ## SYNTAX
 
 ### QueueSigningCertificateReference
@@ -82,18 +81,16 @@ To create a certificate which can be used in this cmdlet specify the X509KeyStor
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### --------------------EXAMPLE 1---------------------
+### EXAMPLE 1
 ```powershell
 Set-SPSecurityTokenServiceConfig -SigningCertificateThumbprint "2796BAE63F1801E277261BA0D77770028F20EEE4"
 ```
 
 This example updates the signing certificate of the SharePoint security token service (STS) identity provider with a certificate that has been deployed in the certificate store.
 
-
-### --------------------EXAMPLE 2---------------------
+### EXAMPLE 2
 ```powershell
 $stsCert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2 "c:\sts.pfx","a",20
 Set-SPSecurityTokenServiceConfig -ImportSigningCertificate $stsCert
@@ -101,17 +98,18 @@ Set-SPSecurityTokenServiceConfig -ImportSigningCertificate $stsCert
 
 This example imports the signing certificate for the SharePoint STS identity provider.
 
-
 ## PARAMETERS
 
 ### -QueueSigningCertificateThumbprint
+
+> Applicable: SharePoint Server Subscription Edition
+
 Sets the certificate with the provided thumbprint as the queued signing certificate.
 
 ```yaml
 Type: String
-Parameter Sets: QueueSigningCertificateReference
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Parameter Sets: QueueSigningCertificateReference, SigningCertificateReference
+Aliases:
 
 Required: True
 Position: Named
@@ -120,27 +118,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: String
-Parameter Sets: SigningCertificateReference
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -RevokeSigningCertificateThumbprint
+
+> Applicable: SharePoint Server Subscription Edition
+
 Revoke the signing certificate with the provided thumbprint.
 
 ```yaml
 Type: String
 Parameter Sets: RevokeSigningCertificateReference
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -150,6 +137,9 @@ Accept wildcard characters: False
 ```
 
 ### -SigningCertificateThumbprint
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the thumbrpint of the signing certificate.
 
 The type must be a valid identity of a signing certificate; for example 2796BAE63F1801E277261BA0D77770028F20EEE4.
@@ -157,8 +147,7 @@ The type must be a valid identity of a signing certificate; for example 2796BAE6
 ```yaml
 Type: String
 Parameter Sets: SigningCertificateReference
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -168,6 +157,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -179,8 +171,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -190,6 +181,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -197,7 +191,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -207,6 +200,9 @@ Accept wildcard characters: False
 ```
 
 ### -FormsTokenLifetime
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the expiration time, in minutes, for tokens issued to ASP.NET Membership Provider and Role providers.
 The default value is 1380.
 
@@ -215,8 +211,7 @@ The type must be a valid integer.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -226,6 +221,9 @@ Accept wildcard characters: False
 ```
 
 ### -ImportSigningCertificate
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the X.509 certificate object from trusted authentication provider farm.
 
 The type must be a name of a valid X.509 certificate; for example, Certificate1.
@@ -233,8 +231,7 @@ The type must be a name of a valid X.509 certificate; for example, Certificate1.
 ```yaml
 Type: X509Certificate2
 Parameter Sets: SigningCertificateImport
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -244,6 +241,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxLogonTokenCacheItems
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the maximum number of entries for the in-memory logon token cache.
 The default value is 250 entries.
 
@@ -252,8 +252,7 @@ The type must be a valid integer.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -263,6 +262,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxServiceTokenCacheItems
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the maximum number of entries for the in-memory service token cache.
 The default value is 250 entries.
 
@@ -271,8 +273,7 @@ The type must be a valid integer.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -282,13 +283,15 @@ Accept wildcard characters: False
 ```
 
 ### -QueueSigningCertificate
+
+> Applicable: SharePoint Server Subscription Edition
+
 Sets the provided certificate as the queued signing certificate.
 
 ```yaml
 Type: X509Certificate2
 Parameter Sets: SigningCertificateQueue
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -298,13 +301,15 @@ Accept wildcard characters: False
 ```
 
 ### -QueueSigningCertificateStoreName
+
+> Applicable: SharePoint Server Subscription Edition
+
 The store to search in when looking up a certificate to be set as the queued signing certificate by its thumbprint. Required if QueueSigningCertificateThumbprint was specified.
 
 ```yaml
 Type: String
 Parameter Sets: QueueSigningCertificateReference, SigningCertificateReference
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -314,13 +319,15 @@ Accept wildcard characters: False
 ```
 
 ### -RevokeSigningCertificate
+
+> Applicable: SharePoint Server Subscription Edition
+
 Revokes the signing certificate that matches the provided certificate.
 
 ```yaml
 Type: X509Certificate2
 Parameter Sets: SigningCertificateRevoke
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -330,13 +337,15 @@ Accept wildcard characters: False
 ```
 
 ### -RevokeSigningCertificateStoreName
+
+> Applicable: SharePoint Server Subscription Edition
+
 The store to search when looking up a certificate to be revoked by its thumbprint. Required if the QueueSigningCertificateThumbprint was specified.
 
 ```yaml
 Type: String
 Parameter Sets: RevokeSigningCertificateReference
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -346,6 +355,9 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceTokenCacheExpirationWindow
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the interval, in minutes, for automatically renewing the token in the cache.
 The default value is 2 minutes.
 
@@ -354,8 +366,7 @@ The type must be a valid integer.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -365,6 +376,9 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceTokenLifetime
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the expiration time, in minutes, for the security token service cache.
 The default value is 15 minutes.
 
@@ -373,8 +387,7 @@ The type must be a valid integer.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -384,6 +397,9 @@ Accept wildcard characters: False
 ```
 
 ### -SigningCertificateStoreName
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the certificate store where the signing certificate resides.
 The identity store for an identity provider can be a SQL database table, an Active Directory Domain Services (AD DS), or Active Directory Lightweight Directory Service (AD LDS).
 
@@ -392,8 +408,7 @@ The type must be a valid identity of a signing certificate store; for example Id
 ```yaml
 Type: String
 Parameter Sets: SigningCertificateReference
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -403,6 +418,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -410,7 +428,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -420,6 +437,9 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsTokenLifetime
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the expiration time, in minutes, for tokens issued to Windows users.
 The default value is 1380 minutes.
 
@@ -428,8 +448,7 @@ The type must be a valid integer.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

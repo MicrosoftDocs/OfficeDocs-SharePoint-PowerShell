@@ -7,14 +7,13 @@ title: Remove-SPExcelBlockedFileType
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # Remove-SPExcelBlockedFileType
 
 ## SYNOPSIS
 Removes an entry from the list of file types that are prevented from loading on Excel Services Application.
-
 
 ## SYNTAX
 
@@ -25,15 +24,14 @@ Remove-SPExcelBlockedFileType [-Identity] <SPExcelBlockedFileTypePipeBind>
 ```
 
 ## DESCRIPTION
-The `Remove-SPExcelBlockedExcelFileType` cmdlet removes an entry from the list of file types that are prevented from loading on an Excel Services Application Web service application. 
+The `Remove-SPExcelBlockedExcelFileType` cmdlet removes an entry from the list of file types that are prevented from loading on an Excel Services Application Web service application.
 Excel Services Application does not load any file types that correspond to a file type that is on this list.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### -----------------------EXAMPLE-----------------------------
+### EXAMPLE
 ```
 Get-SPExcelServiceApplication -Identity "MyExcelService" | Remove-SPExcelBlockedExcelFileType -FileType XLSX
 ```
@@ -42,10 +40,12 @@ This example removes the .xlsx file name extensions from the list of file types 
 
 After the .xlsx file name extension is removed from the list, these extensions are allowed to load in Excel Services Application.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies the file type to remove from the list of blocked file types.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; one of the following file types: XLSX, XLSB, XLSM; or an instance of a valid SPExcelBlockedFileType object.
@@ -53,8 +53,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPExcelBlockedFileTypePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: True
 Position: 1
@@ -64,6 +63,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExcelServiceApplication
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies the Excel Services Application Web service application that contains the SPBlockedExcelFileType list object.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of an Excel Services Application Web service application in the farm (for example, MyExcelService1); or an instance of a valid SPExcelServiceApplication object.
@@ -71,8 +73,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPExcelServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: True
 Position: Named
@@ -82,6 +83,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -93,8 +97,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -104,6 +107,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -111,7 +117,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -121,6 +126,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -128,7 +136,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named

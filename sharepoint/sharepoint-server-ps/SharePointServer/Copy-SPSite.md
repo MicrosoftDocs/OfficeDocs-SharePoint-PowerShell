@@ -14,7 +14,6 @@ schema: 2.0.0
 Makes a copy of a site collection.
 
 
-
 ## SYNTAX
 
 ```
@@ -34,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE------------- 
+### EXAMPLE
 ```powershell
 Copy-SPSite https://contoso/sites/OldTeam -DestinationDatabase WSS_Content -TargetUrl https://contoso/sites/NewTeam
 ```
@@ -44,14 +43,16 @@ This example makes a copy of the https://contoso/sites/OldTeam site collection f
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the site collection to copy.
 This can be a valid URL or GUID.
 
 ```yaml
 Type: SPSitePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -61,13 +62,15 @@ Accept wildcard characters: False
 ```
 
 ### -TargetUrl
+
+> Applicable: SharePoint Server Subscription Edition
+
 The URL that will be used for the destination copy of the site collection.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 2
@@ -77,6 +80,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -88,8 +94,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -99,13 +104,15 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationDatabase
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the location where the copy will be sent to.
 
 ```yaml
 Type: SPContentDatabasePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -115,13 +122,15 @@ Accept wildcard characters: False
 ```
 
 ### -HostHeaderWebApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Use when the site collection is a host-named site collection that allows the site to land on the correct web application.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -131,6 +140,9 @@ Accept wildcard characters: False
 ```
 
 ### -PreserveSiteId
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies if the SiteID is to be saved or not.
 
 The valid values are True and False. The default value is False.
@@ -138,8 +150,7 @@ The valid values are True and False. The default value is False.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

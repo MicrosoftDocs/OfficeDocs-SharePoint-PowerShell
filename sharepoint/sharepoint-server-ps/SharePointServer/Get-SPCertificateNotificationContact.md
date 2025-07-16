@@ -24,7 +24,7 @@ The \`Get-SPCertificateNotificationContact\` cmdlet gets the email addresses to 
 
 ## EXAMPLES
 
-### ------------EXAMPLE-----------
+### EXAMPLE
 ```powershell
 Get-SPCertificateNotificationContact -EmailAddress sharepoint-admins@example.com
 ```

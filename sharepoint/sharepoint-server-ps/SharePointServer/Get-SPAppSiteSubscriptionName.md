@@ -14,7 +14,6 @@ schema: 2.0.0
 Returns the name of the specified site subscription.
 
 
-
 ## SYNTAX
 
 ```
@@ -29,14 +28,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------EXAMPLE 1------- 
+### EXAMPLE 1
 ```powershell
 Get-SPAppSiteSubscriptionName
 ```
 
 This example returns the name of the default site subscription.
 
-### ------------EXAMPLE 2------- 
+### EXAMPLE 2
 ```powershell
 Get-SPAppSiteSubscriptionName -SiteSubscription https://www.contoso.com
 ```
@@ -46,6 +45,9 @@ This example returns the name of the site subscription for SPSite https://www.co
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -57,8 +59,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -68,6 +69,9 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSubscription
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the SPSiteSubscription object or the SPSiteSubscription Id or the URL of an SPSite.
 If this parameter is not specified, then the default site subscription is used.
 All SharePoint SPSites are members of the default site subscription if they have not been specifically assigned a site subscription.
@@ -75,8 +79,7 @@ All SharePoint SPSites are members of the default site subscription if they have
 ```yaml
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

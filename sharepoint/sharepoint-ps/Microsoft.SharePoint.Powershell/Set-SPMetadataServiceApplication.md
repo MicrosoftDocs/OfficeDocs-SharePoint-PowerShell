@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 Sets the properties of a managed metadata service application.
 
-
 ## SYNTAX
 
 ### NoQuota
@@ -46,10 +45,9 @@ Use the `Set-SPMetadataServiceApplication` cmdlet to set the properties of a man
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### --------------------EXAMPLE 1---------------------
+### EXAMPLE 1
 ```
 $sa = Get-SPMetadataServiceApplication -Identity 'Managed Metadata Service Application'
 Set-SPMetadataServiceApplication -Identity $sa -HubUri 'https://sitename' -SyndicationErrorReportEnabled
@@ -58,8 +56,7 @@ Set-SPMetadataServiceApplication -Identity $sa -HubUri 'https://sitename' -Syndi
 This example adds a content type hub to an existing managed metadata service application.
 It also enables error reporting when content types are imported.
 
-
-### --------------------EXAMPLE 2---------------------
+### EXAMPLE 2
 ```
 $sa = Get-SPMetadataServiceApplication -Identity 'Managed Metadata Service Application'
 Set-SPMetadataServiceApplication -Identity $sa -AdministratorAccount 'contoso\username1' -FullAccessAccount 'contoso\AppPoolAccount1,contoso\AppPoolAccount2' -RestrictedAccount 'contoso\AppPoolAccount3,contoso\AppPoolAccount4,contoso\AppPoolAccount5' -ReadAccessAccount 'contoso\AppPoolAccount6'
@@ -70,10 +67,12 @@ This example sets permissions on an existing managed metadata service applicatio
 If you use Windows PowerShell to set any of the account values, you should set all of them.
 The `Set-SPMetadataServiceApplication` cmdlet first erases all accounts, then adds the accounts that you specified.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the managed metadata service application to update.
 
 The type must be a valid GUID or the name of a valid managed metadata  service application.
@@ -81,8 +80,7 @@ The type must be a valid GUID or the name of a valid managed metadata  service a
 ```yaml
 Type: SPMetadataServiceCmdletPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -92,6 +90,9 @@ Accept wildcard characters: False
 ```
 
 ### -AdministratorAccount
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 A comma-separated list of user accounts or service accounts in the format \<domain\>\\\<account\> that may create and run the service application.
 The accounts must already exist.
 
@@ -101,8 +102,7 @@ Consider setting all four parameters at the same time.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -112,6 +112,9 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationPool
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies an existing IIS application pool in which to run the Web service for the managed metadata service application.
 
 The value must be a GUID that is the identity of an SPServiceApplicationPool object; the name of an existing application pool; or an instance of a valid SPServiceApplicationPool object.
@@ -119,8 +122,7 @@ The value must be a GUID that is the identity of an SPServiceApplicationPool obj
 ```yaml
 Type: SPIisWebServiceApplicationPoolPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -130,6 +132,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -141,8 +146,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -152,6 +156,9 @@ Accept wildcard characters: False
 ```
 
 ### -CacheTimeCheckInterval
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the interval, in seconds, that a front-end Web server should wait before asking the application server for changes.
 This value is set per timer job, client application, or Web application.
 
@@ -161,8 +168,7 @@ The default value is 10.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -172,6 +178,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -179,7 +188,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -189,6 +197,9 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseCredentials
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the PSCredential object that contains the user name and password to be used for database SQL authentication.
 
 If SQL authentication is to be used, either the DatabaseCredentials parameter must be specified or both the DatabaseUserName and DatabasePassword parameters must be set.
@@ -198,8 +209,7 @@ The type must be a valid PSCredential object.
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -209,6 +219,9 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of the database that contains the term store for the managed metadata service application.
 
 The type must be a valid name of a SQL Server database; for example MeatadataDB1.
@@ -216,8 +229,7 @@ The type must be a valid name of a SQL Server database; for example MeatadataDB1
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -227,6 +239,9 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServer
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of the host server for the database specified in DatabaseName.
 
 The type must be a valid name of a SQL Server database; for example SqlServerHost1.
@@ -234,8 +249,7 @@ The type must be a valid name of a SQL Server database; for example SqlServerHos
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -245,6 +259,9 @@ Accept wildcard characters: False
 ```
 
 ### -DoNotUnpublishAllPackages
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 If this flag is set, the packages will not be unpublished.
 If the HubUri parameter is changed, all content type packages will be unpublished by default.
 
@@ -253,8 +270,7 @@ If the HubUri parameter is not changed, this flag has no effect.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -264,6 +280,9 @@ Accept wildcard characters: False
 ```
 
 ### -FailoverDatabaseServer
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of the host server for the failover database server.
 
 The type must be a valid SQL Server host name; for example, SQLServerHost1.
@@ -271,8 +290,7 @@ The type must be a valid SQL Server host name; for example, SQLServerHost1.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -282,6 +300,9 @@ Accept wildcard characters: False
 ```
 
 ### -FullAccessAccount
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies a comma-separated set of application pool accounts in the format \<domain\>\\\<account\> that will be given read/write permission to the managed metadata service's term store and content type gallery.
 The accounts must already exist.
 
@@ -291,8 +312,7 @@ Consider setting all four parameters at the same time.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -302,14 +322,16 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the new name of the service application.
 The name can contain a maximum of 128 characters.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -319,6 +341,9 @@ Accept wildcard characters: False
 ```
 
 ### -RestrictedAccount
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies a comma-separated set of application pool accounts in the format \<domain\>\\\<account\> that will be given permission to read the managed metadata service's term store and content type gallery and permission to write to open term sets and local term sets and to create new enterprise keywords.
 The accounts must already exist.
 
@@ -328,8 +353,7 @@ Consider setting all four parameters at the same time.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -339,13 +363,15 @@ Accept wildcard characters: False
 ```
 
 ### -SyndicationErrorReportEnabled
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Enables reporting of errors when content types are imported.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -355,13 +381,15 @@ Accept wildcard characters: False
 ```
 
 ### -HubUri
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the fully qualified URL of the site collection that contains the content type gallery that the service will provide access to.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -371,6 +399,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxChannelCache
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the maximum number of Windows Communication Foundation (WCF) channels that a front-end Web server holds open to the application server.
 This value is set per timer job, client application, or Web application.
 
@@ -380,8 +411,7 @@ The default value is 4.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -391,6 +421,9 @@ Accept wildcard characters: False
 ```
 
 ### -ReadAccessAccount
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies a comma-separated set of application pool accounts in the format \<domain\>\\\<account\> that will be given read-only permission to the managed metadata service's term store and content type gallery.
 The accounts must already exist.
 
@@ -400,8 +433,7 @@ Consider setting all four parameters at the same time.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -411,6 +443,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -418,7 +453,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -428,13 +462,15 @@ Accept wildcard characters: False
 ```
 
 ### -DisablePartitionQuota
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 When in partitioned mode, disables the partition quota.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: NoQuota
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -444,13 +480,15 @@ Accept wildcard characters: False
 ```
 
 ### -GroupsPerPartition
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 When in partitioned mode, sets the maximum number of groups per partition.
 
 ```yaml
 Type: Int32
 Parameter Sets: Quota
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -460,13 +498,15 @@ Accept wildcard characters: False
 ```
 
 ### -LabelsPerPartition
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 When in partitioned mode, sets the maximum number of labels per partition.
 
 ```yaml
 Type: Int32
 Parameter Sets: Quota
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -476,13 +516,15 @@ Accept wildcard characters: False
 ```
 
 ### -PropertiesPerPartition
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 When in partitioned mode, sets the maximum number of properties per partition.
 
 ```yaml
 Type: Int32
 Parameter Sets: Quota
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -492,13 +534,15 @@ Accept wildcard characters: False
 ```
 
 ### -TermSetsPerPartition
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 When in partitioned mode, sets the maximum number of term sets per partition.
 
 ```yaml
 Type: Int32
 Parameter Sets: Quota
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -508,13 +552,15 @@ Accept wildcard characters: False
 ```
 
 ### -TermsPerPartition
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 When in partitioned mode, sets the maximum number of terms per partition.
 
 ```yaml
 Type: Int32
 Parameter Sets: Quota
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named

@@ -10,7 +10,6 @@ ms.author: trgreen
 ms.reviewer:
 ---
 
-
 # Export-SPOQueryLogs
 
 ## SYNOPSIS
@@ -72,7 +71,6 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -91,7 +89,6 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -109,7 +106,6 @@ Specifies from which point of time to export the logs from. Use the date format 
 Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: Named

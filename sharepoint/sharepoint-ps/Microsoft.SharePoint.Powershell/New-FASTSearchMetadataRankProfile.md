@@ -6,7 +6,7 @@ applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 title: New-FASTSearchMetadataRankProfile
 ---
 
@@ -35,7 +35,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 New-FASTSearchMetadataRankProfile -Name newrankdistribution
 ```
@@ -43,7 +43,7 @@ New-FASTSearchMetadataRankProfile -Name newrankdistribution
 This example adds a new rank profile based on the default settings.
 The new rank profile is called "newrankdistribution".
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 2 (FAST Server for SharePoint 2010)
 ```
 C:\PS>$rankprofile_template = Get-FASTSearchMetadataRankProfile -Name newrankdistribution
 New-FASTSearchMetadataRankProfile -Template $rankprofile_template -Name ExtraRankProfile
@@ -51,7 +51,7 @@ New-FASTSearchMetadataRankProfile -Template $rankprofile_template -Name ExtraRan
 
 This example adds a new rank profile based on an existing rank profile called "newrankdistribution".
 
-### ---------------EXAMPLE 3----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 3 (FAST Server for SharePoint 2010)
 ```
 C:\PS>$new_rank_profile = New-FASTSearchMetadataRankProfile -Name ImprovedDefault
 $new_rank_profile.makeDefault()
@@ -62,13 +62,15 @@ This example specifies a new rank profile to use as the default rank profile for
 ## PARAMETERS
 
 ### -Name
+
+> Applicable: FAST Server for SharePoint 2010
+
 The name of the new rank profile.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: RankProfileName, N
-Applicable: FAST Server for SharePoint 2010
 
 Required: True
 Position: Named
@@ -78,13 +80,15 @@ Accept wildcard characters: False
 ```
 
 ### -Template
+
+> Applicable: FAST Server for SharePoint 2010
+
 An object representing the rank profile that will serve as a template in creating the new rank profile.
 
 ```yaml
 Type: RankProfile
 Parameter Sets: (All)
 Aliases: RankProfileTemplate, T
-Applicable: FAST Server for SharePoint 2010
 
 Required: False
 Position: Named

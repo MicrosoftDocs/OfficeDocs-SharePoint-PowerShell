@@ -67,7 +67,6 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: 2
 Default value: None
@@ -85,7 +84,6 @@ Provides an SPO notification that the user is being moved.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: 5
@@ -105,7 +103,6 @@ Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: 3
 Default value: None
@@ -123,7 +120,6 @@ Specifies what is the preferred date and time to stop stop the move. Recommened 
 Type: System.DateTime
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: 4
@@ -158,7 +154,6 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: 1
 Default value: None
@@ -176,7 +171,6 @@ Use this parameter to validate if the user is able to be moved. This parameter i
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: 7

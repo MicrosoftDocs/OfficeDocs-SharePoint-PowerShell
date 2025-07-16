@@ -32,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -----------------------EXAMPLE-----------------------------
+### EXAMPLE
 
 ```powershell
 $user = Get-SPOExternalUser -Filter someone@example.com

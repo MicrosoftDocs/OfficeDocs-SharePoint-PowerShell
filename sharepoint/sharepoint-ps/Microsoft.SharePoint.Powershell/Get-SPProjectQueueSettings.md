@@ -42,7 +42,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ## EXAMPLES
 
-### --------------------EXAMPLE--------------------- 
+### EXAMPLE
 ```
 Get-SPProjectQueueSettings -ServiceApplication "Project Service Application"
 ```
@@ -52,6 +52,9 @@ This example retrieves the queue settings for the "Project Service Application" 
 ## PARAMETERS
 
 ### -ServiceApplication
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Specifies the Project Server service application to target.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefg; a valid name of a Project Server Service Application (for example, ProjectServiceApp1); or an instance of a valid PsiServiceApplication object.
@@ -60,7 +63,6 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefg;
 Type: PsiServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: sa
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -70,6 +72,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -81,8 +86,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: False
 Position: Named

@@ -41,7 +41,7 @@ You can use the cmdlet to output the following additional information:
 - List detailed diagnostic information for the index component
 - Debug information that may be used by Microsoft for detailed issue resolution
 
-If you don't want to iterate over the output in a script, use the Text parameter. 
+If you don't want to iterate over the output in a script, use the Text parameter.
 If you do not use the Text parameter, the cmdlet will output a set of objects that have the following properties:
 
 - string Name: the name of a search component, a health report item or a constellation property
@@ -52,24 +52,23 @@ If you do not use the Text parameter, the cmdlet will output a set of objects th
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [https://go.microsoft.com/fwlink/p/?LinkId=251831](https://go.microsoft.com/fwlink/p/?LinkId=251831).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------ 
+### EXAMPLE 1
 ```powershell
 Get-SPEnterpriseSearchServiceApplication | Get-SPEnterpriseSearchStatus -Text
 ```
 
 This example retrieves a list that has diagnostics information about all search components of the default Search Service Application.
 
-### ------------------EXAMPLE 2------------------ 
+### EXAMPLE 2
 ```powershell
 Get-SPEnterpriseSearchStatus -SearchApplication 'Search Service Application' -JobStatus -Text
 ```
 
 This example retrieves the background activity job status for the search analytics timer jobs.
 
-### ------------------EXAMPLE 3------------------ 
+### EXAMPLE 3
 ```powershell
 Get-SPEnterpriseSearchServiceApplication | Get-SPEnterpriseSearchStatus -HealthReport -Component IndexComponent1 -Text
 ```
@@ -79,13 +78,15 @@ This example retrieves the diagnostic information for the index component named 
 ## PARAMETERS
 
 ### -SearchApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the search service application that contains the search components.
 
 ```yaml
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -95,6 +96,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -102,8 +106,7 @@ When the Global parameter is used, all objects are contained in the global store
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -114,16 +117,16 @@ Accept wildcard characters: False
 
 ### -Component
 
-Specifies the name of the search component. 
-This parameter is only used in association with the HealthReport and Primary parameter.
+> Applicable: SharePoint Server Subscription Edition
 
+Specifies the name of the search component.
+This parameter is only used in association with the HealthReport and Primary parameter.
 
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -134,16 +137,16 @@ Accept wildcard characters: False
 
 ### -Constellation
 
-Specifies if internal diagnostic information for the search topology should be provided. 
-This parameter should only be used for debugging.
+> Applicable: SharePoint Server Subscription Edition
 
+Specifies if internal diagnostic information for the search topology should be provided.
+This parameter should only be used for debugging.
 
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -153,14 +156,16 @@ Accept wildcard characters: False
 ```
 
 ### -Detailed
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the level of detail for the HealthReport parameter.
 When this parameter is used, the cmdlet will also output verbose diagnostic information.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -171,16 +176,16 @@ Accept wildcard characters: False
 
 ### -DetailSearchRuntime
 
-Specifies if internal diagnostic information for the search runtime should be provided. 
-This parameter should only be used for debugging.
+> Applicable: SharePoint Server Subscription Edition
 
+Specifies if internal diagnostic information for the search runtime should be provided.
+This parameter should only be used for debugging.
 
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -191,16 +196,16 @@ Accept wildcard characters: False
 
 ### -HealthReport
 
-Specifies if diagnostic information for the search component should be provided. 
-When using this parameter, you must specify the component name using the Component parameter.
+> Applicable: SharePoint Server Subscription Edition
 
+Specifies if diagnostic information for the search component should be provided.
+When using this parameter, you must specify the component name using the Component parameter.
 
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -210,13 +215,15 @@ Accept wildcard characters: False
 ```
 
 ### -JobStatus
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies if status information for the Search Analytics and Usage Analytics timer jobs should be provided.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -227,17 +234,17 @@ Accept wildcard characters: False
 
 ### -Primary
 
-Specifies if the Admin component has the Primary role.
-When using this parameter, you must specify the component name using the Component parameter. 
-Returns true if the Admin Component has the Primary role.
+> Applicable: SharePoint Server Subscription Edition
 
+Specifies if the Admin component has the Primary role.
+When using this parameter, you must specify the component name using the Component parameter.
+Returns true if the Admin Component has the Primary role.
 
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -248,18 +255,18 @@ Accept wildcard characters: False
 
 ### -Text
 
-Specifies if the print output from this cmdlet should be outputted in a format that is convenient for reading. 
+> Applicable: SharePoint Server Subscription Edition
+
+Specifies if the print output from this cmdlet should be outputted in a format that is convenient for reading.
 If not used, this cmdlet outputs a SearchStatusInfo object.
 
 When using this parameter, the output is printed to the console and cannot be piped to a file or another program.
 
 
-
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

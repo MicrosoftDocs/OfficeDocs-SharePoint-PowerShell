@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the Health Score bucket values for an existing network throttling performance counter for a specified Web application.
 
-
 ## SYNTAX
 
 ```
@@ -29,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 $buckets=(2000,1000,500,300,200,100,50,30,20,10)
 Set-SPWebApplicationHttpThrottlingMonitor https://sharepoint -
@@ -38,8 +37,7 @@ Category Memory -Counter 'Available Mbytes' -IsDesc -HealthScoreBuckets $buckets
 
 This example sets the Health Score bucket values for the Memory\Available Mbytes counter to the array listed for the https://sharepoint Web application.
 
-
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Set-SPWebApplicationHttpThrottlingMonitor https://sharepoint
 0 -Category Memory -Counter 'Available Mbytes' -IsDesc -UpperLimit 3000
@@ -47,10 +45,12 @@ Set-SPWebApplicationHttpThrottlingMonitor https://sharepoint
 
 This example sets the upper limit for the Memory\Available Mbytes counter, the highest value in the Health Score buckets, to 3000 for the https://sharepoint Web application.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the SharePoint Web application to update.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a SharePoint Web application (for example, MyOfficeApp1); or an instance of a valid SPWebApplication object.
@@ -58,8 +58,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -69,6 +68,9 @@ Accept wildcard characters: False
 ```
 
 ### -Category
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the performance counter category.
 
 The type must be a valid performance counter category in the throttling monitor.
@@ -77,8 +79,7 @@ Use the `Get-SPWebApplicationHttpThrottlingMonitor` cmdlet to return a list of p
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 2
@@ -88,6 +89,9 @@ Accept wildcard characters: False
 ```
 
 ### -Counter
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the performance counter.
 
 The type must be a valid performance counter in the throttling monitor.
@@ -96,8 +100,7 @@ Use the `Get-SPWebApplicationHttpThrottlingMonitor` cmdlet to return a list of p
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 3
@@ -107,6 +110,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -118,8 +124,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -129,6 +134,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -136,7 +144,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -146,13 +153,15 @@ Accept wildcard characters: False
 ```
 
 ### -HealthScoreBuckets
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies bucket ranges to use in determining the calculation of the server Health Score for this counter.
 
 ```yaml
 Type: Double[]
 Parameter Sets: (All)
 Aliases: Buckets
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -162,6 +171,9 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the instance of the performance counter.
 The default value is empty.
 If the specified value is invalid, this cmdlet will not run.
@@ -169,8 +181,7 @@ If the specified value is invalid, this cmdlet will not run.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -180,6 +191,9 @@ Accept wildcard characters: False
 ```
 
 ### -IsDESC
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that this counter is interpreted in descending order.
 
 If this parameter is set, Health Score bucket values are interpreted in descending order; for example, set this parameter by using the Memory category and Available Mbytes counter to monitor available memory.
@@ -187,8 +201,7 @@ If this parameter is set, Health Score bucket values are interpreted in descendi
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -198,6 +211,9 @@ Accept wildcard characters: False
 ```
 
 ### -LowerLimit
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the lower limit of the numerical threshold of the specified performance counter.
 The lower limit is the lowest value in the Health Score bucket values.
 
@@ -205,7 +221,6 @@ The lower limit is the lowest value in the Health Score bucket values.
 Type: Double
 Parameter Sets: (All)
 Aliases: Lower
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -215,6 +230,9 @@ Accept wildcard characters: False
 ```
 
 ### -UpperLimit
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the upper limit of the numerical threshold of the specified performance counter.
 The upper limit is the highest value in the Health Score bucket values.
 
@@ -222,7 +240,6 @@ The upper limit is the highest value in the Health Score bucket values.
 Type: Double
 Parameter Sets: (All)
 Aliases: Upper
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -232,6 +249,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -239,7 +259,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

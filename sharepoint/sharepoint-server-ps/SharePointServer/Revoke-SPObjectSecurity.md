@@ -2,7 +2,7 @@
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/revoke-spobjectsecurity
-Applicable: SharePoint Server Subscription Edition
+
 title: Revoke-SPObjectSecurity
 schema: 2.0.0
 ---
@@ -11,7 +11,6 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Removes a security principal from a SPObjectSecurity object.
-
 
 ## SYNTAX
 
@@ -37,10 +36,9 @@ An SPObjectSecurity object is a common object that is used to represent the secu
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831 (https://go.microsoft.com/fwlink/p/?LinkId=251831).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------
+### EXAMPLE
 ```powershell
 $security = Get-SPServiceApplicationSecurity $serviceApp -Admin
 Revoke-SPObjectSecurity $security "domain\user"
@@ -50,18 +48,19 @@ Set-SPServiceApplicationSecurity $serviceApp -Admin $security
 This example retrieves the SPObjectSecurity object corresponding to the administrator ACL on a service application and removes a user from that ACL.
 The removed an administrator for the service application $serviceApp.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the SPObjectSecurity object from which the security principal is removed.
 You can use the `Get-SPServiceApplicationSecurity` cmdlet to get a SPObjectSecurity object .
 
 ```yaml
 Type: SPObjectSecurity
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -71,6 +70,9 @@ Accept wildcard characters: False
 ```
 
 ### -Principal
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the principal for whom the rights are removed.
 
 The type must a valid name a principal; for example, Full Control.
@@ -78,8 +80,7 @@ The type must a valid name a principal; for example, Full Control.
 ```yaml
 Type: SPClaim
 Parameter Sets: RevokeOne
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 2
@@ -89,6 +90,9 @@ Accept wildcard characters: False
 ```
 
 ### -Rights
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the rights of the principal to revoke.
 
 The type must a valid array of strings that represents the rights of the principal to revoke.
@@ -96,8 +100,7 @@ The type must a valid array of strings that represents the rights of the princip
 ```yaml
 Type: String[]
 Parameter Sets: RevokeOne
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: 3
@@ -107,13 +110,15 @@ Accept wildcard characters: False
 ```
 
 ### -All
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that all security principals are removed from the specified SPObjectSecurity object.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RevokeAll
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -123,6 +128,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -134,8 +142,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

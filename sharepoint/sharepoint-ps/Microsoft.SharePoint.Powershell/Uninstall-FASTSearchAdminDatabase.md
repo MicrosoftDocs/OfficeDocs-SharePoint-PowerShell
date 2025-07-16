@@ -34,7 +34,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 Uninstall-FASTSearchAdminDatabase -DbServer=sqlserver.contoso.com
 ```
@@ -45,13 +45,15 @@ All data will be deleted.
 ## PARAMETERS
 
 ### -DbConnection
+
+> Applicable: FAST Server for SharePoint 2010
+
 Specifies the database connection string for the FAST Search Server 2010 for SharePoint administration database, in the same format as the ConnectionString property of the System.Data.SqlClient.SqlConnection .NET Framework type.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -61,6 +63,9 @@ Accept wildcard characters: False
 ```
 
 ### -DbName
+
+> Applicable: FAST Server for SharePoint 2010
+
 Specifies the name of the FAST Search Server 2010 for SharePoint administration database.
 
 The name only takes effect when used in conjunction with the DbServer parameter, not the DbConnection parameter.
@@ -68,8 +73,7 @@ The name only takes effect when used in conjunction with the DbServer parameter,
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -79,6 +83,9 @@ Accept wildcard characters: False
 ```
 
 ### -DbServer
+
+> Applicable: FAST Server for SharePoint 2010
+
 Specifies the database server instance that contains the FAST Search Server 2010 for SharePoint administration database
 
 Only one of the DbServer and DbConnection parameters must be specified.
@@ -87,8 +94,7 @@ Using DbServer with a value of sqlserver.contoso.com is equivalent to using DbCo
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named

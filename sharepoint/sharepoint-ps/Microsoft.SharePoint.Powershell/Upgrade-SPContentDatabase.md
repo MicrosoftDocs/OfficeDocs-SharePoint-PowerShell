@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 Resumes a failed database upgrade or begins a build-to-build database upgrade.
 
-
 ## SYNTAX
 
 ### ContentDatabaseById
@@ -43,7 +42,7 @@ Use the `Upgrade-SPContentDatabase` cmdlet to resume a failed database upgrade o
 The `Upgrade-SPContentDatabase` cmdlet initiates an upgrade of an existing content database that is attached to the current farm.
 This cmdlet begins a new upgrade session, which can be used either to resume a failed version-to-version or build-to-build upgrade of a content database or to begin a build-to-build upgrade of a content database.
 
-If the database is hosted on a version of SQL Server that supports creation and use of snapshots of the database, this cmdlet can use a database snapshot for build-to-build upgrades. 
+If the database is hosted on a version of SQL Server that supports creation and use of snapshots of the database, this cmdlet can use a database snapshot for build-to-build upgrades.
 During upgrade, users see a ready-only version of the database, which is the snapshot.
 After upgrade users see upgraded content.
 
@@ -52,10 +51,9 @@ To prevent build-to-build upgrades of site collections, use the NoB2BSiteUpgrade
 
 This cmdlet does not trigger version-to-version upgrade of any site collections.
 
-
 ## EXAMPLES
 
-### --------------------------EXAMPLE 1------------------------------
+### EXAMPLE 1
 ```
 Upgrade-SPContentDatabase WSS_Content
 ```
@@ -63,7 +61,7 @@ Upgrade-SPContentDatabase WSS_Content
 This example upgrades the existing WSS_Content content database schema and then performs only build-to-build upgrade actions on existing site collections if required.
 This operation does not changed the CompatibilityLevel for existing site collections in this database.
 
-### --------------------------EXAMPLE 2------------------------------
+### EXAMPLE 2
 ```
 Upgrade-SPContentDatabase WSS_Content -NoB2BSiteUpgrade
 ```
@@ -72,18 +70,21 @@ This example upgrades the existing WSS_Content content database schema only.
 No build-to-build upgrade actions are performed on any site collections.
 This operation does not change The CompatibilityLevel for existing site collections in this database.
 
-### --------------------------EXAMPLE 3------------------------------
+### EXAMPLE 3
 ```
 Upgrade-SPContentDatabase WSS_Content -NoB2BSiteUpgrade -UseSnapshot
 ```
 
-This example upgrades the existing WSS_Content content database schema only while using a snapshot of the database to retain read-only access to the content during the upgrade. 
+This example upgrades the existing WSS_Content content database schema only while using a snapshot of the database to retain read-only access to the content during the upgrade.
 No build-to-build upgrade actions are performed on any site collections.
 This operation does not change the CompatibilityLevel for existing site collections in this database.
 
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the content database to upgrade.
 
 The value must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh or an instance of a valid SPContentDatabase object.
@@ -91,8 +92,7 @@ The value must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefg
 ```yaml
 Type: SPContentDatabasePipeBind
 Parameter Sets: ContentDatabaseById
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -102,13 +102,15 @@ Accept wildcard characters: False
 ```
 
 ### -ForceDeleteLock
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Forces deletion of locks on the database before the upgrade starts.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: 2
@@ -118,13 +120,15 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of attached content database.
 
 ```yaml
 Type: String
 Parameter Sets: ContentDatabaseByName
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -134,13 +138,15 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the web application that hosts the attached content database.
 
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: ContentDatabaseByName
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -150,6 +156,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -161,8 +170,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -172,6 +180,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -179,7 +190,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -189,13 +199,15 @@ Accept wildcard characters: False
 ```
 
 ### -NoB2BSiteUpgrade
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies to not upgrade all child objects when performing a build-to-build upgrade.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -205,13 +217,15 @@ Accept wildcard characters: False
 ```
 
 ### -ServerInstance
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 The SQL Server instance that hosts the attached content database.
 
 ```yaml
 Type: SPDatabaseServiceInstancePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -221,13 +235,15 @@ Accept wildcard characters: False
 ```
 
 ### -SkipIntegrityChecks
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the upgrade process not to run the internal integrity checks such as missing templates and orphan detection as part of the upgrade process.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -237,6 +253,9 @@ Accept wildcard characters: False
 ```
 
 ### -UseSnapshot
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies to use the snapshot method to perform unattached upgrade.
 This will make a snapshot of the current database and then perform all upgrade operations that apply to the database and optionally to its contents.
 
@@ -248,8 +267,7 @@ This parameter only works for versions of SQL Server that support creation and u
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -259,6 +277,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -266,7 +287,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -276,13 +296,15 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUnattached
+
+> Applicable: SharePoint Server 2016, SharePoint Server 2019
+
 Lets the upgrade process to proceed on a content database which is not currently attached to a SharePoint farm.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -292,13 +314,15 @@ Accept wildcard characters: False
 ```
 
 ### -SkipSiteUpgrade
+
+> Applicable: SharePoint Server 2016, SharePoint Server 2019
+
 Specifies to not upgrade databases and their child objects when performing upgrade.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: NoB2BSiteUpgrade
-Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

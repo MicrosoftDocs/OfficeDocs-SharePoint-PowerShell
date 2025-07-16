@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 Sets the operation status of the linguistic query and document processing components.
 
-
 ## SYNTAX
 
 ```
@@ -31,10 +30,9 @@ This cmdlet sets the operational status of the linguistic query and document pro
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE 1-----------------
+### EXAMPLE 1
 ```
 $ssa = Get-SPEnterpriseSearchServiceApplication
 Set-SpEnterpriseSearchLinguisticComponentsStatus -SearchApplication $ssa -StemmingEnabled $false
@@ -42,8 +40,7 @@ Set-SpEnterpriseSearchLinguisticComponentsStatus -SearchApplication $ssa -Stemmi
 
 This example shows how to disable stemming during query processing by setting the parameter StemmingEnabled to false.
 
-
-### ------------------EXAMPLE 2-----------------
+### EXAMPLE 2
 ```
 $ssa = Get-SPEnterpriseSearchServiceApplication
 Set-SpEnterpriseSearchLinguisticComponentsStatus -SearchApplication $ssa -AllEnabled $false
@@ -51,18 +48,18 @@ Set-SpEnterpriseSearchLinguisticComponentsStatus -SearchApplication $ssa -AllEna
 
 This example shows how to disable all linguistic query and document processing functionalities.
 
-
 ## PARAMETERS
 
 ### -AllEnabled
-A Boolean value to enable or deactivate all linguistic functionalities.
 
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
+A Boolean value to enable or deactivate all linguistic functionalities.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -72,6 +69,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -80,12 +80,10 @@ When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are au
 When the Global parameter is used, all objects are contained in the global store.
 If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
-
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -95,14 +93,15 @@ Accept wildcard characters: False
 ```
 
 ### -EntityExtractionEnabled
-A Boolean value to enable or deactivate the company extractor and all custom extractors during document processing.
 
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
+A Boolean value to enable or deactivate the company extractor and all custom extractors during document processing.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -112,14 +111,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-An object that represents the current status of the linguistic components.
 
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
+An object that represents the current status of the linguistic components.
 
 ```yaml
 Type: LinguisticComponentsStatusPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -129,14 +129,15 @@ Accept wildcard characters: False
 ```
 
 ### -QuerySpellingEnabled
-A Boolean value to enable or deactivate query spelling correction.
 
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
+A Boolean value to enable or deactivate query spelling correction.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -146,14 +147,15 @@ Accept wildcard characters: False
 ```
 
 ### -SearchApplication
-Specifies the search service application that contains the linguistic processing components.
 
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
+Specifies the search service application that contains the linguistic processing components.
 
 ```yaml
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -163,14 +165,15 @@ Accept wildcard characters: False
 ```
 
 ### -StemmingEnabled
-A Boolean value to enable or deactivate expansive stemming during query processing.
 
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
+A Boolean value to enable or deactivate expansive stemming during query processing.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -180,14 +183,15 @@ Accept wildcard characters: False
 ```
 
 ### -ThesaurusEnabled
-A Boolean value to enable or deactivate thesaurus lookup during query processing.
 
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
+A Boolean value to enable or deactivate thesaurus lookup during query processing.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

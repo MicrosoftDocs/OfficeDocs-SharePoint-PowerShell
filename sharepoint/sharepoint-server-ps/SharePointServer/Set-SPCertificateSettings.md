@@ -29,7 +29,7 @@ These include default properties for creating and renewing certificates and cert
 
 ## EXAMPLES
 
-### ------------EXAMPLE-----------
+### EXAMPLE
 ```powershell
 Set-SPCertificateSettings -CertificateExpirationWarningThreshold 22
 ```

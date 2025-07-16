@@ -14,7 +14,6 @@ schema: 2.0.0
 Creates a new SharePoint Central Administration Web application.
 
 
-
 ## SYNTAX
 
 ```
@@ -30,25 +29,26 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1----------------------- 
+### EXAMPLE 1
 ```
 New-SPCentralAdministration -WindowsAuthProvider NTLM -Port 8080
 ```
 
 This example creates the Central Administration site at port 8080 on the local farm using NTLM authentication.
 
-
-### ------------------EXAMPLE 2----------------------- 
+### EXAMPLE 2
 ```
 New-SPCentralAdministration -WindowsAuthProvider Kerberos -Port 443 -SecureSocketsLayer
 ```
 
 This example creates the Central Administration site using SSL on port 443 with Kerberos authentication.
 
-
 ## PARAMETERS
 
 ### -Port
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the port number for Central Administration.
 If no port is specified, a nonconflicting port number is auto-generated.
 
@@ -59,8 +59,7 @@ If you specify a port number that has already been assigned, IIS does not start 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: 1
@@ -70,6 +69,9 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsAuthProvider
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the authorization provider for this Web application.
 If no authentication provider is specified, the default value NTLM is used.
 
@@ -78,8 +80,7 @@ The type must be one of two values: Kerberos or NTLM.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: 2
@@ -89,6 +90,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -100,8 +104,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -111,6 +114,9 @@ Accept wildcard characters: False
 ```
 
 ### -SecureSocketsLayer
+
+> Applicable: SharePoint Server 2016, SharePoint Server 2019
+
 Enables Secure Socket Layer (SSL) encryption for the specified port. If you choose to use SSL, you must assign a server certificate to the Central Administration IIS web site by using the IIS administration tools. The Central Administration web application won't be accessible until you do this.
 
 The default value is False.
@@ -120,8 +126,7 @@ If this parameter is omitted or set to False the Central Administration site wil
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

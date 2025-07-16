@@ -6,7 +6,7 @@ applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 title: New-FASTSearchMetadataManagedProperty
 ---
 
@@ -42,7 +42,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 New-FASTSearchMetadataManagedProperty -name integervalue -type 2 -description "A managed property for integer values"
 ```
@@ -50,7 +50,7 @@ New-FASTSearchMetadataManagedProperty -name integervalue -type 2 -description "A
 This example creates a managed property called "integervalue" of type 2 (integer).
 To further change the settings on the managed property, see Set-FASTSearchMetadataManagedProperty.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 2 (FAST Server for SharePoint 2010)
 ```
 C:\PS>$managedproperty = New-FASTSearchMetadataManagedProperty -Name webtitle -type 1 -description "Titles from RSS and Sitemap Files"
 $rsstitle = Get-FASTSearchMetadataCrawledProperty -Name rss.title
@@ -73,13 +73,15 @@ To make the managed property searchable on its own, see Set-FASTSearchMetadataMa
 ## PARAMETERS
 
 ### -Name
+
+> Applicable: FAST Server for SharePoint 2010
+
 The name of the new managed property.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: Named
@@ -89,6 +91,9 @@ Accept wildcard characters: False
 ```
 
 ### -Type
+
+> Applicable: FAST Server for SharePoint 2010
+
 An integer representing the data type of the new managed property.
 Valid values are:
 
@@ -102,8 +107,7 @@ Valid values are:
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: Named
@@ -113,13 +117,15 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
+> Applicable: FAST Server for SharePoint 2010
+
 A text description of the managed property explaining what the managed property is used for.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named

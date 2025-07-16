@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the value of a property or attribute of a Business Data Connectivity Metadata Store metadata object.
 
-
 ## SYNTAX
 
 ### Display
@@ -45,10 +44,9 @@ The `Set-SPBusinessDataCatalogMetadataObject` cmdlet sets the value of a propert
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 $obj = Get-SPBusinessDataCatalogMetadataObject -Namespace "ContosoDatabase" -Name "ContosoDatabase" -BdcObjectType "LobSystemInstance" -ServiceContext http://contoso
 Set-SPBusinessDataCatalogMetadataObject -Identity $obj -PropertyName "ShowInSearchUI" -PropertyValue "True"
@@ -57,17 +55,18 @@ Set-SPBusinessDataCatalogMetadataObject -Identity $obj -PropertyName "ShowInSear
 This example creates a property on the LobSystemInstance (External System Instance) of name ContosoDatabase.
 The property has the name ShowInSearchUI and a value of True.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the Business Data Connectivity Metadata Store metadata object to update.
 
 ```yaml
 Type: MetadataObject
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -77,6 +76,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -88,8 +90,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -99,6 +100,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -106,7 +110,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -116,13 +119,15 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the display name of the Business Data Connectivity Metadata Store metadata object.
 
 ```yaml
 Type: String
 Parameter Sets: Display
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -132,13 +137,15 @@ Accept wildcard characters: False
 ```
 
 ### -PropertyName
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the property to update.
 
 ```yaml
 Type: String
 Parameter Sets: NameValue, NameRemove
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -148,13 +155,15 @@ Accept wildcard characters: False
 ```
 
 ### -PropertyValue
+
+> Applicable: SharePoint Server Subscription Edition
+
 Sets the new value of the property specified in the PropertyName parameter.
 
 ```yaml
 Type: PSObject
 Parameter Sets: NameValue
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -164,13 +173,15 @@ Accept wildcard characters: False
 ```
 
 ### -Remove
+
+> Applicable: SharePoint Server Subscription Edition
+
 Removes the property specified in the PropertyName parameter.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -180,6 +191,9 @@ Accept wildcard characters: False
 ```
 
 ### -SettingId
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the custom environment settings model slice for which the property applies.
 
 The type must be a valid string that identifies a model slice; for example, ModelSlice1.
@@ -187,8 +201,7 @@ The type must be a valid string that identifies a model slice; for example, Mode
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -198,6 +211,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -205,7 +221,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

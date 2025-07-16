@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 Changes the role of the server.
 
-
 ## SYNTAX
 
 ```
@@ -26,29 +25,29 @@ Set-SPServer [-Identity] <SPServerPipeBind> [-AssignmentCollection <SPAssignment
 ## DESCRIPTION
 The Set-SPServer cmdlet changes the role of the server in the farm by using the Role parameter. A new cmdlet in SharePoint Server 2016, SharePoint Server 2019 that is used in MinRole.
 
-
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### EXAMPLE
 ```
 Set-SPServer -Role SingleServerFarm
 ```
 
 This example changes the server to SingleServerFarm role.
 
-
 ## PARAMETERS
 
 ### -AssignmentCollection
-Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used. 
 
-**NOTE**: When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.                 
+> Applicable: SharePoint Server 2016, SharePoint Server 2019
+
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+**NOTE**: When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -58,13 +57,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of the server in the farm.
 
 ```yaml
 Type: SPServerPipeBind
 Parameter Sets: (All)
 Aliases: Address
-Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 0
@@ -74,7 +75,10 @@ Accept wildcard characters: False
 ```
 
 ### -Role
-Specifies the name of the server role you want to change. 
+
+> Applicable: SharePoint Server 2016, SharePoint Server 2019
+
+Specifies the name of the server role you want to change.
 
 The valid values are:
 
@@ -87,13 +91,11 @@ The valid values are:
 * ApplicationWithSearch
 * WebFrontEndWithDistributedCache
 
-
 ```yaml
 Type: SPServerRole
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Application, ApplicationWithSearch, Custom, DistributedCache, Search, SingleServerFarm, WebFrontEnd, WebFrontEndWithDistributedCache
-Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -103,14 +105,16 @@ Accept wildcard characters: False
 ```
 
 ### -Status
+
+> Applicable: SharePoint Server 2016, SharePoint Server 2019
+
 Sets the status of the server in the farm.
 
 ```yaml
 Type: SPObjectStatus
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 Accepted values: Online, Disabled, Offline, Unprovisioning, Provisioning, Upgrading, Patching
-Applicable: SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

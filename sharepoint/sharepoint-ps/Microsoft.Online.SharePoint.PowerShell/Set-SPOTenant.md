@@ -606,7 +606,6 @@ Set-SPOTenant -EnableVersionExpirationSetting $true
 The `EnableVersionExpirationSetting` parameter is no longer active, this feature is now automatically enabled for each tenant. Setting `EnableVersionExpirationSetting` to false would not disable the feature.
 [Learn more about Version History Settings](/sharepoint/document-library-version-history-limits)
 
-
 ### EXAMPLE 17
 
 ```powershell

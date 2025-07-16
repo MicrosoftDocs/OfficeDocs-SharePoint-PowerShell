@@ -17,7 +17,6 @@ ms.reviewer:
 Returns the throttling configuration for a Business Data Connectivity Service application.
 
 
-
 ## SYNTAX
 
 ### FileBackedProvided
@@ -44,7 +43,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ 
+### EXAMPLE
 ```
 Get-SPBusinessDataCatalogThrottleConfig -Scope Database -ThrottleType Items -ServiceApplicationProxy $contosoServAppProxy
 ```
@@ -54,13 +53,15 @@ This example returns the throttling information that is related to database item
 ## PARAMETERS
 
 ### -FileBacked
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Requests the throttling configuration for file backed metadata catalogs.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: FileBackedProvided
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -70,6 +71,9 @@ Accept wildcard characters: False
 ```
 
 ### -Scope
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Returns the throttling configuration for the specified the scope.
 
 The type must be one of the following: Wcf, WebService, Database, Global, or Custom.
@@ -77,8 +81,7 @@ The type must be one of the following: Wcf, WebService, Database, Global, or Cus
 ```yaml
 Type: ThrottleScope
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -88,13 +91,15 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceApplicationProxy
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the Business Data Connectivity Service application proxy that contains the throttling configuration to get.
 
 ```yaml
 Type: SPServiceApplicationProxyPipeBind
 Parameter Sets: ProxyProvided
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -104,6 +109,9 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottleType
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Returns the throttling configuration for the specified throttle type.
 
 The type must be one of the following: None, Items, Size, Connections, or Timeout.
@@ -111,8 +119,7 @@ The type must be one of the following: None, Items, Size, Connections, or Timeou
 ```yaml
 Type: ThrottleType
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -122,6 +129,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -129,8 +139,7 @@ When the Global parameter is used, all objects are contained in the global store
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

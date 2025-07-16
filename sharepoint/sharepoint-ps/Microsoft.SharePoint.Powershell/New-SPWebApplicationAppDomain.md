@@ -16,7 +16,6 @@ ms.reviewer:
 
 Creates an AppDomain entry.
 
-
 ## SYNTAX
 
 ```
@@ -29,10 +28,9 @@ New-SPWebApplicationAppDomain [-AppDomain] <String> -WebApplication <SPWebApplic
 
 Use the New-SPWebApplicationAppDomain cmdlet to create an AppDomain entry. If you specify a port, the cmdlet adds a port binding to the Internet Information Services (IIS) site corresponding to the Web Application/Zone combination.
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE 1-----------------------
+### EXAMPLE 1
 
 ```powershell
 New-SPWebApplicationAppDomain -AppDomain contosoapps.com -WebApplication https://www.contoso.com
@@ -40,7 +38,7 @@ New-SPWebApplicationAppDomain -AppDomain contosoapps.com -WebApplication https:/
 
 Creates a new app domain for apps for SharePoint for the specified web application in the default zone.
 
-### ------------------EXAMPLE 2-----------------------
+### EXAMPLE 2
 
 ```powershell
 New-SPWebApplicationAppDomain -AppDomain contosoapps.com -WebApplication https://www.contoso.com -Zone Internet -Port 10000
@@ -52,13 +50,14 @@ Creates a new app domain for apps for SharePoint for the specified web applicati
 
 ### -AppDomain
 
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the URI of the app domain.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 1
@@ -69,14 +68,14 @@ Accept wildcard characters: False
 
 ### -WebApplication
 
-Specifies the GUID, URI, or name of the web application for which the app domain is being configured.
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
+Specifies the GUID, URI, or name of the web application for which the app domain is being configured.
 
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -87,6 +86,8 @@ Accept wildcard characters: False
 
 ### -AssignmentCollection
 
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -95,7 +96,6 @@ When the Global parameter is used, all objects are contained in the global store
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -106,13 +106,14 @@ Accept wildcard characters: False
 
 ### -Confirm
 
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -123,13 +124,14 @@ Accept wildcard characters: False
 
 ### -Port
 
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the IIS port number to which the app domain will be assigned. If no value is specified, the same port used by the web application for the zone is applied.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -140,13 +142,14 @@ Accept wildcard characters: False
 
 ### -SecureSocketsLayer
 
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies that the app domain will use Secured Sockets Layer (SSL) security. If no value is specified, no SSL security will be used.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -157,6 +160,8 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -164,7 +169,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -174,6 +178,8 @@ Accept wildcard characters: False
 ```
 
 ### -Zone
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Specifies the security zone to which the app domain will be assigned.
 
@@ -193,7 +199,6 @@ If no value is specified, Default is applied.
 Type: SPUrlZone
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

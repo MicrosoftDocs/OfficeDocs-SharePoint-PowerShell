@@ -7,7 +7,7 @@ title: Install-SPHelpCollection
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # Install-SPHelpCollection
@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 
 Installs the provided Help site collection files in the current farm.
-
 
 
 ## SYNTAX
@@ -44,7 +43,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ 
+### EXAMPLE
 ```
 Install-SPHelpCollection -LiteralPath 'C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\HCCab\1033\OSSAdmin.cab'
 ```
@@ -54,13 +53,15 @@ This example installs the specified help collection in the current farm.
 ## PARAMETERS
 
 ### -All
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 If the LiteralPath parameter is not specified, specifies that all Help Collection CABs under %Program Files%\Common Files\Microsoft Shared\Web Server Extensions\14\HCCab\\\<LCID\> in the Help site collection are installed, and existing Help collections are overwritten.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: InstallAll
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -70,6 +71,9 @@ Accept wildcard characters: False
 ```
 
 ### -LiteralPath
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the exact path to a specific custom Help file in the Help site collection cab file.
 
 The type must be a valid path in either of the following forms:
@@ -80,8 +84,7 @@ The type must be a valid path in either of the following forms:
 ```yaml
 Type: String
 Parameter Sets: InstallOne
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -91,6 +94,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -102,8 +108,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

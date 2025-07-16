@@ -7,14 +7,13 @@ title: New-SPProjectServiceApplication
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # New-SPProjectServiceApplication
 
 ## SYNOPSIS
 Creates a new Project Server Service application.
-
 
 ## SYNTAX
 
@@ -28,18 +27,16 @@ The `New-SPProjectServiceApplication` cmdlet creates a new Project Server Servic
 
 For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE 1-----------------------
+### EXAMPLE 1
 ```
 New-SPProjectServiceApplication -Name "PsiApplication" -ApplicationPool "PsiApplicationPool" -Proxy
 ```
 
 This example creates a Project Server Service application with the name PsiApplication and an application pool with the name PsiApplicationPool and it creates a Project Server Service application proxy for the application.
 
-
-### ------------------EXAMPLE 2-----------------------
+### EXAMPLE 2
 ```
 Get-SPIisWebServiceApplicationPool "PsiApplicationPool" | New-SPProjectServiceApplication -Name "PsiApplication"
 ```
@@ -47,10 +44,12 @@ Get-SPIisWebServiceApplicationPool "PsiApplicationPool" | New-SPProjectServiceAp
 This example creates a Project Server Service application with the name PsiApplication.
 The result is piped using an application pool object.
 
-
 ## PARAMETERS
 
 ### -ApplicationPool
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Specifies the existing IIS application pool to run the Web service in for the new service application.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of an application pool (for example, AppPoolName1); or an instance of a valid IISWebServiceApplicationPool object.
@@ -58,8 +57,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPIisWebServiceApplicationPoolPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -69,6 +67,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Specifies the name of the new Project Server Service application.
 
 The type must be a valid name of a Project Server Service application; for example, ProjectWebApp1.
@@ -76,8 +77,7 @@ The type must be a valid name of a Project Server Service application; for examp
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -87,6 +87,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -98,8 +101,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -109,13 +111,15 @@ Accept wildcard characters: False
 ```
 
 ### -Proxy
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Specifies that a proxy for new service application is automatically created.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: False
 Position: Named

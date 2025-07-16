@@ -24,7 +24,7 @@ Get-SPExcelUserDefinedFunction [[-Identity] <SPExcelUDFPipeBind>]
 ```
 
 ## DESCRIPTION
-The Get-SPExcelUserDefinedFunction cmdlet reads a user-defined function and its properties, or returns the collection of user-defined functions for an Excel Services Application Web service application. 
+The Get-SPExcelUserDefinedFunction cmdlet reads a user-defined function and its properties, or returns the collection of user-defined functions for an Excel Services Application Web service application.
 Excel Services Application uses only user-defined functions that are in the list of user-defined functions.
 User-defined functions are managed code assemblies that can be called from an Excel Services Application workbook by using standard Excel Services Application formula syntax.
 The assemblies can perform custom logic or other actions, such as refreshing data.
@@ -34,14 +34,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1-------------- 
+### EXAMPLE 1
 ```
 Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelUserDefinedFunction -Identity SampleCompany.SampleApplication.SampleUdf
 ```
 
 This example displays the user-defined function named SampleCompany.SampleApplication.SampleUdf from the list of user-defined functions that is in the Excel Services Application Web service application named MyExcelService.
 
-### --------------EXAMPLE 2-------------- 
+### EXAMPLE 2
 ```
 Get-SPExcelServiceApplication | Get-SPExcelUserDefinedFunction | format-list
 ```
@@ -51,6 +51,9 @@ This example displays every user-defined function for every Excel Services Appli
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies the UserDefinedFunction object to get.
 If the Identity parameter is not specified, the cmdlet returns all of the functions in the user defined functions list.
 
@@ -59,8 +62,7 @@ The type must be a valid name of the code assembly (for example, SampleCompany.S
 ```yaml
 Type: SPExcelUDFPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: 1
@@ -70,6 +72,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExcelServiceApplication
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies the Excel Services Application Web service application that contains the SPExcelUserDefinedFunction list object.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of an Excel Services Application Web service application in the farm (for example, MyExcelService1); or an instance of a valid SPExcelServiceApplication object.
@@ -77,8 +82,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPExcelServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: True
 Position: Named
@@ -88,6 +92,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -99,8 +106,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named

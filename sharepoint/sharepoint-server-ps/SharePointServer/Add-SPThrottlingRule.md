@@ -14,7 +14,6 @@ schema: 2.0.0
 Adds a new throttling rule.
 
 
-
 ## SYNTAX
 
 ```
@@ -30,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -----------EXAMPLE--------- 
+### EXAMPLE
 ```powershell
 $web=Get-SPWebApplication -Identity <URL of web application>
 $rm=Get-SPRequestManagementSettings -Identity $web
@@ -43,13 +42,15 @@ This example adds a throttling rule for a specified identity by using the $rm an
 ## PARAMETERS
 
 ### -RequestManagementSettings
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the request management settings object to add.
 
 ```yaml
 Type: SPRequestManagementSettingsPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -59,13 +60,15 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the throttling rule.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 2
@@ -75,6 +78,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -86,8 +92,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -97,13 +102,15 @@ Accept wildcard characters: False
 ```
 
 ### -Criteria
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the criteria for the rule to match.
 
 ```yaml
 Type: SPRequestManagementRuleCriteriaPipeBind[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -113,13 +120,15 @@ Accept wildcard characters: False
 ```
 
 ### -Expiration
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the expiration date and time of the rule.
 
 ```yaml
 Type: DateTime
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -129,14 +138,16 @@ Accept wildcard characters: False
 ```
 
 ### -Threshold
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies a value between 0 and 10 which defines the maximum threshold for throttling.
 The Request Manager will remove routing targets if their Health-Score becomes greater than this value.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

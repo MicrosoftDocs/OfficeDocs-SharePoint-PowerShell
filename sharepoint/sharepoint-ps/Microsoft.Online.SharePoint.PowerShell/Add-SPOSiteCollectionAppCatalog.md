@@ -52,7 +52,6 @@ Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -72,7 +71,6 @@ Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
-
 Required: False
 Position: Named
 Default value: None
@@ -91,7 +89,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 
 Required: False
 Position: Named

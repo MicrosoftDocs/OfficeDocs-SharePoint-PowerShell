@@ -2,7 +2,7 @@
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 module name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spprojectusersync
-Applicable: SharePoint Server Subscription Edition
+
 title: Set-SPProjectUserSync
 schema: 2.0.0
 ---
@@ -29,24 +29,25 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ## EXAMPLES
 
-### ----------------------EXAMPLE-----------------------
+### EXAMPLE
 ```powershell
 Set-SPProjectUserSync https://localhost/pwa EnablePWA
 ```
 
 In this example, WSS User sync is enabled for the Project Web App site at https://localhost/pwa.
 
-
 ## PARAMETERS
 
 ### -Url
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the URL of the Project Web App instance to set the Project User Sync settings.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 2
@@ -56,13 +57,15 @@ Accept wildcard characters: False
 ```
 
 ### -Value
+
+> Applicable: SharePoint Server Subscription Edition
+
 Disabled completely disables WSS User Sync; EnablePWA enables WSS User sync for the Project Web App site; EnableEntProj enables WSS User sync for all SharePoint sites connected to Enterprise Projects; EnableSPProj enables WSS User sync for all SharePoint sites connected to SharePoint Projects; EnableAll enables WSS User sync for the Project Web App site and all connected SharePoint sites.
 
 ```yaml
 Type: UserSyncParameterValues[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 3
@@ -72,6 +75,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -83,8 +89,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

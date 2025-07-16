@@ -22,13 +22,11 @@ Register-SPAppPrincipal -DisplayName <String> -NameIdentifier <String> -Site <SP
 ## DESCRIPTION
 Use the `Register-SPAppPrincipal` cmdlet to let an on-premises farm administrator to register an app principal management service.
 
-
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831(https://go.microsoft.com/fwlink/p/?LinkId=251831).
-
 
 ## EXAMPLES
 
-### ------------------EXAMPLE-----------------------
+### EXAMPLE
 ```powershell
 $site = Get-SPSite "https://<urlofsite>"
 Register-SPAppPrincipal -site $site.RootWeb -NameIdentifier "00000003-0000-0ff1-ce00-000000000000@f686d426-8d16-42db-81b7-cb578e110ccd" -DisplayName "Contoso"
@@ -36,17 +34,18 @@ Register-SPAppPrincipal -site $site.RootWeb -NameIdentifier "00000003-0000-0ff1-
 
 This example registers the app principal named Contoso.
 
-
 ## PARAMETERS
 
 ### -DisplayName
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the friendly name to use for the app principal that is being registered.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -56,13 +55,15 @@ Accept wildcard characters: False
 ```
 
 ### -NameIdentifier
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the app principal's name identifier that needs to be added to the app management service.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -72,13 +73,15 @@ Accept wildcard characters: False
 ```
 
 ### -Site
+
+> Applicable: SharePoint Server Subscription Edition
+
 {{Fill Site Description}}
 
 ```yaml
 Type: SPWebPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -88,6 +91,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -99,8 +105,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

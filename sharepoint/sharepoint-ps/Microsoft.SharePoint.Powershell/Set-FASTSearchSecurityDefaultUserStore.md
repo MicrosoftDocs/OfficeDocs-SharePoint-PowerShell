@@ -34,14 +34,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 Set-FASTSearchSecurityDefaultUserStore -DefaultUserStoreId win
 ```
 
 This example sets the default user store to "win".
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 2 (FAST Server for SharePoint 2010)
 ```
 C:\PS>$defuserstore | Set-FASTSearchSecurityDefaultUserStore
 ```
@@ -53,13 +53,15 @@ In this example, the $defuserstoreGeneralSetting was created with this command: 
 ## PARAMETERS
 
 ### -DefaultUserStoreId
+
+> Applicable: FAST Server for SharePoint 2010
+
 The identity of the user store to set as the default user store.
 
 ```yaml
 Type: String
 Parameter Sets: ProcessId
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 1
@@ -69,13 +71,15 @@ Accept wildcard characters: False
 ```
 
 ### -GeneralSetting
+
+> Applicable: FAST Server for SharePoint 2010
+
 A DefaultUserStoreSettinginstance whose property values are used for the DefaultUserStoreSetting being updated.
 
 ```yaml
 Type: DefaultUserStoreSetting
 Parameter Sets: ProcessGeneralSetting
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 9999

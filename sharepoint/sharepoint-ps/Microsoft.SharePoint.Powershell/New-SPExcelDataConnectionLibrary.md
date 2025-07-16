@@ -7,14 +7,13 @@ title: New-SPExcelDataConnectionLibrary
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # New-SPExcelDataConnectionLibrary
 
 ## SYNOPSIS
 Adds a new data connection library to Excel Services Application.
-
 
 ## SYNTAX
 
@@ -25,7 +24,7 @@ New-SPExcelDataConnectionLibrary -Address <String> -ExcelServiceApplication <SPE
 ```
 
 ## DESCRIPTION
-The `New-SPExcelDataConnectionLibrary` cmdlet adds a data connection library to the list of trusted data connection libraries for an Excel Services Application Web service application. 
+The `New-SPExcelDataConnectionLibrary` cmdlet adds a data connection library to the list of trusted data connection libraries for an Excel Services Application Web service application.
 Excel Services Application loads only data connection files that are stored in a data connection library that is on the list of trusted data connection libraries.
 Data connection libraries contain data connection files, which contain all the resources that Excel Services Application and the Excel client require to connect to an external data source.
 Data connection libraries enable you to reuse and share data connections.
@@ -33,10 +32,9 @@ Data connections can be loaded by using information from the workbook file; howe
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------
+### EXAMPLE
 ```
 $sa = Get-SPExcelServiceApplication
 New-SPExcelDataConnectionLibrary -Address "https://portal/site/salesDCL" -Description "This is the DCL where all the connections to the sales data are stored." -ExcelServiceApplication $sa
@@ -46,10 +44,12 @@ This example adds a new data connection library (DCL) and then sets its descript
 
 Workbooks can use connection files stored in that library to refresh data on the Excel Services Application Web service application.
 
-
 ## PARAMETERS
 
 ### -Address
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies the address of the data connection library.
 The address must be unique in the list of trusted data connection libraries.
 
@@ -58,8 +58,7 @@ The type must be a valid URL, in the form https://server_name.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: True
 Position: Named
@@ -69,6 +68,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExcelServiceApplication
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies the Excel Services Application Web service application that contains the SPExcelDataConnectionLibrary list object.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of an Excel Services Application Web service application in the farm (for example, MyExcelService1); or an instance of a valid SPExcelServiceApplication object.
@@ -76,8 +78,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPExcelServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: True
 Position: Named
@@ -87,6 +88,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -98,8 +102,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -109,6 +112,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -116,7 +122,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -126,6 +131,9 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies a friendly description for the data connection library.
 
 The type must be a valid string; for example, this is a custom OLEDB provider.
@@ -133,8 +141,7 @@ The type must be a valid string; for example, this is a custom OLEDB provider.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -144,6 +151,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -151,7 +161,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named

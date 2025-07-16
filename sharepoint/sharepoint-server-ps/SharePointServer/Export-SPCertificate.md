@@ -32,22 +32,22 @@ Exports certificates from the SharePoint farm into a certificate file.
 This exported certificate file is stored in the Central Administration site by default, but can also be stored in a path specified by the Path parameter.
 
 SharePoint supports exporting certificates to PFX (PKCS #12) files, P7B (PKCS #7) files, and CER files.
-Both PFX files and P7B files can contain multiple certificates, which is useful for exporting a chain of certificates from the end entity (leaf) certificate to the root certificate. 
+Both PFX files and P7B files can contain multiple certificates, which is useful for exporting a chain of certificates from the end entity (leaf) certificate to the root certificate.
 However, only PFX files can contain private keys for certificates, which are necessary for a server certificate to be assigned to an IIS web site.
 CER files contain only a single certificate.
 
 ## EXAMPLES
 
-### ------------EXAMPLE 1-----------
+### EXAMPLE 1
 ```powershell
-$password = ConvertTo-SecureString -AsPlainText -Force 
- 
+$password = ConvertTo-SecureString -AsPlainText -Force
+
 Export-SPCertificate -Identity "Team Sites Certificate" -Password $password -IncludeAllCertificatesInCertificationPath -Path "\\server\fileshare\certificates.pfx"
 ```
 
 This example exports the "Team Sites Certificate" certificate and its private key, as well as other certificates in its certificate chain, to the \\\\server\fileshare\certificates.pfx file.
 
-### ------------EXAMPLE 2-----------
+### EXAMPLE 2
 ```powershell
 Export-SPCertificate -Identity "Team Sites Certificate" -Type Cert
 ```

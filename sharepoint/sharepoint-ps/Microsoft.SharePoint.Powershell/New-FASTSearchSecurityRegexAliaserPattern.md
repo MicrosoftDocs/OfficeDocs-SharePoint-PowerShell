@@ -6,7 +6,7 @@ applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 title: New-FASTSearchSecurityRegexAliaserPattern
 ---
 
@@ -32,7 +32,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 New-FASTSearchSecurityRegexAliaserPattern -Regex .* -InputPropertyName mail -MapToUsername "\1"
 ```
@@ -44,14 +44,16 @@ Use the regex pattern configuration object output from this command for the valu
 ## PARAMETERS
 
 ### -Regex
+
+> Applicable: FAST Server for SharePoint 2010
+
 The regular expression pattern that determines if the user or group should be mapped to another user store.
 This regular expression pattern may contain regular expression groups that may be used in the generation of the MapToUsername value.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: 1
@@ -61,6 +63,9 @@ Accept wildcard characters: False
 ```
 
 ### -MapToUsername
+
+> Applicable: FAST Server for SharePoint 2010
+
 The user or group name to look to.
 This can also contain regular expression group replacements using the syntax:
 
@@ -71,8 +76,7 @@ where # is the group capture index.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: 2
@@ -82,6 +86,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputPropertyName
+
+> Applicable: FAST Server for SharePoint 2010
+
 The user/group property name this regular expression pattern is matched against.
 
 The InputPropertyName is one of the following:
@@ -95,8 +102,7 @@ Refer to your specific user store for other properties that the user store expos
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 3
@@ -106,14 +112,16 @@ Accept wildcard characters: False
 ```
 
 ### -Patterns
+
+> Applicable: FAST Server for SharePoint 2010
+
 A list of RegExAliasPatternMapConfig objects.
 The RegExAliasPatternMapConfig being created is added to this list.
 
 ```yaml
 Type: System.Collections.Generic.List`1[Microsoft.SharePoint.Search.Extended.Security.Config.RegExAliasPatternMapConfig]
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named

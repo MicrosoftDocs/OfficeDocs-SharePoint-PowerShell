@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a new User Settings Provider.
 
-
 ## SYNTAX
 
 ```
@@ -25,27 +24,27 @@ Use the `New-SPUserSettingsProvider` cmdlet to add a new User Settings Provider 
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ----------------------- EXAMPLE---------------------------
+### EXAMPLE
 ```powershell
 New-SPUserSettingsProvider -DisplayName "My User Settings Provider" -AssemblyName MyProvider.dll -Type MyProvider
 ```
 
 This example adds a user setting provider with a display name of "My User Settings Provider" which uses the MyProvider.dll file.
 
-
 ## PARAMETERS
 
 ### -AssemblyName
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the assembly name for the provider.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -55,13 +54,15 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the display name to use for this provider.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -71,13 +72,15 @@ Accept wildcard characters: False
 ```
 
 ### -Type
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the type name to use for this provider.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -87,6 +90,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -98,8 +104,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

@@ -32,25 +32,26 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1-------------------
+### EXAMPLE 1
 ```
 Set-SPPRojectPermissionMode -Url https://AppServer/pwa -Mode ProjectServer
 ```
 
 This example shows the syntax for transitioning a server into Project Server permission mode.
 
-
-### --------------EXAMPLE 2-------------------
+### EXAMPLE 2
 ```
 Set-SPPRojectPermissionMode -Url https://AppServer/pwa -Mode SharePoint
 ```
 
 This example shows the syntax for transitioning a server into SharePoint permission mode.
 
-
 ## PARAMETERS
 
 ### -Url
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Specifies the URL of the Project Web App instance for which the permission mode is to be changed.
 
 The type must be a valid URL, in the form https://\<ServerName\>/\<PWAName\>.
@@ -58,8 +59,7 @@ The type must be a valid URL, in the form https://\<ServerName\>/\<PWAName\>.
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -69,6 +69,9 @@ Accept wildcard characters: False
 ```
 
 ### -Mode
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Specifies the mode into which the instance should be changed.
 
 The type must be a valid permission mode, in the form SharePoint or ProjectServer.
@@ -76,8 +79,7 @@ The type must be a valid permission mode, in the form SharePoint or ProjectServe
 ```yaml
 Type: PermissionMode
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: True
 Position: 2
@@ -87,6 +89,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -98,8 +103,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: False
 Position: Named

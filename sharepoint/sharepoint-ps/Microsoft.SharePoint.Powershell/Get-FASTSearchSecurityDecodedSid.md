@@ -28,7 +28,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1-----------------
+### EXAMPLE 1
 ```
 Get-FASTSearchSecurityDecodedSid -EncodedSID aebaaaaaaaaakiaaaaaccaqaaa
 ```
@@ -38,13 +38,15 @@ This example retrieves the Windows SID and user or group identifier for an encod
 ## PARAMETERS
 
 ### -EncodedSID
+
+> Applicable: FAST Server for SharePoint 2010
+
 The encoded extended security identifier that will be decoded.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: 1

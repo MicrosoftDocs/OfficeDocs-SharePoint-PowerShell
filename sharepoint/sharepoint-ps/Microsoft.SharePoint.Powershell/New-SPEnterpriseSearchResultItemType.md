@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a new result item type.
 
-
 ## SYNTAX
 
 ### New
@@ -52,10 +51,9 @@ Example use cases:
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------
+### EXAMPLE
 ```
 $rule = Get-SPEnterpriseSearchPropertyRule -PropertyName "ContentTypeId" -Operator "StartsWith"
 $rule.AddValue('0x010063C2F478ACC511DFB869B5BFDFD720851252')
@@ -84,28 +82,17 @@ Finally, the example defines the rule item type by its name, the rule collection
 ## PARAMETERS
 
 ### -Name
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of the result item type.
 
 ```yaml
 Type: String
-Parameter Sets: New
+Parameter Sets: New, Copy
 Aliases: n
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
-Parameter Sets: Copy
-Aliases: n
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
-
-Required: False
 Position: 2
 Default value: None
 Accept pipeline input: False
@@ -113,13 +100,15 @@ Accept wildcard characters: False
 ```
 
 ### -Rules
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the collection of rules to evaluate the result properties against.
 
 ```yaml
 Type: PropertyRuleCollection
-Parameter Sets: New
+Parameter Sets: New, Copy
 Aliases: rule
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 3
@@ -128,27 +117,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: PropertyRuleCollection
-Parameter Sets: Copy
-Aliases: rule
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
-
-Required: False
-Position: 3
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -RulePriority
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies which priority the collection of rules has compared to other rules.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases: priority
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 4
@@ -158,13 +136,15 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayProperties
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies which result properties to display.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: dp
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 5
@@ -174,6 +154,9 @@ Accept wildcard characters: False
 ```
 
 ### -SourceID
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Identifies the search result source that the result item type applies to.
 Leave this parameter blank to apply to all result sources.
 
@@ -181,7 +164,6 @@ Leave this parameter blank to apply to all result sources.
 Type: Guid
 Parameter Sets: (All)
 Aliases: sid
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: 6
@@ -191,14 +173,16 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayTemplateUrl
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the URL of the display template that shall be used for rendering the results.
 Specify an absolute URL.
 
 ```yaml
 Type: String
-Parameter Sets: New
+Parameter Sets: New, Copy
 Aliases: url
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: 7
@@ -207,27 +191,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: String
-Parameter Sets: Copy
-Aliases: url
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
-
-Required: False
-Position: 7
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ExistingResultItemType
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies an existing result item type to which new rules or displayed properties can be added.
 
 ```yaml
 Type: ResultItemTypePipeBind
 Parameter Sets: Copy
 Aliases: copy
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -237,13 +210,15 @@ Accept wildcard characters: False
 ```
 
 ### -ExistingResultItemTypeOwner
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the search object owner that defines the scope at which an existing result item type was created.
 
 ```yaml
 Type: SearchObjectOwner
 Parameter Sets: Copy
 Aliases: eo
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -253,13 +228,15 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the search object owner that defines the scope at which the result item type is created.
 
 ```yaml
 Type: SearchObjectOwner
 Parameter Sets: (All)
 Aliases: o
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: True
 Position: Named
@@ -269,6 +246,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -280,8 +260,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -291,6 +270,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -298,7 +280,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -308,6 +289,9 @@ Accept wildcard characters: False
 ```
 
 ### -OptimizeForFrequentUse
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Enable this flag if you always want the properties of this result item type to be requested, regardless of whether the result type is triggered.
 This will improve performance as long as it is only enabled on the most frequently used result item types.
 
@@ -315,7 +299,6 @@ This will improve performance as long as it is only enabled on the most frequent
 Type: Boolean
 Parameter Sets: (All)
 Aliases: opt
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -325,14 +308,16 @@ Accept wildcard characters: False
 ```
 
 ### -SearchApplication
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the search application that contains the result item type.
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application name (for example, SearchApp1); or an instance of a valid SearchServiceApplication object.
 
 ```yaml
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -342,14 +327,16 @@ Accept wildcard characters: False
 ```
 
 ### -SearchApplicationProxy
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the proxy of the search application that contains the result item type.
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application proxy name (for example, SearchAppProxy1); or an instance of a valid SearchServiceApplicationProxy object.
 
 ```yaml
 Type: SearchServiceApplicationProxyPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -359,6 +346,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -366,7 +356,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

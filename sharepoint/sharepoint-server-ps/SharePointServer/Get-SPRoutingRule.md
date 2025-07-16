@@ -14,7 +14,6 @@ schema: 2.0.0
 Returns all routing rules.
 
 
-
 ## SYNTAX
 
 ```
@@ -29,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE------------ 
+### EXAMPLE
 ```powershell
 $web=Get-SPWebApplication -Identity <URL of web application>
 $rm=Get-SPRequestManagementSettings -Identity $web
@@ -41,13 +40,15 @@ This example returns a routing rule for the farm.
 ## PARAMETERS
 
 ### -RequestManagementSettings
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the request management settings object to return.
 
 ```yaml
 Type: SPRequestManagementSettingsPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -57,6 +58,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -68,8 +72,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -79,13 +82,15 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the rule to return.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

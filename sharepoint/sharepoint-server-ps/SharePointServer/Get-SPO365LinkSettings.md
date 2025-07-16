@@ -23,7 +23,7 @@ Use the **Get-SPO365LinkSettings** cmdlet to display current hybrid configuratio
 
 ## EXAMPLES
 
-### ------------EXAMPLE 1-----------
+### EXAMPLE 1
 ```powershell
 $gc = Start-SPAssignment
 Get-SPO365LinkSettings -AssignmentCollection $gc
@@ -35,6 +35,9 @@ This example returns all hybrid configurations.
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -46,8 +49,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

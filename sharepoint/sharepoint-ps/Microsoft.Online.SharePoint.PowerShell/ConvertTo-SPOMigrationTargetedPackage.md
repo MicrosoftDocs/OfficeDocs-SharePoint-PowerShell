@@ -62,7 +62,6 @@ Type: Microsoft.Online.SharePoint.PowerShell.CredentialCmdletPipeBind
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -80,7 +79,6 @@ Fill out the Regular Credentials (Get-Credential)
 Type: Microsoft.Online.SharePoint.PowerShell.CredentialCmdletPipeBind
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: Named
@@ -100,7 +98,6 @@ Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -118,7 +115,6 @@ Switch Parameter to determine if you should get or not a log file.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: Named
@@ -138,7 +134,6 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: 2
 Default value: None
@@ -156,7 +151,6 @@ Switch parameter to boost file share migration performance.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: Named
@@ -176,7 +170,6 @@ Type: System.Int64
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -194,7 +187,6 @@ Defines the temporary Path where are located the XML source files.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: 0
@@ -214,7 +206,6 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: 1
 Default value: None
@@ -233,7 +224,6 @@ Type: System.String
 Parameter Sets: DocumentLibraryImport
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -251,7 +241,6 @@ Defines the target document library subfolder path.
 Type: System.String
 Parameter Sets: DocumentLibraryImport
 Aliases:
-
 
 Required: False
 Position: Named
@@ -272,7 +261,6 @@ Parameter Sets: (All)
 Aliases:
 Accepted values: Production, ProductionChina, None, OnPremises
 
-
 Required: False
 Position: Named
 Default value: None
@@ -290,7 +278,6 @@ Defines the Target list path
 Type: System.String
 Parameter Sets: ListImport
 Aliases:
-
 
 Required: True
 Position: Named
@@ -310,7 +297,6 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: 3
 Default value: None
@@ -328,7 +314,6 @@ Defines the file mapping of the user.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: Named

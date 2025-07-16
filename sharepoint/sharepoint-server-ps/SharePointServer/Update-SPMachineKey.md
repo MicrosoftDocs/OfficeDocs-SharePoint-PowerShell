@@ -24,14 +24,14 @@ The \`Update-SPMachineKey\` cmdlet deploys ASP.NET view state decryption and val
 
 ## EXAMPLES
 
-### -------------EXAMPLE 1------------- 
+### EXAMPLE 1
 ```powershell
 Update-SPMachineKey -WebApplication http://sitename
 ```
 
 This example deploys the ASP.NET view state decryption and validation keys stored in the configuration database for web application 'http://sitename' to all servers in the farm.
 
-### -------------EXAMPLE 2------------- 
+### EXAMPLE 2
 ```powershell
 Update-SPMachineKey -WebApplication http://sitename -Local
 ```
@@ -41,6 +41,9 @@ This example deploys the ASP.NET view state decryption and validation keys store
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -53,7 +56,6 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -63,6 +65,9 @@ Accept wildcard characters: False
 ```
 
 ### -Local
+
+> Applicable: SharePoint Server Subscription Edition
+
 Deploy the decryption and validation keys only to the local server.
 Other servers in the farm will continue to use the previous decryption and validation keys.
 Web sessions that are load balanced across multiple servers in the farm will fail if these keys are not synchronized on every server in the farm.
@@ -73,7 +78,6 @@ If this parameter is not specified, the decryption and validation keys will be d
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -83,13 +87,15 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name, URL, or GUID of the Web application.
 
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -99,13 +105,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -115,6 +123,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -122,7 +133,6 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

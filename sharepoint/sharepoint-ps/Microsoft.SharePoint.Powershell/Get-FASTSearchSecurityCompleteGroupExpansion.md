@@ -33,7 +33,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1-----------------
+### EXAMPLE 1
 ```
 Get-FASTSearchSecurityCompleteGroupExpansion -Identity ln1 -User user1
 ```
@@ -43,13 +43,15 @@ This example retrieves complete group expansion information for "user1" in the u
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: FAST Server for SharePoint 2010
+
 The identity of the user store containing the user to expand.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: 1
@@ -59,13 +61,15 @@ Accept wildcard characters: False
 ```
 
 ### -User
+
+> Applicable: FAST Server for SharePoint 2010
+
 The user or group identifier to expand.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: 2
@@ -75,13 +79,15 @@ Accept wildcard characters: False
 ```
 
 ### -ExtraProperties
+
+> Applicable: FAST Server for SharePoint 2010
+
 If specified, the command gets the extra properties for all principals (user and groups) returned by the resolve.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 3
@@ -91,14 +97,16 @@ Accept wildcard characters: False
 ```
 
 ### -XmlFile
+
+> Applicable: FAST Server for SharePoint 2010
+
 The absolute path to an XML file which is accessible and writable from the security manager.
 If specified, complete expansion information is written as XML to this file.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 4
@@ -108,13 +116,15 @@ Accept wildcard characters: False
 ```
 
 ### -Worker
+
+> Applicable: FAST Server for SharePoint 2010
+
 The optional Worker parameter specifies the WorkerPoolNode object for the security worker that is to handle the request.
 
 ```yaml
 Type: WorkerPoolNode
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 9999

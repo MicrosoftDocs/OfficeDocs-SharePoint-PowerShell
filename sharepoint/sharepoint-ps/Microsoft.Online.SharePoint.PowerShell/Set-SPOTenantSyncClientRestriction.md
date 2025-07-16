@@ -148,7 +148,6 @@ Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Blocking
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -164,7 +163,6 @@ Accept wildcard characters: False
 Type: System.Boolean
 Parameter Sets: ReportProblemDialogFeature
 Aliases:
-
 
 Required: True
 Position: Named
@@ -184,7 +182,6 @@ Type: System.String
 Parameter Sets: Blocking
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -202,7 +199,6 @@ Enables the feature to block sync originating from domains that are not present 
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: Blocking
 Aliases:
-
 
 Required: False
 Position: Named
@@ -224,7 +220,6 @@ Blocks certain file types from syncing with the new sync client (OneDrive.exe).
 Type: System.String
 Parameter Sets: FileExclusion
 Aliases:
-
 
 Required: False
 Position: Named

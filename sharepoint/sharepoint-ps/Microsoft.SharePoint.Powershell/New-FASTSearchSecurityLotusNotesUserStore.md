@@ -6,7 +6,7 @@ applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 title: New-FASTSearchSecurityLotusNotesUserStore
 ---
 
@@ -36,7 +36,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 new-FASTSearchSecurityLotusNotesUserStore ln1
 ```
@@ -45,7 +45,7 @@ This example creates a new security Lotus Notes user store with a user store ide
 
 This example uses default values for all parameters except the required Identity parameter.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 2 (FAST Server for SharePoint 2010)
 ```
 Get-FASTSearchSecurityLotusNotesUserStore -Identity ln1 | New-FASTSearchSecurityLotusNotesUserStore -Identity ln3 -UseViewSecurity $true
 ```
@@ -56,13 +56,15 @@ The New-FASTSearchSecurityLotusNotesUserStore command uses the ObjectToClone obj
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: FAST Server for SharePoint 2010
+
 User store identity.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: 1
@@ -72,13 +74,15 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
+> Applicable: FAST Server for SharePoint 2010
+
 A brief explanation of the user store.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 2
@@ -88,6 +92,9 @@ Accept wildcard characters: False
 ```
 
 ### -UseDenyOnDefault
+
+> Applicable: FAST Server for SharePoint 2010
+
 If true, support for default access with deny on users/groups is enabled on database level security.
 
 You must enable this filter for an inverse security model: first grant access to everyone, and then explicitly deny access to certain groups or users.
@@ -95,8 +102,7 @@ You must enable this filter for an inverse security model: first grant access to
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 3
@@ -106,6 +112,9 @@ Accept wildcard characters: False
 ```
 
 ### -UseDocumentSecurity
+
+> Applicable: FAST Server for SharePoint 2010
+
 If true, item security is enabled (i.e., the filter contains an item level security condition).
 
 If set to false, item level security is ignored; only database level security (and possibly view security) is used.
@@ -115,8 +124,7 @@ If items always inherit the ACLs of the database, you can turn off this option.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 4
@@ -126,6 +134,9 @@ Accept wildcard characters: False
 ```
 
 ### -UseWildcardSecurity
+
+> Applicable: FAST Server for SharePoint 2010
+
 If true, database access through wildcard group entry (starting with */) is enabled.
 
 If set to false, the wildcard check is ignored.
@@ -134,8 +145,7 @@ Only normal groups are checked against the database ACL.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 5
@@ -145,6 +155,9 @@ Accept wildcard characters: False
 ```
 
 ### -UseViewSecurity
+
+> Applicable: FAST Server for SharePoint 2010
+
 If true, view security is enabled (i.e., the filter contains a view level security condition).
 
 If set to false, view level security is ignored; only database level security (and possibly item security) is used.
@@ -154,8 +167,7 @@ If views always inherit the ACLs of the database, or if views are not indexed, y
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 6
@@ -165,13 +177,15 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPrefix
+
+> Applicable: FAST Server for SharePoint 2010
+
 A string value prepended to the document ACL to control which items the user is allowed access to and which items will be returned in the query.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 7
@@ -181,13 +195,15 @@ Accept wildcard characters: False
 ```
 
 ### -DenyPrefix
+
+> Applicable: FAST Server for SharePoint 2010
+
 A string value prepended to the ACL to control which items the user is denied access to and which items are not returned from the query.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 8
@@ -197,6 +213,9 @@ Accept wildcard characters: False
 ```
 
 ### -NonIndexableCharacterHandling
+
+> Applicable: FAST Server for SharePoint 2010
+
 Specifies what to do with ACL values that match the NonIndexableCharacterRegExPattern regular expression.
 
 Valid values:
@@ -208,8 +227,7 @@ Valid values:
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 9
@@ -219,13 +237,15 @@ Accept wildcard characters: False
 ```
 
 ### -NonIndexableCharacterEncodingPrefix
+
+> Applicable: FAST Server for SharePoint 2010
+
 If NonIndexableCharacterHandling is set to encodeWithPrefix, this parameter specifies the prefix added to the encoded ACL.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 10
@@ -235,6 +255,9 @@ Accept wildcard characters: False
 ```
 
 ### -NonIndexableCharacterPattern
+
+> Applicable: FAST Server for SharePoint 2010
+
 Specifies a regular expression pattern used to detect non-indexable characters in an ACL.
 
 Identities matching this regular expression pattern will be processed based on NonIndexableCharacterHandling.
@@ -242,8 +265,7 @@ Identities matching this regular expression pattern will be processed based on N
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: 11
@@ -253,13 +275,15 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectToClone
+
+> Applicable: FAST Server for SharePoint 2010
+
 A Lotus Notes user store object whose property values are used as a baseline for the Lotus Notes user store being created.
 
 ```yaml
 Type: LotusNotesUserStore
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named

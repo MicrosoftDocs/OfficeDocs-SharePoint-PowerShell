@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Configures one or more common settings for all web services.
 
-
 ## SYNTAX
 
 ### SslCertificateImport (Default)
@@ -46,20 +45,21 @@ The `Set- SPServiceHostConfig` cmdlet configures one or more common settings for
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE-----------------------
+### EXAMPLE
 ```powershell
 Set-SPServiceHostConfig -Port 12345
 ```
 
 This example sets the HTTP port for the web services.
 
-
 ## PARAMETERS
 
 ### -AllowLegacyEncryption
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that older SSL and TLS protocol versions and cipher suites are allowed to be used with this IIS website.
 Legacy encryption is weaker than modern encryption and is not recommended.
 
@@ -72,7 +72,6 @@ This parameter is only valid when used with the SecureSocketsLayer parameter.
 Type: SwitchParameter
 Parameter Sets: SslCertificateImport, SslCertificateReference
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -82,6 +81,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -93,8 +95,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -104,13 +105,15 @@ Accept wildcard characters: False
 ```
 
 ### -HttpPort
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the new port for the web service.
 
 ```yaml
 Type: Int32
 Parameter Sets: SslCertificateImport, SslCertificateReference
 Aliases: Port
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -120,13 +123,15 @@ Accept wildcard characters: False
 ```
 
 ### -HttpsPort
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the new secure port for the web service.
 
 ```yaml
 Type: Int32
 Parameter Sets: SslCertificateImport, SslCertificateReference
 Aliases: SecurePort
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -136,13 +141,15 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the identity of the web service application to configure.
 
 ```yaml
 Type: SPIisWebServiceSettings
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -152,13 +159,15 @@ Accept wildcard characters: False
 ```
 
 ### -ImportSslCertificate
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the SSL Certificate to use for secure protocols.
 
 ```yaml
 Type: X509Certificate2
 Parameter Sets: SslCertificateImport
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -168,13 +177,15 @@ Accept wildcard characters: False
 ```
 
 ### -NetTcpPort
+
+> Applicable: SharePoint Server Subscription Edition
+
 Sets the TCP port for the web service.
 
 ```yaml
 Type: Int32
 Parameter Sets: SslCertificateImport, SslCertificateReference
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -184,13 +195,15 @@ Accept wildcard characters: False
 ```
 
 ### -NoWait
+
+> Applicable: SharePoint Server Subscription Edition
+
 For more information, see TechNet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SslCertificateImport, SslCertificateReference
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -200,13 +213,15 @@ Accept wildcard characters: False
 ```
 
 ### -RunInProcess
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies to update the web service application configuration using the current process instead of a SharePoint Timer job.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: SslCertificateReferenceRunInProcess
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -216,13 +231,15 @@ Accept wildcard characters: False
 ```
 
 ### -SslCertificateStoreName
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the certificate store containing the SSL certificate to retrieve for secure protocols.
 
 ```yaml
 Type: String
 Parameter Sets: SslCertificateReference, SslCertificateReferenceRunInProcess
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -232,13 +249,15 @@ Accept wildcard characters: False
 ```
 
 ### -SslCertificateThumbprint
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the thumbprint of the SSL certificate to retrieve for secure protocols.
 
 ```yaml
 Type: String
 Parameter Sets: SslCertificateReference, SslCertificateReferenceRunInProcess
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: Named
@@ -248,6 +267,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: \`get-help about_commonparameters\`
 
@@ -255,7 +277,6 @@ For more information, type the following command: \`get-help about_commonparamet
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -265,6 +286,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -272,7 +296,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

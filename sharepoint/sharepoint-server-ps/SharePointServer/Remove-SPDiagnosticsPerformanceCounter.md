@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes an instance of a performance counter.
 
-
 ## SYNTAX
 
 ```
@@ -31,36 +30,35 @@ There is no user interface.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 Remove-SPDiagnosticsPerformanceCounter -category ASP.NET
 ```
 
 This example removes all the counters in the category ASP.NET on front end Web servers.
 
-
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 Remove-SPDiagnosticsPerformanceCounter -category ASP.NET -Counter "Requests Queued"
 ```
 
 This example removes the counters in the category ASP.NET that have requests queued on front end Web servers.
 
-
-### ------------------EXAMPLE 3------------------
+### EXAMPLE 3
 ```powershell
 Remove-SPDiagnosticsPerformanceCounter -category Processor -counter "% Processor Time" -instance "_Total" -databaseserver
 ```
 
 This example removes the counters of the _Total instance, with the counter % Processor Time in the category Processor on database servers.
 
-
 ## PARAMETERS
 
 ### -Category
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the category of performance counters to remove.
 
 The type must be a valid name of a category of performance counters; for example, ASP.NET, PhysicalDisk, or Processor.
@@ -68,8 +66,7 @@ The type must be a valid name of a category of performance counters; for example
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 2
@@ -79,6 +76,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -90,8 +90,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -101,6 +100,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -108,7 +110,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -118,6 +119,9 @@ Accept wildcard characters: False
 ```
 
 ### -Counter
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the type of counter to remove.
 If this parameter is not specified, this cmdlet removes all performance counters of the specified category.
 
@@ -127,8 +131,7 @@ Disk Queue Length, and % Processor Time.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -138,13 +141,15 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServer
+
+> Applicable: SharePoint Server Subscription Edition
+
 Removes the specified performance counters that are collected on the database servers in the farm.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -154,6 +159,9 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the instance name of the performance counter to remove.
 If this parameter is not specified, this cmdlet removes all instances of the specified performance counter.
 
@@ -162,8 +170,7 @@ The type must be a valid name of a performance counter instance; for example Tot
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -173,13 +180,15 @@ Accept wildcard characters: False
 ```
 
 ### -WebFrontEnd
+
+> Applicable: SharePoint Server Subscription Edition
+
 Removes performance counters that are collected on the front end Web servers in the farm.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -189,6 +198,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -196,7 +208,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

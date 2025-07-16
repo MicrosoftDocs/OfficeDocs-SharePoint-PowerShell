@@ -28,14 +28,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------ 
+### EXAMPLE 1
 ```powershell
 Get-SPEnterpriseSearchHostController
 ```
 
 This example retrieves a list of all HostControllers in the farm with their status (primary/secondary) and repository version.
 
-### ------------------EXAMPLE 2------------------ 
+### EXAMPLE 2
 ```powershell
 $ssi = Get-SPEnterpriseSearchServiceInstance -Local
 Get-SPEnterpriseSearchHostController -SearchServiceInstance $ssi
@@ -46,6 +46,9 @@ This example retrieves the status information for the SearchHostController on th
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -53,8 +56,7 @@ When the Global parameter is used, all objects are contained in the global store
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -64,13 +66,15 @@ Accept wildcard characters: False
 ```
 
 ### -SearchServiceInstance
+
+> Applicable: SharePoint Server Subscription Edition
+
 The Search Service instance of the server from where the SearchHostController object is returned.
 
 ```yaml
 Type: SearchServiceInstancePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

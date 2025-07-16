@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Extends the range of a specified scale-out database.
 
-
 ## SYNTAX
 
 ```
@@ -26,10 +25,9 @@ Use the `Set-SPScaleOutDatabaseDataRange` cmdlet to extend the range of a specif
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### EXAMPLE
 ```powershell
 $databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
 $database = $databases[0]
@@ -39,17 +37,18 @@ Set-SPScaleOutDatabaseDataRange -Database $database -Range $state.Range -NewRang
 
 This example extends the data range end point of the first database in the specified service application up to the maximum range point.
 
-
 ## PARAMETERS
 
 ### -Database
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the scale-out database to which to extend the data range.
 
 ```yaml
 Type: SPDatabasePipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -59,13 +58,15 @@ Accept wildcard characters: False
 ```
 
 ### -IsUpperSubRange
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether to set the start or the end point of the data range with the specified value in the NewRangePoint parameter.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -75,13 +76,15 @@ Accept wildcard characters: False
 ```
 
 ### -Range
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the expected data range of the scale-out database.
 
 ```yaml
 Type: SPScaleOutDataRange
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -91,6 +94,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -102,8 +108,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -113,6 +118,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -120,7 +128,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -130,6 +137,9 @@ Accept wildcard characters: False
 ```
 
 ### -NewRangePoint
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the new start or end point of the database.
 
 The maximum value is NULL.
@@ -137,8 +147,7 @@ The maximum value is NULL.
 ```yaml
 Type: Byte[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -148,6 +157,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -155,7 +167,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

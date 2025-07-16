@@ -21,7 +21,6 @@ Do not use.
 Remove-SPOUserInfo -LoginName <String> -Site <SpoSitePipeBind> [-RedactName <String>] [<CommonParameters>]
 ```
 
-
 ## DESCRIPTION
 
 Do not use.
@@ -40,7 +39,6 @@ Do not use.
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: Named
@@ -74,7 +72,6 @@ Do not use.
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: Named

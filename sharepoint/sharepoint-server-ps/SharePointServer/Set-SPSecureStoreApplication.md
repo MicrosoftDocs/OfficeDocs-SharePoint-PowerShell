@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets properties of a Secure Store application.
 
-
 ## SYNTAX
 
 ```
@@ -27,10 +26,9 @@ The `Set-SPSecureStoreApplication` cmdlet sets properties of a Secure Store appl
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------
+### EXAMPLE
 ```powershell
 $targetApp.FriendlyName = "Updated Contoso Target App"
 Set-SPSecureStoreApplication -Identity $application -TargetApplication $targetApp
@@ -38,17 +36,18 @@ Set-SPSecureStoreApplication -Identity $application -TargetApplication $targetAp
 
 This example sets a new display name Updated Contoso Target App for the target application.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the Secure Store application to update.
 
 ```yaml
 Type: SPSecureStoreApplication
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -58,13 +57,15 @@ Accept wildcard characters: False
 ```
 
 ### -Administrator
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the administrator of the Secure Store application.
 
 ```yaml
 Type: SPClaim[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -74,6 +75,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -85,8 +89,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -96,6 +99,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -103,7 +109,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -113,13 +118,15 @@ Accept wildcard characters: False
 ```
 
 ### -CredentialsOwnerGroup
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the claims object for the groups that own the group credentials.
 
 ```yaml
 Type: SPClaim[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -129,14 +136,16 @@ Accept wildcard characters: False
 ```
 
 ### -Fields
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the field information for the application.
 The default fields are username and password.
 
 ```yaml
 Type: TargetApplicationField[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -146,13 +155,15 @@ Accept wildcard characters: False
 ```
 
 ### -TargetApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the target application.
 
 ```yaml
 Type: TargetApplication
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -162,13 +173,15 @@ Accept wildcard characters: False
 ```
 
 ### -TicketRedeemer
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the ticket redeemer claim value.
 
 ```yaml
 Type: SPClaim[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -178,6 +191,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -185,7 +201,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

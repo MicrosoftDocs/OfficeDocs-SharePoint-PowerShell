@@ -7,7 +7,7 @@ title: Import-SPWeb
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # Import-SPWeb
@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 
 Imports a web, list, or library.
-
 
 
 ## SYNTAX
@@ -36,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------------------EXAMPLE---------------------- 
+### EXAMPLE
 ```
 Import-SPWeb https://site -Path export.cmp -UpdateVersions Overwrite
 ```
@@ -46,6 +45,9 @@ This example imports the contents of export.cmp into a site at https://site, ove
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the URL or GUID of the Web to import into.
 
 The type must be a valid URL, GUID, or object; for example, a valid URL, in the form https://server_name, or a GUID, in the form, 1234-4567-5678a.
@@ -53,8 +55,7 @@ The type must be a valid URL, GUID, or object; for example, a valid URL, in the 
 ```yaml
 Type: SPWebPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -64,6 +65,9 @@ Accept wildcard characters: False
 ```
 
 ### -Path
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of the import file.
 
 If the NoFileCompression parameter is used, a directory must be specified; otherwise, any file format is valid.
@@ -71,8 +75,7 @@ If the NoFileCompression parameter is used, a directory must be specified; other
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -82,13 +85,15 @@ Accept wildcard characters: False
 ```
 
 ### -ActivateSolutions
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies whether user solutions are activated during import.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -98,6 +103,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -109,8 +117,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -120,6 +127,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -127,7 +137,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -137,13 +146,15 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 This parameter has no function in this cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -153,13 +164,15 @@ Accept wildcard characters: False
 ```
 
 ### -HaltOnError
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Stops the import process when an error occurs.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -169,13 +182,15 @@ Accept wildcard characters: False
 ```
 
 ### -HaltOnWarning
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Stops the import process when a warning occurs.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -185,6 +200,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeUserCustomAction
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies whether User Custom Actions are included during import.
 
 Valid values are:
@@ -194,8 +212,7 @@ All, None
 ```yaml
 Type: SPIncludeUserCustomAction
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -206,13 +223,14 @@ Accept wildcard characters: False
 
 ### -IncludeUserSecurity
 
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Preserves the user security settings.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -222,6 +240,9 @@ Accept wildcard characters: False
 ```
 
 ### -NoFileCompression
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Either enables or disables file compression in the import package.
 The import package is stored in the folder specified by the Path parameter or Identity parameter.
 We recommend that you use this parameter for performance reasons.
@@ -230,8 +251,7 @@ If compression is enabled, the import process can increase by approximately 30 p
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -241,6 +261,9 @@ Accept wildcard characters: False
 ```
 
 ### -NoLogFile
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Suppresses the generation of an import log file.
 If this parameter is absent, the Import-SPWeb cmdlet will generate an export log file in the same location as the export package.
 The log file uses Unified Logging Service (ULS).
@@ -251,8 +274,7 @@ However, for performance reasons, you might not want to generate a log file.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -262,6 +284,9 @@ Accept wildcard characters: False
 ```
 
 ### -UpdateVersions
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Indicates how to resolve situations where a file to be imported to a site already exists in that site.
 If the UpdateVersions parameter is absent, the import operation by default uses a value of 1 (Append).
 
@@ -282,8 +307,7 @@ Append, Ignore, Overwrite
 ```yaml
 Type: SPUpdateVersions
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -293,6 +317,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -300,7 +327,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -310,13 +336,15 @@ Accept wildcard characters: False
 ```
 
 ### -PreserveDeletedUserMetadataReferences
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Attempts to opulates the 'Author' ('Created By') field for items even if the SPUser object was marked as deleted on the destination site.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

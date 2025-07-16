@@ -7,7 +7,7 @@ title: New-SPAuthenticationProvider
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # New-SPAuthenticationProvider
@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 
 Creates a new authentication provider in the farm.
-
 
 
 ## SYNTAX
@@ -55,7 +54,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------------------------EXAMPLE1------------------ 
+### ---------------------------EXAMPLE1------------------
 ```
 $ap = New-SPAuthenticationProvider -UseWindowsIntegratedAuthentication
 Set-SPWebApplication -Name "Claims Windows Web App" -ApplicationPool "Claims App Pool" -ApplicationPoolAccount "redmond\appool" -Url http://<servername> -Port 80 -AuthenticationProvider $ap
@@ -63,7 +62,7 @@ Set-SPWebApplication -Name "Claims Windows Web App" -ApplicationPool "Claims App
 
 This example creates a Windows claims authentication provider.
 
-### ---------------------------EXAMPLE2------------------ 
+### ---------------------------EXAMPLE2------------------
 ```
 $ap = New-SPAuthenticationProvider -ASPNETMembershipProvider "membership" -ASPNETRoleProviderName "rolemanager"
 Set-SPWebApplication -Name "Claims Windows Web App" -ApplicationPool "Claims App Pool" -ApplicationPoolAccount "redmond\appool" -Url http://<servername> -Port 80 -AuthenticationProvider $ap
@@ -71,7 +70,7 @@ Set-SPWebApplication -Name "Claims Windows Web App" -ApplicationPool "Claims App
 
 This example creates an authentication provider that is based on the ASP.NET membership role provider.
 
-### ---------------------------EXAMPLE3------------------ 
+### ---------------------------EXAMPLE3------------------
 ```
 $ap = New-SPAuthenticationProvider -TrustedIdentityTokenIssuer | Get-SPTrustedIdentityTokenIssuer "LiveIDSTS"
 Set-SPWebApplication -Name "Claims Windows Web App" -ApplicationPool "Claims App Pool" -ApplicationPoolAccount "redmond\appool" -Url http://<servername> -Port 80 -AuthenticationProvider $ap
@@ -82,6 +81,9 @@ This example creates a trusted token issuer authentication provider.
 ## PARAMETERS
 
 ### -ASPNETMembershipProvider
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of the membership provider.
 
 The value must be a valid name of an ASP.NET membership provider; for example, myMembershipProvider.
@@ -89,8 +91,7 @@ The value must be a valid name of an ASP.NET membership provider; for example, m
 ```yaml
 Type: String
 Parameter Sets: Forms
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -100,6 +101,9 @@ Accept wildcard characters: False
 ```
 
 ### -ASPNETRoleProviderName
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of the role provider.
 
 The value must be a valid name of an ASP.NET role provider; for example, myRoleProvider.
@@ -107,8 +111,7 @@ The value must be a valid name of an ASP.NET role provider; for example, myRoleP
 ```yaml
 Type: String
 Parameter Sets: Forms
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -118,6 +121,9 @@ Accept wildcard characters: False
 ```
 
 ### -TrustedIdentityTokenIssuer
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the identity of the authentication provider.
 
 The value must be in one of the following forms:
@@ -129,8 +135,7 @@ The value must be in one of the following forms:
 ```yaml
 Type: SPTrustedIdentityTokenIssuerPipeBind
 Parameter Sets: Trusted
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -140,13 +145,15 @@ Accept wildcard characters: False
 ```
 
 ### -AllowAnonymous
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies whether the web application allows anonymous access.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Windows
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -156,6 +163,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -167,8 +177,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -178,13 +187,15 @@ Accept wildcard characters: False
 ```
 
 ### -DisableKerberos
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies whether the web application disables Kerberos authentication.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Windows
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -194,13 +205,15 @@ Accept wildcard characters: False
 ```
 
 ### -UseBasicAuthentication
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies whether the web application uses Basic authentication.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Windows
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -210,13 +223,15 @@ Accept wildcard characters: False
 ```
 
 ### -UseWindowsIntegratedAuthentication
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies whether the web application uses Integrated Windows authentication.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Windows
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

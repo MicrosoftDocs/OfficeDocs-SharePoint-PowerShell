@@ -17,7 +17,6 @@ ms.reviewer:
 Returns all managed paths that match the given criteria.
 
 
-
 ## SYNTAX
 
 ### HostHeader
@@ -37,7 +36,7 @@ This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see [Cmdlet parameter sets](https://learn.microsoft.com/powershell/scripting/developer/cmdlet/cmdlet-parameter-sets).
 
-The Get-SPManagedPath cmdlet returns the SharePoint managed path that matches the provided Identity for either a Web application, site collection or for all host-named site collections. 
+The Get-SPManagedPath cmdlet returns the SharePoint managed path that matches the provided Identity for either a Web application, site collection or for all host-named site collections.
 If an Identity parameter is not provided, all managed paths for the given scope are returned.
 
 Host-named sites (no matter the Web application in which they are contained) share a single set of managed paths.
@@ -47,14 +46,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- 
+### EXAMPLE 1
 ```
 Get-SPManagedPath -WebApplication https://sitename
 ```
 
 This example returns all managed paths for the specified Web application.
 
-### --------------EXAMPLE 2----------------- 
+### EXAMPLE 2
 ```
 Get-SPManagedPath -identity "Sites" -HostHeader
 ```
@@ -64,6 +63,9 @@ This example gets the Sites managed path from the host-named site collections-sc
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the URL or GUID of the managed path to return.
 
 The type must be a valid URL, in the https://server_name or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
@@ -71,8 +73,7 @@ The type must be a valid URL, in the https://server_name or a valid GUID (for ex
 ```yaml
 Type: SPPrefixPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: 1
@@ -82,13 +83,15 @@ Accept wildcard characters: False
 ```
 
 ### -HostHeader
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 If provided, the managed paths returned are for the host-named sites in the farm.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: HostHeader
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -98,6 +101,9 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the URL or GUID of the Web application from which to get the managed path.
 
 The type must be a valid URL, in the form https://server_name, or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
@@ -105,8 +111,7 @@ The type must be a valid URL, in the form https://server_name, or a valid GUID (
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: WebApplication
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -116,6 +121,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -127,8 +135,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

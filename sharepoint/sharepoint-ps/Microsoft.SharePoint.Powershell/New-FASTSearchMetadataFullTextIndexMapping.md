@@ -6,7 +6,7 @@ applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 title: New-FASTSearchMetadataFullTextIndexMapping
 ---
 
@@ -40,7 +40,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 C:\PS>$title = Get-FASTSearchMetadataManagedProperty -name title
 $fulltextindex = Get-FASTSearchMetadataFullTextIndex -Name thirdfulltextindex
@@ -54,13 +54,15 @@ After this mapping is made, the content must be re-fed to populate the full text
 ## PARAMETERS
 
 ### -FullTextIndex
+
+> Applicable: FAST Server for SharePoint 2010
+
 The full text index to add the mapping to.
 
 ```yaml
 Type: FullTextIndex
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: Named
@@ -70,6 +72,9 @@ Accept wildcard characters: False
 ```
 
 ### -Level
+
+> Applicable: FAST Server for SharePoint 2010
+
 The importance level of this managed property.
 Allowed values are 1 through 7.
 
@@ -77,7 +82,6 @@ Allowed values are 1 through 7.
 Type: Int32
 Parameter Sets: (All)
 Aliases: ImportanceLevel, L
-Applicable: FAST Server for SharePoint 2010
 
 Required: True
 Position: Named
@@ -87,13 +91,15 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedProperty
+
+> Applicable: FAST Server for SharePoint 2010
+
 The managed property being mapped to the full text index.
 
 ```yaml
 Type: ManagedProperty
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: Named

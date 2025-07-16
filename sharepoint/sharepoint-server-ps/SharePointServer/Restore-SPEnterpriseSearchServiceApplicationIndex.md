@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Restores the search index from the specified backup files.
 
-
 ## SYNTAX
 
 ### Restore
@@ -41,10 +40,9 @@ The first set of parameters is for Application Configuration Attach mode and the
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------
+### EXAMPLE 1
 ```powershell
 $ssa = Get-SPEnterpriseSearchServiceApplication
 $handle = Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -BackupFolder "\\sample\backup\spbr0000"
@@ -53,8 +51,7 @@ Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -Handl
 
 This example starts a restore of the search index in the default search service application from a backup located at \\\\sample\backup\spbr0000.
 
-
-### ------------------EXAMPLE 2------------------
+### EXAMPLE 2
 ```powershell
 $handle = Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -BackupFolder "\\sample\backup\spbr0000"
 Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication "Search Service Application" -Handle $handle
@@ -62,17 +59,18 @@ Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication "Search Ser
 
 This example checks the status of the running job to restore of the search index in the search service application Search Service Application with the handle $handle .
 
-
 ## PARAMETERS
 
 ### -SearchApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the search service application that contains the index files that should be restored.
 
 ```yaml
 Type: SearchServiceApplication
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -82,13 +80,15 @@ Accept wildcard characters: False
 ```
 
 ### -BackupFolder
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the full file path of the backup files.
 
 ```yaml
 Type: String
 Parameter Sets: Restore
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 2
@@ -98,13 +98,15 @@ Accept wildcard characters: False
 ```
 
 ### -Handle
+
+> Applicable: SharePoint Server Subscription Edition
+
 A handle returned from an initial call using Parameter set 1.
 
 ```yaml
 Type: String
 Parameter Sets: RestoreProgress
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 2
@@ -114,13 +116,15 @@ Accept wildcard characters: False
 ```
 
 ### -AllReplicas
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies a switch to restore all replicas, not just the primary.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Restore
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: 3
@@ -130,15 +134,16 @@ Accept wildcard characters: False
 ```
 
 ### -AllowMove
-Specifies a switch to move instead of copying files when restoring. 
-Moving may be faster than copying.
 
+> Applicable: SharePoint Server Subscription Edition
+
+Specifies a switch to move instead of copying files when restoring.
+Moving may be faster than copying.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Restore
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: 4
@@ -148,13 +153,15 @@ Accept wildcard characters: False
 ```
 
 ### -Retries
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the number of times to retry if temporary failure occurs.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: 5
@@ -164,13 +171,15 @@ Accept wildcard characters: False
 ```
 
 ### -RetryPauseSeconds
+
+> Applicable: SharePoint Server Subscription Edition
+
 Seconds to pause between retries if temporary failure occurs.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: 6
@@ -180,6 +189,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -191,8 +203,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -202,6 +213,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -209,7 +223,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -219,6 +232,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -226,7 +242,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

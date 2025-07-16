@@ -14,7 +14,6 @@ schema: 2.0.0
 Copies a content database to a new location by using Remote BLOB Storage (RBS).
 
 
-
 ## SYNTAX
 
 ```
@@ -34,14 +33,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -------------------EXAMPLE 1----------------------- 
+### EXAMPLE 1
 ```powershell
 Move-SPBlobStorageLocation WSS_Content
 ```
 
 This example copies the content database named WSS_Content from the Windows Internal Database to the same database name in SQL Server 2008 Express by using RBS.
 
-### -------------------EXAMPLE 2----------------------- 
+### EXAMPLE 2
 ```powershell
 Move-SPBlobStorageLocation WSS_Content -DestinationDatabase WSS_V4_Content -BackupDatabase WSSBackupDB -VerboseMod:$true
 ```
@@ -54,13 +53,15 @@ The output of this command displays log information to the Command Prompt window
 ## PARAMETERS
 
 ### -SourceDatabase
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the Windows Internal Database.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -70,6 +71,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -81,8 +85,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -92,6 +95,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -99,7 +105,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -109,14 +114,16 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationDatabase
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the migrated database.
 If the DestinationDatabase parameter is not specified, the SourceDatabase parameter is used.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -126,6 +133,9 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationDataSourceInstance
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the instance of the destination database.
 The value in the SourceDatabase parameter is migrated to this instance.
 The name of the instance of the database should be SQL Server with Service Pack 1 (SP1) and Cumulative Update 2 version or higher.
@@ -134,8 +144,7 @@ If the DestinationDataSourceInstance parameter is not specified, the local host 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -145,6 +154,9 @@ Accept wildcard characters: False
 ```
 
 ### -Dir
+
+> Applicable: SharePoint Server Subscription Edition
+
 Used for all disk operations, including storing temporary backups and database (.mdf) files of a migrated database.
 If the Dir parameter is not specified, a default directory of the destination SQL Server instance is used.
 The free space in this directory should be at least two times the size of the source database.
@@ -152,8 +164,7 @@ The free space in this directory should be at least two times the size of the so
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -163,14 +174,16 @@ Accept wildcard characters: False
 ```
 
 ### -VerboseMod
+
+> Applicable: SharePoint Server Subscription Edition
+
 Generates verbose log output to be displayed in the Command Prompt window.
 If the VerboseMod parameter is not specified, no output is displayed.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -180,6 +193,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -187,7 +203,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

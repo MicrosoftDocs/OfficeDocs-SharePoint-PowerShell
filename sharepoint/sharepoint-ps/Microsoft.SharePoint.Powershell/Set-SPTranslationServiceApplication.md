@@ -40,17 +40,19 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------------EXAMPLE---------------
+### EXAMPLE
 ```
 Set-SPTranslationServiceApplication TranslationService -JobExpirationDays 14 -TotalActiveProcesses 3
 ```
 
 This example sets the job expiration to 14 days and the number of worker processes per server to 3 for the Machine Translation Service application named TranslationService.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the URL or GUID of the instance of the Machine Translation service to set.
 
 The type must be a valid URL in the form, https://server_name or a valid GUID (for example, 12345678-90ab-cdef-1234-567890bcdefgh).
@@ -58,8 +60,7 @@ The type must be a valid URL in the form, https://server_name or a valid GUID (f
 ```yaml
 Type: TranslationServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -69,6 +70,9 @@ Accept wildcard characters: False
 ```
 
 ### -AddEnabledFileExtensions
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Comma delimited list of file extensions that you want to add to the set of enabled file extensions for the Machine Translation Service application
 
 To return a list of supported file extensions, type \[Microsoft.Office.TranslationServices.TranslationService\]::EnumerateFileExtensions().
@@ -76,8 +80,7 @@ To return a list of supported file extensions, type \[Microsoft.Office.Translati
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -87,13 +90,15 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationPool
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the managed application pool that the instance of Translation Service will run in.
 
 ```yaml
 Type: SPIisWebServiceApplicationPoolPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -103,6 +108,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -114,8 +122,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -125,13 +132,15 @@ Accept wildcard characters: False
 ```
 
 ### -ClearEnabledFileExtensions
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Disables all file extensions for the Machine Translation Service application.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -141,6 +150,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -148,7 +160,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -158,14 +169,16 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseCredential
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the SQL Server credentials used for this Translation Service instance.
 This parameter to be used only used for SQL authentication; if not present, Windows authentication is used instead.
 
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -175,13 +188,15 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the database name which is to be used for this Translation Service instance.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -191,13 +206,15 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServer
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the database server which is to be used for this Translation Service instance.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -207,13 +224,15 @@ Accept wildcard characters: False
 ```
 
 ### -DisableBinaryFileScan
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Determines whether Gatekeeper is run on binary files.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -223,13 +242,15 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAllFileExtensions
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Enables all file extensions for the Machine Translation Service application.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -239,13 +260,15 @@ Accept wildcard characters: False
 ```
 
 ### -FailoverDatabaseServer
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the SQL server instance that will be used as a backup to the primary SQL Server instance.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -255,13 +278,15 @@ Accept wildcard characters: False
 ```
 
 ### -JobExpirationDays
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the amount of days after which completed jobs can be automatically removed from the Machine Translation Service queue database.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -271,6 +296,9 @@ Accept wildcard characters: False
 ```
 
 ### -KeepAliveTimeout
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the length of time (in seconds) that the worker can be inactive before it is automatically stopped.
 
 The valid values are 60 to 600.
@@ -279,8 +307,7 @@ The default value is 60.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -290,14 +317,16 @@ Accept wildcard characters: False
 ```
 
 ### -MachineTranslationAddress
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the service URL the service application will use to call the translation provider.
 For example, https://api.microsofttranslator.com/v2/soap.svc
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -307,13 +336,15 @@ Accept wildcard characters: False
 ```
 
 ### -MachineTranslationCategory
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the category which will be used by the service when calling the translation provider.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -323,13 +354,15 @@ Accept wildcard characters: False
 ```
 
 ### -MachineTranslationClientId
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the AppId which will be used by the service when calling the translation provider.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -339,6 +372,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumBinaryFileSize
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the maximum file size in kilobytes (KB) which can be translated for file types which contain binary data.
 The valid values are 100 to 524288.
 The default value is 51200.
@@ -346,8 +382,7 @@ The default value is 51200.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -357,6 +392,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumItemsPerDay
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the maximum number of items which can be added to the job queue in a 24-hour period.
 A value of zero indicates no limit.
 
@@ -367,8 +405,7 @@ The default value is zero.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -378,6 +415,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumItemsPerPartitionPerDay
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the maximum number of items which can be added to the job queue in a 24-hour period per partition.
 A value of zero indicates no limit.
 
@@ -388,8 +428,7 @@ The default value is zero.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -399,6 +438,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumSyncTranslationRequests
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the maximum number of items which can be added to the sync queue.
 A valid of zero indicates no limit.
 
@@ -408,8 +450,7 @@ The default value is 10.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -419,6 +460,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumTextFileSize
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the maximum file size in kilobytes (KB) which can be translated for file types which contain mostly text data.
 The valid values are 100 to 15360.
 The default value is 5120.
@@ -426,8 +470,7 @@ The default value is 5120.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -437,6 +480,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumTranslationAttempts
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the maximum number of attempts an unsuccessful job is tried before it is marked as Failed.
 
 The valid values are 1 to 10.
@@ -445,8 +491,7 @@ The default value is 2.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -456,6 +501,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumTranslationTime
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the maximum length of time (in minutes) that a translation can take.
 
 The valid values are 60 to 3600.
@@ -464,8 +512,7 @@ The default value is 600.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -475,6 +522,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumWordCharacterCount
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the maximum character count for a Microsoft Word document which can be translated.
 
 The valid Int values are 10000 to 10000000.
@@ -483,8 +533,7 @@ The default value is 500000.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -494,6 +543,9 @@ Accept wildcard characters: False
 ```
 
 ### -RecycleProcessThreshold
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the number of documents which are translated before a Translation Worker process is recycled.
 
 The valid values are 1 to 1,000.
@@ -502,8 +554,7 @@ The default value is 100.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -513,6 +564,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveEnabledFileExtensions
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Comma delimited list of file extensions that you want to remove from the set of enabled file extensions for the Machine Translation Service application.
 
 To return a list of supported file extensions, type \[Microsoft.Office.TranslationServices.TranslationService\]::EnumerateFileExtensions().
@@ -520,8 +574,7 @@ To return a list of supported file extensions, type \[Microsoft.Office.Translati
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -531,6 +584,9 @@ Accept wildcard characters: False
 ```
 
 ### -TimerJobFrequency
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the frequency (in minutes) with which the timer job for this service application runs.
 The valid values are 1 to 59.
 The default value is 15 minutes.
@@ -538,8 +594,7 @@ The default value is 15 minutes.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -549,6 +604,9 @@ Accept wildcard characters: False
 ```
 
 ### -TotalActiveProcesses
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the number of Translation Workers which are simultaneously running on a single machine.
 
 The valid values are 1 to 5.
@@ -557,8 +615,7 @@ The default value is 1.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -568,6 +625,9 @@ Accept wildcard characters: False
 ```
 
 ### -TranslationsPerInstance
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the number of translations dispatched to each service instance every time the timer job is run.
 
 Valid values are 1 to 1,000.
@@ -576,8 +636,7 @@ The default value is 200.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -587,13 +646,15 @@ Accept wildcard characters: False
 ```
 
 ### -UseDefaultInternetSettings
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Determines whether the service application will use default Internet settings for the user service account to connect to the translation provider.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -603,13 +664,15 @@ Accept wildcard characters: False
 ```
 
 ### -WebProxyAddress
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the web proxy address and port that the service application will use to connect to the translation provider.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -619,6 +682,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -626,7 +692,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named

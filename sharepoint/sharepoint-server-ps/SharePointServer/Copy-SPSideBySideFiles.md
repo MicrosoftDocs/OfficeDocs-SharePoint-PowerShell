@@ -2,7 +2,7 @@
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/copy-spsidebysidefiles
-Applicable: SharePoint Server Subscription Edition
+
 title: Copy-SPSideBySideFiles
 schema: 2.0.0
 ---
@@ -24,7 +24,7 @@ In SharePoint Server 2016, zero down time in-place upgrade is available. If the 
 
 ## EXAMPLES
 
-### ------------Example 1 -----------
+### Example 1
 ```powershell
 Copy-SPSideBySideFiles -LogFile "C:\CopySideBySideFiles.log"
 ```
@@ -34,6 +34,9 @@ This example copies SideBySide files and writes a log data of the copy process t
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 **NOTE**: When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
@@ -41,8 +44,7 @@ Manages objects for the purpose of proper disposal. Use of objects, such as SPWe
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -52,13 +54,15 @@ Accept wildcard characters: False
 ```
 
 ### -LogFile
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the fully-qualified logfile name of SideBySide copy operation. If LogFile is not specified, the logfile will be placed in default SharePoint log files folder.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

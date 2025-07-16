@@ -18,7 +18,6 @@ ms.reviewer:
 
 Cmdlet to submit a new migration job referenced to a previously uploaded package in Azure Blob storage into to a site collection.
 
-
 ## SYNTAX
 
 ### AzureLocationsInline
@@ -72,7 +71,6 @@ Type: System.String
 Parameter Sets: AzureLocationsInline
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -90,7 +88,6 @@ Optional credentials of a site collection administrator to use to connect to the
 Type: Microsoft.Online.SharePoint.PowerShell.CredentialCmdletPipeBind
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: Named
@@ -110,7 +107,6 @@ Type: Microsoft.Online.SharePoint.Migration.EncryptionParameters
 Parameter Sets: (All)
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -128,7 +124,6 @@ A fully qualified URL and SAS token representing the Azure Blob Storage containe
 Type: System.String
 Parameter Sets: AzureLocationsInline
 Aliases:
-
 
 Required: True
 Position: 1
@@ -148,7 +143,6 @@ Type: Microsoft.Online.SharePoint.Migration.MigrationPackageAzureLocations
 Parameter Sets: AzureLocationsPipebind
 Aliases:
 
-
 Required: True
 Position: 1
 Default value: None
@@ -166,7 +160,6 @@ Indicates to not create a log file. The default is to create a new CreateMigrati
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: Named
@@ -186,7 +179,6 @@ Type: System.String
 Parameter Sets: AzureLocationsInline
 Aliases:
 
-
 Required: True
 Position: 2
 Default value: None
@@ -204,7 +196,6 @@ The fully qualified target web URL where the package will be imported into. This
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: 0

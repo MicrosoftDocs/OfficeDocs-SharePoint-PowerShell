@@ -28,7 +28,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ## EXAMPLES
 
-### ------------ Example 1 --------------------  
+### Example 1
 ```
 
 ```
@@ -36,13 +36,15 @@ For permissions and the most current information about Windows PowerShell for Pr
 ## PARAMETERS
 
 ### -Url
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Microsoft internal use only.
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: True
 Position: Named
@@ -52,13 +54,15 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Microsoft internal use only.
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: False
 Position: Named

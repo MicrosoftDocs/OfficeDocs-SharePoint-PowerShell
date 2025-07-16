@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the identifier of the farm or tenant used by the Office Marketplace to issue App licenses.
 
-
 ## SYNTAX
 
 ```
@@ -27,10 +26,9 @@ To ensure you do not lose rights to the use of all Apps you have purchased on th
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### -----------EXAMPLE 1----------
+### EXAMPLE 1
 ```powershell
 $sa = Get-SPServiceApplication | where {$_.TypeName -eq "App Management Service Application"}
 Set-SPAppManagementDeploymentId -DeploymentId 3102B7C3-1866-48EE-91CB-84E20AD24BF2 -AppManagementServiceApplication $sa
@@ -38,8 +36,7 @@ Set-SPAppManagementDeploymentId -DeploymentId 3102B7C3-1866-48EE-91CB-84E20AD24B
 
 This example sets the deployment identifier of the current farm to 3102B7C3-1866-48EE-91CB-84E20AD24BF2.
 
-
-### -----------EXAMPLE 2----------
+### EXAMPLE 2
 ```powershell
 $sa = Get-SPServiceApplication | where {$_.TypeName -eq "App Management Service Application"}
 Get-SPSiteSubscription | where{$_.Id -eq "88f16a50-0530-4f3f-b749-24ef0b30d685"} | Set-SPAppManagementDeploymentId -DeploymentId 3102B7C3-1866-48EE-91CB-84E20AD24BF2 -AppManagementServiceApplication $sa
@@ -47,17 +44,18 @@ Get-SPSiteSubscription | where{$_.Id -eq "88f16a50-0530-4f3f-b749-24ef0b30d685"}
 
 This example sets the deployment identifier of the tenant with the site subscription identifier 88f16a50-0530-4f3f-b749-24ef0b30d685 to 3102B7C3-1866-48EE-91CB-84E20AD24BF2.
 
-
 ## PARAMETERS
 
 ### -AppManagementServiceApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the app management service application object that is running on the farm.
 
 ```yaml
 Type: AppManagementServiceApplication
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -67,6 +65,9 @@ Accept wildcard characters: False
 ```
 
 ### -DeploymentId
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the deployment identifier value for the tenant.
 This parameter works in conjunction with the value that is defined with Identity parameter.
 If Identity parameter is omitted, then it is assumed that this deployment identifier value belongs to the farm.
@@ -74,8 +75,7 @@ If Identity parameter is omitted, then it is assumed that this deployment identi
 ```yaml
 Type: Guid
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -85,6 +85,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -96,8 +99,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -107,6 +109,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -114,7 +119,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -124,6 +128,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Identifies the site subscription object representing the tenant to which the DeploymentId parameter is to be assigned.
 If the Identity parameter is omitted, it is assumed that the deployment identifier belongs to the farm.
 
@@ -131,7 +138,6 @@ If the Identity parameter is omitted, it is assumed that the deployment identifi
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All)
 Aliases: Subscription
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -141,6 +147,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -148,7 +157,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

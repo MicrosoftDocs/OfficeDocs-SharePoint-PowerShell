@@ -7,14 +7,13 @@ title: Reset-SPProjectQueueSettings
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 ---
 
 # Reset-SPProjectQueueSettings
 
 ## SYNOPSIS
 Resets all Project Server Queue settings to their default values for a specific Project Server Service Application.
-
 
 ## SYNTAX
 
@@ -28,10 +27,9 @@ Resets all Project Server Queue settings to their default values for a specific 
 
 For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251833 (https://go.microsoft.com/fwlink/p/?LinkId=251833).
 
-
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### EXAMPLE
 ```
 $sa = Get-SPServiceApplication | ?{$_.TypeName -eq 'Project Application Services'}
 Reset-SPProjectQueueSettings -ServiceApplication $sa
@@ -39,10 +37,12 @@ Reset-SPProjectQueueSettings -ServiceApplication $sa
 
 This example resets the queue settings for a Project Server Service Application service application.
 
-
 ## PARAMETERS
 
 ### -ServiceApplication
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 Specifies the Project Server service application to target.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name for a Project Server service application (for example, ProjectServiceApp1); or an instance of a valid PsiServiceApplication object.
@@ -51,7 +51,6 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: PsiServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: sa
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
 
 Required: False
 Position: Named
@@ -61,13 +60,15 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+
 {{Fill AssignmentCollection Description}}
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: Project Server 2013, Project Server 2016, Project Server 2019
+Aliases:
 
 Required: False
 Position: Named

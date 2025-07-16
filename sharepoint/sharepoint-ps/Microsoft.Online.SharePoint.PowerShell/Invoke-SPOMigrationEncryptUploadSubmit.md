@@ -83,7 +83,6 @@ Type: Microsoft.Online.SharePoint.PowerShell.CredentialCmdletPipeBind
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -102,7 +101,6 @@ Type: Microsoft.Online.SharePoint.Migration.MigrationPackageLocation
 Parameter Sets: ImplicitSourceParameterSet
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -120,7 +118,6 @@ Controls if a log will be created or not
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: Named
@@ -155,7 +152,6 @@ Type: System.String
 Parameter Sets: ExplicitSourceParameterSet
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -174,7 +170,6 @@ Type: System.String
 Parameter Sets: ExplicitSourceParameterSet
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -192,7 +187,6 @@ Target web URL
 Type: System.String
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: Named

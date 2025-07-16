@@ -39,14 +39,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 Set-FASTSearchMetadataFullTextIndex -name content -description "Central content repository"
 ```
 
 This example updates the description of the existing full text index named "content".
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 2 (FAST Server for SharePoint 2010)
 ```
 Set-FASTSearchMetadataFullTextIndex -Name content -StemmingEnabled 1
 ```
@@ -57,13 +57,15 @@ The content of the full text index must be recrawled/re-fed for this change to t
 ## PARAMETERS
 
 ### -FullTextIndex
+
+> Applicable: FAST Server for SharePoint 2010
+
 An object representing the full text index to be updated.
 
 ```yaml
 Type: FullTextIndex
 Parameter Sets: FullTextIndex
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: Named
@@ -73,13 +75,15 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: FAST Server for SharePoint 2010
+
 Name of the full text index to be updated.
 
 ```yaml
 Type: String
 Parameter Sets: Name
 Aliases: FullTextIndexName, N
-Applicable: FAST Server for SharePoint 2010
 
 Required: True
 Position: Named
@@ -89,13 +93,15 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
+> Applicable: FAST Server for SharePoint 2010
+
 A new description to use for the full text index.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -105,13 +111,15 @@ Accept wildcard characters: False
 ```
 
 ### -StemmingEnabled
+
+> Applicable: FAST Server for SharePoint 2010
+
 Enables or disables stemming for this full text index.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named

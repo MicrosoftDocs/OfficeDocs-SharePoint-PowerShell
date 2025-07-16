@@ -14,7 +14,6 @@ schema: 2.0.0
 Creates a backup file of site subscription data.
 
 
-
 ## SYNTAX
 
 ```
@@ -29,15 +28,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- 
+### EXAMPLE 1
 ```powershell
 Export-SPSiteSubscriptionSettings -Identity "https://siteCollection" -Path "C:\siteCollection_sitesubscriptionsettings.txt"
 ```
 
 The example backs up the subscription settings store of https://siteCollection.
 
-
-### --------------EXAMPLE 2----------------- 
+### EXAMPLE 2
 ```powershell
 $site = Get-SPSite https://siteCollection
 Export-SPSiteSubscriptionSettings -Identity $site.SiteSubscription -Path "C:\siteCollection_sitesubscriptionsettings.txt"
@@ -48,6 +46,9 @@ The example backs up the subscription settings store of https://siteCollection u
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the ID of the site subscription from which to back up data.
 
 The type must be a valid URL, in the form https://server_name or a Site Subscription object.
@@ -55,8 +56,7 @@ The type must be a valid URL, in the form https://server_name or a Site Subscrip
 ```yaml
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -66,6 +66,9 @@ Accept wildcard characters: False
 ```
 
 ### -Path
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the location of the output file.
 
 The type must be a valid path; for example,  C:/backupfile.back..
@@ -73,8 +76,7 @@ The type must be a valid path; for example,  C:/backupfile.back..
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -84,14 +86,16 @@ Accept wildcard characters: False
 ```
 
 ### -AdminProperties
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that only administrator subscription properties are exported.
 If this parameter is not set, only non-administrator subscription properties are exported.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -101,6 +105,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -112,8 +119,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -123,13 +129,15 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: SharePoint Server Subscription Edition
+
 Forces the output backup file (if provided) to overwrite any existing file at the given path.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

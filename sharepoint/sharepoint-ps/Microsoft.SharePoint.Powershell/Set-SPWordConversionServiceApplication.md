@@ -34,20 +34,21 @@ The `Set-SPWordConversionServiceApplication` cmdlet sets global properties of a 
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### -----------EXAMPLE-----------------
+### EXAMPLE
 ```
 Get-SPServiceApplication -Name WordServices1 | Set-SPWordConversionServiceApplication -TimerJobFrequency 30
 ```
 
 This example sets the timer job frequency of the WordServices1 application to 30 minutes.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the Word Automation Services application to update.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a Word Automation Services application (for example, WordSvcApp1); or an instance of a valid SPServiceApplication object.
@@ -55,8 +56,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: WordServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: True
 Position: 1
@@ -66,6 +66,9 @@ Accept wildcard characters: False
 ```
 
 ### -ActiveProcesses
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the number of conversion processes on each machine on which the service application runs.
 This value is equivalent to the number of simultaneous conversions.
 The default value is 8.
@@ -75,8 +78,7 @@ The type must be a valid integer in the range from 1 to 1000.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -86,6 +88,9 @@ Accept wildcard characters: False
 ```
 
 ### -AddSupportedFormats
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies a set of file formats to be enabled for use by the service application.
 
 The value must be a comma-delimited list of one or more of the following: docx, doc, mht, rtf, xml.
@@ -93,8 +98,7 @@ The value must be a comma-delimited list of one or more of the following: docx, 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -104,6 +108,9 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationPool
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the existing IIS managed application pool in which this instance of Word Automation Services runs.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of an application pool (for example, AppPoolName1); or an instance of a valid IISWebServiceApplicationPool object.
@@ -111,8 +118,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPIisWebServiceApplicationPoolPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -122,6 +128,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -133,8 +142,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -144,13 +152,15 @@ Accept wildcard characters: False
 ```
 
 ### -ClearSupportedFormats
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies that all file formats should be disabled for use by the service application.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -160,6 +170,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -167,7 +180,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -177,6 +189,9 @@ Accept wildcard characters: False
 ```
 
 ### -ConversionsPerInstance
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the number of items sent to each conversion process (see the ActiveProcesses parameter description earlier in this table) every time the timer job is run.
 The default value is 12.
 
@@ -185,8 +200,7 @@ The type must be a valid integer.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -196,6 +210,9 @@ Accept wildcard characters: False
 ```
 
 ### -ConversionTimeout
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the time, in minutes, after which a conversion that is marked InProgress is confirmed to be still running each time the timer job runs and if necessary, the conversion is restarted.
 The default value is 5.
 
@@ -204,8 +221,7 @@ The type must be a valid integer in the range from 1 to 60.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -215,6 +231,9 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseCredential
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the credentials to use for connecting to the database for the Word Automation Services application.
 Use this parameter only if SQL Authentication is used to access the service application database.
 
@@ -223,8 +242,7 @@ When the DatabaseCredential parameter is specified, the DatabaseName and Databas
 ```yaml
 Type: PSCredential
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -234,6 +252,9 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseName
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of the database to use for this instance of the Word Automation Services application.
 
 The type must be a valid SQL database name; for example, MetadataDB1.
@@ -241,8 +262,7 @@ The type must be a valid SQL database name; for example, MetadataDB1.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -252,6 +272,9 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServer
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the name of the host server for the Word Automation Services database.
 
 The type must be a valid SQL database server host name; for example, SQLServerHost1.
@@ -259,8 +282,7 @@ The type must be a valid SQL database server host name; for example, SQLServerHo
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -270,14 +292,16 @@ Accept wildcard characters: False
 ```
 
 ### -DisableBinaryFileScan
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies whether additional checks are run when Word documents are processed.
 Turn this setting off only if all documents processed by the service are trusted.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -287,13 +311,15 @@ Accept wildcard characters: False
 ```
 
 ### -DisableEmbeddedFonts
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies whether embedded fonts are ignored when present in input documents.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -303,6 +329,9 @@ Accept wildcard characters: False
 ```
 
 ### -KeepAliveTimeout
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the length of time, in seconds, that a conversion can be non-responsive before it is terminated.
 The default value is 30.
 
@@ -311,8 +340,7 @@ The type must be a valid integer in the range from 10 to 60.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -322,6 +350,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumConversionAttempts
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 The maximum number of conversion attempts before a conversion is marked with status "Failed".
 The default value is 2.
 
@@ -330,8 +361,7 @@ The type must be a valid integer in the range from 1 to 10.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -341,6 +371,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumConversionTime
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the maximum length of time, in seconds, that a conversion can run before it is terminated.
 The default value is 300.
 
@@ -349,8 +382,7 @@ The type must be a valid integer in the range from 60 to MaxInt.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -360,6 +392,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumMemoryUsage
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the maximum percentage of system memory which can be used by the service application.
 The default value is 100.
 
@@ -368,8 +403,7 @@ The type must be a valid integer in the range from 10 to 100.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -379,6 +413,9 @@ Accept wildcard characters: False
 ```
 
 ### -RecycleProcessThreshold
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the number of documents which are converted before a conversion process is recycled.
 For additional information about the conversion process, see the ActiveProcess parameter description earlier in this table.
 
@@ -387,8 +424,7 @@ The type must be a valid integer in the range from 1 to 1000.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -398,6 +434,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSupportedFormats
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies a set of file formats to be disabled for use by the service application.
 
 The value must be a comma delimited list of one or more of the following: docx, doc, mht, rtf, xml.
@@ -405,8 +444,7 @@ The value must be a comma delimited list of one or more of the following: docx, 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -416,6 +454,9 @@ Accept wildcard characters: False
 ```
 
 ### -TimerJobFrequency
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Specifies the frequency, in minutes, with which the timer job for this service application runs.
 The default value is 15.
 
@@ -424,8 +465,7 @@ The type must be a valid integer in the range from 1 to 59.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -435,6 +475,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -442,7 +485,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
 Required: False
 Position: Named
@@ -452,13 +494,15 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumGroupSize
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 {{Fill MaximumGroupSize Description}}
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -468,13 +512,15 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumSyncConversionRequests
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 {{Fill MaximumSyncConversionRequests Description}}
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named

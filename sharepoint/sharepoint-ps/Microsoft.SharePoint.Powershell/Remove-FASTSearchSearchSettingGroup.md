@@ -6,7 +6,7 @@ applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 title: Remove-FASTSearchSearchSettingGroup
 ---
 
@@ -28,21 +28,21 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 Remove-FASTSearchSearchSettingGroup -Name marketinggroup
 ```
 
 This example deletes the "marketinggroup" search setting group.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 2 (FAST Server for SharePoint 2010)
 ```
 Remove-FASTSearchSearchSettingGroup -Name marketinggroup -Force
 ```
 
 This example deletes the "marketinggroup" search setting group without being prompted to confirm the operation.
 
-### ---------------EXAMPLE 3----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 3 (FAST Server for SharePoint 2010)
 ```
 Remove-FASTSearchSearchSettingGroup -Name marketinggroup -WhatIf
 ```
@@ -52,13 +52,15 @@ This example describes what would happen if you executed the Remove-FASTSearchSe
 ## PARAMETERS
 
 ### -Name
+
+> Applicable: FAST Server for SharePoint 2010
+
 The name of the search setting group to delete.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: Named
@@ -68,6 +70,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: FAST Server for SharePoint 2010
+
 Activates user prompting to confirm the operation.
 If set, prompting is activated.
 
@@ -79,7 +84,6 @@ In cases where Confirm is not specified, the cmdlet will prompt if the $ConfirmP
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: FAST Server for SharePoint 2010
 
 Required: False
 Position: Named
@@ -89,13 +93,15 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: FAST Server for SharePoint 2010
+
 Overrides any user prompting settings so the user is not asked to confirm the operation.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -105,6 +111,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: FAST Server for SharePoint 2010
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: get-help about_commonparameters
 
@@ -112,7 +121,6 @@ For more information, type the following command: get-help about_commonparameter
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: FAST Server for SharePoint 2010
 
 Required: False
 Position: Named

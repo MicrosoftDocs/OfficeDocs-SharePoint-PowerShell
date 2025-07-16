@@ -14,7 +14,6 @@ schema: 2.0.0
 Adds a new instance of a performance counter to a Web front end computer or a database server.
 
 
-
 ## SYNTAX
 
 ### AddCounter
@@ -47,17 +46,16 @@ The Add-SPDiagnosticsPerformanceCounter cmdlet adds a performance counter to a f
 A performance counter is read and recorded in the usage database.
 By default, the new performance counter is added to the database servers in the farm.
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------ 
+### EXAMPLE 1
 ```powershell
 Add-SPDiagnosticsPerformanceCounter -category ASP.NET -Counter "Requests Queued"
 ```
 
 This example adds the counter that has the name ASP.NET\Requests Queued on front end Web servers.
 
-### ------------------EXAMPLE 2------------------ 
+### EXAMPLE 2
 ```powershell
 Add-SPDiagnosticsPerformanceCounter -category PhysicalDisk -counter "Avg. Disk Queue Length" -allinstances
 ```
@@ -65,7 +63,7 @@ Add-SPDiagnosticsPerformanceCounter -category PhysicalDisk -counter "Avg. Disk Q
 This example adds all instances of the counter PhysicalDisk in the category Avg.
 Disk Queue Length on front end Web servers.
 
-### ------------------EXAMPLE 3------------------ 
+### EXAMPLE 3
 ```powershell
 Add-SPDiagnosticsPerformanceCounter -category Processor -counter "% Processor Time" -instance "_Total" -databaseserver
 ```
@@ -75,6 +73,9 @@ This example adds the _Total instance of the counter % Processor Time in the cat
 ## PARAMETERS
 
 ### -Category
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the category of performance counter to add to the target Web front end computer or database server.
 
 The type must be a valid name of a category of performance counters; for example, ASP.NET, PhysicalDisk, or Processor.
@@ -82,8 +83,7 @@ The type must be a valid name of a category of performance counters; for example
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 2
@@ -93,6 +93,9 @@ Accept wildcard characters: False
 ```
 
 ### -Counter
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the type of counter to add to the target Web front end computer or database server.
 
 The type must be a valid name of counter type; for example, Requests Queued, Avg.
@@ -100,24 +103,10 @@ Disk Queue Length, and % Processor Time.
 
 ```yaml
 Type: String
-Parameter Sets: AddCounter
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Parameter Sets: AddCounter, AddInstance
+Aliases:
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
-Parameter Sets: AddInstance
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
@@ -125,15 +114,17 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the display name of the new performance counter.
 
 The type must be a valid name of a performance counter instance; for example Total_PerfCounter.
 
 ```yaml
 Type: String
-Parameter Sets: AddInstance
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Parameter Sets: AddInstance, AddMultipleCounters
+Aliases:
 
 Required: True
 Position: Named
@@ -142,27 +133,16 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-```yaml
-Type: String
-Parameter Sets: AddMultipleCounters
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -AllInstances
+
+> Applicable: SharePoint Server Subscription Edition
+
 Collects all instances of a counter category and type on the target Web front end computer or database server.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -172,6 +152,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -183,8 +166,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -194,6 +176,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -201,7 +186,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -211,13 +195,15 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseServer
+
+> Applicable: SharePoint Server Subscription Edition
+
 Adds the specified performance counter to all database servers in the farm.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -227,13 +213,15 @@ Accept wildcard characters: False
 ```
 
 ### -WebFrontEnd
+
+> Applicable: SharePoint Server Subscription Edition
+
 Adds the specified performance counter to all Web front end computers in the farm.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -243,6 +231,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -250,7 +241,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -260,13 +250,15 @@ Accept wildcard characters: False
 ```
 
 ### -CounterList
+
+> Applicable: SharePoint Server Subscription Edition
+
 {{Fill CounterList Description}}
 
 ```yaml
 Type: String[]
 Parameter Sets: AddMultipleCounters
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named

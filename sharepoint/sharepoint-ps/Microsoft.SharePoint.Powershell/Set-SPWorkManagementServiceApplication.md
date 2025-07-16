@@ -33,7 +33,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------------EXAMPLE---------------
+### EXAMPLE
 ```
 C:\PS>$wmservice = Get-SPServiceApplication -Name "Work Management Service Application"
 
@@ -47,6 +47,9 @@ This example sets the minimum time between provider refreshes to 10 minutes on t
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016
+
 Specifies the service application to update.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a subscription settings service application (for example, SubSettingsApp1); or an instance of a valid SPWorkManagementServiceApplication object
@@ -54,8 +57,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPWorkManagementServiceCmdletPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Aliases:
 
 Required: True
 Position: 1
@@ -65,14 +67,16 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationPool
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016
+
 Specifies the name of an application pool to use; for example, SharePoint - 1213.
 If no value is specified, the default application pool is used.
 
 ```yaml
 Type: SPIisWebServiceApplicationPoolPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Aliases:
 
 Required: False
 Position: Named
@@ -82,6 +86,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -93,8 +100,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Aliases:
 
 Required: False
 Position: Named
@@ -104,6 +110,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -111,7 +120,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -121,14 +129,16 @@ Accept wildcard characters: False
 ```
 
 ### -MinimumTimeBetweenProviderRefreshes
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016
+
 Specifies the minimum amount of time between cache update operations per user.
 If this time has not passed since the last successful refresh request for a user, the service application does not execute new refresh requests.
 
 ```yaml
 Type: TimeSpan
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Aliases:
 
 Required: False
 Position: Named
@@ -138,14 +148,16 @@ Accept wildcard characters: False
 ```
 
 ### -MinimumTimeBetweenSearchQueries
-Specifies the minimum amount of time between calls to the Search Service application to discover new SharePoint task lists where a user has tasks. 
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016
+
+Specifies the minimum amount of time between calls to the Search Service application to discover new SharePoint task lists where a user has tasks.
 If this time has not passed since the last successful call to Search for a user, the service application does not call Search during refresh operations.
 
 ```yaml
 Type: TimeSpan
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Aliases:
 
 Required: False
 Position: Named
@@ -155,13 +167,15 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016
+
 Specifies the name of the Work Management Service application.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Aliases:
 
 Required: False
 Position: Named
@@ -171,6 +185,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -178,7 +195,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -188,13 +204,15 @@ Accept wildcard characters: False
 ```
 
 ### -MinimumTimeBetweenEwsSyncSubscriptionSearches
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016
+
 This value specifies the minimum amount of time between calls into our routine that tries to find new tenants that want to sync EWS tasks.
 
 ```yaml
 Type: TimeSpan
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Aliases:
 
 Required: False
 Position: Named
@@ -204,13 +222,15 @@ Accept wildcard characters: False
 ```
 
 ### -NumberOfSubscriptionSyncsPerEwsSyncRun
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016
+
 This value specifies the maximum number of tenants the service will try to sync via EWS per Timer job interval
 
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Aliases:
 
 Required: False
 Position: Named
@@ -220,13 +240,15 @@ Accept wildcard characters: False
 ```
 
 ### -NumberOfUsersEwsSyncWillProcessAtOnce
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016
+
 This value specifies the maximum number of users a service instance machine will sync via EWS at one time across all tenants.
 
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Aliases:
 
 Required: False
 Position: Named
@@ -236,13 +258,15 @@ Accept wildcard characters: False
 ```
 
 ### -NumberOfUsersPerEwsSyncBatch
+
+> Applicable: SharePoint Server 2013, SharePoint Server 2016
+
 This value specifies the maximum number of users a service instance will try to sync on a given tenant via EWS per Timer job interval
 
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Aliases:
 
 Required: False
 Position: Named

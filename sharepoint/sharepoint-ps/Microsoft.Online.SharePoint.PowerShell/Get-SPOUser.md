@@ -84,7 +84,6 @@ Type: System.String
 Parameter Sets: ByGroup
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -102,7 +101,6 @@ Specifies the maximum number of users returned. The default value is to return 5
 Type: System.String
 Parameter Sets: All, ByGroup
 Aliases:
-
 
 Required: False
 Position: Named
@@ -122,7 +120,6 @@ Type: System.String
 Parameter Sets: ByLogin
 Aliases:
 
-
 Required: False
 Position: Named
 Default value: None
@@ -140,7 +137,6 @@ Specifies the URL of the site collection to get the user from.
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: Named

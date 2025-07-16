@@ -15,7 +15,6 @@ Displays all inconsistencies related to scale-out databases' ranges.
 
 
 
-
 ## SYNTAX
 
 ```
@@ -29,10 +28,9 @@ Use the Get-SPServerScaleOutDatabaseInconsistency cmdlet to return all inconsist
 
 
 
-
 ## EXAMPLES
 
-### -------------EXAMPLE-------------- 
+### EXAMPLE
 ```powershell
 $serviceApplication = Get-SPServiceApplication -Name "AppManagement"
 Get-SPServerScaleOutDatabaseInconsistency -ServiceApplication $serviceApplication
@@ -44,16 +42,16 @@ This example gets all the scale-out inconsistencies for the given service applic
 
 ### -ServiceApplication
 
-Specifies the service application for which to return the scale-out inconsistencies.
+> Applicable: SharePoint Server Subscription Edition
 
+Specifies the service application for which to return the scale-out inconsistencies.
 
 
 
 ```yaml
 Type: SPServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -63,6 +61,8 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
 
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
@@ -74,12 +74,10 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 
 
 
-
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -90,16 +88,16 @@ Accept wildcard characters: False
 
 ### -Confirm
 
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
-
 
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -110,9 +108,10 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
-
 
 
 
@@ -120,7 +119,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

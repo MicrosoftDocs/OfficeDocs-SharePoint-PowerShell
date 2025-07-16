@@ -38,21 +38,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -------------EXAMPLE 1------------- 
+### EXAMPLE 1
 ```powershell
 Update-SPDataRetrievalServiceConfig -Farm -Enable $false
 ```
 
 This example turns off the data retrieval service for the farm.
 
-### -------------EXAMPLE 2------------- 
+### EXAMPLE 2
 ```powershell
 Update-SPDataRetrievalServiceConfig -WebApplication http://MyOfficeApp1 -Inherit
 ```
 
 This example enables the Web application, MyOfficeApp1, to inherit the global settings.
 
-### -------------EXAMPLE 3------------- 
+### EXAMPLE 3
 ```powershell
 Update-SPDataRetrievalServiceConfig -WebApplication http://MyOfficeApp1 -Enable $false
 ```
@@ -62,6 +62,9 @@ This example turns off the data retrieval service for the Web application, MyOff
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -74,7 +77,6 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -84,6 +86,9 @@ Accept wildcard characters: False
 ```
 
 ### -DataSourceTimeout
+
+> Applicable: SharePoint Server Subscription Edition
+
 Set the response timeout in second.
 
 This setting applies to the following data retrieval services:
@@ -102,7 +107,6 @@ XmlUrlDataSource
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -112,13 +116,15 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
+
+> Applicable: SharePoint Server Subscription Edition
+
 @{Text=}
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -128,6 +134,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDataSourceControls
+
+> Applicable: SharePoint Server Subscription Edition
+
 Enable or disable the set of data source controls on this server.
 
 This setting applies to the following data source controls:
@@ -144,7 +153,6 @@ AggregateDataSource
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -154,6 +162,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableUpdateSupport
+
+> Applicable: SharePoint Server Subscription Edition
+
 Enable or disable the support for update queries.
 
 This setting applies to the following data retrieval services:
@@ -164,7 +175,6 @@ OLEDB
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -174,13 +184,15 @@ Accept wildcard characters: False
 ```
 
 ### -Farm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Apply the setting to the farm, and to all the SharePoint Web applications inherit the config.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Farm
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -190,13 +202,15 @@ Accept wildcard characters: False
 ```
 
 ### -Inherit
+
+> Applicable: SharePoint Server Subscription Edition
+
 Set whether inherit the global setting of the farm.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: WebApplication
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -206,13 +220,15 @@ Accept wildcard characters: False
 ```
 
 ### -LimitResponseSize
+
+> Applicable: SharePoint Server Subscription Edition
+
 The maximum size of the SOAP response that the data source returns to the data retrieval service, specified by kilobytes(KB).
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -222,13 +238,15 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Apply the setting to the specified SharePoint Web application.
 
 ```yaml
 Type: SPWebApplicationPipeBind
 Parameter Sets: WebApplication
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: True
 Position: 1
@@ -238,13 +256,15 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -254,13 +274,15 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

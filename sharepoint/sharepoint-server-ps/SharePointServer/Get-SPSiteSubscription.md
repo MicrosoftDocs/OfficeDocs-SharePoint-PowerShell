@@ -14,7 +14,6 @@ schema: 2.0.0
 Returns the site subscription for the given URL or all site subscriptions in the local farm.
 
 
-
 ## SYNTAX
 
 ```
@@ -30,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE---------------------- 
+### EXAMPLE
 ```powershell
 $SiteSub = Get-SPSiteSubscription https://Contoso.com
 $SiteSub = Get-SPSite https://contoso.com | Get-SPSiteSubscription
@@ -41,6 +40,9 @@ This example retrieves the site subscription for https://Contoso.com.
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the ID of the subscription.
 
 The type must be a valid URL, in the form https://server_name.
@@ -48,8 +50,7 @@ The type must be a valid URL, in the form https://server_name.
 ```yaml
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: 1
@@ -59,6 +60,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -70,8 +74,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

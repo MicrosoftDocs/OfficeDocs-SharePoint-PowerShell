@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 Sets properties of a user-defined function in Excel Services Application.
 
-
 ## SYNTAX
 
 ```
@@ -26,7 +25,7 @@ Set-SPExcelUserDefinedFunction [-Identity] <SPExcelUDFPipeBind>
 ```
 
 ## DESCRIPTION
-The `Set-SPExcelUserDefinedFunction` cmdlet sets properties of a user-defined function assembly. 
+The `Set-SPExcelUserDefinedFunction` cmdlet sets properties of a user-defined function assembly.
 Excel Services Application uses only user-defined functions that have an entry in the user-defined function list.
 User-defined functions are managed code assemblies that can be called from an Excel Services Application workbook by using standard Excel Services Application formula syntax.
 The assemblies can perform custom logic or other actions, such as refresh data.
@@ -34,28 +33,28 @@ Windows PowerShell cmdlets operate on the entries in the user-defined function l
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### --------------EXAMPLE 1--------------
+### EXAMPLE 1
 ```
 Set-SPExcelUserDefinedFunction -ExcelServiceApplication "My Excel Service" -Identity SampleCompany.SampleApplication.SampleUdf -Description "This is the new description for the sample UDF"
 ```
 
 This example changes the description of the user-defined function (UDF) to the UDF SampleCompany.SampleApplication.SampleUdf file for the Excel Services Application Web service application named My Excel Service.
 
-
-### --------------EXAMPLE 2--------------
+### EXAMPLE 2
 ```
 Get-SPExcelServiceApplication "My Excel Service" | Set-SPExcelUserDefinedFunction -Identity SampleCompany.SampleApplication.SampleUdf -Enable: $false
 ```
 
 This example disables the sample UDF SampleCompany.SampleApplication.SampleUdf file from the Excel Services Application named My Excel Service.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies the SPExcelUserDefinedFunction object to update.
 
 The type must be a valid name of the code assembly; for example, SampleCompany.SampleApplication.SampleUdf; or an instance of a valid SPExcelUDF object.
@@ -63,8 +62,7 @@ The type must be a valid name of the code assembly; for example, SampleCompany.S
 ```yaml
 Type: SPExcelUDFPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: True
 Position: 1
@@ -74,6 +72,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExcelServiceApplication
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies the Excel Services Application Web service application that contains the SPExcelUserDefinedFunction list object.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of an Excel Services Application Web service application in the farm (for example, MyExcelService1); or an instance of a valid SPExcelServiceApplication object.
@@ -81,8 +82,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPExcelServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: True
 Position: Named
@@ -92,17 +92,18 @@ Accept wildcard characters: False
 ```
 
 ### -Assembly
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies the strongly-typed name of the assembly.
 The name must be unique in the list of user-defined functions and cannot be more than 4096 alphanumeric characters long.
 
 The type must be a string of alphanumeric characters; for example, SampleCompany.SampleApplication.SampleUdf, C:\UDFs\SampleUdf.dll, or \\\\MyNetworkServer\UDFs\SampleUdf.dll.
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -112,6 +113,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssemblyLocation
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies the location where the assembly is stored.
 
 The type must be one of the following: GAC or LocalFile.
@@ -119,8 +123,7 @@ The type must be one of the following: GAC or LocalFile.
 ```yaml
 Type: AssemblyLocation
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -130,6 +133,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -141,8 +147,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -152,6 +157,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -159,7 +167,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -169,6 +176,9 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies a display description for the user-defined function.
 The name cannot be more than 4096 alphanumeric characters long.
 
@@ -177,8 +187,7 @@ The type must be a string of alphanumeric characters; for example, this is the u
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -188,13 +197,15 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Activates the user-defined function for use with Excel Services Application.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -204,6 +215,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -211,7 +225,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named

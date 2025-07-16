@@ -32,14 +32,14 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 Set-FASTSearchSecurityXMLAliaser -Identity xmlalias1 -PathToXMLFile "C:\dev\temp\mapping1.xml"
 ```
 
 This example uploads and updates the XML mapping for an XML aliaser.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 2 (FAST Server for SharePoint 2010)
 ```
 Get-FASTSearchSecurityAliaser myxmlalias | Set-FASTSearchSecurityXMLAliaser -OutputUserStoreIds ln2 -InputPropertyName '$PRINCIPAL_REFERENCE_ALIAS'
 ```
@@ -49,13 +49,15 @@ This example changes the OutputUserStoreIds and InputPropertyName for the XML al
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: FAST Server for SharePoint 2010
+
 The identity of the XML aliaser to update.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: Named
@@ -65,6 +67,9 @@ Accept wildcard characters: False
 ```
 
 ### -InputPropertyName
+
+> Applicable: FAST Server for SharePoint 2010
+
 The user/group property name this regular expression pattern is matched again.
 
 The inputPropertyName is one of the following:
@@ -83,8 +88,7 @@ Refer to your specific user store for other properties that the user store expos
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -94,13 +98,15 @@ Accept wildcard characters: False
 ```
 
 ### -InputUserStoreId
+
+> Applicable: FAST Server for SharePoint 2010
+
 The identity of the mapped-from user store.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -110,13 +116,15 @@ Accept wildcard characters: False
 ```
 
 ### -OutputUserStoreIds
+
+> Applicable: FAST Server for SharePoint 2010
+
 A comma-separated list of mapped-to user store identities.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -126,6 +134,9 @@ Accept wildcard characters: False
 ```
 
 ### -PathToXMLFile
+
+> Applicable: FAST Server for SharePoint 2010
+
 The absolute path to the XML mapping file to upload to the XML aliaser.
 
 The path must specify a file accessible to the security manager.
@@ -133,8 +144,7 @@ The path must specify a file accessible to the security manager.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -144,13 +154,15 @@ Accept wildcard characters: False
 ```
 
 ### -XMLAliaser
+
+> Applicable: FAST Server for SharePoint 2010
+
 A SecurityXMLAliaserobject whose property values are being updated.
 
 ```yaml
 Type: SecurityXMLAliaser
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named

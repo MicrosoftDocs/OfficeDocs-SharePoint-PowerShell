@@ -14,7 +14,6 @@ schema: 2.0.0
 Adds an instance of the distributed cache service to a local server.
 
 
-
 ## SYNTAX
 
 ###  (Default)
@@ -41,10 +40,9 @@ This cmdlet contains more than one parameter set. You may only use parameters fr
 Use the Add-SPDistributedCacheServiceInstance cmdlet to add an instance of the distributed cache server to a local server. This is required to start the AppFabric service.
 
 
-
 ## EXAMPLES
 
-### ------------Example 1 -----------
+### Example 1
 ```powershell
 Add-SPDistributedCacheServiceInstance
 ```
@@ -55,17 +53,17 @@ This example adds an instance of the distributed cache service to a local server
 
 ### -AssignmentCollection
 
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 **NOTE**: When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 
-
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -75,6 +73,9 @@ Accept wildcard characters: False
 ```
 
 ### -CacheSizeInMB
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the amount of RAM to allocate for the Distributed Cache service instance.
 
 If this parameter is not specified, the default value will be used.
@@ -82,8 +83,7 @@ If this parameter is not specified, the default value will be used.
 ```yaml
 Type: Int32
 Parameter Sets: CacheSizeSet
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -93,7 +93,10 @@ Accept wildcard characters: False
 ```
 
 ### -Role
-Specifies the type of server role that the Distributed Cache service instance should be configured for. 
+
+> Applicable: SharePoint Server Subscription Edition
+
+Specifies the type of server role that the Distributed Cache service instance should be configured for.
 
 This parameter is typically used when you are going to do a server role conversion to the specified server role.
 
@@ -106,9 +109,8 @@ The valid values are:
 ```yaml
 Type: SPServerRole
 Parameter Sets: LocalServerRoleSet
-Aliases: 
+Aliases:
 Accepted values: DistributedCache, SingleServerFarm, WebFrontEndWithDistributedCache
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

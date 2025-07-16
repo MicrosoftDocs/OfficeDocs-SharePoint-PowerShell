@@ -29,7 +29,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1-----------------
+### EXAMPLE 1
 ```
 Get-FASTSearchResource dictionaries\spellcheck\check_en.aut c:\check_en.aut
 ```
@@ -39,13 +39,15 @@ This example downloads dictionaries\spellcheck\check_en.aut from the resource st
 ## PARAMETERS
 
 ### -Path
+
+> Applicable: FAST Server for SharePoint 2010
+
 Partial URI within the resource store where the file needs to be downloaded from.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: ResourceURI
-Applicable: FAST Server for SharePoint 2010
 
 Required: True
 Position: 1
@@ -55,13 +57,15 @@ Accept wildcard characters: False
 ```
 
 ### -FilePath
+
+> Applicable: FAST Server for SharePoint 2010
+
 Path to download the resource.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: 2

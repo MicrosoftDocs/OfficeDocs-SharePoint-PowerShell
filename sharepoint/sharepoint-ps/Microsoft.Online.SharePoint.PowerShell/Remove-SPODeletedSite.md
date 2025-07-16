@@ -34,7 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -----------------------EXAMPLE-----------------------------
+### EXAMPLE
 
 ```powershell
 Remove-SPODeletedSite -Identity https://contoso.sharepoint.com/sites/sitetoremove
@@ -55,7 +55,6 @@ Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
 
-
 Required: True
 Position: Named
 Default value: None
@@ -73,7 +72,6 @@ Continues without the status being polled. Polling the action can slow its progr
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
-
 
 Required: False
 Position: Named
@@ -93,7 +91,6 @@ Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
-
 Required: False
 Position: Named
 Default value: None
@@ -112,7 +109,6 @@ The cmdlet is not run.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
 
 Required: False
 Position: Named

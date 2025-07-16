@@ -24,7 +24,7 @@ The \`Clear-SPCertificateNotificationContact\` cmdlet deletes all email addresse
 
 ## EXAMPLES
 
-### ------------EXAMPLE-----------
+### EXAMPLE
 ```powershell
 Clear-SPCertificateNotificationContact
 ```

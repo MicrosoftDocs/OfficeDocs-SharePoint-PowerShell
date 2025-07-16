@@ -6,7 +6,7 @@ applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
-ms.reviewer: 
+ms.reviewer:
 title: Install-FASTSearchAdminDatabase
 ---
 
@@ -37,21 +37,21 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 Install-FASTSearchAdminDatabase -DbConnection "Data Source=sqlserver.contoso.com;Database=FASTSearchAdminDatabase;integrated Security=True;"
 ```
 
 This example installs the database schema in the database server specified by the connection string.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 2 (FAST Server for SharePoint 2010)
 ```
 Install-FASTSearchAdminDatabase -Upgrade -DbServer "sqlserver.contoso.com"
 ```
 
 This example upgrades the database schema already installed in the FAST Search Server 2010 for SharePoint administration database on the given SQL Server instance.
 
-### ---------------EXAMPLE 3----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 3 (FAST Server for SharePoint 2010)
 ```
 Install-FASTSearchAdminDatabase -Force -DbServer "sqlserver.contoso.com"
 ```
@@ -61,13 +61,15 @@ This example deletes and reinstalls the database schema already installed in the
 ## PARAMETERS
 
 ### -DbConnection
+
+> Applicable: FAST Server for SharePoint 2010
+
 Specifies the database connection string for the FAST Search Server 2010 for SharePoint administration database, in the same format as the ConnectionString property of the System.Data.SqlClient.SqlConnection .NET Framework type.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -77,6 +79,9 @@ Accept wildcard characters: False
 ```
 
 ### -DbName
+
+> Applicable: FAST Server for SharePoint 2010
+
 Specifies the name of the FAST Search Server 2010 for SharePoint administration database.
 
 The name only takes effect when used in conjunction with the DbServer parameter, not the DbConnection parameter.
@@ -84,8 +89,7 @@ The name only takes effect when used in conjunction with the DbServer parameter,
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -95,6 +99,9 @@ Accept wildcard characters: False
 ```
 
 ### -DbServer
+
+> Applicable: FAST Server for SharePoint 2010
+
 Specifies the database server instance that contains the FAST Search Server 2010 for SharePoint administration database.
 
 Only one of the DbServer and DbConnection parameters must be specified.
@@ -103,8 +110,7 @@ Using DbServer with a value of sqlserver.contoso.com is equivalent to using DbCo
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -114,6 +120,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
+
+> Applicable: FAST Server for SharePoint 2010
+
 The Force parameter specifies that the FAST Search Server 2010 for SharePoint administration database already exists, but should be reinstalled.
 
 This will delete all data that already exists in the database.
@@ -121,8 +130,7 @@ This will delete all data that already exists in the database.
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -132,6 +140,9 @@ Accept wildcard characters: False
 ```
 
 ### -Upgrade
+
+> Applicable: FAST Server for SharePoint 2010
+
 Specifies that the FAST Search Server 2010 for SharePoint administration database already exists and that it should be upgraded, because it uses an older version of the database schema.
 
 The upgrade process will attempt to migrate all data to the new database schema.
@@ -141,8 +152,7 @@ It is strongly recommended that you back up the database before performing this 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named

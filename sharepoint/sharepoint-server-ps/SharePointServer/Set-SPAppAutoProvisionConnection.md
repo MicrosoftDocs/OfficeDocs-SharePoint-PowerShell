@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets provision connection settings for an app.
 
-
 ## SYNTAX
 
 ### WebHostEndPoint
@@ -51,18 +50,16 @@ Use the `Set-SPAppAutoProvisionConnection` cmdlet to set provision connection se
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### --------------------EXAMPLE 1---------------------
+### EXAMPLE 1
 ```powershell
 Set-SpAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost -Password passname -Username <username>
 ```
 
 This example configures remote web host to be used provision apps that use this functionality for the default site subscription server on https://SPremotewebhost.
 
-
-### --------------------EXAMPLE 2---------------------
+### EXAMPLE 2
 ```powershell
 $subscription = Get-SPSiteSubscription https://Contoso.com
 Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost -Password passname -Username <username> -SiteSubscription $subscription
@@ -70,33 +67,32 @@ Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https:/
 
 This example configures remote web host to be used provision apps that use this functionality for the site subscription of Contoso.com site to server on https://SPremotewebhost.
 
-
-### --------------------EXAMPLE 3---------------------
+### EXAMPLE 3
 ```powershell
 Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -EndPoint https://SPremotewebhost
 ```
 
 This example updates the endpoint of the already configured remote web host server https://SPRemotewebhost for the default site subscription.
 
-
-### --------------------EXAMPLE 4---------------------
+### EXAMPLE 4
 ```powershell
 Set-SPAppAutoProvisionConnection -ConnectionType RemoteWebHost -Remove
 ```
 
 This example removes the remote web host configuration for the default site subscription.
 
-
 ## PARAMETERS
 
 ### -ConnectionType
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the connection type to provision.
 
 ```yaml
 Type: ConnectionTypes
 Parameter Sets: WebHostEndPoint, WebHostSetup, WebHostCredential
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -106,13 +102,15 @@ Accept wildcard characters: False
 ```
 
 ### -EndPoint
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the end point of the provision connection.
 
 ```yaml
 Type: String
 Parameter Sets: WebHostEndPoint, WebHostSetup
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -122,13 +120,15 @@ Accept wildcard characters: False
 ```
 
 ### -Password
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the password for the provision connection.
 
 ```yaml
 Type: String
 Parameter Sets: WebHostSetup, WebHostCredential
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -138,13 +138,15 @@ Accept wildcard characters: False
 ```
 
 ### -Remove
+
+> Applicable: SharePoint Server Subscription Edition
+
 Removes the auto provision connection of the app.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Remove
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -154,13 +156,15 @@ Accept wildcard characters: False
 ```
 
 ### -Username
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the user name of the connection.
 
 ```yaml
 Type: String
 Parameter Sets: WebHostSetup, WebHostCredential
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -170,6 +174,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -181,8 +188,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -192,13 +198,15 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSubscription
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the site collection for which the provision connection is to be associated.
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

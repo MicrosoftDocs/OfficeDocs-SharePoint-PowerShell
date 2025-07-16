@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the IIS website binding for the SharePoint Central Administration site.
 
-
 ## SYNTAX
 
 ```
@@ -26,20 +25,21 @@ The `Set-SPCentralAdministration` cmdlet sets the IIS website binding for the Sh
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [https://go.microsoft.com/fwlink/p/?LinkId=251831](https://go.microsoft.com/fwlink/p/?LinkId=251831).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------
+### EXAMPLE
 ```powershell
 Set-SPCentralAdministration -Port 8282
 ```
 
 This example sets the port for the Central Administration web application on the local farm to 8282.
 
-
 ## PARAMETERS
 
 ### -AllowLegacyEncryption
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that older SSL and TLS protocol versions and cipher suites are allowed to be used with this IIS website.
 Legacy encryption is weaker than modern encryption and is not recommended.
 
@@ -52,7 +52,6 @@ This parameter is only valid when used with the SecureSocketsLayer parameter.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -62,6 +61,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -73,8 +75,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -84,6 +85,9 @@ Accept wildcard characters: False
 ```
 
 ### -Certificate
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the certificate that will be used for the Secure Sockets Layer (SSL) binding of this IIS website.
 This parameter is only valid when used with the SecureSocketsLayer parameter.
 
@@ -91,7 +95,6 @@ This parameter is only valid when used with the SecureSocketsLayer parameter.
 Type: SPServerCertificatePipeBind
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -101,6 +104,9 @@ Accept wildcard characters: False
 ```
 
 ### -HostHeader
+
+> Applicable: SharePoint Server Subscription Edition
+
 The host header of the Central Administration IIS website.
 
 If this parameter is omitted, there will be no host header binding and the URL of the Central Administration site will be based on the name of this server.
@@ -109,7 +115,6 @@ If this parameter is omitted, there will be no host header binding and the URL o
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -119,6 +124,9 @@ Accept wildcard characters: False
 ```
 
 ### -Port
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the administration port for the Central Administration site.
 
 The type must be a valid port number; for example, 8080.
@@ -126,8 +134,7 @@ The type must be a valid port number; for example, 8080.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -137,6 +144,9 @@ Accept wildcard characters: False
 ```
 
 ### -SecureSocketsLayer
+
+> Applicable: SharePoint Server Subscription Edition
+
 Enables Secure Sockets Layer (SSL) encryption for the Central Administration IIS website.
 If you choose to use SSL, you must import a server certificate to SharePoint and assign it to the Central Administration IIS website for this web application.
 The Central Administration web application won't be accessible until you do this.
@@ -148,8 +158,7 @@ If this parameter is omitted or set to False, the Central Administration site wi
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -159,13 +168,15 @@ Accept wildcard characters: False
 ```
 
 ### -Url
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the load-balanced URL for Central Administration.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -175,6 +186,9 @@ Accept wildcard characters: False
 ```
 
 ### -UseServerNameIndication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that the Secure Sockets Layer (SSL) binding of this IIS website should use Server Name Indication (SNI).
 Server Name Indication allows multiple IIS websites with unique host headers and unique server certificates to share the same SSL port.
 If Server Name Indication isn't used, all IIS websites sharing the same SSL port must share the same server certificate.
@@ -183,7 +197,6 @@ If Server Name Indication isn't used, all IIS websites sharing the same SSL port
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -193,6 +206,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -200,7 +216,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -210,6 +225,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -217,7 +235,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

@@ -45,7 +45,6 @@ Get-SPOSitePages -Site 'https://contoso.sharepoint.com/sites/testsite'
 
 Example 1 demonstrates how a SharePoint Administrator can retrieve all the SharePoint pages under the `testsite`.
 
-
 ## PARAMETERS
 
 ### -Site
@@ -58,7 +57,6 @@ Specifies the URL of the SharePoint site from which to fetch the SharePoint page
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: Named

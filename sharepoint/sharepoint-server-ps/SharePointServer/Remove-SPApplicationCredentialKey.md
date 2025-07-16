@@ -2,7 +2,7 @@
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 module name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spapplicationcredentialkey
-Applicable: SharePoint Server Subscription Edition
+
 title: Remove-SPApplicationCredentialKey
 schema: 2.0.0
 ---
@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes the application credential key from the local server.
 
-
 ## SYNTAX
 
 ```
@@ -20,13 +19,12 @@ Remove-SPApplicationCredentialKey [-AssignmentCollection <SPAssignmentCollection
  [<CommonParameters>]
 ```
 
-
 ## DESCRIPTION
 Use the **Remove-SPApplicationCredentialKey** cmdlet to remove the application credential key from the local server. The application credential key is used by certain features to encrypt and decrypt passwords.
 
 ## EXAMPLES
 
-### ------------EXAMPLE -----------
+### EXAMPLE
 ```powershell
  Remove-SPApplicationCredentialKey -Confirm:$false
 ```
@@ -35,6 +33,9 @@ This example removes the application credential key from the local server withou
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -47,7 +48,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Server Subscription Edition
+
 Required: False
 Position: Named
 Default value: None
@@ -56,13 +57,16 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
+
 Required: False
 Position: Named
 Default value: None
@@ -71,6 +75,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -78,7 +85,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
+
 Required: False
 Position: Named
 Default value: None
@@ -89,6 +96,5 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable.
 For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
-
 
 ## RELATED LINKS

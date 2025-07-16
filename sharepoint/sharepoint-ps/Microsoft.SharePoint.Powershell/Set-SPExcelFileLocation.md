@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 Sets properties of a trusted file location for Excel Services Application.
 
-
 ## SYNTAX
 
 ```
@@ -40,28 +39,28 @@ The properties that are used by the trusted file location are determined by comp
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### --------------EXAMPLE 1--------------
+### EXAMPLE 1
 ```
 Get-SPExcelFileLocation -ExcelServiceApplication "My Excel Service" | where { $_.externaldataallowed -eq "DclAndEmbedded"} | Set-SPExcelFileLocation -ExernalDataAllowed Dcl
 ```
 
 This example gets every trusted file location for the Excel Services Application Web service application named My Excel Service that allows data connections to load from workbook files and specifies that the locations must use a data connection library to load data connections.
 
-
-### --------------EXAMPLE 2--------------
+### EXAMPLE 2
 ```
 Get-SPExcelServiceApplication | Get-SPExcelFileLocation | where {$_.Address -eq "https://"} | Set-SPExcelFileLocation -Description "This is the default trusted file location for Excel Services Application. It allows any file from anywhere in SharePoint to load."
 ```
 
 This example changes the description of the default file location for every Excel Services Application Web service application in the farm.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies the FileLocation object to update.
 The name must be unique in the list of file locations.
 
@@ -70,8 +69,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPExcelFileLocationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: True
 Position: 1
@@ -81,6 +79,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExcelServiceApplication
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies the Excel Services Application Web service application that contains the SPExcelFileLocation list object.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of an Excel Services Application Web service application in the farm (for example, MyExcelService1); or an instance of a valid SPExcelServiceApplication object.
@@ -88,8 +89,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPExcelServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: True
 Position: Named
@@ -99,6 +99,9 @@ Accept wildcard characters: False
 ```
 
 ### -AbortOnRefreshOnOpenFail
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies that the load of a Excel Services Application file automatically fails if an automatic data refresh operation fails when the file is opened.
 The load is failed only if the following conditions are true:
 
@@ -108,8 +111,7 @@ The load is failed only if the following conditions are true:
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -119,6 +121,9 @@ Accept wildcard characters: False
 ```
 
 ### -Address
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 System.String
 
 Specifies a Web folder, or file directory from which Excel Services Application can load workbooks.
@@ -128,8 +133,7 @@ The type must be a valid URL, in the form https://myPortal/myTeam; or a valid UN
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -139,6 +143,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -150,8 +157,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -161,6 +167,9 @@ Accept wildcard characters: False
 ```
 
 ### -AutomaticVolatileFunctionCacheLifetime
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies the maximum time, in seconds, that a computed value for a volatile function is cached for automatic recalculations.
 Valid values include:
 
@@ -175,8 +184,7 @@ The type must be the integers -1 or 0, or an integer value in the range of 1 to 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -186,6 +194,9 @@ Accept wildcard characters: False
 ```
 
 ### -ChartAndImageSizeMax
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies the maximum size, in megabytes, of a chart or image that can be opened.
 The default value is 1.
 
@@ -194,8 +205,7 @@ The type must be a valid integer greater than 0.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -205,6 +215,9 @@ Accept wildcard characters: False
 ```
 
 ### -ConcurrentDataRequestsPerSessionMax
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies the maximum number of concurrent external data requests allowed in each session.
 If a session must issue more than this number of requests, additional requests must be queued.
 The scope of this setting is the logical server.
@@ -215,8 +228,7 @@ The type must be a positive integer.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -226,6 +238,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -233,7 +248,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -243,6 +257,9 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultWorkbookCalcMode
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies the calculation mode of workbooks.
 All of the settings except the File setting override the workbook settings.
 If this parameter is changed, it is applied to all new sessions on Excel Services Application when the ConfigDB properties cache is refreshed.
@@ -253,8 +270,7 @@ The type must be one of the following: File, Manual, Auto, or AutoDataTables.
 ```yaml
 Type: DefaultWorkbookCalcMode
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -264,6 +280,9 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies a friendly description for the new file location.
 
 The type must be a valid string; for example, this is the file location of the monthly sales reports.
@@ -271,8 +290,7 @@ The type must be a valid string; for example, this is the file location of the m
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -282,13 +300,15 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayGranularExtDataErrors
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Displays granular error messages for external data failures for files in this location.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -298,6 +318,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalDataAllowed
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies the type of external data access allowed for workbooks:
 None specifies that data refresh is disabled.
 Dcl specifies that data is refreshed only when it uses a connection file in a trusted data connection library.
@@ -311,8 +334,7 @@ The type must be one of the following: None, Dcl, or DclAndEmbedded.
 ```yaml
 Type: AllowExternalData
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -322,14 +344,16 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeChildren
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Indicates that subordinate URLs, directories and libraries are trusted.
 For example, if the trusted file location is https://portal, and IncludeChildren is true, then https://portal/subSite is also trusted, as is any subURL under the URL specified in Address.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -339,6 +363,9 @@ Accept wildcard characters: False
 ```
 
 ### -LocationType
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 The type of location.
 LocationType indicates how Excel Services Application retrieves files from that location specified in Address.
 The default value is SharePoint.
@@ -348,8 +375,7 @@ The type must be one of the following: SharePoint, UNC, or HTTP.
 ```yaml
 Type: LocationType
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -359,6 +385,9 @@ Accept wildcard characters: False
 ```
 
 ### -ManualExtDataCacheLifetime
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies the time, in seconds, that Excel Services Application waits before re-issuing a manual, or user-initiated, external data request.
 During this period, the results from the previous external data request may be returned from an external data cache.
 
@@ -373,8 +402,7 @@ The default value is 300.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -384,6 +412,9 @@ Accept wildcard characters: False
 ```
 
 ### -NewWorkbookSessionTimeout
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies the time, in seconds, that a session for a new, unsaved, workbook will remain active on Excel Services Application with no user activity.
 The default value 1800.
 Valid values include the following:
@@ -399,8 +430,7 @@ The type must be -1, 0, or an integer in the range of 1 to 2073600.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -410,6 +440,9 @@ Accept wildcard characters: False
 ```
 
 ### -PeriodicExtDataCacheLifetime
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies the time, in seconds, that Excel Services Application waits before re-issuing an on-open or periodic (that is, automatic) external data request.
 During this period, the results from the previous external data request may be returned from an external data cache.
 A value -1 specifies to never refresh after the first query.
@@ -421,8 +454,7 @@ The default value is 300.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -432,6 +464,9 @@ Accept wildcard characters: False
 ```
 
 ### -RequestDurationMax
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies the maximum duration, in seconds, for a single request in a session.
 After this time elapses the request is timed out.
 
@@ -442,8 +477,7 @@ The default value is 300.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -453,6 +487,9 @@ Accept wildcard characters: False
 ```
 
 ### -RESTExternalDataAllowed
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies whether requests from the Representational State Transfer (REST) Application Programming Interface (API) are permitted to refresh external data connections.
 
 The RESTExternalDataAllowed parameter has no effect if  the External DataAllowed parameter is set to None.
@@ -460,8 +497,7 @@ The RESTExternalDataAllowed parameter has no effect if  the External DataAllowed
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -471,6 +507,9 @@ Accept wildcard characters: False
 ```
 
 ### -SessionTimeout
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies the time, in seconds, that a session will remain active on Excel Services Application with no user activity.
 The default is 300 seconds.
 The default value is 300.
@@ -487,8 +526,7 @@ The type must be -1, 0, or an integer in the range of 1 to 2073600.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -498,6 +536,9 @@ Accept wildcard characters: False
 ```
 
 ### -ShortSessionTimeout
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies the time, in seconds, that a user has to make the initial interaction with a spreadsheet.
 After this time has elapsed, if the user is not active, then the session is closed.
 The value must always be less than SessionTimeout.
@@ -509,8 +550,7 @@ The type must be -1 or an integer in the range of 1 to 2073600.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -520,13 +560,15 @@ Accept wildcard characters: False
 ```
 
 ### -UdfsAllowed
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies that user-defined functions can be called by workbooks loaded from the trusted file location that is specified in Address.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -536,14 +578,16 @@ Accept wildcard characters: False
 ```
 
 ### -WarnOnDataRefresh
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies that a warning is displayed to the user on the first refresh of data for the workbook.
 The default value is True.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -553,6 +597,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -560,7 +607,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -570,6 +616,9 @@ Accept wildcard characters: False
 ```
 
 ### -WorkbookSizeMax
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 Specifies the maximum size, in megabytes, of a workbook that can be loaded.
 The default value is 10.
 
@@ -578,8 +627,7 @@ The type must be an integer value in the range of 1 to 2000.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named
@@ -589,15 +637,17 @@ Accept wildcard characters: False
 ```
 
 ### -ChartRenderDurationMax
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013
+
 The maximum time (in seconds) spent rendering any single chart.
 
-Valid values: -1 (no limit); from 1 through 2073600 (24 days).  
+Valid values: -1 (no limit); from 1 through 2073600 (24 days).
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013
+Aliases:
 
 Required: False
 Position: Named

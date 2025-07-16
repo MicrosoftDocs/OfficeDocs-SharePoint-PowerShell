@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets performance properties for a Visio Services application.
 
-
 ## SYNTAX
 
 ```
@@ -26,18 +25,16 @@ The `Set-SPVisioPerformance` cmdlet sets properties related to performance for a
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### -------------------EXAMPLE 1----------------------
+### EXAMPLE 1
 ```powershell
 Set-SPVisioPerformance -VisioServiceApplication "VGS2" -MaxDiagramSize 10 -MaxRecalcDuration 120 -MinDiagramCacheAge 1 -MaxDiagramCacheAge 4
 ```
 
 This example changes settings that are related to performance for a Visio Services application.
 
-
-### -------------------EXAMPLE 2----------------------
+### EXAMPLE 2
 ```powershell
 Set-SPVisioPerformance -VisioServiceApplication "VGS2" -MaxDiagramSize 10
 ```
@@ -46,10 +43,12 @@ This example changes settings that are related to performance for a Visio Servic
 Note that only one setting value is specified.
 The cmdlet prompts you for the other parameter values.
 
-
 ## PARAMETERS
 
 ### -MaxDiagramCacheAge
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the time, in minutes, after which cached items are purged.
 This value affects memory use on the server.
 A large cache age slows the rate at which diagrams can be refreshed by users and reduces CPU and memory use of the server.
@@ -60,8 +59,7 @@ The type must be an integer in the range of 0 to 34560 (24 days).
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -71,6 +69,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxDiagramSize
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the maximum size, in megabytes, of a diagram that can be opened by the Visio Services application.
 The default value is 5.
 
@@ -79,8 +80,7 @@ The type must be an integer in the range of 1 to 50.
 ```yaml
 Type: Int64
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -90,6 +90,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxRecalcDuration
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the maximum time, in seconds, that a diagram can only be recalculated by the Visio Services application.
 Diagram recalculation operations that take longer than this number of seconds are canceled by the service.
 A low value increases performance by allowing only simple diagrams to be processed by the server, which minimizes CPU and memory use.
@@ -101,8 +104,7 @@ The default value is 60 seconds.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -112,6 +114,9 @@ Accept wildcard characters: False
 ```
 
 ### -MinDiagramCacheAge
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the minimum time, in minutes, a diagram is cached in memory.
 This value affects memory use on the server.
 A small value allows users to refresh their diagrams more often, but will increase memory and CPU load of the server.
@@ -122,8 +127,7 @@ The type must be an integer in the range of 0 to 34560 (24 days).
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -133,6 +137,9 @@ Accept wildcard characters: False
 ```
 
 ### -VisioServiceApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the Visio Services application that contains the SPVisioPerformance object.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a Visio Services application (for example, MyVisioService1); or an instance of a valid SPVisioServiceApplication object.
@@ -140,8 +147,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 ```yaml
 Type: SPVisioServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -151,6 +157,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -162,8 +171,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -173,13 +181,15 @@ Accept wildcard characters: False
 ```
 
 ### -MaxCacheSize
+
+> Applicable: SharePoint Server Subscription Edition
+
 {{Fill MaxCacheSize Description}}
 
 ```yaml
 Type: Int64
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named

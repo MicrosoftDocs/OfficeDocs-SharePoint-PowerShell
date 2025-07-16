@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets properties of a crawled property category.
 
-
 ## SYNTAX
 
 ```
@@ -31,10 +30,9 @@ Changes to the category will overwrite all propsets.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------
+### EXAMPLE
 ```powershell
 $ssa = Get-SPEnterpriseSearchServiceApplication
 Set-SPEnterpriseSearchMetadataCategory -Identity People -SearchApplication $ssa -DiscoverNewProperties $false -MapToContents $false
@@ -42,10 +40,12 @@ Set-SPEnterpriseSearchMetadataCategory -Identity People -SearchApplication $ssa 
 
 This example sets both DiscoverNewProperties and MapToContents properties to False for the People category for the default search service application.
 
-
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -54,12 +54,10 @@ When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are au
 When the Global parameter is used, all objects are contained in the global store.
 If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
-
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -69,17 +67,18 @@ Accept wildcard characters: False
 ```
 
 ### -AutoCreateNewManagedProperties
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that when a new crawled property in this category is found, a corresponding managed property is created and mapped to this new crawled property.
 
 Note:
 Null indicates that the value is unchanged.
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: auto
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -89,15 +88,16 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
-
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -107,17 +107,18 @@ Accept wildcard characters: False
 ```
 
 ### -DiscoverNewProperties
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that if there are unknown properties in this category, these new properties are discovered during a crawl.
 
 Note:
 Null indicates that the value is unchanged.
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: d
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -127,16 +128,17 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the metadata category to update.
 
 The type must be a valid name of a metadata category, for example, MetadataCategory1, or an instance of a valid Category object.
 
-
 ```yaml
 Type: CategoryPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -146,17 +148,18 @@ Accept wildcard characters: False
 ```
 
 ### -MapToContents
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies that all crawled properties of type string are mapped to corresponding managed properties of this category.
 
 Note:
 Null indicates that the value is unchanged.
 
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases: m
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -166,6 +169,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the enterprise search metadata category.
 
 The type must be a valid name of a metadata category, for example MetadataCategory1.
@@ -173,12 +179,10 @@ The type must be a valid name of a metadata category, for example MetadataCatego
 Note:
 Null indicates that the value is unchanged.
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases: n
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -188,16 +192,17 @@ Accept wildcard characters: False
 ```
 
 ### -SearchApplication
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the search application that contains the enterprise search metadata categories.
 
 The type must be a valid search application name, for example, SearchApp1, or an instance of a valid SearchServiceApplication object.
 
-
 ```yaml
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -207,15 +212,16 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
-
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

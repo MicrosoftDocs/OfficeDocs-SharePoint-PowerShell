@@ -46,7 +46,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 1 (FAST Server for SharePoint 2010)
 ```
 C:\PS>$title = Get-FASTSearchMetadataManagedProperty -name title
 Set-FASTSearchMetadataManagedProperty -ManagedProperty $title -Refinement 1
@@ -56,7 +56,7 @@ This example enables refinement for the managed property "title".
 Content must be re-fed/recrawled to populate the refinement.
 Until it is populated, the refinement defaults to having no value.
 
-### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 2 (FAST Server for SharePoint 2010)
 ```
 C:\PS>$title = Get-FASTSearchMetadataManagedProperty -name title
 Set-FASTSearchMetadataManagedProperty -ManagedProperty $title -Queryable 1
@@ -69,7 +69,7 @@ Relevancy is not calculated for such queries (unlike searches against the full t
 
 The content must be recrawled/re-fed for this to take effect.
 
-### ---------------EXAMPLE 3----------------- (FAST Server for SharePoint 2010)
+### EXAMPLE 3 (FAST Server for SharePoint 2010)
 ```
 C:\PS>$title = Get-FASTSearchMetadataManagedProperty -name title
 Set-FASTSearchMetadataManagedProperty -ManagedProperty $title -SummaryType 1
@@ -83,13 +83,15 @@ The content must be recrawled/re-fed for this to take effect.
 ## PARAMETERS
 
 ### -ManagedProperty
+
+> Applicable: FAST Server for SharePoint 2010
+
 The managed property object to modify.
 
 ```yaml
 Type: ManagedProperty
 Parameter Sets: ManagedProperty
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: True
 Position: Named
@@ -99,13 +101,15 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+
+> Applicable: FAST Server for SharePoint 2010
+
 The name of the managed property to modify.
 
 ```yaml
 Type: String
 Parameter Sets: Name
 Aliases: ManagedPropertyName, N
-Applicable: FAST Server for SharePoint 2010
 
 Required: True
 Position: Named
@@ -115,13 +119,15 @@ Accept wildcard characters: False
 ```
 
 ### -Description
+
+> Applicable: FAST Server for SharePoint 2010
+
 A text string describing the managed property's use.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -131,6 +137,9 @@ Accept wildcard characters: False
 ```
 
 ### -MergeCrawledProperties
+
+> Applicable: FAST Server for SharePoint 2010
+
 This Boolean value controls whether or not multiple crawled properties mapped to this managed property are merged when multiple crawled properties are present in the input.
 
 If not set, only the first element of the first non-empty crawled property is stored in the managed property.
@@ -141,8 +150,7 @@ The content must be re-fed/recrawled for this change to take effect.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -152,6 +160,9 @@ Accept wildcard characters: False
 ```
 
 ### -Queryable
+
+> Applicable: FAST Server for SharePoint 2010
+
 This Boolean value specifies whether or not the managed property is directly searchable on its own (and not only as part of a full text index).
 
 If not set, it can only be searched when included in a full text index.
@@ -161,8 +172,7 @@ The content must be recrawled/re-fed again for this change to take effect.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -172,6 +182,9 @@ Accept wildcard characters: False
 ```
 
 ### -RefinementEnabled
+
+> Applicable: FAST Server for SharePoint 2010
+
 This Boolean value specifies whether or not a refiner is available for the managed property.
 
 Refiners group search results based on the values of individual managed properties from the complete result set of a query.
@@ -182,8 +195,7 @@ After enabling refinement on a managed property, the content must be recrawled/r
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -193,6 +205,9 @@ Accept wildcard characters: False
 ```
 
 ### -SortableType
+
+> Applicable: FAST Server for SharePoint 2010
+
 The sorting type of the managed property.
 Valid values are:
 
@@ -211,8 +226,7 @@ Managed properties of the type datetime always have sorting enabled.
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -222,6 +236,9 @@ Accept wildcard characters: False
 ```
 
 ### -SummaryType
+
+> Applicable: FAST Server for SharePoint 2010
+
 The type of summary to return for the managed property.
 Valid values are:
 
@@ -234,8 +251,7 @@ The content must be recrawled/re-fed for any change in this setting to take effe
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -245,6 +261,9 @@ Accept wildcard characters: False
 ```
 
 ### -StemmingEnabled
+
+> Applicable: FAST Server for SharePoint 2010
+
 Enables or disables stemming for the managed property.
 
 Stemming is the process of reducing words to their base form, or expanding to all known forms, to increase recall.
@@ -255,8 +274,7 @@ The content must be recrawled/re-fed for this to take effect.
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -266,6 +284,9 @@ Accept wildcard characters: False
 ```
 
 ### -DecimalPlaces
+
+> Applicable: FAST Server for SharePoint 2010
+
 This integer parameter specifies how many decimal places should be used for the managed property.
 
 A higher number of decimals provides a more precise result, but reduces the minimum and maximum number size that can be stored in the managed property.
@@ -273,8 +294,7 @@ A higher number of decimals provides a more precise result, but reduces the mini
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -284,6 +304,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxIndexSize
+
+> Applicable: FAST Server for SharePoint 2010
+
 This integer parameter sets the maximum number of kilobytes indexed for the managed property.
 
 Valid values range from 0 through 2097151 (2GB).
@@ -293,8 +316,7 @@ The measured value equals the data stored prior to indexing and is slightly larg
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -304,6 +326,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxResultSize
+
+> Applicable: FAST Server for SharePoint 2010
+
 This integer parameter sets the maximum number of kilobytes that can be returned for this managed property.
 
 If a managed property's content is longer than this, then the returned version of the managed property is truncated to the specified value.
@@ -315,8 +340,7 @@ If the summary type of the managed property is dynamic, then this size refers to
 ```yaml
 Type: Int32
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -326,13 +350,15 @@ Accept wildcard characters: False
 ```
 
 ### -IsMapped
+
+> Applicable: FAST Server for SharePoint 2010
+
 This Boolean parameter specifies whether or not the managed property is mapped to support Alternate Access Mappings in SharePoint.
 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named

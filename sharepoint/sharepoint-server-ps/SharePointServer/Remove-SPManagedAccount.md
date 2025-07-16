@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a managed account registration from the farm.
 
-
 ## SYNTAX
 
 ```
@@ -29,20 +28,21 @@ The `Remove-SPManagedAccount` cmdlet removes account registration from the confi
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### ----------------------EXAMPLE-------------------
+### EXAMPLE
 ```powershell
 Remove-SPManagedAccount -Identity DOMAIN\ServiceAcct
 ```
 
 This example removes the DOMAIN\ServiceAcct managed account from the farm.
 
-
 ## PARAMETERS
 
 ### -Identity
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the full name or partial name of the managed accounts to retrieve.
 
 The type must be a valid account name, in the form Domain\User, or a GUID, in the form 1234-3456-09876.
@@ -50,8 +50,7 @@ The type must be a valid account name, in the form Domain\User, or a GUID, in th
 ```yaml
 Type: SPManagedAccountPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -61,13 +60,15 @@ Accept wildcard characters: False
 ```
 
 ### -NewPassword
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies a secure string for the new password (that is, $MySecureString). Works in conjunction with the ChangePassword parameter.
 
 ```yaml
 Type: SecureString
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -77,6 +78,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -88,8 +92,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -99,6 +102,9 @@ Accept wildcard characters: False
 ```
 
 ### -ChangePassword
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies whether a password is to be changed.
 Works in conjunction with the NewPassword parameter.
 When the ChangePassword value is set, a secure string value is required for the NewPassword parameter (that is, $MySecureString).
@@ -106,8 +112,7 @@ When the ChangePassword value is set, a secure string value is required for the 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -117,6 +122,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -124,7 +132,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -134,6 +141,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -141,7 +151,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

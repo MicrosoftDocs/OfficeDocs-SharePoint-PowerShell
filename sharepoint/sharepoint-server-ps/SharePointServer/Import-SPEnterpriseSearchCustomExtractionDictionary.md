@@ -29,7 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE----------------- 
+### EXAMPLE
 ```powershell
 $searchApp = Get-SPEnterpriseSearchServiceApplication
 Import-SPEnterpriseSearchCustomExtractionDictionary -SearchApplication $searchApp -Filename c:\transfer\entity_extraction.csv -DictionaryName Microsoft.UserDictionaries.EntityExtraction.Custom.Word.1
@@ -41,6 +41,9 @@ The entries of this dictionary will be matched in a case-insensitive way against
 ## PARAMETERS
 
 ### -DictionaryName
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the name of the target dictionary.
 The name must be one of the following 12 predefined dictionaries.
 The name signifies the "case sensitivity" and "token matching" behavior.
@@ -48,8 +51,7 @@ The name signifies the "case sensitivity" and "token matching" behavior.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -60,15 +62,15 @@ Accept wildcard characters: False
 
 ### -FileName
 
-Specifies the file path of the .cvs file to be imported
+> Applicable: SharePoint Server Subscription Edition
 
+Specifies the file path of the .cvs file to be imported
 
 
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -79,15 +81,15 @@ Accept wildcard characters: False
 
 ### -SearchApplication
 
-Specifies the search service application to which the custom extraction dictionary should be imported.
+> Applicable: SharePoint Server Subscription Edition
 
+Specifies the search service application to which the custom extraction dictionary should be imported.
 
 
 ```yaml
 Type: SearchServiceApplicationPipeBind
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: Named
@@ -97,6 +99,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -108,8 +113,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named
@@ -119,6 +123,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Server Subscription Edition
+
 Prompts you for confirmation before executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -126,7 +133,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named
@@ -136,6 +142,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Server Subscription Edition
+
 Displays a message that describes the effect of the command instead of executing the command.
 For more information, type the following command: `get-help about_commonparameters`
 
@@ -143,7 +152,6 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server Subscription Edition
 
 Required: False
 Position: Named

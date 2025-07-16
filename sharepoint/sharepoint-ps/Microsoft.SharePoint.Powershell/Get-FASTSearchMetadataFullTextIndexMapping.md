@@ -36,7 +36,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1-----------------
+### EXAMPLE 1
 ```
 $fulltextindex = Get-FASTSearchMetadataFullTextIndex -name content
 Get-FASTSearchMetadataFullTextIndexMapping -fulltextindex $fulltextindex| ForEach-Object {$_.ManagedProperty.Name}
@@ -45,7 +45,7 @@ Get-FASTSearchMetadataFullTextIndexMapping -fulltextindex $fulltextindex| ForEac
 This example retrieves the full text index mappings for the full text index "content".
 It then iterates over the mappings and outputs the names of the managed properties included in the full text index.
 
-### ---------------EXAMPLE 2-----------------
+### EXAMPLE 2
 ```
 $title = Get-FASTSearchMetadataManagedProperty -name title
 Get-FASTSearchMetadataFullTextIndexMapping -managedproperty $title
@@ -58,13 +58,15 @@ The specified managed property is mapped to both "content" and "thirdfulltextind
 ## PARAMETERS
 
 ### -FullTextIndex
+
+> Applicable: FAST Server for SharePoint 2010
+
 The full text index specified to retrieve mappings.
 
 ```yaml
 Type: FullTextIndex
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named
@@ -74,13 +76,15 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedProperty
+
+> Applicable: FAST Server for SharePoint 2010
+
 The managed property specified to retrieve mappings.
 
 ```yaml
 Type: ManagedProperty
 Parameter Sets: (All)
-Aliases: 
-Applicable: FAST Server for SharePoint 2010
+Aliases:
 
 Required: False
 Position: Named

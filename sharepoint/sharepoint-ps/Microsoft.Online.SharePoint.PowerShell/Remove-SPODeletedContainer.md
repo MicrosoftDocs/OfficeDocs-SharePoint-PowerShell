@@ -30,9 +30,6 @@ The `Remove-SPODeletedContainer` cmdlet permanently removes a deleted File Stora
 > [!IMPORTANT]
 > We do not generally recommend that you permanently delete Containers.
 
-
-
-
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
 ## EXAMPLES
@@ -44,8 +41,6 @@ Remove-SPODeletedContainer -Identity b66f5b2e-4cbd-4754-9ad3-8291c2c81ade
 ```
 
 This example removes a deleted Container with the `ContainerId` `b66f5b2e-4cbd-4754-9ad3-8291c2c81ade` from the Recycle Bin and deletes it permanently.
-
-
 
 ## PARAMETERS
 
@@ -74,7 +69,6 @@ Specifies the `<ContainerId>` of the Container to be permanently deleted.
 Type: Microsoft.Online.SharePoint.PowerShell.SPOContainerPipeBind
 Parameter Sets: (All)
 Aliases:
-
 
 Required: True
 Position: 0

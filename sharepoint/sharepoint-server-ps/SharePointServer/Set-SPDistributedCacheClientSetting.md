@@ -12,7 +12,6 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets distributed cache settings.
 
-
 ## SYNTAX
 
 ```
@@ -27,10 +26,9 @@ Usage can be any type of cache that the ContainerType parameter specifies.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
-
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### EXAMPLE
 ```powershell
 $settings = Get-SPDistributedCacheClientSetting -ContainerType DistributedLogonTokenCache
 $settings.MaxConnectionsToServer = 10
@@ -39,10 +37,12 @@ Set-SPDistributedCacheClientSetting -ContainerType DistributedLogonTokenCache -D
 
 This example updates the MaxConnectionsToServer to 10 for DistributedLogonTokenCache.
 
-
 ## PARAMETERS
 
 ### -ContainerType
+
+> Applicable: SharePoint Server Subscription Edition
+
 Specifies the container type to clear.
 
 The valid values are the following:
@@ -67,12 +67,10 @@ The valid values are the following:
 
 -DistributedViewStateCache
 
-
 ```yaml
 Type: SPDistributedCacheContainerType
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -82,14 +80,16 @@ Accept wildcard characters: False
 ```
 
 ### -DistributedCacheClientSettings
+
+> Applicable: SharePoint Server Subscription Edition
+
 Updates the various cache client settings.
 It is recommended to use the default settings.
 
 ```yaml
 Type: SPDistributedCacheClientSettings
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: True
 Position: 1
@@ -99,6 +99,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server Subscription Edition
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -110,8 +113,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server Subscription Edition
+Aliases:
 
 Required: False
 Position: Named

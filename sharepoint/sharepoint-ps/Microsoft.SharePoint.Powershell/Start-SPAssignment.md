@@ -15,7 +15,6 @@ ms.reviewer:
 ## SYNOPSIS
 Initiates a new assignment store.
 
-
 ## SYNTAX
 
 ```
@@ -44,7 +43,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1-----------------------
+### EXAMPLE 1
 ```
 Start-SPAssignment -global
 $w = Get-SPWeb https://MyWeb
@@ -56,8 +55,7 @@ This example uses simple assignment.
 Although it is easier to use simple assignment, it is not a good idea to run commands that iterate through multiple SPSite or SPWeb objects while simple assignment is enabled.
 Ensure that you run `Stop-SPAssignment` before you attempt any iterations of multiple objects.
 
-
-### ------------------EXAMPLE 2-----------------------
+### EXAMPLE 2
 ```
 $gc = Start-SPAssignment
 $web = $gc | Get-SPWeb https://MyWeb
@@ -69,10 +67,12 @@ This example sets the title of the SPWeb object in multiple lines and controls t
 This is an advanced example.
 Only developers are advised to use it.
 
-
 ## PARAMETERS
 
 ### -AssignmentCollection
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
@@ -84,8 +84,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
@@ -95,6 +94,9 @@ Accept wildcard characters: False
 ```
 
 ### -Global
+
+> Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+
 If you use this parameter, all objects are assigned to the lifetime of the script and are disposed of when the `Stop-SPAssignment` cmdlet is called.
 
 If you do not use this parameter, you must assign the output of this cmdlet to a variable and then dispose of objects by using the Identity parameter of the `Stop-SPAssignment` cmdlet.
@@ -102,8 +104,7 @@ If you do not use this parameter, you must assign the output of this cmdlet to a
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
+Aliases:
 
 Required: False
 Position: Named
