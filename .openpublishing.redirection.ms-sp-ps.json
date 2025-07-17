@@ -4778,7 +4778,7 @@
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-server/sharepoint-server.md",
             "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-server/index.yml",
