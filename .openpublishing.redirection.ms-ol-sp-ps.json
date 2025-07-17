@@ -866,6 +866,11 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "sharepoint/sharepoint-ps/sharepoint-online/index.yml",
+            "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/New-SPOAppBillingPolicy.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/new-spoappbillingpolicy",
             "redirect_document_id": true
