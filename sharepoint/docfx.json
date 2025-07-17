@@ -44,10 +44,10 @@
       "feedback_system": "Standard",
             "feedback_product_url": "https://github.com/MicrosoftDocs/OfficeDocs-SharePoint-powershell/issues",
       "author": "techwriter40",
+      "manager": "meerak",
       "ms.author": "pamgreen",
       "ms.devlang": "powershell",
       "ms.date": "09/08/2021",
-      "ms.manager": "meerak",
       "ms.topic": "reference",
       "contributors_to_exclude": [
         "rjagiewich",
