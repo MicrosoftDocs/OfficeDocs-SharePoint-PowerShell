@@ -1,1714 +1,1694 @@
 {
     "redirections": [
         {
-            "source_path": "sharepoint/virtual-folder/sharepoint-online/Add-SPOTenantRestrictedSearchAllowedList.md",
-            "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "sharepoint/virtual-folder/sharepoint-online/Get-SPOTenantRestrictedSearchAllowedList.md",
-            "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "sharepoint/virtual-folder/sharepoint-online/Get-SPOTenantRestrictedSearchMode.md",
-            "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "sharepoint/virtual-folder/sharepoint-online/Remove-SPOTenantRestrictedSearchAllowedList.md",
-            "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "sharepoint/virtual-folder/sharepoint-online/Set-SPOTenantRestrictedSearchMode.md",
-            "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "sharepoint/virtual-folder/sharepoint-online/Add-SPOAppPrioritizationPolicy.md",
+            "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Add-SPOAppPrioritizationPolicy.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/Add-SPOServicePrioritizationAppRegistration",
             "redirect_document_id": false
         },
         {
-            "source_path": "sharepoint/virtual-folder/sharepoint-online/Get-SPOAppPrioritizationPolicies.md",
+            "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOAppPrioritizationPolicies.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/Get-SPOServicePrioritizationAppRegistrations",
             "redirect_document_id": false
         },
         {
-            "source_path": "sharepoint/virtual-folder/sharepoint-online/Remove-SPOAppPrioritizationPolicy.md",
+            "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOAppPrioritizationPolicy.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/Remove-SPOServicePrioritizationAppRegistration",
             "redirect_document_id": false
         },
         {
-            "source_path": "sharepoint/virtual-folder/sharepoint-online/Set-SPOAppPrioritizationPolicy.md",
+            "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOAppPrioritizationPolicy.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/Set-SPOServicePrioritizationAppRegistration",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Add-SPOContainerTypeBilling.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/add-spocontainertypebilling",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Add-SPOContainerUser.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/add-spocontaineruser",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Add-SPOContentSecurityPolicy.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/add-spocontentsecuritypolicy",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Add-SPOFontPackage.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/add-spofontpackage",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Add-SPOGeoAdministrator.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/add-spogeoadministrator",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Add-SPOHubSiteAssociation.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/add-spohubsiteassociation",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Add-SPOHubToHubAssociation.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/add-spohubtohubassociation",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Add-SPOListDesign.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/add-spolistdesign",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Add-SPOOrgAssetsLibrary.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/add-spoorgassetslibrary",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Add-SPOServicePrioritizationAppRegistration.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/add-sposerviceprioritizationappregistration",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Add-SPOSiteCollectionAppCatalog.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/add-spositecollectionappcatalog",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Add-SPOSiteDesign.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/add-spositedesign",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Add-SPOSiteDesignTask.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/add-spositedesigntask",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Add-SPOSiteOneDriveClassicFeatures.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/add-spositeonedriveclassicfeatures",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Add-SPOSiteScript.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/add-spositescript",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Add-SPOSiteScriptPackage.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/add-spositescriptpackage",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Add-SPOTenantCdnOrigin.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/add-spotenantcdnorigin",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Add-SPOTenantIdentityMap.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/add-spotenantidentitymap",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Add-SPOTenantIdentityMappingGroup.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/add-spotenantidentitymappinggroup",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Add-SPOTenantIdentityMappingUser.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/add-spotenantidentitymappinguser",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Add-SPOTenantRestrictedSearchAllowedList.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/add-spotenantrestrictedsearchallowedlist",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Add-SPOTheme.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/add-spotheme",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Add-SPOUser.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/add-spouser",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Apply-SPOFontPackage.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/apply-spofontpackage",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Approve-SPOTenantServicePrincipalPermissionGrant.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/approve-spotenantserviceprincipalpermissiongrant",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Approve-SPOTenantServicePrincipalPermissionRequest.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/approve-spotenantserviceprincipalpermissionrequest",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Clear-SPOTenantPreAuthSettings.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/clear-spotenantpreauthsettings",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Connect-SPOService.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/connect-sposervice",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/ConvertTo-SPOMigrationEncryptedPackage.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/convertto-spomigrationencryptedpackage",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/ConvertTo-SPOMigrationTargetedPackage.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/convertto-spomigrationtargetedpackage",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Copy-SPOPersonalSitePage.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/copy-spopersonalsitepage",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Deny-SPOTenantServicePrincipalPermissionRequest.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/deny-spotenantserviceprincipalpermissionrequest",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Disable-SPOTenantServicePrincipal.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/disable-spotenantserviceprincipal",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Disconnect-SPOService.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/disconnect-sposervice",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Enable-SPOCommSite.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/enable-spocommsite",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Enable-SPOTenantServicePrincipal.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/enable-spotenantserviceprincipal",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Export-SPODataAccessGovernanceInsight.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/export-spodataaccessgovernanceinsight",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Export-SPOQueryLogs.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/export-spoquerylogs",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Export-SPOSites.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/export-sposites",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Export-SPOUserInfo.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/export-spouserinfo",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Export-SPOUserProfile.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/export-spouserprofile",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-FileSensitivityLabelInfo.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-filesensitivitylabelinfo",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOAppBillingPolicies.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spoappbillingpolicies",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOAppErrors.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spoapperrors",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOAppInfo.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spoappinfo",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOApplication.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spoapplication",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOAuditDataCollectionStatusForActivityInsights.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spoauditdatacollectionstatusforactivityinsights",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOBlockedPageCreationContentTypeList.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spoblockedpagecreationcontenttypelist",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOBrowserIdleSignOut.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spobrowseridlesignout",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOBuiltInDesignPackageVisibility.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spobuiltindesignpackagevisibility",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOBuiltInFontPackageSettings.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spobuiltinfontpackagesettings",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOBuiltInSiteTemplateSettings.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spobuiltinsitetemplatesettings",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOContainer.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spocontainer",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOContainerType.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spocontainertype",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOContainerTypeConfiguration.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spocontainertypeconfiguration",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOContentEventEmailAddresses.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spocontenteventemailaddresses",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOContentSecurityPolicy.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spocontentsecuritypolicy",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOCopilotAgentInsightsReport.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spocopilotagentinsightsreport",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOCopilotPromoOptInStatus.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spocopilotpromooptinstatus",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOCopilotPromoUsage.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spocopilotpromousage",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOCrossGeoMoveReport.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spocrossgeomovereport",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOCrossGeoMovedUsers.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spocrossgeomovedusers",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOCrossGeoUsers.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spocrossgeousers",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOCrossTenantCompatibilityStatus.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spocrosstenantcompatibilitystatus",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOCrossTenantGroupContentMoveState.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spocrosstenantgroupcontentmovestate",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOCrossTenantHostUrl.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spocrosstenanthosturl",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOCrossTenantRelationship.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spocrosstenantrelationship",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOCrossTenantRelationshipByPartner.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spocrosstenantrelationshipbypartner",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOCrossTenantRelationshipByScenario.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spocrosstenantrelationshipbyscenario",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOCrossTenantSiteContentMoveState.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spocrosstenantsitecontentmovestate",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOCrossTenantUserContentMoveState.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spocrosstenantusercontentmovestate",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPODataAccessGovernanceInsight.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spodataaccessgovernanceinsight",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPODataEncryptionPolicy.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spodataencryptionpolicy",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPODeletedContainer.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spodeletedcontainer",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPODeletedSite.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spodeletedsite",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPODisableSpacesActivation.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spodisablespacesactivation",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOEnterpriseAppInsightsReport.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spoenterpriseappinsightsreport",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOExternalUser.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spoexternaluser",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOFontPackage.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spofontpackage",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOGeoAdministrator.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spogeoadministrator",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOGeoMoveCrossCompatibilityStatus.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spogeomovecrosscompatibilitystatus",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOGeoStorageQuota.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spogeostoragequota",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOHideDefaultThemes.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spohidedefaultthemes",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOHomeSite.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spohomesite",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOHubSite.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spohubsite",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOInformationBarriersInsightsReport.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spoinformationbarriersinsightsreport",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOInformationBarriersPolicyComplianceReport.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spoinformationbarrierspolicycompliancereport",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOIsCommSite.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spoiscommsite",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOKnowledgeHubSite.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spoknowledgehubsite",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOLandingSites.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spolandingsites",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOListDesign.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spolistdesign",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOListFileVersionBatchDeleteJobProgress.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spolistfileversionbatchdeletejobprogress",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOListFileVersionExpirationReportJobProgress.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spolistfileversionexpirationreportjobprogress",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOListVersionPolicy.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spolistversionpolicy",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOMalwareFile.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spomalwarefile",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOMalwareFileContent.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spomalwarefilecontent",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOMigrationJobProgress.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spomigrationjobprogress",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOMigrationJobStatus.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spomigrationjobstatus",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOMultiGeoCompanyAllowedDataLocation.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spomultigeocompanyalloweddatalocation",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOMultiGeoExperience.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spomultigeoexperience",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOOrgAssetsLibrary.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spoorgassetslibrary",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOOrgNewsSite.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spoorgnewssite",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOPersonalSitePageCopyProgress.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spopersonalsitepagecopyprogress",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOPortalLaunchWaves.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spoportallaunchwaves",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOPublicCdnOrigins.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spopubliccdnorigins",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPORestrictedAccessForSitesInsights.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-sporestrictedaccessforsitesinsights",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPORestrictedContentDiscoverabilityReport.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-sporestrictedcontentdiscoverabilityreport",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPORestrictedSiteCreation.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-sporestrictedsitecreation",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOServicePrioritizationAppRegistrations.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-sposerviceprioritizationappregistrations",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOServicePrioritizationBillingPolicies.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-sposerviceprioritizationbillingpolicies",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOSite.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-sposite",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOSiteCollectionAppCatalogs.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spositecollectionappcatalogs",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOSiteContentMoveState.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spositecontentmovestate",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOSiteDataEncryptionPolicy.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spositedataencryptionpolicy",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOSiteDesign.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spositedesign",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOSiteDesignRights.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spositedesignrights",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOSiteDesignRun.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spositedesignrun",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOSiteDesignRunStatus.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spositedesignrunstatus",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOSiteDesignTask.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spositedesigntask",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOSiteFileVersionBatchDeleteJobProgress.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spositefileversionbatchdeletejobprogress",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOSiteFileVersionExpirationReportJobProgress.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spositefileversionexpirationreportjobprogress",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOSiteGroup.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spositegroup",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOSitePages.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spositepages",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOSiteRenameState.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spositerenamestate",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOSiteReview.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spositereview",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOSiteScript.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spositescript",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOSiteScriptFromList.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spositescriptfromlist",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOSiteScriptFromWeb.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spositescriptfromweb",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOSiteScriptPackageFile.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spositescriptpackagefile",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOSiteScriptPackageFromWeb.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spositescriptpackagefromweb",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOSiteUserInvitations.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spositeuserinvitations",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOSiteVersionPolicyJobProgress.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spositeversionpolicyjobprogress",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOStorageEntity.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spostorageentity",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOStructuralNavigationCacheSiteState.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spostructuralnavigationcachesitestate",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOStructuralNavigationCacheWebState.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spostructuralnavigationcachewebstate",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOTemporarilyDisableAppBar.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spotemporarilydisableappbar",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOTenant.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spotenant",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOTenantCdnEnabled.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spotenantcdnenabled",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOTenantCdnOrigins.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spotenantcdnorigins",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOTenantCdnPolicies.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spotenantcdnpolicies",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOTenantContentTypeReplicationParameters.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spotenantcontenttypereplicationparameters",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOTenantIdentityMappingGroup.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spotenantidentitymappinggroup",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOTenantIdentityMappingUser.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spotenantidentitymappinguser",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOTenantLogEntry.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spotenantlogentry",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOTenantLogLastAvailableTimeInUtc.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spotenantloglastavailabletimeinutc",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOTenantPreAuthSettings.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spotenantpreauthsettings",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOTenantRenameSitePrioritization.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spotenantrenamesiteprioritization",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOTenantRenameStatus.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spotenantrenamestatus",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOTenantRestrictedSearchAllowedList.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spotenantrestrictedsearchallowedlist",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOTenantRestrictedSearchMode.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spotenantrestrictedsearchmode",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOTenantServicePrincipalPermissionGrants.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spotenantserviceprincipalpermissiongrants",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOTenantServicePrincipalPermissionRequests.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spotenantserviceprincipalpermissionrequests",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOTenantSyncClientRestriction.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spotenantsyncclientrestriction",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOTenantTaxonomyReplicationParameters.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spotenanttaxonomyreplicationparameters",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOTheme.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spotheme",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOUnifiedGroup.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spounifiedgroup",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOUnifiedGroupMoveState.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spounifiedgroupmovestate",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOUser.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spouser",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOUserAndContentMoveState.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spouserandcontentmovestate",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOUserOneDriveLocation.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spouseronedrivelocation",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOWebTemplate.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spowebtemplate",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Grant-SPOHubSiteRights.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/grant-spohubsiterights",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Grant-SPOSiteDesignRights.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/grant-spositedesignrights",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Invoke-SPOListDesign.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/invoke-spolistdesign",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Invoke-SPOMigrationEncryptUploadSubmit.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/invoke-spomigrationencryptuploadsubmit",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Invoke-SPOSiteDesign.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/invoke-spositedesign",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Invoke-SPOSiteSwap.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/invoke-spositeswap",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Invoke-SPOSiteUpgrade.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/invoke-spositeupgrade",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/sharepoint-online.md",
-            "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/microsoft.online.sharepoint.powershell",
+            "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "sharepoint/sharepoint-ps/sharepoint-online/index.yml",
+            "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/",
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/New-SPOAppBillingPolicy.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/new-spoappbillingpolicy",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/New-SPOContainerType.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/new-spocontainertype",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/New-SPOListFileVersionBatchDeleteJob.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/new-spolistfileversionbatchdeletejob",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/New-SPOListFileVersionExpirationReportJob.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/new-spolistfileversionexpirationreportjob",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/New-SPOMigrationEncryptionParameters.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/new-spomigrationencryptionparameters",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/New-SPOMigrationPackage.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/new-spomigrationpackage",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/New-SPOPortalLaunchWaves.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/new-spoportallaunchwaves",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/New-SPOPublicCdnOrigin.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/new-spopubliccdnorigin",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/New-SPOSdnProvider.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/new-sposdnprovider",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/New-SPOServicePrioritizationBillingPolicy.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/new-sposerviceprioritizationbillingpolicy",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/New-SPOSite.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/new-sposite",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/New-SPOSiteFileVersionBatchDeleteJob.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/new-spositefileversionbatchdeletejob",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/New-SPOSiteFileVersionExpirationReportJob.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/new-spositefileversionexpirationreportjob",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/New-SPOSiteGroup.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/new-spositegroup",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/New-SPOSiteSharingReportJob.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/new-spositesharingreportjob",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Register-SPODataEncryptionPolicy.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/register-spodataencryptionpolicy",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Register-SPOHubSite.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/register-spohubsite",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOAppBillingPolicy.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spoappbillingpolicy",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOBlockedPageCreationContentType.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spoblockedpagecreationcontenttype",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOContainer.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spocontainer",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOContainerType.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spocontainertype",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOContainerUser.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spocontaineruser",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOContentEventEmailAddresses.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spocontenteventemailaddresses",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOContentSecurityPolicy.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spocontentsecuritypolicy",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOCrossTenantRelationship.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spocrosstenantrelationship",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPODataAccessGovernanceInsight.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spodataaccessgovernanceinsight",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPODeletedContainer.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spodeletedcontainer",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPODeletedSite.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spodeletedsite",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOExternalUser.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spoexternaluser",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOFontPackage.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spofontpackage",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOGeoAdministrator.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spogeoadministrator",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOHomeSite.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spohomesite",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOHubSiteAssociation.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spohubsiteassociation",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOHubToHubAssociation.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spohubtohubassociation",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOInformationBarriersPolicyComplianceReport.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spoinformationbarrierspolicycompliancereport",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOKnowledgeHubSite.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spoknowledgehubsite",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOListDesign.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spolistdesign",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOListFileVersionBatchDeleteJob.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spolistfileversionbatchdeletejob",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOMigrationJob.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spomigrationjob",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOMultiGeoCompanyAllowedDataLocation.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spomultigeocompanyalloweddatalocation",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOOrgAssetsLibrary.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spoorgassetslibrary",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOOrgNewsSite.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spoorgnewssite",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOPortalLaunchWaves.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spoportallaunchwaves",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOPublicCdnOrigin.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spopubliccdnorigin",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOSdnProvider.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-sposdnprovider",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOServicePrioritizationAppRegistration.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-sposerviceprioritizationappregistration",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOSite.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-sposite",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOSiteCollectionAppCatalog.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spositecollectionappcatalog",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOSiteCollectionAppCatalogById.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spositecollectionappcatalogbyid",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOSiteDesign.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spositedesign",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOSiteDesignTask.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spositedesigntask",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOSiteFileVersionBatchDeleteJob.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spositefileversionbatchdeletejob",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOSiteGroup.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spositegroup",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOSiteScript.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spositescript",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOSiteSharingReportJob.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spositesharingreportjob",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOSiteUserInvitations.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spositeuserinvitations",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOSiteVersionPolicyJob.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spositeversionpolicyjob",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOStorageEntity.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spostorageentity",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOTenantCdnOrigin.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spotenantcdnorigin",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOTenantIdentityMappingGroup.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spotenantidentitymappinggroup",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOTenantIdentityMappingUser.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spotenantidentitymappinguser",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOTenantRenameSitePrioritization.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spotenantrenamesiteprioritization",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOTenantRestrictedSearchAllowedList.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spotenantrestrictedsearchallowedlist",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOTenantSyncClientRestriction.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spotenantsyncclientrestriction",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOTheme.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spotheme",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOUser.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spouser",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOUserInfo.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spouserinfo",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOUserProfile.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spouserprofile",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Repair-SPOSite.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/repair-sposite",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Request-SPOPersonalSite.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/request-spopersonalsite",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Request-SPOUpgradeEvaluationSite.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/request-spoupgradeevaluationsite",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Restore-SPODataEncryptionPolicy.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/restore-spodataencryptionpolicy",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Restore-SPODeletedContainer.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/restore-spodeletedcontainer",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Restore-SPODeletedSite.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/restore-spodeletedsite",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Revoke-SPOHubSiteRights.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/revoke-spohubsiterights",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Revoke-SPOSiteDesignRights.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/revoke-spositedesignrights",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Revoke-SPOTenantServicePrincipalPermission.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/revoke-spotenantserviceprincipalpermission",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Revoke-SPOUserSession.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/revoke-spousersession",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOApplication.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spoapplication",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOApplicationPermission.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spoapplicationpermission",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOBlockedPageCreationContentType.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spoblockedpagecreationcontenttype",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOBrowserIdleSignOut.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spobrowseridlesignout",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOBuiltInDesignPackageVisibility.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spobuiltindesignpackagevisibility",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOBuiltInFontPackageSettings.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spobuiltinfontpackagesettings",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOBuiltInSiteTemplateSettings.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spobuiltinsitetemplatesettings",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOContainer.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spocontainer",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOContainerType.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spocontainertype",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOContainerTypeConfiguration.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spocontainertypeconfiguration",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOContainerUser.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spocontaineruser",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOContentEventEmailAddresses.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spocontenteventemailaddresses",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOCopilotPromoOptInStatus.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spocopilotpromooptinstatus",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOCrossTenantQuota.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spocrosstenantquota",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOCrossTenantRelationship.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spocrosstenantrelationship",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOCustomFontCatalog.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spocustomfontcatalog",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPODisableSpacesActivation.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spodisablespacesactivation",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOGeoStorageQuota.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spogeostoragequota",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOHideDefaultThemes.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spohidedefaultthemes",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOHomeSite.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spohomesite",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOHubSite.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spohubsite",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOKnowledgeHubSite.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spoknowledgehubsite",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOListVersionPolicy.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spolistversionpolicy",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOMigrationPackageAzureSource.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spomigrationpackageazuresource",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOMultiGeoCompanyAllowedDataLocation.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spomultigeocompanyalloweddatalocation",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOMultiGeoExperience.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spomultigeoexperience",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOOrgAssetsLibrary.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spoorgassetslibrary",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOOrgNewsSite.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spoorgnewssite",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOPortalLaunchWaves.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spoportallaunchwaves",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPORestrictedSiteCreation.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-sporestrictedsitecreation",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOServicePrioritizationAppRegistration.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-sposerviceprioritizationappregistration",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOSite.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-sposite",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOSiteArchiveState.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spositearchivestate",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOSiteDesign.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spositedesign",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOSiteGroup.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spositegroup",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOSiteOffice365Group.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spositeoffice365group",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOSiteScript.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spositescript",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOSiteScriptPackage.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spositescriptpackage",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOStorageEntity.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spostorageentity",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOStructuralNavigationCacheSiteState.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spostructuralnavigationcachesitestate",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOStructuralNavigationCacheWebState.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spostructuralnavigationcachewebstate",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOTemporarilyDisableAppBar.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spotemporarilydisableappbar",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOTenant.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spotenant",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOTenantCdnEnabled.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spotenantcdnenabled",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOTenantCdnPolicy.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spotenantcdnpolicy",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOTenantContentTypeReplicationParameters.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spotenantcontenttypereplicationparameters",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOTenantPreAuthSettings.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spotenantpreauthsettings",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOTenantRenameSitePrioritization.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spotenantrenamesiteprioritization",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOTenantRestrictedSearchMode.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spotenantrestrictedsearchmode",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOTenantSyncClientRestriction.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spotenantsyncclientrestriction",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOTenantTaxonomyReplicationParameters.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spotenanttaxonomyreplicationparameters",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOUnifiedGroup.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spounifiedgroup",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOUser.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spouser",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOWebTheme.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spowebtheme",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Start-SPOAuditDataCollectionForActivityInsights.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/start-spoauditdatacollectionforactivityinsights",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Start-SPOCopilotAgentInsightsReport.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/start-spocopilotagentinsightsreport",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Start-SPOCrossTenantGroupContentMove.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/start-spocrosstenantgroupcontentmove",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Start-SPOCrossTenantSiteContentMove.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/start-spocrosstenantsitecontentmove",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Start-SPOCrossTenantUserContentMove.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/start-spocrosstenantusercontentmove",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Start-SPODataAccessGovernanceInsight.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/start-spodataaccessgovernanceinsight",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Start-SPOEnterpriseAppInsightsReport.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/start-spoenterpriseappinsightsreport",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Start-SPOInformationBarriersInsightsReport.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/start-spoinformationbarriersinsightsreport",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Start-SPOInformationBarriersPolicyComplianceReport.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/start-spoinformationbarrierspolicycompliancereport",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Start-SPORestrictedAccessForSitesInsights.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/start-sporestrictedaccessforsitesinsights",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Start-SPORestrictedContentDiscoverabilityReport.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/start-sporestrictedcontentdiscoverabilityreport",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Start-SPOSiteContentMove.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/start-spositecontentmove",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Start-SPOSiteOpticalCharacterRecognitionBackfill.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/start-spositeopticalcharacterrecognitionbackfill",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Start-SPOSiteRename.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/start-spositerename",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Start-SPOSiteReview.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/start-spositereview",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Start-SPOTenantRename.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/start-spotenantrename",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Start-SPOUnifiedGroupMove.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/start-spounifiedgroupmove",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Start-SPOUserAndContentMove.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/start-spouserandcontentmove",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Stop-SPOAuditDataCollectionForActivityInsights.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/stop-spoauditdatacollectionforactivityinsights",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Stop-SPOCrossTenantGroupContentMove.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/stop-spocrosstenantgroupcontentmove",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Stop-SPOCrossTenantSiteContentMove.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/stop-spocrosstenantsitecontentmove",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Stop-SPOCrossTenantUserContentMove.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/stop-spocrosstenantusercontentmove",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Stop-SPOSiteContentMove.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/stop-spositecontentmove",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Stop-SPOTenantRename.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/stop-spotenantrename",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Stop-SPOUserAndContentMove.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/stop-spouserandcontentmove",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Submit-SPOMigrationJob.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/submit-spomigrationjob",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Test-SPOSite.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/test-sposite",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Unlock-SPOSensitivityLabelEncryptedFile.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/unlock-sposensitivitylabelencryptedfile",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Unregister-SPOHubSite.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/unregister-spohubsite",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Update-SPODataEncryptionPolicy.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/update-spodataencryptionpolicy",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Update-UserType.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/update-usertype",
-            "redirect_document_id": false
+            "redirect_document_id": true
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Verify-SPOCrossTenantRelationship.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/verify-spocrosstenantrelationship",
-            "redirect_document_id": false
+            "redirect_document_id": true
         }
     ]
 }
