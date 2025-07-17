@@ -29,7 +29,7 @@ landingContent:
           - text: Get started with SharePoint Online Management Shell
             url: sharepoint-online/connect-sharepoint-online.md
           - text: Cmdlet reference
-            url: /powershell/module/sharepoint-online
+            url: /powershell/module/microsoft.online.sharepoint.powershell
 
   # Card
   - title: SharePoint Server Subscription
@@ -37,9 +37,9 @@ landingContent:
       - linkListType: reference
         links:
           - text: Overview
-            url: sharepoint-server/sharepoint-server-sub-cmdlets.md         
+            url: sharepoint-server/sharepoint-server-sub-cmdlets.md
           - text: Cmdlet reference
-            url: /powershell/module/sharepoint-server
+            url: /powershell/module/sharepointserver
 
 
   # Card
@@ -48,9 +48,9 @@ landingContent:
       - linkListType: reference
         links:
           - text: Overview
-            url: sharepoint-server/sharepoint-server-cmdlets.md         
+            url: sharepoint-server/sharepoint-server-cmdlets.md
           - text: Cmdlet reference
-            url: /powershell/module/sharepoint-server
+            url: /powershell/module/microsoft.sharepoint.powershell
 
  # Card
   - title: PnP PowerShell
@@ -58,7 +58,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Overview
-            url: sharepoint-pnp/sharepoint-pnp-cmdlets.md     
+            url: sharepoint-pnp/sharepoint-pnp-cmdlets.md
           - text: Cmdlet reference
             url: https://pnp.github.io/powershell/
           - text: PowerShell Gallery
@@ -75,6 +75,6 @@ landingContent:
             url: /powershell/scripting/overview
           - text: More resources for learning PowerShell
             url: /powershell/scripting/learn/more-powershell-learning
-          
 
-   
+
+

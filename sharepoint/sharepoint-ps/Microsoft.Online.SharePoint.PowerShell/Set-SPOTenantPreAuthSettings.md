@@ -299,5 +299,6 @@ The `-IncludedFeatures` and `-ExcludedFeatures` use feature names from the follo
 
 ## RELATED LINKS
 
-- [Get-SPOTenantPreAuthSettings](Get-SPOTenantPreAuthSettings.md)
-- [Clear-SPOTenantPreAuthSettings](Clear-SPOTenantPreAuthSettings.md)
+[Get-SPOTenantPreAuthSettings](Get-SPOTenantPreAuthSettings.md)
+
+[Clear-SPOTenantPreAuthSettings](Clear-SPOTenantPreAuthSettings.md)
