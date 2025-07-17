@@ -2,7 +2,6 @@
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Set-SPOApplication
-
 title: Set-SPOApplication
 schema: 2.0.0
 author: ShreyasSar26
@@ -21,17 +20,8 @@ Sets or updates one or more configuration of a SharePoint Embedded application.
 ```
 Set-SPOApplication [-OwningApplicationId] <Guid> [[-SharingCapability] <SharingCapabilities>]
  [[-OverrideTenantSharingCapability] <Boolean>]
- [[-CopilotEmbeddedChatHosts] <System.Collections.Generic.List`1[System.String]>] [<CommonParameters>]
-```
-
-### ParamSet1
-
-```powershell
-Set-SPOApplication
-[[-OwningApplicationId] <Guid>]
-[[–SharingCapability] <SharingCapability>]
-[[-OverrideTenantSharingCapability] <Boolean>]
-[[-CopilotEmbeddedChatHosts] <String>]
+ [[-CopilotEmbeddedChatHosts] <System.Collections.Generic.List`1[System.String]>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION

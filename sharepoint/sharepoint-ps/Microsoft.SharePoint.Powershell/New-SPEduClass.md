@@ -258,9 +258,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.String
-Microsoft.SharePoint.PowerShell.SPSitePipeBind
-System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
-Microsoft.SharePoint.PowerShell.SPAssignmentCollection
+
+### Microsoft.SharePoint.PowerShell.SPSitePipeBind
+
+### System.DateTime
+
+### Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 
 ## OUTPUTS
 

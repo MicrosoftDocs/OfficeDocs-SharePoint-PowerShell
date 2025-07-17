@@ -9,24 +9,35 @@ ms.author: anfra
 ms.reviewer: anushmag
 manager: anushmag
 schema: 2.0.0
-
 ---
 
 # Set-SPOTenantRenameSitePrioritization
+
 ## SYNOPSIS
+
 Allows prioritization of a site for early execution, as part of [Advanced Tenant Rename](/sharepoint/change-your-sharepoint-domain-name#advanced-tenant-rename-preview).
+
 ## SYNTAX
+
 ```
 Set-SPOTenantRenameSitePrioritization -SiteUrl <String> [<CommonParameters>]
 ```
+
 ## DESCRIPTION
+
 Allows for the specified site to be prioritized.
 
-As part of [Advanced Tenant Rename](/sharepoint/change-your-sharepoint-domain-name#advanced-tenant-rename-preview), organizations can prioritize up to 4,000 sites for initial execution among all other sites in your organization as part of the overall rename operation.
+As part of
+[Advanced Tenant Rename](/sharepoint/change-your-sharepoint-domain-name#advanced-tenant-rename-preview),
+organizations can prioritize up to 4,000 sites for initial execution among all other sites in your
+organization as part of the overall rename operation.
 
-It is possible to start prioritizing sites only once the rename operation has been scheduled using the [Start-SPOTenantRename](Start-SPOTenantRename.md) cmdlet.
+It is possible to start prioritizing sites only once the rename operation has been scheduled using
+the [Start-SPOTenantRename](Start-SPOTenantRename.md) cmdlet.
 
-Please note that prioritizing a site is not a guarantee that it will complete first. There are several factors that can affect processing times, and multiple site renames are processed in parallel. Prioritized sites have a much higher chance of completing first.
+Please note that prioritizing a site is not a guarantee that it will complete first. There are
+several factors that can affect processing times, and multiple site renames are processed in
+parallel. Prioritized sites have a much higher chance of completing first.
 
 You must be at least a SharePoint administrator to run the cmdlet.
 
@@ -44,7 +55,10 @@ This example prioritizes the 'projectx' site within the Advanced Tenant Rename.
 
 ### -SiteUrl
 
-Specifies the full site URL of the site you wish to prioritize. This can be either a OneDrive for Business or SharePoint Online site. Root URLs (e.g., contoso.sharepoint.com, contoso-admin.sharepoint.com or contoso-my.sharepoint.com) can't be prioritized.
+Specifies the full site URL of the site you wish to prioritize. This can be either a OneDrive for
+Business or SharePoint Online site. Root URLs (e.g., contoso.sharepoint.com,
+contoso-admin.sharepoint.com or contoso-my.sharepoint.com) can't be prioritized.
+
 ```yaml
 Type: System.String
 Parameter Sets: (All)
@@ -59,7 +73,10 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

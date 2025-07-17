@@ -71,5 +71,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Set-SPOTenantPreAuthSettings](Set-SPOTenantPreAuthSettings.md)
-- [Clear-SPOTenantPreAuthSettings](Clear-SPOTenantPreAuthSettings.md)
+[Set-SPOTenantPreAuthSettings](Set-SPOTenantPreAuthSettings.md)
+
+[Clear-SPOTenantPreAuthSettings](Clear-SPOTenantPreAuthSettings.md)
