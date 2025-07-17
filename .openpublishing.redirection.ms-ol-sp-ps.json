@@ -862,7 +862,7 @@
         },
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/sharepoint-online.md",
-            "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/microsoft.online.sharepoint.powershell",
+            "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell",
             "redirect_document_id": true
         },
         {
