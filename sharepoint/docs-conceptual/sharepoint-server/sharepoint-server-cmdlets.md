@@ -85,5 +85,5 @@ sessions. For more information about scripts and execution policies, see [about_
 [01]: /dotnet/api/system.management.automation.runspaces.psthreadoptions
 [02]: /powershell/module/microsoft.powershell.core/about/about_execution_policies
 [03]: /powershell/module/microsoft.powershell.core/about/about_scripts
-[04]: xref:Microsoft.SharePoint.Powershell
-[05]: xref:Microsoft.SharePoint.Powershell.Add-SPShellAdmin
+[04]: /powershell/module/microsoft.sharepoint.powershell
+[05]: /powershell/module/microsoft.sharepoint.powershell/add-spshelladmin?view=sharepoint-ps&preserve-view=true
