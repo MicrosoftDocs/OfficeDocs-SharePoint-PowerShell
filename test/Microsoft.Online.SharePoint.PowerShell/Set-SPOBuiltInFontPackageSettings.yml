@@ -1,0 +1,68 @@
+metadata:
+  applicable: SharePoint Online
+  author: Yixian15
+  document type: cmdlet
+  external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
+  HelpUri: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spobuiltinfontpackagesettings
+  Module Name: Microsoft.Online.SharePoint.PowerShell
+  ms.author: yixianpu
+  ms.reviewer: 
+  PlatyPS schema version: 2024-05-01
+  title: Set-SPOBuiltInFontPackageSettings
+title: Set-SPOBuiltInFontPackageSettings
+synopsis: Use this cmdlet to set settings of [built-in font packages](/sharepoint/brand-center-font-packages).
+syntaxes:
+- commandName: Set-SPOBuiltInFontPackageSettings
+  parameterSetName: Default
+  isDefault: true
+  parameters:
+  - '[-HideBuiltInFontPackages <Boolean>]'
+aliases: ''
+description: |-
+  Use this cmdlet to set settings of [built-in font packages](/sharepoint/brand-center-font-packages).
+examples:
+- title: Example 1
+  description: >-
+    ```powershell
+
+    Set-SPOBuiltInFontPackageSettings -HideBuiltInFontPackages $true
+
+    ```
+
+
+    This example sets the built-in font packages to be hidden from SharePoint sites.
+parameters:
+- name: HideBuiltInFontPackages
+  type: System.Boolean
+  description: ''
+  defaultValue: None
+  supportsWildcards: false
+  isDynamic: false
+  aliases: []
+  dontShow: false
+  acceptedValues: []
+  parameterSets:
+  - name: (All)
+    position: Named
+    isRequired: false
+    valueFromPipeline: true
+    valueFromPipelineByPropertyName: false
+    valueFromRemainingArguments: false
+  helpMessage: ''
+
+- name: CommonParameters
+  description: |-
+    This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+    -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable,
+    -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see
+    [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+inputs:
+- name: System.Boolean
+  description: ''
+outputs:
+- name: System.Object
+  description: ''
+notes: ''
+links:
+- text: 'Get-SPOBuiltInFontPackageSettings'
+  href: ./Get-SPOBuiltInFontPackageSettings.md

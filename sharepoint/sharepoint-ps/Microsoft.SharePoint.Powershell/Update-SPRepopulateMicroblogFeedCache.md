@@ -18,15 +18,6 @@ Refreshes the microblog feed cache.
 
 ## SYNTAX
 
-### (Default)
-
-```
-Update-SPRepopulateMicroblogFeedCache [-AccountName <String>]
- -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
- [-AssignmentCollection <SPAssignmentCollection>] [-SiteSubscription <SPSiteSubscriptionPipeBind>]
- [-SiteUrl <String>] [<CommonParameters>]
-```
-
 ### Default
 
 ```
@@ -39,25 +30,30 @@ Update-SPRepopulateMicroblogFeedCache [-AccountName <String>]
 ### FollowableList
 
 ```
-Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
- [-AssignmentCollection <SPAssignmentCollection>] -SiteSubscription <SPSiteSubscriptionPipeBind> -ListId <Guid>
- -ListRootFolderUrl <String> -SiteId <Guid> -WebId <Guid> [<CommonParameters>]
+Update-SPRepopulateMicroblogFeedCache
+ -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
+ [-AssignmentCollection <SPAssignmentCollection>] -SiteSubscription <SPSiteSubscriptionPipeBind>
+ -ListId <Guid> -ListRootFolderUrl <String> -SiteId <Guid> -WebId <Guid> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Use the `Update-SPRepopulateMicroblogFeedCache` cmdlet to refresh the feeds of a given user.
-It can be used in scenarios where the automatic refresh has failed or when reverting to an old version of a user's personal site.
+Use the `Update-SPRepopulateMicroblogFeedCache` cmdlet to refresh the feeds of a given user. It can
+be used in scenarios where the automatic refresh has failed or when reverting to an old version of a
+user's personal site.
 
-When you refresh the cache, the `Update-SPRepopulateMicroblogLMTCache` cmdlet should be run first and then the `Update-SPRepopulateMicroblogFeedCache` cmdlet second.
+When you refresh the cache, the `Update-SPRepopulateMicroblogLMTCache` cmdlet should be run first
+and then the `Update-SPRepopulateMicroblogFeedCache` cmdlet second.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products,
+see the online documentation at
+[SharePoint Server Cmdlets](/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
 ### EXAMPLE 1
 
-```
+```powershell
 $proxy = Get-SPServiceApplicationProxy | ?{$_.TypeName -eq 'User Profile Service Application Proxy'}
 Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy $proxy -AccountName contoso\userName
 ```
@@ -115,9 +111,9 @@ Specifies the User Profile Service application proxy to update.
 
 The type must be in one of the following forms:
 
---A valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
---A valid name of a service application proxy (for example, UserProfileSvcProxy1)
---An instance of a valid SPServiceApplicationProxy object
+- A valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
+- A valid name of a service application proxy (for example, UserProfileSvcProxy1)
+- An instance of a valid SPServiceApplicationProxy object
 
 ```yaml
 Type: SPServiceApplicationProxyPipeBind
@@ -135,13 +131,16 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
-Manages objects for the purpose of proper disposal.
-Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
-Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
-When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use
+large amounts of memory and use of these objects in Windows PowerShell scripts requires proper
+memory management. Using the SPAssignment object, you can assign objects to a variable and dispose
+of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration
+objects are used, the objects are automatically disposed of if an assignment collection or the
+Global parameter is not used.
 
-When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+When the Global parameter is used, all objects are contained in the global store. If objects are not
+immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario
+can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -159,8 +158,8 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
-Specifies the account under which this service should run.
-This parameter is mandatory in a hosted-environment and optional in a non-hosted environment.
+Specifies the account under which this service should run. This parameter is mandatory in a
+hosted-environment and optional in a non-hosted environment.
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
@@ -178,7 +177,8 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 
-Specifies the Site's URL to repopulate the site feeds. If you don't specify this parameter, you must specify the AccountName parameter. If neither parameter is specified, an error message is displayed.
+Specifies the Site's URL to repopulate the site feeds. If you don't specify this parameter, you must
+specify the AccountName parameter. If neither parameter is specified, an error message is displayed.
 
 ```yaml
 Type: String
@@ -266,7 +266,10 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see about_CommonParameters
+(https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

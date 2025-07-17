@@ -4,7 +4,7 @@ Module Name: Microsoft.Online.SharePoint.PowerShell
 online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Set-SPOCopilotPromoOptInStatus
 applicable: SharePoint Online
 title: Set-SPOCopilotPromoOptInStatus
-schema:
+schema: 2.0.0
 author: siruvanti
 ms.author: siruvanti
 ms.reviewer:
@@ -40,6 +40,7 @@ Example 1 sets the Opt-In Copilot promo status for the tenant to `True`.
 ### -IsCopilotPromoStatusEnabled
 
 > Applicable: SharePoint Online
+
 Use this parameter to set Copilot opt-in promo status.
 
 ```yaml
@@ -55,7 +56,11 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -68,5 +73,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-- [Get-SPOCopilotPromoOptInStatus](./Get-SPOCopilotPromoOptInStatus.md)
-- [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
+
+[Get-SPOCopilotPromoOptInStatus](./Get-SPOCopilotPromoOptInStatus.md)
+
+[Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)

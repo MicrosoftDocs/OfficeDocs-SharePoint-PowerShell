@@ -4,7 +4,7 @@ Module Name: Microsoft.Online.SharePoint.PowerShell
 online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Get-SPOCopilotPromoOptInStatus
 applicable: SharePoint Online
 title: Get-SPOCopilotPromoOptInStatus
-schema:
+schema: 2.0.0
 author: siruvanti
 ms.author: siruvanti
 ms.reviewer:
@@ -40,7 +40,11 @@ Example 1 returns the value of the Opt-In promo status.
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable,
+-InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose,
+-WarningAction, and -WarningVariable. For more information, see
+[about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

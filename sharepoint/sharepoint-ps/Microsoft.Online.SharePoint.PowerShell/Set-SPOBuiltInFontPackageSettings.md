@@ -21,6 +21,7 @@ Use this cmdlet to set settings of [built-in font packages](/sharepoint/brand-ce
 ```
 Set-SPOBuiltInFontPackageSettings [-HideBuiltInFontPackages <Boolean>] [<CommonParameters>]
 ```
+
 ## DESCRIPTION
 
 Use this cmdlet to set settings of [built-in font packages](/sharepoint/brand-center-font-packages).
@@ -56,7 +57,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### [System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]
+### System.Boolean
 
 ## OUTPUTS
 
@@ -66,4 +67,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-- [Get-SPOBuiltInFontPackageSettings](./Get-SPOBuiltInFontPackageSettings.md)
+[Get-SPOBuiltInFontPackageSettings](./Get-SPOBuiltInFontPackageSettings.md)
