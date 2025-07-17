@@ -5,11 +5,14 @@
       {"files": ["**/*.yml", "**/*.md"], "src": "docs-conceptual", "dest": "sharepoint" },
       
       {"files": ["**/toc.yml"], "src": "sharepoint-ps", "version": "sharepoint-ps", "exclude": ["docs-conceptual"], "dest": "module/sharepoint-ps"},
-      {"files": ["**/*.yml", "**/*.md"], "src": "sharepoint-ps", "version": "sharepoint-ps", "exclude": ["docs-conceptual"], "dest": "module"},
+      {"files": ["**/*.yml"], "src": "sharepoint-ps", "version": "sharepoint-ps", "exclude": ["docs-conceptual"], "dest": "module"},
+      {"files": ["**/*.md"], "src": "sharepoint-ps/sharepoint-server", "version": "sharepoint-ps", "exclude": ["docs-conceptual"], "dest": "module/sharepoint-server"},
+      {"files": ["**/*.md"], "src": "sharepoint-ps/sharepoint-online", "version": "sharepoint-ps", "exclude": ["docs-conceptual"], "dest": "module/sharepoint-online"},
       {"files": ["**/*.md"], "src": "virtual-folder", "version": "sharepoint-ps", "dest": "module" },
       
       {"files": ["**/toc.yml"], "src": "sharepoint-server-ps", "version": "sharepoint-server-ps", "exclude": ["docs-conceptual"], "dest": "module/sharepoint-ps"},
-      {"files": ["**/*.yml", "**/*.md"], "src": "sharepoint-server-ps", "version": "sharepoint-server-ps", "exclude": ["docs-conceptual"], "dest": "module"},
+      {"files": ["**/*.yml"], "src": "sharepoint-server-ps", "version": "sharepoint-server-ps", "exclude": ["docs-conceptual"], "dest": "module"},
+      {"files": ["**/*.md"], "src": "sharepoint-server-ps/sharepoint-server", "version": "sharepoint-server-ps", "exclude": ["docs-conceptual"], "dest": "module/sharepoint-server"},
       {"files": ["**/*.md"], "src": "virtual-folder", "version": "sharepoint-server-ps", "dest": "module" }
     ],
     "resource": [
