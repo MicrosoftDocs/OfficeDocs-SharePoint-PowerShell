@@ -2,7 +2,6 @@
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Set-SPOContainer
-
 title: Set-SPOContainer
 schema: 2.0.0
 author: ShreyasSar26
@@ -127,6 +126,7 @@ Accept wildcard characters: False
 ### -BlockDownloadPolicy
 
 > Applicable: SharePoint Embedded
+
 As a SharePoint Embedded Administrator, you can block the download of files from SharePoint Embedded containers. This feature does not need Microsoft Entra Conditional Access policies. This feature can be set for individual containers but not at the organization level.
 
 Blocking the download of files allows users to remain productive while addressing the risk of accidental data loss. Users have browser-only access with no ability to download, print, or sync files. They also won't be able to access content through apps, including the Microsoft Office desktop apps. When web access is limited, users will see the following message at the top of containers: "Your organization doesn't allow you to download, print, or sync from this Container. For help contact your IT department." Read the full documentation for advanced capabilities at [Block download policy for SharePoint Containers and OneDrive](/sharepoint/block-download-from-sites).
@@ -146,6 +146,7 @@ Accept wildcard characters: False
 ### -ConditionalAccessPolicy
 
 > Applicable: SharePoint Embedded
+
 Read the [Control access from unmanaged devices](/sharepoint/control-access-from-unmanaged-devices) documentation to understand Conditional Access Policy usage in SharePoint Embedded container.
 
 Possible values:
@@ -266,6 +267,7 @@ Accept wildcard characters: False
 ### -SensitivityLabel
 
 > Applicable: SharePoint Embedded
+
 Specifies the unique identifier (GUID) of the SensitivityLabel.
 
 ```yaml

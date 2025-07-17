@@ -4,7 +4,7 @@ Module Name: Microsoft.Online.SharePoint.PowerShell
 online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Get-SPOCopilotPromoUsage
 applicable: SharePoint Online
 title: Get-SPOCopilotPromoUsage
-schema:
+schema: 2.0.0
 author: arakesh
 ms.author: arakesh
 ms.reviewer:
