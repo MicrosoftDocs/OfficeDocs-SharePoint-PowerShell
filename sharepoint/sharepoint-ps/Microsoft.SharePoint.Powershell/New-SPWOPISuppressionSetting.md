@@ -170,10 +170,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Content roadmap for Office Web Apps]()
-
-[Use Office Web Apps with SharePoint 2013]()
-
 [Get-SPWOPISuppressionSetting](Get-SPWOPISuppressionSetting.md)
 
 [Remove-SPWOPISuppressionSetting](Remove-SPWOPISuppressionSetting.md)

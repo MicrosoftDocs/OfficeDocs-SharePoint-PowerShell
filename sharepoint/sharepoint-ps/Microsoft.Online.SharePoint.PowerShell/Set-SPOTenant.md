@@ -4545,5 +4545,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-SPOSite](Get-SPOSite.md)
 
 [Set-SPOSite](Set-SPOSite.md)
-
-[Upgrade-SPOSite](Upgrade-SPOSite.md)
