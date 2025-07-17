@@ -33,9 +33,9 @@
     "branches_to_filter": [],
     "git_repository_branch_open_to_public_contributors": "main",
     "redirection_files": [
-        ".openpublishing.ms-ol-sp-ps.redirection.json",
-        ".openpublishing.ms-sp-ps.redirection.json",
-        ".openpublishing.spserver.redirection.json"
+        ".openpublishing.redirection.ms-ol-sp-ps.json",
+        ".openpublishing.redirection.ms-sp-ps.json",
+        ".openpublishing.redirection.spserver.json"
     ],
     "skip_source_output_uploading": false,
     "need_preview_pull_request": true,
