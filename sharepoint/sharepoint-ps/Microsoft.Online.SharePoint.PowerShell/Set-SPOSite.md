@@ -61,7 +61,9 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-Owner <String>] [-Title <String>] [-
  [-RestrictedAccessControl <Boolean>] [-RestrictedAccessControlGroups <Guid[]>]
  [-ListsShowHeaderAndNavigation <Boolean>] [-HidePeoplePreviewingFiles <Boolean>]
  [-HidePeopleWhoHaveListsOpen <Boolean>] [-AllowFileArchive <Boolean>]
- [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-WhatIf] [-Confirm]
+ [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>]
+ [-DisableSiteBranding <Boolean>]
+ [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -947,6 +949,25 @@ This parameter prevents non-owners from inviting new users to the site.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ParamSet3
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableSiteBranding
+
+> Applicable: SharePoint Online
+Enables or disables site branding. When `DisableSiteBranding` is set to `$true`, the site branding is disabled on the site collection.
+
+PARAMVALUE: True | False
+
+```yaml
+Type: System.Boolean
+Parameter Sets: ParamSet1
 Aliases:
 
 Required: False
