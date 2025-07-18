@@ -3645,7 +3645,7 @@ Accept wildcard characters: False
 
 Specifies the upper bound for user-created organization link expiration periods. All links created after setting this policy will expire by the end of a period spanning the set number of days.
 
-The value can be from 0 to 730 days.
+The value can be from 7 to 730 days.
 
 To remove the expiration requirement, set the value to zero (0).
 
