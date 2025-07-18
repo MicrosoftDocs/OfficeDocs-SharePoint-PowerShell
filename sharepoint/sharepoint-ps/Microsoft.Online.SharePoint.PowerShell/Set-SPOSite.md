@@ -961,6 +961,7 @@ Accept wildcard characters: False
 ### -DisableSiteBranding
 
 > Applicable: SharePoint Online
+
 Enables or disables site branding. When `DisableSiteBranding` is set to `$true`, the site branding is disabled on the site collection.
 
 PARAMVALUE: True | False
