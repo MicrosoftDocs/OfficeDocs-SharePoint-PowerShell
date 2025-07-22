@@ -839,7 +839,16 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSensitivityLabelOnRecords
-{{ Fill AllowSensitivityLabelOnRecords Description }}
+
+> Applicable: SharePoint Online
+
+Allow Records to have sensitivity labels applied.
+
+The valid values are:
+
+- False (default) – Do not allow the the application of sensitivity labels to records.
+
+- True – Allow the application of sensitivity labels to records.
 
 ```yaml
 Type: System.Boolean
