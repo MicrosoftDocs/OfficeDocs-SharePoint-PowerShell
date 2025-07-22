@@ -19,13 +19,21 @@ Removes a library that was designated as a central location for organization ass
 
 ## SYNTAX
 
+### RemoveLibrary (Default)
 ```
 Remove-SPOOrgAssetsLibrary [-LibraryUrl <String>] [-ListId <Guid>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### BrandCenter
+```
+Remove-SPOOrgAssetsLibrary [-BrandCenter] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 The Remove-SPOOrgAssetsLibrary cmdlet removes a library that was designated as a central location for organization assets across the tenant. Once this cmdlet is run, this library will no longer be accessible from the "Your organization" tab in the file picker (it might take up to 24 hours before the change applies). When running the cmdlet, either the library URL or library ID (not both) needs to be indicated.
+
+When used with the `-BrandCenter` parameter, this cmdlet removes Brand Center related organization assets libraries and deactivates Brand Center features for the tenant.
 
 Once the library is removed, CDN will still be enabled for this library. To disable CDN for this library, use Remove-SPOTenantCdnOrigin with the server relative URL (example: /sites/branding/assets).
 
@@ -39,6 +47,14 @@ This example removes https://contoso.sharepoint.com/sites/branding/Assets as a d
 Remove-SPOOrgAssetsLibrary -ListId 58454454-6546-6466-9769-646464623988
 ```
 
+### Example 2
+
+This example removes Brand Center related organization assets libraries and deactivates Brand Center features for the tenant.
+
+```powershell
+Remove-SPOOrgAssetsLibrary -BrandCenter
+```
+
 ## PARAMETERS
 
 ### -LibraryUrl
@@ -49,7 +65,7 @@ Indicates the server relative URL of the library to be removed as a central loca
 
 ```yaml
 Type: System.String
-Parameter Sets: (All)
+Parameter Sets: RemoveLibrary
 Aliases:
 
 Required: False
@@ -67,7 +83,25 @@ Indicates the library ID for the library to be removed as a central location for
 
 ```yaml
 Type: System.Guid
-Parameter Sets: (All)
+Parameter Sets: RemoveLibrary
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BrandCenter
+
+> Applicable: SharePoint Online
+
+Deactivates Brand Center features for the tenant.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: BrandCenter
 Aliases:
 
 Required: False
