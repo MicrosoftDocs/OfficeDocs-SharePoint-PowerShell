@@ -32,12 +32,12 @@ During SharePoint cross-tenant user migration, file paths from the source tenant
 ```powershell
 Find-SPOCrossTenantLongFilePathsForSiteRename -OldSiteUrl [https://contoso.sharepoint.com/sites/site1](https://contoso.sharepoint.com/sites/site1) -NewSiteUrl [https://fabrikam.sharepoint.com/sites/site1](https://fabrikam.sharepoint.com/sites/site1)
 ```
-Example 1 finds 
+Example 1 looks through the site inputted to find file paths that exceed the 400 character limit.
 
 ## PARAMETERS
 
 ### -NewSiteUrl
-This parameter includes the source site URL.
+Specifies which source site URL to look through.
 
 ```yaml
 Type: String
@@ -52,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -OldSiteUrl
-This parameter includes the target site URL.
+Specifies which target site URL to look through.
 
 ```yaml
 Type: String
