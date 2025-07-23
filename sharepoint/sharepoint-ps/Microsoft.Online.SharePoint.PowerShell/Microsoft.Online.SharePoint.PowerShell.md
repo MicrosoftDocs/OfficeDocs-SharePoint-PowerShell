@@ -139,7 +139,7 @@ Export user information from site user information list.
 Export user profile data to csv file.
 
 ### [Find-SPOCrossTenantLongFilePathsForSiteRename](Find-SPOCrossTenantLongFilePathsForSiteRename.md)
-Finds sites that exceed 400 character limit for Cross Tenant User Migration moves.
+Identify sites with file paths over 400 characters for cross-tenant user migration.
 
 ### [Get-FileSensitivityLabelInfo](Get-FileSensitivityLabelInfo.md)
 Extracts and displays the sensitivity label related information attached to an office file stored in SharePoint.
