@@ -43,9 +43,7 @@ You must be a SharePoint Administrator to run this cmdlet.
 ### Example 1
 
 ```powershell
-
 Get-SPOAppBillingPolicies
-
 ```
 
 {{ Add example description here }}
