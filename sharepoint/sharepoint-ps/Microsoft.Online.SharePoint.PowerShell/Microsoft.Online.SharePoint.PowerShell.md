@@ -108,6 +108,9 @@ Export user information from site user information list.
 ### [Export-SPOUserProfile](Export-SPOUserProfile.md)
 Export user profile data to csv file.
 
+### [Find-SPOCrossTenantLongFilePathsForSiteRename](Find-SPOCrossTenantLongFilePathsForSiteRename.md)
+Identify sites with file paths over 400 characters for cross-tenant user migration.
+
 ### [Get-FileSensitivityLabelInfo](Get-FileSensitivityLabelInfo.md)
 Extracts and displays the sensitivity label related information attached to an office file stored in SharePoint.
 
