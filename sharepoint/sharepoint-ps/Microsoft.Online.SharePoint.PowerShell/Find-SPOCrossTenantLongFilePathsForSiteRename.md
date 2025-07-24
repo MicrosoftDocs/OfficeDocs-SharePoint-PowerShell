@@ -37,7 +37,7 @@ Example 1 looks through the site inputted to find file paths that exceed the 400
 ## PARAMETERS
 
 ### -NewSiteUrl
-Specifies which source site URL to look through.
+Specifies the new URL to assign to the SharePoint site after the rename.
 
 ```yaml
 Type: String
@@ -52,7 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -OldSiteUrl
-Specifies which target site URL to look through.
+Specifies the original URL of the SharePoint site before the rename.  
 
 ```yaml
 Type: String
