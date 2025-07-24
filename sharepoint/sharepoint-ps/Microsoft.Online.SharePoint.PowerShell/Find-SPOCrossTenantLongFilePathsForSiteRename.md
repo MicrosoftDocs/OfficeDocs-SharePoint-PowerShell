@@ -30,7 +30,7 @@ During SharePoint cross-tenant user migration, file paths from the source tenant
 
 ### Example 1
 ```powershell
-Find-SPOCrossTenantLongFilePathsForSiteRename -OldSiteUrl [https://contoso.sharepoint.com/sites/site1](https://contoso.sharepoint.com/sites/site1) -NewSiteUrl [https://fabrikam.sharepoint.com/sites/site1](https://fabrikam.sharepoint.com/sites/site1)
+https://fabrikam.sharepoint.com/sites/site1
 ```
 Example 1 looks through the site inputted to find file paths that exceed the 400 character limit.
 
