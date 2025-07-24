@@ -654,6 +654,8 @@ This example disables the Power Apps Adaptive Card Extension.
 
 ### -AIBuilderModelScope
 
+> Applicable: SharePoint Online
+
 This parameter allows administrators to limit which SharePoint sites the AI builder model and [structured and freeform document processing](/microsoft-365/syntex/form-processing-overview) premium feature is available on.
 
 The valid values are:
@@ -669,7 +671,6 @@ The valid values are:
 ```yaml
 Type: SyntexFeatureScopeValue
 Parameter Sets: (All)
-Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
@@ -678,6 +679,8 @@ Accept wildcard characters: False
 ```
 
 ### -AIBuilderModelSelectedSitesIncludesContentCenters
+
+> Applicable: SharePoint Online
 
 This parameter allows administrators to choose whether or not the AI builder model and [structured and freeform document processing](/microsoft-365/syntex/form-processing-overview) premium feature is available on all content center sites when the feature's scope is `SelectedSites` even if they are not explicitly included within the selected sites list. This parameter can only be called if the AI builder model's scope is set to `SelectedSites`.
 
@@ -689,7 +692,6 @@ PARAMVALUE: True | False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
@@ -699,6 +701,8 @@ Accept wildcard characters: False
 
 ### -AIBuilderModelSelectedSitesList
 
+> Applicable: SharePoint Online
+
 This parameter allows administrators to pass a list of SharePoint site URLs to modify the AI builder model and [structured and freeform document processing](/microsoft-365/syntex/form-processing-overview) premium feature's selected sites list. By default this parameter overwrites the existing list with the user input list. Additionally, the `AIBuilderModelSelectedSitesListOperation` parameter can be used to specify a different operation. This parameter can only be called if the AI builder model's scope is set to `SelectedSites`. The inputted list of site URLs cannot exceed 100 items.
 
 > [!NOTE]
@@ -707,7 +711,6 @@ This parameter allows administrators to pass a list of SharePoint site URLs to m
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
@@ -716,6 +719,8 @@ Accept wildcard characters: False
 ```
 
 ### -AIBuilderModelSelectedSitesListOperation
+
+> Applicable: SharePoint Online
 
 This parameter allows administrators to specify the operation to perform on the AI builder model and [structured and freeform document processing](/microsoft-365/syntex/form-processing-overview) premium feature's current selected sites list using the list of site URLs passed to the `AIBuilderModelSelectedSitesList` parameter.
 
@@ -732,7 +737,6 @@ The valid values are:
 ```yaml
 Type: SelectedSitesListOperations
 Parameter Sets: (All)
-Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: Overwrite
@@ -946,13 +950,14 @@ Accept wildcard characters: False
 
 ### -AllowSelectSecurityGroupsInSPSitesList
 
+> Applicable: SharePoint Online
+
 Allows members of specific security groups to access SharePoint content.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
@@ -962,13 +967,14 @@ Accept wildcard characters: False
 
 ### -AllowSelectSGsInODBListInTenant
 
+> Applicable: SharePoint Online
+
 Allows members of specific security groups to access OneDrive content.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
@@ -1986,13 +1992,14 @@ Accept wildcard characters: False
 
 ### -DenySelectSecurityGroupsInSPSitesList
 
+> Applicable: SharePoint Online
+
 Restricts members of specific security groups from accessing SharePoint content.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
@@ -2002,13 +2009,14 @@ Accept wildcard characters: False
 
 ### -DenySelectSGsInODBListInTenant
 
+> Applicable: SharePoint Online
+
 Restricts members of specific security groups from accessing OneDrive content.
 
 ```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
@@ -2774,6 +2782,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableVersionExpirationSetting
+
+> Applicable: SharePoint Online
+
 The `EnableVersionExpirationSetting` parameter is no longer active, this feature is now automatically enabled for each tenant.
 [Learn more about Version History Settings](/sharepoint/document-library-version-history-limits)
 
@@ -2781,7 +2792,6 @@ The `EnableVersionExpirationSetting` parameter is no longer active, this feature
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
@@ -2791,6 +2801,8 @@ Accept wildcard characters: False
 
 ### -EnforceContentSecurityPolicyConfiguration
 
+> Applicable: SharePoint Online
+
 When set to `True` **Content Security Policy** violations will be enforced.
 In multi-geo environments, **Content Security Policy** configuration is unique to each geo.
 
@@ -2799,7 +2811,6 @@ PARAMVALUE: True | False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: False
@@ -2860,6 +2871,8 @@ Accept wildcard characters: False
 
 ### -ExemptNativeUsersFromTenantLevelRestricedAccessControl
 
+> Applicable: SharePoint Online
+
 Gets or sets the value of a setting which determines whether Native Identity users should be exempted from restricted access control policy at tenant level.
 
 PARAMVALUE: True | False
@@ -2868,7 +2881,6 @@ PARAMVALUE: True | False
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
@@ -3997,6 +4009,8 @@ Accept wildcard characters: False
 
 ### -OpticalCharacterRecognitionScope
 
+> Applicable: SharePoint Online
+
 This parameter allows administrators to limit which SharePoint sites the [optical character recognition](/microsoft-365/syntex/ocr) premium feature is available on.
 
 The valid values are:
@@ -4012,7 +4026,6 @@ The valid values are:
 ```yaml
 Type: SyntexFeatureScopeValue
 Parameter Sets: (All)
-Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
@@ -4022,6 +4035,8 @@ Accept wildcard characters: False
 
 ### -OpticalCharacterRecognitionSelectedSitesList
 
+> Applicable: SharePoint Online
+
 This parameter allows administrators to pass a list of SharePoint site URLs to modify the [optical character recognition](/microsoft-365/syntex/ocr) premium feature's selected sites list. By default this parameter overwrites the existing list with the user input list. Additionally, the `OpticalCharacterRecognitionSelectedSitesListOperation` parameter can be used to specify a different operation. This parameter can only be called if optical character recognition's scope is set to `SelectedSites`. The inputted list of site URLs cannot exceed 100 items.
 
 > [!NOTE]
@@ -4030,7 +4045,6 @@ This parameter allows administrators to pass a list of SharePoint site URLs to m
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
@@ -4039,6 +4053,8 @@ Accept wildcard characters: False
 ```
 
 ### -OpticalCharacterRecognitionSelectedSitesListOperation
+
+> Applicable: SharePoint Online
 
 This parameter allows administrators to specify the operation to perform on the [optical character recognition](/microsoft-365/syntex/ocr) premium feature's current selected sites list using the list of site URLs passed to the `OpticalCharacterRecognitionSelectedSitesList` parameter.
 
@@ -4055,7 +4071,6 @@ The valid values are:
 ```yaml
 Type: SelectedSitesListOperations
 Parameter Sets: (All)
-Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: Overwrite
@@ -4128,6 +4143,8 @@ Accept wildcard characters: False
 
 ### -PrebuiltModelScope
 
+> Applicable: SharePoint Online
+
 This parameter allows administrators to limit which SharePoint sites the prebuilt model and [prebuilt document processing](/microsoft-365/syntex/prebuilt-overview) premium feature is available on.
 
 The valid values are:
@@ -4143,7 +4160,6 @@ The valid values are:
 ```yaml
 Type: SyntexFeatureScopeValue
 Parameter Sets: (All)
-Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
@@ -4153,6 +4169,8 @@ Accept wildcard characters: False
 
 ### -PrebuiltModelSelectedSitesList
 
+> Applicable: SharePoint Online
+
 This parameter allows administrators to pass a list of SharePoint site URLs to modify the prebuilt model and [prebuilt document processing](/microsoft-365/syntex/prebuilt-overview) premium feature's selected sites list. By default this parameter overwrites the existing list with the user input list. Additionally, the `PrebuiltModelSelectedSitesListOperation` parameter can be used to specify a different operation. This parameter can only be called if the prebuilt model's scope is set to `SelectedSites`. The inputted list of site URLs cannot exceed 100 items.
 
 > [!NOTE]
@@ -4161,7 +4179,6 @@ This parameter allows administrators to pass a list of SharePoint site URLs to m
 ```yaml
 Type: String[]
 Parameter Sets: (All)
-Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
@@ -4170,6 +4187,8 @@ Accept wildcard characters: False
 ```
 
 ### -PrebuiltModelSelectedSitesListOperation
+
+> Applicable: SharePoint Online
 
 This parameter allows administrators to specify the operation to perform on the prebuilt model and [prebuilt document processing](/microsoft-365/syntex/prebuilt-overview) premium feature's current selected sites list using the list of site URLs passed to the `PrebuiltModelSelectedSitesList` parameter.
 
@@ -4186,7 +4205,6 @@ The valid values are:
 ```yaml
 Type: SelectedSitesListOperations
 Parameter Sets: (All)
-Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: Overwrite
@@ -4281,13 +4299,14 @@ Accept wildcard characters: False
 
 ### -RecycleBinRetentionPeriod
 
+> Applicable: SharePoint Online
+
 Sets the amount of time content is kept in the in recycle bin in Microsoft365.com before it is deleted.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
@@ -4311,6 +4330,9 @@ Accept wildcard characters: False
 ```
 
 ### -ReduceTempTokenLifetimeEnabled
+
+> Applicable: SharePoint Online
+
 Enables reduced session timeout for temporary URLs used by apps for document download scenarios. Reduction occurs when an app redeeming an IP address does not match the original requesting IP. The default value is 15 minutes if ReduceTempTokenLifetimeValue is not set.
 
 **Note**: Reducing this value may bring degradation in end-user experience by requiring frequent authentication prompts to users.
@@ -4319,7 +4341,6 @@ Enables reduced session timeout for temporary URLs used by apps for document dow
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: False
@@ -4344,13 +4365,14 @@ Accept wildcard characters: False
 
 ### -ReduceTempTokenLifetimeValue
 
+> Applicable: SharePoint Online
+
 Optional parameter to set the session timeout value for temporary URLs. The value can be set between 5 and 15 minutes and the default value is 15 minutes.
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: 15
@@ -4467,6 +4489,8 @@ Accept wildcard characters: False
 
 ### -ResyncContentSecurityPolicyConfigurationEntries
 
+> Applicable: SharePoint Online
+
 When set to `True`, forces a sync of **Content Security Policy** sources for SharePoint Framework components in the tenant application catalog.
 New sources will be added to the configuration, if not already present, based on the `cdnBasedPath` property under a solution's `.config/write-manifests.json` if present.
 The sync may take up to 24 hours to complete.
@@ -4477,7 +4501,6 @@ PARAMVALUE: True | False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: False
@@ -4566,6 +4589,8 @@ Accept wildcard characters: False
 
 ### -SelfServiceSiteCreationDisabled
 
+> Applicable: SharePoint Online
+
 When set to `True`, users cannot create sites from SharePoint, OneDrive, the PnP PowerShell cmdlet, and the REST API. When set to `False` (the default), users can create sites from SharePoint, OneDrive, the PnP PowerShell cmdlet, and the REST API.
 
 PARAMVALUE: True | False
@@ -4573,7 +4598,6 @@ PARAMVALUE: True | False
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
-Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: False
@@ -4583,13 +4607,14 @@ Accept wildcard characters: False
 
 ### -SensitivityLabel
 
+> Applicable: SharePoint Online
+
 Sets the sensitiviy label for a site.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
