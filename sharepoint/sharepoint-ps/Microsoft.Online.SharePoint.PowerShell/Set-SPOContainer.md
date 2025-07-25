@@ -49,10 +49,18 @@ Set-SPOContainer [-Identity] <SPOContainerPipeBind>
  [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>] [-SharingAllowedDomainList <String>]
  [-SharingBlockedDomainList <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
-
+### PrincipalOwnerTransfer
+```
+Set-SPOContainer [-Identity] <SPOContainerPipeBind> -ExistingPrincipalOwner <String>
+ -NewPrincipalOwner <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+ ```
 ## DESCRIPTION
 
-For any parameters that are passed in, the `Set-SPOContainer` cmdlet sets or updates the setting for the active container identified by the parameter `Identity`. The cmdlet throws an error if the identity of an archived container is provided.
+For any parameters that are passed in, the `Set-SPOContainer` cmdlet sets or updates the setting for the active container identified by the parameter `Identity`. The cmdlet throws an error if the identity of an archived container is provided. The principal owner transfer operation is supported only for containers that are user-owned. Attempting to perform this operation on containers that are tenant-owned or group-owned will result in an error. 
+
+> [!IMPORTANT]
+> Always wait for the current principal owner transfer attempt to finish before reusing the cmdlet. Concurrent or premature reuse can lead to incomplete or invalid ownership changes.
+> 
 
 You must be a SharePoint Embedded Administrator to run the cmdlet.
 
@@ -182,6 +190,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExistingPrincipalOwner
+The current principal owner of the container.
+
+```yaml
+Type: String
+Parameter Sets: PrincipalOwnerTransfer
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Identity
 
 Use this parameter to specify the container url.
@@ -214,6 +237,20 @@ Aliases:
 Accepted values: OfficeOnlineFilesOnly, WebPreviewableFiles, OtherFiles
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NewPrincipalOwner
+The new user to whom a user-owned container's lifecycle will be tied to.
+```yaml
+Type: String
+Parameter Sets: PrincipalOwnerTransfer
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
