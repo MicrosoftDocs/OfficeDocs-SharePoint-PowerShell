@@ -127,6 +127,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
+ [-RestrictResourceAccountAccess <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -239,6 +240,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
+ [-RestrictResourceAccountAccess <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -353,6 +355,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
+ [-RestrictResourceAccountAccess <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -465,6 +468,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
+ [-RestrictResourceAccountAccess <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -4483,6 +4487,27 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictResourceAccountAccess
+
+> Applicable: SharePoint Online
+
+Controls whether resource accounts used by Teams Rooms and Devices can retain access to files after the meeting/collaboration is complete. Setting this to True prevents devices from accessing files and other Microsoft 365 assets when not actively in-use. 
+
+PARAMVALUE: True | False 
+
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
