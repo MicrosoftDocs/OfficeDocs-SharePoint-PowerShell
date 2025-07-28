@@ -25,17 +25,17 @@ Get-SPOFileRequestBrandingProfiles [<CommonParameters>]
 
 ## DESCRIPTION
 
-The Get-SPOFileRequestBrandingProfiles cmdlet returns the branding profiles currently configured for the file request feature in the tenant. Each profile contains metadata about the logo and background image assets, such as file name and file URL. The cmdlet will output the asset library URL being used, along with information for both the primary and secondary branding profiles (if present). Each tenant can have at most one primary and one secondary branding profile.
+This cmdlet returns the branding profiles currently configured for the file request feature in the tenant. Each profile contains metadata about the logo and background image assets, such as file name and file URL. The cmdlet will output the asset library URL being used, along with information for both the primary and secondary branding profiles (if present). Each tenant can have at most one primary and one secondary branding profile.
 
 ## EXAMPLES
 
 ### Example 1
 
-This example sets https://contoso.sharepoint.com/sites/branding/Assets/ as the organization asset library containing branding images for file request pages. It adds a branding profile using LogoA.jpg and BackgroundA.jpg, whose server-relative paths are provided via the LogoFileUrl and BackgroundFileUrl parameters. The IsPrimary flag indicates whether this profile should be treated as the primary branding profile for the tenant. In this example, the profile is being set as the primary profile.
-
 ```powershell
 Get-SPOFileRequestBrandingProfiles
 ```
+
+This example retrieves the branding profiles configured for the file request feature. If profiles have been added using Add-SPOFileRequestBrandingProfile, the output will include the asset library URL and details abou the branding profiles such as file names and URLs for primary and secondary profiles if present.
 
 ## PARAMETERS
 

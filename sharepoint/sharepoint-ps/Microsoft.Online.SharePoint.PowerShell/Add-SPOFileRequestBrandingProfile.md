@@ -26,24 +26,25 @@ Add-SPOFileRequestBrandingProfile -AssetLibraryUrl <String> -IsPrimary <Boolean>
 
 ## DESCRIPTION
 
-The Add-SPOFileRequestBrandingProfile cmdlet registers a branding profile to be used for the file request feature across the tenant. You must specify an existing organization asset library URL where the branding assets are stored and indicate whether the profile should be designated as primary. Each tenant can have one primary and one secondary profile. The organization asset library being used must be configured with the CdnType being "Public" (see [Add-SPOOrgAssetsLibrary](/powershell/module/sharepoint-online/add-spoorgassetslibrary) for more info).
+This cmdlet registers a branding profile to be used for the file request feature across the tenant. You must specify an existing organization asset library URL where the branding assets are stored and indicate whether the profile should be designated as primary. Each tenant can have one primary and one secondary profile. The organization asset library being used must be configured with the CdnType being "Public" (see [Add-SPOOrgAssetsLibrary](/powershell/module/sharepoint-online/add-spoorgassetslibrary) for more info).
 
 ## EXAMPLES
 
 ### Example 1
 
-This example sets https://contoso.sharepoint.com/sites/branding/Assets/ as the organization asset library containing branding images for file request pages. It adds a branding profile using LogoA.jpg and BackgroundA.jpg, whose server-relative paths are provided via the LogoFileUrl and BackgroundFileUrl parameters. The IsPrimary flag indicates whether this profile should be treated as the primary branding profile for the tenant. In this example, the profile is being set as the primary profile.
-
 ```powershell
 Add-SPOFileRequestBrandingProfile -AssetLibraryUrl "https://contoso.sharepoint.com/sites/branding/Assets" -LogoFileUrl "/sites/branding/Assets/LogoA.jpg" -BackgroundFileUrl "/sites/branding/Assets/BackgroundA.jpg" -IsPrimary $true
 ```
-### Example 2
 
-This example sets https://contoso.sharepoint.com/sites/branding/Assets/ as the organization asset library containing branding images for file request pages. It adds a branding profile using LogoB.jpg and BackgroundB.jpg, whose server-relative paths are provided via the LogoFileUrl and BackgroundFileUrl parameters. The IsPrimary flag indicates whether this profile should be treated as the primary branding profile for the tenant. In this example, the profile is NOT being set as the primary profile.
+This example sets https://contoso.sharepoint.com/sites/branding/Assets/ as the organization asset library containing branding images for file request pages. It adds a branding profile using LogoA.jpg and BackgroundA.jpg, whose server-relative paths are provided via the LogoFileUrl and BackgroundFileUrl parameters. The `-IsPrimary` flag indicates whether this profile should be treated as the primary branding profile for the tenant. In this example, the profile is being set as the primary profile.
+
+### Example 2
 
 ```powershell
 Add-SPOFileRequestBrandingProfile -AssetLibraryUrl "https://contoso.sharepoint.com/sites/branding/Assets" -LogoFileUrl "/sites/branding/Assets/LogoB.jpg" -BackgroundFileUrl "/sites/branding/Assets/BackgroundB.jpg" -IsPrimary $false
 ```
+
+This example sets https://contoso.sharepoint.com/sites/branding/Assets/ as the organization asset library containing branding images for file request pages. It adds a branding profile using LogoB.jpg and BackgroundB.jpg, whose server-relative paths are provided via the LogoFileUrl and BackgroundFileUrl parameters. The `-IsPrimary` flag indicates whether this profile should be treated as the primary branding profile for the tenant. In this example, the profile is NOT being set as the primary profile.
 
 ## PARAMETERS
 

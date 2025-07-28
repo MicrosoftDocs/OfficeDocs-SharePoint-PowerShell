@@ -25,17 +25,17 @@ Switch-SPOFileRequestBrandingProfiles [<CommonParameters>]
 
 ## DESCRIPTION
 
-The Switch-SPOFileRequestBrandingProfiles cmdlet exchanges the current primary and secondary branding profiles used for the file request feature. This allows administrators to quickly change which profile is active without re-uploading or modifying assets. To use this cmdlet, both a primary and a secondary branding profile must already exist. The primary will become the secondary, and vice versa. If only one profile is present, the switch operation will fail.
+This cmdlet exchanges the current primary and secondary branding profiles used for the file request feature. This allows administrators to quickly change which profile is active without re-uploading or modifying assets. To use this cmdlet, both a primary and a secondary branding profile must already exist. The primary will become the secondary, and vice versa. If only one profile is present, the switch operation will fail.
 
 ## EXAMPLES
 
 ### Example 1
 
-This example switches the current primary and secondary branding profiles used for file request pages. After running this command, the existing secondary profile will become the new primary, and the current primary will become secondary.
-
 ```powershell
 Switch-SPOFileRequestBrandingProfiles
 ```
+
+This example switches the current primary and secondary branding profiles used for file request pages. After running this command, the existing secondary profile will become the new primary, and the current primary will become secondary.
 
 ## PARAMETERS
 

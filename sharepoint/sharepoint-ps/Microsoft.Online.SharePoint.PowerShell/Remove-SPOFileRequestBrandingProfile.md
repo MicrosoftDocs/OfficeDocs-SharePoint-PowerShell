@@ -26,27 +26,28 @@ Remove-SPOFileRequestBrandingProfile [-Primary] [-Secondary]
 
 ## DESCRIPTION
 
-The Remove-SPOFileRequestBrandingProfile cmdlet deletes either the primary or secondary branding profile associated with the file request feature. You must specify exactly one of the -Primary or -Secondary switches to indicate which profile to remove. If both switches are used or neither is specified, the cmdlet will throw an error.
+This cmdlet deletes either the primary or secondary branding profile associated with the file request feature. You must specify exactly one of the `-Primary` or `-Secondary` switches to indicate which profile to remove. If both switches are used or neither is specified, the cmdlet will throw an error.
 
-Note:
-If you remove the primary profile and a secondary profile exists, the secondary profile will automatically be promoted to primary. This ensures that the file request feature always has a primary branding profile if one is available.
+> [!NOTE]
+> If you remove the primary profile and a secondary profile exists, the secondary profile will automatically be promoted to primary. This ensures that the file request feature always has a primary branding profile if one is available.
 
 ## EXAMPLES
 
 ### Example 1
 
-This example removes the primary branding profile that was previously configured for file request pages in the tenant. If a secondary branding profile exists, it will automatically be promoted to primary after this command completes.
-
 ```powershell
 Remove-SPOFileRequestBrandingProfile -Primary
 ```
-### Example 2
 
-This example removes the secondary branding profile that was previously configured for file request pages in the tenant.
+This example removes the primary branding profile that was previously configured for file request pages in the tenant. If a secondary branding profile exists, it will automatically be promoted to primary after this command completes.
+
+### Example 2
 
 ```powershell
 Remove-SPOFileRequestBrandingProfile -Secondary
 ```
+
+This example removes the secondary branding profile that was previously configured for file request pages in the tenant.
 
 ## PARAMETERS
 
