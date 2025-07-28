@@ -1896,7 +1896,7 @@ The valid values are:
 
 - None - Use the widest sharing scope permitted by other sharing settings
 - Direct - Sets the default sharing link for this site to the Specific people link
-- Internal - Sets the default sharing link for this site to the organization link or company shareable link
+- Internal - Sets the default sharing link for this site to the organization link
 - AnonymousAccess - Sets the default sharing link for this site to an Anonymous Access or Anyone link
 
 ```yaml
