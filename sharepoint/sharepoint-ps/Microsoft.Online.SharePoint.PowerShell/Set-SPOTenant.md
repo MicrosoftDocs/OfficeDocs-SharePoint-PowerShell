@@ -1839,7 +1839,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Lets administrators choose the default permission of the link in the sharing dialog box in OneDrive for Business and SharePoint Online. This applies to anonymous access, internal and direct links.
+Lets administrators choose the default permission of the link in the sharing dialog box in OneDrive for Business and SharePoint Online. This applies to anonymous access, organization, and specific people links.
 
 The valid values are View and Edit (default).
 
@@ -1894,7 +1894,7 @@ For additional information about how to change the default link type, see Change
 
 The valid values are:
 
-- None - Respect the organization default sharing link type
+- None - Use the widest sharing scope permitted by other sharing settings
 - Direct - Sets the default sharing link for this site to the Specific people link
 - Internal - Sets the default sharing link for this site to the organization link or company shareable link
 - AnonymousAccess - Sets the default sharing link for this site to an Anonymous Access or Anyone link
