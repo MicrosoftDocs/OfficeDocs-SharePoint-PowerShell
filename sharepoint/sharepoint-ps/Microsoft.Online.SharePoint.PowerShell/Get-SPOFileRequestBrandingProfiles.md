@@ -35,7 +35,7 @@ This cmdlet returns the branding profiles currently configured for the file requ
 Get-SPOFileRequestBrandingProfiles
 ```
 
-This example retrieves the branding profiles configured for the file request feature. If profiles have been added using Add-SPOFileRequestBrandingProfile, the output will include the asset library URL and details abou the branding profiles such as file names and URLs for primary and secondary profiles if present.
+This example retrieves the branding profiles configured for the file request feature. If profiles have been added using `Add-SPOFileRequestBrandingProfile`, the output will include the asset library URL and details abou the branding profiles such as file names and URLs for primary and secondary profiles if present.
 
 ## PARAMETERS
 
