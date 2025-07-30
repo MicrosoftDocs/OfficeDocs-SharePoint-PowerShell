@@ -21,6 +21,9 @@ Adds the mentioned billing profile details to a standard container type.
 ### [Add-SPOContentSecurityPolicy](Add-SPOContentSecurityPolicy.md)
 Adds a source to the **Content Security Policy** configuration.
 
+### [Add-SPOFileRequestBrandingProfile](Add-SPOFileRequestBrandingProfile.md)
+Adds a branding profile for the file request feature by specifying logo and background assets from an existing organization asset library.
+
 ### [Add-SPOGeoAdministrator](Add-SPOGeoAdministrator.md)
 Adds a new SharePoint user or security group as GeoAdministrator to a multi-geo tenant.
 
@@ -191,6 +194,9 @@ This cmdlet enables the administrator to check status of all active and availabl
 
 ### [Get-SPOExternalUser](Get-SPOExternalUser.md)
 Returns external users in the tenant.
+
+### [Get-SPOFileRequestBrandingProfiles](Get-SPOFileRequestBrandingProfiles.md)
+Retrieves branding profiles configured for the file request feature, including details about logo and background assets.
 
 ### [Get-SPOGeoAdministrator](Get-SPOGeoAdministrator.md)
 This cmdlet returns the SharePoint Online user or security group accounts with Global Admin privileges in the current multi-geo tenant.
@@ -488,6 +494,9 @@ Removes a SharePoint Online deleted site collection from the Recycle Bin.
 
 ### [Remove-SPOExternalUser](Remove-SPOExternalUser.md)
 Removes a collection of external users from the tenancy's folder.
+
+### [Remove-SPOFileRequestBrandingProfile](Remove-SPOFileRequestBrandingProfile.md)
+Removes a branding profile (either primary or secondary) configured for the file request feature across the tenant.
 
 ### [Remove-SPOGeoAdministrator](Remove-SPOGeoAdministrator.md)
 Removes a new SharePoint user or security Group in the current Multi-Geo Tenant.
@@ -803,6 +812,9 @@ In a Multi-Geo company, stops the ability to move a user's content related objec
 
 ### [Submit-SPOMigrationJob](Submit-SPOMigrationJob.md)
 **Note**: This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](/sharepointmigration/overview-spmt-ps-cmdlets).  Cmdlet to submit a new migration job referenced to a previously uploaded package in Azure Blob storage into to a site collection.
+
+### [Switch-SPOFileRequestBrandingProfiles](Switch-SPOFileRequestBrandingProfiles.md)
+Switches the primary and secondary file request branding profiles configured for the tenant.
 
 ### [Test-SPOSite](Test-SPOSite.md)
 Tests a SharePoint Online site collection.
