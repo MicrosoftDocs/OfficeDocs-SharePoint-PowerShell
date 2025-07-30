@@ -65,7 +65,10 @@ Set-SPOOrgAssetsLibrary -LibraryURL sites/branding/Templates -OrgAssetType Image
 ## PARAMETERS
 
 ### -CopilotSearchable
-{{ Fill CopilotSearchable Description }}
+
+> Applicable: SharePoint Online
+
+Specifies whether the library is made available to Microsoft 365 Copilot Search.
 
 ```yaml
 Type: System.Boolean
@@ -140,6 +143,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -155,6 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -171,6 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

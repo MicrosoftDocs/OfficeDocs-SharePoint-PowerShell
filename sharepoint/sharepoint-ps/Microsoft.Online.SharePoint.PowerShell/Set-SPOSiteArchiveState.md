@@ -68,7 +68,10 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+
+> Applicable: SharePoint Online
+
+Whether to set the site archived state without prompting for confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -83,7 +86,10 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{ Fill Identity Description }}
+
+> Applicable: SharePoint Online
+
+Identity of the site to archive or reactivate.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
@@ -98,7 +104,10 @@ Accept wildcard characters: False
 ```
 
 ### -NoWait
-{{ Fill NoWait Description }}
+
+> Applicable: SharePoint Online
+
+Whether to not wait for the operation to complete.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -113,6 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -128,6 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -144,6 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

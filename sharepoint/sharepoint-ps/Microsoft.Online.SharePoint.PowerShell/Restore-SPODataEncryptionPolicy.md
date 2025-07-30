@@ -20,6 +20,7 @@ For more information, see [Controlling your data in Office 365 using Customer Ke
 ## SYNTAX
 
 ### BYOK_MultipleParameters
+
 ```
 Restore-SPODataEncryptionPolicy -PrimaryKeyVaultName <String> -PrimaryKeyName <String>
  -PrimaryKeyVersion <Guid> -SecondaryKeyVaultName <String> -SecondaryKeyName <String>
@@ -27,6 +28,7 @@ Restore-SPODataEncryptionPolicy -PrimaryKeyVaultName <String> -PrimaryKeyName <S
 ```
 
 ### BYOK_Uri
+
 ```
 Restore-SPODataEncryptionPolicy -PrimaryKeyVaultUri <Uri> -SecondaryKeyVaultUri <Uri> [<CommonParameters>]
 ```
@@ -43,6 +45,7 @@ For more information, see [Controlling your data in Office 365 using Customer Ke
 ```powershell
 Restore-SPODataEncryptionPolicy -PrimaryKeyVaultName 'PKVaultName1' -PrimaryKeyName 'PrimaryKey1' -PrimaryKeyVersion 'f635a23bd4a44b9996ff6aadd88d42ba' -SecondaryKeyVaultName 'SKVaultName1' -SecondaryKeyName 'SecondaryKey2' -SecondaryKeyVersion '2b3e8f1d754f438dacdec1f0945f251a'
 ```
+
 This example restores the DEP used with SharePoint Online and OneDrive for Business to the given keys.
 
 ## PARAMETERS
@@ -84,7 +87,10 @@ Accept wildcard characters: False
 ```
 
 ### -PrimaryKeyVaultUri
-{{ Fill PrimaryKeyVaultUri Description }}
+
+> Applicable: SharePoint Online
+
+The Uri of the primary key vault.
 
 ```yaml
 Type: System.Uri
@@ -153,7 +159,10 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryKeyVaultUri
-{{ Fill SecondaryKeyVaultUri Description }}
+
+> Applicable: SharePoint Online
+
+The Uri of the secondary key vault.
 
 ```yaml
 Type: System.Uri
@@ -186,6 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

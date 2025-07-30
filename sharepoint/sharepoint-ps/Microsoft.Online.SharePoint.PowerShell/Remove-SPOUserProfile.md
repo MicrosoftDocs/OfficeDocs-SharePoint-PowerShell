@@ -46,7 +46,7 @@ Example 1 removes a user who has the e-mail address joe.healy@contoso.com from t
 
 > Applicable: SharePoint Online
 
-Specifies the login name of the user which user profile is deleted.
+Specifies the login name of the user profile to be deleted.
 
 ```yaml
 Type: System.String
@@ -61,7 +61,10 @@ Accept wildcard characters: False
 ```
 
 ### -UserId
-{{ Fill UserId Description }}
+
+> Applicable: SharePoint Online
+
+Specifies the ID of the user profile to be deleted.
 
 ```yaml
 Type: System.String

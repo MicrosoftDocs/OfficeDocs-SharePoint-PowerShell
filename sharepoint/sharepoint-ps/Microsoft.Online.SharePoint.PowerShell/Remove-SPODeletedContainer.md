@@ -45,7 +45,10 @@ This example removes a deleted Container with the `ContainerId` `b66f5b2e-4cbd-4
 ## PARAMETERS
 
 ### -Force
-{{ Fill Force Description }}
+
+> Applicable: SharePoint Online
+
+Whether to remove the deleted container without prompting for confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -78,6 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -93,6 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -127,4 +132,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
 
 [Remove-SPOContainer](./Remove-SPOContainer.md)
-

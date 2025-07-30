@@ -140,7 +140,10 @@ Accept wildcard characters: False
 ```
 
 ### -SuppressAllWarnings
-{{ Fill SuppressAllWarnings Description }}
+
+> Applicable: SharePoint Online
+
+Whether to suppress all warning messages.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -155,7 +158,10 @@ Accept wildcard characters: False
 ```
 
 ### -SuppressBcsCheck
-{{ Fill SuppressBcsCheck Description }}
+
+> Applicable: SharePoint Online
+
+Whether to surpress checking whether tenant is using Business Connectivity Service (BCS) feature.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -226,6 +232,7 @@ Accept wildcard characters: False
 ### -Confirm
 
 > Applicable: SharePoint Online
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -243,6 +250,7 @@ Accept wildcard characters: False
 ### -WhatIf
 
 > Applicable: SharePoint Online
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 

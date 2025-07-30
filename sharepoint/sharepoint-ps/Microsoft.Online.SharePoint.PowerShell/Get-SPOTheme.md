@@ -19,6 +19,7 @@ ms.reviewer:
 ```
 Get-SPOTheme [[-Name] <String>] [<CommonParameters>]
 ```
+
 ## DESCRIPTION
 
 The **Get-SPOTheme** cmdlet returns the settings for a named existing theme, or for all uploaded themes if no name is provided.
@@ -78,7 +79,10 @@ Get-SPOTheme
 ## PARAMETERS
 
 ### -Name
-{{ Fill Name Description }}
+
+> Applicable: SharePoint Online
+
+The name of the theme.
 
 ```yaml
 Type: System.String
@@ -93,6 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

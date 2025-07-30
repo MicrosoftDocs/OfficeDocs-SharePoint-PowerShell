@@ -50,7 +50,10 @@ This example disables the hub feature on the marketing site.
 ## PARAMETERS
 
 ### -Force
-{{ Fill Force Description }}
+
+> Applicable: SharePoint Online
+
+Whether to disable the hub site feature without prompting for confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -103,6 +106,7 @@ Accept wildcard characters: False
 ### -WhatIf
 
 > Applicable: SharePoint Online
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -119,6 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
