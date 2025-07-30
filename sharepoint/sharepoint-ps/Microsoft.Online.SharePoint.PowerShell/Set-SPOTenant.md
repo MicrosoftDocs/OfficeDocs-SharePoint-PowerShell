@@ -2782,7 +2782,6 @@ Allows tenant admins to turn on support for sections in OneNote with sensitivity
 
 - Applying a sensitivity label in OneNote for the web.
 - Uploading a labeled document, and then extracting and displaying that sensitivity label.
-- Auto-labeling policies and default sensitivity labels for SharePoint document libraries.
 
 The valid values are:
 
@@ -2809,7 +2808,6 @@ Allows tenant admins to turn on support for Video files with sensitivity labels 
 
 - Applying a sensitivity label to Video files on Sharepoint.
 - Uploading a labeled document, and then extracting and displaying that sensitivity label.
-- Auto-labeling policies and default sensitivity labels for SharePoint document libraries.
 
 The valid values are:
 
