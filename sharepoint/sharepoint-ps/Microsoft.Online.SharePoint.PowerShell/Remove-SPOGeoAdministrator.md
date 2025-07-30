@@ -19,16 +19,19 @@ Removes a new SharePoint user or security Group in the current Multi-Geo Tenant.
 ## SYNTAX
 
 ### User (Default)
+
 ```
 Remove-SPOGeoAdministrator [-UserPrincipalName] <String> [<CommonParameters>]
 ```
 
 ### Group
+
 ```
 Remove-SPOGeoAdministrator [-GroupAlias] <String> [<CommonParameters>]
 ```
 
 ### ObjectId
+
 ```
 Remove-SPOGeoAdministrator [-ObjectId] <Guid> [<CommonParameters>]
 ```
@@ -66,7 +69,10 @@ Same as example 1, but using the LoginName parameter explicitly.
 ## PARAMETERS
 
 ### -GroupAlias
-{{ Fill GroupAlias Description }}
+
+> Applicable: SharePoint Online
+
+The login name of the security group to be removed.
 
 ```yaml
 Type: System.String
@@ -81,7 +87,10 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectId
-{{ Fill ObjectId Description }}
+
+> Applicable: SharePoint Online
+
+The ID of the user or security group to be removed.
 
 ```yaml
 Type: System.Guid
@@ -98,7 +107,8 @@ Accept wildcard characters: False
 ### -UserPrincipalName
 
 > Applicable: SharePoint Online
-{{ Fill UserPrincipalName Description }}
+
+The login name of the user to be removed.
 
 ```yaml
 Type: System.String

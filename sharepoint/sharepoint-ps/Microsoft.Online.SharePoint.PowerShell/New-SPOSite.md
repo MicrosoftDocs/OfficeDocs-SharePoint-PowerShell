@@ -80,7 +80,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAgreementsSolution
-{{ Fill EnableAgreementsSolution Description }}
+
+> Applicable: SharePoint Online
+
+Whether to enable the Agreements Solution feature in the new site.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
