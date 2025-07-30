@@ -19,12 +19,14 @@ Updates customer encryption status for a geo tenant.
 ## SYNTAX
 
 ### BYOK_MultipleParameters (Default)
+
 ```
 Update-SPODataEncryptionPolicy -KeyVaultName <String> -KeyName <String> -KeyVersion <Guid>
  -KeyType <CustomerKeyVaultKeyType> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### BYOK_Uri
+
 ```
 Update-SPODataEncryptionPolicy -KeyVaultUri <Uri> -KeyType <CustomerKeyVaultKeyType> [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -100,7 +102,10 @@ Accept wildcard characters: False
 ```
 
 ### -KeyVaultUri
-{{ Fill KeyVaultUri Description }}
+
+> Applicable: SharePoint Online
+
+The Uri of the Azure Key Vault
 
 ```yaml
 Type: System.Uri

@@ -21,6 +21,7 @@ Creates a new migration job in the target site collection.
 ## SYNTAX
 
 ### ImplicitSourceParameterSet
+
 ```
 Invoke-SPOMigrationEncryptUploadSubmit -MigrationSourceLocations <MigrationPackageLocation>
  -Credentials <CredentialCmdletPipeBind> -TargetWebUrl <String> [-NoLogFile] [-ParallelUpload]
@@ -28,6 +29,7 @@ Invoke-SPOMigrationEncryptUploadSubmit -MigrationSourceLocations <MigrationPacka
 ```
 
 ### ExplicitSourceParameterSet
+
 ```
 Invoke-SPOMigrationEncryptUploadSubmit -SourceFilesPath <String> -SourcePackagePath <String>
  -Credentials <CredentialCmdletPipeBind> -TargetWebUrl <String> [-NoLogFile] [-ParallelUpload]
@@ -127,7 +129,10 @@ Accept wildcard characters: False
 ```
 
 ### -ParallelUpload
-{{ Fill ParallelUpload Description }}
+
+> Applicable: SharePoint Online
+
+Whether to enable parallel upload of files to Azure.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

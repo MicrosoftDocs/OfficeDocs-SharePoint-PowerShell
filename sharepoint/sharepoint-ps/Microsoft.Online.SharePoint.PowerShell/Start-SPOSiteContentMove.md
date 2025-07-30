@@ -19,6 +19,7 @@ Start a job to move a particular user or group of users to be moved across geo l
 ## SYNTAX
 
 ### UrlAndDestinationDataLocation (Default)
+
 ```
 Start-SPOSiteContentMove [-SourceSiteUrl] <String> [-DestinationDataLocation] <String>
  [[-PreferredMoveBeginDate] <DateTime>] [[-PreferredMoveEndDate] <DateTime>] [[-Reserved] <String>]
@@ -27,6 +28,7 @@ Start-SPOSiteContentMove [-SourceSiteUrl] <String> [-DestinationDataLocation] <S
 ```
 
 ### UrlAndDestinationUrl
+
 ```
 Start-SPOSiteContentMove [-SourceSiteUrl] <String> [-DestinationUrl] <String>
  [[-PreferredMoveBeginDate] <DateTime>] [[-PreferredMoveEndDate] <DateTime>] [[-Reserved] <String>]
@@ -105,7 +107,10 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+
+> Applicable: SharePoint Online
+
+Whether to start the move process without prompting for confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -192,6 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -SuppressAllWarnings
+
 Suppress all warning messages.
 
 ```yaml
@@ -207,6 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -SuppressBcsCheck
+
 Suppress checking for Business Connectivity Services used with the associated site.
 
 ```yaml
@@ -222,6 +229,7 @@ Accept wildcard characters: False
 ```
 
 ### -SuppressMarketplaceAppCheck
+
 Suppress checking compatibility of marketplace SharePoint Add-ins deployed to the associated site.
 
 ```yaml
@@ -237,6 +245,7 @@ Accept wildcard characters: False
 ```
 
 ### -SuppressWorkflow2013Check
+
 Suppress checking compatibility of SharePoint 2013 Workflows deployed to the associated site.
 
 ```yaml
