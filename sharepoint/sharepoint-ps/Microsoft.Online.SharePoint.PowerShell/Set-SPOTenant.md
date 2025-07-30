@@ -127,7 +127,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
- [-RestrictResourceAccountAccess <Boolean>]
+ [-RestrictResourceAccountAccess <Boolean>] [-EnableSensitivityLabelForOneNote <Boolean>]
+ [-EnableSensitivityLabelForVideoFiles <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -240,7 +241,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
- [-RestrictResourceAccountAccess <Boolean>]
+ [-RestrictResourceAccountAccess <Boolean>] [-EnableSensitivityLabelForOneNote <Boolean>]
+ [-EnableSensitivityLabelForVideoFiles <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -355,7 +357,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
- [-RestrictResourceAccountAccess <Boolean>]
+ [-RestrictResourceAccountAccess <Boolean>] [-EnableSensitivityLabelForOneNote <Boolean>]
+ [-EnableSensitivityLabelForVideoFiles <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -468,7 +471,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
- [-RestrictResourceAccountAccess <Boolean>]
+ [-RestrictResourceAccountAccess <Boolean>] [-EnableSensitivityLabelForOneNote <Boolean>]
+ [-EnableSensitivityLabelForVideoFiles <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -2757,6 +2761,60 @@ The valid values are:
 
 - True - Enables support for PDFs.
 - False (default) - Disables support for PDFs.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableSensitivityLabelforOneNote
+
+> Applicable: SharePoint Online
+
+Allows tenant admins to turn on support for sections in OneNote with sensitivity labels for the following scenarios:
+
+- Applying a sensitivity label in OneNote for the web.
+- Uploading a labeled document, and then extracting and displaying that sensitivity label.
+- Auto-labeling policies and default sensitivity labels for SharePoint document libraries.
+
+The valid values are:
+
+- True - Enables support for OneNote files.
+- False (default) - Disables support for OneNote files.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableSensitivityLabelforVideoFiles
+
+> Applicable: SharePoint Online
+
+Allows tenant admins to turn on support for Video files with sensitivity labels for the following scenarios:
+
+- Applying a sensitivity label to Video files on Sharepoint.
+- Uploading a labeled document, and then extracting and displaying that sensitivity label.
+- Auto-labeling policies and default sensitivity labels for SharePoint document libraries.
+
+The valid values are:
+
+- True - Enables support for Video files.
+- False (default) - Disables support for Video files.
 
 ```yaml
 Type: System.Boolean
