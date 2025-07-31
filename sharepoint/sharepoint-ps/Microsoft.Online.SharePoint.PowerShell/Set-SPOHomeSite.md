@@ -35,6 +35,7 @@ Use this cmdlet to set a SharePoint Site as a Home Site. A home site is a commun
 Set-SPOHomeSite -HomeSiteUrl "https://contoso.sharepoint.com/sites/homesite"
 This example set the site collection at *<https://contoso.sharepoint.com/sites/homesite>* as SharePoint Online Home Site.
 ```
+
 ### Example 2
 
 ```powershell
@@ -45,7 +46,10 @@ Sets the home site to the provided site collection url and keeps the Viva Connec
 ## PARAMETERS
 
 ### -DraftMode
-{{ Fill DraftMode Description }}
+
+> Applicable: SharePoint Online
+
+Whether to set the home site to draft mode.
 
 ```yaml
 Type: System.Boolean
@@ -60,7 +64,10 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{ Fill Force Description }}
+
+> Applicable: SharePoint Online
+
+Whether to set the home site without prompting for confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -91,6 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -VivaConnectionsDefaultStart
+
 When set to $true, the VivaConnectionsDefaultStart parameter will keep the Viva Connections landing experience to the SharePoint home site for the desktop experience. If set to $false, the Viva Connections home experience will be used. This command doesn't impact the mobile experience.
 
 ```yaml

@@ -27,7 +27,7 @@ Add-SPOOrgAssetsLibrary -LibraryUrl <String> [-ThumbnailUrl <String>] [-OrgAsset
 
 ## DESCRIPTION
 
-The Add-SPOOrgAssetsLibrary cmdlet designates a library to be a central location for organization assets across the tenant. Once this cmdlet is run, assets stored within this library are available to sites across the tenant.  The name publicly displayed for the library will be the organization's name. Note that it may take from a couple of hours to a day for changes to be reflected.
+The Add-SPOOrgAssetsLibrary cmdlet designates a library to be a central location for organization assets across the tenant. Once this cmdlet is run, assets stored within this library are available to sites across the tenant. The name publicly displayed for the library will be the organization's name. Note that it may take from a couple of hours to a day for changes to be reflected.
 
 ## EXAMPLES
 
@@ -38,6 +38,7 @@ This example adds https://contoso.sharepoint.com/sites/branding/Assets as a desi
 ```powershell
 Add-SPOOrgAssetsLibrary -LibraryURL https://contoso.sharepoint.com/sites/branding/Assets -ThumbnailURL https://contoso.sharepoint.com/sites/branding/Assets/contosologo.jpg
 ```
+
 ### Example 2
 
 This example adds https://contoso.sharepoint.com/sites/branding/Templates as a designated library for organization assets. Templates is the name of the SharePoint library added and will be the name publicly displayed for the library. The thumbnail publicly displayed for the library is contosologo.jpg, from that same library. OrgAssetType is the type of SharePoint library.
@@ -71,7 +72,10 @@ Accept wildcard characters: False
 ```
 
 ### -CopilotSearchable
-{{ Fill CopilotSearchable Description }}
+
+> Applicable: SharePoint Online
+
+Specifies whether the library is made available to Microsoft 365 Copilot Search.
 
 ```yaml
 Type: System.Boolean
@@ -104,7 +108,10 @@ Accept wildcard characters: False
 ```
 
 ### -NoDefaultOrigins
-{{ Fill NoDefaultOrigins Description }}
+
+> Applicable: SharePoint Online
+
+Specifies whether to provision default origins during activation of the CDN for organizational assets feature.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -159,6 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -174,6 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 

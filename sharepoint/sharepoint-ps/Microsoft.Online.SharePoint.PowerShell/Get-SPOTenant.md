@@ -45,7 +45,10 @@ This example returns the organization-level site collection properties such as S
 ## PARAMETERS
 
 ### -ShowDetails
-{{ Fill ShowDetails Description }}
+
+> Applicable: SharePoint Online
+
+Whether to show the detailed properties for each setting.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

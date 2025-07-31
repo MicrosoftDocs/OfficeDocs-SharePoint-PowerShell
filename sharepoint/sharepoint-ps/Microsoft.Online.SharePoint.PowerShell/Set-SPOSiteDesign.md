@@ -26,7 +26,8 @@ Set-SPOSiteDesign [-Identity] <SPOSiteDesignPipeBind> [-Title <String>] [-WebTem
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+Updates a previously uploaded site design.
 
 ## EXAMPLES
 
@@ -47,7 +48,7 @@ Set-SPOSiteDesign `
 
 ## DESCRIPTION
 
-Updates a previously uploaded site design.
+This cmdlet updates a previously uploaded site design.
 
 ## PARAMETERS
 
@@ -70,7 +71,10 @@ Accept wildcard characters: False
 ```
 
 ### -DesignPackageId
-{{ Fill DesignPackageId Description }}
+
+> Applicable: SharePoint Online
+
+The new design package to associate with this site design.
 
 ```yaml
 Type: System.Guid
@@ -211,7 +215,10 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-{{ Fill Version Description }}
+
+> Applicable: SharePoint Online
+
+The new version number of the site design.
 
 ```yaml
 Type: System.Int32

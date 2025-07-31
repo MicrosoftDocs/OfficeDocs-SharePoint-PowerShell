@@ -19,6 +19,7 @@ Cmdlet to create Azure containers, upload migration package files into the appro
 ## SYNTAX
 
 ### ImplicitSourceExplicitAzure
+
 ```
 Set-SPOMigrationPackageAzureSource -MigrationSourceLocations <MigrationPackageLocation>
  [-FileContainerName <String>] [-PackageContainerName <String>] [-AzureQueueName <String>]
@@ -28,6 +29,7 @@ Set-SPOMigrationPackageAzureSource -MigrationSourceLocations <MigrationPackageLo
 ```
 
 ### ImplicitSourceImplicitAzure
+
 ```
 Set-SPOMigrationPackageAzureSource -MigrationSourceLocations <MigrationPackageLocation>
  -MigrationPackageAzureLocations <MigrationPackageAzureLocations>
@@ -37,6 +39,7 @@ Set-SPOMigrationPackageAzureSource -MigrationSourceLocations <MigrationPackageLo
 ```
 
 ### ExplicitSourceExplicitAzure
+
 ```
 Set-SPOMigrationPackageAzureSource -SourceFilesPath <String> -SourcePackagePath <String>
  [-FileContainerName <String>] [-PackageContainerName <String>] [-AzureQueueName <String>]
@@ -46,6 +49,7 @@ Set-SPOMigrationPackageAzureSource -SourceFilesPath <String> -SourcePackagePath 
 ```
 
 ### ExplicitSourceImplicitAzure
+
 ```
 Set-SPOMigrationPackageAzureSource -SourceFilesPath <String> -SourcePackagePath <String>
  -MigrationPackageAzureLocations <MigrationPackageAzureLocations>
@@ -313,7 +317,10 @@ Accept wildcard characters: False
 ```
 
 ### -ParallelUpload
-{{ Fill ParallelUpload Description }}
+
+> Applicable: SharePoint Online
+
+Whether to enable parallel upload of files to Azure.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

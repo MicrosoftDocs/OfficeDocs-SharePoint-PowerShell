@@ -19,6 +19,7 @@ Sets properties on the SharePoint Online organization.
 ## SYNTAX
 
 ### None (Default)
+
 ```
 Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-ExternalServicesEnabled <Boolean>] [-NoAccessRedirectUrl <String>] [-ArchiveRedirectUrl <String>]
@@ -133,6 +134,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
 ```
 
 ### ParameterSetContentTypeSyncSiteTemplatesList
+
 ```
 Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-ExternalServicesEnabled <Boolean>] [-NoAccessRedirectUrl <String>] [-ArchiveRedirectUrl <String>]
@@ -247,6 +249,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
 ```
 
 ### ParamSetMultipleSites
+
 ```
 Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-ExternalServicesEnabled <Boolean>] [-NoAccessRedirectUrl <String>] [-ArchiveRedirectUrl <String>]
@@ -363,6 +366,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
 ```
 
 ### InformationBarrier
+
 ```
 Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-ExternalServicesEnabled <Boolean>] [-NoAccessRedirectUrl <String>] [-ArchiveRedirectUrl <String>]
@@ -611,6 +615,7 @@ This example enables users to share with all external collaborators except for t
 ```powershell
 Set-SPOTenant -EnableVersionExpirationSetting $true
 ```
+
 The `EnableVersionExpirationSetting` parameter is no longer active, this feature is now automatically enabled for each tenant. Setting `EnableVersionExpirationSetting` to false would not disable the feature.
 [Learn more about Version History Settings](/sharepoint/document-library-version-history-limits)
 
@@ -652,6 +657,7 @@ Set-SPOTenant –WhoCanShareAnonymousAllowList @()
 This example empties the WhoCanShareAnonymousAllowList. Similar code works for the WhoCanShareAuthenticatedGuestAllowList.
 
 ### EXAMPLE 21
+
 ```powershell
 Set-SPOTenant -DisabledAdaptiveCardExtensionIds 0d2d0fd0-9489-47ef-acfb-90edca009cba
 ```
@@ -815,6 +821,7 @@ The valid values are:
 * True - Classic publishing site collections can be created and the publishing features can be activated in sites.
 
 ```yaml
+
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
@@ -1027,6 +1034,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled
+
 Enables or disables web property bag updates in all sites in the tenant. When `AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled` is set to `$true`, the web property bag can be updated even if the Add And Customize Pages right is denied on a site collection.
 PARAMVALUE: True | False
 
@@ -1119,7 +1127,10 @@ Accept wildcard characters: False
 ```
 
 ### -AppOnlyBypassPeoplePickerPolicies
-{{ Fill AppOnlyBypassPeoplePickerPolicies Description }}
+
+> Applicable: SharePoint Online
+
+Whether app-only bypasses people-picker policies.
 
 ```yaml
 Type: System.Boolean
@@ -1134,7 +1145,10 @@ Accept wildcard characters: False
 ```
 
 ### -ArchiveRedirectUrl
-{{ Fill ArchiveRedirectUrl Description }}
+
+> Applicable: SharePoint Online
+
+Url to use to contact the administrator in the archived error page.
 
 ```yaml
 Type: System.String
@@ -1149,7 +1163,10 @@ Accept wildcard characters: False
 ```
 
 ### -AuthContextResilienceMode
-{{ Fill AuthContextResilienceMode Description }}
+
+> Applicable: SharePoint Online
+
+The authentication context resilience mode.
 
 ```yaml
 Type: Microsoft.SharePoint.Administration.SPResilienceModeType
@@ -1282,7 +1299,10 @@ Accept wildcard characters: False
 ```
 
 ### -BlockAppAccessWithAuthenticationContext
-{{ Fill BlockAppAccessWithAuthenticationContext Description }}
+
+> Applicable: SharePoint Online
+
+Whether to block app access via authentication context.
 
 ```yaml
 Type: System.Boolean
@@ -1299,7 +1319,6 @@ Accept wildcard characters: False
 ### -BlockDownloadFileTypeIds
 
 Specifies the list of file type IDs that BlockDownloadFileTypePolicy applies to.
-
 
 The valid values are:
 
@@ -1439,6 +1458,7 @@ Accept wildcard characters: False
 Blocks users from accessing User Info if they have Limited Access permission only to a SharePoint site. The policy applies to all SharePoint sites in the organization.
 
 The valid values are:
+
 - ApplyToNoUsers (default) – No users are prevented from accessing User Info when they have Limited Access permission only to a SharePoint site.
 - ApplyToAllUsers – All users (internal or external) are prevented from accessing User Info if they have Limited Access permission only to a SharePoint site.
 - ApplyToGuestAndExternalUsers – Only external or guest users are prevented from accessing User Info if they have Limited Access permission only to a SharePoint site.
@@ -1459,6 +1479,7 @@ Accept wildcard characters: False
 ### -BusinessConnectivityServiceDisabled
 
 > Applicable: SharePoint Online
+
 Prevents access to features that depend on the Business Connectivity Service (BCS), including external lists, external columns, and external content types.
 
 PARAMVALUE: True | False
@@ -1536,7 +1557,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Please read [Control access from unmanaged devices](/sharepoint/control-access-from-unmanaged-devices ) documentation here to understand Conditional Access Policy usage in SharePoint Online.
+Please read [Control access from unmanaged devices](/sharepoint/control-access-from-unmanaged-devices) documentation here to understand Conditional Access Policy usage in SharePoint Online.
 
 PARAMVALUE: AllowFullAccess | AllowLimitedAccess | BlockAccess
 
@@ -1610,7 +1631,10 @@ Accept wildcard characters: False
 ```
 
 ### -CoreBlockGuestsAsSiteAdmin
-{{ Fill CoreBlockGuestsAsSiteAdmin Description }}
+
+> Applicable: SharePoint Online
+
+Whether to block guests as site admins on core partition.
 
 ```yaml
 Type: Microsoft.SharePoint.Client.SharingState
@@ -1647,6 +1671,7 @@ Accept wildcard characters: False
 This parameter sets the default share link role on SharePoint sites. It replaces the `DefaultLinkPermission`.
 
 The valid values are:
+
 - `None`: No permissions granted.
 - `View`: View-only permissions.
 - `Edit`: Edit permissions.
@@ -1670,6 +1695,7 @@ Accept wildcard characters: False
 This parameter sets the default share link scope on SharePoint sites. It replaces the `DefaultSharingLinkType`.
 
 The valid values are:
+
 - `Anyone`: Anyone with the link can access the content.
 - `Organization`: Only people within the organization can access the content.
 - `SpecificPeople`: Only specific individuals (specified by the user) can access the content.
@@ -1916,7 +1942,10 @@ Accept wildcard characters: False
 ```
 
 ### -DelayDenyAddAndCustomizePagesEnforcement
-{{ Fill DelayDenyAddAndCustomizePagesEnforcement Description }}
+
+> Applicable: SharePoint Online
+
+Whether to delay enforcing custom scripts setting.
 
 ```yaml
 Type: System.Boolean
@@ -1961,6 +1990,7 @@ Accept wildcard characters: False
 Allows SharePoint administrators to delegate the management of Restricted access control policy on sites to site admins and owners.
 
 The valid values are:
+
 - True - Allow site admins and owners to manage Restricted access control policy
 - False (default) - Do not allow site admins and owners to manage Restricted access control policy
 
@@ -1983,6 +2013,7 @@ Accept wildcard characters: False
 Allows SharePoint administrators to delegate the management of Restricted content discoverability policy on sites to site admins and owners.
 
 The valid values are:
+
 - True - Allow site admins and owners to manage Restricted content discoverability policy
 - False (default) - Do not allow site admins and owners to manage Restricted content discoverability policy
 
@@ -2094,9 +2125,9 @@ Accept wildcard characters: False
 
 Allows administrators to prevent certain Adaptive Card Extensions from being added to pages or rendering on pages on which they were previously added. Currently, only the following Adaptive Card Extensions can be disabled in such a manner:
 
-| Adaptive Card Extension Name | GUID |
-|---|---|
-| Power Apps | 0d2d0fd0-9489-47ef-acfb-90edca009cba |
+| Adaptive Card Extension Name | GUID                                 |
+| ---------------------------- | ------------------------------------ |
+| Power Apps                   | 0d2d0fd0-9489-47ef-acfb-90edca009cba |
 
 To disable a specific Adaptive Card Extension, you need to enter its GUID as the parameter. To view a list of disabled Adaptive Card Extensions, use [Get-SPOTenant](Get-SPOTenant.md) to get `DisabledAdaptiveCardExtensionIds`.
 
@@ -2827,7 +2858,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTenantRestrictionsInsights
-{{ Fill EnableTenantRestrictionsInsights Description }}
+
+> Applicable: SharePoint Online
+
+Whether to enable the tenant restrictions policy insights.
 
 ```yaml
 Type: System.Boolean
@@ -3316,7 +3350,10 @@ Accept wildcard characters: False
 ```
 
 ### -IsFluidEnabled
-{{ Fill IsFluidEnabled Description }}
+
+> Applicable: SharePoint Online
+
+Whether the Fluid Framework is enabled.
 
 ```yaml
 Type: System.Boolean
@@ -3785,21 +3822,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ODBMembersCanShare
-{{ Fill ODBMembersCanShare Description }}
-
-```yaml
-Type: Microsoft.SharePoint.Client.SharingState
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -OfficeClientADALDisabled
 
 > Applicable: SharePoint Online
@@ -3868,6 +3890,7 @@ Accept wildcard characters: False
 This parameter sets the default share link role on OneDrive sites. It replaces the `DefaultLinkPermission`.
 
 The valid values are:
+
 - `None`: No permissions granted.
 - `View`: View-only permissions.
 - `Edit`: Edit permissions.
@@ -3891,6 +3914,7 @@ Accept wildcard characters: False
 This parameter sets the default share link scope on OneDrive sites. It replaces the `DefaultSharingLinkType`.
 
 The valid values are:
+
 - `Anyone`: Anyone with the link can access the content.
 - `Organization`: Only people within the organization can access the content.
 - `SpecificPeople`: Only specific individuals (specified by the user) can access the content.
@@ -4374,21 +4398,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RecycleBinRetentionPeriod
-{{ Fill RecycleBinRetentionPeriod Description }}
-
-```yaml
-Type: System.Int32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ReduceTempTokenLifetimeEnabled
 
 > Applicable: SharePoint Online
@@ -4404,21 +4413,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReduceTempTokenLifetimeEnabled
-{{ Fill ReduceTempTokenLifetimeEnabled Description }}
-
-```yaml
-Type: System.Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -4440,22 +4434,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ReduceTempTokenLifetimeValue
-{{ Fill ReduceTempTokenLifetimeValue Description }}
-
-```yaml
-Type: System.Int32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -RequireAcceptingAccountMatchInvitedAccount
+
 This parameter has been deprecated since SharePoint Online legacy invitation flow switched to Entra B2B invitation flow.
 
 ```yaml
@@ -4517,7 +4497,10 @@ Accept wildcard characters: False
 ```
 
 ### -RestrictedAccessControlForOneDriveErrorHelpLink
-{{ Fill RestrictedAccessControlForOneDriveErrorHelpLink Description }}
+
+> Applicable: SharePoint Online
+
+Sets the link to organization help page in case of access denied due to restricted access control policy.
 
 ```yaml
 Type: System.String
@@ -4551,9 +4534,9 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Controls whether resource accounts used by Teams Rooms and Devices can retain access to files after the meeting/collaboration is complete. Setting this to True prevents devices from accessing files and other Microsoft 365 assets when not actively in-use. 
+Controls whether resource accounts used by Teams Rooms and Devices can retain access to files after the meeting/collaboration is complete. Setting this to True prevents devices from accessing files and other Microsoft 365 assets when not actively in-use.
 
-PARAMVALUE: True | False 
+PARAMVALUE: True | False
 
 > [!NOTE]
 > This feature is currently in preview and may not be available in your tenant.
@@ -4613,21 +4596,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ReSyncTenantPrivacyProfile
-{{ Fill ReSyncTenantPrivacyProfile Description }}
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SearchResolveExactEmailOrUPN
 
 > Applicable: SharePoint Online
@@ -4640,21 +4608,6 @@ The valid values are:
 
 - False (default) - Starts with / partial name search functionality is available.
 - True - Disables starts with for all users/partial name search functionality for all SharePoint users, except SharePoint Admins.
-
-```yaml
-Type: System.Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SelfServiceSiteCreationDisabled
-{{ Fill SelfServiceSiteCreationDisabled Description }}
 
 ```yaml
 Type: System.Boolean
@@ -4875,7 +4828,10 @@ Accept wildcard characters: False
 ```
 
 ### -ShowOpenInDesktopOptionForSyncedFiles
-{{ Fill ShowOpenInDesktopOptionForSyncedFiles Description }}
+
+> Applicable: SharePoint Online
+
+Sets whether the Open in Desktop setting should be enabled.
 
 ```yaml
 Type: System.Boolean
@@ -5107,7 +5063,10 @@ Accept wildcard characters: False
 ```
 
 ### -StreamLaunchConfig
-{{ Fill StreamLaunchConfig Description }}
+
+> Applicable: SharePoint Online
+
+Sets the Stream Launch config state.
 
 ```yaml
 Type: System.Int32
@@ -5140,7 +5099,10 @@ Accept wildcard characters: False
 ```
 
 ### -SyncPrivacyProfileProperties
-{{ Fill SyncPrivacyProfileProperties Description }}
+
+> Applicable: SharePoint Online
+
+Sets whether the synced privacy profile properties will be refreshed on the next request.
 
 ```yaml
 Type: System.Boolean
@@ -5155,7 +5117,10 @@ Accept wildcard characters: False
 ```
 
 ### -TlsTokenBindingPolicyValue
-{{ Fill TlsTokenBindingPolicyValue Description }}
+
+> Applicable: SharePoint Online
+
+Sets the Transport Layer Security (TLS) token binding policy setting.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.TenantManagement.SPOTlsTokenBindingPolicyValue
@@ -5191,6 +5156,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -UsePersistentCookiesForExplorerView
 
 > Applicable: SharePoint Online
@@ -5278,7 +5244,6 @@ To set this list to be a specific security group, you need to enter its GUID as 
 can enter multiple GUIDs by using commas to separate them. To view the current list, use
 [Get-SPOTenant](Get-SPOTenant.md).
 
-
 ```yaml
 Type: System.Guid[]
 Parameter Sets: (All)
@@ -5332,6 +5297,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
