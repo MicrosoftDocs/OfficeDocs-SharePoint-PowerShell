@@ -103,6 +103,8 @@ If this cmdlet is executed with `-Content` as `CopilotAgentsOnSites`, a report w
 | Template                        | The Site template of the SharePoint site.                       |
 | Site owner                      | Name of the owner of the SharePoint site.                       |
 | Copilot name                    | Name of Copilot agent on the SharePoint site.                   |
+| Created by                      | Name of the user who created the Copilot agent.                 |
+| Agent created date              | Date on which the Copilot agent was created.                    |
 | Sensitivity                     | The sensitivity label of the SharePoint site.                   |
 | Restrict site access enabled    | Restrict site access status (Yes/No) of the SharePoint site.    |
 | Restrict site discovery enabled | Restrict site discovery status (Yes/No) of the SharePoint site. |
