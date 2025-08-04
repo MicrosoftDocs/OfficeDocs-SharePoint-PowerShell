@@ -51,12 +51,12 @@ Set-SPOContainer [-Identity] <SPOContainerPipeBind>
 ```
 ### PrincipalOwnerTransfer
 ```
-Set-SPOContainer [-Identity] <SPOContainerPipeBind> -ExistingPrincipalOwner <String>
+Set-SPOContainer [-Identity] <SPOContainerPipeBind> -CurrentPrincipalOwner <String>
  -NewPrincipalOwner <String> [-WhatIf] [-Confirm] [<CommonParameters>]
  ```
 ## DESCRIPTION
 
-For any parameters that are passed in, the `Set-SPOContainer` cmdlet sets or updates the setting for the active container identified by the parameter `Identity`. The cmdlet throws an error if the identity of an archived container is provided. The principal owner transfer operation is supported only for containers that are user-owned. Attempting to perform this operation on containers that are tenant-owned or group-owned will result in an error. 
+For any parameters that are passed in, the `Set-SPOContainer` cmdlet sets or updates the setting for the active container identified by the parameter `Identity`. The cmdlet throws an error if the identity of an archived container is provided. The principal owner transfer operation is supported only for containers that are user-owned. Attempting to perform this operation on non user-owned containers will result in an error. 
 
 > [!IMPORTANT]
 > Always wait for the current principal owner transfer attempt to finish before reusing the cmdlet. Concurrent or premature reuse can lead to incomplete or invalid ownership changes.
@@ -190,7 +190,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExistingPrincipalOwner
+### -CurrentPrincipalOwner
 The current principal owner of the container.
 
 ```yaml
