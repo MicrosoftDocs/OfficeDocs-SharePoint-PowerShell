@@ -64,7 +64,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnablePermissionsSync
-{{ Fill EnablePermissionsSync Description }}
+
+> Applicable: SharePoint Online
+
+Whether to enable permission sync to the associated sites.
 
 ```yaml
 Type: System.Boolean
@@ -79,7 +82,10 @@ Accept wildcard characters: False
 ```
 
 ### -HideNameInNavigation
-{{ Fill HideNameInNavigation Description }}
+
+> Applicable: SharePoint Online
+
+Whether to include the hub site name and logo in the hub site navigation.
 
 ```yaml
 Type: System.Boolean
@@ -184,6 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

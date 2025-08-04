@@ -68,66 +68,77 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-Owner <String>] [-Title <String>] [-
 ```
 
 ### ParamSet2
+
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> -EnablePWA <Boolean> [-InformationBarriersMode <String>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### ParamSet3
+
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-DisableSharingForNonOwners] [-InformationBarriersMode <String>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ParamSet5
+
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-RemoveLabel] [-InformationBarriersMode <String>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### AddInformationBarrierSegments
+
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-AddInformationSegment <Guid[]>] [-InformationBarriersMode <String>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveInformationBarrierSegments
+
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-RemoveInformationSegment <Guid[]>]
  [-InformationBarriersMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ClearLockDown
+
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>] [-ClearSharingLockDown] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### AddRestrictedAccessControlGroups
+
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>]
  [-AddRestrictedAccessControlGroups <Guid[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveRestrictedAccessControlGroups
+
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>]
  [-RemoveRestrictedAccessControlGroups <Guid[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ClearRestrictedAccessControl
+
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>] [-ClearRestrictedAccessControl]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### InheritVersionPolicyFromTenant
+
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>] [-InheritVersionPolicyFromTenant]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetSiteFileVersionPolicy
+
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>]
  [-EnableAutoExpirationVersionTrim <Boolean>] [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>]
@@ -136,6 +147,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>]
 ```
 
 ### ClearGroupId
+
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>] [-ClearGroupId] [-WhatIf]
  [-Confirm] [<CommonParameters>]
@@ -442,6 +454,7 @@ Accept wildcard characters: False
 ### -AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled
 
 > Applicable: SharePoint Online
+
 Enables or disables web property bag updates. When `AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled` is set to `$true`, the web property bag can be updated even if the Add And Customize Pages right is denied on the site collection.
 
 PARAMVALUE: True | False
@@ -603,7 +616,10 @@ Accept wildcard characters: False
 ```
 
 ### -BlockGuestsAsSiteAdmin
-{{ Fill BlockGuestsAsSiteAdmin Description }}
+
+> Applicable: SharePoint Online
+
+Whether to block guests as site admins.
 
 ```yaml
 Type: Microsoft.SharePoint.Client.SharingState
@@ -651,7 +667,10 @@ Accept wildcard characters: False
 ```
 
 ### -ClearSharingLockDown
-{{ Fill ClearSharingLockDown Description }}
+
+> Applicable: SharePoint Online
+
+Whether to clear the sharing lockdown for the site.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -756,7 +775,10 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultLinkToExistingAccessReset
-{{ Fill DefaultLinkToExistingAccessReset Description }}
+
+> Applicable: SharePoint Online
+
+Whether to reset the default link to existing access to the site.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -1268,7 +1290,10 @@ Accept wildcard characters: False
 ```
 
 ### -ListsShowHeaderAndNavigation
-{{ Fill ListsShowHeaderAndNavigation Description }}
+
+> Applicable: SharePoint Online
+
+Whether users see the full SharePoint chrome when they open a list.
 
 ```yaml
 Type: System.Boolean
@@ -1283,6 +1308,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocaleId
+
 Specifies the language of this site collection.
 For more information, see Locale IDs Assigned by Microsoft (https://go.microsoft.com/fwlink/p/?LinkId=242911) (https://go.microsoft.com/fwlink/p/?LinkId=242911).
 
@@ -1460,6 +1486,7 @@ Accept wildcard characters: False
 Choose whether to override the Block User Info Visibility policy on this site.
 
 PARAMVALUE:
+
 - OrganizationDefault (default) - Respect the organization-level Block User Info Visibility policy.
 - ApplyToNoUsers – No users are prevented from accessing User Info when they have Limited Access permission only on the site.
 - ApplyToAllUsers – All users (internal or external) are prevented from accessing User Info if they have Limited Access permission only on the site.
@@ -1694,6 +1721,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceQuota
+
 Specifies the resource quota in megabytes of the site collection.
 The default value is 0.
 For more information, see Resource Usage Limits on Sandboxed Solutions in SharePoint 2010 (https://msdn.microsoft.com/en-us/library/gg615462.aspx) (https://msdn.microsoft.com/en-us/library/gg615462.aspx).
@@ -2064,7 +2092,10 @@ Accept wildcard characters: False
 ```
 
 ### -UpdateUserTypeFromAzureAD
-{{ Fill UpdateUserTypeFromAzureAD Description }}
+
+> Applicable: SharePoint Online
+
+Whether to update user types for all users in the site to match what's in Entra.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

@@ -19,24 +19,28 @@ Sets or updates one or more property values of a trial, standard or a direct to 
 ## SYNTAX
 
 ### ContainerTypeName
+
 ```
 Set-SPOContainerType -ContainerTypeId <Guid> [-ContainerTypeName] <String> [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### OwningApplicationId
+
 ```
 Set-SPOContainerType -ContainerTypeId <Guid> [-OwningApplicationId] <Guid> [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### AzureSubscriptionId
+
 ```
 Set-SPOContainerType -ContainerTypeId <Guid> [[-AzureSubscriptionId] <Guid>] [-ResourceGroup] <String>
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ApplicationRedirectUrl
+
 ```
 Set-SPOContainerType -ContainerTypeId <Guid> [-ApplicationRedirectUrl] <String> [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -75,11 +79,13 @@ In Example 2, the billing profile of the container type is updated.
 ```powershell
 Set-SPOContainerType -ContainerTypeId 01f62754-0873-4ec6-ab4a-3eed48ba8be7 -OwningApplicationId 994b9586-253e-4a77-b51 - ContainerTypeName 'Blue Container Type'
 ```
+
 In Example 3, the trial container type name is updated as 'Blue Container Type'
 
 ## PARAMETERS
 
 ### -ApplicationRedirectUrl
+
 This parameter sets the application redirect Url for the container type.
 
 ```yaml
@@ -95,6 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -AzureSubscriptionId
+
 Use this parameter to set the Azure billing subscription ID you wish to attach to the container type.
 
 ```yaml
@@ -110,6 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContainerTypeId
+
 Use this parameter to enter the container type ID
 
 ```yaml
@@ -125,6 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContainerTypeName
+
 Use this parameter to pass the conatiner type name you intend to use for the container type
 
 ```yaml
@@ -139,22 +148,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OwningApplicationId
-{{ Fill OwningApplicationId Description }}
-
-```yaml
-Type: System.Guid
-Parameter Sets: OwningApplicationId
-Aliases:
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ResourceGroup
+
 Use this parameter to set the Azure resource group of the associated Azure billing subscription you intend to attach to the container type.
 
 ```yaml
@@ -170,6 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -185,6 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -201,6 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -222,4 +220,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-SPOContainerType](./Get-SPOContainerType.md)
 
 [Remove-SPOContainerType](./Remove-SPOContainerType.md)
-
