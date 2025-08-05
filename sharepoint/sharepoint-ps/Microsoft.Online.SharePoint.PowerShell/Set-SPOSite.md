@@ -1005,7 +1005,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-When Admin with Copilot license mark the site as authoritative, it signals to Microsoft Search, Copilot(BizChat), and other AI agents that the content is official, trusted, and verified. This improves content discoverability and user trust in AI-generated responses. 
+When an admin with a Copilot license marks a site as authoritative, it signals to Microsoft Search, Microsoft 365 Copilot, and other AI agents that the content is official, trusted, and verified. This designation helps improve content discoverability and increases user confidence in AI-generated responses. 
 
 PARAMVALUE: True | False
 
