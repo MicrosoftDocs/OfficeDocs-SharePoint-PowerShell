@@ -53,7 +53,7 @@ Start-SPODataAccessGovernanceInsight -ReportEntity <ReportEntityEnum> -Workload 
 ### UserPermissionsParameterSet
 ```
 Start-SPODataAccessGovernanceInsight -ReportEntity <ReportEntityEnum> -Workload <WorkloadEnum>
- -ReportType <ReportTypeEnum> -Name <String> -UserIDList <System.Collections.Generic.List`1[System.Guid]>
+ -ReportType <ReportTypeEnum> -Name <String> -UserEmailList <System.Collections.Generic.List`1[System.String]>
  [<CommonParameters>]
 ```
 
@@ -227,12 +227,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UserIDList
+### -UserEmailList
 
-Specifies the Entra object IDs of the users for whom permissions report should be generated. Can be fetched using the `Get-MgUser` command from [Microsoft Graph PowerShell](/powershell/module/microsoft.graph.users/get-mguser).
+Specifies the email IDs of the users for whom permissions report should be generated.
 
 ```yaml
-Type: System.Collections.Generic.List`1[System.Guid]
+Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: UserPermissionsParameterSet
 Aliases:
 
