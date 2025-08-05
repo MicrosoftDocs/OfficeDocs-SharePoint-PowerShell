@@ -63,6 +63,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-Owner <String>] [-Title <String>] [-
  [-HidePeopleWhoHaveListsOpen <Boolean>] [-AllowFileArchive <Boolean>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>]
  [-DisableSiteBranding <Boolean>]
+ [-IsAuthoritative <Boolean>]
  [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -990,6 +991,26 @@ PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
+Parameter Sets: ParamSet1
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsAuthoritative
+
+> Applicable: SharePoint Online
+
+When Admin with Copilot license mark the site as authoritative, it signals to Microsoft Search, Copilot(BizChat), and other AI agents that the content is official, trusted, and verified. This improves content discoverability and user trust in AI-generated responses. 
+
+PARAMVALUE: True | False
+
+```yaml
+Type: Boolean
 Parameter Sets: ParamSet1
 Aliases:
 
