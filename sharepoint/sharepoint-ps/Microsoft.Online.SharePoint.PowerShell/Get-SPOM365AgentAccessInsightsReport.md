@@ -24,7 +24,7 @@ This cmdlet enables the administrator to check status of all active and availabl
 
 ```
 Get-SPOM365AgentAccessInsightsReport [-ReportId <Guid>] [-Action <ActionType>]
- [-Content <SPOCopilotAgentInsightType>] [<CommonParameters>]
+ [-Content <M365AgentsOnSites>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -120,13 +120,13 @@ The list of Agent Details would have follwing properties for each agent. This li
 | Agent Type                      | The type of the agent (e.g., Declarative, Custom, etc.)         |
 | Request Volume                  | Total requests made by this agent to the site.                  |
 
-If this cmdlet is executed with `-ReportId` as parameter and `-Content` as `SiteDistribution`, a report showing M365 agents distribution across sites in the specified number of days will be displayed with the following properties:
+If this cmdlet is executed with `-ReportId` as parameter and `-Content` as `SiteDistribution`, a report showing Microsoft 365 agents distribution across sites in the specified number of days will be displayed with the following properties:
 
-| Property       | Description                                                                                  |
-|:---------------|:---------------------------------------------------------------------------------------------|
-| Site template  | The Site template of the SharePoint site.                                                    |
-| Sites          | Number of sites corresponding to that particular site template.                              |
-| M365 agents    | Number of M365 agents on the SharePoint site corresponding to that particular site template. |
+| Property       | Description                                                                                           |
+|:---------------|:------------------------------------------------------------------------------------------------------|
+| Site template  | The Site template of the SharePoint site.                                                             |
+| Sites          | Number of sites corresponding to that particular site template.                                       |
+| M365 agents    | Number of Microsoft 365 agents on the SharePoint site corresponding to that particular site template. |
 
 ```yaml
 Type: Microsoft.Online.SharePoint.TenantAdministration.SPOM365AgentInsightType
@@ -178,3 +178,4 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
 
 [Start-SPOM365AgentAccessInsightsReport](./Start-SPOM365AgentAccessInsightsReport.md)
+
