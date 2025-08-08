@@ -85,13 +85,11 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-It specifies the kind of report to view or download. There are 3 kinds of sub-reports: CopilotAgentsOnSites, TopSites, SiteDistribution.
+Specifies the type of report to view or download. Valid values are:
 
-If this cmdlet is executed with `-Content` as `CopilotAgentsOnSites`, a report with list of all sites on which a Copilot agent is created along with the names of the Copilot agent created in the specified number of days will be displayed.
-
-If this cmdlet is executed with `-ReportId` as parameter and `-Content` as `TopSites`, the top 100 records summarizing the number of Copilot agents on sites created in the specified number of days will be displayed.
-
-If this cmdlet is executed with `-ReportId` as parameter and `-Content` as `SiteDistribution`, a report showing Copilot distribution across sites in the specified number of days will be displayed.
+- `CopilotAgentsOnSites`: Displays a report listing all sites where a Copilot agent was created within the specified number of days. Includes the names of the agents created.
+- `TopSites`: Displays the top 100 sites with the highest number of Copilot agents created within the specified number of days.
+- `SiteDistribution`: Displays a report showing how Copilot agents are distributed across sites within the specified number of days.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.TenantAdministration.SPOCopilotAgentInsightType
