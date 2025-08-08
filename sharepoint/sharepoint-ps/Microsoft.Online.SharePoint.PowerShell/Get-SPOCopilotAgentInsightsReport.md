@@ -29,14 +29,7 @@ Get-SPOCopilotAgentInsightsReport [-ReportId <Guid>] [-Action <ActionType>]
 
 ## DESCRIPTION
 
-If this cmdlet is executed without any parameters, it displays the status of all active and completed reports with the following properties:
-
-| Property             | Description                                                      |
-|:---------------------|:-----------------------------------------------------------------|
-| Id                   | The unique Id of the report.                                     |
-| CreatedDateTimeInUtc | The date and time in UTC when the report creation was triggered. |
-| Status               | The status of the report.                                        |
-| ReportPeriodInDays   | The report duration in days.                                     |
+If this cmdlet is executed without any parameters, it displays the status of all active and completed reports.
 
 > [!NOTE]
 > All reports adhere to any retention timeline as per [Data Access Governance](/sharepoint/data-access-governance-reports).
