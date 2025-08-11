@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Removes a user from an assigned membership of a container.
+Removes a user from an assigned role of a container.
 
 ## SYNTAX
 
@@ -30,7 +30,7 @@ Remove-SPOContainerUser [-ContainerId] <String> -LoginName <String> -Role <Strin
 Remove-SPOContainerUser 423poi45 -LoginName shras@contoso.com-Role Owmer
 ```
 
-Example 1 removes the user with User Principal Name "shras@contoso.com" from the role of an owner. 
+Example 1 removes the user with User Principal Name "shras@contoso.com" from the role of an owner of container whose ContainerId is 423poi45 . 
 
 ## PARAMETERS
 
