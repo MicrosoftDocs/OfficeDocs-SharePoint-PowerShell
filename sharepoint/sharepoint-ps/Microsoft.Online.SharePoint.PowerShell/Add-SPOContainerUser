@@ -22,11 +22,9 @@ Assigns a particular membership of a container to users.
 Add-SPOContainerUser [-ContainerId] <String> -LoginName <String> -Role <String> [<CommonParameters>]
 ```
 
-
 ## EXAMPLES
 
 ### Example 1
-
 
 ```powershell
 Add-SPOContainerUser 423poi45 -LoginName shras@contoso.com-Role Owmer
