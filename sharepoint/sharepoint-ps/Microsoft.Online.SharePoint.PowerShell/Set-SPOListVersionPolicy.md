@@ -19,10 +19,23 @@ Sets the version policy setting on the document library.
 
 ## SYNTAX
 
+### SetPolicy
 ```
 Set-SPOListVersionPolicy [-Site] <SpoSitePipeBind> -List <SPOListPipeBind>
  -EnableAutoExpirationVersionTrim <Boolean> [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>]
- [-MajorWithMinorVersionsLimit <Int32>] [<CommonParameters>]
+ [-MajorWithMinorVersionsLimit <Int32>] [-FileTypes <String[]>] [<CommonParameters>]
+```
+
+### RemovePolicy
+```
+Set-SPOListVersionPolicy [-Site] <SpoSitePipeBind> -List <SPOListPipeBind>
+ -RemoveVersionExpirationFileTypeOverride <String[]> [<CommonParameters>]
+```
+
+### SyncPolicy
+```
+Set-SPOListVersionPolicy [-Site] <SpoSitePipeBind> -List <SPOListPipeBind> [-FileTypes <String[]>] [-Sync]
+ [-ExcludeDefaultPolicy] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,7 +64,79 @@ Example 2 sets manual version histroy limits on the document library called "Doc
 Set-SPOListVersionPolicy -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -MajorWithMinorVersionsLimit 20 -ExpireVersionsAfterDays 0
 ```
 
-Example 3 sets manual version histroy limits on the document library called "Documents" by limiting the number of versions with no time limits. The new document libraries will use this version setting.
+Example 3 sets manual version histroy limits on the document library called "Documents" by limiting the number of versions with no time limits.
+
+### Example 4
+```powershell
+Set-SPOListVersionPolicy -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -EnableAutoExpirationVersionTrim $true -FileTypes @("Video", "Audio")
+```
+Example 4 sets automatic version history limit override for video and audio file types on the document library called "Documents".
+
+### EXAMPLE 5
+
+```powershell
+Set-SPOListVersionPolicy -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -MajorWithMinorVersionsLimit 20 -ExpireVersionsAfterDays 30 -FileTypes @("Video", "Audio")
+```
+
+Example 5 sets manual version history limit override for video and audio file types on the document library called "Documents" by limiting the number of versions and the time (in days) versions are kept.
+
+### EXAMPLE 6
+
+```powershell
+Set-SPOListVersionPolicy -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -MajorWithMinorVersionsLimit 20 -ExpireVersionsAfterDays 0 -FileTypes @("Video", "Audio")
+```
+
+Example 6 sets manual version history limit override for video and audio file types on the document library called "Documents" by limiting the number of versions with no time limits.
+
+### EXAMPLE 7
+
+```powershell
+Set-SPOListVersionPolicy -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -Sync
+```
+
+Example 7 sets the version history limits (include file type overrides) to that of the tenant or site (if the site this document library is in has broken inheritance for version history limits).
+
+### EXAMPLE 8
+
+```powershell
+Set-SPOListVersionPolicy -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -Sync -FileTypes @("Video", "Audio")
+```
+
+Example 8 sets the default version history limits and overrides for video and audio file types to that of the tenant or site (if the site this document library is in has broken inheritance for version history limits).
+
+### EXAMPLE 9
+
+```powershell
+Set-SPOListVersionPolicy -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -Sync -FileTypes @()
+```
+
+Example 9 sets the default version history limit to that of the tenant or site (if the site this document library is in has broken inheritance for version history limits).
+
+### EXAMPLE 10
+
+```powershell
+Set-SPOListVersionPolicy -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -Sync -FileTypes @("Video", "Audio") -ExcludeDefaultPolicy
+```
+
+Example 10 sets the only the version history limit overrides for video and audio file types to that of the tenant or site (if the site this document library is in has broken inheritance for version history limits).
+
+### EXAMPLE 11
+
+
+```powershell
+Set-SPOListVersionPolicy -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -Sync -ExcludeDefaultPolicy
+```
+
+Example 10 sets the version history limit overrides for all file types to that of the tenant or site (if the site this document library is in has broken inheritance for version history limits).
+
+### EXAMPLE 12
+
+
+```powershell
+Set-SPOListVersionPolicy -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -RemoveVersionExpirationFileTypeOverride @("Video", "Audio")
+```
+
+Example 12 removes the version history limit overrides for video and audio file types so that they follow the default version history limits.
 
 ## PARAMETERS
 
@@ -77,11 +162,31 @@ The valid values are:
 PARAMVALUE: $true | $false
 
 ```yaml
-Type: System.Boolean
-Parameter Sets: (All)
+Type: Boolean
+Parameter Sets: SetPolicy
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExcludeDefaultPolicy
+> Applicable: SharePoint Online
+
+Indicates whether to synchronize the default version policy to the default policy of the tenant or the site (if the site this document library is in has broken inheritance for version history limits).
+
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: SyncPolicy
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -96,8 +201,43 @@ When version history limits are managed manually (`EnableAutoExpirationVersionTr
 PARAMVALUE: Int32
 
 ```yaml
-Type: System.Int32
-Parameter Sets: (All)
+Type: Int32
+Parameter Sets: SetPolicy
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FileTypes
+> Applicable: SharePoint Online
+
+An array of file type names. The supported file type names are:
+
+- Audio
+
+- OutlookPST
+
+- Video
+
+Apply the version history limits to a set of file types so that they no longer follow the default version history limits. It is used in combination with the following parameters: 
+
+- EnableAutoExpirationVersionTrim
+
+- MajorVersionLimit
+
+- ExpireVersionsAfterDays
+
+Or apply the version history limit override for the file types of the tenant or the site (if the site this document library is in has broken inheritance for version history limits) by using the **Sync** parameter. For more information about this option, please refer to the documentation for the **Sync** parameter.
+
+
+
+```yaml
+Type: String[]
+Parameter Sets: SetPolicy, SyncPolicy
 Aliases:
 
 Required: False
@@ -131,8 +271,8 @@ When version history limits are managed manually (`EnableAutoExpirationVersionTr
 PARAMVALUE: Int32
 
 ```yaml
-Type: System.Int32
-Parameter Sets: (All)
+Type: Int32
+Parameter Sets: SetPolicy
 Aliases:
 
 Required: False
@@ -150,11 +290,28 @@ When version history limits are managed manually (`EnableAutoExpirationVersionTr
 PARAMVALUE: Int32
 
 ```yaml
-Type: System.Int32
-Parameter Sets: (All)
+Type: Int32
+Parameter Sets: SetPolicy
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveVersionExpirationFileTypeOverride
+An array of file type names. Removes the version history limits to a set of file types so that they will follow the default version history limits. 
+
+
+
+```yaml
+Type: String[]
+Parameter Sets: RemovePolicy
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -176,6 +333,36 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -Sync
+Apply the version history limits of the tenant or the site (if the site this document library is in has broken inheritance for version history limits).
+
+You may use the following parameters in combination to update only the default policy or a set of file type overrides:
+
+- ExcludeDefaultPolicy: if set, it will not update the default policy.
+
+- FileTypes: 
+
+  - if set, it will update the specified file types; 
+    
+  - if not set, it will update all file type overrides;
+    
+  - if set to an empty array (i.e. `@()`), it will not update any file type overrides.
+    
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: SyncPolicy
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
