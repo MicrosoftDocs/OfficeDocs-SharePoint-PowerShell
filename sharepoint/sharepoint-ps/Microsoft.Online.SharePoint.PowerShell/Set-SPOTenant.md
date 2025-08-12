@@ -105,7 +105,9 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-IsEnableAppAuthPopUpEnabled <Boolean>] [-IsDataAccessInCardDesignerEnabled <Boolean>]
  [-MassDeleteNotificationDisabled <Boolean>] [-EnableAutoExpirationVersionTrim <Boolean>]
  [-EnableMediaReactions <Boolean>] [-BusinessConnectivityServiceDisabled <Boolean>]
- [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] [-AllowSensitivityLabelOnRecords <Boolean>]
+ [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] [-FileTypesForVersionExpiration <String[]>]
+ [-RemoveVersionExpirationFileTypeOverride <String[]>]
+ [-AllowSensitivityLabelOnRecords <Boolean>]
  [-DelayDenyAddAndCustomizePagesEnforcement <Boolean>]
  [-DelayDenyAddAndCustomizePagesEnforcementOnClassicPublishingSites <Boolean>]
  [-AllowClassicPublishingSiteCreation <Boolean>] [-WhoCanShareAnonymousAllowList <Guid[]>]
@@ -337,7 +339,9 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-IsEnableAppAuthPopUpEnabled <Boolean>] [-IsDataAccessInCardDesignerEnabled <Boolean>]
  [-MassDeleteNotificationDisabled <Boolean>] [-EnableAutoExpirationVersionTrim <Boolean>]
  [-EnableMediaReactions <Boolean>] [-BusinessConnectivityServiceDisabled <Boolean>]
- [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] [-AllowSensitivityLabelOnRecords <Boolean>]
+ [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] 
+ [-FileTypesForVersionExpiration <String[]>] [-RemoveVersionExpirationFileTypeOverride <String[]>]
+ [-AllowSensitivityLabelOnRecords <Boolean>]
  [-DelayDenyAddAndCustomizePagesEnforcement <Boolean>]
  [-DelayDenyAddAndCustomizePagesEnforcementOnClassicPublishingSites <Boolean>]
  [-AllowClassicPublishingSiteCreation <Boolean>] [-WhoCanShareAnonymousAllowList <Guid[]>]
@@ -452,7 +456,9 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-IsEnableAppAuthPopUpEnabled <Boolean>] [-IsDataAccessInCardDesignerEnabled <Boolean>]
  [-MassDeleteNotificationDisabled <Boolean>] [-EnableAutoExpirationVersionTrim <Boolean>]
  [-EnableMediaReactions <Boolean>] [-BusinessConnectivityServiceDisabled <Boolean>]
- [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] [-AllowSensitivityLabelOnRecords <Boolean>]
+ [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] 
+ [-FileTypesForVersionExpiration <String[]>] [-RemoveVersionExpirationFileTypeOverride <String[]>]
+ [-AllowSensitivityLabelOnRecords <Boolean>]
  [-DelayDenyAddAndCustomizePagesEnforcement <Boolean>]
  [-DelayDenyAddAndCustomizePagesEnforcementOnClassicPublishingSites <Boolean>]
  [-AllowClassicPublishingSiteCreation <Boolean>] [-WhoCanShareAnonymousAllowList <Guid[]>]
@@ -663,6 +669,42 @@ Set-SPOTenant -DisabledAdaptiveCardExtensionIds 0d2d0fd0-9489-47ef-acfb-90edca00
 ```
 
 This example disables the Power Apps Adaptive Card Extension.
+
+### EXAMPLE 22
+
+
+```powershell
+Set-SPOTenant -EnableAutoExpirationVersionTrim $true -FileTypesForVersionExpiration @("Video", "Audio")
+```
+
+This example sets automatic version history limit override for video and audio file types on all new document libraries at tenant level. 
+
+### EXAMPLE 23
+
+
+```powershell
+Set-SPOTenant -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 30 -FileTypesForVersionExpiration @("Video", "Audio")
+```
+
+This example sets manual version history limit override for video and audio file types on all new document libraries at tenant level by limiting the number of major versions and the time (in days) versions are kept.
+
+### EXAMPLE 24
+
+
+```powershell
+Set-SPOTenant -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 0 -FileTypesForVersionExpiration @("Video", "Audio")
+```
+
+This example sets manual version history limit override for video and audio file types on all new document libraries at tenant level by limiting the number of major versions with no time limits. 
+
+### EXAMPLE 25
+
+
+```powershell
+Set-SPOTenant -RemoveVersionExpirationFileTypeOverride @("Video", "Audio")
+```
+
+This example removes any specific version history limit override set for video and audio file types on all new document libraries at tenant level. 
 
 ## PARAMETERS
 
@@ -3125,6 +3167,42 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FileTypesForVersionExpiration
+
+An array of file type names. The supported file type names are:
+
+- Audio
+
+- OutlookPST
+
+- Video
+
+Apply the version history limits to a set of file types so that they no longer follow the default version history limits. It is used in combination with the following parameters: 
+
+- EnableAutoExpirationVersionTrim
+
+- MajorVersionLimit
+
+- ExpireVersionsAfterDays
+
+The version history limits are applied on new document libraries in the tenant.
+
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
+
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -FolderAnonymousLinkType
 
 > Applicable: SharePoint Online
@@ -4430,6 +4508,30 @@ Aliases:
 Required: False
 Position: Named
 Default value: 15
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveVersionExpirationFileTypeOverride
+
+An array of file type names. Removes the version history limits to a set of file types so that they will follow the default version history limits. 
+
+The version history limits are applied on new document libraries in the tenant.
+
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
+
+YAML
+
+
+```
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
