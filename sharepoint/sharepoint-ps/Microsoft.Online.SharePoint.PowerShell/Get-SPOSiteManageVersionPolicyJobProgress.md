@@ -8,7 +8,10 @@ schema: 2.0.0
 # Get-SPOSiteManageVersionPolicyJobProgress
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Gets the status and progress for background jobs started by [`New-SPOSiteManageVersionPolicyJob`]().
+
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
 
 ## SYNTAX
 
@@ -17,21 +20,25 @@ Get-SPOSiteManageVersionPolicyJobProgress [-Identity] <SpoSitePipeBind> [<Common
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Gets the status and progress for background jobs started by [`New-SPOSiteManageVersionPolicyJob`]().
 
 ## EXAMPLES
 
 ### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+
+```
+Get-SPOSiteManageVersionPolicyJobProgress https://contoso.sharepoint.com/sites/site1
 ```
 
-{{ Add example description here }}
+Gets the progress of the site manage version policy job for the site.
 
 ## PARAMETERS
 
 ### -Identity
-{{ Fill Identity Description }}
+
+> Applicable: SharePoint Online
+
+Specifies the URL of the site collection.
 
 ```yaml
 Type: SpoSitePipeBind
@@ -58,3 +65,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[New-SPOSiteManageVersionPolicyJob](New-SPOSiteManageVersionPolicyJob.md)
+
+[Remove-SPOSiteManageVersionPolicyJob](Remove-SPOSiteManageVersionPolicyJob.md)
