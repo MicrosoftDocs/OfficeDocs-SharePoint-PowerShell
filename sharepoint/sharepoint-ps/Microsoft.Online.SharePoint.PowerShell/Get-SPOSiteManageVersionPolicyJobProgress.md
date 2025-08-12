@@ -8,7 +8,8 @@ schema: 2.0.0
 # Get-SPOSiteManageVersionPolicyJobProgress
 
 ## SYNOPSIS
-Gets the status and progress for background jobs started by `New-SPOSiteManageVersionPolicyJob`.> [!NOTE]
+Gets the status and progress for background jobs started by `New-SPOSiteManageVersionPolicyJob`.
+> [!NOTE]
 > This feature is currently in preview and may not be available in your tenant.
 
 ## SYNTAX
