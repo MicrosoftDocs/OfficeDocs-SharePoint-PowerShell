@@ -30,7 +30,7 @@ New-SPOSiteManageVersionPolicyJob [-Identity] <SpoSitePipeBind> [-FileTypes <Str
 ## DESCRIPTION
 Starts a background job that does one or more of the following: 
 
-- set the version history limits of all document libraries to that of the site;
+- sets the version history limits of all document libraries to that of the site;
 
 - trims version in all document libraries according to each list's version history limits.
 
@@ -231,7 +231,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{ Fill Identity Description }}
+> Applicable: SharePoint Online
+
+Specifies the URL of the site collection.
 
 ```yaml
 Type: SpoSitePipeBind
