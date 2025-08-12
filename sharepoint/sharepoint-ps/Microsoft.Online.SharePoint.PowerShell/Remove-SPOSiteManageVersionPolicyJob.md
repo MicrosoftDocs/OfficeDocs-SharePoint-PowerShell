@@ -8,25 +8,29 @@ schema: 2.0.0
 # Remove-SPOSiteManageVersionPolicyJob
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Stops further processing of site manage version policy job that is in-progress.
+
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
 
 ## SYNTAX
 
-```
+```powershell
 Remove-SPOSiteManageVersionPolicyJob [-Identity] <SpoSitePipeBind> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Stops further processing of site manage version policy job that is in-progress.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
-PS C:\> {{ Add example code here }}
+Remove-SPOSiteFileVersionBatchDeleteJob -Identity https://contoso.sharepoint.com/sites/site1
 ```
 
-{{ Add example description here }}
+Stops further processing of site manage version policy job
 
 ## PARAMETERS
 
@@ -46,7 +50,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{ Fill Identity Description }}
+> Applicable: SharePoint Online
+
+Specifies the URL of the site collection.
 
 ```yaml
 Type: SpoSitePipeBind
@@ -89,3 +95,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+[Get-SPOSiteManageVersionPolicyJobProgress](Get-SPOSiteManageVersionPolicyJobProgress.md)
+[New-SPOSiteManageVersionPolicyJob](New-SPOSiteManageVersionPolicyJob.md)
