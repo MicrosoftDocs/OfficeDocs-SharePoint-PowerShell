@@ -10,10 +10,13 @@ schema: 2.0.0
 ## SYNOPSIS
 Starts a background job that manages the file versions and version history limits of all of its document libraries.
 
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
+
 ## SYNTAX
 
 ### MandatoryTrimOptionalSync
-```
+```powershell
 New-SPOSiteManageVersionPolicyJob [-Identity] <SpoSitePipeBind> [-FileTypes <String[]>] [-ExcludeDefaultPolicy]
  [-TrimUseListPolicy] [-SyncListPolicy] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
