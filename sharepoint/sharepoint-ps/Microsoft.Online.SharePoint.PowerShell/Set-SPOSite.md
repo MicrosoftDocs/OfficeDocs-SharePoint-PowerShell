@@ -147,6 +147,21 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### SetSiteFileTypeFileVersionPolicy
+
+
+```
+Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>] [-EnableAutoExpirationVersionTrim <Boolean>] [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] -FileTypesForVersionExpiration <String[]> [-ApplyToNewDocumentLibraries] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveSiteFileVersionPolicy
+
+
+```
+Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>] [-ApplyToNewDocumentLibraries]
+ [-RemoveVersionExpirationFileTypeOverride <String[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### ClearGroupId
 
 ```
@@ -331,6 +346,44 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -InheritVersion
 ```
 
 Example 20 clears the file version setting at site level. The new document libraries will use the Tenant Level setting. It won't impact the existing document libraries.
+
+### Example 21
+
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $true -FileTypesForVersionExpiration @("Video", "Audio") -ApplyToNewDocumentLibraries
+```
+
+Example 21 sets automatic version history limit override for video and audio file types at site level. The new document libraries will use this version setting.
+
+### Example 22
+
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 30 
+-FileTypesForVersionExpiration @("Video", "Audio") -ApplyToNewDocumentLibraries
+```
+
+Example 22 sets manual version history limit override for video and audio file types at site level by limiting the number of versions and the time (in days) versions are kept. The new document libraries will use this version setting.
+
+### Example 23
+
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 0 
+-FileTypesForVersionExpiration @("Video", "Audio") -ApplyToNewDocumentLibraries
+```
+
+Example 23 sets manual version history limit override for video and audio file types at site level by limiting the number of versions with no time limits. The new document libraries will use this version setting.
+
+### Example 24
+
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -RemoveVersionExpirationFileTypeOverride @("Video", "Audio") -ApplyToNewDocumentLibraries
+```
+
+Example 24 removes the version history limit override for video and audio file types at the site level. The new document libraries will use this version setting.
 
 ## PARAMETERS
 
@@ -518,10 +571,23 @@ Apply the version history limits setting to new document libraries.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: SetSiteFileVersionPolicy
+Parameter Sets: SetSiteFileVersionPolicy, RemoveSiteFileVersionPolicy
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+```
+Type: SwitchParameter
+Parameter Sets: SetSiteFileTypeFileVersionPolicy
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -1045,7 +1111,7 @@ PARAMVALUE: False | True
 
 ```yaml
 Type: System.Boolean
-Parameter Sets: SetSiteFileVersionPolicy
+Parameter Sets: SetSiteFileVersionPolicy, SetSiteFileTypeFileVersionPolicy
 Aliases:
 
 Required: False
@@ -1140,7 +1206,7 @@ PARAMVALUE: Int32
 
 ```yaml
 Type: System.Int32
-Parameter Sets: SetSiteFileVersionPolicy
+Parameter Sets: SetSiteFileVersionPolicy, SetSiteFileTypeFileVersionPolicy
 Aliases:
 
 Required: False
@@ -1164,6 +1230,43 @@ Parameter Sets: ParamSet1
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FileTypesForVersionExpiration
+
+> Applicable: SharePoint Online
+
+An array of file type names. The supported file type names are:
+
+- Audio
+
+- OutlookPST
+
+- Video
+
+Apply the version history limits to a set of file types so that they no longer follow the default version history limits. It is used in combination with the following parameters: 
+
+- EnableAutoExpirationVersionTrim
+
+- MajorVersionLimit
+
+- ExpireVersionsAfterDays
+
+This must be used with **ApplyToNewDocumentLibraries** switch set to true, because the version history limits are only applied on new document libraries in the site.
+
+
+
+
+```
+Type: String[]
+Parameter Sets: SetSiteFileTypeFileVersionPolicy
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -1430,7 +1533,7 @@ PARAMVALUE: Int32
 
 ```yaml
 Type: System.Int32
-Parameter Sets: SetSiteFileVersionPolicy
+Parameter Sets: SetSiteFileVersionPolicy, SetSiteFileTypeFileVersionPolicy
 Aliases:
 
 Required: False
@@ -1692,6 +1795,30 @@ Specifies the IDs of groups to be removed from access restriction policy and los
 ```yaml
 Type: System.Guid[]
 Parameter Sets: RemoveRestrictedAccessControlGroups
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveVersionExpirationFileTypeOverride
+
+> Applicable: SharePoint Online
+
+An array of file type names. Removes the version history limits to a set of file types so that they will follow the default version history limits. 
+
+This must be used with **ApplyToNewDocumentLibraries** switch set to true, because the version history limits are only applied on new document libraries in the site.
+
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
+
+
+```yaml
+Type: String[]
+Parameter Sets: RemoveSiteFileVersionPolicy
 Aliases:
 
 Required: False
