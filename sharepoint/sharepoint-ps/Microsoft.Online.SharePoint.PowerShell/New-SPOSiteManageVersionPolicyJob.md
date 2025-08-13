@@ -86,7 +86,7 @@ Apply the site version history limits (including file type overrides) to existin
 New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites/site1 -SyncListPolicy -ExcludeDefaultPolicy
 ```
 
-Apply the site level all file type version history limit overrides to existing document libraries. If the site is not broken inheritance for version history limits, then it applies the tenant version history limits.
+Apply all site file type version history limit overrides to existing document libraries. If the site is not broken inheritance for version history limits, then it applies the tenant version history limits.
 
 ### Example 6
 
@@ -175,7 +175,7 @@ Apply the site version history limits (including file type overrides) to existin
 New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites/site1 -SyncListPolicy -TrimUseListPolicy -ExcludeDefaultPolicy
 ```
 
-Apply the site level all file type version history limit overrides to existing document libraries. If the site is not broken inheritance for version history limits, then it applies the tenant version history limits. Then trim all file versions that have a file type override based on each document library's version history limits.
+Apply all site file type version history limit overrides to existing document libraries. If the site is not broken inheritance for version history limits, then it applies the tenant version history limits. Then trim all file versions that have a file type override based on each document library's version history limits.
 
 ## PARAMETERS
 
