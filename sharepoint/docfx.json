@@ -43,9 +43,9 @@
       "breadcrumb_path": "/powershell/breadcrumb/toc.json",
       "feedback_system": "Standard",
             "feedback_product_url": "https://github.com/MicrosoftDocs/OfficeDocs-SharePoint-powershell/issues",
-      "author": "techwriter40",
-      "manager": "meerak",
-      "ms.author": "pamgreen",
+      "author": "samkabue",
+      "manager": "speedta",
+      "ms.author": "speedta",
       "ms.devlang": "powershell",
       "ms.topic": "reference",
       "contributors_to_exclude": [
