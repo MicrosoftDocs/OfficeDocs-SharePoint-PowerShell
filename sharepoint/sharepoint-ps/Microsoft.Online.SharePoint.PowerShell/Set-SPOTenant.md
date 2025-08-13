@@ -4514,7 +4514,7 @@ Accept wildcard characters: False
 
 ### -RemoveVersionExpirationFileTypeOverride
 
-An array of file type names. Removes the version history limits to a set of file types so that they will follow the default version history limits. 
+An array of file type names. Removes the version history limit override from a set of file types so that they will follow the default version history limits. 
 
 The version history limits are applied on new document libraries in the tenant.
 > [!NOTE]
