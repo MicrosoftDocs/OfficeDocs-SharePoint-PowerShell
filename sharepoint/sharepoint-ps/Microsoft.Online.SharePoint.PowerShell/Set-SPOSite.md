@@ -159,7 +159,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>] [-
 
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>] [-ApplyToNewDocumentLibraries]
- [-RemoveVersionExpirationFileTypeOverride <String[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -RemoveVersionExpirationFileTypeOverride <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ClearGroupId
