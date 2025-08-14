@@ -74,6 +74,6 @@ This cmdlet returns diagnostic information about the status of Windows Defender 
 
 [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets)
 
-[Windows Defender Antivirus](https://learn.microsoft.com/windows/security/threat-protection/microsoft-defender-antivirus/)
+[Windows Defender Antivirus](https://learn.microsoft.com/defender-endpoint/microsoft-defender-antivirus-windows)
 
 [Antimalware Scan Interface (AMSI)](https://learn.microsoft.com/windows/win32/amsi/antimalware-scan-interface-portal)
