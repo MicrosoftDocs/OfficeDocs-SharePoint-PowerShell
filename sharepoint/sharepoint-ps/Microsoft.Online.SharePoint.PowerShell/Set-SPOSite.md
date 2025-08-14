@@ -157,7 +157,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>] [-
 
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>] [-ApplyToNewDocumentLibraries]
- [-RemoveVersionExpirationFileTypeOverride <String[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -RemoveVersionExpirationFileTypeOverride <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ClearGroupId
@@ -1808,7 +1808,7 @@ Type: String[]
 Parameter Sets: RemoveSiteFileVersionPolicy
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

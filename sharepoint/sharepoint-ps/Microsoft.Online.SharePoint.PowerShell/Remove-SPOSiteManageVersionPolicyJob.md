@@ -36,7 +36,7 @@ Stops processing of the in-progress manage version policy job for the given site
 Remove-SPOSiteFileVersionBatchDeleteJob -Identity https://contoso.sharepoint.com/sites/site1
 ```
 
-Stops further processing of site manage version policy job
+Stops further processing of site manage version policy job.
 
 ## PARAMETERS
 
