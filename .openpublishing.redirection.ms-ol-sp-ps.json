@@ -31,6 +31,11 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Add-SPOFontPackage.md",
+            "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/add-spofontpackage",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Add-SPOGeoAdministrator.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/add-spogeoadministrator",
             "redirect_document_id": true
@@ -308,6 +313,11 @@
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOExternalUser.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spoexternaluser",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOFontPackage.md",
+            "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spofontpackage",
             "redirect_document_id": true
         },
         {
@@ -826,6 +836,11 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOFontPackage.md",
+            "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spofontpackage",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOGeoAdministrator.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spogeoadministrator",
             "redirect_document_id": true
@@ -1098,6 +1113,11 @@
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPODisableSpacesActivation.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spodisablespacesactivation",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Set-SPOFontPackage.md",
+            "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/set-spofontpackage",
             "redirect_document_id": true
         },
         {
