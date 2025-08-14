@@ -24,6 +24,9 @@ Adds a source to the **Content Security Policy** configuration.
 ### [Add-SPOFileRequestBrandingProfile](Add-SPOFileRequestBrandingProfile.md)
 Adds a branding profile for the file request feature by specifying logo and background assets from an existing organization asset library.
 
+### [Add-SPOFontPackage](Add-SPOFontPackage.md)
+Creates a new custom font package with fonts in the brand fonts library.
+
 ### [Add-SPOGeoAdministrator](Add-SPOGeoAdministrator.md)
 Adds a new SharePoint user or security group as GeoAdministrator to a multi-geo tenant.
 
@@ -197,6 +200,9 @@ Returns external users in the tenant.
 
 ### [Get-SPOFileRequestBrandingProfiles](Get-SPOFileRequestBrandingProfiles.md)
 Retrieves branding profiles configured for the file request feature, including details about logo and background assets.
+
+### [Get-SPOFontPackage](Get-SPOFontPackage.md)
+Returns one or all custom font packages in the tenant.
 
 ### [Get-SPOGeoAdministrator](Get-SPOGeoAdministrator.md)
 This cmdlet returns the SharePoint Online user or security group accounts with Global Admin privileges in the current multi-geo tenant.
@@ -385,7 +391,7 @@ Returns the current configuration status.
 Get the replication parameters to manage Multi-Geo taxonomy replication.
 
 ### [Get-SPOTheme](Get-SPOTheme.md)
-{{Placeholder}}
+Returns one or all theme settings from the tenant.
 
 ### [Get-SPOUnifiedGroup](Get-SPOUnifiedGroup.md)
 Retrieves the Preferred Data Location for the specified Office 365 Group.
@@ -497,6 +503,9 @@ Removes a collection of external users from the tenancy's folder.
 
 ### [Remove-SPOFileRequestBrandingProfile](Remove-SPOFileRequestBrandingProfile.md)
 Removes a branding profile (either primary or secondary) configured for the file request feature across the tenant.
+
+### [Remove-SPOFontPackage](Remove-SPOFontPackage.md)
+Removes a brand font package from the tenant.
 
 ### [Remove-SPOGeoAdministrator](Remove-SPOGeoAdministrator.md)
 Removes a new SharePoint user or security Group in the current Multi-Geo Tenant.
@@ -659,6 +668,9 @@ This cmdlet sends a trust request to the tenant with whom you want to establish 
 
 ### [Set-SPODisableSpacesActivation](Set-SPODisableSpacesActivation.md)
 Disables the SharePoint Spaces activation.
+
+### [Set-SPOFontPackage](Set-SPOFontPackage.md)
+Applies a brand font package to a SharePoint site or Viva Connections.
 
 ### [Set-SPOGeoStorageQuota](Set-SPOGeoStorageQuota.md)
 This cmdlet sets the storage quota on a multi-geo tenant.
