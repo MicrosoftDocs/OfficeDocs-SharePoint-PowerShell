@@ -143,6 +143,7 @@ Example 12 removes the version history limit overrides for video and audio file 
 ### -EnableAutoExpirationVersionTrim
 
 > Applicable: SharePoint Online
+
 Global and SharePoint Administrators can set document library level version history limits settings that universally apply to new versions created.
 
 When version history limits are managed automatically, SharePoint employs an algorithm behind the scenes that deletes (thins out) intermittent older versions that are least likely to be needed, while preserving sufficient high-value versions - more versions in the recent past and fewer farther back in time - in case restores are required.
@@ -196,6 +197,7 @@ Accept wildcard characters: False
 ### -ExpireVersionsAfterDays
 
 > Applicable: SharePoint Online
+
 When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), admins will need to set the limits to the number of major versions (`MajorVersionLimit`), the number of major with minor versions (`MajorWithMinorVersionsLimit`) and the time period the versions are stored (`ExpireVersionsAfterDays`). Please check the description of `EnableAutoExpirationVersionTrim` for more details.
 
 PARAMVALUE: Int32
@@ -258,6 +260,7 @@ Accept wildcard characters: False
 ### -MajorVersionLimit
 
 > Applicable: SharePoint Online
+
 When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), admins will need to set the limits to the number of major versions (`MajorVersionLimit`) and the time period the versions are stored (`ExpireVersionsAfterDays`). Please check the description of `EnableAutoExpirationVersionTrim` for more details.
 
 PARAMVALUE: Int32
@@ -277,6 +280,7 @@ Accept wildcard characters: False
 ### -MajorWithMinorVersionsLimit
 
 > Applicable: SharePoint Online
+
 When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), admins will need to set the limits to the number of major versions (`MajorVersionLimit`), the number of major with minor versions (`MajorWithMinorVersionsLimit`) and the time period the versions are stored (`ExpireVersionsAfterDays`). Please check the description of `EnableAutoExpirationVersionTrim` for more details.
 
 PARAMVALUE: Int32
