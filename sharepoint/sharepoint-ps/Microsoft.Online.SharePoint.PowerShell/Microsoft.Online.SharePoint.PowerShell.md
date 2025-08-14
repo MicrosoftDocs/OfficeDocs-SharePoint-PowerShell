@@ -391,7 +391,7 @@ Returns the current configuration status.
 Get the replication parameters to manage Multi-Geo taxonomy replication.
 
 ### [Get-SPOTheme](Get-SPOTheme.md)
-Returns one or all themes settings from the tenant.
+Returns one or all theme settings from the tenant.
 
 ### [Get-SPOUnifiedGroup](Get-SPOUnifiedGroup.md)
 Retrieves the Preferred Data Location for the specified Office 365 Group.
