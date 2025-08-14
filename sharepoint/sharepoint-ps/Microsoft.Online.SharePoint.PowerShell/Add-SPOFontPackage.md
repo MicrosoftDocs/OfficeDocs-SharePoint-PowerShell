@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
 title: Add-SPOFontPackage
 schema: 2.0.0
-author: luchaoqiu
+author: JQ1u
 ms.author: luchaoqiu
 ms.reviewer:
 ---
@@ -24,7 +24,7 @@ Add-SPOFontPackage -Title <String> -PackageJson <String> [-IsHidden <Boolean>] [
 
 ## DESCRIPTION
 
-The `Add-SPOFontPackage` cmdlet creates a new brand font package for the SharePoint tenant. Each font package must have a unique name. The font file must be added to the SharePoint Brand Center before creating a font package. For more information, see [Brand Fonts](https://learn.microsoft.com/sharepoint/brand-fonts).
+This cmdlet creates a new brand font package for the tenant. Each font package must have a unique name. The font file must be added to the SharePoint Brand Center before creating a font package. For more information, see [Brand Fonts](/sharepoint/brand-fonts).
 
 ## EXAMPLES
 
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Specifies whether the font package should be hidden from users. When set to $true, the font package will not be visible in the **Change the look** options, but can still be applied using the `Set-SPOFontPackage` cmdlet.
+Specifies whether the font package should be hidden from users. When set to `$true`, the font package will not be visible in the **Change the look** options, but can still be applied using the `Set-SPOFontPackage` cmdlet.
 
 ```yaml
 Type: System.Boolean

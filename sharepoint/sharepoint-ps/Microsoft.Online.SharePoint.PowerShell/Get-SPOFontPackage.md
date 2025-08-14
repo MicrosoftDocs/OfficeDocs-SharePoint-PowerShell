@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
 title: Get-SPOFontPackage
 schema: 2.0.0
-author: luchaoqiu
+author: JQ1u
 ms.author: luchaoqiu
 ms.reviewer:
 ---
@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Returns one or all custom font packages from the SharePoint tenant.
+Returns one or all custom font packages in the tenant.
 
 ## SYNTAX
 
@@ -24,19 +24,9 @@ Get-SPOFontPackage [[-Identity] <SPOFontPackagePipeBind>] [<CommonParameters>]
 
 ## DESCRIPTION
 
-The `Get-SPOFontPackage` cmdlet retrieves one or more custom font packages from the SharePoint tenant. Custom font packages include those created through the SharePoint Brand Center app or by using the `Add-SPOFontPackage` cmdlet. You can retrieve a specific font package by providing its identity, or retrieve all font packages if no identity is specified.
+This cmdlet retrieves one or more custom font packages in the tenant. Custom font packages include those created through the SharePoint Brand Center app or by using the `Add-SPOFontPackage` cmdlet. You can retrieve a specific font package by providing its identity, or retrieve all font packages if no identity is specified.
 
 Font packages contain custom typography definitions that can be applied to SharePoint sites and Viva Connections for branding purposes.
-
-After running this cmdlet, the information for each font package will be displayed with the following properties:
-
-| Property    | Type   | Description                                             |
-| :---------- | :----- | :------------------------------------------------------|
-| ID          | Guid   | Unique ID of the font package.                          |
-| Title       | string | The display name of the font package.                   |
-| IsHidden    | bool   | Whether the font package is hidden from the SharePointUI. |
-| IsValid     | bool   | Whether the font package is valid and can be applied.   |
-| PackageJson | string | The JSON specifying the settings of the font package.   |
 
 ## EXAMPLES
 

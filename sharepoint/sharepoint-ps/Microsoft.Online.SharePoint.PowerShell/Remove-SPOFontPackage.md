@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
 title: Remove-SPOFontPackage
 schema: 2.0.0
-author: luchaoqiu
+author: JQ1u
 ms.author: luchaoqiu
 ms.reviewer:
 ---
@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Removes a brand font package from the SharePoint tenant.
+Removes a brand font package from the tenant.
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ Remove-SPOFontPackage [-Identity] <SPOFontPackagePipeBind> [<CommonParameters>]
 
 ## DESCRIPTION
 
-The `Remove-SPOFontPackage` cmdlet removes a custom font package from the SharePoint tenant. After removal, the font package will no longer be available for use on SharePoint sites or Viva Connections.
+This cmdlet removes a custom font package from the tenant. After removal, the font package will no longer be available for use on SharePoint sites or Viva Connections.
 
 > [!NOTE]
 > Removing a font package does not delete the associated brand font files. Pages that already use the removed font package will continue to display the configured fonts, but you will no longer be able to modify the font package settings.

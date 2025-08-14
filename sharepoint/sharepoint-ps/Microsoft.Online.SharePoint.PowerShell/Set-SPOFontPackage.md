@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
 title: Set-SPOFontPackage
 schema: 2.0.0
-author: luchaoqiu
+author: JQ1u
 ms.author: luchaoqiu
 ms.reviewer:
 ---
@@ -24,7 +24,7 @@ Set-SPOFontPackage [-Identity] <SPOFontPackagePipeBind> [-WebUrl] <String> [<Com
 
 ## DESCRIPTION
 
-The `Set-SPOFontPackage` cmdlet applies a brand font package to a specified SharePoint site or Viva Connections. Use this cmdlet to customize the typography and branding of SharePoint sites by applying predefined font packages.
+This cmdlet applies a brand font package to a specified SharePoint site or Viva Connections. Use this cmdlet to customize the typography and branding of SharePoint sites by applying predefined font packages.
 
 ## EXAMPLES
 
