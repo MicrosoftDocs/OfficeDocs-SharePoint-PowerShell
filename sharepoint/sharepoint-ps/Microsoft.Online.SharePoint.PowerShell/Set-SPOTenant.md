@@ -3170,26 +3170,19 @@ Accept wildcard characters: False
 ### -FileTypesForVersionExpiration
 
 An array of file type names. The supported file type names are:
-
 - Audio
-
 - OutlookPST
-
 - Video
 
 Apply the version history limits to a set of file types so that they no longer follow the default version history limits. It is used in combination with the following parameters: 
-
-- EnableAutoExpirationVersionTrim
-
-- MajorVersionLimit
-
-- ExpireVersionsAfterDays
+- [EnableAutoExpirationVersionTrim](#-EnableAutoExpirationVersionTrim)
+- [MajorVersionLimit](#-MajorVersionLimit)
+- [ExpireVersionsAfterDays](#-ExpireVersionsAfterDays)
 
 The version history limits are applied on new document libraries in the tenant.
 
 > [!NOTE]
 > This feature is currently in preview and may not be available in your tenant.
-
 
 ```yaml
 Type: String[]
@@ -4521,10 +4514,7 @@ The version history limits are applied on new document libraries in the tenant.
 > [!NOTE]
 > This feature is currently in preview and may not be available in your tenant.
 
-YAML
-
-
-```
+```yaml
 Type: String[]
 Parameter Sets: (All)
 Aliases:

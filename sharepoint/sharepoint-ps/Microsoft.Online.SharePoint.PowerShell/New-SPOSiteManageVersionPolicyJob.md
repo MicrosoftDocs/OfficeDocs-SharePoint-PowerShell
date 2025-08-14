@@ -14,7 +14,7 @@ manager: yigitd
 # New-SPOSiteManageVersionPolicyJob
 
 ## SYNOPSIS
-Starts a background job that manages the file versions and version history limits of all of its document libraries.
+Starts a background job to manage file versions and version history limits for all document libraries in the given site.
 
 > [!NOTE]
 > This feature is currently in preview and may not be available in your tenant.

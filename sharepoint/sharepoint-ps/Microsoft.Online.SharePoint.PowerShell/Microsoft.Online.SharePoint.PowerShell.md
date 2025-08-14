@@ -463,7 +463,7 @@ Generates a version storage usage report for a site collection. This report can 
 Creates a new group in a SharePoint Online site collection.
 
 ### [New-SPOSiteManageVersionPolicyJob](New-SPOSiteManageVersionPolicyJob.md)
-Starts a background job that manages the file versions and version history limits of all of its document libraries.
+Starts a background job to manage file versions and version history limits for all document libraries in the given site.
 
 ### [New-SPOSiteSharingReportJob](New-SPOSiteSharingReportJob.md)
 Creates a new sharing report job.
@@ -565,7 +565,7 @@ Stops further processing of site level trim job that is in-progress.
 Removes a SharePoint Online group from a site collection.
 
 ### [Remove-SPOSiteManageVersionPolicyJob](Remove-SPOSiteManageVersionPolicyJob.md)
-Stops further processing of site manage version policy job that is in-progress.
+Stops processing of the in-progress manage version policy job for the given site.
 
 ### [Remove-SPOSiteScript](Remove-SPOSiteScript.md)
 Removes a site script.

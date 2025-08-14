@@ -149,13 +149,11 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>]
 
 ### SetSiteFileTypeFileVersionPolicy
 
-
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>] [-EnableAutoExpirationVersionTrim <Boolean>] [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] -FileTypesForVersionExpiration <String[]> [-ApplyToNewDocumentLibraries] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveSiteFileVersionPolicy
-
 
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>] [-ApplyToNewDocumentLibraries]
@@ -273,7 +271,7 @@ In this example, an authentication context called MFA is attached to the site.
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $true
 ```
 
-Example 11 sets automatic version history limits at site level. Automatic setting will be applied to all new document libraries created in the site and a background request will be created to asynchronously process the update on existing document libraries that have versioning enabled.
+Example 11 sets automatic version history limits at the site level. Automatic setting will be applied to all new document libraries created in the site and a background request will be created to asynchronously process the update on existing document libraries that have versioning enabled.
 
 ### EXAMPLE 12
 
@@ -281,7 +279,7 @@ Example 11 sets automatic version history limits at site level. Automatic settin
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -MajorWithMinorVersionsLimit 20 -ExpireVersionsAfterDays 30
 ```
 
-Example 12 sets manual version history limits at site level by limiting the number of versions and the time (in days) versions are kept. The new document libraries will use this version setting. Also it creates a job to set this manual version setting for existing document libraries that enabled versioning.
+Example 12 sets manual version history limits at the site level by limiting the number of versions and the time (in days) versions are kept. The new document libraries will use this version setting. Also it creates a job to set this manual version setting for existing document libraries that enabled versioning.
 
 ### EXAMPLE 13
 
@@ -289,7 +287,7 @@ Example 12 sets manual version history limits at site level by limiting the numb
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -MajorWithMinorVersionsLimit 20 -ExpireVersionsAfterDays 0
 ```
 
-Example 13 sets manual version history limits at site level by limiting the number of versions with no time limits. The new document libraries will use this version setting. Also it creates a job to set this manual version setting for existing document libraries that enabled versioning.
+Example 13 sets manual version history limits at the site level by limiting the number of versions with no time limits. The new document libraries will use this version setting. Also it creates a job to set this manual version setting for existing document libraries that enabled versioning.
 
 ### Example 14
 
@@ -297,7 +295,7 @@ Example 13 sets manual version history limits at site level by limiting the numb
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $true -ApplyToNewDocumentLibraries
 ```
 
-Example 14 sets automatic version history limits at site level. The new document libraries will use this version setting.
+Example 14 sets automatic version history limits at the site level. The new document libraries will use this version setting.
 
 ### EXAMPLE 15
 
@@ -305,7 +303,7 @@ Example 14 sets automatic version history limits at site level. The new document
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 30 -ApplyToNewDocumentLibraries
 ```
 
-Example 15 sets manual version history limits at site level by limiting the number of versions and the time (in days) versions are kept. The new document libraries will use this version setting.
+Example 15 sets manual version history limits at the site level by limiting the number of versions and the time (in days) versions are kept. The new document libraries will use this version setting.
 
 ### EXAMPLE 16
 
@@ -313,7 +311,7 @@ Example 15 sets manual version history limits at site level by limiting the numb
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 0 -ApplyToNewDocumentLibraries
 ```
 
-Example 16 sets manual version history limits at site level by limiting the number of versions with no time limits. The new document libraries will use this version setting.
+Example 16 sets manual version history limits at the site level by limiting the number of versions with no time limits. The new document libraries will use this version setting.
 
 ### Example 17
 
@@ -345,7 +343,7 @@ Example 19 creates a request to set manual version history limits that limits th
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -InheritVersionPolicyFromTenant
 ```
 
-Example 20 clears the file version setting at site level. The new document libraries will use the Tenant Level setting. It won't impact the existing document libraries.
+Example 20 clears the file version setting at the site level. The new document libraries will use the Tenant Level setting. It won't impact the existing document libraries.
 
 ### Example 21
 
@@ -354,7 +352,7 @@ Example 20 clears the file version setting at site level. The new document libra
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $true -FileTypesForVersionExpiration @("Video", "Audio") -ApplyToNewDocumentLibraries
 ```
 
-Example 21 sets automatic version history limit override for video and audio file types at site level. The new document libraries will use this version setting.
+Example 21 sets automatic version history limit override for video and audio file types at the site level. The new document libraries will use this version setting.
 
 ### Example 22
 
@@ -364,7 +362,7 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpi
 -FileTypesForVersionExpiration @("Video", "Audio") -ApplyToNewDocumentLibraries
 ```
 
-Example 22 sets manual version history limit override for video and audio file types at site level by limiting the number of versions and the time (in days) versions are kept. The new document libraries will use this version setting.
+Example 22 sets manual version history limit override for video and audio file types at the site level by limiting the number of versions and the time (in days) versions are kept. The new document libraries will use this version setting.
 
 ### Example 23
 
@@ -374,7 +372,7 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpi
 -FileTypesForVersionExpiration @("Video", "Audio") -ApplyToNewDocumentLibraries
 ```
 
-Example 23 sets manual version history limit override for video and audio file types at site level by limiting the number of versions with no time limits. The new document libraries will use this version setting.
+Example 23 sets manual version history limit override for video and audio file types at the site level by limiting the number of versions with no time limits. The new document libraries will use this version setting.
 
 ### Example 24
 
@@ -581,8 +579,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-
-```
+```yaml
 Type: SwitchParameter
 Parameter Sets: SetSiteFileTypeFileVersionPolicy
 Aliases:
@@ -1241,27 +1238,18 @@ Accept wildcard characters: False
 > Applicable: SharePoint Online
 
 An array of file type names. The supported file type names are:
-
 - Audio
-
 - OutlookPST
-
 - Video
 
 Apply the version history limits to a set of file types so that they no longer follow the default version history limits. It is used in combination with the following parameters: 
+- [EnableAutoExpirationVersionTrim](#-EnableAutoExpirationVersionTrim)
+- [MajorVersionLimit](#-MajorVersionLimit)
+- [ExpireVersionsAfterDays](#-ExpireVersionsAfterDays)
 
-- EnableAutoExpirationVersionTrim
+This must be used with [ApplyToNewDocumentLibraries](#-ApplyToNewDocumentLibraries) switch set to true, because the version history limits are only applied on new document libraries in the site.
 
-- MajorVersionLimit
-
-- ExpireVersionsAfterDays
-
-This must be used with **ApplyToNewDocumentLibraries** switch set to true, because the version history limits are only applied on new document libraries in the site.
-
-
-
-
-```
+```yaml
 Type: String[]
 Parameter Sets: SetSiteFileTypeFileVersionPolicy
 Aliases:
@@ -1375,7 +1363,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Clear the file version setting at site level. The new document libraries will use the Tenant Level setting. It won't impact the existing document libraries.
+Clear the file version setting at the site level. The new document libraries will use the Tenant Level setting. It won't impact the existing document libraries.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -1810,11 +1798,10 @@ Accept wildcard characters: False
 
 An array of file type names. Removes the version history limits to a set of file types so that they will follow the default version history limits. 
 
-This must be used with **ApplyToNewDocumentLibraries** switch set to true, because the version history limits are only applied on new document libraries in the site.
+This must be used with [ApplyToNewDocumentLibraries](#-ApplyToNewDocumentLibraries) switch set to true, because the version history limits are only applied on new document libraries in the site.
 
 > [!NOTE]
 > This feature is currently in preview and may not be available in your tenant.
-
 
 ```yaml
 Type: String[]

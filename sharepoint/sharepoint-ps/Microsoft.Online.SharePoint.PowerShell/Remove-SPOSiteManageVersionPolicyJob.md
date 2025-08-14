@@ -14,7 +14,7 @@ manager: yigitd
 # Remove-SPOSiteManageVersionPolicyJob
 
 ## SYNOPSIS
-Stops further processing of site manage version policy job that is in-progress.
+Stops processing of the in-progress manage version policy job for the given site.
 
 > [!NOTE]
 > This feature is currently in preview and may not be available in your tenant.
@@ -26,7 +26,7 @@ Remove-SPOSiteManageVersionPolicyJob [-Identity] <SpoSitePipeBind> [-WhatIf] [-C
 ```
 
 ## DESCRIPTION
-Stops further processing of site manage version policy job that is in-progress.
+Stops processing of the in-progress manage version policy job for the given site.
 
 ## EXAMPLES
 

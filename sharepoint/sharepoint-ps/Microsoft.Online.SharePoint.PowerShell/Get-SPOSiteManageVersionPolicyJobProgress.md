@@ -14,7 +14,7 @@ manager: yigitd
 # Get-SPOSiteManageVersionPolicyJobProgress
 
 ## SYNOPSIS
-Gets the status and progress for background jobs started by `New-SPOSiteManageVersionPolicyJob`.
+Gets the status and progress for a background job started by `New-SPOSiteManageVersionPolicyJob`.
 > [!NOTE]
 > This feature is currently in preview and may not be available in your tenant.
 
@@ -25,7 +25,7 @@ Get-SPOSiteManageVersionPolicyJobProgress [-Identity] <SpoSitePipeBind> [<Common
 ```
 
 ## DESCRIPTION
-Gets the status and progress for background jobs started by `New-SPOSiteManageVersionPolicyJob`.
+Gets the status and progress for a background job started by `New-SPOSiteManageVersionPolicyJob`.
 
 ## EXAMPLES
 
@@ -35,7 +35,7 @@ Gets the status and progress for background jobs started by `New-SPOSiteManageVe
 Get-SPOSiteManageVersionPolicyJobProgress https://contoso.sharepoint.com/sites/site1
 ```
 
-Gets the progress of the site manage version policy job for the site.
+Gets the progress of the site manage version policy job for the given site.
 
 ## PARAMETERS
 
