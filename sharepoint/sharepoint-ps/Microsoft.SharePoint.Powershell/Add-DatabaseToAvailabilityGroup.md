@@ -5,8 +5,8 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-server/
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Add-DatabaseToAvailabilityGroup
 schema: 2.0.0
-author: techwriter40
-ms.author: pamgreen
+author: garycentric
+ms.author: speedta
 ms.reviewer:
 ---
 
