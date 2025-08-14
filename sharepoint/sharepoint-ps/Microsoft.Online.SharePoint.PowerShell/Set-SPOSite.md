@@ -1243,11 +1243,11 @@ An array of file type names. The supported file type names are:
 - Video
 
 Apply the version history limits to a set of file types so that they no longer follow the default version history limits. It is used in combination with the following parameters: 
-- [EnableAutoExpirationVersionTrim](#-EnableAutoExpirationVersionTrim)
-- [MajorVersionLimit](#-MajorVersionLimit)
-- [ExpireVersionsAfterDays](#-ExpireVersionsAfterDays)
+- [EnableAutoExpirationVersionTrim](#-enableautoexpirationversiontrim)
+- [MajorVersionLimit](#-majorversionlimit)
+- [ExpireVersionsAfterDays](#-expireversionsafterdays)
 
-This must be used with [ApplyToNewDocumentLibraries](#-ApplyToNewDocumentLibraries) switch set to true, because the version history limits are only applied on new document libraries in the site.
+This must be used with [ApplyToNewDocumentLibraries](#-applytonewdocumentlibraries) switch set to true, because the version history limits are only applied on new document libraries in the site.
 
 ```yaml
 Type: String[]
@@ -1798,7 +1798,7 @@ Accept wildcard characters: False
 
 An array of file type names. Removes the version history limits to a set of file types so that they will follow the default version history limits. 
 
-This must be used with [ApplyToNewDocumentLibraries](#-ApplyToNewDocumentLibraries) switch set to true, because the version history limits are only applied on new document libraries in the site.
+This must be used with [ApplyToNewDocumentLibraries](#-applytonewdocumentlibraries) switch set to true, because the version history limits are only applied on new document libraries in the site.
 
 > [!NOTE]
 > This feature is currently in preview and may not be available in your tenant.

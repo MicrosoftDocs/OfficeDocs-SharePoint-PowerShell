@@ -3175,9 +3175,9 @@ An array of file type names. The supported file type names are:
 - Video
 
 Apply the version history limits to a set of file types so that they no longer follow the default version history limits. It is used in combination with the following parameters: 
-- [EnableAutoExpirationVersionTrim](#-EnableAutoExpirationVersionTrim)
-- [MajorVersionLimit](#-MajorVersionLimit)
-- [ExpireVersionsAfterDays](#-ExpireVersionsAfterDays)
+- [EnableAutoExpirationVersionTrim](#-enableautoexpirationversiontrim)
+- [MajorVersionLimit](#-majorversionlimit)
+- [ExpireVersionsAfterDays](#-expireversionsafterdays)
 
 The version history limits are applied on new document libraries in the tenant.
 

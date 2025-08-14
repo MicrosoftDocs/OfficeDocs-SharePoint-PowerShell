@@ -221,11 +221,11 @@ An array of file type names. The supported file type names are:
 - Video
 
 Apply the version history limits to a set of file types so that they no longer follow the default version history limits. It is used in combination with the following parameters: 
-- [EnableAutoExpirationVersionTrim](#-EnableAutoExpirationVersionTrim)
-- [MajorVersionLimit](#-MajorVersionLimit)
-- [ExpireVersionsAfterDays](#-ExpireVersionsAfterDays)
+- [EnableAutoExpirationVersionTrim](#-enableautoexpirationversiontrim)
+- [MajorVersionLimit](#-majorversionlimit)
+- [ExpireVersionsAfterDays](#-expireversionsafterdays)
 
-Or apply the version history limit override for the file types of the tenant or the site (if the site this document library is in has broken inheritance for version history limits) by using the [Sync](#-Sync) parameter. For more information about this option, please refer to the documentation for the [Sync](#-Sync) parameter.
+Or apply the version history limit override for the file types of the tenant or the site (if the site this document library is in has broken inheritance for version history limits) by using the [Sync](#-sync) parameter. For more information about this option, please refer to the documentation for the [Sync](#-sync) parameter.
 
 ```yaml
 Type: String[]
@@ -330,8 +330,8 @@ Accept wildcard characters: False
 Apply the version history limits of the tenant or the site (if the site this document library is in has broken inheritance for version history limits).
 
 You may use the following parameters in combination to update only the default policy or a set of file type overrides:
-- [ExcludeDefaultPolicy](#-ExcludeDefaultPolicy): if set, it will not update the default policy.
-- [FileTypes](#-FileTypes): 
+- [ExcludeDefaultPolicy](#-excludedefaultpolicy): if set, it will not update the default policy.
+- [FileTypes](#-filetypes): 
   - if set, it will update the specified file types; 
   - if not set, it will update all file type overrides;
   - if set to an empty array (i.e. `@()`), it will not update any file type overrides.
