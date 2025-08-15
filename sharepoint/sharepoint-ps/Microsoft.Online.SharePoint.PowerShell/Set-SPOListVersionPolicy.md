@@ -195,6 +195,9 @@ Apply the version history limits to a set of file types so that they no longer f
 
 Or apply the version history limit override for the file types of the tenant or the site (if the site this document library is in has broken inheritance for version history limits) by using the [Sync](#-sync) parameter.
 
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
+
 ```yaml
 Type: String[]
 Parameter Sets: SetPolicy, SyncPolicy
@@ -265,6 +268,9 @@ Accept wildcard characters: False
 
 ### -RemoveVersionExpirationFileTypeOverride
 An array of file type names. Removes the version history limit override from a set of file types so that they will follow the default version history limits. 
+
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
 
 ```yaml
 Type: String[]

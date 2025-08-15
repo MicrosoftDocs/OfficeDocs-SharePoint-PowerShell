@@ -1249,6 +1249,9 @@ Apply the version history limits to a set of file types so that they no longer f
 
 This must be used with [ApplyToNewDocumentLibraries](#-applytonewdocumentlibraries) switch set to true, because the version history limits are only applied on new document libraries in the site.
 
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
+
 ```yaml
 Type: String[]
 Parameter Sets: SetSiteFileTypeFileVersionPolicy

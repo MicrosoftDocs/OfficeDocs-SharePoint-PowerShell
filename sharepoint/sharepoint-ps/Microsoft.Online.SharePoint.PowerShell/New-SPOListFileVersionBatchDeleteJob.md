@@ -155,6 +155,9 @@ An array of file type names to trim versions. The supported file type names are:
 - OutlookPST
 - Video
 
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
+
 ```yaml
 Type: String[]
 Parameter Sets: ByPolicy
@@ -248,6 +251,9 @@ Accept wildcard characters: False
 
 ### -TrimUseListPolicy
 Indicates whether to trim versions by applying the document library's version history limits.
+
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
 
 ```yaml
 Type: SwitchParameter
