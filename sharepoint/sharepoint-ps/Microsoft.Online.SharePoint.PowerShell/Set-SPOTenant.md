@@ -672,7 +672,6 @@ This example disables the Power Apps Adaptive Card Extension.
 
 ### EXAMPLE 22
 
-
 ```powershell
 Set-SPOTenant -EnableAutoExpirationVersionTrim $true -FileTypesForVersionExpiration @("Video", "Audio")
 ```
@@ -680,7 +679,6 @@ Set-SPOTenant -EnableAutoExpirationVersionTrim $true -FileTypesForVersionExpirat
 This example sets automatic version history limit override for video and audio file types on all new document libraries at tenant level. 
 
 ### EXAMPLE 23
-
 
 ```powershell
 Set-SPOTenant -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 30 -FileTypesForVersionExpiration @("Video", "Audio")
@@ -690,7 +688,6 @@ This example sets manual version history limit override for video and audio file
 
 ### EXAMPLE 24
 
-
 ```powershell
 Set-SPOTenant -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 0 -FileTypesForVersionExpiration @("Video", "Audio")
 ```
@@ -698,7 +695,6 @@ Set-SPOTenant -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -Ex
 This example sets manual version history limit override for video and audio file types on all new document libraries at tenant level by limiting the number of major versions with no time limits. 
 
 ### EXAMPLE 25
-
 
 ```powershell
 Set-SPOTenant -RemoveVersionExpirationFileTypeOverride @("Video", "Audio")

@@ -34,17 +34,12 @@ New-SPOSiteManageVersionPolicyJob [-Identity] <SpoSitePipeBind> [-FileTypes <Str
 
 ## DESCRIPTION
 Starts a background job that does one or more of the following: 
-
 - sets the version history limits of all document libraries to that of the site;
-
 - trims version in all document libraries according to each list's version history limits.
 
 This effect can be applied to default version history limits, or a set of file types. Supported file types are:
-
 - Audio
-
 - OutlookPST
-
 - Video
 
 ## EXAMPLES
@@ -103,7 +98,6 @@ Trim video and audio file versions, and the file versions that don't have a file
 
 ### Example 7
 
-
 ```powershell
 New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites/site1 -TrimUseListPolicy -FileTypes @("Video","Audio") -ExcludeDefaultPolicy
 ```
@@ -111,7 +105,6 @@ New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites
 Trim video and audio file versions based on each document library's version history limits.
 
 ### Example 8
-
 
 ```powershell
 New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites/site1 -TrimUseListPolicy -FileTypes @()
@@ -121,7 +114,6 @@ Trim file versions that don't have a file type override based on each document l
 
 ### Example 9
 
-
 ```powershell
 New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites/site1 -TrimUseListPolicy
 ```
@@ -129,7 +121,6 @@ New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites
 Trim all file versions based on each document library's version history limits.
 
 ### Example 10
-
 
 ```powershell
 New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites/site1 -TrimUseListPolicy -ExcludeDefaultPolicy
@@ -148,7 +139,6 @@ Apply the site video, audio, and default version history limits to existing docu
 
 ### Example 12
 
-
 ```powershell
 New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites/site1 -SyncListPolicy -TrimUseListPolicy -FileTypes @("Video","Audio") -ExcludeDefaultPolicy
 ```
@@ -156,7 +146,6 @@ New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites
 Apply the site video, audio version history limits to existing document libraries. If the site is not broken inheritance for version history limits, then it applies the tenant version history limits. Then trim video and audio file versions based on each document library's version history limits.
 
 ### Example 13
-
 
 ```powershell
 New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites/site1 -SyncListPolicy -TrimUseListPolicy -FileTypes @()
@@ -166,7 +155,6 @@ Apply the site default version history limits to existing document libraries. If
 
 ### Example 14
 
-
 ```powershell
 New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites/site1 -SyncListPolicy -TrimUseListPolicy
 ```
@@ -174,7 +162,6 @@ New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites
 Apply the site version history limits (including file type overrides) to existing document libraries. If the site is not broken inheritance for version history limits, then it applies the tenant version history limits. Then trim all file versions based on each document library's version history limits.
 
 ### Example 15
-
 
 ```powershell
 New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites/site1 -SyncListPolicy -TrimUseListPolicy -ExcludeDefaultPolicy
@@ -216,11 +203,8 @@ Accept wildcard characters: False
 
 ### -FileTypes
 An array of file type names. The supported file type names are:
-
 - Audio
-
 - OutlookPST
-
 - Video
 
 ```yaml
