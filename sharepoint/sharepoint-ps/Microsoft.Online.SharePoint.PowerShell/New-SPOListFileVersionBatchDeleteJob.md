@@ -171,13 +171,6 @@ An array of file type names to trim versions. The supported file type names are:
 - OutlookPST
 - Video
 
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> 6e83ced68a482707018e763b6d17dbe1d5ae7ee5
 ```yaml
 Type: String[]
 Parameter Sets: ByPolicy

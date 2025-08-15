@@ -227,7 +227,7 @@ Apply the version history limits to a set of file types so that they no longer f
 - [MajorVersionLimit](#-majorversionlimit)
 - [ExpireVersionsAfterDays](#-expireversionsafterdays)
 
-Or apply the version history limit override for the file types of the tenant or the site (if the site this document library is in has broken inheritance for version history limits) by using the [Sync](#-sync) parameter. For more information about this option, please refer to the documentation for the [Sync](#-sync) parameter.
+Or apply the version history limit override for the file types of the tenant or the site (if the site this document library is in has broken inheritance for version history limits) by using the [Sync](#-sync) parameter.
 
 ```yaml
 Type: String[]
