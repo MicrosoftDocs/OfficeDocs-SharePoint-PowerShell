@@ -54,7 +54,6 @@ Apply the site video, audio, and default version history limits to existing docu
 
 ### Example 2
 
-
 ```powershell
 New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites/site1 -SyncListPolicy -FileTypes @("Video","Audio") -ExcludeDefaultPolicy
 ```
@@ -63,32 +62,13 @@ Apply the site video, audio version history limits to existing document librarie
 
 ### Example 3
 
-
-```powershell
-New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites/site1 -SyncListPolicy -FileTypes @()
-```
-
-Apply the site default version history limits to existing document libraries. If the site is not broken inheritance for version history limits, then it applies the tenant version history limits.
-
-### Example 4
-
-
 ```powershell
 New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites/site1 -SyncListPolicy
 ```
 
 Apply the site version history limits (including file type overrides) to existing document libraries. If the site is not broken inheritance for version history limits, then it applies the tenant version history limits.
 
-### Example 5
-
-
-```powershell
-New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites/site1 -SyncListPolicy -ExcludeDefaultPolicy
-```
-
-Apply all site file type version history limit overrides to existing document libraries. If the site is not broken inheritance for version history limits, then it applies the tenant version history limits.
-
-### Example 6
+### Example 4
 
 ```powershell
 New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites/site1 -TrimUseListPolicy -FileTypes @("Video","Audio") 
@@ -96,7 +76,7 @@ New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites
 
 Trim video and audio file versions, and the file versions that don't have a file type override, based on each document library's version history limits.
 
-### Example 7
+### Example 5
 
 ```powershell
 New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites/site1 -TrimUseListPolicy -FileTypes @("Video","Audio") -ExcludeDefaultPolicy
@@ -104,15 +84,7 @@ New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites
 
 Trim video and audio file versions based on each document library's version history limits.
 
-### Example 8
-
-```powershell
-New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites/site1 -TrimUseListPolicy -FileTypes @()
-```
-
-Trim file versions that don't have a file type override based on each document library's version history limits.
-
-### Example 9
+### Example 6
 
 ```powershell
 New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites/site1 -TrimUseListPolicy
@@ -120,54 +92,13 @@ New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites
 
 Trim all file versions based on each document library's version history limits.
 
-### Example 10
-
-```powershell
-New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites/site1 -TrimUseListPolicy -ExcludeDefaultPolicy
-```
-
-Trim all file versions that have a file type override based on each document library's version history limits.
-
-
-### Example 11
-
-```powershell
-New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites/site1 -SyncListPolicy -FileTypes @("Video","Audio") 
-```
-
-Apply the site video, audio, and default version history limits to existing document libraries. If the site is not broken inheritance for version history limits, then it applies the tenant version history limits. Then trim video and audio file versions, and the file versions that don't have a file type override, based on each document library's version history limits.
-
-### Example 12
-
-```powershell
-New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites/site1 -SyncListPolicy -TrimUseListPolicy -FileTypes @("Video","Audio") -ExcludeDefaultPolicy
-```
-
-Apply the site video, audio version history limits to existing document libraries. If the site is not broken inheritance for version history limits, then it applies the tenant version history limits. Then trim video and audio file versions based on each document library's version history limits.
-
-### Example 13
-
-```powershell
-New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites/site1 -SyncListPolicy -TrimUseListPolicy -FileTypes @()
-```
-
-Apply the site default version history limits to existing document libraries. If the site is not broken inheritance for version history limits, then it applies the tenant version history limits. Then trim file versions that don't have a file type override based on each document library's version history limits.
-
-### Example 14
+### Example 7
 
 ```powershell
 New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites/site1 -SyncListPolicy -TrimUseListPolicy
 ```
 
 Apply the site version history limits (including file type overrides) to existing document libraries. If the site is not broken inheritance for version history limits, then it applies the tenant version history limits. Then trim all file versions based on each document library's version history limits.
-
-### Example 15
-
-```powershell
-New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites/site1 -SyncListPolicy -TrimUseListPolicy -ExcludeDefaultPolicy
-```
-
-Apply all site file type version history limit overrides to existing document libraries. If the site is not broken inheritance for version history limits, then it applies the tenant version history limits. Then trim all file versions that have a file type override based on each document library's version history limits.
 
 ## PARAMETERS
 

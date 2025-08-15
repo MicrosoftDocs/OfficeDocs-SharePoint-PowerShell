@@ -75,68 +75,34 @@ Example 4 sets automatic version history limit override for video and audio file
 ### EXAMPLE 5
 
 ```powershell
-Set-SPOListVersionPolicy -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -MajorWithMinorVersionsLimit 20 -ExpireVersionsAfterDays 30 -FileTypes @("Video", "Audio")
-```
-
-Example 5 sets manual version history limit override for video and audio file types on the document library called "Documents" by limiting the number of versions and the time (in days) versions are kept.
-
-### EXAMPLE 6
-
-```powershell
-Set-SPOListVersionPolicy -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -MajorWithMinorVersionsLimit 20 -ExpireVersionsAfterDays 0 -FileTypes @("Video", "Audio")
-```
-
-Example 6 sets manual version history limit override for video and audio file types on the document library called "Documents" by limiting the number of versions with no time limits.
-
-### EXAMPLE 7
-
-```powershell
 Set-SPOListVersionPolicy -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -Sync
 ```
 
-Example 7 sets the version history limits (include file type overrides) to that of the tenant or site (if the site this document library is in has broken inheritance for version history limits).
+Example 5 sets the version history limits (include file type overrides) to that of the tenant or site (if the site this document library is in has broken inheritance for version history limits).
 
-### EXAMPLE 8
+### EXAMPLE 6
 
 ```powershell
 Set-SPOListVersionPolicy -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -Sync -FileTypes @("Video", "Audio")
 ```
 
-Example 8 sets the default version history limits and overrides for video and audio file types to that of the tenant or site (if the site this document library is in has broken inheritance for version history limits).
+Example 6 sets the default version history limits and overrides for video and audio file types to that of the tenant or site (if the site this document library is in has broken inheritance for version history limits).
 
-### EXAMPLE 9
-
-```powershell
-Set-SPOListVersionPolicy -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -Sync -FileTypes @()
-```
-
-Example 9 sets the default version history limit to that of the tenant or site (if the site this document library is in has broken inheritance for version history limits).
-
-### EXAMPLE 10
+### EXAMPLE 7
 
 ```powershell
 Set-SPOListVersionPolicy -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -Sync -FileTypes @("Video", "Audio") -ExcludeDefaultPolicy
 ```
 
-Example 10 sets the only the version history limit overrides for video and audio file types to that of the tenant or site (if the site this document library is in has broken inheritance for version history limits).
+Example 7 sets the only the version history limit overrides for video and audio file types to that of the tenant or site (if the site this document library is in has broken inheritance for version history limits).
 
-### EXAMPLE 11
-
-
-```powershell
-Set-SPOListVersionPolicy -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -Sync -ExcludeDefaultPolicy
-```
-
-Example 10 sets the version history limit overrides for all file types to that of the tenant or site (if the site this document library is in has broken inheritance for version history limits).
-
-### EXAMPLE 12
-
+### EXAMPLE 8
 
 ```powershell
 Set-SPOListVersionPolicy -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -RemoveVersionExpirationFileTypeOverride @("Video", "Audio")
 ```
 
-Example 12 removes the version history limit overrides for video and audio file types so that they follow the default version history limits.
+Example 8 removes the version history limit overrides for video and audio file types so that they follow the default version history limits.
 
 ## PARAMETERS
 

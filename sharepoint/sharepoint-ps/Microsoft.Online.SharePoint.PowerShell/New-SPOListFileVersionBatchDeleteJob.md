@@ -99,22 +99,6 @@ New-SPOListFileVersionBatchDeleteJob -Site https://contoso.sharepoint.com/sites/
 
 Example 6 starts a trim job that will delete file versions for video and audio file types in the document library based on the version history limits of the document library.
 
-### EXAMPLE 7
-
-```powershell
-New-SPOListFileVersionBatchDeleteJob -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -TrimUseListPolicy -ExcludeDefaultPolicy
-```
-
-Example 7 starts a trim job that will delete file versions for all file types that have a version history limit override in the document library based on the version history limits of the document library.
-
-### EXAMPLE 8
-
-```powershell
-New-SPOListFileVersionBatchDeleteJob -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -TrimUseListPolicy -FileTypes @()
-```
-
-Example 8 starts a trim job that will delete file versions for all file types that don't have a version history limit override in the document library based on the version history limits of the document library.
-
 ## PARAMETERS
 
 ### -Automatic
