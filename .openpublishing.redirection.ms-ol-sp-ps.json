@@ -506,6 +506,11 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOSiteManageVersionPolicyJobProgress.md",
+            "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spositemanageversionpolicyjobprogress",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Get-SPOSitePages.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/get-spositepages",
             "redirect_document_id": true
@@ -771,6 +776,11 @@
             "redirect_document_id": true
         },
         {
+            "source_path": "sharepoint/sharepoint-ps/sharepoint-online/New-SPOSiteManageVersionPolicyJob.md",
+            "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/new-spositemanageversionpolicyjob",
+            "redirect_document_id": true
+        },
+        {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Register-SPODataEncryptionPolicy.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/register-spodataencryptionpolicy",
             "redirect_document_id": true
@@ -928,6 +938,11 @@
         {
             "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOSiteGroup.md",
             "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spositegroup",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "sharepoint/sharepoint-ps/sharepoint-online/Remove-SPOSiteManageVersionPolicyJob.md",
+            "redirect_url": "/powershell/module/microsoft.online.sharepoint.powershell/remove-spositemanageversionpolicyjob",
             "redirect_document_id": true
         },
         {

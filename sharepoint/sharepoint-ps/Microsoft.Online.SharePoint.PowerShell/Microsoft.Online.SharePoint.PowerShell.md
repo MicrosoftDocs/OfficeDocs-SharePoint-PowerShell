@@ -315,6 +315,9 @@ Gets the status for a file version expiration report generation job for a site c
 ### [Get-SPOSiteGroup](Get-SPOSiteGroup.md)
 Gets all the groups on the specified site collection.
 
+### [Get-SPOSiteManageVersionPolicyJobProgress](Get-SPOSiteManageVersionPolicyJobProgress.md)
+Gets the status and progress for site manage version policy jobs.
+
 ### [Get-SPOSitePages](Get-SPOSitePages.md)
 This cmdlet allows you to retrieve all SharePoint pages under a specific SharePoint site.
 
@@ -465,6 +468,9 @@ Generates a version storage usage report for a site collection. This report can 
 ### [New-SPOSiteGroup](New-SPOSiteGroup.md)
 Creates a new group in a SharePoint Online site collection.
 
+### [New-SPOSiteManageVersionPolicyJob](New-SPOSiteManageVersionPolicyJob.md)
+Starts a background job to manage file versions and version history limits for all document libraries in the given site.
+
 ### [New-SPOSiteSharingReportJob](New-SPOSiteSharingReportJob.md)
 Creates a new sharing report job.
 
@@ -566,6 +572,9 @@ Stops further processing of site level trim job that is in-progress.
 
 ### [Remove-SPOSiteGroup](Remove-SPOSiteGroup.md)
 Removes a SharePoint Online group from a site collection.
+
+### [Remove-SPOSiteManageVersionPolicyJob](Remove-SPOSiteManageVersionPolicyJob.md)
+Stops processing of the in-progress manage version policy job for the given site.
 
 ### [Remove-SPOSiteScript](Remove-SPOSiteScript.md)
 Removes a site script.

@@ -37,6 +37,12 @@ New-SPOListFileVersionBatchDeleteJob [-Site] <SpoSitePipeBind> -List <SPOListPip
  -MajorVersionLimit <Int32> -MajorWithMinorVersionsLimit <Int32> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### ByPolicy
+```
+New-SPOListFileVersionBatchDeleteJob [-Site] <SpoSitePipeBind> -List <SPOListPipeBind> [-FileTypes <String[]>]
+ [-ExcludeDefaultPolicy] [-TrimUseListPolicy] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ## DESCRIPTION
 
 Queues a job to trim versions from a document library.
@@ -69,6 +75,30 @@ New-SPOListFileVersionBatchDeleteJob -Site https://contoso.sharepoint.com/sites/
 
 Example 3 starts a trim job that will delete file versions in the document library called "Documents" based on the version count limits.
 
+### EXAMPLE 4
+
+```powershell
+New-SPOListFileVersionBatchDeleteJob -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -TrimUseListPolicy
+```
+
+Example 4 starts a trim job that will delete file versions in the document library called "Documents" based on the version history limits of the document library.
+
+### EXAMPLE 5
+
+```powershell
+New-SPOListFileVersionBatchDeleteJob -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -TrimUseListPolicy -FileTypes @("Video", "Audio")
+```
+
+Example 5 starts a trim job that will delete file versions for video and audio file types, and file versions that do not belong to a file type override in the document library based on the version history limits of the document library.
+
+### EXAMPLE 6
+
+```powershell
+New-SPOListFileVersionBatchDeleteJob -Site https://contoso.sharepoint.com/sites/site1 -List "Documents" -TrimUseListPolicy -FileTypes @("Video", "Audio") -ExcludeDefaultPolicy
+```
+
+Example 6 starts a trim job that will delete file versions for video and audio file types in the document library based on the version history limits of the document library.
+
 ## PARAMETERS
 
 ### -Automatic
@@ -92,6 +122,45 @@ The minimum age of file versions to trim. In other words, all file versions that
 ```yaml
 Type: System.Int32
 Parameter Sets: DeleteOlderThanDays
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExcludeDefaultPolicy
+Indicates whether to trim versions based on the default version history limits.
+
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ByPolicy
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FileTypes
+An array of file type names to trim versions. The supported file type names are:
+- Audio
+- OutlookPST
+- Video
+
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
+
+```yaml
+Type: String[]
+Parameter Sets: ByPolicy
 Aliases:
 
 Required: False
@@ -172,6 +241,24 @@ Prompts you for confirmation before running the cmdlet.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TrimUseListPolicy
+Indicates whether to trim versions by applying the document library's version history limits.
+
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ByPolicy
+Aliases:
 
 Required: False
 Position: Named
