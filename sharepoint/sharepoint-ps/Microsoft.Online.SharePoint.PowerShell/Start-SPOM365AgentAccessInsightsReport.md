@@ -29,14 +29,7 @@ Start-SPOM365AgentAccessInsightsReport [-Force] [-ReportPeriodInDays <Int32>] [-
 
 ## DESCRIPTION
 
-After this cmdlet is executed, the M365 agent insight report generation request for the specified number of days gets queued in the pipeline and the below metadata is displayed with the following properties:
-
-| Property             | Description                                                      |
-|:---------------------|:-----------------------------------------------------------------|
-| Id                   | The unique Id of the report.                                     |
-| CreatedDateTimeInUtc | The date and time in UTC when the report creation was triggered. |
-| Status               | The status of the report.                                        |
-| ReportPeriodInDays   | The report duration in days.                                     |
+After executing this cmdlet, the M365 agent insight report generation request for the specified number of days is added to the pipeline queue.
 
 ## EXAMPLES
 
@@ -141,5 +134,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
+
 
 [Get-SPOM365AgentAccessInsightsReport](./Get-SPOM365AgentAccessInsightsReport)
