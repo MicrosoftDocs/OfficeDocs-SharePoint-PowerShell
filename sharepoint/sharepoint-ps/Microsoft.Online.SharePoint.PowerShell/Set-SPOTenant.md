@@ -131,7 +131,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
  [-RestrictResourceAccountAccess <Boolean>] [-EnableSensitivityLabelForOneNote <Boolean>]
- [-EnableSensitivityLabelForVideoFiles <Boolean>]
+ [-EnableSensitivityLabelForVideoFiles <Boolean>] [-SiteOwnersCanAccessMissingContent <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -246,7 +246,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
  [-RestrictResourceAccountAccess <Boolean>] [-EnableSensitivityLabelForOneNote <Boolean>]
- [-EnableSensitivityLabelForVideoFiles <Boolean>]
+ [-EnableSensitivityLabelForVideoFiles <Boolean>] [-SiteOwnersCanAccessMissingContent <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -365,7 +365,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
  [-RestrictResourceAccountAccess <Boolean>] [-EnableSensitivityLabelForOneNote <Boolean>]
- [-EnableSensitivityLabelForVideoFiles <Boolean>]
+ [-EnableSensitivityLabelForVideoFiles <Boolean>] [-SiteOwnersCanAccessMissingContent <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -482,7 +482,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
  [-RestrictResourceAccountAccess <Boolean>] [-EnableSensitivityLabelForOneNote <Boolean>]
- [-EnableSensitivityLabelForVideoFiles <Boolean>]
+ [-EnableSensitivityLabelForVideoFiles <Boolean>] [-SiteOwnersCanAccessMissingContent <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -4992,6 +4992,27 @@ The valid values are:
 
 ```yaml
 Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteOwnersCanAccessMissingContent
+
+> Applicable: SharePoint Online
+
+Whether site owners can access information about missing content on their site.
+
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
+
+```yaml
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
 
