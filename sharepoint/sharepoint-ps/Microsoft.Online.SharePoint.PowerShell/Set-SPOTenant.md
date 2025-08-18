@@ -5004,6 +5004,8 @@ Accept wildcard characters: False
 
 ### -SiteOwnersCanAccessMissingContent
 
+> Applicable: SharePoint Online
+
 Whether site owners can access information about missing content on their site.
 
 > [!NOTE]
