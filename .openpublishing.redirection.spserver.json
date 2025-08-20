@@ -2,817 +2,817 @@
     "redirections": [
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Add-SPAppDeniedEndpoint.md",
-            "redirect_url": "/powershell/module/sharepointserver/add-spappdeniedendpoint",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/add-spappdeniedendpoint",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Add-SPCertificateNotificationContact.md",
-            "redirect_url": "/powershell/module/sharepointserver/add-spcertificatenotificationcontact",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/add-spcertificatenotificationcontact",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Add-SPClaimTypeMapping.md",
-            "redirect_url": "/powershell/module/sharepointserver/add-spclaimtypemapping",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/add-spclaimtypemapping",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Add-SPDatabaseToAvailabilityGroup.md",
-            "redirect_url": "/powershell/module/sharepointserver/add-spdatabasetoavailabilitygroup",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/add-spdatabasetoavailabilitygroup",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Add-SPDiagnosticsPerformanceCounter.md",
-            "redirect_url": "/powershell/module/sharepointserver/add-spdiagnosticsperformancecounter",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/add-spdiagnosticsperformancecounter",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Add-SPDistributedCacheServiceInstance.md",
-            "redirect_url": "/powershell/module/sharepointserver/add-spdistributedcacheserviceinstance",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/add-spdistributedcacheserviceinstance",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Add-SPInfoPathUserAgent.md",
-            "redirect_url": "/powershell/module/sharepointserver/add-spinfopathuseragent",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/add-spinfopathuseragent",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Add-SPPeoplePickerDistributionListSearchDomain.md",
-            "redirect_url": "/powershell/module/sharepointserver/add-sppeoplepickerdistributionlistsearchdomain",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/add-sppeoplepickerdistributionlistsearchdomain",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Add-SPPeoplePickerSearchADDomain.md",
-            "redirect_url": "/powershell/module/sharepointserver/add-sppeoplepickersearchaddomain",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/add-sppeoplepickersearchaddomain",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Add-SPPeoplePickerServiceAccountDirectoryPath.md",
-            "redirect_url": "/powershell/module/sharepointserver/add-sppeoplepickerserviceaccountdirectorypath",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/add-sppeoplepickerserviceaccountdirectorypath",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Add-SPPluggableSecurityTrimmer.md",
-            "redirect_url": "/powershell/module/sharepointserver/add-sppluggablesecuritytrimmer",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/add-sppluggablesecuritytrimmer",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Add-SPProfileLeader.md",
-            "redirect_url": "/powershell/module/sharepointserver/add-spprofileleader",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/add-spprofileleader",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Add-SPProfileSyncConnection.md",
-            "redirect_url": "/powershell/module/sharepointserver/add-spprofilesyncconnection",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/add-spprofilesyncconnection",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Add-SPRoutingMachineInfo.md",
-            "redirect_url": "/powershell/module/sharepointserver/add-sproutingmachineinfo",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/add-sproutingmachineinfo",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Add-SPRoutingMachinePool.md",
-            "redirect_url": "/powershell/module/sharepointserver/add-sproutingmachinepool",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/add-sproutingmachinepool",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Add-SPRoutingRule.md",
-            "redirect_url": "/powershell/module/sharepointserver/add-sproutingrule",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/add-sproutingrule",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Add-SPScaleOutDatabase.md",
-            "redirect_url": "/powershell/module/sharepointserver/add-spscaleoutdatabase",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/add-spscaleoutdatabase",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Add-SPSecureStoreSystemAccount.md",
-            "redirect_url": "/powershell/module/sharepointserver/add-spsecurestoresystemaccount",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/add-spsecurestoresystemaccount",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Add-SPServerScaleOutDatabase.md",
-            "redirect_url": "/powershell/module/sharepointserver/add-spserverscaleoutdatabase",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/add-spserverscaleoutdatabase",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Add-SPServiceApplicationProxyGroupMember.md",
-            "redirect_url": "/powershell/module/sharepointserver/add-spserviceapplicationproxygroupmember",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/add-spserviceapplicationproxygroupmember",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Add-SPShellAdmin.md",
-            "redirect_url": "/powershell/module/sharepointserver/add-spshelladmin",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/add-spshelladmin",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Add-SPSiteSubscriptionFeaturePackMember.md",
-            "redirect_url": "/powershell/module/sharepointserver/add-spsitesubscriptionfeaturepackmember",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/add-spsitesubscriptionfeaturepackmember",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Add-SPSiteSubscriptionProfileConfig.md",
-            "redirect_url": "/powershell/module/sharepointserver/add-spsitesubscriptionprofileconfig",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/add-spsitesubscriptionprofileconfig",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Add-SPSolution.md",
-            "redirect_url": "/powershell/module/sharepointserver/add-spsolution",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/add-spsolution",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Add-SPThrottlingRule.md",
-            "redirect_url": "/powershell/module/sharepointserver/add-spthrottlingrule",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/add-spthrottlingrule",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Add-SPUserLicenseMapping.md",
-            "redirect_url": "/powershell/module/sharepointserver/add-spuserlicensemapping",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/add-spuserlicensemapping",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Add-SPUserSolution.md",
-            "redirect_url": "/powershell/module/sharepointserver/add-spusersolution",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/add-spusersolution",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Backup-SPConfigurationDatabase.md",
-            "redirect_url": "/powershell/module/sharepointserver/backup-spconfigurationdatabase",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/backup-spconfigurationdatabase",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Backup-SPEnterpriseSearchServiceApplicationIndex.md",
-            "redirect_url": "/powershell/module/sharepointserver/backup-spenterprisesearchserviceapplicationindex",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/backup-spenterprisesearchserviceapplicationindex",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Backup-SPFarm.md",
-            "redirect_url": "/powershell/module/sharepointserver/backup-spfarm",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/backup-spfarm",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Backup-SPSite.md",
-            "redirect_url": "/powershell/module/sharepointserver/backup-spsite",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/backup-spsite",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Clear-SPAppDeniedEndpointList.md",
-            "redirect_url": "/powershell/module/sharepointserver/clear-spappdeniedendpointlist",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/clear-spappdeniedendpointlist",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Clear-SPBusinessDataCatalogEntityNotificationWeb.md",
-            "redirect_url": "/powershell/module/sharepointserver/clear-spbusinessdatacatalogentitynotificationweb",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/clear-spbusinessdatacatalogentitynotificationweb",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Clear-SPCertificateNotificationContact.md",
-            "redirect_url": "/powershell/module/sharepointserver/clear-spcertificatenotificationcontact",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/clear-spcertificatenotificationcontact",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Clear-SPContentDatabaseSyncData.md",
-            "redirect_url": "/powershell/module/sharepointserver/clear-spcontentdatabasesyncdata",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/clear-spcontentdatabasesyncdata",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Clear-SPDistributedCacheItem.md",
-            "redirect_url": "/powershell/module/sharepointserver/clear-spdistributedcacheitem",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/clear-spdistributedcacheitem",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Clear-SPLogLevel.md",
-            "redirect_url": "/powershell/module/sharepointserver/clear-sploglevel",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/clear-sploglevel",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Clear-SPMetadataWebServicePartitionData.md",
-            "redirect_url": "/powershell/module/sharepointserver/clear-spmetadatawebservicepartitiondata",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/clear-spmetadatawebservicepartitiondata",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Clear-SPPeoplePickerDistributionListSearchDomain.md",
-            "redirect_url": "/powershell/module/sharepointserver/clear-sppeoplepickerdistributionlistsearchdomain",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/clear-sppeoplepickerdistributionlistsearchdomain",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Clear-SPPeoplePickerSearchADDomain.md",
-            "redirect_url": "/powershell/module/sharepointserver/clear-sppeoplepickersearchaddomain",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/clear-sppeoplepickersearchaddomain",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Clear-SPPeoplePickerServiceAccountDirectoryPath.md",
-            "redirect_url": "/powershell/module/sharepointserver/clear-sppeoplepickerserviceaccountdirectorypath",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/clear-sppeoplepickerserviceaccountdirectorypath",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Clear-SPScaleOutDatabaseDeletedDataSubRange.md",
-            "redirect_url": "/powershell/module/sharepointserver/clear-spscaleoutdatabasedeleteddatasubrange",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/clear-spscaleoutdatabasedeleteddatasubrange",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Clear-SPScaleOutDatabaseLog.md",
-            "redirect_url": "/powershell/module/sharepointserver/clear-spscaleoutdatabaselog",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/clear-spscaleoutdatabaselog",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Clear-SPScaleOutDatabaseTenantData.md",
-            "redirect_url": "/powershell/module/sharepointserver/clear-spscaleoutdatabasetenantdata",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/clear-spscaleoutdatabasetenantdata",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Clear-SPSecureStoreCredentialMapping.md",
-            "redirect_url": "/powershell/module/sharepointserver/clear-spsecurestorecredentialmapping",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/clear-spsecurestorecredentialmapping",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Clear-SPSecureStoreDefaultProvider.md",
-            "redirect_url": "/powershell/module/sharepointserver/clear-spsecurestoredefaultprovider",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/clear-spsecurestoredefaultprovider",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Clear-SPServerScaleOutDatabaseDeletedDataSubRange.md",
-            "redirect_url": "/powershell/module/sharepointserver/clear-spserverscaleoutdatabasedeleteddatasubrange",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/clear-spserverscaleoutdatabasedeleteddatasubrange",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Clear-SPServerScaleOutDatabaseLog.md",
-            "redirect_url": "/powershell/module/sharepointserver/clear-spserverscaleoutdatabaselog",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/clear-spserverscaleoutdatabaselog",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Clear-SPServerScaleOutDatabaseTenantData.md",
-            "redirect_url": "/powershell/module/sharepointserver/clear-spserverscaleoutdatabasetenantdata",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/clear-spserverscaleoutdatabasetenantdata",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Clear-SPSiteSubscriptionBusinessDataCatalogConfig.md",
-            "redirect_url": "/powershell/module/sharepointserver/clear-spsitesubscriptionbusinessdatacatalogconfig",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/clear-spsitesubscriptionbusinessdatacatalogconfig",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Connect-SPConfigurationDatabase.md",
-            "redirect_url": "/powershell/module/sharepointserver/connect-spconfigurationdatabase",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/connect-spconfigurationdatabase",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Convert-SPWebApplication.md",
-            "redirect_url": "/powershell/module/sharepointserver/convert-spwebapplication",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/convert-spwebapplication",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Copy-SPActivitiesToWorkflowService.md",
-            "redirect_url": "/powershell/module/sharepointserver/copy-spactivitiestoworkflowservice",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/copy-spactivitiestoworkflowservice",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Copy-SPBusinessDataCatalogAclToChildren.md",
-            "redirect_url": "/powershell/module/sharepointserver/copy-spbusinessdatacatalogacltochildren",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/copy-spbusinessdatacatalogacltochildren",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Copy-SPContentTypes.md",
-            "redirect_url": "/powershell/module/sharepointserver/copy-spcontenttypes",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/copy-spcontenttypes",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Copy-SPSideBySideFiles.md",
-            "redirect_url": "/powershell/module/sharepointserver/copy-spsidebysidefiles",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/copy-spsidebysidefiles",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Copy-SPSite.md",
-            "redirect_url": "/powershell/module/sharepointserver/copy-spsite",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/copy-spsite",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Copy-SPTaxonomyGroups.md",
-            "redirect_url": "/powershell/module/sharepointserver/copy-sptaxonomygroups",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/copy-sptaxonomygroups",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Disable-ProjectServerLicense.md",
-            "redirect_url": "/powershell/module/sharepointserver/disable-projectserverlicense",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/disable-projectserverlicense",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Disable-SPAppAutoProvision.md",
-            "redirect_url": "/powershell/module/sharepointserver/disable-spappautoprovision",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/disable-spappautoprovision",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Disable-SPBusinessDataCatalogEntity.md",
-            "redirect_url": "/powershell/module/sharepointserver/disable-spbusinessdatacatalogentity",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/disable-spbusinessdatacatalogentity",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Disable-SPFeature.md",
-            "redirect_url": "/powershell/module/sharepointserver/disable-spfeature",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/disable-spfeature",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Disable-SPHealthAnalysisRule.md",
-            "redirect_url": "/powershell/module/sharepointserver/disable-sphealthanalysisrule",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/disable-sphealthanalysisrule",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Disable-SPInfoPathFormTemplate.md",
-            "redirect_url": "/powershell/module/sharepointserver/disable-spinfopathformtemplate",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/disable-spinfopathformtemplate",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Disable-SPProjectActiveDirectoryEnterpriseResourcePoolSync.md",
-            "redirect_url": "/powershell/module/sharepointserver/disable-spprojectactivedirectoryenterpriseresourcepoolsync",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/disable-spprojectactivedirectoryenterpriseresourcepoolsync",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Disable-SPProjectEmailNotification.md",
-            "redirect_url": "/powershell/module/sharepointserver/disable-spprojectemailnotification",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/disable-spprojectemailnotification",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Disable-SPProjectEnterpriseProjectTaskSync.md",
-            "redirect_url": "/powershell/module/sharepointserver/disable-spprojectenterpriseprojecttasksync",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/disable-spprojectenterpriseprojecttasksync",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Disable-SPProjectQueueStatsMonitoring.md",
-            "redirect_url": "/powershell/module/sharepointserver/disable-spprojectqueuestatsmonitoring",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/disable-spprojectqueuestatsmonitoring",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Disable-SPSessionStateService.md",
-            "redirect_url": "/powershell/module/sharepointserver/disable-spsessionstateservice",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/disable-spsessionstateservice",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Disable-SPSingleSignOn.md",
-            "redirect_url": "/powershell/module/sharepointserver/disable-spsinglesignon",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/disable-spsinglesignon",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Disable-SPTimerJob.md",
-            "redirect_url": "/powershell/module/sharepointserver/disable-sptimerjob",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/disable-sptimerjob",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Disable-SPUserLicensing.md",
-            "redirect_url": "/powershell/module/sharepointserver/disable-spuserlicensing",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/disable-spuserlicensing",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Disable-SPUserSolutionAllowList.md",
-            "redirect_url": "/powershell/module/sharepointserver/disable-spusersolutionallowlist",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/disable-spusersolutionallowlist",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Disable-SPWebApplicationHttpThrottling.md",
-            "redirect_url": "/powershell/module/sharepointserver/disable-spwebapplicationhttpthrottling",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/disable-spwebapplicationhttpthrottling",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Disable-SPWebTemplateForSiteMaster.md",
-            "redirect_url": "/powershell/module/sharepointserver/disable-spwebtemplateforsitemaster",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/disable-spwebtemplateforsitemaster",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Disconnect-SPConfigurationDatabase.md",
-            "redirect_url": "/powershell/module/sharepointserver/disconnect-spconfigurationdatabase",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/disconnect-spconfigurationdatabase",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Dismount-SPContentDatabase.md",
-            "redirect_url": "/powershell/module/sharepointserver/dismount-spcontentdatabase",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/dismount-spcontentdatabase",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Dismount-SPStateServiceDatabase.md",
-            "redirect_url": "/powershell/module/sharepointserver/dismount-spstateservicedatabase",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/dismount-spstateservicedatabase",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Enable-ProjectServerLicense.md",
-            "redirect_url": "/powershell/module/sharepointserver/enable-projectserverlicense",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/enable-projectserverlicense",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Enable-SPAppAutoProvision.md",
-            "redirect_url": "/powershell/module/sharepointserver/enable-spappautoprovision",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/enable-spappautoprovision",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Enable-SPBusinessDataCatalogEntity.md",
-            "redirect_url": "/powershell/module/sharepointserver/enable-spbusinessdatacatalogentity",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/enable-spbusinessdatacatalogentity",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Enable-SPFeature.md",
-            "redirect_url": "/powershell/module/sharepointserver/enable-spfeature",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/enable-spfeature",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Enable-SPHealthAnalysisRule.md",
-            "redirect_url": "/powershell/module/sharepointserver/enable-sphealthanalysisrule",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/enable-sphealthanalysisrule",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Enable-SPInfoPathFormTemplate.md",
-            "redirect_url": "/powershell/module/sharepointserver/enable-spinfopathformtemplate",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/enable-spinfopathformtemplate",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Enable-SPProjectActiveDirectoryEnterpriseResourcePoolSync.md",
-            "redirect_url": "/powershell/module/sharepointserver/enable-spprojectactivedirectoryenterpriseresourcepoolsync",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/enable-spprojectactivedirectoryenterpriseresourcepoolsync",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Enable-SPProjectEmailNotification.md",
-            "redirect_url": "/powershell/module/sharepointserver/enable-spprojectemailnotification",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/enable-spprojectemailnotification",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Enable-SPProjectEnterpriseProjectTaskSync.md",
-            "redirect_url": "/powershell/module/sharepointserver/enable-spprojectenterpriseprojecttasksync",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/enable-spprojectenterpriseprojecttasksync",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Enable-SPProjectQueueStatsMonitoring.md",
-            "redirect_url": "/powershell/module/sharepointserver/enable-spprojectqueuestatsmonitoring",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/enable-spprojectqueuestatsmonitoring",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Enable-SPSessionStateService.md",
-            "redirect_url": "/powershell/module/sharepointserver/enable-spsessionstateservice",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/enable-spsessionstateservice",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Enable-SPTimerJob.md",
-            "redirect_url": "/powershell/module/sharepointserver/enable-sptimerjob",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/enable-sptimerjob",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Enable-SPUserLicensing.md",
-            "redirect_url": "/powershell/module/sharepointserver/enable-spuserlicensing",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/enable-spuserlicensing",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Enable-SPUserSolutionAllowList.md",
-            "redirect_url": "/powershell/module/sharepointserver/enable-spusersolutionallowlist",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/enable-spusersolutionallowlist",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Enable-SPWebApplicationHttpThrottling.md",
-            "redirect_url": "/powershell/module/sharepointserver/enable-spwebapplicationhttpthrottling",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/enable-spwebapplicationhttpthrottling",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Enable-SPWebTemplateForSiteMaster.md",
-            "redirect_url": "/powershell/module/sharepointserver/enable-spwebtemplateforsitemaster",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/enable-spwebtemplateforsitemaster",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Export-SPAppPackage.md",
-            "redirect_url": "/powershell/module/sharepointserver/export-spapppackage",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/export-spapppackage",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Export-SPBusinessDataCatalogModel.md",
-            "redirect_url": "/powershell/module/sharepointserver/export-spbusinessdatacatalogmodel",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/export-spbusinessdatacatalogmodel",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Export-SPCacheClusterConfig.md",
-            "redirect_url": "/powershell/module/sharepointserver/export-spcacheclusterconfig",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/export-spcacheclusterconfig",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Export-SPCertificate.md",
-            "redirect_url": "/powershell/module/sharepointserver/export-spcertificate",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/export-spcertificate",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Export-SPEnterpriseSearchTopology.md",
-            "redirect_url": "/powershell/module/sharepointserver/export-spenterprisesearchtopology",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/export-spenterprisesearchtopology",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Export-SPInfoPathAdministrationFiles.md",
-            "redirect_url": "/powershell/module/sharepointserver/export-spinfopathadministrationfiles",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/export-spinfopathadministrationfiles",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Export-SPMetadataWebServicePartitionData.md",
-            "redirect_url": "/powershell/module/sharepointserver/export-spmetadatawebservicepartitiondata",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/export-spmetadatawebservicepartitiondata",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Export-SPScaleOutDatabaseTenantData.md",
-            "redirect_url": "/powershell/module/sharepointserver/export-spscaleoutdatabasetenantdata",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/export-spscaleoutdatabasetenantdata",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Export-SPServerScaleOutDatabaseTenantData.md",
-            "redirect_url": "/powershell/module/sharepointserver/export-spserverscaleoutdatabasetenantdata",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/export-spserverscaleoutdatabasetenantdata",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Export-SPSiteSubscriptionBusinessDataCatalogConfig.md",
-            "redirect_url": "/powershell/module/sharepointserver/export-spsitesubscriptionbusinessdatacatalogconfig",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/export-spsitesubscriptionbusinessdatacatalogconfig",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Export-SPSiteSubscriptionSettings.md",
-            "redirect_url": "/powershell/module/sharepointserver/export-spsitesubscriptionsettings",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/export-spsitesubscriptionsettings",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Export-SPTagsAndNotesData.md",
-            "redirect_url": "/powershell/module/sharepointserver/export-sptagsandnotesdata",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/export-sptagsandnotesdata",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Export-SPWeb.md",
-            "redirect_url": "/powershell/module/sharepointserver/export-spweb",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/export-spweb",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Get-ProjectServerLicense.md",
-            "redirect_url": "/powershell/module/sharepointserver/get-projectserverlicense",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/get-projectserverlicense",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Get-SPAlternateURL.md",
-            "redirect_url": "/powershell/module/sharepointserver/get-spalternateurl",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/get-spalternateurl",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Get-SPAppAcquisitionConfiguration.md",
-            "redirect_url": "/powershell/module/sharepointserver/get-spappacquisitionconfiguration",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/get-spappacquisitionconfiguration",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Get-SPAppAutoProvisionConnection.md",
-            "redirect_url": "/powershell/module/sharepointserver/get-spappautoprovisionconnection",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/get-spappautoprovisionconnection",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Get-SPAvailabilityGroupStatus.md",
-            "redirect_url": "/powershell/module/sharepointserver/get-spavailabilitygroupstatus",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/get-spavailabilitygroupstatus",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Get-SPCache.md",
-            "redirect_url": "/powershell/module/sharepointserver/get-spcache",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/get-spcache",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Get-SPCacheClusterHealth.md",
-            "redirect_url": "/powershell/module/sharepointserver/get-spcacheclusterhealth",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/get-spcacheclusterhealth",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Get-SPCacheClusterInfo.md",
-            "redirect_url": "/powershell/module/sharepointserver/get-spcacheclusterinfo",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/get-spcacheclusterinfo",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Get-SPCacheHost.md",
-            "redirect_url": "/powershell/module/sharepointserver/get-spcachehost",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/get-spcachehost",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Get-SPCacheHostConfig.md",
-            "redirect_url": "/powershell/module/sharepointserver/get-spcachehostconfig",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/get-spcachehostconfig",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Get-SPCacheStatistics.md",
-            "redirect_url": "/powershell/module/sharepointserver/get-spcachestatistics",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/get-spcachestatistics",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Get-SPCertificate.md",
-            "redirect_url": "/powershell/module/sharepointserver/get-spcertificate",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/get-spcertificate",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Get-SPCertificateNotificationContact.md",
-            "redirect_url": "/powershell/module/sharepointserver/get-spcertificatenotificationcontact",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/get-spcertificatenotificationcontact",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Get-SPCertificateSettings.md",
-            "redirect_url": "/powershell/module/sharepointserver/get-spcertificatesettings",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/get-spcertificatesettings",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Get-SPFlightsInfo.md",
-            "redirect_url": "/powershell/module/sharepointserver/get-spflightsinfo",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/get-spflightsinfo",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Get-SPPeoplePickerConfig.md",
-            "redirect_url": "/powershell/module/sharepointserver/get-sppeoplepickerconfig",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/get-sppeoplepickerconfig",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Get-SPPeoplePickerDistributionListSearchDomain.md",
-            "redirect_url": "/powershell/module/sharepointserver/get-sppeoplepickerdistributionlistsearchdomain",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/get-sppeoplepickerdistributionlistsearchdomain",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Get-SPPeoplePickerSearchADDomain.md",
-            "redirect_url": "/powershell/module/sharepointserver/get-sppeoplepickersearchaddomain",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/get-sppeoplepickersearchaddomain",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Get-SPRemoteShareBlobStore.md",
-            "redirect_url": "/powershell/module/sharepointserver/get-spremoteshareblobstore",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/get-spremoteshareblobstore",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Import-SPCacheClusterConfig.md",
-            "redirect_url": "/powershell/module/sharepointserver/import-spcacheclusterconfig",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/import-spcacheclusterconfig",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Import-SPCertificate.md",
-            "redirect_url": "/powershell/module/sharepointserver/import-spcertificate",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/import-spcertificate",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Move-SPCertificate.md",
-            "redirect_url": "/powershell/module/sharepointserver/move-spcertificate",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/move-spcertificate",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/New-SPCache.md",
-            "redirect_url": "/powershell/module/sharepointserver/new-spcache",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/new-spcache",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/New-SPCertificate.md",
-            "redirect_url": "/powershell/module/sharepointserver/new-spcertificate",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/new-spcertificate",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/New-SPODataConnectionSetting.md",
-            "redirect_url": "/powershell/module/sharepointserver/new-spodataconnectionsetting",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/new-spodataconnectionsetting",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/New-SPOnlineApplicationPrincipalManagementServiceApplicationProxy.md",
-            "redirect_url": "/powershell/module/sharepointserver/new-sponlineapplicationprincipalmanagementserviceapplicationproxy",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/new-sponlineapplicationprincipalmanagementserviceapplicationproxy",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Register-SPRemoteShareBlobStore.md",
-            "redirect_url": "/powershell/module/sharepointserver/register-spremoteshareblobstore",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/register-spremoteshareblobstore",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Register-SPVssWriter.md",
-            "redirect_url": "/powershell/module/sharepointserver/register-spvsswriter",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/register-spvsswriter",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Remove-SPCertificate.md",
-            "redirect_url": "/powershell/module/sharepointserver/remove-spcertificate",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/remove-spcertificate",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Remove-SPCertificateNotificationContact.md",
-            "redirect_url": "/powershell/module/sharepointserver/remove-spcertificatenotificationcontact",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/remove-spcertificatenotificationcontact",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Remove-SPConfigurationObject.md",
-            "redirect_url": "/powershell/module/sharepointserver/remove-spconfigurationobject",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/remove-spconfigurationobject",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Remove-SPDatabaseFromAvailabilityGroup.md",
-            "redirect_url": "/powershell/module/sharepointserver/remove-spdatabasefromavailabilitygroup",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/remove-spdatabasefromavailabilitygroup",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Remove-SPODataConnectionSetting.md",
-            "redirect_url": "/powershell/module/sharepointserver/remove-spodataconnectionsetting",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/remove-spodataconnectionsetting",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Remove-SPPeoplePickerDistributionListSearchDomain.md",
-            "redirect_url": "/powershell/module/sharepointserver/remove-sppeoplepickerdistributionlistsearchdomain",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/remove-sppeoplepickerdistributionlistsearchdomain",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Remove-SPPeoplePickerSearchADDomain.md",
-            "redirect_url": "/powershell/module/sharepointserver/remove-sppeoplepickersearchaddomain",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/remove-sppeoplepickersearchaddomain",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Remove-SPPeoplePickerServiceAccountDirectoryPath.md",
-            "redirect_url": "/powershell/module/sharepointserver/remove-sppeoplepickerserviceaccountdirectorypath",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/remove-sppeoplepickerserviceaccountdirectorypath",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Rename-SPCertificate.md",
-            "redirect_url": "/powershell/module/sharepointserver/rename-spcertificate",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/rename-spcertificate",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Renew-SPCertificate.md",
-            "redirect_url": "/powershell/module/sharepointserver/renew-spcertificate",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/renew-spcertificate",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Set-SPCertificateSettings.md",
-            "redirect_url": "/powershell/module/sharepointserver/set-spcertificatesettings",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/set-spcertificatesettings",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Set-SPMachineKey.md",
-            "redirect_url": "/powershell/module/sharepointserver/set-spmachinekey",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/set-spmachinekey",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Set-SPODataConnectionSetting.md",
-            "redirect_url": "/powershell/module/sharepointserver/set-spodataconnectionsetting",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/set-spodataconnectionsetting",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Set-SPODataConnectionSettingMetadata.md",
-            "redirect_url": "/powershell/module/sharepointserver/set-spodataconnectionsettingmetadata",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/set-spodataconnectionsettingmetadata",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Set-SPPeoplePickerConfig.md",
-            "redirect_url": "/powershell/module/sharepointserver/set-sppeoplepickerconfig",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/set-sppeoplepickerconfig",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Set-SPRemoteShareBlobStore.md",
-            "redirect_url": "/powershell/module/sharepointserver/set-spremoteshareblobstore",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/set-spremoteshareblobstore",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Start-SPCacheCluster.md",
-            "redirect_url": "/powershell/module/sharepointserver/start-spcachecluster",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/start-spcachecluster",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Stop-SPCacheCluster.md",
-            "redirect_url": "/powershell/module/sharepointserver/stop-spcachecluster",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/stop-spcachecluster",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Switch-SPBlobStorage.md",
-            "redirect_url": "/powershell/module/sharepointserver/switch-spblobstorage",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/switch-spblobstorage",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Switch-SPCertificate.md",
-            "redirect_url": "/powershell/module/sharepointserver/switch-spcertificate",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/switch-spcertificate",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Test-SPRemoteShareBlobStore.md",
-            "redirect_url": "/powershell/module/sharepointserver/test-spremoteshareblobstore",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/test-spremoteshareblobstore",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Unregister-SPRemoteShareBlobStore.md",
-            "redirect_url": "/powershell/module/sharepointserver/unregister-spremoteshareblobstore",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/unregister-spremoteshareblobstore",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Unregister-SPVssWriter.md",
-            "redirect_url": "/powershell/module/sharepointserver/unregister-spvsswriter",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/unregister-spvsswriter",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Update-SPAzureBlobConfigLocatorEx1.md",
-            "redirect_url": "/powershell/module/sharepointserver/update-spazureblobconfiglocatorex1",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/update-spazureblobconfiglocatorex1",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Update-SPDataRetrievalServiceConfig.md",
-            "redirect_url": "/powershell/module/sharepointserver/update-spdataretrievalserviceconfig",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/update-spdataretrievalserviceconfig",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Update-SPFlightsConfigFile.md",
-            "redirect_url": "/powershell/module/sharepointserver/update-spflightsconfigfile",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/update-spflightsconfigfile",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Update-SPMachineKey.md",
-            "redirect_url": "/powershell/module/sharepointserver/update-spmachinekey",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/update-spmachinekey",
             "redirect_document_id": false
         },
         {
             "source_path": "sharepoint/virtual-folder/sharepoint-server/Use-SPCacheCluster.md",
-            "redirect_url": "/powershell/module/sharepointserver/use-spcachecluster",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.powershell/use-spcachecluster",
             "redirect_document_id": false
         }
     ]
