@@ -24,6 +24,9 @@ Adds a source to the **Content Security Policy** configuration.
 ### [Add-SPOFileRequestBrandingProfile](Add-SPOFileRequestBrandingProfile.md)
 Adds a branding profile for the file request feature by specifying logo and background assets from an existing organization asset library.
 
+### [Add-SPOFontPackage](Add-SPOFontPackage.md)
+Creates a new custom font package with fonts in the brand fonts library.
+
 ### [Add-SPOGeoAdministrator](Add-SPOGeoAdministrator.md)
 Adds a new SharePoint user or security group as GeoAdministrator to a multi-geo tenant.
 
@@ -198,6 +201,9 @@ Returns external users in the tenant.
 ### [Get-SPOFileRequestBrandingProfiles](Get-SPOFileRequestBrandingProfiles.md)
 Retrieves branding profiles configured for the file request feature, including details about logo and background assets.
 
+### [Get-SPOFontPackage](Get-SPOFontPackage.md)
+Returns one or all custom font packages in the tenant.
+
 ### [Get-SPOGeoAdministrator](Get-SPOGeoAdministrator.md)
 This cmdlet returns the SharePoint Online user or security group accounts with Global Admin privileges in the current multi-geo tenant.
 
@@ -309,6 +315,9 @@ Gets the status for a file version expiration report generation job for a site c
 ### [Get-SPOSiteGroup](Get-SPOSiteGroup.md)
 Gets all the groups on the specified site collection.
 
+### [Get-SPOSiteManageVersionPolicyJobProgress](Get-SPOSiteManageVersionPolicyJobProgress.md)
+Gets the status and progress for site manage version policy jobs.
+
 ### [Get-SPOSitePages](Get-SPOSitePages.md)
 This cmdlet allows you to retrieve all SharePoint pages under a specific SharePoint site.
 
@@ -385,7 +394,7 @@ Returns the current configuration status.
 Get the replication parameters to manage Multi-Geo taxonomy replication.
 
 ### [Get-SPOTheme](Get-SPOTheme.md)
-{{Placeholder}}
+Returns one or all theme settings from the tenant.
 
 ### [Get-SPOUnifiedGroup](Get-SPOUnifiedGroup.md)
 Retrieves the Preferred Data Location for the specified Office 365 Group.
@@ -459,6 +468,9 @@ Generates a version storage usage report for a site collection. This report can 
 ### [New-SPOSiteGroup](New-SPOSiteGroup.md)
 Creates a new group in a SharePoint Online site collection.
 
+### [New-SPOSiteManageVersionPolicyJob](New-SPOSiteManageVersionPolicyJob.md)
+Starts a background job to manage file versions and version history limits for all document libraries in the given site.
+
 ### [New-SPOSiteSharingReportJob](New-SPOSiteSharingReportJob.md)
 Creates a new sharing report job.
 
@@ -497,6 +509,9 @@ Removes a collection of external users from the tenancy's folder.
 
 ### [Remove-SPOFileRequestBrandingProfile](Remove-SPOFileRequestBrandingProfile.md)
 Removes a branding profile (either primary or secondary) configured for the file request feature across the tenant.
+
+### [Remove-SPOFontPackage](Remove-SPOFontPackage.md)
+Removes a brand font package from the tenant.
 
 ### [Remove-SPOGeoAdministrator](Remove-SPOGeoAdministrator.md)
 Removes a new SharePoint user or security Group in the current Multi-Geo Tenant.
@@ -557,6 +572,9 @@ Stops further processing of site level trim job that is in-progress.
 
 ### [Remove-SPOSiteGroup](Remove-SPOSiteGroup.md)
 Removes a SharePoint Online group from a site collection.
+
+### [Remove-SPOSiteManageVersionPolicyJob](Remove-SPOSiteManageVersionPolicyJob.md)
+Stops processing of the in-progress manage version policy job for the given site.
 
 ### [Remove-SPOSiteScript](Remove-SPOSiteScript.md)
 Removes a site script.
@@ -659,6 +677,9 @@ This cmdlet sends a trust request to the tenant with whom you want to establish 
 
 ### [Set-SPODisableSpacesActivation](Set-SPODisableSpacesActivation.md)
 Disables the SharePoint Spaces activation.
+
+### [Set-SPOFontPackage](Set-SPOFontPackage.md)
+Applies a brand font package to a SharePoint site or Viva Connections.
 
 ### [Set-SPOGeoStorageQuota](Set-SPOGeoStorageQuota.md)
 This cmdlet sets the storage quota on a multi-geo tenant.
