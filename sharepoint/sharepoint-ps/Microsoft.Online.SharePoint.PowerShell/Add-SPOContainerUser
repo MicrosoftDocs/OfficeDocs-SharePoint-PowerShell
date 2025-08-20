@@ -22,6 +22,19 @@ Adds a user to a container with a specified role.
 Add-SPOContainerUser [-ContainerId] <String> -LoginName <String> -Role <String> [<CommonParameters>]
 ```
 
+##DESCRIPTION
+
+Adds a user to a SharePoint Embedded container and assigns a specific role.
+You must be a SharePoint Embedded Administrator to run this cmdlet.
+
+For permissions and the most current information about Windows PowerShell for SharePoint Embedded Containers, see the documentation at [Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
+
+> [!NOTE]
+> A user can be assigned to only one role within a container at a time.
+> The roles **owner** and **principal owner** are distinct. A container can have multiple owners, but only one principal owner at any time.
+> Principal ownership of a container can't be added—it can only be transferred.
+
+
 ## EXAMPLES
 
 ### Example 1
