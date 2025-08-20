@@ -14,13 +14,26 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Reassigns the user from an already assigned role to a new role on a container. 
+Reassigns a user from their current role to a new role within a SharePoint Embedded container.
 
 ## SYNTAX
 
 ```
 Set-SPOContainerUser [-ContainerId] <String> -LoginName <String> -Role <String> [<CommonParameters>
 ```
+
+##DESCRIPTION
+
+Updates a user's assigned role within a SharePoint Embedded container. Use this cmdlet to reassign a user from their current role to a new one. You must specify the container ID, the user's login name, and the new role.
+
+You must be a SharePoint Embedded Administrator to run this cmdlet.
+
+For permissions and the most current information about Windows PowerShell for SharePoint Embedded Containers, see the documentation at [Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
+
+> [!NOTE]
+> A user can be assigned to only one role within a container at a time.
+> To transfer principal ownership of a container, use the `Set-SPOContainer` cmdlet
+
 
 ## EXAMPLES
 
@@ -38,7 +51,7 @@ Example 1 reassigns the role of User Principal Name "shras@contoso.com" to manag
 
 > Applicable: SharePoint Online
 
-Use this parameter to specify the Container ID.
+The unique identifier of the container to which the user is being added.
 
 ```yaml
 Type: String
@@ -56,7 +69,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-The User Principal Name to whom a membership is to be assigned. 
+The user’s login name to assign to the container. This is the User Principal Name.
 
 ```yaml
 Type: String
@@ -74,11 +87,13 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-The membership role intended to be assigned to a user. The available roles are : 
-Owner: have full control over the container and the contents of the container.
-Manager: can add, update, and delete contents of a container and also maintain permissions of the container but cannot delete a container.
-Writer: can add, update, and delete content in the container.
-Reader: can only view content in the container.
+The role to assign to the user within the container. Valid roles are:
+
+Owner: Has full control over the container and its contents.
+Manager: Can add, update, and delete content, and manage permissions, but can't delete the container.
+Writer: Can add, update, and delete content in the container.
+Reader: Can only view content in the container.
+
 
 ```yaml
 Type: String
@@ -110,14 +125,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell)
 
-[Get-SPOApplication](./Get-SPOApplication.md)
+[Add-SPOContainerUser](./Add-SPOContainerUser.md)
+
+[Set-SPOContainerUser](./Set-SPOContainerUser.md)
 
 [Set-SPOContainer](./Set-SPOContainer.md)
 
-[Get-SPODeletedContainer](./Get-SPODeletedContainer.md)
+[Get-SPOContainer](./Get-SPOContainer.md)
 
-[Remove-SPOContainer](./Remove-SPOContainer.md)
-
-[Remove-SPODeletedContainer](./Remove-SPODeletedContainer.md)
-
-[Restore-SPODeletedContainer](./Restore-SPODeletedContainer.md)
