@@ -60,11 +60,18 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 > [!NOTE]
 > Containers in the Recycle Bin will not be retrieved by using the `Get-SPOContainer` cmdlet.
-> The OwningApplicationId for Microsoft Loop is `a187e399-0c36-4b98-8f04-1edc167a0996`.
-> The OwningApplicationId for Microsoft Designer is `5e2795e3-ce8c-4cfb-b302-35fe5cd01597`.
-> The OwningApplicationId for Microsoft Teams Events VOD is `f574b137-eb91-46a0-8811-1a04d80c7ffa`.
-> The OwningApplicationId for Microsoft Outlook Newsletters is `a6804318-a92d-4f36-b499-441033991274`.
-> The OwningApplicationId for Microsoft Declarative Agent is `3FBEE041-E7D6-4F14-8826-6BF27F0A2849`.
+> 
+> Use the following `OwningApplicationId` values to identify specific Microsoft applications:
+
+
+| Application | OwningApplicationId | 
+|----------|----------|
+| **Microsoft Loop**  | `a187e399-0c36-4b98-8f04-1edc167a0996` | 
+| **Microsoft Designer** | `5e2795e3-ce8c-4cfb-b302-35fe5cd01597`  | 
+| **Microsoft Teams Events Video on Demand** | `f574b137-eb91-46a0-8811-1a04d80c7ffa`| 
+| **Microsoft Outlook Newsletters** | `a6804318-a92d-4f36-b499-441033991274`| 
+| **Microsoft Declarative Agent** | `3FBEE041-E7D6-4F14-8826-6BF27F0A2849`  | 
+
 
 ## EXAMPLES
 
@@ -73,7 +80,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ```powershell
 Get-SPOContainer 
 ```
-Example 1 returns the details of all the containers in the tenant
+Example 1 returns the details of all the containers in the tenant.
 
 ### Example 2
 
