@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Adds a user to a container with a specified role.
+Adds a user to a SharePoint Embedded container with a specified role.
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ Add-SPOContainerUser [-ContainerId] <String> -LoginName <String> -Role <String> 
 
 ##DESCRIPTION
 
-Adds a user to a SharePoint Embedded container and assigns a specific role.
+Assigns a user to a defined role within a SharePoint Embedded container. You must specify the container ID, the user's login name, and the role to be assigned. This cmdlet is used to grant access and permissions based on role membership.
 You must be a SharePoint Embedded Administrator to run this cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Embedded Containers, see the documentation at [Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
