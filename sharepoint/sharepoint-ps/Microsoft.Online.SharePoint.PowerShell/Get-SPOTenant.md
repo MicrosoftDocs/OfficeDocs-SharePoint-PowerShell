@@ -19,7 +19,7 @@ Returns SharePoint Online organization properties.
 ## SYNTAX
 
 ```
-Get-SPOTenant [-ShowDetails] [<CommonParameters>]
+Get-SPOTenant [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,21 +43,6 @@ Get-SPOTenant
 This example returns the organization-level site collection properties such as StorageQuota, StorageQuotaAllocated, ResourceQuota, ResourceQuotaAllocated, SiteCreationMode and OneDriveStorageQuota.
 
 ## PARAMETERS
-
-### -ShowDetails
-{{ Fill ShowDetails Description }}
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### CommonParameters
 

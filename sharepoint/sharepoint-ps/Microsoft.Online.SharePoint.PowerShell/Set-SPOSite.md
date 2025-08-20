@@ -63,71 +63,83 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-Owner <String>] [-Title <String>] [-
  [-HidePeopleWhoHaveListsOpen <Boolean>] [-AllowFileArchive <Boolean>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>]
  [-DisableSiteBranding <Boolean>]
+ [-IsAuthoritative <Boolean>]
  [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### ParamSet2
+
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> -EnablePWA <Boolean> [-InformationBarriersMode <String>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### ParamSet3
+
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-DisableSharingForNonOwners] [-InformationBarriersMode <String>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ParamSet5
+
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-RemoveLabel] [-InformationBarriersMode <String>] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### AddInformationBarrierSegments
+
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-AddInformationSegment <Guid[]>] [-InformationBarriersMode <String>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveInformationBarrierSegments
+
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-RemoveInformationSegment <Guid[]>]
  [-InformationBarriersMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ClearLockDown
+
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>] [-ClearSharingLockDown] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
 ### AddRestrictedAccessControlGroups
+
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>]
  [-AddRestrictedAccessControlGroups <Guid[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveRestrictedAccessControlGroups
+
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>]
  [-RemoveRestrictedAccessControlGroups <Guid[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ClearRestrictedAccessControl
+
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>] [-ClearRestrictedAccessControl]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### InheritVersionPolicyFromTenant
+
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>] [-InheritVersionPolicyFromTenant]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### SetSiteFileVersionPolicy
+
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>]
  [-EnableAutoExpirationVersionTrim <Boolean>] [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>]
@@ -135,7 +147,21 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
+### SetSiteFileTypeFileVersionPolicy
+
+```
+Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>] [-EnableAutoExpirationVersionTrim <Boolean>] [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] -FileTypesForVersionExpiration <String[]> [-ApplyToNewDocumentLibraries] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveSiteFileVersionPolicy
+
+```
+Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>] [-ApplyToNewDocumentLibraries]
+ -RemoveVersionExpirationFileTypeOverride <String[]> [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
 ### ClearGroupId
+
 ```
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-InformationBarriersMode <String>] [-ClearGroupId] [-WhatIf]
  [-Confirm] [<CommonParameters>]
@@ -245,7 +271,7 @@ In this example, an authentication context called MFA is attached to the site.
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $true
 ```
 
-Example 11 sets automatic version history limits at site level. Automatic setting will be applied to all new document libraries created in the site and a background request will be created to asynchronously process the update on existing document libraries that have versioning enabled.
+Example 11 sets automatic version history limits at the site level. Automatic setting will be applied to all new document libraries created in the site and a background request will be created to asynchronously process the update on existing document libraries that have versioning enabled.
 
 ### EXAMPLE 12
 
@@ -253,7 +279,7 @@ Example 11 sets automatic version history limits at site level. Automatic settin
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -MajorWithMinorVersionsLimit 20 -ExpireVersionsAfterDays 30
 ```
 
-Example 12 sets manual version history limits at site level by limiting the number of versions and the time (in days) versions are kept. The new document libraries will use this version setting. Also it creates a job to set this manual version setting for existing document libraries that enabled versioning.
+Example 12 sets manual version history limits at the site level by limiting the number of versions and the time (in days) versions are kept. The new document libraries will use this version setting. Also it creates a job to set this manual version setting for existing document libraries that enabled versioning.
 
 ### EXAMPLE 13
 
@@ -261,7 +287,7 @@ Example 12 sets manual version history limits at site level by limiting the numb
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -MajorWithMinorVersionsLimit 20 -ExpireVersionsAfterDays 0
 ```
 
-Example 13 sets manual version history limits at site level by limiting the number of versions with no time limits. The new document libraries will use this version setting. Also it creates a job to set this manual version setting for existing document libraries that enabled versioning.
+Example 13 sets manual version history limits at the site level by limiting the number of versions with no time limits. The new document libraries will use this version setting. Also it creates a job to set this manual version setting for existing document libraries that enabled versioning.
 
 ### Example 14
 
@@ -269,7 +295,7 @@ Example 13 sets manual version history limits at site level by limiting the numb
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $true -ApplyToNewDocumentLibraries
 ```
 
-Example 14 sets automatic version history limits at site level. The new document libraries will use this version setting.
+Example 14 sets automatic version history limits at the site level. The new document libraries will use this version setting.
 
 ### EXAMPLE 15
 
@@ -277,7 +303,7 @@ Example 14 sets automatic version history limits at site level. The new document
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 30 -ApplyToNewDocumentLibraries
 ```
 
-Example 15 sets manual version history limits at site level by limiting the number of versions and the time (in days) versions are kept. The new document libraries will use this version setting.
+Example 15 sets manual version history limits at the site level by limiting the number of versions and the time (in days) versions are kept. The new document libraries will use this version setting.
 
 ### EXAMPLE 16
 
@@ -285,7 +311,7 @@ Example 15 sets manual version history limits at site level by limiting the numb
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 0 -ApplyToNewDocumentLibraries
 ```
 
-Example 16 sets manual version history limits at site level by limiting the number of versions with no time limits. The new document libraries will use this version setting.
+Example 16 sets manual version history limits at the site level by limiting the number of versions with no time limits. The new document libraries will use this version setting.
 
 ### Example 17
 
@@ -317,7 +343,45 @@ Example 19 creates a request to set manual version history limits that limits th
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -InheritVersionPolicyFromTenant
 ```
 
-Example 20 clears the file version setting at site level. The new document libraries will use the Tenant Level setting. It won't impact the existing document libraries.
+Example 20 clears the file version setting at the site level. The new document libraries will use the Tenant Level setting. It won't impact the existing document libraries.
+
+### Example 21
+
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $true -FileTypesForVersionExpiration @("Video", "Audio") -ApplyToNewDocumentLibraries
+```
+
+Example 21 sets automatic version history limit override for video and audio file types at the site level. The new document libraries will use this version setting.
+
+### Example 22
+
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 30 
+-FileTypesForVersionExpiration @("Video", "Audio") -ApplyToNewDocumentLibraries
+```
+
+Example 22 sets manual version history limit override for video and audio file types at the site level by limiting the number of versions and the time (in days) versions are kept. The new document libraries will use this version setting.
+
+### Example 23
+
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 0 
+-FileTypesForVersionExpiration @("Video", "Audio") -ApplyToNewDocumentLibraries
+```
+
+Example 23 sets manual version history limit override for video and audio file types at the site level by limiting the number of versions with no time limits. The new document libraries will use this version setting.
+
+### Example 24
+
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -RemoveVersionExpirationFileTypeOverride @("Video", "Audio") -ApplyToNewDocumentLibraries
+```
+
+Example 24 removes the version history limit override for video and audio file types at the site level. The new document libraries will use this version setting.
 
 ## PARAMETERS
 
@@ -442,6 +506,7 @@ Accept wildcard characters: False
 ### -AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled
 
 > Applicable: SharePoint Online
+
 Enables or disables web property bag updates. When `AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled` is set to `$true`, the web property bag can be updated even if the Add And Customize Pages right is denied on the site collection.
 
 PARAMVALUE: True | False
@@ -504,10 +569,22 @@ Apply the version history limits setting to new document libraries.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
-Parameter Sets: SetSiteFileVersionPolicy
+Parameter Sets: SetSiteFileVersionPolicy, RemoveSiteFileVersionPolicy
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: SetSiteFileTypeFileVersionPolicy
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -603,7 +680,10 @@ Accept wildcard characters: False
 ```
 
 ### -BlockGuestsAsSiteAdmin
-{{ Fill BlockGuestsAsSiteAdmin Description }}
+
+> Applicable: SharePoint Online
+
+Whether to block guests as site admins.
 
 ```yaml
 Type: Microsoft.SharePoint.Client.SharingState
@@ -651,7 +731,10 @@ Accept wildcard characters: False
 ```
 
 ### -ClearSharingLockDown
-{{ Fill ClearSharingLockDown Description }}
+
+> Applicable: SharePoint Online
+
+Whether to clear the sharing lockdown for the site.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -756,7 +839,10 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultLinkToExistingAccessReset
-{{ Fill DefaultLinkToExistingAccessReset Description }}
+
+> Applicable: SharePoint Online
+
+Whether to reset the default link to existing access to the site.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -978,6 +1064,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IsAuthoritative
+
+> Applicable: SharePoint Online
+
+When an admin with a Copilot license marks a site as authoritative, it signals to Microsoft Search, Microsoft 365 Copilot, and other AI agents that the content is official, trusted, and verified. This designation helps improve content discoverability and increases user confidence in AI-generated responses. 
+
+PARAMVALUE: True | False
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableAutoExpirationVersionTrim
 
 > Applicable: SharePoint Online
@@ -1002,7 +1108,7 @@ PARAMVALUE: False | True
 
 ```yaml
 Type: System.Boolean
-Parameter Sets: SetSiteFileVersionPolicy
+Parameter Sets: SetSiteFileVersionPolicy, SetSiteFileTypeFileVersionPolicy
 Aliases:
 
 Required: False
@@ -1097,7 +1203,7 @@ PARAMVALUE: Int32
 
 ```yaml
 Type: System.Int32
-Parameter Sets: SetSiteFileVersionPolicy
+Parameter Sets: SetSiteFileVersionPolicy, SetSiteFileTypeFileVersionPolicy
 Aliases:
 
 Required: False
@@ -1121,6 +1227,37 @@ Parameter Sets: ParamSet1
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FileTypesForVersionExpiration
+
+> Applicable: SharePoint Online
+
+An array of file type names. The supported file type names are:
+- Audio
+- OutlookPST
+- Video
+
+Apply the version history limits to a set of file types so that they no longer follow the default version history limits. It is used in combination with the following parameters: 
+- [EnableAutoExpirationVersionTrim](#-enableautoexpirationversiontrim)
+- [MajorVersionLimit](#-majorversionlimit)
+- [ExpireVersionsAfterDays](#-expireversionsafterdays)
+
+This must be used with [ApplyToNewDocumentLibraries](#-applytonewdocumentlibraries) switch set to true, because the version history limits are only applied on new document libraries in the site.
+
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
+
+```yaml
+Type: String[]
+Parameter Sets: SetSiteFileTypeFileVersionPolicy
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -1229,7 +1366,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Clear the file version setting at site level. The new document libraries will use the Tenant Level setting. It won't impact the existing document libraries.
+Clear the file version setting at the site level. The new document libraries will use the Tenant Level setting. It won't impact the existing document libraries.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -1268,7 +1405,10 @@ Accept wildcard characters: False
 ```
 
 ### -ListsShowHeaderAndNavigation
-{{ Fill ListsShowHeaderAndNavigation Description }}
+
+> Applicable: SharePoint Online
+
+Whether users see the full SharePoint chrome when they open a list.
 
 ```yaml
 Type: System.Boolean
@@ -1283,6 +1423,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocaleId
+
 Specifies the language of this site collection.
 For more information, see Locale IDs Assigned by Microsoft (https://go.microsoft.com/fwlink/p/?LinkId=242911) (https://go.microsoft.com/fwlink/p/?LinkId=242911).
 
@@ -1383,7 +1524,7 @@ PARAMVALUE: Int32
 
 ```yaml
 Type: System.Int32
-Parameter Sets: SetSiteFileVersionPolicy
+Parameter Sets: SetSiteFileVersionPolicy, SetSiteFileTypeFileVersionPolicy
 Aliases:
 
 Required: False
@@ -1460,6 +1601,7 @@ Accept wildcard characters: False
 Choose whether to override the Block User Info Visibility policy on this site.
 
 PARAMVALUE:
+
 - OrganizationDefault (default) - Respect the organization-level Block User Info Visibility policy.
 - ApplyToNoUsers – No users are prevented from accessing User Info when they have Limited Access permission only on the site.
 - ApplyToAllUsers – All users (internal or external) are prevented from accessing User Info if they have Limited Access permission only on the site.
@@ -1653,6 +1795,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RemoveVersionExpirationFileTypeOverride
+
+> Applicable: SharePoint Online
+
+An array of file type names. Removes the version history limits to a set of file types so that they will follow the default version history limits. 
+
+This must be used with [ApplyToNewDocumentLibraries](#-applytonewdocumentlibraries) switch set to true, because the version history limits are only applied on new document libraries in the site.
+
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
+
+```yaml
+Type: String[]
+Parameter Sets: RemoveSiteFileVersionPolicy
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RequestFilesLinkEnabled
 
 > Applicable: SharePoint Online
@@ -1694,6 +1859,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceQuota
+
 Specifies the resource quota in megabytes of the site collection.
 The default value is 0.
 For more information, see Resource Usage Limits on Sandboxed Solutions in SharePoint 2010 (https://msdn.microsoft.com/en-us/library/gg615462.aspx) (https://msdn.microsoft.com/en-us/library/gg615462.aspx).
@@ -2064,7 +2230,10 @@ Accept wildcard characters: False
 ```
 
 ### -UpdateUserTypeFromAzureAD
-{{ Fill UpdateUserTypeFromAzureAD Description }}
+
+> Applicable: SharePoint Online
+
+Whether to update user types for all users in the site to match what's in Entra.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter

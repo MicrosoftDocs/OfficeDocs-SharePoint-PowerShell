@@ -49,10 +49,18 @@ Set-SPOContainer [-Identity] <SPOContainerPipeBind>
  [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>] [-SharingAllowedDomainList <String>]
  [-SharingBlockedDomainList <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
-
+### PrincipalOwnerTransfer
+```
+Set-SPOContainer [-Identity] <SPOContainerPipeBind> -CurrentPrincipalOwner <String>
+ -NewPrincipalOwner <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+ ```
 ## DESCRIPTION
 
-For any parameters that are passed in, the `Set-SPOContainer` cmdlet sets or updates the setting for the active container identified by the parameter `Identity`. The cmdlet throws an error if the identity of an archived container is provided.
+For any parameters that are passed in, the `Set-SPOContainer` cmdlet sets or updates the setting for the active container identified by the parameter `Identity`. The cmdlet throws an error if the identity of an archived container is provided. The principal owner transfer operation is supported only for containers that are user-owned. Attempting to perform this operation on non user-owned containers will result in an error. 
+
+> [!IMPORTANT]
+> Always wait for the current principal owner transfer attempt to finish before reusing the cmdlet. Concurrent or premature reuse can lead to incomplete or invalid ownership changes.
+> 
 
 You must be a SharePoint Embedded Administrator to run the cmdlet.
 
@@ -93,6 +101,8 @@ This example removes any previously set sensitivity label on the container.
 
 ### -AllowEditing
 
+> Applicable: SharePoint Online
+
 Prevents users from editing Office files in the browser and copying and pasting Office file contents out of the browser window.
 
 ```yaml
@@ -108,6 +118,8 @@ Accept wildcard characters: False
 ```
 
 ### -AuthenticationContextName
+
+> Applicable: SharePoint Online
 
 The conditional access authentication context name.
 
@@ -125,7 +137,7 @@ Accept wildcard characters: False
 
 ### -BlockDownloadPolicy
 
-> Applicable: SharePoint Embedded
+> Applicable: SharePoint Online
 
 As a SharePoint Embedded Administrator, you can block the download of files from SharePoint Embedded containers. This feature does not need Microsoft Entra Conditional Access policies. This feature can be set for individual containers but not at the organization level.
 
@@ -145,7 +157,7 @@ Accept wildcard characters: False
 
 ### -ConditionalAccessPolicy
 
-> Applicable: SharePoint Embedded
+> Applicable: SharePoint Online
 
 Read the [Control access from unmanaged devices](/sharepoint/control-access-from-unmanaged-devices) documentation to understand Conditional Access Policy usage in SharePoint Embedded container.
 
@@ -168,6 +180,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeBlockDownloadPolicyContainerOwners
+
+> Applicable: SharePoint Online
+
 Controls if container owners are excluded from block download policy.
 
 ```yaml
@@ -182,7 +197,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CurrentPrincipalOwner
+
+> Applicable: SharePoint Online
+
+The current principal owner of the container.
+
+```yaml
+Type: String
+Parameter Sets: PrincipalOwnerTransfer
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Identity
+
+> Applicable: SharePoint Online
 
 Use this parameter to specify the container url.
 
@@ -199,6 +234,9 @@ Accept wildcard characters: False
 ```
 
 ### -LimitedAccessFileType
+
+> Applicable: SharePoint Online
+
 The following parameters can be used with -ConditionalAccessPolicy AllowLimitedAccess for both the organization-wide setting and the container-level setting.
 
 OfficeOnlineFilesOnly: Allows users to preview only Office files in the browser. This option increases security but may be a barrier to user productivity.
@@ -220,7 +258,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -NewPrincipalOwner
+
+> Applicable: SharePoint Online
+
+The new user to whom a user-owned container's lifecycle will be tied to.
+```yaml
+Type: String
+Parameter Sets: PrincipalOwnerTransfer
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ReadOnlyForBlockDownloadPolicy
+
+> Applicable: SharePoint Online
+
 Controls if read-only should be enabled for block download policy.
 
 ```yaml
@@ -236,6 +294,9 @@ Accept wildcard characters: False
 ```
 
 ### -ReadOnlyForUnmanagedDevices
+
+> Applicable: SharePoint Online
+
 Controls whether unmanaged devices have read-only access.
 
 ```yaml
@@ -251,6 +312,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveLabel
+
+> Applicable: SharePoint Online
+
 This parameter allows you to remove the assigned sensitivity label on a container.
 
 ```yaml
@@ -266,7 +330,7 @@ Accept wildcard characters: False
 
 ### -SensitivityLabel
 
-> Applicable: SharePoint Embedded
+> Applicable: SharePoint Online
 
 Specifies the unique identifier (GUID) of the SensitivityLabel.
 
@@ -283,6 +347,9 @@ Accept wildcard characters: False
 ```
 
 ### -SharingAllowedDomainList
+
+> Applicable: SharePoint Online
+
 Specifies a list of email domains that are allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
 ```yaml
@@ -298,6 +365,9 @@ Accept wildcard characters: False
 ```
 
 ### -SharingBlockedDomainList
+
+> Applicable: SharePoint Online
+
 Specifies a list of email domains that are blocked or prohibited for sharing with the external collaborators. Use space character as the delimiter for entering multiple values. For example, "contoso.com fabrikam.com".
 
 ```yaml
@@ -313,6 +383,9 @@ Accept wildcard characters: False
 ```
 
 ### -SharingDomainRestrictionMode
+
+> Applicable: SharePoint Online
+
 Specifies the sharing mode for external domains.
 
 Possible values are:
@@ -335,6 +408,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Online
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -350,6 +426,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
+> Applicable: SharePoint Online
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -366,6 +445,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
+> Applicable: SharePoint Online
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

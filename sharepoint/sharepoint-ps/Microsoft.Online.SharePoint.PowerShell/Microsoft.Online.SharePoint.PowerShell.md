@@ -18,14 +18,14 @@ The following cmdlet references are for SharePoint Online.
 ### [Add-SPOContainerTypeBilling](Add-SPOContainerTypeBilling.md)
 Adds the mentioned billing profile details to a standard container type.
 
-### [Add-SPOContainerUser](Add-SPOContainerUser.md)
-{{ Fill in the Synopsis }}
-
 ### [Add-SPOContentSecurityPolicy](Add-SPOContentSecurityPolicy.md)
 Adds a source to the **Content Security Policy** configuration.
 
+### [Add-SPOFileRequestBrandingProfile](Add-SPOFileRequestBrandingProfile.md)
+Adds a branding profile for the file request feature by specifying logo and background assets from an existing organization asset library.
+
 ### [Add-SPOFontPackage](Add-SPOFontPackage.md)
-{{ Fill in the Synopsis }}
+Creates a new custom font package with fonts in the brand fonts library.
 
 ### [Add-SPOGeoAdministrator](Add-SPOGeoAdministrator.md)
 Adds a new SharePoint user or security group as GeoAdministrator to a multi-geo tenant.
@@ -54,9 +54,6 @@ Creates a new site design available to users when they create a new site from th
 ### [Add-SPOSiteDesignTask](Add-SPOSiteDesignTask.md)
 Similar to Invoke-SPOSiteDesign, this command is used to apply a published site design to a specified site collection target. It schedules the operation, allowing for the application of larger site scripts (Invoke-SPOSiteDesign is limited to 30 actions and subactions).  The supported site templates you can apply a site design to include: "modern" team site (with O365 group), "modern" team site (without an O365 group); communication site; classic team site; and classic publishing site.
 
-### [Add-SPOSiteOneDriveClassicFeatures](Add-SPOSiteOneDriveClassicFeatures.md)
-{{ Fill in the Synopsis }}
-
 ### [Add-SPOSiteScript](Add-SPOSiteScript.md)
 Uploads a new site script for use either directly or in a site design.
 
@@ -66,26 +63,11 @@ Uploads a new site script package for use either directly or in a site design.
 ### [Add-SPOTenantCdnOrigin](Add-SPOTenantCdnOrigin.md)
 Configures a new origin to public or private content delivery network (CDN). Requires Tenant administrator permissions.
 
-### [Add-SPOTenantIdentityMap](Add-SPOTenantIdentityMap.md)
-{{ Fill in the Synopsis }}
-
-### [Add-SPOTenantIdentityMappingGroup](Add-SPOTenantIdentityMappingGroup.md)
-{{ Fill in the Synopsis }}
-
-### [Add-SPOTenantIdentityMappingUser](Add-SPOTenantIdentityMappingUser.md)
-{{ Fill in the Synopsis }}
-
-### [Add-SPOTenantRestrictedSearchAllowedList](Add-SPOTenantRestrictedSearchAllowedList.md)
-{{ Fill in the Synopsis }}
-
 ### [Add-SPOTheme](Add-SPOTheme.md)
 Creates a new custom theme, or overwrites an existing theme to modify its settings.
 
 ### [Add-SPOUser](Add-SPOUser.md)
 Adds an existing Office 365 user or an Office 365 security group to a SharePoint group.
-
-### [Apply-SPOFontPackage](Apply-SPOFontPackage.md)
-{{ Fill in the Synopsis }}
 
 ### [Approve-SPOTenantServicePrincipalPermissionGrant](Approve-SPOTenantServicePrincipalPermissionGrant.md)
 Approves a permission request for the current tenant's "SharePoint Online Client" service principal.
@@ -111,9 +93,6 @@ This cmdlet command allows you to relocate existing SharePoint pages by utilizin
 ### [Deny-SPOTenantServicePrincipalPermissionRequest](Deny-SPOTenantServicePrincipalPermissionRequest.md)
 Denies a permission request for the current tenant's "SharePoint Online Client" service principal
 
-### [Disable-SPOTenantServicePrincipal](Disable-SPOTenantServicePrincipal.md)
-Disables the current tenant's "SharePoint Online Client" service principal.
-
 ### [Disconnect-SPOService](Disconnect-SPOService.md)
 Disconnects from a SharePoint Online service.
 
@@ -129,14 +108,14 @@ This cmdlet downloads the Data Access Governance (DAG) reports to the specified 
 ### [Export-SPOQueryLogs](Export-SPOQueryLogs.md)
 Export query logs for a user in an Office 365 tenant.  > [!NOTE] > Beginning February 2022, we'll be removing the Export-SPOQueryLogs command from SharePoint in Microsoft 365. We encourage users to instead download their Microsoft Search query history logs from the [My Account privacy portal](https://myaccount.microsoft.com/settingsandprivacy/privacy).
 
-### [Export-SPOSites](Export-SPOSites.md)
-{{ Fill in the Synopsis }}
-
 ### [Export-SPOUserInfo](Export-SPOUserInfo.md)
 Export user information from site user information list.
 
 ### [Export-SPOUserProfile](Export-SPOUserProfile.md)
 Export user profile data to csv file.
+
+### [Find-SPOCrossTenantLongFilePathsForSiteRename](Find-SPOCrossTenantLongFilePathsForSiteRename.md)
+Identify sites with file paths over 400 characters for cross-tenant user migration.
 
 ### [Get-FileSensitivityLabelInfo](Get-FileSensitivityLabelInfo.md)
 Extracts and displays the sensitivity label related information attached to an office file stored in SharePoint.
@@ -155,9 +134,6 @@ Returns a list of SharePoint Embedded applications in the specified tenant.
 
 ### [Get-SPOAuditDataCollectionStatusForActivityInsights](Get-SPOAuditDataCollectionStatusForActivityInsights.md)
 Lists the current status of audit data collection for reports on activities from the last 28 days in the SharePoint admin center.
-
-### [Get-SPOBlockedPageCreationContentTypeList](Get-SPOBlockedPageCreationContentTypeList.md)
-{{ Fill in the Synopsis }}
 
 ### [Get-SPOBrowserIdleSignOut](Get-SPOBrowserIdleSignOut.md)
 Used to retrieve the current configuration values for Idle session sign-out policy.
@@ -189,12 +165,6 @@ Returns all sources in the current **Content Security Policy** configuration.
 ### [Get-SPOCopilotAgentInsightsReport](Get-SPOCopilotAgentInsightsReport.md)
 This cmdlet enables the administrator to check status of all active and available reports when no report ID is present and to view or download a report if report ID is present.  > [!NOTE] > The feature associated with this cmdlet will be rolling out soon.
 
-### [Get-SPOCopilotPromoOptInStatus](Get-SPOCopilotPromoOptInStatus.md)
-Returns the Opt-In Copilot promo status for the tenant.
-
-### [Get-SPOCopilotPromoUsage](Get-SPOCopilotPromoUsage.md)
-Returns the count of SharePoint Agent promotion queries used by the tenant.
-
 ### [Get-SPOCrossGeoMovedUsers](Get-SPOCrossGeoMovedUsers.md)
 In a multi-geo tenant returns the SharePoint Online user (or users) that had been moved.
 
@@ -207,26 +177,8 @@ Returns the SharePoint Online users in a multi-geo tenant that match the criteri
 ### [Get-SPOCrossTenantCompatibilityStatus](Get-SPOCrossTenantCompatibilityStatus.md)
 Determines the compatibility with the partner tenant.
 
-### [Get-SPOCrossTenantGroupContentMoveState](Get-SPOCrossTenantGroupContentMoveState.md)
-{{ Fill in the Synopsis }}
-
 ### [Get-SPOCrossTenantHostUrl](Get-SPOCrossTenantHostUrl.md)
 Returns the cross-tenant host URL.
-
-### [Get-SPOCrossTenantRelationship](Get-SPOCrossTenantRelationship.md)
-{{ Fill in the Synopsis }}
-
-### [Get-SPOCrossTenantRelationshipByPartner](Get-SPOCrossTenantRelationshipByPartner.md)
-{{ Fill in the Synopsis }}
-
-### [Get-SPOCrossTenantRelationshipByScenario](Get-SPOCrossTenantRelationshipByScenario.md)
-{{ Fill in the Synopsis }}
-
-### [Get-SPOCrossTenantSiteContentMoveState](Get-SPOCrossTenantSiteContentMoveState.md)
-{{ Fill in the Synopsis }}
-
-### [Get-SPOCrossTenantUserContentMoveState](Get-SPOCrossTenantUserContentMoveState.md)
-{{ Fill in the Synopsis }}
 
 ### [Get-SPODataAccessGovernanceInsight](Get-SPODataAccessGovernanceInsight.md)
 Lists various 'Data Access Governance' (DAG) reports in SharePoint admin center.
@@ -240,17 +192,17 @@ Returns all deleted Containers in the Recycle Bin.
 ### [Get-SPODeletedSite](Get-SPODeletedSite.md)
 Returns all deleted site collections from the Recycle Bin.
 
-### [Get-SPODisableSpacesActivation](Get-SPODisableSpacesActivation.md)
-{{ Fill in the Synopsis }}
-
 ### [Get-SPOEnterpriseAppInsightsReport](Get-SPOEnterpriseAppInsightsReport.md)
 This cmdlet enables the administrator to check status of all active and available reports when no report ID is present and to view or download a report if report ID is present.
 
 ### [Get-SPOExternalUser](Get-SPOExternalUser.md)
 Returns external users in the tenant.
 
+### [Get-SPOFileRequestBrandingProfiles](Get-SPOFileRequestBrandingProfiles.md)
+Retrieves branding profiles configured for the file request feature, including details about logo and background assets.
+
 ### [Get-SPOFontPackage](Get-SPOFontPackage.md)
-{{ Fill in the Synopsis }}
+Returns one or all custom font packages in the tenant.
 
 ### [Get-SPOGeoAdministrator](Get-SPOGeoAdministrator.md)
 This cmdlet returns the SharePoint Online user or security group accounts with Global Admin privileges in the current multi-geo tenant.
@@ -272,18 +224,6 @@ Lists hub sites or hub site information.
 
 ### [Get-SPOInformationBarriersInsightsReport](Get-SPOInformationBarriersInsightsReport.md)
 Enables the SharePoint Administrator to check status of all active and completed reports of insights on Information Barriers (IB).
-
-### [Get-SPOInformationBarriersPolicyComplianceReport](Get-SPOInformationBarriersPolicyComplianceReport.md)
-{{ Fill in the Synopsis }}
-
-### [Get-SPOIsCommSite](Get-SPOIsCommSite.md)
-{{ Fill in the Synopsis }}
-
-### [Get-SPOKnowledgeHubSite](Get-SPOKnowledgeHubSite.md)
-{{ Fill in the Synopsis }}
-
-### [Get-SPOLandingSites](Get-SPOLandingSites.md)
-{{ Fill in the Synopsis }}
 
 ### [Get-SPOListDesign](Get-SPOListDesign.md)
 Gets details about list designs that are on the SharePoint tenant. You can specify an ID of a specific list design to retrieve. If there are no parameters listed, details about all list designs are listed.
@@ -324,17 +264,11 @@ Lists URLs of all the configured organizational news sites. Requires Tenant admi
 ### [Get-SPOPersonalSitePageCopyProgress](Get-SPOPersonalSitePageCopyProgress.md)
 This cmdlet enables you to track the progress of a SharePoint page's copy operation.
 
-### [Get-SPOPortalLaunchWaves](Get-SPOPortalLaunchWaves.md)
-{{ Fill in the Synopsis }}
-
 ### [Get-SPOPublicCdnOrigins](Get-SPOPublicCdnOrigins.md)
 This cmdlet returns a list of CDN Origins in your SharePoint Online Tenant
 
 ### [Get-SPORestrictedAccessForSitesInsights](Get-SPORestrictedAccessForSitesInsights.md)
 This cmdlet enables the administrator to check status of all active and available reports about insights on sites protected and access denials by restricted access control.
-
-### [Get-SPORestrictedContentDiscoverabilityReport](Get-SPORestrictedContentDiscoverabilityReport.md)
-{{ Fill in the Synopsis }}
 
 ### [Get-SPORestrictedSiteCreation](Get-SPORestrictedSiteCreation.md)
 This cmdlet allows SharePoint administrators to check the current configuration of the restricted site creation feature.
@@ -381,6 +315,9 @@ Gets the status for a file version expiration report generation job for a site c
 ### [Get-SPOSiteGroup](Get-SPOSiteGroup.md)
 Gets all the groups on the specified site collection.
 
+### [Get-SPOSiteManageVersionPolicyJobProgress](Get-SPOSiteManageVersionPolicyJobProgress.md)
+Gets the status and progress for site manage version policy jobs.
+
 ### [Get-SPOSitePages](Get-SPOSitePages.md)
 This cmdlet allows you to retrieve all SharePoint pages under a specific SharePoint site.
 
@@ -399,12 +336,6 @@ Creates site script syntax from an existing SharePoint list.
 ### [Get-SPOSiteScriptFromWeb](Get-SPOSiteScriptFromWeb.md)
 Creates site script syntax from an existing SharePoint site.
 
-### [Get-SPOSiteScriptPackageFile](Get-SPOSiteScriptPackageFile.md)
-{{ Fill in the Synopsis }}
-
-### [Get-SPOSiteScriptPackageFromWeb](Get-SPOSiteScriptPackageFromWeb.md)
-{{ Fill in the Synopsis }}
-
 ### [Get-SPOSiteUserInvitations](Get-SPOSiteUserInvitations.md)
 Searches against all stored sharing links and retrieves the email invites.
 
@@ -419,9 +350,6 @@ Get the structural navigation caching state for a site collection.
 
 ### [Get-SPOStructuralNavigationCacheWebState](Get-SPOStructuralNavigationCacheWebState.md)
 Get the structural navigation caching state for a web.
-
-### [Get-SPOTemporarilyDisableAppBar](Get-SPOTemporarilyDisableAppBar.md)
-{{ Fill in the Synopsis }}
 
 ### [Get-SPOTenant](Get-SPOTenant.md)
 Returns SharePoint Online organization properties.
@@ -438,12 +366,6 @@ Get the public or private Policies applied on your SharePoint Online Tenant. Req
 ### [Get-SPOTenantContentTypeReplicationParameters](Get-SPOTenantContentTypeReplicationParameters.md)
 Gets content types for replication parameters
 
-### [Get-SPOTenantIdentityMappingGroup](Get-SPOTenantIdentityMappingGroup.md)
-{{ Fill in the Synopsis }}
-
-### [Get-SPOTenantIdentityMappingUser](Get-SPOTenantIdentityMappingUser.md)
-{{ Fill in the Synopsis }}
-
 ### [Get-SPOTenantLogEntry](Get-SPOTenantLogEntry.md)
 Retrieves SharePoint Online company logs. This cmdlet is reserved for internal Microsoft use.
 
@@ -459,12 +381,6 @@ Returns the list of sites that are prioritized for early execution, as part of [
 ### [Get-SPOTenantRenameStatus](Get-SPOTenantRenameStatus.md)
 > [!IMPORTANT] > This feature is currently available to organizations that have no more than 10,000 total SharePoint sites and OneDrive accounts combined.  Get the status of the job to change the SharePoint domain name for your organization in Microsoft 365.
 
-### [Get-SPOTenantRestrictedSearchAllowedList](Get-SPOTenantRestrictedSearchAllowedList.md)
-{{ Fill in the Synopsis }}
-
-### [Get-SPOTenantRestrictedSearchMode](Get-SPOTenantRestrictedSearchMode.md)
-{{ Fill in the Synopsis }}
-
 ### [Get-SPOTenantServicePrincipalPermissionGrants](Get-SPOTenantServicePrincipalPermissionGrants.md)
 Gets the collection of permission grants for the "SharePoint Online Client" service principal
 
@@ -478,7 +394,7 @@ Returns the current configuration status.
 Get the replication parameters to manage Multi-Geo taxonomy replication.
 
 ### [Get-SPOTheme](Get-SPOTheme.md)
-{{Placeholder}}
+Returns one or all theme settings from the tenant.
 
 ### [Get-SPOUnifiedGroup](Get-SPOUnifiedGroup.md)
 Retrieves the Preferred Data Location for the specified Office 365 Group.
@@ -504,9 +420,6 @@ Grants rights to users or mail-enabled security groups to associate their site w
 ### [Grant-SPOSiteDesignRights](Grant-SPOSiteDesignRights.md)
 Used to apply permissions to a set of users or a security group, effectively scoping the visibility of the site design in the UX. They start off public, but after you set permissions, only those groups or users with permissions can access the site design.
 
-### [Invoke-SPOListDesign](Invoke-SPOListDesign.md)
-{{ Fill in the Synopsis }}
-
 ### [Invoke-SPOMigrationEncryptUploadSubmit](Invoke-SPOMigrationEncryptUploadSubmit.md)
 **Note**: This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](/sharepointmigration/overview-spmt-ps-cmdlets).  Creates a new migration job in the target site collection.
 
@@ -515,9 +428,6 @@ Applies a published site design to a specified site collection target. This allo
 
 ### [Invoke-SPOSiteSwap](Invoke-SPOSiteSwap.md)
 Invokes a job to swap the location of a site with another site while archiving the original site.
-
-### [Invoke-SPOSiteUpgrade](Invoke-SPOSiteUpgrade.md)
-{{ Fill in the Synopsis }}
 
 ### [New-SPOAppBillingPolicy](New-SPOAppBillingPolicy.md)
 Creates a new billing policy for an application owned by the tenant.
@@ -536,9 +446,6 @@ Starts generating file version expiration report for a document library.
 
 ### [New-SPOMigrationPackage](New-SPOMigrationPackage.md)
 Cmdlet to create a new migration package based on source files in a local or network shared folder.  > [!NOTE] > This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see > [Migrate to SharePoint using PowerShell](/sharepointmigration/overview-spmt-ps-cmdlets).
-
-### [New-SPOPortalLaunchWaves](New-SPOPortalLaunchWaves.md)
-{{ Fill in the Synopsis }}
 
 ### [New-SPOPublicCdnOrigin](New-SPOPublicCdnOrigin.md)
 Creates a new public CDN on a document library in your SharePoint Online Tenant
@@ -561,6 +468,9 @@ Generates a version storage usage report for a site collection. This report can 
 ### [New-SPOSiteGroup](New-SPOSiteGroup.md)
 Creates a new group in a SharePoint Online site collection.
 
+### [New-SPOSiteManageVersionPolicyJob](New-SPOSiteManageVersionPolicyJob.md)
+Starts a background job to manage file versions and version history limits for all document libraries in the given site.
+
 ### [New-SPOSiteSharingReportJob](New-SPOSiteSharingReportJob.md)
 Creates a new sharing report job.
 
@@ -573,26 +483,17 @@ Enables the hub site feature on a site to make it a hub site. For more informati
 ### [Remove-SPOAppBillingPolicy](Remove-SPOAppBillingPolicy.md)
 Removes billing policy asscoiated with the application.
 
-### [Remove-SPOBlockedPageCreationContentType](Remove-SPOBlockedPageCreationContentType.md)
-{{ Fill in the Synopsis }}
-
 ### [Remove-SPOContainer](Remove-SPOContainer.md)
 Sends a Container to the Recycle Bin.
 
 ### [Remove-SPOContainerType](Remove-SPOContainerType.md)
 This cmdlet removes the container type specified from the tenant.
 
-### [Remove-SPOContainerUser](Remove-SPOContainerUser.md)
-{{ Fill in the Synopsis }}
-
 ### [Remove-SPOContentEventEmailAddresses](Remove-SPOContentEventEmailAddresses.md)
 Removes the email addresses associated with the specified category of content event if they exist. Consequently, notification emails will no longer be sent to these addresses.
 
 ### [Remove-SPOContentSecurityPolicy](Remove-SPOContentSecurityPolicy.md)
 Removes a source from the **Content Security Policy** configuration.
-
-### [Remove-SPOCrossTenantRelationship](Remove-SPOCrossTenantRelationship.md)
-{{ Fill in the Synopsis }}
 
 ### [Remove-SPODataAccessGovernanceInsight](Remove-SPODataAccessGovernanceInsight.md)
 This cmdlet deletes the given Data Access Governance (DAG) report.
@@ -606,8 +507,11 @@ Removes a SharePoint Online deleted site collection from the Recycle Bin.
 ### [Remove-SPOExternalUser](Remove-SPOExternalUser.md)
 Removes a collection of external users from the tenancy's folder.
 
+### [Remove-SPOFileRequestBrandingProfile](Remove-SPOFileRequestBrandingProfile.md)
+Removes a branding profile (either primary or secondary) configured for the file request feature across the tenant.
+
 ### [Remove-SPOFontPackage](Remove-SPOFontPackage.md)
-{{ Fill in the Synopsis }}
+Removes a brand font package from the tenant.
 
 ### [Remove-SPOGeoAdministrator](Remove-SPOGeoAdministrator.md)
 Removes a new SharePoint user or security Group in the current Multi-Geo Tenant.
@@ -620,12 +524,6 @@ Removes a site from its associated hub site.
 
 ### [Remove-SPOHubToHubAssociation](Remove-SPOHubToHubAssociation.md)
 Removes the selected hub site from its parent hub.
-
-### [Remove-SPOInformationBarriersPolicyComplianceReport](Remove-SPOInformationBarriersPolicyComplianceReport.md)
-{{ Fill in the Synopsis }}
-
-### [Remove-SPOKnowledgeHubSite](Remove-SPOKnowledgeHubSite.md)
-{{ Fill in the Synopsis }}
 
 ### [Remove-SPOListDesign](Remove-SPOListDesign.md)
 Removes a list design. It no longer appears in the UI for creating a new list.
@@ -644,9 +542,6 @@ Removes a library that was designated as a central location for organization ass
 
 ### [Remove-SPOOrgNewsSite](Remove-SPOOrgNewsSite.md)
 Removes a given site from the list of organizational news sites based on its URL in your SharePoint Online Tenant
-
-### [Remove-SPOPortalLaunchWaves](Remove-SPOPortalLaunchWaves.md)
-{{ Fill in the Synopsis }}
 
 ### [Remove-SPOPublicCdnOrigin](Remove-SPOPublicCdnOrigin.md)
 Removes a given public CDN origin based on its identity (id) in your SharePoint Online Tenant
@@ -678,11 +573,11 @@ Stops further processing of site level trim job that is in-progress.
 ### [Remove-SPOSiteGroup](Remove-SPOSiteGroup.md)
 Removes a SharePoint Online group from a site collection.
 
+### [Remove-SPOSiteManageVersionPolicyJob](Remove-SPOSiteManageVersionPolicyJob.md)
+Stops processing of the in-progress manage version policy job for the given site.
+
 ### [Remove-SPOSiteScript](Remove-SPOSiteScript.md)
 Removes a site script.
-
-### [Remove-SPOSiteSharingReportJob](Remove-SPOSiteSharingReportJob.md)
-{{ Fill in the Synopsis }}
 
 ### [Remove-SPOSiteUserInvitations](Remove-SPOSiteUserInvitations.md)
 .
@@ -696,17 +591,8 @@ Tenant properties allow tenant administrators to add properties in the app catal
 ### [Remove-SPOTenantCdnOrigin](Remove-SPOTenantCdnOrigin.md)
 Removes a new origin from the Public or Private content delivery network (CDN). Requires Tenant administrator permissions.
 
-### [Remove-SPOTenantIdentityMappingGroup](Remove-SPOTenantIdentityMappingGroup.md)
-{{ Fill in the Synopsis }}
-
-### [Remove-SPOTenantIdentityMappingUser](Remove-SPOTenantIdentityMappingUser.md)
-{{ Fill in the Synopsis }}
-
 ### [Remove-SPOTenantRenameSitePrioritization](Remove-SPOTenantRenameSitePrioritization.md)
 Allows removal of the prioritization previously assigned to a site for early execution, as part of [Advanced Tenant Rename](/sharepoint/change-your-sharepoint-domain-name#advanced-tenant-rename-preview).
-
-### [Remove-SPOTenantRestrictedSearchAllowedList](Remove-SPOTenantRestrictedSearchAllowedList.md)
-{{ Fill in the Synopsis }}
 
 ### [Remove-SPOTenantSyncClientRestriction](Remove-SPOTenantSyncClientRestriction.md)
 Disables the feature for the tenancy.
@@ -759,9 +645,6 @@ Sets or updates one or more configuration of a SharePoint Embedded application.
 ### [Set-SPOApplicationPermission](Set-SPOApplicationPermission.md)
 Manages permissions for a guest application to access a SharePoint Embedded application.
 
-### [Set-SPOBlockedPageCreationContentType](Set-SPOBlockedPageCreationContentType.md)
-{{ Fill in the Synopsis }}
-
 ### [Set-SPOBrowserIdleSignOut](Set-SPOBrowserIdleSignOut.md)
 Sets the current configuration values for Idle session sign-out.
 
@@ -783,26 +666,20 @@ Sets or updates one or more property values of a trial, standard or a direct to 
 ### [Set-SPOContainerTypeConfiguration](Set-SPOContainerTypeConfiguration.md)
 Sets or updates the configuration settings of a container type in SharePoint Embedded.
 
-### [Set-SPOContainerUser](Set-SPOContainerUser.md)
-{{ Fill in the Synopsis }}
-
 ### [Set-SPOContentEventEmailAddresses](Set-SPOContentEventEmailAddresses.md)
 Adds the email addresses to the specified category of content event. Consequently, notification emails will be sent to these addresses.
 
 ### [Set-SPOCopilotPromoOptInStatus](Set-SPOCopilotPromoOptInStatus.md)
 Sets the Opt-In Copilot promo status for the tenant.
 
-### [Set-SPOCrossTenantQuota](Set-SPOCrossTenantQuota.md)
-{{ Fill in the Synopsis }}
-
 ### [Set-SPOCrossTenantRelationship](Set-SPOCrossTenantRelationship.md)
 This cmdlet sends a trust request to the tenant with whom you want to establish trust.
 
-### [Set-SPOCustomFontCatalog](Set-SPOCustomFontCatalog.md)
-{{ Fill in the Synopsis }}
-
 ### [Set-SPODisableSpacesActivation](Set-SPODisableSpacesActivation.md)
 Disables the SharePoint Spaces activation.
+
+### [Set-SPOFontPackage](Set-SPOFontPackage.md)
+Applies a brand font package to a SharePoint site or Viva Connections.
 
 ### [Set-SPOGeoStorageQuota](Set-SPOGeoStorageQuota.md)
 This cmdlet sets the storage quota on a multi-geo tenant.
@@ -815,9 +692,6 @@ Sets a SharePoint Site as a Home Site.
 
 ### [Set-SPOHubSite](Set-SPOHubSite.md)
 Sets the hub site information such as name, logo, and description.
-
-### [Set-SPOKnowledgeHubSite](Set-SPOKnowledgeHubSite.md)
-{{ Fill in the Synopsis }}
 
 ### [Set-SPOListVersionPolicy](Set-SPOListVersionPolicy.md)
 Sets the version policy setting on the document library.
@@ -836,9 +710,6 @@ Updates information for a library that is designated as a location for organizat
 
 ### [Set-SPOOrgNewsSite](Set-SPOOrgNewsSite.md)
 Marks a site as one of multiple possible tenant's organizational news sites. Requires at least SharePoint administrator permissions.
-
-### [Set-SPOPortalLaunchWaves](Set-SPOPortalLaunchWaves.md)
-{{ Fill in the Synopsis }}
 
 ### [Set-SPORestrictedSiteCreation](Set-SPORestrictedSiteCreation.md)
 Sets or updates one or more group configurations for restricting site creation.
@@ -876,9 +747,6 @@ Enable or disable caching for all webs in a site collection.
 ### [Set-SPOStructuralNavigationCacheWebState](Set-SPOStructuralNavigationCacheWebState.md)
 Enable or disable caching for a web in a site collection.
 
-### [Set-SPOTemporarilyDisableAppBar](Set-SPOTemporarilyDisableAppBar.md)
-{{ Fill in the Synopsis }}
-
 ### [Set-SPOTenant](Set-SPOTenant.md)
 Sets properties on the SharePoint Online organization.
 
@@ -896,9 +764,6 @@ Sets the configuration of pre-authentication.
 
 ### [Set-SPOTenantRenameSitePrioritization](Set-SPOTenantRenameSitePrioritization.md)
 Allows prioritization of a site for early execution, as part of [Advanced Tenant Rename](/sharepoint/change-your-sharepoint-domain-name#advanced-tenant-rename-preview).
-
-### [Set-SPOTenantRestrictedSearchMode](Set-SPOTenantRestrictedSearchMode.md)
-{{ Fill in the Synopsis }}
 
 ### [Set-SPOTenantSyncClientRestriction](Set-SPOTenantSyncClientRestriction.md)
 Controls tenant-wide options and restrictions specific to syncing files.
@@ -921,15 +786,6 @@ This cmdlet starts collecting audit data for reports on activities from the last
 ### [Start-SPOCopilotAgentInsightsReport](Start-SPOCopilotAgentInsightsReport.md)
 Using this cmdlet, administrators may trigger the build of a new Copilot agent insight report for the specified number of days.  > [!NOTE] > The feature associated with this cmdlet will be rolling out soon.
 
-### [Start-SPOCrossTenantGroupContentMove](Start-SPOCrossTenantGroupContentMove.md)
-{{ Fill in the Synopsis }}
-
-### [Start-SPOCrossTenantSiteContentMove](Start-SPOCrossTenantSiteContentMove.md)
-{{ Fill in the Synopsis }}
-
-### [Start-SPOCrossTenantUserContentMove](Start-SPOCrossTenantUserContentMove.md)
-{{ Fill in the Synopsis }}
-
 ### [Start-SPODataAccessGovernanceInsight](Start-SPODataAccessGovernanceInsight.md)
 This cmdlet generates Data Access Governance (DAG) reports meant to provide insights into potential oversharing of sensitive data in SharePoint and/or OneDrive for Business. SharePoint Advanced Management (SAM) license is required to run these reports.
 
@@ -939,14 +795,8 @@ This cmdlet enables administrator to trigger the build of a new enterprise appli
 ### [Start-SPOInformationBarriersInsightsReport](Start-SPOInformationBarriersInsightsReport.md)
 Generates a new report to identify and discover the usage patterns of Information Barriers (IB) across SharePoint sites and OneDrive accounts in the organization.
 
-### [Start-SPOInformationBarriersPolicyComplianceReport](Start-SPOInformationBarriersPolicyComplianceReport.md)
-{{ Fill in the Synopsis }}
-
 ### [Start-SPORestrictedAccessForSitesInsights](Start-SPORestrictedAccessForSitesInsights.md)
 This cmdlet enables administrator to trigger the build of a new restricted access control insights report for the data from last 28 days.
-
-### [Start-SPORestrictedContentDiscoverabilityReport](Start-SPORestrictedContentDiscoverabilityReport.md)
-{{ Fill in the Synopsis }}
 
 ### [Start-SPOSiteContentMove](Start-SPOSiteContentMove.md)
 Start a job to move a particular user or group of users to be moved across geo locations relative to the one that executes the command
@@ -972,15 +822,6 @@ Starts the ability to move a user closer to their sites.
 ### [Stop-SPOAuditDataCollectionForActivityInsights](Stop-SPOAuditDataCollectionForActivityInsights.md)
 This cmdlet stops collecting audit data for reports on activities from the last 28 days, such as sharing link reports and content shared with everyone except external users, from the SharePoint admin center.
 
-### [Stop-SPOCrossTenantGroupContentMove](Stop-SPOCrossTenantGroupContentMove.md)
-{{ Fill in the Synopsis }}
-
-### [Stop-SPOCrossTenantSiteContentMove](Stop-SPOCrossTenantSiteContentMove.md)
-{{ Fill in the Synopsis }}
-
-### [Stop-SPOCrossTenantUserContentMove](Stop-SPOCrossTenantUserContentMove.md)
-{{ Fill in the Synopsis }}
-
 ### [Stop-SPOSiteContentMove](Stop-SPOSiteContentMove.md)
 Stops a job to move a particular user or group of users to be moved across geo locations relative to the one that executes the command.
 
@@ -992,6 +833,9 @@ In a Multi-Geo company, stops the ability to move a user's content related objec
 
 ### [Submit-SPOMigrationJob](Submit-SPOMigrationJob.md)
 **Note**: This cmdlet has been deprecated. To migrate to SharePoint and Microsoft 365 using PowerShell, see [Migrate to SharePoint using PowerShell](/sharepointmigration/overview-spmt-ps-cmdlets).  Cmdlet to submit a new migration job referenced to a previously uploaded package in Azure Blob storage into to a site collection.
+
+### [Switch-SPOFileRequestBrandingProfiles](Switch-SPOFileRequestBrandingProfiles.md)
+Switches the primary and secondary file request branding profiles configured for the tenant.
 
 ### [Test-SPOSite](Test-SPOSite.md)
 Tests a SharePoint Online site collection.
@@ -1007,7 +851,3 @@ Updates customer encryption status for a geo tenant.
 
 ### [Update-UserType](Update-UserType.md)
 Updates the specified user's UserType value from Microsoft Entra ID.
-
-### [Verify-SPOCrossTenantRelationship](Verify-SPOCrossTenantRelationship.md)
-{{ Fill in the Synopsis }}
-

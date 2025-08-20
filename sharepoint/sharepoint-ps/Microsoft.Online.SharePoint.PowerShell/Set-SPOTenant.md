@@ -19,6 +19,7 @@ Sets properties on the SharePoint Online organization.
 ## SYNTAX
 
 ### None (Default)
+
 ```
 Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-ExternalServicesEnabled <Boolean>] [-NoAccessRedirectUrl <String>] [-ArchiveRedirectUrl <String>]
@@ -104,7 +105,9 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-IsEnableAppAuthPopUpEnabled <Boolean>] [-IsDataAccessInCardDesignerEnabled <Boolean>]
  [-MassDeleteNotificationDisabled <Boolean>] [-EnableAutoExpirationVersionTrim <Boolean>]
  [-EnableMediaReactions <Boolean>] [-BusinessConnectivityServiceDisabled <Boolean>]
- [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] [-AllowSensitivityLabelOnRecords <Boolean>]
+ [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] [-FileTypesForVersionExpiration <String[]>]
+ [-RemoveVersionExpirationFileTypeOverride <String[]>]
+ [-AllowSensitivityLabelOnRecords <Boolean>]
  [-DelayDenyAddAndCustomizePagesEnforcement <Boolean>]
  [-DelayDenyAddAndCustomizePagesEnforcementOnClassicPublishingSites <Boolean>]
  [-AllowClassicPublishingSiteCreation <Boolean>] [-WhoCanShareAnonymousAllowList <Guid[]>]
@@ -127,10 +130,13 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
+ [-RestrictResourceAccountAccess <Boolean>] [-EnableSensitivityLabelForOneNote <Boolean>]
+ [-EnableSensitivityLabelForVideoFiles <Boolean>] [-SiteOwnersCanAccessMissingContent <Boolean>]
  [<CommonParameters>]
 ```
 
 ### ParameterSetContentTypeSyncSiteTemplatesList
+
 ```
 Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-ExternalServicesEnabled <Boolean>] [-NoAccessRedirectUrl <String>] [-ArchiveRedirectUrl <String>]
@@ -239,10 +245,13 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
+ [-RestrictResourceAccountAccess <Boolean>] [-EnableSensitivityLabelForOneNote <Boolean>]
+ [-EnableSensitivityLabelForVideoFiles <Boolean>] [-SiteOwnersCanAccessMissingContent <Boolean>]
  [<CommonParameters>]
 ```
 
 ### ParamSetMultipleSites
+
 ```
 Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-ExternalServicesEnabled <Boolean>] [-NoAccessRedirectUrl <String>] [-ArchiveRedirectUrl <String>]
@@ -330,7 +339,9 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-IsEnableAppAuthPopUpEnabled <Boolean>] [-IsDataAccessInCardDesignerEnabled <Boolean>]
  [-MassDeleteNotificationDisabled <Boolean>] [-EnableAutoExpirationVersionTrim <Boolean>]
  [-EnableMediaReactions <Boolean>] [-BusinessConnectivityServiceDisabled <Boolean>]
- [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] [-AllowSensitivityLabelOnRecords <Boolean>]
+ [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] 
+ [-FileTypesForVersionExpiration <String[]>] [-RemoveVersionExpirationFileTypeOverride <String[]>]
+ [-AllowSensitivityLabelOnRecords <Boolean>]
  [-DelayDenyAddAndCustomizePagesEnforcement <Boolean>]
  [-DelayDenyAddAndCustomizePagesEnforcementOnClassicPublishingSites <Boolean>]
  [-AllowClassicPublishingSiteCreation <Boolean>] [-WhoCanShareAnonymousAllowList <Guid[]>]
@@ -353,10 +364,13 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
+ [-RestrictResourceAccountAccess <Boolean>] [-EnableSensitivityLabelForOneNote <Boolean>]
+ [-EnableSensitivityLabelForVideoFiles <Boolean>] [-SiteOwnersCanAccessMissingContent <Boolean>]
  [<CommonParameters>]
 ```
 
 ### InformationBarrier
+
 ```
 Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-ExternalServicesEnabled <Boolean>] [-NoAccessRedirectUrl <String>] [-ArchiveRedirectUrl <String>]
@@ -442,7 +456,9 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-IsEnableAppAuthPopUpEnabled <Boolean>] [-IsDataAccessInCardDesignerEnabled <Boolean>]
  [-MassDeleteNotificationDisabled <Boolean>] [-EnableAutoExpirationVersionTrim <Boolean>]
  [-EnableMediaReactions <Boolean>] [-BusinessConnectivityServiceDisabled <Boolean>]
- [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] [-AllowSensitivityLabelOnRecords <Boolean>]
+ [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] 
+ [-FileTypesForVersionExpiration <String[]>] [-RemoveVersionExpirationFileTypeOverride <String[]>]
+ [-AllowSensitivityLabelOnRecords <Boolean>]
  [-DelayDenyAddAndCustomizePagesEnforcement <Boolean>]
  [-DelayDenyAddAndCustomizePagesEnforcementOnClassicPublishingSites <Boolean>]
  [-AllowClassicPublishingSiteCreation <Boolean>] [-WhoCanShareAnonymousAllowList <Guid[]>]
@@ -465,6 +481,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
+ [-RestrictResourceAccountAccess <Boolean>] [-EnableSensitivityLabelForOneNote <Boolean>]
+ [-EnableSensitivityLabelForVideoFiles <Boolean>] [-SiteOwnersCanAccessMissingContent <Boolean>]
  [<CommonParameters>]
 ```
 
@@ -603,6 +621,7 @@ This example enables users to share with all external collaborators except for t
 ```powershell
 Set-SPOTenant -EnableVersionExpirationSetting $true
 ```
+
 The `EnableVersionExpirationSetting` parameter is no longer active, this feature is now automatically enabled for each tenant. Setting `EnableVersionExpirationSetting` to false would not disable the feature.
 [Learn more about Version History Settings](/sharepoint/document-library-version-history-limits)
 
@@ -644,13 +663,138 @@ Set-SPOTenant –WhoCanShareAnonymousAllowList @()
 This example empties the WhoCanShareAnonymousAllowList. Similar code works for the WhoCanShareAuthenticatedGuestAllowList.
 
 ### EXAMPLE 21
+
 ```powershell
 Set-SPOTenant -DisabledAdaptiveCardExtensionIds 0d2d0fd0-9489-47ef-acfb-90edca009cba
 ```
 
 This example disables the Power Apps Adaptive Card Extension.
 
+### EXAMPLE 22
+
+```powershell
+Set-SPOTenant -EnableAutoExpirationVersionTrim $true -FileTypesForVersionExpiration @("Video", "Audio")
+```
+
+This example sets automatic version history limit override for video and audio file types on all new document libraries at tenant level. 
+
+### EXAMPLE 23
+
+```powershell
+Set-SPOTenant -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 30 -FileTypesForVersionExpiration @("Video", "Audio")
+```
+
+This example sets manual version history limit override for video and audio file types on all new document libraries at tenant level by limiting the number of major versions and the time (in days) versions are kept.
+
+### EXAMPLE 24
+
+```powershell
+Set-SPOTenant -EnableAutoExpirationVersionTrim $false -MajorVersionLimit 500 -ExpireVersionsAfterDays 0 -FileTypesForVersionExpiration @("Video", "Audio")
+```
+
+This example sets manual version history limit override for video and audio file types on all new document libraries at tenant level by limiting the number of major versions with no time limits. 
+
+### EXAMPLE 25
+
+```powershell
+Set-SPOTenant -RemoveVersionExpirationFileTypeOverride @("Video", "Audio")
+```
+
+This example removes any specific version history limit override set for video and audio file types on all new document libraries at tenant level. 
+
 ## PARAMETERS
+
+### -AIBuilderModelScope
+
+> Applicable: SharePoint Online
+
+This parameter allows administrators to limit which SharePoint sites the AI builder model and [structured and freeform document processing](/microsoft-365/syntex/form-processing-overview) premium feature is available on.
+
+The valid values are:
+
+- `NoSites`: AI builder models are not available on any sites.
+- `AllSites`: AI builder models are available on all sites.
+- `SelectedSites`: AI builder models are available only on sites within the feature's selected sites list.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+> Use of this parameter will clear the current AI builder model selected sites list, if one exists.
+
+```yaml
+Type: SyntexFeatureScopeValue
+Parameter Sets: (All)
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AIBuilderModelSelectedSitesIncludesContentCenters
+
+> Applicable: SharePoint Online
+
+This parameter allows administrators to choose whether or not the AI builder model and [structured and freeform document processing](/microsoft-365/syntex/form-processing-overview) premium feature is available on all content center sites when the feature's scope is `SelectedSites` even if they are not explicitly included within the selected sites list. This parameter can only be called if the AI builder model's scope is set to `SelectedSites`.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+
+PARAMVALUE: True | False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AIBuilderModelSelectedSitesList
+
+> Applicable: SharePoint Online
+
+This parameter allows administrators to pass a list of SharePoint site URLs to modify the AI builder model and [structured and freeform document processing](/microsoft-365/syntex/form-processing-overview) premium feature's selected sites list. By default this parameter overwrites the existing list with the user input list. Additionally, the `AIBuilderModelSelectedSitesListOperation` parameter can be used to specify a different operation. This parameter can only be called if the AI builder model's scope is set to `SelectedSites`. The inputted list of site URLs cannot exceed 100 items.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AIBuilderModelSelectedSitesListOperation
+
+> Applicable: SharePoint Online
+
+This parameter allows administrators to specify the operation to perform on the AI builder model and [structured and freeform document processing](/microsoft-365/syntex/form-processing-overview) premium feature's current selected sites list using the list of site URLs passed to the `AIBuilderModelSelectedSitesList` parameter.
+
+The valid values are:
+
+- `Overwrite`: Overwrite the existing selected sites list. This is the default operation.
+- `Append`: Append the input list of sites to the existing selected sites list.
+- `Remove`: Remove the input list of sites from the existing selected sites list.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+> Calling this parameter without `AIBuilderModelSelectedSitesList` has no effect.
+
+```yaml
+Type: SelectedSitesListOperations
+Parameter Sets: (All)
+Required: False
+Position: Named
+Default value: Overwrite
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AllOrganizationSecurityGroupId
 
@@ -671,7 +815,25 @@ Accept wildcard characters: False
 ```
 
 ### -AllowAnonymousMeetingParticipantsToAccessWhiteboards
-{{ Fill AllowAnonymousMeetingParticipantsToAccessWhiteboards Description }}
+
+When you share a whiteboard in a Teams meeting, Whiteboard creates a sharing link. This link is
+accessible by anyone within the organization. The whiteboard is also shared with any in-tenant users
+in the meeting. Whiteboards are shared using company-shareable links, regardless of the default
+setting. Support for the default sharing link type is planned.
+
+There's more capability for temporary collaboration by external and shared device accounts during a
+Teams meeting. Users can temporarily view and collaborate on whiteboards that are shared in a
+meeting, in a similar way to PowerPoint Live sharing.
+
+In this case, Whiteboard provides temporary viewing and collaboration on the whiteboard during the
+Teams meeting only. A share link isn't created and Whiteboard doesn't grant access to the file.
+
+If you have external sharing enabled for OneDrive for Business, no further action is required.
+
+If you restrict external sharing for OneDrive for Business, you can keep it restricted, and just
+enable this new setting in order for external and shared device accounts to work. For more
+information, see
+[Manage sharing for Microsoft Whiteboard](/microsoft-365/whiteboard/manage-sharing-organizations).
 
 ```yaml
 Type: Microsoft.SharePoint.Client.SharingState
@@ -697,6 +859,7 @@ The valid values are:
 * True - Classic publishing site collections can be created and the publishing features can be activated in sites.
 
 ```yaml
+
 Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
@@ -838,6 +1001,40 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowSelectSecurityGroupsInSPSitesList
+
+> Applicable: SharePoint Online
+
+Allows members of specific security groups to access SharePoint content.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowSelectSGsInODBListInTenant
+
+> Applicable: SharePoint Online
+
+Allows members of specific security groups to access OneDrive content.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowSensitivityLabelOnRecords
 
 > Applicable: SharePoint Online
@@ -863,7 +1060,10 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSharingOutsideRestrictedAccessControlGroups
-{{ Fill AllowSharingOutsideRestrictedAccessControlGroups Description }}
+
+Controls whether sharing SharePoint sites and their content is allowed with users and groups who are not allowed as per the Restricted access control policy.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -878,7 +1078,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled
-{{ Fill AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled Description }}
+
+Enables or disables web property bag updates in all sites in the tenant. When `AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled` is set to `$true`, the web property bag can be updated even if the Add And Customize Pages right is denied on a site collection.
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -893,7 +1095,10 @@ Accept wildcard characters: False
 ```
 
 ### -AnyoneLinkTrackUsers
-{{ Fill AnyoneLinkTrackUsers Description }}
+
+Requires recipients to verify their identity with an email address to access content from an Anyone link.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -908,7 +1113,9 @@ Accept wildcard characters: False
 ```
 
 ### -AppAccessInformationBarriersAllowList
-{{ Fill AppAccessInformationBarriersAllowList Description }}
+
+Gets or sets the list of third-party application IDs (GUIDs) that are allowed to access information barriers protected sites and OneDrive accounts in the tenant.
+Note: The feature associated with this cmdlet will be rolling out soon.
 
 ```yaml
 Type: System.Guid[]
@@ -923,7 +1130,10 @@ Accept wildcard characters: False
 ```
 
 ### -AppBypassInformationBarriers
-{{ Fill AppBypassInformationBarriers Description }}
+
+Controls whether applications running in app-only mode can access sites protected by information barriers.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -961,7 +1171,10 @@ Accept wildcard characters: False
 ```
 
 ### -AppOnlyBypassPeoplePickerPolicies
-{{ Fill AppOnlyBypassPeoplePickerPolicies Description }}
+
+> Applicable: SharePoint Online
+
+Whether app-only bypasses people-picker policies.
 
 ```yaml
 Type: System.Boolean
@@ -976,7 +1189,10 @@ Accept wildcard characters: False
 ```
 
 ### -ArchiveRedirectUrl
-{{ Fill ArchiveRedirectUrl Description }}
+
+> Applicable: SharePoint Online
+
+Url to use to contact the administrator in the archived error page.
 
 ```yaml
 Type: System.String
@@ -991,7 +1207,10 @@ Accept wildcard characters: False
 ```
 
 ### -AuthContextResilienceMode
-{{ Fill AuthContextResilienceMode Description }}
+
+> Applicable: SharePoint Online
+
+The authentication context resilience mode.
 
 ```yaml
 Type: Microsoft.SharePoint.Administration.SPResilienceModeType
@@ -1006,7 +1225,18 @@ Accept wildcard characters: False
 ```
 
 ### -AutofillColumnsScope
-{{ Fill AutofillColumnsScope Description }}
+
+This parameter allows administrators to limit which SharePoint sites the [autofill columns](/microsoft-365/syntex/autofill-overview) premium feature is available on.
+
+The valid values are:
+
+- `NoSites`: Autofill columns are not available on any sites.
+- `AllSites`: Autofill columns are available on all sites.
+- `SelectedSites`: Autofill columns are available only on sites within the feature's selected sites list.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant has pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+> Use of this parameter will clear the current autofill columns selected sites list, if one exists.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.TenantAdministration.SyntexFeatureScopeValue
@@ -1021,7 +1251,11 @@ Accept wildcard characters: False
 ```
 
 ### -AutofillColumnsSelectedSitesList
-{{ Fill AutofillColumnsSelectedSitesList Description }}
+
+This parameter allows administrators to pass a list of SharePoint site URLs to modify the [autofill columns](/microsoft-365/syntex/autofill-overview) premium feature's selected sites list. By default this parameter overwrites the existing list with the user input list. Additionally, the `AutofillColumnsSelectedSitesListOperation` parameter can be used to specify a different operation. This parameter can only be called if autofill columns' scope is set to `SelectedSites`. The inputted list of site URLs cannot exceed 100 items.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant has pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
 
 ```yaml
 Type: System.String[]
@@ -1036,7 +1270,18 @@ Accept wildcard characters: False
 ```
 
 ### -AutofillColumnsSelectedSitesListOperation
-{{ Fill AutofillColumnsSelectedSitesListOperation Description }}
+
+This parameter allows administrators to specify the operation to perform on the [autofill columns](/microsoft-365/syntex/autofill-overview) premium feature's current selected sites list using the list of site URLs passed to the `AutofillColumnsSelectedSitesList` parameter.
+
+The valid values are:
+
+- `Overwrite`: Overwrite the existing selected sites list. This is the default operation.
+- `Append`: Append the input list of sites to the existing selected sites list.
+- `Remove`: Remove the input list of sites from the existing selected sites list.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant has pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+> Calling this parameter without `AutofillColumnsSelectedSitesList` has no effect.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.TenantAdministration.SelectedSitesListOperations
@@ -1098,7 +1343,10 @@ Accept wildcard characters: False
 ```
 
 ### -BlockAppAccessWithAuthenticationContext
-{{ Fill BlockAppAccessWithAuthenticationContext Description }}
+
+> Applicable: SharePoint Online
+
+Whether to block app access via authentication context.
 
 ```yaml
 Type: System.Boolean
@@ -1113,7 +1361,12 @@ Accept wildcard characters: False
 ```
 
 ### -BlockDownloadFileTypeIds
-{{ Fill BlockDownloadFileTypeIds Description }}
+
+Specifies the list of file type IDs that BlockDownloadFileTypePolicy applies to.
+
+The valid values are:
+
+- TeamsMeetingRecording
 
 ```yaml
 Type: Microsoft.SharePoint.Client.Administration.SPBlockDownloadFileTypeId[]
@@ -1128,7 +1381,18 @@ Accept wildcard characters: False
 ```
 
 ### -BlockDownloadFileTypePolicy
-{{ Fill BlockDownloadFileTypePolicy Description }}
+
+You can block the download of Teams meeting recording files from SharePoint or OneDrive. This allows users to remain productive while addressing the risk of accidental data loss. Users have browser-only access to play the meeting recordings with no ability to download or sync files or access them through apps.
+
+This policy applies to new meeting recordings across the entire organization. You can exempt people who are members of specified security groups from the policy. This allows you to specify governance or compliance specialists who should have download access to meeting recordings.
+
+After the policy is turned on, any new Teams meeting recording files created by the Teams service and saved in SharePoint and OneDrive are blocked from download.
+
+Because this policy affects meeting recordings stored in OneDrive and SharePoint, you must be a SharePoint administrator to configure it.
+
+Note that this policy doesn't apply to manually uploaded meeting recording files. For more details, see [Block the download of Teams meeting recording files from SharePoint or OneDrive](/microsoftteams/block-download-meeting-recording).
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -1238,6 +1502,7 @@ Accept wildcard characters: False
 Blocks users from accessing User Info if they have Limited Access permission only to a SharePoint site. The policy applies to all SharePoint sites in the organization.
 
 The valid values are:
+
 - ApplyToNoUsers (default) – No users are prevented from accessing User Info when they have Limited Access permission only to a SharePoint site.
 - ApplyToAllUsers – All users (internal or external) are prevented from accessing User Info if they have Limited Access permission only to a SharePoint site.
 - ApplyToGuestAndExternalUsers – Only external or guest users are prevented from accessing User Info if they have Limited Access permission only to a SharePoint site.
@@ -1258,6 +1523,7 @@ Accept wildcard characters: False
 ### -BusinessConnectivityServiceDisabled
 
 > Applicable: SharePoint Online
+
 Prevents access to features that depend on the Business Connectivity Service (BCS), including external lists, external columns, and external content types.
 
 PARAMVALUE: True | False
@@ -1335,7 +1601,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Please read [Control access from unmanaged devices](/sharepoint/control-access-from-unmanaged-devices ) documentation here to understand Conditional Access Policy usage in SharePoint Online.
+Please read [Control access from unmanaged devices](/sharepoint/control-access-from-unmanaged-devices) documentation here to understand Conditional Access Policy usage in SharePoint Online.
 
 PARAMVALUE: AllowFullAccess | AllowLimitedAccess | BlockAccess
 
@@ -1370,7 +1636,10 @@ Accept wildcard characters: False
 ```
 
 ### -ContentSecurityPolicyEnforcement
-{{ Fill ContentSecurityPolicyEnforcement Description }}
+
+Controls whether content security policy is enabled.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -1406,7 +1675,10 @@ Accept wildcard characters: False
 ```
 
 ### -CoreBlockGuestsAsSiteAdmin
-{{ Fill CoreBlockGuestsAsSiteAdmin Description }}
+
+> Applicable: SharePoint Online
+
+Whether to block guests as site admins on core partition.
 
 ```yaml
 Type: Microsoft.SharePoint.Client.SharingState
@@ -1421,7 +1693,10 @@ Accept wildcard characters: False
 ```
 
 ### -CoreDefaultLinkToExistingAccess
-{{ Fill CoreDefaultLinkToExistingAccess Description }}
+
+When set to `True`, the default sharing link will be a "People with Existing Access" link (which does not modify permissions) for SharePoint sites. When set to `False` (the default), the default sharing link type is controlled by the `CoreDefaultShareLinkScope` parameter.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -1436,7 +1711,16 @@ Accept wildcard characters: False
 ```
 
 ### -CoreDefaultShareLinkRole
-{{ Fill CoreDefaultShareLinkRole Description }}
+
+This parameter sets the default share link role on SharePoint sites. It replaces the `DefaultLinkPermission`.
+
+The valid values are:
+
+- `None`: No permissions granted.
+- `View`: View-only permissions.
+- `Edit`: Edit permissions.
+- `Review`: Review permissions.
+- `RestrictedView`: Restricted view permissions.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.TenantManagement.SharingRole
@@ -1451,7 +1735,15 @@ Accept wildcard characters: False
 ```
 
 ### -CoreDefaultShareLinkScope
-{{ Fill CoreDefaultShareLinkScope Description }}
+
+This parameter sets the default share link scope on SharePoint sites. It replaces the `DefaultSharingLinkType`.
+
+The valid values are:
+
+- `Anyone`: Anyone with the link can access the content.
+- `Organization`: Only people within the organization can access the content.
+- `SpecificPeople`: Only specific individuals (specified by the user) can access the content.
+- `Uninitialized`: The default value, indicating that the default share link scope is not explicitly set.
 
 ```yaml
 Type: Microsoft.SharePoint.Client.Sharing.SharingScope
@@ -1517,7 +1809,10 @@ Accept wildcard characters: False
 ```
 
 ### -CoreRequestFilesLinkEnabled
-{{ Fill CoreRequestFilesLinkEnabled Description }}
+
+Enable or disable the Request files link on the core partition for all SharePoint sites (not including OneDrive sites). If this value is not set, Request files will only show for OneDrives with Anyone links enabled.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -1532,7 +1827,12 @@ Accept wildcard characters: False
 ```
 
 ### -CoreRequestFilesLinkExpirationInDays
-{{ Fill CoreRequestFilesLinkExpirationInDays Description }}
+
+Specifies the number of days before a Request files link expires for all SharePoint sites (not including OneDrive sites).
+
+The value can be from 0 to 730 days.
+
+To remove the expiration requirement, set the value to zero (0).
 
 ```yaml
 Type: System.Int32
@@ -1547,7 +1847,17 @@ Accept wildcard characters: False
 ```
 
 ### -CoreSharingCapability
-{{ Fill CoreSharingCapability Description }}
+
+Determines what level of sharing is available for SharePoint sites (not including OneDrive sites).
+
+The valid values are:
+
+- ExternalUserAndGuestSharing (default) - External user sharing (share by email) and guest link sharing are both enabled.
+- Disabled - External user sharing (share by email) and guest link sharing are both disabled.
+- ExternalUserSharingOnly - External user sharing (share by email) is enabled, but guest link sharing is disabled.
+- ExistingExternalUserSharingOnly - Only guests already in your organization's directory.
+
+For more information about sharing, see [Manage sharing settings](/sharepoint/turn-external-sharing-on-or-off) for your SharePoint online environment.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.TenantManagement.SharingCapabilities
@@ -1580,7 +1890,12 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultContentCenterSite
-{{ Fill DefaultContentCenterSite Description }}
+
+This parameter allows administrators to set the default content center site for their tenant, if one does not already exist, by providing a content center's URL. The content center configured here is the default for all document processing services. Content center owners can view analytics for all applied models in it, and members can build enterprise models. For more information visit [Create a content center in Microsoft Syntex](/microsoft-365/syntex/create-a-content-center).
+
+> [!NOTE]
+> Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+> You cannot change the designated default content center once it has been set.
 
 ```yaml
 Type: System.String
@@ -1598,7 +1913,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Lets administrators choose the default permission of the link in the sharing dialog box in OneDrive for Business and SharePoint Online. This applies to anonymous access, internal and direct links.
+Lets administrators choose the default permission of the link in the sharing dialog box in OneDrive for Business and SharePoint Online. This applies to anonymous access, organization, and specific people links.
 
 The valid values are View and Edit (default).
 
@@ -1615,7 +1930,18 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultOneDriveInformationBarrierMode
-{{ Fill DefaultOneDriveInformationBarrierMode Description }}
+
+The DefaultOneDriveInformationBarrierMode sets the information barrier mode for all OneDrive sites.
+
+The valid values are:
+
+- Open
+- Explicit
+- Implicit
+- OwnerModerated
+- Mixed
+
+For more information about information barriers, see [Use information barriers with SharePoint](/purview/information-barriers-sharepoint) for your SharePoint Online environment.
 
 ```yaml
 Type: System.String
@@ -1642,9 +1968,9 @@ For additional information about how to change the default link type, see Change
 
 The valid values are:
 
-- None - Respect the organization default sharing link type
+- None - Use the widest sharing scope permitted by other sharing settings
 - Direct - Sets the default sharing link for this site to the Specific people link
-- Internal - Sets the default sharing link for this site to the organization link or company shareable link
+- Internal - Sets the default sharing link for this site to the organization link
 - AnonymousAccess - Sets the default sharing link for this site to an Anonymous Access or Anyone link
 
 ```yaml
@@ -1660,7 +1986,10 @@ Accept wildcard characters: False
 ```
 
 ### -DelayDenyAddAndCustomizePagesEnforcement
-{{ Fill DelayDenyAddAndCustomizePagesEnforcement Description }}
+
+> Applicable: SharePoint Online
+
+Whether to delay enforcing custom scripts setting.
 
 ```yaml
 Type: System.Boolean
@@ -1675,7 +2004,16 @@ Accept wildcard characters: False
 ```
 
 ### -DelayDenyAddAndCustomizePagesEnforcementOnClassicPublishingSites
-{{ Fill DelayDenyAddAndCustomizePagesEnforcementOnClassicPublishingSites Description }}
+
+This parameter controls how SharePoint will deal with classic publishing sites (templates BLANKINTERNETCONTAINER#0, CMSPUBLISHING#0 and BLANKINTERNET#0) where custom scripts are allowed.
+
+The valid values are:
+
+* False (default) - for classic publishing site collections where administrators enabled the ability to add custom script, SharePoint will revoke that ability within 24 hours from the last time this setting was changed.
+* True - All changes performed by administrators to custom script settings are preserved.
+
+> [!NOTE]
+> This setting affects all classic publishing sites (templates BLANKINTERNETCONTAINER#0, CMSPUBLISHING#0 and BLANKINTERNET#0). There are no options to preserve changes to custom script settings only on some specific sites.
 
 ```yaml
 Type: System.Boolean
@@ -1696,6 +2034,7 @@ Accept wildcard characters: False
 Allows SharePoint administrators to delegate the management of Restricted access control policy on sites to site admins and owners.
 
 The valid values are:
+
 - True - Allow site admins and owners to manage Restricted access control policy
 - False (default) - Do not allow site admins and owners to manage Restricted access control policy
 
@@ -1718,6 +2057,7 @@ Accept wildcard characters: False
 Allows SharePoint administrators to delegate the management of Restricted content discoverability policy on sites to site admins and owners.
 
 The valid values are:
+
 - True - Allow site admins and owners to manage Restricted content discoverability policy
 - False (default) - Do not allow site admins and owners to manage Restricted content discoverability policy
 
@@ -1726,6 +2066,40 @@ Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
 
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DenySelectSecurityGroupsInSPSitesList
+
+> Applicable: SharePoint Online
+
+Restricts members of specific security groups from accessing SharePoint content.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DenySelectSGsInODBListInTenant
+
+> Applicable: SharePoint Online
+
+Restricts members of specific security groups from accessing OneDrive content.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
 Required: False
 Position: Named
 Default value: None
@@ -1754,7 +2128,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableBackToClassic
-{{ Fill DisableBackToClassic Description }}
+
+Enables or disables the link "Return to classic SharePoint" on modern SharePoint list and library pages.
 
 ```yaml
 Type: System.Boolean
@@ -1794,9 +2169,9 @@ Accept wildcard characters: False
 
 Allows administrators to prevent certain Adaptive Card Extensions from being added to pages or rendering on pages on which they were previously added. Currently, only the following Adaptive Card Extensions can be disabled in such a manner:
 
-| Adaptive Card Extension Name | GUID |
-|---|---|
-| Power Apps | 0d2d0fd0-9489-47ef-acfb-90edca009cba |
+| Adaptive Card Extension Name | GUID                                 |
+| ---------------------------- | ------------------------------------ |
+| Power Apps                   | 0d2d0fd0-9489-47ef-acfb-90edca009cba |
 
 To disable a specific Adaptive Card Extension, you need to enter its GUID as the parameter. To view a list of disabled Adaptive Card Extensions, use [Get-SPOTenant](Get-SPOTenant.md) to get `DisabledAdaptiveCardExtensionIds`.
 
@@ -1867,7 +2242,10 @@ Accept wildcard characters: False
 ```
 
 ### -DisableModernListTemplateIds
-{{ Fill DisableModernListTemplateIds Description }}
+
+Specifies list of modern template IDs not enabled in tenant.
+
+To set this list to be a specific security group, you need to enter its GUID as the argument. You can enter multiple GUIDs by using commas to separate them. To view the current list, use [./Get-SPOTenant.md](Get-SPOTenant.md).
 
 ```yaml
 Type: System.Guid[]
@@ -1903,7 +2281,10 @@ Accept wildcard characters: False
 ```
 
 ### -DisablePersonalListCreation
-{{ Fill DisablePersonalListCreation Description }}
+
+Controls whether users can create a personal list.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -1938,7 +2319,10 @@ Accept wildcard characters: False
 ```
 
 ### -DisableSpacesActivation
-{{ Fill DisableSpacesActivation Description }}
+
+Controls SharePoint spaces activation.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -1953,7 +2337,10 @@ Accept wildcard characters: False
 ```
 
 ### -DisableVivaConnectionsAnalytics
-{{ Fill DisableVivaConnectionsAnalytics Description }}
+
+Controls whether the Viva Connections analytics feature is enabled.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -1968,7 +2355,10 @@ Accept wildcard characters: False
 ```
 
 ### -DisableWorkflow2010
-{{ Fill DisableWorkflow2010 Description }}
+
+Controls whether Workflow 2010 is enabled.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -2026,7 +2416,18 @@ Accept wildcard characters: False
 ```
 
 ### -DocumentTranslationScope
-{{ Fill DocumentTranslationScope Description }}
+
+This parameter allows administrators to limit which SharePoint sites the [document translation](/microsoft-365/syntex/translation) premium feature is available on.
+
+The valid values are:
+
+- `NoSites`: Document translation is not available on any sites.
+- `AllSites`: Document translation is available on all sites.
+- `SelectedSites`: Document translation is available only on sites within the feature's selected sites list.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant has pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+> Use of this parameter will clear the current document translation selected sites list, if one exists.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.TenantAdministration.SyntexFeatureScopeValue
@@ -2041,7 +2442,11 @@ Accept wildcard characters: False
 ```
 
 ### -DocumentTranslationSelectedSitesList
-{{ Fill DocumentTranslationSelectedSitesList Description }}
+
+This parameter allows administrators to pass a list of SharePoint site URLs to modify the [document translation](/microsoft-365/syntex/translation) premium feature's selected sites list. By default this parameter overwrites the existing list with the user input list. Additionally, the `DocumentTranslationSelectedSitesListOperation` parameter can be used to specify a different operation. This parameter can only be called if document translation's scope is set to `SelectedSites`. The inputted list of site URLs cannot exceed 100 items.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant has pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
 
 ```yaml
 Type: System.String[]
@@ -2056,7 +2461,18 @@ Accept wildcard characters: False
 ```
 
 ### -DocumentTranslationSelectedSitesListOperation
-{{ Fill DocumentTranslationSelectedSitesListOperation Description }}
+
+This parameter allows administrators to specify the operation to perform on the [document translation](/microsoft-365/syntex/translation) premium feature's current selected sites list using the list of site URLs passed to the `DocumentTranslationSelectedSitesList` parameter.
+
+The valid values are:
+
+- `Overwrite`: Overwrite the existing selected sites list. This is the default operation.
+- `Append`: Append the input list of sites to the existing selected sites list.
+- `Remove`: Remove the input list of sites from the existing selected sites list.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant has pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+> Calling this parameter without `DocumentTranslationSelectedSitesList` has no effect.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.TenantAdministration.SelectedSitesListOperations
@@ -2071,7 +2487,18 @@ Accept wildcard characters: False
 ```
 
 ### -DocumentUnderstandingModelScope
-{{ Fill DocumentUnderstandingModelScope Description }}
+
+This parameter allows administrators to limit which SharePoint sites the document understanding model and [unstructurted document processesing](/microsoft-365/syntex/document-understanding-overview) premium feature is available on.
+
+The valid values are:
+
+- `NoSites`: Document understanding models are not available on any sites.
+- `AllSites`: Document understanding models are available on all sites.
+- `SelectedSites`: Document understanding models are available only on sites within the feature's selected sites list.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+> Use of this parameter will clear the current document understanding model selected sites list, if one exists.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.TenantAdministration.SyntexFeatureScopeValue
@@ -2086,7 +2513,11 @@ Accept wildcard characters: False
 ```
 
 ### -DocumentUnderstandingModelSelectedSitesList
-{{ Fill DocumentUnderstandingModelSelectedSitesList Description }}
+
+This parameter allows administrators to pass a list of SharePoint site URLs to modify the document understanding model and [unstructurted document processesing](/microsoft-365/syntex/document-understanding-overview) premium feature's selected sites list. By default this parameter overwrites the existing list with the user input list. Additionally, the `DocumentUnderstandingModelSelectedSitesListOperation` parameter can be used to specify a different operation. This parameter can only be called if the document understanding model's scope is set to `SelectedSites`. The inputted list of site URLs cannot exceed 100 items.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
 
 ```yaml
 Type: System.String[]
@@ -2101,7 +2532,18 @@ Accept wildcard characters: False
 ```
 
 ### -DocumentUnderstandingModelSelectedSitesListOperation
-{{ Fill DocumentUnderstandingModelSelectedSitesListOperation Description }}
+
+This parameter allows administrators to specify the operation to perform on the document understanding model and [unstructurted document processesing](/microsoft-365/syntex/document-understanding-overview) premium feature's current selected sites list using the list of site URLs passed to the `DocumentUnderstandingModelSelectedSitesList` parameter.
+
+The valid values are:
+
+- `Overwrite`: Overwrite the existing selected sites list. This is the default operation.
+- `Append`: Append the input list of sites to the existing selected sites list.
+- `Remove`: Remove the input list of sites from the existing selected sites list.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+> Calling this parameter without `DocumentUnderstandingModelSelectedSitesList` has no effect.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.TenantAdministration.SelectedSitesListOperations
@@ -2176,7 +2618,23 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAutoExpirationVersionTrim
-{{ Fill EnableAutoExpirationVersionTrim Description }}
+
+Global and SharePoint Administrators can set organization-level version history limits settings that universally apply to new versions created on all new document libraries created in your organization.
+
+When version history limits are managed automatically, SharePoint employs an algorithm behind the scenes that deletes (thins out) intermittent older versions that are least likely to be needed, while preserving sufficient high-value versions - more versions in the recent past and fewer farther back in time - in case restores are required.
+
+The valid values are:
+
+- True – Version history limits for new versions created on all new document libraries in your organization will be managed automatically.
+- False – Version history limits for new Versions created on all new document libraries in your organization will be managed manually by setting limits to the number of major versions (`MajorVersionLimit`) and time set (`ExpireVersionsAfterDays`). Review the documentation of both parameters to manage your organization's version limits manually.
+
+> [!NOTE]
+> When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), `MajorVersionLimit` and `ExpireVersionsAfterDays` are both required parameters with the following acceptable values:
+> a. `MajorVersionLimit` accepts values from 1 through 50,000 (inclusive).
+> b. `ExpireVersionsAfterDays` accepts values of 0 to Never Expire or values >= 30 to delete versions that exceed that time period.
+> When version history limits are managed automatically (`EnableAutoExpirationVersionTrim $true`), setting `MajorVersionLimit` or `ExpireVersionsAfterDays` will result in an error as the count limits are set by the service.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -2231,7 +2689,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDiscoverableByOrganizationForVideos
-{{ Fill EnableDiscoverableByOrganizationForVideos Description }}
+
+When set to true, allows users to easily share a video with the entire company, using the security group defined in "AllOrganizationSecurityGroupId". If this security group is undefined, the Discoverable By Company for Videos feature will remain hidden.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -2267,7 +2728,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableMediaReactions
-{{ Fill EnableMediaReactions Description }}
+
+Controls whether media reactions are enabled.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -2302,7 +2766,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableModernListTemplateIds
-{{ Fill EnableModernListTemplateIds Description }}
+
+Specifies list of modern template IDs enabled in tenant.
+
+To set this list to be a specific security group, you need to enter its GUID as the argument. You can enter multiple GUIDs by using commas to separate them. To view the current list, use [./Get-SPOTenant.md](Get-SPOTenant.md).
 
 ```yaml
 Type: System.Guid[]
@@ -2337,7 +2804,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnableRestrictedAccessControl
-{{ Fill EnableRestrictedAccessControl Description }}
+
+Lets you and other Global or SharePoint Administrators restrict access to sites.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -2379,8 +2849,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableTenantRestrictionsInsights
-{{ Fill EnableTenantRestrictionsInsights Description }}
+### -EnableSensitivityLabelforOneNote
+
+> Applicable: SharePoint Online
+
+Allows tenant admins to turn on support for sections in OneNote with sensitivity labels for the following scenarios:
+
+- Applying a sensitivity label in OneNote for the web.
+- Uploading a labeled document, and then extracting and displaying that sensitivity label.
+
+The valid values are:
+
+- True - Enables support for OneNote files.
+- False (default) - Disables support for OneNote files.
 
 ```yaml
 Type: System.Boolean
@@ -2394,8 +2875,92 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableSensitivityLabelforVideoFiles
+
+> Applicable: SharePoint Online
+
+Allows tenant admins to turn on support for Video files with sensitivity labels for the following scenarios:
+
+- Applying a sensitivity label to Video files on Sharepoint.
+- Uploading a labeled document, and then extracting and displaying that sensitivity label.
+
+The valid values are:
+
+- True - Enables support for Video files.
+- False (default) - Disables support for Video files.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableTenantRestrictionsInsights
+
+> Applicable: SharePoint Online
+
+Whether to enable the tenant restrictions policy insights.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableVersionExpirationSetting
+
+> Applicable: SharePoint Online
+
+The `EnableVersionExpirationSetting` parameter is no longer active, this feature is now automatically enabled for each tenant.
+[Learn more about Version History Settings](/sharepoint/document-library-version-history-limits)
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnforceContentSecurityPolicyConfiguration
+
+> Applicable: SharePoint Online
+
+When set to `True` **Content Security Policy** violations will be enforced.
+In multi-geo environments, **Content Security Policy** configuration is unique to each geo.
+
+PARAMVALUE: True | False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnforceRequestDigest
-{{ Fill EnforceRequestDigest Description }}
+
+When set to `True` a valid request digest is required on SOAP API calls that perform a state-changing operation.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -2410,7 +2975,10 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludedBlockDownloadGroupIds
-{{ Fill ExcludedBlockDownloadGroupIds Description }}
+
+Exempts users from specified groups from the block download policy and they can fully download any content for the site.
+
+To set this list to be a specific security group, you need to enter its GUID as the argument. You can enter multiple GUIDs by using commas to separate them. To view the current list, use [./Get-SPOTenant.md](Get-SPOTenant.md).
 
 ```yaml
 Type: System.Guid[]
@@ -2439,8 +3007,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExemptNativeUsersFromTenantLevelRestricedAccessControl
+
+> Applicable: SharePoint Online
+
+Gets or sets the value of a setting which determines whether Native Identity users should be exempted from restricted access control policy at tenant level.
+
+PARAMVALUE: True | False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ExpireVersionsAfterDays
-{{ Fill ExpireVersionsAfterDays Description }}
+
+When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), admins will need to set the limits to the number of major versions (`MajorVersionLimit`) and the time period the versions are stored (`ExpireVersionsAfterDays`). Please check the description of `EnableAutoExpirationVersionTrim` for more details.
+
+PARAMVALUE: Int32
 
 ```yaml
 Type: System.Int32
@@ -2455,7 +3045,10 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendPermissionsToUnprotectedFiles
-{{ Fill ExtendPermissionsToUnprotectedFiles Description }}
+
+This property can be used to turn on/off the capability called "Extended SharePoint permissions to unprotected files". To learn more about this feature check [here](https://aka.ms/ExtendSharePointPermission)
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -2576,6 +3169,35 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FileTypesForVersionExpiration
+
+An array of file type names. The supported file type names are:
+- Audio
+- OutlookPST
+- Video
+
+Apply the version history limits to a set of file types so that they no longer follow the default version history limits. It is used in combination with the following parameters: 
+- [EnableAutoExpirationVersionTrim](#-enableautoexpirationversiontrim)
+- [MajorVersionLimit](#-majorversionlimit)
+- [ExpireVersionsAfterDays](#-expireversionsafterdays)
+
+The version history limits are applied on new document libraries in the tenant.
+
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -FolderAnonymousLinkType
 
 > Applicable: SharePoint Online
@@ -2601,7 +3223,10 @@ Accept wildcard characters: False
 ```
 
 ### -HideSyncButtonOnTeamSite
-{{ Fill HideSyncButtonOnTeamSite Description }}
+
+When set to true, turns off OneDrive sync from all the SharePoint libraries in your organization.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -2616,7 +3241,10 @@ Accept wildcard characters: False
 ```
 
 ### -IBImplicitGroupBased
-{{ Fill IBImplicitGroupBased Description }}
+
+The IBImplicitGroupBased setting enables Microsoft 365 Groups membership-based access and sharing control for all Implicit mode sites.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -2651,7 +3279,10 @@ Accept wildcard characters: False
 ```
 
 ### -InformationBarriersSuspension
-{{ Fill InformationBarriersSuspension Description }}
+
+When InformationBarriersSuspension parameter is set to $false, information barriers in SharePoint and OneDrive is enabled, when set to $true, it is disabled.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -2731,7 +3362,10 @@ Accept wildcard characters: False
 ```
 
 ### -IsCollabMeetingNotesFluidEnabled
-{{ Fill IsCollabMeetingNotesFluidEnabled Description }}
+
+Controls whether collaborative meeting notes are enabled in Microsoft Teams.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -2746,7 +3380,15 @@ Accept wildcard characters: False
 ```
 
 ### -IsDataAccessInCardDesignerEnabled
-{{ Fill IsDataAccessInCardDesignerEnabled Description }}
+
+The IsDataAccessInCardDesignerEnabled settings (defaulted to false) will allow Viva Connections Dashboard operators to access SharePoint and Graph APIs in the Card Designer card.
+
+The valid values are:
+
+- False (default) – SharePoint and Graph APIs cannot be accessed in the Card Designer card.
+- True – Users with edit permissions on the Dashboard will be able to access SharePoint and Graph APIs in the Card Designer card.
+
+For more information on this feature, see [Overview of Viva Connections Card Designer advance API features](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/viva/features/card-designer/card-designer-api-support).
 
 ```yaml
 Type: System.Boolean
@@ -2761,7 +3403,12 @@ Accept wildcard characters: False
 ```
 
 ### -IsEnableAppAuthPopUpEnabled
-{{ Fill IsEnableAppAuthPopUpEnabled Description }}
+
+Enables or disables users in the organization to authenticate SharePoint applications using popups.
+
+This parameter affects the way code in SharePoint interacts with Microsoft Entra ID to get tokens to access APIs. In scenarios where third-party cookies are disabled (such as Safari browsers with ITP feature enabled), any code that requires a token to access an API automatically triggers a full page refresh. When IsEnableAppAuthPopUpEnabled is set to $true, SharePoint will instead surface a popup in this scenario.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -2776,7 +3423,10 @@ Accept wildcard characters: False
 ```
 
 ### -IsFluidEnabled
-{{ Fill IsFluidEnabled Description }}
+
+> Applicable: SharePoint Online
+
+Whether the Fluid Framework is enabled.
 
 ```yaml
 Type: System.Boolean
@@ -2791,7 +3441,10 @@ Accept wildcard characters: False
 ```
 
 ### -IsLoopEnabled
-{{ Fill IsLoopEnabled Description }}
+
+Controls whether Loop components are available in Microsoft Teams.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -2921,7 +3574,10 @@ Accept wildcard characters: False
 ```
 
 ### -LegacyBrowserAuthProtocolsEnabled
-{{ Fill LegacyBrowserAuthProtocolsEnabled Description }}
+
+Controls whether legacy browser authentication connections to SharePoint with legacy Relying Party suite (RPS) protocol are enabled. Legacy protocols are more susceptible to brute-force and phishing attacks because they use non-modern authentication methods. Setting this to False prevents applications, (including third party applications) from using non-modern authentication protocols to access SharePoint Online and OneDrive resources in a browser.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -2962,7 +3618,10 @@ Accept wildcard characters: False
 ```
 
 ### -MajorVersionLimit
-{{ Fill MajorVersionLimit Description }}
+
+When version history limits are managed manually (`EnableAutoExpirationVersionTrim $false`), admins will need to set the limits to the number of major versions (`MajorVersionLimit`) and the time period the versions are stored (`ExpireVersionsAfterDays`). Please check the description of `EnableAutoExpirationVersionTrim` for more details.
+
+PARAMVALUE: Int32
 
 ```yaml
 Type: System.Int32
@@ -3002,7 +3661,10 @@ Accept wildcard characters: False
 ```
 
 ### -MassDeleteNotificationDisabled
-{{ Fill MassDeleteNotificationDisabled Description }}
+
+Enables or disables the mass delete detection feature. When MassDeleteNotificationDisabled is set to $true, tenant admins can perform mass deletion operations without triggering notifications.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -3233,21 +3895,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ODBMembersCanShare
-{{ Fill ODBMembersCanShare Description }}
-
-```yaml
-Type: Microsoft.SharePoint.Client.SharingState
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -OfficeClientADALDisabled
 
 > Applicable: SharePoint Online
@@ -3272,7 +3919,14 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveBlockGuestsAsSiteAdmin
-{{ Fill OneDriveBlockGuestsAsSiteAdmin Description }}
+
+Controls whether guests are blocked from using OneDrive.
+
+The valid values are:
+
+- On
+- Off
+- Unspecified
 
 ```yaml
 Type: Microsoft.SharePoint.Client.SharingState
@@ -3287,7 +3941,10 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveDefaultLinkToExistingAccess
-{{ Fill OneDriveDefaultLinkToExistingAccess Description }}
+
+When set to `True`, the default sharing link will be a "People with Existing Access" link (which does not modify permissions) for OneDrive sites. When set to `False` (the default), the default sharing link type is controlled by the `OneDriveDefaultShareLinkScope` parameter.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -3302,7 +3959,16 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveDefaultShareLinkRole
-{{ Fill OneDriveDefaultShareLinkRole Description }}
+
+This parameter sets the default share link role on OneDrive sites. It replaces the `DefaultLinkPermission`.
+
+The valid values are:
+
+- `None`: No permissions granted.
+- `View`: View-only permissions.
+- `Edit`: Edit permissions.
+- `Review`: Review permissions.
+- `RestrictedView`: Restricted view permissions.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.TenantManagement.SharingRole
@@ -3317,7 +3983,15 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveDefaultShareLinkScope
-{{ Fill OneDriveDefaultShareLinkScope Description }}
+
+This parameter sets the default share link scope on OneDrive sites. It replaces the `DefaultSharingLinkType`.
+
+The valid values are:
+
+- `Anyone`: Anyone with the link can access the content.
+- `Organization`: Only people within the organization can access the content.
+- `SpecificPeople`: Only specific individuals (specified by the user) can access the content.
+- `Uninitialized`: The default value, indicating that the default share link scope is not explicitly set.
 
 ```yaml
 Type: Microsoft.SharePoint.Client.Sharing.SharingScope
@@ -3406,7 +4080,10 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveRequestFilesLinkEnabled
-{{ Fill OneDriveRequestFilesLinkEnabled Description }}
+
+Enable or disable the Request files link on the OneDrive partition for all OneDrive sites. If this value is not set, the Request files link will only show for OneDrives with Anyone links enabled.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -3421,7 +4098,12 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveRequestFilesLinkExpirationInDays
-{{ Fill OneDriveRequestFilesLinkExpirationInDays Description }}
+
+Specifies the number of days before a Request files link expires for all OneDrive sites.
+
+The value can be from 0 to 730 days.
+
+To remove the expiration requirement, set the value to zero (0).
 
 ```yaml
 Type: System.Int32
@@ -3436,7 +4118,15 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveSharingCapability
-{{ Fill OneDriveSharingCapability Description }}
+
+Determines what level of sharing is available for OneDrive sites. It corresponds to the `SharingCapabilities` for OneDrive sites.
+
+The valid values are:
+
+- ExternalUserAndGuestSharing (default) - External user sharing (share by email) and guest link sharing are both enabled.
+- Disabled - External user sharing (share by email) and guest link sharing are both disabled.
+- ExternalUserSharingOnly - External user sharing (share by email) is enabled, but guest link sharing is disabled.
+- ExistingExternalUserSharingOnly - Only guests already in your organization's directory.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.TenantManagement.SharingCapabilities
@@ -3470,6 +4160,77 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OpticalCharacterRecognitionScope
+
+> Applicable: SharePoint Online
+
+This parameter allows administrators to limit which SharePoint sites the [optical character recognition](/microsoft-365/syntex/ocr) premium feature is available on.
+
+The valid values are:
+
+- `NoSites`: Optical character recognition is not available on any sites.
+- `AllSites`: Optical character recognition is available on all sites.
+- `SelectedSites`: Optical character recognition is available only on sites within the feature's selected sites list.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant has pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+> Use of this parameter will clear the current optical character recognition selected sites list, if one exists.
+
+```yaml
+Type: SyntexFeatureScopeValue
+Parameter Sets: (All)
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OpticalCharacterRecognitionSelectedSitesList
+
+> Applicable: SharePoint Online
+
+This parameter allows administrators to pass a list of SharePoint site URLs to modify the [optical character recognition](/microsoft-365/syntex/ocr) premium feature's selected sites list. By default this parameter overwrites the existing list with the user input list. Additionally, the `OpticalCharacterRecognitionSelectedSitesListOperation` parameter can be used to specify a different operation. This parameter can only be called if optical character recognition's scope is set to `SelectedSites`. The inputted list of site URLs cannot exceed 100 items.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant has pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OpticalCharacterRecognitionSelectedSitesListOperation
+
+> Applicable: SharePoint Online
+
+This parameter allows administrators to specify the operation to perform on the [optical character recognition](/microsoft-365/syntex/ocr) premium feature's current selected sites list using the list of site URLs passed to the `OpticalCharacterRecognitionSelectedSitesList` parameter.
+
+The valid values are:
+
+- `Overwrite`: Overwrite the existing selected sites list. This is the default operation.
+- `Append`: Append the input list of sites to the existing selected sites list.
+- `Remove`: Remove the input list of sites from the existing selected sites list.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant has pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+> Calling this parameter without `OpticalCharacterRecognitionSelectedSitesList` has no effect.
+
+```yaml
+Type: SelectedSitesListOperations
+Parameter Sets: (All)
+Required: False
+Position: Named
+Default value: Overwrite
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -3533,6 +4294,77 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PrebuiltModelScope
+
+> Applicable: SharePoint Online
+
+This parameter allows administrators to limit which SharePoint sites the prebuilt model and [prebuilt document processing](/microsoft-365/syntex/prebuilt-overview) premium feature is available on.
+
+The valid values are:
+
+- `NoSites`: Prebuilt models are not available on any sites.
+- `AllSites`: Prebuilt models are available on all sites.
+- `SelectedSites`: Prebuilt models are available only on sites within the feature's selected sites list.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+> Use of this parameter will clear the current prebuilt model selected sites list, if one exists.
+
+```yaml
+Type: SyntexFeatureScopeValue
+Parameter Sets: (All)
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PrebuiltModelSelectedSitesList
+
+> Applicable: SharePoint Online
+
+This parameter allows administrators to pass a list of SharePoint site URLs to modify the prebuilt model and [prebuilt document processing](/microsoft-365/syntex/prebuilt-overview) premium feature's selected sites list. By default this parameter overwrites the existing list with the user input list. Additionally, the `PrebuiltModelSelectedSitesListOperation` parameter can be used to specify a different operation. This parameter can only be called if the prebuilt model's scope is set to `SelectedSites`. The inputted list of site URLs cannot exceed 100 items.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PrebuiltModelSelectedSitesListOperation
+
+> Applicable: SharePoint Online
+
+This parameter allows administrators to specify the operation to perform on the prebuilt model and [prebuilt document processing](/microsoft-365/syntex/prebuilt-overview) premium feature's current selected sites list using the list of site URLs passed to the `PrebuiltModelSelectedSitesList` parameter.
+
+The valid values are:
+
+- `Overwrite`: Overwrite the existing selected sites list. This is the default operation.
+- `Append`: Append the input list of sites to the existing selected sites list.
+- `Remove`: Remove the input list of sites from the existing selected sites list.
+
+> [!NOTE]
+> Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
+> Calling this parameter without `PrebuiltModelSelectedSitesList` has no effect.
+
+```yaml
+Type: SelectedSitesListOperations
+Parameter Sets: (All)
+Required: False
+Position: Named
+Default value: Overwrite
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -3622,13 +4454,100 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RecycleBinRetentionPeriod
+
+> Applicable: SharePoint Online
+
+Sets the amount of time content is kept in the in recycle bin in Microsoft365.com before it is deleted.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReduceTempTokenLifetimeEnabled
+
+> Applicable: SharePoint Online
+
+Enables reduced session timeout for temporary URLs used by apps for document download scenarios. Reduction occurs when an app redeeming an IP address does not match the original requesting IP. The default value is 15 minutes if ReduceTempTokenLifetimeValue is not set.
+
+**Note**: Reducing this value may bring degradation in end-user experience by requiring frequent authentication prompts to users.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReduceTempTokenLifetimeValue
+
+> Applicable: SharePoint Online
+
+Optional parameter to set the session timeout value for temporary URLs. The value can be set between 5 and 15 minutes and the default value is 15 minutes.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: 15
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveVersionExpirationFileTypeOverride
+
+An array of file type names. Removes the version history limit override from a set of file types so that they will follow the default version history limits. 
+
+The version history limits are applied on new document libraries in the tenant.
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RequireAcceptingAccountMatchInvitedAccount
+
+This parameter has been deprecated since SharePoint Online legacy invitation flow switched to Entra B2B invitation flow.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RequireAcceptingAccountMatchInvitedAccount
 
 This parameter has been deprecated since SharePoint Online legacy invitation flow switched to Entra B2B invitation flow.
 
 ### -RequireAnonymousLinksExpireInDays
-
-> Applicable: SharePoint Online
 
 Specifies the upper bound for user-created anonymous link expiration periods. All links created after setting this policy will expire by the end of a period spanning the set number of days.
 
@@ -3637,7 +4556,7 @@ The value can be from 0 to 730 days.
 To remove the expiration requirement, set the value to zero (0).
 
 ```yaml
-Type: System.String[]
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -3666,6 +4585,82 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictedAccessControlForOneDriveErrorHelpLink
+
+> Applicable: SharePoint Online
+
+Sets the link to organization help page in case of access denied due to restricted access control policy.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictedAccessControlforSitesErrorHelpLink
+
+Sets a custom learn more link to inform users who were denied access to a SharePoint site due to the restricted site access control policy.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictResourceAccountAccess
+
+> Applicable: SharePoint Online
+
+Controls whether resource accounts used by Teams Rooms and Devices can retain access to files after the meeting/collaboration is complete. Setting this to True prevents devices from accessing files and other Microsoft 365 assets when not actively in-use.
+
+PARAMVALUE: True | False
+
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ResyncContentSecurityPolicyConfigurationEntries
+
+> Applicable: SharePoint Online
+
+When set to `True`, forces a sync of **Content Security Policy** sources for SharePoint Framework components in the tenant application catalog.
+New sources will be added to the configuration, if not already present, based on the `cdnBasedPath` property under a solution's `.config/write-manifests.json` if present.
+The sync may take up to 24 hours to complete.
+In multi-geo environments, **Content Security Policy** configuration is unique to each geo.
+
+PARAMVALUE: True | False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -3719,6 +4714,41 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SelfServiceSiteCreationDisabled
+
+> Applicable: SharePoint Online
+
+When set to `True`, users cannot create sites from SharePoint, OneDrive, the PnP PowerShell cmdlet, and the REST API. When set to `False` (the default), users can create sites from SharePoint, OneDrive, the PnP PowerShell cmdlet, and the REST API.
+
+PARAMVALUE: True | False
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SensitivityLabel
+
+> Applicable: SharePoint Online
+
+Sets the sensitiviy label for a site.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SharingAllowedDomainList
 
 > Applicable: SharePoint Online
@@ -3749,233 +4779,6 @@ For additional information about how to restrict a domain sharing, see [Restrict
 
 ```yaml
 Type: System.Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RecycleBinRetentionPeriod
-{{ Fill RecycleBinRetentionPeriod Description }}
-
-```yaml
-Type: System.Int32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReduceTempTokenLifetimeEnabled
-{{ Fill ReduceTempTokenLifetimeEnabled Description }}
-
-```yaml
-Type: System.Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReduceTempTokenLifetimeValue
-{{ Fill ReduceTempTokenLifetimeValue Description }}
-
-```yaml
-Type: System.Int32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RequireAcceptingAccountMatchInvitedAccount
-Ensures that an external user can only accept an external sharing invitation with an account matching the invited email address.
-
-The parameter accepts two values: True or False.
-
-True-User must accept this invitation with bob@contoso.com.
-
-False- When a document is shared with an external user, bob@contoso.com, it can be accepted by any user with access to the invitation link in the original e-mail.
-
-Administrators who desire increased control over external collaborators should consider enabling this feature.
-
-This only applies to new external users accepting new sharing invitations.
-
-The resource owner must share with an organizational or Microsoft account or the external user will be unable to access the resource.
-
-```yaml
-Type: System.Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RequireAnonymousLinksExpireInDays
-{{ Fill RequireAnonymousLinksExpireInDays Description }}
-
-```yaml
-Type: System.Int32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RestrictedAccessControlForOneDriveErrorHelpLink
-{{ Fill RestrictedAccessControlForOneDriveErrorHelpLink Description }}
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RestrictedAccessControlforSitesErrorHelpLink
-{{ Fill RestrictedAccessControlforSitesErrorHelpLink Description }}
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResyncContentSecurityPolicyConfigurationEntries
-{{ Fill ResyncContentSecurityPolicyConfigurationEntries Description }}
-
-```yaml
-Type: System.Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ReSyncTenantPrivacyProfile
-{{ Fill ReSyncTenantPrivacyProfile Description }}
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SearchResolveExactEmailOrUPN
-Removes the search capability from People Picker.
-
-The valid values are:
-
-* Recently resolved names will still appear in the list.
-* False- Restores default search functionality.
-
-```yaml
-Type: System.Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SelfServiceSiteCreationDisabled
-{{ Fill SelfServiceSiteCreationDisabled Description }}
-
-```yaml
-Type: System.Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SensitivityLabel
-{{ Fill SensitivityLabel Description }}
-
-```yaml
-Type: System.String
-Parameter Sets: ParamSetMultipleSites
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SharingAllowedDomainList
-{{ Fill SharingAllowedDomainList Description }}
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SharingBlockedDomainList
-{{ Fill SharingBlockedDomainList Description }}
-
-```yaml
-Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -4118,7 +4921,10 @@ Accept wildcard characters: False
 ```
 
 ### -ShowOpenInDesktopOptionForSyncedFiles
-{{ Fill ShowOpenInDesktopOptionForSyncedFiles Description }}
+
+> Applicable: SharePoint Online
+
+Sets whether the Open in Desktop setting should be enabled.
 
 ```yaml
 Type: System.Boolean
@@ -4133,7 +4939,10 @@ Accept wildcard characters: False
 ```
 
 ### -ShowPeoplePickerGroupSuggestionsForIB
-{{ Fill ShowPeoplePickerGroupSuggestionsForIB Description }}
+
+The ShowPeoplePickerGroupSuggestionsForIB setting (defaulted to false) allows showing group suggestions for information barriers (IBs) in the People Picker.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -4199,6 +5008,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SiteOwnersCanAccessMissingContent
+
+> Applicable: SharePoint Online
+
+Whether site owners can access information about missing content on their site.
+
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SiteOwnerManageLegacyServicePrincipalEnabled
 
 > Applicable: SharePoint Online
@@ -4220,7 +5050,13 @@ Accept wildcard characters: False
 ```
 
 ### -Sites
-{{ Fill Sites Description }}
+
+List of sites that certain properties will apply to, such as a conditional access policy.
+
+The valid values are:
+
+- Url
+- SiteId
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind[]
@@ -4341,7 +5177,10 @@ Accept wildcard characters: False
 ```
 
 ### -StreamLaunchConfig
-{{ Fill StreamLaunchConfig Description }}
+
+> Applicable: SharePoint Online
+
+Sets the Stream Launch config state.
 
 ```yaml
 Type: System.Int32
@@ -4356,7 +5195,10 @@ Accept wildcard characters: False
 ```
 
 ### -SyncAadB2BManagementPolicy
-{{ Fill SyncAadB2BManagementPolicy Description }}
+
+This feature allows SharePoint Online to synchronize several Entra B2B collaboration settings [Guest user access restriction and collaboration restriction](https://learn.microsoft.com/en-us/entra/external-id/external-collaboration-settings-configure#configure-settings-in-the-portal), and store them on SharePoint Online tenant store. On sharing, SharePoint checks whether those synchronized settings are blocking sharing before sending invitation requests to Entra B2B invitation manager. The sync might take up to 24 hours to complete if you change those Entra B2B collaboration settings. To make the change effective on SharePoint Online immediately, run 'Set-SPOTenant -SyncAadB2BManagementPolicy $true' and it forces a sync from Microsoft Entra.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -4371,7 +5213,10 @@ Accept wildcard characters: False
 ```
 
 ### -SyncPrivacyProfileProperties
-{{ Fill SyncPrivacyProfileProperties Description }}
+
+> Applicable: SharePoint Online
+
+Sets whether the synced privacy profile properties will be refreshed on the next request.
 
 ```yaml
 Type: System.Boolean
@@ -4386,7 +5231,10 @@ Accept wildcard characters: False
 ```
 
 ### -TlsTokenBindingPolicyValue
-{{ Fill TlsTokenBindingPolicyValue Description }}
+
+> Applicable: SharePoint Online
+
+Sets the Transport Layer Security (TLS) token binding policy setting.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.TenantManagement.SPOTlsTokenBindingPolicyValue
@@ -4422,6 +5270,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -UsePersistentCookiesForExplorerView
 
 > Applicable: SharePoint Online
@@ -4454,7 +5303,10 @@ Accept wildcard characters: False
 ```
 
 ### -ViewersCanCommentOnMediaDisabled
-{{ Fill ViewersCanCommentOnMediaDisabled Description }}
+
+Controls whether viewers commenting on media items is disabled or not.
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
@@ -4494,7 +5346,17 @@ Accept wildcard characters: False
 ```
 
 ### -WhoCanShareAnonymousAllowList
-{{ Fill WhoCanShareAnonymousAllowList Description }}
+
+Sets the list of security groups who are allowed to share with anonymous (non-authenticated) users
+as well as authenticated guest users. Each security group is denoted by its GUID object ID in the
+Entra directory.
+
+> [!NOTE]
+> This allow list only accepts security groups, and not Microsoft 365 Groups.
+
+To set this list to be a specific security group, you need to enter its GUID as the argument. You
+can enter multiple GUIDs by using commas to separate them. To view the current list, use
+[Get-SPOTenant](Get-SPOTenant.md).
 
 ```yaml
 Type: System.Guid[]
@@ -4509,7 +5371,16 @@ Accept wildcard characters: False
 ```
 
 ### -WhoCanShareAuthenticatedGuestAllowList
-{{ Fill WhoCanShareAuthenticatedGuestAllowList Description }}
+
+Sets the list of security groups who are only allowed to share with authenticated guest users. Each
+security group is denoted by its GUID object ID.
+
+> [!NOTE]
+> This allow list only accepts security groups, and not Microsoft 365 Groups.
+
+To set this list to be a specific security group, you need to enter its GUID as the argument. You
+can enter multiple GUIDs by using commas to separate them. To view the current list, use
+[Get-SPOTenant](Get-SPOTenant.md).
 
 ```yaml
 Type: System.Guid[]
@@ -4524,7 +5395,8 @@ Accept wildcard characters: False
 ```
 
 ### -Workflows2013Enabled
-{{ Fill Workflows2013Enabled Description }}
+
+Controls whether Workflow 2013 is enabled.
 
 ```yaml
 Type: System.Boolean
@@ -4539,6 +5411,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

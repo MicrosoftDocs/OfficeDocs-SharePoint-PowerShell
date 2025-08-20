@@ -15,6 +15,7 @@ ms.reviewer:
 ## SYNOPSIS
 
 Do not use.
+
 ## SYNTAX
 
 ```
@@ -48,7 +49,10 @@ Accept wildcard characters: False
 ```
 
 ### -RedactName
-{{ Fill RedactName Description }}
+
+> Applicable: SharePoint Online
+
+Do not use.
 
 ```yaml
 Type: System.String

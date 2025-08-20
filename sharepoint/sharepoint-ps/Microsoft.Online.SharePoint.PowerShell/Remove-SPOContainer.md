@@ -13,6 +13,7 @@ ms.reviewer:
 # Remove-SPOContainer
 
 ## SYNOPSIS
+
 Sends a Container to the Recycle Bin.
 
 ## SYNTAX
@@ -42,7 +43,10 @@ Example 1 places the Container with the `ContainerId` `423poi45-jikl-9bnm-b302-1
 ## PARAMETERS
 
 ### -Force
-{{ Fill Force Description }}
+
+> Applicable: SharePoint Online
+
+Whether to remove the container without prompting for confirmation.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -75,6 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -90,6 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 

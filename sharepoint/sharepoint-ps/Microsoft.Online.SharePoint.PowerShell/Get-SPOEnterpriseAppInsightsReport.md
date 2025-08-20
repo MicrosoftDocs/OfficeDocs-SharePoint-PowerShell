@@ -44,6 +44,8 @@ If this cmdlet is executed with `-ReportId` as parameter, the top 100 records of
 | AppID           | The AppID of the 3P application.                                           |
 | AppPermissions  | The permissions granted to the 3P application.                             |
 | RequestVoulme   | The number of times the 3P application accessed the given SharePoint site. |
+| CallType        | The call type used by the 3P application to access the SharePoint site.    |
+| PoliciesOnSite  | The list of premium policies applied on the SharePoint site.               |
 
 If this cmdlet is executed with both the parameters, i.e. `-ReportId` and `-Action`, and if the value of `-Action` is set as `View`, it will display the same result as described above. If the value of `-Action` is set to `Download`, it will download the full report in CSV format to the same path from where the command was run.
 

@@ -129,7 +129,10 @@ Accept wildcard characters: False
 ```
 
 ### -Reserved
-{{ Fill Reserved Description }}
+
+> Applicable: SharePoint Online
+
+Reserved.
 
 ```yaml
 Type: System.String

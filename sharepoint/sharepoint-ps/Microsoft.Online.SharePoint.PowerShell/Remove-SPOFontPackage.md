@@ -1,14 +1,20 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version:
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spofontpackage
+applicable: SharePoint Online
+title: Remove-SPOFontPackage
 schema: 2.0.0
+author: JQ1u
+ms.author: luchaoqiu
+ms.reviewer:
 ---
 
 # Remove-SPOFontPackage
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+
+Removes a brand font package from the tenant.
 
 ## SYNTAX
 
@@ -17,21 +23,46 @@ Remove-SPOFontPackage [-Identity] <SPOFontPackagePipeBind> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+
+This cmdlet removes a custom font package from the tenant. After removal, the font package will no longer be available for use on SharePoint sites or Viva Connections.
+
+> [!NOTE]
+> Removing a font package does not delete the associated brand font files. Pages that already use the removed font package will continue to display the configured fonts, but you will no longer be able to modify the font package settings.
 
 ## EXAMPLES
 
-### Example 1
+### EXAMPLE 1
+
 ```powershell
-PS C:\> {{ Add example code here }}
+Remove-SPOFontPackage -Identity 12345678-1234-1234-1234-123456789012
 ```
 
-{{ Add example description here }}
+This example removes the font package with the specified GUID.
+
+### EXAMPLE 2
+
+```powershell
+$fontPackage = Get-SPOFontPackage -Identity 12345678-1234-1234-1234-123456789012
+Remove-SPOFontPackage -Identity $fontPackage
+```
+
+This example retrieves a font package and then removes it.
+
+### EXAMPLE 3
+
+```powershell
+Get-SPOFontPackage | Where-Object {$_.IsHidden -eq $true} | Remove-SPOFontPackage
+```
+
+This example removes all hidden font packages from the SharePoint tenant.
 
 ## PARAMETERS
 
 ### -Identity
-{{ Fill Identity Description }}
+
+> Applicable: SharePoint Online
+
+Specifies the identity of the font package to remove. This can be the ID (GUID) of the font package, or a font package object.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SPOFontPackagePipeBind
@@ -46,6 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -54,8 +86,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### System.Object
+### None
 
 ## NOTES
 
 ## RELATED LINKS
+
+[Add-SPOFontPackage](Add-SPOFontPackage.md)
+
+[Get-SPOFontPackage](Get-SPOFontPackage.md)
+
+[Set-SPOFontPackage](Set-SPOFontPackage.md)
