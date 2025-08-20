@@ -25,6 +25,7 @@ Add-SPOContainerUser [-ContainerId] <String> -LoginName <String> -Role <String> 
 ##DESCRIPTION
 
 Assigns a user to a defined role within a SharePoint Embedded container. You must specify the container ID, the user's login name, and the role to be assigned. This cmdlet is used to grant access and permissions based on role membership.
+
 You must be a SharePoint Embedded Administrator to run this cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Embedded Containers, see the documentation at [Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
@@ -125,16 +126,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell)
 
-[Get-SPOApplication](./Get-SPOApplication.md)
+[Set-SPOContainerUser](./Set-SPOContainerUser.md)
+
+[Remove-SPOContainerUser](./Remove-SPOContainerUser.md)
 
 [Set-SPOContainer](./Set-SPOContainer.md)
 
-[Get-SPODeletedContainer](./Get-SPODeletedContainer.md)
+[Get-SPOContainer](./Get-SPOContainer.md)
 
-[Remove-SPOContainer](./Remove-SPOContainer.md)
 
-[Remove-SPODeletedContainer](./Remove-SPODeletedContainer.md)
-
-[Restore-SPODeletedContainer](./Restore-SPODeletedContainer.md)
 
 
