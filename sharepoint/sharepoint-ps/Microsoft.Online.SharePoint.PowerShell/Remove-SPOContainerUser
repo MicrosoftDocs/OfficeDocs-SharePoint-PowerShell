@@ -24,7 +24,7 @@ Remove-SPOContainerUser [-ContainerId] <String> -LoginName <String> -Role <Strin
 
 ##DESCRIPTION
 
-Removes a user from a defined role within a SharePoint Embedded container. Use this cmdlet when you need to revoke a user's access or change their assigned role. The user must be currently assigned to the specified role in the container for the removal to succeed.
+Removes a user from a defined role within a SharePoint Embedded container.
 
 You must be a SharePoint Embedded Administrator to run this cmdlet.
 
