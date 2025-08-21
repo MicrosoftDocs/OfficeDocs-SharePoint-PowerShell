@@ -73,7 +73,6 @@ For permissions and the most current information about Windows PowerShell for Sh
 | **Microsoft Teams Events Video on Demand** | `f574b137-eb91-46a0-8811-1a04d80c7ffa`| 
 
 
-
 ## EXAMPLES
 
 ### Example 1
