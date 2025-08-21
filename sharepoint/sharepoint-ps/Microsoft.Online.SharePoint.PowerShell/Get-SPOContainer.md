@@ -59,18 +59,19 @@ You must be a SharePoint Embedded Administrator to run this cmdlet.
 For permissions and the most current information about Windows PowerShell for SharePoint Embedded Containers, see the documentation at [Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
 > [!NOTE]
-> Containers in the Recycle Bin will not be retrieved by using the `Get-SPOContainer` cmdlet.
+> You can't retrieve containers in the Recycle Bin using this cmdlet.
 > 
 > Use the following `OwningApplicationId` values to identify specific Microsoft applications:
 
 
 | Application | OwningApplicationId | 
 |----------|----------|
-| **Microsoft Loop**  | `a187e399-0c36-4b98-8f04-1edc167a0996` | 
+| **Microsoft Declarative Agent** | `3fbee041-e7d6-4f14-8826-6bf27f0a2849`  | 
 | **Microsoft Designer** | `5e2795e3-ce8c-4cfb-b302-35fe5cd01597`  | 
-| **Microsoft Teams Events Video on Demand** | `f574b137-eb91-46a0-8811-1a04d80c7ffa`| 
+| **Microsoft Loop**  | `a187e399-0c36-4b98-8f04-1edc167a0996` | 
 | **Microsoft Outlook Newsletters** | `a6804318-a92d-4f36-b499-441033991274`| 
-| **Microsoft Declarative Agent** | `3FBEE041-E7D6-4F14-8826-6BF27F0A2849`  | 
+| **Microsoft Teams Events Video on Demand** | `f574b137-eb91-46a0-8811-1a04d80c7ffa`| 
+
 
 
 ## EXAMPLES
