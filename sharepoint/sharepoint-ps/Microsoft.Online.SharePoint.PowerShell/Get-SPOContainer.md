@@ -126,7 +126,7 @@ Example 6 displays the containers belonging to the application, sorted in ascend
 Get-SPOContainer -OwningApplicationId 423poi45 -SortByStorage Ascending -Paged
 ```
 
-Example 7 displays a paged view of the the containers belonging to the application, sorted in ascending order of storage.
+Example 7 displays a paged view of the containers belonging to the application, sorted in ascending order of storage.
 
 ### Example 8
 
@@ -156,7 +156,7 @@ The ArchiveStatus parameter is used to display containers in various stages of a
 - RecentlyArchived – Displays containers in the "Recently archived" state.
 - FullyArchived – Displays containers in the "Fully archived" state.
 - Reactivating – Displays containers in the "Reactivating" state.
-- NotArchived – Displays active containers
+- NotArchived – Displays active containers.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.TenantAdministration.SPContainerArchiveStatusFilterProperties
@@ -229,7 +229,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Use this parameter to provide the paging token to view the remaining containers as shown in Example 4. If there are no more containers to display, the cmdlet output will return the message `End of containers view.` Otherwise, use the given paging token to retrieve the next batch of up to 200 containers. For displaying the next set of archived containers, `-ArchiveStatus` paramter needs to be used along with this parameter.
+Use this parameter to provide the paging token to view the remaining containers as shown in Example 4. If there are no more containers to display, the cmdlet output will return the message `End of containers view.` Otherwise, use the given paging token to retrieve the next batch of up to 200 containers. For displaying the next set of archived containers, `-ArchiveStatus` parameter needs to be used along with this parameter.
 
 ```yaml
 Type: System.String
