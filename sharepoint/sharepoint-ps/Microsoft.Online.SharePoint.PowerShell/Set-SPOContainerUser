@@ -24,7 +24,7 @@ Set-SPOContainerUser [-ContainerId] <String> -LoginName <String> -Role <String> 
 
 ##DESCRIPTION
 
-Updates a user's assigned role within a SharePoint Embedded container. Use this cmdlet to reassign a user from their current role to a new one. You must specify the container ID, the user's login name, and the new role.
+Updates a user's assigned role within a SharePoint Embedded container.
 
 You must be a SharePoint Embedded Administrator to run this cmdlet.
 
