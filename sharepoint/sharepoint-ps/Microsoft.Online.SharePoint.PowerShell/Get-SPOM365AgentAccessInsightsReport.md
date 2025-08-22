@@ -5,10 +5,9 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
 title: Get-SPOM365AgentAccessInsightsReport
 schema: 2.0.0
-author: gchaudhary
+author: starringGTM
 ms.author: gchaudhary
 ms.reviewer:
-manager: lokeshgoel
 ---
 
 # Get-SPOM365AgentAccessInsightsReport
@@ -49,7 +48,7 @@ Example 1 enables administrator to view the status of all active and completed a
 Get-SPOM365AgentAccessInsightsReport –ReportId 9d946216-afe7-49f5-8267-7b662435c70b
 ```
 
-Example 2 enables administrator to view the M365 agent insight report of the given report id.
+Example 2 enables administrator to view the Microsoft 365 agent insight report of the given report ID.
 
 ### EXAMPLE 3
 
@@ -57,7 +56,7 @@ Example 2 enables administrator to view the M365 agent insight report of the giv
 Get-SPOM365AgentAccessInsightsReport – ReportId 9d946216-afe7-49f5-8267-7b662435c70b -Action Download
 ```
 
-Example 3 enables administrator to download the M365 agent insight report of the given report id to the same path from where the command was run.
+Example 3 enables administrator to download the Microsoft 365 agent insight report of the given report ID to the same path from where the command was run.
 
 ## PARAMETERS
 
@@ -84,7 +83,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-It specifies the kind of report to view or download. There are 2 kinds of sub-reports: M365AgentsOnSites, SiteDistribution.
+It specifies the kind of report to view or download.
 
 If this cmdlet is executed with `-Content` as `M365AgentsOnSites`, a report with list of all sites on which a agent is created along with the names of the agent created in the specified number of days will be displayed.
 
@@ -107,7 +106,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-It specifies the unique Id of the report to be viewed or downloaded.
+It specifies the unique ID of the report to be viewed or downloaded.
 
 ```yaml
 Type: System.Guid
@@ -140,5 +139,3 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
 
 [Start-SPOM365AgentAccessInsightsReport](./Start-SPOM365AgentAccessInsightsReport.md)
-
-
