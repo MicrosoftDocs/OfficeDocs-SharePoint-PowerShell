@@ -484,7 +484,7 @@ Cmdlet to register customer encryption status for your geo tenant. For more info
 Enables the hub site feature on a site to make it a hub site. For more information visit [SharePoint hub sites overview](/sharepoint/dev/features/hub-site/hub-site-overview).
 
 ### [Remove-SPOAppBillingPolicy](Remove-SPOAppBillingPolicy.md)
-Removes billing policy asscoiated with the application.
+Removes billing policy associated with the application.
 
 ### [Remove-SPOContainer](Remove-SPOContainer.md)
 Sends a Container to the Recycle Bin.
