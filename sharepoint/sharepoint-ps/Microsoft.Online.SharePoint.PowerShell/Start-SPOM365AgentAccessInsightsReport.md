@@ -5,17 +5,16 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
 title: Start-SPOM365AgentAccessInsightsReport
 schema: 2.0.0
-author: gchaudhary
+author: starringGTM
 ms.author: gchaudhary
 ms.reviewer:
-manager: lokeshgoel
 ---
 
  # Start-SPOM365AgentAccessInsightsReport
 
 ## SYNOPSIS
 
-Using this cmdlet, administrators may trigger the build of a new M365 agent insight report for the specified number of days.
+Using this cmdlet, administrators may trigger the build of a new Microsoft 365 agent insight report for the specified number of days.
 
 > [!NOTE]
 > The feature associated with this cmdlet will be rolling out soon.
@@ -29,7 +28,7 @@ Start-SPOM365AgentAccessInsightsReport [-Force] [-ReportPeriodInDays <Int32>] [-
 
 ## DESCRIPTION
 
-After executing this cmdlet, the M365 agent insight report generation request for the specified number of days is added to the pipeline queue.
+After executing this cmdlet, the Microsoft 365 agent insight report generation request for the specified number of days is added to the pipeline queue.
 
 ## EXAMPLES
 
@@ -39,7 +38,7 @@ After executing this cmdlet, the M365 agent insight report generation request fo
 Start-SPOM365AgentAccessInsightsReport
 ```
 
-Example 1 generates the M365 agent insight report for a default duration of 1 day since the parameter `–ReportPeriodInDays` is not provided.
+Example 1 generates the Microsoft 365 agent insight report for a default duration of 1 day since the parameter `–ReportPeriodInDays` is not provided.
 
 ### EXAMPLE 2
 
