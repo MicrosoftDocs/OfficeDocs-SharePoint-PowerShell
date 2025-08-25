@@ -231,6 +231,9 @@ Gets the status for a file version expiration report generation job for a docume
 ### [Get-SPOListVersionPolicy](Get-SPOListVersionPolicy.md)
 Gets the version policy setting on the document library.
 
+### [Get-SPOM365AgentAccessInsightsReport](Get-SPOM365AgentAccessInsightsReport.md)
+This cmdlet enables the administrator to check status of all active and available Microsoft 365 Agent Insights reports when no report ID is present and to view or download a report if report ID is present.  > [!NOTE] > The feature associated with this cmdlet will be rolling out soon.
+
 ### [Get-SPOMalwareFile](Get-SPOMalwareFile.md)
 Extracts and displays the malware-related information of an infected file stored in SharePoint.
 
@@ -773,6 +776,9 @@ This cmdlet enables administrator to trigger the build of a new enterprise appli
 
 ### [Start-SPOInformationBarriersInsightsReport](Start-SPOInformationBarriersInsightsReport.md)
 Generates a new report to identify and discover the usage patterns of Information Barriers (IB) across SharePoint sites and OneDrive accounts in the organization.
+
+### [Start-SPOM365AgentAccessInsightsReport](Start-SPOM365AgentAccessInsightsReport.md)
+Using this cmdlet, administrators may trigger the build of a new Microsoft 365 agent insight report for the specified number of days.  > [!NOTE] > The feature associated with this cmdlet will be rolling out soon.
 
 ### [Start-SPORestrictedAccessForSitesInsights](Start-SPORestrictedAccessForSitesInsights.md)
 This cmdlet enables administrator to trigger the build of a new restricted access control insights report for the data from last 28 days.
