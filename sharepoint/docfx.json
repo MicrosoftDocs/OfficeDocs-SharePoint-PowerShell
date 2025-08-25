@@ -49,6 +49,7 @@
       "ms.devlang": "powershell",
       "ms.date": "09/08/2021",
       "ms.topic": "reference",
+      "toc_preview": true,
       "contributors_to_exclude": [
         "rjagiewich",
         "traya1",
