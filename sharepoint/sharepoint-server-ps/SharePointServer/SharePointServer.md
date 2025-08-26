@@ -1,5 +1,5 @@
 ---
-module name: SharePointServer
+Module Name: SharePointServer
 Module Guid: 01dfdcd9-c48d-46a9-b09a-587ca5c4829a
 Help Version:  17.0.15229.2100
 Download Help Link:  https://officedocs-cdn.azureedge.net/powershell/sharepoint/
@@ -17,13 +17,13 @@ zh-CN Version: 17.0.15229.2100
 zh-TW Version: 17.0.15229.2100
 ---
 
-# SharePointServer module
+# SharePointServer Module
 
 ## Description
 
 The following cmdlet references are for SharePoint Server.
 
-## SharePointServer cmdlets
+## SharePointServer Cmdlets
 
 ### [Add-SPAppDeniedEndpoint](Add-SPAppDeniedEndpoint.md)
 Adds a  relative URL endpoint of a server to the list of app-denied endpoints.
