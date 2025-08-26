@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
-module name: SharePointServer
+Module Name: SharePointServer
 online version:
 schema: 2.0.0
 ---

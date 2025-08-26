@@ -1,6 +1,6 @@
 ---
 external help file: sharepointonline.xml
-module name: SharePointServer
+Module Name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spodataconnectionsettingmetadata
 
 title: Get-SPODataConnectionSettingMetadata
