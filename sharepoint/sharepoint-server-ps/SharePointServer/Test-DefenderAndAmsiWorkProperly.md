@@ -1,5 +1,8 @@
 ---
+<<<<<<< Updated upstream
 external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
+=======
+>>>>>>> Stashed changes
 Module Name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/test-defenderandamsiworkproperly
 applicable: SharePoint Server Subscription Edition

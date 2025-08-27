@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.TopologyService-help.xml
-module name: SharePointServer
+Module Name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/receive-spserviceapplicationconnectioninfo
 applicable: SharePoint Server Subscription Edition
 title: Receive-SPServiceApplicationConnectionInfo
