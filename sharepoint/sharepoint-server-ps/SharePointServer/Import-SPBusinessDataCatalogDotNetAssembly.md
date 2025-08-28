@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: SharePointServer
+Module Name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/import-spbusinessdatacatalogdotnetassembly
 applicable: SharePoint Server Subscription Edition
 title: Import-SPBusinessDataCatalogDotNetAssembly
