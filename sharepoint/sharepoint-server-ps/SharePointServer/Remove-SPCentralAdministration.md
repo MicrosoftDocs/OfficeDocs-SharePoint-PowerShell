@@ -2,7 +2,6 @@
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spcentraladministration
-
 title: Remove-SPCentralAdministration
 schema: 2.0.0
 ---

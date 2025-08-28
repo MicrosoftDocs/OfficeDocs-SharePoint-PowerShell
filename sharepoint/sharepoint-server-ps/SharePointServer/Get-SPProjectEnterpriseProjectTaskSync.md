@@ -2,7 +2,6 @@
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 Module Name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spprojectenterpriseprojecttasksync
-
 title: Get-SPProjectEnterpriseProjectTaskSync
 schema: 2.0.0
 ---
