@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
-module name: SharePointServer
+Module Name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spserverscaleoutdatabasedatarange
 applicable: SharePoint Server Subscription Edition
 title: Set-SPServerScaleOutDatabaseDataRange
@@ -10,6 +10,7 @@ schema: 2.0.0
 # Set-SPServerScaleOutDatabaseDataRange
 
 ## SYNOPSIS
+
 Extends the range of a specified scale-out database.
 
 ## SYNTAX
@@ -21,11 +22,13 @@ Set-SPServerScaleOutDatabaseDataRange -Database <SPDatabasePipeBind> -IsUpperSub
 ```
 
 ## DESCRIPTION
+
 Use the Set-SPServerScaleOutDatabaseDataRange cmdlet to extend the range of a specified scale-out database in a specified direction.
 
 ## EXAMPLES
 
 ### EXAMPLE
+
 ```powershell
 $databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
 $database = $databases[0]
@@ -136,7 +139,7 @@ Accept wildcard characters: False
 Specifies the new start point or end point of the database.
 The maximum value is NULL.
 
-``yaml
+```yaml
 Type: Byte[]
 Parameter Sets: (All)
 Aliases:
@@ -168,11 +171,13 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### Microsoft.SharePoint.PowerShell.SPDatabasePipeBind
+
 Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 
 ## OUTPUTS
