@@ -10,6 +10,7 @@ schema: 2.0.0
 # Set-SPServerScaleOutDatabaseDataRange
 
 ## SYNOPSIS
+
 Extends the range of a specified scale-out database.
 
 ## SYNTAX
@@ -21,11 +22,13 @@ Set-SPServerScaleOutDatabaseDataRange -Database <SPDatabasePipeBind> -IsUpperSub
 ```
 
 ## DESCRIPTION
+
 Use the Set-SPServerScaleOutDatabaseDataRange cmdlet to extend the range of a specified scale-out database in a specified direction.
 
 ## EXAMPLES
 
 ### EXAMPLE
+
 ```powershell
 $databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
 $database = $databases[0]
@@ -136,7 +139,7 @@ Accept wildcard characters: False
 Specifies the new start point or end point of the database.
 The maximum value is NULL.
 
-``yaml
+```yaml
 Type: Byte[]
 Parameter Sets: (All)
 Aliases:

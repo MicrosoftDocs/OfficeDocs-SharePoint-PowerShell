@@ -24,15 +24,6 @@ Update-SPRepopulateMicroblogFeedCache [-AccountName <String>]
  [-SiteUrl <String>] [<CommonParameters>]
 ```
 
-### Default
-
-```
-Update-SPRepopulateMicroblogFeedCache [-AccountName <String>]
- -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
- [-AssignmentCollection <SPAssignmentCollection>] [-SiteSubscription <SPSiteSubscriptionPipeBind>]
- [-SiteUrl <String>] [<CommonParameters>]
-```
-
 ### FollowableList
 
 ```
