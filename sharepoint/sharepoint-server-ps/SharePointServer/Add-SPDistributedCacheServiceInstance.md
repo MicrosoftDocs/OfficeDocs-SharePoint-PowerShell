@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: SharePointServer
+Module Name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/add-spdistributedcacheserviceinstance
 applicable: SharePoint Server Subscription Edition
 title: Add-SPDistributedCacheServiceInstance
@@ -16,7 +16,7 @@ Adds an instance of the distributed cache service to a local server.
 
 ## SYNTAX
 
-###  (Default)
+### Default
 ```
 Add-SPDistributedCacheServiceInstance [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```

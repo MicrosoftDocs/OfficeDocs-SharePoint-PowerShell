@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
-module name: SharePointServer
+Module Name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/restore-spenterprisesearchserviceapplication
 applicable: SharePoint Server Subscription Edition
 title: Restore-SPEnterpriseSearchServiceApplication
