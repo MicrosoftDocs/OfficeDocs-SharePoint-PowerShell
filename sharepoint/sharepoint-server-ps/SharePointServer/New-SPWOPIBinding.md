@@ -263,10 +263,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Content roadmap for Office Web Apps]()
-
-[Use Office Web Apps with SharePoint 2013]()
-
 [Get-SPWOPIBinding](Get-SPWOPIBinding.md)
 
 [Set-SPWOPIBinding](Set-SPWOPIBinding.md)
