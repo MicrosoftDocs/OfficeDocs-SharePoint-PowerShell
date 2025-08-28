@@ -119,8 +119,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-SPODataConnectionSetting](New-SPODataConnectionSetting)
+[New-SPODataConnectionSetting](New-SPODataConnectionSetting.md)
 
-[Remove-SPODataConnectionSetting](Remove-SPODataConnectionSetting)
+[Remove-SPODataConnectionSetting](Remove-SPODataConnectionSetting.md)
 
-[Set-SPODataConnectionSetting](Set-SPODataConnectionSetting)
+[Set-SPODataConnectionSetting](Set-SPODataConnectionSetting.md)
