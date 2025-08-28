@@ -1,5 +1,5 @@
 ---
-module name: SharePointServer
+Module Name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/test-defenderandamsiworkproperly
 applicable: SharePoint Server Subscription Edition
 title: Test-DefenderAndAmsiWorkProperly
