@@ -18,6 +18,9 @@ The following cmdlet references are for SharePoint Online.
 ### [Add-SPOContainerTypeBilling](Add-SPOContainerTypeBilling.md)
 Adds the mentioned billing profile details to a standard container type.
 
+### [Add-SPOContainerUser](Add-SPOContainerUser.md)
+Adds a user to a SharePoint Embedded container with a specified role.
+
 ### [Add-SPOContentSecurityPolicy](Add-SPOContentSecurityPolicy.md)
 Adds a source to the **Content Security Policy** configuration.
 
@@ -481,12 +484,15 @@ Cmdlet to register customer encryption status for your geo tenant. For more info
 Enables the hub site feature on a site to make it a hub site. For more information visit [SharePoint hub sites overview](/sharepoint/dev/features/hub-site/hub-site-overview).
 
 ### [Remove-SPOAppBillingPolicy](Remove-SPOAppBillingPolicy.md)
-Removes billing policy asscoiated with the application.
+Removes billing policy associated with the application.
 
 ### [Remove-SPOContainer](Remove-SPOContainer.md)
 Sends a Container to the Recycle Bin.
 
 ### [Remove-SPOContainerType](Remove-SPOContainerType.md)
+This cmdlet removes the container type specified from the tenant.
+
+### [Remove-SPOContainerUser](Remove-SPOContainerUser.md)
 This cmdlet removes the container type specified from the tenant.
 
 ### [Remove-SPOContentEventEmailAddresses](Remove-SPOContentEventEmailAddresses.md)
@@ -665,6 +671,9 @@ Sets or updates one or more property values of a trial, standard or a direct to 
 
 ### [Set-SPOContainerTypeConfiguration](Set-SPOContainerTypeConfiguration.md)
 Sets or updates the configuration settings of a container type in SharePoint Embedded.
+
+### [Set-SPOContainerUser](Set-SPOContainerUser.md)
+Reassigns a user from their current role to a new role within a SharePoint Embedded container.
 
 ### [Set-SPOContentEventEmailAddresses](Set-SPOContentEventEmailAddresses.md)
 Adds the email addresses to the specified category of content event. Consequently, notification emails will be sent to these addresses.

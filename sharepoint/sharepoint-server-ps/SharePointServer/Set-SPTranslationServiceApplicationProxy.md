@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Office.TranslationServices.dll-Help.xml
-module name: SharePointServer
+Module Name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-sptranslationserviceapplicationproxy
 applicable: SharePoint Server Subscription Edition
 title: Set-SPTranslationServiceApplicationProxy
