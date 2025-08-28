@@ -15,7 +15,7 @@ Refreshes the microblog feed cache.
 
 ## SYNTAX
 
-### (Default)
+### Default
 
 ```
 Update-SPRepopulateMicroblogFeedCache [-AccountName <String>]

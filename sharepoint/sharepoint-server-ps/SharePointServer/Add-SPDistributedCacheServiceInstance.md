@@ -16,7 +16,7 @@ Adds an instance of the distributed cache service to a local server.
 
 ## SYNTAX
 
-###  (Default)
+### Default
 ```
 Add-SPDistributedCacheServiceInstance [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
