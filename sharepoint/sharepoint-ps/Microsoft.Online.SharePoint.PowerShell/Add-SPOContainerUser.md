@@ -22,7 +22,7 @@ Adds a user to a SharePoint Embedded container with a specified role.
 Add-SPOContainerUser [-ContainerId] <String> -LoginName <String> -Role <String> [<CommonParameters>]
 ```
 
-##DESCRIPTION
+## DESCRIPTION
 
 Assigns a user to a defined role within a SharePoint Embedded container.
 
@@ -48,7 +48,7 @@ Example 1 assigns the role of owner to user with User Principal Name "shras@cont
 
 ## PARAMETERS
 
--ContainerId
+### -ContainerId
 
 > Applicable: SharePoint Online
 
@@ -66,7 +66,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
--LoginName
+### -LoginName
 
 > Applicable: SharePoint Online
 
@@ -84,7 +84,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
--Role
+### -Role
 
 > Applicable: SharePoint Online
 
@@ -110,6 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
@@ -133,7 +134,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-SPOContainer](./Set-SPOContainer.md)
 
 [Get-SPOContainer](./Get-SPOContainer.md)
-
-
-
-
