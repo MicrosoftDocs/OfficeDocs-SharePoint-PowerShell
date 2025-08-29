@@ -47,7 +47,7 @@ Example 1 reassigns the role of User Principal Name "shras@contoso.com" to manag
 
 ## PARAMETERS
 
--ContainerId
+### -ContainerId
 
 > Applicable: SharePoint Online
 
@@ -65,7 +65,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
--LoginName
+### -LoginName
 
 > Applicable: SharePoint Online
 
@@ -83,7 +83,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
--Role
+### -Role
 
 > Applicable: SharePoint Online
 
@@ -109,6 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
