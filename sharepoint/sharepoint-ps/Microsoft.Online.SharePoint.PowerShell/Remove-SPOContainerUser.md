@@ -22,7 +22,7 @@ Removes a user from a specified role in a SharePoint Embedded container.
 Remove-SPOContainerUser [-ContainerId] <String> -LoginName <String> -Role <String> [<CommonParameters>]
 ```
 
-##DESCRIPTION
+## DESCRIPTION
 
 Removes a user from a defined role within a SharePoint Embedded container.
 

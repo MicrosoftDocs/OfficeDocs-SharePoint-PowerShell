@@ -22,7 +22,7 @@ Adds a user to a SharePoint Embedded container with a specified role.
 Add-SPOContainerUser [-ContainerId] <String> -LoginName <String> -Role <String> [<CommonParameters>]
 ```
 
-##DESCRIPTION
+## DESCRIPTION
 
 Assigns a user to a defined role within a SharePoint Embedded container.
 

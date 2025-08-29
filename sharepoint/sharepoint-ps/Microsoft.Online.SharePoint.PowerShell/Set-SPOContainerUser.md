@@ -22,7 +22,7 @@ Reassigns a user from their current role to a new role within a SharePoint Embed
 Set-SPOContainerUser [-ContainerId] <String> -LoginName <String> -Role <String> [<CommonParameters>
 ```
 
-##DESCRIPTION
+## DESCRIPTION
 
 Updates a user's assigned role within a SharePoint Embedded container.
 
