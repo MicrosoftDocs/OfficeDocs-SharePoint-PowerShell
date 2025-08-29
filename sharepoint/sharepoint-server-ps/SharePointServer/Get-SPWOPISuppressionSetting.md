@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: SharePointServer
+Module Name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spwopisuppressionsetting
 applicable: SharePoint Server Subscription Edition
 title: Get-SPWOPISuppressionSetting
@@ -71,10 +71,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Content roadmap for Office Web Apps]()
-
-[Use Office Web Apps with SharePoint 2013]()
 
 [New-SPWOPISuppressionSetting](New-SPWOPISuppressionSetting.md)
 

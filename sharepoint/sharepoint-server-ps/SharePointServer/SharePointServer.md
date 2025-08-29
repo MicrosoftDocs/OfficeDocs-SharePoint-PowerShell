@@ -1,5 +1,5 @@
 ---
-module name: SharePointServer
+Module Name: SharePointServer
 Module Guid: 01dfdcd9-c48d-46a9-b09a-587ca5c4829a
 Help Version:  17.0.15229.2100
 Download Help Link:  https://officedocs-cdn.azureedge.net/powershell/sharepoint/
@@ -2447,6 +2447,9 @@ Replaces existing certificate assignments with a new certificate.
 
 ### [Sync-SPProjectPermissions](Sync-SPProjectPermissions.md)
 Manually synchronizes permissions between a Project Web App instance and its associated project sites.
+
+### [Test-DefenderAndAmsiWorkProperly](Test-DefenderAndAmsiWorkProperly.md)
+Tests that Windows Defender components and SharePoint AMSI integration are properly installed and running.
 
 ### [Test-SPContentDatabase](Test-SPContentDatabase.md)
 Tests a content database.

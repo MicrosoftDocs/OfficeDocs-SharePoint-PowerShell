@@ -1,8 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: SharePointServer
+Module Name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/move-spappmanagementdata
-
 title: Move-SPAppManagementData
 schema: 2.0.0
 ---

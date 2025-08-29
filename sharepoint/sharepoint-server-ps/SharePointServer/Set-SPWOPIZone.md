@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: SharePointServer
+Module Name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spwopizone
 applicable: SharePoint Server Subscription Edition
 title: Set-SPWOPIZone
@@ -141,9 +141,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Content roadmap for Office Web Apps]()
-
-[Use Office Web Apps with SharePoint 2013]()
 
 [Get-SPWOPIZone](Get-SPWOPIZone.md)

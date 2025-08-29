@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: SharePointServer
+Module Name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/upgrade-spcontentdatabase
 applicable: SharePoint Server Subscription Edition
 title: Upgrade-SPContentDatabase

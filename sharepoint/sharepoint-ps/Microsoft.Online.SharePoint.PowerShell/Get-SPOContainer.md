@@ -18,27 +18,36 @@ Returns one or more containers in a SharePoint Embedded application.
 
 ## SYNTAX
 
+### All (Default)
+```
+Get-SPOContainer [-Identity <SPOContainerPipeBind>] [-Paged] [[-PagingToken] <String>]
+ [[-SortByStorage] <SortOrder>] [[-ArchiveStatus] <SPContainerArchiveStatusFilterProperties>]
+ [-ProgressAction <ActionPreference>] [<CommonParameters>]
+```
+
 ### OwningApplicationId
 ```
-Get-SPOContainer [-OwningApplicationId] <Guid> [-Paged] [[-PagingToken] <String>] [<CommonParameters>]
+Get-SPOContainer [-OwningApplicationId] <Guid> [-Paged] [[-PagingToken] <String>]
+ [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
+
 
 ### Sort
 ```
 Get-SPOContainer [-OwningApplicationId] <Guid> [-Paged] [[-PagingToken] <String>] [-SortByStorage] <SortOrder>
- [<CommonParameters>]
+ [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ### Archive
 ```
 Get-SPOContainer [-OwningApplicationId] <Guid> [-Paged] [[-PagingToken] <String>]
  [[-SortByStorage] <SortOrder>] [-ArchiveStatus] <SPContainerArchiveStatusFilterProperties>
- [<CommonParameters>]
+ [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ### Identity
 ```
-Get-SPOContainer -Identity <SPOContainerPipeBind> [<CommonParameters>]
+Get-SPOContainer -Identity <SPOContainerPipeBind> [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -50,73 +59,90 @@ You must be a SharePoint Embedded Administrator to run this cmdlet.
 For permissions and the most current information about Windows PowerShell for SharePoint Embedded Containers, see the documentation at [Intro to SharePoint Embedded Containers Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
 > [!NOTE]
-> Containers in the Recycle Bin will not be retrieved by using the `Get-SPOContainer` cmdlet.
-> The OwningApplicationId for Microsoft Loop is `a187e399-0c36-4b98-8f04-1edc167a0996`.
-> The OwningApplicationId for Microsoft Designer is `5e2795e3-ce8c-4cfb-b302-35fe5cd01597`.
+> You can't retrieve containers in the Recycle Bin using this cmdlet.
+> 
+> Use the following `OwningApplicationId` values to identify specific Microsoft applications:
+
+
+| Application | OwningApplicationId | 
+|----------|----------|
+| **Microsoft Declarative Agent** | `3fbee041-e7d6-4f14-8826-6bf27f0a2849`  | 
+| **Microsoft Designer** | `5e2795e3-ce8c-4cfb-b302-35fe5cd01597`  | 
+| **Microsoft Loop**  | `a187e399-0c36-4b98-8f04-1edc167a0996` | 
+| **Microsoft Outlook Newsletters** | `a6804318-a92d-4f36-b499-441033991274`| 
+| **Microsoft Teams Events Video on Demand** | `f574b137-eb91-46a0-8811-1a04d80c7ffa`| 
+
 
 ## EXAMPLES
 
 ### Example 1
 
 ```powershell
-Get-SPOContainer -Identity b66f5b2e
+Get-SPOContainer 
 ```
-
-Example 1 returns the detailed properties of the Container with associated Container ID b66f5b2e.
+Example 1 returns the details of all the containers in the tenant.
 
 ### Example 2
 
 ```powershell
-Get-SPOContainer -OwningApplicationId 423poi45 | ft
+Get-SPOContainer -Identity b66f5b2e
 ```
-Example 2 returns a tabular list of Containers created under the SharePoint Embedded application with the `OwningApplicationId` of  `423poi45`.
+
+Example 2 returns the detailed properties of the Container with associated Container ID b66f5b2e.
 
 ### Example 3
 
 ```powershell
-Get-SPOContainer -OwningApplicationId 423poi45 -Paged | ft
+Get-SPOContainer -OwningApplicationId 423poi45 | ft
 ```
-Example 3 uses the `-Paged` command to retrieve a paging token.
+Example 3 returns a tabular list of Containers created under the SharePoint Embedded application with the `OwningApplicationId` of  `423poi45`.
 
 ### Example 4
+
+```powershell
+Get-SPOContainer -OwningApplicationId 423poi45 -Paged | ft
+```
+Example 4 uses the `-Paged` command to retrieve a paging token.
+
+### Example 5
 
 ```powershell
 Get-SPOContainer -OwningApplicationId 423poi45 -Paged -PagingToken <zacad> | ft
 ```
 
-Example 4 uses the `-PagingToken` parameter along with the `-Paged` parameter to view more containers that were not displayed in Example 3.
+Example 5 uses the `-PagingToken` parameter along with the `-Paged` parameter to view more containers that were not displayed in Example 3.
 
-### Example 5
+### Example 6
 
 ```powershell
 Get-SPOContainer -OwningApplicationId 423poi45 -SortByStorage Ascending
 ```
 
-Example 5 displays the containers belonging to the application, sorted in ascending order of storage.
+Example 6 displays the containers belonging to the application, sorted in ascending order of storage.
 
-### Example 6
+### Example 7
 
 ```powershell
 Get-SPOContainer -OwningApplicationId 423poi45 -SortByStorage Ascending -Paged
 ```
 
-Example 6 displays a paged view of the the containers belonging to the application, sorted in ascending order of storage.
+Example 7 displays a paged view of the containers belonging to the application, sorted in ascending order of storage.
 
-### Example 7
+### Example 8
 
 ```powershell
 Get-SPOContainer -OwningApplicationId 423poi45-as -SortByStorage Ascending -Paged -PagingToken <zacad>
 ```
 
-Example 7 displays the next list of paged view of containers belonging to the application, sorted in ascending order of storage.
+Example 8 displays the next list of paged view of containers belonging to the application, sorted in ascending order of storage.
 
-### Example 8
+### Example 9
 
 ```powershell
 Get-SPOContainer -OwningApplicationId 423poi45 -ArchiveStatus RecentlyArchived | ft
 ```
 
-Example 8 returns a tabular list of recently archived containers belonging to the SharePoint Embedded application with the OwningApplicationId of 423poi45.
+Example 9 returns a tabular list of recently archived containers belonging to the SharePoint Embedded application with the OwningApplicationId of 423poi45.
 
 ## PARAMETERS
 
@@ -130,7 +156,7 @@ The ArchiveStatus parameter is used to display containers in various stages of a
 - RecentlyArchived – Displays containers in the "Recently archived" state.
 - FullyArchived – Displays containers in the "Fully archived" state.
 - Reactivating – Displays containers in the "Reactivating" state.
-- NotArchived – Displays active containers
+- NotArchived – Displays active containers.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.TenantAdministration.SPContainerArchiveStatusFilterProperties
@@ -203,7 +229,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Use this parameter to provide the paging token to view the remaining containers as shown in Example 4. If there are no more containers to display, the cmdlet output will return the message `End of containers view.` Otherwise, use the given paging token to retrieve the next batch of up to 200 containers. For displaying the next set of archived containers, `-ArchiveStatus` paramter needs to be used along with this parameter.
+Use this parameter to provide the paging token to view the remaining containers as shown in Example 4. If there are no more containers to display, the cmdlet output will return the message `End of containers view.` Otherwise, use the given paging token to retrieve the next batch of up to 200 containers. For displaying the next set of archived containers, `-ArchiveStatus` parameter needs to be used along with this parameter.
 
 ```yaml
 Type: System.String
@@ -218,6 +244,8 @@ Accept wildcard characters: False
 ```
 
 ### -SortByStorage
+
+> Applicable: SharePoint Online
 
 This parameter can be used when you need to see the list of containers, sorted by storage.
 
@@ -235,6 +263,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
+> Applicable: SharePoint Online
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
