@@ -15,7 +15,7 @@ Tests that Windows Defender components and SharePoint AMSI integration are prope
 ## SYNTAX
 
 ### PSMode
-```powershell
+```
 Test-DefenderAndAmsiWorkProperly [<CommonParameters>]
 ```
 
@@ -50,7 +50,6 @@ This example tests the Windows Defender components and SharePoint AMSI integrati
 ## PARAMETERS
 
 ### CommonParameters
-
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
