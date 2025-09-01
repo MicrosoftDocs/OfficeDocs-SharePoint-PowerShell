@@ -336,6 +336,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RestrictContentOrgWideSearch
+
+Controls whether org-wide content search is enabled for a container.
+
+```yaml
+Type: Boolean
+Parameter Sets: RestrictContentOrgWideSearch
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SensitivityLabel
 
 > Applicable: SharePoint Online
@@ -444,22 +460,6 @@ The cmdlet is not run.
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RestrictContentOrgWideSearch
-
-Controls whether org-wide content search is enabled for a site.
-
-```yaml
-Type: Boolean
-Parameter Sets: RestrictContentOrgWideSearch
-Aliases:
 
 Required: False
 Position: Named
