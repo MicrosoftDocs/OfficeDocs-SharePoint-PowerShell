@@ -230,11 +230,14 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-Instead of adding the -UseSystemBrowser parameter every time users run Connect-SPOService, this choice can be controlled by a registry key as well. This registry key (UseSystemBrowser of type REG_DWORD) will be located at HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SPO\CMDLETS).
-
-If either registry key is set to a non-zero integer value OR UseSystemBrowser parameter is set to true, authentication flow will use system browser for sign-in.
-
+> [!NOTE]
+> To avoid adding the `-UseSystemBrowser` parameter every time you run Connect-SPOService, 
+you can set a registry key instead.
+>
+> Set the UseSystemBrowser registery key (type `REG_DWORD`) at:
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SPO\CMDLETS\
+>
+> If either registry key is set to a non-zero integer value or -UseSystemBrowser parameter is set to `true`, authentication flow will use system browser for sign-in.
 
 ### CommonParameters
 
