@@ -18,21 +18,21 @@ Creates a new custom theme, or overwrites an existing theme to modify its settin
 
 ## SYNTAX
 
+### NewThemeSet
+```
+Add-SPOTheme
+    [-Identity] <SpoThemePipeBind>
+    -ColorPairs <SpoThemeColorPairPipeBind>
+    [-Overwrite]
+    [<CommonParameters>]
+```
+
 ### LegacyThemeSet
 ```
 Add-SPOTheme
     [-Identity] <SpoThemePipeBind>
     -Palette <SpoThemePalettePipeBind>
     -IsInverted <Boolean>
-    [-Overwrite]
-    [<CommonParameters>]
-```
-
-### NewThemeSet
-```
-Add-SPOTheme
-    [-Identity] <SpoThemePipeBind>
-    -ColorPairs <SpoThemeColorPairPipeBind>
     [-Overwrite]
     [<CommonParameters>]
 ```
@@ -47,7 +47,78 @@ You can choose which parameter set to use depending on the legacy or new theme f
 
 ## Examples
 
-### Example 1: Add a legacy format theme 
+### Example 1: Add a new format theme
+```powershell
+$colorPairs = @{
+    light = @(
+        @{
+            accentColor = '#03787C'
+            backgroundColor = '#ffffff'
+        },
+        @{
+            accentColor = '#ffffff'
+            backgroundColor = '#03787C'
+        },
+        @{
+            accentColor = '#E3FFFD'
+            backgroundColor = '#03787C'
+        },
+        @{
+            accentColor = '#03787C'
+            backgroundColor = '#E3FFFD'
+        },
+        @{
+            accentColor = '#FFF9E3'
+            backgroundColor = '#03787C'
+        },
+        @{
+            accentColor = '#03787C'
+            backgroundColor = '#FFF9E3'
+        },
+        @{
+            accentColor = '#03787C'
+            backgroundColor = '#F5F5F5'
+        },
+        @{
+            accentColor = '#242424'
+            backgroundColor = '#F5F5F5'
+        },
+        @{
+            accentColor = '#155473'
+            backgroundColor = '#ffffff'
+        },
+        @{
+            accentColor = '#ffffff'
+            backgroundColor = '#155473'
+        },
+        @{
+            accentColor = '#155473'
+            backgroundColor = '#E3FFFD'
+        },
+        @{
+            accentColor = '#E3FFFD'
+            backgroundColor = '#155473'
+        },
+        @{
+            accentColor = '#FFF9E3'
+            backgroundColor = '#155473'
+        },
+        @{
+            accentColor = '#155473'
+            backgroundColor = '#FFF9E3'
+        }
+    )
+}
+
+Add-SPOTheme -Identity "Teal Theme" -ColorPairs $colorPairs
+```
+
+### Example 2: Overwrite a new format theme
+```powershell
+Add-SPOTheme -Identity "Teal Theme" -ColorPairs $colorPairs -Overwrite
+```
+
+### Example 3: Add a legacy format theme 
 In this example, a theme named `"Custom Cyan"` is created, with color palette settings that are various shades of cyan. Note that the settings are passed as a hash table.
 
 ```powershell
@@ -85,35 +156,12 @@ Add-SPOTheme -Identity "Custom Cyan" -Palette $themepalette -IsInverted $false
 > [!NOTE]
 > Prior to the December 2017 release of the SPO Management Shell, the **Add-SPOTheme** cmdlet required that color palette settings be passed as a dictionary. We recommend that you use the latest version of the SPO Management Shell, or use the `HashToDictionary` function to convert a hash table to a dictionary if needed.
 
-### Example 2: Overwrite a legacy format theme 
+### Example 4: Overwrite a legacy format theme 
 
 If you want to update an existing legacy format theme (to modify some of its color settings, for example), use the same syntax as shown previously, but add the `-Overwrite` flag to the **Add-SPOTheme** cmdlet.
 
 ```powershell
 Add-SPOTheme -Identity "Custom Cyan" -Palette $themepalette -IsInverted $false -Overwrite
-```
-
-### Example 3: Add a new format theme
-```powershell
-$colorPairs = @{
-    light = @(
-        @{
-            accentColor = '#00ffff'
-            backgroundColor = '#fff'
-        },
-        @{
-            accentColor = '#fff'
-            backgroundColor = '#00ffff'
-        }
-    )
-}
-
-Add-SPOTheme -Identity "Custom Cyan" -ColorPairs $colorPairs
-```
-
-### Example 4: Overwrite a new format theme
-```powershell
-Add-SPOTheme -Identity "Custom Cyan" -ColorPairs $colorPairs -Overwrite
 ```
 
 ## PARAMETERS
