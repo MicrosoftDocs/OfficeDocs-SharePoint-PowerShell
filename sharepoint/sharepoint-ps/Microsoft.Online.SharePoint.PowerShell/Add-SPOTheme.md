@@ -98,11 +98,11 @@ Add-SPOTheme -Identity "Custom Cyan" -Palette $themepalette -IsInverted $false -
 $colorPairs = @{
     light = @(
         @{
-            foregroundColor = '#00ffff'
+            accentColor = '#00ffff'
             backgroundColor = '#fff'
         },
         @{
-            foregroundColor = '#fff'
+            accentColor = '#fff'
             backgroundColor = '#00ffff'
         }
     )
