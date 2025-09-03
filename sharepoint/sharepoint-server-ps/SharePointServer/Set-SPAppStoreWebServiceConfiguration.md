@@ -1,8 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: SharePointServer
+Module Name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spappstorewebserviceconfiguration
-
 title: Set-SPAppStoreWebServiceConfiguration
 schema: 2.0.0
 ---

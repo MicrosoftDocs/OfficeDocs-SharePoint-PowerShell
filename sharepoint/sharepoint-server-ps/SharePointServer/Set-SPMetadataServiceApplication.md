@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
-module name: SharePointServer
+Module Name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spmetadataserviceapplication
 applicable: SharePoint Server Subscription Edition
 title: Set-SPMetadataServiceApplication

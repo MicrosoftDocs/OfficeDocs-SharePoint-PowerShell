@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Office.Server.Powerpoint.dll-Help.xml
-module name: SharePointServer
+Module Name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-sppowerpointconversionserviceapplication
 applicable: SharePoint Server Subscription Edition
 title: New-SPPowerPointConversionServiceApplication
