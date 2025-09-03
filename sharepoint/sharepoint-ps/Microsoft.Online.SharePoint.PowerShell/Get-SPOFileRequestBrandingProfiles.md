@@ -9,6 +9,7 @@ ms.author: nabeelnaiyer
 ms.reviewer:
 manager: ahackett
 schema: 2.0.0
+ms.date: 07/29/2025
 ---
 
 # Get-SPOFileRequestBrandingProfiles

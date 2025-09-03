@@ -6,6 +6,7 @@ Locale: en-US
 author: samkabue
 ms.author: speedta
 ms.reviewer:
+ms.date: 08/22/2025
 ---
 
 # Microsoft.Online.SharePoint.PowerShell Module

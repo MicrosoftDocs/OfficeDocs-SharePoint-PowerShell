@@ -8,6 +8,7 @@ author: techwriter40
 ms.author: pamgreen
 ms.reviewer:
 title: New-FASTSearchSecurityLotusNotesUserStore
+ms.date: 07/16/2025
 ---
 
 # New-FASTSearchSecurityLotusNotesUserStore

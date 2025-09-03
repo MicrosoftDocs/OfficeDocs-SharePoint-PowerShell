@@ -9,6 +9,7 @@ author: paramveersisodia
 ms.author: paramsis
 manager: suyog
 ms.reviewer:
+ms.date: 07/16/2025
 ---
 
 # Get-SPOStructuralNavigationCacheSiteState

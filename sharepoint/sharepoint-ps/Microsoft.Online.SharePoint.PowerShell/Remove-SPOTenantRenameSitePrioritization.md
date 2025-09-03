@@ -10,6 +10,7 @@ ms.reviewer: anushmag
 manager: anushmag
 schema: 2.0.0
 
+ms.date: 07/15/2025
 ---
 
 # Remove-SPOTenantRenameSitePrioritization

@@ -8,6 +8,7 @@ schema: 2.0.0
 author: ShreyasSar26
 ms.author: shsaravanan
 ms.reviewer:
+ms.date: 07/30/2025
 ---
 
 # Set-SPOContainerType

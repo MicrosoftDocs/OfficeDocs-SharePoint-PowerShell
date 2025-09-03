@@ -8,6 +8,7 @@ schema: 2.0.0
 author: salarson
 ms.author: salarson
 ms.reviewer:
+ms.date: 07/15/2025
 ---
 
 # New-SPOSiteSharingReportJob

@@ -6,6 +6,7 @@ schema: 2.0.0
 author: SaladiHarini
 ms.author: hasaladi
 title: Get-SPOListDesign
+ms.date: 07/15/2025
 ---
 
 # Get-SPOListDesign

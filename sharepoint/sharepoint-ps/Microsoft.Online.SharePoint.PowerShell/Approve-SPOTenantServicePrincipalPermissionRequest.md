@@ -8,6 +8,7 @@ schema: 2.0.0
 author: samkabue
 ms.author: speedta
 ms.reviewer:
+ms.date: 07/15/2025
 ---
 
 # Approve-SPOTenantServicePrincipalPermissionRequest

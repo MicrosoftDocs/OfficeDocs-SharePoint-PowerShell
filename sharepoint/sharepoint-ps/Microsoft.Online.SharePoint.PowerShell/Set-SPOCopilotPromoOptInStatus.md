@@ -8,6 +8,7 @@ schema: 2.0.0
 author: siruvanti
 ms.author: siruvanti
 ms.reviewer:
+ms.date: 08/28/2025
 ---
 # Set-SPOCopilotPromoOptInStatus
 

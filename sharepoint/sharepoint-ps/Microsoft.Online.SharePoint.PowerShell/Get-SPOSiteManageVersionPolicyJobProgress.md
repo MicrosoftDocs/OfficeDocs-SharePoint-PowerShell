@@ -8,6 +8,7 @@ schema: 2.0.0
 author: blarrywangmsft
 ms.author: blarrywang
 ms.reviewer:
+ms.date: 08/15/2025
 ---
 
 # Get-SPOSiteManageVersionPolicyJobProgress

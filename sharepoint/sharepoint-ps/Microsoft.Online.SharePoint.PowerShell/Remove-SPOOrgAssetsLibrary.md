@@ -9,6 +9,7 @@ ms.author: maesfaha
 ms.reviewer:
 manager: paulac
 schema: 2.0.0
+ms.date: 07/21/2025
 ---
 
 # Remove-SPOOrgAssetsLibrary

@@ -5,6 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-server/
 applicable: SharePoint Server Subscription Edition
 title: Add-SPProfileSyncConnection
 schema: 2.0.0
+ms.date: 08/26/2025
 ---
 
 # Add-SPProfileSyncConnection

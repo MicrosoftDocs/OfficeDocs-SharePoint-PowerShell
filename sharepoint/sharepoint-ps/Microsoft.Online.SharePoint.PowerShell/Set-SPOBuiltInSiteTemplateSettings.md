@@ -8,6 +8,7 @@ schema: 2.0.0
 author: Holland-ODSP
 ms.author: hokavian
 ms.reviewer:
+ms.date: 07/16/2025
 ---
 
 # Set-SPOBuiltInSiteTemplateSettings

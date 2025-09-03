@@ -9,6 +9,7 @@ author: sumikumar
 ms.author: sumikumar
 ms.reviewer:
 manager: hikakar
+ms.date: 07/29/2025
 ---
 
 # Get-SPOEnterpriseAppInsightsReport

@@ -15,6 +15,7 @@ pt-BR Version: 17.0.15229.2100
 ru-RU Version: 17.0.15229.2100
 zh-CN Version: 17.0.15229.2100
 zh-TW Version: 17.0.15229.2100
+ms.date: 07/16/2025
 ---
 # SharePointServer module
 

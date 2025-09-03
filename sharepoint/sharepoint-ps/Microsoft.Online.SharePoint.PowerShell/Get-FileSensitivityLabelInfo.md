@@ -8,6 +8,7 @@ schema: 2.0.0
 author: SanjoyanM
 ms.author: samust
 ms.reviewer:
+ms.date: 07/16/2025
 ---
 
 # Get-FileSensitivityLabelInfo

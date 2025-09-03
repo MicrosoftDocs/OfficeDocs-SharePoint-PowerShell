@@ -7,6 +7,7 @@ title: Set-SPOOrgNewsSite
 schema: 2.0.0
 author: samkabue
 ms.author: speedta
+ms.date: 07/16/2025
 ---
 
 # Set-SPOOrgNewsSite

@@ -5,6 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-server/
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Remove-SPEnterpriseSearchResultItemType
 schema: 2.0.0
+ms.date: 07/16/2025
 ---
 
 # Remove-SPEnterpriseSearchResultItemType

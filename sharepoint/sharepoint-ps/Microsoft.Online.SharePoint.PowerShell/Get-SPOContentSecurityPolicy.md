@@ -9,6 +9,7 @@ author: jaobrie
 ms.author: jaobrie
 manager: ryannak
 ms.reviewer:
+ms.date: 07/15/2025
 ---
 
 # Get-SPOContentSecurityPolicy

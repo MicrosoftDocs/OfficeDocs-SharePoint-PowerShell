@@ -8,6 +8,7 @@ schema: 2.0.0
 author: FarreltinF
 ms.author: fanyi
 ms.reviewer:
+ms.date: 07/16/2025
 ---
 
 # Get-SPOContainerTypeConfiguration

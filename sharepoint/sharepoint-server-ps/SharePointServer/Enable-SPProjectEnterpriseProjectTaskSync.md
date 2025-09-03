@@ -4,6 +4,7 @@ Module Name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/enable-spprojectenterpriseprojecttasksync
 title: Enable-SPProjectEnterpriseProjectTaskSync
 schema: 2.0.0
+ms.date: 08/28/2025
 ---
 
 # Enable-SPProjectEnterpriseProjectTaskSync

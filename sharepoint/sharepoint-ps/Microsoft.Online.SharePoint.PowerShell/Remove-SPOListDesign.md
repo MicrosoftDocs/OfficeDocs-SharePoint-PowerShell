@@ -7,6 +7,7 @@ author: SaladiHarini
 ms.author: hasaladi
 ms.reviewer:
 title: Remove-SPOListDesign
+ms.date: 07/15/2025
 ---
 
 # Remove-SPOListDesign

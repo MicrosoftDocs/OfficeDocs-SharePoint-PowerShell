@@ -8,6 +8,7 @@ author: techwriter40
 ms.author: pamgreen
 ms.reviewer:
 title: Add-FASTSearchResource
+ms.date: 07/16/2025
 ---
 
 # Add-FASTSearchResource

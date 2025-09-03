@@ -9,6 +9,7 @@ author: samkabue
 ms.author: speedta
 ms.reviewer:
 ms.custom: has-azure-ad-ps-ref
+ms.date: 07/30/2025
 ---
 
 # Remove-SPOUserProfile

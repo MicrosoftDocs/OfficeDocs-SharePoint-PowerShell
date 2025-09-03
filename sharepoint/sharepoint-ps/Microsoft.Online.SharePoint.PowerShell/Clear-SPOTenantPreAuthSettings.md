@@ -9,6 +9,7 @@ author: lw-msft
 ms.author: laurenwong
 ms.reviewer:
 manager: bhaveshd
+ms.date: 07/15/2025
 ---
 
 # Clear-SPOTenantPreAuthSettings

@@ -6,6 +6,7 @@ schema: 2.0.0
 author: vgaddam-pm
 ms.author: vgaddam
 ms.reviewer: jmcdowe
+ms.date: 07/24/2025
 ---
 
 # Find-SPOCrossTenantLongFilePathsForSiteRename

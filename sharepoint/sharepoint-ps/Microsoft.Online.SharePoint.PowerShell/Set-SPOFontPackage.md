@@ -8,6 +8,7 @@ schema: 2.0.0
 author: JQ1u
 ms.author: luchaoqiu
 ms.reviewer:
+ms.date: 08/14/2025
 ---
 
 # Set-SPOFontPackage

@@ -3,6 +3,7 @@ external help file: Microsoft.SharePoint.Publishing.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
 online version:
 schema: 2.0.0
+ms.date: 07/17/2025
 ---
 
 # Deploy-SPVariation
