@@ -21,6 +21,7 @@ This cmdlet must be run before any other SharePoint Online cmdlets can run.
 ## SYNTAX
 
 ### AuthenticationLocation
+
 ```
 Connect-SPOService -Url <UrlCmdletPipeBind> [-Credential <CredentialCmdletPipeBind>] [-ClientTag <String>]
  [-Region <AADCrossTenantAuthenticationLocation>] [-ModernAuth <Boolean>] [-UseSystemBrowser <Boolean>]
@@ -28,6 +29,7 @@ Connect-SPOService -Url <UrlCmdletPipeBind> [-Credential <CredentialCmdletPipeBi
 ```
 
 ### AuthenticationUrl
+
 ```
 Connect-SPOService -Url <UrlCmdletPipeBind> [-Credential <CredentialCmdletPipeBind>] [-ClientTag <String>]
  -AuthenticationUrl <String> [-ModernAuth <Boolean>] [-UseSystemBrowser <Boolean>] [<CommonParameters>]
@@ -87,14 +89,14 @@ Connects to a SharePoint Online Administration Center specifying the region.
 
 ### EXAMPLE 5
 
- ```powershell
+```powershell
 Connect-SPOService -Credential $creds -Url https://tenant-admin.sharepoint.com -ModernAuth $true -AuthenticationUrl https://login.microsoftonline.com/organizations
 ```
 Connecting to SPO Service with ModernAuth Flag.
 
 ### EXAMPLE 6
 
- ```powershell
+```powershell
 Connect-SPOService -Url https://contoso-admin.sharepoint.com -UseSystemBrowser $true
 ```
 Authenticates using the Microsoft Authentication Library (MSAL) and connects to the SharePoint Online Administration Center on successful authentication.
@@ -159,7 +161,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
- Ensures that SharePoint Online tenant administration cmdlets can connect to the service using modern TLS protocols.
+Ensures that SharePoint Online tenant administration cmdlets can connect to the service using modern TLS protocols.
 
 To use it you also need to provide the **AuthenticationUrl** parameter.
 
@@ -174,6 +176,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -Region
 
 > Applicable: SharePoint Online
@@ -218,7 +221,15 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
- Used to authenticate the user using the Microsoft Authentication Library (MSAL).
+Used to authenticate the user using the Microsoft Authentication Library (MSAL).
+
+> [!NOTE]
+> To avoid adding the `-UseSystemBrowser` parameter every time you run `Connect-SPOService`, you can set a registry key instead.
+>
+> Set the `UseSystemBrowser` registry key (type `REG_DWORD`) at: 
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SPO\CMDLETS\`
+>
+> If either registry key is set to a non-zero integer value or `-UseSystemBrowser` parameter is set to `true`, authentication flow will use system browser for sign-in.
 
 ```yaml
 Type: System.Boolean
