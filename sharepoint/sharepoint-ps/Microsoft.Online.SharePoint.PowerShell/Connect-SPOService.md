@@ -219,8 +219,7 @@ Accept wildcard characters: False
 
  Used to authenticate the user using the Microsoft Authentication Library (MSAL).
 > [!NOTE]
-> To avoid adding the `-UseSystemBrowser` parameter every time you run Connect-SPOService, 
-you can set a registry key instead.
+> To avoid adding the `-UseSystemBrowser` parameter every time you run `Connect-SPOService`, you can set a registry key instead.
 >
 > Set the `UseSystemBrowser` registery key (type `REG_DWORD`) at: 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SPO\CMDLETS\`
