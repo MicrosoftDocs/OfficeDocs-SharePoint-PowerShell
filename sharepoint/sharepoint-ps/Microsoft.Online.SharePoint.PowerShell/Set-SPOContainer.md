@@ -338,6 +338,8 @@ Accept wildcard characters: False
 
 ### -RestrictContentOrgWideSearch
 
+> Applicable: SharePoint Online
+
 Controls whether org-wide content search is enabled for a container.
 
 ```yaml
