@@ -6,7 +6,7 @@ applicable: SharePoint Online
 title: Get-SPOTenantServicePrincipalPermissionRequests
 schema: 2.0.0
 author: trent-green
-ms.author: trgreen
+ms.author: speedta
 ms.reviewer:
 ---
 

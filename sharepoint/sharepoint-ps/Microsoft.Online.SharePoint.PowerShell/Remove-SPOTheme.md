@@ -6,7 +6,7 @@ applicable: SharePoint Online
 title: Remove-SPOTheme
 schema: 2.0.0
 author: trent-green
-ms.author: trgreen
+ms.author: speedta
 ms.reviewer:
 ---
 

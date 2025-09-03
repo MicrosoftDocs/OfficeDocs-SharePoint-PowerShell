@@ -6,7 +6,7 @@ applicable: SharePoint Online
 title: Get-SPOOrgNewsSite
 schema: 2.0.0
 author: trent-green
-ms.author: trgreen
+ms.author: speedta
 ---
 
 # Get-SPOOrgNewsSite

@@ -6,7 +6,7 @@ applicable: SharePoint Online
 title: Remove-SPOUserProfile
 schema: 2.0.0
 author: trent-green
-ms.author: trgreen
+ms.author: speedta
 ms.reviewer:
 ms.custom: has-azure-ad-ps-ref
 ---
