@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
 title: Invoke-SPOMigrationEncryptUploadSubmit
 schema: 2.0.0
-author: trent-green
+author: samkabue
 ms.author: speedta
 ms.reviewer:
 ---

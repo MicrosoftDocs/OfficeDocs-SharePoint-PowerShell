@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-server/
 applicable: SharePoint Server 2013, SharePoint Server 2016
 title: Get-SPODataConnectionSetting
 schema: 2.0.0
-author: trent-green
+author: samkabue
 ms.author: speedta
 ms.reviewer:
 ---
