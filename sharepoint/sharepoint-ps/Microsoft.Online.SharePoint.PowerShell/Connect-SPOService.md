@@ -218,6 +218,14 @@ Accept wildcard characters: False
 > Applicable: SharePoint Online
 
  Used to authenticate the user using the Microsoft Authentication Library (MSAL).
+> [!NOTE]
+> To avoid adding the `-UseSystemBrowser` parameter every time you run Connect-SPOService, 
+you can set a registry key instead.
+>
+> Set the `UseSystemBrowser` registery key (type `REG_DWORD`) at: 
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SPO\CMDLETS\`
+>
+> If either registry key is set to a non-zero integer value or `-UseSystemBrowser` parameter is set to `true`, authentication flow will use system browser for sign-in.
 
 ```yaml
 Type: System.Boolean
@@ -230,14 +238,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-> [!NOTE]
-> To avoid adding the `-UseSystemBrowser` parameter every time you run Connect-SPOService, 
-you can set a registry key instead.
->
-> Set the `UseSystemBrowser` registery key (type `REG_DWORD`) at: 
-`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SPO\CMDLETS\`
->
-> If either registry key is set to a non-zero integer value or `-UseSystemBrowser` parameter is set to `true`, authentication flow will use system browser for sign-in.
 
 ### CommonParameters
 
