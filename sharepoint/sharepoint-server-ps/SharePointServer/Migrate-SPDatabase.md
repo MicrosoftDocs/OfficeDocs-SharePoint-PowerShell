@@ -4,7 +4,6 @@ Module Name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/migrate-spdatabase
 title: Migrate-SPDatabase
 schema: 2.0.0
-ms.date: 08/28/2025
 ---
 
 # Migrate-SPDatabase

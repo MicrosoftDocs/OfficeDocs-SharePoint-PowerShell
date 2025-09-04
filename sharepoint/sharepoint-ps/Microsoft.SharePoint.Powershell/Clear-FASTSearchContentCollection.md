@@ -8,7 +8,6 @@ author: techwriter40
 ms.author: pamgreen
 ms.reviewer:
 title: Clear-FASTSearchContentCollection
-ms.date: 07/16/2025
 ---
 
 # Clear-FASTSearchContentCollection

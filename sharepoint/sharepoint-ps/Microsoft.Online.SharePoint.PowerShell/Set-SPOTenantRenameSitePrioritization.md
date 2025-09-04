@@ -9,7 +9,6 @@ ms.author: anfra
 ms.reviewer: anushmag
 manager: anushmag
 schema: 2.0.0
-ms.date: 07/17/2025
 ---
 
 # Set-SPOTenantRenameSitePrioritization

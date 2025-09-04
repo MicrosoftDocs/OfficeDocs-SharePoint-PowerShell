@@ -8,7 +8,6 @@ schema: 2.0.0
 author: techwriter40
 ms.author: pamgreen
 ms.reviewer:
-ms.date: 07/16/2025
 ---
 
 # Set-SPBingMapsKey

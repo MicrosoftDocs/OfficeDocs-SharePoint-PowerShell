@@ -8,7 +8,6 @@ schema: 2.0.0
 author: arakesh
 ms.author: arakesh
 ms.reviewer:
-ms.date: 07/23/2025
 ---
 # Get-SPOAppBillingPolicies
 

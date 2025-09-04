@@ -4,7 +4,6 @@ Module Name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spsitemaster
 title: New-SPSiteMaster
 schema: 2.0.0
-ms.date: 08/28/2025
 ---
 
 # New-SPSiteMaster

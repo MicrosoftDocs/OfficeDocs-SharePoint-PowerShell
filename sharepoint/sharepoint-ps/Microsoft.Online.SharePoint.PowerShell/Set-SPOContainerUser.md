@@ -8,7 +8,6 @@ schema: 2.0.0
 author: ShreyasSar26
 ms.author: shsaravanan
 ms.reviewer:
-ms.date: 08/29/2025
 ---
 
 # Set-SPOContainerUser

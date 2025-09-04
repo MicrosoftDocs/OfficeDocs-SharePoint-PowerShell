@@ -4,7 +4,6 @@ Module Name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spconnectedserviceapplicationinformation
 title: Get-SPConnectedServiceApplicationInformation
 schema: 2.0.0
-ms.date: 08/28/2025
 ---
 
 # Get-SPConnectedServiceApplicationInformation

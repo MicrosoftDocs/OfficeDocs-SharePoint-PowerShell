@@ -7,7 +7,6 @@ author: reedpamsft
 ms.author: reedpa
 ms.reviewer:
 title: Add-SPOListDesign
-ms.date: 07/15/2025
 ---
 
 # Add-SPOListDesign

@@ -8,7 +8,6 @@ schema: 2.0.0
 author: cindylay
 ms.author: cindylay
 ms.reviewer:
-ms.date: 07/30/2025
 ---
 
 # Remove-SPODeletedContainer

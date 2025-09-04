@@ -8,7 +8,6 @@ schema: 2.0.0
 author: Yixian15
 ms.author: yixianpu
 ms.reviewer:
-ms.date: 07/15/2025
 ---
 
 # Get-SPOBuiltInFontPackageSettings

@@ -2,7 +2,6 @@
 description: Learn about the Microsoft.SharePoint.Powershell module, which contains cmdlets for managing SharePoint Server.
 title: Overview of the Microsoft.SharePoint.Powershell module
 ms.service: sharepoint-powershell
-ms.date: 07/17/2025
 ---
 
 # Overview of the Microsoft.SharePoint.Powershell module

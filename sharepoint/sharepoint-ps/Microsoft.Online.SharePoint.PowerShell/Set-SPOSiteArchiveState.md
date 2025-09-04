@@ -8,7 +8,6 @@ schema: 2.0.0
 author: AdiGanMSFT
 ms.author: adigan
 ms.reviewer:
-ms.date: 07/30/2025
 ---
 
 # Set-SPOSiteArchiveState

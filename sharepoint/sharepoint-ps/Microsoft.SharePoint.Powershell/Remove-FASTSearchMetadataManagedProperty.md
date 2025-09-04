@@ -8,7 +8,6 @@ author: techwriter40
 ms.author: pamgreen
 ms.reviewer:
 title: Remove-FASTSearchMetadataManagedProperty
-ms.date: 07/16/2025
 ---
 
 # Remove-FASTSearchMetadataManagedProperty

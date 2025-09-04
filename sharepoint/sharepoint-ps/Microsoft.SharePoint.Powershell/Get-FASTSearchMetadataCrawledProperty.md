@@ -8,7 +8,6 @@ author: techwriter40
 ms.author: pamgreen
 ms.reviewer:
 title: Get-FASTSearchMetadataCrawledProperty
-ms.date: 07/16/2025
 ---
 
 # Get-FASTSearchMetadataCrawledProperty

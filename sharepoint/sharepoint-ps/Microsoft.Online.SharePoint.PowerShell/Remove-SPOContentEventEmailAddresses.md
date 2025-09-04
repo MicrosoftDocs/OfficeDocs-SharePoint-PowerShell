@@ -9,7 +9,6 @@ author: mshabaz
 ms.author: mshabaz
 ms.reviewer:
 manager: miabhish
-ms.date: 07/15/2025
 ---
 
 # Remove-SPOContentEventEmailAddresses

@@ -3,7 +3,6 @@ external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version:
 schema: 2.0.0
-ms.date: 07/15/2025
 ---
 
 # Add-SPOSiteScriptPackage

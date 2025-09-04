@@ -9,7 +9,6 @@ author: pvrk
 ms.author: pullabhk
 manager:
 ms.reviewer:
-ms.date: 07/15/2025
 ---
 
 # Start-SPOAuditDataCollectionForActivityInsights

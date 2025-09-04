@@ -9,7 +9,6 @@ author: lw-msft
 ms.author: laurenwong
 ms.reviewer:
 manager: bhaveshd
-ms.date: 07/17/2025
 ---
 
 # Set-SPOTenantPreAuthSettings

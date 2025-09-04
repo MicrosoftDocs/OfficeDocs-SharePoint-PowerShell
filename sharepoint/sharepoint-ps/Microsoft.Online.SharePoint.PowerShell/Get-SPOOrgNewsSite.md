@@ -7,7 +7,6 @@ title: Get-SPOOrgNewsSite
 schema: 2.0.0
 author: samkabue
 ms.author: speedta
-ms.date: 07/15/2025
 ---
 
 # Get-SPOOrgNewsSite

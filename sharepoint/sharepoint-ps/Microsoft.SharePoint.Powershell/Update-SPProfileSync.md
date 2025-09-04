@@ -6,7 +6,6 @@ applicable:
 title: Update-SPProfileSync
 online version:
 schema: 2.0.0
-ms.date: 07/16/2025
 ---
 
 # Update-SPProfileSync

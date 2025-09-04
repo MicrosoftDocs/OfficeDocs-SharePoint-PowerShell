@@ -9,7 +9,6 @@ author: samkabue
 ms.author: speedta
 ms.reviewer:
 ms.custom: has-azure-ad-ps-ref
-ms.date: 07/16/2025
 ---
 
 # Request-SPOPersonalSite

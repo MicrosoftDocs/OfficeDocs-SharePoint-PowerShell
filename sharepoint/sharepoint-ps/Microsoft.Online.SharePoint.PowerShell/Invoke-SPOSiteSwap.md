@@ -7,7 +7,6 @@ title: Invoke-SPOSiteSwap
 schema: 2.0.0
 ms.author: divyasru
 ms.reviewer:
-ms.date: 07/16/2025
 ---
 
 # Invoke-SPOSiteSwap

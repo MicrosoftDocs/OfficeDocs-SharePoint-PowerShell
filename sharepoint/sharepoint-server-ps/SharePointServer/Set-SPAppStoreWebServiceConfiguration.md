@@ -4,7 +4,6 @@ Module Name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spappstorewebserviceconfiguration
 title: Set-SPAppStoreWebServiceConfiguration
 schema: 2.0.0
-ms.date: 08/28/2025
 ---
 
 # Set-SPAppStoreWebServiceConfiguration

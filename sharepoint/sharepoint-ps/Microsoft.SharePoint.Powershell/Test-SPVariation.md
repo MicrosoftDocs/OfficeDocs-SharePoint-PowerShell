@@ -4,7 +4,6 @@ Module Name: Microsoft.SharePoint.Powershell
 online version:
 schema: 2.0.0
 title: Test-SPVariation
-ms.date: 07/17/2025
 ---
 
 # Test-SPVariation

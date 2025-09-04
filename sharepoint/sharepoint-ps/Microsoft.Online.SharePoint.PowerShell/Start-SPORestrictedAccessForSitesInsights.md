@@ -9,7 +9,6 @@ author: ishwarit
 ms.author: itambakhe
 ms.reviewer:
 manager:
-ms.date: 07/16/2025
 ---
 
 # Start-SPORestrictedAccessForSitesInsights

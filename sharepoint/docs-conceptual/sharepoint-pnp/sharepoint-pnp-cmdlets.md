@@ -1,7 +1,6 @@
 ---
 title: PnP PowerShell Overview
 description: "PnP PowerShell Overview"
-ms.date: 10/06/2023
 ---
 
 # PnP PowerShell overview

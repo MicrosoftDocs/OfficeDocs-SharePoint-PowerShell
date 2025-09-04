@@ -8,7 +8,6 @@ author: techwriter40
 ms.author: pamgreen
 ms.reviewer:
 title: Get-FASTSearchSecurityRegexAliaser
-ms.date: 07/16/2025
 ---
 
 # Get-FASTSearchSecurityRegexAliaser

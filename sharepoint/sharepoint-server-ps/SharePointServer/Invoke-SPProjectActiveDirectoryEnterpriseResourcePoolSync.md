@@ -4,7 +4,6 @@ Module Name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/invoke-spprojectactivedirectoryenterpriseresourcepoolsync
 title: Invoke-SPProjectActiveDirectoryEnterpriseResourcePoolSync
 schema: 2.0.0
-ms.date: 08/28/2025
 ---
 
 # Invoke-SPProjectActiveDirectoryEnterpriseResourcePoolSync

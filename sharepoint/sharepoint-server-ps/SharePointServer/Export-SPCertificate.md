@@ -3,7 +3,6 @@ external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
 Module Name: SharePointServer
 online version:
 schema: 2.0.0
-ms.date: 08/26/2025
 ---
 
 # Export-SPCertificate

@@ -8,7 +8,6 @@ schema: 2.0.0
 author: serdarsoysal
 ms.author: serdars
 ms.reviewer:
-ms.date: 07/16/2025
 ---
 
 # Start-SPAssignment

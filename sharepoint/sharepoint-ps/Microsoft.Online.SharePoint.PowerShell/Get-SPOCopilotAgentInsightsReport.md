@@ -9,7 +9,6 @@ author: bhagatshweta
 ms.author: bhagatshweta
 ms.reviewer:
 manager: hikakar
-ms.date: 08/08/2025
 ---
 
 # Get-SPOCopilotAgentInsightsReport

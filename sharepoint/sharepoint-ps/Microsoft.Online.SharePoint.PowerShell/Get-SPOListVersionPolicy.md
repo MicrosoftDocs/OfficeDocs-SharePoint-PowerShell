@@ -9,7 +9,6 @@ author: msjennywu
 ms.author: jennywu
 ms.reviewer:
 manager: seanmc
-ms.date: 07/15/2025
 ---
 
 # Get-SPOListVersionPolicy

@@ -8,7 +8,6 @@ schema: 2.0.0
 author: garycentric
 ms.author: speedta
 ms.reviewer:
-ms.date: 08/13/2025
 ---
 
 # Add-DatabaseToAvailabilityGroup

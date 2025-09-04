@@ -8,7 +8,6 @@ schema: 2.0.0
 author: killerewok2000
 ms.author: Sibourda
 ms.reviewer:
-ms.date: 07/15/2025
 ---
 
 # Remove-SPOServicePrioritizationAppRegistration
