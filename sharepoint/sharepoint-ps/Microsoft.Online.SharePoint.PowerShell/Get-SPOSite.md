@@ -315,7 +315,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Displays sites which are have true value for IsAuthoritative site property when value is set to $true. The 'IsAuthoritaive' site property signals to Microsoft Search, Copilot(BizChat), and other AI agents that the site's content is official, trusted, and verified. This designation enhances content discoverability and increases user confidence in AI-generated responses.
+Filter the list of sites where the IsAuthoritative property is set to true. When IsAuthoritative is true, it signals to Microsoft Search, Copilot (BizChat), and other AI agents that the site's content is official, trusted, and verified.
 
 ```yaml
 Type: Boolean
