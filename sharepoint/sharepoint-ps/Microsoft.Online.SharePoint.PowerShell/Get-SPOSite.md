@@ -236,7 +236,7 @@ Accept wildcard characters: False
 > Applicable: SharePoint Online
 
 Specifies the script block of the server-side filter to apply. The type must be a valid filter name and value must be in the form `{ PropertyName <operator> "filterValue"}`. Valid operators are as follows: -eq, -ne, -like, -notlike.
- Currently, you can filter by these properties: Owner, Template (can be used to filter if it is the only property present in the filter), LockState, Url.
+ Currently, you can filter by these properties: Owner, Template (can be used to filter if it is the only property present in the filter), LockState, Url, IsAuthoritative (It only supports comparision operators -eq and -ne. For eg: `{IsAuthoritative -eq true}`).
  Using the -or operator to include an additional filter is not supported.
 
 Note: The operator values are case-sensitive.
@@ -302,6 +302,24 @@ The values are $true and $false. By default, the value is $false which means no 
 ```yaml
 Type: System.Boolean
 Parameter Sets: ParamSet2
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsAuthoritative
+
+> Applicable: SharePoint Online
+
+Displays sites which are have true value for IsAuthoritative site property when value is set to $true. The 'IsAuthoritaive' site property signals to Microsoft Search, Copilot(BizChat), and other AI agents that the site's content is official, trusted, and verified. This designation enhances content discoverability and increases user confidence in AI-generated responses.
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
 Aliases:
 
 Required: False
