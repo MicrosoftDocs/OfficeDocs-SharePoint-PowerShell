@@ -4,8 +4,8 @@ Module Name: Microsoft.Online.SharePoint.PowerShell
 online version: https://learn.microsoft.com/powershell/module/sharepoint-online/add-spoorgassetslibrary
 applicable: SharePoint Online
 title: Add-SPOOrgAssetsLibrary
-author: Maralesfahanpoor
-ms.author: maesfaha
+author: samkabue
+ms.author: speedta
 ms.reviewer:
 manager: paulac
 schema: 2.0.0

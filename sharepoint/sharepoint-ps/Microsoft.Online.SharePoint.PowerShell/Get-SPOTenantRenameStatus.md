@@ -5,8 +5,8 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
 title: Get-SPOTenantRenameStatus
 schema: 2.0.0
-author: WayneEwington
-ms.author: waynewin
+author: samkabue
+ms.author: speedta
 ms.reviewer:
 ---
 
