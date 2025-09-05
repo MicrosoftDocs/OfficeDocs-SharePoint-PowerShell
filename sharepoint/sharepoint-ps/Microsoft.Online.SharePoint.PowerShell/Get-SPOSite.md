@@ -126,12 +126,20 @@ This example uses server side filtering to return sites matching 18.
 ### EXAMPLE 8
 
 ```powershell
+Get-SPOSite -Filter { IsAuthoritative -eq true }
+```
+
+This example uses server side filtering to return Authoritative sites (i.e., sites that have the IsAuthoritative property set to true).
+
+### EXAMPLE 9
+
+```powershell
 Get-SPOSite -Limit ALL | ?{$_.IsTeamsConnected -eq $true}
 ```
 
 This example uses client-side filtering to return a list of sites connected to Microsoft Teams.
 
-### EXAMPLE 9
+### EXAMPLE 10
 
 ```powershell
 Get-SPOSite -Limit ALL | ?{$_.IsTeamsChannelConnected -eq $true}
@@ -139,14 +147,14 @@ Get-SPOSite -Limit ALL | ?{$_.IsTeamsChannelConnected -eq $true}
 
 This example uses client-side filtering to return a list of sites connected to a Microsoft Teams Private or Shared channel.
 
-### EXAMPLE 10
+### EXAMPLE 11
 
 ```powershell
 Get-SPOSite -Limit ALL -GroupIdDefined $true
 ```
 This example uses server-side filtering to return all sites that have an associated Microsoft 365 Group.
 
-### EXAMPLE 11
+### EXAMPLE 12
 
 ```powershell
 $userUPN="joe.healy@contoso.com"
@@ -236,7 +244,7 @@ Accept wildcard characters: False
 > Applicable: SharePoint Online
 
 Specifies the script block of the server-side filter to apply. The type must be a valid filter name and value must be in the form `{ PropertyName <operator> "filterValue"}`. Valid operators are as follows: -eq, -ne, -like, -notlike.
- Currently, you can filter by these properties: Owner, Template (can be used to filter if it is the only property present in the filter), LockState, Url, IsAuthoritative (It only supports comparision operators -eq and -ne. For eg: `{IsAuthoritative -eq true}`).
+ Currently, you can filter by these properties: Owner, Template (can be used to filter if it is the only property present in the filter), LockState, Url, IsAuthoritative (only supports comparison operators -eq and -ne).
  Using the -or operator to include an additional filter is not supported.
 
 Note: The operator values are case-sensitive.
