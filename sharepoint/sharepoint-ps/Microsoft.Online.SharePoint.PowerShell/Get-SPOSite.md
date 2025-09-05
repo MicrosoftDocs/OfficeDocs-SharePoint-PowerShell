@@ -20,7 +20,7 @@ Returns one or more site collections.
 
 ### ParamSet1 (Default)
 ```
-Get-SPOSite [[-Identity] <SpoSitePipeBind>] [-Limit <String>] [-Detailed] [<CommonParameters>]
+Get-SPOSite [[-Identity] <SpoSitePipeBind>] [-Limit <String>] [-Detailed] [-IsAuthoritative <Boolean>] [<CommonParameters>]
 ```
 
 ### ParamSet3
