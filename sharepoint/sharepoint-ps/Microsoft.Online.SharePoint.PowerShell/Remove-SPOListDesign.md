@@ -3,8 +3,8 @@ external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spolistdesign
 schema: 2.0.0
-author: SaladiHarini
-ms.author: hasaladi
+author: samkabue
+ms.author: speedta
 ms.reviewer:
 title: Remove-SPOListDesign
 ---

@@ -3,8 +3,8 @@ Module Name: Microsoft.Online.SharePoint.PowerShell
 Module Guid: adedde5f-e77b-4682-ab3d-a4cb4ff79b83
 title: Microsoft.Online.SharePoint.PowerShell Module
 Locale: en-US
-author: trent-green
-ms.author: trgreen
+author: samkabue
+ms.author: speedta
 ms.reviewer:
 ---
 
