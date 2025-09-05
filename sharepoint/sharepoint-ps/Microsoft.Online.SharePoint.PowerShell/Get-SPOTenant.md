@@ -5,8 +5,8 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 applicable: SharePoint Online
 title: Get-SPOTenant
 schema: 2.0.0
-author: trent-green
-ms.author: trgreen
+author: samkabue
+ms.author: speedta
 ms.reviewer:
 ---
 
@@ -19,7 +19,7 @@ Returns SharePoint Online organization properties.
 ## SYNTAX
 
 ```
-Get-SPOTenant [-ShowDetails] [<CommonParameters>]
+Get-SPOTenant [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -43,24 +43,6 @@ Get-SPOTenant
 This example returns the organization-level site collection properties such as StorageQuota, StorageQuotaAllocated, ResourceQuota, ResourceQuotaAllocated, SiteCreationMode and OneDriveStorageQuota.
 
 ## PARAMETERS
-
-### -ShowDetails
-
-> Applicable: SharePoint Online
-
-Whether to show the detailed properties for each setting.
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### CommonParameters
 
