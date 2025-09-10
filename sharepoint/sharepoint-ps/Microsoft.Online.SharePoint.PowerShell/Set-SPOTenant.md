@@ -1037,9 +1037,14 @@ Accept wildcard characters: False
 
 ### -AllowSensitivityLabelOnRecords
 
-Controls whether sensitivity labels can be applied to records.
+> Applicable: SharePoint Online
 
-PARAMVALUE: True | False
+Specifies whether sensitivity labels can be applied to records.
+
+The valid values are:
+
+- False (default) – Do not allow the application of sensitivity labels to records.
+- True – Allow the application of sensitivity labels to records.
 
 ```yaml
 Type: System.Boolean
