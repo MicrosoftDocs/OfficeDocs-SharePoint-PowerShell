@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
-module name: SharePointServer
+Module Name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spsecurestoredefaultprovider
 applicable: SharePoint Server Subscription Edition
 title: Set-SPSecureStoreDefaultProvider

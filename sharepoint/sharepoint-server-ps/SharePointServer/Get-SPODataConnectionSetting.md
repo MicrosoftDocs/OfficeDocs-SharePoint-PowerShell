@@ -1,8 +1,7 @@
 ---
 external help file: sharepointonline.xml
-module name: SharePointServer
+Module Name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spodataconnectionsetting
-
 title: Get-SPODataConnectionSetting
 schema: 2.0.0
 ---
@@ -120,8 +119,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-SPODataConnectionSetting](xref:SharePointOnlinePowerShell.New-SPODataConnectionSetting)
+[New-SPODataConnectionSetting](New-SPODataConnectionSetting.md)
 
-[Remove-SPODataConnectionSetting](xref:SharePointOnlinePowerShell.Remove-SPODataConnectionSetting)
+[Remove-SPODataConnectionSetting](Remove-SPODataConnectionSetting.md)
 
-[Set-SPODataConnectionSetting](xref:SharePointOnlinePowerShell.Set-SPODataConnectionSetting)
+[Set-SPODataConnectionSetting](Set-SPODataConnectionSetting.md)

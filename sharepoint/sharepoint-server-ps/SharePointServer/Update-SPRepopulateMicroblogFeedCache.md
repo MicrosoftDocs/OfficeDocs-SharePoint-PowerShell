@@ -1,6 +1,6 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
-module name: SharePointServer
+Module Name: SharePointServer
 online version: https://learn.microsoft.com/powershell/module/sharepoint-server/update-sprepopulatemicroblogfeedcache
 applicable: SharePoint Server Subscription Edition
 title: Update-SPRepopulateMicroblogFeedCache
@@ -14,15 +14,6 @@ schema: 2.0.0
 Refreshes the microblog feed cache.
 
 ## SYNTAX
-
-### (Default)
-
-```
-Update-SPRepopulateMicroblogFeedCache [-AccountName <String>]
- -ProfileServiceApplicationProxy <SPServiceApplicationProxyPipeBind>
- [-AssignmentCollection <SPAssignmentCollection>] [-SiteSubscription <SPSiteSubscriptionPipeBind>]
- [-SiteUrl <String>] [<CommonParameters>]
-```
 
 ### Default
 

@@ -3,6 +3,7 @@ manager: mengkel
 ms.author: samkabue
 title: Get started with the SharePoint Online Management Shell
 description:  Get started with the SharePoint Online Management Shell
+ms.date: 05/16/2025
 ---
 
 # Get started with SharePoint Online Management Shell #

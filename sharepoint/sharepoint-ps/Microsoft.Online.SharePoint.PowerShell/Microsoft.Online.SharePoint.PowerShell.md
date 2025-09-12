@@ -3,8 +3,8 @@ Module Name: Microsoft.Online.SharePoint.PowerShell
 Module Guid: adedde5f-e77b-4682-ab3d-a4cb4ff79b83
 title: Microsoft.Online.SharePoint.PowerShell Module
 Locale: en-US
-author: trent-green
-ms.author: trgreen
+author: samkabue
+ms.author: speedta
 ms.reviewer:
 ---
 
@@ -17,6 +17,9 @@ The following cmdlet references are for SharePoint Online.
 
 ### [Add-SPOContainerTypeBilling](Add-SPOContainerTypeBilling.md)
 Adds the mentioned billing profile details to a standard container type.
+
+### [Add-SPOContainerUser](Add-SPOContainerUser.md)
+Adds a user to a SharePoint Embedded container with a specified role.
 
 ### [Add-SPOContentSecurityPolicy](Add-SPOContentSecurityPolicy.md)
 Adds a source to the **Content Security Policy** configuration.
@@ -236,6 +239,9 @@ Gets the status for a file version expiration report generation job for a docume
 
 ### [Get-SPOListVersionPolicy](Get-SPOListVersionPolicy.md)
 Gets the version policy setting on the document library.
+
+### [Get-SPOM365AgentAccessInsightsReport](Get-SPOM365AgentAccessInsightsReport.md)
+This cmdlet enables the administrator to check status of all active and available Microsoft 365 Agent Insights reports when no report ID is present and to view or download a report if report ID is present.  > [!NOTE] > The feature associated with this cmdlet will be rolling out soon.
 
 ### [Get-SPOMalwareFile](Get-SPOMalwareFile.md)
 Extracts and displays the malware-related information of an infected file stored in SharePoint.
@@ -481,12 +487,15 @@ Cmdlet to register customer encryption status for your geo tenant. For more info
 Enables the hub site feature on a site to make it a hub site. For more information visit [SharePoint hub sites overview](/sharepoint/dev/features/hub-site/hub-site-overview).
 
 ### [Remove-SPOAppBillingPolicy](Remove-SPOAppBillingPolicy.md)
-Removes billing policy asscoiated with the application.
+Removes billing policy associated with the application.
 
 ### [Remove-SPOContainer](Remove-SPOContainer.md)
 Sends a Container to the Recycle Bin.
 
 ### [Remove-SPOContainerType](Remove-SPOContainerType.md)
+This cmdlet removes the container type specified from the tenant.
+
+### [Remove-SPOContainerUser](Remove-SPOContainerUser.md)
 This cmdlet removes the container type specified from the tenant.
 
 ### [Remove-SPOContentEventEmailAddresses](Remove-SPOContentEventEmailAddresses.md)
@@ -666,6 +675,9 @@ Sets or updates one or more property values of a trial, standard or a direct to 
 ### [Set-SPOContainerTypeConfiguration](Set-SPOContainerTypeConfiguration.md)
 Sets or updates the configuration settings of a container type in SharePoint Embedded.
 
+### [Set-SPOContainerUser](Set-SPOContainerUser.md)
+Reassigns a user from their current role to a new role within a SharePoint Embedded container.
+
 ### [Set-SPOContentEventEmailAddresses](Set-SPOContentEventEmailAddresses.md)
 Adds the email addresses to the specified category of content event. Consequently, notification emails will be sent to these addresses.
 
@@ -794,6 +806,9 @@ This cmdlet enables administrator to trigger the build of a new enterprise appli
 
 ### [Start-SPOInformationBarriersInsightsReport](Start-SPOInformationBarriersInsightsReport.md)
 Generates a new report to identify and discover the usage patterns of Information Barriers (IB) across SharePoint sites and OneDrive accounts in the organization.
+
+### [Start-SPOM365AgentAccessInsightsReport](Start-SPOM365AgentAccessInsightsReport.md)
+Using this cmdlet, administrators may trigger the build of a new Microsoft 365 agent insight report for the specified number of days.  > [!NOTE] > The feature associated with this cmdlet will be rolling out soon.
 
 ### [Start-SPORestrictedAccessForSitesInsights](Start-SPORestrictedAccessForSitesInsights.md)
 This cmdlet enables administrator to trigger the build of a new restricted access control insights report for the data from last 28 days.
