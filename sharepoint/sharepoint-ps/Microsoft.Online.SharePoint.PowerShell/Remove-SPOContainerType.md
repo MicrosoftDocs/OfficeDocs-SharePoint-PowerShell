@@ -33,7 +33,7 @@ You must be a SharePoint Embedded Administrator to run this cmdlet.
 ### Example 1
 
 ```powershell
-Remove-SPOContainerTypeId -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604a8
+Remove-SPOContainerType -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604a8
 ```
 
 In Example 1, the cmdlet asks for a confirmation on the remove action and on confirmation, deletes the trial container type.
