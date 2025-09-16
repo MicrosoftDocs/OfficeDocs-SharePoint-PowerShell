@@ -14,8 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 Creates a new billing policy for service prioritization in SharePoint Online.
-> [!NOTE]
-> This functionality is rolling out and might not be fully enabled in your environment yet.
+
 
 ## SYNTAX
 

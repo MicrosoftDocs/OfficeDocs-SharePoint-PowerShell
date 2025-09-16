@@ -14,8 +14,6 @@ ms.reviewer:
 
 ## SYNOPSIS
 Updates an existing app registration for service prioritization in SharePoint Online.
-> [!NOTE]
-> This functionality is rolling out and might not be fully enabled in your environment yet.
 
 ## SYNTAX
 

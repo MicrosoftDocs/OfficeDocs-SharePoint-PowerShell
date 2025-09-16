@@ -280,10 +280,10 @@ This cmdlet enables the administrator to check status of all active and availabl
 This cmdlet allows SharePoint administrators to check the current configuration of the restricted site creation feature.
 
 ### [Get-SPOServicePrioritizationAppRegistrations](Get-SPOServicePrioritizationAppRegistrations.md)
-Retrieves the list of app registrations configured for service prioritization in SharePoint Online. > [!NOTE] > This functionality is rolling out and might not be fully enabled in your environment yet.
+Retrieves the list of app registrations configured for service prioritization in SharePoint Online.
 
 ### [Get-SPOServicePrioritizationBillingPolicies](Get-SPOServicePrioritizationBillingPolicies.md)
-Retrieves the list of billing policies configured for service prioritization in SharePoint Online. > [!NOTE] > This functionality is rolling out and might not be fully enabled in your environment yet.
+Retrieves the list of billing policies configured for service prioritization in SharePoint Online. 
 
 ### [Get-SPOSite](Get-SPOSite.md)
 Returns one or more site collections.
@@ -460,7 +460,7 @@ Creates a new public CDN on a document library in your SharePoint Online Tenant
 Adds a new Software-Defined Networking (SDN) provider
 
 ### [New-SPOServicePrioritizationBillingPolicy](New-SPOServicePrioritizationBillingPolicy.md)
-Creates a new billing policy for service prioritization in SharePoint Online. > [!NOTE] > This functionality is rolling out and might not be fully enabled in your environment yet.
+Creates a new billing policy for service prioritization in SharePoint Online.
 
 ### [New-SPOSite](New-SPOSite.md)
 Creates a new SharePoint Online site collection for the current company.
@@ -559,7 +559,7 @@ Removes a given public CDN origin based on its identity (id) in your SharePoint 
 Removes Software-Defined Networking (SDN) Support in your SharePoint Online tenant
 
 ### [Remove-SPOServicePrioritizationAppRegistration](Remove-SPOServicePrioritizationAppRegistration.md)
-Removes an app registration from service prioritization in SharePoint Online. > [!NOTE] > This functionality is rolling out and might not be fully enabled in your environment yet.
+Removes an app registration from service prioritization in SharePoint Online. 
 
 ### [Remove-SPOSite](Remove-SPOSite.md)
 Sends a SharePoint Online site collection to the SharePoint Online Recycle Bin.
@@ -727,7 +727,7 @@ Marks a site as one of multiple possible tenant's organizational news sites. Req
 Sets or updates one or more group configurations for restricting site creation.
 
 ### [Set-SPOServicePrioritizationAppRegistration](Set-SPOServicePrioritizationAppRegistration.md)
-Updates an existing app registration for service prioritization in SharePoint Online. > [!NOTE] > This functionality is rolling out and might not be fully enabled in your environment yet.
+Updates an existing app registration for service prioritization in SharePoint Online. 
 
 ### [Set-SPOSite](Set-SPOSite.md)
 Sets or updates one or more properties' values for a site collection.
