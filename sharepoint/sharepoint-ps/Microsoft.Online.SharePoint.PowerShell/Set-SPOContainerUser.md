@@ -40,7 +40,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### Example 1
 
 ```powershell
-Set-SPOContainerUser 423poi45 -LoginName shras@contoso.com-Role Manager
+Set-SPOContainerUser 423poi45 -LoginName shras@contoso.com -Role Manager
 ```
 
 Example 1 reassigns the role of User Principal Name "shras@contoso.com" to manager. 
