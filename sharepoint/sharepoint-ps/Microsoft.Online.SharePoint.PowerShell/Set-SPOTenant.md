@@ -3541,7 +3541,7 @@ The valid values are:
 - `NoSites`: Knowledge Agent isn't available on any sites. This is the Default value.
 
 > [!NOTE]
-> Use of this parameter requires Microsoft 35 Copilot license.
+> Use of this parameter requires Microsoft 365 Copilot license.
 
 ```yaml
 Type: KnowledgeAgentFeatureScopeValue
