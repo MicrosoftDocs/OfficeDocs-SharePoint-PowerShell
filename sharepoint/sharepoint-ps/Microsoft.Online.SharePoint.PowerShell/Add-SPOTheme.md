@@ -38,32 +38,37 @@ Add-SPOTheme
 ```
 
 ## DESCRIPTION
-The **Add-SPOTheme** cmdlet creates a new theme or updates an existing theme. The color palette and color pairs settings can be passed as either a hash table or a dictionary.
+The **Add-SPOTheme** cmdlet creates a new theme or updates an existing theme. The color pairs settings can be passed as a hash table. The color palette settings can be passed as either a hash table or a dictionary.
 
 Adding a theme does not apply the theme to any sites. It adds the theme to your tenant store, and then the theme is available in the list of themes under the **Change the look** option for modern pages.
 
 You can choose which parameter set to use depending on the legacy or new theme format you want to add. Please read [Site theme](https://learn.microsoft.com/sharepoint/site-theme) for more about new theme.
 
+> [!NOTE]
+> In multi-geo environments, themes added by an administrator in the primary geography are propagated and available across the entire organization. This` Add-SPOTheme` cmdlet is not supported for administrators in satellite geographies.
 
 ## Examples
 
 ### Example 1: Add a new format theme
+In this example, a theme named `"Teal Theme"` is created, with color pair settings that are various shades of teal.
+
 ```powershell
 $colorPairs = @{
   light = @(
-    @{ "themePrimary": "#ffffff", "backgroundColor": "#03787C"; },
-    @{ "themePrimary": "#E3FFFD", "backgroundColor": "#03787C"; },
-    @{ "themePrimary": "#03787C", "backgroundColor": "#E3FFFD"; },
-    @{ "themePrimary": "#FFF9E3", "backgroundColor": "#03787C"; },
-    @{ "themePrimary": "#03787C", "backgroundColor": "#FFF9E3"; },
-    @{ "themePrimary": "#03787C", "backgroundColor": "#F5F5F5"; },
-    @{ "themePrimary": "#242424", "backgroundColor": "#F5F5F5"; },
-    @{ "themePrimary": "#155473", "backgroundColor": "#ffffff"; },
-    @{ "themePrimary": "#ffffff", "backgroundColor": "#155473"; },
-    @{ "themePrimary": "#155473", "backgroundColor": "#E3FFFD"; },
-    @{ "themePrimary": "#E3FFFD", "backgroundColor": "#155473"; },
-    @{ "themePrimary": "#FFF9E3", "backgroundColor": "#155473"; },
-    @{ "themePrimary": "#155473", "backgroundColor": "#FFF9E3"; }
+    @{ "accentColor": "#03787C"; "backgroundColor": "#ffffff" }
+    @{ "accentColor": "#ffffff"; "backgroundColor": "#03787C" }
+    @{ "accentColor": "#E3FFFD"; "backgroundColor": "#03787C" }
+    @{ "accentColor": "#03787C"; "backgroundColor": "#E3FFFD" }
+    @{ "accentColor": "#FFF9E3"; "backgroundColor": "#03787C" }
+    @{ "accentColor": "#03787C"; "backgroundColor": "#FFF9E3" }
+    @{ "accentColor": "#03787C"; "backgroundColor": "#F5F5F5" }
+    @{ "accentColor": "#242424"; "backgroundColor": "#F5F5F5" }
+    @{ "accentColor": "#155473"; "backgroundColor": "#ffffff" }
+    @{ "accentColor": "#ffffff"; "backgroundColor": "#155473" }
+    @{ "accentColor": "#155473"; "backgroundColor": "#E3FFFD" }
+    @{ "accentColor": "#E3FFFD"; "backgroundColor": "#155473" }
+    @{ "accentColor": "#FFF9E3"; "backgroundColor": "#155473" }
+    @{ "accentColor": "#155473"; "backgroundColor": "#FFF9E3" }
   )
 }
 
@@ -71,6 +76,9 @@ Add-SPOTheme -Identity "Teal Theme" -ColorPairs $colorPairs
 ```
 
 ### Example 2: Overwrite a new format theme
+
+If you want to update an existing new format theme (to modify some of its color settings, for example), use the same syntax as shown previously, but add the `-Overwrite` flag to the **Add-SPOTheme** cmdlet.
+
 ```powershell
 Add-SPOTheme -Identity "Teal Theme" -ColorPairs $colorPairs -Overwrite
 ```
@@ -170,7 +178,7 @@ Type: Microsoft.Online.SharePoint.PowerShell.SpoThemeColorPairPipeBind
 Parameter Sets: NewThemeSet
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -188,7 +196,7 @@ Type: Microsoft.Online.SharePoint.PowerShell.SpoThemePalettePipeBind
 Parameter Sets: LegacyThemeSet
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -209,7 +217,7 @@ Type: System.Boolean
 Parameter Sets: LegacyThemeSet
 Aliases: None
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
