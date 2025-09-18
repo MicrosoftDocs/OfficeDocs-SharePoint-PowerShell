@@ -132,6 +132,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
  [-RestrictResourceAccountAccess <Boolean>] [-EnableSensitivityLabelForOneNote <Boolean>]
  [-EnableSensitivityLabelForVideoFiles <Boolean>] [-SiteOwnersCanAccessMissingContent <Boolean>]
+ [-KnowledgeAgentScope <KnowledgeAgentFeatureScopeValue>] [-KnowledgeAgentSelectedSitesList <String[]>] 
+ [-KnowledgeAgentSelectedSitesListOperation <SelectedSitesListOperations>]
  [<CommonParameters>]
 ```
 
@@ -3522,6 +3524,77 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -KnowledgeAgentScope
+
+> Applicable: SharePoint Online
+
+This parameter allows administrators to control which SharePoint sites the Knowledge Agent feature is available on.
+
+The valid values are:
+
+- `AllSites`: Knowledge Agent is available on all sites.
+- `ExcludeSelectedSites`: Knowledge Agent is available on all sites except those specified in `KnowledgeAgentSelectedSitesList`.
+- `NoSites`: Knowledge Agent isn't available on any sites. This is the Default value.
+
+> [!NOTE]
+> Use of this parameter requires Microsoft 35 Copilot license.
+
+```yaml
+Type: KnowledgeAgentFeatureScopeValue
+Parameter Sets: (All)
+Required: False
+Position: Named
+Default value: NoSites
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -KnowledgeAgentSelectedSitesList
+
+> Applicable: SharePoint Online
+
+This parameter allows administrators to pass a list of SharePoint site URLs to exclude from the Knowledge agent feature. By default, this overwrites any existing exclusion list with the provided list. This parameter can only be called when `KnowledgeAgentScope` is set to `ExcludeSelectedSites`.
+
+The list of site URLs can't exceed 100 items.
+
+> [!NOTE]
+> Use of this parameter requires Microsoft 35 Copilot license.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -KnowledgeAgentSelectedSitesListOperation
+
+> Applicable: SharePoint Online
+
+This parameter specifies the operation to perform on the Knowledge Agent feature's current excluded sites list.
+
+The valid values are:
+
+- `Overwrite`: Overwrite the existing excluded sites list. This is the default operation.
+- `Append`: Append the input list of sites to the existing excluded sites list.
+- `Remove`: Remove the input list of sites from the existing excluded sites list.
+
+> [!NOTE]
+> Calling this parameter without `KnowledgeAgentSelectedSitesList` has no effect.
+
+```yaml
+Type: SelectedSitesListOperations
+Parameter Sets: (All)
+Required: False
+Position: Named
+Default value: Overwrite
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
