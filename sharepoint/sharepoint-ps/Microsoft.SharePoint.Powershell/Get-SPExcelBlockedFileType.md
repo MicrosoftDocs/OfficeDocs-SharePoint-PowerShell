@@ -1,7 +1,7 @@
 ---
 external help file: sharepointserver.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spexcelblockedfiletype
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/get-spexcelblockedfiletype
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Get-SPExcelBlockedFileType
 schema: 2.0.0

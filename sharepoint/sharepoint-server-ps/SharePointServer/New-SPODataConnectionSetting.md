@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spodataconnectionsetting
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/new-spodataconnectionsetting
 applicable: SharePoint Server Subscription Edition
 title: New-SPODataConnectionSetting
 schema: 2.0.0

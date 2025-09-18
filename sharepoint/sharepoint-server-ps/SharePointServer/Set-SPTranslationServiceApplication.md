@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.TranslationServices.dll-Help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-sptranslationserviceapplication
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/set-sptranslationserviceapplication
 applicable: SharePoint Server Subscription Edition
 title: Set-SPTranslationServiceApplication
 schema: 2.0.0

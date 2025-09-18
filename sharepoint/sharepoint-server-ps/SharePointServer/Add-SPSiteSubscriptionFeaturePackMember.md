@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/add-spsitesubscriptionfeaturepackmember
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/add-spsitesubscriptionfeaturepackmember
 applicable: SharePoint Server Subscription Edition
 title: Add-SPSiteSubscriptionFeaturePackMember
 schema: 2.0.0

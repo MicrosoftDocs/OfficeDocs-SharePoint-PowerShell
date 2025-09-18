@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spopubliccdnorigins
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/get-spopubliccdnorigins
 applicable: SharePoint Online
 title: Get-SPOPublicCdnOrigins
 schema: 2.0.0

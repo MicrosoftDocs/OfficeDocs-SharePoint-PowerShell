@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/start-spservice
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/start-spservice
 title: Start-SPService
 schema: 2.0.0
 ---

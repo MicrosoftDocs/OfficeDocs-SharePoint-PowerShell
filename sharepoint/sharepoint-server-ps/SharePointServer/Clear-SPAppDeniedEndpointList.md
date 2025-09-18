@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/clear-spappdeniedendpointlist
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/clear-spappdeniedendpointlist
 applicable: SharePoint Server Subscription Edition
 title: Clear-SPAppDeniedEndpointList
 schema: 2.0.0

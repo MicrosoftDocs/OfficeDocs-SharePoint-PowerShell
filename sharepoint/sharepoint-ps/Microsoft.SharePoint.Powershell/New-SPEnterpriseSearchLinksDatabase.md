@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spenterprisesearchlinksdatabase
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/new-spenterprisesearchlinksdatabase
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPEnterpriseSearchLinksDatabase
 schema: 2.0.0

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spbrowsercustomerexperienceimprovementprogram
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/set-spbrowsercustomerexperienceimprovementprogram
 applicable: SharePoint Server Subscription Edition
 title: Set-SPBrowserCustomerExperienceImprovementProgram
 schema: 2.0.0

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/enable-spbusinessdatacatalogentity
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/enable-spbusinessdatacatalogentity
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Enable-SPBusinessDataCatalogEntity
 schema: 2.0.0
