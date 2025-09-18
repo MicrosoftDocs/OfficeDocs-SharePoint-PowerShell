@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spenterprisesearchserviceapplicationsitesettings
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/remove-spenterprisesearchserviceapplicationsitesettings
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPEnterpriseSearchServiceApplicationSiteSettings
 schema: 2.0.0

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spocrossgeomovereport
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/get-spocrossgeomovereport
 applicable: SharePoint Online
 title: Get-SPOCrossGeoMoveReport
 schema: 2.0.0

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spusagedefinition
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/get-spusagedefinition
 applicable: SharePoint Server Subscription Edition
 title: Get-SPUsageDefinition
 schema: 2.0.0

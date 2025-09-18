@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/import-spenterprisesearchpopularqueries
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/import-spenterprisesearchpopularqueries
 applicable: SharePoint Server Subscription Edition
 title: Import-SPEnterpriseSearchPopularQueries
 schema: 2.0.0

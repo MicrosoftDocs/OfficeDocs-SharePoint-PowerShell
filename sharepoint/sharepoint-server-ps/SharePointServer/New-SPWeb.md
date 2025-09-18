@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spweb
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/new-spweb
 applicable: SharePoint Server Subscription Edition
 title: New-SPWeb
 schema: 2.0.0

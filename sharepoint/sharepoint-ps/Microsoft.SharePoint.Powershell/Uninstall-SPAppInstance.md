@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/uninstall-spappinstance
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/uninstall-spappinstance
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Uninstall-SPAppInstance
 schema: 2.0.0

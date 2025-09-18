@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/disable-spsinglesignon
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/disable-spsinglesignon
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Disable-SPSingleSignOn
 schema: 2.0.0
