@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/set-spwopizone
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/set-spwopizone
 applicable: SharePoint Server Subscription Edition
 title: Set-SPWOPIZone
 schema: 2.0.0

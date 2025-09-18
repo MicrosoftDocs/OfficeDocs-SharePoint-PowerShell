@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.online.sharepoint.powershell/convertto-spomigrationtargetedpackage
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/convertto-spomigrationtargetedpackage
 applicable: SharePoint Online
 title: ConvertTo-SPOMigrationTargetedPackage
 schema: 2.0.0

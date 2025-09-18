@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/upgrade-spsinglesignondatabase
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/upgrade-spsinglesignondatabase
 applicable: SharePoint Server Subscription Edition
 title: Upgrade-SPSingleSignOnDatabase
 schema: 2.0.0

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/get-spsessionstateservice
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/get-spsessionstateservice
 applicable: SharePoint Server Subscription Edition
 title: Get-SPSessionStateService
 schema: 2.0.0

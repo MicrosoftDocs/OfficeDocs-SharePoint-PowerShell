@@ -1,7 +1,7 @@
 ---
 external help file: microsoft.office.access.server.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/get-spaccessservicesapplication
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/get-spaccessservicesapplication
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPAccessServicesApplication
 schema: 2.0.0

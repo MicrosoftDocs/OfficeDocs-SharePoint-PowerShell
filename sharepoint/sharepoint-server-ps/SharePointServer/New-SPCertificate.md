@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/new-spcertificate
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/new-spcertificate
 applicable: SharePoint Server Subscription Edition
 title: New-SPCertificate
 schema: 2.0.0

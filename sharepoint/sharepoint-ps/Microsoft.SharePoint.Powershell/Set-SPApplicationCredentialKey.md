@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/set-spapplicationcredentialkey
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/set-spapplicationcredentialkey
 applicable: SharePoint Server 2019
 title: Set-SPApplicationCredentialKey
 schema: 2.0.0

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.online.sharepoint.powershell/set-spotenantrenamesiteprioritization
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/set-spotenantrenamesiteprioritization
 applicable: SharePoint Online
 title: Set-SPOTenantRenameSitePrioritization
 author: AnfraMsft

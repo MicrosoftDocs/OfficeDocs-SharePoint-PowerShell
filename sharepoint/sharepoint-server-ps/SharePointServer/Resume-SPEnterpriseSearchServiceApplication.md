@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/resume-spenterprisesearchserviceapplication
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/resume-spenterprisesearchserviceapplication
 applicable: SharePoint Server Subscription Edition
 title: Resume-SPEnterpriseSearchServiceApplication
 schema: 2.0.0

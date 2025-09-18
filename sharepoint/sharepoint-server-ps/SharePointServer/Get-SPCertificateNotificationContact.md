@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/get-spcertificatenotificationcontact
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/get-spcertificatenotificationcontact
 applicable: SharePoint Server Subscription Edition
 title: Get-SPCertificateNotificationContact
 schema: 2.0.0

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/clear-spsecurestoredefaultprovider
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/clear-spsecurestoredefaultprovider
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Clear-SPSecureStoreDefaultProvider
 schema: 2.0.0

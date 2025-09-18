@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/remove-spactivityfeeditems
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/remove-spactivityfeeditems
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPActivityFeedItems
 schema: 2.0.0

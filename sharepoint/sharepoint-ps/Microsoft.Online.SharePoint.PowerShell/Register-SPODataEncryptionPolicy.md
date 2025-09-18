@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.online.sharepoint.powershell/register-spodataencryptionpolicy
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/register-spodataencryptionpolicy
 applicable: SharePoint Online
 title: Register-SPODataEncryptionPolicy
 schema: 2.0.0

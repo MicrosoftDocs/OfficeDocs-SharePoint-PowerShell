@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/new-sptrustedsecuritytokenissuer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/new-sptrustedsecuritytokenissuer
 applicable: SharePoint Server Subscription Edition
 title: New-SPTrustedSecurityTokenIssuer
 schema: 2.0.0

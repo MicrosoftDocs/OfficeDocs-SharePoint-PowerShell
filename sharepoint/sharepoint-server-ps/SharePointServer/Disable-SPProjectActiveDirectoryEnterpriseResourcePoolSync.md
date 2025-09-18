@@ -1,7 +1,7 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/disable-spprojectactivedirectoryenterpriseresourcepoolsync
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/disable-spprojectactivedirectoryenterpriseresourcepoolsync
 title: Disable-SPProjectActiveDirectoryEnterpriseResourcePoolSync
 schema: 2.0.0
 ---

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.online.sharepoint.powershell/remove-spoorgassetslibrary
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/remove-spoorgassetslibrary
 applicable: SharePoint Online
 title: Remove-SPOOrgAssetsLibrary
 author: samkabue

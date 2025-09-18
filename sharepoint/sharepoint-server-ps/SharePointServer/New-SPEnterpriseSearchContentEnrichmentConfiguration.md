@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/new-spenterprisesearchcontentenrichmentconfiguration
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/new-spenterprisesearchcontentenrichmentconfiguration
 applicable: SharePoint Server Subscription Edition
 title: New-SPEnterpriseSearchContentEnrichmentConfiguration
 schema: 2.0.0

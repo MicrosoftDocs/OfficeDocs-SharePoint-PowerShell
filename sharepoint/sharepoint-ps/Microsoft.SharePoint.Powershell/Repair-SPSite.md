@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/repair-spsite
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/repair-spsite
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Repair-SPSite
 schema: 2.0.0

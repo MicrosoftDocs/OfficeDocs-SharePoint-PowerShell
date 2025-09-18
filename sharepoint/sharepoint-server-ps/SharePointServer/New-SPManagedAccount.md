@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/new-spmanagedaccount
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/new-spmanagedaccount
 applicable: SharePoint Server Subscription Edition
 title: New-SPManagedAccount
 schema: 2.0.0

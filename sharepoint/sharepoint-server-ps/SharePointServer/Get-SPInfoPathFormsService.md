@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/get-spinfopathformsservice
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/get-spinfopathformsservice
 applicable: SharePoint Server Subscription Edition
 title: Get-SPInfoPathFormsService
 schema: 2.0.0

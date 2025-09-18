@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/set-spdefaultprofileconfig
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/set-spdefaultprofileconfig
 title: Set-SPDefaultProfileConfig
 schema: 2.0.0
 ---

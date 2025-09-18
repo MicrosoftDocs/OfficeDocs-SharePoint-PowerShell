@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/convert-spwebapplication
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/convert-spwebapplication
 applicable: SharePoint Server Subscription Edition
 title: Convert-SPWebApplication
 schema: 2.0.0

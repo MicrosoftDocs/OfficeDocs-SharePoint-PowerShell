@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/unregister-spremoteshareblobstore
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/unregister-spremoteshareblobstore
 applicable: SharePoint Server Subscription Edition
 title: Unregister-SPRemoteShareBlobStore
 schema: 2.0.0

@@ -1,7 +1,7 @@
 ---
 external help file: sharepointserver.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/new-spexceluserdefinedfunction
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/new-spexceluserdefinedfunction
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: New-SPExcelUserDefinedFunction
 schema: 2.0.0

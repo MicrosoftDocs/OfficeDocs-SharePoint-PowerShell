@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/set-spstateserviceapplication
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/set-spstateserviceapplication
 applicable: SharePoint Server Subscription Edition
 title: Set-SPStateServiceApplication
 schema: 2.0.0

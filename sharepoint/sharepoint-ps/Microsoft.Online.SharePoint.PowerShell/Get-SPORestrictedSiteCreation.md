@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.online.sharepoint.powershell/get-sporestrictedsitecreation
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/get-sporestrictedsitecreation
 applicable: SharePoint Online
 title: Get-SPORestrictedSiteCreation
 schema: 2.0.0

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/initialize-spstateservicedatabase
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/initialize-spstateservicedatabase
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Initialize-SPStateServiceDatabase
 schema: 2.0.0

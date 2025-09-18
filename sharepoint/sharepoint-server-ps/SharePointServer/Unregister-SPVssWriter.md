@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/unregister-spvsswriter
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/unregister-spvsswriter
 applicable: SharePoint Server Subscription Edition
 title: Unregister-SPVssWriter
 schema: 2.0.0

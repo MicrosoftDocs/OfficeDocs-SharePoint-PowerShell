@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.online.sharepoint.powershell/export-spouserinfo
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/export-spouserinfo
 applicable: SharePoint Online
 title: Export-SPOUserInfo
 schema: 2.0.0

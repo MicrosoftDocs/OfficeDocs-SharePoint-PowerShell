@@ -1,7 +1,7 @@
 ---
 external help file: sharepointserver.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/remove-spenterprisesearchresultitemtype
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/remove-spenterprisesearchresultitemtype
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPEnterpriseSearchResultItemType
 schema: 2.0.0

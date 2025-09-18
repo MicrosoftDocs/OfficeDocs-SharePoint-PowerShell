@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/new-spuser
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/new-spuser
 applicable: SharePoint Server Subscription Edition
 title: New-SPUser
 schema: 2.0.0

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.online.sharepoint.powershell/set-spomultigeocompanyalloweddatalocation
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/set-spomultigeocompanyalloweddatalocation
 applicable: SharePoint Online
 title: Set-SPOMultiGeoCompanyAllowedDataLocation
 schema: 2.0.0

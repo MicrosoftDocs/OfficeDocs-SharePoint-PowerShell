@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/set-spenterprisesearchqueryspellingcorrection
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/set-spenterprisesearchqueryspellingcorrection
 applicable: SharePoint Server Subscription Edition
 title: Set-SPEnterpriseSearchQuerySpellingCorrection
 schema: 2.0.0

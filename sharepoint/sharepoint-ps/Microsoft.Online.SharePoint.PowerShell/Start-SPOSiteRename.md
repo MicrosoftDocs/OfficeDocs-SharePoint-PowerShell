@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.online.sharepoint.powershell/start-spositerename
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/start-spositerename
 applicable: SharePoint Online
 title: Start-SPOSiteRename
 schema: 2.0.0

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/stop-spcontenttypereplication
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/stop-spcontenttypereplication
 applicable: SSharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Stop-SPContentTypeReplication
 schema: 2.0.0

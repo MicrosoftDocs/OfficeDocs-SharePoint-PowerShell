@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/remove-spinfopathuseragent
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/remove-spinfopathuseragent
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPInfoPathUserAgent
 schema: 2.0.0

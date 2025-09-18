@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/remove-spsitesubscriptionmetadataconfig
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/remove-spsitesubscriptionmetadataconfig
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPSiteSubscriptionMetadataConfig
 schema: 2.0.0

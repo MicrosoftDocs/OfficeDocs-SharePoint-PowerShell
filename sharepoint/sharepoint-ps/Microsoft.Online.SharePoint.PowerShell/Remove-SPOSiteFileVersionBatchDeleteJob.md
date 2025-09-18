@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.online.sharepoint.powershell/remove-spositefileversionbatchdeletejob
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/remove-spositefileversionbatchdeletejob
 applicable: SharePoint Online
 title: Remove-SPOSiteFileVersionBatchDeleteJob
 schema: 2.0.0

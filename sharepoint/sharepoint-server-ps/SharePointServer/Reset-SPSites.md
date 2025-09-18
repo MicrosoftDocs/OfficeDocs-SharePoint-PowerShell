@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/reset-spsites
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/reset-spsites
 title: Reset-SPSites
 schema: 2.0.0
 ---

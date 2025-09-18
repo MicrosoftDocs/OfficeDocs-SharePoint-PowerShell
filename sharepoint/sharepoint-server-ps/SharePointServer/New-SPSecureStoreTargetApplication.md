@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/new-spsecurestoretargetapplication
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/new-spsecurestoretargetapplication
 applicable: SharePoint Server Subscription Edition
 title: New-SPSecureStoreTargetApplication
 schema: 2.0.0
