@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/add-spositedesigntask
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/add-spositedesigntask
 applicable: SharePoint Online
 title: Add-SPOSiteDesignTask
 schema: 2.0.0
@@ -97,6 +97,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPOSiteDesignTask](/powershell/module/sharepoint-online/get-spositedesigntask)
+[Get-SPOSiteDesignTask](/powershell/module/microsoft.online.sharepoint.powershell/get-spositedesigntask)
 
-[Invoke-SPOSiteDesign](/powershell/module/sharepoint-online/invoke-spositedesign)
+[Invoke-SPOSiteDesign](/powershell/module/microsoft.online.sharepoint.powershell/invoke-spositedesign)

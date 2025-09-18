@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/invoke-spositeswap
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/invoke-spositeswap
 applicable: SharePoint Online
 title: Invoke-SPOSiteSwap
 schema: 2.0.0

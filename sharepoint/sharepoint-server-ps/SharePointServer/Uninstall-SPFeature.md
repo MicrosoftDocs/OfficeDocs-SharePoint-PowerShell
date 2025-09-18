@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/uninstall-spfeature
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/uninstall-spfeature
 applicable: SharePoint Server Subscription Edition
 title: Uninstall-SPFeature
 schema: 2.0.0

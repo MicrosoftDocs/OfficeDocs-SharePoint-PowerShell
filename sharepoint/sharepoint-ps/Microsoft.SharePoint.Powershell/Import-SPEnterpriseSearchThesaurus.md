@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/import-spenterprisesearchthesaurus
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/import-spenterprisesearchthesaurus
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Import-SPEnterpriseSearchThesaurus
 schema: 2.0.0

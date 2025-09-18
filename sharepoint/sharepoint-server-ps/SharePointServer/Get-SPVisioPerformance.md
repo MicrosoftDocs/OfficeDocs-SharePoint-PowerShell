@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Visio.Server.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spvisioperformance
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/get-spvisioperformance
 applicable: SharePoint Server Subscription Edition
 title: Get-SPVisioPerformance
 schema: 2.0.0
