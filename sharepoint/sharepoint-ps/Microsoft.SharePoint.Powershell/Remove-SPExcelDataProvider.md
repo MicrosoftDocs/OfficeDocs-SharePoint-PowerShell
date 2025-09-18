@@ -1,7 +1,7 @@
 ---
 external help file: sharepointserver.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spexceldataprovider
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/remove-spexceldataprovider
 applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Remove-SPExcelDataProvider
 schema: 2.0.0

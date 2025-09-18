@@ -1,7 +1,7 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spprojectpcssettings
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/get-spprojectpcssettings
 title: Get-SPProjectPCSSettings
 schema: 2.0.0
 ---

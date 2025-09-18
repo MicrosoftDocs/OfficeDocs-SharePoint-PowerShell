@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.WorkflowServices.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spworkflowserviceapplicationproxy
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/get-spworkflowserviceapplicationproxy
 applicable: SharePoint Server Subscription Edition
 title: Get-SPWorkflowServiceApplicationProxy
 schema: 2.0.0

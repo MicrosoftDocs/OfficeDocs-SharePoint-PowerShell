@@ -1,7 +1,7 @@
 ---
 external help file: sharepointserver.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/upgrade-spsitemapdatabase
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/upgrade-spsitemapdatabase
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Upgrade-SPSiteMapDatabase
 schema: 2.0.0

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/suspend-spenterprisesearchserviceapplication
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/suspend-spenterprisesearchserviceapplication
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Suspend-SPEnterpriseSearchServiceApplication
 schema: 2.0.0

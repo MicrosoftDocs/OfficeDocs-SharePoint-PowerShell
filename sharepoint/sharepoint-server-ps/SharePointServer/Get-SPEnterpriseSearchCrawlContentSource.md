@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchcrawlcontentsource
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/get-spenterprisesearchcrawlcontentsource
 applicable: SharePoint Server Subscription Edition
 title: Get-SPEnterpriseSearchCrawlContentSource
 schema: 2.0.0

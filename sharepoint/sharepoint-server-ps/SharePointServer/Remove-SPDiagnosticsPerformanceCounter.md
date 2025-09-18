@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spdiagnosticsperformancecounter
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/remove-spdiagnosticsperformancecounter
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPDiagnosticsPerformanceCounter
 schema: 2.0.0

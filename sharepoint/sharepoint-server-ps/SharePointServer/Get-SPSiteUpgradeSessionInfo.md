@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spsiteupgradesessioninfo
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/get-spsiteupgradesessioninfo
 applicable: SharePoint Server Subscription Edition
 title: Get-SPSiteUpgradeSessionInfo
 schema: 2.0.0

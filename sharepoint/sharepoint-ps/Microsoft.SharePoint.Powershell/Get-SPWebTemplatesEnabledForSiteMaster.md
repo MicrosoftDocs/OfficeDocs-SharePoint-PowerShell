@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spwebtemplatesenabledforsitemaster
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/get-spwebtemplatesenabledforsitemaster
 applicable: SharePoint Server 2016, SharePoint Server 2019
 title: Get-SPWebTemplatesEnabledForSiteMaster
 schema: 2.0.0

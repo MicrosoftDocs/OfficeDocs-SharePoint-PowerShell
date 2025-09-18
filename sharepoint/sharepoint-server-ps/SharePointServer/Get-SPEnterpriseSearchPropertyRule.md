@@ -1,7 +1,7 @@
 ---
 external help file: sharepointserver.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spenterprisesearchpropertyrule
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/get-spenterprisesearchpropertyrule
 applicable: SharePoint Server Subscription Edition
 title: Get-SPEnterpriseSearchPropertyRule
 schema: 2.0.0

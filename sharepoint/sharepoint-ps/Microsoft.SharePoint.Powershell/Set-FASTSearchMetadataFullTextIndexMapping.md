@@ -1,7 +1,7 @@
 ---
 external help file: sharepointserver.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-fastsearchmetadatafulltextindexmapping
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/set-fastsearchmetadatafulltextindexmapping
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 author: techwriter40

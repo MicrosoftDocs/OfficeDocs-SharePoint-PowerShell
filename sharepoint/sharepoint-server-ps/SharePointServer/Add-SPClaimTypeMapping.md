@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/add-spclaimtypemapping
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/add-spclaimtypemapping
 applicable: SharePoint Server Subscription Edition
 title: Add-SPClaimTypeMapping
 schema: 2.0.0

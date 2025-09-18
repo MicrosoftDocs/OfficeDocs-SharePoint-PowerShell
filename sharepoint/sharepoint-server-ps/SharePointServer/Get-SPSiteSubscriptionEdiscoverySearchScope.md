@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.Publishing.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spsitesubscriptionediscoverysearchscope
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/get-spsitesubscriptionediscoverysearchscope
 applicable: SharePoint Server Subscription Edition
 title: Get-SPSiteSubscriptionEdiscoverySearchScope
 schema: 2.0.0

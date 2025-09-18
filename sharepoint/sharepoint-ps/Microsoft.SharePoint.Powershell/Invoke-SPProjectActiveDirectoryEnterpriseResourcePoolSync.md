@@ -1,7 +1,7 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/invoke-spprojectactivedirectoryenterpriseresourcepoolsync
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/invoke-spprojectactivedirectoryenterpriseresourcepoolsync
 applicable: Project Server 2013, Project Server 2016, Project Server 2019
 title: Invoke-SPProjectActiveDirectoryEnterpriseResourcePoolSync
 schema: 2.0.0

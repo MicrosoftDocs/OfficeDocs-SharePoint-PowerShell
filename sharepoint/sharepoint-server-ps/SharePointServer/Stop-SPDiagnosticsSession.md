@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/stop-spdiagnosticssession
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/stop-spdiagnosticssession
 applicable: SharePoint Server Subscription Edition
 title: Stop-SPDiagnosticsSession
 schema: 2.0.0

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/update-spinfopathformtemplate
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/update-spinfopathformtemplate
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Update-SPInfoPathFormTemplate
 schema: 2.0.0

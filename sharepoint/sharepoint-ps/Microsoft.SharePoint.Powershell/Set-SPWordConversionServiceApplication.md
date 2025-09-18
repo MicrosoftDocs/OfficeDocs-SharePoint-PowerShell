@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Word.Server.dll-Help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spwordconversionserviceapplication
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/set-spwordconversionserviceapplication
 applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: Set-SPWordConversionServiceApplication
 schema: 2.0.0

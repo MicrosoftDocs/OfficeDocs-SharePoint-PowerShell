@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/export-spsitesubscriptionsettings
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/export-spsitesubscriptionsettings
 applicable: SharePoint Server Subscription Edition
 title: Export-SPSiteSubscriptionSettings
 schema: 2.0.0

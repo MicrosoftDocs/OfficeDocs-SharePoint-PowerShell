@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spsecurestoresystemaccount
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/remove-spsecurestoresystemaccount
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPSecureStoreSystemAccount
 schema: 2.0.0

@@ -1,7 +1,7 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/reset-spprojectqueuesettings
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/reset-spprojectqueuesettings
 title: Reset-SPProjectQueueSettings
 schema: 2.0.0
 ---

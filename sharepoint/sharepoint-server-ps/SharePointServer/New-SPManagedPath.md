@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spmanagedpath
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/new-spmanagedpath
 applicable: SharePoint Server Subscription Edition
 title: New-SPManagedPath
 schema: 2.0.0

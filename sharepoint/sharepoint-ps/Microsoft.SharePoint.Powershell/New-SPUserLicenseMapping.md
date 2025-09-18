@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spuserlicensemapping
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/new-spuserlicensemapping
 applicable: SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019
 title: New-SPUserLicenseMapping
 schema: 2.0.0

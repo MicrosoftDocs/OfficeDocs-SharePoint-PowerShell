@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spserviceapplicationpool
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/new-spserviceapplicationpool
 applicable: SharePoint Server Subscription Edition
 title: New-SPServiceApplicationPool
 schema: 2.0.0

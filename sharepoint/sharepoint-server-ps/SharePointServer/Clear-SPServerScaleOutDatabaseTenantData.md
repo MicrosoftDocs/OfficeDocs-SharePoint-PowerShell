@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/clear-spserverscaleoutdatabasetenantdata
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/clear-spserverscaleoutdatabasetenantdata
 applicable: SharePoint Server Subscription Edition
 title: Clear-SPServerScaleOutDatabaseTenantData
 schema: 2.0.0

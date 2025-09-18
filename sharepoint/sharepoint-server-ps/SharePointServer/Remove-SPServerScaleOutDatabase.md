@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spserverscaleoutdatabase
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/remove-spserverscaleoutdatabase
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPServerScaleOutDatabase
 schema: 2.0.0

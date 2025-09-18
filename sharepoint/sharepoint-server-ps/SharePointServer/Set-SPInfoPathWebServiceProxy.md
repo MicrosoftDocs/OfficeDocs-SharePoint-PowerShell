@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spinfopathwebserviceproxy
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/set-spinfopathwebserviceproxy
 applicable: SharePoint Server Subscription Edition
 title: Set-SPInfoPathWebServiceProxy
 schema: 2.0.0

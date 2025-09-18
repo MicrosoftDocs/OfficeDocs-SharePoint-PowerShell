@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/disable-spinfopathformtemplate
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/disable-spinfopathformtemplate
 applicable: SharePoint Server Subscription Edition
 title: Disable-SPInfoPathFormTemplate
 schema: 2.0.0

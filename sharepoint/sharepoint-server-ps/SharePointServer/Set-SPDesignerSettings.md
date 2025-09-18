@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spdesignersettings
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/set-spdesignersettings
 applicable: SharePoint Server Subscription Edition
 title: Set-SPDesignerSettings
 schema: 2.0.0

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/start-spcachecluster
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.sharepoint.powershell/start-spcachecluster
 applicable: SharePoint Server Subscription Edition
 title: Start-SPCacheCluster
 schema: 2.0.0
