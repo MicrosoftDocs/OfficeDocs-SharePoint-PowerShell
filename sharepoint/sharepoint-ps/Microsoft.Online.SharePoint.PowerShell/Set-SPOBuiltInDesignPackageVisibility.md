@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spobuiltindesignpackagevisibility
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.online.sharepoint.powershell/set-spobuiltindesignpackagevisibility
 applicable: SharePoint Online
 title: Set-SPOBuiltInDesignPackageVisibility
 schema: 2.0.0

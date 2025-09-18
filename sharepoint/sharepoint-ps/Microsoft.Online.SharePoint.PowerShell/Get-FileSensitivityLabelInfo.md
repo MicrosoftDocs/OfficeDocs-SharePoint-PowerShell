@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Get-FileSensitivityLabelInfo
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.online.sharepoint.powershell/Get-FileSensitivityLabelInfo
 applicable: SharePoint Online
 title: Get-FileSensitivityLabelInfo
 schema: 2.0.0

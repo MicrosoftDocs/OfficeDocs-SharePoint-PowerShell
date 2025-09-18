@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/submit-spomigrationjob
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.online.sharepoint.powershell/submit-spomigrationjob
 applicable: SharePoint Online
 title: Submit-SPOMigrationJob
 schema: 2.0.0

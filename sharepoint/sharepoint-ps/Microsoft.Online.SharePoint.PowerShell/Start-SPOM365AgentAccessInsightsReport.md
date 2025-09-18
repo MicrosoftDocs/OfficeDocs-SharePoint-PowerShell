@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/start-spom365agentaccessinsightsreport
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.online.sharepoint.powershell/start-spom365agentaccessinsightsreport
 applicable: SharePoint Online
 title: Start-SPOM365AgentAccessInsightsReport
 schema: 2.0.0

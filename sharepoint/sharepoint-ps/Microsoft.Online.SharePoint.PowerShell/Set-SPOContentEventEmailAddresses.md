@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spocontenteventemailaddresses
+online version: https://learn.microsoft.com/en-us/powershell/module/microsoft.online.sharepoint.powershell/set-spocontenteventemailaddresses
 applicable: SharePoint Online
 title: Set-SPOContentEventEmailAddresses
 schema: 1.0.0
