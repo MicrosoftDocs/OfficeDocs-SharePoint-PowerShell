@@ -26,7 +26,7 @@ Add-SPOFileRequestBrandingProfile -AssetLibraryUrl <String> -IsPrimary <Boolean>
 
 ## DESCRIPTION
 
-This cmdlet registers a branding profile to be used for the file request feature across the tenant. You must specify an existing organization asset library URL where the branding assets are stored and indicate whether the profile should be designated as primary. Each tenant can have one primary and one secondary profile. The organization asset library being used must be configured with the CdnType being "Public" (see [Add-SPOOrgAssetsLibrary](/powershell/module/sharepoint-online/add-spoorgassetslibrary) for more info).
+This cmdlet registers a branding profile to be used for the file request feature across the tenant. You must specify an existing organization asset library URL where the branding assets are stored and indicate whether the profile should be designated as primary. Each tenant can have one primary and one secondary profile. The organization asset library being used must be configured with the CdnType being "Public" (see [Add-SPOOrgAssetsLibrary](/powershell/module/microsoft.online.sharepoint.powershell/add-spoorgassetslibrary) for more info).
 
 ## EXAMPLES
 
@@ -129,8 +129,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPOFileRequestBrandingProfiles](/powershell/module/sharepoint-online/get-spofilerequestbrandingprofiles)
+[Get-SPOFileRequestBrandingProfiles](/powershell/module/microsoft.online.sharepoint.powershell/get-spofilerequestbrandingprofiles)
 
-[Remove-SPOFileRequestBrandingProfile](/powershell/module/sharepoint-online/remove-spofilerequestbrandingprofile)
+[Remove-SPOFileRequestBrandingProfile](/powershell/module/microsoft.online.sharepoint.powershell/remove-spofilerequestbrandingprofile)
 
-[Switch-SPOFileRequestBrandingProfiles](/powershell/module/sharepoint-online/switch-spofilerequestbrandingprofiles)
+[Switch-SPOFileRequestBrandingProfiles](/powershell/module/microsoft.online.sharepoint.powershell/switch-spofilerequestbrandingprofiles)

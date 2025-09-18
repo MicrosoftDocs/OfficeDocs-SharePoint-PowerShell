@@ -88,7 +88,7 @@ The encryption status for the geo. Possible states include:
 
 ## RELATED LINKS
 
-[Register-SPODataEncryptionPolicy](/powershell/module/sharepoint-online/register-spodataencryptionpolicy)
+[Register-SPODataEncryptionPolicy](/powershell/module/microsoft.online.sharepoint.powershell/register-spodataencryptionpolicy)
 
 [Controlling your data in Office 365 using Customer Key](/microsoft-365/compliance/controlling-your-data-using-customer-key)
 

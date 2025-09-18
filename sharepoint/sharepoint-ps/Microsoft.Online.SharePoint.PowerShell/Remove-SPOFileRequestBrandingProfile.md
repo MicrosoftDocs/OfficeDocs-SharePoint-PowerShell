@@ -99,8 +99,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-SPOFileRequestBrandingProfile](/powershell/module/sharepoint-online/add-spofilerequestbrandingprofile)
+[Add-SPOFileRequestBrandingProfile](/powershell/module/microsoft.online.sharepoint.powershell/add-spofilerequestbrandingprofile)
 
-[Get-SPOFileRequestBrandingProfiles](/powershell/module/sharepoint-online/get-spofilerequestbrandingprofiles)
+[Get-SPOFileRequestBrandingProfiles](/powershell/module/microsoft.online.sharepoint.powershell/get-spofilerequestbrandingprofiles)
 
-[Switch-SPOFileRequestBrandingProfiles](/powershell/module/sharepoint-online/switch-spofilerequestbrandingprofiles)
+[Switch-SPOFileRequestBrandingProfiles](/powershell/module/microsoft.online.sharepoint.powershell/switch-spofilerequestbrandingprofiles)

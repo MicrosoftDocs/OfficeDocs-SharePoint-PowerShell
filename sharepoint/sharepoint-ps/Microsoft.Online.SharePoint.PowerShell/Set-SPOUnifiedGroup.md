@@ -89,6 +89,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPOUnifiedGroup](/powershell/module/sharepoint-online/get-spounifiedgroup)
+[Get-SPOUnifiedGroup](/powershell/module/microsoft.online.sharepoint.powershell/get-spounifiedgroup)
 
 [Move a SharePoint site to a different geo location](/office365/enterprise/move-sharepoint-between-geo-locations)

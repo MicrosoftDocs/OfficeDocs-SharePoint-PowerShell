@@ -214,8 +214,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPOOrgAssetsLibrary](/powershell/module/sharepoint-online/get-spoorgassetslibrary)
+[Get-SPOOrgAssetsLibrary](/powershell/module/microsoft.online.sharepoint.powershell/get-spoorgassetslibrary)
 
-[Set-SPOOrgAssetsLibrary](/powershell/module/sharepoint-online/set-spoorgassetslibrary)
+[Set-SPOOrgAssetsLibrary](/powershell/module/microsoft.online.sharepoint.powershell/set-spoorgassetslibrary)
 
-[Remove-SPOOrgAssetsLibrary](/powershell/module/sharepoint-online/remove-spoorgassetslibrary)
+[Remove-SPOOrgAssetsLibrary](/powershell/module/microsoft.online.sharepoint.powershell/remove-spoorgassetslibrary)

@@ -29,7 +29,7 @@ landingContent:
           - text: Get started with SharePoint Online Management Shell
             url: ../sharepoint-online/connect-sharepoint-online.md
           - text: Cmdlet reference
-            url: /powershell/module/sharepoint-online
+            url: /powershell/module/microsoft.online.sharepoint.powershell
 
   # Card
   - title: SharePoint Server Subscription

@@ -97,6 +97,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPOSiteDesignTask](/powershell/module/sharepoint-online/get-spositedesigntask)
+[Get-SPOSiteDesignTask](/powershell/module/microsoft.online.sharepoint.powershell/get-spositedesigntask)
 
-[Invoke-SPOSiteDesign](/powershell/module/sharepoint-online/invoke-spositedesign)
+[Invoke-SPOSiteDesign](/powershell/module/microsoft.online.sharepoint.powershell/invoke-spositedesign)

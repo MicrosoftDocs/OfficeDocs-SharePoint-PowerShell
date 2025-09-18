@@ -55,8 +55,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-SPOFileRequestBrandingProfile](/powershell/module/sharepoint-online/add-spofilerequestbrandingprofile)
+[Add-SPOFileRequestBrandingProfile](/powershell/module/microsoft.online.sharepoint.powershell/add-spofilerequestbrandingprofile)
 
-[Remove-SPOFileRequestBrandingProfile](/powershell/module/sharepoint-online/remove-spofilerequestbrandingprofile)
+[Remove-SPOFileRequestBrandingProfile](/powershell/module/microsoft.online.sharepoint.powershell/remove-spofilerequestbrandingprofile)
 
-[Switch-SPOFileRequestBrandingProfiles](/powershell/module/sharepoint-online/switch-spofilerequestbrandingprofiles)
+[Switch-SPOFileRequestBrandingProfiles](/powershell/module/microsoft.online.sharepoint.powershell/switch-spofilerequestbrandingprofiles)

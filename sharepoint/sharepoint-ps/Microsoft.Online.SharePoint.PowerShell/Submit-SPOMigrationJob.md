@@ -100,7 +100,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-An EncryptionParameters object. See [New-SPOMigrationEncryptionParameters](/powershell/module/sharepoint-online/new-spomigrationencryptionparameters) for more information.
+An EncryptionParameters object. See [New-SPOMigrationEncryptionParameters](/powershell/module/microsoft.online.sharepoint.powershell/new-spomigrationencryptionparameters) for more information.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.Migration.EncryptionParameters
