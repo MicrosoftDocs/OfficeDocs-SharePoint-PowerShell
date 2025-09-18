@@ -123,8 +123,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-SPODataConnectionSetting](/powershell/module/sharepoint-server/New-SPODataConnectionSetting)
+[New-SPODataConnectionSetting](/powershell/module/microsoft.sharepoint.powershell/New-SPODataConnectionSetting)
 
-[Remove-SPODataConnectionSetting](/powershell/module/sharepoint-server/Remove-SPODataConnectionSetting)
+[Remove-SPODataConnectionSetting](/powershell/module/microsoft.sharepoint.powershell/Remove-SPODataConnectionSetting)
 
-[Set-SPODataConnectionSetting](/powershell/module/sharepoint-server/Set-SPODataConnectionSetting)
+[Set-SPODataConnectionSetting](/powershell/module/microsoft.sharepoint.powershell/Set-SPODataConnectionSetting)

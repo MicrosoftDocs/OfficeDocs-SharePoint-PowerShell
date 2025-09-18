@@ -39,7 +39,7 @@ landingContent:
           - text: Overview
             url: ../sharepoint-server/sharepoint-server-sub-cmdlets.md         
           - text: Cmdlet reference
-            url: /powershell/module/sharepoint-server
+            url: /powershell/module/microsoft.sharepoint.powershell
 
 
   # Card
@@ -50,7 +50,7 @@ landingContent:
           - text: Overview
             url: ../sharepoint-server/sharepoint-server-cmdlets.md         
           - text: Cmdlet reference
-            url: /powershell/module/sharepoint-server
+            url: /powershell/module/microsoft.sharepoint.powershell
 
  # Card
   - title: SharePoint Patterns and Practices (PnP)
