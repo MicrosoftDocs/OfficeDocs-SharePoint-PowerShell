@@ -50,7 +50,9 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-Owner <String>] [-Title <String>] [-
  [-DefaultLinkPermission <SharingPermissionType>] [-DefaultLinkToExistingAccess <Boolean>]
  [-DefaultLinkToExistingAccessReset] [-AnonymousLinkExpirationInDays <Int32>]
  [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [-ExternalUserExpirationInDays <Int32>]
- [-OverrideTenantExternalUserExpirationPolicy <Boolean>] [-InformationBarriersMode <String>]
+ [-OverrideTenantExternalUserExpirationPolicy <Boolean>] [-OrganizationLinkMaxExpirationInDays <Int32>]
+ [-OrganizationLinkRecommendedExpirationInDays <Int32>]
+ [-OverrideTenantOrganizationLinkExpirationPolicy <Boolean>] [-InformationBarriersMode <String>]
  [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>]
  [-OverrideBlockUserInfoVisibility <SiteUserInfoVisibilityPolicyValue>]
  [-LoopDefaultSharingLinkScope <SharingScope>] [-LoopDefaultSharingLinkRole <SharingRole>]
@@ -60,12 +62,9 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-Owner <String>] [-Title <String>] [-
  [-RestrictContentOrgWideSearch <Boolean>] [-RestrictedContentDiscoveryforCopilotAndAgents <Boolean>]
  [-RestrictedAccessControl <Boolean>] [-RestrictedAccessControlGroups <Guid[]>]
  [-ListsShowHeaderAndNavigation <Boolean>] [-HidePeoplePreviewingFiles <Boolean>]
- [-HidePeopleWhoHaveListsOpen <Boolean>] [-AllowFileArchive <Boolean>]
- [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>]
- [-DisableSiteBranding <Boolean>]
- [-IsAuthoritative <Boolean>]
- [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-HidePeopleWhoHaveListsOpen <Boolean>] [-IsAuthoritative <Boolean>] [-AllowFileArchive <Boolean>]
+ [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-DisableSiteBranding <Boolean>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ParamSet2
@@ -1594,6 +1593,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OrganizationLinkMaxExpirationInDays
+{{ Fill OrganizationLinkMaxExpirationInDays Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: ParamSet1
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OrganizationLinkRecommendedExpirationInDays
+{{ Fill OrganizationLinkRecommendedExpirationInDays Description }}
+
+```yaml
+Type: Int32
+Parameter Sets: ParamSet1
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OverrideBlockUserInfoVisibility
 
 > Applicable: SharePoint Online
@@ -1678,6 +1707,21 @@ Possible values:
 
 ```yaml
 Type: System.Boolean
+Parameter Sets: ParamSet1
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OverrideTenantOrganizationLinkExpirationPolicy
+{{ Fill OverrideTenantOrganizationLinkExpirationPolicy Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: ParamSet1
 Aliases:
 
