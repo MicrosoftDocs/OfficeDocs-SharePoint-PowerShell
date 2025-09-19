@@ -3562,7 +3562,7 @@ This parameter allows administrators to pass a list of SharePoint site URLs to e
 The list of site URLs can't exceed 100 items.
 
 > [!NOTE]
-> Use of this parameter requires Microsoft 35 Copilot license.
+> Use of this parameter requires Microsoft 365 Copilot license.
 
 ```yaml
 Type: String[]
