@@ -1595,6 +1595,8 @@ Accept wildcard characters: False
 
 ### -OrganizationSharingLinkMaxExpirationInDays
 
+> Applicable: SharePoint Online
+
 Specifies the maximum number of days before organization sharing links expire for this site.
 
 The value can be from 7 to 720 days.
@@ -1602,7 +1604,7 @@ The value can be from 7 to 720 days.
 To remove the expiration requirement, set the value to zero (0).
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: ParamSet1
 Aliases:
 
@@ -1615,14 +1617,16 @@ Accept wildcard characters: False
 
 ### -OrganizationSharingLinkRecommendedExpirationInDays
 
+> Applicable: SharePoint Online
+
 Specifies the recommended number of days before organization sharing links expire for this site. This setting provides a suggested expiration period to users when they create sharing links.
 
-The value can be from 7 to 720 days and must be less than or equal to the maximum expiration value set by OrganizationSharingLinkMaxExpirationInDays.
+The value can be from 7 to 720 days and must be less than or equal to the maximum expiration value set by `OrganizationSharingLinkMaxExpirationInDays`.
 
 To remove the recommendation, set the value to zero (0).
 
 ```yaml
-Type: Int32
+Type: System.Int32
 Parameter Sets: ParamSet1
 Aliases:
 

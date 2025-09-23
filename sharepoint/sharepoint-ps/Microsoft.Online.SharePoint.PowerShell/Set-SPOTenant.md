@@ -1814,6 +1814,8 @@ Accept wildcard characters: False
 
 ### -CoreOrganizationSharingLinkMaxExpirationInDays
 
+> Applicable: SharePoint Online
+
 Specifies the maximum number of days before organization sharing links expire for all SharePoint sites (not including OneDrive sites).
 
 The value can be from 7 to 720 days.
@@ -1834,9 +1836,11 @@ Accept wildcard characters: False
 
 ### -CoreOrganizationSharingLinkRecommendedExpirationInDays
 
+> Applicable: SharePoint Online
+
 Specifies the recommended number of days before organization sharing links expire for all SharePoint sites (not including OneDrive sites). This setting provides a suggested expiration period to users when they create sharing links.
 
-The value can be from 7 to 720 days and must be less than or equal to the maximum expiration value set by CoreOrganizationSharingLinkMaxExpirationInDays.
+The value can be from 7 to 720 days and must be less than or equal to the maximum expiration value set by `CoreOrganizationSharingLinkMaxExpirationInDays`.
 
 To remove the recommendation, set the value to zero (0).
 
@@ -4196,6 +4200,8 @@ Accept wildcard characters: False
 
 ### -OneDriveOrganizationSharingLinkMaxExpirationInDays
 
+> Applicable: SharePoint Online
+
 Specifies the maximum number of days before organization sharing links expire for all OneDrive sites.
 
 The value can be from 7 to 720 days.
@@ -4216,9 +4222,11 @@ Accept wildcard characters: False
 
 ### -OneDriveOrganizationSharingLinkRecommendedExpirationInDays
 
+> Applicable: SharePoint Online
+
 Specifies the recommended number of days before organization sharing links expire for all OneDrive sites. This setting provides a suggested expiration period to users when they create sharing links.
 
-The value can be from 7 to 720 days and must be less than or equal to the maximum expiration value set by OneDriveOrganizationSharingLinkMaxExpirationInDays.
+The value can be from 7 to 720 days and must be less than or equal to the maximum expiration value set by `OneDriveOrganizationSharingLinkMaxExpirationInDays`.
 
 To remove the recommendation, set the value to zero (0).
 
