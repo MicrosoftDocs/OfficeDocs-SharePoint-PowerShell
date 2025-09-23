@@ -38,19 +38,18 @@ Add-SPOTheme
 ```
 
 ## DESCRIPTION
-The **Add-SPOTheme** cmdlet creates a new theme or updates an existing theme. The color pairs settings can be passed as a hash table. The color palette settings can be passed as either a hash table or a dictionary.
+This cmdlet creates a new theme or updates an existing theme. The color pairs settings can be passed as a hash table, while the color palette settings can be passed as either a hash table or a dictionary.
 
-Adding a theme does not apply the theme to any sites. It adds the theme to your tenant store, and then the theme is available in the list of themes under the **Change the look** option for modern pages.
+Adding a theme does not automatically apply it to any site. Instead, the theme becomes available in the list of themes under the **Change the look** option for modern SharePoint pages.
 
-You can choose which parameter set to use depending on the legacy or new theme format you want to add. Please read [Site theme](https://learn.microsoft.com/sharepoint/site-theme) for more about new theme.
+Choose the appropriate parameter set based on whether you're working with a legacy or modern theme format. For details about the new theme format, see [Site theme](/sharepoint/site-theme).
 
 > [!NOTE]
-> In multi-geo environments, themes added by an administrator in the primary geography are propagated and available across the entire organization. This` Add-SPOTheme` cmdlet is not supported for administrators in satellite geographies.
+> In multi-geo environments, themes added by an administrator in the primary geography are automatically propagated and available across the organization. This cmdlet is not supported for administrators in satellite geographies.
 
 ## Examples
 
-### Example 1: Add a new format theme
-In this example, a theme named `"Teal Theme"` is created, with color pair settings that are various shades of teal.
+### Example 1:
 
 ```powershell
 $colorPairs = @{
@@ -75,16 +74,17 @@ $colorPairs = @{
 Add-SPOTheme -Identity "Teal Theme" -ColorPairs $colorPairs
 ```
 
-### Example 2: Overwrite a new format theme
+This example creates a theme named `"Teal Theme"` with color pair settings in various shades of teal.
 
-If you want to update an existing new format theme (to modify some of its color settings, for example), use the same syntax as shown previously, but add the `-Overwrite` flag to the **Add-SPOTheme** cmdlet.
+### Example 2:
 
 ```powershell
 Add-SPOTheme -Identity "Teal Theme" -ColorPairs $colorPairs -Overwrite
 ```
 
-### Example 3: Add a legacy format theme 
-In this example, a theme named `"Custom Cyan"` is created, with color palette settings that are various shades of cyan. Note that the settings are passed as a hash table.
+To update an existing theme in the new format, modify the color settings using the same syntax as when creating a theme. Add the `-Overwrite` flag to the Add-SPOTheme cmdlet.
+
+### Example 3:
 
 ```powershell
 $themepalette = @{
@@ -118,16 +118,18 @@ $themepalette = @{
 Add-SPOTheme -Identity "Custom Cyan" -Palette $themepalette -IsInverted $false
 ```
 
+In this example, a theme named `"Custom Cyan"` is created, with color palette settings that are various shades of cyan. Note that the settings are passed as a hash table.
+
 > [!NOTE]
 > Prior to the December 2017 release of the SPO Management Shell, the **Add-SPOTheme** cmdlet required that color palette settings be passed as a dictionary. We recommend that you use the latest version of the SPO Management Shell, or use the `HashToDictionary` function to convert a hash table to a dictionary if needed.
 
 ### Example 4: Overwrite a legacy format theme 
 
-If you want to update an existing legacy format theme (to modify some of its color settings, for example), use the same syntax as shown previously, but add the `-Overwrite` flag to the **Add-SPOTheme** cmdlet.
-
 ```powershell
 Add-SPOTheme -Identity "Custom Cyan" -Palette $themepalette -IsInverted $false -Overwrite
 ```
+
+To update an existing legacy format theme and modify its color settings, use the same syntax as when creating the theme. Add the `-Overwrite` flag to the Add-SPOTheme cmdlet.
 
 ## PARAMETERS
 
@@ -171,7 +173,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Specifies the color pairs of the theme, as a dictionary or hash table of theme slot values. Supports up to 16 color pairs.
+Specifies the theme’s color pairs using a hash table of slot values. Supports up to 16 color pairs.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoThemeColorPairPipeBind
