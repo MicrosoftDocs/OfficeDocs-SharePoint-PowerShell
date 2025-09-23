@@ -52,7 +52,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-Owner <String>] [-Title <String>] [-
  [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [-ExternalUserExpirationInDays <Int32>]
  [-OverrideTenantExternalUserExpirationPolicy <Boolean>] [-OrganizationSharingLinkMaxExpirationInDays <Int32>]
  [-OrganizationSharingLinkRecommendedExpirationInDays <Int32>]
- [-OverrideTenantOrganizationLinkExpirationPolicy <Boolean>] [-InformationBarriersMode <String>]
+ [-OverrideTenantOrganizationSharingLinkExpirationPolicy <Boolean>] [-InformationBarriersMode <String>]
  [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>]
  [-OverrideBlockUserInfoVisibility <SiteUserInfoVisibilityPolicyValue>]
  [-LoopDefaultSharingLinkScope <SharingScope>] [-LoopDefaultSharingLinkRole <SharingRole>]
@@ -1727,11 +1727,19 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OverrideTenantOrganizationLinkExpirationPolicy
-{{ Fill OverrideTenantOrganizationLinkExpirationPolicy Description }}
+### -OverrideTenantOrganizationSharingLinkExpirationPolicy
+
+> Applicable: SharePoint Online
+
+Choose whether to override the tenant-level organization sharing link expiration policy on this site.
+
+Possible values:
+
+- False: Respect the tenant-level organization sharing link expiration policy.
+- True: Override the tenant-level organization sharing link expiration policy (can be more or less restrictive).
 
 ```yaml
-Type: Boolean
+Type: System.Boolean
 Parameter Sets: ParamSet1
 Aliases:
 
