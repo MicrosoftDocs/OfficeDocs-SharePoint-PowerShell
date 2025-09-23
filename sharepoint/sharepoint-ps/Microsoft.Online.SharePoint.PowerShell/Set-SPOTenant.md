@@ -1812,6 +1812,46 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CoreOrganizationSharingLinkMaxExpirationInDays
+
+Specifies the maximum number of days before organization sharing links expire for all SharePoint sites (not including OneDrive sites).
+
+The value can be from 7 to 720 days.
+
+To remove the expiration requirement, set the value to zero (0).
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CoreOrganizationSharingLinkRecommendedExpirationInDays
+
+Specifies the recommended number of days before organization sharing links expire for all SharePoint sites (not including OneDrive sites). This setting provides a suggested expiration period to users when they create sharing links.
+
+The value can be from 7 to 720 days and must be less than or equal to the maximum expiration value set by CoreOrganizationSharingLinkMaxExpirationInDays.
+
+To remove the recommendation, set the value to zero (0).
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -CoreRequestFilesLinkEnabled
 
 Enable or disable the Request files link on the core partition for all SharePoint sites (not including OneDrive sites). If this value is not set, Request files will only show for OneDrives with Anyone links enabled.
@@ -4144,6 +4184,46 @@ The valid values are:
 
 ```yaml
 Type: Microsoft.SharePoint.Client.Sharing.SharingScope
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveOrganizationSharingLinkMaxExpirationInDays
+
+Specifies the maximum number of days before organization sharing links expire for all OneDrive sites.
+
+The value can be from 7 to 720 days.
+
+To remove the expiration requirement, set the value to zero (0).
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveOrganizationSharingLinkRecommendedExpirationInDays
+
+Specifies the recommended number of days before organization sharing links expire for all OneDrive sites. This setting provides a suggested expiration period to users when they create sharing links.
+
+The value can be from 7 to 720 days and must be less than or equal to the maximum expiration value set by OneDriveOrganizationSharingLinkMaxExpirationInDays.
+
+To remove the recommendation, set the value to zero (0).
+
+```yaml
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
 

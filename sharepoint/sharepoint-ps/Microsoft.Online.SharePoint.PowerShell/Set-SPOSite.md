@@ -50,8 +50,8 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-Owner <String>] [-Title <String>] [-
  [-DefaultLinkPermission <SharingPermissionType>] [-DefaultLinkToExistingAccess <Boolean>]
  [-DefaultLinkToExistingAccessReset] [-AnonymousLinkExpirationInDays <Int32>]
  [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [-ExternalUserExpirationInDays <Int32>]
- [-OverrideTenantExternalUserExpirationPolicy <Boolean>] [-OrganizationLinkMaxExpirationInDays <Int32>]
- [-OrganizationLinkRecommendedExpirationInDays <Int32>]
+ [-OverrideTenantExternalUserExpirationPolicy <Boolean>] [-OrganizationSharingLinkMaxExpirationInDays <Int32>]
+ [-OrganizationSharingLinkRecommendedExpirationInDays <Int32>]
  [-OverrideTenantOrganizationLinkExpirationPolicy <Boolean>] [-InformationBarriersMode <String>]
  [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>]
  [-OverrideBlockUserInfoVisibility <SiteUserInfoVisibilityPolicyValue>]
@@ -1593,8 +1593,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OrganizationLinkMaxExpirationInDays
-{{ Fill OrganizationLinkMaxExpirationInDays Description }}
+### -OrganizationSharingLinkMaxExpirationInDays
+
+Specifies the maximum number of days before organization sharing links expire for this site.
+
+The value can be from 7 to 720 days.
+
+To remove the expiration requirement, set the value to zero (0).
 
 ```yaml
 Type: Int32
@@ -1608,8 +1613,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -OrganizationLinkRecommendedExpirationInDays
-{{ Fill OrganizationLinkRecommendedExpirationInDays Description }}
+### -OrganizationSharingLinkRecommendedExpirationInDays
+
+Specifies the recommended number of days before organization sharing links expire for this site. This setting provides a suggested expiration period to users when they create sharing links.
+
+The value can be from 7 to 720 days and must be less than or equal to the maximum expiration value set by OrganizationSharingLinkMaxExpirationInDays.
+
+To remove the recommendation, set the value to zero (0).
 
 ```yaml
 Type: Int32
