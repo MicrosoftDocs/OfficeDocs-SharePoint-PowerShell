@@ -54,16 +54,16 @@ Choose the appropriate parameter set based on whether you're working with a lega
 ```powershell
 $colorPairs = @{
   light = @(
-    @{ "accentColor": "#03787C"; "backgroundColor": "#ffffff" }
-    @{ "accentColor": "#ffffff"; "backgroundColor": "#03787C" }
+    @{ "accentColor": "#03787C"; "backgroundColor": "#FFFFFF" }
+    @{ "accentColor": "#FFFFFF"; "backgroundColor": "#03787C" }
     @{ "accentColor": "#E3FFFD"; "backgroundColor": "#03787C" }
     @{ "accentColor": "#03787C"; "backgroundColor": "#E3FFFD" }
     @{ "accentColor": "#FFF9E3"; "backgroundColor": "#03787C" }
     @{ "accentColor": "#03787C"; "backgroundColor": "#FFF9E3" }
     @{ "accentColor": "#03787C"; "backgroundColor": "#F5F5F5" }
     @{ "accentColor": "#242424"; "backgroundColor": "#F5F5F5" }
-    @{ "accentColor": "#155473"; "backgroundColor": "#ffffff" }
-    @{ "accentColor": "#ffffff"; "backgroundColor": "#155473" }
+    @{ "accentColor": "#155473"; "backgroundColor": "#FFFFFF" }
+    @{ "accentColor": "#FFFFFF"; "backgroundColor": "#155473" }
     @{ "accentColor": "#155473"; "backgroundColor": "#E3FFFD" }
     @{ "accentColor": "#E3FFFD"; "backgroundColor": "#155473" }
     @{ "accentColor": "#FFF9E3"; "backgroundColor": "#155473" }
