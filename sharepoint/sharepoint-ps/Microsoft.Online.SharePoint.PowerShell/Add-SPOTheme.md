@@ -173,7 +173,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Specifies the theme’s color pairs using a hash table of slot values. Supports up to 16 color pairs.
+Specifies the theme's color pairs using a hash table of slot values. Supports up to 16 color pairs.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SpoThemeColorPairPipeBind
