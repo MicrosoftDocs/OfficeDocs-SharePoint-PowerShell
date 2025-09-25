@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spmetadataserviceapplication
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/new-spmetadataserviceapplication
 applicable: SharePoint Server Subscription Edition
 title: New-SPMetadataServiceApplication
 schema: 2.0.0

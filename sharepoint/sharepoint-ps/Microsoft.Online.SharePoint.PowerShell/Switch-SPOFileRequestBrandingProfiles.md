@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/switch-spofilerequestbrandingprofiles
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/switch-spofilerequestbrandingprofiles
 applicable: SharePoint Online
 title: Switch-SPOFileRequestBrandingProfiles
 author: nabeelnaiyer
@@ -55,8 +55,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-SPOFileRequestBrandingProfile](/powershell/module/sharepoint-online/add-spofilerequestbrandingprofile)
+[Add-SPOFileRequestBrandingProfile](/powershell/module/microsoft.online.sharepoint.powershell/add-spofilerequestbrandingprofile)
 
-[Get-SPOFileRequestBrandingProfiles](/powershell/module/sharepoint-online/get-spofilerequestbrandingprofiles)
+[Get-SPOFileRequestBrandingProfiles](/powershell/module/microsoft.online.sharepoint.powershell/get-spofilerequestbrandingprofiles)
 
-[Remove-SPOFileRequestBrandingProfile](/powershell/module/sharepoint-online/remove-spofilerequestbrandingprofile)
+[Remove-SPOFileRequestBrandingProfile](/powershell/module/microsoft.online.sharepoint.powershell/remove-spofilerequestbrandingprofile)

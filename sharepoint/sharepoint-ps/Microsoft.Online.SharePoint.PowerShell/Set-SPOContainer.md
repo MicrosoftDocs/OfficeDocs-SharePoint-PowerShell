@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Set-SPOContainer
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/Set-SPOContainer
 title: Set-SPOContainer
 schema: 2.0.0
 author: ShreyasSar26
@@ -49,11 +49,19 @@ Set-SPOContainer [-Identity] <SPOContainerPipeBind>
  [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>] [-SharingAllowedDomainList <String>]
  [-SharingBlockedDomainList <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
+
 ### PrincipalOwnerTransfer
 ```
 Set-SPOContainer [-Identity] <SPOContainerPipeBind> -CurrentPrincipalOwner <String>
  -NewPrincipalOwner <String> [-WhatIf] [-Confirm] [<CommonParameters>]
  ```
+
+### RestrictContentOrgWideSearch
+```
+Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-RestrictContentOrgWideSearch <Boolean>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
 ## DESCRIPTION
 
 For any parameters that are passed in, the `Set-SPOContainer` cmdlet sets or updates the setting for the active container identified by the parameter `Identity`. The cmdlet throws an error if the identity of an archived container is provided. The principal owner transfer operation is supported only for containers that are user-owned. Attempting to perform this operation on non user-owned containers will result in an error. 
@@ -321,6 +329,24 @@ This parameter allows you to remove the assigned sensitivity label on a containe
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: ParamSet2
 Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictContentOrgWideSearch
+
+> Applicable: SharePoint Online
+
+Controls whether org-wide content search is enabled for a container.
+
+```yaml
+Type: Boolean
+Parameter Sets: RestrictContentOrgWideSearch
+Aliases:
+
 Required: False
 Position: Named
 Default value: None

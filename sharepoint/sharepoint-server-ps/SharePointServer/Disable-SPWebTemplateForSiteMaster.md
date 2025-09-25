@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/disable-spwebtemplateforsitemaster
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/disable-spwebtemplateforsitemaster
 title: Disable-SPWebTemplateForSiteMaster
 schema: 2.0.0
 ---

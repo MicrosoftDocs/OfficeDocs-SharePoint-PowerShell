@@ -3,8 +3,8 @@ Module Name: Microsoft.Online.SharePoint.PowerShell
 Module Guid: adedde5f-e77b-4682-ab3d-a4cb4ff79b83
 title: Microsoft.Online.SharePoint.PowerShell Module
 Locale: en-US
-author: trent-green
-ms.author: trgreen
+author: samkabue
+ms.author: speedta
 ms.reviewer:
 ---
 
@@ -240,6 +240,9 @@ Gets the status for a file version expiration report generation job for a docume
 ### [Get-SPOListVersionPolicy](Get-SPOListVersionPolicy.md)
 Gets the version policy setting on the document library.
 
+### [Get-SPOM365AgentAccessInsightsReport](Get-SPOM365AgentAccessInsightsReport.md)
+This cmdlet enables the administrator to check status of all active and available Microsoft 365 Agent Insights reports when no report ID is present and to view or download a report if report ID is present.  > [!NOTE] > The feature associated with this cmdlet will be rolling out soon.
+
 ### [Get-SPOMalwareFile](Get-SPOMalwareFile.md)
 Extracts and displays the malware-related information of an infected file stored in SharePoint.
 
@@ -277,10 +280,10 @@ This cmdlet enables the administrator to check status of all active and availabl
 This cmdlet allows SharePoint administrators to check the current configuration of the restricted site creation feature.
 
 ### [Get-SPOServicePrioritizationAppRegistrations](Get-SPOServicePrioritizationAppRegistrations.md)
-Retrieves the list of app registrations configured for service prioritization in SharePoint Online. > [!NOTE] > This functionality is rolling out and might not be fully enabled in your environment yet.
+Retrieves the list of app registrations configured for service prioritization in SharePoint Online.
 
 ### [Get-SPOServicePrioritizationBillingPolicies](Get-SPOServicePrioritizationBillingPolicies.md)
-Retrieves the list of billing policies configured for service prioritization in SharePoint Online. > [!NOTE] > This functionality is rolling out and might not be fully enabled in your environment yet.
+Retrieves the list of billing policies configured for service prioritization in SharePoint Online. 
 
 ### [Get-SPOSite](Get-SPOSite.md)
 Returns one or more site collections.
@@ -457,7 +460,7 @@ Creates a new public CDN on a document library in your SharePoint Online Tenant
 Adds a new Software-Defined Networking (SDN) provider
 
 ### [New-SPOServicePrioritizationBillingPolicy](New-SPOServicePrioritizationBillingPolicy.md)
-Creates a new billing policy for service prioritization in SharePoint Online. > [!NOTE] > This functionality is rolling out and might not be fully enabled in your environment yet.
+Creates a new billing policy for service prioritization in SharePoint Online.
 
 ### [New-SPOSite](New-SPOSite.md)
 Creates a new SharePoint Online site collection for the current company.
@@ -556,7 +559,7 @@ Removes a given public CDN origin based on its identity (id) in your SharePoint 
 Removes Software-Defined Networking (SDN) Support in your SharePoint Online tenant
 
 ### [Remove-SPOServicePrioritizationAppRegistration](Remove-SPOServicePrioritizationAppRegistration.md)
-Removes an app registration from service prioritization in SharePoint Online. > [!NOTE] > This functionality is rolling out and might not be fully enabled in your environment yet.
+Removes an app registration from service prioritization in SharePoint Online. 
 
 ### [Remove-SPOSite](Remove-SPOSite.md)
 Sends a SharePoint Online site collection to the SharePoint Online Recycle Bin.
@@ -724,7 +727,7 @@ Marks a site as one of multiple possible tenant's organizational news sites. Req
 Sets or updates one or more group configurations for restricting site creation.
 
 ### [Set-SPOServicePrioritizationAppRegistration](Set-SPOServicePrioritizationAppRegistration.md)
-Updates an existing app registration for service prioritization in SharePoint Online. > [!NOTE] > This functionality is rolling out and might not be fully enabled in your environment yet.
+Updates an existing app registration for service prioritization in SharePoint Online. 
 
 ### [Set-SPOSite](Set-SPOSite.md)
 Sets or updates one or more properties' values for a site collection.
@@ -803,6 +806,9 @@ This cmdlet enables administrator to trigger the build of a new enterprise appli
 
 ### [Start-SPOInformationBarriersInsightsReport](Start-SPOInformationBarriersInsightsReport.md)
 Generates a new report to identify and discover the usage patterns of Information Barriers (IB) across SharePoint sites and OneDrive accounts in the organization.
+
+### [Start-SPOM365AgentAccessInsightsReport](Start-SPOM365AgentAccessInsightsReport.md)
+Using this cmdlet, administrators may trigger the build of a new Microsoft 365 agent insight report for the specified number of days.  > [!NOTE] > The feature associated with this cmdlet will be rolling out soon.
 
 ### [Start-SPORestrictedAccessForSitesInsights](Start-SPORestrictedAccessForSitesInsights.md)
 This cmdlet enables administrator to trigger the build of a new restricted access control insights report for the data from last 28 days.

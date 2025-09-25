@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://docs.microsoft.com/powershell/module/sharepoint-online/New-SPOSiteSharingReportJob
+online version: https://docs.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/New-SPOSiteSharingReportJob
 applicable: SharePoint Online
 title: New-SPOSiteSharingReportJob
 schema: 2.0.0

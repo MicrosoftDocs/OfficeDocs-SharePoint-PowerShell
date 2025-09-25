@@ -1,7 +1,7 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spprojectwebinstancedata
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/remove-spprojectwebinstancedata
 applicable: Project Server 2016, Project Server 2019
 title: Remove-SPProjectWebInstanceData
 schema: 2.0.0

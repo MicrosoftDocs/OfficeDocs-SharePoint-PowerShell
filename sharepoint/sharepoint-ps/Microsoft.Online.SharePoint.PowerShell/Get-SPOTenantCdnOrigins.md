@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spotenantcdnorigins
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/get-spotenantcdnorigins
 applicable: SharePoint Online
 title: Get-SPOTenantCdnOrigins
 schema: 2.0.0
-author: trent-green
-ms.author: trgreen
+author: samkabue
+ms.author: speedta
 ms.reviewer:
 ---
 

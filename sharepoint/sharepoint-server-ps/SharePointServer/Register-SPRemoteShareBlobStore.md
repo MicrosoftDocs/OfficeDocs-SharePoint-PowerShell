@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/register-spremoteshareblobstore
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/register-spremoteshareblobstore
 applicable: SharePoint Server Subscription Edition
 title: Register-SPRemoteShareBlobStore
 schema: 2.0.0

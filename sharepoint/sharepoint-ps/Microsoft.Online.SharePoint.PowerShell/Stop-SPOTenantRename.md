@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/stop-spotenantrename
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/stop-spotenantrename
 applicable: SharePoint Online
 title: Stop-SPOTenantRename
 schema: 2.0.0
-author: WayneEwington
-ms.author: waynewin
+author: samkabue
+ms.author: speedta
 ms.reviewer:
 ---
 

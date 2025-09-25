@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spotenantcdnpolicies
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/get-spotenantcdnpolicies
 applicable: SharePoint Online
 title: Get-SPOTenantCdnPolicies
 schema: 2.0.0
-author: trent-green
-ms.author: trgreen
+author: samkabue
+ms.author: speedta
 ms.reviewer:
 ---
 

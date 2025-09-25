@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/export-spmetadatawebservicepartitiondata
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/export-spmetadatawebservicepartitiondata
 applicable: SharePoint Server Subscription Edition
 title: Export-SPMetadataWebServicePartitionData
 schema: 2.0.0

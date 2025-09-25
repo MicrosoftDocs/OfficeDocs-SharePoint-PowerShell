@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/install-spapplicationcontent
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/install-spapplicationcontent
 applicable: SharePoint Server Subscription Edition
 title: Install-SPApplicationContent
 schema: 2.0.0

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spusersolutionallowlist
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/new-spusersolutionallowlist
 applicable: SharePoint Server Subscription Edition
 title: New-SPUserSolutionAllowList
 schema: 2.0.0

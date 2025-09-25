@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/add-sppeoplepickersearchaddomain
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/add-sppeoplepickersearchaddomain
 applicable: SharePoint Server Subscription Edition
 title: Add-SPPeoplePickerSearchADDomain
 schema: 2.0.0

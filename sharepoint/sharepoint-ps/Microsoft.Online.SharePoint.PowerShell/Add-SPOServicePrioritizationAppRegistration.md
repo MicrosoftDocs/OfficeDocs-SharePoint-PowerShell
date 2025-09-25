@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Add-SPOServicePrioritizationAppRegistration
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/Add-SPOServicePrioritizationAppRegistration
 applicable: SharePoint Online
 title: Add-SPOServicePrioritizationAppRegistration
 schema: 2.0.0
@@ -14,8 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 Adds a new app registration for service prioritization in SharePoint Online.
-> [!NOTE]
-> This functionality is rolling out and might not be fully enabled in your environment yet.
+
 
 ## SYNTAX
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/add-spocontaineruser
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/add-spocontaineruser
 applicable: SharePoint Online
 title: Add-SPOContainerUser
 schema: 2.0.0
@@ -41,7 +41,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### Example 1
 
 ```powershell
-Add-SPOContainerUser 423poi45 -LoginName shras@contoso.com-Role Owner
+Add-SPOContainerUser 423poi45 -LoginName shras@contoso.com -Role Owner
 ```
 
 Example 1 assigns the role of owner to user with User Principal Name "shras@contoso.com".

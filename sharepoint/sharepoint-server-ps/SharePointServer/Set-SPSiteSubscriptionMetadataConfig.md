@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.Taxonomy.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spsitesubscriptionmetadataconfig
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/set-spsitesubscriptionmetadataconfig
 applicable: SharePoint Server Subscription Edition
 title: Set-SPSiteSubscriptionMetadataConfig
 schema: 2.0.0

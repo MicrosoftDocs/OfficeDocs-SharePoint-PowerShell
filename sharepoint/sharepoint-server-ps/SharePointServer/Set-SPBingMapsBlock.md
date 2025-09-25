@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spbingmapsblock
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/set-spbingmapsblock
 applicable: SharePoint Server Subscription Edition
 title: Set-SPBingMapsBlock
 schema: 2.0.0

@@ -1,7 +1,7 @@
 ---
 external help file: sharepointserver.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/mount-spsitemapdatabase
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/mount-spsitemapdatabase
 applicable: SharePoint Server 2016
 title: Mount-SPSiteMapDatabase
 schema: 2.0.0
