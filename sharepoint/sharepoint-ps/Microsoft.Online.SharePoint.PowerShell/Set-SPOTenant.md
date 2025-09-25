@@ -1842,7 +1842,7 @@ Specifies the recommended number of days before organization sharing links expir
 
 The value can be from 7 to 720 days and must be less than or equal to the maximum expiration value set by `CoreOrganizationSharingLinkMaxExpirationInDays`.
 
-To remove the recommendation, set the value to zero (0).
+When set to 0, the default value will be `CoreOrganizationSharingLinkMaxExpirationInDays`.
 
 ```yaml
 Type: System.Int32
@@ -4228,7 +4228,7 @@ Specifies the recommended number of days before organization sharing links expir
 
 The value can be from 7 to 720 days and must be less than or equal to the maximum expiration value set by `OneDriveOrganizationSharingLinkMaxExpirationInDays`.
 
-To remove the recommendation, set the value to zero (0).
+When set to 0, the default value will be `OneDriveOrganizationSharingLinkMaxExpirationInDays`.
 
 ```yaml
 Type: System.Int32

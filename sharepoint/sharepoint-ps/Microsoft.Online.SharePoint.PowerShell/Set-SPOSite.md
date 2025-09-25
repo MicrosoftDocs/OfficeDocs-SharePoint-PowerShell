@@ -1623,7 +1623,7 @@ Specifies the recommended number of days before organization sharing links expir
 
 The value can be from 7 to 720 days and must be less than or equal to the maximum expiration value set by `OrganizationSharingLinkMaxExpirationInDays`.
 
-To remove the recommendation, set the value to zero (0).
+When set to 0, the default value will be `OrganizationSharingLinkMaxExpirationInDays`.
 
 ```yaml
 Type: System.Int32
@@ -1735,7 +1735,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Choose whether to override the tenant-level organization sharing link expiration policy on this site.
+Choose whether to override the tenant-level organization sharing link expiration policy on this site. Overrides both the maximum and recommended values.
 
 Possible values:
 
