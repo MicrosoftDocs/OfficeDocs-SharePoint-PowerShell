@@ -30,6 +30,30 @@ Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-BlockDownloadPolicy <Boole
  [-Confirm] [<CommonParameters>]
 ```
 
+### RestrictedAccessControl
+```
+Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-EnableRestrictedAccessControl <Boolean>]
+ [-RestrictedAccessControlGroups <Guid[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RestrictedAccessControlGroupsToAdd
+```
+Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-RestrictedAccessControlGroupsToAdd <Guid[]>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### RestrictedAccessControlGroupsToRemove
+```
+Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-RestrictedAccessControlGroupsToRemove <Guid[]>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
+```
+
+### ClearRestrictedAccessControl
+```
+Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-ClearRestrictedAccessControl] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
 ### ParamSet2
 ```
 Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-RemoveLabel] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -68,7 +92,6 @@ For any parameters that are passed in, the `Set-SPOContainer` cmdlet sets or upd
 
 > [!IMPORTANT]
 > Always wait for the current principal owner transfer attempt to finish before reusing the cmdlet. Concurrent or premature reuse can lead to incomplete or invalid ownership changes.
-> 
 
 You must be a SharePoint Embedded Administrator to run the cmdlet.
 
@@ -163,6 +186,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ClearRestrictedAccessControl
+
+> Applicable: SharePoint Online
+
+Clears the list of groups that are given access via an access restriction policy.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ClearRestrictedAccessControl
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ConditionalAccessPolicy
 
 > Applicable: SharePoint Online
@@ -187,24 +228,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExcludeBlockDownloadPolicyContainerOwners
-
-> Applicable: SharePoint Online
-
-Controls if container owners are excluded from block download policy.
-
-```yaml
-Type: System.Boolean
-Parameter Sets: BlockDownloadPolicy
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -CurrentPrincipalOwner
 
 > Applicable: SharePoint Online
@@ -217,6 +240,42 @@ Parameter Sets: PrincipalOwnerTransfer
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableRestrictedAccessControl
+
+> Applicable: SharePoint Online
+
+Lets you and other SharePoint Embedded admins restrict access to containers.
+
+```yaml
+Type: Boolean
+Parameter Sets: RestrictedAccessControl
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExcludeBlockDownloadPolicyContainerOwners
+
+> Applicable: SharePoint Online
+
+Controls if container owners are excluded from block download policy.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: BlockDownloadPolicy
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -345,6 +404,60 @@ Controls whether org-wide content search is enabled for a container.
 ```yaml
 Type: Boolean
 Parameter Sets: RestrictContentOrgWideSearch
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictedAccessControlGroups
+
+> Applicable: SharePoint Online
+
+Specifies the IDs of groups that have access under an access restriction policy.
+
+```yaml
+Type: Guid[]
+Parameter Sets: RestrictedAccessControl
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictedAccessControlGroupsToAdd
+
+> Applicable: SharePoint Online
+
+Specifies the IDs of groups to be added to an access restriction policy and gain access.
+
+```yaml
+Type: Guid[]
+Parameter Sets: RestrictedAccessControlGroupsToAdd
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictedAccessControlGroupsToRemove
+
+> Applicable: SharePoint Online
+
+Specifies the IDs of groups to be removed from access restriction policy and lose access.
+
+```yaml
+Type: Guid[]
+Parameter Sets: RestrictedAccessControlGroupsToRemove
 Aliases:
 
 Required: False
