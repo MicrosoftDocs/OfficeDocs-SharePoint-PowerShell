@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/move-spprofilemanagedmetadataproperty
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/move-spprofilemanagedmetadataproperty
 applicable: SharePoint Server Subscription Edition
 title: Move-SPProfileManagedMetadataProperty
 schema: 2.0.0

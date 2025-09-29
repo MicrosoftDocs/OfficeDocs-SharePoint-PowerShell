@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/update-spazureblobconfiglocatorex1
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/update-spazureblobconfiglocatorex1
 applicable: SharePoint Server Subscription Edition
 title: Update-SPAzureBlobConfigLocatorEx1
 schema: 2.0.0

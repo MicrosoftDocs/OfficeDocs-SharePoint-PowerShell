@@ -1,7 +1,7 @@
 ---
 external help file: sharepointserver.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-fastsearchcontentcollection
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/new-fastsearchcontentcollection
 applicable: FAST Server for SharePoint 2010
 schema: 2.0.0
 author: techwriter40

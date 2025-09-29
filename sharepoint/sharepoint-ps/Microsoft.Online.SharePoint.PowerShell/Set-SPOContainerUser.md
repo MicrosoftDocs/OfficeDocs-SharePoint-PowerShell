@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spocontaineruser
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/set-spocontaineruser
 applicable: SharePoint Online
 title: Set-SPOContainerUser
 schema: 2.0.0
@@ -40,7 +40,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### Example 1
 
 ```powershell
-Set-SPOContainerUser 423poi45 -LoginName shras@contoso.com-Role Manager
+Set-SPOContainerUser 423poi45 -LoginName shras@contoso.com -Role Manager
 ```
 
 Example 1 reassigns the role of User Principal Name "shras@contoso.com" to manager. 

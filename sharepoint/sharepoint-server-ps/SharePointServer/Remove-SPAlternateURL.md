@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spalternateurl
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/remove-spalternateurl
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPAlternateURL
 schema: 2.0.0

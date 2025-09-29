@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spusageapplication
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/new-spusageapplication
 applicable: SharePoint Server Subscription Edition
 title: New-SPUsageApplication
 schema: 2.0.0

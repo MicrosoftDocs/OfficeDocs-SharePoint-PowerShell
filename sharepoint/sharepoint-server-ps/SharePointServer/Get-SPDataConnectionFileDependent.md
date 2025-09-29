@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spdataconnectionfiledependent
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/get-spdataconnectionfiledependent
 applicable: SharePoint Server Subscription Edition
 title: Get-SPDataConnectionFileDependent
 schema: 2.0.0

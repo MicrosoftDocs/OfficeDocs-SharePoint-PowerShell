@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spotenant
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/set-spotenant
 applicable: SharePoint Online
 title: Set-SPOTenant
 schema: 2.0.0
@@ -28,7 +28,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-ShowEveryoneExceptExternalUsersClaim <Boolean>]
  [-AllowEveryoneExceptExternalUsersClaimInPrivateSite <Boolean>] [-SearchResolveExactEmailOrUPN <Boolean>]
  [-OfficeClientADALDisabled <Boolean>] [-LegacyAuthProtocolsEnabled <Boolean>]
- [-LegacyBrowserAuthProtocolsEnabled <Boolean>] [-DisableCustomAppAuthentication <Boolean>]
+ [-LegacyBrowserAuthProtocolsEnabled <Boolean>] [-AllowLegacyBrowserAuthProtocolsEnabledSetting <Boolean>]
+ [-AllowLegacyAuthProtocolsEnabledSetting <Boolean>] [-DisableCustomAppAuthentication <Boolean>]
  [-IsSharePointAddInsDisabled <Boolean>] [-IsSharePointAddInsBlocked <Boolean>]
  [-DisableSharePointStoreAccess <Boolean>] [-SiteOwnerManageLegacyServicePrincipalEnabled <Boolean>]
  [-RequireAcceptingAccountMatchInvitedAccount <Boolean>] [-ProvisionSharedWithEveryoneFolder <Boolean>]
@@ -36,7 +37,10 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-UsePersistentCookiesForExplorerView <Boolean>] [-ReSyncTenantPrivacyProfile]
  [-BccExternalSharingInvitations <Boolean>] [-BccExternalSharingInvitationsList <String>]
  [-PublicCdnEnabled <Boolean>] [-PublicCdnAllowedFileTypes <String>]
- [-RequireAnonymousLinksExpireInDays <Int32>] [-SharingAllowedDomainList <String>]
+ [-RequireAnonymousLinksExpireInDays <Int32>] [-OneDriveOrganizationSharingLinkMaxExpirationInDays <Int32>]
+ [-CoreOrganizationSharingLinkMaxExpirationInDays <Int32>]
+ [-OneDriveOrganizationSharingLinkRecommendedExpirationInDays <Int32>]
+ [-CoreOrganizationSharingLinkRecommendedExpirationInDays <Int32>] [-SharingAllowedDomainList <String>]
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-OneDriveStorageQuota <Int64>] [-OneDriveForGuestsEnabled <Boolean>] [-IPAddressEnforcement <Boolean>]
  [-IPAddressAllowList <String>] [-IPAddressWACTokenLifetime <Int32>]
@@ -52,10 +56,11 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-SpecialCharactersStateInFileFolderNames <SpecialCharactersState>] [-OwnerAnonymousNotification <Boolean>]
  [-CommentsOnSitePagesDisabled <Boolean>] [-CommentsOnFilesDisabled <Boolean>]
  [-CommentsOnListItemsDisabled <Boolean>] [-ViewersCanCommentOnMediaDisabled <Boolean>]
- [-SocialBarOnSitePagesDisabled <Boolean>] [-OrphanedPersonalSitesRetentionPeriod <Int32>]
- [-PermissiveBrowserFileHandlingOverride <Boolean>] [-DisallowInfectedFileDownload <Boolean>]
- [-DefaultLinkPermission <SharingPermissionType>] [-CustomizedExternalSharingServiceUrl <String>]
- [-ConditionalAccessPolicyErrorHelpLink <String>] [-RestrictedAccessControlforSitesErrorHelpLink <String>]
+ [-SocialBarOnSitePagesDisabled <Boolean>] [-SiteOwnersCanAccessMissingContent <Boolean>]
+ [-OrphanedPersonalSitesRetentionPeriod <Int32>] [-PermissiveBrowserFileHandlingOverride <Boolean>]
+ [-DisallowInfectedFileDownload <Boolean>] [-DefaultLinkPermission <SharingPermissionType>]
+ [-CustomizedExternalSharingServiceUrl <String>] [-ConditionalAccessPolicyErrorHelpLink <String>]
+ [-RestrictedAccessControlforSitesErrorHelpLink <String>]
  [-RestrictedAccessControlForOneDriveErrorHelpLink <String>]
  [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>] [-FilePickerExternalImageSearchEnabled <Boolean>]
  [-EmailAttestationRequired <Boolean>] [-EmailAttestationReAuthDays <Int32>]
@@ -82,6 +87,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-IsFluidEnabled <Boolean>] [-IsWBFluidEnabled <Boolean>] [-IsCollabMeetingNotesFluidEnabled <Boolean>]
  [-IsLoopEnabled <Boolean>] [-DisableDocumentLibraryDefaultLabeling <Boolean>]
  [-ExtendPermissionsToUnprotectedFiles <Boolean>] [-EnableSensitivityLabelForPDF <Boolean>]
+ [-EnableSensitivityLabelForOneNote <Boolean>] [-EnableSensitivityLabelForVideoFiles <Boolean>]
  [-BlockSendLabelMismatchEmail <Boolean>] [-LabelMismatchEmailHelpLink <String>]
  [-BlockUserInfoVisibility <String>] [-BlockUserInfoVisibilityInOneDrive <TenantBrowseUserInfoPolicyValue>]
  [-BlockUserInfoVisibilityInSharePoint <TenantBrowseUserInfoPolicyValue>]
@@ -106,8 +112,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-MassDeleteNotificationDisabled <Boolean>] [-EnableAutoExpirationVersionTrim <Boolean>]
  [-EnableMediaReactions <Boolean>] [-BusinessConnectivityServiceDisabled <Boolean>]
  [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] [-FileTypesForVersionExpiration <String[]>]
- [-RemoveVersionExpirationFileTypeOverride <String[]>]
- [-AllowSensitivityLabelOnRecords <Boolean>]
+ [-RemoveVersionExpirationFileTypeOverride <String[]>] [-AllowSensitivityLabelOnRecords <Boolean>]
  [-DelayDenyAddAndCustomizePagesEnforcement <Boolean>]
  [-DelayDenyAddAndCustomizePagesEnforcementOnClassicPublishingSites <Boolean>]
  [-AllowClassicPublishingSiteCreation <Boolean>] [-WhoCanShareAnonymousAllowList <Guid[]>]
@@ -125,14 +130,14 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-DocumentTranslationSelectedSitesListOperation <SelectedSitesListOperations>]
  [-AutofillColumnsScope <SyntexFeatureScopeValue>] [-AutofillColumnsSelectedSitesList <String[]>]
  [-AutofillColumnsSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-KnowledgeAgentScope <KnowledgeAgentFeatureScopeValue>] [-KnowledgeAgentSelectedSitesList <String[]>]
+ [-KnowledgeAgentSelectedSitesListOperation <SelectedSitesListOperations>]
  [-OpticalCharacterRecognitionScope <SyntexFeatureScopeValue>]
  [-OpticalCharacterRecognitionSelectedSitesList <String[]>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
- [-RestrictResourceAccountAccess <Boolean>] [-EnableSensitivityLabelForOneNote <Boolean>]
- [-EnableSensitivityLabelForVideoFiles <Boolean>] [-SiteOwnersCanAccessMissingContent <Boolean>]
- [<CommonParameters>]
+ [-RestrictResourceAccountAccess <Boolean>] [<CommonParameters>]
 ```
 
 ### ParameterSetContentTypeSyncSiteTemplatesList
@@ -1037,9 +1042,14 @@ Accept wildcard characters: False
 
 ### -AllowSensitivityLabelOnRecords
 
-Controls whether sensitivity labels can be applied to records.
+> Applicable: SharePoint Online
 
-PARAMVALUE: True | False
+Specifies whether sensitivity labels can be applied to records.
+
+The valid values are:
+
+- False (default) – Do not allow the application of sensitivity labels to records.
+- True – Allow the application of sensitivity labels to records.
 
 ```yaml
 Type: System.Boolean
@@ -1792,6 +1802,50 @@ The valid values are:
 
 ```yaml
 Type: Microsoft.SharePoint.Client.Sharing.SharingScope
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CoreOrganizationSharingLinkMaxExpirationInDays
+
+> Applicable: SharePoint Online
+
+Specifies the maximum number of days before organization sharing links expire for all SharePoint sites (not including OneDrive sites).
+
+The value can be from 7 to 720 days.
+
+To remove the expiration requirement, set the value to zero (0).
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CoreOrganizationSharingLinkRecommendedExpirationInDays
+
+> Applicable: SharePoint Online
+
+Specifies the recommended number of days before organization sharing links expire for all SharePoint sites (not including OneDrive sites). This setting provides a suggested expiration period to users when they create sharing links.
+
+The value can be from 7 to 720 days and must be less than or equal to the maximum expiration value set by `CoreOrganizationSharingLinkMaxExpirationInDays`.
+
+When set to 0, the default value will be `CoreOrganizationSharingLinkMaxExpirationInDays`.
+
+```yaml
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -3521,6 +3575,77 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -KnowledgeAgentScope
+
+> Applicable: SharePoint Online
+
+This parameter allows administrators to control which SharePoint sites the Knowledge Agent feature is available on.
+
+The valid values are:
+
+- `AllSites`: Knowledge Agent is available on all sites.
+- `ExcludeSelectedSites`: Knowledge Agent is available on all sites except those specified in `KnowledgeAgentSelectedSitesList`.
+- `NoSites`: Knowledge Agent isn't available on any sites. This is the Default value.
+
+> [!NOTE]
+> Use of this parameter requires Microsoft 365 Copilot license.
+
+```yaml
+Type: KnowledgeAgentFeatureScopeValue
+Parameter Sets: (All)
+Required: False
+Position: Named
+Default value: NoSites
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -KnowledgeAgentSelectedSitesList
+
+> Applicable: SharePoint Online
+
+This parameter allows administrators to pass a list of SharePoint site URLs to exclude from the Knowledge agent feature. By default, this overwrites any existing exclusion list with the provided list. This parameter can only be called when `KnowledgeAgentScope` is set to `ExcludeSelectedSites`.
+
+The list of site URLs can't exceed 100 items.
+
+> [!NOTE]
+> Use of this parameter requires Microsoft 365 Copilot license.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -KnowledgeAgentSelectedSitesListOperation
+
+> Applicable: SharePoint Online
+
+This parameter specifies the operation to perform on the Knowledge Agent feature's current excluded sites list.
+
+The valid values are:
+
+- `Overwrite`: Overwrite the existing excluded sites list. This is the default operation.
+- `Append`: Append the input list of sites to the existing excluded sites list.
+- `Remove`: Remove the input list of sites from the existing excluded sites list.
+
+> [!NOTE]
+> Calling this parameter without `KnowledgeAgentSelectedSitesList` has no effect.
+
+```yaml
+Type: SelectedSitesListOperations
+Parameter Sets: (All)
+Required: False
+Position: Named
+Default value: Overwrite
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LabelMismatchEmailHelpLink
 
 > Applicable: SharePoint Online
@@ -4073,6 +4198,50 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OneDriveOrganizationSharingLinkMaxExpirationInDays
+
+> Applicable: SharePoint Online
+
+Specifies the maximum number of days before organization sharing links expire for all OneDrive sites.
+
+The value can be from 7 to 720 days.
+
+To remove the expiration requirement, set the value to zero (0).
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveOrganizationSharingLinkRecommendedExpirationInDays
+
+> Applicable: SharePoint Online
+
+Specifies the recommended number of days before organization sharing links expire for all OneDrive sites. This setting provides a suggested expiration period to users when they create sharing links.
+
+The value can be from 7 to 720 days and must be less than or equal to the maximum expiration value set by `OneDriveOrganizationSharingLinkMaxExpirationInDays`.
+
+When set to 0, the default value will be `OneDriveOrganizationSharingLinkMaxExpirationInDays`.
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OneDriveRequestFilesLinkEnabled
 
 Enable or disable the Request files link on the OneDrive partition for all OneDrive sites. If this value is not set, the Request files link will only show for OneDrives with Anyone links enabled.
@@ -4551,28 +4720,6 @@ To remove the expiration requirement, set the value to zero (0).
 
 ```yaml
 Type: System.Int32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RequireOrganizationLinksExpireInDays
-
-> Applicable: SharePoint Online
-
-Specifies the upper bound for user-created organization link expiration periods. All links created after setting this policy will expire by the end of a period spanning the set number of days.
-
-The value can be from 7 to 730 days.
-
-To remove the expiration requirement, set the value to zero (0).
-
-```yaml
-Type: Microsoft.Online.SharePoint.TenantAdministration.SelectedSitesListOperations
 Parameter Sets: (All)
 Aliases:
 

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spscaleoutdatabasedatarange
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/set-spscaleoutdatabasedatarange
 applicable: SharePoint Server Subscription Edition
 title: Set-SPScaleOutDatabaseDataRange
 schema: 2.0.0

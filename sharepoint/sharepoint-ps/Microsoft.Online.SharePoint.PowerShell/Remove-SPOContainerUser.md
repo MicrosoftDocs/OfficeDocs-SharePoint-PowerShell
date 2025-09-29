@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spocontaineruser
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/remove-spocontaineruser
 applicable: SharePoint Online
 title: Remove-SPOContainerUser
 schema: 2.0.0
@@ -39,7 +39,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### Example 1
 
 ```powershell
-Remove-SPOContainerUser 423poi45 -LoginName shras@contoso.com-Role Owner
+Remove-SPOContainerUser 423poi45 -LoginName shras@contoso.com -Role Owner
 ```
 
 Example 1 removes the user with User Principal Name "shras@contoso.com" from the role of an owner of container whose ContainerId is 423poi45 . 

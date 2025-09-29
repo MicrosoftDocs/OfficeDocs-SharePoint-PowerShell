@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/update-spflightsconfigfile
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/update-spflightsconfigfile
 applicable: SharePoint Server Subscription Edition
 title: Update-SPFlightsConfigFile
 schema: 2.0.0
