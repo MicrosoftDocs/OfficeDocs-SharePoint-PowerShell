@@ -250,7 +250,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Lets you and other SharePoint Embedded admins restrict access to containers.
+Allows you and other SharePoint Embedded admins restrict access to containers.
 
 ```yaml
 Type: Boolean
@@ -268,7 +268,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Controls if container owners are excluded from block download policy.
+Specifies whether container owners are excluded from block download policy.
 
 ```yaml
 Type: System.Boolean
@@ -417,7 +417,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Specifies the IDs of groups that have access under an access restriction policy.
+Specifies the group IDs that have access under an access restriction policy.
 
 ```yaml
 Type: Guid[]
@@ -435,7 +435,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Specifies the IDs of groups to be added to an access restriction policy and gain access.
+Specifies the group IDs to add to an access restriction policy to grant access.
 
 ```yaml
 Type: Guid[]
@@ -453,7 +453,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Specifies the IDs of groups to be removed from access restriction policy and lose access.
+Specifies the group IDs to remove from an access restriction policy to revoke access.
 
 ```yaml
 Type: Guid[]
