@@ -3698,6 +3698,9 @@ Controls whether legacy browser authentication connections to SharePoint with le
 
 PARAMVALUE: True | False
 
+> [!NOTE]
+> • Legacy browser authentication is being deprecated for enterprise tenants as of October 2025. <br/> This setting will no longer be available to set to true. The RPS protocol will no longer function. <br/>
+
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
