@@ -22,10 +22,7 @@ This cmdlet must be run before any other SharePoint Online cmdlets can run.
 ### AuthenticationCertificate
 
 ```
-Connect-SPOService -Url <UrlCmdletPipeBind> [-Credential <CredentialCmdletPipeBind>] [-ClientTag <String>]
- [-Region <AADCrossTenantAuthenticationLocation>] [-AuthenticationUrl <String>] [-ModernAuth <Boolean>]
- [-UseSystemBrowser <Boolean>] [-Certificate <X509Certificate2>] [-CertificatePath <String>]
- [-CertificateThumbprint <String>] [-CertificatePassword <SecureString>] -ClientId <String> -TenantId <String>
+Connect-SPOService -Url <UrlCmdletPipeBind> [-ClientTag <String>] [-Region <AADCrossTenantAuthenticationLocation>] [-AuthenticationUrl <String>] [-Certificate <X509Certificate2>] [-CertificatePath <String>] [-CertificateThumbprint <String>] [-CertificatePassword <SecureString>] -ClientId <String> -TenantId <String>
  [<CommonParameters>]
 ```
 
@@ -134,7 +131,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-An X.509 certificate supplied during invocation.
+An X.509 certificate used during authentication.
 
 ```yaml
 Type: X509Certificate2
@@ -152,7 +149,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-The password of your certificate file.
+The password for the certificate file.
 
 ```yaml
 Type: SecureString
@@ -170,7 +167,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-The path of your local pfx certificate file.
+The path to the local .pfx certificate file.
 
 ```yaml
 Type: String
@@ -188,7 +185,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-The thumbprint of your certificate. The certificate will be retrieved from the current user's certificate store.
+The thumbprint of the certificate in the current user’s certificate store.
 
 ```yaml
 Type: String
@@ -206,7 +203,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-The client id of your application.
+The application’s client ID.
 
 ```yaml
 Type: String
@@ -302,7 +299,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-The id of the tenant to connect to. You can also use this parameter to specify your sign-in audience.
+The tenant ID to connect to.
 
 ```yaml
 Type: String
