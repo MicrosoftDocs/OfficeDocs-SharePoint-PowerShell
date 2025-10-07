@@ -39,10 +39,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### Example 1
 
 ```powershell
-Remove-SPOContainerUser 423poi45 -LoginName shras@contoso.com -Role Owner
+Remove-SPOContainerUser b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_8U -LoginName shras@contoso.com -Role Owner
 ```
 
-Example 1 removes the user with User Principal Name "shras@contoso.com" from the role of an owner of container whose ContainerId is 423poi45 . 
+Example 1 removes the user with User Principal Name "shras@contoso.com" from the role of an owner of container whose ContainerId is b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_8U . 
 
 ## PARAMETERS
 
