@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/suspend-spstateservicedatabase
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/suspend-spstateservicedatabase
 applicable: SharePoint Server Subscription Edition
 title: Suspend-SPStateServiceDatabase
 schema: 2.0.0

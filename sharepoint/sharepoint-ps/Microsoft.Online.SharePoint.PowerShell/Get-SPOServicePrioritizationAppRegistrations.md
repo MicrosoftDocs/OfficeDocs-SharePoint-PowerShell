@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Get-SPOServicePrioritizationAppRegistrations
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/Get-SPOServicePrioritizationAppRegistrations
 applicable: SharePoint Online
 title: Get-SPOServicePrioritizationAppRegistrations
 schema: 2.0.0
@@ -14,8 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 Retrieves the list of app registrations configured for service prioritization in SharePoint Online.
-> [!NOTE]
-> This functionality is rolling out and might not be fully enabled in your environment yet.
+
 
 ## SYNTAX
 

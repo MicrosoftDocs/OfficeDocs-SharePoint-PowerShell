@@ -1,8 +1,7 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/repair-spprojectwebinstance
-
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/repair-spprojectwebinstance
 title: Repair-SPProjectWebInstance
 schema: 2.0.0
 ---

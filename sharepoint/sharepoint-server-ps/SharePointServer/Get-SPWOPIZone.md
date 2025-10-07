@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spwopizone
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/get-spwopizone
 applicable: SharePoint Server Subscription Edition
 title: Get-SPWOPIZone
 schema: 2.0.0
@@ -71,9 +71,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Content roadmap for Office Web Apps]()
-
-[Use Office Web Apps with SharePoint 2013]()
 
 [Set-SPWOPIZone](Set-SPWOPIZone.md)

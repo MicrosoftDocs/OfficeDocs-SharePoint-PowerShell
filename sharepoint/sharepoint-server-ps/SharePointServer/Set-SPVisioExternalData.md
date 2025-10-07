@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Visio.Server.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spvisioexternaldata
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/set-spvisioexternaldata
 applicable: SharePoint Server Subscription Edition
 title: Set-SPVisioExternalData
 schema: 2.0.0

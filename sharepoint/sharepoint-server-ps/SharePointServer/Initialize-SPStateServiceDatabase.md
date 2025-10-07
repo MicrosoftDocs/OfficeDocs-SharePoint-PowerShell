@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/initialize-spstateservicedatabase
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/initialize-spstateservicedatabase
 applicable: SharePoint Server Subscription Edition
 title: Initialize-SPStateServiceDatabase
 schema: 2.0.0

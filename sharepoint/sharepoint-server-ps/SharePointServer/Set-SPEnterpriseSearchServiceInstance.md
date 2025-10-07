@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spenterprisesearchserviceinstance
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/set-spenterprisesearchserviceinstance
 applicable: SharePoint Server Subscription Edition
 title: Set-SPEnterpriseSearchServiceInstance
 schema: 2.0.0

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spwopisuppressionsetting
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/remove-spwopisuppressionsetting
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPWOPISuppressionSetting
 schema: 2.0.0
@@ -197,10 +197,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Content roadmap for Office Web Apps]()
-
-[Use Office Web Apps with SharePoint 2013]()
 
 [New-SPWOPISuppressionSetting](New-SPWOPISuppressionSetting.md)
 

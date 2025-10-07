@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/export-spserverscaleoutdatabasetenantdata
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/export-spserverscaleoutdatabasetenantdata
 applicable: SharePoint Server Subscription Edition
 title: Export-SPServerScaleOutDatabaseTenantData
 schema: 2.0.0

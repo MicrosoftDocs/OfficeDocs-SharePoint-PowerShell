@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.Search.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spenterprisesearchmetadatamanagedproperty
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/remove-spenterprisesearchmetadatamanagedproperty
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPEnterpriseSearchMetadataManagedProperty
 schema: 2.0.0

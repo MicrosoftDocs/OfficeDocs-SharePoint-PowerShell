@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/update-spwopiproofkey
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/update-spwopiproofkey
 applicable: SharePoint Server Subscription Edition
 title: Update-SPWOPIProofKey
 schema: 2.0.0
@@ -91,7 +91,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Content roadmap for Office Web Apps]()
-
-[Use Office Web Apps with SharePoint 2013]()

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spsitesubscriptionprofileconfig
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/set-spsitesubscriptionprofileconfig
 applicable: SharePoint Server Subscription Edition
 title: Set-SPSiteSubscriptionProfileConfig
 schema: 2.0.0

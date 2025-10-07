@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/Set-SPOCopilotPromoOptInStatus
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/Set-SPOCopilotPromoOptInStatus
 applicable: SharePoint Online
 title: Set-SPOCopilotPromoOptInStatus
 schema: 2.0.0
@@ -73,7 +73,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Get-SPOCopilotPromoOptInStatus](./Get-SPOCopilotPromoOptInStatus.md)
 
 [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spsecurestoreapplication
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/set-spsecurestoreapplication
 applicable: SharePoint Server Subscription Edition
 title: Set-SPSecureStoreApplication
 schema: 2.0.0

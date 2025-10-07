@@ -1,8 +1,7 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/enable-spprojectemailnotification
-
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/enable-spprojectemailnotification
 title: Enable-SPProjectEmailNotification
 schema: 2.0.0
 ---

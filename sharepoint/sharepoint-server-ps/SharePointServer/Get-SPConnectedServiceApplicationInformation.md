@@ -1,8 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-spconnectedserviceapplicationinformation
-
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/get-spconnectedserviceapplicationinformation
 title: Get-SPConnectedServiceApplicationInformation
 schema: 2.0.0
 ---

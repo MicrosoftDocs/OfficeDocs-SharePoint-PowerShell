@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spocontaineruser
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/remove-spocontaineruser
 applicable: SharePoint Online
 title: Remove-SPOContainerUser
 schema: 2.0.0
@@ -22,7 +22,7 @@ Removes a user from a specified role in a SharePoint Embedded container.
 Remove-SPOContainerUser [-ContainerId] <String> -LoginName <String> -Role <String> [<CommonParameters>]
 ```
 
-##DESCRIPTION
+## DESCRIPTION
 
 Removes a user from a defined role within a SharePoint Embedded container.
 
@@ -39,14 +39,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### Example 1
 
 ```powershell
-Remove-SPOContainerUser 423poi45 -LoginName shras@contoso.com-Role Owner
+Remove-SPOContainerUser 423poi45 -LoginName shras@contoso.com -Role Owner
 ```
 
 Example 1 removes the user with User Principal Name "shras@contoso.com" from the role of an owner of container whose ContainerId is 423poi45 . 
 
 ## PARAMETERS
 
--ContainerId
+### -ContainerId
 
 > Applicable: SharePoint Online
 
@@ -64,7 +64,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
--LoginName
+### -LoginName
 
 > Applicable: SharePoint Online
 
@@ -82,7 +82,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
--Role
+### -Role
 
 > Applicable: SharePoint Online
 
@@ -108,6 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS

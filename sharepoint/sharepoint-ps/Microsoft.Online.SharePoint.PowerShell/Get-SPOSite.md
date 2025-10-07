@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-sposite
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/get-sposite
 applicable: SharePoint Online
 title: Get-SPOSite
 schema: 2.0.0
-author: trent-green
-ms.author: trgreen
+author: samkabue
+ms.author: speedta
 ms.reviewer:
 ---
 
@@ -20,7 +20,7 @@ Returns one or more site collections.
 
 ### ParamSet1 (Default)
 ```
-Get-SPOSite [[-Identity] <SpoSitePipeBind>] [-Limit <String>] [-Detailed] [<CommonParameters>]
+Get-SPOSite [[-Identity] <SpoSitePipeBind>] [-Limit <String>] [-Detailed] [-IsAuthoritative <Boolean>] [<CommonParameters>]
 ```
 
 ### ParamSet3
@@ -111,7 +111,7 @@ This example gets quota details for a Group Site.
 Get-SPOSite -Identity https://contoso.sharepoint.com/sites/research | Select InformationSegment
 ```
 
-This example returns the InformationSegments associated with the site. It is applicable for tenants who have enabled Microsoft 365 Information barriers capability. Read [Learn about information barriers](/microsoft-365/compliance/information-barriers) to understand Information barriers in SharePoint Online.
+This example returns the InformationSegment associated with the site. It is applicable for tenants who have enabled Microsoft 365 Information barriers capability. Read [Learn about information barriers](/microsoft-365/compliance/information-barriers) to understand Information barriers in SharePoint Online.
 
 **Note**: This property is available only in SharePoint Online Management Shell Version 16.0.19927.12000 or later.
 
@@ -126,12 +126,20 @@ This example uses server side filtering to return sites matching 18.
 ### EXAMPLE 8
 
 ```powershell
+Get-SPOSite -Filter { IsAuthoritative -eq true }
+```
+
+This example uses server side filtering to return Authoritative sites (i.e., sites that have the IsAuthoritative property set to true).
+
+### EXAMPLE 9
+
+```powershell
 Get-SPOSite -Limit ALL | ?{$_.IsTeamsConnected -eq $true}
 ```
 
 This example uses client-side filtering to return a list of sites connected to Microsoft Teams.
 
-### EXAMPLE 9
+### EXAMPLE 10
 
 ```powershell
 Get-SPOSite -Limit ALL | ?{$_.IsTeamsChannelConnected -eq $true}
@@ -139,14 +147,14 @@ Get-SPOSite -Limit ALL | ?{$_.IsTeamsChannelConnected -eq $true}
 
 This example uses client-side filtering to return a list of sites connected to a Microsoft Teams Private or Shared channel.
 
-### EXAMPLE 10
+### EXAMPLE 11
 
 ```powershell
 Get-SPOSite -Limit ALL -GroupIdDefined $true
 ```
 This example uses server-side filtering to return all sites that have an associated Microsoft 365 Group.
 
-### EXAMPLE 11
+### EXAMPLE 12
 
 ```powershell
 $userUPN="joe.healy@contoso.com"
@@ -236,7 +244,7 @@ Accept wildcard characters: False
 > Applicable: SharePoint Online
 
 Specifies the script block of the server-side filter to apply. The type must be a valid filter name and value must be in the form `{ PropertyName <operator> "filterValue"}`. Valid operators are as follows: -eq, -ne, -like, -notlike.
- Currently, you can filter by these properties: Owner, Template (can be used to filter if it is the only property present in the filter), LockState, Url.
+ Currently, you can filter by these properties: Owner, Template (can be used to filter if it is the only property present in the filter), LockState, Url, IsAuthoritative (only supports comparison operators -eq and -ne).
  Using the -or operator to include an additional filter is not supported.
 
 Note: The operator values are case-sensitive.
@@ -302,6 +310,24 @@ The values are $true and $false. By default, the value is $false which means no 
 ```yaml
 Type: System.Boolean
 Parameter Sets: ParamSet2
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsAuthoritative
+
+> Applicable: SharePoint Online
+
+Filter the list of sites where the IsAuthoritative property is set to true. When IsAuthoritative is true, it signals to Microsoft Search, Copilot (BizChat), and other AI agents that the site's content is official, trusted, and verified.
+
+```yaml
+Type: Boolean
+Parameter Sets: ParamSet1
 Aliases:
 
 Required: False

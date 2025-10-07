@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spappdisablingconfiguration
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/set-spappdisablingconfiguration
 applicable: SharePoint Server Subscription Edition
 title: Set-SPAppDisablingConfiguration
 schema: 2.0.0

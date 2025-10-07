@@ -1,8 +1,7 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spprojectusersyncfullsyncthreshold
-
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/set-spprojectusersyncfullsyncthreshold
 title: Set-SPProjectUserSyncFullSyncThreshold
 schema: 2.0.0
 ---

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spsitesubscriptionprofileconfig
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/remove-spsitesubscriptionprofileconfig
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPSiteSubscriptionProfileConfig
 schema: 2.0.0

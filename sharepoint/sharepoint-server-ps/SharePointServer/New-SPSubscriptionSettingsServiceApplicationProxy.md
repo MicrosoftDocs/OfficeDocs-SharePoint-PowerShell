@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spsubscriptionsettingsserviceapplicationproxy
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/new-spsubscriptionsettingsserviceapplicationproxy
 applicable: SharePoint Server Subscription Edition
 title: New-SPSubscriptionSettingsServiceApplicationProxy
 schema: 2.0.0

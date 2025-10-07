@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.TopologyService-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-sptopologyserviceapplication
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/set-sptopologyserviceapplication
 applicable: SharePoint Server Subscription Edition
 title: Set-SPTopologyServiceApplication
 schema: 2.0.0

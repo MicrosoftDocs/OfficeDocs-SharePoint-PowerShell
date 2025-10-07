@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/add-spoorgassetslibrary
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/add-spoorgassetslibrary
 applicable: SharePoint Online
 title: Add-SPOOrgAssetsLibrary
-author: Maralesfahanpoor
-ms.author: maesfaha
+author: samkabue
+ms.author: speedta
 ms.reviewer:
 manager: paulac
 schema: 2.0.0
@@ -214,8 +214,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPOOrgAssetsLibrary](/powershell/module/sharepoint-online/get-spoorgassetslibrary)
+[Get-SPOOrgAssetsLibrary](/powershell/module/microsoft.online.sharepoint.powershell/get-spoorgassetslibrary)
 
-[Set-SPOOrgAssetsLibrary](/powershell/module/sharepoint-online/set-spoorgassetslibrary)
+[Set-SPOOrgAssetsLibrary](/powershell/module/microsoft.online.sharepoint.powershell/set-spoorgassetslibrary)
 
-[Remove-SPOOrgAssetsLibrary](/powershell/module/sharepoint-online/remove-spoorgassetslibrary)
+[Remove-SPOOrgAssetsLibrary](/powershell/module/microsoft.online.sharepoint.powershell/remove-spoorgassetslibrary)

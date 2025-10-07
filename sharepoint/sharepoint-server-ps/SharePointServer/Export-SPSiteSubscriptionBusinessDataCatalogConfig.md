@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/export-spsitesubscriptionbusinessdatacatalogconfig
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/export-spsitesubscriptionbusinessdatacatalogconfig
 applicable: SharePoint Server Subscription Edition
 title: Export-SPSiteSubscriptionBusinessDataCatalogConfig
 schema: 2.0.0

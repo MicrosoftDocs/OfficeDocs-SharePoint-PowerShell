@@ -1,8 +1,7 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spprojectserviceapplication
-
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/new-spprojectserviceapplication
 title: New-SPProjectServiceApplication
 schema: 2.0.0
 ---

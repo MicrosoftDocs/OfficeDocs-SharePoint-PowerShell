@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spocontaineruser
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/set-spocontaineruser
 applicable: SharePoint Online
 title: Set-SPOContainerUser
 schema: 2.0.0
@@ -22,7 +22,7 @@ Reassigns a user from their current role to a new role within a SharePoint Embed
 Set-SPOContainerUser [-ContainerId] <String> -LoginName <String> -Role <String> [<CommonParameters>
 ```
 
-##DESCRIPTION
+## DESCRIPTION
 
 Updates a user's assigned role within a SharePoint Embedded container.
 
@@ -40,14 +40,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### Example 1
 
 ```powershell
-Set-SPOContainerUser 423poi45 -LoginName shras@contoso.com-Role Manager
+Set-SPOContainerUser 423poi45 -LoginName shras@contoso.com -Role Manager
 ```
 
 Example 1 reassigns the role of User Principal Name "shras@contoso.com" to manager. 
 
 ## PARAMETERS
 
--ContainerId
+### -ContainerId
 
 > Applicable: SharePoint Online
 
@@ -65,7 +65,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
--LoginName
+### -LoginName
 
 > Applicable: SharePoint Online
 
@@ -83,7 +83,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
--Role
+### -Role
 
 > Applicable: SharePoint Online
 
@@ -109,6 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS

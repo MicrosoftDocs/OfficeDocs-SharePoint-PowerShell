@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/connect-spconfigurationdatabase
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/connect-spconfigurationdatabase
 applicable: SharePoint Server Subscription Edition
 title: Connect-SPConfigurationDatabase
 schema: 2.0.0

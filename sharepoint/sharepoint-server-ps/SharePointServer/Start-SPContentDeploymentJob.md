@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.Publishing.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/start-spcontentdeploymentjob
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/start-spcontentdeploymentjob
 applicable: SharePoint Server Subscription Edition
 title: Start-SPContentDeploymentJob
 schema: 2.0.0

@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-spositescript
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/set-spositescript
 applicable: SharePoint Online
 title: Set-SPOSiteScript
 schema: 2.0.0
-author: trent-green
-ms.author: trgreen
+author: samkabue
+ms.author: speedta
 ms.reviewer:
 ---
 

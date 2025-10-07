@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/grant-spbusinessdatacatalogmetadataobject
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/grant-spbusinessdatacatalogmetadataobject
 applicable: SharePoint Server Subscription Edition
 title: Grant-SPBusinessDataCatalogMetadataObject
 schema: 2.0.0

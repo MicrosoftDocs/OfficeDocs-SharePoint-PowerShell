@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/update-spdistributedcachesize
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/update-spdistributedcachesize
 applicable: SharePoint Server Subscription Edition
 title: Update-SPDistributedCacheSize
 schema: 2.0.0

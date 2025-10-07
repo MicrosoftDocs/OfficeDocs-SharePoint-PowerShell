@@ -1,12 +1,12 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-sposdnprovider
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/remove-sposdnprovider
 applicable: SharePoint Online
 title: Remove-SPOSdnProvider
 schema: 2.0.0
-author: trent-green
-ms.author: trgreen
+author: samkabue
+ms.author: speedta
 ms.reviewer:
 ---
 

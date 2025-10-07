@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.InfoPath.Server.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/add-spinfopathuseragent
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/add-spinfopathuseragent
 applicable: SharePoint Server Subscription Edition
 title: Add-SPInfoPathUserAgent
 schema: 2.0.0

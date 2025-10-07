@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spsecurestoreserviceapplicationproxy
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/new-spsecurestoreserviceapplicationproxy
 applicable: SharePoint Server Subscription Edition
 title: New-SPSecureStoreServiceApplicationProxy
 schema: 2.0.0

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.UserProfiles.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spprofileleader
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/remove-spprofileleader
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPProfileLeader
 schema: 2.0.0

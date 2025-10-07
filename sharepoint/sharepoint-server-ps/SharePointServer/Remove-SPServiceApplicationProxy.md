@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-spserviceapplicationproxy
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/remove-spserviceapplicationproxy
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPServiceApplicationProxy
 schema: 2.0.0

@@ -1,8 +1,7 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/invoke-spprojectactivedirectorygroupsync
-
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/invoke-spprojectactivedirectorygroupsync
 title: Invoke-SPProjectActiveDirectoryGroupSync
 schema: 2.0.0
 ---

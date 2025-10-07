@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spcustomlayoutspage
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/set-spcustomlayoutspage
 applicable: SharePoint Server Subscription Edition
 title: Set-SPCustomLayoutsPage
 schema: 2.0.0

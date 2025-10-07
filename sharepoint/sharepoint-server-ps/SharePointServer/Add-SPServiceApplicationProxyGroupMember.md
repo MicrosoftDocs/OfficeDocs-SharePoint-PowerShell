@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/add-spserviceapplicationproxygroupmember
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/add-spserviceapplicationproxygroupmember
 applicable: SharePoint Server Subscription Edition
 title: Add-SPServiceApplicationProxyGroupMember
 schema: 2.0.0

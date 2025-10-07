@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.WorkflowServices.PowerShell.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/register-spworkflowservice
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/register-spworkflowservice
 applicable: SharePoint Server Subscription Edition
 title: Register-SPWorkflowService
 schema: 2.0.0

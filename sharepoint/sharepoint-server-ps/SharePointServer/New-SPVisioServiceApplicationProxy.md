@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Visio.Server.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spvisioserviceapplicationproxy
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/new-spvisioserviceapplicationproxy
 applicable: SharePoint Server Subscription Edition
 title: New-SPVisioServiceApplicationProxy
 schema: 2.0.0

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.Server.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/mount-spstateservicedatabase
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/mount-spstateservicedatabase
 applicable: SharePoint Server Subscription Edition
 title: Mount-SPStateServiceDatabase
 schema: 2.0.0

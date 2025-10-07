@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/copy-spbusinessdatacatalogacltochildren
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/copy-spbusinessdatacatalogacltochildren
 applicable: SharePoint Server Subscription Edition
 title: Copy-SPBusinessDataCatalogAclToChildren
 schema: 2.0.0

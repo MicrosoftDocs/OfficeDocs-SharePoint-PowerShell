@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.SSOUpgrade-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/update-spsecurestoregroupcredentialmapping
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/update-spsecurestoregroupcredentialmapping
 applicable: SharePoint Server Subscription Edition
 title: Update-SPSecureStoreGroupCredentialMapping
 schema: 2.0.0

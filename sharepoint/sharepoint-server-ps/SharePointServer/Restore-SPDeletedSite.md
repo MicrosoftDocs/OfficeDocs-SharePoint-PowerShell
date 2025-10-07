@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/restore-spdeletedsite
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/restore-spdeletedsite
 applicable: SharePoint Server Subscription Edition
 title: Restore-SPDeletedSite
 schema: 2.0.0

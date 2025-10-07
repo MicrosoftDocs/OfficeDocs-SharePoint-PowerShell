@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.TopologyService-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/get-sptopologyserviceapplicationproxy
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/get-sptopologyserviceapplicationproxy
 applicable: SharePoint Server Subscription Edition
 title: Get-SPTopologyServiceApplicationProxy
 schema: 2.0.0

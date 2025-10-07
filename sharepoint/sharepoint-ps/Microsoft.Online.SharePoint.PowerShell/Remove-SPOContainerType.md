@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-spocontainertype
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/remove-spocontainertype
 applicable: SharePoint Online
 title: Remove-SPOContainerType
 schema: 2.0.0
@@ -33,7 +33,7 @@ You must be a SharePoint Embedded Administrator to run this cmdlet.
 ### Example 1
 
 ```powershell
-Remove-SPOContainerTypeId -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604a8
+Remove-SPOContainerType -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604a8
 ```
 
 In Example 1, the cmdlet asks for a confirmation on the remove action and on confirmation, deletes the trial container type.

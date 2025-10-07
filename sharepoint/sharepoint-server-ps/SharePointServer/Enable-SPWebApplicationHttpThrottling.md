@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/enable-spwebapplicationhttpthrottling
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/enable-spwebapplicationhttpthrottling
 applicable: SharePoint Server Subscription Edition
 title: Enable-SPWebApplicationHttpThrottling
 schema: 2.0.0

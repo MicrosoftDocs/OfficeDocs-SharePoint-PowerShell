@@ -2,6 +2,7 @@
 description: Learn about the SharePointServer module, which contains cmdlets for managing SharePoint Server.
 title: SharePoint Server Subscription Edition module
 ms.service: sharepoint-powershell
+ms.date: 07/17/2025
 ---
 
 # SharePoint Server Subscription Edition module

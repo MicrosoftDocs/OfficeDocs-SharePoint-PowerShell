@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
-module name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/start-sptimerjob
+Module Name: SharePointServer
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/start-sptimerjob
 applicable: SharePoint Server Subscription Edition
 title: Start-SPTimerJob
 schema: 2.0.0
