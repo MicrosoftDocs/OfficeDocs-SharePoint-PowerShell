@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/stop-spoauditdatacollectionforactivityinsights
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/stop-spoauditdatacollectionforactivityinsights
 applicable: SharePoint Online
 title: Stop-SPOAuditDataCollectionForActivityInsights
 schema: 2.0.0

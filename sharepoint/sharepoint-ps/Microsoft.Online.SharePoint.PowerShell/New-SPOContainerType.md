@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/new-spocontainertype
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/new-spocontainertype
 applicable: SharePoint Online
 title: New-SPOContainerType
 schema: 2.0.0

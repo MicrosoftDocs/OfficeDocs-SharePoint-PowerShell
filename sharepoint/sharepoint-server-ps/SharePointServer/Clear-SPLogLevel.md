@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/clear-sploglevel
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/clear-sploglevel
 applicable: SharePoint Server Subscription Edition
 title: Clear-SPLogLevel
 schema: 2.0.0

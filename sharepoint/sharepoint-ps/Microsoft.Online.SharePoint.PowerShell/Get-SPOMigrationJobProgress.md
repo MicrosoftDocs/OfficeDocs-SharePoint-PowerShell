@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-spomigrationjobprogress
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/get-spomigrationjobprogress
 applicable: SharePoint Online
 title: Get-SPOMigrationJobProgress
 schema: 2.0.0
@@ -142,7 +142,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-An EncryptionParameters object. See New-SPOMigrationEncryptionParameters https://learn.microsoft.com/powershell/module/sharepoint-online/new-spomigrationencryptionparameters for more information.
+An EncryptionParameters object. See New-SPOMigrationEncryptionParameters https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/new-spomigrationencryptionparameters for more information.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.Migration.EncryptionParameters

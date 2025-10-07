@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/set-spdiagnosticsprovider
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/set-spdiagnosticsprovider
 applicable: SharePoint Server Subscription Edition
 title: Set-SPDiagnosticsProvider
 schema: 2.0.0

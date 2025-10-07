@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-Help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/clear-sppeoplepickerserviceaccountdirectorypath
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/clear-sppeoplepickerserviceaccountdirectorypath
 applicable: SharePoint Server Subscription Edition
 title: Clear-SPPeoplePickerServiceAccountDirectoryPath
 schema: 2.0.0

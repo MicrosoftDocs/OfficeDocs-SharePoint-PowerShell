@@ -1,7 +1,7 @@
 ---
 external help file: microsoft.office.project.server.stsadmcommandhandler.dll-help.xml
 Module Name: Microsoft.SharePoint.Powershell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/migrate-spprojectresourceplans
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/migrate-spprojectresourceplans
 applicable: Project Server 2016, Project Server 2019
 title: Migrate-SPProjectResourcePlans
 schema: 2.0.0

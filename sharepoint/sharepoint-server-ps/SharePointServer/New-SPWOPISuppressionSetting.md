@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/new-spwopisuppressionsetting
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/new-spwopisuppressionsetting
 applicable: SharePoint Server Subscription Edition
 title: New-SPWOPISuppressionSetting
 schema: 2.0.0

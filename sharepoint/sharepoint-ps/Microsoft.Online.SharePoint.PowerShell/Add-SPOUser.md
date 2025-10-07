@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/add-spouser
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/add-spouser
 applicable: SharePoint Online
 title: Add-SPOUser
 schema: 2.0.0

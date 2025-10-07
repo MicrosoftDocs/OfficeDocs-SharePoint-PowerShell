@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/set-sposite
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/set-sposite
 applicable: SharePoint Online
 title: Set-SPOSite
 schema: 2.0.0
@@ -50,7 +50,9 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-Owner <String>] [-Title <String>] [-
  [-DefaultLinkPermission <SharingPermissionType>] [-DefaultLinkToExistingAccess <Boolean>]
  [-DefaultLinkToExistingAccessReset] [-AnonymousLinkExpirationInDays <Int32>]
  [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [-ExternalUserExpirationInDays <Int32>]
- [-OverrideTenantExternalUserExpirationPolicy <Boolean>] [-InformationBarriersMode <String>]
+ [-OverrideTenantExternalUserExpirationPolicy <Boolean>] [-OrganizationSharingLinkMaxExpirationInDays <Int32>]
+ [-OrganizationSharingLinkRecommendedExpirationInDays <Int32>]
+ [-OverrideTenantOrganizationSharingLinkExpirationPolicy <Boolean>] [-InformationBarriersMode <String>]
  [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>]
  [-OverrideBlockUserInfoVisibility <SiteUserInfoVisibilityPolicyValue>]
  [-LoopDefaultSharingLinkScope <SharingScope>] [-LoopDefaultSharingLinkRole <SharingRole>]
@@ -60,12 +62,9 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-Owner <String>] [-Title <String>] [-
  [-RestrictContentOrgWideSearch <Boolean>] [-RestrictedContentDiscoveryforCopilotAndAgents <Boolean>]
  [-RestrictedAccessControl <Boolean>] [-RestrictedAccessControlGroups <Guid[]>]
  [-ListsShowHeaderAndNavigation <Boolean>] [-HidePeoplePreviewingFiles <Boolean>]
- [-HidePeopleWhoHaveListsOpen <Boolean>] [-AllowFileArchive <Boolean>]
- [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>]
- [-DisableSiteBranding <Boolean>]
- [-IsAuthoritative <Boolean>]
- [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-HidePeopleWhoHaveListsOpen <Boolean>] [-IsAuthoritative <Boolean>] [-AllowFileArchive <Boolean>]
+ [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-DisableSiteBranding <Boolean>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ParamSet2
@@ -1594,6 +1593,50 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -OrganizationSharingLinkMaxExpirationInDays
+
+> Applicable: SharePoint Online
+
+Specifies the maximum number of days before organization sharing links expire for this site.
+
+The value can be from 7 to 720 days.
+
+To remove the expiration requirement, set the value to zero (0).
+
+```yaml
+Type: System.Int32
+Parameter Sets: ParamSet1
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OrganizationSharingLinkRecommendedExpirationInDays
+
+> Applicable: SharePoint Online
+
+Specifies the recommended number of days before organization sharing links expire for this site. This setting provides a suggested expiration period to users when they create sharing links.
+
+The value can be from 7 to 720 days and must be less than or equal to the maximum expiration value set by `OrganizationSharingLinkMaxExpirationInDays`.
+
+When set to 0, the default value will be `OrganizationSharingLinkMaxExpirationInDays`.
+
+```yaml
+Type: System.Int32
+Parameter Sets: ParamSet1
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -OverrideBlockUserInfoVisibility
 
 > Applicable: SharePoint Online
@@ -1675,6 +1718,29 @@ Possible values:
 - None: Respect the organization-level policy for external user expiration.
 - False: Respect the organization-level policy for external user expiration.
 - True: Override the organization-level policy for external user expiration (can be more or less restrictive).
+
+```yaml
+Type: System.Boolean
+Parameter Sets: ParamSet1
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OverrideTenantOrganizationSharingLinkExpirationPolicy
+
+> Applicable: SharePoint Online
+
+Choose whether to override the tenant-level organization sharing link expiration policy on this site. Overrides both the maximum and recommended values.
+
+Possible values:
+
+- False: Respect the tenant-level organization sharing link expiration policy.
+- True: Override the tenant-level organization sharing link expiration policy (can be more or less restrictive).
 
 ```yaml
 Type: System.Boolean

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Office.TranslationServices.dll-Help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/remove-sptranslationservicejobhistory
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/remove-sptranslationservicejobhistory
 applicable: SharePoint Server Subscription Edition
 title: Remove-SPTranslationServiceJobHistory
 schema: 2.0.0

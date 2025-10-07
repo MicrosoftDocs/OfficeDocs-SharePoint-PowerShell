@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.SharePoint.PowerShell.dll-help.xml
 Module Name: SharePointServer
-online version: https://learn.microsoft.com/powershell/module/sharepoint-server/import-spscaleoutdatabasetenantdata
+online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoint.powershell/import-spscaleoutdatabasetenantdata
 applicable: SharePoint Server Subscription Edition
 title: Import-SPScaleOutDatabaseTenantData
 schema: 2.0.0

@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/copy-spopersonalsitepage
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/copy-spopersonalsitepage
 applicable: SharePoint Online
 title: Copy-SPOPersonalSitePage
 schema: 2.0.0
