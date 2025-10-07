@@ -4936,7 +4936,7 @@ Accept wildcard characters: False
 
 Specifies agentic identities which are restricted from sharing content to external users. 
 
-- For agentic users this corresponds to the GUID identifying the parent the agentic user was created from.
+- For agentic users this is the GUID of the parent the agentic user was created from.
 
 > [!NOTE]
 > This feature is currently in preview and may not be available in your tenant.
