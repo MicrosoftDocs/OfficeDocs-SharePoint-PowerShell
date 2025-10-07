@@ -35,7 +35,7 @@ You must be a SharePoint Embedded Administrator to run this cmdlet.
 ### Example 1
 
 ```powershell
-New-SPOContainerType -ContainerTypeName ContosoLegal -OwningApplicationId a735e4af
+New-SPOContainerType -ContainerTypeName ContosoLegal -OwningApplicationId 2ce03211-353e-45d7-b487-8ac6981332cf
 ```
 
 In Example 1, the cmdlet creates a new regular billed container type ContosoLegal.
@@ -43,7 +43,7 @@ In Example 1, the cmdlet creates a new regular billed container type ContosoLega
 ### Example 2
 
 ```powershell
-New-SPOContainerType –IsPassThroughBilling –ContainerTypeName ContosoLegal -OwningApplicationId a735e4af
+New-SPOContainerType –IsPassThroughBilling –ContainerTypeName ContosoLegal -OwningApplicationId 2ce03211-353e-45d7-b487-8ac6981332ed
 ```
 
 In Example 2, the cmdlet creates a direct to customer billed container type ContosoLegal.
@@ -51,7 +51,7 @@ In Example 2, the cmdlet creates a direct to customer billed container type Cont
 ### Example 3
 
 ```powershell
-New-SPOContainerType –TrialContainerType -ContainerTypeName ContosoLegal -OwningApplicationId a735e4af
+New-SPOContainerType –TrialContainerType -ContainerTypeName ContosoLegal -OwningApplicationId 2ce03211-353e-45d7-b487-8ac6981332fl
 ```
 
 In Example 3, the cmdlet creates a trial container type, ContosoLegal, valid for 30 days.
@@ -59,7 +59,7 @@ In Example 3, the cmdlet creates a trial container type, ContosoLegal, valid for
 ### Example 4
 
 ```powershell
-New-SPOContainerType -ContainerTypeName ContosoLegal -OwningApplicationId a735e4af -GovernableByAdmin $false
+New-SPOContainerType -ContainerTypeName ContosoLegal -OwningApplicationId 2ce03211-353e-45d7-b487-8ac6981332cf -GovernableByAdmin $false
 ```
 
 In Example 4, the cmdlet creates a standard container type, ContosoLegal that has opted out of management through Microsoft-enabled administrator platforms.
