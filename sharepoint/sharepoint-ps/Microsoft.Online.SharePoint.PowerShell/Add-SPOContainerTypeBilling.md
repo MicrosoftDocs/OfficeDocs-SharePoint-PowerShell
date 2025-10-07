@@ -38,10 +38,10 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### Example 1
 
 ```powershell
-Add-SPOContainerTypeBilling - ContainerTypeId aa1d89b3 -AzureSubscriptionId 5a8a4d9f -ResourceGroup "RG100" -Region "(US) East US"
+Add-SPOContainerTypeBilling - ContainerTypeId b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_5Z -AzureSubscriptionId d32cba02-d63c-4202-ade5-2134b0c54fe -ResourceGroup "RG100" -Region "East US"
 ```
 
-Example 1 attaches the billing profile of Azure subscription ID "5a8a4d9f", resource group "RG100" and region "(US) East US" to the container type ID "aa1d89b3".
+Example 1 attaches the billing profile of Azure subscription ID "d32cba02-d63c-4202-ade5-2134b0c54fe", resource group "RG100" and region "East US" to the container type ID "b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_5Z3".
 
 ## PARAMETERS
 
