@@ -41,7 +41,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 ### Example 1
 
 ```powershell
-Add-SPOContainerUser 423poi45 -LoginName shras@contoso.com -Role Owner
+Add-SPOContainerUser b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_8U -LoginName shras@contoso.com -Role Owner
 ```
 
 Example 1 assigns the role of owner to user with User Principal Name "shras@contoso.com".
