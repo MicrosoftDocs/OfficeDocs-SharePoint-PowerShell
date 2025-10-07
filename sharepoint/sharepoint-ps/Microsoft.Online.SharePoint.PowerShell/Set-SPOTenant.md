@@ -609,7 +609,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
- [-RestrictExternalSharing] <Guid[]> [-AddAppIDToList] [-RemoveAppIDFromList] [<CommonParameters>]
+ [-RestrictExternalSharing] <Guid[]> [-AddAppIdToList] [-RemoveAppIdFromList] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -922,11 +922,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AddAppIDToList
+### -AddAppIdToList
 
 > Applicable: SharePoint Online
 
-This is a switch value paired with RestrictExternalSharing to indicate GUIDs should be added to the restrict external sharing control list.
+When paired with `RestrictExternalSharing`, indicates that GUIDs should be added to the external sharing restriction.
 
 > [!NOTE]
 > This feature is currently in preview and may not be available in your tenant.
@@ -4812,11 +4812,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RemoveAppIDFromList
+### -RemoveAppIdFromList
 
 > Applicable: SharePoint Online
 
-This is a switch value paired with RestrictExternalSharing to indicate GUIDs should be removed from the restrict external sharing control list.
+When paired with `RestrictExternalSharing`, indicates that GUIDs should be removed from the external sharing restriction.
 
 > [!NOTE]
 > This feature is currently in preview and may not be available in your tenant.
@@ -4931,9 +4931,9 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Specifies a list of agent identities which are restricted from sharing content to external users. 
+Specifies agentic identities which are restricted from sharing content to external users. 
 
-For agentic users this corresponds to the GUID identifying the parent the agentic user was created from.
+- For agentic users this corresponds to the GUID identifying the parent the agentic user was created from.
 
 > [!NOTE]
 > This feature is currently in preview and may not be available in your tenant.
@@ -4954,7 +4954,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Controls whether agentic identities are allowed to share content with external users. Setting this to `True` prevents agentic identities from sharing content with external users.
+Controls whether agentic identities are allowed to share content with external users. Setting this to `True` prevents sharing.
 
 PARAMVALUE: True | False
 
