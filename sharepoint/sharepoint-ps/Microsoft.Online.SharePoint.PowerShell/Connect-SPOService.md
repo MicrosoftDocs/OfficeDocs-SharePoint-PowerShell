@@ -22,8 +22,10 @@ This cmdlet must be run before any other SharePoint Online cmdlets can run.
 ### AuthenticationCertificate
 
 ```
-Connect-SPOService -Url <UrlCmdletPipeBind> [-ClientTag <String>] [-Region <AADCrossTenantAuthenticationLocation>] [-AuthenticationUrl <String>] [-Certificate <X509Certificate2>] [-CertificatePath <String>] [-CertificateThumbprint <String>] [-CertificatePassword <SecureString>] -ClientId <String> -TenantId <String>
- [<CommonParameters>]
+Connect-SPOService -Url <UrlCmdletPipeBind> [-ClientTag <String>]
+ [-Region <AADCrossTenantAuthenticationLocation>] [-AuthenticationUrl <String>]
+ [-Certificate <X509Certificate2>] [-CertificatePath <String>] [-CertificateThumbprint <String>]
+ [-CertificatePassword <SecureString>] -ClientId <String> -TenantId <String> [<CommonParameters>]
 ```
 
 ### AuthenticationLocation
@@ -121,6 +123,18 @@ Parameter Sets: AuthenticationUrl
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+```yaml
+Type: String
+Parameter Sets: AuthenticationCertificate
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -243,7 +257,7 @@ Specifies the credentials to use to connect. If no credentials are presented, a 
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.CredentialCmdletPipeBind
-Parameter Sets: (All)
+Parameter Sets: AuthenticationUrl, AuthenticationLocation
 Aliases:
 
 Required: False
@@ -263,7 +277,7 @@ To use it you also need to provide the **AuthenticationUrl** parameter.
 
 ```yaml
 Type: System.Boolean
-Parameter Sets: (All)
+Parameter Sets: AuthenticationUrl, AuthenticationLocation
 Aliases:
 
 Required: False
@@ -285,7 +299,7 @@ The default value is "default".
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.AADCrossTenantAuthenticationLocation
-Parameter Sets: AuthenticationLocation
+Parameter Sets: AuthenticationLocation, AuthenticationCertificate
 Aliases:
 
 Required: False
@@ -347,7 +361,7 @@ Used to authenticate the user using the Microsoft Authentication Library (MSAL).
 
 ```yaml
 Type: System.Boolean
-Parameter Sets: (All)
+Parameter Sets: AuthenticationUrl, AuthenticationLocation
 Aliases:
 
 Required: False
