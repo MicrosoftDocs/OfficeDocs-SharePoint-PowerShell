@@ -78,9 +78,9 @@ Example 5 overrides the tenant-level `WhoCanShareAuthenticatedGuestAllowList` wi
 ### Example 6
 
 ```powershell
-Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585 -CopilotEmbeddedChatHosts "https://localhost:3000 https://contoso.sharepoint.com https://fabrikam.com"
+Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -CopilotEmbeddedChatHosts "https://localhost:3000 https://contoso.sharepoint.com https://fabrikam.com"
 ```
-This example sets the host URLs for the container type with Id 4f0af585.
+This example sets the host URLs for the container type with Id 4f0af585-8dcc-0000-223d-661eb2c604e4.
 
 ## PARAMETERS
 
