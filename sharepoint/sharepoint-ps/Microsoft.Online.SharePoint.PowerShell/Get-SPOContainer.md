@@ -85,29 +85,29 @@ Example 1 returns the details of all the containers in the tenant.
 ### Example 2
 
 ```powershell
-Get-SPOContainer -Identity b66f5b2e
+Get-SPOContainer -Identity b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_8U
 ```
 
-Example 2 returns the detailed properties of the Container with associated Container ID b66f5b2e.
+Example 2 returns the detailed properties of the Container with associated Container ID b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_8U.
 
 ### Example 3
 
 ```powershell
-Get-SPOContainer -OwningApplicationId 423poi45 | ft
+Get-SPOContainer -OwningApplicationId 2ce03211-353e-45d7-b487-8ac6981332cf | ft
 ```
-Example 3 returns a tabular list of Containers created under the SharePoint Embedded application with the `OwningApplicationId` of  `423poi45`.
+Example 3 returns a tabular list of Containers created under the SharePoint Embedded application with the `OwningApplicationId` of  `2ce03211-353e-45d7-b487-8ac6981332cf`.
 
 ### Example 4
 
 ```powershell
-Get-SPOContainer -OwningApplicationId 423poi45 -Paged | ft
+Get-SPOContainer -OwningApplicationId 2ce03211-353e-45d7-b487-8ac6981332cf -Paged | ft
 ```
 Example 4 uses the `-Paged` command to retrieve a paging token.
 
 ### Example 5
 
 ```powershell
-Get-SPOContainer -OwningApplicationId 423poi45 -Paged -PagingToken <zacad> | ft
+Get-SPOContainer -OwningApplicationId 2ce03211-353e-45d7-b487-8ac6981332cf -Paged -PagingToken <zacad> | ft
 ```
 
 Example 5 uses the `-PagingToken` parameter along with the `-Paged` parameter to view more containers that were not displayed in Example 3.
@@ -115,7 +115,7 @@ Example 5 uses the `-PagingToken` parameter along with the `-Paged` parameter to
 ### Example 6
 
 ```powershell
-Get-SPOContainer -OwningApplicationId 423poi45 -SortByStorage Ascending
+Get-SPOContainer -OwningApplicationId 2ce03211-353e-45d7-b487-8ac6981332cf -SortByStorage Ascending
 ```
 
 Example 6 displays the containers belonging to the application, sorted in ascending order of storage.
@@ -123,7 +123,7 @@ Example 6 displays the containers belonging to the application, sorted in ascend
 ### Example 7
 
 ```powershell
-Get-SPOContainer -OwningApplicationId 423poi45 -SortByStorage Ascending -Paged
+Get-SPOContainer -OwningApplicationId 2ce03211-353e-45d7-b487-8ac6981332cf -SortByStorage Ascending -Paged
 ```
 
 Example 7 displays a paged view of the containers belonging to the application, sorted in ascending order of storage.
@@ -131,7 +131,7 @@ Example 7 displays a paged view of the containers belonging to the application, 
 ### Example 8
 
 ```powershell
-Get-SPOContainer -OwningApplicationId 423poi45-as -SortByStorage Ascending -Paged -PagingToken <zacad>
+Get-SPOContainer -OwningApplicationId 2ce03211-353e-45d7-b487-8ac6981332cf -SortByStorage Ascending -Paged -PagingToken <zacad>
 ```
 
 Example 8 displays the next list of paged view of containers belonging to the application, sorted in ascending order of storage.
@@ -139,7 +139,7 @@ Example 8 displays the next list of paged view of containers belonging to the ap
 ### Example 9
 
 ```powershell
-Get-SPOContainer -OwningApplicationId 423poi45 -ArchiveStatus RecentlyArchived | ft
+Get-SPOContainer -OwningApplicationId 2ce03211-353e-45d7-b487-8ac6981332cf -ArchiveStatus RecentlyArchived | ft
 ```
 
 Example 9 returns a tabular list of recently archived containers belonging to the SharePoint Embedded application with the OwningApplicationId of 423poi45.

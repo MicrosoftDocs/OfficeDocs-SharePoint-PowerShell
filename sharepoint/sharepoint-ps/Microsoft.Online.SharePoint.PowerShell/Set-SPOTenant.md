@@ -19,7 +19,6 @@ Sets properties on the SharePoint Online organization.
 ## SYNTAX
 
 ### None (Default)
-
 ```
 Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-ExternalServicesEnabled <Boolean>] [-NoAccessRedirectUrl <String>] [-ArchiveRedirectUrl <String>]
@@ -37,10 +36,126 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-UsePersistentCookiesForExplorerView <Boolean>] [-ReSyncTenantPrivacyProfile]
  [-BccExternalSharingInvitations <Boolean>] [-BccExternalSharingInvitationsList <String>]
  [-PublicCdnEnabled <Boolean>] [-PublicCdnAllowedFileTypes <String>]
- [-RequireAnonymousLinksExpireInDays <Int32>] [-OneDriveOrganizationSharingLinkMaxExpirationInDays <Int32>]
- [-CoreOrganizationSharingLinkMaxExpirationInDays <Int32>]
- [-OneDriveOrganizationSharingLinkRecommendedExpirationInDays <Int32>]
- [-CoreOrganizationSharingLinkRecommendedExpirationInDays <Int32>] [-SharingAllowedDomainList <String>]
+ [-RequireAnonymousLinksExpireInDays <Int32>] [-RequireOrganizationLinksExpireInDays <Int32>]
+ [-SharingAllowedDomainList <String>] [-SharingBlockedDomainList <String>]
+ [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>] [-OneDriveStorageQuota <Int64>]
+ [-OneDriveForGuestsEnabled <Boolean>] [-IPAddressEnforcement <Boolean>] [-IPAddressAllowList <String>]
+ [-IPAddressWACTokenLifetime <Int32>] [-EnableTenantRestrictionsInsights <Boolean>]
+ [-EnablePromotedFileHandlers <Boolean>] [-UseFindPeopleInPeoplePicker <Boolean>]
+ [-DefaultSharingLinkType <SharingLinkType>] [-ODBMembersCanShare <SharingState>]
+ [-ODBAccessRequests <SharingState>] [-PreventExternalUsersFromResharing <Boolean>]
+ [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-AppOnlyBypassPeoplePickerPolicies <Boolean>]
+ [-EnableDiscoverableByOrganizationForVideos <Boolean>] [-FileAnonymousLinkType <AnonymousLinkType>]
+ [-FolderAnonymousLinkType <AnonymousLinkType>] [-NotifyOwnersWhenItemsReshared <Boolean>]
+ [-NotifyOwnersWhenInvitationsAccepted <Boolean>] [-NotificationsInOneDriveForBusinessEnabled <Boolean>]
+ [-NotificationsInSharePointEnabled <Boolean>] [-SelfServiceSiteCreationDisabled <Boolean>]
+ [-SpecialCharactersStateInFileFolderNames <SpecialCharactersState>] [-OwnerAnonymousNotification <Boolean>]
+ [-CommentsOnSitePagesDisabled <Boolean>] [-CommentsOnFilesDisabled <Boolean>]
+ [-CommentsOnListItemsDisabled <Boolean>] [-ViewersCanCommentOnMediaDisabled <Boolean>]
+ [-SocialBarOnSitePagesDisabled <Boolean>] [-SiteOwnersCanAccessMissingContent <Boolean>]
+ [-OrphanedPersonalSitesRetentionPeriod <Int32>] [-PermissiveBrowserFileHandlingOverride <Boolean>]
+ [-DisallowInfectedFileDownload <Boolean>] [-DefaultLinkPermission <SharingPermissionType>]
+ [-CustomizedExternalSharingServiceUrl <String>] [-ConditionalAccessPolicyErrorHelpLink <String>]
+ [-RestrictedAccessControlforSitesErrorHelpLink <String>]
+ [-RestrictedAccessControlForOneDriveErrorHelpLink <String>]
+ [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>] [-FilePickerExternalImageSearchEnabled <Boolean>]
+ [-EmailAttestationRequired <Boolean>] [-EmailAttestationReAuthDays <Int32>]
+ [-SyncPrivacyProfileProperties <Boolean>] [-DisabledWebPartIds <Guid[]>]
+ [-DisabledAdaptiveCardExtensionIds <Guid[]>] [-EnableMinimumVersionRequirement <Boolean>]
+ [-MarkNewFilesSensitiveByDefault <SensitiveByDefaultState>] [-EnableAIPIntegration <Boolean>]
+ [-SyncAadB2BManagementPolicy <Boolean>] [-AllowCommentsTextOnEmailEnabled <Boolean>]
+ [-EnableAzureADB2BIntegration <Boolean>] [-DisableAddShortcutsToOneDrive <Boolean>]
+ [-IncludeAtAGlanceInShareEmails <Boolean>] [-DisableWorkflow2010 <Boolean>] [-EnableAutoNewsDigest <Boolean>]
+ [-StopNew2010Workflows <Boolean>] [-StopNew2013Workflows <Boolean>] [-DisableBackToClassic <Boolean>]
+ [-ExternalUserExpirationRequired <Boolean>] [-ExternalUserExpireInDays <Int32>]
+ [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>] [-AnyoneLinkTrackUsers <Boolean>]
+ [-BlockAppAccessWithAuthenticationContext <Boolean>] [-OneDriveLoopDefaultSharingLinkScope <SharingScope>]
+ [-OneDriveLoopDefaultSharingLinkRole <SharingRole>] [-OneDriveRequestFilesLinkEnabled <Boolean>]
+ [-OneDriveRequestFilesLinkExpirationInDays <Int32>] [-OneDriveSharingCapability <SharingCapabilities>]
+ [-OneDriveDefaultShareLinkScope <SharingScope>] [-OneDriveDefaultShareLinkRole <SharingRole>]
+ [-OneDriveDefaultLinkToExistingAccess <Boolean>] [-OneDriveBlockGuestsAsSiteAdmin <SharingState>]
+ [-CoreLoopDefaultSharingLinkScope <SharingScope>] [-CoreLoopDefaultSharingLinkRole <SharingRole>]
+ [-CoreSharingCapability <SharingCapabilities>] [-AllowSharingOutsideRestrictedAccessControlGroups <Boolean>]
+ [-CoreRequestFilesLinkEnabled <Boolean>] [-CoreRequestFilesLinkExpirationInDays <Int32>]
+ [-CoreDefaultShareLinkScope <SharingScope>] [-CoreDefaultShareLinkRole <SharingRole>]
+ [-CoreDefaultLinkToExistingAccess <Boolean>] [-CoreBlockGuestsAsSiteAdmin <SharingState>]
+ [-AllowAnonymousMeetingParticipantsToAccessWhiteboards <SharingState>] [-Workflows2013Enabled <Boolean>]
+ [-IsFluidEnabled <Boolean>] [-IsWBFluidEnabled <Boolean>] [-IsCollabMeetingNotesFluidEnabled <Boolean>]
+ [-IsLoopEnabled <Boolean>] [-DisableDocumentLibraryDefaultLabeling <Boolean>]
+ [-ExtendPermissionsToUnprotectedFiles <Boolean>] [-EnableSensitivityLabelForPDF <Boolean>]
+ [-EnableSensitivityLabelForOneNote <Boolean>] [-EnableSensitivityLabelForVideoFiles <Boolean>]
+ [-BlockSendLabelMismatchEmail <Boolean>] [-LabelMismatchEmailHelpLink <String>]
+ [-BlockUserInfoVisibility <String>] [-BlockUserInfoVisibilityInOneDrive <TenantBrowseUserInfoPolicyValue>]
+ [-BlockUserInfoVisibilityInSharePoint <TenantBrowseUserInfoPolicyValue>]
+ [-AllowOverrideForBlockUserInfoVisibility <Boolean>] [-DisablePersonalListCreation <Boolean>]
+ [-DisableSpacesActivation <Boolean>] [-DisableVivaConnectionsAnalytics <Boolean>]
+ [-InformationBarriersSuspension <Boolean>] [-IBImplicitGroupBased <Boolean>]
+ [-AppBypassInformationBarriers <Boolean>] [-AppAccessInformationBarriersAllowList <Guid[]>]
+ [-AllOrganizationSecurityGroupId <Guid>] [-DisableModernListTemplateIds <Guid[]>]
+ [-EnableModernListTemplateIds <Guid[]>] [-HideSyncButtonOnTeamSite <Boolean>]
+ [-AllowGuestUserShareToUsersNotInSiteCollection <Boolean>] [-StreamLaunchConfig <Int32>]
+ [-DelegateRestrictedContentDiscoverabilityManagement <Boolean>]
+ [-DelegateRestrictedAccessControlManagement <Boolean>] [-DisableOutlookPSTVersionTrimming <Boolean>]
+ [-MediaTranscription <MediaTranscriptionPolicyType>]
+ [-MediaTranscriptionAutomaticFeatures <MediaTranscriptionAutomaticFeaturesPolicyType>]
+ [-ViewInFileExplorerEnabled <Boolean>] [-AuthContextResilienceMode <SPResilienceModeType>]
+ [-ReduceTempTokenLifetimeEnabled <Boolean>] [-ReduceTempTokenLifetimeValue <Int32>]
+ [-ShowOpenInDesktopOptionForSyncedFiles <Boolean>] [-ShowPeoplePickerGroupSuggestionsForIB <Boolean>]
+ [-EnableRestrictedAccessControl <Boolean>] [-BlockDownloadFileTypePolicy <Boolean>]
+ [-BlockDownloadFileTypeIds <SPBlockDownloadFileTypeId[]>] [-ExcludedBlockDownloadGroupIds <Guid[]>]
+ [-TlsTokenBindingPolicyValue <SPOTlsTokenBindingPolicyValue>] [-RecycleBinRetentionPeriod <Int32>]
+ [-IsEnableAppAuthPopUpEnabled <Boolean>] [-IsDataAccessInCardDesignerEnabled <Boolean>]
+ [-MassDeleteNotificationDisabled <Boolean>] [-EnableAutoExpirationVersionTrim <Boolean>]
+ [-EnableMediaReactions <Boolean>] [-BusinessConnectivityServiceDisabled <Boolean>]
+ [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] [-FileTypesForVersionExpiration <String[]>]
+ [-RemoveVersionExpirationFileTypeOverride <String[]>] [-AllowSensitivityLabelOnRecords <Boolean>]
+ [-DelayDenyAddAndCustomizePagesEnforcement <Boolean>]
+ [-DelayDenyAddAndCustomizePagesEnforcementOnClassicPublishingSites <Boolean>]
+ [-AllowClassicPublishingSiteCreation <Boolean>] [-WhoCanShareAnonymousAllowList <Guid[]>]
+ [-WhoCanShareAuthenticatedGuestAllowList <Guid[]>]
+ [-ResyncContentSecurityPolicyConfigurationEntries <Boolean>] [-ContentSecurityPolicyEnforcement <Boolean>]
+ [-DocumentUnderstandingModelScope <SyntexFeatureScopeValue>]
+ [-DocumentUnderstandingModelSelectedSitesList <String[]>]
+ [-DocumentUnderstandingModelSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-AIBuilderModelScope <SyntexFeatureScopeValue>] [-AIBuilderModelSelectedSitesList <String[]>]
+ [-AIBuilderModelSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-AIBuilderModelSelectedSitesIncludesContentCenters <Boolean>] [-PrebuiltModelScope <SyntexFeatureScopeValue>]
+ [-PrebuiltModelSelectedSitesList <String[]>]
+ [-PrebuiltModelSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-DocumentTranslationScope <SyntexFeatureScopeValue>] [-DocumentTranslationSelectedSitesList <String[]>]
+ [-DocumentTranslationSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-AutofillColumnsScope <SyntexFeatureScopeValue>] [-AutofillColumnsSelectedSitesList <String[]>]
+ [-AutofillColumnsSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-KnowledgeAgentScope <KnowledgeAgentFeatureScopeValue>] [-KnowledgeAgentSelectedSitesList <String[]>]
+ [-KnowledgeAgentSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-OpticalCharacterRecognitionScope <SyntexFeatureScopeValue>]
+ [-OpticalCharacterRecognitionSelectedSitesList <String[]>]
+ [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-DefaultContentCenterSite <String>]
+ [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
+ [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>] [<CommonParameters>]
+```
+
+### ParameterSetContentTypeSyncSiteTemplatesList
+```
+Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
+ [-ExternalServicesEnabled <Boolean>] [-NoAccessRedirectUrl <String>] [-ArchiveRedirectUrl <String>]
+ [-SharingCapability <SharingCapabilities>] [-DisplayStartASiteOption <Boolean>] [-StartASiteFormUrl <String>]
+ [-ShowEveryoneClaim <Boolean>] [-ShowAllUsersClaim <Boolean>]
+ [-ShowEveryoneExceptExternalUsersClaim <Boolean>]
+ [-AllowEveryoneExceptExternalUsersClaimInPrivateSite <Boolean>] [-SearchResolveExactEmailOrUPN <Boolean>]
+ [-OfficeClientADALDisabled <Boolean>] [-LegacyAuthProtocolsEnabled <Boolean>]
+ [-LegacyBrowserAuthProtocolsEnabled <Boolean>] [-AllowLegacyBrowserAuthProtocolsEnabledSetting <Boolean>]
+ [-AllowLegacyAuthProtocolsEnabledSetting <Boolean>] [-DisableCustomAppAuthentication <Boolean>]
+ [-IsSharePointAddInsDisabled <Boolean>] [-IsSharePointAddInsBlocked <Boolean>]
+ [-DisableSharePointStoreAccess <Boolean>] [-SiteOwnerManageLegacyServicePrincipalEnabled <Boolean>]
+ [-RequireAcceptingAccountMatchInvitedAccount <Boolean>] [-ProvisionSharedWithEveryoneFolder <Boolean>]
+ [-SignInAccelerationDomain <String>] [-EnableGuestSignInAcceleration <Boolean>]
+ [-UsePersistentCookiesForExplorerView <Boolean>] -ContentTypeSyncSiteTemplatesList <String[]>
+ [-ExcludeSiteTemplate] [-ReSyncTenantPrivacyProfile] [-BccExternalSharingInvitations <Boolean>]
+ [-BccExternalSharingInvitationsList <String>] [-PublicCdnEnabled <Boolean>]
+ [-PublicCdnAllowedFileTypes <String>] [-RequireAnonymousLinksExpireInDays <Int32>]
+ [-RequireOrganizationLinksExpireInDays <Int32>] [-SharingAllowedDomainList <String>]
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-OneDriveStorageQuota <Int64>] [-OneDriveForGuestsEnabled <Boolean>] [-IPAddressEnforcement <Boolean>]
  [-IPAddressAllowList <String>] [-IPAddressWACTokenLifetime <Int32>]
@@ -137,11 +252,10 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
- [-RestrictResourceAccountAccess <Boolean>] [<CommonParameters>]
+ [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>] [<CommonParameters>]
 ```
 
-### ParameterSetContentTypeSyncSiteTemplatesList
-
+### ParamSetMultipleSites
 ```
 Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-ExternalServicesEnabled <Boolean>] [-NoAccessRedirectUrl <String>] [-ArchiveRedirectUrl <String>]
@@ -150,15 +264,16 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-ShowEveryoneExceptExternalUsersClaim <Boolean>]
  [-AllowEveryoneExceptExternalUsersClaimInPrivateSite <Boolean>] [-SearchResolveExactEmailOrUPN <Boolean>]
  [-OfficeClientADALDisabled <Boolean>] [-LegacyAuthProtocolsEnabled <Boolean>]
- [-LegacyBrowserAuthProtocolsEnabled <Boolean>] [-DisableCustomAppAuthentication <Boolean>]
+ [-LegacyBrowserAuthProtocolsEnabled <Boolean>] [-AllowLegacyBrowserAuthProtocolsEnabledSetting <Boolean>]
+ [-AllowLegacyAuthProtocolsEnabledSetting <Boolean>] [-DisableCustomAppAuthentication <Boolean>]
  [-IsSharePointAddInsDisabled <Boolean>] [-IsSharePointAddInsBlocked <Boolean>]
  [-DisableSharePointStoreAccess <Boolean>] [-SiteOwnerManageLegacyServicePrincipalEnabled <Boolean>]
  [-RequireAcceptingAccountMatchInvitedAccount <Boolean>] [-ProvisionSharedWithEveryoneFolder <Boolean>]
  [-SignInAccelerationDomain <String>] [-EnableGuestSignInAcceleration <Boolean>]
- [-UsePersistentCookiesForExplorerView <Boolean>] -ContentTypeSyncSiteTemplatesList <String[]>
- [-ExcludeSiteTemplate] [-ReSyncTenantPrivacyProfile] [-BccExternalSharingInvitations <Boolean>]
- [-BccExternalSharingInvitationsList <String>] [-PublicCdnEnabled <Boolean>]
- [-PublicCdnAllowedFileTypes <String>] [-RequireAnonymousLinksExpireInDays <Int32>]
+ [-UsePersistentCookiesForExplorerView <Boolean>] [-ReSyncTenantPrivacyProfile]
+ [-BccExternalSharingInvitations <Boolean>] [-BccExternalSharingInvitationsList <String>]
+ [-PublicCdnEnabled <Boolean>] [-PublicCdnAllowedFileTypes <String>]
+ [-RequireAnonymousLinksExpireInDays <Int32>] [-RequireOrganizationLinksExpireInDays <Int32>]
  [-SharingAllowedDomainList <String>] [-SharingBlockedDomainList <String>]
  [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>] [-OneDriveStorageQuota <Int64>]
  [-OneDriveForGuestsEnabled <Boolean>] [-IPAddressEnforcement <Boolean>] [-IPAddressAllowList <String>]
@@ -174,126 +289,12 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-SpecialCharactersStateInFileFolderNames <SpecialCharactersState>] [-OwnerAnonymousNotification <Boolean>]
  [-CommentsOnSitePagesDisabled <Boolean>] [-CommentsOnFilesDisabled <Boolean>]
  [-CommentsOnListItemsDisabled <Boolean>] [-ViewersCanCommentOnMediaDisabled <Boolean>]
- [-SocialBarOnSitePagesDisabled <Boolean>] [-OrphanedPersonalSitesRetentionPeriod <Int32>]
- [-PermissiveBrowserFileHandlingOverride <Boolean>] [-DisallowInfectedFileDownload <Boolean>]
- [-DefaultLinkPermission <SharingPermissionType>] [-CustomizedExternalSharingServiceUrl <String>]
- [-ConditionalAccessPolicyErrorHelpLink <String>] [-RestrictedAccessControlforSitesErrorHelpLink <String>]
+ [-SocialBarOnSitePagesDisabled <Boolean>] [-SiteOwnersCanAccessMissingContent <Boolean>]
+ [-OrphanedPersonalSitesRetentionPeriod <Int32>] [-PermissiveBrowserFileHandlingOverride <Boolean>]
+ [-DisallowInfectedFileDownload <Boolean>] [-DefaultLinkPermission <SharingPermissionType>]
+ [-CustomizedExternalSharingServiceUrl <String>] [-ConditionalAccessPolicyErrorHelpLink <String>]
+ [-RestrictedAccessControlforSitesErrorHelpLink <String>] [-SensitivityLabel <String>]
  [-RestrictedAccessControlForOneDriveErrorHelpLink <String>]
- [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>] [-FilePickerExternalImageSearchEnabled <Boolean>]
- [-EmailAttestationRequired <Boolean>] [-EmailAttestationReAuthDays <Int32>]
- [-SyncPrivacyProfileProperties <Boolean>] [-DisabledWebPartIds <Guid[]>]
- [-DisabledAdaptiveCardExtensionIds <Guid[]>] [-EnableMinimumVersionRequirement <Boolean>]
- [-MarkNewFilesSensitiveByDefault <SensitiveByDefaultState>] [-EnableAIPIntegration <Boolean>]
- [-SyncAadB2BManagementPolicy <Boolean>] [-AllowCommentsTextOnEmailEnabled <Boolean>]
- [-EnableAzureADB2BIntegration <Boolean>] [-DisableAddShortcutsToOneDrive <Boolean>]
- [-IncludeAtAGlanceInShareEmails <Boolean>] [-DisableWorkflow2010 <Boolean>] [-EnableAutoNewsDigest <Boolean>]
- [-StopNew2010Workflows <Boolean>] [-StopNew2013Workflows <Boolean>] [-DisableBackToClassic <Boolean>]
- [-ExternalUserExpirationRequired <Boolean>] [-ExternalUserExpireInDays <Int32>]
- [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>] [-AnyoneLinkTrackUsers <Boolean>]
- [-BlockAppAccessWithAuthenticationContext <Boolean>] [-OneDriveLoopDefaultSharingLinkScope <SharingScope>]
- [-OneDriveLoopDefaultSharingLinkRole <SharingRole>] [-OneDriveRequestFilesLinkEnabled <Boolean>]
- [-OneDriveRequestFilesLinkExpirationInDays <Int32>] [-OneDriveSharingCapability <SharingCapabilities>]
- [-OneDriveDefaultShareLinkScope <SharingScope>] [-OneDriveDefaultShareLinkRole <SharingRole>]
- [-OneDriveDefaultLinkToExistingAccess <Boolean>] [-OneDriveBlockGuestsAsSiteAdmin <SharingState>]
- [-CoreLoopDefaultSharingLinkScope <SharingScope>] [-CoreLoopDefaultSharingLinkRole <SharingRole>]
- [-CoreSharingCapability <SharingCapabilities>] [-AllowSharingOutsideRestrictedAccessControlGroups <Boolean>]
- [-CoreRequestFilesLinkEnabled <Boolean>] [-CoreRequestFilesLinkExpirationInDays <Int32>]
- [-CoreDefaultShareLinkScope <SharingScope>] [-CoreDefaultShareLinkRole <SharingRole>]
- [-CoreDefaultLinkToExistingAccess <Boolean>] [-CoreBlockGuestsAsSiteAdmin <SharingState>]
- [-AllowAnonymousMeetingParticipantsToAccessWhiteboards <SharingState>] [-Workflows2013Enabled <Boolean>]
- [-IsFluidEnabled <Boolean>] [-IsWBFluidEnabled <Boolean>] [-IsCollabMeetingNotesFluidEnabled <Boolean>]
- [-IsLoopEnabled <Boolean>] [-DisableDocumentLibraryDefaultLabeling <Boolean>]
- [-ExtendPermissionsToUnprotectedFiles <Boolean>] [-EnableSensitivityLabelForPDF <Boolean>]
- [-BlockSendLabelMismatchEmail <Boolean>] [-LabelMismatchEmailHelpLink <String>]
- [-BlockUserInfoVisibility <String>] [-BlockUserInfoVisibilityInOneDrive <TenantBrowseUserInfoPolicyValue>]
- [-BlockUserInfoVisibilityInSharePoint <TenantBrowseUserInfoPolicyValue>]
- [-AllowOverrideForBlockUserInfoVisibility <Boolean>] [-DisablePersonalListCreation <Boolean>]
- [-DisableSpacesActivation <Boolean>] [-DisableVivaConnectionsAnalytics <Boolean>]
- [-InformationBarriersSuspension <Boolean>] [-IBImplicitGroupBased <Boolean>]
- [-AppBypassInformationBarriers <Boolean>] [-AppAccessInformationBarriersAllowList <Guid[]>]
- [-AllOrganizationSecurityGroupId <Guid>] [-DisableModernListTemplateIds <Guid[]>]
- [-EnableModernListTemplateIds <Guid[]>] [-HideSyncButtonOnTeamSite <Boolean>]
- [-AllowGuestUserShareToUsersNotInSiteCollection <Boolean>] [-StreamLaunchConfig <Int32>]
- [-DelegateRestrictedContentDiscoverabilityManagement <Boolean>]
- [-DelegateRestrictedAccessControlManagement <Boolean>] [-DisableOutlookPSTVersionTrimming <Boolean>]
- [-MediaTranscription <MediaTranscriptionPolicyType>]
- [-MediaTranscriptionAutomaticFeatures <MediaTranscriptionAutomaticFeaturesPolicyType>]
- [-ViewInFileExplorerEnabled <Boolean>] [-AuthContextResilienceMode <SPResilienceModeType>]
- [-ReduceTempTokenLifetimeEnabled <Boolean>] [-ReduceTempTokenLifetimeValue <Int32>]
- [-ShowOpenInDesktopOptionForSyncedFiles <Boolean>] [-ShowPeoplePickerGroupSuggestionsForIB <Boolean>]
- [-EnableRestrictedAccessControl <Boolean>] [-BlockDownloadFileTypePolicy <Boolean>]
- [-BlockDownloadFileTypeIds <SPBlockDownloadFileTypeId[]>] [-ExcludedBlockDownloadGroupIds <Guid[]>]
- [-TlsTokenBindingPolicyValue <SPOTlsTokenBindingPolicyValue>] [-RecycleBinRetentionPeriod <Int32>]
- [-IsEnableAppAuthPopUpEnabled <Boolean>] [-IsDataAccessInCardDesignerEnabled <Boolean>]
- [-MassDeleteNotificationDisabled <Boolean>] [-EnableAutoExpirationVersionTrim <Boolean>]
- [-EnableMediaReactions <Boolean>] [-BusinessConnectivityServiceDisabled <Boolean>]
- [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] [-AllowSensitivityLabelOnRecords <Boolean>]
- [-DelayDenyAddAndCustomizePagesEnforcement <Boolean>]
- [-DelayDenyAddAndCustomizePagesEnforcementOnClassicPublishingSites <Boolean>]
- [-AllowClassicPublishingSiteCreation <Boolean>] [-WhoCanShareAnonymousAllowList <Guid[]>]
- [-WhoCanShareAuthenticatedGuestAllowList <Guid[]>]
- [-ResyncContentSecurityPolicyConfigurationEntries <Boolean>] [-ContentSecurityPolicyEnforcement <Boolean>]
- [-DocumentUnderstandingModelScope <SyntexFeatureScopeValue>]
- [-DocumentUnderstandingModelSelectedSitesList <String[]>]
- [-DocumentUnderstandingModelSelectedSitesListOperation <SelectedSitesListOperations>]
- [-AIBuilderModelScope <SyntexFeatureScopeValue>] [-AIBuilderModelSelectedSitesList <String[]>]
- [-AIBuilderModelSelectedSitesListOperation <SelectedSitesListOperations>]
- [-AIBuilderModelSelectedSitesIncludesContentCenters <Boolean>] [-PrebuiltModelScope <SyntexFeatureScopeValue>]
- [-PrebuiltModelSelectedSitesList <String[]>]
- [-PrebuiltModelSelectedSitesListOperation <SelectedSitesListOperations>]
- [-DocumentTranslationScope <SyntexFeatureScopeValue>] [-DocumentTranslationSelectedSitesList <String[]>]
- [-DocumentTranslationSelectedSitesListOperation <SelectedSitesListOperations>]
- [-AutofillColumnsScope <SyntexFeatureScopeValue>] [-AutofillColumnsSelectedSitesList <String[]>]
- [-AutofillColumnsSelectedSitesListOperation <SelectedSitesListOperations>]
- [-OpticalCharacterRecognitionScope <SyntexFeatureScopeValue>]
- [-OpticalCharacterRecognitionSelectedSitesList <String[]>]
- [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
- [-DefaultContentCenterSite <String>]
- [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
- [-RestrictResourceAccountAccess <Boolean>] [-EnableSensitivityLabelForOneNote <Boolean>]
- [-EnableSensitivityLabelForVideoFiles <Boolean>] [-SiteOwnersCanAccessMissingContent <Boolean>]
- [<CommonParameters>]
-```
-
-### ParamSetMultipleSites
-
-```
-Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
- [-ExternalServicesEnabled <Boolean>] [-NoAccessRedirectUrl <String>] [-ArchiveRedirectUrl <String>]
- [-SharingCapability <SharingCapabilities>] [-DisplayStartASiteOption <Boolean>] [-StartASiteFormUrl <String>]
- [-ShowEveryoneClaim <Boolean>] [-ShowAllUsersClaim <Boolean>]
- [-ShowEveryoneExceptExternalUsersClaim <Boolean>]
- [-AllowEveryoneExceptExternalUsersClaimInPrivateSite <Boolean>] [-SearchResolveExactEmailOrUPN <Boolean>]
- [-OfficeClientADALDisabled <Boolean>] [-LegacyAuthProtocolsEnabled <Boolean>]
- [-LegacyBrowserAuthProtocolsEnabled <Boolean>] [-DisableCustomAppAuthentication <Boolean>]
- [-IsSharePointAddInsDisabled <Boolean>] [-IsSharePointAddInsBlocked <Boolean>]
- [-DisableSharePointStoreAccess <Boolean>] [-SiteOwnerManageLegacyServicePrincipalEnabled <Boolean>]
- [-RequireAcceptingAccountMatchInvitedAccount <Boolean>] [-ProvisionSharedWithEveryoneFolder <Boolean>]
- [-SignInAccelerationDomain <String>] [-EnableGuestSignInAcceleration <Boolean>]
- [-UsePersistentCookiesForExplorerView <Boolean>] [-ReSyncTenantPrivacyProfile]
- [-BccExternalSharingInvitations <Boolean>] [-BccExternalSharingInvitationsList <String>]
- [-PublicCdnEnabled <Boolean>] [-PublicCdnAllowedFileTypes <String>]
- [-RequireAnonymousLinksExpireInDays <Int32>] [-SharingAllowedDomainList <String>]
- [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
- [-OneDriveStorageQuota <Int64>] [-OneDriveForGuestsEnabled <Boolean>] [-IPAddressEnforcement <Boolean>]
- [-IPAddressAllowList <String>] [-IPAddressWACTokenLifetime <Int32>]
- [-EnableTenantRestrictionsInsights <Boolean>] [-EnablePromotedFileHandlers <Boolean>]
- [-UseFindPeopleInPeoplePicker <Boolean>] [-DefaultSharingLinkType <SharingLinkType>]
- [-ODBMembersCanShare <SharingState>] [-ODBAccessRequests <SharingState>]
- [-PreventExternalUsersFromResharing <Boolean>] [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>]
- [-AppOnlyBypassPeoplePickerPolicies <Boolean>] [-EnableDiscoverableByOrganizationForVideos <Boolean>]
- [-FileAnonymousLinkType <AnonymousLinkType>] [-FolderAnonymousLinkType <AnonymousLinkType>]
- [-NotifyOwnersWhenItemsReshared <Boolean>] [-NotifyOwnersWhenInvitationsAccepted <Boolean>]
- [-NotificationsInOneDriveForBusinessEnabled <Boolean>] [-NotificationsInSharePointEnabled <Boolean>]
- [-SelfServiceSiteCreationDisabled <Boolean>]
- [-SpecialCharactersStateInFileFolderNames <SpecialCharactersState>] [-OwnerAnonymousNotification <Boolean>]
- [-CommentsOnSitePagesDisabled <Boolean>] [-CommentsOnFilesDisabled <Boolean>]
- [-CommentsOnListItemsDisabled <Boolean>] [-ViewersCanCommentOnMediaDisabled <Boolean>]
- [-SocialBarOnSitePagesDisabled <Boolean>] [-OrphanedPersonalSitesRetentionPeriod <Int32>]
- [-PermissiveBrowserFileHandlingOverride <Boolean>] [-DisallowInfectedFileDownload <Boolean>]
- [-DefaultLinkPermission <SharingPermissionType>] [-CustomizedExternalSharingServiceUrl <String>]
- [-ConditionalAccessPolicyErrorHelpLink <String>] [-RestrictedAccessControlforSitesErrorHelpLink <String>]
- [-SensitivityLabel <String>] [-RestrictedAccessControlForOneDriveErrorHelpLink <String>]
  [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>] [-AllowDownloadingNonWebViewableFiles <Boolean>]
  [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>]
  [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>] [-FilePickerExternalImageSearchEnabled <Boolean>]
@@ -305,7 +306,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-EnableAzureADB2BIntegration <Boolean>] [-DisableAddShortcutsToOneDrive <Boolean>]
  [-IncludeAtAGlanceInShareEmails <Boolean>] [-DisableWorkflow2010 <Boolean>] [-EnableAutoNewsDigest <Boolean>]
  [-StopNew2010Workflows <Boolean>] [-StopNew2013Workflows <Boolean>] [-DisableBackToClassic <Boolean>]
- [-Sites <SpoSitePipeBind[]>] [-ExternalUserExpirationRequired <Boolean>] [-ExternalUserExpireInDays <Int32>]
+ [[-Sites] <SpoSitePipeBind[]>] [-ExternalUserExpirationRequired <Boolean>] [-ExternalUserExpireInDays <Int32>]
  [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>] [-AnyoneLinkTrackUsers <Boolean>]
  [-BlockAppAccessWithAuthenticationContext <Boolean>] [-OneDriveLoopDefaultSharingLinkScope <SharingScope>]
  [-OneDriveLoopDefaultSharingLinkRole <SharingRole>] [-OneDriveRequestFilesLinkEnabled <Boolean>]
@@ -321,6 +322,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-IsFluidEnabled <Boolean>] [-IsWBFluidEnabled <Boolean>] [-IsCollabMeetingNotesFluidEnabled <Boolean>]
  [-IsLoopEnabled <Boolean>] [-DisableDocumentLibraryDefaultLabeling <Boolean>]
  [-ExtendPermissionsToUnprotectedFiles <Boolean>] [-EnableSensitivityLabelForPDF <Boolean>]
+ [-EnableSensitivityLabelForOneNote <Boolean>] [-EnableSensitivityLabelForVideoFiles <Boolean>]
  [-BlockSendLabelMismatchEmail <Boolean>] [-LabelMismatchEmailHelpLink <String>]
  [-BlockUserInfoVisibility <String>] [-BlockUserInfoVisibilityInOneDrive <TenantBrowseUserInfoPolicyValue>]
  [-BlockUserInfoVisibilityInSharePoint <TenantBrowseUserInfoPolicyValue>]
@@ -344,9 +346,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-IsEnableAppAuthPopUpEnabled <Boolean>] [-IsDataAccessInCardDesignerEnabled <Boolean>]
  [-MassDeleteNotificationDisabled <Boolean>] [-EnableAutoExpirationVersionTrim <Boolean>]
  [-EnableMediaReactions <Boolean>] [-BusinessConnectivityServiceDisabled <Boolean>]
- [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] 
- [-FileTypesForVersionExpiration <String[]>] [-RemoveVersionExpirationFileTypeOverride <String[]>]
- [-AllowSensitivityLabelOnRecords <Boolean>]
+ [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] [-FileTypesForVersionExpiration <String[]>]
+ [-RemoveVersionExpirationFileTypeOverride <String[]>] [-AllowSensitivityLabelOnRecords <Boolean>]
  [-DelayDenyAddAndCustomizePagesEnforcement <Boolean>]
  [-DelayDenyAddAndCustomizePagesEnforcementOnClassicPublishingSites <Boolean>]
  [-AllowClassicPublishingSiteCreation <Boolean>] [-WhoCanShareAnonymousAllowList <Guid[]>]
@@ -364,18 +365,17 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-DocumentTranslationSelectedSitesListOperation <SelectedSitesListOperations>]
  [-AutofillColumnsScope <SyntexFeatureScopeValue>] [-AutofillColumnsSelectedSitesList <String[]>]
  [-AutofillColumnsSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-KnowledgeAgentScope <KnowledgeAgentFeatureScopeValue>] [-KnowledgeAgentSelectedSitesList <String[]>]
+ [-KnowledgeAgentSelectedSitesListOperation <SelectedSitesListOperations>]
  [-OpticalCharacterRecognitionScope <SyntexFeatureScopeValue>]
  [-OpticalCharacterRecognitionSelectedSitesList <String[]>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
- [-RestrictResourceAccountAccess <Boolean>] [-EnableSensitivityLabelForOneNote <Boolean>]
- [-EnableSensitivityLabelForVideoFiles <Boolean>] [-SiteOwnersCanAccessMissingContent <Boolean>]
- [<CommonParameters>]
+ [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>] [<CommonParameters>]
 ```
 
 ### InformationBarrier
-
 ```
 Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-ExternalServicesEnabled <Boolean>] [-NoAccessRedirectUrl <String>] [-ArchiveRedirectUrl <String>]
@@ -384,7 +384,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-ShowEveryoneExceptExternalUsersClaim <Boolean>]
  [-AllowEveryoneExceptExternalUsersClaimInPrivateSite <Boolean>] [-SearchResolveExactEmailOrUPN <Boolean>]
  [-OfficeClientADALDisabled <Boolean>] [-LegacyAuthProtocolsEnabled <Boolean>]
- [-LegacyBrowserAuthProtocolsEnabled <Boolean>] [-DisableCustomAppAuthentication <Boolean>]
+ [-LegacyBrowserAuthProtocolsEnabled <Boolean>] [-AllowLegacyBrowserAuthProtocolsEnabledSetting <Boolean>]
+ [-AllowLegacyAuthProtocolsEnabledSetting <Boolean>] [-DisableCustomAppAuthentication <Boolean>]
  [-IsSharePointAddInsDisabled <Boolean>] [-IsSharePointAddInsBlocked <Boolean>]
  [-DisableSharePointStoreAccess <Boolean>] [-SiteOwnerManageLegacyServicePrincipalEnabled <Boolean>]
  [-RequireAcceptingAccountMatchInvitedAccount <Boolean>] [-ProvisionSharedWithEveryoneFolder <Boolean>]
@@ -392,26 +393,27 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-UsePersistentCookiesForExplorerView <Boolean>] [-ReSyncTenantPrivacyProfile]
  [-BccExternalSharingInvitations <Boolean>] [-BccExternalSharingInvitationsList <String>]
  [-PublicCdnEnabled <Boolean>] [-PublicCdnAllowedFileTypes <String>]
- [-RequireAnonymousLinksExpireInDays <Int32>] [-SharingAllowedDomainList <String>]
- [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
- [-OneDriveStorageQuota <Int64>] [-OneDriveForGuestsEnabled <Boolean>] [-IPAddressEnforcement <Boolean>]
- [-IPAddressAllowList <String>] [-IPAddressWACTokenLifetime <Int32>]
- [-EnableTenantRestrictionsInsights <Boolean>] [-EnablePromotedFileHandlers <Boolean>]
- [-UseFindPeopleInPeoplePicker <Boolean>] [-DefaultSharingLinkType <SharingLinkType>]
- [-ODBMembersCanShare <SharingState>] [-ODBAccessRequests <SharingState>]
- [-PreventExternalUsersFromResharing <Boolean>] [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>]
- [-AppOnlyBypassPeoplePickerPolicies <Boolean>] [-EnableDiscoverableByOrganizationForVideos <Boolean>]
- [-FileAnonymousLinkType <AnonymousLinkType>] [-FolderAnonymousLinkType <AnonymousLinkType>]
- [-NotifyOwnersWhenItemsReshared <Boolean>] [-NotifyOwnersWhenInvitationsAccepted <Boolean>]
- [-NotificationsInOneDriveForBusinessEnabled <Boolean>] [-NotificationsInSharePointEnabled <Boolean>]
- [-SelfServiceSiteCreationDisabled <Boolean>]
+ [-RequireAnonymousLinksExpireInDays <Int32>] [-RequireOrganizationLinksExpireInDays <Int32>]
+ [-SharingAllowedDomainList <String>] [-SharingBlockedDomainList <String>]
+ [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>] [-OneDriveStorageQuota <Int64>]
+ [-OneDriveForGuestsEnabled <Boolean>] [-IPAddressEnforcement <Boolean>] [-IPAddressAllowList <String>]
+ [-IPAddressWACTokenLifetime <Int32>] [-EnableTenantRestrictionsInsights <Boolean>]
+ [-EnablePromotedFileHandlers <Boolean>] [-UseFindPeopleInPeoplePicker <Boolean>]
+ [-DefaultSharingLinkType <SharingLinkType>] [-ODBMembersCanShare <SharingState>]
+ [-ODBAccessRequests <SharingState>] [-PreventExternalUsersFromResharing <Boolean>]
+ [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-AppOnlyBypassPeoplePickerPolicies <Boolean>]
+ [-EnableDiscoverableByOrganizationForVideos <Boolean>] [-FileAnonymousLinkType <AnonymousLinkType>]
+ [-FolderAnonymousLinkType <AnonymousLinkType>] [-NotifyOwnersWhenItemsReshared <Boolean>]
+ [-NotifyOwnersWhenInvitationsAccepted <Boolean>] [-NotificationsInOneDriveForBusinessEnabled <Boolean>]
+ [-NotificationsInSharePointEnabled <Boolean>] [-SelfServiceSiteCreationDisabled <Boolean>]
  [-SpecialCharactersStateInFileFolderNames <SpecialCharactersState>] [-OwnerAnonymousNotification <Boolean>]
  [-CommentsOnSitePagesDisabled <Boolean>] [-CommentsOnFilesDisabled <Boolean>]
  [-CommentsOnListItemsDisabled <Boolean>] [-ViewersCanCommentOnMediaDisabled <Boolean>]
- [-SocialBarOnSitePagesDisabled <Boolean>] [-OrphanedPersonalSitesRetentionPeriod <Int32>]
- [-PermissiveBrowserFileHandlingOverride <Boolean>] [-DisallowInfectedFileDownload <Boolean>]
- [-DefaultLinkPermission <SharingPermissionType>] [-CustomizedExternalSharingServiceUrl <String>]
- [-ConditionalAccessPolicyErrorHelpLink <String>] [-RestrictedAccessControlforSitesErrorHelpLink <String>]
+ [-SocialBarOnSitePagesDisabled <Boolean>] [-SiteOwnersCanAccessMissingContent <Boolean>]
+ [-OrphanedPersonalSitesRetentionPeriod <Int32>] [-PermissiveBrowserFileHandlingOverride <Boolean>]
+ [-DisallowInfectedFileDownload <Boolean>] [-DefaultLinkPermission <SharingPermissionType>]
+ [-CustomizedExternalSharingServiceUrl <String>] [-ConditionalAccessPolicyErrorHelpLink <String>]
+ [-RestrictedAccessControlforSitesErrorHelpLink <String>]
  [-RestrictedAccessControlForOneDriveErrorHelpLink <String>]
  [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>] [-FilePickerExternalImageSearchEnabled <Boolean>]
  [-EmailAttestationRequired <Boolean>] [-EmailAttestationReAuthDays <Int32>]
@@ -438,6 +440,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-IsFluidEnabled <Boolean>] [-IsWBFluidEnabled <Boolean>] [-IsCollabMeetingNotesFluidEnabled <Boolean>]
  [-IsLoopEnabled <Boolean>] [-DisableDocumentLibraryDefaultLabeling <Boolean>]
  [-ExtendPermissionsToUnprotectedFiles <Boolean>] [-EnableSensitivityLabelForPDF <Boolean>]
+ [-EnableSensitivityLabelForOneNote <Boolean>] [-EnableSensitivityLabelForVideoFiles <Boolean>]
  [-BlockSendLabelMismatchEmail <Boolean>] [-LabelMismatchEmailHelpLink <String>]
  [-BlockUserInfoVisibility <String>] [-BlockUserInfoVisibilityInOneDrive <TenantBrowseUserInfoPolicyValue>]
  [-BlockUserInfoVisibilityInSharePoint <TenantBrowseUserInfoPolicyValue>]
@@ -461,9 +464,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-IsEnableAppAuthPopUpEnabled <Boolean>] [-IsDataAccessInCardDesignerEnabled <Boolean>]
  [-MassDeleteNotificationDisabled <Boolean>] [-EnableAutoExpirationVersionTrim <Boolean>]
  [-EnableMediaReactions <Boolean>] [-BusinessConnectivityServiceDisabled <Boolean>]
- [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] 
- [-FileTypesForVersionExpiration <String[]>] [-RemoveVersionExpirationFileTypeOverride <String[]>]
- [-AllowSensitivityLabelOnRecords <Boolean>]
+ [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] [-FileTypesForVersionExpiration <String[]>]
+ [-RemoveVersionExpirationFileTypeOverride <String[]>] [-AllowSensitivityLabelOnRecords <Boolean>]
  [-DelayDenyAddAndCustomizePagesEnforcement <Boolean>]
  [-DelayDenyAddAndCustomizePagesEnforcementOnClassicPublishingSites <Boolean>]
  [-AllowClassicPublishingSiteCreation <Boolean>] [-WhoCanShareAnonymousAllowList <Guid[]>]
@@ -481,14 +483,133 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-DocumentTranslationSelectedSitesListOperation <SelectedSitesListOperations>]
  [-AutofillColumnsScope <SyntexFeatureScopeValue>] [-AutofillColumnsSelectedSitesList <String[]>]
  [-AutofillColumnsSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-KnowledgeAgentScope <KnowledgeAgentFeatureScopeValue>] [-KnowledgeAgentSelectedSitesList <String[]>]
+ [-KnowledgeAgentSelectedSitesListOperation <SelectedSitesListOperations>]
  [-OpticalCharacterRecognitionScope <SyntexFeatureScopeValue>]
  [-OpticalCharacterRecognitionSelectedSitesList <String[]>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
- [-RestrictResourceAccountAccess <Boolean>] [-EnableSensitivityLabelForOneNote <Boolean>]
- [-EnableSensitivityLabelForVideoFiles <Boolean>] [-SiteOwnersCanAccessMissingContent <Boolean>]
- [<CommonParameters>]
+ [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>] [<CommonParameters>]
+```
+
+### ParameterSetNameRestrictExternalSharing
+```
+Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
+ [-ExternalServicesEnabled <Boolean>] [-NoAccessRedirectUrl <String>] [-ArchiveRedirectUrl <String>]
+ [-SharingCapability <SharingCapabilities>] [-DisplayStartASiteOption <Boolean>] [-StartASiteFormUrl <String>]
+ [-ShowEveryoneClaim <Boolean>] [-ShowAllUsersClaim <Boolean>]
+ [-ShowEveryoneExceptExternalUsersClaim <Boolean>]
+ [-AllowEveryoneExceptExternalUsersClaimInPrivateSite <Boolean>] [-SearchResolveExactEmailOrUPN <Boolean>]
+ [-OfficeClientADALDisabled <Boolean>] [-LegacyAuthProtocolsEnabled <Boolean>]
+ [-LegacyBrowserAuthProtocolsEnabled <Boolean>] [-AllowLegacyBrowserAuthProtocolsEnabledSetting <Boolean>]
+ [-AllowLegacyAuthProtocolsEnabledSetting <Boolean>] [-DisableCustomAppAuthentication <Boolean>]
+ [-IsSharePointAddInsDisabled <Boolean>] [-IsSharePointAddInsBlocked <Boolean>]
+ [-DisableSharePointStoreAccess <Boolean>] [-SiteOwnerManageLegacyServicePrincipalEnabled <Boolean>]
+ [-RequireAcceptingAccountMatchInvitedAccount <Boolean>] [-ProvisionSharedWithEveryoneFolder <Boolean>]
+ [-SignInAccelerationDomain <String>] [-EnableGuestSignInAcceleration <Boolean>]
+ [-UsePersistentCookiesForExplorerView <Boolean>] [-ReSyncTenantPrivacyProfile]
+ [-BccExternalSharingInvitations <Boolean>] [-BccExternalSharingInvitationsList <String>]
+ [-PublicCdnEnabled <Boolean>] [-PublicCdnAllowedFileTypes <String>]
+ [-RequireAnonymousLinksExpireInDays <Int32>] [-RequireOrganizationLinksExpireInDays <Int32>]
+ [-SharingAllowedDomainList <String>] [-SharingBlockedDomainList <String>]
+ [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>] [-OneDriveStorageQuota <Int64>]
+ [-OneDriveForGuestsEnabled <Boolean>] [-IPAddressEnforcement <Boolean>] [-IPAddressAllowList <String>]
+ [-IPAddressWACTokenLifetime <Int32>] [-EnableTenantRestrictionsInsights <Boolean>]
+ [-EnablePromotedFileHandlers <Boolean>] [-UseFindPeopleInPeoplePicker <Boolean>]
+ [-DefaultSharingLinkType <SharingLinkType>] [-ODBMembersCanShare <SharingState>]
+ [-ODBAccessRequests <SharingState>] [-PreventExternalUsersFromResharing <Boolean>]
+ [-ShowPeoplePickerSuggestionsForGuestUsers <Boolean>] [-AppOnlyBypassPeoplePickerPolicies <Boolean>]
+ [-EnableDiscoverableByOrganizationForVideos <Boolean>] [-FileAnonymousLinkType <AnonymousLinkType>]
+ [-FolderAnonymousLinkType <AnonymousLinkType>] [-NotifyOwnersWhenItemsReshared <Boolean>]
+ [-NotifyOwnersWhenInvitationsAccepted <Boolean>] [-NotificationsInOneDriveForBusinessEnabled <Boolean>]
+ [-NotificationsInSharePointEnabled <Boolean>] [-SelfServiceSiteCreationDisabled <Boolean>]
+ [-SpecialCharactersStateInFileFolderNames <SpecialCharactersState>] [-OwnerAnonymousNotification <Boolean>]
+ [-CommentsOnSitePagesDisabled <Boolean>] [-CommentsOnFilesDisabled <Boolean>]
+ [-CommentsOnListItemsDisabled <Boolean>] [-ViewersCanCommentOnMediaDisabled <Boolean>]
+ [-SocialBarOnSitePagesDisabled <Boolean>] [-SiteOwnersCanAccessMissingContent <Boolean>]
+ [-OrphanedPersonalSitesRetentionPeriod <Int32>] [-PermissiveBrowserFileHandlingOverride <Boolean>]
+ [-DisallowInfectedFileDownload <Boolean>] [-DefaultLinkPermission <SharingPermissionType>]
+ [-CustomizedExternalSharingServiceUrl <String>] [-ConditionalAccessPolicyErrorHelpLink <String>]
+ [-RestrictedAccessControlforSitesErrorHelpLink <String>]
+ [-RestrictedAccessControlForOneDriveErrorHelpLink <String>]
+ [-ApplyAppEnforcedRestrictionsToAdHocRecipients <Boolean>] [-FilePickerExternalImageSearchEnabled <Boolean>]
+ [-EmailAttestationRequired <Boolean>] [-EmailAttestationReAuthDays <Int32>]
+ [-SyncPrivacyProfileProperties <Boolean>] [-DisabledWebPartIds <Guid[]>]
+ [-DisabledAdaptiveCardExtensionIds <Guid[]>] [-EnableMinimumVersionRequirement <Boolean>]
+ [-MarkNewFilesSensitiveByDefault <SensitiveByDefaultState>] [-EnableAIPIntegration <Boolean>]
+ [-SyncAadB2BManagementPolicy <Boolean>] [-AllowCommentsTextOnEmailEnabled <Boolean>]
+ [-EnableAzureADB2BIntegration <Boolean>] [-DisableAddShortcutsToOneDrive <Boolean>]
+ [-IncludeAtAGlanceInShareEmails <Boolean>] [-DisableWorkflow2010 <Boolean>] [-EnableAutoNewsDigest <Boolean>]
+ [-StopNew2010Workflows <Boolean>] [-StopNew2013Workflows <Boolean>] [-DisableBackToClassic <Boolean>]
+ [-ExternalUserExpirationRequired <Boolean>] [-ExternalUserExpireInDays <Int32>]
+ [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>] [-AnyoneLinkTrackUsers <Boolean>]
+ [-BlockAppAccessWithAuthenticationContext <Boolean>] [-OneDriveLoopDefaultSharingLinkScope <SharingScope>]
+ [-OneDriveLoopDefaultSharingLinkRole <SharingRole>] [-OneDriveRequestFilesLinkEnabled <Boolean>]
+ [-OneDriveRequestFilesLinkExpirationInDays <Int32>] [-OneDriveSharingCapability <SharingCapabilities>]
+ [-OneDriveDefaultShareLinkScope <SharingScope>] [-OneDriveDefaultShareLinkRole <SharingRole>]
+ [-OneDriveDefaultLinkToExistingAccess <Boolean>] [-OneDriveBlockGuestsAsSiteAdmin <SharingState>]
+ [-CoreLoopDefaultSharingLinkScope <SharingScope>] [-CoreLoopDefaultSharingLinkRole <SharingRole>]
+ [-CoreSharingCapability <SharingCapabilities>] [-AllowSharingOutsideRestrictedAccessControlGroups <Boolean>]
+ [-CoreRequestFilesLinkEnabled <Boolean>] [-CoreRequestFilesLinkExpirationInDays <Int32>]
+ [-CoreDefaultShareLinkScope <SharingScope>] [-CoreDefaultShareLinkRole <SharingRole>]
+ [-CoreDefaultLinkToExistingAccess <Boolean>] [-CoreBlockGuestsAsSiteAdmin <SharingState>]
+ [-AllowAnonymousMeetingParticipantsToAccessWhiteboards <SharingState>] [-Workflows2013Enabled <Boolean>]
+ [-IsFluidEnabled <Boolean>] [-IsWBFluidEnabled <Boolean>] [-IsCollabMeetingNotesFluidEnabled <Boolean>]
+ [-IsLoopEnabled <Boolean>] [-DisableDocumentLibraryDefaultLabeling <Boolean>]
+ [-ExtendPermissionsToUnprotectedFiles <Boolean>] [-EnableSensitivityLabelForPDF <Boolean>]
+ [-EnableSensitivityLabelForOneNote <Boolean>] [-EnableSensitivityLabelForVideoFiles <Boolean>]
+ [-BlockSendLabelMismatchEmail <Boolean>] [-LabelMismatchEmailHelpLink <String>]
+ [-BlockUserInfoVisibility <String>] [-BlockUserInfoVisibilityInOneDrive <TenantBrowseUserInfoPolicyValue>]
+ [-BlockUserInfoVisibilityInSharePoint <TenantBrowseUserInfoPolicyValue>]
+ [-AllowOverrideForBlockUserInfoVisibility <Boolean>] [-DisablePersonalListCreation <Boolean>]
+ [-DisableSpacesActivation <Boolean>] [-DisableVivaConnectionsAnalytics <Boolean>]
+ [-InformationBarriersSuspension <Boolean>] [-IBImplicitGroupBased <Boolean>]
+ [-AppBypassInformationBarriers <Boolean>] [-AppAccessInformationBarriersAllowList <Guid[]>]
+ [-AllOrganizationSecurityGroupId <Guid>] [-DisableModernListTemplateIds <Guid[]>]
+ [-EnableModernListTemplateIds <Guid[]>] [-HideSyncButtonOnTeamSite <Boolean>]
+ [-AllowGuestUserShareToUsersNotInSiteCollection <Boolean>] [-StreamLaunchConfig <Int32>]
+ [-DelegateRestrictedContentDiscoverabilityManagement <Boolean>]
+ [-DelegateRestrictedAccessControlManagement <Boolean>] [-DisableOutlookPSTVersionTrimming <Boolean>]
+ [-MediaTranscription <MediaTranscriptionPolicyType>]
+ [-MediaTranscriptionAutomaticFeatures <MediaTranscriptionAutomaticFeaturesPolicyType>]
+ [-ViewInFileExplorerEnabled <Boolean>] [-AuthContextResilienceMode <SPResilienceModeType>]
+ [-ReduceTempTokenLifetimeEnabled <Boolean>] [-ReduceTempTokenLifetimeValue <Int32>]
+ [-ShowOpenInDesktopOptionForSyncedFiles <Boolean>] [-ShowPeoplePickerGroupSuggestionsForIB <Boolean>]
+ [-EnableRestrictedAccessControl <Boolean>] [-BlockDownloadFileTypePolicy <Boolean>]
+ [-BlockDownloadFileTypeIds <SPBlockDownloadFileTypeId[]>] [-ExcludedBlockDownloadGroupIds <Guid[]>]
+ [-TlsTokenBindingPolicyValue <SPOTlsTokenBindingPolicyValue>] [-RecycleBinRetentionPeriod <Int32>]
+ [-IsEnableAppAuthPopUpEnabled <Boolean>] [-IsDataAccessInCardDesignerEnabled <Boolean>]
+ [-MassDeleteNotificationDisabled <Boolean>] [-EnableAutoExpirationVersionTrim <Boolean>]
+ [-EnableMediaReactions <Boolean>] [-BusinessConnectivityServiceDisabled <Boolean>]
+ [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] [-FileTypesForVersionExpiration <String[]>]
+ [-RemoveVersionExpirationFileTypeOverride <String[]>] [-AllowSensitivityLabelOnRecords <Boolean>]
+ [-DelayDenyAddAndCustomizePagesEnforcement <Boolean>]
+ [-DelayDenyAddAndCustomizePagesEnforcementOnClassicPublishingSites <Boolean>]
+ [-AllowClassicPublishingSiteCreation <Boolean>] [-WhoCanShareAnonymousAllowList <Guid[]>]
+ [-WhoCanShareAuthenticatedGuestAllowList <Guid[]>]
+ [-ResyncContentSecurityPolicyConfigurationEntries <Boolean>] [-ContentSecurityPolicyEnforcement <Boolean>]
+ [-DocumentUnderstandingModelScope <SyntexFeatureScopeValue>]
+ [-DocumentUnderstandingModelSelectedSitesList <String[]>]
+ [-DocumentUnderstandingModelSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-AIBuilderModelScope <SyntexFeatureScopeValue>] [-AIBuilderModelSelectedSitesList <String[]>]
+ [-AIBuilderModelSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-AIBuilderModelSelectedSitesIncludesContentCenters <Boolean>] [-PrebuiltModelScope <SyntexFeatureScopeValue>]
+ [-PrebuiltModelSelectedSitesList <String[]>]
+ [-PrebuiltModelSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-DocumentTranslationScope <SyntexFeatureScopeValue>] [-DocumentTranslationSelectedSitesList <String[]>]
+ [-DocumentTranslationSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-AutofillColumnsScope <SyntexFeatureScopeValue>] [-AutofillColumnsSelectedSitesList <String[]>]
+ [-AutofillColumnsSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-KnowledgeAgentScope <KnowledgeAgentFeatureScopeValue>] [-KnowledgeAgentSelectedSitesList <String[]>]
+ [-KnowledgeAgentSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-OpticalCharacterRecognitionScope <SyntexFeatureScopeValue>]
+ [-OpticalCharacterRecognitionSelectedSitesList <String[]>]
+ [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-DefaultContentCenterSite <String>]
+ [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
+ [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
+ [-RestrictExternalSharing] <Guid[]> [-AddAppIdToList] [-RemoveAppIdFromList] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -797,6 +918,27 @@ Parameter Sets: (All)
 Required: False
 Position: Named
 Default value: Overwrite
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddAppIdToList
+
+> Applicable: SharePoint Online
+
+When paired with `RestrictExternalSharing`, indicates that GUIDs should be added to the external sharing restriction.
+
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ParameterSetNameRestrictExternalSharing
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -3698,6 +3840,9 @@ Controls whether legacy browser authentication connections to SharePoint with le
 
 PARAMVALUE: True | False
 
+> [!NOTE]
+> • Legacy browser authentication is being deprecated for enterprise tenants as of October 2025. <br/> This setting will no longer be available to set to true. The RPS protocol will no longer function. <br/>
+
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
@@ -4670,6 +4815,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RemoveAppIdFromList
+
+> Applicable: SharePoint Online
+
+When paired with `RestrictExternalSharing`, indicates that GUIDs should be removed from the external sharing restriction.
+
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ParameterSetNameRestrictExternalSharing
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RemoveVersionExpirationFileTypeOverride
 
 An array of file type names. Removes the version history limit override from a set of file types so that they will follow the default version history limits. 
@@ -4754,6 +4920,52 @@ Sets a custom learn more link to inform users who were denied access to a ShareP
 
 ```yaml
 Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictExternalSharing
+
+> Applicable: SharePoint Online
+
+Specifies agentic identities which are restricted from sharing content to external users. 
+
+- For agentic users this is the GUID of the parent the agentic user was created from.
+
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
+
+```yaml
+Type: Guid[]
+Parameter Sets: ParameterSetNameRestrictExternalSharing
+Aliases:
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictExternalSharingForAgents
+
+> Applicable: SharePoint Online
+
+Controls whether agentic identities are allowed to share content with external users. Setting this to `True` prevents sharing.
+
+PARAMVALUE: True | False
+
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
