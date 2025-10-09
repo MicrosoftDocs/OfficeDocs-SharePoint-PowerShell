@@ -199,7 +199,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-The thumbprint of the certificate in the current user’s certificate store.
+The thumbprint of the certificate in the current user's certificate store.
 
 ```yaml
 Type: String
@@ -217,7 +217,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-The application’s client ID.
+The application's client ID.
 
 ```yaml
 Type: String
