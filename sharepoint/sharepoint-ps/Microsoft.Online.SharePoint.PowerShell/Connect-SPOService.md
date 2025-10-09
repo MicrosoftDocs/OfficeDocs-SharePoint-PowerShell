@@ -19,6 +19,15 @@ This cmdlet must be run before any other SharePoint Online cmdlets can run.
 
 ## SYNTAX
 
+### AuthenticationCertificate
+
+```
+Connect-SPOService -Url <UrlCmdletPipeBind> [-ClientTag <String>]
+ [-Region <AADCrossTenantAuthenticationLocation>] [-AuthenticationUrl <String>]
+ [-Certificate <X509Certificate2>] [-CertificatePath <String>] [-CertificateThumbprint <String>]
+ [-CertificatePassword <SecureString>] -ClientId <String> -TenantId <String> [<CommonParameters>]
+```
+
 ### AuthenticationLocation
 
 ```
@@ -120,6 +129,108 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+```yaml
+Type: String
+Parameter Sets: AuthenticationCertificate
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Certificate
+
+> Applicable: SharePoint Online
+
+An X.509 certificate used during authentication.
+
+```yaml
+Type: X509Certificate2
+Parameter Sets: AuthenticationCertificate
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CertificatePassword
+
+> Applicable: SharePoint Online
+
+The password for the certificate file.
+
+```yaml
+Type: SecureString
+Parameter Sets: AuthenticationCertificate
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CertificatePath
+
+> Applicable: SharePoint Online
+
+The path to the local .pfx certificate file.
+
+```yaml
+Type: String
+Parameter Sets: AuthenticationCertificate
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CertificateThumbprint
+
+> Applicable: SharePoint Online
+
+The thumbprint of the certificate in the current user's certificate store.
+
+```yaml
+Type: String
+Parameter Sets: AuthenticationCertificate
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClientId
+
+> Applicable: SharePoint Online
+
+The application's client ID.
+
+```yaml
+Type: String
+Parameter Sets: AuthenticationCertificate
+Aliases: ApplicationId
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ClientTag
 
 > Applicable: SharePoint Online
@@ -146,7 +257,7 @@ Specifies the credentials to use to connect. If no credentials are presented, a 
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.CredentialCmdletPipeBind
-Parameter Sets: (All)
+Parameter Sets: AuthenticationUrl, AuthenticationLocation
 Aliases:
 
 Required: False
@@ -166,7 +277,7 @@ To use it you also need to provide the **AuthenticationUrl** parameter.
 
 ```yaml
 Type: System.Boolean
-Parameter Sets: (All)
+Parameter Sets: AuthenticationUrl, AuthenticationLocation
 Aliases:
 
 Required: False
@@ -188,10 +299,28 @@ The default value is "default".
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.AADCrossTenantAuthenticationLocation
-Parameter Sets: AuthenticationLocation
+Parameter Sets: AuthenticationLocation, AuthenticationCertificate
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TenantId
+
+> Applicable: SharePoint Online
+
+The tenant ID to connect to.
+
+```yaml
+Type: String
+Parameter Sets: AuthenticationCertificate
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -232,7 +361,7 @@ Used to authenticate the user using the Microsoft Authentication Library (MSAL).
 
 ```yaml
 Type: System.Boolean
-Parameter Sets: (All)
+Parameter Sets: AuthenticationUrl, AuthenticationLocation
 Aliases:
 
 Required: False
