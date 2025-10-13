@@ -37,7 +37,7 @@ Get-SPOTheme -Name "Custom Cyan" | ConvertTo-Json 4
 When the theme is in the new format:
 ```Output
 {
-    "Name":  "Teal theme",
+    "Name":  "Custom Cyan",
     "Palette": null,
     "ColorPairs": {
         "light": [
