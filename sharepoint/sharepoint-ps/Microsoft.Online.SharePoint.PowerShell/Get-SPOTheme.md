@@ -31,9 +31,24 @@ The **Get-SPOTheme** cmdlet returns the settings for a named existing theme, or 
 This example shows how to use the **Get-SPOTheme** cmdlet to return the settings for the `"Custom Cyan"` theme created in the example for the **Add-SPOTheme** cmdlet. Note that this example uses the PowerShell `ConvertTo-Json` filter to display the theme in JSON format.
 
 ```powershell
-Get-SPOTheme -Name "Custom Cyan" | ConvertTo-Json
+Get-SPOTheme -Name "Custom Cyan" | ConvertTo-Json 4
 ```
 
+When the theme is in the new format:
+```Output
+{
+    "Name":  "Teal theme",
+    "Palette": null,
+    "ColorPairs": {
+        "light": [
+            {"accentColor": "#0078D4", "backgroundColor": "#FFFFFF"},
+            {"accentColor": "#FFFFFF", "backgroundColor": "#0078D4"}
+        ]
+    },
+     "IsInverted":  false
+}
+```
+When the theme is in the legacy format:
 ```Output
 {
     "Name":  "Custom Cyan",
@@ -64,6 +79,7 @@ Get-SPOTheme -Name "Custom Cyan" | ConvertTo-Json
                     "primaryText":  "#333",
                     "themePrimary":  "#00ffff"
                 },
+    "ColorPairs": null,
     "IsInverted":  false
 }
 ```
