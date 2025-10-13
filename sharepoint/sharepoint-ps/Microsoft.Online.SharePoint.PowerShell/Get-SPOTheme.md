@@ -48,7 +48,7 @@ Get-SPOTheme -Name "Custom Cyan" | ConvertTo-Json 4
 }
 ```
 
-If the theme is in legacy format then the output will be like this:
+If the theme is in legacy format, the output will be:
 
 ```Output
 {
