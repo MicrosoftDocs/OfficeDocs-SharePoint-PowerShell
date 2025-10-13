@@ -48,6 +48,7 @@ When the theme is in the new format:
      "IsInverted":  false
 }
 ```
+
 When the theme is in the legacy format:
 ```Output
 {
