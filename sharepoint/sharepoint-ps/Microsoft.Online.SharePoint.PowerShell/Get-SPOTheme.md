@@ -36,6 +36,7 @@ Get-SPOTheme -Name "Custom Cyan" | ConvertTo-Json 4
 
 #### Return Value Examples
 Theme in new format
+
 ```
 {
     "Name":  "Custom Cyan",
@@ -51,6 +52,7 @@ Theme in new format
 ```
 
 Theme in legacy format
+
 ```
 {
     "Name":  "Custom Cyan",
