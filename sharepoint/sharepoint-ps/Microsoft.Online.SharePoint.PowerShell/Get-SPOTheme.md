@@ -34,7 +34,8 @@ This example shows how to use the **Get-SPOTheme** cmdlet to return the settings
 Get-SPOTheme -Name "Custom Cyan" | ConvertTo-Json 4
 ```
 
-When the theme is in the new format:
+#### Return Value Examples
+Theme in new format
 ```Output
 {
     "Name":  "Custom Cyan",
@@ -49,6 +50,7 @@ When the theme is in the new format:
 }
 ```
 
+Theme in legacy format
 When the theme is in the legacy format:
 ```Output
 {
