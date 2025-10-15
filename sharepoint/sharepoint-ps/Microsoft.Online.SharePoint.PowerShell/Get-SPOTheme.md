@@ -31,8 +31,24 @@ The **Get-SPOTheme** cmdlet returns the settings for a named existing theme, or 
 This example shows how to use the **Get-SPOTheme** cmdlet to return the settings for the `"Custom Cyan"` theme created in the example for the **Add-SPOTheme** cmdlet. Note that this example uses the PowerShell `ConvertTo-Json` filter to display the theme in JSON format.
 
 ```powershell
-Get-SPOTheme -Name "Custom Cyan" | ConvertTo-Json
+Get-SPOTheme -Name "Custom Cyan" | ConvertTo-Json 4
 ```
+
+```Output
+{
+    "Name":  "Custom Cyan",
+    "Palette": null,
+    "ColorPairs": {
+        "light": [
+            {"accentColor": "#0078D4", "backgroundColor": "#FFFFFF"},
+            {"accentColor": "#FFFFFF", "backgroundColor": "#0078D4"}
+        ]
+    },
+     "IsInverted":  false
+}
+```
+
+If the theme is in legacy format, the output will be:
 
 ```Output
 {
@@ -111,3 +127,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+[Site theme](/sharepoint/site-theme)
