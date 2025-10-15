@@ -66,11 +66,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 | Application | OwningApplicationId | 
 |----------|----------|
-| **Microsoft Declarative Agent** | `3fbee041-e7d6-4f14-8826-6bf27f0a2849`  | 
+| **Microsoft Declarative Agent** | `e8be65d6-d430-4289-a665-51bf2a194bda`  | 
 | **Microsoft Designer** | `5e2795e3-ce8c-4cfb-b302-35fe5cd01597`  | 
 | **Microsoft Loop**  | `a187e399-0c36-4b98-8f04-1edc167a0996` | 
-| **Microsoft Outlook Newsletters** | `a6804318-a92d-4f36-b499-441033991274`| 
-| **Microsoft Teams Events Video on Demand** | `f574b137-eb91-46a0-8811-1a04d80c7ffa`| 
+| **Microsoft Outlook Newsletters** | `155d75a8-799c-4ad4-ae3f-0084ccced5fa`| 
+| **Microsoft Teams Events Video on Demand** | `7fc21101-d09b-4343-8eb3-21187e0431a4`| 
 
 
 ## EXAMPLES
