@@ -133,7 +133,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
- [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>] [<CommonParameters>]
+ [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
+ [-StopAlerts <Boolean>] [<CommonParameters>]
 ```
 
 ### ParameterSetContentTypeSyncSiteTemplatesList
@@ -252,7 +253,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
- [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>] [<CommonParameters>]
+ [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
+ [-StopAlerts <Boolean>] [<CommonParameters>]
 ```
 
 ### ParamSetMultipleSites
@@ -372,7 +374,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
- [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>] [<CommonParameters>]
+ [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
+ [-StopAlerts <Boolean>] [<CommonParameters>]
 ```
 
 ### InformationBarrier
@@ -490,7 +493,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
- [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>] [<CommonParameters>]
+ [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
+ [-StopAlerts <Boolean>] [<CommonParameters>]
 ```
 
 ### ParameterSetNameRestrictExternalSharing
@@ -609,7 +613,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
- [-RestrictExternalSharing] <Guid[]> [-AddAppIdToList] [-RemoveAppIdFromList] [<CommonParameters>]
+ [-RestrictExternalSharing] <Guid[]> [-AddAppIdToList] [-RemoveAppIdFromList]
+ [-StopAlerts <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -5491,6 +5496,29 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StopAlerts
+This parameter allows turning off classic SharePoint Alerts ahead of the announced deprecation on July 1st 2026.
+
+The valid values are:
+
+* False (default) - The classic SharePoint Alerts feature is not turned off.
+* True - The classic SharePoint Alerts feature is turned off and no classic Alert emails are send.
+
+> [!NOTE]
+> This setting supports the [classic SharePoint Alerts retirement](https://aka.ms/retirement/alerts/support) as it allows administrators to disable classic SharePoint Alerts before the feature retires on July 1st 2026.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: SharePoint Online
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
