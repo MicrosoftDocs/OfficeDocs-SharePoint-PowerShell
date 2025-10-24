@@ -5,9 +5,9 @@ online version: https://learn.microsoft.com/powershell/module/microsoft.online.s
 applicable: SharePoint Online
 title: Get-SPOServicePrioritizationBillingPolicies
 schema: 2.0.0
-author: killerewok2000
-ms.author: Sibourda
-ms.reviewer:
+author: samkabue
+ms.author: speedta
+ms.reviewer: speedta
 ---
 
 # Get-SPOServicePrioritizationBillingPolicies
