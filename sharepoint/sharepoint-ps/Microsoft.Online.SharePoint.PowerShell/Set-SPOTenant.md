@@ -5516,15 +5516,15 @@ Accept wildcard characters: False
 ```
 
 ### -StopAlerts
-This parameter allows turning off classic SharePoint Alerts ahead of the announced deprecation on July 1st 2026.
+
+> Applicable: SharePoint Online
+
+This parameter allows turning off classic SharePoint Alerts ahead of the announced deprecation on July 1, 2026. See the [SharePoint Alerts retirement](https://aka.ms/retirement/alerts/support) page for more information.
 
 The valid values are:
 
 * False - The classic SharePoint Alerts feature is not turned off.
-* True - The classic SharePoint Alerts feature is turned off and no classic Alert emails are send.
-
-> [!NOTE]
-> This setting supports the [classic SharePoint Alerts retirement](https://aka.ms/retirement/alerts/support) as it allows administrators to disable classic SharePoint Alerts before the feature retires on July 1st 2026.
+* True - The classic SharePoint Alerts feature is turned off and no classic Alert emails are sent.
 
 ```yaml
 Type: Boolean
