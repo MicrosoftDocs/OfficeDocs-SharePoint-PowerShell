@@ -118,6 +118,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AllowClassicPublishingSiteCreation <Boolean>] [-WhoCanShareAnonymousAllowList <Guid[]>]
  [-WhoCanShareAuthenticatedGuestAllowList <Guid[]>]
  [-ResyncContentSecurityPolicyConfigurationEntries <Boolean>] [-ContentSecurityPolicyEnforcement <Boolean>]
+ [-DelayContentSecurityPolicyEnforcement <Boolean>]
  [-DocumentUnderstandingModelScope <SyntexFeatureScopeValue>]
  [-DocumentUnderstandingModelSelectedSitesList <String[]>]
  [-DocumentUnderstandingModelSelectedSitesListOperation <SelectedSitesListOperations>]
@@ -241,6 +242,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AllowClassicPublishingSiteCreation <Boolean>] [-WhoCanShareAnonymousAllowList <Guid[]>]
  [-WhoCanShareAuthenticatedGuestAllowList <Guid[]>]
  [-ResyncContentSecurityPolicyConfigurationEntries <Boolean>] [-ContentSecurityPolicyEnforcement <Boolean>]
+ [-DelayContentSecurityPolicyEnforcement <Boolean>]
  [-DocumentUnderstandingModelScope <SyntexFeatureScopeValue>]
  [-DocumentUnderstandingModelSelectedSitesList <String[]>]
  [-DocumentUnderstandingModelSelectedSitesListOperation <SelectedSitesListOperations>]
@@ -365,6 +367,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AllowClassicPublishingSiteCreation <Boolean>] [-WhoCanShareAnonymousAllowList <Guid[]>]
  [-WhoCanShareAuthenticatedGuestAllowList <Guid[]>]
  [-ResyncContentSecurityPolicyConfigurationEntries <Boolean>] [-ContentSecurityPolicyEnforcement <Boolean>]
+ [-DelayContentSecurityPolicyEnforcement <Boolean>]
  [-DocumentUnderstandingModelScope <SyntexFeatureScopeValue>]
  [-DocumentUnderstandingModelSelectedSitesList <String[]>]
  [-DocumentUnderstandingModelSelectedSitesListOperation <SelectedSitesListOperations>]
@@ -487,6 +490,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AllowClassicPublishingSiteCreation <Boolean>] [-WhoCanShareAnonymousAllowList <Guid[]>]
  [-WhoCanShareAuthenticatedGuestAllowList <Guid[]>]
  [-ResyncContentSecurityPolicyConfigurationEntries <Boolean>] [-ContentSecurityPolicyEnforcement <Boolean>]
+ [-DelayContentSecurityPolicyEnforcement <Boolean>]
  [-DocumentUnderstandingModelScope <SyntexFeatureScopeValue>]
  [-DocumentUnderstandingModelSelectedSitesList <String[]>]
  [-DocumentUnderstandingModelSelectedSitesListOperation <SelectedSitesListOperations>]
@@ -609,6 +613,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AllowClassicPublishingSiteCreation <Boolean>] [-WhoCanShareAnonymousAllowList <Guid[]>]
  [-WhoCanShareAuthenticatedGuestAllowList <Guid[]>]
  [-ResyncContentSecurityPolicyConfigurationEntries <Boolean>] [-ContentSecurityPolicyEnforcement <Boolean>]
+ [-DelayContentSecurityPolicyEnforcement <Boolean>]
  [-DocumentUnderstandingModelScope <SyntexFeatureScopeValue>]
  [-DocumentUnderstandingModelSelectedSitesList <String[]>]
  [-DocumentUnderstandingModelSelectedSitesListOperation <SelectedSitesListOperations>]
@@ -2185,6 +2190,29 @@ The valid values are:
 
 ```yaml
 Type: Microsoft.Online.SharePoint.TenantManagement.SharingLinkType
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DelayContentSecurityPolicyEnforcement
+
+> Applicable: SharePoint Online
+
+This parameter allows administrators to delay the [enforcement of Content Security Policy checking](https://aka.ms/spfx/csp) from March 1, 2026 to June 1, 2026.
+
+The valid values are:
+
+* False - The Content Security Enforcement checking will start from March 1, 2026.
+* True - The Content Security Enforcement checking will start from June 1, 2026.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
