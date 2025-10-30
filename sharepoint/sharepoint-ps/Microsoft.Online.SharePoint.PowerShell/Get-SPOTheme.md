@@ -24,6 +24,9 @@ Get-SPOTheme [[-Name] <String>] [<CommonParameters>]
 
 The **Get-SPOTheme** cmdlet returns the settings for a named existing theme, or for all uploaded themes if no name is provided.
 
+> [!NOTE]
+> For multi-geo tenants, primary geo admins can centrally manage themes. Satellite geo admins can't create new themes, but they can edit or delete themes they previously added. To make it clear which themes can be modified, we added an editable field.
+
 ## EXAMPLES
 
 ### Example 1
@@ -44,7 +47,8 @@ Get-SPOTheme -Name "Custom Cyan" | ConvertTo-Json -Depth 4
             {"accentColor": "#FFFFFF", "backgroundColor": "#0078D4"}
         ]
     },
-     "IsInverted":  false
+    "IsInverted":  false,
+    "Editable": true
 }
 ```
 
@@ -80,7 +84,8 @@ If the theme is in legacy format, the output will be:
                     "primaryText":  "#333",
                     "themePrimary":  "#00ffff"
                 },
-    "IsInverted":  false
+    "IsInverted":  false,
+    "Editable": true
 }
 ```
 
