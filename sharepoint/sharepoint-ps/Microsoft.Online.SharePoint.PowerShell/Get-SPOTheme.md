@@ -25,7 +25,9 @@ Get-SPOTheme [[-Name] <String>] [<CommonParameters>]
 The **Get-SPOTheme** cmdlet returns the settings for a named existing theme, or for all uploaded themes if no name is provided.
 
 > [!NOTE]
-> For multi-geo tenants, primary geo admins can centrally manage organization themes. Satellite geo admins can't create new themes, but they can edit or delete themes they previously added. To show which themes can be modified, we added an editable field. Satellite geo admins can also view themes created in the primary geo and apply them to sites in their tenant by using the [Set-SPOWebTheme](./Set-SPOWebTheme.md) cmdlet.
+> To support consistent branding and simplify governance, theme management is transitioning to a centralized model.
+> - The **primary geo admins** will act as the central location for **organization-wide theme creation and management**. Themes created here will be visible and applicable across satellite geos.
+> - The **satellite geo admins** will be able to view and apply themes from the primary geo to their own sites by using Get-SPOTheme and Set-SPOWebTheme cmdlet. Themes previously created within satellite geos will remain available for use. However, **creating new themes in satellite geos will no longer be supported** going forward.
 
 ## EXAMPLES
 
