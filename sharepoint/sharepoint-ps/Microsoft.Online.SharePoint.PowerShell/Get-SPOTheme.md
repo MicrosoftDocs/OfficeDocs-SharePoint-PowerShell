@@ -22,18 +22,18 @@ Get-SPOTheme [[-Name] <String>] [<CommonParameters>]
 
 ## DESCRIPTION
 
-The **Get-SPOTheme** cmdlet returns the settings for a named existing theme, or for all uploaded themes if no name is provided.
+This cmdlet returns the settings for a named existing theme, or for all uploaded themes if no name is provided.
 
 > [!NOTE]
 > To support consistent branding and simplify governance, theme management is transitioning to a centralized model.
 > - The **primary geo** will act as the central location for **organization-wide theme creation and management**. Themes created here will be visible and applicable across satellite geos.
-> - The **Satellite Geo Administrators** will be able to view and apply themes from the primary geo to their own sites by using `Get-SPOTheme` and `Set-SPOWebTheme` cmdlet. Themes previously created within satellite geos will remain available for use. However, **creating new themes in satellite geos will no longer be supported** going forward.
+> - The satellite **Geo Administrators** will be able to view and apply themes from the primary geo to their own sites by using `Get-SPOTheme` and `Set-SPOWebTheme` cmdlet. Themes previously created within satellite geos will remain available for use. However, **creating new themes in satellite geos will no longer be supported** going forward.
 
 ## EXAMPLES
 
 ### Example 1
 
-This example shows how to use the **Get-SPOTheme** cmdlet to return the settings for the `"Custom Cyan"` theme created in the example for the **Add-SPOTheme** cmdlet. Note that this example uses the PowerShell `ConvertTo-Json` filter to display the theme in JSON format.
+This example shows how to use the [**Get-SPOTheme**](./Get-SPOTheme.md) cmdlet to return the settings for the `"Custom Cyan"` theme created in the example for the [**Add-SPOTheme**](./Add-SPOTheme.md) cmdlet. Note that this example uses the PowerShell `ConvertTo-Json` filter to display the theme in JSON format.
 
 ```powershell
 Get-SPOTheme -Name "Custom Cyan" | ConvertTo-Json -Depth 4
@@ -93,7 +93,7 @@ If the theme is in legacy format, the output will be:
 
 ### Example 2
 
-To return all uploaded themes, use the **Get-SPOTheme** command with no arguments.
+To return all uploaded themes, use the [**Get-SPOTheme**](./Get-SPOTheme.md) command with no arguments.
 
 ```powershell
 Get-SPOTheme
