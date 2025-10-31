@@ -26,8 +26,8 @@ The **Get-SPOTheme** cmdlet returns the settings for a named existing theme, or 
 
 > [!NOTE]
 > To support consistent branding and simplify governance, theme management is transitioning to a centralized model.
-> - The **primary geo admins** will act as the central location for **organization-wide theme creation and management**. Themes created here will be visible and applicable across satellite geos.
-> - The **satellite geo admins** will be able to view and apply themes from the primary geo to their own sites by using Get-SPOTheme and Set-SPOWebTheme cmdlet. Themes previously created within satellite geos will remain available for use. However, **creating new themes in satellite geos will no longer be supported** going forward.
+> - The **primary geo** will act as the central location for **organization-wide theme creation and management**. Themes created here will be visible and applicable across satellite geos.
+> - The **Satellite Geo Administrators** will be able to view and apply themes from the primary geo to their own sites by using `Get-SPOTheme` and `Set-SPOWebTheme` cmdlet. Themes previously created within satellite geos will remain available for use. However, **creating new themes in satellite geos will no longer be supported** going forward.
 
 ## EXAMPLES
 
@@ -60,32 +60,32 @@ If the theme is in legacy format, the output will be:
 {
     "Name":  "Custom Cyan",
     "Palette":  {
-                    "themeLight":  "#affefe",
-                    "themeTertiary":  "#76ffff",
-                    "black":  "#000000",
-                    "neutralSecondary":  "#666666",
-                    "neutralTertiaryAlt":  "#c8c8c8",
-                    "themeSecondary":  "#39ffff",
-                    "themeDarker":  "#005252",
-                    "primaryBackground":  "#fff",
-                    "neutralQuaternary":  "#d0d0d0",
-                    "neutralPrimaryAlt":  "#3c3c3c",
-                    "neutralPrimary":  "#333",
-                    "themeDark":  "#009090",
-                    "themeLighter":  "#daffff",
-                    "neutralTertiary":  "#a6a6a6",
-                    "neutralQuaternaryAlt":  "#dadada",
-                    "themeLighterAlt":  "#f3fcfc",
-                    "white":  "#fff",
-                    "neutralSecondaryAlt":  "#767676",
-                    "neutralLighter":  "#f4f4f4",
-                    "neutralLight":  "#eaeaea",
-                    "neutralDark":  "#212121",
-                    "themeDarkAlt":  "#00c4c4",
-                    "neutralLighterAlt":  "#f8f8f8",
-                    "primaryText":  "#333",
-                    "themePrimary":  "#00ffff"
-                },
+        "themeLight":  "#affefe",
+        "themeTertiary":  "#76ffff",
+        "black":  "#000000",
+        "neutralSecondary":  "#666666",
+        "neutralTertiaryAlt":  "#c8c8c8",
+        "themeSecondary":  "#39ffff",
+        "themeDarker":  "#005252",
+        "primaryBackground":  "#fff",
+        "neutralQuaternary":  "#d0d0d0",
+        "neutralPrimaryAlt":  "#3c3c3c",
+        "neutralPrimary":  "#333",
+        "themeDark":  "#009090",
+        "themeLighter":  "#daffff",
+        "neutralTertiary":  "#a6a6a6",
+        "neutralQuaternaryAlt":  "#dadada",
+        "themeLighterAlt":  "#f3fcfc",
+        "white":  "#fff",
+        "neutralSecondaryAlt":  "#767676",
+        "neutralLighter":  "#f4f4f4",
+        "neutralLight":  "#eaeaea",
+        "neutralDark":  "#212121",
+        "themeDarkAlt":  "#00c4c4",
+        "neutralLighterAlt":  "#f8f8f8",
+        "primaryText":  "#333",
+        "themePrimary":  "#00ffff"
+    },
     "IsInverted":  false,
     "Editable": true
 }
