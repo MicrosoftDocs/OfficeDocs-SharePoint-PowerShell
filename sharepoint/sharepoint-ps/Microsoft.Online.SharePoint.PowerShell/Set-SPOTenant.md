@@ -109,7 +109,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-BlockDownloadFileTypeIds <SPBlockDownloadFileTypeId[]>] [-ExcludedBlockDownloadGroupIds <Guid[]>]
  [-TlsTokenBindingPolicyValue <SPOTlsTokenBindingPolicyValue>] [-RecycleBinRetentionPeriod <Int32>]
  [-IsEnableAppAuthPopUpEnabled <Boolean>] [-IsDataAccessInCardDesignerEnabled <Boolean>]
- [-MassDeleteNotificationDisabled <Boolean>] [-EnableAutoExpirationVersionTrim <Boolean>]
+ [-MassDeleteNotificationDisabled <Boolean>] [-MassDeleteNotificationDisabledForODB <Boolean>]
+ [-MassDeleteNotificationDisabledForSPO <Boolean>] [-EnableAutoExpirationVersionTrim <Boolean>]
  [-EnableMediaReactions <Boolean>] [-BusinessConnectivityServiceDisabled <Boolean>]
  [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] [-FileTypesForVersionExpiration <String[]>]
  [-RemoveVersionExpirationFileTypeOverride <String[]>] [-AllowSensitivityLabelOnRecords <Boolean>]
@@ -233,7 +234,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-BlockDownloadFileTypeIds <SPBlockDownloadFileTypeId[]>] [-ExcludedBlockDownloadGroupIds <Guid[]>]
  [-TlsTokenBindingPolicyValue <SPOTlsTokenBindingPolicyValue>] [-RecycleBinRetentionPeriod <Int32>]
  [-IsEnableAppAuthPopUpEnabled <Boolean>] [-IsDataAccessInCardDesignerEnabled <Boolean>]
- [-MassDeleteNotificationDisabled <Boolean>] [-EnableAutoExpirationVersionTrim <Boolean>]
+ [-MassDeleteNotificationDisabled <Boolean>] [-MassDeleteNotificationDisabledForODB <Boolean>]
+ [-MassDeleteNotificationDisabledForSPO <Boolean>] [-EnableAutoExpirationVersionTrim <Boolean>]
  [-EnableMediaReactions <Boolean>] [-BusinessConnectivityServiceDisabled <Boolean>]
  [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] [-FileTypesForVersionExpiration <String[]>]
  [-RemoveVersionExpirationFileTypeOverride <String[]>] [-AllowSensitivityLabelOnRecords <Boolean>]
@@ -358,7 +360,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-BlockDownloadFileTypeIds <SPBlockDownloadFileTypeId[]>] [-ExcludedBlockDownloadGroupIds <Guid[]>]
  [-TlsTokenBindingPolicyValue <SPOTlsTokenBindingPolicyValue>] [-RecycleBinRetentionPeriod <Int32>]
  [-IsEnableAppAuthPopUpEnabled <Boolean>] [-IsDataAccessInCardDesignerEnabled <Boolean>]
- [-MassDeleteNotificationDisabled <Boolean>] [-EnableAutoExpirationVersionTrim <Boolean>]
+ [-MassDeleteNotificationDisabled <Boolean>] [-MassDeleteNotificationDisabledForODB <Boolean>]
+ [-MassDeleteNotificationDisabledForSPO <Boolean>] [-EnableAutoExpirationVersionTrim <Boolean>]
  [-EnableMediaReactions <Boolean>] [-BusinessConnectivityServiceDisabled <Boolean>]
  [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] [-FileTypesForVersionExpiration <String[]>]
  [-RemoveVersionExpirationFileTypeOverride <String[]>] [-AllowSensitivityLabelOnRecords <Boolean>]
@@ -481,7 +484,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-BlockDownloadFileTypeIds <SPBlockDownloadFileTypeId[]>] [-ExcludedBlockDownloadGroupIds <Guid[]>]
  [-TlsTokenBindingPolicyValue <SPOTlsTokenBindingPolicyValue>] [-RecycleBinRetentionPeriod <Int32>]
  [-IsEnableAppAuthPopUpEnabled <Boolean>] [-IsDataAccessInCardDesignerEnabled <Boolean>]
- [-MassDeleteNotificationDisabled <Boolean>] [-EnableAutoExpirationVersionTrim <Boolean>]
+ [-MassDeleteNotificationDisabled <Boolean>] [-MassDeleteNotificationDisabledForODB <Boolean>]
+ [-MassDeleteNotificationDisabledForSPO <Boolean>] [-EnableAutoExpirationVersionTrim <Boolean>]
  [-EnableMediaReactions <Boolean>] [-BusinessConnectivityServiceDisabled <Boolean>]
  [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] [-FileTypesForVersionExpiration <String[]>]
  [-RemoveVersionExpirationFileTypeOverride <String[]>] [-AllowSensitivityLabelOnRecords <Boolean>]
@@ -604,7 +608,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-BlockDownloadFileTypeIds <SPBlockDownloadFileTypeId[]>] [-ExcludedBlockDownloadGroupIds <Guid[]>]
  [-TlsTokenBindingPolicyValue <SPOTlsTokenBindingPolicyValue>] [-RecycleBinRetentionPeriod <Int32>]
  [-IsEnableAppAuthPopUpEnabled <Boolean>] [-IsDataAccessInCardDesignerEnabled <Boolean>]
- [-MassDeleteNotificationDisabled <Boolean>] [-EnableAutoExpirationVersionTrim <Boolean>]
+ [-MassDeleteNotificationDisabled <Boolean>] [-MassDeleteNotificationDisabledForODB <Boolean>]
+ [-MassDeleteNotificationDisabledForSPO <Boolean>] [-EnableAutoExpirationVersionTrim <Boolean>]
  [-EnableMediaReactions <Boolean>] [-BusinessConnectivityServiceDisabled <Boolean>]
  [-ExpireVersionsAfterDays <Int32>] [-MajorVersionLimit <Int32>] [-FileTypesForVersionExpiration <String[]>]
  [-RemoveVersionExpirationFileTypeOverride <String[]>] [-AllowSensitivityLabelOnRecords <Boolean>]
@@ -3974,7 +3979,7 @@ Accept wildcard characters: False
 
 ### -MassDeleteNotificationDisabled
 
-Enables or disables the mass delete detection feature. When MassDeleteNotificationDisabled is set to $true, tenant admins can perform mass deletion operations without triggering notifications.
+Enables or disables the mass delete detection feature. When MassDeleteNotificationDisabled is set to $true, tenant admins can perform mass deletion operations without triggering email notifications.
 
 PARAMVALUE: True | False
 
@@ -3985,7 +3990,43 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MassDeleteNotificationDisabledForODB
+
+Enables or disables the mass delete detection feature for ODB. When MassDeleteNotificationDisabledForODB is set to $true, tenant admins can perform mass deletion operations without triggering email notifications for ODB.
+
+PARAMVALUE: True | False
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MassDeleteNotificationDisabledForSPO
+
+Enables or disables the mass delete detection feature for SPO. When MassDeleteNotificationDisabledForSPO is set to $true, tenant admins can perform mass deletion operations without triggering email notifications for SPO.
+
+PARAMVALUE: True | False
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
