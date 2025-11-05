@@ -109,6 +109,29 @@ Connect-SPOService -Url https://contoso-admin.sharepoint.com -UseSystemBrowser $
 ```
 Authenticates using the Microsoft Authentication Library (MSAL) and connects to the SharePoint Online Administration Center on successful authentication.
 
+### EXAMPLE 7
+
+```powershell
+$password = ConvertTo-SecureString -String "password" -Force -AsPlainText
+Connect-SPOService -Url https://contoso-admin.sharepoint.com -ClientId <your_client_id> -Tenant <your_tenant_id> -CertificatePath <C:\certificates\sample-cert.pfx> -CertificatePassword $password
+```
+Connect to the SharePoint Online service using an app identity and a certificate file path, with an optional password
+
+### EXAMPLE 8
+
+```powershell
+Connect-SPOService -Url https://contoso-admin.sharepoint.com -ClientId <your_client_id> -Tenant <your_tenant_id> -CertificateThumbprint "<your_certificate_thumbprint>"
+```
+Connect to the SharePoint Online service using an app identity and a certificate thumbprint
+
+### EXAMPLE 9
+
+```powershell
+$cert = Get-ChildItem Cert:\LocalMachine\My$CertThumbprint
+Connect-SPOService -Url https://contoso-admin.sharepoint.com -ClientId <your_client_id> -Tenant <your_tenant_id> -Certificate $cert
+```
+Connect to the SharePoint Online service using an app identity and a certificate object
+
 ## PARAMETERS
 
 ### -AuthenticationUrl
