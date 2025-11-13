@@ -10,7 +10,7 @@ ms.author: shsaravanan
 ms.reviewer:
 ---
 
-# INew-SPOContainerType
+# New-SPOContainerType
 
 ## SYNOPSIS
 
