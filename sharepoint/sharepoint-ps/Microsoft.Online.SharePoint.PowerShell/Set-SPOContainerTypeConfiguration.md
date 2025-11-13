@@ -24,7 +24,7 @@ Set-SPOContainerTypeConfiguration -ContainerTypeId <Guid> [-DiscoverabilityDisab
  [-WhoCanShareAuthenticatedGuestAllowList <Guid[]>] [-OverrideTenantWhoCanShareAnonymousAllowList <Boolean>]
  [-OverrideTenantWhoCanShareAuthenticatedGuestAllowList <Boolean>]
  [-CopilotEmbeddedChatHosts <System.Collections.Generic.List`1[System.String]>]
- [-AnonymousLinkExpirationInDays <Int32>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AnonymousLinkExpirationInDays <Int32>] [-IsArchiveEnabled <Boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -81,6 +81,15 @@ Example 5 overrides the tenant-level `WhoCanShareAuthenticatedGuestAllowList` wi
 Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -CopilotEmbeddedChatHosts "https://localhost:3000 https://contoso.sharepoint.com https://fabrikam.com"
 ```
 This example sets the host URLs for the container type with Id 4f0af585-8dcc-0000-223d-661eb2c604e4.
+
+### Example 7
+
+
+```powershell
+Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -IsArchiveEnabled $true
+```
+
+Example 7 enables support for archive and reactivate actions on all the containers of ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4.
 
 ## PARAMETERS
 
@@ -167,6 +176,25 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+
+```
+
+
+### -IsArchiveEnabled
+
+Using -IsArchiveEnabled flag, you can start supporting archival and reactivation actions on containers. Archival moves the data in cold tier and offers cost saving benefit. While archived, the content becomes inaccessible and needs to be reactivated first. Reactivation is instantaneous within first 7 days of archival and may take up to 24 hours after that. When not passed, the value of this parameter is set to False and all the calls to archive and unarchive API will fail.
+
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
