@@ -10,7 +10,7 @@ ms.author: shsaravanan
 ms.reviewer:
 ---
 
-# New-SPOContainerType
+# INew-SPOContainerType
 
 ## SYNOPSIS
 
@@ -21,7 +21,7 @@ This cmdlet creates a new container type of standard or trial status. The standa
 ```
 New-SPOContainerType [-ContainerTypeName] <String> -OwningApplicationId <Guid>
  [-ApplicationRedirectUrl <String>] [-TrialContainerType] [-IsPassThroughBilling]
- [-IsGovernableByAdmin <Boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-IsGovernableByAdmin <Boolean>] [-IsArchiveEnabled <Boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -64,6 +64,15 @@ New-SPOContainerType -ContainerTypeName ContosoLegal -OwningApplicationId 2ce032
 
 In Example 4, the cmdlet creates a standard container type, ContosoLegal that has opted out of management through Microsoft-enabled administrator platforms.
 
+### Example 5
+
+
+```powershell
+New-SPOContainerType -ContainerTypeName ContosoLegal -OwningApplicationId 2ce03211-353e-45d7-b487-8ac6981332cf -IsArchiveEnabled $true
+```
+
+In Example 5, the cmdlet creates a standard container type, ContosoLegal that support archive and reactivate actions on its containers.
+
 ## PARAMETERS
 
 ### -ApplicationRedirectUrl
@@ -98,6 +107,25 @@ Aliases:
 Required: True
 Position: 0
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsArchiveEnabled
+
+> Applicable: SharePoint Online
+
+Using -IsArchiveEnabled flag, you can start supporting archival and reactivation actions on containers. Archival moves the data in cold tier and offers cost saving benefit. While archived, the content becomes inaccessible and needs to be reactivated first. Reactivation is instantaneous within first 7 days of archival and may take up to 24 hours after that. When not passed, the value of this parameter is set to False and all the calls to archive and unarchive API will fail.
+
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
