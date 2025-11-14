@@ -1,4 +1,4 @@
-Frestrie---
+FrestrictedsiteFrestrie---
 Module Name: Microsoft.Online.SharePoint.PowerShell
 Module Guid: adedde5f-e77b-4682-ab3d-a4cb4ff79b83
 title: Microsoft.Online.SharePoint.PowerShell Module
@@ -278,9 +278,6 @@ This cmdlet enables the administrator to check status of all active and availabl
 
 ### [Get-SPORestrictedSiteCreation](Get-SPORestrictedSiteCreation.md)
 This cmdlet allows SharePoint administrators to check the current configuration of the restricted site creation feature.
-
-### [Get-SPORestrictedSiteCreationForApps](Get-SPORestrictedSiteCreationForApps.md)
-This cmdlet allows SharePoint administrators to check the current configuration of the restricted site creation for apps feature. Note: This feature is currently in preview and may not be available in your tenant.
 
 ### [Get-SPOServicePrioritizationAppRegistrations](Get-SPOServicePrioritizationAppRegistrations.md)
 Retrieves the list of app registrations configured for service prioritization in SharePoint Online.
@@ -728,9 +725,6 @@ Marks a site as one of multiple possible tenant's organizational news sites. Req
 
 ### [Set-SPORestrictedSiteCreation](Set-SPORestrictedSiteCreation.md)
 Sets or updates one or more group configurations for restricting site creation.
-
-### [Set-SPORestrictedSiteCreationForApps](Set-SPORestrictedSiteCreationForApps.md)
-Sets or updates one or more group configurations for restricting site creation for apps. Note: This feature is currently in preview and may not be available in your tenant.
 
 ### [Set-SPOServicePrioritizationAppRegistration](Set-SPOServicePrioritizationAppRegistration.md)
 Updates an existing app registration for service prioritization in SharePoint Online. 
