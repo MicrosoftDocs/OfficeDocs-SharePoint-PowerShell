@@ -10,7 +10,7 @@ ms.author: vgaddam
 ms.reviewer: jmcdowe
 ---
 
-# Set-SPORestrictedSiteCreation
+# Set-SPORestrictedSiteCreationForApps
 
 ## SYNOPSIS
 
