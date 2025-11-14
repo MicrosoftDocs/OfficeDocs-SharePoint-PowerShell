@@ -10,7 +10,7 @@ ms.author: vgaddam
 ms.reviewer:
 ---
 
-# Get-SPORestrictedSiteCreation
+# Get-SPORestrictedSiteCreationForApps
 
 ## SYNOPSIS
 
