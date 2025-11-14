@@ -66,12 +66,11 @@ In Example 4, the cmdlet creates a standard container type, ContosoLegal that ha
 
 ### Example 5
 
-
 ```powershell
 New-SPOContainerType -ContainerTypeName ContosoLegal -OwningApplicationId 2ce03211-353e-45d7-b487-8ac6981332cf -IsArchiveEnabled $true
 ```
 
-In Example 5, the cmdlet creates a standard container type, ContosoLegal that support archive and reactivate actions on its containers.
+In Example 5, the cmdlet creates a standard container type, ContosoLegal that supports archive and reactivate actions on its containers.
 
 ## PARAMETERS
 
@@ -115,8 +114,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Using -IsArchiveEnabled flag, you can start supporting archival and reactivation actions on containers. Archival moves the data in cold tier and offers cost saving benefit. While archived, the content becomes inaccessible and needs to be reactivated first. Reactivation is instantaneous within first 7 days of archival and may take up to 24 hours after that. When not passed, the value of this parameter is set to False and all the calls to archive and unarchive API will fail.
-
+Use the `-IsArchiveEnabled` flag to enable archival and reactivation for containers. Archival moves data to the cold tier, reducing storage costs. While archived, content is inaccessible until reactivated. Reactivation is immediate within the first seven days and can take up to 24 hours afterward. If you don’t include this flag, the value defaults to `False`, and all archive and unarchive API calls fail. After you update the flag, allow up to 24 hours for the change to take effect in the consuming tenant.
 
 ```yaml
 Type: System.Boolean
