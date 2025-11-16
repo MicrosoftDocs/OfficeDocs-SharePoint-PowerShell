@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-This cmdlet allows SharePoint administrators to check the current configuration of the restricted site creation for apps feature.
+Administrators
 
 ## SYNTAX
 
