@@ -28,8 +28,8 @@ Set-SPORestrictedSiteCreationForApps [-Enabled <Boolean>] [-Mode <RestrictedSite
 
 This cmdlet sets or updates the configuration or setting for the Restricted Site Creation For Apps feature.
 
-> [!Important]
-> You must use version 16.0.25513.12000 (published December 2025) or later of the [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) for these commands to function properly. Earlier versions do not have the current list of site types and will not operate correctly.
+> [!Note]
+> This feature is currently in preview and may not be available in your tenant.
 
 ## EXAMPLES
 
