@@ -124,7 +124,7 @@ Accept wildcard characters: False
 > Applicable: SharePoint Online
 
 A comma-separated list of up to 100 app IDs. When paired with the `–SiteType` parameter, defines a new policy which applies to the specified apps.
-Set to the empty string ("") to clear the policy for a site type.
+Set to the empty string `""` to clear the policy for a site type.
 
 ```yaml
 Type: System.String
