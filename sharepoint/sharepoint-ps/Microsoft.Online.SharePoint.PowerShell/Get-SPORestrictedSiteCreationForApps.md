@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Administrators
+This cmdlet allows SharePoint Administrators to check the current configuration of the restricted site creation for apps feature.
 
 ## SYNTAX
 
@@ -26,8 +26,8 @@ Get-SPORestrictedSiteCreationForApps [-SiteType <RestrictedSiteCreationSiteType>
 
 This cmdlet obtains the current configuration information for the restricted site creation for apps feature, including whether it is enabled, the current mode, and the current policies.
 
-> [!Important]
->You must use version 16.0.25513.12000 (published December 2025) or later of the [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online) for these commands to function properly. Earlier versions do not have the current list of site types and will not operate correctly.
+> [!Note]
+> This feature is currently in preview and may not be available in your tenant.
 
 ## EXAMPLES
 
