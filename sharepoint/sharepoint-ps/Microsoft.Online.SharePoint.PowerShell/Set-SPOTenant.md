@@ -1138,7 +1138,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Controls whether file-level archiving is allowed at the tenant level. This setting can be overridden for specific sites by the site-level flag of the same name and has no effect unless M365 Archive is enabled for your organization.
+Controls whether file-level archiving is allowed at the tenant level. This setting can be overridden for specific sites by the site-level flag of the same name and has no effect unless Microsoft 365 Archive is enabled for your organization.
 
 The valid values are:
 
@@ -1161,12 +1161,12 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Specifies the default value of the AllowFileArchive property for newly created SharePoint sites. This determines whether new sites allow file-level archiving by default. M365 Archive and the tenant-level AllowFileArchive setting must both be enabled for manual archiving to work when this property is set to True.
+Specifies the default value of the `AllowFileArchive` property for newly created SharePoint sites. This determines whether new sites allow file-level archiving by default. Microsoft 365 Archive and the tenant-level `AllowFileArchive` setting must both be enabled for manual archiving to work when this property is set to True.
 
 The valid values are:
 
-- True (default) - Sets AllowFileArchive to True for all newly provisioned sites. M365 Archive and the tenant-level AllowFileArchive setting must both be enabled for manual archiving to work on future provisioned sites. 
-- False - Sets AllowFileArchive to False for all newly provisioned sites.
+- True (default) - Sets `AllowFileArchive` to True for all newly provisioned sites. Microsoft 365 Archive and the tenant-level `AllowFileArchive` setting must both be enabled for manual archiving to work on future provisioned sites. 
+- False - Sets `AllowFileArchive` to False for all newly provisioned sites.
 
 ```yaml
 Type: Boolean
