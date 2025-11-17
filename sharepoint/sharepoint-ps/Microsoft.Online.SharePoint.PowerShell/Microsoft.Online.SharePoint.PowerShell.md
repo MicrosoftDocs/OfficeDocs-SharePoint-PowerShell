@@ -280,7 +280,7 @@ This cmdlet enables the administrator to check status of all active and availabl
 This cmdlet allows SharePoint administrators to check the current configuration of the restricted site creation feature.
 
 ### [Get-SPORestrictedSiteCreationForApps](Get-SPORestrictedSiteCreationForApps.md)
-This cmdlet allows SharePoint administrators to check the current configuration of the restricted site creation for apps feature. > [!NOTE] > This feature is currently in preview and may not be available in your tenant.
+This cmdlet allows SharePoint administrators to check the current configuration of the restricted site creation for apps feature.  > [!NOTE] > This feature is currently in preview and may not be available in your tenant.
 
 ### [Get-SPOServicePrioritizationAppRegistrations](Get-SPOServicePrioritizationAppRegistrations.md)
 Retrieves the list of app registrations configured for service prioritization in SharePoint Online.
@@ -730,7 +730,7 @@ Marks a site as one of multiple possible tenant's organizational news sites. Req
 Sets or updates one or more group configurations for restricting site creation.
 
 ### [Set-SPORestrictedSiteCreationForApps](Set-SPORestrictedSiteCreationForApps.md)
-Sets or updates one or more group configurations for restricting site creation for apps. > [!NOTE] > This feature is currently in preview and may not be available in your tenant.
+Sets or updates one or more group configurations for restricting site creation for apps.  > [!NOTE] > This feature is currently in preview and may not be available in your tenant.
 
 ### [Set-SPOServicePrioritizationAppRegistration](Set-SPOServicePrioritizationAppRegistration.md)
 Updates an existing app registration for service prioritization in SharePoint Online. 
