@@ -139,7 +139,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
- [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>] [<CommonParameters>]
+ [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
+ [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
 ```
 
 ### ParameterSetContentTypeSyncSiteTemplatesList
@@ -264,7 +265,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
- [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>] [<CommonParameters>]
+ [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
+ [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
 ```
 
 ### ParamSetMultipleSites
@@ -390,7 +392,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
- [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>] [<CommonParameters>]
+ [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
+ [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
 ```
 
 ### InformationBarrier
@@ -514,7 +517,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
- [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>] [<CommonParameters>]
+ [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
+ [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
 ```
 
 ### ParameterSetNameRestrictExternalSharing
@@ -639,7 +643,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-DefaultContentCenterSite <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
- -RestrictExternalSharing <Guid[]> [-AddAppIdToList] [-RemoveAppIdFromList] [<CommonParameters>]
+ -RestrictExternalSharing <Guid[]> [-AddAppIdToList] [-RemoveAppIdFromList]
+ [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -1125,6 +1130,52 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowFileArchive
+
+> Applicable: SharePoint Online
+
+Controls whether file-level archiving is allowed at the tenant level. This setting can be overridden for specific sites by the site-level flag of the same name and has no effect unless Microsoft 365 Archive is enabled for your organization.
+
+The valid values are:
+
+- True (default) - Allows users to manually archive files on sites where file-level archiving is also enabled. Manual archiving is limited to internal users with write access to the file.
+- False - Blocks manual archiving for all files, regardless of the site-level setting. Admin-defined policies can still archive files automatically.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowFileArchiveOnNewSitesByDefault
+
+> Applicable: SharePoint Online
+
+Specifies the default value of the `AllowFileArchive` property for newly created SharePoint sites. This determines whether new sites allow file-level archiving by default. Microsoft 365 Archive and the tenant-level `AllowFileArchive` setting must both be enabled for manual archiving to work when this property is set to True.
+
+The valid values are:
+
+- True (default) - Sets `AllowFileArchive` to True for all newly provisioned sites. Microsoft 365 Archive and the tenant-level `AllowFileArchive` setting must both be enabled for manual archiving to work on future provisioned sites. 
+- False - Sets `AllowFileArchive` to False for all newly provisioned sites.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
