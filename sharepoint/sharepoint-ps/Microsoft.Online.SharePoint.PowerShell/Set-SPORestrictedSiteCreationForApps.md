@@ -104,7 +104,7 @@ PARAMVALUE: Deny | Allow
 - Allow – an app will only be allowed to create a site if a policy applies to them.
 
 > [!NOTE]
-> The restricted site creation mode is shared across all site type policies. It is not possible to use deny mode for one site type and allow mode for a different site type. When the mode is changed, all polices are cleared.
+> The restricted site creation mode is shared across all site type policies. It is not possible to use deny mode for one site type and allow mode for a different site type. When the mode is changed, all policies are cleared.
 
 ```yaml
 Type: Microsoft.SharePoint.Administration.SPOnlineProvisioning.RestrictedSiteCreationMode
