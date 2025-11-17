@@ -181,7 +181,7 @@ Accept wildcard characters: False
 
 ### -IsArchiveEnabled
 
-Use the `-IsArchiveEnabled` flag to enable archival of containers. Archival moves data to the cold tier, reducing storage costs. While archived, content is inaccessible until reactivated. Reactivation is immediate within the first seven days and can take up to 24 hours afterward. If you don’t include this flag, the value defaults to `False`, and all archive API calls fail. After you update the flag, allow up to 24 hours for the change to take effect in the consuming tenant.
+Use the `-IsArchiveEnabled` flag to enable archival of containers. Archival moves data to the cold tier, reducing storage costs. While archived, content is inaccessible until reactivated. Reactivation is immediate within the first seven days and can take up to 24 hours afterward. If you don't include this flag, the value defaults to `False`, and all archive API calls fail. After you update the flag, allow up to 24 hours for the change to take effect in the consuming tenant.
 
 ```yaml
 Type: System.Boolean
