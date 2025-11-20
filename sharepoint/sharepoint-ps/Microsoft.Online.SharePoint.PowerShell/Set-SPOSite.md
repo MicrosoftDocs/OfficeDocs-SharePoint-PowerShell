@@ -64,6 +64,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-Owner <String>] [-Title <String>] [-
  [-ListsShowHeaderAndNavigation <Boolean>] [-HidePeoplePreviewingFiles <Boolean>]
  [-HidePeopleWhoHaveListsOpen <Boolean>] [-IsAuthoritative <Boolean>] [-AllowFileArchive <Boolean>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-DisableSiteBranding <Boolean>]
+ [-AllowClassicPageBaselineSecurityModeOptout <Boolean>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -507,6 +508,26 @@ Accept wildcard characters: False
 > Applicable: SharePoint Online
 
 Enables or disables web property bag updates. When `AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled` is set to `$true`, the web property bag can be updated even if the Add And Customize Pages right is denied on the site collection.
+
+PARAMVALUE: True | False
+
+```yaml
+Type: System.Boolean
+Parameter Sets: ParamSet1
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowClassicPageBaselineSecurityModeOptout
+
+> Applicable: SharePoint Online
+
+Allows a site to opt out of baseline security mode for classic pages. When `AllowClassicPageBaselineSecurityModeOptout` is set to `$true`, users can create and edit classic pages even if baseline security mode is enabled in the tenant.
 
 PARAMVALUE: True | False
 
