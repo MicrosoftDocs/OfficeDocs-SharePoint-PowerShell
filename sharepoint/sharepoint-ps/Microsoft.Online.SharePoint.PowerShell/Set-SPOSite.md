@@ -64,7 +64,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-Owner <String>] [-Title <String>] [-
  [-ListsShowHeaderAndNavigation <Boolean>] [-HidePeoplePreviewingFiles <Boolean>]
  [-HidePeopleWhoHaveListsOpen <Boolean>] [-IsAuthoritative <Boolean>] [-AllowFileArchive <Boolean>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-DisableSiteBranding <Boolean>]
- [-AllowClassicPageBaselineSecurityModeOptout <Boolean>]
+ [-DisableClassicPageBaselineSecurityMode <Boolean>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -523,11 +523,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowClassicPageBaselineSecurityModeOptout
+### -DisableClassicPageBaselineSecurityMode
 
 > Applicable: SharePoint Online
 
-Allows a site to opt out of baseline security mode for classic pages. When `AllowClassicPageBaselineSecurityModeOptout` is set to `$true`, users can create and edit classic pages even if baseline security mode is enabled in the tenant.
+Allows a site to disable baseline security mode for classic pages. When `DisableClassicPageBaselineSecurityMode` is set to `$true`, users can create and edit classic pages even if baseline security mode is enabled at the tenant level.
 
 PARAMVALUE: True | False
 
