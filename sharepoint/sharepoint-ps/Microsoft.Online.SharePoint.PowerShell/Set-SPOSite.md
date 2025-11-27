@@ -527,7 +527,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Allows a site to disable baseline security mode for classic pages. When `DisableClassicPageBaselineSecurityMode` is set to `$true`, users can create and edit classic pages even if baseline security mode is enabled at the tenant level.
+Allows a site to disable baseline security mode for classic pages. When `DisableClassicPageBaselineSecurityMode` is set to `$true`, users can create and edit classic pages even if baseline security mode is enabled at the tenant level in Microsoft admin center.
 
 PARAMVALUE: True | False
 
