@@ -40,7 +40,6 @@ This example sets the built-in font packages to be hidden from SharePoint sites.
 
 ### -HideBuiltInFontPackages
 
-
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
