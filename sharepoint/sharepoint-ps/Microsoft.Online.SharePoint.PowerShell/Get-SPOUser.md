@@ -43,7 +43,7 @@ The `Get-SPOUser` cmdlet matches one and only one user or security group.
 
 Be sure to run the `Get-SPOUser` cmdlet as at least a SharePoint Online administrator and be a site collection administrator of the queried site.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832>.
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/).
 
 ## EXAMPLES
 

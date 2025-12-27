@@ -25,7 +25,7 @@ Register-SPAppPrincipal -DisplayName <String> -NameIdentifier <String> -Site <SP
 ## DESCRIPTION
 Use the `Register-SPAppPrincipal` cmdlet to let an on-premises farm administrator to register an app principal management service.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at https://go.microsoft.com/fwlink/p/?LinkId=251831(https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

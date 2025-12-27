@@ -31,7 +31,7 @@ However, creating a new SharePoint Online site collection fails if a deleted sit
 
 You must be at least a SharePoint Online administrator to run the cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at <https://go.microsoft.com/fwlink/p/?LinkId=251832>.
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/).
 
 ## EXAMPLES
 

@@ -28,7 +28,7 @@ Get-SPOExternalUser [[-Position] <Int32>] [[-PageSize] <Int32>] [[-Filter] <Stri
 
 The `Get-SPOExternalUser` cmdlet returns external users that are located in the tenant based on specified criteria.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [https://go.microsoft.com/fwlink/p/?LinkId=251832](https://go.microsoft.com/fwlink/p/?LinkId=251832).
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/](https://learn.microsoft.com/powershell/sharepoint/sharepoint-online/).
 
 ## EXAMPLES
 
