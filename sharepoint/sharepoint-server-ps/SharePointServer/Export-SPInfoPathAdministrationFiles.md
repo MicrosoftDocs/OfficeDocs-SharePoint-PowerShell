@@ -24,7 +24,7 @@ The Export-SPInfoPathAdministrationFiles cmdlet saves all InfoPath form template
 The backup package includes all workflow forms in InfoPath that were deployed by an administrator and not included with SharePoint Server, and includes browser forms that were deployed by an administrator.
 The backup package is output to the specified .cab file.
 
-[SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
