@@ -30,8 +30,7 @@ Use the Move-SPSocialComment cmdlet to move social comments from one page to ano
 
 This cmdlet does not move Tags or Ratings.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016, SharePoint Server 2019 reference [https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/).
-
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [Windows PowerShell for SharePoint Server 2016, SharePoint Server 2019 reference](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/).
 
 ## EXAMPLES
 
