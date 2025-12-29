@@ -27,7 +27,7 @@ Use the Set-SPAppStoreWebServiceConfiguration cmdlet to set the product type (On
 
 This cmdlet is not intended for the ITPro audience.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [Windows PowerShell for SharePoint Server 2016, SharePoint Server 2019 reference](/powershell/sharepoint/sharepoint-server/).](/powershell/sharepoint/sharepoint-server/).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [Windows PowerShell for SharePoint Server 2016, SharePoint Server 2019 reference](/powershell/sharepoint/sharepoint-server/).
 
 ## EXAMPLES
 
