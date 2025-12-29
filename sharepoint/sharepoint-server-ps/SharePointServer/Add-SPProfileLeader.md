@@ -29,7 +29,7 @@ For additional information about SPProfileLeader cmdlets, see the \*-SPProfileLe
 
 After you use the `Add-SPProfileLeader` cmdlet to add a company leader, you have to complete a full crawl of your content sources for the changes to take effect.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
