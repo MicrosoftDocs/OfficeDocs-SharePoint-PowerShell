@@ -22,7 +22,7 @@ Import-SPCacheClusterConfig -Path <String> [-AssignmentCollection <SPAssignmentC
 ## DESCRIPTION
 Use the Import-SPCacheClusterConfig cmdlet to import cache cluster configuration details from an XML file.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

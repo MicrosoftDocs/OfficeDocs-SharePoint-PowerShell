@@ -23,7 +23,7 @@ Get-SPCacheClusterHealth [-AssignmentCollection <SPAssignmentCollection>] [-What
 ## DESCRIPTION
 Use the Get-SPCacheClusterHealth cmdlet to Returns get statistics for all of the named caches in the cache cluster.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

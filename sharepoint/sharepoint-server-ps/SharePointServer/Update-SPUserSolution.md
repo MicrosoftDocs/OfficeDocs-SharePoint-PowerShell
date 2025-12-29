@@ -25,7 +25,7 @@ The `Update-SPUserSolution` cmdlet upgrades a sandboxed solution that has alread
 A user solution is a sandboxed solution.
 Before you use this cmdlet to upgrade the activated solution, use the Add-SPUserSolution cmdlet to upload the upgraded solution to the solution gallery.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
