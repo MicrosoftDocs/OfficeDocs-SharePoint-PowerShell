@@ -25,7 +25,7 @@ Restart-SPAppInstanceJob -AppInstance <SPAppInstance> [-AssignmentCollection <SP
 ## DESCRIPTION
 Use the Restart-SPAppInstanceJob cmdlet to restart an app instance.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [Windows PowerShell for SharePoint Server 2016, SharePoint Server 2019 reference](/powershell/sharepoint/sharepoint-server/).SharePoint Server 2019 reference](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [Windows PowerShell for SharePoint Server 2016, SharePoint Server 2019 reference](/powershell/sharepoint/sharepoint-server/).](/powershell/sharepoint/sharepoint-server/).
 
 ## EXAMPLES
 

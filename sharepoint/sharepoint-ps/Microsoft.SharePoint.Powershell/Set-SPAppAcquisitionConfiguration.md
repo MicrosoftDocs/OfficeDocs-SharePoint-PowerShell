@@ -34,7 +34,7 @@ This cmdlet contains more than one parameter set. You may only use parameters fr
 
 Use the Set-SPAppAcquisitionConfiguration cmdlet to set app acquisition settings from the SharePoint Store or App Catalog.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [Windows PowerShell for SharePoint Server 2016, SharePoint Server 2019 reference](/powershell/sharepoint/sharepoint-server/).SharePoint Server 2019 reference](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [Windows PowerShell for SharePoint Server 2016, SharePoint Server 2019 reference](/powershell/sharepoint/sharepoint-server/).](/powershell/sharepoint/sharepoint-server/).
 
 ## EXAMPLES
 
