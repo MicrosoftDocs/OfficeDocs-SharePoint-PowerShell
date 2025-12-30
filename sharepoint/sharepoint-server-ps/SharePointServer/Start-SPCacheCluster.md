@@ -21,7 +21,7 @@ Start-SPCacheCluster [-AssignmentCollection <SPAssignmentCollection>] [-WhatIf] 
 ## DESCRIPTION
 Use the Start-SPCacheCluster cmdlet to start the Caching Services on all cache hosts in the cluster.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](https://learn.microsoft.com/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
