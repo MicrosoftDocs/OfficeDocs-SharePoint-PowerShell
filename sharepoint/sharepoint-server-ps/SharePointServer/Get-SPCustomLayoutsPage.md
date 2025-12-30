@@ -26,7 +26,7 @@ Get-SPCustomLayoutsPage -WebApplication <SPWebApplicationPipeBind>
 The Get-SPCustomLayoutsPagecmdlet cmdlet returns a mapping to a custom layout page in a Web application.
 If the Identity parameter is not specified, this cmdlet returns the collection of mappings for all custom layout pages.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [https://go.microsoft.com/fwlink/p/?LinkId=251831](https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

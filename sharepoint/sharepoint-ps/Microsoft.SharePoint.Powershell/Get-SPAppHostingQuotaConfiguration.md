@@ -25,7 +25,7 @@ Get-SPAppHostingQuotaConfiguration [-AssignmentCollection <SPAssignmentCollectio
 ## DESCRIPTION
 Use the `Get-SPAppHostingQuotaConfiguration` cmdlet to return the hosting quotas for a specified app by using the Identity parameter.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016, SharePoint Server 2019 reference [https://go.microsoft.com/fwlink/p/?LinkId=671715](https://go.microsoft.com/fwlink/p/?LinkId=671715).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [Windows PowerShell for SharePoint Server 2016, SharePoint Server 2019 reference](/powershell/sharepoint/sharepoint-server/).
 
 ## EXAMPLES
 

@@ -26,7 +26,7 @@ Set-SPDefaultProfileConfig [-AssignmentCollection <SPAssignmentCollection>] [-Co
 ## DESCRIPTION
 Use the Set-SPDefaultProfileConfig cmdlet to change the MySitesPublicEnabled property of a User Profile Application Proxy from whatever was set at the time of Proxy creation to whatever is defined by using this cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at Windows PowerShell for SharePoint Server 2016, SharePoint Server 2019 reference [https://go.microsoft.com/fwlink/p/?LinkId=671715)](https://go.microsoft.com/fwlink/p/?LinkId=671715).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [Windows PowerShell for SharePoint Server 2016, SharePoint Server 2019 reference](/powershell/sharepoint/sharepoint-server/).
 
 ## EXAMPLES
 
