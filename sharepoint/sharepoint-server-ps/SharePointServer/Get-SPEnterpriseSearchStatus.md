@@ -50,7 +50,7 @@ If you do not use the Text parameter, the cmdlet will output a set of objects th
 - string Message: additional information that is provided as a text string
 - ReadOnlyDictionary\<string,string\>Details: dictionary name/value pairs that provide additional diagnostic information
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [https://go.microsoft.com/fwlink/p/?LinkId=251831](https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 
