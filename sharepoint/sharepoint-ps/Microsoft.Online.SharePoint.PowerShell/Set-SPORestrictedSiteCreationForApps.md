@@ -142,7 +142,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Shows what would happen if the cmdlet runs without enforcing the policy by only giving audit events when app creation is restricted.
+Shows what would happen if the cmdlet runs without enforcing the policy by only giving audit events when site creation is restricted.
 
 ```yaml
 Type: Boolean
