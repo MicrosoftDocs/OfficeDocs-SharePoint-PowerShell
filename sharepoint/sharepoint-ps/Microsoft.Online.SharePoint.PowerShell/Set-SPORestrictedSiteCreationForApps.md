@@ -138,6 +138,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SimulationMode
+
+> Applicable: SharePoint Online
+
+Shows what would happen if the cmdlet runs without enforcing the policy by only giving audit events when app creation is restricted.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SiteType
 
 > Applicable: SharePoint Online
