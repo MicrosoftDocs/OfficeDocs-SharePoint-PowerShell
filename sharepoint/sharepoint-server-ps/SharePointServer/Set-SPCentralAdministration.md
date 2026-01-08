@@ -23,7 +23,7 @@ Set-SPCentralAdministration -Port <Int32> [-SecureSocketsLayer] [-HostHeader <St
 ## DESCRIPTION
 The `Set-SPCentralAdministration` cmdlet sets the IIS website binding for the SharePoint Central Administration site.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [https://go.microsoft.com/fwlink/p/?LinkId=251831](https://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 ## EXAMPLES
 

@@ -21,7 +21,7 @@ This cmdlet creates a new container type of standard or trial status. The standa
 ```
 New-SPOContainerType [-ContainerTypeName] <String> -OwningApplicationId <Guid>
  [-ApplicationRedirectUrl <String>] [-TrialContainerType] [-IsPassThroughBilling]
- [-IsGovernableByAdmin <Boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-IsGovernableByAdmin <Boolean>] [-IsArchiveEnabled <Boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -64,6 +64,14 @@ New-SPOContainerType -ContainerTypeName ContosoLegal -OwningApplicationId 2ce032
 
 In Example 4, the cmdlet creates a standard container type, ContosoLegal that has opted out of management through Microsoft-enabled administrator platforms.
 
+### Example 5
+
+```powershell
+New-SPOContainerType -ContainerTypeName ContosoLegal -OwningApplicationId 2ce03211-353e-45d7-b487-8ac6981332cf -IsArchiveEnabled $true
+```
+
+In Example 5, the cmdlet creates a standard container type, ContosoLegal that supports archive and reactivate actions on its containers.
+
 ## PARAMETERS
 
 ### -ApplicationRedirectUrl
@@ -98,6 +106,24 @@ Aliases:
 Required: True
 Position: 0
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsArchiveEnabled
+
+> Applicable: SharePoint Online
+
+Use the `-IsArchiveEnabled` flag to enable archival of containers. Archival moves data to the cold tier, reducing storage costs. While archived, content is inaccessible until reactivated. Reactivation is immediate within the first seven days and can take up to 24 hours afterward. If you don't include this flag, the value defaults to `False`, and all archive API calls fail. After you update the flag, allow up to 24 hours for the change to take effect in the consuming tenant.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

@@ -27,7 +27,7 @@ Get-SPEnterpriseSearchResultSource [[-Identity] <ResultSourcePipeBind>] -Owner <
 
 This cmdlet retrieves a result source object.
 
-If the Identity parameter is not specified, this cmdlet returns the result source collection for the specified search object owner. For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [https://go.microsoft.com/fwlink/p/?LinkId=251831] (https://go.microsoft.com/fwlink/p/?LinkId=251831).
+If the Identity parameter is not specified, this cmdlet returns the result source collection for the specified search object owner. For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [SharePoint Server Cmdlets](/powershell/sharepoint/sharepoint-server/sharepoint-server-cmdlets).
 
 
 ## EXAMPLES
