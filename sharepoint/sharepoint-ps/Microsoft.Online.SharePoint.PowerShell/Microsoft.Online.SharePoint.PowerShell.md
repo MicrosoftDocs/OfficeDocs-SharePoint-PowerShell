@@ -363,6 +363,9 @@ Get the structural navigation caching state for a web.
 ### [Get-SPOTenant](Get-SPOTenant.md)
 Returns SharePoint Online organization properties.
 
+### [Get-SPOTenantApplyFileVersionPolicyJobProgress](Get-SPOTenantApplyFileVersionPolicyJobProgress.md)
+Gets the status for a tenant apply file version policy job.
+
 ### [Get-SPOTenantCdnEnabled](Get-SPOTenantCdnEnabled.md)
 Returns whether Public content delivery network (CDN) or Private CDN is enabled on the tenant level. Requires Tenant administrator permissions.
 
@@ -483,6 +486,9 @@ Starts a background job to manage file versions and version history limits for a
 ### [New-SPOSiteSharingReportJob](New-SPOSiteSharingReportJob.md)
 Creates a new sharing report job.
 
+### [New-SPOTenantApplyFileVersionPolicyJob](New-SPOTenantApplyFileVersionPolicyJob.md)
+Queues a job to apply the tenant-level file version policy across all sites.
+
 ### [Register-SPODataEncryptionPolicy](Register-SPODataEncryptionPolicy.md)
 Cmdlet to register customer encryption status for your geo tenant. For more information, see [Controlling your data in Office 365 using Customer Key](/microsoft-365/compliance/controlling-your-data-using-customer-key)
 
@@ -599,6 +605,9 @@ Cancels further processing of version settings update on existing document libra
 
 ### [Remove-SPOStorageEntity](Remove-SPOStorageEntity.md)
 Tenant properties allow tenant administrators to add properties in the app catalog that can be read by various SharePoint Framework components. Because tenant properties are stored in the tenant app catalog, you must provide the tenant app catalog site collection URL or the site collection app catalog URL in the following cmdlets. This cmdlet is used to remove a value in the property bag.
+
+### [Remove-SPOTenantApplyFileVersionPolicyJob](Remove-SPOTenantApplyFileVersionPolicyJob.md)
+Stops further processing of tenant apply file version policy job that is in-progress.
 
 ### [Remove-SPOTenantCdnOrigin](Remove-SPOTenantCdnOrigin.md)
 Removes a new origin from the Public or Private content delivery network (CDN). Requires Tenant administrator permissions.
