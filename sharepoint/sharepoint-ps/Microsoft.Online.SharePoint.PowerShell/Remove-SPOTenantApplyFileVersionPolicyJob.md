@@ -15,10 +15,10 @@ manager: seanmc
 
 ## SYNOPSIS
 
-> [!NOTE]
-> This feature is part of the version history controls preview. If your tenant is not part of the preview or the feature has not rolled out to your tenant, you will get an error when trying to run this cmdlet.
+Stops further processing of tenant apply file version policy job that is in progress. SharePoint Advanced Management license is required to run this cmdlet.
 
-Stops further processing of tenant apply file version policy job that is in-progress. SharePoint Advanced Management (SAM) license is required to run this cmdlet.
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
 
 ## SYNTAX
 
@@ -28,11 +28,11 @@ Remove-SPOTenantApplyFileVersionPolicyJob [-WhatIf] [-Confirm] [<CommonParameter
 
 ## DESCRIPTION
 
-Stops further processing of tenant apply file version policy job that is in-progress.
+Stops further processing of tenant apply file version policy job that is in progress.
 
-Caution:
-- When 'TrimVersions' is specified in the job, this will stop creating new jobs that trim versions for sites. This does not affect versions that were already permanently deleted while the job was running.
-- When 'SetVersionPolicy' is specified in the job, this will stop creating new jobs that apply the new version policy to existing document libraries for sites. The version policies that were already applied remain in place and will not be reverted.
+> [!NOTE]
+> - When 'TrimVersions' is specified in the job, this will stop creating new jobs that trim versions for sites. This does not affect versions that were already permanently deleted while the job was running.
+> - When 'SetVersionPolicy' is specified in the job, this will stop creating new jobs that apply the new version policy to existing document libraries for sites. The version policies that were already applied remain in place and will not be reverted.
 
 ## EXAMPLES
 
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -93,3 +93,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-SPOTenantApplyFileVersionPolicyJob](New-SPOTenantApplyFileVersionPolicyJob.md)
 
 [Get-SPOTenantApplyFileVersionPolicyJobProgress](Get-SPOTenantApplyFileVersionPolicyJobProgress.md)
+
+[SharePoint Advanced Management](/sharepoint/sharepoint-advanced-management-licensing)

@@ -15,10 +15,10 @@ manager: seanmc
 
 ## SYNOPSIS
 
-> [!NOTE]
-> This feature is part of the version history controls preview. If your tenant is not part of the preview or the feature has not rolled out to your tenant, you will get an error when trying to run this cmdlet.
+Gets the status for a tenant apply file version policy job. SharePoint Advanced Management license is required to run this cmdlet.
 
-Gets the status for a tenant apply file version policy job. SharePoint Advanced Management (SAM) license is required to run this cmdlet.
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
 
 ## SYNTAX
 
@@ -42,7 +42,7 @@ Example 1 gets the status for a tenant apply file version policy job.
 ## PARAMETERS
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -58,3 +58,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-SPOTenantApplyFileVersionPolicyJob](New-SPOTenantApplyFileVersionPolicyJob.md)
 
 [Remove-SPOTenantApplyFileVersionPolicyJob](Remove-SPOTenantApplyFileVersionPolicyJob.md)
+
+[SharePoint Advanced Management](/sharepoint/sharepoint-advanced-management-licensing)

@@ -15,35 +15,33 @@ manager: seanmc
 
 ## SYNOPSIS
 
-> [!NOTE]
-> This feature is part of the version history controls preview. If your tenant is not part of the preview or the feature has not rolled out to your tenant, you will get an error when trying to run this cmdlet.
+Queues a job to apply the tenant-level file version policy across all sites. SharePoint Advanced Management license is required to run this cmdlet.
 
-Queues a job to apply the tenant-level file version policy across all sites. SharePoint Advanced Management (SAM) license is required to run this cmdlet.
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
 
 ## SYNTAX
 
 ```
-New-SPOTenantApplyFileVersionPolicyJob [-TrimVersions] [-SetVersionPolicy] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+New-SPOTenantApplyFileVersionPolicyJob [-TrimVersions] [-SetVersionPolicy] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Queues a job to apply the tenant-level file version policy across all sites. The job trims existing file versions and/or set version policy for existing document libraries based on the version policy configured at the tenant level.
+Queues a job to apply the tenant-level file version policy across all sites. The job trims existing file versions and/or sets version policy for existing document libraries based on the version policy configured at the tenant level.
 
 The following site types are excluded from processing:
 
 - Read-only sites
-
 - Locked sites
-
 - Archived sites
-
 - Sites with version policy broken inheritance
 
-Caution:
-- Versions deleted using this cmdlet will be permanently deleted and cannot be recovered from the recycle bin.
-- If the tenant-level version policy is modified while the job is in progress, the job will apply the updated policy to the remaining sites that have not yet been processed. Sites that were already processed will not be re-evaluated or updated.
+> [!NOTE]
+> - Versions deleted using this cmdlet will be permanently deleted and cannot be recovered from the recycle bin.
+> - Use `Get-SPOTenant` cmdlet and the `EnableAutoExpirationVersionTrim`, `MajorVersionLimit`, `ExpireVersionsAfterDays` and `VersionPolicyFileTypeOverride` properties to confirm the tenant-level file version policy before running the cmdlet to make sure it matches your intended configuration.
+> - If the tenant-level version policy changes while the job is in progress, the job will apply the updated policy to the remaining sites that have not yet been processed. Sites that were already processed will not be re-evaluated or updated.
+> - Allow only one job per tenant.
 
 ## EXAMPLES
 
@@ -86,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetVersionPolicy
-Set version policy for existing document libraries across all sites.
+Sets version policy for existing document libraries across all sites.
 
 ```yaml
 Type: SwitchParameter
@@ -101,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrimVersions
-Trim versions for files in document libraries across all sites.
+Trims versions for files in document libraries across all sites.
 
 ```yaml
 Type: SwitchParameter
@@ -132,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -148,3 +146,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-SPOTenantApplyFileVersionPolicyJobProgress](Get-SPOTenantApplyFileVersionPolicyJobProgress.md)
 
 [Remove-SPOTenantApplyFileVersionPolicyJob](Remove-SPOTenantApplyFileVersionPolicyJob.md)
+
+[Get-SPOTenant](Get-SPOTenant.md)
+
+[SharePoint Advanced Management](/sharepoint/sharepoint-advanced-management-licensing)
