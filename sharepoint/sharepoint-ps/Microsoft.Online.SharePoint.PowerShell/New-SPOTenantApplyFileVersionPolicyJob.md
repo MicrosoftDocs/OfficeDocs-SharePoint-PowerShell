@@ -50,14 +50,14 @@ The following site types are excluded from processing:
 New-SPOTenantApplyFileVersionPolicyJob -TrimVersions -SetVersionPolicy
 ```
 
-Example 1 starts a tenant apply file version policy job to trim versions and set version policy for existing document libraries across all sites.
+Example 1 starts a tenant apply file version policy job to trim existing versions and set version policy for existing document libraries across all sites.
 
 ### Example 2
 ```powershell
 New-SPOTenantApplyFileVersionPolicyJob -TrimVersions
 ```
 
-Example 2 starts a tenant apply file version policy job to trim versions for files in doducment libraries across all sites.
+Example 2 starts a tenant apply file version policy job to trim existing versions for files in doducment libraries across all sites.
 
 ### Example 3
 ```powershell
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetVersionPolicy
-Sets version policy for existing document libraries across all sites.
+Sets version policy for existing document libraries across all sites based on the tenant-level file version policy. The version policy applys to new versions created in these existing document libraries.
 
 ```yaml
 Type: SwitchParameter
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -TrimVersions
-Trims versions for files in document libraries across all sites.
+Trims existing versions for files in document libraries across all sites based on the tenant-level file version policy.
 
 ```yaml
 Type: SwitchParameter

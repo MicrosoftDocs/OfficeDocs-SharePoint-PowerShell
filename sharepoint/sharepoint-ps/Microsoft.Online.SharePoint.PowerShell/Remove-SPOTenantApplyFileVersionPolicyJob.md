@@ -31,8 +31,8 @@ Remove-SPOTenantApplyFileVersionPolicyJob [-WhatIf] [-Confirm] [<CommonParameter
 Stops further processing of tenant apply file version policy job that is in progress.
 
 > [!NOTE]
-> - When 'TrimVersions' is specified in the job, this will stop creating new jobs that trim versions for sites. This does not affect versions that were already permanently deleted while the job was running.
-> - When 'SetVersionPolicy' is specified in the job, this will stop creating new jobs that apply the new version policy to existing document libraries for sites. The version policies that were already applied remain in place and will not be reverted.
+> - If the tenant apply version job is queued by using the cmdlet `New-SPOTenantApplyFileVersionPolicyJob` with the `TrimVersions` parameter, this will stop creating new sub-jobs that trim versions for sites. This does not affect versions that were already permanently deleted while the job was running.
+> - If the tenant apply version job is queued by using the cmdlet `New-SPOTenantApplyFileVersionPolicyJob` with the `SetVersionPolicy` parameter, this will stop creating new sub-jobs that apply the new version policy to existing document libraries for sites. The version policies that were already applied remain in place and will not be reverted.
 
 ## EXAMPLES
 
