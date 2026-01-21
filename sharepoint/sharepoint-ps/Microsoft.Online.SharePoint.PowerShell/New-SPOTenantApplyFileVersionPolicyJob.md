@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetVersionPolicy
-Sets version policy for existing document libraries across all sites based on the tenant-level file version policy. The version policy applys to new versions created in these existing document libraries.
+Sets version policy for existing document libraries across all sites based on the tenant-level file version policy. The version policy applies to new versions created in these existing document libraries.
 
 ```yaml
 Type: SwitchParameter

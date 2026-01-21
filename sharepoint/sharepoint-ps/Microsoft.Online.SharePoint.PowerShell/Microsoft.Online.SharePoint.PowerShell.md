@@ -607,7 +607,7 @@ Cancels further processing of version settings update on existing document libra
 Tenant properties allow tenant administrators to add properties in the app catalog that can be read by various SharePoint Framework components. Because tenant properties are stored in the tenant app catalog, you must provide the tenant app catalog site collection URL or the site collection app catalog URL in the following cmdlets. This cmdlet is used to remove a value in the property bag.
 
 ### [Remove-SPOTenantApplyFileVersionPolicyJob](Remove-SPOTenantApplyFileVersionPolicyJob.md)
-Stops further processing of tenant apply file version policy job that is in-progress. SharePoint Advanced Management license is required to run this cmdlet.
+Stops further processing of tenant apply file version policy job that is in progress. SharePoint Advanced Management license is required to run this cmdlet.
 
 ### [Remove-SPOTenantCdnOrigin](Remove-SPOTenantCdnOrigin.md)
 Removes a new origin from the Public or Private content delivery network (CDN). Requires Tenant administrator permissions.
