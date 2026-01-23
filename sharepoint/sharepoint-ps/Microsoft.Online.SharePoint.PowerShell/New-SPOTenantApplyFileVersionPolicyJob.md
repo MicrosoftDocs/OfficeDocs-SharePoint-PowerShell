@@ -57,7 +57,7 @@ Example 1 starts a tenant apply file version policy job to trim existing version
 New-SPOTenantApplyFileVersionPolicyJob -TrimVersions
 ```
 
-Example 2 starts a tenant apply file version policy job to trim existing versions for files in doducment libraries across all sites.
+Example 2 starts a tenant apply file version policy job to trim existing versions for files in document libraries across all sites.
 
 ### Example 3
 ```powershell
