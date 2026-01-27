@@ -5773,7 +5773,7 @@ This feature enables tenant admins to enable ODB and SPO to respect Exchange sup
 PARAMVALUE: True | False
 
 > [!NOTE]
-> When set to $true, users aren't able to share with security groups or SharePoint groups.
+> When set to $true, users aren't able to share with security groups or SharePoint groups. SharePoint site administrators can bypass the People Picker restrictions on sites they administer.
 
 ```yaml
 Type: System.Boolean
