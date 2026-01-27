@@ -141,6 +141,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
+ [-EnableNotificationsSubscriptions <Boolean>]
 ```
 
 ### ParameterSetContentTypeSyncSiteTemplatesList
@@ -395,6 +396,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
+ [-EnableNotificationsSubscriptions <Boolean>]
 ```
 
 ### InformationBarrier
@@ -520,6 +522,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
+ [-EnableNotificationsSubscriptions <Boolean>]
 ```
 
 ### ParameterSetNameRestrictExternalSharing
@@ -646,6 +649,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  -RestrictExternalSharing <Guid[]> [-AddAppIdToList] [-RemoveAppIdFromList]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
+ [-EnableNotificationsSubscriptions <Boolean>]
 ```
 
 ## DESCRIPTION
@@ -2950,7 +2954,7 @@ Accept wildcard characters: False
 Enable or disable auto news digest. [Documentation](https://aka.ms/autonewsdigest) for auto news digest.
 
 PARAMVALUE: True | False
-
+https://learn.microsoft.com/en-us/sharepoint/dev/apis/webhooks/lists/overview-sharepoint-list-webhooks
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
@@ -2959,6 +2963,27 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableNotificationsSubscriptions
+
+> Applicable: SharePoint Online
+
+Enable or disable writing SharePoint News and Announcement notification to a hidden list (NewsNotificationList) in each user's My Site. This setting is an opt-in for SharePoint Online to emit notification data; third-party solutions must still create and manage webhook subscriptions to receive change notifications and then read the list to process new entries.
+[Documentation](https://learn.microsoft.com/sharepoint/dev/apis/webhooks/lists/overview-sharepoint-list-webhooks) for SharePoint list web hooks.
+
+PARAMVALUE: True | False
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
