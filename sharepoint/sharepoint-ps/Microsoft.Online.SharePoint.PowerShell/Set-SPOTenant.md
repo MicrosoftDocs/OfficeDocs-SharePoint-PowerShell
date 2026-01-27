@@ -5195,6 +5195,9 @@ The valid values are:
 - False (default) - Starts with / partial name search functionality is available.
 - True - Disables starts with for all users/partial name search functionality for all SharePoint users, except SharePoint Admins.
 
+> [!NOTE]
+> SharePoint site administrators can bypass the People Picker restrictions on sites they administer.
+
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
