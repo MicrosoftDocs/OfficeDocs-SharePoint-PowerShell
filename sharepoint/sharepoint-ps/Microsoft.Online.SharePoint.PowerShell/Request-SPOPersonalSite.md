@@ -27,10 +27,10 @@ Request-SPOPersonalSite -UserEmails <String[]> [-NoWait] [<CommonParameters>]
 
 The `Request-SPOPersonalSite` cmdlet requests that the users specified be enqueued so that a Personal Site be created for each. The actual Personal site is created by a Timer Job later. If the user already has a Personal Site created, the request for creation for the user will be silently ignored.
 
-Note:
-- You must specify a string array of user logins that contains one or more valid user email (logins) and cannot contain any empty fields. The command will stop if it encounters any empty strings in the array. A maximum of 200 users can be specified.
-- The actor executing this cmdlet must be at least assigned the SharePoint Online administrator role and have been assigned a SharePoint Online license to be able to provision the OneDrive for Business sites. The users who the sites will be provisioned for must also have a SharePoint license assigned.
--  This cmdlet is NOT OneDrive Multi-Geo aware. If you need to request Personal Sites for Multi-Geo enabled tenants, you must run this cmdlet for users in the region their data is to be hosted in. To retrieve users with a specific PDL, use the following sample: `Get-EntraUser | Where {$_.PreferredDataLocation -eq "EUR"}`.
+> [!NOTE]
+> - You must specify a string array of user logins that contains one or more valid user email (logins) and cannot contain any empty fields. The command will stop if it encounters any empty strings in the array. A maximum of 200 users can be specified.
+> - The actor executing this cmdlet must be at least assigned the SharePoint Online administrator role and have been assigned a SharePoint Online license to be able to provision the OneDrive for Business sites. The users who the sites will be provisioned for must also have a SharePoint license assigned.
+> -  This cmdlet is NOT OneDrive Multi-Geo aware. If you need to request Personal Sites for Multi-Geo enabled tenants, you must run this cmdlet for users in the region their data is to be hosted in. To retrieve users with a specific PDL, use the following sample: `Get-EntraUser | Where {$_.PreferredDataLocation -eq "EUR"}`.
 
 For more information and other examples, see [Pre-provision OneDrive for users in your organization](/sharepoint/pre-provision-accounts).
 
