@@ -53,7 +53,7 @@ Start-SPODataAccessGovernanceInsight -ReportEntity <ReportEntityEnum> -Workload 
 ### UserPermissionsParameterSet
 ```
 Start-SPODataAccessGovernanceInsight -ReportEntity <ReportEntityEnum> -Workload <WorkloadEnum>
- -ReportType <ReportTypeEnum> -Name <String> -UpnList <System.Collections.Generic.List`1[System.String]>
+ -ReportType <ReportTypeEnum> -Name <String> -UserPrincipalNames <System.Collections.Generic.List`1[System.String]>
  [<CommonParameters>]
 ```
 
@@ -227,9 +227,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UpnList
+### -UserPrincipalNames
 
-Specifies the user principal name of the users for whom permissions report should be generated.
+Specifies the user principal names of the users for whom permissions report should be generated.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
