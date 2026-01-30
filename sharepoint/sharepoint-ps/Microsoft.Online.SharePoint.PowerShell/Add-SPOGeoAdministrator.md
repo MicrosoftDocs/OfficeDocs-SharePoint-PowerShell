@@ -8,7 +8,7 @@ schema: 2.0.0
 author: samkabue
 ms.author: speedta
 ms.reviewer:
-ms.custom: has-azure-ad-ps-ref
+ms.custom: no-azure-ad-ps-ref
 ---
 
 # Add-SPOGeoAdministrator
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Not all security groups have a group alias. If you want to add a security group that does not have an alias, run Get-MsolGroup to retrieve a list of groups, find your security group's ObjectID, and then use this parameter. For more information, see [Add or remove a geo administrator in Microsoft 365 Multi-Geo](/office365/enterprise/add-a-sharepoint-geo-admin).
+Not all security groups have a group alias. If you want to add a security group that does not have an alias, run Get-EntraGroup to retrieve a list of groups, find your security group's ObjectID, and then use this parameter. For more information, see [Add or remove a geo administrator in Microsoft 365 Multi-Geo](/office365/enterprise/add-a-sharepoint-geo-admin).
 
 ```yaml
 Type: System.Guid
