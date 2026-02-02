@@ -92,7 +92,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-BlockUserInfoVisibility <String>] [-BlockUserInfoVisibilityInOneDrive <TenantBrowseUserInfoPolicyValue>]
  [-BlockUserInfoVisibilityInSharePoint <TenantBrowseUserInfoPolicyValue>]
  [-AllowOverrideForBlockUserInfoVisibility <Boolean>] [-DisablePersonalListCreation <Boolean>]
- [-DisableSpacesActivation <Boolean>] [-DisableVivaConnectionsAnalytics <Boolean>]
+ [-DisableSpacesActivation <Boolean>] [-DisableSpfxTopBottomPlaceholdersElevated <Boolean>]
+ [-DisableVivaConnectionsAnalytics <Boolean>]
  [-InformationBarriersSuspension <Boolean>] [-IBImplicitGroupBased <Boolean>]
  [-AppBypassInformationBarriers <Boolean>] [-AppAccessInformationBarriersAllowList <Guid[]>]
  [-AllOrganizationSecurityGroupId <Guid>] [-DisableModernListTemplateIds <Guid[]>]
@@ -218,7 +219,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-BlockUserInfoVisibility <String>] [-BlockUserInfoVisibilityInOneDrive <TenantBrowseUserInfoPolicyValue>]
  [-BlockUserInfoVisibilityInSharePoint <TenantBrowseUserInfoPolicyValue>]
  [-AllowOverrideForBlockUserInfoVisibility <Boolean>] [-DisablePersonalListCreation <Boolean>]
- [-DisableSpacesActivation <Boolean>] [-DisableVivaConnectionsAnalytics <Boolean>]
+ [-DisableSpacesActivation <Boolean>] [-DisableSpfxTopBottomPlaceholdersElevated <Boolean>]
+ [-DisableVivaConnectionsAnalytics <Boolean>]
  [-InformationBarriersSuspension <Boolean>] [-IBImplicitGroupBased <Boolean>]
  [-AppBypassInformationBarriers <Boolean>] [-AppAccessInformationBarriersAllowList <Guid[]>]
  [-AllOrganizationSecurityGroupId <Guid>] [-DisableModernListTemplateIds <Guid[]>]
@@ -345,7 +347,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-BlockUserInfoVisibility <String>] [-BlockUserInfoVisibilityInOneDrive <TenantBrowseUserInfoPolicyValue>]
  [-BlockUserInfoVisibilityInSharePoint <TenantBrowseUserInfoPolicyValue>]
  [-AllowOverrideForBlockUserInfoVisibility <Boolean>] [-DisablePersonalListCreation <Boolean>]
- [-DisableSpacesActivation <Boolean>] [-DisableVivaConnectionsAnalytics <Boolean>]
+ [-DisableSpacesActivation <Boolean>] [-DisableSpfxTopBottomPlaceholdersElevated <Boolean>]
+ [-DisableVivaConnectionsAnalytics <Boolean>]
  [-InformationBarriersSuspension <Boolean>] [-IBImplicitGroupBased <Boolean>]
  [-AppBypassInformationBarriers <Boolean>] [-AppAccessInformationBarriersAllowList <Guid[]>]
  [-AllOrganizationSecurityGroupId <Guid>] [-DisableModernListTemplateIds <Guid[]>]
@@ -470,7 +473,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-BlockUserInfoVisibility <String>] [-BlockUserInfoVisibilityInOneDrive <TenantBrowseUserInfoPolicyValue>]
  [-BlockUserInfoVisibilityInSharePoint <TenantBrowseUserInfoPolicyValue>]
  [-AllowOverrideForBlockUserInfoVisibility <Boolean>] [-DisablePersonalListCreation <Boolean>]
- [-DisableSpacesActivation <Boolean>] [-DisableVivaConnectionsAnalytics <Boolean>]
+ [-DisableSpacesActivation <Boolean>] [-DisableSpfxTopBottomPlaceholdersElevated <Boolean>]
+ [-DisableVivaConnectionsAnalytics <Boolean>]
  [-InformationBarriersSuspension <Boolean>] [-IBImplicitGroupBased <Boolean>]
  [-AppBypassInformationBarriers <Boolean>] [-DefaultOneDriveInformationBarrierMode <String>]
  [-AppAccessInformationBarriersAllowList <Guid[]>] [-AllOrganizationSecurityGroupId <Guid>]
@@ -595,7 +599,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-BlockUserInfoVisibility <String>] [-BlockUserInfoVisibilityInOneDrive <TenantBrowseUserInfoPolicyValue>]
  [-BlockUserInfoVisibilityInSharePoint <TenantBrowseUserInfoPolicyValue>]
  [-AllowOverrideForBlockUserInfoVisibility <Boolean>] [-DisablePersonalListCreation <Boolean>]
- [-DisableSpacesActivation <Boolean>] [-DisableVivaConnectionsAnalytics <Boolean>]
+ [-DisableSpacesActivation <Boolean>] [-DisableSpfxTopBottomPlaceholdersElevated <Boolean>]
+ [-DisableVivaConnectionsAnalytics <Boolean>]
  [-InformationBarriersSuspension <Boolean>] [-IBImplicitGroupBased <Boolean>]
  [-AppBypassInformationBarriers <Boolean>] [-AppAccessInformationBarriersAllowList <Guid[]>]
  [-AllOrganizationSecurityGroupId <Guid>] [-DisableModernListTemplateIds <Guid[]>]
@@ -2615,6 +2620,28 @@ Accept wildcard characters: False
 ### -DisableSpacesActivation
 
 Controls SharePoint spaces activation.
+
+PARAMVALUE: True | False
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableSpfxTopBottomPlaceholdersElevated
+
+> Applicable: SharePoint Online
+
+This feature allows SharePoint Administrators to control where SPFx Top and Bottom placeholders are rendered in relation to elevated content.
+
+Accepts a value of true (enabled) to render the Top and Bottom placeholders outside the elevated content area, or false (disabled) to render them inside the elevated content area. By default, this feature is set to false.
 
 PARAMVALUE: True | False
 
