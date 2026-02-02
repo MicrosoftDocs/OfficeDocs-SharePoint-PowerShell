@@ -2971,7 +2971,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Enable or disable writing SharePoint News and Announcement notifications to a hidden list (NewsNotificationList) in each user's My Site. This setting is an opt-in for SharePoint Online to emit notification data. Third-party solutions must create and manage webhook subscriptions to receive change notifications and then read the list to process new entries for triggering their own notifications for the user.
+Enable or disable writing SharePoint News and Announcement notifications to a hidden list (NewsNotificationList) in each user's My Site. This setting is an opt-in for SharePoint Online to emit notification data. Third-party solutions must create and manage webhook subscriptions to receive change notifications and then read the list to process new entries for triggering their own notifications for the user. Notificaitons for Likes and comments on News posts are not in scope for this setting. 
 [Documentation](https://learn.microsoft.com/sharepoint/dev/apis/webhooks/lists/overview-sharepoint-list-webhooks) for SharePoint list web hooks.
 [Documentation](https://learn.microsoft.com/viva/connections/viva-connections-news-notifications#when-notifications-are-sent-via-microsoft-teams) for SharePoint news notifications.
 [Documentation](https://learn.microsoft.com/viva/connections/announcements-viva-connections) for Announcements.
