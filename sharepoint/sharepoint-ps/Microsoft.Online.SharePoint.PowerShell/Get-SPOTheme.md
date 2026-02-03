@@ -36,7 +36,7 @@ This cmdlet returns the settings for a named existing theme, or for all uploaded
 This example shows how to use the [**Get-SPOTheme**](./Get-SPOTheme.md) cmdlet to return the settings for the `"Custom Cyan"` theme created in the example for the [**Add-SPOTheme**](./Add-SPOTheme.md) cmdlet. Note that this example uses the PowerShell `ConvertTo-Json` filter to display the theme in JSON format.
 
 ```powershell
-Get-SPOTheme -Name "Custom Cyan" | ConvertTo-Json -Depth 4
+Get-SPOTheme -Name "Custom Cyan" -IncludeGlobalTheme | ConvertTo-Json -Depth 4
 ```
 
 ```Output
@@ -96,7 +96,7 @@ If the theme is in legacy format, the output will be:
 To return all uploaded themes, use the [**Get-SPOTheme**](./Get-SPOTheme.md) command with no arguments.
 
 ```powershell
-Get-SPOTheme
+Get-SPOTheme -IncludeGlobalTheme
 ```
 
 ## PARAMETERS
@@ -116,6 +116,26 @@ Required: False
 Position: 0
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -IncludeGlobalTheme
+
+> Applicable: SharePoint Online
+
+When specified, Get-SPOTheme returns all global themes that are available to the tenant. This includes themes created by using PowerShell as well as themes created in the Brand Center.
+
+For satellite geos, IncludeGlobalTheme also returns the global themes that are defined in the primary geo.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
