@@ -15,7 +15,7 @@ manager: seanmc
 
 ## SYNOPSIS
 
-Queues a job to apply the tenant-level file version policy across all sites. SharePoint Advanced Management license is required to run this cmdlet.
+Queues a job to apply the tenant-level file version policy across all sites. SharePoint Advanced Management license or Copilot license is required to run this cmdlet.
 
 > [!NOTE]
 > This feature is currently in preview and may not be available in your tenant.
@@ -150,3 +150,5 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 [Get-SPOTenant](Get-SPOTenant.md)
 
 [SharePoint Advanced Management](/sharepoint/sharepoint-advanced-management-licensing)
+
+[Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-licensing)

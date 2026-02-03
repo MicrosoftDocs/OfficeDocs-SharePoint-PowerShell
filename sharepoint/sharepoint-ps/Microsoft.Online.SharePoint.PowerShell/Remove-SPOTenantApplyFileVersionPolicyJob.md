@@ -15,7 +15,7 @@ manager: seanmc
 
 ## SYNOPSIS
 
-Stops further processing of tenant apply file version policy job that is in progress. SharePoint Advanced Management license is required to run this cmdlet.
+Stops further processing of tenant apply file version policy job that is in progress. SharePoint Advanced Management license or Copilot license is required to run this cmdlet.
 
 > [!NOTE]
 > This feature is currently in preview and may not be available in your tenant.
@@ -95,3 +95,5 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 [Get-SPOTenantApplyFileVersionPolicyJobProgress](Get-SPOTenantApplyFileVersionPolicyJobProgress.md)
 
 [SharePoint Advanced Management](/sharepoint/sharepoint-advanced-management-licensing)
+
+[Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-licensing)
