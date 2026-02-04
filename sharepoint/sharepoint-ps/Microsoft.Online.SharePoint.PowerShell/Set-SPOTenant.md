@@ -2641,7 +2641,7 @@ Accept wildcard characters: False
 
 This feature allows SharePoint Administrators to control where SPFx Top and Bottom placeholders are rendered in relation to elevated content.
 
-Accepts a value of true (enabled) to render the Top and Bottom placeholders outside the elevated content area, or false (disabled) to render them inside the elevated content area. By default, this feature is set to false.
+Accepts a value of true to render the Top and Bottom placeholders outside the elevated content area, or false to render them inside the elevated content area. By default, this feature is set to false.
 
 PARAMVALUE: True | False
 
