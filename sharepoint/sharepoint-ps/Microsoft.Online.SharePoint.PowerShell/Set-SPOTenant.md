@@ -128,7 +128,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AIBuilderModelSelectedSitesIncludesContentCenters <Boolean>] [-PrebuiltModelScope <SyntexFeatureScopeValue>]
  [-PrebuiltModelSelectedSitesList <String[]>]
  [-PrebuiltModelSelectedSitesListOperation <SelectedSitesListOperations>]
- [-DocumentTranslationScope <SyntexFeatureScopeValue>] [-DocumentTranslationSelectedSitesList <String[]>]...manage [webhook](/sharepoint/dev/apis/webhooks/lists/overview-sharepoint-list-webhooks) solutions...
+ [-DocumentTranslationScope <SyntexFeatureScopeValue>] [-DocumentTranslationSelectedSitesList <String[]>]
  [-DocumentTranslationSelectedSitesListOperation <SelectedSitesListOperations>]
  [-AutofillColumnsScope <SyntexFeatureScopeValue>] [-AutofillColumnsSelectedSitesList <String[]>]
  [-AutofillColumnsSelectedSitesListOperation <SelectedSitesListOperations>]
@@ -2971,7 +2971,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-This is an opt-in setting that enables or disables writing SharePoint News and Announcement notification data to a list (NewsNotificationList) in each user’s My Site. When enabled, SharePoint Online emits notification events to this list. Third-party solutions must create and manage [webhook](/sharepoint/dev/apis/webhooks/lists/overview-sharepoint-list-webhooks) solutions to receive change notifications and then read the list to process new entries for triggering their own notifications for the user. This applies to [SharePoint News Notifications](/viva/connections/viva-connections-news-notifications#when-notifications-are-sent-via-microsoft-teams) and [Viva Connections Annoucements](/viva/connections/announcements-viva-connections).
+This is an opt-in setting that enables or disables writing SharePoint News and Announcement notification data to a list (NewsNotificationList) in the My Site of every user. When enabled, SharePoint Online emits notification events to this list. Third-party solutions must create and manage [webhook](/sharepoint/dev/apis/webhooks/lists/overview-sharepoint-list-webhooks) solutions to receive change notifications and then read the list to process new entries for triggering their own notifications for the user. This applies to [SharePoint News Notifications](/viva/connections/viva-connections-news-notifications#when-notifications-are-sent-via-microsoft-teams) and [Viva Connections Annoucements](/viva/connections/announcements-viva-connections).
 
 PARAMVALUE: True | False
 
