@@ -92,7 +92,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-BlockUserInfoVisibility <String>] [-BlockUserInfoVisibilityInOneDrive <TenantBrowseUserInfoPolicyValue>]
  [-BlockUserInfoVisibilityInSharePoint <TenantBrowseUserInfoPolicyValue>]
  [-AllowOverrideForBlockUserInfoVisibility <Boolean>] [-DisablePersonalListCreation <Boolean>]
- [-DisableSpacesActivation <Boolean>] [-DisableVivaConnectionsAnalytics <Boolean>]
+ [-DisableSpacesActivation <Boolean>] [-DisableSpfxTopBottomPlaceholdersInElevatedContent <Boolean>]
+ [-DisableVivaConnectionsAnalytics <Boolean>]
  [-InformationBarriersSuspension <Boolean>] [-IBImplicitGroupBased <Boolean>]
  [-AppBypassInformationBarriers <Boolean>] [-AppAccessInformationBarriersAllowList <Guid[]>]
  [-AllOrganizationSecurityGroupId <Guid>] [-DisableModernListTemplateIds <Guid[]>]
@@ -141,6 +142,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
+ [-EnableNotificationsSubscriptions <Boolean>]
 ```
 
 ### ParameterSetContentTypeSyncSiteTemplatesList
@@ -218,7 +220,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-BlockUserInfoVisibility <String>] [-BlockUserInfoVisibilityInOneDrive <TenantBrowseUserInfoPolicyValue>]
  [-BlockUserInfoVisibilityInSharePoint <TenantBrowseUserInfoPolicyValue>]
  [-AllowOverrideForBlockUserInfoVisibility <Boolean>] [-DisablePersonalListCreation <Boolean>]
- [-DisableSpacesActivation <Boolean>] [-DisableVivaConnectionsAnalytics <Boolean>]
+ [-DisableSpacesActivation <Boolean>] [-DisableSpfxTopBottomPlaceholdersInElevatedContent <Boolean>]
+ [-DisableVivaConnectionsAnalytics <Boolean>]
  [-InformationBarriersSuspension <Boolean>] [-IBImplicitGroupBased <Boolean>]
  [-AppBypassInformationBarriers <Boolean>] [-AppAccessInformationBarriersAllowList <Guid[]>]
  [-AllOrganizationSecurityGroupId <Guid>] [-DisableModernListTemplateIds <Guid[]>]
@@ -267,6 +270,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
+ [-EnableNotificationsSubscriptions <Boolean>]
 ```
 
 ### ParamSetMultipleSites
@@ -345,7 +349,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-BlockUserInfoVisibility <String>] [-BlockUserInfoVisibilityInOneDrive <TenantBrowseUserInfoPolicyValue>]
  [-BlockUserInfoVisibilityInSharePoint <TenantBrowseUserInfoPolicyValue>]
  [-AllowOverrideForBlockUserInfoVisibility <Boolean>] [-DisablePersonalListCreation <Boolean>]
- [-DisableSpacesActivation <Boolean>] [-DisableVivaConnectionsAnalytics <Boolean>]
+ [-DisableSpacesActivation <Boolean>] [-DisableSpfxTopBottomPlaceholdersInElevatedContent <Boolean>]
+ [-DisableVivaConnectionsAnalytics <Boolean>]
  [-InformationBarriersSuspension <Boolean>] [-IBImplicitGroupBased <Boolean>]
  [-AppBypassInformationBarriers <Boolean>] [-AppAccessInformationBarriersAllowList <Guid[]>]
  [-AllOrganizationSecurityGroupId <Guid>] [-DisableModernListTemplateIds <Guid[]>]
@@ -394,6 +399,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
+ [-EnableNotificationsSubscriptions <Boolean>]
 ```
 
 ### InformationBarrier
@@ -470,7 +476,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-BlockUserInfoVisibility <String>] [-BlockUserInfoVisibilityInOneDrive <TenantBrowseUserInfoPolicyValue>]
  [-BlockUserInfoVisibilityInSharePoint <TenantBrowseUserInfoPolicyValue>]
  [-AllowOverrideForBlockUserInfoVisibility <Boolean>] [-DisablePersonalListCreation <Boolean>]
- [-DisableSpacesActivation <Boolean>] [-DisableVivaConnectionsAnalytics <Boolean>]
+ [-DisableSpacesActivation <Boolean>] [-DisableSpfxTopBottomPlaceholdersInElevatedContent <Boolean>]
+ [-DisableVivaConnectionsAnalytics <Boolean>]
  [-InformationBarriersSuspension <Boolean>] [-IBImplicitGroupBased <Boolean>]
  [-AppBypassInformationBarriers <Boolean>] [-DefaultOneDriveInformationBarrierMode <String>]
  [-AppAccessInformationBarriersAllowList <Guid[]>] [-AllOrganizationSecurityGroupId <Guid>]
@@ -519,6 +526,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
+ [-EnableNotificationsSubscriptions <Boolean>]
 ```
 
 ### ParameterSetNameRestrictExternalSharing
@@ -595,7 +603,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-BlockUserInfoVisibility <String>] [-BlockUserInfoVisibilityInOneDrive <TenantBrowseUserInfoPolicyValue>]
  [-BlockUserInfoVisibilityInSharePoint <TenantBrowseUserInfoPolicyValue>]
  [-AllowOverrideForBlockUserInfoVisibility <Boolean>] [-DisablePersonalListCreation <Boolean>]
- [-DisableSpacesActivation <Boolean>] [-DisableVivaConnectionsAnalytics <Boolean>]
+ [-DisableSpacesActivation <Boolean>] [-DisableSpfxTopBottomPlaceholdersInElevatedContent <Boolean>]
+ [-DisableVivaConnectionsAnalytics <Boolean>]
  [-InformationBarriersSuspension <Boolean>] [-IBImplicitGroupBased <Boolean>]
  [-AppBypassInformationBarriers <Boolean>] [-AppAccessInformationBarriersAllowList <Guid[]>]
  [-AllOrganizationSecurityGroupId <Guid>] [-DisableModernListTemplateIds <Guid[]>]
@@ -645,6 +654,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  -RestrictExternalSharing <Guid[]> [-AddAppIdToList] [-RemoveAppIdFromList]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
+ [-EnableNotificationsSubscriptions <Boolean>]
 ```
 
 ## DESCRIPTION
@@ -2630,6 +2640,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisableSpfxTopBottomPlaceholdersInElevatedContent
+
+> Applicable: SharePoint Online
+
+This feature allows SharePoint Administrators to control where SPFx Top and Bottom placeholders are rendered in relation to elevated content.
+
+Accepts a value of true to render the Top and Bottom placeholders outside the elevated content area, or false to render them inside the elevated content area. By default, this feature is set to false.
+
+PARAMVALUE: True | False
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisableVivaConnectionsAnalytics
 
 Controls whether the Viva Connections analytics feature is enabled.
@@ -2958,6 +2990,26 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableNotificationsSubscriptions
+
+> Applicable: SharePoint Online
+
+This is an opt-in setting that enables or disables writing SharePoint News and Announcement notification data to a list (NewsNotificationList) in the My Site of every user. When enabled, SharePoint Online emits notification events to this list. Third-party solutions must create and manage [webhook](/sharepoint/dev/apis/webhooks/lists/overview-sharepoint-list-webhooks) solutions to receive change notifications and then read the list to process new entries for triggering their own notifications for the user. This applies to [SharePoint News Notifications](/viva/connections/viva-connections-news-notifications#when-notifications-are-sent-via-microsoft-teams) and [Viva Connections Annoucements](/viva/connections/announcements-viva-connections).
+
+PARAMVALUE: True | False
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -5944,5 +5996,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
 
 [Get-SPOSite](Get-SPOSite.md)
-
-[Set-SPOSite](Set-SPOSite.md)
