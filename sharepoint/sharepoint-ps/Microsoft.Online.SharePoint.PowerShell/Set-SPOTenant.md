@@ -5996,5 +5996,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
 
 [Get-SPOSite](Get-SPOSite.md)
-
-[Set-SPOSite](Set-SPOSite.md)
