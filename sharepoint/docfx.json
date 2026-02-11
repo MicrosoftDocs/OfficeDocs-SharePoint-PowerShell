@@ -73,8 +73,7 @@
       }
     },
     "template": [],
-    "dest": "sharepointps"
-    },
+    "dest": "sharepointps",
     "rules": {
       "filename-incomplete": { 
         "exclude": [ 
@@ -107,4 +106,5 @@
         ] 
       }
     }
+  }
 }
