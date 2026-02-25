@@ -54,7 +54,7 @@ Specifies the entity that could cause oversharing and hence tracked by these rep
 Type: Microsoft.Online.SharePoint.TenantAdministration.ReportEntityEnum
 Parameter Sets: GetAllReportsParameterSet
 Aliases:
-Accepted values: SharingLinks_Anyone, SharingLinks_PeopleInYourOrg, SharingLinks_Guests, SensitivityLabelForFiles, EveryoneExceptExternalUsersAtSite, EveryoneExceptExternalUsersForItems, PermissionedUsers, PermissionsReport
+Accepted values: Everyone, EveryoneExceptExternalUsers, EveryoneExceptExternalUsersAtSite, EveryoneExceptExternalUsersForItems, PermissionedUsers, PermissionsReport, SensitivityLabelForFiles, SharingLinks_Anyone, SharingLinks_Guests, SharingLinks_PeopleInYourOrg
 
 Required: True
 Position: Named
