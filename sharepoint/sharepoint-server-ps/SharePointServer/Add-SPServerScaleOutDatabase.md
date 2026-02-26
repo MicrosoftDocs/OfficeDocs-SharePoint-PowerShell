@@ -18,7 +18,7 @@ Adds an existing scale-out content database to the specified service application
 ```
 Add-SPServerScaleOutDatabase -DatabaseName <String> -ServiceApplication <SPServiceApplicationPipeBind>
  [-AssignmentCollection <SPAssignmentCollection>] [-Confirm] [-DatabaseCredentials <PSCredential>]
- [-DatabaseFailoverServer <String>] [-DatabaseServer <String>] [-WhatIf] [-DeferUpgradeActions]
+ [-DatabaseFailoverServer <String>] [-DatabaseServer <String>] [-WhatIf] [-DeferUpgradeActions] [-DatabaseServerCertificateHostName <String>] 
  [<CommonParameters>]
 ```
 
@@ -203,6 +203,24 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### DatabaseServerCertificateHostName 
+
+> Applicable: SharePoint Server Subscription Edition
+
+Specifies the host name that is used to validate the SQL Server TLS certificate when establishing the database connection.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
