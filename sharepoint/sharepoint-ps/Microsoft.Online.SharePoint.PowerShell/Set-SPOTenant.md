@@ -3201,7 +3201,7 @@ Accept wildcard characters: False
 
 Allows tenant admins to turn on support for sections in OneNote with sensitivity labels for the following scenarios:
 
-- Manually apply a sensitivity label in a OneNote across endpoints.
+- Manually apply a sensitivity label in OneNote across endpoints.
 
 The valid values are:
 
