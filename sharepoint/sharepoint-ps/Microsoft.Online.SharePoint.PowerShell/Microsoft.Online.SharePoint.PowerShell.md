@@ -5,7 +5,9 @@ title: Microsoft.Online.SharePoint.PowerShell Module
 Locale: en-US
 author: samkabue
 ms.author: speedta
-ms.reviewer:
+ms.reviewer: Mengke-Gh
+description: The SharePoint Online PowerShell module page provides a comprehensive list of cmdlets that allow administrators to manage, configure, monitor, secure, automate, and govern every aspect of SharePoint Online at the tenant and site level.
+ms.date: 03/04/2026
 ---
 
 # Microsoft.Online.SharePoint.PowerShell Module
