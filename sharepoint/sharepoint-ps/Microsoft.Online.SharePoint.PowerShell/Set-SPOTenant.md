@@ -7,7 +7,9 @@ title: Set-SPOTenant
 schema: 2.0.0
 author: samkabue
 ms.author: speedta
-ms.reviewer:
+ms.reviewer: Mengke-GH
+description: 'A PowerShell cmdlet used in SharePoint Online to configure organization-wide tenant settings. '
+ms.date: 03/04/2026
 ---
 
 # Set-SPOTenant
