@@ -7,7 +7,9 @@ title: Connect-SPOService
 schema: 2.0.0
 author: ShreyasSar26
 ms.author: shsaravanan
-ms.reviewer:
+ms.reviewer: Mengke-Gh
+description: 'Connect-SPOService is a PowerShell cmdlet in the Microsoft.Online.SharePoint.PowerShell module that connects a SharePoint Administrator or SharePoint Embedded Administrator to the SharePoint admin center. '
+ms.date: 03/04/2026
 ---
 
 # Connect-SPOService
