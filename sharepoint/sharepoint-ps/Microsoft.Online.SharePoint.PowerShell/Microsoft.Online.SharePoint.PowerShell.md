@@ -570,7 +570,13 @@ Removes a given public CDN origin based on its identity (id) in your SharePoint 
 Removes Software-Defined Networking (SDN) Support in your SharePoint Online tenant
 
 ### [Remove-SPOServicePrioritizationAppRegistration](Remove-SPOServicePrioritizationAppRegistration.md)
-Removes an app registration from service prioritization in SharePoint Online. 
+Removes an app registration from service prioritization in SharePoint Online.
+
+### [Remove-SPOServicePrioritizationAppRegistrationsByPolicy](Remove-SPOServicePrioritizationAppRegistrationsByPolicy.md)
+Removes all app registrations linked to a specific SharePoint Online Service Prioritization billing policy.
+
+### [Remove-SPOServicePrioritizationBillingPolicy](Remove-SPOServicePrioritizationBillingPolicy.md)
+Removes all app registrations linked to a SharePoint Online Service Prioritization billing policy and then deletes the billing policy itself.
 
 ### [Remove-SPOSite](Remove-SPOSite.md)
 Sends a SharePoint Online site collection to the SharePoint Online Recycle Bin.
