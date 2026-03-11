@@ -33,21 +33,21 @@ You must be a SharePoint Online administrator to run this cmdlet.
 
 ## EXAMPLES
 
-### Example 1: Remove a billing policy and all its app registrations
+### Example 1
 
 ```powershell
 Remove-SPOServicePrioritizationBillingPolicy -PolicyId 11111111-1111-1111-1111-111111111111
 ```
 
-Prompts for confirmation, then removes all app registrations linked to the specified billing policy and deletes the billing policy.
+Example 1 prompts for confirmation, then removes all app registrations linked to the specified billing policy and deletes the billing policy.
 
-### Example 2: Remove without confirmation prompt
+### Example 2
 
 ```powershell
 Remove-SPOServicePrioritizationBillingPolicy -PolicyId 11111111-1111-1111-1111-111111111111 -Force
 ```
 
-Removes all app registrations linked to the specified billing policy and deletes the billing policy without prompting for confirmation.
+Example 2 removes all app registrations linked to the specified billing policy and deletes the billing policy without prompting for confirmation.
 
 ## PARAMETERS
 

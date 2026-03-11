@@ -31,21 +31,21 @@ By default, the cmdlet prompts for confirmation before deleting. Use `-Force` to
 
 ## EXAMPLES
 
-### Example 1: Remove all app registrations for a billing policy
+### Example 1
 
 ```powershell
 Remove-SPOServicePrioritizationAppRegistrationsByPolicy -PolicyId 11111111-1111-1111-1111-111111111111
 ```
 
-Prompts for confirmation, then removes all app registrations linked to the specified billing policy.
+Example 1 prompts for confirmation, then removes all app registrations linked to the specified billing policy.
 
-### Example 2: Remove without confirmation prompt
+### Example 2
 
 ```powershell
 Remove-SPOServicePrioritizationAppRegistrationsByPolicy -PolicyId 11111111-1111-1111-1111-111111111111 -Force
 ```
 
-Removes all app registrations linked to the specified billing policy without prompting for confirmation.
+Example 2 removes all app registrations linked to the specified billing policy without prompting for confirmation.
 
 ## PARAMETERS
 

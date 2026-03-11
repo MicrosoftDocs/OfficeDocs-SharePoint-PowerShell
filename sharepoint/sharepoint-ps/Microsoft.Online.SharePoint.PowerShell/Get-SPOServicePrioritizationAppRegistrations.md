@@ -38,21 +38,21 @@ When `-PolicyId` is specified, only registrations linked to that billing policy 
 
 ## EXAMPLES
 
-### Example 1: Get all app registrations
+### Example 1
 
 ```powershell
 Get-SPOServicePrioritizationAppRegistrations
 ```
 
-Returns all app registrations enrolled in SharePoint Online Service Prioritization for the tenant.
+Example 1 returns all app registrations enrolled in SharePoint Online Service Prioritization for the tenant.
 
-### Example 2: Get app registrations for a specific billing policy
+### Example 2
 
 ```powershell
 Get-SPOServicePrioritizationAppRegistrations -PolicyId 11111111-1111-1111-1111-111111111111
 ```
 
-Returns only app registrations linked to the specified billing policy.
+Example 2 returns only app registrations linked to the specified billing policy.
 
 ## PARAMETERS
 
