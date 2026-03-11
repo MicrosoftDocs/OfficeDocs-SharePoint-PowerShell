@@ -2,7 +2,11 @@
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
 online version: https://learn.microsoft.com/powershell/module/sharepoint-online/remove-sposerviceprioritizationappregistrationsbypolicy
+title: Remove-SPOServicePrioritizationAppRegistrationsByPolicy
 schema: 2.0.0
+author: juanoriana
+ms.author: 
+ms.reviewer:
 ---
 
 # Remove-SPOServicePrioritizationAppRegistrationsByPolicy
@@ -19,20 +23,18 @@ Remove-SPOServicePrioritizationAppRegistrationsByPolicy -PolicyId <Guid> [-Force
 
 ## DESCRIPTION
 
-The `Remove-SPOServicePrioritizationAppRegistrationsByPolicy` cmdlet removes all app registrations associated with the specified billing policy in a single server-side operation.
+This cmdlet removes all app registrations associated with the specified billing policy.
 
 Before deletion, the cmdlet verifies that the billing policy exists and that at least one app registration is linked to it. If neither condition is met, the cmdlet exits silently.
 
 By default, the cmdlet prompts for confirmation before deleting. Use `-Force` to suppress the confirmation prompt.
-
-You must be a SharePoint Online administrator to run this cmdlet.
 
 ## EXAMPLES
 
 ### Example 1: Remove all app registrations for a billing policy
 
 ```powershell
-Remove-SPOServicePrioritizationAppRegistrationsByPolicy -PolicyId "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+Remove-SPOServicePrioritizationAppRegistrationsByPolicy -PolicyId 11111111-1111-1111-1111-111111111111
 ```
 
 Prompts for confirmation, then removes all app registrations linked to the specified billing policy.
@@ -40,7 +42,7 @@ Prompts for confirmation, then removes all app registrations linked to the speci
 ### Example 2: Remove without confirmation prompt
 
 ```powershell
-Remove-SPOServicePrioritizationAppRegistrationsByPolicy -PolicyId "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" -Force
+Remove-SPOServicePrioritizationAppRegistrationsByPolicy -PolicyId 11111111-1111-1111-1111-111111111111 -Force
 ```
 
 Removes all app registrations linked to the specified billing policy without prompting for confirmation.
@@ -121,13 +123,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Online.SharePoint.PowerShell.SPOServicePrioritizationBulkDeleteResult
-
-| Property | Type | Description |
-|---|---|---|
-| SuccessCount | Int32 | The number of app registrations successfully removed. |
-| FailedAppIds | List\<String\> | App IDs that could not be confirmed as deleted, populated only when the server reports fewer deletions than expected. `null` when all registrations were deleted successfully. |
-| BillingPolicyDeleted | Boolean | Always `false` for this cmdlet. Use `Remove-SPOServicePrioritizationBillingPolicy` to delete the billing policy. |
+### System.Object
 
 ## NOTES
 

@@ -1,8 +1,13 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/sharepoint-online/get-sposerviceprioritizationappregistrations
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/Get-SPOServicePrioritizationAppRegistrations
+applicable: SharePoint Online
+title: Get-SPOServicePrioritizationAppRegistrations
 schema: 2.0.0
+author: samkabue
+ms.author: speedta
+ms.reviewer: speedta
 ---
 
 # Get-SPOServicePrioritizationAppRegistrations
@@ -27,11 +32,9 @@ Get-SPOServicePrioritizationAppRegistrations -PolicyId <Guid> [<CommonParameters
 
 ## DESCRIPTION
 
-The `Get-SPOServicePrioritizationAppRegistrations` cmdlet retrieves all app registrations enrolled in SharePoint Online Service Prioritization for the tenant.
+This cmdlet retrieves all app registrations enrolled in SharePoint Online Service Prioritization for the tenant.
 
-When `-PolicyId` is specified, only registrations linked to that billing policy are returned. The filtering is performed server-side, so only matching records are transferred.
-
-You must be a SharePoint Online administrator to run this cmdlet.
+When `-PolicyId` is specified, only registrations linked to that billing policy are returned.
 
 ## EXAMPLES
 
@@ -46,7 +49,7 @@ Returns all app registrations enrolled in SharePoint Online Service Prioritizati
 ### Example 2: Get app registrations for a specific billing policy
 
 ```powershell
-Get-SPOServicePrioritizationAppRegistrations -PolicyId "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+Get-SPOServicePrioritizationAppRegistrations -PolicyId 11111111-1111-1111-1111-111111111111
 ```
 
 Returns only app registrations linked to the specified billing policy.
@@ -81,16 +84,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Online.SharePoint.PowerShell.SPOServicePrioritizationAppRegistrationCmdLetObj
-
-Each output object has the following properties:
-
-| Property | Type | Description |
-|---|---|---|
-| AppId | String | The application (client) ID of the registered app. |
-| PolicyId | String | The billing policy ID the app is linked to. |
-| Enabled | String | Whether the registration is currently active. |
-| QuotaMultiplier | Int32 | The throttling quota multiplier applied to this app (2–10). |
+### System.Object
 
 ## NOTES
 
