@@ -185,6 +185,12 @@ Determines the compatibility with the partner tenant.
 ### [Get-SPOCrossTenantHostUrl](Get-SPOCrossTenantHostUrl.md)
 Returns the cross-tenant host URL.
 
+### [Get-SPOCustomCdnSiteCollectionApps](Get-SPOCustomCdnSiteCollectionApps.md)
+Retrieves all app installations that use a custom CDN for a specific site collection.
+
+### [Get-SPOCustomCdnTenantApps](Get-SPOCustomCdnTenantApps.md)
+Retrieves all apps that use a custom CDN from the Tenant App Catalog.
+
 ### [Get-SPODataAccessGovernanceInsight](Get-SPODataAccessGovernanceInsight.md)
 Lists various 'Data Access Governance' (DAG) reports in SharePoint admin center.
 

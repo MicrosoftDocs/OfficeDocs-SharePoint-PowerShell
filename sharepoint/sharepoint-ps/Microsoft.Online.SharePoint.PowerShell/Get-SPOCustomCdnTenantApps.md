@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/microsoft.online.s
 applicable: SharePoint Online
 title: Get-SPOCustomCdnTenantApps
 schema: 2.0.0
-author: yadongzhai
+author: Yadong1106
 ms.author: yadongzhai
 ms.reviewer:
 ---
