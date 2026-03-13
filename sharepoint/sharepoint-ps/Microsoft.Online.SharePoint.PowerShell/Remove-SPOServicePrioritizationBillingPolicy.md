@@ -5,7 +5,7 @@ online version: https://learn.microsoft.com/powershell/module/sharepoint-online/
 title: Remove-SPOServicePrioritizationBillingPolicy
 schema: 2.0.0
 author: juanoriana
-ms.author: 
+ms.author: juanoriana
 ms.reviewer:
 ---
 
