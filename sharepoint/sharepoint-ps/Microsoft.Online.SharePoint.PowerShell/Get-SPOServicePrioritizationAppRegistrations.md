@@ -18,7 +18,7 @@ Returns app registrations enrolled in SharePoint Online Service Prioritization.
 
 ## SYNTAX
 
-```powershell
+```
 Get-SPOServicePrioritizationAppRegistrations -PolicyId <Guid> [<CommonParameters>]
 ```
 

@@ -17,7 +17,7 @@ Removes all app registrations linked to a specific SharePoint Online Service Pri
 
 ## SYNTAX
 
-```powershell
+```
 Remove-SPOServicePrioritizationAppRegistrationsByPolicy -PolicyId <Guid> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

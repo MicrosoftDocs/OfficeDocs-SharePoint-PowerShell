@@ -17,7 +17,7 @@ Removes all app registrations linked to a SharePoint Online Service Prioritizati
 
 ## SYNTAX
 
-```powershell
+```
 Remove-SPOServicePrioritizationBillingPolicy -PolicyId <Guid> [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
