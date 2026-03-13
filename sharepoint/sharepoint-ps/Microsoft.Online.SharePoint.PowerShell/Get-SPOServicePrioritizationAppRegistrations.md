@@ -56,7 +56,7 @@ When omitted, all app registrations for the tenant are returned.
 
 ```yaml
 Type: Guid
-Parameter Sets: ByPolicy
+Parameter Sets: (All)
 Aliases:
 
 Required: False
