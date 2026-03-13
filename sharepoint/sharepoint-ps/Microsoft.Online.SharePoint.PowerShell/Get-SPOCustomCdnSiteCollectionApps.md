@@ -7,14 +7,13 @@ title: Get-SPOCustomCdnSiteCollectionApps
 schema: 2.0.0
 author: Yadong1106
 ms.author: yadongzhai
-ms.reviewer:
 ---
 
 # Get-SPOCustomCdnSiteCollectionApps
 
 ## SYNOPSIS
 
-Retrieves all app installations that use a custom CDN for a specific site collection. You must be a SharePoint Online administrator to run this cmdlet.
+Retrieves all app installations that use a custom content delivery network (CDN) for a specific site collection.
 
 ## SYNTAX
 
@@ -24,7 +23,7 @@ Get-SPOCustomCdnSiteCollectionApps -SiteUrl <String> [<CommonParameters>]
 
 ## DESCRIPTION
 
-Retrieves all app installations that are configured to use a custom content delivery network (CDN) for the specified site collection. The output includes the product ID, title, app installation ID, site ID, and site URL of each app installation.
+Retrieves all app installations that are configured to use a custom CDN for the specified site collection. The output includes the product ID, title, app installation ID, site ID, and site URL of each app installation.
 
 ## EXAMPLES
 
@@ -58,7 +57,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

@@ -7,14 +7,13 @@ title: Get-SPOCustomCdnTenantApps
 schema: 2.0.0
 author: Yadong1106
 ms.author: yadongzhai
-ms.reviewer:
 ---
 
 # Get-SPOCustomCdnTenantApps
 
 ## SYNOPSIS
 
-Retrieves all apps that use a custom CDN from the Tenant App Catalog. You must be a SharePoint Online administrator to run this cmdlet.
+Retrieves all apps that use a custom content delivery network (CDN) from the Tenant App Catalog.
 
 ## SYNTAX
 
@@ -24,7 +23,7 @@ Get-SPOCustomCdnTenantApps [<CommonParameters>]
 
 ## DESCRIPTION
 
-Retrieves all apps from the Tenant App Catalog that are configured to use a custom content delivery network (CDN). The output includes the product ID and title of each app.
+Retrieves all apps from the Tenant App Catalog that are configured to use a custom CDN. The output includes the product ID and title of each app.
 
 ## EXAMPLES
 
@@ -40,7 +39,7 @@ This example returns a list of all apps in the Tenant App Catalog that use a cus
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
