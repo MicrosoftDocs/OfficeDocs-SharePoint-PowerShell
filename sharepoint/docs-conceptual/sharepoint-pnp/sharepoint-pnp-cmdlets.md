@@ -1,12 +1,13 @@
 ---
 title: PnP PowerShell Overview
 description: "PnP PowerShell Overview"
-ms.date: 10/06/2023
+ms.date: 03/06/2026
+ms.reviewer: VesaJuvonen
 ---
 
 # PnP PowerShell overview
 
-PnP PowerShell is a .NET Core 3.1 / .NET Framework 4.6.1 based PowerShell Module providing over 600 cmdlets that work with Microsoft 365 environments such as SharePoint Online, Microsoft Teams, Microsoft Project, Security & Compliance, Microsoft Entra ID, and more.
+PnP PowerShell is a .NET 8.0 based PowerShell Module providing over 700 cmdlets that work with Microsoft 365 environments such as SharePoint Online, Microsoft Teams, Microsoft Project, Security & Compliance, Microsoft Entra ID, and more.
 
 For more information about installing or upgrading to this module, refer to these [PnP PowerShell articles](https://pnp.github.io/powershell/articles/index.html).
 
@@ -14,12 +15,13 @@ For more information about installing or upgrading to this module, refer to thes
 
 This library is an open-source and community-provided library with an active community providing support for it. It is not a Microsoft-provided module so there's no SLA or direct support for this open-source component from Microsoft. You can, however, report any issues using the [issues list in GitHub](https://github.com/pnp/powershell/issues).
 
-PnP PowerShell is initiative part of the larger community and open-source work under the [Microsoft 365 platform community (PnP)](https://aka.ms/m365pnp) initiative.
+PnP PowerShell is initiative part of the larger community and open-source work under the [Microsoft 365 & Power Platform community](https://aka.ms/community/home) initiative. PnP PowerShell is also supported by the [.NET Foundation](https://dotnetfoundation.org/) and has adopted the [.NET Foundation Code of Conduct](https://dotnetfoundation.org/code-of-conduct).
 
 _**Applies to:** SharePoint Online_
 
 ## Additional resources
 <a name="bk_addresources"> </a>
 
+- [PnP PowerShell documentation](https://pnp.github.io/powershell/)
 - [PnP PowerShell on GitHub](https://github.com/pnp/powershell)
 - [PnP PowerShell open source documentation](https://pnp.github.io/powershell)
