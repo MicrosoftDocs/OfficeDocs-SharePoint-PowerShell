@@ -2,6 +2,7 @@
 title: PnP PowerShell Overview
 description: "PnP PowerShell Overview"
 ms.date: 03/06/2026
+ms.reviewer: VesaJuvonen
 ---
 
 # PnP PowerShell overview
