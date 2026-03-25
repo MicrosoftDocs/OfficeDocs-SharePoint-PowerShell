@@ -187,7 +187,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ShouldUseLegacyItemWebUrl
+### -UseLegacyItemWebUrl
 
 When enabled, temporarily uses the legacy item WebUrl format instead of the new SharePoint Embedded item WebUrl.
 
