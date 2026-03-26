@@ -24,7 +24,7 @@ Set-SPOContainerTypeConfiguration -ContainerTypeId <Guid> [-DiscoverabilityDisab
  [-WhoCanShareAuthenticatedGuestAllowList <Guid[]>] [-OverrideTenantWhoCanShareAnonymousAllowList <Boolean>]
  [-OverrideTenantWhoCanShareAuthenticatedGuestAllowList <Boolean>]
  [-CopilotEmbeddedChatHosts <System.Collections.Generic.List`1[System.String]>]
- [-AnonymousLinkExpirationInDays <Int32>] [-IsArchiveEnabled <Boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-AnonymousLinkExpirationInDays <Int32>] [-IsArchiveEnabled <Boolean>] [-UseLegacyItemWebUrl <Boolean>]  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -89,6 +89,14 @@ Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb
 ```
 
 Example 7 enables support for archive and reactivate actions on all the containers of ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4.
+
+### Example 8
+
+```powershell
+Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -UseLegacyItemWebUrl $true
+```
+
+Example 8 configures the containers of ContainerType ID 4f0af585-8dcc-0000-223d-661eb2c604e4 to temporarily continue using the legacy item WebUrl.
 
 ## PARAMETERS
 
@@ -175,6 +183,22 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseLegacyItemWebUrl
+
+When enabled, temporarily uses the legacy item WebUrl format instead of the new SharePoint Embedded item WebUrl.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
