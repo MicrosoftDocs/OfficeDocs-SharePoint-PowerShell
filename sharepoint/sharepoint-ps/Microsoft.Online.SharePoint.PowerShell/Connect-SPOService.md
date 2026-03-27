@@ -23,19 +23,25 @@ Connects a SharePoint Administrator or SharePoint Embedded Administrator to the 
 ### AuthenticationCertificate
 
 ```
-Connect-SPOService [-Url] <UrlCmdletPipeBind> [[-ClientTag] <String>] [-Region <AADCrossTenantAuthenticationLocation>] [-AuthenticationUrl <String>] [-Certificate <X509Certificate2>] [-CertificatePath <String>] [-CertificateThumbprint <String>] [-CertificatePassword <SecureString>] -ClientId <String> -TenantId <String> [<CommonParameters>]
+Connect-SPOService [-Url] <UrlCmdletPipeBind> [[-ClientTag] <String>] [-Region <AADCrossTenantAuthenticationLocation>] [-AuthenticationUrl <String>] [-Certificate <X509Certificate2>] [-CertificatePath <String>] [-CertificateThumbprint <String>] [-CertificatePassword <SecureString>] -ClientId <String> -TenantId <String> [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ### AuthenticationLocation
 
 ```
-Connect-SPOService [-Url] <UrlCmdletPipeBind> [[-Credential] <CredentialCmdletPipeBind>] [[-ClientTag] <String>] [-Region <AADCrossTenantAuthenticationLocation>] [[-ModernAuth] <Boolean>] [[-UseSystemBrowser] <Boolean>]
+Connect-SPOService [-Url] <UrlCmdletPipeBind> [[-Credential] <CredentialCmdletPipeBind>] [[-ClientTag] <String>] [-Region <AADCrossTenantAuthenticationLocation>] [[-ModernAuth] <Boolean>] [-ProgressAction <ActionPreference>] [[-UseSystemBrowser] <Boolean>]
+```
+
+### AuthenticationManagedIdentity
+
+```
+Connect-SPOService -Url <UrlCmdletPipeBind> [-ClientTag <String>] [-ManagedIdentity] [-ManagedIdentityType <ManagedIdentityType>] [-ManagedIdentityClientId <String>] [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ### AuthenticationUrl
 
 ```
-Connect-SPOService [-Url] <UrlCmdletPipeBind> [[-Credential] <CredentialCmdletPipeBind>] [[-ClientTag] <String>] -AuthenticationUrl <String> [[-ModernAuth] <Boolean>] [[-UseSystemBrowser] <Boolean>] [<CommonParameters>]
+Connect-SPOService [-Url] <UrlCmdletPipeBind> [[-Credential] <CredentialCmdletPipeBind>] [[-ClientTag] <String>] -AuthenticationUrl <String> [[-ModernAuth] <Boolean>] [[-UseSystemBrowser] <Boolean>] [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -284,6 +290,60 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -ManagedIdentity
+
+> Applicable: SharePoint Online
+
+Enables the use of managed identity instead of user or certificate‑based authentication
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AuthenticationManagedIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManagedIdentityClientId
+
+> Applicable: SharePoint Online
+
+Specifies the client ID of a user‑assigned managed identity to use for authentication.
+
+```yaml
+Type: String
+Parameter Sets: AuthenticationManagedIdentity
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManagedIdentityType
+
+> Applicable: SharePoint Online
+
+Specifies the type of managed identity to use when authenticating. If not specified, the default managed identity type is used.
+
+```yaml
+Type: ManagedIdentityType
+Parameter Sets: AuthenticationManagedIdentity
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ModernAuth
 
 > Applicable: SharePoint Online
@@ -295,6 +355,24 @@ When you use this parameter, you must also specify the `AuthenticationUrl` param
 Type: System.Boolean
 Parameter Sets: AuthenticationUrl, AuthenticationLocation
 Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProgressAction
+
+> Applicable: SharePoint Online
+
+Specifies how progress information is displayed during command execution.
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: proga
 
 Required: False
 Position: Named
