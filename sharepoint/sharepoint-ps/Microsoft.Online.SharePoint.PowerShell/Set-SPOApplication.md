@@ -21,6 +21,7 @@ Sets or updates one or more configuration of a SharePoint Embedded application.
 Set-SPOApplication [-OwningApplicationId] <Guid> [[-SharingCapability] <SharingCapabilities>]
  [[-OverrideTenantSharingCapability] <Boolean>]
  [[-CopilotEmbeddedChatHosts] <System.Collections.Generic.List`1[System.String]>]
+ [[-MajorVersionLimit] <Int>]
  [<CommonParameters>]
 ```
 
