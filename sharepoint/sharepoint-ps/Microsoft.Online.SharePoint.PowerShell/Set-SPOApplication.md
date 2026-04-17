@@ -130,6 +130,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MajorVersionLimit
+
+This parameter is used to override MajorVerisonLimit for 1P container types.
+
+```yaml
+Type: Int
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 4
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SharingCapability
 
 Determines what level of sharing is available for the SharePoint Embedded Application.
