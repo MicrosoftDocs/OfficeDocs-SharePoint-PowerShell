@@ -75,7 +75,7 @@ This example sets the host URLs for the application with Id 423poi45.
 ```powershell
 Set-SPOApplication -OwningApplicationId 423poi45 -MajorVersionLimit 1000
 ```
-This example sets the MajorVersionLimit to 1000
+This example sets the MajorVersionLimit to 1000.
 
 ## PARAMETERS
 
