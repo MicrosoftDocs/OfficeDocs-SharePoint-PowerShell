@@ -132,7 +132,7 @@ Accept wildcard characters: False
 
 ### -MajorVersionLimit
 
-This parameter is used to override MajorVerisonLimit for 1P container types.
+This parameter is used to override MajorVerisonLimit for first-party container types.
 
 ```yaml
 Type: Int
