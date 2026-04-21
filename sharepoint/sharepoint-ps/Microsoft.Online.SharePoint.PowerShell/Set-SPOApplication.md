@@ -21,6 +21,7 @@ Sets or updates one or more configuration of a SharePoint Embedded application.
 Set-SPOApplication [-OwningApplicationId] <Guid> [[-SharingCapability] <SharingCapabilities>]
  [[-OverrideTenantSharingCapability] <Boolean>]
  [[-CopilotEmbeddedChatHosts] <System.Collections.Generic.List`1[System.String]>]
+ [[-MajorVersionLimit] <Int>]
  [<CommonParameters>]
 ```
 
@@ -68,6 +69,13 @@ This example demonstrates how to enable file sharing within the SharePoint Embed
 Set-SPOApplication -OwningApplicationId 423poi45 -CopilotEmbeddedChatHosts "https://localhost:3000 https://contoso.sharepoint.com https://fabrikam.com"
 ```
 This example sets the host URLs for the application with Id 423poi45.
+
+### Example 5
+
+```powershell
+Set-SPOApplication -OwningApplicationId 423poi45 -MajorVersionLimit 1000
+```
+This example sets the MajorVersionLimit to 1000.
 
 ## PARAMETERS
 
@@ -117,6 +125,22 @@ Aliases:
 
 Required: True
 Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MajorVersionLimit
+
+This parameter is used to override MajorVersionLimit for container types.
+
+```yaml
+Type: Int
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
