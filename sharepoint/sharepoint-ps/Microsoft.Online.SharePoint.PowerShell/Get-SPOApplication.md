@@ -100,7 +100,7 @@ The following details are returned:
 
 - CopilotEmbeddedChatHosts
 
-- MajorVersionLimit
+- ItemMajorVersionLimit
 
 ```yaml
 Type: System.Guid
