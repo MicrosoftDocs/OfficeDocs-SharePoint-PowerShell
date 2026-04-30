@@ -877,6 +877,14 @@ Set-SPOTenant -RemoveVersionExpirationFileTypeOverride @("Video", "Audio")
 
 This example removes any specific version history limit override set for video and audio file types on all new document libraries at tenant level. 
 
+### EXAMPLE 26
+
+```powershell
+Set-SPOTenant -IsFilePreviewDomainRestrictionEnabled $true -FilePreviewAllowedDomainList "contoso.com;fabrikam.com"
+```
+
+This example restricts file preview to the specified domains. When domain restriction is enabled, only files embedded from the listed domains can be previewed, in addition to predefined trusted Microsoft domains (for example, teams.microsoft.com).
+
 ## PARAMETERS
 
 ### -AIBuilderModelScope
@@ -3792,7 +3800,7 @@ Accept wildcard characters: False
 
 Enables or disables domain-based restrictions for file preview.
 
-When set to $true, SharePoint restricts file preview to the domains specified in -FilePreviewAllowedDomainList.When set to $false, domain restrictions are disabled and file preview is allowed for all domains, regardless of the allow list configuration.This setting affects the embedded preview experiences.
+When set to `$true`, SharePoint restricts file preview to the domains specified in `-FilePreviewAllowedDomainList`. When set to `$false`, domain restrictions are disabled and file preview is allowed for all domains, regardless of the allow list configuration. This setting affects the embedded preview experiences.
 
 PARAMVALUE: True | False
 
