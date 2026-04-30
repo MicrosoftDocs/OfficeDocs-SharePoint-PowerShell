@@ -145,6 +145,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
  [-EnableNotificationsSubscriptions <Boolean>]
+ [-IsFilePreviewDomainRestrictionEnabled <Boolean>]
+ [-FilePreviewAllowedDomainList <String>]
 ```
 
 ### ParameterSetContentTypeSyncSiteTemplatesList
@@ -3516,6 +3518,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FilePreviewAllowedDomainList
+
+Specifies the list of domains that are allowed for file preview.
+Use a semicolon-delimited list of domain names. For example: `contoso.com;fabrikam.com`.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: String.Empty
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -FileTypesForVersionExpiration
 
 An array of file type names. The supported file type names are:
@@ -3765,6 +3784,26 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsFilePreviewDomainRestrictionEnabled
+
+Enables or disables domain-based restrictions for file preview.
+
+When set to $true, SharePoint restricts file preview to the domains specified in -FilePreviewAllowedDomainList.When set to $false, domain restrictions are disabled and file preview is allowed for all domains, regardless of the allow list configuration.This setting affects the embedded preview experiences.
+
+PARAMVALUE: True | False
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
