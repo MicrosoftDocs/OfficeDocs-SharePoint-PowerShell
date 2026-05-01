@@ -2826,7 +2826,7 @@ Accept wildcard characters: False
 
 ### -DocumentUnderstandingModelScope
 
-This parameter allows administrators to limit which SharePoint sites the document understanding model and [unstructurted document processesing](/microsoft-365/syntex/document-understanding-overview) premium feature is available on.
+This parameter allows administrators to limit which SharePoint sites the document understanding model and [unstructured document processing](/microsoft-365/syntex/document-understanding-overview) premium feature is available on.
 
 The valid values are:
 
