@@ -23,7 +23,8 @@ Queues a job to apply the tenant-level file version policy across all sites. Sha
 ## SYNTAX
 
 ```
-New-SPOTenantApplyFileVersionPolicyJob [-TrimVersions] [-SetVersionPolicy] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-SPOTenantApplyFileVersionPolicyJob [-TrimVersions] [-SetVersionPolicy] [-CollectVersionData]
+ [-VersionPolicy <SPOFileVersionPolicySettings>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,9 +40,10 @@ The following site types are excluded from processing:
 
 > [!NOTE]
 > - Versions deleted using this cmdlet will be permanently deleted and cannot be recovered from the recycle bin.
-> - Use `Get-SPOTenant` cmdlet and the `EnableAutoExpirationVersionTrim`, `MajorVersionLimit`, `ExpireVersionsAfterDays` and `VersionPolicyFileTypeOverride` properties to confirm the tenant-level file version policy before running the cmdlet to make sure it matches your intended configuration.
+> - Use `Get-SPOTenantVersionPolicy` to confirm the tenant-level file version policy before running the cmdlet to make sure it matches your intended configuration. You can also use the `Get-SPOTenant` cmdlet and check the `EnableAutoExpirationVersionTrim`, `MajorVersionLimit`, `ExpireVersionsAfterDays`, and `VersionPolicyFileTypeOverride` properties.
 > - If the tenant-level version policy changes while the job is in progress, the job will apply the updated policy to the remaining sites that have not yet been processed. Sites that were already processed will not be re-evaluated or updated.
-> - Allow only one job per tenant.
+> - Only one job is allowed per tenant.
+> - Use `-CollectVersionData` first and wait for the job to complete before running `Get-SPOTenantApplyFileVersionPolicyJobImpact` to estimate the impact of a policy without deleting any versions.
 
 ## EXAMPLES
 
@@ -65,6 +67,21 @@ New-SPOTenantApplyFileVersionPolicyJob -SetVersionPolicy
 ```
 
 Example 3 starts a tenant apply file version policy job to set version policy for existing document libraries across all sites.
+
+### Example 4
+```powershell
+New-SPOTenantApplyFileVersionPolicyJob -CollectVersionData
+```
+
+Example 4 starts a job to collect version data across all sites. Once the job completes, use `Get-SPOTenantApplyFileVersionPolicyJobImpact` to estimate the impact of a version policy without deleting any versions.
+
+### Example 5
+```powershell
+$policy = Get-SPOTenantVersionPolicy | Get-SPOVersionPolicyWithChanges -MajorVersionLimit 100
+New-SPOTenantApplyFileVersionPolicyJob -TrimVersions -VersionPolicy $policy
+```
+
+Example 5 retrieves the current tenant version policy, modifies the major version limit to 100 locally, then starts a trim job using that modified policy. The tenant-level policy is updated before the job begins.
 
 ## PARAMETERS
 
@@ -98,11 +115,43 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -CollectVersionData
+Collects version data across all sites for use with `Get-SPOTenantApplyFileVersionPolicyJobImpact`. Use this switch to run a data-collection pass before deciding whether and how to trim versions. The job does not delete any versions when only this switch is specified.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -TrimVersions
 Trims existing versions for files in document libraries across all sites based on the tenant-level file version policy.
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VersionPolicy
+The new version policy to apply to the tenant before starting the job. When specified, the tenant-level policy is updated to match this object prior to running the job actions (`-TrimVersions`, `-SetVersionPolicy`, `-CollectVersionData`).
+
+Use `Get-SPOTenantVersionPolicy` and `Get-SPOVersionPolicyWithChanges` to build this value.
+
+```yaml
+Type: SPOFileVersionPolicySettings
 Parameter Sets: (All)
 Aliases:
 
@@ -145,7 +194,13 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 
 [Get-SPOTenantApplyFileVersionPolicyJobProgress](Get-SPOTenantApplyFileVersionPolicyJobProgress.md)
 
+[Get-SPOTenantApplyFileVersionPolicyJobImpact](Get-SPOTenantApplyFileVersionPolicyJobImpact.md)
+
 [Remove-SPOTenantApplyFileVersionPolicyJob](Remove-SPOTenantApplyFileVersionPolicyJob.md)
+
+[Get-SPOTenantVersionPolicy](Get-SPOTenantVersionPolicy.md)
+
+[Get-SPOVersionPolicyWithChanges](Get-SPOVersionPolicyWithChanges.md)
 
 [Get-SPOTenant](Get-SPOTenant.md)
 
