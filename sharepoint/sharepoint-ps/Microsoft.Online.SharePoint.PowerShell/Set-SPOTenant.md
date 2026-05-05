@@ -880,7 +880,7 @@ This example removes any specific version history limit override set for video a
 ### EXAMPLE 26
 
 ```powershell
-Set-SPOTenant -IsFilePreviewDomainRestrictionEnabled $true -FilePreviewAllowedDomainList "contoso.com;fabrikam.com"
+Set-SPOTenant -IsFilePreviewDomainRestrictionEnabled $true -FilePreviewAllowedDomainList "contoso.com,fabrikam.com"
 ```
 
 This example restricts file preview to the specified domains. When domain restriction is enabled, only files embedded from the listed domains can be previewed, in addition to predefined trusted Microsoft domains (for example, teams.microsoft.com).
@@ -3529,7 +3529,7 @@ Accept wildcard characters: False
 ### -FilePreviewAllowedDomainList
 
 Specifies the list of domains that are allowed for file preview.
-Use a semicolon-delimited list of domain names. For example: `contoso.com;fabrikam.com`.
+Use a comma-delimited list of domain names. For example: `contoso.com,fabrikam.com`.
 
 ```yaml
 Type: String
