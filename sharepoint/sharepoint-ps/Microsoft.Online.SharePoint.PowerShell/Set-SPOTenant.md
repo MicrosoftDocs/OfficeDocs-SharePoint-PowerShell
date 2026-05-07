@@ -147,6 +147,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-EnableNotificationsSubscriptions <Boolean>]
  [-IsFilePreviewDomainRestrictionEnabled <Boolean>]
  [-FilePreviewAllowedDomainList <String>]
+ [-DisableTeamsMeetingRecordingDeletedNotification <Boolean>]
 ```
 
 ### ParameterSetContentTypeSyncSiteTemplatesList
@@ -275,6 +276,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
  [-EnableNotificationsSubscriptions <Boolean>]
+ [-DisableTeamsMeetingRecordingDeletedNotification <Boolean>]
 ```
 
 ### ParamSetMultipleSites
@@ -404,6 +406,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
  [-EnableNotificationsSubscriptions <Boolean>]
+ [-DisableTeamsMeetingRecordingDeletedNotification <Boolean>]
 ```
 
 ### InformationBarrier
@@ -531,6 +534,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
  [-EnableNotificationsSubscriptions <Boolean>]
+ [-DisableTeamsMeetingRecordingDeletedNotification <Boolean>]
 ```
 
 ### ParameterSetNameRestrictExternalSharing
@@ -659,6 +663,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  -RestrictExternalSharing <Guid[]> [-AddAppIdToList] [-RemoveAppIdFromList]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
  [-EnableNotificationsSubscriptions <Boolean>]
+ [-DisableTeamsMeetingRecordingDeletedNotification <Boolean>]
 ```
 
 ## DESCRIPTION
@@ -3011,6 +3016,26 @@ Accept wildcard characters: False
 > Applicable: SharePoint Online
 
 This is an opt-in setting that enables or disables writing SharePoint News and Announcement notification data to a list (NewsNotificationList) in the My Site of every user. When enabled, SharePoint Online emits notification events to this list. Third-party solutions must create and manage [webhook](/sharepoint/dev/apis/webhooks/lists/overview-sharepoint-list-webhooks) solutions to receive change notifications and then read the list to process new entries for triggering their own notifications for the user. This applies to [SharePoint News Notifications](/viva/connections/viva-connections-news-notifications#when-notifications-are-sent-via-microsoft-teams) and [Viva Connections Annoucements](/viva/connections/announcements-viva-connections).
+
+PARAMVALUE: True | False
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableTeamsMeetingRecordingDeletedNotification
+
+> Applicable: SharePoint Online
+
+This is an opt-in setting that enables or disables sending email notification when a Teams meeting recording file is deleted after expiration at the tenant level.
 
 PARAMVALUE: True | False
 
