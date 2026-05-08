@@ -147,6 +147,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-EnableNotificationsSubscriptions <Boolean>]
  [-IsFilePreviewDomainRestrictionEnabled <Boolean>]
  [-FilePreviewAllowedDomainList <String>]
+ [-DisableTeamsMeetingRecordingDeletedNotification <Boolean>]
 ```
 
 ### ParameterSetContentTypeSyncSiteTemplatesList
@@ -275,6 +276,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
  [-EnableNotificationsSubscriptions <Boolean>]
+ [-DisableTeamsMeetingRecordingDeletedNotification <Boolean>]
 ```
 
 ### ParamSetMultipleSites
@@ -404,6 +406,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
  [-EnableNotificationsSubscriptions <Boolean>]
+ [-DisableTeamsMeetingRecordingDeletedNotification <Boolean>]
 ```
 
 ### InformationBarrier
@@ -531,6 +534,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
  [-EnableNotificationsSubscriptions <Boolean>]
+ [-DisableTeamsMeetingRecordingDeletedNotification <Boolean>]
 ```
 
 ### ParameterSetNameRestrictExternalSharing
@@ -659,6 +663,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  -RestrictExternalSharing <Guid[]> [-AddAppIdToList] [-RemoveAppIdFromList]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
  [-EnableNotificationsSubscriptions <Boolean>]
+ [-DisableTeamsMeetingRecordingDeletedNotification <Boolean>]
 ```
 
 ## DESCRIPTION
@@ -2852,7 +2857,7 @@ Accept wildcard characters: False
 
 ### -DocumentUnderstandingModelSelectedSitesList
 
-This parameter allows administrators to pass a list of SharePoint site URLs to modify the document understanding model and [unstructurted document processesing](/microsoft-365/syntex/document-understanding-overview) premium feature's selected sites list. By default this parameter overwrites the existing list with the user input list. Additionally, the `DocumentUnderstandingModelSelectedSitesListOperation` parameter can be used to specify a different operation. This parameter can only be called if the document understanding model's scope is set to `SelectedSites`. The inputted list of site URLs cannot exceed 100 items.
+This parameter allows administrators to pass a list of SharePoint site URLs to modify the document understanding model and [unstructured document processing](/microsoft-365/syntex/document-understanding-overview) premium feature's selected sites list. By default this parameter overwrites the existing list with the user input list. Additionally, the `DocumentUnderstandingModelSelectedSitesListOperation` parameter can be used to specify a different operation. This parameter can only be called if the document understanding model's scope is set to `SelectedSites`. The inputted list of site URLs cannot exceed 100 items.
 
 > [!NOTE]
 > Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
@@ -2871,7 +2876,7 @@ Accept wildcard characters: False
 
 ### -DocumentUnderstandingModelSelectedSitesListOperation
 
-This parameter allows administrators to specify the operation to perform on the document understanding model and [unstructurted document processesing](/microsoft-365/syntex/document-understanding-overview) premium feature's current selected sites list using the list of site URLs passed to the `DocumentUnderstandingModelSelectedSitesList` parameter.
+This parameter allows administrators to specify the operation to perform on the document understanding model and [unstructured document processing](/microsoft-365/syntex/document-understanding-overview) premium feature's current selected sites list using the list of site URLs passed to the `DocumentUnderstandingModelSelectedSitesList` parameter.
 
 The valid values are:
 
@@ -3011,6 +3016,26 @@ Accept wildcard characters: False
 > Applicable: SharePoint Online
 
 This is an opt-in setting that enables or disables writing SharePoint News and Announcement notification data to a list (NewsNotificationList) in the My Site of every user. When enabled, SharePoint Online emits notification events to this list. Third-party solutions must create and manage [webhook](/sharepoint/dev/apis/webhooks/lists/overview-sharepoint-list-webhooks) solutions to receive change notifications and then read the list to process new entries for triggering their own notifications for the user. This applies to [SharePoint News Notifications](/viva/connections/viva-connections-news-notifications#when-notifications-are-sent-via-microsoft-teams) and [Viva Connections Annoucements](/viva/connections/announcements-viva-connections).
+
+PARAMVALUE: True | False
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableTeamsMeetingRecordingDeletedNotification
+
+> Applicable: SharePoint Online
+
+This is an opt-in setting that enables or disables sending email notification when a Teams meeting recording file is deleted after expiration at the tenant level.
 
 PARAMVALUE: True | False
 
