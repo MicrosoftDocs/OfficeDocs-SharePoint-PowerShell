@@ -5,7 +5,9 @@ title: Microsoft.Online.SharePoint.PowerShell Module
 Locale: en-US
 author: samkabue
 ms.author: speedta
-ms.reviewer:
+ms.reviewer: Mengke-Gh
+description: The SharePoint Online PowerShell module page provides a comprehensive list of cmdlets that allow administrators to manage, configure, monitor, secure, automate, and govern every aspect of SharePoint Online at the tenant and site level.
+ms.date: 03/04/2026
 ---
 
 # Microsoft.Online.SharePoint.PowerShell Module
@@ -182,6 +184,12 @@ Determines the compatibility with the partner tenant.
 
 ### [Get-SPOCrossTenantHostUrl](Get-SPOCrossTenantHostUrl.md)
 Returns the cross-tenant host URL.
+
+### [Get-SPOCustomCdnSiteCollectionApps](Get-SPOCustomCdnSiteCollectionApps.md)
+Retrieves all app installations that use a custom CDN for a specific site collection.
+
+### [Get-SPOCustomCdnTenantApps](Get-SPOCustomCdnTenantApps.md)
+Retrieves all apps that use a custom CDN from the Tenant App Catalog.
 
 ### [Get-SPODataAccessGovernanceInsight](Get-SPODataAccessGovernanceInsight.md)
 Lists various 'Data Access Governance' (DAG) reports in SharePoint admin center.
@@ -363,6 +371,9 @@ Get the structural navigation caching state for a web.
 ### [Get-SPOTenant](Get-SPOTenant.md)
 Returns SharePoint Online organization properties.
 
+### [Get-SPOTenantApplyFileVersionPolicyJobImpact](Get-SPOTenantApplyFileVersionPolicyJobImpact.md)
+Estimates how many versions would be trimmed and how much storage would be freed if a trimming job were run with the given version policy. SharePoint Advanced Management license or Copilot license is required to run this cmdlet.
+
 ### [Get-SPOTenantApplyFileVersionPolicyJobProgress](Get-SPOTenantApplyFileVersionPolicyJobProgress.md)
 Gets the status for a tenant apply file version policy job. SharePoint Advanced Management license or Copilot license is required to run this cmdlet.
 
@@ -405,6 +416,9 @@ Returns the current configuration status.
 ### [Get-SPOTenantTaxonomyReplicationParameters](Get-SPOTenantTaxonomyReplicationParameters.md)
 Get the replication parameters to manage Multi-Geo taxonomy replication.
 
+### [Get-SPOTenantVersionPolicy](Get-SPOTenantVersionPolicy.md)
+Returns the current tenant-level file version policy.
+
 ### [Get-SPOTheme](Get-SPOTheme.md)
 Returns one or all theme settings from the tenant.
 
@@ -422,6 +436,9 @@ This cmdlet allows SharePoint administrators to check the status of a user or si
 
 ### [Get-SPOUserOneDriveLocation](Get-SPOUserOneDriveLocation.md)
 This cmdlet will return the user principal name, current location, and corresponding OneDrive for Business url, and the site ID. This cmdlet only supports Multi-Geo OneDrive sites.
+
+### [Get-SPOVersionPolicyWithChanges](Get-SPOVersionPolicyWithChanges.md)
+Returns a locally modified copy of a version policy.
 
 ### [Get-SPOWebTemplate](Get-SPOWebTemplate.md)
 Displays all site templates that match the given identity.
@@ -568,7 +585,13 @@ Removes a given public CDN origin based on its identity (id) in your SharePoint 
 Removes Software-Defined Networking (SDN) Support in your SharePoint Online tenant
 
 ### [Remove-SPOServicePrioritizationAppRegistration](Remove-SPOServicePrioritizationAppRegistration.md)
-Removes an app registration from service prioritization in SharePoint Online. 
+Removes an app registration from service prioritization in SharePoint Online.
+
+### [Remove-SPOServicePrioritizationAppRegistrationsByPolicy](Remove-SPOServicePrioritizationAppRegistrationsByPolicy.md)
+Removes all app registrations linked to a specific SharePoint Online Service Prioritization billing policy.
+
+### [Remove-SPOServicePrioritizationBillingPolicy](Remove-SPOServicePrioritizationBillingPolicy.md)
+Removes all app registrations linked to a SharePoint Online Service Prioritization billing policy and then deletes the billing policy itself.
 
 ### [Remove-SPOSite](Remove-SPOSite.md)
 Sends a SharePoint Online site collection to the SharePoint Online Recycle Bin.

@@ -96,4 +96,4 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 
 [SharePoint Advanced Management](/sharepoint/sharepoint-advanced-management-licensing)
 
-[Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-licensing)
+[Microsoft 365 Copilot](/microsoft-365/copilot/microsoft-365-copilot-licensing)

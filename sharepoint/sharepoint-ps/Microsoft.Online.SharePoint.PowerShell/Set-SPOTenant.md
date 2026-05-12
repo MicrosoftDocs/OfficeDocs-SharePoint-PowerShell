@@ -7,7 +7,9 @@ title: Set-SPOTenant
 schema: 2.0.0
 author: samkabue
 ms.author: speedta
-ms.reviewer:
+ms.reviewer: Mengke-GH
+description: 'A PowerShell cmdlet used in SharePoint Online to configure organization-wide tenant settings. '
+ms.date: 03/04/2026
 ---
 
 # Set-SPOTenant
@@ -143,6 +145,9 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
  [-EnableNotificationsSubscriptions <Boolean>]
+ [-IsFilePreviewDomainRestrictionEnabled <Boolean>]
+ [-FilePreviewAllowedDomainList <String>]
+ [-DisableTeamsMeetingRecordingDeletedNotification <Boolean>]
 ```
 
 ### ParameterSetContentTypeSyncSiteTemplatesList
@@ -271,6 +276,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
  [-EnableNotificationsSubscriptions <Boolean>]
+ [-DisableTeamsMeetingRecordingDeletedNotification <Boolean>]
 ```
 
 ### ParamSetMultipleSites
@@ -400,6 +406,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
  [-EnableNotificationsSubscriptions <Boolean>]
+ [-DisableTeamsMeetingRecordingDeletedNotification <Boolean>]
 ```
 
 ### InformationBarrier
@@ -527,6 +534,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
  [-EnableNotificationsSubscriptions <Boolean>]
+ [-DisableTeamsMeetingRecordingDeletedNotification <Boolean>]
 ```
 
 ### ParameterSetNameRestrictExternalSharing
@@ -655,6 +663,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  -RestrictExternalSharing <Guid[]> [-AddAppIdToList] [-RemoveAppIdFromList]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
  [-EnableNotificationsSubscriptions <Boolean>]
+ [-DisableTeamsMeetingRecordingDeletedNotification <Boolean>]
 ```
 
 ## DESCRIPTION
@@ -872,6 +881,14 @@ Set-SPOTenant -RemoveVersionExpirationFileTypeOverride @("Video", "Audio")
 ```
 
 This example removes any specific version history limit override set for video and audio file types on all new document libraries at tenant level. 
+
+### EXAMPLE 26
+
+```powershell
+Set-SPOTenant -IsFilePreviewDomainRestrictionEnabled $true -FilePreviewAllowedDomainList "contoso.com,fabrikam.com"
+```
+
+This example restricts file preview to the specified domains. When domain restriction is enabled, only files embedded from the listed domains can be previewed, in addition to predefined trusted Microsoft domains (for example, teams.microsoft.com).
 
 ## PARAMETERS
 
@@ -2049,7 +2066,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Specifies the maximum number of days before organization sharing links expire for all SharePoint sites (not including OneDrive sites).
+Specifies the maximum number of days before organization sharing links expire for all SharePoint sites (not including OneDrive sites). This is a tenant wide setting, and all geos will inherit the policy.
 
 The value can be from 7 to 720 days.
 
@@ -2071,7 +2088,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Specifies the recommended number of days before organization sharing links expire for all SharePoint sites (not including OneDrive sites). This setting provides a suggested expiration period to users when they create sharing links.
+Specifies the recommended number of days before organization sharing links expire for all SharePoint sites (not including OneDrive sites). This setting provides a suggested expiration period to users when they create sharing links. This is a tenant wide setting, and all geos will inherit the policy.
 
 The value can be from 7 to 720 days and must be less than or equal to the maximum expiration value set by `CoreOrganizationSharingLinkMaxExpirationInDays`.
 
@@ -2814,7 +2831,7 @@ Accept wildcard characters: False
 
 ### -DocumentUnderstandingModelScope
 
-This parameter allows administrators to limit which SharePoint sites the document understanding model and [unstructurted document processesing](/microsoft-365/syntex/document-understanding-overview) premium feature is available on.
+This parameter allows administrators to limit which SharePoint sites the document understanding model and [unstructured document processing](/microsoft-365/syntex/document-understanding-overview) premium feature is available on.
 
 The valid values are:
 
@@ -2840,7 +2857,7 @@ Accept wildcard characters: False
 
 ### -DocumentUnderstandingModelSelectedSitesList
 
-This parameter allows administrators to pass a list of SharePoint site URLs to modify the document understanding model and [unstructurted document processesing](/microsoft-365/syntex/document-understanding-overview) premium feature's selected sites list. By default this parameter overwrites the existing list with the user input list. Additionally, the `DocumentUnderstandingModelSelectedSitesListOperation` parameter can be used to specify a different operation. This parameter can only be called if the document understanding model's scope is set to `SelectedSites`. The inputted list of site URLs cannot exceed 100 items.
+This parameter allows administrators to pass a list of SharePoint site URLs to modify the document understanding model and [unstructured document processing](/microsoft-365/syntex/document-understanding-overview) premium feature's selected sites list. By default this parameter overwrites the existing list with the user input list. Additionally, the `DocumentUnderstandingModelSelectedSitesListOperation` parameter can be used to specify a different operation. This parameter can only be called if the document understanding model's scope is set to `SelectedSites`. The inputted list of site URLs cannot exceed 100 items.
 
 > [!NOTE]
 > Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
@@ -2859,7 +2876,7 @@ Accept wildcard characters: False
 
 ### -DocumentUnderstandingModelSelectedSitesListOperation
 
-This parameter allows administrators to specify the operation to perform on the document understanding model and [unstructurted document processesing](/microsoft-365/syntex/document-understanding-overview) premium feature's current selected sites list using the list of site URLs passed to the `DocumentUnderstandingModelSelectedSitesList` parameter.
+This parameter allows administrators to specify the operation to perform on the document understanding model and [unstructured document processing](/microsoft-365/syntex/document-understanding-overview) premium feature's current selected sites list using the list of site URLs passed to the `DocumentUnderstandingModelSelectedSitesList` parameter.
 
 The valid values are:
 
@@ -2999,6 +3016,26 @@ Accept wildcard characters: False
 > Applicable: SharePoint Online
 
 This is an opt-in setting that enables or disables writing SharePoint News and Announcement notification data to a list (NewsNotificationList) in the My Site of every user. When enabled, SharePoint Online emits notification events to this list. Third-party solutions must create and manage [webhook](/sharepoint/dev/apis/webhooks/lists/overview-sharepoint-list-webhooks) solutions to receive change notifications and then read the list to process new entries for triggering their own notifications for the user. This applies to [SharePoint News Notifications](/viva/connections/viva-connections-news-notifications#when-notifications-are-sent-via-microsoft-teams) and [Viva Connections Annoucements](/viva/connections/announcements-viva-connections).
+
+PARAMVALUE: True | False
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableTeamsMeetingRecordingDeletedNotification
+
+> Applicable: SharePoint Online
+
+This is an opt-in setting that enables or disables sending email notification when a Teams meeting recording file is deleted after expiration at the tenant level.
 
 PARAMVALUE: True | False
 
@@ -3201,8 +3238,7 @@ Accept wildcard characters: False
 
 Allows tenant admins to turn on support for sections in OneNote with sensitivity labels for the following scenarios:
 
-- Applying a sensitivity label in OneNote for the web.
-- Uploading a labeled document, and then extracting and displaying that sensitivity label.
+- Manually apply a sensitivity label in OneNote across endpoints.
 
 The valid values are:
 
@@ -3515,6 +3551,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FilePreviewAllowedDomainList
+
+Specifies the list of domains that are allowed for file preview.
+Use a comma-delimited list of domain names. For example: `contoso.com,fabrikam.com`.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: String.Empty
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -FileTypesForVersionExpiration
 
 An array of file type names. The supported file type names are:
@@ -3764,6 +3817,26 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsFilePreviewDomainRestrictionEnabled
+
+Enables or disables domain-based restrictions for file preview.
+
+When set to `$true`, SharePoint restricts file preview to the domains specified in `-FilePreviewAllowedDomainList`. When set to `$false`, domain restrictions are disabled and file preview is allowed for all domains, regardless of the allow list configuration. This setting affects the embedded preview experiences.
+
+PARAMVALUE: True | False
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -4539,7 +4612,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Specifies the maximum number of days before organization sharing links expire for all OneDrive sites.
+Specifies the maximum number of days before organization sharing links expire for all OneDrive sites. This is a tenant wide setting, and all geos will inherit the policy.
 
 The value can be from 7 to 720 days.
 
@@ -4561,7 +4634,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Specifies the recommended number of days before organization sharing links expire for all OneDrive sites. This setting provides a suggested expiration period to users when they create sharing links.
+Specifies the recommended number of days before organization sharing links expire for all OneDrive sites. This setting provides a suggested expiration period to users when they create sharing links. This is a tenant wide setting, and all geos will inherit the policy.
 
 The value can be from 7 to 720 days and must be less than or equal to the maximum expiration value set by `OneDriveOrganizationSharingLinkMaxExpirationInDays`.
 

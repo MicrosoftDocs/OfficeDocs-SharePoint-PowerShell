@@ -100,6 +100,8 @@ The following details are returned:
 
 - CopilotEmbeddedChatHosts
 
+- ItemMajorVersionLimit
+
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)

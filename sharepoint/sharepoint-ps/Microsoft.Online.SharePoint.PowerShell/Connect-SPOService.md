@@ -7,7 +7,9 @@ title: Connect-SPOService
 schema: 2.0.0
 author: ShreyasSar26
 ms.author: shsaravanan
-ms.reviewer:
+ms.reviewer: Mengke-Gh
+description: 'Connect-SPOService is a PowerShell cmdlet in the Microsoft.Online.SharePoint.PowerShell module that connects a SharePoint Administrator or SharePoint Embedded Administrator to the SharePoint admin center. '
+ms.date: 03/04/2026
 ---
 
 # Connect-SPOService
@@ -28,6 +30,12 @@ Connect-SPOService [-Url] <UrlCmdletPipeBind> [[-ClientTag] <String>] [-Region <
 
 ```
 Connect-SPOService [-Url] <UrlCmdletPipeBind> [[-Credential] <CredentialCmdletPipeBind>] [[-ClientTag] <String>] [-Region <AADCrossTenantAuthenticationLocation>] [[-ModernAuth] <Boolean>] [[-UseSystemBrowser] <Boolean>]
+```
+
+### AuthenticationManagedIdentity
+
+```
+Connect-SPOService -Url <UrlCmdletPipeBind> [-ClientTag <String>] [-ManagedIdentity] [-ManagedIdentityType <ManagedIdentityType>] [-ManagedIdentityClientId <String>] [<CommonParameters>]
 ```
 
 ### AuthenticationUrl
@@ -123,6 +131,22 @@ Connect-SPOService -Url https://contoso-admin.sharepoint.com -ClientId 00000000-
 ```
 
 This example connects to the SharePoint admin center by using an app identity and a certificate object.
+
+### EXAMPLE 10
+
+```powershell
+Connect-SPOService -Url https://contoso-admin.sharepoint.com -ManagedIdentity
+```
+
+This example connects to the SharePoint admin center by using system assigned managed identity.
+
+### EXAMPLE 11
+
+```powershell
+Connect-SPOService -url https://contoso-admin.sharepoint.com -ManagedIdentity -ManagedIdentityType UserAssigned -ManagedIdentityClientId 00000000-0000-0000-0000-000000000000
+```
+
+This example connects to the SharePoint admin center by using user assigned managed identity.
 
 ## PARAMETERS
 
@@ -279,6 +303,60 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -ManagedIdentity
+
+> Applicable: SharePoint Online
+
+Indicates that the connection uses a managed identity instead of user or certificate‑based authentication.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AuthenticationManagedIdentity
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManagedIdentityClientId
+
+> Applicable: SharePoint Online
+
+Specifies the client ID of a user‑assigned managed identity to use for authentication.
+
+```yaml
+Type: String
+Parameter Sets: AuthenticationManagedIdentity
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ManagedIdentityType
+
+> Applicable: SharePoint Online
+
+Specifies the type of managed identity to use when authenticating. If not specified, the default managed identity type is used.
+
+```yaml
+Type: ManagedIdentityType
+Parameter Sets: AuthenticationManagedIdentity
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
