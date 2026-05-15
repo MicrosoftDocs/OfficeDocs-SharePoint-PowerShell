@@ -276,6 +276,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
  [-EnableNotificationsSubscriptions <Boolean>]
+ [-IsFilePreviewDomainRestrictionEnabled <Boolean>]
+ [-FilePreviewAllowedDomainList <String>]
  [-DisableTeamsMeetingRecordingDeletedNotification <Boolean>]
 ```
 
@@ -406,6 +408,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
  [-EnableNotificationsSubscriptions <Boolean>]
+ [-IsFilePreviewDomainRestrictionEnabled <Boolean>]
+ [-FilePreviewAllowedDomainList <String>]
  [-DisableTeamsMeetingRecordingDeletedNotification <Boolean>]
 ```
 
@@ -534,6 +538,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
  [-EnableNotificationsSubscriptions <Boolean>]
+ [-IsFilePreviewDomainRestrictionEnabled <Boolean>]
+ [-FilePreviewAllowedDomainList <String>]
  [-DisableTeamsMeetingRecordingDeletedNotification <Boolean>]
 ```
 
@@ -663,6 +669,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  -RestrictExternalSharing <Guid[]> [-AddAppIdToList] [-RemoveAppIdFromList]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
  [-EnableNotificationsSubscriptions <Boolean>]
+ [-IsFilePreviewDomainRestrictionEnabled <Boolean>]
+ [-FilePreviewAllowedDomainList <String>]
  [-DisableTeamsMeetingRecordingDeletedNotification <Boolean>]
 ```
 
@@ -885,10 +893,18 @@ This example removes any specific version history limit override set for video a
 ### EXAMPLE 26
 
 ```powershell
-Set-SPOTenant -IsFilePreviewDomainRestrictionEnabled $true -FilePreviewAllowedDomainList "contoso.com,fabrikam.com"
+Set-SPOTenant -IsFilePreviewDomainRestrictionEnabled $true -FilePreviewAllowedDomainList "contoso.com fabrikam.com"
 ```
 
 This example restricts file preview to the specified domains. When domain restriction is enabled, only files embedded from the listed domains can be previewed, in addition to predefined trusted Microsoft domains (for example, teams.microsoft.com).
+
+### EXAMPLE 27
+
+```powershell
+Set-SPOTenant -IsFilePreviewDomainRestrictionEnabled $false
+```
+
+This example disables the file preview domain restriction. The previously configured allow list is retained but ignored, so the file preview viewer can load content from any domain.
 
 ## PARAMETERS
 
@@ -3553,8 +3569,13 @@ Accept wildcard characters: False
 
 ### -FilePreviewAllowedDomainList
 
-Specifies the list of domains that are allowed for file preview.
-Use a comma-delimited list of domain names. For example: `contoso.com,fabrikam.com`.
+> Applicable: SharePoint Online
+
+Specifies a list of domains that the file preview viewer is allowed to load content from when rendering previews (PDF, images, Office, documents, and other supported file types). Use the space character as the delimiter for entering multiple values. For example, `"contoso.com fabrikam.com"`.
+
+When the restriction is disabled, the list is retained but ignored, and the file preview viewer can load content from any domain. When the restriction is enabled, if this parameter is not specified, a predefined set of allowed domains (such as `teams.microsoft.com`) is used. If it is specified, the provided domains are appended to the default set and do not replace it.
+
+Domain entries must be fully qualified domain names (for example, `contoso.com`) and are provided as a space-separated list. Each entry is trimmed and empty values are ignored. The bare wildcard `*` is not allowed. Wildcards are only permitted in the left-most label as `*.contoso.com`. Invalid wildcard patterns (for example, `contoso.*` or `a*b.com`) are rejected. Duplicate entries are removed using case-sensitive comparison. The list can contain up to 500 domains.
 
 ```yaml
 Type: String
@@ -3823,9 +3844,11 @@ Accept wildcard characters: False
 
 ### -IsFilePreviewDomainRestrictionEnabled
 
-Enables or disables domain-based restrictions for file preview.
+> Applicable: SharePoint Online
 
-When set to `$true`, SharePoint restricts file preview to the domains specified in `-FilePreviewAllowedDomainList`. When set to `$false`, domain restrictions are disabled and file preview is allowed for all domains, regardless of the allow list configuration. This setting affects the embedded preview experiences.
+Enables or disables enforcement of the file preview domain allow list defined by `FilePreviewAllowedDomainList`.
+
+The values are `$true` and `$false`. The default value is `$false`, which means the restriction is disabled and the file preview viewer can load content from any domain.
 
 PARAMVALUE: True | False
 
