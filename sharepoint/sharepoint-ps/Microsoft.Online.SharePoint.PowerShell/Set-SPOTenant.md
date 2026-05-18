@@ -893,7 +893,7 @@ This example removes any specific version history limit override set for video a
 ### EXAMPLE 26
 
 ```powershell
-Set-SPOTenant -IsFilePreviewDomainRestrictionEnabled $true -FilePreviewAllowedDomainList "contoso.com fabrikam.com"
+Set-SPOTenant -IsFilePreviewDomainRestrictionEnabled $true -FilePreviewAllowedDomainList "contoso.com,fabrikam.com"
 ```
 
 This example restricts file preview to the specified domains. When domain restriction is enabled, only files embedded from the listed domains can be previewed, in addition to predefined trusted Microsoft domains (for example, teams.microsoft.com).
@@ -3571,11 +3571,11 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Specifies a list of domains that the file preview viewer is allowed to load content from when rendering previews (PDF, images, Office, documents, and other supported file types). Use the space character as the delimiter for entering multiple values. For example, `"contoso.com fabrikam.com"`.
+Specifies a list of domains that the file preview viewer is allowed to load content from when rendering previews (PDF, images, Office, documents, and other supported file types). Use the comma character as the delimiter for entering multiple values. For example, `"contoso.com fabrikam.com"`.
 
 When the restriction is disabled, the list is retained but ignored, and the file preview viewer can load content from any domain. When the restriction is enabled, if this parameter is not specified, a predefined set of allowed domains (such as `teams.microsoft.com`) is used. If it is specified, the provided domains are appended to the default set and do not replace it.
 
-Domain entries must be fully qualified domain names (for example, `contoso.com`) and are provided as a space-separated list. Each entry is trimmed and empty values are ignored. The bare wildcard `*` is not allowed. Wildcards are only permitted in the left-most label as `*.contoso.com`. Invalid wildcard patterns (for example, `contoso.*` or `a*b.com`) are rejected. Duplicate entries are removed using case-sensitive comparison. The list can contain up to 500 domains.
+Domain entries must be fully qualified domain names (for example, `contoso.com`) and are provided as a comma-separated list. Each entry is trimmed and empty values are ignored. The bare wildcard `*` is not allowed. Wildcards are only permitted in the left-most label as `*.contoso.com`. Invalid wildcard patterns (for example, `contoso.*` or `a*b.com`) are rejected. Duplicate entries are removed using case-sensitive comparison. The list can contain up to 500 domains.
 
 ```yaml
 Type: String
