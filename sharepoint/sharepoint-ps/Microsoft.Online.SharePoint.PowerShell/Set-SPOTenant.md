@@ -3571,7 +3571,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Specifies a list of domains that the file preview viewer is allowed to load content from when rendering previews (PDF, images, Office, documents, and other supported file types). Use the comma character as the delimiter for entering multiple values. For example, `"contoso.com fabrikam.com"`.
+Specifies a list of domains that the file preview viewer is allowed to load content from when rendering previews (PDF, images, Office, documents, and other supported file types). Use the comma character as the delimiter for entering multiple values. For example, `"contoso.com,fabrikam.com"`.
 
 When the restriction is disabled, the list is retained but ignored, and the file preview viewer can load content from any domain. When the restriction is enabled, if this parameter is not specified, a predefined set of allowed domains (such as `teams.microsoft.com`) is used. If it is specified, the provided domains are appended to the default set and do not replace it.
 
