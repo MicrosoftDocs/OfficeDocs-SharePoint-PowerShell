@@ -8,7 +8,7 @@ schema: 2.0.0
 author: samkabue
 ms.author: speedta
 ms.reviewer: Mengke-GH
-description: 'A PowerShell cmdlet used in SharePoint Online to configure organization-wide tenant settings. '
+description: 'A PowerShell cmdlet used in SharePoint Online to configure organization-wide tenant settings.'
 ms.date: 03/04/2026
 ---
 
@@ -5380,7 +5380,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Sets the sensitiviy label for a site.
+Sets the sensitivity label for a site.
 
 ```yaml
 Type: String
