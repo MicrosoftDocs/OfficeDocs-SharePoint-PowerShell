@@ -137,7 +137,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SimulationMode
+### -AuditOnly
 
 > Applicable: SharePoint Online
 
