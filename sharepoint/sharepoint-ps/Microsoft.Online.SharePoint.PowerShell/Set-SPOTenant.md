@@ -7,7 +7,9 @@ title: Set-SPOTenant
 schema: 2.0.0
 author: samkabue
 ms.author: speedta
-ms.reviewer:
+ms.reviewer: Mengke-GH
+description: 'A PowerShell cmdlet used in SharePoint Online to configure organization-wide tenant settings.'
+ms.date: 03/04/2026
 ---
 
 # Set-SPOTenant
@@ -92,7 +94,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-BlockUserInfoVisibility <String>] [-BlockUserInfoVisibilityInOneDrive <TenantBrowseUserInfoPolicyValue>]
  [-BlockUserInfoVisibilityInSharePoint <TenantBrowseUserInfoPolicyValue>]
  [-AllowOverrideForBlockUserInfoVisibility <Boolean>] [-DisablePersonalListCreation <Boolean>]
- [-DisableSpacesActivation <Boolean>] [-DisableVivaConnectionsAnalytics <Boolean>]
+ [-DisableSpacesActivation <Boolean>] [-DisableSpfxTopBottomPlaceholdersInElevatedContent <Boolean>]
+ [-DisableVivaConnectionsAnalytics <Boolean>]
  [-InformationBarriersSuspension <Boolean>] [-IBImplicitGroupBased <Boolean>]
  [-AppBypassInformationBarriers <Boolean>] [-AppAccessInformationBarriersAllowList <Guid[]>]
  [-AllOrganizationSecurityGroupId <Guid>] [-DisableModernListTemplateIds <Guid[]>]
@@ -141,6 +144,10 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
+ [-EnableNotificationsSubscriptions <Boolean>]
+ [-IsFilePreviewDomainRestrictionEnabled <Boolean>]
+ [-FilePreviewAllowedDomainList <String>]
+ [-DisableTeamsMeetingRecordingDeletedNotification <Boolean>]
 ```
 
 ### ParameterSetContentTypeSyncSiteTemplatesList
@@ -218,7 +225,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-BlockUserInfoVisibility <String>] [-BlockUserInfoVisibilityInOneDrive <TenantBrowseUserInfoPolicyValue>]
  [-BlockUserInfoVisibilityInSharePoint <TenantBrowseUserInfoPolicyValue>]
  [-AllowOverrideForBlockUserInfoVisibility <Boolean>] [-DisablePersonalListCreation <Boolean>]
- [-DisableSpacesActivation <Boolean>] [-DisableVivaConnectionsAnalytics <Boolean>]
+ [-DisableSpacesActivation <Boolean>] [-DisableSpfxTopBottomPlaceholdersInElevatedContent <Boolean>]
+ [-DisableVivaConnectionsAnalytics <Boolean>]
  [-InformationBarriersSuspension <Boolean>] [-IBImplicitGroupBased <Boolean>]
  [-AppBypassInformationBarriers <Boolean>] [-AppAccessInformationBarriersAllowList <Guid[]>]
  [-AllOrganizationSecurityGroupId <Guid>] [-DisableModernListTemplateIds <Guid[]>]
@@ -267,6 +275,10 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
+ [-EnableNotificationsSubscriptions <Boolean>]
+ [-IsFilePreviewDomainRestrictionEnabled <Boolean>]
+ [-FilePreviewAllowedDomainList <String>]
+ [-DisableTeamsMeetingRecordingDeletedNotification <Boolean>]
 ```
 
 ### ParamSetMultipleSites
@@ -345,7 +357,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-BlockUserInfoVisibility <String>] [-BlockUserInfoVisibilityInOneDrive <TenantBrowseUserInfoPolicyValue>]
  [-BlockUserInfoVisibilityInSharePoint <TenantBrowseUserInfoPolicyValue>]
  [-AllowOverrideForBlockUserInfoVisibility <Boolean>] [-DisablePersonalListCreation <Boolean>]
- [-DisableSpacesActivation <Boolean>] [-DisableVivaConnectionsAnalytics <Boolean>]
+ [-DisableSpacesActivation <Boolean>] [-DisableSpfxTopBottomPlaceholdersInElevatedContent <Boolean>]
+ [-DisableVivaConnectionsAnalytics <Boolean>]
  [-InformationBarriersSuspension <Boolean>] [-IBImplicitGroupBased <Boolean>]
  [-AppBypassInformationBarriers <Boolean>] [-AppAccessInformationBarriersAllowList <Guid[]>]
  [-AllOrganizationSecurityGroupId <Guid>] [-DisableModernListTemplateIds <Guid[]>]
@@ -394,6 +407,10 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
+ [-EnableNotificationsSubscriptions <Boolean>]
+ [-IsFilePreviewDomainRestrictionEnabled <Boolean>]
+ [-FilePreviewAllowedDomainList <String>]
+ [-DisableTeamsMeetingRecordingDeletedNotification <Boolean>]
 ```
 
 ### InformationBarrier
@@ -470,7 +487,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-BlockUserInfoVisibility <String>] [-BlockUserInfoVisibilityInOneDrive <TenantBrowseUserInfoPolicyValue>]
  [-BlockUserInfoVisibilityInSharePoint <TenantBrowseUserInfoPolicyValue>]
  [-AllowOverrideForBlockUserInfoVisibility <Boolean>] [-DisablePersonalListCreation <Boolean>]
- [-DisableSpacesActivation <Boolean>] [-DisableVivaConnectionsAnalytics <Boolean>]
+ [-DisableSpacesActivation <Boolean>] [-DisableSpfxTopBottomPlaceholdersInElevatedContent <Boolean>]
+ [-DisableVivaConnectionsAnalytics <Boolean>]
  [-InformationBarriersSuspension <Boolean>] [-IBImplicitGroupBased <Boolean>]
  [-AppBypassInformationBarriers <Boolean>] [-DefaultOneDriveInformationBarrierMode <String>]
  [-AppAccessInformationBarriersAllowList <Guid[]>] [-AllOrganizationSecurityGroupId <Guid>]
@@ -519,6 +537,10 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
+ [-EnableNotificationsSubscriptions <Boolean>]
+ [-IsFilePreviewDomainRestrictionEnabled <Boolean>]
+ [-FilePreviewAllowedDomainList <String>]
+ [-DisableTeamsMeetingRecordingDeletedNotification <Boolean>]
 ```
 
 ### ParameterSetNameRestrictExternalSharing
@@ -595,7 +617,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-BlockUserInfoVisibility <String>] [-BlockUserInfoVisibilityInOneDrive <TenantBrowseUserInfoPolicyValue>]
  [-BlockUserInfoVisibilityInSharePoint <TenantBrowseUserInfoPolicyValue>]
  [-AllowOverrideForBlockUserInfoVisibility <Boolean>] [-DisablePersonalListCreation <Boolean>]
- [-DisableSpacesActivation <Boolean>] [-DisableVivaConnectionsAnalytics <Boolean>]
+ [-DisableSpacesActivation <Boolean>] [-DisableSpfxTopBottomPlaceholdersInElevatedContent <Boolean>]
+ [-DisableVivaConnectionsAnalytics <Boolean>]
  [-InformationBarriersSuspension <Boolean>] [-IBImplicitGroupBased <Boolean>]
  [-AppBypassInformationBarriers <Boolean>] [-AppAccessInformationBarriersAllowList <Guid[]>]
  [-AllOrganizationSecurityGroupId <Guid>] [-DisableModernListTemplateIds <Guid[]>]
@@ -645,6 +668,10 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  -RestrictExternalSharing <Guid[]> [-AddAppIdToList] [-RemoveAppIdFromList]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
+ [-EnableNotificationsSubscriptions <Boolean>]
+ [-IsFilePreviewDomainRestrictionEnabled <Boolean>]
+ [-FilePreviewAllowedDomainList <String>]
+ [-DisableTeamsMeetingRecordingDeletedNotification <Boolean>]
 ```
 
 ## DESCRIPTION
@@ -862,6 +889,22 @@ Set-SPOTenant -RemoveVersionExpirationFileTypeOverride @("Video", "Audio")
 ```
 
 This example removes any specific version history limit override set for video and audio file types on all new document libraries at tenant level. 
+
+### EXAMPLE 26
+
+```powershell
+Set-SPOTenant -IsFilePreviewDomainRestrictionEnabled $true -FilePreviewAllowedDomainList "contoso.com,fabrikam.com"
+```
+
+This example restricts file preview to the specified domains. When domain restriction is enabled, only files embedded from the listed domains can be previewed, in addition to predefined trusted Microsoft domains (for example, teams.microsoft.com).
+
+### EXAMPLE 27
+
+```powershell
+Set-SPOTenant -IsFilePreviewDomainRestrictionEnabled $false
+```
+
+This example disables the file preview domain restriction. The previously configured allow list is retained but ignored, so the file preview viewer can load content from any domain.
 
 ## PARAMETERS
 
@@ -2039,7 +2082,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Specifies the maximum number of days before organization sharing links expire for all SharePoint sites (not including OneDrive sites).
+Specifies the maximum number of days before organization sharing links expire for all SharePoint sites (not including OneDrive sites). This is a tenant wide setting, and all geos will inherit the policy.
 
 The value can be from 7 to 720 days.
 
@@ -2061,7 +2104,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Specifies the recommended number of days before organization sharing links expire for all SharePoint sites (not including OneDrive sites). This setting provides a suggested expiration period to users when they create sharing links.
+Specifies the recommended number of days before organization sharing links expire for all SharePoint sites (not including OneDrive sites). This setting provides a suggested expiration period to users when they create sharing links. This is a tenant wide setting, and all geos will inherit the policy.
 
 The value can be from 7 to 720 days and must be less than or equal to the maximum expiration value set by `CoreOrganizationSharingLinkMaxExpirationInDays`.
 
@@ -2630,6 +2673,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisableSpfxTopBottomPlaceholdersInElevatedContent
+
+> Applicable: SharePoint Online
+
+This feature allows SharePoint Administrators to control where SPFx Top and Bottom placeholders are rendered in relation to elevated content.
+
+Accepts a value of true to render the Top and Bottom placeholders outside the elevated content area, or false to render them inside the elevated content area. By default, this feature is set to false.
+
+PARAMVALUE: True | False
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisableVivaConnectionsAnalytics
 
 Controls whether the Viva Connections analytics feature is enabled.
@@ -2782,7 +2847,7 @@ Accept wildcard characters: False
 
 ### -DocumentUnderstandingModelScope
 
-This parameter allows administrators to limit which SharePoint sites the document understanding model and [unstructurted document processesing](/microsoft-365/syntex/document-understanding-overview) premium feature is available on.
+This parameter allows administrators to limit which SharePoint sites the document understanding model and [unstructured document processing](/microsoft-365/syntex/document-understanding-overview) premium feature is available on.
 
 The valid values are:
 
@@ -2808,7 +2873,7 @@ Accept wildcard characters: False
 
 ### -DocumentUnderstandingModelSelectedSitesList
 
-This parameter allows administrators to pass a list of SharePoint site URLs to modify the document understanding model and [unstructurted document processesing](/microsoft-365/syntex/document-understanding-overview) premium feature's selected sites list. By default this parameter overwrites the existing list with the user input list. Additionally, the `DocumentUnderstandingModelSelectedSitesListOperation` parameter can be used to specify a different operation. This parameter can only be called if the document understanding model's scope is set to `SelectedSites`. The inputted list of site URLs cannot exceed 100 items.
+This parameter allows administrators to pass a list of SharePoint site URLs to modify the document understanding model and [unstructured document processing](/microsoft-365/syntex/document-understanding-overview) premium feature's selected sites list. By default this parameter overwrites the existing list with the user input list. Additionally, the `DocumentUnderstandingModelSelectedSitesListOperation` parameter can be used to specify a different operation. This parameter can only be called if the document understanding model's scope is set to `SelectedSites`. The inputted list of site URLs cannot exceed 100 items.
 
 > [!NOTE]
 > Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
@@ -2827,7 +2892,7 @@ Accept wildcard characters: False
 
 ### -DocumentUnderstandingModelSelectedSitesListOperation
 
-This parameter allows administrators to specify the operation to perform on the document understanding model and [unstructurted document processesing](/microsoft-365/syntex/document-understanding-overview) premium feature's current selected sites list using the list of site URLs passed to the `DocumentUnderstandingModelSelectedSitesList` parameter.
+This parameter allows administrators to specify the operation to perform on the document understanding model and [unstructured document processing](/microsoft-365/syntex/document-understanding-overview) premium feature's current selected sites list using the list of site URLs passed to the `DocumentUnderstandingModelSelectedSitesList` parameter.
 
 The valid values are:
 
@@ -2958,6 +3023,46 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableNotificationsSubscriptions
+
+> Applicable: SharePoint Online
+
+This is an opt-in setting that enables or disables writing SharePoint News and Announcement notification data to a list (NewsNotificationList) in the My Site of every user. When enabled, SharePoint Online emits notification events to this list. Third-party solutions must create and manage [webhook](/sharepoint/dev/apis/webhooks/lists/overview-sharepoint-list-webhooks) solutions to receive change notifications and then read the list to process new entries for triggering their own notifications for the user. This applies to [SharePoint News Notifications](/viva/connections/viva-connections-news-notifications#when-notifications-are-sent-via-microsoft-teams) and [Viva Connections Annoucements](/viva/connections/announcements-viva-connections).
+
+PARAMVALUE: True | False
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisableTeamsMeetingRecordingDeletedNotification
+
+> Applicable: SharePoint Online
+
+This is an opt-in setting that enables or disables sending email notification when a Teams meeting recording file is deleted after expiration at the tenant level.
+
+PARAMVALUE: True | False
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -3149,8 +3254,7 @@ Accept wildcard characters: False
 
 Allows tenant admins to turn on support for sections in OneNote with sensitivity labels for the following scenarios:
 
-- Applying a sensitivity label in OneNote for the web.
-- Uploading a labeled document, and then extracting and displaying that sensitivity label.
+- Manually apply a sensitivity label in OneNote across endpoints.
 
 The valid values are:
 
@@ -3463,6 +3567,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FilePreviewAllowedDomainList
+
+> Applicable: SharePoint Online
+
+Specifies a list of domains that the file preview viewer is allowed to load content from when rendering previews (PDF, images, Office, documents, and other supported file types). Use the comma character as the delimiter for entering multiple values. For example, `"contoso.com,fabrikam.com"`.
+
+When the restriction is disabled, the list is retained but ignored, and the file preview viewer can load content from any domain. When the restriction is enabled, if this parameter is not specified, a predefined set of allowed domains (such as `teams.microsoft.com`) is used. If it is specified, the provided domains are appended to the default set and do not replace it.
+
+Domain entries must be fully qualified domain names (for example, `contoso.com`) and are provided as a comma-separated list. Each entry is trimmed and empty values are ignored. The bare wildcard `*` is not allowed. Wildcards are only permitted in the left-most label as `*.contoso.com`. Invalid wildcard patterns (for example, `contoso.*` or `a*b.com`) are rejected. Duplicate entries are removed using case-sensitive comparison. The list can contain up to 500 domains.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: String.Empty
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -FileTypesForVersionExpiration
 
 An array of file type names. The supported file type names are:
@@ -3712,6 +3838,28 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IsFilePreviewDomainRestrictionEnabled
+
+> Applicable: SharePoint Online
+
+Enables or disables enforcement of the file preview domain allow list defined by `FilePreviewAllowedDomainList`.
+
+The values are `$true` and `$false`. The default value is `$false`, which means the restriction is disabled and the file preview viewer can load content from any domain.
+
+PARAMVALUE: True | False
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -4487,7 +4635,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Specifies the maximum number of days before organization sharing links expire for all OneDrive sites.
+Specifies the maximum number of days before organization sharing links expire for all OneDrive sites. This is a tenant wide setting, and all geos will inherit the policy.
 
 The value can be from 7 to 720 days.
 
@@ -4509,7 +4657,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Specifies the recommended number of days before organization sharing links expire for all OneDrive sites. This setting provides a suggested expiration period to users when they create sharing links.
+Specifies the recommended number of days before organization sharing links expire for all OneDrive sites. This setting provides a suggested expiration period to users when they create sharing links. This is a tenant wide setting, and all geos will inherit the policy.
 
 The value can be from 7 to 720 days and must be less than or equal to the maximum expiration value set by `OneDriveOrganizationSharingLinkMaxExpirationInDays`.
 
@@ -5195,6 +5343,9 @@ The valid values are:
 - False (default) - Starts with / partial name search functionality is available.
 - True - Disables starts with for all users/partial name search functionality for all SharePoint users, except SharePoint Admins.
 
+> [!NOTE]
+> SharePoint site administrators can bypass the People Picker restrictions on sites they administer.
+
 ```yaml
 Type: System.Boolean
 Parameter Sets: (All)
@@ -5229,7 +5380,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Sets the sensitiviy label for a site.
+Sets the sensitivity label for a site.
 
 ```yaml
 Type: String
@@ -5773,7 +5924,7 @@ This feature enables tenant admins to enable ODB and SPO to respect Exchange sup
 PARAMVALUE: True | False
 
 > [!NOTE]
-> When set to $true, users aren't able to share with security groups or SharePoint groups.
+> When set to $true, users aren't able to share with security groups or SharePoint groups. SharePoint site administrators can bypass the People Picker restrictions on sites they administer.
 
 ```yaml
 Type: System.Boolean
@@ -5941,5 +6092,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)
 
 [Get-SPOSite](Get-SPOSite.md)
-
-[Set-SPOSite](Set-SPOSite.md)

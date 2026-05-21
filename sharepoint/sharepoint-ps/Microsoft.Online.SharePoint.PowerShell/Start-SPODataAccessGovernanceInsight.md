@@ -53,7 +53,13 @@ Start-SPODataAccessGovernanceInsight -ReportEntity <ReportEntityEnum> -Workload 
 ### UserPermissionsParameterSet
 ```
 Start-SPODataAccessGovernanceInsight -ReportEntity <ReportEntityEnum> -Workload <WorkloadEnum>
- -ReportType <ReportTypeEnum> -Name <String> -UserEmailList <System.Collections.Generic.List`1[System.String]>
+ -ReportType <ReportTypeEnum> -Name <String> -UserPrincipalNames <System.Collections.Generic.List`1[System.String]>
+ [<CommonParameters>]
+```
+
+### DetailedEEEUParameterSet
+```
+Start-SPODataAccessGovernanceInsight -ReportEntity <ReportEntityEnum> -ReportType <ReportTypeEnum>
  [<CommonParameters>]
 ```
 
@@ -65,7 +71,7 @@ This cmdlet is used to generate DAG reports which deal with potential oversharin
 - Content shared with Everyone except external users (EEEU) in last 28 days.
 - List of sites having labelled files, as of report generation time.
 - List of sites having 'too-many-users', as of report generation time, to setup an oversharing baseline.
-- List of sites with direct or indirect permissions to given users. *(Private Preview)*
+- List of sites with direct or indirect permissions to given users.
 
 ## EXAMPLES
 
@@ -76,6 +82,15 @@ Start-SPODataAccessGovernanceInsight -ReportEntity PermissionedUsers -Workload S
 ```
 
 The above cmdlet generates a list of SharePoint sites which can be accessed by more than 1000 users, as of report generation day.
+
+### Example 2
+
+```powershell
+Start-SPODataAccessGovernanceInsight -ReportEntity EveryoneExceptExternalUsers -ReportType Snapshot
+```
+
+The above cmdlet generates a detailed report for all content shared with 'Everyone except external users' (Sites, groups and files) across both SharePoint sites and OneDrive accounts, as of report generation time.
+
 
 ## PARAMETERS
 
@@ -168,7 +183,7 @@ Specifies the entity that could cause oversharing and hence tracked by these rep
 Type: Microsoft.Online.SharePoint.TenantAdministration.ReportEntityEnum
 Parameter Sets: (All)
 Aliases:
-Accepted values: SharingLinks_Anyone, SharingLinks_PeopleInYourOrg, SharingLinks_Guests, SensitivityLabelForFiles, EveryoneExceptExternalUsersAtSite, EveryoneExceptExternalUsersForItems, PermissionedUsers, PermissionsReport
+Accepted values: Everyone, EveryoneExceptExternalUsers, EveryoneExceptExternalUsersAtSite, EveryoneExceptExternalUsersForItems, PermissionedUsers, PermissionsReport, SensitivityLabelForFiles, SharingLinks_Anyone, SharingLinks_Guests, SharingLinks_PeopleInYourOrg
 
 Required: True
 Position: Named
@@ -227,9 +242,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -UserEmailList
+### -UserPrincipalNames
 
-Specifies the email IDs of the users for whom permissions report should be generated.
+Specifies the user principal names of the users for whom permissions report should be generated.
 
 ```yaml
 Type: System.Collections.Generic.List`1[System.String]
@@ -249,7 +264,7 @@ Specifies whether the report is for SharePoint sites or OneDrive accounts.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.TenantAdministration.WorkloadEnum
-Parameter Sets: (All)
+Parameter Sets: EEEUParameterSet, LabelParameterSet, SharingLinkParameterSet, SitePermissionsParameterSet, UserPermissionsParameterSet
 Aliases:
 Accepted values: SharePoint, OneDriveForBusiness
 

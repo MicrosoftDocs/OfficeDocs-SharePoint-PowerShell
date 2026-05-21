@@ -48,7 +48,7 @@ Example 1 enables administrator to view the status of all active and completed a
 Get-SPOM365AgentAccessInsightsReport –ReportId 9d946216-afe7-49f5-8267-7b662435c70b
 ```
 
-Example 2 enables administrator to view the Microsoft 365 agent insight report of the given report ID.
+Example 2 enables administrator to view the Microsoft 365 agent insight report of the given report ID. This displays data for up to 100 sites, with a maximum of 20 agents shown per site.
 
 ### EXAMPLE 3
 

@@ -57,7 +57,8 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-Owner <String>] [-Title <String>] [-
  [-OverrideBlockUserInfoVisibility <SiteUserInfoVisibilityPolicyValue>]
  [-LoopDefaultSharingLinkScope <SharingScope>] [-LoopDefaultSharingLinkRole <SharingRole>]
  [-RequestFilesLinkEnabled <Boolean>] [-RequestFilesLinkExpirationInDays <Int32>]
- [-OverrideSharingCapability <Boolean>] [-DefaultShareLinkScope <SharingScope>]
+ [-OverrideSharingCapability <Boolean>] [-DefaultMainLinkScope <MainLinkAudience>]
+ [-DefaultShareLinkScope <SharingScope>]
  [-DefaultShareLinkRole <SharingRole>] [-BlockGuestsAsSiteAdmin <SharingState>]
  [-RestrictContentOrgWideSearch <Boolean>] [-RestrictedContentDiscoveryforCopilotAndAgents <Boolean>]
  [-RestrictedAccessControl <Boolean>] [-RestrictedAccessControlGroups <Guid[]>]
@@ -842,7 +843,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-When set to TRUE, the DefaultSharingLinkType will be overriden and the default sharing link will a People with Existing Access link (which does not modify permissions). When set to FALSE (the default), the DefaultSharingLinkType parameter controls the default sharing link type.
+When set to TRUE, the DefaultSharingLinkType will be overriden and the default sharing link will be a People with Existing Access link (which does not modify permissions). When set to FALSE (the default), the DefaultSharingLinkType parameter controls the default sharing link type.
 
 PARAMVALUE: False | True
 
@@ -866,6 +867,32 @@ Whether to reset the default link to existing access to the site.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
+Parameter Sets: ParamSet1
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultMainLinkScope
+
+> Applicable: SharePoint Online
+
+The default audience for main links used in sharing. Applies to all items at the root of the document library. Only audience scope is set by this parameter. The default effective value is `OnlyPeopleAdded`.
+
+The valid values are:
+
+- OnlyPeopleAdded
+- Organization
+- Anyone
+
+`Anyone` is only available if anonymous links are allowed at the tenant level. If `Anyone` is selected but the site has Anyone links disabled, the effective default falls back to the next most restrictive value.
+
+```yaml
+Type: Microsoft.SharePoint.Sharing.MainLinkAudience
 Parameter Sets: ParamSet1
 Aliases:
 
@@ -1688,7 +1715,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Determines whether it should override the sharing capability on its partition. For example, if the tenant sharing capability is `ExternalUserAndGuestSharing`, the core partition sharing capability is `Disabled`, and the sharing capability defined on the site collection is `ExternalUserAndGuestSharing`, the effective site sharing capability should be `Disabled` (the most restrictive one among tenant, partition, and site collecction) if `OverrideSharingCapability` is `false`. If `OverrideSharingCapability` is `true`, it skips checking partition sharing capability and the effective site sharing capability should be `ExternalUserAndGuestSharing`.
+Determines whether it should override the sharing capability on its partition. For example, if the tenant sharing capability is `ExternalUserAndGuestSharing`, the core partition sharing capability is `Disabled`, and the sharing capability defined on the site collection is `ExternalUserAndGuestSharing`, the effective site sharing capability should be `Disabled` (the most restrictive one among tenant, partition, and site collection) if `OverrideSharingCapability` is `false`. If `OverrideSharingCapability` is `true`, it skips checking partition sharing capability and the effective site sharing capability should be `ExternalUserAndGuestSharing`.
 
 PARAMVALUE: False | True
 
