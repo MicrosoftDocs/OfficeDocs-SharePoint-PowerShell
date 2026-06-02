@@ -28,7 +28,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-ShowEveryoneClaim <Boolean>] [-ShowAllUsersClaim <Boolean>]
  [-ShowEveryoneExceptExternalUsersClaim <Boolean>]
  [-AllowEveryoneExceptExternalUsersClaimInPrivateSite <Boolean>] [-SearchResolveExactEmailOrUPN <Boolean>]
- [-OfficeClientADALDisabled <Boolean>] [-LegacyAuthProtocolsEnabled <Boolean>]
+ [-EnableAgentWorkerSharingDisclaimer <Boolean>] [-OfficeClientADALDisabled <Boolean>] [-LegacyAuthProtocolsEnabled <Boolean>]
  [-LegacyBrowserAuthProtocolsEnabled <Boolean>] [-AllowLegacyBrowserAuthProtocolsEnabledSetting <Boolean>]
  [-AllowLegacyAuthProtocolsEnabledSetting <Boolean>] [-DisableCustomAppAuthentication <Boolean>]
  [-IsSharePointAddInsDisabled <Boolean>] [-IsSharePointAddInsBlocked <Boolean>]
@@ -158,7 +158,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-ShowEveryoneClaim <Boolean>] [-ShowAllUsersClaim <Boolean>]
  [-ShowEveryoneExceptExternalUsersClaim <Boolean>]
  [-AllowEveryoneExceptExternalUsersClaimInPrivateSite <Boolean>] [-SearchResolveExactEmailOrUPN <Boolean>]
- [-OfficeClientADALDisabled <Boolean>] [-LegacyAuthProtocolsEnabled <Boolean>]
+ [-EnableAgentWorkerSharingDisclaimer <Boolean>] [-OfficeClientADALDisabled <Boolean>] [-LegacyAuthProtocolsEnabled <Boolean>]
  [-LegacyBrowserAuthProtocolsEnabled <Boolean>] [-AllowLegacyBrowserAuthProtocolsEnabledSetting <Boolean>]
  [-AllowLegacyAuthProtocolsEnabledSetting <Boolean>] [-DisableCustomAppAuthentication <Boolean>]
  [-IsSharePointAddInsDisabled <Boolean>] [-IsSharePointAddInsBlocked <Boolean>]
@@ -289,7 +289,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-ShowEveryoneClaim <Boolean>] [-ShowAllUsersClaim <Boolean>]
  [-ShowEveryoneExceptExternalUsersClaim <Boolean>]
  [-AllowEveryoneExceptExternalUsersClaimInPrivateSite <Boolean>] [-SearchResolveExactEmailOrUPN <Boolean>]
- [-OfficeClientADALDisabled <Boolean>] [-LegacyAuthProtocolsEnabled <Boolean>]
+ [-EnableAgentWorkerSharingDisclaimer <Boolean>] [-OfficeClientADALDisabled <Boolean>] [-LegacyAuthProtocolsEnabled <Boolean>]
  [-LegacyBrowserAuthProtocolsEnabled <Boolean>] [-AllowLegacyBrowserAuthProtocolsEnabledSetting <Boolean>]
  [-AllowLegacyAuthProtocolsEnabledSetting <Boolean>] [-DisableCustomAppAuthentication <Boolean>]
  [-IsSharePointAddInsDisabled <Boolean>] [-IsSharePointAddInsBlocked <Boolean>]
@@ -421,7 +421,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-ShowEveryoneClaim <Boolean>] [-ShowAllUsersClaim <Boolean>]
  [-ShowEveryoneExceptExternalUsersClaim <Boolean>]
  [-AllowEveryoneExceptExternalUsersClaimInPrivateSite <Boolean>] [-SearchResolveExactEmailOrUPN <Boolean>]
- [-OfficeClientADALDisabled <Boolean>] [-LegacyAuthProtocolsEnabled <Boolean>]
+ [-EnableAgentWorkerSharingDisclaimer <Boolean>] [-OfficeClientADALDisabled <Boolean>] [-LegacyAuthProtocolsEnabled <Boolean>]
  [-LegacyBrowserAuthProtocolsEnabled <Boolean>] [-AllowLegacyBrowserAuthProtocolsEnabledSetting <Boolean>]
  [-AllowLegacyAuthProtocolsEnabledSetting <Boolean>] [-DisableCustomAppAuthentication <Boolean>]
  [-IsSharePointAddInsDisabled <Boolean>] [-IsSharePointAddInsBlocked <Boolean>]
@@ -551,7 +551,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-ShowEveryoneClaim <Boolean>] [-ShowAllUsersClaim <Boolean>]
  [-ShowEveryoneExceptExternalUsersClaim <Boolean>]
  [-AllowEveryoneExceptExternalUsersClaimInPrivateSite <Boolean>] [-SearchResolveExactEmailOrUPN <Boolean>]
- [-OfficeClientADALDisabled <Boolean>] [-LegacyAuthProtocolsEnabled <Boolean>]
+ [-EnableAgentWorkerSharingDisclaimer <Boolean>] [-OfficeClientADALDisabled <Boolean>] [-LegacyAuthProtocolsEnabled <Boolean>]
  [-LegacyBrowserAuthProtocolsEnabled <Boolean>] [-AllowLegacyBrowserAuthProtocolsEnabledSetting <Boolean>]
  [-AllowLegacyAuthProtocolsEnabledSetting <Boolean>] [-DisableCustomAppAuthentication <Boolean>]
  [-IsSharePointAddInsDisabled <Boolean>] [-IsSharePointAddInsBlocked <Boolean>]
@@ -2972,6 +2972,29 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableAgentWorkerSharingDisclaimer
+
+> Applicable: SharePoint Online
+
+> [!NOTE]
+> This feature is currently in preview and may not be available in your tenant.
+
+This is a tenant-level switch that enables admins to allow end users to see a disclaimer message when they share a site or it's content with an agent worker or AI teammate.
+
+PARAMVALUE: True | False
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
