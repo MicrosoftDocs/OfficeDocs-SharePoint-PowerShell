@@ -19,71 +19,86 @@ Sets or updates one or more property values for a container in SharePoint Embedd
 
 ### ParamSet1
 ```
-Set-SPOContainer [-Identity] <SPOContainerPipeBind> [[-SensitivityLabel] <String>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-SPOContainer [-Identity] <SPOContainerPipeBind> [[-SensitivityLabel] <String>]
+ [-InformationBarriersMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### BlockDownloadPolicy
 ```
 Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-BlockDownloadPolicy <Boolean>]
- [-ExcludeBlockDownloadPolicyContainerOwners <Boolean>] [-ReadOnlyForBlockDownloadPolicy <Boolean>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-ExcludeBlockDownloadPolicyContainerOwners <Boolean>] [-ReadOnlyForBlockDownloadPolicy <Boolean>]
+ [-InformationBarriersMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RestrictedAccessControl
 ```
 Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-EnableRestrictedAccessControl <Boolean>]
- [-RestrictedAccessControlGroups <Guid[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-RestrictedAccessControlGroups <Guid[]>] [-InformationBarriersMode <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### RestrictedAccessControlGroupsToAdd
 ```
-Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-RestrictedAccessControlGroupsToAdd <Guid[]>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-RestrictedAccessControlGroupsToAdd <Guid[]>]
+ [-InformationBarriersMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RestrictedAccessControlGroupsToRemove
 ```
-Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-RestrictedAccessControlGroupsToRemove <Guid[]>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-RestrictedAccessControlGroupsToRemove <Guid[]>]
+ [-InformationBarriersMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ClearRestrictedAccessControl
 ```
-Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-ClearRestrictedAccessControl] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-ClearRestrictedAccessControl]
+ [-InformationBarriersMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ParamSet2
 ```
-Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-RemoveLabel] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-RemoveLabel] [-InformationBarriersMode <String>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### AddInformationBarrierSegments
+```
+Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-AddInformationSegment <Guid[]>]
+ [-InformationBarriersMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### RemoveInformationBarrierSegments
+```
+Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-RemoveInformationSegment <Guid[]>]
+ [-InformationBarriersMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ConditionalAccess
 ```
 Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>]
  [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>]
- [-ReadOnlyForUnmanagedDevices <Boolean>] [-AuthenticationContextName <String>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-ReadOnlyForUnmanagedDevices <Boolean>] [-AuthenticationContextName <String>]
+ [-InformationBarriersMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AllowDenyDomain
 ```
 Set-SPOContainer [-Identity] <SPOContainerPipeBind>
  [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>] [-SharingAllowedDomainList <String>]
- [-SharingBlockedDomainList <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-SharingBlockedDomainList <String>] [-InformationBarriersMode <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### PrincipalOwnerTransfer
 ```
 Set-SPOContainer [-Identity] <SPOContainerPipeBind> -CurrentPrincipalOwner <String>
- -NewPrincipalOwner <String> [-WhatIf] [-Confirm] [<CommonParameters>]
- ```
+ -NewPrincipalOwner <String> [-InformationBarriersMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
 
 ### RestrictContentOrgWideSearch
 ```
-Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-RestrictContentOrgWideSearch <Boolean>] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-RestrictContentOrgWideSearch <Boolean>]
+ [-InformationBarriersMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -128,7 +143,39 @@ Set-SPOContainer -Identity https://contoso.sharepoint.com/contentstorage/CSP_33a
 ```
 This example removes any previously set sensitivity label on the container.
 
+### Example 5
+
+```powershell
+Set-SPOContainer -Identity https://contoso.sharepoint.com/contentstorage/CSP_33a63968-abae-49a3-a255-f83d0ab2260a/ -AddInformationSegment a17efb47-e3c9-4d85-a188-1cd59c83de32
+```
+
+This example adds InformationSegment 'a17efb47-e3c9-4d85-a188-1cd59c83de32' to the container.
+
+### Example 6
+
+```powershell
+Set-SPOContainer -Identity https://contoso.sharepoint.com/contentstorage/CSP_33a63968-abae-49a3-a255-f83d0ab2260a/ -RemoveInformationSegment a17efb47-e3c9-4d85-a188-1cd59c83de32
+```
+
+In this example, InformationSegment 'a17efb47-e3c9-4d85-a188-1cd59c83de32' is removed from the container.
+
 ## PARAMETERS
+
+### -AddInformationSegment
+
+This parameter allows you to add a segment to a SharePoint Embedded container. This parameter is only applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read [https://learn.microsoft.com/sharepoint/information-barriers](https://learn.microsoft.com/sharepoint/information-barriers) documentation to understand Information barriers in SharePoint Online.
+
+```yaml
+Type: System.Guid[]
+Parameter Sets: AddInformationBarrierSegments
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AllowEditing
 
@@ -300,6 +347,24 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
+### -InformationBarriersMode
+
+> Applicable: SharePoint Online
+
+Specifies the information barrier mode.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LimitedAccessFileType
 
 > Applicable: SharePoint Online
@@ -369,6 +434,22 @@ Controls whether unmanaged devices have read-only access.
 ```yaml
 Type: System.Boolean
 Parameter Sets: ConditionalAccess
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveInformationSegment
+
+This parameter allows you to remove a segment from a SharePoint Embedded container. This parameter is only applicable for tenants who have enabled Microsoft 365 Information barriers capability.
+
+```yaml
+Type: System.Guid[]
+Parameter Sets: RemoveInformationBarrierSegments
 Aliases:
 
 Required: False
