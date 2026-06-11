@@ -149,7 +149,7 @@ This example removes any previously set sensitivity label on the container.
 Set-SPOContainer -Identity https://contoso.sharepoint.com/contentstorage/CSP_33a63968-abae-49a3-a255-f83d0ab2260a/ -AddInformationSegment a17efb47-e3c9-4d85-a188-1cd59c83de32
 ```
 
-This example adds InformationSegment 'a17efb47-e3c9-4d85-a188-1cd59c83de32' to the container.
+This example adds `InformationSegment` 'a17efb47-e3c9-4d85-a188-1cd59c83de32' to the container.
 
 ### Example 6
 
@@ -157,13 +157,13 @@ This example adds InformationSegment 'a17efb47-e3c9-4d85-a188-1cd59c83de32' to t
 Set-SPOContainer -Identity https://contoso.sharepoint.com/contentstorage/CSP_33a63968-abae-49a3-a255-f83d0ab2260a/ -RemoveInformationSegment a17efb47-e3c9-4d85-a188-1cd59c83de32
 ```
 
-In this example, InformationSegment 'a17efb47-e3c9-4d85-a188-1cd59c83de32' is removed from the container.
+In this example, `InformationSegment` 'a17efb47-e3c9-4d85-a188-1cd59c83de32' is removed from the container.
 
 ## PARAMETERS
 
 ### -AddInformationSegment
 
-This parameter allows you to add a segment to a SharePoint Embedded container. This parameter is only applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read [https://learn.microsoft.com/sharepoint/information-barriers](https://learn.microsoft.com/sharepoint/information-barriers) documentation to understand Information barriers in SharePoint Online.
+This parameter allows you to add a segment to a SharePoint Embedded container. To use this parameter, your tenant must have Microsoft 365 Information Barriers enabled. For more information, see [Use Information Barriers with SharePoint](/sharepoint/information-barriers).
 
 ```yaml
 Type: System.Guid[]
@@ -445,7 +445,7 @@ Accept wildcard characters: False
 
 ### -RemoveInformationSegment
 
-This parameter allows you to remove a segment from a SharePoint Embedded container. This parameter is only applicable for tenants who have enabled Microsoft 365 Information barriers capability.
+This parameter allows you to remove a segment from a SharePoint Embedded container. This parameter is available only for tenants with Microsoft 365 Information Barriers enabled.
 
 ```yaml
 Type: System.Guid[]

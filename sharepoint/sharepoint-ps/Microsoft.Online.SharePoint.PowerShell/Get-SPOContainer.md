@@ -150,7 +150,7 @@ Example 9 returns a tabular list of recently archived containers belonging to th
 Get-SPOContainer -Identity b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_8U | Select InformationSegment
 ```
 
-Example 10 returns the InformationSegment associated with the container. It is applicable for tenants who have enabled Microsoft 365 Information barriers capability. Read [Learn about information barriers](https://learn.microsoft.com/en-us/purview/information-barriers) to understand Information barriers in SharePoint Online.
+Example 10 returns the `InformationSegment` associated with the container. To use this command, your tenant must have Microsoft 365 Information Barriers enabled. For more information, see [Learn about Information Barriers](/purview/information-barriers).
 
 ## PARAMETERS
 
