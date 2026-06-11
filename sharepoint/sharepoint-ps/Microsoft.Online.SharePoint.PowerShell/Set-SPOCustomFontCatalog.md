@@ -1,0 +1,173 @@
+---
+external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/set-spocustomfontcatalog
+applicable: SharePoint Online
+title: Set-SPOCustomFontCatalog
+schema: 2.0.0
+author: reli-msft
+ms.author: reli
+---
+
+# Set-SPOCustomFontCatalog
+
+## SYNOPSIS
+
+Generates an organization fonts catalog and uploads the font files and catalog files to a SharePoint Organization Asset Library.
+
+## SYNTAX
+
+```
+Set-SPOCustomFontCatalog -LibraryUrl <SpoSitePipeBind> -FontFolder <String> [-WhatIf] [-Confirm]
+ [<CommonParameters>]
+```
+
+## DESCRIPTION
+
+This cmdlet generates the catalog files that make organization fonts available in supported Microsoft 365 apps, including PowerPoint and Word, and uploads the catalog files and font files to a SharePoint organization asset library.
+
+Before you use this cmdlet, designate the target document library as an organization asset library for organization fonts by using `Add-SPOOrgAssetsLibrary` with `-OrgAssetType OfficeFontLibrary` and `-CdnType Public`.
+
+The local font folder must contain the complete set of font files that you want to publish. The folder must be local, must not contain subfolders, and must contain only font files. To add, update, or remove fonts later, update the local folder so that it contains the complete desired set of fonts, including unchanged fonts, and then run this cmdlet again.
+
+Updates to organization asset libraries for organization fonts can take up to 24 hours to propagate.
+
+> [!WARNING]
+> By using this feature and publishing font files, a font catalog file is created. The font catalog files and font files are stored publicly in the cloud and don't respect site classification guidelines if the organization asset library is hosted on a restricted SharePoint site.
+>
+> The font catalog files contain font names and other font metadata. These files are accessible to anyone, including people outside your organization, who can obtain the URLs that point to them.
+>
+> You can delete these files. However, deleting them prevents the feature from working as expected.
+>
+> Don't use this feature if your fonts contain proprietary information, have license restrictions such as restrictions on cloud hosting, or if your organization isn't comfortable making the fonts publicly available.
+
+## EXAMPLES
+
+### Example 1
+
+```powershell
+Add-SPOOrgAssetsLibrary -LibraryUrl https://contoso.sharepoint.com/sites/branding/FontLibrary -OrgAssetType OfficeFontLibrary -CdnType Public
+Set-SPOCustomFontCatalog -FontFolder "C:\ContosoFonts" -LibraryUrl https://contoso.sharepoint.com/sites/branding/FontLibrary
+```
+
+This example designates the FontLibrary document library as an Organization Asset Library for organization fonts and uploads the fonts from `C:\ContosoFonts` with the generated font catalog files.
+
+### Example 2
+
+```powershell
+Set-SPOCustomFontCatalog -FontFolder "C:\ContosoFonts" -LibraryUrl https://contoso.sharepoint.com/sites/branding/FontLibrary
+```
+
+This example replaces the published organization font set with the complete set of fonts in `C:\ContosoFonts`.
+
+### Example 3
+
+```powershell
+Set-SPOCustomFontCatalog -FontFolder "C:\ContosoFonts" -LibraryUrl https://contoso.sharepoint.com/sites/branding/FontLibrary -Verbose
+```
+
+This example uploads the fonts and displays additional font validation details and font menu previews.
+
+## PARAMETERS
+
+### -Confirm
+
+> Applicable: SharePoint Online
+
+Prompts you for confirmation before running the cmdlet.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FontFolder
+
+> Applicable: SharePoint Online
+
+Specifies the local folder that contains the font files to upload. The folder must be a local path, must contain at least one supported font file, must not contain subfolders, and must only contain font files.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LibraryUrl
+
+> Applicable: SharePoint Online
+
+Specifies the absolute URL of the SharePoint document library that is designated as an Organization Asset Library for organization fonts. The library must be added by using `Add-SPOOrgAssetsLibrary -OrgAssetType OfficeFontLibrary -CdnType Public`.
+
+Only include the direct path to the document library. Don't include a view page, such as `/AllItems.aspx`.
+
+```yaml
+Type: Microsoft.Online.SharePoint.PowerShell.SpoSitePipeBind
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+
+> Applicable: SharePoint Online
+
+Shows what would happen if the cmdlet runs. Note that the cmdlet is not actually run.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+
+## INPUTS
+
+### None
+
+## OUTPUTS
+
+### System.Object
+
+## NOTES
+
+You may be prompted to enter your credentials again during upload.
+
+Use the `-Verbose` common parameter to show additional non-blocking font validation information and font menu previews. Verbose output can include validation warnings, informational messages about font characteristics, and previews of how font families and faces will appear in Office font menus.
+
+## RELATED LINKS
+
+[Add-SPOOrgAssetsLibrary](Add-SPOOrgAssetsLibrary.md)
+
+[Get-SPOOrgAssetsLibrary](Get-SPOOrgAssetsLibrary.md)
+
+[Remove-SPOOrgAssetsLibrary](Remove-SPOOrgAssetsLibrary.md)
+
+[Support for organization fonts in PowerPoint and Word](/sharepoint/support-for-organization-fonts-in-powerpoint-for-the-web)

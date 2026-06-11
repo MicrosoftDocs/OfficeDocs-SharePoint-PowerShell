@@ -719,6 +719,9 @@ Adds the email addresses to the specified category of content event. Consequentl
 ### [Set-SPOCopilotPromoOptInStatus](Set-SPOCopilotPromoOptInStatus.md)
 Sets the Opt-In Copilot promo status for the tenant.
 
+### [Set-SPOCustomFontCatalog](Set-SPOCustomFontCatalog.md)
+Generates an organization fonts catalog and uploads the font files and catalog files to a SharePoint Organization Asset Library.
+
 ### [Set-SPOCrossTenantRelationship](Set-SPOCrossTenantRelationship.md)
 This cmdlet sends a trust request to the tenant with whom you want to establish trust.
 
