@@ -5,6 +5,8 @@ online version: https://learn.microsoft.com/powershell/module/microsoft.online.s
 applicable: SharePoint Online
 title: Set-SPOCustomFontCatalog
 schema: 2.0.0
+author: reli-msft
+ms.author: reli
 ---
 
 # Set-SPOCustomFontCatalog
@@ -22,20 +24,22 @@ Set-SPOCustomFontCatalog -LibraryUrl <SpoSitePipeBind> -FontFolder <String> [-Wh
 
 ## DESCRIPTION
 
-The `Set-SPOCustomFontCatalog` cmdlet generates the catalog files that make organization fonts available in supported Microsoft 365 apps, including PowerPoint and Word, and uploads the catalog files and font files to a SharePoint Organization Asset Library.
+This cmdlet generates the catalog files that make organization fonts available in supported Microsoft 365 apps, including PowerPoint and Word, and uploads the catalog files and font files to a SharePoint organization asset library.
 
-Before you run this cmdlet, designate the target document library as an Organization Asset Library for organization fonts by running `Add-SPOOrgAssetsLibrary` with `-OrgAssetType OfficeFontLibrary` and `-CdnType Public`.
+Before you use this cmdlet, designate the target document library as an organization asset library for organization fonts by using `Add-SPOOrgAssetsLibrary` with `-OrgAssetType OfficeFontLibrary` and `-CdnType Public`.
 
-The local font folder must contain the complete set of font files that you want published. The folder must be local, must not contain subfolders, and must only contain font files. To add, update, or remove fonts later, update the local folder so it contains the complete desired set of fonts, including unchanged fonts, and then run this cmdlet again.
+The local font folder must contain the complete set of font files that you want to publish. The folder must be local, must not contain subfolders, and must contain only font files. To add, update, or remove fonts later, update the local folder so that it contains the complete desired set of fonts, including unchanged fonts, and then run this cmdlet again.
 
-Updates to Organization Asset Libraries for organization fonts can take up to 24 hours to propagate.
+Updates to organization asset libraries for organization fonts can take up to 24 hours to propagate.
 
 > [!WARNING]
-> By using this feature and publishing font files, a font catalog file will be created. The newly created font catalog files will be publicly stored, along with the fonts, in the cloud and will not respect the site classification guidelines if the Organization Asset Library is hosted on a Restricted SharePoint Site. The font catalog files will contain font names and other font-related metadata. Please note that the files will be accessible to anyone, including persons external to your organization, who are able to extract the URLs that point to them.
+> By using this feature and publishing font files, a font catalog file is created. The font catalog files and font files are stored publicly in the cloud and don't respect site classification guidelines if the organization asset library is hosted on a restricted SharePoint site.
 >
-> These newly created files can be deleted by you. If deleted, the feature will not work as expected.
+> The font catalog files contain font names and other font metadata. These files are accessible to anyone, including people outside your organization, who can obtain the URLs that point to them.
 >
-> Do not use this feature if your fonts contain proprietary information, or if they have license usage restrictions, such as restrictions on cloud hosting, or if your organization isn't comfortable making the fonts publicly available.
+> You can delete these files. However, deleting them prevents the feature from working as expected.
+>
+> Don't use this feature if your fonts contain proprietary information, have license restrictions such as restrictions on cloud hosting, or if your organization isn't comfortable making the fonts publicly available.
 
 ## EXAMPLES
 
@@ -142,7 +146,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
