@@ -26,7 +26,7 @@ Set-SPOFileArchivePolicy -PolicyId <Guid> [-Name <String>] [-PolicyType <String>
 
 ## DESCRIPTION
 
-This cmdlet updates the properties of an existing file archive policy. Only the parameters that are specified will be updated; all other properties remain unchanged. You cannot set the State to "Active" unless the PolicyType is "AllSites" or at least one site has been added to the policy using `Add-SPOSiteToFileArchivePolicy`.
+This cmdlet updates the properties of an existing file archive policy. Only the parameters that are specified will be updated; all other properties remain unchanged. You cannot set the State to `Active` unless the PolicyType is `AllSites` or at least one site has been added to the policy using `Add-SPOSiteToFileArchivePolicy`.
 
 > [!NOTE]
 > This cmdlet is part of the file archive policies feature which is currently in preview.
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 
 ### -PolicyType
 
-Specifies the updated policy type. Accepted values are "AllSites" (targets all sites in the tenant) and "SelectedSites" (targets only sites explicitly added to the policy).
+Specifies the updated policy type. Accepted values are `AllSites` (targets all sites in the tenant) and `SelectedSites` (targets only sites explicitly added to the policy).
 
 ```yaml
 Type: String
@@ -158,7 +158,7 @@ Accept wildcard characters: False
 
 ### -State
 
-Specifies the updated state of the policy. Accepted values are "Active" and "Inactive". A policy cannot be set to "Active" unless its PolicyType is "AllSites" or at least one site has been added to it.
+Specifies the updated state of the policy. Accepted values are `Active` and `Inactive`. A policy cannot be set to `Active` unless its PolicyType is `AllSites` or at least one site has been added to it.
 
 ```yaml
 Type: String

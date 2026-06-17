@@ -24,7 +24,7 @@ Add-SPOSiteToFileArchivePolicy -PolicyId <Guid> -Site <SpoSitePipeBind> [<Common
 
 ## DESCRIPTION
 
-This cmdlet adds a site to an existing file archive policy that has a PolicyType of "SelectedSites". The site must exist and be eligible for archiving. At least one site must be added before a "SelectedSites" policy can be activated.
+This cmdlet adds a site to an existing file archive policy that has a PolicyType of `SelectedSites`. The site must exist and be eligible for archiving. At least one site must be added before a `SelectedSites` policy can be activated.
 
 > [!NOTE]
 > This cmdlet is part of the file archive policies feature which is currently in preview.

@@ -24,7 +24,7 @@ Get-SPOFileArchivePolicySites -PolicyId <Guid> [<CommonParameters>]
 
 ## DESCRIPTION
 
-This cmdlet retrieves the list of sites that have been added to a file archive policy. This is applicable to policies with a PolicyType of "SelectedSites".
+This cmdlet retrieves the list of sites that have been added to a file archive policy. This is applicable to policies with a PolicyType of `SelectedSites`.
 
 > [!NOTE]
 > This cmdlet is part of the file archive policies feature which is currently in preview.

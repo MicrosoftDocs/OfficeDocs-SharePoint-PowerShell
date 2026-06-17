@@ -25,7 +25,7 @@ New-SPOFileArchivePolicy [-Name <String>] -PolicyType <String> [-LastAccessDateC
 
 ## DESCRIPTION
 
-This cmdlet creates a new file archive policy for the connected SharePoint Online tenant. A file archive policy defines the criteria under which files are automatically archived based on their last access date. The policy is created in an Inactive state and must be activated using `Set-SPOFileArchivePolicy` before it takes effect.
+This cmdlet creates a new file archive policy for the connected SharePoint Online tenant. A file archive policy defines the criteria under which files are automatically archived based on their last access date. The policy is created in an Inactive state and must be activated using `Set-SPOFileArchivePolicy` with `-State Active` before it takes effect.
 
 > [!NOTE]
 > This cmdlet is part of the file archive policies feature which is currently in preview.
@@ -92,7 +92,10 @@ Accept wildcard characters: False
 
 ### -LastAccessDateCriteria
 
-Specifies the number of months since a file was last accessed before it becomes eligible for archiving. Valid values range from 6 to 48. The default value is 24 months. Note: the last access date is accurate starting July 2025. Dates before that may be missing access signals from some clients. For critical data, ensure your criteria doesn't archive based on last access dates before July 2025.
+Specifies the number of months since a file was last accessed before it becomes eligible for archiving. Valid values range from 6 to 48. The default value is 24 months.
+
+> [!IMPORTANT]
+> The last access date is accurate starting July 2025. Dates before that may be missing access signals from some clients. For critical data, ensure your criteria doesn't archive based on last access dates before July 2025.
 
 ```yaml
 Type: Int32
@@ -124,7 +127,7 @@ Accept wildcard characters: False
 
 ### -PolicyType
 
-Specifies whether the policy targets all sites in the tenant or only selected sites. Accepted values are "AllSites" and "SelectedSites". If "SelectedSites" is chosen, you must add at least one site using `Add-SPOSiteToFileArchivePolicy` before the policy can be activated.
+Specifies whether the policy targets all sites in the tenant or only selected sites. Accepted values are `AllSites` and `SelectedSites`. If `SelectedSites` is chosen, you must add at least one site using `Add-SPOSiteToFileArchivePolicy` before the policy can be activated.
 
 ```yaml
 Type: String
@@ -152,7 +155,5 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 ### System.Object
 
 ## NOTES
-
-The policy is created in an Inactive state. Use `Set-SPOFileArchivePolicy` with `-State Active` to activate it.
 
 ## RELATED LINKS
