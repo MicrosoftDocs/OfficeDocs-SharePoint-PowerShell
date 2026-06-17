@@ -20,13 +20,13 @@ This cmdlet enables administrator to trigger the build of a new restricted acces
 ## SYNTAX
 
 ```
-Start-SPORestrictedAccessForSitesInsights [-RACProtectedSites] [-PolicyName <String>][-ActionsBlockedByPolicy] [-Force] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+Start-SPORestrictedAccessForSitesInsights [-RACProtectedSites] [-ActionsBlockedByPolicy] [-Force]
+ [-PolicyName <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-After this cmdlet is executed, the restricted access control insights report generation request is initiated for the requested report subtype.                               |
+ This cmdlet enables administrator to trigger the build of a new restricted access control insights report for the data from last 28 days.
 
 ## EXAMPLES
 
@@ -118,6 +118,7 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+```
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
