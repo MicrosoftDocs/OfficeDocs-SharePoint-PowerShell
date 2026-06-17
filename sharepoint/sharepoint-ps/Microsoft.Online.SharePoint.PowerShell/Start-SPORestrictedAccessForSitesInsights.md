@@ -20,7 +20,7 @@ This cmdlet enables administrator to trigger the build of a new restricted acces
 ## SYNTAX
 
 ```
-Start-SPORestrictedAccessForSitesInsights [-RACProtectedSites] [-ActionsBlockedByPolicy] [-Force] [-WhatIf]
+Start-SPORestrictedAccessForSitesInsights [-RACProtectedSites] [-PolicyName <String>][-ActionsBlockedByPolicy] [-Force] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
@@ -101,6 +101,23 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -PolicyName
+
+> Applicable: SharePoint Online
+
+It is an optional parameter, used together with -ActionsBlockedByPolicy, that scopes the report to a single policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
