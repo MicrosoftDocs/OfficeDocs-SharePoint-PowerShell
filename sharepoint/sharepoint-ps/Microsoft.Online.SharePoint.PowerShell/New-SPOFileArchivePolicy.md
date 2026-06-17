@@ -19,7 +19,7 @@ Creates a new file archive policy for the tenant.
 ## SYNTAX
 
 ```
-New-SPOFileArchivePolicy [-Name <String>] -PolicyType <String> [-LastAccessDateCriteria <Int32>]
+New-SPOFileArchivePolicy [-Name <String>] -PolicyType <SPOFileArchivePolicyType> [-LastAccessDateCriteria <Int32>]
  [-FileTypeCriteria <String[]>] [-IsWhatIfMode <Boolean>] [<CommonParameters>]
 ```
 
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 Specifies whether the policy targets all sites in the tenant or only selected sites. Accepted values are `AllSites` and `SelectedSites`. If `SelectedSites` is chosen, you must add at least one site using `Add-SPOSiteToFileArchivePolicy` before the policy can be activated.
 
 ```yaml
-Type: String
+Type: SPOFileArchivePolicyType
 Parameter Sets: (All)
 Aliases:
 Accepted values: AllSites, SelectedSites

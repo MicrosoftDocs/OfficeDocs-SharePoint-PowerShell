@@ -19,8 +19,8 @@ Updates an existing file archive policy.
 ## SYNTAX
 
 ```
-Set-SPOFileArchivePolicy -PolicyId <Guid> [-Name <String>] [-PolicyType <String>]
- [-LastAccessDateCriteria <Int32>] [-FileTypeCriteria <String[]>] [-IsWhatIfMode <Boolean>] [-State <String>]
+Set-SPOFileArchivePolicy -PolicyId <Guid> [-Name <String>] [-PolicyType <SPOFileArchivePolicyType>]
+ [-LastAccessDateCriteria <Int32>] [-FileTypeCriteria <String[]>] [-IsWhatIfMode <Boolean>] [-State <SPOFileArchivePolicyState>]
  [<CommonParameters>]
 ```
 
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 Specifies the updated policy type. Accepted values are `AllSites` (targets all sites in the tenant) and `SelectedSites` (targets only sites explicitly added to the policy).
 
 ```yaml
-Type: String
+Type: SPOFileArchivePolicyType
 Parameter Sets: (All)
 Aliases:
 Accepted values: AllSites, SelectedSites
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 Specifies the updated state of the policy. Accepted values are `Active` and `Inactive`. A policy cannot be set to `Active` unless its PolicyType is `AllSites` or at least one site has been added to it.
 
 ```yaml
-Type: String
+Type: SPOFileArchivePolicyState
 Parameter Sets: (All)
 Aliases:
 Accepted values: Active, Inactive
