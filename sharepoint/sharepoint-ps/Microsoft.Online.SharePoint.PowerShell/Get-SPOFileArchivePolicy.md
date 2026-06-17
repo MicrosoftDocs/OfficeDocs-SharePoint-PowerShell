@@ -1,14 +1,20 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version:
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/get-spofilearchivepolicy
+applicable: SharePoint Online
+title: Get-SPOFileArchivePolicy
 schema: 2.0.0
+author: HectorRMota
+ms.author: hemota
+ms.reviewer:
 ---
 
 # Get-SPOFileArchivePolicy
 
 ## SYNOPSIS
-Gets one or all File Archive Policies for the tenant.
+
+Gets one or all file archive policies for the tenant.
 
 ## SYNTAX
 
@@ -17,29 +23,34 @@ Get-SPOFileArchivePolicy [-PolicyId <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The `Get-SPOFileArchivePolicy` cmdlet retrieves the properties of File Archive Policies for the connected SharePoint Online tenant. If the `-PolicyId` parameter is specified, returns only the matching policy. If omitted, returns all File Archive Policies under the tenant.
 
-You must be a SharePoint Administrator or Global Administrator to run this cmdlet.
+This cmdlet retrieves the properties of file archive policies for the connected SharePoint Online tenant. If the `-PolicyId` parameter is specified, returns only the matching policy. If omitted, returns all file archive policies under the tenant.
+
+> [!NOTE]
+> This cmdlet is part of the file archive policies feature which is currently in preview.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
-PS C:\> Get-SPOFileArchivePolicy
+Get-SPOFileArchivePolicy
 ```
 
-Returns all File Archive Policies configured for the tenant.
+Returns all file archive policies configured for the tenant.
 
 ### Example 2
+
 ```powershell
-PS C:\> Get-SPOFileArchivePolicy -PolicyId "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+Get-SPOFileArchivePolicy -PolicyId "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
 ```
 
-Returns the File Archive Policy with the specified ID.
+Returns the file archive policy with the specified ID.
 
 ## PARAMETERS
 
 ### -PolicyId
+
 Specifies the unique identifier (GUID) of the policy to retrieve. If not specified, all policies under the tenant are returned.
 
 ```yaml
@@ -55,7 +66,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -64,8 +76,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-## NOTES
 
-This cmdlet is part of the File Archive Policies feature which is currently in preview.
+## NOTES
 
 ## RELATED LINKS

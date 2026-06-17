@@ -1,14 +1,20 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version:
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/remove-spositetofilearchivepolicy
+applicable: SharePoint Online
+title: Remove-SPOSiteToFileArchivePolicy
 schema: 2.0.0
+author: HectorRMota
+ms.author: hemota
+ms.reviewer:
 ---
 
 # Remove-SPOSiteToFileArchivePolicy
 
 ## SYNOPSIS
-Removes a site from a File Archive Policy.
+
+Removes a site from a file archive policy.
 
 ## SYNTAX
 
@@ -17,22 +23,26 @@ Remove-SPOSiteToFileArchivePolicy -PolicyId <Guid> -Site <SpoSitePipeBind> [<Com
 ```
 
 ## DESCRIPTION
-The `Remove-SPOSiteToFileArchivePolicy` cmdlet removes a site from an existing File Archive Policy. The site will no longer be included in future policy runs.
 
-You must be a SharePoint Administrator or Global Administrator to run this cmdlet.
+This cmdlet removes a site from an existing file archive policy. The site will no longer be included in future policy runs.
+
+> [!NOTE]
+> This cmdlet is part of the file archive policies feature which is currently in preview.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
-PS C:\> Remove-SPOSiteToFileArchivePolicy -PolicyId "a1b2c3d4-e5f6-7890-abcd-ef1234567890" -Site "https://contoso.sharepoint.com/sites/marketing"
+Remove-SPOSiteToFileArchivePolicy -PolicyId "a1b2c3d4-e5f6-7890-abcd-ef1234567890" -Site "https://contoso.sharepoint.com/sites/marketing"
 ```
 
-Removes the marketing site from the specified File Archive Policy.
+Removes the marketing site from the specified file archive policy.
 
 ## PARAMETERS
 
 ### -PolicyId
+
 Specifies the unique identifier (GUID) of the policy to remove the site from.
 
 ```yaml
@@ -48,7 +58,8 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-Specifies the URL of the site to remove from the policy (e.g., "https://contoso.sharepoint.com/sites/marketing").
+
+Specifies the URL of the site to remove from the policy.
 
 ```yaml
 Type: SpoSitePipeBind
@@ -63,7 +74,8 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -72,8 +84,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-## NOTES
 
-This cmdlet is part of the File Archive Policies feature which is currently in preview.
+## NOTES
 
 ## RELATED LINKS
