@@ -15,7 +15,7 @@ manager:
 
 ## SYNOPSIS
 
-This cmdlet enables administrator to trigger the build of a new restricted access control insights report for the data from last 28 days.
+This cmdlet starts the generation of a new restricted access control insights report based on data from the previous 28 days.
 
 ## SYNTAX
 
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-It is an optional parameter, used together with -ActionsBlockedByPolicy, that scopes the report to a single policy.
+It is an optional parameter, used together with `-ActionsBlockedByPolicy`, that scopes the report to a single policy.
 
 ```yaml
 Type: String
