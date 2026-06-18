@@ -65,6 +65,9 @@ Uploads a new site script for use either directly or in a site design.
 ### [Add-SPOSiteScriptPackage](Add-SPOSiteScriptPackage.md)
 Uploads a new site script package for use either directly or in a site design.
 
+### [Add-SPOSiteToFileArchivePolicy](Add-SPOSiteToFileArchivePolicy.md)
+Adds a site to a File Archive Policy.
+
 ### [Add-SPOTenantCdnOrigin](Add-SPOTenantCdnOrigin.md)
 Configures a new origin to public or private content delivery network (CDN). Requires Tenant administrator permissions.
 
@@ -208,6 +211,15 @@ This cmdlet enables the administrator to check status of all active and availabl
 
 ### [Get-SPOExternalUser](Get-SPOExternalUser.md)
 Returns external users in the tenant.
+
+### [Get-SPOFileArchivePolicy](Get-SPOFileArchivePolicy.md)
+Gets one or all File Archive Policies for the tenant.
+
+### [Get-SPOFileArchivePolicyReport](Get-SPOFileArchivePolicyReport.md)
+Gets run reports for a File Archive Policy.
+
+### [Get-SPOFileArchivePolicySites](Get-SPOFileArchivePolicySites.md)
+Gets the list of sites associated with a File Archive Policy.
 
 ### [Get-SPOFileRequestBrandingProfiles](Get-SPOFileRequestBrandingProfiles.md)
 Retrieves branding profiles configured for the file request feature, including details about logo and background assets.
@@ -464,6 +476,9 @@ Creates a new billing policy for an application owned by the tenant.
 ### [New-SPOContainerType](New-SPOContainerType.md)
 This cmdlet creates a new container type of standard or trial status. The standard container type can be created with the regular billing structure or direct to customer billing structure.
 
+### [New-SPOFileArchivePolicy](New-SPOFileArchivePolicy.md)
+Creates a new File Archive Policy for the tenant.
+
 ### [New-SPOListFileVersionBatchDeleteJob](New-SPOListFileVersionBatchDeleteJob.md)
 Queues a job to trim versions from a document library.
 
@@ -542,6 +557,9 @@ Removes a SharePoint Online deleted site collection from the Recycle Bin.
 ### [Remove-SPOExternalUser](Remove-SPOExternalUser.md)
 Removes a collection of external users from the tenancy's folder.
 
+### [Remove-SPOFileArchivePolicy](Remove-SPOFileArchivePolicy.md)
+Removes (soft-deletes) a File Archive Policy.
+
 ### [Remove-SPOFileRequestBrandingProfile](Remove-SPOFileRequestBrandingProfile.md)
 Removes a branding profile (either primary or secondary) configured for the file request feature across the tenant.
 
@@ -619,6 +637,9 @@ Stops processing of the in-progress manage version policy job for the given site
 
 ### [Remove-SPOSiteScript](Remove-SPOSiteScript.md)
 Removes a site script.
+
+### [Remove-SPOSiteToFileArchivePolicy](Remove-SPOSiteToFileArchivePolicy.md)
+Removes a site from a File Archive Policy.
 
 ### [Remove-SPOSiteUserInvitations](Remove-SPOSiteUserInvitations.md)
 .
@@ -727,6 +748,9 @@ This cmdlet sends a trust request to the tenant with whom you want to establish 
 
 ### [Set-SPODisableSpacesActivation](Set-SPODisableSpacesActivation.md)
 Disables the SharePoint Spaces activation.
+
+### [Set-SPOFileArchivePolicy](Set-SPOFileArchivePolicy.md)
+Updates an existing File Archive Policy.
 
 ### [Set-SPOFontPackage](Set-SPOFontPackage.md)
 Applies a brand font package to a SharePoint site or Viva Connections.
