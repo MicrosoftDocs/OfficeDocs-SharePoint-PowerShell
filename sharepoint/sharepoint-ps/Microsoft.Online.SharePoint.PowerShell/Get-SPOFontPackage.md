@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Returns one or all custom font   packages in the tenant.
+Returns one or all custom font packages in the tenant.
 
 ## SYNTAX
 
