@@ -26,9 +26,9 @@ Remove-SPOFontFile [-Name] <string> [<CommonParameters>]
 
 This cmdlet removes a custom font file from the tenant's brand fonts library. The font file is deleted from the primary geo and all satellite geos. After removal, the font file will no longer be available for use.
 
-
 > [!NOTE]
 > This operation is only allowed on the primary geo location. Attempting to remove a font file from a satellite geo will result in a warning. Pages that already use the removed font file will remain readable and the font will automatically fall back to Segoe UI. The font packages that use the deleted font file will not be automatically updated or deleted.
+
 ## EXAMPLES
 
 ### EXAMPLE 1
