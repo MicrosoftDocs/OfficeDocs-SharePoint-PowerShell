@@ -24,7 +24,7 @@ Remove-SPOFontFile [-Name] <string> [<CommonParameters>]
 
 ## DESCRIPTION
 
-This cmdlet removes a custom font file from the tenant's brand font library. The font file is deleted from the primary geo and all satellite geos. After removal, the font file will no longer be available for use.
+This cmdlet removes a custom font file from the tenant's brand fonts library. The font file is deleted from the primary geo and all satellite geos. After removal, the font file will no longer be available for use.
 
 
 > [!NOTE]
@@ -37,17 +37,19 @@ This cmdlet removes a custom font file from the tenant's brand font library. The
 Remove-SPOFontFile -Name "CustomFont.woff2"
 ```
 
-This example removes the font file "CustomFont.woff2" from the brand font library across all geo locations.
+This example removes the font file "CustomFont.woff2" from the brand fonts library across all geo locations.
 
 
 ## PARAMETERS
 
 ### -Name
 
+> Applicable: SharePoint Online
+
 Specifies the name of the font file to remove
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -64,7 +66,7 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 
 ## INPUTS
 
-### String
+### System.String
 
 ## OUTPUTS
 
