@@ -34,11 +34,10 @@ This cmdlet removes a custom font file from the tenant's brand fonts library. Th
 ### EXAMPLE 1
 
 ```powershell
-Remove-SPOFontFile -Name "CustomFont.woff2"
+Remove-SPOFontFile -Name "Tahoma.ttf"
 ```
 
-This example removes the font file "CustomFont.woff2" from the brand fonts library across all geo locations.
-
+This example removes the font file "Tahoma.ttf" from the brand fonts library across all geo locations.
 
 ## PARAMETERS
 
