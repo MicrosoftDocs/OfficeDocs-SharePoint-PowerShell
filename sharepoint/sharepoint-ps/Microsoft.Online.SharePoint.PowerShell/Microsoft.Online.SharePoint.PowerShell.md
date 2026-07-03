@@ -563,7 +563,7 @@ Removes (soft-deletes) a File Archive Policy.
 ### [Remove-SPOFileRequestBrandingProfile](Remove-SPOFileRequestBrandingProfile.md)
 Removes a branding profile (either primary or secondary) configured for the file request feature across the tenant.
 
-### [Remove-SPOFontPackage](Remove-SPOFontFile.md)
+### [Remove-SPOFontFile](Remove-SPOFontFile.md)
 Removes a brand font file from the tenant's brand fonts library.
 
 ### [Remove-SPOFontPackage](Remove-SPOFontPackage.md)
