@@ -14,7 +14,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Removes a brand font file from the tenant's brand fonts library.
+Removes a **SharePoint** brand font file from the tenant's brand fonts library.
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ Remove-SPOFontFile [-Name] <string> [<CommonParameters>]
 
 ## DESCRIPTION
 
-This cmdlet removes a custom font file from the tenant's brand fonts library. The font file is deleted from the primary geo and all satellite geos. After removal, the font file will no longer be available for use.
+This cmdlet removes a custom font file from the tenant's brand fonts library. The font file is deleted from the primary geo and all satellite geos. After removal, the font file will no longer be available for use in SharePoint.
 
 > [!NOTE]
 > This operation is only allowed on the primary geo location. Attempting to remove a font file from a satellite geo will result in a warning. Pages that already use the removed font file will remain readable and the font will automatically fall back to Segoe UI. The font packages that use the deleted font file will not be automatically updated or deleted.
@@ -37,7 +37,7 @@ This cmdlet removes a custom font file from the tenant's brand fonts library. Th
 Remove-SPOFontFile -Name "Tahoma.ttf"
 ```
 
-This example removes the font file "Tahoma.ttf" from the brand fonts library across all geo locations.
+This example removes the SharePoint brand font file "Tahoma.ttf" from the brand fonts library across all geo locations.
 
 ## PARAMETERS
 
@@ -74,6 +74,8 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 Returns an array of BrandFontFileDeleteResult objects containing the deletion status for each geo location.
 
 ## RELATED LINKS
+
+[Brand Fonts](https://learn.microsoft.com/en-us/sharepoint/brand-fonts)
 
 [Add-SPOFontPackage](Add-SPOFontPackage.md)
 
