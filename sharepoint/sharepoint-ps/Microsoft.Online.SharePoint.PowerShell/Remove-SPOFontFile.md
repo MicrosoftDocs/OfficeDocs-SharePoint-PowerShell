@@ -75,7 +75,7 @@ Returns an array of BrandFontFileDeleteResult objects containing the deletion st
 
 ## RELATED LINKS
 
-[Brand Fonts](https://learn.microsoft.com/en-us/sharepoint/brand-fonts)
+[Brand Fonts](/sharepoint/brand-fonts)
 
 [Add-SPOFontPackage](Add-SPOFontPackage.md)
 
