@@ -21,15 +21,15 @@ Starts a background job to manage file versions and version history limits for a
 ## SYNTAX
 
 ### MandatoryTrimOptionalSync
-```powershell
+```
 New-SPOSiteManageVersionPolicyJob [-Identity] <SpoSitePipeBind> [-FileTypes <String[]>] [-ExcludeDefaultPolicy]
- [-TrimUseListPolicy] [-SyncListPolicy] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-TrimUseListPolicy] [-SyncListPolicy] [-BypassSiteLock] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### MandatorySync
 ```
 New-SPOSiteManageVersionPolicyJob [-Identity] <SpoSitePipeBind> [-FileTypes <String[]>] [-ExcludeDefaultPolicy]
- [-SyncListPolicy] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-SyncListPolicy] [-BypassSiteLock] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -101,6 +101,21 @@ New-SPOSiteManageVersionPolicyJob -Identity https://contoso.sharepoint.com/sites
 Apply the site version history limits (including file type overrides) to existing document libraries. If the site is not broken inheritance for version history limits, then it applies the tenant version history limits. Then trim all file versions based on each document library's version history limits.
 
 ## PARAMETERS
+
+### -BypassSiteLock
+Indicates whether to allow the job to bypass site lock.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
