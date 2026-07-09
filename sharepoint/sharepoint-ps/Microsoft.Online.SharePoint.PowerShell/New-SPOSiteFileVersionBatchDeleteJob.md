@@ -94,21 +94,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BypassSiteLock
-The job will be allowed to bypass site lock.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DeleteBeforeDays
 The minimum age of file versions to trim. In other words, all file versions that are older than this number of days will be deleted.
 
