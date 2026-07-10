@@ -21,20 +21,20 @@ Queues a job to trim versions for all document libraries in a site collection.
 
 ### AutomaticTrim
 ```
-New-SPOSiteFileVersionBatchDeleteJob [-Identity] <SpoSitePipeBind> [-Automatic] [-BypassSiteLock] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+New-SPOSiteFileVersionBatchDeleteJob [-Identity] <SpoSitePipeBind> [-Automatic] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### DeleteOlderThanDays
 ```
-New-SPOSiteFileVersionBatchDeleteJob [-Identity] <SpoSitePipeBind> [-DeleteBeforeDays <Int32>]
- [-BypassSiteLock] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-SPOSiteFileVersionBatchDeleteJob [-Identity] <SpoSitePipeBind> [-DeleteBeforeDays <Int32>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### CountLimits
 ```
 New-SPOSiteFileVersionBatchDeleteJob [-Identity] <SpoSitePipeBind> -MajorVersionLimit <Int32>
- -MajorWithMinorVersionsLimit <Int32> [-BypassSiteLock] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -MajorWithMinorVersionsLimit <Int32> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -69,14 +69,6 @@ New-SPOSiteFileVersionBatchDeleteJob -Identity https://contoso.sharepoint.com/si
 
 Example 3 starts a trim job that will delete file versions in the site collection based on the version count limits.
 
-### EXAMPLE 4
-
-```powershell
-New-SPOSiteFileVersionBatchDeleteJob -Identity https://contoso.sharepoint.com/sites/site1 -Automatic -BypassSiteLock
-```
-
-Example 4 starts a trim job with automatic version history limit algorithm and bypasses site locks.
-
 ## PARAMETERS
 
 ### -Automatic
@@ -85,21 +77,6 @@ Trim file versions using automatic version history limit algorithm.
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: AutomaticTrim
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassSiteLock
-The job will be allowed to bypass site lock.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
 Aliases:
 
 Required: False
