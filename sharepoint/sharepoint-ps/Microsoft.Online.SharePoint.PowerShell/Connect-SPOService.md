@@ -383,8 +383,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Specifies the authentication region. Valid values are: `Default`, `ITAR`, `Germany`, and `China`.
-The default value is `Default`.
+Specifies the authentication region. Valid values are: `Default`, `ITAR`, `France`, `Germany`, and `China`. The default value is `Default`.
 **Note:** The `ITAR` value applies only to GCC High and DoD tenants.
 
 ```yaml
