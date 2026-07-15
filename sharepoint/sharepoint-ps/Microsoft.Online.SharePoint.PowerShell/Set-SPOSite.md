@@ -52,7 +52,8 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-Owner <String>] [-Title <String>] [-
  [-OverrideTenantAnonymousLinkExpirationPolicy <Boolean>] [-ExternalUserExpirationInDays <Int32>]
  [-OverrideTenantExternalUserExpirationPolicy <Boolean>] [-OrganizationSharingLinkMaxExpirationInDays <Int32>]
  [-OrganizationSharingLinkRecommendedExpirationInDays <Int32>]
- [-OverrideTenantOrganizationSharingLinkExpirationPolicy <Boolean>] [-InformationBarriersMode <String>]
+ [-OverrideTenantOrganizationSharingLinkExpirationPolicy <Boolean>]
+ [-AnyoneSharingLinkRecommendedExpirationInDays <Int32>] [-InformationBarriersMode <String>]
  [-BlockDownloadLinksFileType <BlockDownloadLinksFileTypes>]
  [-OverrideBlockUserInfoVisibility <SiteUserInfoVisibilityPolicyValue>]
  [-LoopDefaultSharingLinkScope <SharingScope>] [-LoopDefaultSharingLinkRole <SharingRole>]
@@ -551,6 +552,28 @@ Accept wildcard characters: False
 Specifies all anonymous/anyone links that have been created (or will be created) will expire after the set number of days. Only applies if OverrideTenantAnonymousLinkExpirationPolicy is set to true.
 
 The valid number should be between 1 and 730. To remove the expiration requirement, set the value to zero (0).
+
+```yaml
+Type: System.Int32
+Parameter Sets: ParamSet1
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AnyoneSharingLinkRecommendedExpirationInDays
+
+> Applicable: SharePoint Online
+
+Specifies the recommended number of days before Anyone (anonymous) sharing links expire for this site. This setting provides a suggested expiration period to users when they create sharing links. Only applies if OverrideTenantAnonymousLinkExpirationPolicy is set to true.
+
+The value can be from 1 to 730 days and must be less than or equal to the maximum expiration value set by `AnonymousLinkExpirationInDays`.
+
+When set to 0, the default value will be `AnonymousLinkExpirationInDays`.
 
 ```yaml
 Type: System.Int32

@@ -41,7 +41,11 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-RequireAnonymousLinksExpireInDays <Int32>] [-OneDriveOrganizationSharingLinkMaxExpirationInDays <Int32>]
  [-CoreOrganizationSharingLinkMaxExpirationInDays <Int32>]
  [-OneDriveOrganizationSharingLinkRecommendedExpirationInDays <Int32>]
- [-CoreOrganizationSharingLinkRecommendedExpirationInDays <Int32>] [-SharingAllowedDomainList <String>]
+ [-CoreOrganizationSharingLinkRecommendedExpirationInDays <Int32>]
+ [-OneDriveAnyoneSharingLinkMaxExpirationInDays <Int32>]
+ [-CoreAnyoneSharingLinkMaxExpirationInDays <Int32>]
+ [-OneDriveAnyoneSharingLinkRecommendedExpirationInDays <Int32>]
+ [-CoreAnyoneSharingLinkRecommendedExpirationInDays <Int32>] [-SharingAllowedDomainList <String>]
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-OneDriveStorageQuota <Int64>] [-OneDriveForGuestsEnabled <Boolean>] [-IPAddressEnforcement <Boolean>]
  [-IPAddressAllowList <String>] [-IPAddressWACTokenLifetime <Int32>]
@@ -172,7 +176,11 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-OneDriveOrganizationSharingLinkMaxExpirationInDays <Int32>]
  [-CoreOrganizationSharingLinkMaxExpirationInDays <Int32>]
  [-OneDriveOrganizationSharingLinkRecommendedExpirationInDays <Int32>]
- [-CoreOrganizationSharingLinkRecommendedExpirationInDays <Int32>] [-SharingAllowedDomainList <String>]
+ [-CoreOrganizationSharingLinkRecommendedExpirationInDays <Int32>]
+ [-OneDriveAnyoneSharingLinkMaxExpirationInDays <Int32>]
+ [-CoreAnyoneSharingLinkMaxExpirationInDays <Int32>]
+ [-OneDriveAnyoneSharingLinkRecommendedExpirationInDays <Int32>]
+ [-CoreAnyoneSharingLinkRecommendedExpirationInDays <Int32>] [-SharingAllowedDomainList <String>]
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-OneDriveStorageQuota <Int64>] [-OneDriveForGuestsEnabled <Boolean>] [-IPAddressEnforcement <Boolean>]
  [-IPAddressAllowList <String>] [-IPAddressWACTokenLifetime <Int32>]
@@ -302,7 +310,11 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-RequireAnonymousLinksExpireInDays <Int32>] [-OneDriveOrganizationSharingLinkMaxExpirationInDays <Int32>]
  [-CoreOrganizationSharingLinkMaxExpirationInDays <Int32>]
  [-OneDriveOrganizationSharingLinkRecommendedExpirationInDays <Int32>]
- [-CoreOrganizationSharingLinkRecommendedExpirationInDays <Int32>] [-SharingAllowedDomainList <String>]
+ [-CoreOrganizationSharingLinkRecommendedExpirationInDays <Int32>]
+ [-OneDriveAnyoneSharingLinkMaxExpirationInDays <Int32>]
+ [-CoreAnyoneSharingLinkMaxExpirationInDays <Int32>]
+ [-OneDriveAnyoneSharingLinkRecommendedExpirationInDays <Int32>]
+ [-CoreAnyoneSharingLinkRecommendedExpirationInDays <Int32>] [-SharingAllowedDomainList <String>]
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-OneDriveStorageQuota <Int64>] [-OneDriveForGuestsEnabled <Boolean>] [-IPAddressEnforcement <Boolean>]
  [-IPAddressAllowList <String>] [-IPAddressWACTokenLifetime <Int32>]
@@ -434,7 +446,11 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-RequireAnonymousLinksExpireInDays <Int32>] [-OneDriveOrganizationSharingLinkMaxExpirationInDays <Int32>]
  [-CoreOrganizationSharingLinkMaxExpirationInDays <Int32>]
  [-OneDriveOrganizationSharingLinkRecommendedExpirationInDays <Int32>]
- [-CoreOrganizationSharingLinkRecommendedExpirationInDays <Int32>] [-SharingAllowedDomainList <String>]
+ [-CoreOrganizationSharingLinkRecommendedExpirationInDays <Int32>]
+ [-OneDriveAnyoneSharingLinkMaxExpirationInDays <Int32>]
+ [-CoreAnyoneSharingLinkMaxExpirationInDays <Int32>]
+ [-OneDriveAnyoneSharingLinkRecommendedExpirationInDays <Int32>]
+ [-CoreAnyoneSharingLinkRecommendedExpirationInDays <Int32>] [-SharingAllowedDomainList <String>]
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-OneDriveStorageQuota <Int64>] [-OneDriveForGuestsEnabled <Boolean>] [-IPAddressEnforcement <Boolean>]
  [-IPAddressAllowList <String>] [-IPAddressWACTokenLifetime <Int32>]
@@ -564,7 +580,11 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-RequireAnonymousLinksExpireInDays <Int32>] [-OneDriveOrganizationSharingLinkMaxExpirationInDays <Int32>]
  [-CoreOrganizationSharingLinkMaxExpirationInDays <Int32>]
  [-OneDriveOrganizationSharingLinkRecommendedExpirationInDays <Int32>]
- [-CoreOrganizationSharingLinkRecommendedExpirationInDays <Int32>] [-SharingAllowedDomainList <String>]
+ [-CoreOrganizationSharingLinkRecommendedExpirationInDays <Int32>]
+ [-OneDriveAnyoneSharingLinkMaxExpirationInDays <Int32>]
+ [-CoreAnyoneSharingLinkMaxExpirationInDays <Int32>]
+ [-OneDriveAnyoneSharingLinkRecommendedExpirationInDays <Int32>]
+ [-CoreAnyoneSharingLinkRecommendedExpirationInDays <Int32>] [-SharingAllowedDomainList <String>]
  [-SharingBlockedDomainList <String>] [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>]
  [-OneDriveStorageQuota <Int64>] [-OneDriveForGuestsEnabled <Boolean>] [-IPAddressEnforcement <Boolean>]
  [-IPAddressAllowList <String>] [-IPAddressWACTokenLifetime <Int32>]
@@ -2068,6 +2088,50 @@ The valid values are:
 
 ```yaml
 Type: Microsoft.SharePoint.Client.Sharing.SharingScope
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CoreAnyoneSharingLinkMaxExpirationInDays
+
+> Applicable: SharePoint Online
+
+Specifies the maximum number of days before Anyone (anonymous) sharing links expire for all SharePoint sites (not including OneDrive sites). This is a tenant wide setting, and all geos will inherit the policy.
+
+The value can be from 1 to 730 days.
+
+To remove the expiration requirement, set the value to zero (0).
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CoreAnyoneSharingLinkRecommendedExpirationInDays
+
+> Applicable: SharePoint Online
+
+Specifies the recommended number of days before Anyone (anonymous) sharing links expire for all SharePoint sites (not including OneDrive sites). This setting provides a suggested expiration period to users when they create sharing links. This is a tenant wide setting, and all geos will inherit the policy.
+
+The value can be from 1 to 730 days and must be less than or equal to the maximum expiration value set by `CoreAnyoneSharingLinkMaxExpirationInDays`.
+
+When set to 0, the default value will be `CoreAnyoneSharingLinkMaxExpirationInDays`.
+
+```yaml
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -4644,6 +4708,50 @@ The valid values are:
 
 ```yaml
 Type: Microsoft.SharePoint.Client.Sharing.SharingScope
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveAnyoneSharingLinkMaxExpirationInDays
+
+> Applicable: SharePoint Online
+
+Specifies the maximum number of days before Anyone (anonymous) sharing links expire for all OneDrive sites. This is a tenant wide setting, and all geos will inherit the policy.
+
+The value can be from 1 to 730 days.
+
+To remove the expiration requirement, set the value to zero (0).
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OneDriveAnyoneSharingLinkRecommendedExpirationInDays
+
+> Applicable: SharePoint Online
+
+Specifies the recommended number of days before Anyone (anonymous) sharing links expire for all OneDrive sites. This setting provides a suggested expiration period to users when they create sharing links. This is a tenant wide setting, and all geos will inherit the policy.
+
+The value can be from 1 to 730 days and must be less than or equal to the maximum expiration value set by `OneDriveAnyoneSharingLinkMaxExpirationInDays`.
+
+When set to 0, the default value will be `OneDriveAnyoneSharingLinkMaxExpirationInDays`.
+
+```yaml
+Type: System.Int32
 Parameter Sets: (All)
 Aliases:
 
