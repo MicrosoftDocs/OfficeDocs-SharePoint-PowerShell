@@ -383,9 +383,11 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Specifies the authentication region. Valid values are: `Default`, `ITAR`, `Germany`, and `China`.
+Specifies the authentication region. Valid values are: `Default`, `ITAR`, `Delos`, `France`, `Germany`, and `China`.
 The default value is `Default`.
+
 **Note:** The `ITAR` value applies only to GCC High and DoD tenants.
+The `Delos` value applies only to German sovereign cloud tenants.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.AADCrossTenantAuthenticationLocation
