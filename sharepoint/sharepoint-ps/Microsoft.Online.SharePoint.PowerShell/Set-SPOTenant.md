@@ -9,7 +9,7 @@ author: samkabue
 ms.author: speedta
 ms.reviewer: Mengke-GH
 description: 'A PowerShell cmdlet used in SharePoint Online to configure organization-wide tenant settings.'
-ms.date: 03/04/2026
+ms.date: 08/03/2026
 ---
 
 # Set-SPOTenant
@@ -145,6 +145,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-OpticalCharacterRecognitionSelectedSitesList <String[]>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
+ [-DefaultLanguageForSiteCreation <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
@@ -280,6 +281,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-OpticalCharacterRecognitionSelectedSitesList <String[]>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
+ [-DefaultLanguageForSiteCreation <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
@@ -416,6 +418,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-OpticalCharacterRecognitionSelectedSitesList <String[]>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
+ [-DefaultLanguageForSiteCreation <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
@@ -550,6 +553,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-OpticalCharacterRecognitionSelectedSitesList <String[]>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
+ [-DefaultLanguageForSiteCreation <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  [-AllowFileArchive <Boolean>] [-AllowFileArchiveByDefault <Boolean>] [<CommonParameters>]
@@ -684,6 +688,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-OpticalCharacterRecognitionSelectedSitesList <String[]>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
  [-DefaultContentCenterSite <String>]
+ [-DefaultLanguageForSiteCreation <String>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-EnforceRequestDigest <Boolean>]
  [-RestrictResourceAccountAccess <Boolean>] [-RestrictExternalSharingForAgents <Boolean>]
  -RestrictExternalSharing <Guid[]> [-AddAppIdToList] [-RemoveAppIdFromList]
@@ -925,6 +930,14 @@ Set-SPOTenant -IsFilePreviewDomainRestrictionEnabled $false
 ```
 
 This example disables the file preview domain restriction. The previously configured allow list is retained but ignored, so the file preview viewer can load content from any domain.
+
+### EXAMPLE 28
+
+```powershell
+Set-SPOTenant -DefaultLanguageForSiteCreation "de-DE"
+```
+
+This example sets the default language for new OneDrive sites to German (Germany). New OneDrive sites created after you run this command use this language instead of the language of the organization's OneDrive host site. To clear the setting and return to the default behavior, pass an empty string: `Set-SPOTenant -DefaultLanguageForSiteCreation ""`.
 
 ## PARAMETERS
 
@@ -2274,6 +2287,28 @@ This parameter allows administrators to set the default content center site for 
 > [!NOTE]
 > Use of this parameter requires that the tenant either have the required license or pay-as-you-go billing set up. For more information, visit [Licensing for Microsoft Syntex](/microsoft-365/syntex/syntex-licensing).
 > You cannot change the designated default content center once it has been set.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultLanguageForSiteCreation
+
+> Applicable: SharePoint Online
+
+Specifies the default language that SharePoint Online uses when it creates new OneDrive sites for the organization. Provide a language tag, such as `en-US`, `de-DE`, or `fr-FR`.
+
+When you set this value, new OneDrive sites are created in the specified language instead of the language of the organization's OneDrive host site. The language must be installed for the organization. If the value is empty, or if the specified language isn't available, SharePoint Online uses the language of the OneDrive host site.
+
+This setting applies only to OneDrive sites that are created after you set it. It doesn't change the language of existing sites. To clear the setting, pass an empty string.
 
 ```yaml
 Type: System.String
