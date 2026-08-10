@@ -709,6 +709,9 @@ As a SharePoint administrator in Microsoft 365, you can block the download of fi
 
 Blocking the download of files allows users to remain productive while addressing the risk of accidental data loss. Users have browser-only access with no ability to download, print, or sync files. They also won't be able to access content through apps, including the Microsoft Office desktop apps. When web access is limited, users will see the following message at the top of sites: "Your organization doesn't allow you to download, print, or sync from this site. For help contact your IT department." Read the full documentation for advanced capabilities at [Block download policy for SharePoint sites and OneDrive](/sharepoint/block-download-from-sites).
 
+> [!NOTE]
+> If `BlockDownloadPolicy` is enabled for a site that hosts a site collection app catalog, uploading or updating SharePoint Framework solution packages (`.sppkg`) can fail with **App package is invalid**, and the **Product ID** remains blank. Temporarily disable `BlockDownloadPolicy` while uploading or updating packages, and re-enable it afterward.
+
 PARAMVALUE: False | True
 
 ```yaml
