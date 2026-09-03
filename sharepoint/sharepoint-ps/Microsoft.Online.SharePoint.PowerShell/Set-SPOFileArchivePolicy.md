@@ -20,13 +20,13 @@ Updates an existing file archive policy.
 
 ```
 Set-SPOFileArchivePolicy -PolicyId <Guid> [-Name <String>] [-PolicyType <SPOFileArchivePolicyType>]
- [-LastAccessDateCriteria <Int32>] [-FileTypeCriteria <String[]>] [-IsWhatIfMode <Boolean>] [-State <SPOFileArchivePolicyState>]
- [<CommonParameters>]
+ [-LastAccessDateCriteria <Int32>] [-FileTypeCriteria <String[]>] [-FileTypeExclusionCriteria <String[]>]
+ [-IsWhatIfMode <Boolean>] [-State <SPOFileArchivePolicyState>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-This cmdlet updates the properties of an existing file archive policy. Only the parameters that are specified will be updated; all other properties remain unchanged. You cannot set the State to `Active` unless the PolicyType is `AllSites` or at least one site has been added to the policy using `Add-SPOSiteToFileArchivePolicy`.
+This cmdlet updates the properties of an existing file archive policy. Only the parameters that are specified will be updated; all other properties remain unchanged. You cannot set the State to `Active` unless the PolicyType is `AllSites` or `AllODBSites`, or at least one site has been added to the policy using `Add-SPOSiteToFileArchivePolicy`.
 
 > [!NOTE]
 > This cmdlet is part of the file archive policies feature which is currently in preview.
@@ -61,7 +61,29 @@ Enables `WhatIf` mode on the specified policy. Future policy runs will report el
 
 ### -FileTypeCriteria
 
-Specifies an updated array of file extensions to include in the policy. Only files matching the specified extensions will be considered for archiving. Use the dot-prefixed format. Set to `$null` to include all file types.
+Specifies an updated array of file extensions to include in the policy, in dot-prefixed format (for example, `.docx`).
+
+> [!NOTE]
+> File type filtering isn't implemented in the current preview, and the inclusion list can't be changed after a policy is created. Supplying this parameter returns the error "Updating file type criteria is not supported. Please remove and recreate the policy to change this setting."
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FileTypeExclusionCriteria
+
+Specifies an updated array of file extensions to exclude from the policy, in dot-prefixed format (for example, `.docx`).
+
+> [!NOTE]
+> File type filtering isn't implemented in the current preview, and the exclusion list can't be changed after a policy is created. Supplying this parameter returns the error "Updating file type exclusion criteria is not supported. Please remove and recreate the policy to change this setting."
 
 ```yaml
 Type: String[]
@@ -141,13 +163,17 @@ Accept wildcard characters: False
 
 ### -PolicyType
 
-Specifies the updated policy type. Accepted values are `AllSites` (targets all sites in the tenant) and `SelectedSites` (targets only sites explicitly added to the policy).
+Specifies the updated policy type. Accepted values are:
+
+- `AllSites`: The policy applies to all SharePoint sites in the tenant.
+- `AllODBSites`: The policy applies to all OneDrive for Business sites in the tenant.
+- `SelectedSites`: The policy applies only to the sites you explicitly add to it.
 
 ```yaml
 Type: SPOFileArchivePolicyType
 Parameter Sets: (All)
 Aliases:
-Accepted values: AllSites, SelectedSites
+Accepted values: AllSites, SelectedSites, AllODBSites
 
 Required: False
 Position: Named
