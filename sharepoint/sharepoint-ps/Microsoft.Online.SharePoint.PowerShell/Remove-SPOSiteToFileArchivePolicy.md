@@ -24,7 +24,11 @@ Remove-SPOSiteToFileArchivePolicy -PolicyId <Guid> -Site <SpoSitePipeBind> [<Com
 
 ## DESCRIPTION
 
-This cmdlet removes a site from an existing file archive policy. The site will no longer be included in future policy runs.
+This cmdlet removes a site from an existing file archive policy. It removes either an included site from a `SelectedSites` policy or an excluded site from an `AllSites` or `AllODBSites` policy.
+
+Removing an included site means the policy no longer applies to that site. Removing an excluded site means the site is no longer exempt, so the policy applies to it again on future runs.
+
+You can't remove the last remaining site from an active `SelectedSites` policy, because that would leave the policy active with no sites in scope. Set the policy to `Inactive` first, or add another site before removing this one.
 
 > [!NOTE]
 > This cmdlet is part of the file archive policies feature which is currently in preview.
