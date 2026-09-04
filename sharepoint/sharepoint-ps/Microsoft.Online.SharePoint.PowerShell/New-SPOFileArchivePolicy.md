@@ -71,10 +71,7 @@ Creates a new file archive policy in `WhatIf` mode. When the policy runs, it wil
 
 ### -FileTypeCriteria
 
-Specifies an array of file extensions to include in the policy, in dot-prefixed format (for example, `.docx`). When omitted, all file types are included.
-
-> [!NOTE]
-> File type filtering isn't implemented in the current preview. Supplying this parameter returns the error "Updating file type criteria is not supported. Please remove and recreate the policy." Omit the parameter to create the policy with all file types included.
+Specifies an array of file extensions to include in the policy, in dot-prefixed format (for example, `.docx`). Only files matching the specified extensions are considered for archiving. When omitted, all file types are included.
 
 ```yaml
 Type: String[]
@@ -90,10 +87,7 @@ Accept wildcard characters: False
 
 ### -FileTypeExclusionCriteria
 
-Specifies an array of file extensions to exclude from the policy, in dot-prefixed format (for example, `.docx`). When omitted, no file types are excluded.
-
-> [!NOTE]
-> File type filtering isn't implemented in the current preview. Supplying this parameter returns the error "Updating file type exclusion criteria is not supported. Please remove and recreate the policy." Omit the parameter to create the policy with no file type exclusions.
+Specifies an array of file extensions to exclude from the policy, in dot-prefixed format (for example, `.docx`). Files matching the specified extensions aren't archived. When omitted, no file types are excluded.
 
 ```yaml
 Type: String[]

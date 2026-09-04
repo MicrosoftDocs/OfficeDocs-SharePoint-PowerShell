@@ -61,10 +61,7 @@ Enables `WhatIf` mode on the specified policy. Future policy runs will report el
 
 ### -FileTypeCriteria
 
-Specifies an updated array of file extensions to include in the policy, in dot-prefixed format (for example, `.docx`).
-
-> [!NOTE]
-> File type filtering isn't implemented in the current preview, and the inclusion list can't be changed after a policy is created. Supplying this parameter returns the error "Updating file type criteria is not supported. Please remove and recreate the policy to change this setting."
+Specifies an updated array of file extensions to include in the policy, in dot-prefixed format (for example, `.docx`). Only files matching the specified extensions are considered for archiving.
 
 ```yaml
 Type: String[]
@@ -80,10 +77,7 @@ Accept wildcard characters: False
 
 ### -FileTypeExclusionCriteria
 
-Specifies an updated array of file extensions to exclude from the policy, in dot-prefixed format (for example, `.docx`).
-
-> [!NOTE]
-> File type filtering isn't implemented in the current preview, and the exclusion list can't be changed after a policy is created. Supplying this parameter returns the error "Updating file type exclusion criteria is not supported. Please remove and recreate the policy to change this setting."
+Specifies an updated array of file extensions to exclude from the policy, in dot-prefixed format (for example, `.docx`). Files matching the specified extensions aren't archived.
 
 ```yaml
 Type: String[]
