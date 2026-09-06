@@ -162,6 +162,14 @@ Get-SPOSite -Filter "Owner -like '$($userUPN)'"
 ```
 This example retrieves all sites filtering by the specified owner using a variable.
 
+### EXAMPLE 13
+
+```powershell
+Get-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 | Select-Object Url, RestrictedForAITeammates
+```
+
+This example returns whether AI teammates are restricted from accessing the site. The property is currently under private preview. If the private preview isn't enabled for the tenant, `RestrictedForAITeammates` returns `False`.
+
 ## PARAMETERS
 
 ### -ArchiveStatus
