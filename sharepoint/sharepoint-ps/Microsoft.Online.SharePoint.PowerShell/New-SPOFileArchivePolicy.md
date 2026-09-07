@@ -20,12 +20,15 @@ Creates a new file archive policy for the tenant.
 
 ```
 New-SPOFileArchivePolicy [-Name <String>] -PolicyType <SPOFileArchivePolicyType> [-LastAccessDateCriteria <Int32>]
- [-FileTypeCriteria <String[]>] [-IsWhatIfMode <Boolean>] [<CommonParameters>]
+ [-FileTypeCriteria <String[]>] [-FileTypeExclusionCriteria <String[]>] [-IsWhatIfMode <Boolean>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 This cmdlet creates a new file archive policy for the connected SharePoint Online tenant. A file archive policy defines the criteria under which files are automatically archived based on their last access date. The policy is created in an Inactive state and must be activated using `Set-SPOFileArchivePolicy` with `-State Active` before it takes effect.
+
+Use `-PolicyType` to choose the scope of the policy: all SharePoint sites in the tenant (`AllSites`), all OneDrive for Business sites in the tenant (`AllODBSites`), or only the sites you explicitly add (`SelectedSites`).
 
 > [!NOTE]
 > This cmdlet is part of the file archive policies feature which is currently in preview.
@@ -43,12 +46,20 @@ Creates a new file archive policy named "ArchiveAll" that targets all sites in t
 ### Example 2
 
 ```powershell
-New-SPOFileArchivePolicy -PolicyType "SelectedSites" -Name "ArchiveMarketing" -LastAccessDateCriteria 12 -FileTypeCriteria ".docx", ".pptx", ".xlsx"
+New-SPOFileArchivePolicy -PolicyType "SelectedSites" -Name "ArchiveMarketing" -LastAccessDateCriteria 12
 ```
 
-Creates a new file archive policy named "ArchiveMarketing" that targets selected sites, archives files not accessed in the last 12 months, and only applies to .docx, .pptx, and .xlsx file types.
+Creates a new file archive policy named "ArchiveMarketing" that targets only the sites you add with `Add-SPOSiteToFileArchivePolicy`, and archives files not accessed in the last 12 months.
 
 ### Example 3
+
+```powershell
+New-SPOFileArchivePolicy -PolicyType "AllODBSites" -Name "ArchiveOneDrive"
+```
+
+Creates a new file archive policy named "ArchiveOneDrive" that targets all OneDrive for Business sites in the tenant. To exempt individual OneDrive sites, add them as exclusions with `Add-SPOSiteToFileArchivePolicy` and the `-Exclude` parameter.
+
+### Example 4
 
 ```powershell
 New-SPOFileArchivePolicy -PolicyType "AllSites" -IsWhatIfMode $true
@@ -60,7 +71,23 @@ Creates a new file archive policy in `WhatIf` mode. When the policy runs, it wil
 
 ### -FileTypeCriteria
 
-Specifies an array of file extensions to include in the policy. Only files matching the specified extensions will be considered for archiving. Use the dot-prefixed format. If not specified, all file types are included.
+Specifies an array of file extensions to include in the policy, in dot-prefixed format (for example, `.docx`). Only files matching the specified extensions are considered for archiving. When omitted, all file types are included.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FileTypeExclusionCriteria
+
+Specifies an array of file extensions to exclude from the policy, in dot-prefixed format (for example, `.docx`). Files matching the specified extensions aren't archived. When omitted, no file types are excluded.
 
 ```yaml
 Type: String[]
@@ -127,13 +154,19 @@ Accept wildcard characters: False
 
 ### -PolicyType
 
-Specifies whether the policy targets all sites in the tenant or only selected sites. Accepted values are `AllSites` and `SelectedSites`. If `SelectedSites` is chosen, you must add at least one site using `Add-SPOSiteToFileArchivePolicy` before the policy can be activated.
+Specifies the scope of the policy. Accepted values are:
+
+- `AllSites`: The policy applies to all SharePoint sites in the tenant.
+- `AllODBSites`: The policy applies to all OneDrive for Business sites in the tenant.
+- `SelectedSites`: The policy applies only to the sites you explicitly add to it.
+
+If you choose `SelectedSites`, you must add at least one site using `Add-SPOSiteToFileArchivePolicy` before the policy can be activated. If you choose `AllSites` or `AllODBSites`, you can optionally exempt individual sites by adding them with `Add-SPOSiteToFileArchivePolicy` and the `-Exclude` parameter.
 
 ```yaml
 Type: SPOFileArchivePolicyType
 Parameter Sets: (All)
 Aliases:
-Accepted values: AllSites, SelectedSites
+Accepted values: AllSites, SelectedSites, AllODBSites
 
 Required: True
 Position: Named
