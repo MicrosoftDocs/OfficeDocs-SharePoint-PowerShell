@@ -61,6 +61,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-Owner <String>] [-Title <String>] [-
  [-OverrideSharingCapability <Boolean>] [-DefaultMainLinkScope <MainLinkAudience>]
  [-DefaultShareLinkScope <SharingScope>]
  [-DefaultShareLinkRole <SharingRole>] [-BlockGuestsAsSiteAdmin <SharingState>]
+ [-FileAnonymousLinkType <AnonymousLinkType>] [-FolderAnonymousLinkType <AnonymousLinkType>]
  [-RestrictContentOrgWideSearch <Boolean>] [-RestrictedContentDiscoveryforCopilotAndAgents <Boolean>]
  [-RestrictedAccessControl <Boolean>] [-RestrictedAccessControlGroups <Guid[]>]
  [-ListsShowHeaderAndNavigation <Boolean>] [-HidePeoplePreviewingFiles <Boolean>]
@@ -177,9 +178,9 @@ You must be a SharePoint Online administrator and be a site collection administr
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
-For OneDrive for Business site collection, the only valid parameters are Identity, AllowDownloadingNonWebViewableFiles, AllowEditing, ConditionalAccessPolicy, DefaultLinkPermission, DefaultSharingLinkType, DisableCompanyWideSharingLinks, LimitedAccessFileType, LockState, Owner, SharingAllowedDomainList, SharingBlockedDomainList, SharingCapability, SharingDomainRestrictionMode, ShowPeoplePickerSuggestionsForGuestUsers, StorageQuota, and StorageWarningLevel.
+For OneDrive for Business site collection, the only valid parameters are Identity, AllowDownloadingNonWebViewableFiles, AllowEditing, ConditionalAccessPolicy, DefaultLinkPermission, DefaultSharingLinkType, DisableCompanyWideSharingLinks, FileAnonymousLinkType, FolderAnonymousLinkType, LimitedAccessFileType, LockState, Owner, SharingAllowedDomainList, SharingBlockedDomainList, SharingCapability, SharingDomainRestrictionMode, ShowPeoplePickerSuggestionsForGuestUsers, StorageQuota, and StorageWarningLevel.
 
-For Groups site collection, the only valid parameters are Identity, AllowSelfServiceUpgrade, DefaultLinkPermission, DefaultSharingLinkType, DenyAddAndCustomizePages, DisableCompanyWideSharingLinks, DisableSharingForNonOwners, LockState, Owner, ResourceQuota, ResourceQuotaWarningLevel, SandboxedCodeActivationCapability, SensitivityLabel, SharingCapability, ShowPeoplePickerSuggestionsForGuestUsers, SocialBarOnSitePagesDisabled, StorageQuota, StorageQuotaReset, and StorageQuotaWarningLevel.
+For Groups site collection, the only valid parameters are Identity, AllowSelfServiceUpgrade, DefaultLinkPermission, DefaultSharingLinkType, DenyAddAndCustomizePages, DisableCompanyWideSharingLinks, DisableSharingForNonOwners, FileAnonymousLinkType, FolderAnonymousLinkType, LockState, Owner, ResourceQuota, ResourceQuotaWarningLevel, SandboxedCodeActivationCapability, SensitivityLabel, SharingCapability, ShowPeoplePickerSuggestionsForGuestUsers, SocialBarOnSitePagesDisabled, StorageQuota, StorageQuotaReset, and StorageQuotaWarningLevel.
 
 ## EXAMPLES
 
@@ -384,6 +385,15 @@ Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -RemoveVersionE
 ```
 
 Example 24 removes the version history limit override for video and audio file types at the site level. The new document libraries will use this version setting.
+
+### Example 25
+
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -FolderAnonymousLinkType ViewUpload -FileAnonymousLinkType None
+```
+
+Example 25 sets a site level override for FolderAnonymousLinkType to limit anonymous and request files folder sharing to only support view and upload permissions and clears any site level override for the FileAnonymousLinkType by setting it to None.
 
 ## PARAMETERS
 
@@ -1306,6 +1316,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FileAnonymousLinkType
+
+> Applicable: SharePoint Online
+
+Site specific override of tenant settings to allow configuring file anonymous access links that allow recipients to only view or view and edit.
+
+The valid values are:
+
+- None - Respect the organization setting for FileAnonymousLinkType
+- View - Sets the anonymous file link permissions for this site to allow only view permissions
+- Edit - Sets the anonymous file link permissions for this site to allow both view and edit permissions
+
+```yaml
+Type: Microsoft.SharePoint.Client.AnonymousLinkType
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -FileTypesForVersionExpiration
 
 > Applicable: SharePoint Online
@@ -1331,6 +1365,31 @@ Parameter Sets: SetSiteFileTypeFileVersionPolicy
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FolderAnonymousLinkType
+
+> Applicable: SharePoint Online
+
+Site specific override of tenant settings to allow configuring folder anonymous access links that allow recipients to view, view and upload, or view, edit, and upload files.
+
+The valid values are:
+
+- None - Respect the organization setting for FolderAnonymousLinkType
+- View - Sets the anonymous folder link permissions for this site to allow only view permissions
+- ViewUpload - Sets the anonymous folder link permissions for this site to allow both view and upload files permissions
+- Edit - Sets the anonymous folder link permissions for this site to allow view, edit, and upload files permissions
+
+```yaml
+Type: Microsoft.SharePoint.Client.AnonymousLinkType
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
