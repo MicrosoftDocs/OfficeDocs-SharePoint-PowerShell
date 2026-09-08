@@ -19,7 +19,8 @@ SharePoint Administrators can delegate access governance of sites to correspondi
 ## SYNTAX
 
 ```
-Start-SPOSiteReview -ReportID <Guid> -SiteID <Guid> [-Comment <String>] [<CommonParameters>]
+Start-SPOSiteReview -ReportID <Guid> -SiteID <Guid> [-Comment <String>]
+ [-DeliveryMode <SiteReviewEmailDeliveryMode>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,6 +35,14 @@ PS C:\> Start-SPOSiteReview -ReportID 03327d1c-38c5-4c32-9dad-85753a682d65 -Site
 ```
 
 The above cmdlet initiates site access review for the given site as per oversharing criteria mentioned in the given DAG report.
+
+### Example 2
+
+```powershell
+PS C:\> Start-SPOSiteReview -ReportID 03327d1c-38c5-4c32-9dad-85753a682d65 -SiteID a10f1997-71f2-4ef2-825e-2439400fc601 -DeliveryMode SingleEmail
+```
+
+The above cmdlet initiates site access review and notifies the reviewers with a single grouped email instead of one email per reviewer. Reviewers are grouped by their notification language, so one email is sent for each language used by the reviewers.
 
 ## PARAMETERS
 
@@ -76,6 +85,29 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DeliveryMode
+Specifies how the reviewers are notified for this site access review.
+
+The acceptable values for this parameter are:
+
+- Individual: Each reviewer receives a separate email. This is the behavior when the parameter is omitted.
+- SingleEmail: The reviewers receive a single grouped email instead of one email each. Reviewers are grouped by their notification language, so one email is sent for each language used by the reviewers.
+
+If a custom email template is configured for site access reviews in your organization, the grouping setting on that template determines how the reviewers are notified, and it takes precedence over this parameter.
+
+```yaml
+Type: Microsoft.Online.SharePoint.PowerShell.SiteReviewEmailDeliveryMode
+Parameter Sets: (All)
+Aliases:
+Accepted values: Individual, SingleEmail
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
