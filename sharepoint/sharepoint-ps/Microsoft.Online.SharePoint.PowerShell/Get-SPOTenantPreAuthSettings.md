@@ -21,16 +21,14 @@ Gets the configuration of pre-authentication.
 
 ### Default
 
-```powershell
+```
 Get-SPOTenantPreAuthSettings [<CommonParameters>]
 ```
 
 ### UseGraphUrlSettings
 
-
-```powershell
+```
 Get-SPOTenantPreAuthSettings [-UseGraphUrlSettings] [<CommonParameters>]
-
 ```
 
 ## DESCRIPTION
@@ -46,7 +44,7 @@ Gets the configuration of pre-authentication.
 >
 > But this feature is currently being deprecated. You can use the related [Set-SPOTenantPreAuthSettings](Set-SPOTenantPreAuthSettings.md) to control the use of pre-authentication in various use cases.
 
-### Microsoft Graph URL settings
+**Microsoft Graph URL settings**
 
 Microsoft Graph file APIs can return URLs that applications use to download, upload, preview, transform, or monitor file operations. Some of these URLs have historically included pre-authentication tokens or redirected clients to pre-authenticated URLs.
 
@@ -76,16 +74,15 @@ Gets all the pre-authentication settings for the tenant. Note that this example 
 
 Returns the configuration that controls whether supported Microsoft Graph file APIs return Microsoft Graph URLs for configured applications.
 
+```yaml
+Type: SwitchParameter
+Parameter Sets: UseGraphUrlSettings
+Aliases: 
 
-```
-Type: System.Management.Automation.SwitchParameter 
-Parameter Sets: UseGraphUrlSettings 
-Aliases:  
-
-Required: False 
-Position: Named 
-Default value: None 
-Accept pipeline input: False 
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
