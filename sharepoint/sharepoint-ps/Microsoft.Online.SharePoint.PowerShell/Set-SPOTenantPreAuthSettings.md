@@ -20,19 +20,26 @@ Sets the configuration of pre-authentication.
 ## SYNTAX
 
 ### IsDisabled
-```
+```powershell
 Set-SPOTenantPreAuthSettings -IsDisabled <Boolean> [<CommonParameters>]
 ```
 
 ### AddListItem
-```
+```powershell
 Set-SPOTenantPreAuthSettings [-Add] -Type <TenantPreAuthSettingsListType> [-IncludedApps <String>]
  [-ExcludedApps <String>] [-IncludedFeatures <String>] [-ExcludedFeatures <String>] [<CommonParameters>]
 ```
 
 ### RemoveListItem
-```
+```powershell
 Set-SPOTenantPreAuthSettings [-Remove] -Id <String> [<CommonParameters>]
+```
+
+### UseGraphUrlSettings
+
+
+```powershell
+Set-SPOTenantPreAuthSettings [-UseGraphUrlIsEnabled <Boolean>] [-UseGraphUrlAppsList <String>]  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,6 +65,12 @@ You can use this cmdlet to configure or disable the pre-authentication feature w
 
 You must be a SharePoint Administrator to run the cmdlet.
 
+### Microsoft Graph URL settings
+
+Microsoft Graph file APIs can return URLs that applications use to download, upload, preview, transform, or monitor file operations. Some of these URLs have historically included pre-authentication tokens or redirected clients to pre-authenticated URLs.
+
+You can use this cmdlet to start receiving Microsoft Graph URLs from supported APIs for third-party applications.
+
 ## EXAMPLES
 
 ### Example 1
@@ -66,12 +79,14 @@ Set-SPOTenantPreAuthSettings -IsDisabled $true
 
 Set-SPOTenantPreAuthSettings -Add -Type Allow -IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42,0ab82eba-96c7-4681-9f75-c18437e20d0e"
 ```
+
 This example disables pre-authentication overall and adds a setting that allows two apps to use pre-authentication for all features.
 
 ### Example 2
 ```powershell
 Set-SPOTenantPreAuthSettings -Add -Type Allow -IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42,0ab82eba-96c7-4681-9f75-c18437e20d0e" -ExcludedApps "" -IncludedFeatures "" -ExcludedFeatures ""
 ```
+
 This example performs the same function as example 1 except in this case the switches for `-ExcludedApps`, `-IncludedFeatures`, and `-ExcludedFeatures` are added to the cmdlet.
 
 These switches are assumed to take the default value of `""` if not used with the cmdlet and example 2 is used to demonstrate the complete set of switches only.
@@ -120,6 +135,35 @@ This example enables pre-authentication overall and denies requests that are not
 >   - If you have `–IncludedApps "" -ExcludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42"`, it means that the setting applies to all apps apart from `"029e7c27-4b9c-4f8b-ba32-b96249468d42"`.
 >   - If you have `–IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42" and -ExcludedApps ""`, it means that the setting only applies to the app `"029e7c27-4b9c-4f8b-ba32-b96249468d42"`
 >   - You cannot have a setting with `–IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42" –ExcludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42"`
+
+### Example 7
+
+
+```powershell
+Set-SPOTenantPreAuthSettings -UseGraphUrlIsEnabled $true -UseGraphUrlAppsList "029e7c27-4b9c-4f8b-ba32-b96249468d42,0ab82eba-96c7-4681-9f75-c18437e20d0e"
+```
+
+This example enables the setting for two apps, which means that supported Microsoft Graph APIs will return Graph URLs to these apps. Using a targeted list allows you to validate application compatibility before applying the behavior more broadly.
+
+### Example 8
+
+
+```powershell
+Set-SPOTenantPreAuthSettings -UseGraphUrlIsEnabled $true -UseGraphUrlAppsList ""
+```
+
+This example enables the setting for all 3P applications by supplying an empty application list.
+
+
+
+### Example 9
+
+
+```powershell
+Set-SPOTenantPreAuthSettings -UseGraphUrlIsEnabled $false
+```
+
+This example shows how to stop returning Microsoft Graph URLs through this setting.
 
 ## PARAMETERS
 
@@ -262,6 +306,23 @@ Aliases:
 Accepted values: Allow, Deny
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseGraphUrlAppsList
+
+Contains the Microsoft Entra application IDs that receive the new behavior. An empty string means that the setting applies to all applications. This only applies when `-UseGraphUrlIsEnabled` is set to `$true`.
+
+
+```yaml
+Type: System.String
+Parameter Sets: UseGraphUrlSettings
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
