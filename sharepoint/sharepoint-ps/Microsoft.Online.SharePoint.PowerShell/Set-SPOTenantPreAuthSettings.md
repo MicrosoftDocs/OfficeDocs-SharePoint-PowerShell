@@ -36,8 +36,6 @@ Set-SPOTenantPreAuthSettings [-Remove] -Id <String> [<CommonParameters>]
 ```
 
 ### UseGraphUrlSettings
-
-
 ```powershell
 Set-SPOTenantPreAuthSettings [-UseGraphUrlIsEnabled <Boolean>] [-UseGraphUrlAppsList <String>]  [<CommonParameters>]
 ```
@@ -70,6 +68,38 @@ You must be a SharePoint Administrator to run the cmdlet.
 Microsoft Graph file APIs can return URLs that applications use to download, upload, preview, transform, or monitor file operations. Some of these URLs have historically included pre-authentication tokens or redirected clients to pre-authenticated URLs.
 
 You can use this cmdlet to start receiving Microsoft Graph URLs from supported APIs for third-party applications.
+
+### Expected API behavior
+
+**APIs that return URLs**
+
+For APIs with a Microsoft Graph alternative, if the setting is enabled for the calling application, the response uses a Microsoft Graph URL, and the application can call that URL by using an appropriate Microsoft Graph access token.
+
+For APIs without a Microsoft Graph alternative, the returned SharePoint Online URL does not contain temporary authentication information. The application must obtain an appropriate Microsoft Entra access token for SharePoint Online and include it when calling the returned URL.
+
+**APIs that currently return an HTTP 302 redirect**
+
+Affected APIs return content directly rather than redirecting the application to a temporary authentication URL. Applications must not depend on intercepting the redirect, extracting a temporary authentication value from the redirect location, passing the redirected URL to an unauthenticated client, or assuming that every content request returns an HTTP 302 status code. Applications should be prepared to process a successful content response from the original Microsoft Graph request.
+
+**Direct SharePoint API requests**
+
+The tenant setting applies when the original request is made through Microsoft Graph. It does not change requests that applications make directly to SharePoint APIs.
+
+**Affected API scenarios**
+
+| API Scenario         | Expected behavior                                                              | 
+|----------------------|--------------------------------------------------------------------------------|
+|Drive item and children responses |	Configured applications receive Microsoft Graph contentStream URLs where supported.|
+|Drive item /content	|Content is returned directly instead of through an HTTP 302 redirect to a temporary authentication URL.|
+|Drive item /contentStream	|No change is expected.|
+|Drive item versions	|Configured applications receive Microsoft Graph content URLs for current and previous versions where supported.|
+|Version /content	|Content is returned directly instead of through an HTTP 302 redirect.|
+|Create upload session	|The returned SharePoint Online upload URL does not contain temporary authentication information. The application must authenticate to SharePoint Online.|
+|Copy operation	|The monitor URL does not contain temporary authentication information. The application must authenticate when polling the SharePoint Online URL.|
+|Preview	|The preview URL does not contain temporary authentication information. The application must authenticate to SharePoint Online.|
+|Thumbnails	|Configured applications receive Microsoft Graph thumbnail content URLs where supported.|
+|Thumbnail content	|Content is returned directly instead of through an HTTP 302 redirect to a temporary authentication URL.|
+|Format conversion	|Converted content is returned directly instead of through an HTTP 302 redirect, subject to API availability.|
 
 ## EXAMPLES
 
@@ -306,6 +336,22 @@ Aliases:
 Accepted values: Allow, Deny
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -UseGraphUrlIsEnabled
+
+Determines whether supported APIs can return Microsoft Graph URLs to configured applications.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: UseGraphUrlSettings
+Aliases:
+Accepted values: True, False
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
