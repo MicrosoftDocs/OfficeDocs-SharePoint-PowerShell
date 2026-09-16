@@ -5,10 +5,10 @@ online version: https://learn.microsoft.com/powershell/module/microsoft.online.s
 applicable: SharePoint Online
 title: New-SPETenantApplyFileVersionPolicyJob
 schema: 2.0.0
-author: msjennywu
-ms.author: jennywu
+author: guptapriyan
+ms.author: guptapriyan
 ms.reviewer:
-manager: seanmc
+manager: srikrg
 ---
 
 # New-SPETenantApplyFileVersionPolicyJob
