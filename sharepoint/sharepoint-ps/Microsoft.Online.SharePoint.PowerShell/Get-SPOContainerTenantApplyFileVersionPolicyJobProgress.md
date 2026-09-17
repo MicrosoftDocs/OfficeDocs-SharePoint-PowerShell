@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/get-spetenantapplyfileversionpolicyjobprogress
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/get-spocontainertenantapplyfileversionpolicyjobprogress
 applicable: SharePoint Online
-title: Get-SPETenantApplyFileVersionPolicyJobProgress
+title: Get-SPOContainerTenantApplyFileVersionPolicyJobProgress
 schema: 2.0.0
 author: guptapriyan2001
 ms.author: guptapriyan
@@ -11,7 +11,7 @@ ms.reviewer:
 manager: srikrg
 ---
 
-# Get-SPETenantApplyFileVersionPolicyJobProgress
+# Get-SPOContainerTenantApplyFileVersionPolicyJobProgress
 
 ## SYNOPSIS
 
@@ -23,7 +23,7 @@ Gets the status for an apply file version policy job for a SharePoint Embedded (
 ## SYNTAX
 
 ```
-Get-SPETenantApplyFileVersionPolicyJobProgress -ContainerTypeId <Guid> [<CommonParameters>]
+Get-SPOContainerTenantApplyFileVersionPolicyJobProgress -ContainerTypeId <Guid> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,7 +34,7 @@ Gets the status for an apply file version policy job that was queued for the spe
 
 ### Example 1
 ```powershell
-Get-SPETenantApplyFileVersionPolicyJobProgress -ContainerTypeId <ContainerTypeId>
+Get-SPOContainerTenantApplyFileVersionPolicyJobProgress -ContainerTypeId <ContainerTypeId>
 ```
 
 Example 1 gets the status for the apply file version policy job of the specified container type.
@@ -70,9 +70,9 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 
 ## RELATED LINKS
 
-[New-SPETenantApplyFileVersionPolicyJob](New-SPETenantApplyFileVersionPolicyJob.md)
+[New-SPOContainerTenantApplyFileVersionPolicyJob](New-SPOContainerTenantApplyFileVersionPolicyJob.md)
 
-[Remove-SPETenantApplyFileVersionPolicyJob](Remove-SPETenantApplyFileVersionPolicyJob.md)
+[Remove-SPOContainerTenantApplyFileVersionPolicyJob](Remove-SPOContainerTenantApplyFileVersionPolicyJob.md)
 
 [SharePoint Advanced Management](/sharepoint/sharepoint-advanced-management-licensing)
 

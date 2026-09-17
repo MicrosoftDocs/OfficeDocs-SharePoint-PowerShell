@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/remove-spetenantapplyfileversionpolicyjob
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/remove-spocontainertenantapplyfileversionpolicyjob
 applicable: SharePoint Online
-title: Remove-SPETenantApplyFileVersionPolicyJob
+title: Remove-SPOContainerTenantApplyFileVersionPolicyJob
 schema: 2.0.0
 author: guptapriyan2001
 ms.author: guptapriyan
@@ -11,7 +11,7 @@ ms.reviewer:
 manager: srikrg
 ---
 
-# Remove-SPETenantApplyFileVersionPolicyJob
+# Remove-SPOContainerTenantApplyFileVersionPolicyJob
 
 ## SYNOPSIS
 
@@ -23,7 +23,7 @@ Stops further processing of an apply file version policy job that is in progress
 ## SYNTAX
 
 ```
-Remove-SPETenantApplyFileVersionPolicyJob -ContainerTypeId <Guid> [-WhatIf] [-Confirm] [<CommonParameters>]
+Remove-SPOContainerTenantApplyFileVersionPolicyJob -ContainerTypeId <Guid> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -31,14 +31,14 @@ Remove-SPETenantApplyFileVersionPolicyJob -ContainerTypeId <Guid> [-WhatIf] [-Co
 Stops further processing of an apply file version policy job that is in progress for the specified SharePoint Embedded (SPE) container type.
 
 > [!NOTE]
-> - If the job was queued by using `New-SPETenantApplyFileVersionPolicyJob` with the `TrimVersions` parameter, this stops creating new sub-jobs that trim versions for containers. This does not affect versions that were already permanently deleted while the job was running.
-> - If the job was queued by using `New-SPETenantApplyFileVersionPolicyJob` with the `SetVersionPolicy` parameter, this stops creating new sub-jobs that apply the new version policy to existing containers. The version policies that were already applied remain in place and will not be reverted.
+> - If the job was queued by using `New-SPOContainerTenantApplyFileVersionPolicyJob` with the `TrimVersions` parameter, this stops creating new sub-jobs that trim versions for containers. This does not affect versions that were already permanently deleted while the job was running.
+> - If the job was queued by using `New-SPOContainerTenantApplyFileVersionPolicyJob` with the `SetVersionPolicy` parameter, this stops creating new sub-jobs that apply the new version policy to existing containers. The version policies that were already applied remain in place and will not be reverted.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Remove-SPETenantApplyFileVersionPolicyJob -ContainerTypeId <ContainerTypeId>
+Remove-SPOContainerTenantApplyFileVersionPolicyJob -ContainerTypeId <ContainerTypeId>
 ```
 
 Example 1 cancels further processing of the apply file version policy job for the specified container type.
@@ -105,9 +105,9 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 
 ## RELATED LINKS
 
-[New-SPETenantApplyFileVersionPolicyJob](New-SPETenantApplyFileVersionPolicyJob.md)
+[New-SPOContainerTenantApplyFileVersionPolicyJob](New-SPOContainerTenantApplyFileVersionPolicyJob.md)
 
-[Get-SPETenantApplyFileVersionPolicyJobProgress](Get-SPETenantApplyFileVersionPolicyJobProgress.md)
+[Get-SPOContainerTenantApplyFileVersionPolicyJobProgress](Get-SPOContainerTenantApplyFileVersionPolicyJobProgress.md)
 
 [SharePoint Advanced Management](/sharepoint/sharepoint-advanced-management-licensing)
 

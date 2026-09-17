@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/new-spetenantapplyfileversionpolicyjob
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/new-spocontainertenantapplyfileversionpolicyjob
 applicable: SharePoint Online
-title: New-SPETenantApplyFileVersionPolicyJob
+title: New-SPOContainerTenantApplyFileVersionPolicyJob
 schema: 2.0.0
 author: guptapriyan2001
 ms.author: guptapriyan
@@ -11,7 +11,7 @@ ms.reviewer:
 manager: srikrg
 ---
 
-# New-SPETenantApplyFileVersionPolicyJob
+# New-SPOContainerTenantApplyFileVersionPolicyJob
 
 ## SYNOPSIS
 
@@ -24,19 +24,19 @@ Queues a job to apply a file version policy across all containers of a SharePoin
 
 ### WithExistingVersionPolicy (Default)
 ```
-New-SPETenantApplyFileVersionPolicyJob -ContainerTypeId <Guid> [-TrimVersions] [-SetVersionPolicy]
+New-SPOContainerTenantApplyFileVersionPolicyJob -ContainerTypeId <Guid> [-TrimVersions] [-SetVersionPolicy]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### WithVersionPolicy
 ```
-New-SPETenantApplyFileVersionPolicyJob -ContainerTypeId <Guid> [-TrimVersions]
+New-SPOContainerTenantApplyFileVersionPolicyJob -ContainerTypeId <Guid> [-TrimVersions]
  -VersionPolicy <SPOFileVersionPolicySettings> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### CollectData
 ```
-New-SPETenantApplyFileVersionPolicyJob -ContainerTypeId <Guid> [-CollectVersionData]
+New-SPOContainerTenantApplyFileVersionPolicyJob -ContainerTypeId <Guid> [-CollectVersionData]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -47,42 +47,42 @@ Queues a job to apply a file version policy across all containers that belong to
 > [!NOTE]
 > - Versions deleted using this cmdlet will be permanently deleted and cannot be recovered from the recycle bin.
 > - Only one job is allowed per container type.
-> - Use `-CollectVersionData` first and wait for the job to complete before running `Get-SPETenantApplyFileVersionPolicyJobImpact` to estimate the impact of a policy without deleting any versions.
+> - Use `-CollectVersionData` first and wait for the job to complete before running `Get-SPOContainerTenantApplyFileVersionPolicyJobImpact` to estimate the impact of a policy without deleting any versions.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-New-SPETenantApplyFileVersionPolicyJob -ContainerTypeId <ContainerTypeId> -TrimVersions -SetVersionPolicy
+New-SPOContainerTenantApplyFileVersionPolicyJob -ContainerTypeId <ContainerTypeId> -TrimVersions -SetVersionPolicy
 ```
 
 Example 1 starts a job to trim existing versions and set version policy for existing containers of the specified container type.
 
 ### Example 2
 ```powershell
-New-SPETenantApplyFileVersionPolicyJob -ContainerTypeId <ContainerTypeId> -TrimVersions
+New-SPOContainerTenantApplyFileVersionPolicyJob -ContainerTypeId <ContainerTypeId> -TrimVersions
 ```
 
 Example 2 starts a job to trim existing versions for files in containers of the specified container type.
 
 ### Example 3
 ```powershell
-New-SPETenantApplyFileVersionPolicyJob -ContainerTypeId <ContainerTypeId> -SetVersionPolicy
+New-SPOContainerTenantApplyFileVersionPolicyJob -ContainerTypeId <ContainerTypeId> -SetVersionPolicy
 ```
 
 Example 3 starts a job to set version policy for existing containers of the specified container type.
 
 ### Example 4
 ```powershell
-New-SPETenantApplyFileVersionPolicyJob -ContainerTypeId <ContainerTypeId> -CollectVersionData
+New-SPOContainerTenantApplyFileVersionPolicyJob -ContainerTypeId <ContainerTypeId> -CollectVersionData
 ```
 
-Example 4 starts a job to collect version data across all containers of the specified container type. Once the job completes, use `Get-SPETenantApplyFileVersionPolicyJobImpact` to estimate the impact of a version policy without deleting any versions.
+Example 4 starts a job to collect version data across all containers of the specified container type. Once the job completes, use `Get-SPOContainerTenantApplyFileVersionPolicyJobImpact` to estimate the impact of a version policy without deleting any versions.
 
 ### Example 5
 ```powershell
 $policy = Get-SPOTenantVersionPolicy | Get-SPOVersionPolicyWithChanges -MajorVersionLimit 100
-New-SPETenantApplyFileVersionPolicyJob -ContainerTypeId <ContainerTypeId> -TrimVersions -VersionPolicy $policy
+New-SPOContainerTenantApplyFileVersionPolicyJob -ContainerTypeId <ContainerTypeId> -TrimVersions -VersionPolicy $policy
 ```
 
 Example 5 builds a version policy that limits to 100 major versions locally, then starts a trim job that applies that policy to the specified container type.
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -CollectVersionData
-Collects version data across all containers of the container type for use with `Get-SPETenantApplyFileVersionPolicyJobImpact`. Use this switch to run a data-collection pass before deciding whether and how to trim versions. The job does not delete any versions. Cannot be combined with `-VersionPolicy` or `-SetVersionPolicy`.
+Collects version data across all containers of the container type for use with `Get-SPOContainerTenantApplyFileVersionPolicyJobImpact`. Use this switch to run a data-collection pass before deciding whether and how to trim versions. The job does not delete any versions. Cannot be combined with `-VersionPolicy` or `-SetVersionPolicy`.
 
 ```yaml
 Type: SwitchParameter
@@ -211,11 +211,11 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 
 ## RELATED LINKS
 
-[Get-SPETenantApplyFileVersionPolicyJobProgress](Get-SPETenantApplyFileVersionPolicyJobProgress.md)
+[Get-SPOContainerTenantApplyFileVersionPolicyJobProgress](Get-SPOContainerTenantApplyFileVersionPolicyJobProgress.md)
 
-[Get-SPETenantApplyFileVersionPolicyJobImpact](Get-SPETenantApplyFileVersionPolicyJobImpact.md)
+[Get-SPOContainerTenantApplyFileVersionPolicyJobImpact](Get-SPOContainerTenantApplyFileVersionPolicyJobImpact.md)
 
-[Remove-SPETenantApplyFileVersionPolicyJob](Remove-SPETenantApplyFileVersionPolicyJob.md)
+[Remove-SPOContainerTenantApplyFileVersionPolicyJob](Remove-SPOContainerTenantApplyFileVersionPolicyJob.md)
 
 [Get-SPOTenantVersionPolicy](Get-SPOTenantVersionPolicy.md)
 

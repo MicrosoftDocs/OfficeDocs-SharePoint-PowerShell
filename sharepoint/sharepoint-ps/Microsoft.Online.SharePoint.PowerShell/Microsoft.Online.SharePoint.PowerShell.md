@@ -128,12 +128,6 @@ Identify sites with file paths over 400 characters for cross-tenant user migrati
 ### [Get-FileSensitivityLabelInfo](Get-FileSensitivityLabelInfo.md)
 Extracts and displays the sensitivity label related information attached to an office file stored in SharePoint.
 
-### [Get-SPETenantApplyFileVersionPolicyJobImpact](Get-SPETenantApplyFileVersionPolicyJobImpact.md)
-Estimates the impact of applying a file version policy across all containers of a SharePoint Embedded container type.
-
-### [Get-SPETenantApplyFileVersionPolicyJobProgress](Get-SPETenantApplyFileVersionPolicyJobProgress.md)
-Returns the progress of the file version policy job for a SharePoint Embedded container type.
-
 ### [Get-SPOAppBillingPolicies](Get-SPOAppBillingPolicies.md)
 Returns billing policies that are owned by the tenant.
 
@@ -163,6 +157,12 @@ Get the current state of Microsoft-provided SharePoint site templates displayed 
 
 ### [Get-SPOContainer](Get-SPOContainer.md)
 Returns one or more containers in a SharePoint Embedded application.
+
+### [Get-SPOContainerTenantApplyFileVersionPolicyJobImpact](Get-SPOContainerTenantApplyFileVersionPolicyJobImpact.md)
+Estimates the impact of applying a file version policy across all containers of a SharePoint Embedded container type.
+
+### [Get-SPOContainerTenantApplyFileVersionPolicyJobProgress](Get-SPOContainerTenantApplyFileVersionPolicyJobProgress.md)
+Returns the progress of the file version policy job for a SharePoint Embedded container type.
 
 ### [Get-SPOContainerType](Get-SPOContainerType.md)
 Returns one or more container types created in the tenant.
@@ -476,11 +476,11 @@ Applies a published site design to a specified site collection target. This allo
 ### [Invoke-SPOSiteSwap](Invoke-SPOSiteSwap.md)
 Invokes a job to swap the location of a site with another site while archiving the original site.
 
-### [New-SPETenantApplyFileVersionPolicyJob](New-SPETenantApplyFileVersionPolicyJob.md)
-Queues a job to apply a file version policy across all containers of a SharePoint Embedded container type.
-
 ### [New-SPOAppBillingPolicy](New-SPOAppBillingPolicy.md)
 Creates a new billing policy for an application owned by the tenant.
+
+### [New-SPOContainerTenantApplyFileVersionPolicyJob](New-SPOContainerTenantApplyFileVersionPolicyJob.md)
+Queues a job to apply a file version policy across all containers of a SharePoint Embedded container type.
 
 ### [New-SPOContainerType](New-SPOContainerType.md)
 This cmdlet creates a new container type of standard or trial status. The standard container type can be created with the regular billing structure or direct to customer billing structure.
@@ -536,14 +536,14 @@ Cmdlet to register customer encryption status for your geo tenant. For more info
 ### [Register-SPOHubSite](Register-SPOHubSite.md)
 Enables the hub site feature on a site to make it a hub site. For more information visit [SharePoint hub sites overview](/sharepoint/dev/features/hub-site/hub-site-overview).
 
-### [Remove-SPETenantApplyFileVersionPolicyJob](Remove-SPETenantApplyFileVersionPolicyJob.md)
-Cancels the file version policy job for a SharePoint Embedded container type.
-
 ### [Remove-SPOAppBillingPolicy](Remove-SPOAppBillingPolicy.md)
 Removes billing policy associated with the application.
 
 ### [Remove-SPOContainer](Remove-SPOContainer.md)
 Sends a Container to the Recycle Bin.
+
+### [Remove-SPOContainerTenantApplyFileVersionPolicyJob](Remove-SPOContainerTenantApplyFileVersionPolicyJob.md)
+Cancels the file version policy job for a SharePoint Embedded container type.
 
 ### [Remove-SPOContainerType](Remove-SPOContainerType.md)
 This cmdlet removes the container type specified from the tenant.

@@ -1,9 +1,9 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/get-spetenantapplyfileversionpolicyjobimpact
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/get-spocontainertenantapplyfileversionpolicyjobimpact
 applicable: SharePoint Online
-title: Get-SPETenantApplyFileVersionPolicyJobImpact
+title: Get-SPOContainerTenantApplyFileVersionPolicyJobImpact
 schema: 2.0.0
 author: guptapriyan2001
 ms.author: guptapriyan
@@ -11,7 +11,7 @@ ms.reviewer:
 manager: srikrg
 ---
 
-# Get-SPETenantApplyFileVersionPolicyJobImpact
+# Get-SPOContainerTenantApplyFileVersionPolicyJobImpact
 
 ## SYNOPSIS
 
@@ -23,16 +23,16 @@ Estimates how many versions would be trimmed and how much storage would be freed
 ## SYNTAX
 
 ```
-Get-SPETenantApplyFileVersionPolicyJobImpact -ContainerTypeId <Guid>
+Get-SPOContainerTenantApplyFileVersionPolicyJobImpact -ContainerTypeId <Guid>
  -VersionPolicy <SPOFileVersionPolicySettings> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Queries the version dataset collected by a previously completed `New-SPETenantApplyFileVersionPolicyJob -CollectVersionData` job for the specified SharePoint Embedded (SPE) container type, and returns an estimated impact object showing how many versions would be trimmed and how much storage would be freed if a trimming job were run with the given version policy.
+Queries the version dataset collected by a previously completed `New-SPOContainerTenantApplyFileVersionPolicyJob -CollectVersionData` job for the specified SharePoint Embedded (SPE) container type, and returns an estimated impact object showing how many versions would be trimmed and how much storage would be freed if a trimming job were run with the given version policy.
 
 > [!NOTE]
-> - A completed job that was started with `-CollectVersionData` for the same container type is required before running this cmdlet. Use `Get-SPETenantApplyFileVersionPolicyJobProgress` to confirm the job has completed.
+> - A completed job that was started with `-CollectVersionData` for the same container type is required before running this cmdlet. Use `Get-SPOContainerTenantApplyFileVersionPolicyJobProgress` to confirm the job has completed.
 > - The estimate is based on a snapshot collected during the job and may not reflect changes made to the container type after the job ran.
 > - The estimate does not account for versions protected by retention policies, retention labels, or eDiscovery holds. Actual versions deleted may be fewer than estimated.
 
@@ -41,7 +41,7 @@ Queries the version dataset collected by a previously completed `New-SPETenantAp
 ### Example 1
 ```powershell
 $policy = Get-SPOTenantVersionPolicy | Get-SPOVersionPolicyWithChanges -MajorVersionLimit 50
-Get-SPETenantApplyFileVersionPolicyJobImpact -ContainerTypeId <ContainerTypeId> -VersionPolicy $policy
+Get-SPOContainerTenantApplyFileVersionPolicyJobImpact -ContainerTypeId <ContainerTypeId> -VersionPolicy $policy
 ```
 
 Estimates the impact of a trimming job run with a modified policy that limits to 50 major versions for the specified container type.
@@ -93,9 +93,9 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 
 ## RELATED LINKS
 
-[New-SPETenantApplyFileVersionPolicyJob](New-SPETenantApplyFileVersionPolicyJob.md)
+[New-SPOContainerTenantApplyFileVersionPolicyJob](New-SPOContainerTenantApplyFileVersionPolicyJob.md)
 
-[Get-SPETenantApplyFileVersionPolicyJobProgress](Get-SPETenantApplyFileVersionPolicyJobProgress.md)
+[Get-SPOContainerTenantApplyFileVersionPolicyJobProgress](Get-SPOContainerTenantApplyFileVersionPolicyJobProgress.md)
 
 [Get-SPOTenantVersionPolicy](Get-SPOTenantVersionPolicy.md)
 
