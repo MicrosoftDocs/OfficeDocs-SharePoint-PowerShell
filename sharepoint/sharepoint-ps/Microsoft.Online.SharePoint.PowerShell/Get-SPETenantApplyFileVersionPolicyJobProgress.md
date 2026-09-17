@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
-Module Name: microsoft.online.sharepoint.powershell
+Module Name: Microsoft.Online.SharePoint.PowerShell
 online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/get-spetenantapplyfileversionpolicyjobprogress
 applicable: SharePoint Online
 title: Get-SPETenantApplyFileVersionPolicyJobProgress
 schema: 2.0.0
-author: guptapriyan
+author: guptapriyan2001
 ms.author: guptapriyan
 ms.reviewer:
 manager: srikrg

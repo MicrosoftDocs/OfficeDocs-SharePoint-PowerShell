@@ -1,11 +1,11 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
-Module Name: microsoft.online.sharepoint.powershell
+Module Name: Microsoft.Online.SharePoint.PowerShell
 online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/new-spetenantapplyfileversionpolicyjob
 applicable: SharePoint Online
 title: New-SPETenantApplyFileVersionPolicyJob
 schema: 2.0.0
-author: guptapriyan
+author: guptapriyan2001
 ms.author: guptapriyan
 ms.reviewer:
 manager: srikrg
@@ -48,8 +48,6 @@ Queues a job to apply a file version policy across all containers that belong to
 > - Versions deleted using this cmdlet will be permanently deleted and cannot be recovered from the recycle bin.
 > - Only one job is allowed per container type.
 > - Use `-CollectVersionData` first and wait for the job to complete before running `Get-SPETenantApplyFileVersionPolicyJobImpact` to estimate the impact of a policy without deleting any versions.
-> - `-VersionPolicy`, `-SetVersionPolicy`/`-TrimVersions`, and `-CollectVersionData` belong to mutually exclusive parameter sets and cannot be combined.
-> - When `-VersionPolicy` is specified, the container-type version policy is updated. Optionally add `-TrimVersions` to also trim existing versions.
 
 ## EXAMPLES
 
@@ -122,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -SetVersionPolicy
-Sets version policy for existing containers of the container type based on the container-type file version policy. The version policy applies to new versions created in these existing containers.
+Sets version policy for existing containers of the container type based on the container-type file version policy. The version policy applies to new versions created in these existing containers. Cannot be combined with `-VersionPolicy` or `-CollectVersionData`.
 
 ```yaml
 Type: SwitchParameter
