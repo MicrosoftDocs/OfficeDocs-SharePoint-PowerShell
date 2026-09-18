@@ -86,22 +86,6 @@ Accept wildcard characters: False
 
 Use this parameter to get details about applications registered in the specified tenant.
 
-The following details are returned:
-
-- OwningApplicationId
-
-- OwningApplicationName
-
-- Applications (by id)
-
-- SharingCapability
-
-- OverrideTenantSharingCapability
-
-- CopilotEmbeddedChatHosts
-
-- ItemMajorVersionLimit
-
 ```yaml
 Type: System.Guid
 Parameter Sets: (All)

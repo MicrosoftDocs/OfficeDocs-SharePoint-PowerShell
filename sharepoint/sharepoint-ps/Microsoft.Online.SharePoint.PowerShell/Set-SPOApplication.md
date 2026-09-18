@@ -22,6 +22,9 @@ Set-SPOApplication [-OwningApplicationId] <Guid> [[-SharingCapability] <SharingC
  [[-OverrideTenantSharingCapability] <Boolean>]
  [[-CopilotEmbeddedChatHosts] <System.Collections.Generic.List`1[System.String]>]
  [[-ItemMajorVersionLimit] <Int>]
+ [[-EnableAutoExpirationVersionTrim] <Boolean>] [[-ExpireVersionsAfterDays] <Int>]
+ [[-FileTypesForVersionExpiration] <String[]>]
+ [[-RemoveVersionExpirationFileTypeOverride] <String[]>]
  [<CommonParameters>]
 ```
 
@@ -76,6 +79,34 @@ This example sets the host URLs for the application with Id 423poi45.
 Set-SPOApplication -OwningApplicationId 423poi45 -ItemMajorVersionLimit 1000
 ```
 This example sets the ItemMajorVersionLimit to 1000.
+
+### Example 6
+
+```powershell
+Set-SPOApplication -OwningApplicationId 423poi45 -EnableAutoExpirationVersionTrim $true
+```
+This example enables automatic version history trimming for the application's containers. When automatic trimming is enabled, `ExpireVersionsAfterDays` and `ItemMajorVersionLimit` are managed automatically and cannot be set at the same time.
+
+### Example 7
+
+```powershell
+Set-SPOApplication -OwningApplicationId 423poi45 -EnableAutoExpirationVersionTrim $false -ItemMajorVersionLimit 500 -ExpireVersionsAfterDays 180
+```
+This example disables automatic trimming and sets a manual version policy. When `EnableAutoExpirationVersionTrim` is `$false`, both `ItemMajorVersionLimit` and `ExpireVersionsAfterDays` must be specified.
+
+### Example 8
+
+```powershell
+Set-SPOApplication -OwningApplicationId 423poi45 -ExpireVersionsAfterDays 365 -FileTypesForVersionExpiration "docx","xlsx"
+```
+This example applies the version-expiration policy to the specified file types.
+
+### Example 9
+
+```powershell
+Set-SPOApplication -OwningApplicationId 423poi45 -RemoveVersionExpirationFileTypeOverride "docx","xlsx"
+```
+This example removes the file-type version-expiration overrides for the specified file types. `RemoveVersionExpirationFileTypeOverride` cannot be combined with any other version policy parameter.
 
 ## PARAMETERS
 
@@ -132,7 +163,7 @@ Accept wildcard characters: False
 
 ### -ItemMajorVersionLimit
 
-This parameter is used to override ItemMajorVersionLimit for container types.
+This parameter is used to override ItemMajorVersionLimit for container types. Valid values are between 1 and 50000.
 
 ```yaml
 Type: Int
@@ -141,6 +172,73 @@ Aliases:
 
 Required: False
 Position: 4
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableAutoExpirationVersionTrim
+
+Enables or disables automatic file version history trimming for the SharePoint Embedded application's containers.
+
+- `$true` - Version history limits are managed automatically. `ExpireVersionsAfterDays` and `ItemMajorVersionLimit` cannot be specified at the same time.
+- `$false` - A manual version policy is used. Both `ItemMajorVersionLimit` and `ExpireVersionsAfterDays` must be specified.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 5
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExpireVersionsAfterDays
+
+The number of days after which file versions expire. A value of 0 means versions never expire. Otherwise the value must be between 30 and 36500. This parameter cannot be used when `EnableAutoExpirationVersionTrim` is `$true`.
+
+```yaml
+Type: Int
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 6
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FileTypesForVersionExpiration
+
+The file types whose version-expiration policy should be updated. The array cannot be empty, and at least one of `EnableAutoExpirationVersionTrim`, `ItemMajorVersionLimit`, or `ExpireVersionsAfterDays` must also be specified.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 7
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveVersionExpirationFileTypeOverride
+
+The file-type version-expiration overrides to remove. The array cannot be empty. This parameter is exclusive and cannot be combined with `FileTypesForVersionExpiration`, `EnableAutoExpirationVersionTrim`, `ItemMajorVersionLimit`, or `ExpireVersionsAfterDays`.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 8
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
