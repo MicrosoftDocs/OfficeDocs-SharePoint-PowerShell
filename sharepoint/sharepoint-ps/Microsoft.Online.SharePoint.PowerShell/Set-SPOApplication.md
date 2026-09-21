@@ -20,7 +20,6 @@ Sets or updates one or more configuration of a SharePoint Embedded application.
 ```
 Set-SPOApplication [-OwningApplicationId] <Guid> [[-SharingCapability] <SharingCapabilities>]
  [[-OverrideTenantSharingCapability] <Boolean>]
- [[-CopilotEmbeddedChatHosts] <System.Collections.Generic.List`1[System.String]>]
  [[-ItemMajorVersionLimit] <Int>]
  [[-EnableAutoExpirationVersionTrim] <Boolean>] [[-ExpireVersionsAfterDays] <Int>]
  [[-FileTypesForVersionExpiration] <String[]>]
@@ -69,39 +68,32 @@ This example demonstrates how to enable file sharing within the SharePoint Embed
 ### Example 4
 
 ```powershell
-Set-SPOApplication -OwningApplicationId 423poi45 -CopilotEmbeddedChatHosts "https://localhost:3000 https://contoso.sharepoint.com https://fabrikam.com"
-```
-This example sets the host URLs for the application with Id 423poi45.
-
-### Example 5
-
-```powershell
 Set-SPOApplication -OwningApplicationId 423poi45 -ItemMajorVersionLimit 1000
 ```
 This example sets the ItemMajorVersionLimit to 1000.
 
-### Example 6
+### Example 5
 
 ```powershell
 Set-SPOApplication -OwningApplicationId 423poi45 -EnableAutoExpirationVersionTrim $true
 ```
 This example enables automatic version history trimming for the application's containers. When automatic trimming is enabled, `ExpireVersionsAfterDays` and `ItemMajorVersionLimit` are managed automatically and cannot be set at the same time.
 
-### Example 7
+### Example 6
 
 ```powershell
 Set-SPOApplication -OwningApplicationId 423poi45 -EnableAutoExpirationVersionTrim $false -ItemMajorVersionLimit 500 -ExpireVersionsAfterDays 180
 ```
 This example disables automatic trimming and sets a manual version policy. When `EnableAutoExpirationVersionTrim` is `$false`, both `ItemMajorVersionLimit` and `ExpireVersionsAfterDays` must be specified.
 
-### Example 8
+### Example 7
 
 ```powershell
 Set-SPOApplication -OwningApplicationId 423poi45 -ExpireVersionsAfterDays 365 -FileTypesForVersionExpiration "docx","xlsx"
 ```
 This example applies the version-expiration policy to the specified file types.
 
-### Example 9
+### Example 8
 
 ```powershell
 Set-SPOApplication -OwningApplicationId 423poi45 -RemoveVersionExpirationFileTypeOverride "docx","xlsx"
@@ -109,22 +101,6 @@ Set-SPOApplication -OwningApplicationId 423poi45 -RemoveVersionExpirationFileTyp
 This example removes the file-type version-expiration overrides for the specified file types. `RemoveVersionExpirationFileTypeOverride` cannot be combined with any other version policy parameter.
 
 ## PARAMETERS
-
-### -CopilotEmbeddedChatHosts
-
-This parameter is used to add host URLs allowed to use the SharePoint Embedded application's declarative agent experience. This will always be a subset of permissible URLs set by the application's developer. To check the list of permissible URLs, use the `Get-SPOApplication` cmdlet.
-
-```yaml
-Type: System.Collections.Generic.List`1[System.String]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 3
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -OverrideTenantSharingCapability
 

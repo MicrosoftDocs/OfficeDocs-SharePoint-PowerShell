@@ -26,7 +26,7 @@ Get-SPOApplication [[-OwningApplicationId] <Guid>] [[-ApplicationId] <Guid>] [<C
 
 This cmdlet is used to retrieve and return SharePoint Embedded applications from all publishers registered within a tenant. This cmdlet can be further customized by pairing it with the `OwningApplicationId` parameter to target a specific application.
 
-In addition to providing details about the application name, this cmdlet also returns essential information about guest applications and their associated permissions on the owning application. The cmdlet displays data related to the sharing capabilities, including the `OverrideTenantSharingCapability` status. Furthermore, the cmdlet lists all host URLs allowed to use the SharePoint Embedded application's declarative agent experience.
+In addition to providing details about the application name, this cmdlet also returns essential information about guest applications and their associated permissions on the owning application. The cmdlet displays data related to the sharing capabilities, including the `OverrideTenantSharingCapability` status.
 
 You must be a SharePoint Embedded Administrator to run the cmdlet.
 
@@ -46,7 +46,7 @@ Example 1 returns all SharePoint Embedded applications registered in the specifi
 Get-SPOApplication -OwningApplicationId 2ce03211-353e-45d7-b487-8ac6981332cf
 ```
 
-Example 2 provides details about the application corresponding to the owning application Id in the specified tenant. It returns applications, which includes the list of guest application IDs with permissions to the owning application, as well as the SharingCapability settings, the `OverrideTenantSharingCapability` status and the list of all Copilot embedded chat host URLs.
+Example 2 provides details about the application corresponding to the owning application Id in the specified tenant. It returns applications, which includes the list of guest application IDs with permissions to the owning application, as well as the SharingCapability settings and the `OverrideTenantSharingCapability` status.
 
 ### Example 3
 
@@ -55,14 +55,6 @@ Get-SPOApplication -OwningApplicationId 2ce03211-353e-45d7-b487-8ac6981332cf -Ap
 ```
 
 Example 3 enumerates app-only permissions of the guest application specified in `ApplicationId`.
-
-### Example 4
-
-```powershell
-Get-SPOApplication -OwningApplicationId 2ce03211-353e-45d7-b487-8ac6981332cf | Select-Object CopilotEmbeddedChatHosts
-```
-
-Example 4 enumerates the entire list of the host URLs driving the Copilot embedded chat capability on the SharePoint Embedded application.
 
 ## PARAMETERS
 
