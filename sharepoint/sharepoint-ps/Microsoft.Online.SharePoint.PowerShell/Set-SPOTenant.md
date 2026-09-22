@@ -112,7 +112,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-ViewInFileExplorerEnabled <Boolean>] [-AuthContextResilienceMode <SPResilienceModeType>]
  [-ReduceTempTokenLifetimeEnabled <Boolean>] [-ReduceTempTokenLifetimeValue <Int32>]
  [-ShowOpenInDesktopOptionForSyncedFiles <Boolean>] [-ShowPeoplePickerGroupSuggestionsForIB <Boolean>]
- [-EnableRestrictedAccessControl <Boolean>] [-BlockDownloadFileTypePolicy <Boolean>]
+ [-EnableRestrictedAccessControl <Boolean>] [-RestrictAccessControlForAgenticUser <Boolean>]
+ [-BlockDownloadFileTypePolicy <Boolean>]
  [-BlockDownloadFileTypeIds <SPBlockDownloadFileTypeId[]>] [-ExcludedBlockDownloadGroupIds <Guid[]>]
  [-TlsTokenBindingPolicyValue <SPOTlsTokenBindingPolicyValue>] [-RecycleBinRetentionPeriod <Int32>]
  [-IsEnableAppAuthPopUpEnabled <Boolean>] [-IsDataAccessInCardDesignerEnabled <Boolean>]
@@ -248,7 +249,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-ViewInFileExplorerEnabled <Boolean>] [-AuthContextResilienceMode <SPResilienceModeType>]
  [-ReduceTempTokenLifetimeEnabled <Boolean>] [-ReduceTempTokenLifetimeValue <Int32>]
  [-ShowOpenInDesktopOptionForSyncedFiles <Boolean>] [-ShowPeoplePickerGroupSuggestionsForIB <Boolean>]
- [-EnableRestrictedAccessControl <Boolean>] [-BlockDownloadFileTypePolicy <Boolean>]
+ [-EnableRestrictedAccessControl <Boolean>] [-RestrictAccessControlForAgenticUser <Boolean>]
+ [-BlockDownloadFileTypePolicy <Boolean>]
  [-BlockDownloadFileTypeIds <SPBlockDownloadFileTypeId[]>] [-ExcludedBlockDownloadGroupIds <Guid[]>]
  [-TlsTokenBindingPolicyValue <SPOTlsTokenBindingPolicyValue>] [-RecycleBinRetentionPeriod <Int32>]
  [-IsEnableAppAuthPopUpEnabled <Boolean>] [-IsDataAccessInCardDesignerEnabled <Boolean>]
@@ -385,7 +387,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-ViewInFileExplorerEnabled <Boolean>] [-AuthContextResilienceMode <SPResilienceModeType>]
  [-ReduceTempTokenLifetimeEnabled <Boolean>] [-ReduceTempTokenLifetimeValue <Int32>]
  [-ShowOpenInDesktopOptionForSyncedFiles <Boolean>] [-ShowPeoplePickerGroupSuggestionsForIB <Boolean>]
- [-EnableRestrictedAccessControl <Boolean>] [-BlockDownloadFileTypePolicy <Boolean>]
+ [-EnableRestrictedAccessControl <Boolean>] [-RestrictAccessControlForAgenticUser <Boolean>]
+ [-BlockDownloadFileTypePolicy <Boolean>]
  [-BlockDownloadFileTypeIds <SPBlockDownloadFileTypeId[]>] [-ExcludedBlockDownloadGroupIds <Guid[]>]
  [-TlsTokenBindingPolicyValue <SPOTlsTokenBindingPolicyValue>] [-RecycleBinRetentionPeriod <Int32>]
  [-IsEnableAppAuthPopUpEnabled <Boolean>] [-IsDataAccessInCardDesignerEnabled <Boolean>]
@@ -520,7 +523,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-ViewInFileExplorerEnabled <Boolean>] [-AuthContextResilienceMode <SPResilienceModeType>]
  [-ReduceTempTokenLifetimeEnabled <Boolean>] [-ReduceTempTokenLifetimeValue <Int32>]
  [-ShowOpenInDesktopOptionForSyncedFiles <Boolean>] [-ShowPeoplePickerGroupSuggestionsForIB <Boolean>]
- [-EnableRestrictedAccessControl <Boolean>] [-BlockDownloadFileTypePolicy <Boolean>]
+ [-EnableRestrictedAccessControl <Boolean>] [-RestrictAccessControlForAgenticUser <Boolean>]
+ [-BlockDownloadFileTypePolicy <Boolean>]
  [-BlockDownloadFileTypeIds <SPBlockDownloadFileTypeId[]>] [-ExcludedBlockDownloadGroupIds <Guid[]>]
  [-TlsTokenBindingPolicyValue <SPOTlsTokenBindingPolicyValue>] [-RecycleBinRetentionPeriod <Int32>]
  [-IsEnableAppAuthPopUpEnabled <Boolean>] [-IsDataAccessInCardDesignerEnabled <Boolean>]
@@ -655,7 +659,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-ViewInFileExplorerEnabled <Boolean>] [-AuthContextResilienceMode <SPResilienceModeType>]
  [-ReduceTempTokenLifetimeEnabled <Boolean>] [-ReduceTempTokenLifetimeValue <Int32>]
  [-ShowOpenInDesktopOptionForSyncedFiles <Boolean>] [-ShowPeoplePickerGroupSuggestionsForIB <Boolean>]
- [-EnableRestrictedAccessControl <Boolean>] [-BlockDownloadFileTypePolicy <Boolean>]
+ [-EnableRestrictedAccessControl <Boolean>] [-RestrictAccessControlForAgenticUser <Boolean>]
+ [-BlockDownloadFileTypePolicy <Boolean>]
  [-BlockDownloadFileTypeIds <SPBlockDownloadFileTypeId[]>] [-ExcludedBlockDownloadGroupIds <Guid[]>]
  [-TlsTokenBindingPolicyValue <SPOTlsTokenBindingPolicyValue>] [-RecycleBinRetentionPeriod <Int32>]
  [-IsEnableAppAuthPopUpEnabled <Boolean>] [-IsDataAccessInCardDesignerEnabled <Boolean>]
@@ -938,6 +943,15 @@ Set-SPOTenant -DefaultLanguageForSiteCreation "de-DE"
 ```
 
 This example sets the default language for new OneDrive sites to German (Germany). New OneDrive sites created after you run this command use this language instead of the language of the organization's OneDrive host site. To clear the setting and return to the default behavior, pass an empty string: `Set-SPOTenant -DefaultLanguageForSiteCreation ""`.
+
+### EXAMPLE 29
+
+```powershell
+Set-SPOTenant -RestrictAccessControlForAgenticUser $true
+Get-SPOTenant | Select-Object RestrictAccessControlForAgenticUser
+```
+
+This example restricts Agent Users from accessing all sites in the organization and then returns the configured value. The policy is enforced at runtime and doesn't remove existing permissions.
 
 ## PARAMETERS
 
@@ -5374,6 +5388,24 @@ Sets a custom learn more link to inform users who were denied access to a ShareP
 
 ```yaml
 Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RestrictAccessControlForAgenticUser
+
+> Applicable: SharePoint Online
+
+Specifies whether Agent Users are restricted from accessing all sites in the organization. Set this parameter to `$true` to block Agent Users at runtime, or `$false` to remove the organization-wide restriction. Changing this setting doesn't remove existing permissions.
+
+```yaml
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases:
 

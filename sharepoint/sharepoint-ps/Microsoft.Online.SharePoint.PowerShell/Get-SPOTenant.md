@@ -42,6 +42,14 @@ Get-SPOTenant
 
 This example returns the organization-level site collection properties such as StorageQuota, StorageQuotaAllocated, ResourceQuota, ResourceQuotaAllocated, SiteCreationMode and OneDriveStorageQuota.
 
+### Example 2
+
+```powershell
+Get-SPOTenant | Select-Object RestrictAccessControlForAgenticUser
+```
+
+This example returns whether Agent Users are restricted from accessing all sites in the organization.
+
 ## PARAMETERS
 
 ### CommonParameters
