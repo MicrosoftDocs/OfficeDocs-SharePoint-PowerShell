@@ -29,20 +29,6 @@ When you run this cmdlet without parameters, it returns the status and metadata 
 
 When you specify `-ReportID`, the cmdlet returns the metadata and content of that report. The content identifies SharePoint sites, OneDrive accounts, and user-owned SharePoint Embedded containers that are noncompliant with current Information Barriers policies.
 
-The cmdlet can return the following properties:
-
-| Property | Description |
-|----------|-------------|
-| Content | The noncompliant SharePoint sites, OneDrive accounts, and user-owned SharePoint Embedded containers in the specified completed report. |
-| HasNonCompliantSites | Indicates whether the specified report contains noncompliant sites, accounts, or containers. |
-| State | The status of the report. |
-| Id | The unique ID of the report. |
-| StartTimeInUtc | The date and time in UTC when report generation started. |
-| CompleteTimeInUtc | The date and time in UTC when report generation completed. |
-| QueuedTimeInUtc | The date and time in UTC when report generation was queued. |
-| UpdateOneDriveSegments | Indicates whether the report was configured to update noncompliant OneDrive segments automatically. |
-| UpdateUserOwnedContainerSegments | Indicates whether the report was configured to update noncompliant user-owned SharePoint Embedded container segments automatically. |
-
 ## EXAMPLES
 
 ### Example 1
@@ -90,7 +76,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

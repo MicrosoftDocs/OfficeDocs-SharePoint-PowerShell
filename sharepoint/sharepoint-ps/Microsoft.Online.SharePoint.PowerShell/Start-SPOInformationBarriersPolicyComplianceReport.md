@@ -28,7 +28,7 @@ Start-SPOInformationBarriersPolicyComplianceReport [-UpdateOneDriveSegments]
 
 This cmdlet generates an Information Barriers policy compliance report that identifies SharePoint sites, OneDrive accounts, and user-owned SharePoint Embedded containers that are noncompliant with current Information Barriers policies.
 
-Use the optional update parameters to automatically update segments for noncompliant OneDrive accounts or user-owned SharePoint Embedded containers while the report is being generated. Report generation can take a long time, depending on the number of sites, accounts, and containers in the organization.
+Use the optional update parameters to automatically update segments for noncompliant OneDrive accounts or user-owned SharePoint Embedded containers while the report is being generated. Report generation can take a long time, depending on the number of sites, accounts, and containers in the organization. To check the report status, run `Get-SPOInformationBarriersPolicyComplianceReport` without any parameters.
 
 ## EXAMPLES
 
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
