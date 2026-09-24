@@ -254,6 +254,9 @@ Lists hub sites or hub site information.
 ### [Get-SPOInformationBarriersInsightsReport](Get-SPOInformationBarriersInsightsReport.md)
 Enables the SharePoint Administrator to check status of all active and completed reports of insights on Information Barriers (IB).
 
+### [Get-SPOInformationBarriersPolicyComplianceReport](Get-SPOInformationBarriersPolicyComplianceReport.md)
+Gets the status and results of Information Barriers policy compliance reports.
+
 ### [Get-SPOListDesign](Get-SPOListDesign.md)
 Gets details about list designs that are on the SharePoint tenant. You can specify an ID of a specific list design to retrieve. If there are no parameters listed, details about all list designs are listed.
 
@@ -886,6 +889,9 @@ This cmdlet enables administrator to trigger the build of a new enterprise appli
 
 ### [Start-SPOInformationBarriersInsightsReport](Start-SPOInformationBarriersInsightsReport.md)
 Generates a new report to identify and discover the usage patterns of Information Barriers (IB) across SharePoint sites and OneDrive accounts in the organization.
+
+### [Start-SPOInformationBarriersPolicyComplianceReport](Start-SPOInformationBarriersPolicyComplianceReport.md)
+Generates an Information Barriers policy compliance report for SharePoint sites, OneDrive accounts, and user-owned SharePoint Embedded containers in the organization.
 
 ### [Start-SPOM365AgentAccessInsightsReport](Start-SPOM365AgentAccessInsightsReport.md)
 Using this cmdlet, administrators may trigger the build of a new Microsoft 365 agent insight report for the specified number of days.  > [!NOTE] > The feature associated with this cmdlet will be rolling out soon.
