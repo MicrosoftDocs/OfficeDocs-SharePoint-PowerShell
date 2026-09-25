@@ -20,19 +20,24 @@ Sets the configuration of pre-authentication.
 ## SYNTAX
 
 ### IsDisabled
-```
+```powershell
 Set-SPOTenantPreAuthSettings -IsDisabled <Boolean> [<CommonParameters>]
 ```
 
 ### AddListItem
-```
+```powershell
 Set-SPOTenantPreAuthSettings [-Add] -Type <TenantPreAuthSettingsListType> [-IncludedApps <String>]
  [-ExcludedApps <String>] [-IncludedFeatures <String>] [-ExcludedFeatures <String>] [<CommonParameters>]
 ```
 
 ### RemoveListItem
-```
+```powershell
 Set-SPOTenantPreAuthSettings [-Remove] -Id <String> [<CommonParameters>]
+```
+
+### UseGraphUrlSettings
+```powershell
+Set-SPOTenantPreAuthSettings [-UseGraphUrlIsEnabled <Boolean>] [-UseGraphUrlAppsList <String>]  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -58,6 +63,44 @@ You can use this cmdlet to configure or disable the pre-authentication feature w
 
 You must be a SharePoint Administrator to run the cmdlet.
 
+### Microsoft Graph URL settings
+
+Microsoft Graph file APIs can return URLs that applications use to download, upload, preview, transform, or monitor file operations. Some of these URLs have historically included pre-authentication tokens or redirected clients to pre-authenticated URLs.
+
+You can use this cmdlet to start receiving Microsoft Graph URLs from supported APIs for third-party applications.
+
+### Expected API behavior
+
+**APIs that return URLs**
+
+For APIs with a Microsoft Graph alternative, if the setting is enabled for the calling application, the response uses a Microsoft Graph URL, and the application can call that URL by using an appropriate Microsoft Graph access token.
+
+For APIs without a Microsoft Graph alternative, the returned SharePoint Online URL does not contain temporary authentication information. The application must obtain an appropriate Microsoft Entra access token for SharePoint Online and include it when calling the returned URL.
+
+**APIs that currently return an HTTP 302 redirect**
+
+Affected APIs return content directly rather than redirecting the application to a temporary authentication URL. Applications must not depend on intercepting the redirect, extracting a temporary authentication value from the redirect location, passing the redirected URL to an unauthenticated client, or assuming that every content request returns an HTTP 302 status code. Applications should be prepared to process a successful content response from the original Microsoft Graph request.
+
+**Direct SharePoint API requests**
+
+The tenant setting applies when the original request is made through Microsoft Graph. It does not change requests that applications make directly to SharePoint APIs.
+
+**Affected API scenarios**
+
+| API Scenario         | Expected behavior                                                              | 
+|----------------------|--------------------------------------------------------------------------------|
+|Drive item and children responses |	Configured applications receive Microsoft Graph contentStream URLs where supported.|
+|Drive item /content	|Content is returned directly instead of through an HTTP 302 redirect to a temporary authentication URL.|
+|Drive item /contentStream	|No change is expected.|
+|Drive item versions	|Configured applications receive Microsoft Graph content URLs for current and previous versions where supported.|
+|Version /content	|Content is returned directly instead of through an HTTP 302 redirect.|
+|Create upload session	|The returned SharePoint Online upload URL does not contain temporary authentication information. The application must authenticate to SharePoint Online.|
+|Copy operation	|The monitor URL does not contain temporary authentication information. The application must authenticate when polling the SharePoint Online URL.|
+|Preview	|The preview URL does not contain temporary authentication information. The application must authenticate to SharePoint Online.|
+|Thumbnails	|Configured applications receive Microsoft Graph thumbnail content URLs where supported.|
+|Thumbnail content	|Content is returned directly instead of through an HTTP 302 redirect to a temporary authentication URL.|
+|Format conversion	|Converted content is returned directly instead of through an HTTP 302 redirect, subject to API availability.|
+
 ## EXAMPLES
 
 ### Example 1
@@ -66,12 +109,14 @@ Set-SPOTenantPreAuthSettings -IsDisabled $true
 
 Set-SPOTenantPreAuthSettings -Add -Type Allow -IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42,0ab82eba-96c7-4681-9f75-c18437e20d0e"
 ```
+
 This example disables pre-authentication overall and adds a setting that allows two apps to use pre-authentication for all features.
 
 ### Example 2
 ```powershell
 Set-SPOTenantPreAuthSettings -Add -Type Allow -IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42,0ab82eba-96c7-4681-9f75-c18437e20d0e" -ExcludedApps "" -IncludedFeatures "" -ExcludedFeatures ""
 ```
+
 This example performs the same function as example 1 except in this case the switches for `-ExcludedApps`, `-IncludedFeatures`, and `-ExcludedFeatures` are added to the cmdlet.
 
 These switches are assumed to take the default value of `""` if not used with the cmdlet and example 2 is used to demonstrate the complete set of switches only.
@@ -120,6 +165,35 @@ This example enables pre-authentication overall and denies requests that are not
 >   - If you have `–IncludedApps "" -ExcludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42"`, it means that the setting applies to all apps apart from `"029e7c27-4b9c-4f8b-ba32-b96249468d42"`.
 >   - If you have `–IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42" and -ExcludedApps ""`, it means that the setting only applies to the app `"029e7c27-4b9c-4f8b-ba32-b96249468d42"`
 >   - You cannot have a setting with `–IncludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42" –ExcludedApps "029e7c27-4b9c-4f8b-ba32-b96249468d42"`
+
+### Example 7
+
+
+```powershell
+Set-SPOTenantPreAuthSettings -UseGraphUrlIsEnabled $true -UseGraphUrlAppsList "029e7c27-4b9c-4f8b-ba32-b96249468d42,0ab82eba-96c7-4681-9f75-c18437e20d0e"
+```
+
+This example enables the setting for two apps, which means that supported Microsoft Graph APIs will return Graph URLs to these apps. Using a targeted list allows you to validate application compatibility before applying the behavior more broadly.
+
+### Example 8
+
+
+```powershell
+Set-SPOTenantPreAuthSettings -UseGraphUrlIsEnabled $true -UseGraphUrlAppsList ""
+```
+
+This example enables the setting for all 3P applications by supplying an empty application list.
+
+
+
+### Example 9
+
+
+```powershell
+Set-SPOTenantPreAuthSettings -UseGraphUrlIsEnabled $false
+```
+
+This example shows how to stop returning Microsoft Graph URLs through this setting.
 
 ## PARAMETERS
 
@@ -262,6 +336,39 @@ Aliases:
 Accepted values: Allow, Deny
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -UseGraphUrlIsEnabled
+
+Determines whether supported APIs can return Microsoft Graph URLs to configured applications.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: UseGraphUrlSettings
+Aliases:
+Accepted values: True, False
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseGraphUrlAppsList
+
+Contains the Microsoft Entra application IDs that receive the new behavior. An empty string means that the setting applies to all applications. This only applies when `-UseGraphUrlIsEnabled` is set to `$true`.
+
+
+```yaml
+Type: System.String
+Parameter Sets: UseGraphUrlSettings
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
