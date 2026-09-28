@@ -31,9 +31,11 @@ type when paired with the `ContainerTypeId` parameter.
 
 You must be a SharePoint Embedded Administrator to run the cmdlet.
 
-While the basic information of container types is displayed to all administrators running this
-cmdlet, the billing information about a container type is only visible to administrators who also
-have owner or contributor access on the billing subscription attached to the container type.
+For standard container types with a billing profile, this cmdlet displays `AzureSubscriptionId` to all
+SharePoint Embedded Administrators. You don't need permissions on the billing subscription to view this ID.
+
+Other billing information, including `ResourceGroup` and `Region`, is visible only to administrators
+with Owner or Contributor access on the billing subscription attached to the container type.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Embedded
 Containers, see the documentation at
