@@ -62,6 +62,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-Owner <String>] [-Title <String>] [-
  [-DefaultShareLinkScope <SharingScope>]
  [-DefaultShareLinkRole <SharingRole>] [-BlockGuestsAsSiteAdmin <SharingState>]
  [-FileAnonymousLinkType <AnonymousLinkType>] [-FolderAnonymousLinkType <AnonymousLinkType>]
+ [-RestrictContentOrgWideSearch <Boolean>]
  [-RestrictedAccessControl <Boolean>] [-RestrictedAccessControlGroups <Guid[]>]
  [-ListsShowHeaderAndNavigation <Boolean>] [-HidePeoplePreviewingFiles <Boolean>]
  [-HidePeopleWhoHaveListsOpen <Boolean>] [-IsAuthoritative <Boolean>] [-AllowFileArchive <Boolean>]
