@@ -158,6 +158,12 @@ Get the current state of Microsoft-provided SharePoint site templates displayed 
 ### [Get-SPOContainer](Get-SPOContainer.md)
 Returns one or more containers in a SharePoint Embedded application.
 
+### [Get-SPOContainerTenantApplyFileVersionPolicyJobImpact](Get-SPOContainerTenantApplyFileVersionPolicyJobImpact.md)
+Estimates the impact of applying a file version policy across all containers of a SharePoint Embedded container type.
+
+### [Get-SPOContainerTenantApplyFileVersionPolicyJobProgress](Get-SPOContainerTenantApplyFileVersionPolicyJobProgress.md)
+Returns the progress of the file version policy job for a SharePoint Embedded container type.
+
 ### [Get-SPOContainerType](Get-SPOContainerType.md)
 Returns one or more container types created in the tenant.
 
@@ -247,6 +253,9 @@ Lists hub sites or hub site information.
 
 ### [Get-SPOInformationBarriersInsightsReport](Get-SPOInformationBarriersInsightsReport.md)
 Enables the SharePoint Administrator to check status of all active and completed reports of insights on Information Barriers (IB).
+
+### [Get-SPOInformationBarriersPolicyComplianceReport](Get-SPOInformationBarriersPolicyComplianceReport.md)
+Gets the status and results of Information Barriers policy compliance reports.
 
 ### [Get-SPOListDesign](Get-SPOListDesign.md)
 Gets details about list designs that are on the SharePoint tenant. You can specify an ID of a specific list design to retrieve. If there are no parameters listed, details about all list designs are listed.
@@ -473,6 +482,9 @@ Invokes a job to swap the location of a site with another site while archiving t
 ### [New-SPOAppBillingPolicy](New-SPOAppBillingPolicy.md)
 Creates a new billing policy for an application owned by the tenant.
 
+### [New-SPOContainerTenantApplyFileVersionPolicyJob](New-SPOContainerTenantApplyFileVersionPolicyJob.md)
+Queues a job to apply a file version policy across all containers of a SharePoint Embedded container type.
+
 ### [New-SPOContainerType](New-SPOContainerType.md)
 This cmdlet creates a new container type of standard or trial status. The standard container type can be created with the regular billing structure or direct to customer billing structure.
 
@@ -532,6 +544,9 @@ Removes billing policy associated with the application.
 
 ### [Remove-SPOContainer](Remove-SPOContainer.md)
 Sends a Container to the Recycle Bin.
+
+### [Remove-SPOContainerTenantApplyFileVersionPolicyJob](Remove-SPOContainerTenantApplyFileVersionPolicyJob.md)
+Cancels the file version policy job for a SharePoint Embedded container type.
 
 ### [Remove-SPOContainerType](Remove-SPOContainerType.md)
 This cmdlet removes the container type specified from the tenant.
@@ -874,6 +889,9 @@ This cmdlet enables administrator to trigger the build of a new enterprise appli
 
 ### [Start-SPOInformationBarriersInsightsReport](Start-SPOInformationBarriersInsightsReport.md)
 Generates a new report to identify and discover the usage patterns of Information Barriers (IB) across SharePoint sites and OneDrive accounts in the organization.
+
+### [Start-SPOInformationBarriersPolicyComplianceReport](Start-SPOInformationBarriersPolicyComplianceReport.md)
+Generates an Information Barriers policy compliance report for SharePoint sites, OneDrive accounts, and user-owned SharePoint Embedded containers in the organization.
 
 ### [Start-SPOM365AgentAccessInsightsReport](Start-SPOM365AgentAccessInsightsReport.md)
 Using this cmdlet, administrators may trigger the build of a new Microsoft 365 agent insight report for the specified number of days.  > [!NOTE] > The feature associated with this cmdlet will be rolling out soon.

@@ -9,7 +9,8 @@ author: samkabue
 ms.author: speedta
 ms.reviewer: Mengke-GH
 description: 'A PowerShell cmdlet used in SharePoint Online to configure organization-wide tenant settings.'
-ms.date: 08/03/2026
+ms.date: 09/23/2026
+ai-usage: ai-assisted
 ---
 
 # Set-SPOTenant
@@ -142,6 +143,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AutofillColumnsSelectedSitesListOperation <SelectedSitesListOperations>]
  [-KnowledgeAgentScope <KnowledgeAgentFeatureScopeValue>] [-KnowledgeAgentSelectedSitesList <String[]>]
  [-KnowledgeAgentSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-SmartWikiEntryScope <SmartWikiEntryScopeValue>] [-SmartWikiEntrySelectedSitesList <String[]>]
+ [-SmartWikiEntrySelectedSitesListOperation <SelectedSitesListOperations>]
  [-OpticalCharacterRecognitionScope <SyntexFeatureScopeValue>]
  [-OpticalCharacterRecognitionSelectedSitesList <String[]>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
@@ -279,6 +282,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AutofillColumnsSelectedSitesListOperation <SelectedSitesListOperations>]
  [-KnowledgeAgentScope <KnowledgeAgentFeatureScopeValue>] [-KnowledgeAgentSelectedSitesList <String[]>]
  [-KnowledgeAgentSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-SmartWikiEntryScope <SmartWikiEntryScopeValue>] [-SmartWikiEntrySelectedSitesList <String[]>]
+ [-SmartWikiEntrySelectedSitesListOperation <SelectedSitesListOperations>]
  [-OpticalCharacterRecognitionScope <SyntexFeatureScopeValue>]
  [-OpticalCharacterRecognitionSelectedSitesList <String[]>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
@@ -417,6 +422,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AutofillColumnsSelectedSitesListOperation <SelectedSitesListOperations>]
  [-KnowledgeAgentScope <KnowledgeAgentFeatureScopeValue>] [-KnowledgeAgentSelectedSitesList <String[]>]
  [-KnowledgeAgentSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-SmartWikiEntryScope <SmartWikiEntryScopeValue>] [-SmartWikiEntrySelectedSitesList <String[]>]
+ [-SmartWikiEntrySelectedSitesListOperation <SelectedSitesListOperations>]
  [-OpticalCharacterRecognitionScope <SyntexFeatureScopeValue>]
  [-OpticalCharacterRecognitionSelectedSitesList <String[]>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
@@ -553,6 +560,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AutofillColumnsSelectedSitesListOperation <SelectedSitesListOperations>]
  [-KnowledgeAgentScope <KnowledgeAgentFeatureScopeValue>] [-KnowledgeAgentSelectedSitesList <String[]>]
  [-KnowledgeAgentSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-SmartWikiEntryScope <SmartWikiEntryScopeValue>] [-SmartWikiEntrySelectedSitesList <String[]>]
+ [-SmartWikiEntrySelectedSitesListOperation <SelectedSitesListOperations>]
  [-OpticalCharacterRecognitionScope <SyntexFeatureScopeValue>]
  [-OpticalCharacterRecognitionSelectedSitesList <String[]>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
@@ -689,6 +698,8 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AutofillColumnsSelectedSitesListOperation <SelectedSitesListOperations>]
  [-KnowledgeAgentScope <KnowledgeAgentFeatureScopeValue>] [-KnowledgeAgentSelectedSitesList <String[]>]
  [-KnowledgeAgentSelectedSitesListOperation <SelectedSitesListOperations>]
+ [-SmartWikiEntryScope <SmartWikiEntryScopeValue>] [-SmartWikiEntrySelectedSitesList <String[]>]
+ [-SmartWikiEntrySelectedSitesListOperation <SelectedSitesListOperations>]
  [-OpticalCharacterRecognitionScope <SyntexFeatureScopeValue>]
  [-OpticalCharacterRecognitionSelectedSitesList <String[]>]
  [-OpticalCharacterRecognitionSelectedSitesListOperation <SelectedSitesListOperations>]
@@ -952,6 +963,27 @@ Get-SPOTenant | Select-Object RestrictAccessControlForAgenticUser
 ```
 
 This example restricts Agent Users from accessing all sites in the organization and then returns the configured value. The policy is enforced at runtime and doesn't remove existing permissions.
+Set-SPOTenant -SmartWikiEntryScope AllSites
+```
+
+This example makes the Smart Wiki library entry point available on all sites in the organization.
+
+### EXAMPLE 30
+
+```powershell
+Set-SPOTenant -SmartWikiEntryScope IncludeSelectedSites -SmartWikiEntrySelectedSitesList "https://contoso.sharepoint.com/sites/marketing","https://contoso.sharepoint.com/sites/sales"
+```
+
+This example makes the Smart Wiki library entry point available only on the two specified sites. The specified sites replace any previously selected sites.
+
+### EXAMPLE 31
+
+```powershell
+Set-SPOTenant -SmartWikiEntrySelectedSitesList "https://contoso.sharepoint.com/sites/hr" -SmartWikiEntrySelectedSitesListOperation Append
+Get-SPOTenant | Select-Object SmartWikiEntryScope, SmartWikiEntrySelectedSitesList
+```
+
+This example adds a site to the current selected sites list for the Smart Wiki library entry point without changing the scope. It then displays the current scope and the selected sites.
 
 ## PARAMETERS
 
@@ -3413,15 +3445,34 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Allows tenant admins to turn on support for Video files with sensitivity labels for the following scenarios:
+Controls sensitivity label support for MP4 video files in SharePoint and OneDrive, including the following scenarios:
 
-- Applying a sensitivity label to Video files on Sharepoint.
-- Uploading a labeled document, and then extracting and displaying that sensitivity label.
+- Applying a sensitivity label to an MP4 file.
+- Extracting and displaying the sensitivity label on an uploaded MP4 file.
 
 The valid values are:
 
-- True - Enables support for Video files.
-- False (default) - Disables support for Video files.
+- True - Enables sensitivity label support for MP4 files.
+- False (default) - Disables sensitivity label support for MP4 files.
+
+An update extends this parameter to Clipchamp project labeling and label inheritance on MP4 exports. The behavior before and after the update is described in this section.
+
+> [!NOTE]
+> The update announced in Message Center post MC1454399 is rolling out worldwide from mid-September 2026, with completion expected in mid-October 2026. The schedule doesn't confirm availability for an individual tenant.
+
+**Before the change reaches your tenant**, `EnableSensitivityLabelForVideoFiles` doesn't control project labeling in the Clipchamp editor. Even when the value is `$false`, Clipchamp can apply your organization's default sensitivity label to a project, and MP4 exports can inherit the project's label.
+
+**After the change reaches your tenant**, the following behavior also applies to `.clipchamp` projects:
+
+| Value and project state after rollout | Project labels and imported media | New MP4 exports |
+| --- | --- | --- |
+| `$true` | Your organization's default label policy applies. Supported label changes and imports are subject to label, protection, and permission checks. | Inherit the project's label, if one is applied. |
+| `$false`, project is unlabeled | No default label or label changes; the picker is hidden. Importing supported protected or non-protected labeled media requires acknowledgment that neither the project nor its export inherits the source label. | Don't inherit a label from the project. |
+| `$false`, project already has a valid label | The existing label and restrictions remain, but label changes are blocked. Imports retain the same checks as for `$true`, but imports that require a project label upgrade are blocked. | Don't inherit the project's label or restrictions from that label. Clipchamp warns before exporting without the label. Users still need permission to export the project. |
+
+Users must still have permission to access and use the source media. After the change reaches your tenant, when the value is `$false`, users can share or download newly exported, unlabeled MP4 videos from Clipchamp, subject to other permissions and policies. This doesn't remove restrictions from the project or change previously exported MP4 files. Setting the value to `$true` doesn't remove Clipchamp's existing limitations on supported label changes.
+
+For Microsoft 365 Multi-Geo, connect to each geo-location and configure the setting separately. Review the effect on your organization's video workflows before changing it. For details, see [Video support for MP4 files and Clipchamp projects](/purview/sensitivity-labels-sharepoint-onedrive-files#video-support-mp4-files).
 
 ```yaml
 Type: System.Boolean
@@ -5909,6 +5960,93 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -SmartWikiEntryScope
+
+> Applicable: SharePoint Online
+
+Specifies the sites where the Smart Wiki library entry point is available to users.
+
+The valid values are:
+
+- `NoSites`: This setting doesn't make the entry point available on any site. This is the default value.
+- `AllSites`: The entry point is available on all sites.
+- `IncludeSelectedSites`: The entry point is available only on the sites in `SmartWikiEntrySelectedSitesList`.
+- `ExcludeSelectedSites`: The entry point is available on all sites except the sites in `SmartWikiEntrySelectedSitesList`.
+
+When you specify this parameter, the current selected sites list is cleared. To set a new list, specify `SmartWikiEntrySelectedSitesList` in the same command. To change the list without changing the scope, omit this parameter.
+
+It might take some time for changes to take effect, and users might need to refresh the page to see them.
+
+> [!NOTE]
+> This setting only controls where the Smart Wiki library entry point is available. It doesn't activate SharePoint features or change access to existing Smart Wiki libraries. `NoSites` doesn't turn off the entry point on sites where it's otherwise available.
+
+```yaml
+Type: SmartWikiEntryScopeValue
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: NoSites
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SmartWikiEntrySelectedSitesList
+
+> Applicable: SharePoint Online
+
+Specifies the site URLs for the Smart Wiki library entry point setting. When `SmartWikiEntryScope` is `IncludeSelectedSites`, the entry point is available only on these sites. When `SmartWikiEntryScope` is `ExcludeSelectedSites`, the entry point is available on all sites except these sites.
+
+You can use this parameter only when `SmartWikiEntryScope` is `IncludeSelectedSites` or `ExcludeSelectedSites`, either in the same command or as the current setting.
+
+By default, the list that you specify replaces the current list. To add sites to or remove sites from the current list, use the `SmartWikiEntrySelectedSitesListOperation` parameter.
+
+Specify the URL of each site collection, for example `https://contoso.sharepoint.com/sites/marketing`. The setting applies to the entire site collection, including its subsites. URLs that don't match a site collection in your organization are ignored, and the cmdlet displays a warning that lists them.
+
+The list can contain up to 100 sites. To clear the list, specify an empty array (`@()`) with the default `Overwrite` operation. When the list is empty, `IncludeSelectedSites` doesn't make the entry point available on any site, and `ExcludeSelectedSites` makes it available on all sites.
+
+If a selected site is deleted, it no longer appears in the `Get-SPOTenant` output, but it still counts toward the 100-site limit until you overwrite the list.
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SmartWikiEntrySelectedSitesListOperation
+
+> Applicable: SharePoint Online
+
+Specifies how the site URLs in `SmartWikiEntrySelectedSitesList` are applied to the current selected sites list.
+
+The valid values are:
+
+- `Overwrite`: Replaces the current list with the specified sites. This is the default value.
+- `Append`: Adds the specified sites to the current list.
+- `Remove`: Removes the specified sites from the current list.
+
+> [!NOTE]
+> You must specify `SmartWikiEntrySelectedSitesList` when you use this parameter. Otherwise, the command returns an error.
+
+```yaml
+Type: SelectedSitesListOperations
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Overwrite
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
