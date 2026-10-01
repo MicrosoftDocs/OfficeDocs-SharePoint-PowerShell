@@ -390,17 +390,19 @@ Example 24 removes the version history limit override for video and audio file t
 ### Example 25
 
 ```powershell
-Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -RestrictAccessControlForAgenticUser $true
-Get-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 | Select-Object Url, RestrictAccessControlForAgenticUser
-```
-
-Example 25 restricts Agent Users from accessing the site and then returns the configured value. The policy is enforced at runtime and doesn't remove existing permissions.
-
-```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -FolderAnonymousLinkType ViewUpload -FileAnonymousLinkType None
 ```
 
 Example 25 sets a site level override for FolderAnonymousLinkType to limit anonymous and request files folder sharing to only support view and upload permissions and clears any site level override for the FileAnonymousLinkType by setting it to None.
+
+### Example 26
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -RestrictAccessControlForAgenticUser $true
+Get-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 | Select-Object Url, RestrictAccessControlForAgenticUser
+```
+
+Example 26 restricts Agent Users from accessing the site and then returns the configured value. The policy is enforced at runtime and doesn't remove existing permissions.
 
 ## PARAMETERS
 
