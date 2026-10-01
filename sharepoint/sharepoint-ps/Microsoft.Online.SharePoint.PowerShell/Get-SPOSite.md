@@ -162,6 +162,14 @@ Get-SPOSite -Filter "Owner -like '$($userUPN)'"
 ```
 This example retrieves all sites filtering by the specified owner using a variable.
 
+### EXAMPLE 13
+
+```powershell
+Get-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 | Select-Object Url, RestrictAccessControlForAgenticUser
+```
+
+This example returns whether Agent Users are restricted from accessing the site.
+
 ## PARAMETERS
 
 ### -ArchiveStatus
