@@ -958,11 +958,6 @@ This example sets the default language for new OneDrive sites to German (Germany
 ### EXAMPLE 29
 
 ```powershell
-Set-SPOTenant -RestrictAccessControlForAgenticUser $true
-Get-SPOTenant | Select-Object RestrictAccessControlForAgenticUser
-```
-
-This example restricts Agent Users from accessing all sites in the organization and then returns the configured value. The policy is enforced at runtime and doesn't remove existing permissions.
 Set-SPOTenant -SmartWikiEntryScope AllSites
 ```
 
@@ -984,6 +979,15 @@ Get-SPOTenant | Select-Object SmartWikiEntryScope, SmartWikiEntrySelectedSitesLi
 ```
 
 This example adds a site to the current selected sites list for the Smart Wiki library entry point without changing the scope. It then displays the current scope and the selected sites.
+
+### EXAMPLE 32
+
+```powershell
+Set-SPOTenant -RestrictAccessControlForAgenticUser $true
+Get-SPOTenant | Select-Object RestrictAccessControlForAgenticUser
+```
+
+This example restricts Agent Users from accessing all sites in the organization and then returns the configured value. The policy is enforced at runtime and doesn't remove existing permissions.
 
 ## PARAMETERS
 
