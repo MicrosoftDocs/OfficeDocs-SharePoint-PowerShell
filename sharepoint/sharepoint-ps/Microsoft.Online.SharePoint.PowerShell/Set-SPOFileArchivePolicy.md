@@ -28,7 +28,7 @@ Set-SPOFileArchivePolicy -PolicyId <Guid> [-Name <String>] [-PolicyType <SPOFile
 
 This cmdlet updates the properties of an existing file archive policy. Only the parameters that are specified will be updated; all other properties remain unchanged. You cannot set the State to `Active` unless the PolicyType is `AllSites` or `AllODBSites`, or at least one site has been added to the policy using `Add-SPOSiteToFileArchivePolicy`.
 
-Use the latest SharePoint Online Management Shell module to configure file-type filtering.
+To configure file-type filtering, use SharePoint Online Management Shell module version [16.0.27709.12000](https://www.powershellgallery.com/packages/Microsoft.Online.SharePoint.PowerShell/16.0.27709.12000) or later.
 
 > [!NOTE]
 > This cmdlet is part of the file archive policies feature which is currently in preview.
