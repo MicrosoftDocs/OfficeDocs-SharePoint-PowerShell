@@ -30,6 +30,8 @@ This cmdlet creates a new file archive policy for the connected SharePoint Onlin
 
 Use `-PolicyType` to choose the scope of the policy: all SharePoint sites in the tenant (`AllSites`), all OneDrive for Business sites in the tenant (`AllODBSites`), or only the sites you explicitly add (`SelectedSites`).
 
+Use the latest SharePoint Online Management Shell module to configure file-type filtering.
+
 > [!NOTE]
 > This cmdlet is part of the file archive policies feature which is currently in preview.
 
@@ -67,11 +69,45 @@ New-SPOFileArchivePolicy -PolicyType "AllSites" -IsWhatIfMode $true
 
 Creates a new file archive policy in `WhatIf` mode. When the policy runs, it will report which files would be archived without actually archiving them.
 
+### Example 5
+
+```powershell
+New-SPOFileArchivePolicy -PolicyType "AllSites" -Name "ArchiveDocuments" -LastAccessDateCriteria 12 -FileTypeCriteria @(".docx", ".pdf") -IsWhatIfMode $true
+```
+
+Creates a file archive policy that includes Word documents (`.docx`) and PDF files (`.pdf`) not accessed in the last 12 months. When activated, the policy reports eligible files without archiving them.
+
+### Example 6
+
+```powershell
+New-SPOFileArchivePolicy -PolicyType "AllSites" -Name "ArchiveOtherFileTypes" -LastAccessDateCriteria 12 -FileTypeExclusionCriteria @(".xlsx", ".pdf") -IsWhatIfMode $true
+Add-SPOSiteToFileArchivePolicy -PolicyId "a1b2c3d4-e5f6-7890-abcd-ef1234567890" -Site "https://contoso.sharepoint.com/sites/legal" -Exclude
+Set-SPOFileArchivePolicy -PolicyId "a1b2c3d4-e5f6-7890-abcd-ef1234567890" -State "Active"
+```
+
+Creates a file archive policy for all SharePoint sites, excluding Excel workbooks (`.xlsx`), PDF files (`.pdf`), and the Legal site. After activation, the policy reports eligible files not accessed in the last 12 months without archiving them.
+
+Replace the sample policy ID in the second and third commands with the ID of the newly created policy. Use `Get-SPOFileArchivePolicy` to retrieve the policy ID.
+
+### Example 7
+
+```powershell
+New-SPOFileArchivePolicy -PolicyType "AllODBSites" -Name "ArchiveOneDriveWithExclusion" -LastAccessDateCriteria 12 -IsWhatIfMode $true
+Add-SPOSiteToFileArchivePolicy -PolicyId "a1b2c3d4-e5f6-7890-abcd-ef1234567890" -Site "https://contoso-my.sharepoint.com/personal/user_contoso_com" -Exclude
+Set-SPOFileArchivePolicy -PolicyId "a1b2c3d4-e5f6-7890-abcd-ef1234567890" -State "Active"
+```
+
+Creates a file archive policy for all OneDrive for Business sites, excluding the specified user's OneDrive site. After activation, the policy reports eligible files not accessed in the last 12 months without archiving them.
+
+Replace the sample policy ID in the second and third commands with the ID of the newly created policy. Use `Get-SPOFileArchivePolicy` to retrieve the policy ID.
+
 ## PARAMETERS
 
 ### -FileTypeCriteria
 
 Specifies an array of file extensions to include in the policy, in dot-prefixed format (for example, `.docx`). Only files matching the specified extensions are considered for archiving. When omitted, all file types are included.
+
+To specify multiple file types, use an explicit PowerShell array, such as `-FileTypeCriteria @(".docx", ".pdf")`. Include the leading dot in each extension. Don't combine multiple extensions into a single string, such as `".docx, .pdf"`.
 
 ```yaml
 Type: String[]
@@ -88,6 +124,8 @@ Accept wildcard characters: False
 ### -FileTypeExclusionCriteria
 
 Specifies an array of file extensions to exclude from the policy, in dot-prefixed format (for example, `.docx`). Files matching the specified extensions aren't archived. When omitted, no file types are excluded.
+
+To exclude multiple file types, use an explicit PowerShell array, such as `-FileTypeExclusionCriteria @(".xlsx", ".pdf")`. Include the leading dot in each extension. Don't combine multiple extensions into a single string, such as `".xlsx, .pdf"`.
 
 ```yaml
 Type: String[]
