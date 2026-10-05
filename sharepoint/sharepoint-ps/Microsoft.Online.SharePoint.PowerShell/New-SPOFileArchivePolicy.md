@@ -30,7 +30,7 @@ This cmdlet creates a new file archive policy for the connected SharePoint Onlin
 
 Use `-PolicyType` to choose the scope of the policy: all SharePoint sites in the tenant (`AllSites`), all OneDrive for Business sites in the tenant (`AllODBSites`), or only the sites you explicitly add (`SelectedSites`).
 
-Use the latest SharePoint Online Management Shell module to configure file-type filtering.
+To configure file-type filtering, use SharePoint Online Management Shell module version [16.0.27709.12000](https://www.powershellgallery.com/packages/Microsoft.Online.SharePoint.PowerShell/16.0.27709.12000) or later.
 
 > [!NOTE]
 > This cmdlet is part of the file archive policies feature which is currently in preview.
