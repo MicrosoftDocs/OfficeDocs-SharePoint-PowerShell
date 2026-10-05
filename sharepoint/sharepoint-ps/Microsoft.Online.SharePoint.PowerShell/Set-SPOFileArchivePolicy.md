@@ -28,6 +28,8 @@ Set-SPOFileArchivePolicy -PolicyId <Guid> [-Name <String>] [-PolicyType <SPOFile
 
 This cmdlet updates the properties of an existing file archive policy. Only the parameters that are specified will be updated; all other properties remain unchanged. You cannot set the State to `Active` unless the PolicyType is `AllSites` or `AllODBSites`, or at least one site has been added to the policy using `Add-SPOSiteToFileArchivePolicy`.
 
+Use the latest SharePoint Online Management Shell module to configure file-type filtering.
+
 > [!NOTE]
 > This cmdlet is part of the file archive policies feature which is currently in preview.
 
@@ -63,6 +65,8 @@ Enables `WhatIf` mode on the specified policy. Future policy runs will report el
 
 Specifies an updated array of file extensions to include in the policy, in dot-prefixed format (for example, `.docx`). Only files matching the specified extensions are considered for archiving.
 
+To specify multiple file types, use an explicit PowerShell array, such as `-FileTypeCriteria @(".docx", ".pdf")`. Include the leading dot in each extension. Don't combine multiple extensions into a single string, such as `".docx, .pdf"`.
+
 ```yaml
 Type: String[]
 Parameter Sets: (All)
@@ -78,6 +82,8 @@ Accept wildcard characters: False
 ### -FileTypeExclusionCriteria
 
 Specifies an updated array of file extensions to exclude from the policy, in dot-prefixed format (for example, `.docx`). Files matching the specified extensions aren't archived.
+
+To exclude multiple file types, use an explicit PowerShell array, such as `-FileTypeExclusionCriteria @(".xlsx", ".pdf")`. Include the leading dot in each extension. Don't combine multiple extensions into a single string, such as `".xlsx, .pdf"`.
 
 ```yaml
 Type: String[]
