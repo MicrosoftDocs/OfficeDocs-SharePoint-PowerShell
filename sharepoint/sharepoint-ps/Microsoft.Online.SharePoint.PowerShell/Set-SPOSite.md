@@ -62,7 +62,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-Owner <String>] [-Title <String>] [-
  [-DefaultShareLinkScope <SharingScope>]
  [-DefaultShareLinkRole <SharingRole>] [-BlockGuestsAsSiteAdmin <SharingState>]
  [-FileAnonymousLinkType <AnonymousLinkType>] [-FolderAnonymousLinkType <AnonymousLinkType>]
- [-RestrictContentOrgWideSearch <Boolean>] [-RestrictedContentDiscoveryforCopilotAndAgents <Boolean>]
+ [-RestrictContentOrgWideSearch <Boolean>]
  [-RestrictAccessControlForAgenticUser <Boolean>]
  [-RestrictedAccessControl <Boolean>] [-RestrictedAccessControlGroups <Guid[]>]
  [-ListsShowHeaderAndNavigation <Boolean>] [-HidePeoplePreviewingFiles <Boolean>]
@@ -2150,22 +2150,6 @@ Specifies the IDs of groups that have access under an access restriction policy.
 
 ```yaml
 Type: System.Guid[]
-Parameter Sets: ParamSet1
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RestrictedContentDiscoveryforCopilotAndAgents
-
-Sets or updates the site setting to host Agents by activating or deactivating the Restricted Content Discovery (RCD) for Agents. *Currently under private preview.*
-
-```yaml
-Type: System.Boolean
 Parameter Sets: ParamSet1
 Aliases:
 
