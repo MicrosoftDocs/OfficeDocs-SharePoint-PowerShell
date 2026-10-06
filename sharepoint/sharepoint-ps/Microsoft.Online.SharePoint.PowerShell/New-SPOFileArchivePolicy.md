@@ -35,6 +35,8 @@ To configure file-type filtering, use SharePoint Online Management Shell module 
 > [!NOTE]
 > This cmdlet is part of the file archive policies feature which is currently in preview.
 
+File type filters don't override the built-in exclusions for SAM automatic file archive policies. For the excluded extensions, see [File types excluded from SAM archive policies](/microsoft-365/archive/archive-overview#file-types-excluded-from-sam-archive-policies).
+
 ## EXAMPLES
 
 ### Example 1
@@ -105,7 +107,7 @@ Replace the sample policy ID in the second and third commands with the ID of the
 
 ### -FileTypeCriteria
 
-Specifies an array of file extensions to include in the policy, in dot-prefixed format (for example, `.docx`). Only files matching the specified extensions are considered for archiving. When omitted, all file types are included.
+Specifies an array of file extensions to include in the policy, in dot-prefixed format (for example, `.docx`). Only files matching the specified extensions are considered for archiving. When omitted, no file type inclusion filter is applied. Built-in file type exclusions still apply.
 
 To specify multiple file types, use an explicit PowerShell array, such as `-FileTypeCriteria @(".docx", ".pdf")`. Include the leading dot in each extension. Don't combine multiple extensions into a single string, such as `".docx, .pdf"`.
 
@@ -123,7 +125,7 @@ Accept wildcard characters: False
 
 ### -FileTypeExclusionCriteria
 
-Specifies an array of file extensions to exclude from the policy, in dot-prefixed format (for example, `.docx`). Files matching the specified extensions aren't archived. When omitted, no file types are excluded.
+Specifies an array of file extensions to exclude from the policy, in dot-prefixed format (for example, `.docx`). Files matching the specified extensions aren't archived. When omitted, no additional file types are excluded by this parameter. Built-in file type exclusions still apply.
 
 To exclude multiple file types, use an explicit PowerShell array, such as `-FileTypeExclusionCriteria @(".xlsx", ".pdf")`. Include the leading dot in each extension. Don't combine multiple extensions into a single string, such as `".xlsx, .pdf"`.
 
