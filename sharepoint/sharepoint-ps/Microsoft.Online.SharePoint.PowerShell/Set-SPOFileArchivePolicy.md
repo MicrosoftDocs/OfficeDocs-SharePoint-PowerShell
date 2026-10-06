@@ -33,6 +33,8 @@ To configure file-type filtering, use SharePoint Online Management Shell module 
 > [!NOTE]
 > This cmdlet is part of the file archive policies feature which is currently in preview.
 
+File type filters don't override the built-in exclusions for SAM automatic file archive policies. For the excluded extensions, see [File types excluded from SAM archive policies](/microsoft-365/archive/archive-overview#file-types-excluded-from-sam-archive-policies).
+
 ## EXAMPLES
 
 ### Example 1
@@ -228,3 +230,4 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 [Remove-SPOFileArchivePolicy](Remove-SPOFileArchivePolicy.md)
 
 [Remove-SPOSiteToFileArchivePolicy](Remove-SPOSiteToFileArchivePolicy.md)
+
