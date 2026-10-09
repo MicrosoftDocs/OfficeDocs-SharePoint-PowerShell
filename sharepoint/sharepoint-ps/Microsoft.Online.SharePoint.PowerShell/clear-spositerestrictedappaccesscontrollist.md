@@ -95,7 +95,7 @@ Specifies the site to change. Provide either the site URL or the site ID.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: []
 Applicable: SharePoint Online
 Required: True
 Position: Named
@@ -114,7 +114,7 @@ Specifies which list to clear. Entry mutations must explicitly identify the targ
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: []
 Accepted values: AllowList, DenyList
 Applicable: SharePoint Online
 Required: True
