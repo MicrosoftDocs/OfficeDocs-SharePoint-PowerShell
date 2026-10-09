@@ -6,7 +6,7 @@ applicable: SharePoint Online
 title: Set-SPOTenantRestrictedAppAccessControlList
 schema: 2.0.0
 ms.author: neilh
-ms.reviewer: [ Add reviewer alias ]
+ms.reviewer: neilh
 description: Set-SPOTenantRestrictedAppAccessControlList lets you add or remove app IDs from the tenant deny list in one atomic update. Learn syntax and examples.
 ms.date: 10/09/2026
 ms.topic: concept-article
