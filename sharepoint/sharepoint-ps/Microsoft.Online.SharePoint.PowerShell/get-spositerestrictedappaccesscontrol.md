@@ -6,7 +6,7 @@ applicable: SharePoint Online
 title: Get-SPOSiteRestrictedAppAccessControl
 schema: 2.0.0
 ms.author: neilh
-ms.reviewer: [ Add reviewer alias ]
+ms.reviewer: neilh
 description: Learn how to use Get-SPOSiteRestrictedAppAccessControl to read a SharePoint site's App Restrictions policy and check enforcement status with PowerShell.
 ms.date: 10/09/2026
 ms.topic: concept-article
