@@ -6,7 +6,7 @@ applicable: SharePoint Online
 title: Set-SPOSiteRestrictedAppAccessControlList
 schema: 2.0.0
 ms.author: neilh
-ms.reviewer: [ Add reviewer alias ]
+ms.reviewer: neilh
 description: Learn how to use Set-SPOSiteRestrictedAppAccessControlList to manage site-level allow and deny lists for App Restrictions in SharePoint Online.
 ms.date: 10/09/2026
 ms.topic: concept-article

@@ -6,7 +6,7 @@ applicable: SharePoint Online
 title: Enable-SPOTenantRestrictedAppAccessControl
 schema: 2.0.0
 ms.author: neilh
-ms.reviewer: [ Add reviewer alias ]
+ms.reviewer: neilh
 description: Learn how to use Enable-SPOTenantRestrictedAppAccessControl to activate the master enforcement switch for App Restrictions across your SharePoint Online tenant.
 ms.date: 10/09/2026
 ms.topic: concept-article

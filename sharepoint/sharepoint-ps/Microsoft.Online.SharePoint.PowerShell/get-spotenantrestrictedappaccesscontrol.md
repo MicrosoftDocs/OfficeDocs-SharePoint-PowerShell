@@ -6,7 +6,7 @@ applicable: SharePoint Online
 title: Get-SPOTenantRestrictedAppAccessControl
 schema: 2.0.0
 ms.author: neilh
-ms.reviewer: [ Add reviewer alias ]
+ms.reviewer: neilh
 description: Get-SPOTenantRestrictedAppAccessControl retrieves your tenant's App Restrictionsolicy, including enforcement status and the deny list. Learn how.
 ms.date: 10/09/2026
 ms.topic: concept-article

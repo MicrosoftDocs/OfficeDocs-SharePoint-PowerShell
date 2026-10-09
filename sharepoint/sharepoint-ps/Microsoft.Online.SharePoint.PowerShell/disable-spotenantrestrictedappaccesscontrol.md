@@ -6,7 +6,7 @@ applicable: SharePoint Online
 title: Disable-SPOTenantRestrictedAppAccessControl
 schema: 2.0.0
 ms.author: neilh
-ms.reviewer: [ Add reviewer alias ]
+ms.reviewer: neilh
 description: Disable-SPOTenantRestrictedAppAccessControl turns off tenant-wide App Restrictions enforcement while keeping your deny list intact. Learn the syntax and examples.
 ms.date: 10/09/2026
 ms.topic: concept-article

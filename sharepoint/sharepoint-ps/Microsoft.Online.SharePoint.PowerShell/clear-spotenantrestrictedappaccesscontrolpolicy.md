@@ -6,7 +6,7 @@ applicable: SharePoint Online
 title: Clear-SPOTenantRestrictedAppAccessControlPolicy
 schema: 2.0.0
 ms.author: neilh
-ms.reviewer: [ Add reviewer alias ]
+ms.reviewer: neilh
 description: Clear-SPOTenantRestrictedAppAccessControlPolicy disables tenant App Restrictions enforcement and clears the deny list. Learn syntax, parameters, and examples.
 ms.date: 10/09/2026
 ms.topic: concept-article
