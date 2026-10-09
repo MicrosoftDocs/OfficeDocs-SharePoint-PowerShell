@@ -20,7 +20,7 @@ Turns off the tenant App Restrictions enforcement switch and clears the tenant-w
 
 ## SYNTAX
 
-```powershell
+```
 Clear-SPOTenantRestrictedAppAccessControlPolicy [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
