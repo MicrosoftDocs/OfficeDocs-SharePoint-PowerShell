@@ -20,7 +20,7 @@ Removes every entry from one app restrictions list on a site, preserving the oth
 
 ## SYNTAX
 
-```powershell
+```
 Clear-SPOSiteRestrictedAppAccessControlList -Identity <String> -ListType <String> [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
