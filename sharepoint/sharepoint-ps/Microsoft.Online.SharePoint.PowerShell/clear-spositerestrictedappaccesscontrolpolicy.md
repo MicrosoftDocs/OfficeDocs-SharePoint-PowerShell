@@ -6,7 +6,7 @@ applicable: SharePoint Online
 title: Clear-SPOSiteRestrictedAppAccessControlPolicy
 schema: 2.0.0
 ms.author: neilh
-ms.reviewer: [ Add reviewer alias ]
+ms.reviewer: neilh
 description: Clear-SPOSiteRestrictedAppAccessControlPolicy removes a site's App Restrictions policy, disabling enforcement and clearing lists. Learn syntax and examples.
 ms.date: 10/09/2026
 ms.topic: concept-article
