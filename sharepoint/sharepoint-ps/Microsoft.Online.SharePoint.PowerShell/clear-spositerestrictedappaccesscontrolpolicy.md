@@ -20,7 +20,7 @@ Removes the complete app restrictions policy from a site. The cmdlet disables en
 
 ## SYNTAX
 
-```powershell
+```
 Clear-SPOSiteRestrictedAppAccessControlPolicy -Identity <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
