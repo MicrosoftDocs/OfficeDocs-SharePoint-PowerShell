@@ -6,7 +6,7 @@ applicable: SharePoint Online
 title: Clear-SPOSiteRestrictedAppAccessControlList
 schema: 2.0.0
 ms.author: neilh
-ms.reviewer: [ Add reviewer alias ]
+ms.reviewer: neilh
 description: Clear-SPOSiteRestrictedAppAccessControlList removes all entries from a site's allow or deny list in SharePoint Online. Learn syntax, examples, and parameters.
 ms.date: 10/09/2026
 ms.topic: concept-article
