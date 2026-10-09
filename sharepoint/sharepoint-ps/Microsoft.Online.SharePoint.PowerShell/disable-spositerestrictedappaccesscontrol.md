@@ -6,7 +6,7 @@ applicable: SharePoint Online
 title: Disable-SPOSiteRestrictedAppAccessControl
 schema: 2.0.0
 ms.author: neilh
-ms.reviewer: [ Add reviewer alias ]
+ms.reviewer: neilh
 description: Learn how to use Disable-SPOSiteRestrictedAppAccessControl in SharePoint Online PowerShell to pause site-level app access enforcement without losing saved settings.
 ms.date: 10/09/2026
 ms.topic: concept-article
