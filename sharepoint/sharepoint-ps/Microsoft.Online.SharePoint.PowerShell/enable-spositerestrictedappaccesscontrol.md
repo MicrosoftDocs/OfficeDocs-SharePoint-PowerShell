@@ -6,7 +6,7 @@ applicable: SharePoint Online
 title: Enable-SPOSiteRestrictedAppAccessControl
 schema: 2.0.0
 ms.author: neilh
-ms.reviewer: [ Add reviewer alias ]
+ms.reviewer: neilh
 description: Enable-SPOSiteRestrictedAppAccessControl turns on App Restrictions enforcement for a SharePoint site using its existing mode and lists. Learn syntax and examples.
 ms.date: 10/09/2026
 ms.topic: concept-article
