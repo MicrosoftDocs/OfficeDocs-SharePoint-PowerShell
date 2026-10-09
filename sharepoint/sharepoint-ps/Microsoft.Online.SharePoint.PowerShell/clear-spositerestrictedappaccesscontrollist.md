@@ -54,7 +54,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### Example 1
 
-```powershell
+```
 Clear-SPOSiteRestrictedAppAccessControlList -Identity "https://contoso.sharepoint.com/sites/Finance" -ListType DenyList
 ```
 
@@ -62,7 +62,7 @@ This example clears the deny list on the Finance site. The allow list, the activ
 
 ### Example 2
 
-```powershell
+```
 Clear-SPOSiteRestrictedAppAccessControlList -Identity "e1b2c3d4-5678-4abc-9def-0123456789ab" -ListType AllowList -WhatIf
 ```
 
@@ -70,7 +70,7 @@ This example identifies the site by site ID and previews clearing the allow list
 
 ### Example 3
 
-```powershell
+```
 $url = "https://contoso.sharepoint.com/sites/Finance"
 Clear-SPOSiteRestrictedAppAccessControlList -Identity $url -ListType AllowList
 Set-SPOSiteRestrictedAppAccessControlList -Identity $url -ListType AllowList -AddRestrictedAppIds "11111111-1111-1111-1111-111111111111"
@@ -80,7 +80,7 @@ This example rebuilds an allow list from scratch. Because list changes are confi
 
 ### Example 4
 
-```powershell
+```
 Clear-SPOSiteRestrictedAppAccessControlList -Identity "https://contoso.sharepoint.com/sites/Finance" -ListType DenyList -Confirm:$false
 ```
 
