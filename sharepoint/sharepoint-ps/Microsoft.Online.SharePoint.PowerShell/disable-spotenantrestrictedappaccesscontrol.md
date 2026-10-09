@@ -20,7 +20,7 @@ Turns off the tenant App Restrictions enforcement switch, while preserving the t
 
 ## SYNTAX
 
-```powershell
+```
 Disable-SPOTenantRestrictedAppAccessControl [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
