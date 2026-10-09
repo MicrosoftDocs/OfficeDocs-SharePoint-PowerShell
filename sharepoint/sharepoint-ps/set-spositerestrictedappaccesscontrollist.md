@@ -60,7 +60,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### Example 1
 
-```powershell
+```
 Set-SPOSiteRestrictedAppAccessControlList -Identity https://contoso.sharepoint.com/sites/Finance -ListType AllowList -AddRestrictedAppIds 11111111-1111-1111-1111-111111111111
 ```
 
@@ -68,7 +68,7 @@ This example adds one application ID to the allow list of the Finance site. The 
 
 ### Example 2
 
-```powershell
+```
 Set-SPOSiteRestrictedAppAccessControlList -Identity https://contoso.sharepoint.com/sites/Finance -ListType DenyList -AddRestrictedAppIds 22222222-2222-2222-2222-222222222222,33333333-3333-3333-3333-333333333333 -RemoveRestrictedAppIds 44444444-4444-4444-4444-444444444444
 ```
 
@@ -76,7 +76,7 @@ This example adds two IDs to the deny list and removes one ID from the deny list
 
 ### Example 3
 
-```powershell
+```
 Set-SPOSiteRestrictedAppAccessControlList -Identity 8a1e30f6-2f52-4b9e-9d1b-2e9f6c1d40aa -ListType AllowList -RemoveRestrictedAppIds 55555555-5555-5555-5555-555555555555 -Confirm:$false
 ```
 
@@ -84,7 +84,7 @@ This example removes a stale application ID from the allow list of a site bound 
 
 ### Example 4
 
-```powershell
+```
 Set-SPOSiteRestrictedAppAccessControlList -Identity https://contoso.sharepoint.com/sites/Finance -ListType DenyList -AddRestrictedAppIds 66666666-6666-6666-6666-666666666666 -WhatIf
 ```
 

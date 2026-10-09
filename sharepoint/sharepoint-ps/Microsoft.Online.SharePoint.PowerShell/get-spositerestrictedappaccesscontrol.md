@@ -20,7 +20,7 @@ Returns the complete site-level App Restrictions policy for a site, including en
 
 ## SYNTAX
 
-```powershell
+```
 Get-SPOSiteRestrictedAppAccessControl [-Identity] <String> [<CommonParameters>]
 ```
 
@@ -56,7 +56,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### Example 1
 
-```powershell
+```
 Get-SPOSiteRestrictedAppAccessControl -Identity https://contoso.sharepoint.com/sites/Finance
 ```
 
@@ -64,7 +64,7 @@ This example returns the complete Restricted App Access Control policy for the F
 
 ### Example 2
 
-```powershell
+```
 Get-SPOSiteRestrictedAppAccessControl -Identity 8a1e30f6-2f52-4b9e-9d1b-2e9f6c1d40aa
 ```
 
@@ -72,7 +72,7 @@ This example returns the same policy for a site bound by site ID. The returned o
 
 ### Example 3
 
-```powershell
+```
 $policy = Get-SPOSiteRestrictedAppAccessControl -Identity https://contoso.sharepoint.com/sites/Finance
 if ($policy.Mode -eq "Allow") {
     $policy.AllowList
@@ -85,7 +85,7 @@ This example returns only the list that the active mode enforces. The other list
 
 ### Example 4
 
-```powershell
+```
 $policy = Get-SPOSiteRestrictedAppAccessControl -Identity https://contoso.sharepoint.com/sites/Finance
 if ($policy.Enabled -and $policy.Mode -eq "Allow" -and $policy.AllowList.Count -eq 0) {
     Write-Host "Enforcement is on with an empty active allow list, which blocks all governed third-party and agentic apps."

@@ -20,7 +20,7 @@ Adds application IDs to and removes application IDs from the tenant-wide App Res
 
 ## SYNTAX
 
-```powershell
+```
 Set-SPOTenantRestrictedAppAccessControlList [-AddRestrictedAppIds <Guid[]>]
  [-RemoveRestrictedAppIds <Guid[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
@@ -55,7 +55,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### Example 1
 
-```powershell
+```
 Set-SPOTenantRestrictedAppAccessControlList -AddRestrictedAppIds 11111111-1111-1111-1111-111111111111
 ```
 
@@ -63,7 +63,7 @@ This example adds one application ID to the tenant deny list. The backend classi
 
 ### Example 2
 
-```powershell
+```
 Set-SPOTenantRestrictedAppAccessControlList -AddRestrictedAppIds 11111111-1111-1111-1111-111111111111, 22222222-2222-2222-2222-222222222222 -RemoveRestrictedAppIds 33333333-3333-3333-3333-333333333333
 ```
 
@@ -71,7 +71,7 @@ This example adds two application IDs and removes a third in a single atomic upd
 
 ### Example 3
 
-```powershell
+```
 Set-SPOTenantRestrictedAppAccessControlList -RemoveRestrictedAppIds 33333333-3333-3333-3333-333333333333 -Confirm:$false
 ```
 
@@ -79,7 +79,7 @@ This example removes an application ID without prompting for confirmation, which
 
 ### Example 4
 
-```powershell
+```
 Set-SPOTenantRestrictedAppAccessControlList -AddRestrictedAppIds 44444444-4444-4444-4444-444444444444 -WhatIf
 ```
 

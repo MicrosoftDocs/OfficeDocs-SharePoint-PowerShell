@@ -48,7 +48,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### Example 1
 
-```powershell
+```
 Disable-SPOTenantRestrictedAppAccessControl
 ```
 
@@ -56,7 +56,7 @@ This example turns off the tenant enforcement switch and preserves the tenant de
 
 ### Example 2
 
-```powershell
+```
 Disable-SPOTenantRestrictedAppAccessControl -WhatIf
 ```
 
@@ -64,7 +64,7 @@ This example shows what would happen if the tenant switch were turned off, witho
 
 ### Example 3
 
-```powershell
+```
 Disable-SPOTenantRestrictedAppAccessControl -Confirm:$false
 Get-SPOTenantRestrictedAppAccessControl
 ```

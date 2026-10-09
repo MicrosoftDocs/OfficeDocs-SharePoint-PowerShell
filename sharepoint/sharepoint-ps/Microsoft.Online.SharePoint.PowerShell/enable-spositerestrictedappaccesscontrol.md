@@ -20,7 +20,7 @@ Turns on App Restrictions enforcement for a site, using the mode and lists that 
 
 ## SYNTAX
 
-```powershell
+```
 Enable-SPOSiteRestrictedAppAccessControl -Identity <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -52,7 +52,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### Example 1
 
-```powershell
+```
 Enable-SPOSiteRestrictedAppAccessControl -Identity "https://contoso.sharepoint.com/sites/Finance"
 ```
 
@@ -60,7 +60,7 @@ This example turns on App Restrictions enforcement for the Finance site by using
 
 ### Example 2
 
-```powershell
+```
 Enable-SPOSiteRestrictedAppAccessControl -Identity "e1b2c3d4-5678-4abc-9def-0123456789ab"
 ```
 
@@ -68,7 +68,7 @@ This example turns on enforcement for the same site by using its site ID. Every 
 
 ### Example 3
 
-```powershell
+```
 $url = "https://contoso.sharepoint.com/sites/Finance"
 Set-SPOSiteRestrictedAppAccessControlMode -Identity $url -Mode Allow
 Set-SPOSiteRestrictedAppAccessControlList -Identity $url -ListType AllowList -AddRestrictedAppIds "11111111-1111-1111-1111-111111111111"
@@ -79,7 +79,7 @@ This example stages a policy and then enables it explicitly. The mode and list c
 
 ### Example 4
 
-```powershell
+```
 Enable-SPOSiteRestrictedAppAccessControl -Identity "https://contoso.sharepoint.com/sites/Finance" -Confirm:$false
 ```
 

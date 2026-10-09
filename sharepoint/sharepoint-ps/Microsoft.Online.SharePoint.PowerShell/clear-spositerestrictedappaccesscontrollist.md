@@ -58,7 +58,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 Clear-SPOSiteRestrictedAppAccessControlList -Identity "https://contoso.sharepoint.com/sites/Finance" -ListType DenyList
 ```
 
-This example clears the deny list on the Finance site. The allow list, the active mode, and site enablement are preserved. If `Deny` is the active mode, the cmdlet warns that clearing the active deny list means all governed third-party applications can access the site.
+This example clears the deny list on the Finance site. It preserves the allow list, the active mode, and site enablement. If `Deny` is the active mode, the cmdlet warns that clearing the active deny list means all governed third-party applications can access the site.
 
 ### Example 2
 

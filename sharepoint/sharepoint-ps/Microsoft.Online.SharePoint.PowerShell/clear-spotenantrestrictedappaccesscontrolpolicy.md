@@ -48,7 +48,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### Example 1
 
-```powershell
+```
 Clear-SPOTenantRestrictedAppAccessControlPolicy
 ```
 
@@ -56,7 +56,7 @@ This example turns off the tenant enforcement switch and clears the tenant deny 
 
 ### Example 2
 
-```powershell
+```
 Clear-SPOTenantRestrictedAppAccessControlPolicy -WhatIf
 ```
 

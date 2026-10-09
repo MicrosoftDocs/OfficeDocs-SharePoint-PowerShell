@@ -46,7 +46,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### Example 1
 
-```powershell
+```
 Clear-SPOSiteRestrictedAppAccessControlPolicy -Identity "https://contoso.sharepoint.com/sites/Finance"
 ```
 
@@ -54,7 +54,7 @@ This example removes the complete App Restrictions policy from the Finance site.
 
 ### Example 2
 
-```powershell
+```
 Clear-SPOSiteRestrictedAppAccessControlPolicy -Identity "e1b2c3d4-5678-4abc-9def-0123456789ab" -WhatIf
 ```
 
@@ -62,7 +62,7 @@ This example identifies the site by site ID and previews the change without modi
 
 ### Example 3
 
-```powershell
+```
 $url = "https://contoso.sharepoint.com/sites/Finance"
 Clear-SPOSiteRestrictedAppAccessControlPolicy -Identity $url -Confirm:$false
 Set-SPOSiteRestrictedAppAccessControlMode -Identity $url -Mode Deny

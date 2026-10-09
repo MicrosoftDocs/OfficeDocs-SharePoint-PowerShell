@@ -20,7 +20,7 @@ Sets the active mode of the site-level App Restrictions policy to `Allow` or `De
 
 ## SYNTAX
 
-```powershell
+```
 Set-SPOSiteRestrictedAppAccessControlMode [-Identity] <String> -Mode <String> [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
@@ -56,7 +56,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### Example 1
 
-```powershell
+```
 Set-SPOSiteRestrictedAppAccessControlMode -Identity https://contoso.sharepoint.com/sites/Finance -Mode Allow
 ```
 
@@ -64,7 +64,7 @@ This example sets the active mode of the Finance site to `Allow`, so only applic
 
 ### Example 2
 
-```powershell
+```
 Set-SPOSiteRestrictedAppAccessControlMode -Identity https://contoso.sharepoint.com/sites/Finance -Mode Deny -WhatIf
 ```
 
@@ -72,7 +72,7 @@ This example displays the impact of switching the Finance site to `Deny`, includ
 
 ### Example 3
 
-```powershell
+```
 Set-SPOSiteRestrictedAppAccessControlMode -Identity 8a1e30f6-2f52-4b9e-9d1b-2e9f6c1d40aa -Mode Deny -Confirm:$false
 ```
 
@@ -80,7 +80,7 @@ This example switches a site bound by site ID to `Deny` without prompting, for u
 
 ### Example 4
 
-```powershell
+```
 Set-SPOSiteRestrictedAppAccessControlMode -Identity https://contoso.sharepoint.com/sites/Finance -Mode Allow
 Enable-SPOSiteRestrictedAppAccessControl -Identity https://contoso.sharepoint.com/sites/Finance
 ```

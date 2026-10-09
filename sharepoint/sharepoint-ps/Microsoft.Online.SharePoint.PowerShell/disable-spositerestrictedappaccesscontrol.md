@@ -46,7 +46,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### Example 1
 
-```powershell
+```
 Disable-SPOSiteRestrictedAppAccessControl -Identity "https://contoso.sharepoint.com/sites/Finance"
 ```
 
@@ -54,7 +54,7 @@ This example turns off App Restrictions enforcement for the Finance site. The si
 
 ### Example 2
 
-```powershell
+```
 Disable-SPOSiteRestrictedAppAccessControl -Identity "e1b2c3d4-5678-4abc-9def-0123456789ab" -WhatIf
 ```
 
@@ -62,7 +62,7 @@ This example uses a site ID and shows what would happen without changing the pol
 
 ### Example 3
 
-```powershell
+```
 $url = "https://contoso.sharepoint.com/sites/Finance"
 Disable-SPOSiteRestrictedAppAccessControl -Identity $url -Confirm:$false
 Get-SPOSiteRestrictedAppAccessControl -Identity $url

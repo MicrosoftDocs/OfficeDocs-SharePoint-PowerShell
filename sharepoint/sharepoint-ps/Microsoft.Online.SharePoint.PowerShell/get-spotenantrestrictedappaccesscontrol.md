@@ -20,7 +20,7 @@ Returns the tenant-level App Restrictions policy, including the tenant enforceme
 
 ## SYNTAX
 
-```powershell
+```
 Get-SPOTenantRestrictedAppAccessControl [<CommonParameters>]
 ```
 
@@ -51,7 +51,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### Example 1
 
-```powershell
+```
 Get-SPOTenantRestrictedAppAccessControl
 ```
 
@@ -59,7 +59,7 @@ This example returns the complete tenant Restricted App Access Control policy, s
 
 ### Example 2
 
-```powershell
+```
 (Get-SPOTenantRestrictedAppAccessControl).RestrictedAppIds
 ```
 
@@ -67,7 +67,7 @@ This example returns only the restricted application IDs from the tenant deny li
 
 ### Example 3
 
-```powershell
+```
 $policy = Get-SPOTenantRestrictedAppAccessControl
 if (-not $policy.Enabled) {
     Write-Host "App Restrictions enforcement is off. Site policies aren't enforced."
@@ -78,7 +78,7 @@ This example stores the tenant policy in a variable and checks the master switch
 
 ### Example 4
 
-```powershell
+```
 $policy = Get-SPOTenantRestrictedAppAccessControl
 if ($policy.Enabled -and $policy.RestrictedAppIds.Count -eq 0) {
     Write-Host "Enforcement is on, but the tenant deny list is empty and denies nothing."

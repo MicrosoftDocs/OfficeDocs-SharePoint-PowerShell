@@ -20,7 +20,7 @@ Turns on the tenant App Restrictions enforcement switch for your organization.
 
 ## SYNTAX
 
-```powershell
+```
 Enable-SPOTenantRestrictedAppAccessControl [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -48,7 +48,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### Example 1
 
-```powershell
+```
 Enable-SPOTenantRestrictedAppAccessControl
 ```
 
@@ -56,7 +56,7 @@ This example turns on the tenant enforcement switch. The cmdlet warns that enfor
 
 ### Example 2
 
-```powershell
+```
 Get-SPOTenantRestrictedAppAccessControl
 Enable-SPOTenantRestrictedAppAccessControl
 ```
@@ -65,7 +65,7 @@ This example reviews the stored tenant policy first, so you can see which applic
 
 ### Example 3
 
-```powershell
+```
 Enable-SPOTenantRestrictedAppAccessControl -WhatIf
 ```
 
@@ -73,7 +73,7 @@ This example shows what would happen if the tenant switch were turned on, withou
 
 ### Example 4
 
-```powershell
+```
 Enable-SPOTenantRestrictedAppAccessControl -Confirm:$false
 ```
 
