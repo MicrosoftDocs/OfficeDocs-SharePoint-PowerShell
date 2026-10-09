@@ -20,7 +20,7 @@ Adds application IDs to, or removes application IDs from, the allow list or the 
 
 ## SYNTAX
 
-```powershell
+```
 Set-SPOSiteRestrictedAppAccessControlList [-Identity] <String> -ListType <String>
  [-AddRestrictedAppIds <Guid[]>] [-RemoveRestrictedAppIds <Guid[]>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
