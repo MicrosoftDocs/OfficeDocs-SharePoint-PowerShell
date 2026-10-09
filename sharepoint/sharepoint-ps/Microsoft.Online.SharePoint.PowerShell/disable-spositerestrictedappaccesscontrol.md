@@ -20,7 +20,7 @@ Turns off App Restrictions enforcement for a site while preserving the site's ac
 
 ## SYNTAX
 
-```powershell
+```
 Disable-SPOSiteRestrictedAppAccessControl -Identity <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
