@@ -96,7 +96,7 @@ Specifies the site to configure. You can specify either the site URL or the site
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: []
 Applicable: SharePoint Online
 Required: True
 Position: 0
@@ -114,7 +114,7 @@ When the mode is `Allow`, applications in the allow list are allowed and all oth
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: []
 Applicable: SharePoint Online
 Accepted values: Allow, Deny
 Required: True

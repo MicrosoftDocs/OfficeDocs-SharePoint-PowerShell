@@ -79,7 +79,7 @@ Specifies the site to disable. Provide either the site URL or the site ID.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: []
 Applicable: SharePoint Online
 Required: True
 Position: Named

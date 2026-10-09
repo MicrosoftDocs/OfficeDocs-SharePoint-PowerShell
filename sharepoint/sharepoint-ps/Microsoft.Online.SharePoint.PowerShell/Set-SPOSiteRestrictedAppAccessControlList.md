@@ -99,7 +99,7 @@ Specifies the site to configure. You can specify either the site URL or the site
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: []
 Applicable: SharePoint Online
 Required: True
 Position: 0
@@ -115,7 +115,7 @@ Specifies the list to change. Valid values are `AllowList` and `DenyList`. Entry
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: []
 Applicable: SharePoint Online
 Accepted values: AllowList, DenyList
 Required: True

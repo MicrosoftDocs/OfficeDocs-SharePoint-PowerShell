@@ -103,7 +103,7 @@ Specifies the site to read. You can specify either the site URL or the site ID.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: []
 Applicable: SharePoint Online
 Required: True
 Position: 0

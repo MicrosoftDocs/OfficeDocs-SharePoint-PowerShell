@@ -81,7 +81,7 @@ Specifies the site whose policy is cleared. Provide either the site URL or the s
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases:
+Aliases: []
 Applicable: SharePoint Online
 Required: True
 Position: Named
