@@ -6,7 +6,7 @@ applicable: SharePoint Online
 title: Set-SPOSiteRestrictedAppAccessControlMode
 schema: 2.0.0
 ms.author: neilh
-ms.reviewer: [ Add reviewer alias ]
+ms.reviewer: neilh
 description: Set-SPOSiteRestrictedAppAccessControlMode switches a site between Allow and Deny modes while preserving both app lists. Learn the syntax and examples.
 ms.date: 10/09/2026
 ms.topic: concept-article
