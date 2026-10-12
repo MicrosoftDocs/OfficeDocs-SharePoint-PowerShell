@@ -8,8 +8,8 @@ schema: 2.0.0
 ms.author: neilh
 ms.reviewer: neilh
 description: Set-SPOTenantRestrictedAppAccessControlList lets you add or remove app IDs from the tenant deny list in one atomic update. Learn syntax and examples.
-ms.date: 10/09/2026
-ms.topic: concept-article
+ms.date: 10/12/2026
+ms.topic: reference
 ---
 
 # Set-SPOTenantRestrictedAppAccessControlList
@@ -21,15 +21,14 @@ Adds application IDs to and removes application IDs from the tenant-wide App Res
 ## SYNTAX
 
 ```
-Set-SPOTenantRestrictedAppAccessControlList [-AddRestrictedAppIds <Guid[]>]
- [-RemoveRestrictedAppIds <Guid[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-SPOTenantRestrictedAppAccessControlList [-AddRestrictedAppIds <Guid[]>] [-RemoveRestrictedAppIds <Guid[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 Use the `Set-SPOTenantRestrictedAppAccessControlList` cmdlet to change the tenant-wide emergency deny list for Restricted App Access Control.
 
-App Restrictions adds a SharePoint authorization boundary for applications that already have Microsoft Entra consent and SharePoint permissions. It never grants permissions and it doesn't replace Entra consent. A request must pass both the existing permission model and RAC for Apps.
+App Restrictions adds a SharePoint authorization boundary for applications that already have Microsoft Entra consent and SharePoint permissions. It never grants permissions and it doesn't replace Entra consent. A request must pass both the existing permission model and App Restrictions.
 
 Both parameters are applied in one atomic update that preserves the tenant enforcement switch. At least one of `-AddRestrictedAppIds` or `-RemoveRestrictedAppIds` is required, and the same ID can't appear in both parameters. Removals are applied before additions.
 
@@ -49,7 +48,7 @@ Tenant App Restrictions administration is isolated from the general-purpose `Get
 
 You must be at least a SharePoint Administrator to run this cmdlet.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
 ## EXAMPLES
 
@@ -89,15 +88,17 @@ This example shows what would happen if the application ID were added, without c
 
 ### -AddRestrictedAppIds
 
+> Applicable: SharePoint Online
+
 Specifies the application IDs to add to the tenant deny list. Each supplied ID is classified by using Microsoft Graph and stored internally as either a regular application or a parent agent blueprint. First-party/core and unclassifiable IDs are rejected, and the add is all-or-none.
 
 At least one of `-AddRestrictedAppIds` or `-RemoveRestrictedAppIds` is required, and an ID can't appear in both parameters. The combined tenant deny list can't exceed 100 IDs.
 
 ```yaml
-Type: Guid[]
+Type: System.Guid[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -107,31 +108,17 @@ Accept wildcard characters: False
 
 ### -RemoveRestrictedAppIds
 
+> Applicable: SharePoint Online
+
 Specifies the application IDs to remove from the tenant deny list. Removals are applied before additions and don't use Microsoft Graph, so stale or deleted application IDs can always be removed.
 
 At least one of `-AddRestrictedAppIds` or `-RemoveRestrictedAppIds` is required, and an ID can't appear in both parameters.
 
 ```yaml
-Type: Guid[]
+Type: System.Guid[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
-### -WhatIf
-
-Shows what would happen if the cmdlet runs. The cmdlet isn't run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: SharePoint Online
 Required: False
 Position: Named
 Default value: None
@@ -141,13 +128,33 @@ Accept wildcard characters: False
 
 ### -Confirm
 
+> Applicable: SharePoint Online
+
 Prompts you for confirmation before running the cmdlet. This cmdlet has a confirm impact of High, so it prompts by default. Automation can use `-Confirm:$false` to suppress the prompt. Suppressing the prompt doesn't bypass validation, authorization, auditing, or first-party protection.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+
+> Applicable: SharePoint Online
+
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
 Required: False
 Position: Named
 Default value: None
@@ -182,14 +189,14 @@ This cmdlet doesn't return an output object. Use `Get-SPOTenantRestrictedAppAcce
 
 ## RELATED LINKS
 
-[Get-SPOTenantRestrictedAppAccessControl](/powershell/module/microsoft.online.sharepoint.powershell/Get-SPOTenantRestrictedAppAccessControl)
+[Get-SPOTenantRestrictedAppAccessControl](Get-SPOTenantRestrictedAppAccessControl.md)
 
-[Enable-SPOTenantRestrictedAppAccessControl](/powershell/module/microsoft.online.sharepoint.powershell/Enable-SPOTenantRestrictedAppAccessControl)
+[Enable-SPOTenantRestrictedAppAccessControl](Enable-SPOTenantRestrictedAppAccessControl.md)
 
-[Disable-SPOTenantRestrictedAppAccessControl](/powershell/module/microsoft.online.sharepoint.powershell/Disable-SPOTenantRestrictedAppAccessControl)
+[Disable-SPOTenantRestrictedAppAccessControl](Disable-SPOTenantRestrictedAppAccessControl.md)
 
-[Clear-SPOTenantRestrictedAppAccessControlPolicy](/powershell/module/microsoft.online.sharepoint.powershell/Clear-SPOTenantRestrictedAppAccessControlPolicy)
+[Clear-SPOTenantRestrictedAppAccessControlPolicy](Clear-SPOTenantRestrictedAppAccessControlPolicy.md)
 
-[Get-SPOSiteRestrictedAppAccessControl](/powershell/module/microsoft.online.sharepoint.powershell/Get-SPOSiteRestrictedAppAccessControl)
+[Get-SPOSiteRestrictedAppAccessControl](Get-SPOSiteRestrictedAppAccessControl.md)
 
 [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell)
