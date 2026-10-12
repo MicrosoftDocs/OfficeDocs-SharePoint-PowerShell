@@ -8,8 +8,8 @@ schema: 2.0.0
 ms.author: neilh
 ms.reviewer: neilh
 description: Clear-SPOTenantRestrictedAppAccessControlPolicy disables tenant App Restrictions enforcement and clears the deny list. Learn syntax, parameters, and examples.
-ms.date: 10/09/2026
-ms.topic: concept-article
+ms.date: 10/12/2026
+ms.topic: reference
 ---
 
 # Clear-SPOTenantRestrictedAppAccessControlPolicy
@@ -40,11 +40,11 @@ Removing IDs doesn't require Microsoft Graph, so stale or deleted applications o
 
 Tenant App Restrictions administration is isolated from the general-purpose `Get-SPOTenant` and `Set-SPOTenant` cmdlets. App Restrictions isn't exposed as a `Tenant` property, so `Get-SPOTenant` doesn't return the policy and `Set-SPOTenant` can't change it.
 
-You must be at least a SharePoint Administrator or to run this cmdlet.
+You must be at least a SharePoint Administrator to run this cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
-## Examples
+## EXAMPLES
 
 ### Example 1
 
@@ -64,7 +64,7 @@ This example shows what would happen if the tenant policy were cleared, without 
 
 ### Example 3
 
-```powershell
+```
 Get-SPOTenantRestrictedAppAccessControl
 Clear-SPOTenantRestrictedAppAccessControlPolicy -Confirm:$false
 Get-SPOTenantRestrictedAppAccessControl
@@ -72,17 +72,19 @@ Get-SPOTenantRestrictedAppAccessControl
 
 This example records the current tenant policy, clears it without prompting for confirmation, and then reads the policy again to confirm that `Enabled` is `False` and that `RestrictedAppIds` is empty. Suppressing the prompt doesn't bypass validation, authorization, or auditing.
 
-## Parameters
+## PARAMETERS
 
-### -WhatIf
+### -Confirm
 
-Shows what would happen if the cmdlet runs. The cmdlet isn't run.
+> Applicable: SharePoint Online
+
+Prompts you for confirmation before running the cmdlet. This cmdlet has a confirm impact of High, so it prompts by default. Automation can use `-Confirm:$false` to suppress the prompt. Suppressing the prompt doesn't bypass validation, authorization, auditing, or first-party protection.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
-Applicable: SharePoint Online
+Aliases: cf
+
 Required: False
 Position: Named
 Default value: None
@@ -90,15 +92,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
+### -WhatIf
 
-Prompts you for confirmation before running the cmdlet. This cmdlet has a confirm impact of High, so it prompts by default. Automation can use `-Confirm:$false` to suppress the prompt. Suppressing the prompt doesn't bypass validation, authorization, auditing, or first-party protection.
+> Applicable: SharePoint Online
+
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
-Applicable: SharePoint Online
+Aliases: wi
+
 Required: False
 Position: Named
 Default value: None
@@ -128,7 +132,7 @@ This cmdlet doesn't return an output object. Use `Get-SPOTenantRestrictedAppAcce
 - Clearing doesn't call Microsoft Graph, so stale or deleted application IDs are removed with the rest of the list.
 - This cmdlet doesn't remove site policy configuration. Use `Clear-SPOSiteRestrictedAppAccessControlPolicy` to clear the policy for an individual site.
 
-## Related links
+## RELATED LINKS
 
 [Get-SPOTenantRestrictedAppAccessControl](Get-SPOTenantRestrictedAppAccessControl.md)
 
