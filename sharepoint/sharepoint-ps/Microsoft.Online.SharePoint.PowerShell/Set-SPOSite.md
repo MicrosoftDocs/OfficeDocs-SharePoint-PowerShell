@@ -68,7 +68,8 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-Owner <String>] [-Title <String>] [-
  [-ListsShowHeaderAndNavigation <Boolean>] [-HidePeoplePreviewingFiles <Boolean>]
  [-HidePeopleWhoHaveListsOpen <Boolean>] [-IsAuthoritative <Boolean>] [-AllowFileArchive <Boolean>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-DisableSiteBranding <Boolean>]
- [-DisableClassicPageBaselineSecurityMode <Boolean>]
+ [-DisableClassicPageBaselineSecurityMode <Boolean>] [-HideSyncButtonOnTeamSite <Boolean>]
+ [-DisableAddShortcutsToOneDrive <Boolean>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -403,6 +404,15 @@ Get-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 | Select-Object
 ```
 
 Example 26 restricts Agent Users from accessing the site and then returns the configured value. The policy is enforced at runtime and doesn't remove existing permissions.
+
+### Example 27
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -HideSyncButtonOnTeamSite $true -DisableAddShortcutsToOneDrive $true
+Get-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 | Select-Object Url, HideSyncButtonOnTeamSite, DisableAddShortcutsToOneDrive
+```
+
+Example 27 hides the **Sync** button and the **Add shortcut to My files** option in the document libraries of the site and then returns the configured values. Other sites in the organization aren't affected.
 
 ## PARAMETERS
 
@@ -1045,6 +1055,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisableAddShortcutsToOneDrive
+
+> Applicable: SharePoint Online
+
+Hides the [Add shortcut to My files](https://support.microsoft.com/office/add-shortcuts-to-shared-folders-in-onedrive-for-work-or-school-d66b1347-99b7-4470-9360-ffc048d35a33) option in the document libraries of the site. When `DisableAddShortcutsToOneDrive` is set to `$true`, users can't add shortcuts to the site's folders in their OneDrive. Shortcuts that users already added remain in their OneDrive.
+
+This setting applies only to the specified site. It can't be set on OneDrive sites. To hide the option for all sites in the organization, use the `DisableAddShortcutsToOneDrive` parameter of [Set-SPOTenant](./Set-SPOTenant.md).
+
+PARAMVALUE: True | False
+
+```yaml
+Type: System.Boolean
+Parameter Sets: ParamSet1
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DisableAppViews
 
 > Applicable: SharePoint Online
@@ -1436,6 +1468,28 @@ This setting disables the feature in Microsoft Lists that displays the presence 
 PARAMVALUE: False | True
 
 If set to True, the presence of other users on the list and its items will no longer be displayed. List presence is enabled by default.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: ParamSet1
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HideSyncButtonOnTeamSite
+
+> Applicable: SharePoint Online
+
+Hides the **Sync** button in the document libraries of the site. When `HideSyncButtonOnTeamSite` is set to `$true`, users can't start syncing the site's libraries with the OneDrive sync app from the browser.
+
+This setting applies only to the specified site. It can't be set on OneDrive sites. To hide the **Sync** button for all sites in the organization, use the `HideSyncButtonOnTeamSite` parameter of [Set-SPOTenant](./Set-SPOTenant.md).
+
+PARAMVALUE: True | False
 
 ```yaml
 Type: System.Boolean
