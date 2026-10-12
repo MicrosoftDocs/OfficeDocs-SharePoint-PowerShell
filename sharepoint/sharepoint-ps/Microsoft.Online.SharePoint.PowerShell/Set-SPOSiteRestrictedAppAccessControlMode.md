@@ -8,8 +8,8 @@ schema: 2.0.0
 ms.author: neilh
 ms.reviewer: neilh
 description: Set-SPOSiteRestrictedAppAccessControlMode switches a site between Allow and Deny modes while preserving both app lists. Learn the syntax and examples.
-ms.date: 10/09/2026
-ms.topic: concept-article
+ms.date: 10/12/2026
+ms.topic: reference
 ---
 
 # Set-SPOSiteRestrictedAppAccessControlMode
@@ -21,15 +21,14 @@ Sets the active mode of the site-level App Restrictions policy to `Allow` or `De
 ## SYNTAX
 
 ```
-Set-SPOSiteRestrictedAppAccessControlMode [-Identity] <String> -Mode <String> [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-SPOSiteRestrictedAppAccessControlMode [-Identity] <String> -Mode <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 Use the `Set-SPOSiteRestrictedAppAccessControlMode` cmdlet to change which list a site enforces. This cmdlet changes the active mode only. It preserves site enablement and both the allow list and the deny list.
 
-Restricted App Access Control (RAC for Apps) adds a SharePoint authorization boundary for applications that already have Microsoft Entra consent and SharePoint permissions. It never grants permissions and it doesn't replace Entra consent. A request must pass both the existing permission model and RAC for Apps.
+App Restrictions adds a SharePoint authorization boundary for applications that already have Microsoft Entra consent and SharePoint permissions. It never grants permissions and it doesn't replace Entra consent. A request must pass both the existing permission model and App Restrictions.
 
 The active mode selects the list that is enforced:
 
@@ -46,7 +45,7 @@ Site enforcement is also gated by the tenant switch. While the tenant switch is 
 
 Automation can use the standard `-Confirm:$false`. Suppressing the prompt doesn't bypass validation, authorization, auditing, or first-party protection.
 
-Site App Restrictions administration is isolated from the general-purpose `Get-SPOSite` and `Set-SPOSite` cmdlets. `Get-SPOSite` doesn't load site policy data and `Set-SPOSite` can't change it. Use the dedicated RAC for Apps cmdlets listed in [Related Links](#related-links).
+Site App Restrictions administration is isolated from the general-purpose `Get-SPOSite` and `Set-SPOSite` cmdlets. `Get-SPOSite` doesn't load site policy data and `Set-SPOSite` can't change it. Use the dedicated App Restrictions cmdlets listed in [Related Links](#related-links).
 
 You must be at least a SharePoint Administrator to run this cmdlet.
 
@@ -91,33 +90,55 @@ This example stages the mode first and then turns enforcement on explicitly. A m
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 Specifies the site to configure. You can specify either the site URL or the site ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases: []
-Applicable: SharePoint Online
+Aliases:
+
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
 ### -Mode
+
+> Applicable: SharePoint Online
 
 Specifies the active mode of the site policy. Valid values are `Allow` and `Deny`.
 
 When the mode is `Allow`, applications in the allow list are allowed and all other governed apps are denied. When the mode is `Deny`, applications in the deny list are denied and all other governed apps are allowed. Both lists are preserved either way.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases: []
-Applicable: SharePoint Online
+Aliases:
 Accepted values: Allow, Deny
+
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+> Applicable: SharePoint Online
+
+Prompts you for confirmation before running the cmdlet. This cmdlet uses `ConfirmImpact.High`, so it prompts by default. Use `-Confirm:$false` to suppress the prompt in automation.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -126,32 +147,18 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
+> Applicable: SharePoint Online
+
 Shows what would happen if the cmdlet runs. The cmdlet isn't run. `-WhatIf` displays the same mode-switch impact as the confirmation warning without changing the policy.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet. This cmdlet uses `ConfirmImpact.High`, so it prompts by default. Use `-Confirm:$false` to suppress the prompt in automation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: True
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
