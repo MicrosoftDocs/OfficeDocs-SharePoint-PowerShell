@@ -8,8 +8,8 @@ schema: 2.0.0
 ms.author: neilh
 ms.reviewer: neilh
 description: Learn how to use Set-SPOSiteRestrictedAppAccessControlList to manage site-level allow and deny lists for App Restrictions in SharePoint Online.
-ms.date: 10/09/2026
-ms.topic: concept-article
+ms.date: 10/12/2026
+ms.topic: reference
 ---
 
 # Set-SPOSiteRestrictedAppAccessControlList
@@ -21,9 +21,7 @@ Adds application IDs to, or removes application IDs from, the allow list or the 
 ## SYNTAX
 
 ```
-Set-SPOSiteRestrictedAppAccessControlList [-Identity] <String> -ListType <String>
- [-AddRestrictedAppIds <Guid[]>] [-RemoveRestrictedAppIds <Guid[]>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Set-SPOSiteRestrictedAppAccessControlList [-Identity] <String> -ListType <String> [-AddRestrictedAppIds <Guid[]>] [-RemoveRestrictedAppIds <Guid[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -69,55 +67,41 @@ This example adds one application ID to the allow list of the Finance site. The 
 ### Example 2
 
 ```
-Set-SPOSiteRestrictedAppAccessControlList -Identity https://contoso.sharepoint.com/sites/Finance -ListType DenyList -AddRestrictedAppIds 22222222-2222-2222-2222-222222222222,33333333-3333-3333-3333-333333333333 -RemoveRestrictedAppIds 44444444-4444-4444-4444-444444444444
+Set-SPOSiteRestrictedAppAccessControlList -Identity https://contoso.sharepoint.com/sites/Finance -ListType DenyList -AddRestrictedAppIds 22222222-2222-2222-2222-222222222222,33333333-3333-3333-3333-333333333333 -RemoveRestrictedAppIds 44444444-4444-4444-4444-444
 ```
-
-This example adds two IDs to the deny list and removes one ID from the deny list in a single atomic update. Removals are applied before additions, and the bulk add is all-or-none.
-
-### Example 3
-
-```
-Set-SPOSiteRestrictedAppAccessControlList -Identity 8a1e30f6-2f52-4b9e-9d1b-2e9f6c1d40aa -ListType AllowList -RemoveRestrictedAppIds 55555555-5555-5555-5555-555555555555 -Confirm:$false
-```
-
-This example removes a stale application ID from the allow list of a site bound by site ID, without prompting. Removal doesn't call Microsoft Graph, so IDs for deleted applications can still be removed. If the ID isn't present in the list, the cmdlet returns a validation error.
-
-### Example 4
-
-```
-Set-SPOSiteRestrictedAppAccessControlList -Identity https://contoso.sharepoint.com/sites/Finance -ListType DenyList -AddRestrictedAppIds 66666666-6666-6666-6666-666666666666 -WhatIf
-```
-
-This example shows what would change without modifying the policy. Adding a parent agent blueprint ID to a deny list blocks the blueprint application and every current or future agent app created from it.
 
 ## PARAMETERS
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 Specifies the site to configure. You can specify either the site URL or the site ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases: []
-Applicable: SharePoint Online
+Aliases:
+
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: True
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 ```
 
 ### -ListType
 
+> Applicable: SharePoint Online
+
 Specifies the list to change. Valid values are `AllowList` and `DenyList`. Entry mutations must explicitly identify the target list.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases: []
-Applicable: SharePoint Online
+Aliases:
 Accepted values: AllowList, DenyList
+
 Required: True
 Position: Named
 Default value: None
@@ -127,6 +111,8 @@ Accept wildcard characters: False
 
 ### -AddRestrictedAppIds
 
+> Applicable: SharePoint Online
+
 Specifies the application IDs to add to the list identified by `-ListType`. You supply application IDs only; the backend classifies each added ID as a regular application or a parent agent blueprint and stores the type internally.
 
 Adds use the shared bulk Microsoft Graph classification. First-party or core applications and unclassifiable IDs are rejected, and a bulk add is all-or-none.
@@ -134,10 +120,10 @@ Adds use the shared bulk Microsoft Graph classification. First-party or core app
 At least one of `-AddRestrictedAppIds` or `-RemoveRestrictedAppIds` is required, and an ID can't appear in both.
 
 ```yaml
-Type: Guid[]
+Type: System.Guid[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
 Default value: None
@@ -147,6 +133,8 @@ Accept wildcard characters: False
 
 ### -RemoveRestrictedAppIds
 
+> Applicable: SharePoint Online
+
 Specifies the application IDs to remove from the list identified by `-ListType`. Removals are applied before additions.
 
 Removing entries doesn't call Microsoft Graph, so deleted or stale application IDs can still be removed. If a supplied ID isn't present in the target list, the cmdlet returns a validation error.
@@ -154,10 +142,28 @@ Removing entries doesn't call Microsoft Graph, so deleted or stale application I
 At least one of `-AddRestrictedAppIds` or `-RemoveRestrictedAppIds` is required, and an ID can't appear in both.
 
 ```yaml
-Type: Guid[]
+Type: System.Guid[]
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+> Applicable: SharePoint Online
+
+Prompts you for confirmation before running the cmdlet. This cmdlet uses `ConfirmImpact.High`, so it prompts by default. Use `-Confirm:$false` to suppress the prompt in automation.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
 Required: False
 Position: Named
 Default value: None
@@ -167,32 +173,18 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
+> Applicable: SharePoint Online
+
 Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet. This cmdlet uses `ConfirmImpact.High`, so it prompts by default. Use `-Confirm:$false` to suppress the prompt in automation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: True
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
