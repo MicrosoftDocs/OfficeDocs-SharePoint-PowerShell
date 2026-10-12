@@ -8,8 +8,8 @@ schema: 2.0.0
 ms.author: neilh
 ms.reviewer: neilh
 description: Learn how to use Disable-SPOSiteRestrictedAppAccessControl in SharePoint Online PowerShell to pause site-level app access enforcement without losing saved settings.
-ms.date: 10/09/2026
-ms.topic: concept-article
+ms.date: 10/12/2026
+ms.topic: reference
 ---
 
 # Disable-SPOSiteRestrictedAppAccessControl
@@ -36,9 +36,9 @@ While the site is disabled, no site-level App Restrictions decision applies to r
 
 App Restrictions adds a SharePoint authorization boundary for applications that already have Microsoft Entra consent and SharePoint permissions. It never grants permissions and it doesn't replace Entra consent. A request must pass both the existing permission model and App Restrictions, so disabling a site policy doesn't grant any application access it doesn't already have.
 
-App Restrictions for Apps administration is isolated from the general-purpose `Get-SPOSite` and `Set-SPOSite` cmdlets. App Restrictions is fully decoupled from `SiteProperties`, so `Get-SPOSite` doesn't load site policy data and `Set-SPOSite` can't change it. Use the dedicated App Restrictions cmdlets listed in [Related Links](#related-links).
+Site App Restrictions administration is isolated from the general-purpose `Get-SPOSite` and `Set-SPOSite` cmdlets. App Restrictions is fully decoupled from `SiteProperties`, so `Get-SPOSite` doesn't load site policy data and `Set-SPOSite` can't change it. Use the dedicated App Restrictions cmdlets listed in [Related Links](#related-links).
 
-You must be at least a SharePoint Administrator or to run this cmdlet.
+You must be at least a SharePoint Administrator to run this cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
@@ -74,14 +74,34 @@ This example disables enforcement without an interactive prompt and then reads t
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 Specifies the site to disable. Provide either the site URL or the site ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
-Aliases: []
-Applicable: SharePoint Online
+Aliases:
+
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+> Applicable: SharePoint Online
+
+Prompts you for confirmation before running the cmdlet. This cmdlet uses `ConfirmImpact.High`, so it prompts by default. Use `-Confirm:$false` to suppress the prompt in automation.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -90,32 +110,18 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
+> Applicable: SharePoint Online
+
 Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet. This cmdlet uses `ConfirmImpact.High`, so it prompts by default. Use `-Confirm:$false` to suppress the prompt in automation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: True
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -141,7 +147,6 @@ This cmdlet doesn't return an object. Use `Get-SPOSiteRestrictedAppAccessControl
 - The tenant switch gates all site enforcement, so a site policy has no effect while the tenant switch is off. The tenant deny list can't be overridden by a site allow list.
 - App Restrictions never grants permissions. A request must still pass existing SharePoint authorization.
 - This cmdlet supports `-WhatIf` and `-Confirm` with `ConfirmImpact.High`. `-Confirm:$false` is allowed for automation and doesn't bypass validation, authorization, auditing, or first-party protection.
-- [Add the exact warning and error text emitted by the cmdlet.]
 
 ## RELATED LINKS
 
