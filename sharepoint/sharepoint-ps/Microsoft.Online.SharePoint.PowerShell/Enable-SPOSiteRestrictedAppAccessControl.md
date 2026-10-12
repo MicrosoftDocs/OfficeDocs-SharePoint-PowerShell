@@ -8,8 +8,8 @@ schema: 2.0.0
 ms.author: neilh
 ms.reviewer: neilh
 description: Enable-SPOSiteRestrictedAppAccessControl turns on App Restrictions enforcement for a SharePoint site using its existing mode and lists. Learn syntax and examples.
-ms.date: 10/09/2026
-ms.topic: concept-article
+ms.date: 10/12/2026
+ms.topic: reference
 ---
 
 # Enable-SPOSiteRestrictedAppAccessControl
@@ -43,7 +43,8 @@ App Restrictions adds a SharePoint authorization boundary for applications that 
 
 Site App Restrictions administration is isolated from the general-purpose `Get-SPOSite` and `Set-SPOSite` cmdlets. App Restrictions is fully decoupled from `SiteProperties`, so `Get-SPOSite` doesn't load site policy data and `Set-SPOSite` can't change it. Use the dedicated App Restrictions cmdlets listed in [Related Links](#related-links).
 
-You must be at least a SharePoint Administrator to run this cmdlet. 
+You must be at least a SharePoint Administrator to run this cmdlet.
+
 Microsoft first-party and core applications are excluded from App Restrictions configuration and enforcement.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
@@ -69,110 +70,4 @@ This example turns on enforcement for the same site by using its site ID. Every 
 ### Example 3
 
 ```
-$url = "https://contoso.sharepoint.com/sites/Finance"
-Set-SPOSiteRestrictedAppAccessControlMode -Identity $url -Mode Allow
-Set-SPOSiteRestrictedAppAccessControlList -Identity $url -ListType AllowList -AddRestrictedAppIds "11111111-1111-1111-1111-111111111111"
-Enable-SPOSiteRestrictedAppAccessControl -Identity $url
-```
-
-This example stages a policy and then enables it explicitly. The mode and list changes are configuration-only and don't turn enforcement on, so nothing is enforced until the final command runs.
-
-### Example 4
-
-```
-Enable-SPOSiteRestrictedAppAccessControl -Identity "https://contoso.sharepoint.com/sites/Finance" -Confirm:$false
-```
-
-This example turns on enforcement without an interactive confirmation prompt, for use in automation. Using `-Confirm:$false` doesn't bypass validation, authorization, auditing, or first-party protection.
-
-## PARAMETERS
-
-### -Identity
-
-Specifies the site to enable. Provide either the site URL or the site ID.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases: []
-Applicable: SharePoint Online
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-
-Shows what would happen if the cmdlet runs. The cmdlet isn't run.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet. This cmdlet uses `ConfirmImpact.High`, so it prompts by default. Use `-Confirm:$false` to suppress the prompt in automation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: True
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### CommonParameters
-
-This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
-
-## INPUTS
-
-### None
-
-## OUTPUTS
-
-### None
-
-This cmdlet doesn't return an object. Use `Get-SPOSiteRestrictedAppAccessControl` to read the resulting policy.
-
-## NOTES
-
-- This cmdlet fails when no mode is set on the site. Enabled with mode `None` is the only combination that the backend rejects.
-- Site enforcement is turned on only by this cmdlet. Mode and list changes are configuration-only and preserve the current enablement state.
-- An empty active allow list blocks all governed third-party and agentic apps. Review the active list with `Get-SPOSiteRestrictedAppAccessControl` before you enable a site.
-- The tenant switch gates all site enforcement, so a site policy has no effect while the tenant switch is off. The tenant deny list can't be overridden by a site allow list.
-- App Restrictions never grants permissions. A request must still pass existing SharePoint authorization.
-- This cmdlet supports `-WhatIf` and `-Confirm` with `ConfirmImpact.High`. `-Confirm:$false` is allowed for automation and doesn't bypass validation, authorization, auditing, or first-party protection.
-- [Add the exact warning and error text emitted by the cmdlet.]
-
-## RELATED LINKS
-
-[Get-SPOSiteRestrictedAppAccessControl](Get-SPOSiteRestrictedAppAccessControl.md)
-
-[Set-SPOSiteRestrictedAppAccessControlMode](Set-SPOSiteRestrictedAppAccessControlMode.md)
-
-[Set-SPOSiteRestrictedAppAccessControlList](Set-SPOSiteRestrictedAppAccessControlList.md)
-
-[Disable-SPOSiteRestrictedAppAccessControl](Disable-SPOSiteRestrictedAppAccessControl.md)
-
-[Clear-SPOSiteRestrictedAppAccessControlList](Clear-SPOSiteRestrictedAppAccessControlList.md)
-
-[Clear-SPOSiteRestrictedAppAccessControlPolicy](Clear-SPOSiteRestrictedAppAccessControlPolicy.md)
-
-[Get-SPOTenantRestrictedAppAccessControl](Get-SPOTenantRestrictedAppAccessControl.md)
-
-[Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell)
+$url = "https://contoso.sharepoint.
