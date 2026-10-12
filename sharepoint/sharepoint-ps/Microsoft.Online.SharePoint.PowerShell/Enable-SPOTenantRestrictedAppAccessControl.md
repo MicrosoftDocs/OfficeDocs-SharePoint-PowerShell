@@ -8,8 +8,8 @@ schema: 2.0.0
 ms.author: neilh
 ms.reviewer: neilh
 description: Learn how to use Enable-SPOTenantRestrictedAppAccessControl to activate the master enforcement switch for App Restrictions across your SharePoint Online tenant.
-ms.date: 10/09/2026
-ms.topic: concept-article
+ms.date: 10/12/2026
+ms.topic: reference
 ---
 
 # Enable-SPOTenantRestrictedAppAccessControl
@@ -81,15 +81,17 @@ This example turns on the tenant switch without prompting for confirmation, whic
 
 ## PARAMETERS
 
-### -WhatIf
+### -Confirm
 
-Shows what would happen if the cmdlet runs. The cmdlet isn't run.
+> Applicable: SharePoint Online
+
+Prompts you for confirmation before running the cmdlet. This cmdlet has a confirm impact of High, so it prompts by default. Automation can use `-Confirm:$false` to suppress the prompt. Suppressing the prompt doesn't bypass validation, authorization, auditing, or first-party protection.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
-Applicable: SharePoint Online
+Aliases: cf
+
 Required: False
 Position: Named
 Default value: None
@@ -97,15 +99,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
+### -WhatIf
 
-Prompts you for confirmation before running the cmdlet. This cmdlet has a confirm impact of High, so it prompts by default. Automation can use `-Confirm:$false` to suppress the prompt. Suppressing the prompt doesn't bypass validation, authorization, auditing, or first-party protection.
+> Applicable: SharePoint Online
+
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
-Applicable: SharePoint Online
+Aliases: wi
+
 Required: False
 Position: Named
 Default value: None
