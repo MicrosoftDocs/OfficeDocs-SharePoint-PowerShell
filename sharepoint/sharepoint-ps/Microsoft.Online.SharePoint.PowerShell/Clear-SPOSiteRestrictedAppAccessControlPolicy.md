@@ -9,7 +9,7 @@ ms.author: neilh
 ms.reviewer: neilh
 description: Clear-SPOSiteRestrictedAppAccessControlPolicy removes a site's App Restrictions policy, disabling enforcement and clearing lists. Learn syntax and examples.
 ms.date: 10/12/2026
-ms.topic: concept-article
+ms.topic: reference
 ---
 
 # Clear-SPOSiteRestrictedAppAccessControlPolicy
@@ -76,14 +76,34 @@ This example removes an existing policy and then rebuilds it from scratch. Becau
 
 ### -Identity
 
+> Applicable: SharePoint Online
+
 Specifies the site whose policy is cleared. Provide either the site URL or the site ID.
 
 ```yaml
-Type: String
+Type: System.String
 Parameter Sets: (All)
 Aliases:
-Applicable: SharePoint Online
+
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+> Applicable: SharePoint Online
+
+Prompts you for confirmation before running the cmdlet. This cmdlet uses `ConfirmImpact.High`, so it prompts by default. Use `-Confirm:$false` to suppress the prompt in automation.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -92,32 +112,18 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
+> Applicable: SharePoint Online
+
 Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Online
+
 Required: False
 Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-
-Prompts you for confirmation before running the cmdlet. This cmdlet uses `ConfirmImpact.High`, so it prompts by default. Use `-Confirm:$false` to suppress the prompt in automation.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Applicable: SharePoint Online
-Required: False
-Position: Named
-Default value: True
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -145,9 +151,8 @@ This cmdlet doesn't return an object. Use `Get-SPOSiteRestrictedAppAccessControl
 - The tenant switch gates all site enforcement, so a site policy has no effect while the tenant switch is off. The tenant deny list can't be overridden by a site allow list.
 - App Restrictions never grants permissions. A request must still pass existing SharePoint authorization.
 - This cmdlet supports `-WhatIf` and `-Confirm` with `ConfirmImpact.High`. `-Confirm:$false` is allowed for automation and doesn't bypass validation, authorization, auditing, or first-party protection.
-- [Add the exact warning and error text emitted by the cmdlet.]
 
-## Related links
+## RELATED LINKS
 
 [Get-SPOSiteRestrictedAppAccessControl](Get-SPOSiteRestrictedAppAccessControl.md)
 
