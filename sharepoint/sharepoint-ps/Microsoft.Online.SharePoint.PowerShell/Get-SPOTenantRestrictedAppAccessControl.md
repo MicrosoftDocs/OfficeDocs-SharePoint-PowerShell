@@ -7,9 +7,9 @@ title: Get-SPOTenantRestrictedAppAccessControl
 schema: 2.0.0
 ms.author: neilh
 ms.reviewer: neilh
-description: Get-SPOTenantRestrictedAppAccessControl retrieves your tenant's App Restrictionsolicy, including enforcement status and the deny list. Learn how.
-ms.date: 10/09/2026
-ms.topic: concept-article
+description: Get-SPOTenantRestrictedAppAccessControl retrieves your tenant's App Restrictions policy, including enforcement status and the deny list. Learn how.
+ms.date: 10/12/2026
+ms.topic: reference
 ---
 
 # Get-SPOTenantRestrictedAppAccessControl
@@ -32,7 +32,7 @@ App Restrictions adds a SharePoint authorization boundary for applications that 
 
 The tenant policy has two parts:
 
-- **Enabled** - the master enforcement switch for App Restrictions. When this switch is off, no RAC for Apps policy is enforced, including the tenant deny list and any site-level policies. Stored tenant and site configuration is preserved, so enforcement resumes with the same configuration when the switch is turned on again.
+- **Enabled** - the master enforcement switch for App Restrictions. When this switch is off, no App Restrictions policy is enforced, including the tenant deny list and any site-level policies. Stored tenant and site configuration is preserved, so enforcement resumes with the same configuration when the switch is turned on again.
 - **RestrictedAppIds** - the tenant-wide emergency deny list. When the switch is on, applications in this list are denied and the list can't be overridden by a site-level allow list.
 
 The tenant deny list can contain both concrete application IDs and parent agent blueprint IDs. A blueprint ID applies to the blueprint application itself and to every current or future agent app created from that blueprint. The cmdlet doesn't require you to distinguish between the two: `RestrictedAppIds` merges the internally typed entries into one stable, duplicate-free list of GUIDs. IDs are stored as lowercase canonical GUID strings and sorted, so output is stable between calls.
@@ -88,8 +88,6 @@ if ($policy.Enabled -and $policy.RestrictedAppIds.Count -eq 0) {
 This example identifies the state where enforcement is enabled but the tenant deny list is empty. This state is valid, and often occurs during cleanup, but the tenant deny list has no effect until an application ID is added.
 
 ## PARAMETERS
-
-This cmdlet has no parameters.
 
 ### CommonParameters
 
