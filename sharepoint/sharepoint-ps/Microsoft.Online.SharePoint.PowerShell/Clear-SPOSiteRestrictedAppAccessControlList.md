@@ -8,7 +8,7 @@ schema: 2.0.0
 ms.author: neilh
 ms.reviewer: neilh
 description: Clear-SPOSiteRestrictedAppAccessControlList removes all entries from a site's allow or deny list in SharePoint Online. Learn syntax, examples, and parameters.
-ms.date: 10/09/2026
+ms.date: 10/12/2026
 ms.topic: concept-article
 ---
 
@@ -21,8 +21,7 @@ Removes every entry from one app restrictions list on a site, preserving the oth
 ## SYNTAX
 
 ```
-Clear-SPOSiteRestrictedAppAccessControlList -Identity <String> -ListType <String> [-WhatIf] [-Confirm]
- [<CommonParameters>]
+Clear-SPOSiteRestrictedAppAccessControlList -Identity <String> -ListType <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -95,7 +94,7 @@ Specifies the site to change. Provide either the site URL or the site ID.
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: []
+Aliases:
 Applicable: SharePoint Online
 Required: True
 Position: Named
@@ -114,7 +113,7 @@ Specifies which list to clear. Entry mutations must explicitly identify the targ
 ```yaml
 Type: String
 Parameter Sets: (All)
-Aliases: []
+Aliases:
 Accepted values: AllowList, DenyList
 Applicable: SharePoint Online
 Required: True
