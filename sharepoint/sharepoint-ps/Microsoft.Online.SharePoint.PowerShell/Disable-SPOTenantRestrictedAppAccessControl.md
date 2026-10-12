@@ -8,8 +8,8 @@ schema: 2.0.0
 ms.author: neilh
 ms.reviewer: neilh
 description: Disable-SPOTenantRestrictedAppAccessControl turns off tenant-wide App Restrictions enforcement while keeping your deny list intact. Learn the syntax and examples.
-ms.date: 10/09/2026
-ms.topic: concept-article
+ms.date: 10/12/2026
+ms.topic: reference
 ---
 
 # Disable-SPOTenantRestrictedAppAccessControl
@@ -38,7 +38,7 @@ Configuration and enablement are orthogonal: this cmdlet changes only the switch
 
 The tenant scope is deny-only and has a single list, so there's no mode cmdlet and no `-ListType` parameter at tenant scope.
 
-App Restrictions administration is isolated from the general-purpose `Get-SPOTenant` and `Set-SPOTenant` cmdlets. App Restrictions isn't exposed as a `Tenant` property, so `Get-SPOTenant` doesn't return the policy and `Set-SPOTenant` can't change it.
+Tenant App Restrictions administration is isolated from the general-purpose `Get-SPOTenant` and `Set-SPOTenant` cmdlets. App Restrictions isn't exposed as a `Tenant` property, so `Get-SPOTenant` doesn't return the policy and `Set-SPOTenant` can't change it.
 
 You must be at least a SharePoint Administrator to run this cmdlet.
 
@@ -73,15 +73,17 @@ This example turns off the tenant switch without prompting, which is useful in a
 
 ## PARAMETERS
 
-### -WhatIf
+### -Confirm
 
-Shows what would happen if the cmdlet runs. The cmdlet isn't run.
+> Applicable: SharePoint Online
+
+Prompts you for confirmation before running the cmdlet. This cmdlet has a confirm impact of High, so it prompts by default. Automation can use `-Confirm:$false` to suppress the prompt. Suppressing the prompt doesn't bypass validation, authorization, auditing, or first-party protection.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: wi
-Applicable: SharePoint Online
+Aliases: cf
+
 Required: False
 Position: Named
 Default value: None
@@ -89,15 +91,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Confirm
+### -WhatIf
 
-Prompts you for confirmation before running the cmdlet. This cmdlet has a confirm impact of High, so it prompts by default. Automation can use `-Confirm:$false` to suppress the prompt. Suppressing the prompt doesn't bypass validation, authorization, auditing, or first-party protection.
+> Applicable: SharePoint Online
+
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
-Aliases: cf
-Applicable: SharePoint Online
+Aliases: wi
+
 Required: False
 Position: Named
 Default value: None
