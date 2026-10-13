@@ -22,7 +22,5 @@
   href: sharepoint-ps/Microsoft.Online.SharePoint.PowerShell/set-spositerestrictedappaccesscontrollist.md
 - name: Set-SPOSiteRestrictedAppAccessControlMode
   href: sharepoint-ps/Microsoft.Online.SharePoint.PowerShell/set-spositerestrictedappaccesscontrolmode.md
-- name: Set-SPOSiteRestrictedAppAccessControlList
-  href: sharepoint-ps/Microsoft.Online.SharePoint.PowerShell/set-spositerestrictedappaccesscontrollist.md
 - name: Set-SPOTenantRestrictedAppAccessControlList
   href: sharepoint-ps/Microsoft.Online.SharePoint.PowerShell/set-spotenantrestrictedappaccesscontrollist.md

@@ -7,8 +7,8 @@ title: Set-SPOSiteRestrictedAppAccessControlList
 schema: 2.0.0
 ms.author: neilh
 ms.reviewer: neilh
-description: Learn how to use Set-SPOSiteRestrictedAppAccessControlList to manage site-level allow and deny lists for App Restrictions in SharePoint Online.
-ms.date: 10/12/2026
+description: Learn how to use Set-SPOSiteRestrictedAppAccessControlList to manage site-level allow and deny lists for Application Restrictions in SharePoint Online.
+ms.date: 10/13/2026
 ms.topic: reference
 ---
 
@@ -16,11 +16,11 @@ ms.topic: reference
 
 ## SYNOPSIS
 
-Adds application IDs to, or removes application IDs from, the allow list or the deny list of a site-level App Restrictions policy, in one atomic update.
+Adds or removes application IDs in a site's Application Restrictions allow or deny list in one atomic update.
 
 ## SYNTAX
 
-```
+```powershell
 Set-SPOSiteRestrictedAppAccessControlList [-Identity] <String> -ListType <String> [-AddRestrictedAppIds <Guid[]>] [-RemoveRestrictedAppIds <Guid[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -28,29 +28,27 @@ Set-SPOSiteRestrictedAppAccessControlList [-Identity] <String> -ListType <String
 
 Use the `Set-SPOSiteRestrictedAppAccessControlList` cmdlet to change the contents of one site list. Additions and removals are applied in one atomic update that preserves site enablement and the active mode.
 
-App Restrictions adds a SharePoint authorization boundary for applications that already have Microsoft Entra consent and SharePoint permissions. It never grants permissions and it doesn't replace Entra consent. A request must pass both the existing permission model and App Restrictions.
+Application Restrictions adds a SharePoint authorization boundary for applications that already have Microsoft Entra consent and SharePoint permissions. It never grants permissions and it doesn't replace Entra consent. A request must pass both the existing permission model and Application Restrictions.
 
 Use `-ListType` to identify the target list explicitly. Both lists are always stored and can be managed regardless of which mode is active. Only the list selected by the active mode participates in runtime enforcement, so adding or removing entries in the inactive list doesn't change current enforcement. The inactive list is preserved for future mode changes.
 
-The active mode determines what the change means at runtime. When the mode is `Allow`, applications in the allow list are allowed and all other governed apps are denied; an empty active allow list blocks all governed third-party and agentic apps. When the mode is `Deny`, applications in the deny list are denied and all other governed apps are allowed; an empty active deny list allows all governed apps.
+The active mode determines what the change means at runtime. When the mode is `Allow`, applications in the allow list pass the Application Restrictions check and all other governed applications are denied by the site policy; an empty active allow list causes the site policy to deny all governed third-party and agentic applications. When the mode is `Deny`, applications in the deny list are denied by the site policy and all other governed applications pass the Application Restrictions check; an empty active deny list means the site policy denies none of them.
 
 At least one of `-AddRestrictedAppIds` or `-RemoveRestrictedAppIds` is required, an ID can't appear in both, and removals are applied before additions.
 
-You supply application IDs only. Each list can contain both concrete application IDs and parent agent blueprint IDs, and the backend classifies each added ID and stores its type internally. A parent agent blueprint ID applies to the blueprint application itself and to every current or future agent app created from that blueprint. In an active deny list, a blueprint ID blocks that complete app family. In an active allow list, it allows that complete app family through App Restrictions.
+You supply application IDs only. Each list can contain both concrete application IDs and parent agent blueprint IDs, and the backend classifies each added ID and stores its type internally. A parent agent blueprint ID applies to the blueprint application itself and to every current or future agent app created from that blueprint. In an active deny list, a blueprint ID causes the site policy to deny that complete app family. In an active allow list, it lets that complete app family pass the Application Restrictions check. Existing Microsoft Entra consent and SharePoint authorization still apply.
 
 Adding IDs uses the same bulk Microsoft Graph classification and first-party exclusion as the tenant cmdlets. Microsoft first-party and core applications are rejected, IDs that can't be classified are rejected, and a bulk add is all-or-none, so no partial set of IDs is persisted.
 
 Removing entries requires only `-ListType` and `-RemoveRestrictedAppIds`. Removal doesn't call Microsoft Graph, so deleted or stale application IDs can still be removed. If a supplied ID isn't present in the target list, the cmdlet returns a validation error.
 
-Configuration and enablement are orthogonal: a list change never turns enforcement on. Site enforcement is turned on only by `Enable-SPOSiteRestrictedAppAccessControl`, so you can stage lists and then enable the site explicitly. This avoids the dangerous case where adding a single ID to an unconfigured site would immediately activate an allow list and block every other application. The only combination the backend rejects is enabled with mode `None`.
+Configuration and enablement are orthogonal: a list change never turns enforcement on. Site enforcement is turned on only by `Enable-SPOSiteRestrictedAppAccessControl`, so you can stage lists and then enable the site explicitly. A mode must be explicitly configured before `Enable-SPOSiteRestrictedAppAccessControl` succeeds.
 
 Site enforcement is also gated by the tenant switch. While the tenant switch is on, the tenant deny list takes precedence and can't be overridden by a site allow list.
 
 Automation can use the standard `-Confirm:$false`. Suppressing the prompt doesn't bypass validation, authorization, auditing, or first-party protection.
 
-Site App Restrictions administration is isolated from the general-purpose `Get-SPOSite` and `Set-SPOSite` cmdlets. `Get-SPOSite` doesn't load site policy data and `Set-SPOSite` can't change it. Use the dedicated App Restrictions cmdlets listed in [Related Links](#related-links).
-
-You must be at least a SharePoint Administrator to run this cmdlet.
+Site Application Restrictions administration is isolated from the general-purpose `Get-SPOSite` and `Set-SPOSite` cmdlets. `Get-SPOSite` doesn't load site policy data and `Set-SPOSite` can't change it. Use the dedicated Application Restrictions cmdlets listed in [Related Links](#related-links).
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
@@ -58,7 +56,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### Example 1
 
-```
+```powershell
 Set-SPOSiteRestrictedAppAccessControlList -Identity https://contoso.sharepoint.com/sites/Finance -ListType AllowList -AddRestrictedAppIds 11111111-1111-1111-1111-111111111111
 ```
 
@@ -66,9 +64,11 @@ This example adds one application ID to the allow list of the Finance site. The 
 
 ### Example 2
 
+```powershell
+Set-SPOSiteRestrictedAppAccessControlList -Identity https://contoso.sharepoint.com/sites/Finance -ListType DenyList -AddRestrictedAppIds 22222222-2222-2222-2222-222222222222,33333333-3333-3333-3333-333333333333 -RemoveRestrictedAppIds 44444444-4444-4444-4444-444444444444
 ```
-Set-SPOSiteRestrictedAppAccessControlList -Identity https://contoso.sharepoint.com/sites/Finance -ListType DenyList -AddRestrictedAppIds 22222222-2222-2222-2222-222222222222,33333333-3333-3333-3333-333333333333 -RemoveRestrictedAppIds 44444444-4444-4444-4444-444
-```
+
+This example adds two application IDs and removes a third in one atomic update. The removal is applied before the additions. Site enablement and the active mode are unchanged.
 
 ## PARAMETERS
 
@@ -207,7 +207,7 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 - At least one of `-AddRestrictedAppIds` or `-RemoveRestrictedAppIds` is required, an ID can't appear in both, and removals are applied before additions.
 - Each list has a hard maximum of 100 entries, and the two lists combined have a hard maximum of 200 entries. Both regular application IDs and parent agent blueprint IDs consume the same quota.
 - Adding or removing entries in the list that the active mode doesn't enforce doesn't change current enforcement.
-- Configuration and enablement are orthogonal. Site enforcement is turned on only by `Enable-SPOSiteRestrictedAppAccessControl`. The only combination the backend rejects is enabled with mode `None`.
+- Configuration and enablement are orthogonal. Site enforcement is turned on only by `Enable-SPOSiteRestrictedAppAccessControl`, and a mode must be explicitly configured before that cmdlet succeeds.
 - The tenant switch gates all site enforcement. While the tenant switch is on, the tenant deny list can't be overridden by a site allow list.
 - Use `Get-SPOSiteRestrictedAppAccessControl` to confirm the resulting lists, and `Clear-SPOSiteRestrictedAppAccessControlList` to clear an entire list.
 

@@ -7,8 +7,8 @@ title: Clear-SPOSiteRestrictedAppAccessControlPolicy
 schema: 2.0.0
 ms.author: neilh
 ms.reviewer: neilh
-description: Clear-SPOSiteRestrictedAppAccessControlPolicy removes a site's App Restrictions policy, disabling enforcement and clearing lists. Learn syntax and examples.
-ms.date: 10/12/2026
+description: Clear-SPOSiteRestrictedAppAccessControlPolicy removes a site's Application Restrictions policy, disabling enforcement and clearing lists. Learn syntax and examples.
+ms.date: 10/13/2026
 ms.topic: reference
 ---
 
@@ -16,11 +16,11 @@ ms.topic: reference
 
 ## SYNOPSIS
 
-Removes the complete app restrictions policy from a site. The cmdlet disables enforcement, and removes the active mode and both lists.
+Removes the complete Application Restrictions policy from a site. The cmdlet disables enforcement and removes the active mode and both lists.
 
 ## SYNTAX
 
-```
+```powershell
 Clear-SPOSiteRestrictedAppAccessControlPolicy -Identity <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -34,11 +34,9 @@ Because the mode is removed along with the lists, a cleared site can't be enable
 
 Clearing a site policy affects only that site. The tenant switch gates all site enforcement, and the tenant deny list can't be overridden by a site allow list, so clearing a site policy never restores access for an application that the tenant denies. Use `Clear-SPOTenantRestrictedAppAccessControlPolicy` for the tenant scope.
 
-App Restrictions adds a SharePoint authorization boundary for applications that already have Microsoft Entra consent and SharePoint permissions. It never grants permissions and it doesn't replace Entra consent. A request must pass both the existing permission model and App Restrictions, so clearing a site policy doesn't grant any application access it doesn't already have.
+Application Restrictions adds a SharePoint authorization boundary for applications that already have Microsoft Entra consent and SharePoint permissions. It never grants permissions and it doesn't replace Entra consent. A request must pass both the existing permission model and Application Restrictions, so clearing a site policy doesn't grant any application access it doesn't already have.
 
-Site App Restrictions administration is isolated from the general-purpose `Get-SPOSite` and `Set-SPOSite` cmdlets. App Restrictions is fully decoupled from `SiteProperties`, so `Get-SPOSite` doesn't load site policy data and `Set-SPOSite` can't change it. Use the dedicated App Restrictions cmdlets listed in [Related Links](#related-links).
-
-You must be at least a SharePoint Administrator to run this cmdlet.
+Site Application Restrictions administration is isolated from the general-purpose `Get-SPOSite` and `Set-SPOSite` cmdlets. Application Restrictions is fully decoupled from `SiteProperties`, so `Get-SPOSite` doesn't load site policy data and `Set-SPOSite` can't change it. Use the dedicated Application Restrictions cmdlets listed in [Related Links](#related-links).
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
@@ -46,23 +44,23 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### Example 1
 
-```
+```powershell
 Clear-SPOSiteRestrictedAppAccessControlPolicy -Identity "https://contoso.sharepoint.com/sites/Finance"
 ```
 
-This example removes the complete App Restrictions policy from the Finance site. It disables enforcement and removes the active mode, allow list, and deny list.
+This example removes the complete Application Restrictions policy from the Finance site. It disables enforcement and removes the active mode, allow list, and deny list.
 
 ### Example 2
 
-```
+```powershell
 Clear-SPOSiteRestrictedAppAccessControlPolicy -Identity "e1b2c3d4-5678-4abc-9def-0123456789ab" -WhatIf
 ```
 
-This example identifies the site by site ID and previews the change without modifying the policy. Every site App Restrictions cmdlet accepts `-Identity` as either a site URL or a site ID.
+This example identifies the site by site ID and previews the change without modifying the policy. Every site Application Restrictions cmdlet accepts `-Identity` as either a site URL or a site ID.
 
 ### Example 3
 
-```
+```powershell
 $url = "https://contoso.sharepoint.com/sites/Finance"
 Clear-SPOSiteRestrictedAppAccessControlPolicy -Identity $url -Confirm:$false
 Set-SPOSiteRestrictedAppAccessControlMode -Identity $url -Mode Deny
@@ -149,7 +147,7 @@ This cmdlet doesn't return an object. Use `Get-SPOSiteRestrictedAppAccessControl
 - To clear only one list, use `Clear-SPOSiteRestrictedAppAccessControlList`, which preserves the other list, the active mode, and site enablement.
 - After clearing, the site can't be enabled until a mode is set. `Enable-SPOSiteRestrictedAppAccessControl` fails when no mode is set.
 - The tenant switch gates all site enforcement, so a site policy has no effect while the tenant switch is off. The tenant deny list can't be overridden by a site allow list.
-- App Restrictions never grants permissions. A request must still pass existing SharePoint authorization.
+- Application Restrictions never grants permissions. A request must still pass existing SharePoint authorization.
 - This cmdlet supports `-WhatIf` and `-Confirm` with `ConfirmImpact.High`. `-Confirm:$false` is allowed for automation and doesn't bypass validation, authorization, auditing, or first-party protection.
 
 ## RELATED LINKS

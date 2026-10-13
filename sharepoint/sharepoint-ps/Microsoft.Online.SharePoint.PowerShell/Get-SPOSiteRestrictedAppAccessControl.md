@@ -7,8 +7,8 @@ title: Get-SPOSiteRestrictedAppAccessControl
 schema: 2.0.0
 ms.author: neilh
 ms.reviewer: neilh
-description: Learn how to use Get-SPOSiteRestrictedAppAccessControl to read a SharePoint site's App Restrictions policy and check enforcement status with PowerShell.
-ms.date: 10/12/2026
+description: Learn how to use Get-SPOSiteRestrictedAppAccessControl to read a SharePoint site's Application Restrictions policy and check enforcement status with PowerShell.
+ms.date: 10/13/2026
 ms.topic: reference
 ---
 
@@ -16,28 +16,28 @@ ms.topic: reference
 
 ## SYNOPSIS
 
-Returns the complete site-level App Restrictions policy for a site, including enablement, active mode, and both the allow list and the deny list.
+Returns the complete site-level Application Restrictions policy for a site, including enablement, active mode, and both the allow list and the deny list.
 
 ## SYNTAX
 
-```
+```powershell
 Get-SPOSiteRestrictedAppAccessControl [-Identity] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-Use the `Get-SPOSiteRestrictedAppAccessControl` cmdlet to read the complete Restricted App Access Control policy stored for a single site.
+Use the `Get-SPOSiteRestrictedAppAccessControl` cmdlet to read the complete Application Restrictions policy stored for a single site.
 
-App Restrictions adds a SharePoint authorization boundary for applications that already have Microsoft Entra consent and SharePoint permissions. It never grants permissions and it doesn't replace Entra consent. A request must pass both the existing permission model and App Restrictions.
+Application Restrictions adds a SharePoint authorization boundary for applications that already have Microsoft Entra consent and SharePoint permissions. It never grants permissions and it doesn't replace Entra consent. A request must pass both the existing permission model and Application Restrictions.
 
 A site policy has four parts:
 
 - **Enabled** - whether site enforcement is turned on. Site enforcement is turned on only by `Enable-SPOSiteRestrictedAppAccessControl`. Mode and list changes are configuration-only and preserve the current enablement state.
-- **Mode** - the active mode. When the mode is `Allow`, applications in the allow list are allowed and all other governed apps are denied. When the mode is `Deny`, applications in the deny list are denied and all other governed apps are allowed. `Allow` is the default mode when a site is enabled without existing configuration.
+- **Mode** - the active mode. When the mode is `Allow`, applications in the allow list pass the Application Restrictions check and all other governed applications are denied by the site policy. When the mode is `Deny`, applications in the deny list are denied by the site policy and all other governed applications pass the Application Restrictions check. A mode must be explicitly configured before the site policy can be enabled.
 - **AllowList** - the persistent list used when the mode is `Allow`.
 - **DenyList** - the persistent list used when the mode is `Deny`.
 
-Both lists are always stored and can be managed regardless of which mode is active. Only the list selected by the active mode participates in runtime enforcement. The inactive list is preserved for future mode changes and has no runtime effect. An empty active allow list blocks all governed third-party and agentic apps. An empty active deny list allows all governed apps.
+Both lists are always stored and can be managed regardless of which mode is active. Only the list selected by the active mode participates in runtime enforcement. The inactive list is preserved for future mode changes and has no runtime effect. An empty active allow list causes the site policy to deny all governed third-party and agentic applications. An empty active deny list means the site policy denies none of them. Existing Microsoft Entra consent and SharePoint authorization still apply.
 
 `AllowList` and `DenyList` are returned as GUID arrays. Each list can contain both concrete application IDs and parent agent blueprint IDs, and a blueprint ID applies to the blueprint application itself and to every current or future agent app created from that blueprint. The cmdlet doesn't require you to distinguish between the two: each property merges its internally typed application and blueprint entries into one stable, duplicate-free list of GUIDs.
 
@@ -45,11 +45,9 @@ This cmdlet performs an uncached read and always returns the authoritative store
 
 Site enforcement is gated by the tenant switch. While the tenant switch is off, no site policy is enforced, even when a site policy reports `Enabled` as `True`. While the tenant switch is on, the tenant deny list takes precedence and can't be overridden by a site allow list. Use `Get-SPOTenantRestrictedAppAccessControl` to read the tenant switch and the tenant deny list.
 
-Site App Restrictions administration is isolated from the general-purpose `Get-SPOSite` and `Set-SPOSite` cmdlets. App Restrictions is fully decoupled from site properties, so `Get-SPOSite` doesn't load site policy data and `Set-SPOSite` can't change it. Use the dedicated App Restrictions cmdlets listed in [Related Links](#related-links).
+Site Application Restrictions administration is isolated from the general-purpose `Get-SPOSite` and `Set-SPOSite` cmdlets. Application Restrictions is fully decoupled from site properties, so `Get-SPOSite` doesn't load site policy data and `Set-SPOSite` can't change it. Use the dedicated Application Restrictions cmdlets listed in [Related Links](#related-links).
 
-You must be at least a SharePoint Administrator to run this cmdlet.
-
-Microsoft first-party and core applications are excluded from App Restrictions configuration and enforcement and never appear in a site list.
+Microsoft first-party and core applications are excluded from Application Restrictions configuration and enforcement and never appear in a site list.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
@@ -57,23 +55,23 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### Example 1
 
-```
+```powershell
 Get-SPOSiteRestrictedAppAccessControl -Identity https://contoso.sharepoint.com/sites/Finance
 ```
 
-This example returns the complete Restricted App Access Control policy for the Finance site, bound by site URL.
+This example returns the complete Application Restrictions policy for the Finance site identified by its URL. The returned object includes `SiteUrl`.
 
 ### Example 2
 
-```
+```powershell
 Get-SPOSiteRestrictedAppAccessControl -Identity 8a1e30f6-2f52-4b9e-9d1b-2e9f6c1d40aa
 ```
 
-This example returns the same policy for a site bound by site ID. The returned object carries `SiteUrl`, so it identifies its own site even when you don't know the URL.
+This example returns the same policy for a site identified by its ID. The returned object includes `SiteUrl`, so the result remains identifiable even when the input is a site ID.
 
 ### Example 3
 
-```
+```powershell
 $policy = Get-SPOSiteRestrictedAppAccessControl -Identity https://contoso.sharepoint.com/sites/Finance
 if ($policy.Mode -eq "Allow") {
     $policy.AllowList
@@ -86,14 +84,15 @@ This example returns only the list that the active mode enforces. The other list
 
 ### Example 4
 
-```
+```powershell
+$tenantPolicy = Get-SPOTenantRestrictedAppAccessControl
 $policy = Get-SPOSiteRestrictedAppAccessControl -Identity https://contoso.sharepoint.com/sites/Finance
-if ($policy.Enabled -and $policy.Mode -eq "Allow" -and $policy.AllowList.Count -eq 0) {
+if ($tenantPolicy.Enabled -and $policy.Enabled -and $policy.Mode -eq "Allow" -and $policy.AllowList.Count -eq 0) {
     Write-Host "Enforcement is on with an empty active allow list, which blocks all governed third-party and agentic apps."
 }
 ```
 
-This example identifies the state where enforcement is enabled, the active mode is `Allow`, and the active allow list is empty. In that state, all governed third-party and agentic apps are blocked from the site while the tenant switch is on.
+This example identifies the state where the tenant switch and site policy are enabled, the active mode is `Allow`, and the active allow list is empty. In that state, the site policy blocks all governed third-party and agentic apps.
 
 ## PARAMETERS
 
@@ -131,7 +130,7 @@ Returns an `SPORestrictedAppAccessControlSitePolicy` object with the following p
 
 | Property | Type | Description |
 |---|---|---|
-| `SiteUrl` | String | The URL of the site the policy belongs to. This property is carried so the returned object identifies its own site, which matters when sites are piped into the cmdlet and when you bound the site by ID. |
+| `SiteUrl` | String | The URL of the site the policy belongs to. This property keeps results identifiable when sites are piped into the cmdlet or when the input is a site ID. |
 | `Enabled` | Boolean | Indicates whether site enforcement is turned on. Site enforcement is also gated by the tenant switch. |
 | `Mode` | String | The active mode, `Allow` or `Deny`. Only the list selected by this mode is enforced. |
 | `AllowList` | Guid[] | The persistent allow list, returned as one stable, duplicate-free list of application IDs and parent agent blueprint IDs. |
@@ -139,13 +138,13 @@ Returns an `SPORestrictedAppAccessControlSitePolicy` object with the following p
 
 ## NOTES
 
-- Getters return authoritative uncached state.
+- This cmdlet returns the authoritative, uncached policy state.
 - When the stored policy data is malformed, the cmdlet emits a warning and the returned object includes `IsPolicyDataMalformed = true`. Healthy output omits that property.
 - Both lists are always stored. Only the list selected by the active mode is enforced; the inactive list is preserved and has no runtime effect.
 - Each list has a hard maximum of 100 entries, and the two lists combined have a hard maximum of 200 entries.
 - A parent agent blueprint ID entry applies to the blueprint application itself and to every current or future agent app created from that blueprint.
 - The tenant switch gates all site enforcement. While the tenant switch is on, the tenant deny list can't be overridden by a site allow list.
-- Configuration and enablement are orthogonal: mode and list changes never turn enforcement on. The only combination the backend rejects is enabled with mode `None`.
+- Configuration and enablement are orthogonal: mode and list changes never turn enforcement on. A mode must be explicitly configured before `Enable-SPOSiteRestrictedAppAccessControl` succeeds.
 - Use `Get-SPOTenantRestrictedAppAccessControl` to read the tenant-level policy.
 
 ## RELATED LINKS

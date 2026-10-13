@@ -7,8 +7,8 @@ title: Set-SPOSiteRestrictedAppAccessControlMode
 schema: 2.0.0
 ms.author: neilh
 ms.reviewer: neilh
-description: Set-SPOSiteRestrictedAppAccessControlMode switches a site between Allow and Deny modes while preserving both app lists. Learn the syntax and examples.
-ms.date: 10/12/2026
+description: Set-SPOSiteRestrictedAppAccessControlMode switches a site between Allow and Deny modes while preserving both application lists. Learn the syntax and examples.
+ms.date: 10/13/2026
 ms.topic: reference
 ---
 
@@ -16,11 +16,11 @@ ms.topic: reference
 
 ## SYNOPSIS
 
-Sets the active mode of the site-level App Restrictions policy to `Allow` or `Deny`, preserving site enablement and both lists.
+Sets the active mode of the site-level Application Restrictions policy to `Allow` or `Deny`, preserving site enablement and both lists.
 
 ## SYNTAX
 
-```
+```powershell
 Set-SPOSiteRestrictedAppAccessControlMode [-Identity] <String> -Mode <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -28,14 +28,14 @@ Set-SPOSiteRestrictedAppAccessControlMode [-Identity] <String> -Mode <String> [-
 
 Use the `Set-SPOSiteRestrictedAppAccessControlMode` cmdlet to change which list a site enforces. This cmdlet changes the active mode only. It preserves site enablement and both the allow list and the deny list.
 
-App Restrictions adds a SharePoint authorization boundary for applications that already have Microsoft Entra consent and SharePoint permissions. It never grants permissions and it doesn't replace Entra consent. A request must pass both the existing permission model and App Restrictions.
+Application Restrictions adds a SharePoint authorization boundary for applications that already have Microsoft Entra consent and SharePoint permissions. It never grants permissions and it doesn't replace Entra consent. A request must pass both the existing permission model and Application Restrictions.
 
 The active mode selects the list that is enforced:
 
-- **Allow** - applications in the allow list are allowed and all other governed apps are denied. An empty active allow list blocks all governed third-party and agentic apps.
-- **Deny** - applications in the deny list are denied and all other governed apps are allowed. An empty active deny list allows all governed apps.
+- **Allow** - applications in the allow list pass the Application Restrictions check, and all other governed applications are denied by the site policy. An empty active allow list causes the site policy to deny all governed third-party and agentic applications.
+- **Deny** - applications in the deny list are denied by the site policy, and all other governed applications pass the Application Restrictions check. An empty active deny list means the site policy denies none of them.
 
-`Allow` is the default mode when a site is enabled without existing configuration. Both lists are always stored and can be managed regardless of which mode is active. Only the list selected by the active mode participates in runtime enforcement. The inactive list is preserved for future mode changes and has no runtime effect.
+Both lists are always stored and can be managed regardless of which mode is active. Only the list selected by the active mode participates in runtime enforcement. The inactive list is preserved for future mode changes and has no runtime effect. A mode must be explicitly configured before the site policy can be enabled.
 
 Because a mode switch can change the effective decision for every governed application on the site, the cmdlet displays a warning before it makes the change. The warning identifies the current mode, the target mode, the size of the newly active preserved list, and the new default decision, and it clearly states that both lists are preserved. The cmdlet then asks you to confirm. Use `-WhatIf` to display the same impact without changing the policy.
 
@@ -45,9 +45,7 @@ Site enforcement is also gated by the tenant switch. While the tenant switch is 
 
 Automation can use the standard `-Confirm:$false`. Suppressing the prompt doesn't bypass validation, authorization, auditing, or first-party protection.
 
-Site App Restrictions administration is isolated from the general-purpose `Get-SPOSite` and `Set-SPOSite` cmdlets. `Get-SPOSite` doesn't load site policy data and `Set-SPOSite` can't change it. Use the dedicated App Restrictions cmdlets listed in [Related Links](#related-links).
-
-You must be at least a SharePoint Administrator to run this cmdlet.
+Site Application Restrictions administration is isolated from the general-purpose `Get-SPOSite` and `Set-SPOSite` cmdlets. `Get-SPOSite` doesn't load site policy data and `Set-SPOSite` can't change it. Use the dedicated Application Restrictions cmdlets listed in [Related Links](#related-links).
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
 
@@ -55,15 +53,15 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### Example 1
 
-```
+```powershell
 Set-SPOSiteRestrictedAppAccessControlMode -Identity https://contoso.sharepoint.com/sites/Finance -Mode Allow
 ```
 
-This example sets the active mode of the Finance site to `Allow`, so only applications in the site allow list can access the site and all other governed apps are denied. The deny list is preserved but becomes inactive. The cmdlet displays the mode-switch warning and asks for confirmation before it applies the change.
+This example sets the active mode of the Finance site to `Allow`. Applications in the site allow list pass the Application Restrictions check, and all other governed applications are denied by the site policy. Existing Microsoft Entra consent and SharePoint authorization still apply. The deny list is preserved but becomes inactive. The cmdlet displays the mode-switch warning and asks for confirmation before it applies the change.
 
 ### Example 2
 
-```
+```powershell
 Set-SPOSiteRestrictedAppAccessControlMode -Identity https://contoso.sharepoint.com/sites/Finance -Mode Deny -WhatIf
 ```
 
@@ -71,15 +69,15 @@ This example displays the impact of switching the Finance site to `Deny`, includ
 
 ### Example 3
 
-```
+```powershell
 Set-SPOSiteRestrictedAppAccessControlMode -Identity 8a1e30f6-2f52-4b9e-9d1b-2e9f6c1d40aa -Mode Deny -Confirm:$false
 ```
 
-This example switches a site bound by site ID to `Deny` without prompting, for use in automation. Suppressing the prompt doesn't bypass validation, authorization, auditing, or first-party protection.
+This example switches a site identified by its ID to `Deny` without prompting, for use in automation. Suppressing the prompt doesn't bypass validation, authorization, auditing, or first-party protection.
 
 ### Example 4
 
-```
+```powershell
 Set-SPOSiteRestrictedAppAccessControlMode -Identity https://contoso.sharepoint.com/sites/Finance -Mode Allow
 Enable-SPOSiteRestrictedAppAccessControl -Identity https://contoso.sharepoint.com/sites/Finance
 ```
@@ -112,7 +110,7 @@ Accept wildcard characters: False
 
 Specifies the active mode of the site policy. Valid values are `Allow` and `Deny`.
 
-When the mode is `Allow`, applications in the allow list are allowed and all other governed apps are denied. When the mode is `Deny`, applications in the deny list are denied and all other governed apps are allowed. Both lists are preserved either way.
+When the mode is `Allow`, applications in the allow list pass the Application Restrictions check and all other governed applications are denied by the site policy. When the mode is `Deny`, applications in the deny list are denied by the site policy and all other governed applications pass the Application Restrictions check. Both lists are preserved either way. Existing Microsoft Entra consent and SharePoint authorization still apply.
 
 ```yaml
 Type: System.String
@@ -178,8 +176,9 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 ## NOTES
 
 - A mode change changes only the active mode. It preserves site enablement and both lists.
-- Before the switch, the cmdlet warns with the current mode, the target mode, the size of the newly active preserved list, and the new default decision, states that both lists are preserved, and asks for confirmation.
-- An empty active allow list blocks all governed third-party and agentic apps. An empty active deny list allows all governed apps.
+- Before the switch, the cmdlet warns with the current mode, target mode, size of the newly active preserved list, and new default decision.
+- The warning states that both lists are preserved, and the cmdlet asks for confirmation.
+- An empty active allow list causes the site policy to deny all governed third-party and agentic applications. An empty active deny list means the site policy denies none of them. Existing Microsoft Entra consent and SharePoint authorization still apply.
 - Configuration and enablement are orthogonal. Site enforcement is turned on only by `Enable-SPOSiteRestrictedAppAccessControl`. The only combination the backend rejects is enabled with mode `None`.
 - The tenant switch gates all site enforcement. While the tenant switch is on, the tenant deny list can't be overridden by a site allow list.
 - Use `Get-SPOSiteRestrictedAppAccessControl` to confirm the resulting mode and both lists.
