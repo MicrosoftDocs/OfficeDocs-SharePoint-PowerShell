@@ -103,13 +103,31 @@ The above cmdlet generates a detailed report for all content shared with 'Everyo
 ### Example 3
 
 ```powershell
-$groups = Get-MgGroup -Filter "displayName eq 'Finance Owners'" -Property Id,Mail,DisplayName,SecurityEnabled,GroupTypes |
-    Select-Object Id,Mail,DisplayName
+Connect-MgGraph -Scopes "GroupMember.Read.All"
 
-Start-SPODataAccessGovernanceInsight -ReportEntity PermissionsReport -ReportType Snapshot -Workload SharePoint -Name "FinanceOwnersPermissions" -TargetGroups $groups
+$securityGroup = Get-MgGroup -GroupId "<security group object ID>" -Property Id,Mail,DisplayName,SecurityEnabled
+
+if (-not $securityGroup.SecurityEnabled) {
+    throw "The group '$($securityGroup.DisplayName)' isn't a security group."
+}
+
+$microsoft365Groups = @(Get-MgGroup -Filter "displayName eq 'Finance site owners'" -Property Id,Mail,DisplayName,GroupTypes)
+
+if ($microsoft365Groups.Count -ne 1) {
+    throw "Expected exactly one Microsoft Entra group named 'Finance site owners'; found $($microsoft365Groups.Count)."
+}
+
+$microsoft365Group = $microsoft365Groups[0]
+if ($microsoft365Group.GroupTypes -notcontains "Unified") {
+    throw "The group '$($microsoft365Group.DisplayName)' isn't a Microsoft 365 group."
+}
+
+$targetGroups = @($securityGroup, $microsoft365Group) | Select-Object Id,Mail,DisplayName
+
+Start-SPODataAccessGovernanceInsight -ReportEntity PermissionsReport -ReportType Snapshot -Workload SharePoint -Name "GroupPermissions" -TargetGroups $targetGroups
 ```
 
-This example resolves a Microsoft Entra group and generates a snapshot report that identifies SharePoint sites where the group has permissions. Use Microsoft Graph to pass only security groups or Microsoft 365 groups. Distribution lists aren't supported. The group object must contain `Id` and `DisplayName`; `Mail` is optional to support groups that aren't mail-enabled.
+This example connects to Microsoft Graph PowerShell with `GroupMember.Read.All`, the least-privileged delegated permission for reading group properties. This permission requires administrator consent. It resolves a security group by its unique object ID and a Microsoft 365 group by the display name `Finance site owners`. The name lookup must return exactly one group, and each result is validated as the expected supported group type before the report is generated. Distribution lists aren't supported. Each object passed to `-TargetGroups` must contain `Id` and `DisplayName`; `Mail` is optional to support groups that aren't mail-enabled.
 
 
 ## PARAMETERS
