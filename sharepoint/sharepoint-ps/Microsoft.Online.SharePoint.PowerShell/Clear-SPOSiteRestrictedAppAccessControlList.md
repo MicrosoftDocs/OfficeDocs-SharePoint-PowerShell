@@ -1,0 +1,204 @@
+---
+external help file: Microsoft.Online.SharePoint.PowerShell.dll-help.xml
+Module Name: Microsoft.Online.SharePoint.PowerShell
+online version: https://learn.microsoft.com/powershell/module/sharepoint-online/clear-spositerestrictedappaccesscontrollist
+applicable: SharePoint Online
+title: Clear-SPOSiteRestrictedAppAccessControlList
+schema: 2.0.0
+ms.author: neilh
+ms.reviewer: neilh
+description: Clear-SPOSiteRestrictedAppAccessControlList removes all entries from a site's allow or deny list in SharePoint Online. Learn syntax, examples, and parameters.
+ms.date: 10/13/2026
+ms.topic: reference
+---
+
+# Clear-SPOSiteRestrictedAppAccessControlList
+
+## SYNOPSIS
+
+Clears a site's Application Restrictions allow or deny list while preserving the other list, active mode, and site enablement.
+
+## SYNTAX
+
+```powershell
+Clear-SPOSiteRestrictedAppAccessControlList -Identity <String> -ListType <String> [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+## DESCRIPTION
+
+Use the `Clear-SPOSiteRestrictedAppAccessControlList` cmdlet to clear the allow list or deny list on a single site. Clearing one list preserves the other list, active mode, and site enablement. To remove the complete policy, use `Clear-SPOSiteRestrictedAppAccessControlPolicy`.
+
+A site stores both lists, but only the list selected by the active mode participates in enforcement:
+
+- **Allow** mode enforces the allow list. Listed applications pass the Application Restrictions check, and all other governed applications are denied by the site policy.
+- **Deny** mode enforces the deny list. Listed applications are denied by the site policy, and all other governed applications pass the Application Restrictions check.
+
+When the cleared list is the one the active mode enforces, the cmdlet emits a warning before confirmation. Clearing the active allow list causes the site policy to deny all governed third-party and agentic applications. Clearing the active deny list means the site policy no longer denies any governed applications. This warning describes only the Application Restrictions policy decision and never means that an application is granted access. Existing Microsoft Entra consent and SharePoint authorization still apply. The warning also states whether the change takes effect immediately or when enforcement is next enabled.
+
+Clearing an inactive list doesn't change current enforcement, but it still supports `-WhatIf` and `-Confirm`, and it's audited.
+
+Configuration and enablement are orthogonal. List changes never turn enforcement on, so clearing a list on a site that isn't enabled leaves the site disabled and stages the change for the next time enforcement is enabled with `Enable-SPOSiteRestrictedAppAccessControl`. This avoids the dangerous case where adding a single ID to an unconfigured site would immediately activate an allow list and block every other application.
+
+The tenant switch gates all site enforcement. A site policy has no effect while the tenant switch is off, and the tenant deny list can't be overridden by a site allow list, so clearing a site deny list never restores access for an application that the tenant denies.
+
+Application Restrictions adds a SharePoint authorization boundary for applications that already have Microsoft Entra consent and SharePoint permissions. It never grants permissions and it doesn't replace Entra consent. A request must pass both the existing permission model and Application Restrictions.
+
+Site Application Restrictions administration is isolated from the general-purpose `Get-SPOSite` and `Set-SPOSite` cmdlets. Application Restrictions is fully decoupled from `SiteProperties`, so `Get-SPOSite` doesn't load site policy data and `Set-SPOSite` can't change it. Use the dedicated Application Restrictions cmdlets listed in [Related Links](#related-links).
+
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at [Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell).
+
+## EXAMPLES
+
+### Example 1
+
+```powershell
+Clear-SPOSiteRestrictedAppAccessControlList -Identity "https://contoso.sharepoint.com/sites/Finance" -ListType DenyList
+```
+
+This example clears the deny list on the Finance site. It preserves the allow list, active mode, and site enablement. If `Deny` is the active mode, the cmdlet warns that the site policy no longer denies governed applications in that list. Existing Microsoft Entra consent and SharePoint authorization still apply.
+
+### Example 2
+
+```powershell
+Clear-SPOSiteRestrictedAppAccessControlList -Identity "e1b2c3d4-5678-4abc-9def-0123456789ab" -ListType AllowList -WhatIf
+```
+
+This example identifies the site by site ID and previews clearing the allow list without changing the policy. Every site Application Restrictions cmdlet accepts `-Identity` as either a site URL or a site ID.
+
+### Example 3
+
+```powershell
+$url = "https://contoso.sharepoint.com/sites/Finance"
+Clear-SPOSiteRestrictedAppAccessControlList -Identity $url -ListType AllowList
+Set-SPOSiteRestrictedAppAccessControlList -Identity $url -ListType AllowList -AddRestrictedAppIds "11111111-1111-1111-1111-111111111111"
+```
+
+This example rebuilds an allow list from scratch. Because list changes are configuration-only, neither command changes whether the site is enabled.
+
+### Example 4
+
+```powershell
+Clear-SPOSiteRestrictedAppAccessControlList -Identity "https://contoso.sharepoint.com/sites/Finance" -ListType DenyList -Confirm:$false
+```
+
+This example clears the deny list without an interactive confirmation prompt, for use in automation. Using `-Confirm:$false` doesn't bypass validation, authorization, auditing, or first-party protection.
+
+## PARAMETERS
+
+### -Identity
+
+> Applicable: SharePoint Online
+
+Specifies the site to change. Provide either the site URL or the site ID.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ListType
+
+> Applicable: SharePoint Online
+
+Specifies which list to clear. Entry mutations must explicitly identify the target list. The valid values are:
+
+- `AllowList`
+- `DenyList`
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+Accepted values: AllowList, DenyList
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+> Applicable: SharePoint Online
+
+Prompts you for confirmation before running the cmdlet. This cmdlet uses `ConfirmImpact.High`, so it prompts by default. Use `-Confirm:$false` to suppress the prompt in automation.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+
+> Applicable: SharePoint Online
+
+Shows what would happen if the cmdlet runs. The cmdlet isn't run.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### None
+
+## OUTPUTS
+
+### None
+
+This cmdlet doesn't return an object. Use `Get-SPOSiteRestrictedAppAccessControl` to read the resulting policy.
+
+## NOTES
+
+- Clearing one list preserves the other list, the active mode, and site enablement.
+- Clearing the list that the active mode enforces changes the Application Restrictions policy decision. An empty active allow list causes the site policy to deny all governed third-party and agentic applications. An empty active deny list means the site policy denies none of them. Existing Microsoft Entra consent and SharePoint authorization still apply. The cmdlet warns before confirmation and states whether the change takes effect immediately or when enforcement is next enabled.
+- Clearing an inactive list doesn't change current enforcement, but the operation still supports `-WhatIf` and `-Confirm` and is audited.
+- List changes never turn enforcement on. Site enforcement is turned on only by `Enable-SPOSiteRestrictedAppAccessControl`.
+- The tenant switch gates all site enforcement, so a site policy has no effect while the tenant switch is off. The tenant deny list can't be overridden by a site allow list.
+- Application Restrictions never grants permissions. A request must still pass existing SharePoint authorization.
+- This cmdlet supports `-WhatIf` and `-Confirm` with `ConfirmImpact.High`. `-Confirm:$false` is allowed for automation and doesn't bypass validation, authorization, auditing, or first-party protection.
+
+## RELATED LINKS
+
+[Get-SPOSiteRestrictedAppAccessControl](Get-SPOSiteRestrictedAppAccessControl.md)
+
+[Set-SPOSiteRestrictedAppAccessControlMode](Set-SPOSiteRestrictedAppAccessControlMode.md)
+
+[Set-SPOSiteRestrictedAppAccessControlList](Set-SPOSiteRestrictedAppAccessControlList.md)
+
+[Enable-SPOSiteRestrictedAppAccessControl](Enable-SPOSiteRestrictedAppAccessControl.md)
+
+[Disable-SPOSiteRestrictedAppAccessControl](Disable-SPOSiteRestrictedAppAccessControl.md)
+
+[Clear-SPOSiteRestrictedAppAccessControlPolicy](Clear-SPOSiteRestrictedAppAccessControlPolicy.md)
+
+[Get-SPOTenantRestrictedAppAccessControl](Get-SPOTenantRestrictedAppAccessControl.md)
+
+[Intro to SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell)
