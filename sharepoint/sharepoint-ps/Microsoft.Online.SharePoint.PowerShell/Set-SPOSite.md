@@ -69,7 +69,7 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-Owner <String>] [-Title <String>] [-
  [-HidePeopleWhoHaveListsOpen <Boolean>] [-IsAuthoritative <Boolean>] [-AllowFileArchive <Boolean>]
  [-AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled <Boolean>] [-DisableSiteBranding <Boolean>]
  [-DisableClassicPageBaselineSecurityMode <Boolean>] [-HideSyncButtonOnTeamSite <Boolean>]
- [-DisableAddShortcutsToOneDrive <Boolean>]
+ [-HideAddShortcutsToOneDrive <Boolean>]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -408,11 +408,12 @@ Example 26 restricts Agent Users from accessing the site and then returns the co
 ### Example 27
 
 ```powershell
-Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -HideSyncButtonOnTeamSite $true -DisableAddShortcutsToOneDrive $true
-Get-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 | Select-Object Url, HideSyncButtonOnTeamSite, DisableAddShortcutsToOneDrive
+Set-SPOTenant -HideSyncButtonOnTeamSite $true -AllowOverrideHideSyncButton $true
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -HideSyncButtonOnTeamSite $false
+Get-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 | Select-Object Url, HideSyncButtonOnTeamSite, EffectiveHideSyncButtonOnTeamSite
 ```
 
-Example 27 hides the **Sync** button and the **Add shortcut to My files** option in the document libraries of the site and then returns the configured values. Other sites in the organization aren't affected.
+Example 27 hides the **Sync** button for all SharePoint sites in the organization, allows sites to override that setting, and then shows the **Sync** button again on site1. The last command returns the site-level value and the value that's applied to the site.
 
 ## PARAMETERS
 
@@ -1055,28 +1056,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DisableAddShortcutsToOneDrive
-
-> Applicable: SharePoint Online
-
-Hides the [Add shortcut to My files](https://support.microsoft.com/office/add-shortcuts-to-shared-folders-in-onedrive-for-work-or-school-d66b1347-99b7-4470-9360-ffc048d35a33) option in the document libraries of the site. When `DisableAddShortcutsToOneDrive` is set to `$true`, users can't add shortcuts to the site's folders in their OneDrive. Shortcuts that users already added remain in their OneDrive.
-
-This setting applies only to the specified site. It can't be set on OneDrive sites. To hide the option for all sites in the organization, use the `DisableAddShortcutsToOneDrive` parameter of [Set-SPOTenant](./Set-SPOTenant.md).
-
-PARAMVALUE: True | False
-
-```yaml
-Type: System.Boolean
-Parameter Sets: ParamSet1
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DisableAppViews
 
 > Applicable: SharePoint Online
@@ -1437,6 +1416,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -HideAddShortcutsToOneDrive
+
+> Applicable: SharePoint Online
+
+Hides the [Add shortcut to My files](https://support.microsoft.com/office/add-shortcuts-to-shared-folders-in-onedrive-for-work-or-school-d66b1347-99b7-4470-9360-ffc048d35a33) option in the document libraries of the site. When `HideAddShortcutsToOneDrive` is set to `$true`, the option is hidden for users who browse the site. Shortcuts that users already added remain in their OneDrive.
+
+This setting applies only to the specified site, which can be a SharePoint site or a OneDrive site. The option is also hidden on every site when the `DisableAddShortcutsToOneDrive` parameter of [Set-SPOTenant](./Set-SPOTenant.md) is set to `$true`, which turns off adding shortcuts for the whole organization. To check whether the option is hidden on a site, see the `EffectiveHideAddShortcutsToOneDrive` property returned by Get-SPOSite.
+
+> [!NOTE]
+> This setting controls only whether the option appears in the browser. Users, scripts, APIs, and agents can still add shortcuts to the site's content by other means. To turn off adding shortcuts for the whole organization, use `Set-SPOTenant -DisableAddShortcutsToOneDrive $true`.
+
+PARAMVALUE: True | False
+
+```yaml
+Type: System.Boolean
+Parameter Sets: ParamSet1
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -HidePeoplePreviewingFiles
 
 > Applicable: SharePoint Online
@@ -1485,9 +1489,12 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Hides the **Sync** button in the document libraries of the site. When `HideSyncButtonOnTeamSite` is set to `$true`, users can't start syncing the site's libraries with the OneDrive sync app from the browser.
+Hides or shows the **Sync** button in the document libraries of the site. When `HideSyncButtonOnTeamSite` is set to `$true`, users can't start syncing the site's libraries with the OneDrive sync app from the browser. When it's set to `$false`, the **Sync** button is shown.
 
-This setting applies only to the specified site. It can't be set on OneDrive sites. To hide the **Sync** button for all sites in the organization, use the `HideSyncButtonOnTeamSite` parameter of [Set-SPOTenant](./Set-SPOTenant.md).
+This setting applies only to the specified site. It can be set on SharePoint sites, such as team sites and communication sites, but not on OneDrive sites. A site that has no site-level value uses the `HideSyncButtonOnTeamSite` setting of [Set-SPOTenant](./Set-SPOTenant.md). The site-level value is applied only when `AllowOverrideHideSyncButton` is set to `$true` with Set-SPOTenant. To remove the site-level value so that the site uses the organization-level setting again, set this parameter to `$null`. Get-SPOSite returns an empty `HideSyncButtonOnTeamSite` value for a site that has no site-level value; to check which value is applied to a site, see the `EffectiveHideSyncButtonOnTeamSite` property.
+
+> [!NOTE]
+> This setting controls only whether the **Sync** button appears in the browser. Users, scripts, APIs, and agents can still start syncing the site's libraries by other means. To prevent a library from being synced, turn off the library's **Offline Client Availability** setting.
 
 PARAMVALUE: True | False
 
