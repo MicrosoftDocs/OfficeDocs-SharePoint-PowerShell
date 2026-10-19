@@ -19,8 +19,16 @@ Gets the configuration of pre-authentication.
 
 ## SYNTAX
 
+### Default
+
 ```
 Get-SPOTenantPreAuthSettings [<CommonParameters>]
+```
+
+### UseGraphUrlSettings
+
+```
+Get-SPOTenantPreAuthSettings [-UseGraphUrlSettings] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -35,6 +43,12 @@ Gets the configuration of pre-authentication.
 > `https://<tenant>.sharepoint.com/sites/samplesite/_layouts/15/download.aspx?UniqueId=<id>&tempauth=v1.ey...`
 >
 > But this feature is currently being deprecated. You can use the related [Set-SPOTenantPreAuthSettings](Set-SPOTenantPreAuthSettings.md) to control the use of pre-authentication in various use cases.
+
+**Microsoft Graph URL settings**
+
+Microsoft Graph file APIs can return URLs that applications use to download, upload, preview, transform, or monitor file operations. Some of these URLs have historically included pre-authentication tokens or redirected clients to pre-authenticated URLs.
+
+Use this cmdlet to get details on the use graph url setting configuration.
 
 ## EXAMPLES
 
@@ -55,6 +69,22 @@ Get-SPOTenantPreAuthSettings | ConvertTo-Json
 Gets all the pre-authentication settings for the tenant. Note that this example uses `ConvertTo-Json` to display the settings in JSON format since more complex Allow or Deny lists may be hard to read as an object.
 
 ## PARAMETERS
+
+### -UseGraphUrlSettings
+
+Returns the configuration that controls whether supported Microsoft Graph file APIs return Microsoft Graph URLs for configured applications.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: UseGraphUrlSettings
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).

@@ -83,8 +83,17 @@ Approves a permission request for the current tenant's "SharePoint Online Client
 ### [Approve-SPOTenantServicePrincipalPermissionRequest](Approve-SPOTenantServicePrincipalPermissionRequest.md)
 Approves a permission request for the current tenant's "SharePoint Online Client" service principal
 
+### [Clear-SPOSiteRestrictedAppAccessControlList](Clear-SPOSiteRestrictedAppAccessControlList.md)
+Clears a site's Application Restrictions allow or deny list while preserving the other list, active mode, and site enablement.
+
+### [Clear-SPOSiteRestrictedAppAccessControlPolicy](Clear-SPOSiteRestrictedAppAccessControlPolicy.md)
+Removes the complete Application Restrictions policy from a site, disabling enforcement and removing the active mode and both lists.
+
 ### [Clear-SPOTenantPreAuthSettings](Clear-SPOTenantPreAuthSettings.md)
 Clears the pre-authentication settings for either the allow or deny list.
+
+### [Clear-SPOTenantRestrictedAppAccessControlPolicy](Clear-SPOTenantRestrictedAppAccessControlPolicy.md)
+Turns off the tenant Application Restrictions enforcement switch and clears the tenant-wide deny list.
 
 ### [Connect-SPOService](Connect-SPOService.md)
 Connects the SharePoint Online Administrator or the SharePoint Embedded Administrator to a SharePoint Online connection (the SharePoint Online Administration Center). This cmdlet must be run before any other SharePoint Online cmdlets can run.
@@ -101,11 +110,23 @@ This cmdlet command allows you to relocate existing SharePoint pages by utilizin
 ### [Deny-SPOTenantServicePrincipalPermissionRequest](Deny-SPOTenantServicePrincipalPermissionRequest.md)
 Denies a permission request for the current tenant's "SharePoint Online Client" service principal
 
+### [Disable-SPOSiteRestrictedAppAccessControl](Disable-SPOSiteRestrictedAppAccessControl.md)
+Turns off Application Restrictions enforcement for a site while preserving the active mode and both lists.
+
+### [Disable-SPOTenantRestrictedAppAccessControl](Disable-SPOTenantRestrictedAppAccessControl.md)
+Turns off the tenant Application Restrictions enforcement switch while preserving the tenant deny list.
+
 ### [Disconnect-SPOService](Disconnect-SPOService.md)
 Disconnects from a SharePoint Online service.
 
 ### [Enable-SPOCommSite](Enable-SPOCommSite.md)
 Enables the  communication site experience on an existing classic team site. Please read instructions in [modernize classic team site](/sharepoint/modernize-classic-team-site) before attempting to execute this cmdlet.
+
+### [Enable-SPOSiteRestrictedAppAccessControl](Enable-SPOSiteRestrictedAppAccessControl.md)
+Turns on Application Restrictions enforcement for a site using its configured mode and lists.
+
+### [Enable-SPOTenantRestrictedAppAccessControl](Enable-SPOTenantRestrictedAppAccessControl.md)
+Turns on the tenant Application Restrictions enforcement switch for the organization.
 
 ### [Enable-SPOTenantServicePrincipal](Enable-SPOTenantServicePrincipal.md)
 Enables the current tenant's "SharePoint Online Client" service principal.
@@ -157,6 +178,12 @@ Get the current state of Microsoft-provided SharePoint site templates displayed 
 
 ### [Get-SPOContainer](Get-SPOContainer.md)
 Returns one or more containers in a SharePoint Embedded application.
+
+### [Get-SPOContainerTenantApplyFileVersionPolicyJobImpact](Get-SPOContainerTenantApplyFileVersionPolicyJobImpact.md)
+Estimates the impact of applying a file version policy across all containers of a SharePoint Embedded container type.
+
+### [Get-SPOContainerTenantApplyFileVersionPolicyJobProgress](Get-SPOContainerTenantApplyFileVersionPolicyJobProgress.md)
+Returns the progress of the file version policy job for a SharePoint Embedded container type.
 
 ### [Get-SPOContainerType](Get-SPOContainerType.md)
 Returns one or more container types created in the tenant.
@@ -247,6 +274,9 @@ Lists hub sites or hub site information.
 
 ### [Get-SPOInformationBarriersInsightsReport](Get-SPOInformationBarriersInsightsReport.md)
 Enables the SharePoint Administrator to check status of all active and completed reports of insights on Information Barriers (IB).
+
+### [Get-SPOInformationBarriersPolicyComplianceReport](Get-SPOInformationBarriersPolicyComplianceReport.md)
+Gets the status and results of Information Barriers policy compliance reports.
 
 ### [Get-SPOListDesign](Get-SPOListDesign.md)
 Gets details about list designs that are on the SharePoint tenant. You can specify an ID of a specific list design to retrieve. If there are no parameters listed, details about all list designs are listed.
@@ -353,6 +383,9 @@ This cmdlet allows you to retrieve all SharePoint pages under a specific SharePo
 ### [Get-SPOSiteRenameState](Get-SPOSiteRenameState.md)
 Returns the current rename job state of a SharePoint Online Site.
 
+### [Get-SPOSiteRestrictedAppAccessControl](Get-SPOSiteRestrictedAppAccessControl.md)
+Returns the complete site-level Application Restrictions policy for a site, including enablement, active mode, and both lists.
+
 ### [Get-SPOSiteReview](Get-SPOSiteReview.md)
 Track all site access reviews initiated from Data Access Governance (DAG) reports.
 
@@ -416,6 +449,9 @@ Returns the list of sites that are prioritized for early execution, as part of [
 ### [Get-SPOTenantRenameStatus](Get-SPOTenantRenameStatus.md)
 > [!IMPORTANT] > This feature is currently available to organizations that have no more than 10,000 total SharePoint sites and OneDrive accounts combined.  Get the status of the job to change the SharePoint domain name for your organization in Microsoft 365.
 
+### [Get-SPOTenantRestrictedAppAccessControl](Get-SPOTenantRestrictedAppAccessControl.md)
+Returns the tenant Application Restrictions enforcement status and deny list.
+
 ### [Get-SPOTenantServicePrincipalPermissionGrants](Get-SPOTenantServicePrincipalPermissionGrants.md)
 Gets the collection of permission grants for the "SharePoint Online Client" service principal
 
@@ -472,6 +508,9 @@ Invokes a job to swap the location of a site with another site while archiving t
 
 ### [New-SPOAppBillingPolicy](New-SPOAppBillingPolicy.md)
 Creates a new billing policy for an application owned by the tenant.
+
+### [New-SPOContainerTenantApplyFileVersionPolicyJob](New-SPOContainerTenantApplyFileVersionPolicyJob.md)
+Queues a job to apply a file version policy across all containers of a SharePoint Embedded container type.
 
 ### [New-SPOContainerType](New-SPOContainerType.md)
 This cmdlet creates a new container type of standard or trial status. The standard container type can be created with the regular billing structure or direct to customer billing structure.
@@ -532,6 +571,9 @@ Removes billing policy associated with the application.
 
 ### [Remove-SPOContainer](Remove-SPOContainer.md)
 Sends a Container to the Recycle Bin.
+
+### [Remove-SPOContainerTenantApplyFileVersionPolicyJob](Remove-SPOContainerTenantApplyFileVersionPolicyJob.md)
+Cancels the file version policy job for a SharePoint Embedded container type.
 
 ### [Remove-SPOContainerType](Remove-SPOContainerType.md)
 This cmdlet removes the container type specified from the tenant.
@@ -812,6 +854,12 @@ Updates the SharePoint Online owner and permission levels on a group inside a si
 ### [Set-SPOSiteOffice365Group](Set-SPOSiteOffice365Group.md)
 Connects a top-level SPO site collection to a new Microsoft 365 Group.
 
+### [Set-SPOSiteRestrictedAppAccessControlList](Set-SPOSiteRestrictedAppAccessControlList.md)
+Adds or removes application IDs in a site's Application Restrictions allow or deny list in one atomic update.
+
+### [Set-SPOSiteRestrictedAppAccessControlMode](Set-SPOSiteRestrictedAppAccessControlMode.md)
+Sets a site's active Application Restrictions mode to Allow or Deny while preserving site enablement and both lists.
+
 ### [Set-SPOSiteScript](Set-SPOSiteScript.md)
 Updates a previously uploaded site script.
 
@@ -845,6 +893,9 @@ Sets the configuration of pre-authentication.
 ### [Set-SPOTenantRenameSitePrioritization](Set-SPOTenantRenameSitePrioritization.md)
 Allows prioritization of a site for early execution, as part of [Advanced Tenant Rename](/sharepoint/change-your-sharepoint-domain-name#advanced-tenant-rename-preview).
 
+### [Set-SPOTenantRestrictedAppAccessControlList](Set-SPOTenantRestrictedAppAccessControlList.md)
+Adds or removes application IDs in the tenant-wide Application Restrictions deny list in one atomic update.
+
 ### [Set-SPOTenantSyncClientRestriction](Set-SPOTenantSyncClientRestriction.md)
 Controls tenant-wide options and restrictions specific to syncing files.
 
@@ -874,6 +925,9 @@ This cmdlet enables administrator to trigger the build of a new enterprise appli
 
 ### [Start-SPOInformationBarriersInsightsReport](Start-SPOInformationBarriersInsightsReport.md)
 Generates a new report to identify and discover the usage patterns of Information Barriers (IB) across SharePoint sites and OneDrive accounts in the organization.
+
+### [Start-SPOInformationBarriersPolicyComplianceReport](Start-SPOInformationBarriersPolicyComplianceReport.md)
+Generates an Information Barriers policy compliance report for SharePoint sites, OneDrive accounts, and user-owned SharePoint Embedded containers in the organization.
 
 ### [Start-SPOM365AgentAccessInsightsReport](Start-SPOM365AgentAccessInsightsReport.md)
 Using this cmdlet, administrators may trigger the build of a new Microsoft 365 agent insight report for the specified number of days.  > [!NOTE] > The feature associated with this cmdlet will be rolling out soon.

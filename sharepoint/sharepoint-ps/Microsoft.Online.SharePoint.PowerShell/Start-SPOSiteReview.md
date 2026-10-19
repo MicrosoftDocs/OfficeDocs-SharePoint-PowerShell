@@ -14,17 +14,18 @@ ms.reviewer:
 # Start-SPOSiteReview
 
 ## SYNOPSIS
-SharePoint Administrators can delegate access governance of sites to corresponding site owners through 'site access review'. The 'access review' is under the context of oversharing as specified in the Data Access Governance (DAG) reports. Read all about site access review [here](/sharepoint/site-access-review).
+SharePoint Administrators can delegate access governance of sites to corresponding site owners or site collection administrators through 'site access review'. The 'access review' is under the context of oversharing as specified in the Data Access Governance (DAG) reports. Read all about site access review [here](/sharepoint/site-access-review).
 
 ## SYNTAX
 
 ```
 Start-SPOSiteReview -ReportID <Guid> -SiteID <Guid> [-Comment <String>]
- [-DeliveryMode <SiteReviewEmailDeliveryMode>] [<CommonParameters>]
+ [-DeliveryMode <SiteReviewEmailDeliveryMode>]
+ [-RecipientRole <SiteReviewRecipientRoleParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Initiates a 'site access review' request to all the site owners under the context of the DAG report. The request is sent via email to all site owners with comments given by SharePoint Administrator.
+Initiates a 'site access review' request under the context of the DAG report. By default, the request is sent via email to all site owners. Use `-RecipientRole` to send the request to site owners, site collection administrators, or both. Comments provided by the SharePoint Administrator are included with the request.
 
 ## EXAMPLES
 
@@ -44,10 +45,18 @@ PS C:\> Start-SPOSiteReview -ReportID 03327d1c-38c5-4c32-9dad-85753a682d65 -Site
 
 The above cmdlet initiates site access review and notifies the reviewers with a single grouped email instead of one email per reviewer. Reviewers are grouped by their notification language, so one email is sent for each language used by the reviewers.
 
+### Example 3
+
+```powershell
+PS C:\> Start-SPOSiteReview -ReportID 03327d1c-38c5-4c32-9dad-85753a682d65 -SiteID a10f1997-71f2-4ef2-825e-2439400fc601 -RecipientRole All
+```
+
+The above cmdlet initiates site access review and sends the request to both the site owners and site collection administrators. A person who belongs to both groups is included only once.
+
 ## PARAMETERS
 
 ### -Comment
-SharePoint Administrator to add comments to provide more context to the site owner regarding the purpose of the review.
+SharePoint Administrator to add comments to provide more context to the reviewers regarding the purpose of the review.
 
 ```yaml
 Type: System.String
@@ -106,6 +115,30 @@ Type: Microsoft.Online.SharePoint.PowerShell.SiteReviewEmailDeliveryMode
 Parameter Sets: (All)
 Aliases:
 Accepted values: Individual, SingleEmail
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientRole
+Specifies who receives the site access review request.
+
+The acceptable values for this parameter are:
+
+- SiteOwners: Sends the request to members of the site's owner group. This is the default behavior when the parameter is omitted and no recipient role is configured on the email template.
+- SiteAdmins: Sends the request to the site collection administrators.
+- All: Sends the request to both the site owners and site collection administrators. A person who is both an owner and an administrator is included only once.
+
+If a custom email template is configured for site access reviews in your organization, the recipient role on that template determines who receives the request and takes precedence over this parameter.
+
+```yaml
+Type: Microsoft.Online.SharePoint.PowerShell.SiteReviewRecipientRoleParameter
+Parameter Sets: (All)
+Aliases:
+Accepted values: SiteOwners, SiteAdmins, All
 
 Required: False
 Position: Named

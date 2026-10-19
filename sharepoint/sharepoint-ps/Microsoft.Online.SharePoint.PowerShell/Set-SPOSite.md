@@ -62,7 +62,8 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-Owner <String>] [-Title <String>] [-
  [-DefaultShareLinkScope <SharingScope>]
  [-DefaultShareLinkRole <SharingRole>] [-BlockGuestsAsSiteAdmin <SharingState>]
  [-FileAnonymousLinkType <AnonymousLinkType>] [-FolderAnonymousLinkType <AnonymousLinkType>]
- [-RestrictContentOrgWideSearch <Boolean>] [-RestrictedContentDiscoveryforCopilotAndAgents <Boolean>]
+ [-RestrictContentOrgWideSearch <Boolean>]
+ [-RestrictAccessControlForAgenticUser <Boolean>]
  [-RestrictedAccessControl <Boolean>] [-RestrictedAccessControlGroups <Guid[]>]
  [-ListsShowHeaderAndNavigation <Boolean>] [-HidePeoplePreviewingFiles <Boolean>]
  [-HidePeopleWhoHaveListsOpen <Boolean>] [-IsAuthoritative <Boolean>] [-AllowFileArchive <Boolean>]
@@ -388,12 +389,20 @@ Example 24 removes the version history limit override for video and audio file t
 
 ### Example 25
 
-
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -FolderAnonymousLinkType ViewUpload -FileAnonymousLinkType None
 ```
 
 Example 25 sets a site level override for FolderAnonymousLinkType to limit anonymous and request files folder sharing to only support view and upload permissions and clears any site level override for the FileAnonymousLinkType by setting it to None.
+
+### Example 26
+
+```powershell
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -RestrictAccessControlForAgenticUser $true
+Get-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 | Select-Object Url, RestrictAccessControlForAgenticUser
+```
+
+Example 26 restricts Agent Users from accessing the site and then returns the configured value. The policy is enforced at runtime and doesn't remove existing permissions.
 
 ## PARAMETERS
 
@@ -2151,9 +2160,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -RestrictedContentDiscoveryforCopilotAndAgents
+### -RestrictAccessControlForAgenticUser
 
-Sets or updates the site setting to host Agents by activating or deactivating the Restricted Content Discovery (RCD) for Agents. *Currently under private preview.*
+> Applicable: SharePoint Online
+
+Specifies whether Agent Users are restricted from accessing the site. Set this parameter to `$true` to block Agent Users at runtime, or `$false` to remove the site restriction. Changing this setting doesn't remove existing permissions.
 
 ```yaml
 Type: System.Boolean

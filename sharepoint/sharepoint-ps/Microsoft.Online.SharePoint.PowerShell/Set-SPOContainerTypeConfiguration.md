@@ -23,7 +23,6 @@ Set-SPOContainerTypeConfiguration -ContainerTypeId <Guid> [-DiscoverabilityDisab
  [-SharingRestricted <Boolean>] [-ApplicationRedirectUrl <String>] [-WhoCanShareAnonymousAllowList <Guid[]>]
  [-WhoCanShareAuthenticatedGuestAllowList <Guid[]>] [-OverrideTenantWhoCanShareAnonymousAllowList <Boolean>]
  [-OverrideTenantWhoCanShareAuthenticatedGuestAllowList <Boolean>]
- [-CopilotEmbeddedChatHosts <System.Collections.Generic.List`1[System.String]>]
  [-AnonymousLinkExpirationInDays <Int32>] [-IsArchiveEnabled <Boolean>] [-UseLegacyItemWebUrl <Boolean>]  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -78,25 +77,18 @@ Example 5 overrides the tenant-level `WhoCanShareAuthenticatedGuestAllowList` wi
 ### Example 6
 
 ```powershell
-Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -CopilotEmbeddedChatHosts "https://localhost:3000 https://contoso.sharepoint.com https://fabrikam.com"
-```
-This example sets the host URLs for the container type with Id 4f0af585-8dcc-0000-223d-661eb2c604e4.
-
-### Example 7
-
-```powershell
 Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -IsArchiveEnabled $true
 ```
 
-Example 7 enables support for archive and reactivate actions on all the containers of ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4.
+Example 6 enables support for archive and reactivate actions on all the containers of ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4.
 
-### Example 8
+### Example 7
 
 ```powershell
 Set-SPOContainerTypeConfiguration -ContainerTypeId 4f0af585-8dcc-0000-223d-661eb2c604e4 -UseLegacyItemWebUrl $true
 ```
 
-Example 8 configures the containers of ContainerType ID 4f0af585-8dcc-0000-223d-661eb2c604e4 to temporarily continue using the legacy item WebUrl.
+Example 7 configures the containers of ContainerType ID 4f0af585-8dcc-0000-223d-661eb2c604e4 to temporarily continue using the legacy item WebUrl.
 
 ## PARAMETERS
 
@@ -145,21 +137,6 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CopilotEmbeddedChatHosts
-This parameter is used to add host URLs allowed to use the SharePoint Embedded application's declarative agent experience.
-
-```yaml
-Type: System.Collections.Generic.List`1[System.String]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
