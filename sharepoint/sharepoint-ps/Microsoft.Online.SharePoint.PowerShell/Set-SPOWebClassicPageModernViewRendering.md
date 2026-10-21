@@ -18,15 +18,9 @@ Sets or clears the modern view rendering setting for classic pages on a web.
 
 ## SYNTAX
 
-### Enabled
 ```
-Set-SPOWebClassicPageModernViewRendering -WebUrl <String> -Enabled <Boolean> [-WhatIf] [-Confirm]
+Set-SPOWebClassicPageModernViewRendering -WebUrl <String> -Operation <WebClassicPageModernViewRenderingOperation> [-WhatIf] [-Confirm]
  [<CommonParameters>]
-```
-
-### Clear
-```
-Set-SPOWebClassicPageModernViewRendering -WebUrl <String> [-Clear] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,13 +28,15 @@ The `Set-SPOWebClassicPageModernViewRendering` cmdlet controls whether classic p
 
 The setting applies only to the web that you specify. Parent webs, sibling webs, and subsites keep their own settings. To change more than one web, run the cmdlet once for each web.
 
-Use one of the following options:
+Specify one of the following operations:
 
-- **-Enabled $true**: Classic pages on this web render with the modern view, even if the tenant-level rollout hasn't reached the web.
-- **-Enabled $false**: Classic pages on this web render with the classic view, even if the tenant-level rollout has reached the web. This is an explicit opt out, not the same as clearing the setting.
-- **-Clear**: Removes the stored setting, so the tenant-level rollout decides how classic pages render.
+- **-Operation Enable**: Stores an explicit opt-in to modern view rendering, even if the tenant-level rollout hasn't reached the web.
+- **-Operation Disable**: Stores an explicit opt-out of modern view rendering, even if the tenant-level rollout has reached the web.
+- **-Operation UseTenantDefault**: Removes the stored setting, so the tenant-level rollout decides how classic pages render. This operation can result in either modern or classic rendering; it isn't the same as `Disable`.
 
-The setting takes precedence over the tenant-level rollout. Clearing it restores the tenant-level behavior.
+The setting takes precedence over the tenant-level rollout. `Enable` doesn't bypass page eligibility, request-level opt-out, or service safeguards, and doesn't guarantee that every page renders with the modern view.
+
+The operation is required and has no default. To read the stored setting without changing it, use `Get-SPOWebClassicPageModernViewRendering`.
 
 You must be a SharePoint Administrator to run this cmdlet.
 
@@ -48,51 +44,33 @@ You must be a SharePoint Administrator to run this cmdlet.
 
 ### Example 1
 ```powershell
-PS C:\> Set-SPOWebClassicPageModernViewRendering -WebUrl "https://contoso.sharepoint.com/sites/marketing" -Enabled $true
+PS C:\> Set-SPOWebClassicPageModernViewRendering -WebUrl "https://contoso.sharepoint.com/sites/marketing" -Operation Enable
 ```
 
-This example turns on modern view rendering for classic pages on the root web of the Marketing site.
+This example opts the root web of the Marketing site into modern view rendering for eligible classic pages.
 
 ### Example 2
 ```powershell
-PS C:\> Set-SPOWebClassicPageModernViewRendering -WebUrl "https://contoso.sharepoint.com/sites/marketing/europe" -Enabled $false
+PS C:\> Set-SPOWebClassicPageModernViewRendering -WebUrl "https://contoso.sharepoint.com/sites/marketing/europe" -Operation Disable
 ```
 
 This example turns off modern view rendering for classic pages on the Europe subsite. Other webs in the site collection aren't affected.
 
 ### Example 3
 ```powershell
-PS C:\> Set-SPOWebClassicPageModernViewRendering -WebUrl "https://contoso.sharepoint.com/sites/marketing/europe" -Clear
+PS C:\> Set-SPOWebClassicPageModernViewRendering -WebUrl "https://contoso.sharepoint.com/sites/marketing/europe" -Operation UseTenantDefault
 ```
 
-This example removes the stored setting from the Europe subsite, so the tenant-level rollout decides how classic pages render.
+This example removes the stored setting from the Europe subsite, so the tenant-level rollout decides how classic pages render. `Get-SPOWebClassicPageModernViewRendering` then reports `StoredOverride` as `NotSet`.
 
 ### Example 4
 ```powershell
-PS C:\> Set-SPOWebClassicPageModernViewRendering -WebUrl "https://contoso.sharepoint.com/sites/marketing" -Clear -WhatIf
+PS C:\> Set-SPOWebClassicPageModernViewRendering -WebUrl "https://contoso.sharepoint.com/sites/marketing" -Operation UseTenantDefault -WhatIf
 ```
 
-This example shows what would happen if you cleared the setting on the root web of the Marketing site. The setting isn't changed.
+This example previews removing the web override and using tenant defaults on the root web of the Marketing site. The setting isn't changed.
 
 ## PARAMETERS
-
-### -Clear
-
-> Applicable: SharePoint Online
-
-Removes the stored setting from the web, so the tenant-level rollout decides how classic pages render. You can't use this parameter together with the **Enabled** parameter, and you can't specify it as `$false`.
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: Clear
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Confirm
 
@@ -112,16 +90,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Enabled
+### -Operation
 
 > Applicable: SharePoint Online
 
-Specifies how classic pages render on the web. Use `$true` to render them with the modern view, or `$false` to render them with the classic view. A value of `$false` is an explicit opt out. To remove the setting instead, use the **Clear** parameter.
+Specifies the change to make to this web. `Enable` stores an explicit opt-in, `Disable` stores an explicit opt-out, and `UseTenantDefault` removes the override so the tenant-level rollout applies again. Using tenant defaults doesn't necessarily disable modern view rendering.
 
 ```yaml
-Type: System.Boolean
-Parameter Sets: Enabled
+Type: Microsoft.Online.SharePoint.PowerShell.SPOWebClassicPageModernViewRendering+WebClassicPageModernViewRenderingOperation
+Parameter Sets: (All)
 Aliases:
+Accepted values: Enable, Disable, UseTenantDefault
 
 Required: True
 Position: Named

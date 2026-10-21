@@ -34,12 +34,14 @@ The cmdlet returns an object with the following properties:
 
   | Value | Description |
   |-------|-------------|
-  | `Enabled` | Classic pages on this web render with the modern view. |
-  | `Disabled` | Classic pages on this web render with the classic view. |
+  | `Enabled` | An explicit opt-in to modern view rendering is stored on this web. |
+  | `Disabled` | An explicit opt-out of modern view rendering is stored on this web. |
   | `NotSet` | No setting is stored on this web, so the tenant-level rollout decides how classic pages render. `NotSet` isn't the same as `Disabled`. |
   | `Invalid` | A stored value can't be interpreted. The tenant-level rollout decides how classic pages render until you set a valid value or clear the setting. |
 
-This cmdlet reports the stored configuration only. A result of `Enabled` doesn't guarantee that every page renders with the modern view, because page type and page eligibility also affect rendering.
+This cmdlet reports the stored configuration only. A result of `Enabled` doesn't guarantee that every page renders with the modern view, because page type, page eligibility, request-level opt-out, and service safeguards also affect rendering.
+
+Use `Set-SPOWebClassicPageModernViewRendering -Operation Enable` or `-Operation Disable` to store an explicit override. Use `-Operation UseTenantDefault` to remove the override; the next read then reports `NotSet`, not `Disabled`.
 
 You must be a SharePoint Administrator to run this cmdlet.
 
