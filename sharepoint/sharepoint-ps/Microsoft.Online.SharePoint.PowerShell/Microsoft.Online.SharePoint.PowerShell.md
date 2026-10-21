@@ -131,6 +131,9 @@ Turns on the tenant Application Restrictions enforcement switch for the organiza
 ### [Enable-SPOTenantServicePrincipal](Enable-SPOTenantServicePrincipal.md)
 Enables the current tenant's "SharePoint Online Client" service principal.
 
+### [Export-SPOContainerDataAccessGovernanceJob](Export-SPOContainerDataAccessGovernanceJob.md)
+Downloads a completed SharePoint Embedded Data Access Governance report.
+
 ### [Export-SPODataAccessGovernanceInsight](Export-SPODataAccessGovernanceInsight.md)
 This cmdlet downloads the Data Access Governance (DAG) reports to the specified path. The default is the "Downloads" folder.
 
@@ -178,6 +181,9 @@ Get the current state of Microsoft-provided SharePoint site templates displayed 
 
 ### [Get-SPOContainer](Get-SPOContainer.md)
 Returns one or more containers in a SharePoint Embedded application.
+
+### [Get-SPOContainerDataAccessGovernanceJob](Get-SPOContainerDataAccessGovernanceJob.md)
+Lists SharePoint Embedded Data Access Governance reports or gets a report by ID.
 
 ### [Get-SPOContainerTenantApplyFileVersionPolicyJobImpact](Get-SPOContainerTenantApplyFileVersionPolicyJobImpact.md)
 Estimates the impact of applying a file version policy across all containers of a SharePoint Embedded container type.
@@ -572,6 +578,9 @@ Removes billing policy associated with the application.
 ### [Remove-SPOContainer](Remove-SPOContainer.md)
 Sends a Container to the Recycle Bin.
 
+### [Remove-SPOContainerDataAccessGovernanceJob](Remove-SPOContainerDataAccessGovernanceJob.md)
+Deletes a SharePoint Embedded Data Access Governance report.
+
 ### [Remove-SPOContainerTenantApplyFileVersionPolicyJob](Remove-SPOContainerTenantApplyFileVersionPolicyJob.md)
 Cancels the file version policy job for a SharePoint Embedded container type.
 
@@ -913,6 +922,9 @@ Sets the theme for a SharePoint site.
 
 ### [Start-SPOAuditDataCollectionForActivityInsights](Start-SPOAuditDataCollectionForActivityInsights.md)
 This cmdlet starts collecting audit data for reports on activities from the last 28 days, such as sharing link reports and content shared with everyone except external users, from the SharePoint admin center.
+
+### [Start-SPOContainerDataAccessGovernanceJob](Start-SPOContainerDataAccessGovernanceJob.md)
+Requests a Data Access Governance report for SharePoint Embedded containers.
 
 ### [Start-SPOCopilotAgentInsightsReport](Start-SPOCopilotAgentInsightsReport.md)
 Using this cmdlet, administrators may trigger the build of a new Copilot agent insight report for the specified number of days.  > [!NOTE] > The feature associated with this cmdlet will be rolling out soon.
