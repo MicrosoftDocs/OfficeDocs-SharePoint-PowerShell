@@ -73,9 +73,6 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 
 Each site entry exposes an `IsIncluded` Boolean property. A value of `$true` identifies a stored inclusion, and `$false` identifies a stored exclusion when the server supplies the property.
 
-> [!IMPORTANT]
-> Older servers might omit `IsIncluded`, causing the client to show its default value of `$false`. In that case, `$false` doesn't establish that the site is an exclusion.
-
 ## NOTES
 
 ## RELATED LINKS
