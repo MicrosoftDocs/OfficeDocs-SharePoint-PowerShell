@@ -119,7 +119,7 @@ Accept wildcard characters: False
 
 ### -LastAccessDateCriteria
 
-Specifies the number of months since a file was last accessed before it becomes eligible for archiving. Valid values range from 6 to 48. When omitted, the default value for the new policy is 18 months.
+Specifies the number of months since a file was last accessed before it becomes eligible for archiving. Valid values range from 6 to 48. This parameter has no PowerShell-side default. When omitted, the service applies an inactivity threshold of 18 months to the new policy.
 
 > [!IMPORTANT]
 > The last access date is accurate starting July 2025. Dates before that may be missing access signals from some clients. For critical data, ensure your criteria doesn't archive based on last access dates before July 2025.
@@ -131,7 +131,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: 18
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
