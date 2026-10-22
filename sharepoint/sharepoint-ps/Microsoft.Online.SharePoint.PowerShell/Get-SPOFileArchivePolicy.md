@@ -77,7 +77,7 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 
 ### System.Object
 
-For a `SelectedSites` policy, the returned site count includes only sites stored as inclusions, not exclusions. For an `AllSites` or `AllODBSites` policy, the returned site count is `0`. This value doesn't represent the number of sites covered by the policy or the number of excluded sites.
+An upcoming service update changes the returned site count for a `SelectedSites` policy to include only sites stored as inclusions, not exclusions. For an `AllSites` or `AllODBSites` policy, the returned site count remains `0`. This value doesn't represent the number of sites covered by the policy or the number of excluded sites.
 
 ## NOTES
 
