@@ -41,7 +41,7 @@ Use `-PolicyType` to choose the scope of the policy: all SharePoint sites in the
 New-SPOFileArchivePolicy -PolicyType "AllSites" -Name "ArchiveAll"
 ```
 
-Creates a new file archive policy named "ArchiveAll" that targets all sites in the tenant, using the service's default last access date criteria. The current default is 24 months; an upcoming service update changes it to 18 months.
+Creates a new file archive policy named "ArchiveAll" that targets all sites in the tenant, using the default last access date criteria of 18 months.
 
 ### Example 2
 
@@ -119,7 +119,7 @@ Accept wildcard characters: False
 
 ### -LastAccessDateCriteria
 
-Specifies the number of months since a file was last accessed before it becomes eligible for archiving. Valid values range from 6 to 48. This parameter has no PowerShell-side default. When omitted, the service applies its default inactivity threshold to the new policy. The current service default is 24 months; an upcoming service update changes it to 18 months.
+Specifies the number of months since a file was last accessed before it becomes eligible for archiving. Valid values range from 6 to 48. This parameter has no PowerShell-side default. When omitted, the service applies an inactivity threshold of 18 months to the new policy.
 
 > [!IMPORTANT]
 > The last access date is accurate starting July 2025. Dates before that may be missing access signals from some clients. For critical data, ensure your criteria doesn't archive based on last access dates before July 2025.
