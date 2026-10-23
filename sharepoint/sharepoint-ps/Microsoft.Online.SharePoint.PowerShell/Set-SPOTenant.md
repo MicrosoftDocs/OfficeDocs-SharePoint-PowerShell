@@ -105,7 +105,6 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AppBypassInformationBarriers <Boolean>] [-AppAccessInformationBarriersAllowList <Guid[]>]
  [-AllOrganizationSecurityGroupId <Guid>] [-DisableModernListTemplateIds <Guid[]>]
  [-EnableModernListTemplateIds <Guid[]>] [-HideSyncButtonOnTeamSite <Boolean>]
- [-AllowOverrideHideSyncButton <Boolean>]
  [-AllowGuestUserShareToUsersNotInSiteCollection <Boolean>] [-StreamLaunchConfig <Int32>]
  [-DelegateRestrictedContentDiscoverabilityManagement <Boolean>]
  [-DelegateRestrictedAccessControlManagement <Boolean>] [-DisableOutlookPSTVersionTrimming <Boolean>]
@@ -243,7 +242,6 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AppBypassInformationBarriers <Boolean>] [-AppAccessInformationBarriersAllowList <Guid[]>]
  [-AllOrganizationSecurityGroupId <Guid>] [-DisableModernListTemplateIds <Guid[]>]
  [-EnableModernListTemplateIds <Guid[]>] [-HideSyncButtonOnTeamSite <Boolean>]
- [-AllowOverrideHideSyncButton <Boolean>]
  [-AllowGuestUserShareToUsersNotInSiteCollection <Boolean>] [-StreamLaunchConfig <Int32>]
  [-DelegateRestrictedContentDiscoverabilityManagement <Boolean>]
  [-DelegateRestrictedAccessControlManagement <Boolean>] [-DisableOutlookPSTVersionTrimming <Boolean>]
@@ -382,7 +380,6 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AppBypassInformationBarriers <Boolean>] [-AppAccessInformationBarriersAllowList <Guid[]>]
  [-AllOrganizationSecurityGroupId <Guid>] [-DisableModernListTemplateIds <Guid[]>]
  [-EnableModernListTemplateIds <Guid[]>] [-HideSyncButtonOnTeamSite <Boolean>]
- [-AllowOverrideHideSyncButton <Boolean>]
  [-AllowGuestUserShareToUsersNotInSiteCollection <Boolean>] [-StreamLaunchConfig <Int32>]
  [-DelegateRestrictedContentDiscoverabilityManagement <Boolean>]
  [-DelegateRestrictedAccessControlManagement <Boolean>] [-DisableOutlookPSTVersionTrimming <Boolean>]
@@ -519,8 +516,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AppBypassInformationBarriers <Boolean>] [-DefaultOneDriveInformationBarrierMode <String>]
  [-AppAccessInformationBarriersAllowList <Guid[]>] [-AllOrganizationSecurityGroupId <Guid>]
  [-DisableModernListTemplateIds <Guid[]>] [-EnableModernListTemplateIds <Guid[]>]
- [-HideSyncButtonOnTeamSite <Boolean>]
- [-AllowOverrideHideSyncButton <Boolean>] [-AllowGuestUserShareToUsersNotInSiteCollection <Boolean>]
+ [-HideSyncButtonOnTeamSite <Boolean>] [-AllowGuestUserShareToUsersNotInSiteCollection <Boolean>]
  [-StreamLaunchConfig <Int32>] [-DelegateRestrictedContentDiscoverabilityManagement <Boolean>]
  [-DelegateRestrictedAccessControlManagement <Boolean>] [-DisableOutlookPSTVersionTrimming <Boolean>]
  [-MediaTranscription <MediaTranscriptionPolicyType>]
@@ -656,7 +652,6 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-AppBypassInformationBarriers <Boolean>] [-AppAccessInformationBarriersAllowList <Guid[]>]
  [-AllOrganizationSecurityGroupId <Guid>] [-DisableModernListTemplateIds <Guid[]>]
  [-EnableModernListTemplateIds <Guid[]>] [-HideSyncButtonOnTeamSite <Boolean>]
- [-AllowOverrideHideSyncButton <Boolean>]
  [-AllowGuestUserShareToUsersNotInSiteCollection <Boolean>] [-StreamLaunchConfig <Int32>]
  [-DelegateRestrictedContentDiscoverabilityManagement <Boolean>]
  [-DelegateRestrictedAccessControlManagement <Boolean>] [-DisableOutlookPSTVersionTrimming <Boolean>]
@@ -1312,30 +1307,6 @@ The valid values are:
 - False (default) – Do not allow the Block User Info Visibility policy to be overridden for a SharePoint site or OneDrive.
 
 - True – Allow the Block User Info Visibility policy to be overridden for a SharePoint site or OneDrive.
-
-```yaml
-Type: System.Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowOverrideHideSyncButton
-
-> Applicable: SharePoint Online
-
-Allows a site-level `HideSyncButtonOnTeamSite` value, set with Set-SPOSite, to override the organization-level `HideSyncButtonOnTeamSite` setting.
-
-The valid values are:
-
-- False (default) - The organization-level setting applies to every site. Site-level values are saved but not applied.
-
-- True - Sites that have a site-level value use it. Other sites use the organization-level setting.
 
 ```yaml
 Type: System.Boolean
