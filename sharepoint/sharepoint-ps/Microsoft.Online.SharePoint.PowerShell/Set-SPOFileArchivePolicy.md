@@ -119,6 +119,9 @@ Accept wildcard characters: False
 
 Specifies the updated number of months since a file was last accessed before it becomes eligible for archiving. Valid values range from 6 to 48.
 
+> [!IMPORTANT]
+> Last access date updates can take up to 30 days to be reflected. Recent human access might not yet be reflected in the recorded date used by the policy. During this delay, a recently accessed file can still qualify for archiving if its recorded last access date meets the policy’s inactivity threshold. For more information, see [Select an inactivity threshold](/microsoft-365/archive/manage-inactive-files#select-an-inactivity-threshold).
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -230,4 +233,3 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 [Remove-SPOFileArchivePolicy](Remove-SPOFileArchivePolicy.md)
 
 [Remove-SPOSiteToFileArchivePolicy](Remove-SPOSiteToFileArchivePolicy.md)
-
