@@ -24,9 +24,11 @@ Get-SPOFileArchivePolicySites -PolicyId <Guid> [<CommonParameters>]
 
 ## DESCRIPTION
 
-This cmdlet retrieves the list of sites that have been added to a file archive policy.
+This cmdlet retrieves the site entries stored for a file archive policy.
 
-For a policy with a PolicyType of `SelectedSites`, this returns the included sites that the policy applies to. For a policy with a PolicyType of `AllSites` or `AllODBSites`, this returns the excluded sites that are exempt from the policy.
+For a policy with a PolicyType of `SelectedSites`, included sites define the policy's scope. For a policy with a PolicyType of `AllSites` or `AllODBSites`, excluded sites are exempt from the policy.
+
+An upcoming client and service update exposes whether each stored entry is an inclusion or an exclusion through `IsIncluded`. The updated output retains both types of stored entries rather than filtering them by the current policy type.
 
 > [!NOTE]
 > This cmdlet is part of the file archive policies feature which is currently in preview.
@@ -70,6 +72,8 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 ## OUTPUTS
 
 ### System.Object
+
+An upcoming client and service update adds an `IsIncluded` Boolean property to each site entry. In that update, `$true` identifies a stored inclusion and `$false` identifies a stored exclusion. Scripts targeting currently released versions must not rely on this upcoming property.
 
 ## NOTES
 
