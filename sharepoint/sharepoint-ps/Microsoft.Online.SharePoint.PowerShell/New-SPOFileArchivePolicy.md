@@ -162,6 +162,9 @@ Accept wildcard characters: False
 Specifies the number of months since a file was last accessed before it becomes eligible for archiving. Valid values range from 6 to 48. The default value is 24 months.
 
 > [!IMPORTANT]
+> Last access date updates can take up to 30 days to be reflected. Recent human access might not yet be reflected in the recorded date used by the policy. During this delay, a recently accessed file can still qualify for archiving if its recorded last access date meets the policy’s inactivity threshold. For more information, see [Select an inactivity threshold](/microsoft-365/archive/manage-inactive-files#select-an-inactivity-threshold).
+
+> [!IMPORTANT]
 > The last access date is accurate starting July 2025. Dates before that may be missing access signals from some clients. For critical data, ensure your criteria doesn't archive based on last access dates before July 2025.
 
 ```yaml
