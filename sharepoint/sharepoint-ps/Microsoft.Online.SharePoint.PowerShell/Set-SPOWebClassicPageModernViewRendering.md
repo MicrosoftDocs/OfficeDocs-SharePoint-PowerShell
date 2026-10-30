@@ -1,7 +1,7 @@
 ---
 external help file: Microsoft.Online.SharePoint.PowerShell.dll-Help.xml
 Module Name: Microsoft.Online.SharePoint.PowerShell
-online version:
+online version: https://learn.microsoft.com/powershell/module/microsoft.online.sharepoint.powershell/set-spowebclassicpagemodernviewrendering
 schema: 2.0.0
 applicable: SharePoint Online
 title: Set-SPOWebClassicPageModernViewRendering
@@ -14,7 +14,7 @@ ms.reviewer:
 # Set-SPOWebClassicPageModernViewRendering
 
 ## SYNOPSIS
-Sets or clears the modern view rendering setting for classic pages on a web.
+This cmdlet sets or clears the modern view rendering setting for classic pages on a web.
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ Set-SPOWebClassicPageModernViewRendering -WebUrl <String> -Operation <WebClassic
 ```
 
 ## DESCRIPTION
-The `Set-SPOWebClassicPageModernViewRendering` cmdlet controls whether classic pages on a single web render with the modern view. The web can be the root web of a site collection or any subsite.
+This cmdlet controls whether classic pages on a single web render with the modern view. The web can be the root web of a site collection or any subsite.
 
 The setting applies only to the web that you specify. Parent webs, sibling webs, and subsites keep their own settings. To change more than one web, run the cmdlet once for each web.
 
@@ -38,34 +38,32 @@ The setting takes precedence over the tenant-level rollout. `Enable` doesn't byp
 
 The operation is required and has no default. To read the stored setting without changing it, use `Get-SPOWebClassicPageModernViewRendering`.
 
-You must be a SharePoint Administrator to run this cmdlet.
-
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Set-SPOWebClassicPageModernViewRendering -WebUrl "https://contoso.sharepoint.com/sites/marketing" -Operation Enable
+Set-SPOWebClassicPageModernViewRendering -WebUrl "https://contoso.sharepoint.com/sites/marketing" -Operation Enable
 ```
 
 This example opts the root web of the Marketing site into modern view rendering for eligible classic pages.
 
 ### Example 2
 ```powershell
-PS C:\> Set-SPOWebClassicPageModernViewRendering -WebUrl "https://contoso.sharepoint.com/sites/marketing/europe" -Operation Disable
+Set-SPOWebClassicPageModernViewRendering -WebUrl "https://contoso.sharepoint.com/sites/marketing/europe" -Operation Disable
 ```
 
 This example turns off modern view rendering for classic pages on the Europe subsite. Other webs in the site collection aren't affected.
 
 ### Example 3
 ```powershell
-PS C:\> Set-SPOWebClassicPageModernViewRendering -WebUrl "https://contoso.sharepoint.com/sites/marketing/europe" -Operation UseTenantDefault
+Set-SPOWebClassicPageModernViewRendering -WebUrl "https://contoso.sharepoint.com/sites/marketing/europe" -Operation UseTenantDefault
 ```
 
 This example removes the stored setting from the Europe subsite, so the tenant-level rollout decides how classic pages render. `Get-SPOWebClassicPageModernViewRendering` then reports `StoredOverride` as `NotSet`.
 
 ### Example 4
 ```powershell
-PS C:\> Set-SPOWebClassicPageModernViewRendering -WebUrl "https://contoso.sharepoint.com/sites/marketing" -Operation UseTenantDefault -WhatIf
+Set-SPOWebClassicPageModernViewRendering -WebUrl "https://contoso.sharepoint.com/sites/marketing" -Operation UseTenantDefault -WhatIf
 ```
 
 This example previews removing the web override and using tenant defaults on the root web of the Marketing site. The setting isn't changed.
@@ -146,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -155,16 +153,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ### System.Object
-
-## NOTES
-
-To see the examples, type: "get-help Set-SPOWebClassicPageModernViewRendering -examples".
-
-For more information, type: "get-help Set-SPOWebClassicPageModernViewRendering -detailed".
-
-For technical information, type: "get-help Set-SPOWebClassicPageModernViewRendering -full".
-
-For online help, type: "get-help Set-SPOWebClassicPageModernViewRendering -online"
 
 ## RELATED LINKS
 [Get-SPOWebClassicPageModernViewRendering](Get-SPOWebClassicPageModernViewRendering.md)
