@@ -488,6 +488,9 @@ This cmdlet will return the user principal name, current location, and correspon
 ### [Get-SPOVersionPolicyWithChanges](Get-SPOVersionPolicyWithChanges.md)
 Returns a locally modified copy of a version policy.
 
+### [Get-SPOWebClassicPageModernViewRendering](Get-SPOWebClassicPageModernViewRendering.md)
+Get the modern view rendering setting for classic pages on a web.
+
 ### [Get-SPOWebTemplate](Get-SPOWebTemplate.md)
 Displays all site templates that match the given identity.
 
@@ -907,6 +910,9 @@ Sets the Preferred Data Location (PDL) for the specified Office 365 Group. The c
 
 ### [Set-SPOUser](Set-SPOUser.md)
 Configures properties on an existing user.
+
+### [Set-SPOWebClassicPageModernViewRendering](Set-SPOWebClassicPageModernViewRendering.md)
+Set or clear the modern view rendering setting for classic pages on a web.
 
 ### [Set-SPOWebTheme](Set-SPOWebTheme.md)
 Sets the theme for a SharePoint site.
