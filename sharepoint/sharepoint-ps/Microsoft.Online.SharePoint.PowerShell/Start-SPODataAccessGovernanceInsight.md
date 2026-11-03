@@ -57,6 +57,14 @@ Start-SPODataAccessGovernanceInsight -ReportEntity <ReportEntityEnum> -Workload 
  [<CommonParameters>]
 ```
 
+### GroupPermissionsParameterSet
+```
+Start-SPODataAccessGovernanceInsight -ReportEntity <ReportEntityEnum> -Workload <WorkloadEnum>
+ -ReportType <ReportTypeEnum> -Name <String>
+ -TargetGroups <System.Collections.Generic.List`1[System.Management.Automation.PSObject]>
+ [<CommonParameters>]
+```
+
 ### DetailedEEEUParameterSet
 ```
 Start-SPODataAccessGovernanceInsight -ReportEntity <ReportEntityEnum> -ReportType <ReportTypeEnum>
@@ -72,6 +80,7 @@ This cmdlet is used to generate DAG reports which deal with potential oversharin
 - List of sites having labelled files, as of report generation time.
 - List of sites having 'too-many-users', as of report generation time, to setup an oversharing baseline.
 - List of sites with direct or indirect permissions to given users.
+- List of sites with permissions granted to specified Microsoft Entra security groups or Microsoft 365 groups.
 
 ## EXAMPLES
 
@@ -90,6 +99,35 @@ Start-SPODataAccessGovernanceInsight -ReportEntity EveryoneExceptExternalUsers -
 ```
 
 The above cmdlet generates a detailed report for all content shared with 'Everyone except external users' (Sites, groups and files) across both SharePoint sites and OneDrive accounts, as of report generation time.
+
+### Example 3
+
+```powershell
+Connect-MgGraph -Scopes "GroupMember.Read.All"
+
+$securityGroup = Get-MgGroup -GroupId "<security group object ID>" -Property Id,Mail,DisplayName,SecurityEnabled
+
+if (-not $securityGroup.SecurityEnabled) {
+    throw "The group '$($securityGroup.DisplayName)' isn't a security group."
+}
+
+$microsoft365Groups = @(Get-MgGroup -Filter "displayName eq 'Finance site owners'" -Property Id,Mail,DisplayName,GroupTypes)
+
+if ($microsoft365Groups.Count -ne 1) {
+    throw "Expected exactly one Microsoft Entra group named 'Finance site owners'; found $($microsoft365Groups.Count)."
+}
+
+$microsoft365Group = $microsoft365Groups[0]
+if ($microsoft365Group.GroupTypes -notcontains "Unified") {
+    throw "The group '$($microsoft365Group.DisplayName)' isn't a Microsoft 365 group."
+}
+
+$targetGroups = @($securityGroup, $microsoft365Group) | Select-Object Id,Mail,DisplayName
+
+Start-SPODataAccessGovernanceInsight -ReportEntity PermissionsReport -ReportType Snapshot -Workload SharePoint -Name "GroupPermissions" -TargetGroups $targetGroups
+```
+
+This example connects to Microsoft Graph PowerShell with `GroupMember.Read.All`, the least-privileged delegated permission for reading group properties. This permission requires administrator consent. It resolves a security group by its unique object ID and a Microsoft 365 group by the display name `Finance site owners`. The name lookup must return exactly one group, and each result is validated as the expected supported group type before the report is generated. Distribution lists aren't supported. Each object passed to `-TargetGroups` must contain `Id` and `DisplayName`; `Mail` is optional to support groups that aren't mail-enabled.
 
 
 ## PARAMETERS
@@ -148,7 +186,7 @@ Specifies the name to be given to the generated report.
 
 ```yaml
 Type: System.String
-Parameter Sets: EEEUParameterSet, SitePermissionsParameterSet, UserPermissionsParameterSet
+Parameter Sets: EEEUParameterSet, SitePermissionsParameterSet, UserPermissionsParameterSet, GroupPermissionsParameterSet
 Aliases:
 
 Required: True
@@ -242,6 +280,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -TargetGroups
+
+Specifies 1 to 100 pre-resolved Microsoft Entra security groups or Microsoft 365 groups for which the permissions report is generated. Distribution lists aren't supported.
+
+Resolve the groups with Microsoft Graph before calling this cmdlet. Each object must contain a valid group `Id` and a nonempty `DisplayName`. The `Mail` property is optional. Duplicate objects with the same `Id` are included only once.
+
+```yaml
+Type: System.Collections.Generic.List`1[System.Management.Automation.PSObject]
+Parameter Sets: GroupPermissionsParameterSet
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UserPrincipalNames
 
 Specifies the user principal names of the users for whom permissions report should be generated.
@@ -264,7 +320,7 @@ Specifies whether the report is for SharePoint sites or OneDrive accounts.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.TenantAdministration.WorkloadEnum
-Parameter Sets: EEEUParameterSet, LabelParameterSet, SharingLinkParameterSet, SitePermissionsParameterSet, UserPermissionsParameterSet
+Parameter Sets: EEEUParameterSet, LabelParameterSet, SharingLinkParameterSet, SitePermissionsParameterSet, UserPermissionsParameterSet, GroupPermissionsParameterSet
 Aliases:
 Accepted values: SharePoint, OneDriveForBusiness
 
