@@ -25,7 +25,33 @@ The `Start-SPOContainerDataAccessGovernanceJob` cmdlet submits a report request 
 
 The supported job type is `SitePermissions`. This cmdlet targets SharePoint Embedded; it doesn't accept a workload parameter. To request reports for SharePoint sites or OneDrive accounts, use `Start-SPODataAccessGovernanceInsight`.
 
-Connect to the tenant administration endpoint with `Connect-SPOService` before running this cmdlet. The service must support SharePoint Embedded Data Access Governance reports, and the signed-in account must be authorized to request them.
+Connect to the consuming tenant's administration endpoint with `Connect-SPOService` before running this cmdlet. The signed-in account must have the **SharePoint Embedded Administrator** role, which is the least-privileged role for this operation, or the **Global Administrator** role. The regular SharePoint Administrator role alone doesn't grant access to this cmdlet. For role information, see [Consuming tenant admin](/sharepoint/dev/embedded/admin/consuming-tenant-admin).
+
+The service must support SharePoint Embedded Data Access Governance reports. Report operations fail in environments where the required backend support hasn't been deployed.
+
+**Report scope**
+
+A `SitePermissions` job captures a permissions snapshot across all eligible SharePoint Embedded containers in the connected consuming tenant, including all applications and container types. It doesn't include regular SharePoint sites or OneDrive accounts. The cmdlet doesn't accept application, container-type, or container filters.
+
+Containers in a `NoAccess` lock state and archived containers are excluded. Unlocked containers and containers in a `ReadOnly` lock state are included.
+
+**Licensing and supported environments**
+
+The report has the same licensing requirements and supported-cloud scope as the existing [Site Permissions report](/sharepoint/data-access-governance-site-permissions-report). The licensing requirements in [Prerequisites for SharePoint Advanced Management](/sharepoint/sharepoint-advanced-management-prerequisites) apply; use the SharePoint Embedded administrative roles specified above rather than the SharePoint administrative roles described in that article.
+
+As with existing [Data access governance reports](/sharepoint/data-access-governance-reports), the report isn't available for Microsoft 365 operated by 21Vianet, even with the required licenses. In supported environments, SharePoint Embedded reporting backend support must also be deployed.
+
+**Service limits**
+
+The report uses the same generation, retention, frequency, export, and concurrent-job policies as the existing [Site Permissions report](/sharepoint/data-access-governance-site-permissions-report):
+
+- The first report takes up to 5 days to complete.
+- Subsequent reports complete within 24 hours.
+- Report data can be up to 48 hours old.
+- Reports can be run again every 30 days.
+- The downloaded CSV can contain up to 1 million containers.
+
+Report retention and concurrent-job limits are controlled by the reporting service. This cmdlet doesn't provide parameters to change those policies.
 
 ## EXAMPLES
 
