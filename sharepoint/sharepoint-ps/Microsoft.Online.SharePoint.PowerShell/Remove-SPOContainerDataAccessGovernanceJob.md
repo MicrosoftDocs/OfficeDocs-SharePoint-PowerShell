@@ -27,7 +27,7 @@ The cmdlet retrieves the report metadata and verifies that the report belongs to
 
 Use `WhatIf` to preview the deletion. The cmdlet still retrieves and validates the report, but doesn't send a deletion request.
 
-Connect to the consuming tenant's administration endpoint with `Connect-SPOService` before running this cmdlet. The signed-in account must have the **SharePoint Embedded Administrator** role, which is the least-privileged role for this operation, or the **Global Administrator** role. The regular SharePoint Administrator role alone doesn't grant access to this cmdlet.
+Connect to the consuming tenant's administration endpoint with `Connect-SPOService` before running this cmdlet. You must be a SharePoint Embedded Administrator or Global Administrator to run this cmdlet. SharePoint Embedded Administrator is the least-privileged role for this operation.
 
 The service must support SharePoint Embedded Data Access Governance reports. Report operations fail in environments where the required backend support hasn't been deployed. For report scope, licensing, supported environments, and service limits, see [Start-SPOContainerDataAccessGovernanceJob](./Start-SPOContainerDataAccessGovernanceJob.md#description).
 

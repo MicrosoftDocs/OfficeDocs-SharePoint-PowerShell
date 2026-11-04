@@ -25,7 +25,7 @@ The `Start-SPOContainerDataAccessGovernanceJob` cmdlet submits a report request 
 
 The supported job type is `SitePermissions`. This cmdlet targets SharePoint Embedded; it doesn't accept a workload parameter. To request reports for SharePoint sites or OneDrive accounts, use `Start-SPODataAccessGovernanceInsight`.
 
-Connect to the consuming tenant's administration endpoint with `Connect-SPOService` before running this cmdlet. The signed-in account must have the **SharePoint Embedded Administrator** role, which is the least-privileged role for this operation, or the **Global Administrator** role. The regular SharePoint Administrator role alone doesn't grant access to this cmdlet. For role information, see [Consuming tenant admin](/sharepoint/dev/embedded/admin/consuming-tenant-admin).
+Connect to the consuming tenant's administration endpoint with `Connect-SPOService` before running this cmdlet. You must be a SharePoint Embedded Administrator or Global Administrator to run this cmdlet. SharePoint Embedded Administrator is the least-privileged role for this operation. For role information, see [Consuming tenant admin](/sharepoint/dev/embedded/admin/consuming-tenant-admin).
 
 The service must support SharePoint Embedded Data Access Governance reports. Report operations fail in environments where the required backend support hasn't been deployed.
 
@@ -37,7 +37,7 @@ Containers in a `NoAccess` lock state and archived containers are excluded. Unlo
 
 **Licensing and supported environments**
 
-The report has the same licensing requirements and supported-cloud scope as the existing [Site Permissions report](/sharepoint/data-access-governance-site-permissions-report). The licensing requirements in [Prerequisites for SharePoint Advanced Management](/sharepoint/sharepoint-advanced-management-prerequisites) apply; use the SharePoint Embedded administrative roles specified above rather than the SharePoint administrative roles described in that article.
+The report has the same licensing requirements and supported-cloud scope as the existing [Site Permissions report](/sharepoint/data-access-governance-site-permissions-report). The licensing requirements in [Prerequisites for SharePoint Advanced Management](/sharepoint/sharepoint-advanced-management-prerequisites) apply.
 
 As with existing [Data access governance reports](/sharepoint/data-access-governance-reports), the report isn't available for Microsoft 365 operated by 21Vianet, even with the required licenses. In supported environments, SharePoint Embedded reporting backend support must also be deployed.
 

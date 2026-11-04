@@ -35,7 +35,7 @@ The output includes the report ID, report name, workload, and status. Wait until
 
 A report ID belonging to SharePoint or OneDrive isn't accepted. Use `Get-SPODataAccessGovernanceInsight` for those reports.
 
-Connect to the consuming tenant's administration endpoint with `Connect-SPOService` before running this cmdlet. The signed-in account must have the **SharePoint Embedded Administrator** role, which is the least-privileged role for this operation, or the **Global Administrator** role. The regular SharePoint Administrator role alone doesn't grant access to this cmdlet.
+Connect to the consuming tenant's administration endpoint with `Connect-SPOService` before running this cmdlet. You must be a SharePoint Embedded Administrator or Global Administrator to run this cmdlet. SharePoint Embedded Administrator is the least-privileged role for this operation.
 
 The service must support SharePoint Embedded Data Access Governance reports. Report operations fail in environments where the required backend support hasn't been deployed. For report scope, licensing, supported environments, and service limits, see [Start-SPOContainerDataAccessGovernanceJob](./Start-SPOContainerDataAccessGovernanceJob.md#description).
 
