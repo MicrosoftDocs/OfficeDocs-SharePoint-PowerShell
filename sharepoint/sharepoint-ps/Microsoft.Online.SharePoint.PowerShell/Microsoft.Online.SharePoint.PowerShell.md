@@ -740,6 +740,9 @@ Recovers a deleted Container from the Recycle Bin.
 ### [Restore-SPODeletedSite](Restore-SPODeletedSite.md)
 Restores a SharePoint Online deleted site collection from the Recycle Bin.
 
+### [Restore-SPOPersonalSiteOwnership](Restore-SPOPersonalSiteOwnership.md)
+Restores ownership of an existing OneDrive and reconnects its owner's profile without deleting the previously associated OneDrive. This cmdlet is unreleased; availability and end-to-end validation are pending.
+
 ### [Revoke-SPOHubSiteRights](Revoke-SPOHubSiteRights.md)
 Revokes rights for specified principals to a hub.
 
