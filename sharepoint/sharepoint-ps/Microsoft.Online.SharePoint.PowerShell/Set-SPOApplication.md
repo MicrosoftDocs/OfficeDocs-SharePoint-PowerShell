@@ -22,8 +22,6 @@ Set-SPOApplication [-OwningApplicationId] <Guid> [[-SharingCapability] <SharingC
  [[-OverrideTenantSharingCapability] <Boolean>]
  [[-ItemMajorVersionLimit] <Int>]
  [[-EnableAutoExpirationVersionTrim] <Boolean>] [[-ExpireVersionsAfterDays] <Int>]
- [[-FileTypesForVersionExpiration] <String[]>]
- [[-RemoveVersionExpirationFileTypeOverride] <String[]>]
  [<CommonParameters>]
 ```
 
@@ -85,21 +83,6 @@ This example enables automatic version history trimming for the application's co
 Set-SPOApplication -OwningApplicationId 423poi45 -EnableAutoExpirationVersionTrim $false -ItemMajorVersionLimit 500 -ExpireVersionsAfterDays 180
 ```
 This example disables automatic trimming and sets a manual version policy. When `EnableAutoExpirationVersionTrim` is `$false`, both `ItemMajorVersionLimit` and `ExpireVersionsAfterDays` must be specified.
-
-### Example 7
-
-```powershell
-Set-SPOApplication -OwningApplicationId 423poi45 -ExpireVersionsAfterDays 365 -FileTypesForVersionExpiration "docx","xlsx"
-```
-This example applies the version-expiration policy to the specified file types.
-
-### Example 8
-
-```powershell
-Set-SPOApplication -OwningApplicationId 423poi45 -RemoveVersionExpirationFileTypeOverride "docx","xlsx"
-```
-This example removes the file-type version-expiration overrides for the specified file types. `RemoveVersionExpirationFileTypeOverride` cannot be combined with any other version policy parameter.
-
 ## PARAMETERS
 
 ### -OverrideTenantSharingCapability
@@ -183,38 +166,6 @@ Aliases:
 
 Required: False
 Position: 6
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -FileTypesForVersionExpiration
-
-The file types whose version-expiration policy should be updated. The array cannot be empty, and at least one of `EnableAutoExpirationVersionTrim`, `ItemMajorVersionLimit`, or `ExpireVersionsAfterDays` must also be specified.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 7
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RemoveVersionExpirationFileTypeOverride
-
-The file-type version-expiration overrides to remove. The array cannot be empty. This parameter is exclusive and cannot be combined with `FileTypesForVersionExpiration`, `EnableAutoExpirationVersionTrim`, `ItemMajorVersionLimit`, or `ExpireVersionsAfterDays`.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 8
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
