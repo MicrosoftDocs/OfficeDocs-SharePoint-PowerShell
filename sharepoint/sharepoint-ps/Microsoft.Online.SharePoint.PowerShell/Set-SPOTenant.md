@@ -1126,11 +1126,6 @@ Accept wildcard characters: False
 
 This parameter allows creation of classic publishing site collections and activation of classic publishing features in sites.
 
-To create a publishing portal site collection with [New-SPOSite](New-SPOSite.md), use the `BLANKINTERNETCONTAINER#0` template. The `CMSPUBLISHING#0` and `BLANKINTERNET#0` templates are subsite templates and cannot be used directly with `New-SPOSite` to create site collections.
-
-> [!NOTE]
-> Setting this parameter to `$true` does not override template availability or tenant restrictions on subsite creation. Use [Get-SPOWebTemplate](Get-SPOWebTemplate.md) to list valid site collection templates.
-
 The valid values are:
 
 * False (default) - Classic publishing site collections cannot be created and the publishing features cannot be activated in sites.
