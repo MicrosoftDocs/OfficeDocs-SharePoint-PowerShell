@@ -37,7 +37,7 @@ Connect to the tenant's SharePoint admin service by using `Connect-SPOService`. 
 
 The service resolves the new owner's current directory identity before repairing ownership and the site's cached user identity. The profile's stored directory object ID and binary user identifier aren't used as prerequisites for recovery: differences can reflect delayed synchronization. The cmdlet doesn't create a missing profile or repair these profile identity properties.
 
-The profile update is limited to its personal-site association (`PersonalSpace`). The cmdlet also updates the selected site's reciprocal profile identifier. It preserves unrelated profile properties, including feed association, personal-site capabilities, and personal-site creation state.
+The cmdlet updates the profile's personal-site association (`PersonalSpace`) and the selected site's reciprocal profile identifier. It also independently attempts to refresh personal-site capabilities from the selected site's features, update the feed identifier from its root web, and set personal-site creation state to `Created`. These three metadata updates are best effort and are attempted even when the personal-site association already matches. A nonfatal metadata-update failure doesn't prevent the remaining updates or make identity recovery fail. The cmdlet doesn't repair the profile's directory identity properties.
 
 For Multi-Geo tenants, the cmdlet checks the site's host against the new owner's preferred data location and the available tenant location configuration. If either is absent or the location configuration is empty, the check uses the selected site's current host. When no configuration entry matches the preferred location, it uses the single configured location or the tenant's unambiguous default location. If a location can't be selected unambiguously or its host is invalid, the checks fail. The cmdlet doesn't move sites between locations.
 
@@ -338,7 +338,7 @@ The customer-visible stages run in this order:
 | `DeletionSchedule` | Cancels pending personal-site deletion scheduling for the target. |
 | `Ownership` | Sets the primary site owner and site collection administrator, grants root-web Full Control when needed, and updates the root web's author. |
 | `OwnerIdentity` | Repairs the owner's cached site identity in place when needed, retaining the site-user ID and its role assignments. Fails if another site user already has the intended identity. |
-| `ProfileReconnection` | Repairs the new owner's profile's personal-site association and records the profile identifier on the selected site. Doesn't repair profile identity or other profile properties. |
+| `ProfileReconnection` | Repairs the new owner's personal-site association and records the profile identifier on the selected site. Independently attempts capabilities, feed-identifier, and creation-state updates on a best-effort basis; their nonfatal failures don't fail recovery. Doesn't repair profile identity. |
 | `LicenseReevaluation` | Queues license reevaluation when required. Doesn't assign a license or wait for reevaluation to finish. |
 | `DirectoryUrlPublication` | Submits the owner's OneDrive URL update to Microsoft Entra ID. |
 | `CompletionVerification` | Verifies ownership, the target profile association, and removal from the personal-site deletion queue. |
