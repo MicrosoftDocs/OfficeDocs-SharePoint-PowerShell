@@ -33,7 +33,13 @@ The `Restore-SPOPersonalSiteOwnership` cmdlet restores ownership and profile ass
 
 Use this cmdlet to repair an existing OneDrive's ownership and profile association. It doesn't create a OneDrive, restore a deleted site from the recycle bin, restore a deleted Microsoft Entra user, or copy content between sites. It isn't a secondary-contact or manager access-delegation command.
 
-Connect to the tenant's SharePoint admin service by using `Connect-SPOService`. Your account must have permission to update the selected site. The new owner must exist in the same tenant and have a matching SharePoint user profile. The selected site must be an existing OneDrive site. For Multi-Geo tenants, it must be in the location expected for the new owner; this cmdlet doesn't move sites between locations.
+Connect to the tenant's SharePoint admin service by using `Connect-SPOService`. Your account must have permission to update the selected site. The new owner must exist in the same tenant and have an existing SharePoint user profile that the service can retrieve by the user's account claim. The selected site must be an existing OneDrive site.
+
+The service resolves the new owner's current directory identity before repairing ownership and the site's cached user identity. The profile's stored directory object ID and binary user identifier aren't used as prerequisites for recovery: differences can reflect delayed synchronization. The cmdlet doesn't create a missing profile or repair these profile identity properties.
+
+The profile update is limited to its personal-site association (`PersonalSpace`). The cmdlet also updates the selected site's reciprocal profile identifier. It preserves unrelated profile properties, including feed association, personal-site capabilities, and personal-site creation state.
+
+For Multi-Geo tenants, the cmdlet checks the site's host against the new owner's preferred data location and the available tenant location configuration. If either is absent or the location configuration is empty, the check uses the selected site's current host. When no configuration entry matches the preferred location, it uses the single configured location or the tenant's unambiguous default location. If a location can't be selected unambiguously or its host is invalid, the checks fail. The cmdlet doesn't move sites between locations.
 
 Specify the target by using `-Identity` or `-MySiteId`, and the new owner by using `-OwnerUPN` or `-OwnerObjectId`. A target and an owner are required even though the individual parameters are optional. If you supply both forms of an identity, `-MySiteId` takes precedence over `-Identity`, and `-OwnerObjectId` takes precedence over `-OwnerUPN`. The ignored URL or UPN isn't used to cross-check the supplied ID.
 
@@ -41,7 +47,7 @@ If the new owner's profile already references another OneDrive, the cmdlet retur
 
 The cmdlet also cancels pending personal-site deletion scheduling for the selected site, repairs the owner's cached site identity when needed, and submits license reevaluation and directory URL updates as applicable. It doesn't assign a Microsoft 365 license.
 
-The operation isn't a single transaction. If a stage fails, earlier changes can remain. Review the returned progress before deciding whether to retry. The cmdlet stops if its safety checks detect that the owner identity, site ownership, or profile association changed during the operation.
+The operation applies repeatable corrections across multiple stages, but isn't a single transaction. If a stage fails, earlier changes can remain. Review the returned progress before deciding whether to retry. The cmdlet stops if its safety checks detect an unexpected change to the owner identity, site ownership, or profile association during the operation.
 
 Run `-WhatIf` first to perform authorized read-only checks and inspect the previous association. These checks don't reserve the site or guarantee that a later recovery attempt will succeed. See **OUTPUTS** for the result fields and stage order.
 
@@ -135,7 +141,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Specifies the HTTPS URL of the existing OneDrive site to repair. Use `-Identity` or `-MySiteId` to select the target.
+Specifies the HTTPS URL of the existing OneDrive site to repair. Use `-Identity` or `-MySiteId` to select the target. The URL must not contain embedded credentials, a query string, or a fragment.
 
 If you also supply a nonempty `-MySiteId`, the cmdlet uses that ID and ignores `-Identity`.
 
@@ -217,6 +223,8 @@ Specifies an old owner's user principal name (UPN). The cmdlet disconnects this 
 
 If the profile is absent or references another site, this stage makes no changes. Specifying the new owner's profile as the old profile causes the request to fail.
 
+Disconnection clears only the old profile's personal-site association (`PersonalSpace`). It preserves the profile's other properties and doesn't delete the user profile, user account, or site content.
+
 Omit this parameter when you don't need to disconnect a specific old profile.
 
 ```yaml
@@ -237,7 +245,7 @@ Accept wildcard characters: False
 
 Specifies the new owner's Microsoft Entra user object ID. Use `-OwnerObjectId` or `-OwnerUPN` to select the new owner.
 
-A nonempty object ID takes precedence over `-OwnerUPN`. The user must belong to the connected tenant and have a matching SharePoint user profile.
+A nonempty object ID takes precedence over `-OwnerUPN`. The service resolves the user's current UPN and site identity from this object ID. The user must belong to the connected tenant and have an existing SharePoint user profile retrievable by the resolved account claim.
 
 ```yaml
 Type: Guid
@@ -329,19 +337,23 @@ The customer-visible stages run in this order:
 | `OldProfile` | Disconnects the specified old profile when it still references the target. Otherwise, makes no changes. |
 | `DeletionSchedule` | Cancels pending personal-site deletion scheduling for the target. |
 | `Ownership` | Sets the primary site owner and site collection administrator, grants root-web Full Control when needed, and updates the root web's author. |
-| `OwnerIdentity` | Repairs the owner's cached site identity when needed. |
-| `ProfileReconnection` | Reconnects the new owner's profile and applies the associated profile corrections. |
+| `OwnerIdentity` | Repairs the owner's cached site identity in place when needed, retaining the site-user ID and its role assignments. Fails if another site user already has the intended identity. |
+| `ProfileReconnection` | Repairs the new owner's profile's personal-site association and records the profile identifier on the selected site. Doesn't repair profile identity or other profile properties. |
 | `LicenseReevaluation` | Queues license reevaluation when required. Doesn't assign a license or wait for reevaluation to finish. |
 | `DirectoryUrlPublication` | Submits the owner's OneDrive URL update to Microsoft Entra ID. |
 | `CompletionVerification` | Verifies ownership, the target profile association, and removal from the personal-site deletion queue. |
 
 Completed submission stages don't guarantee that background processing has finished or that directory changes have propagated. Use the returned progress rather than inferring success from a command completing without an exception.
 
+Recovery also attempts to refresh service-side site registration on a best-effort basis. A refresh failure doesn't necessarily fail recovery, and a successful result doesn't guarantee that all site registration has converged. This refresh isn't reported as a separate stage.
+
 ## NOTES
 
-This operation changes ownership of one existing OneDrive. It doesn't separately guarantee that the previous primary owner remains a site collection administrator.
+This operation changes ownership of one existing OneDrive. Changing the primary owner can remove the previous owner's site collection administrator status when that user isn't the secondary contact. The cmdlet doesn't explicitly remove that user's other role assignments or group memberships. Review the previous owner's effective access after recovery.
 
-Repeating recovery applies the required corrections again; an already-correct profile association doesn't skip all subsequent work. Fresh safety checks still apply, and a repeated request can fail if its prerequisites changed.
+Repeating recovery reapplies the required corrections toward the same ownership and profile state; an already-correct profile association doesn't skip all subsequent work. A retry can submit directory updates again. License reevaluation uses a stable work-item identity to avoid duplicate pending requests. Fresh safety checks still apply, and a repeated request can fail if its prerequisites changed.
+
+For a storage-quota-related failure during the ownership stage, the cmdlet can retry once with a bounded temporary quota increase. It attempts to restore and verify the original quota settings, including when the retry fails. A conflicting quota change or a restoration failure causes the stage to fail; recovery doesn't promise that all changes were rolled back.
 
 The cmdlet doesn't accept bulk input. Review each target and its returned result separately.
 
