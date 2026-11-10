@@ -22,22 +22,30 @@ Downloads completed file last access date reports as a ZIP file and a JSON index
 
 ```
 Export-SPOLastAccessDateReport [-RunId] <Guid> [[-Path] <String>] [-Force]
- [<CommonParameters>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
 The `Export-SPOLastAccessDateReport` cmdlet downloads reports for a request submitted by `Start-SPOLastAccessDateReport`.
 
-The service packages reports after site processing finishes. Export checks the package and can request packaging if necessary.
+The service packages reports after site processing finishes. Export requests packaging if it was never queued or previously failed.
 
 When the package is ready, Export downloads `LastAccessDateReport_<RunId>.zip` and `LastAccessDateReport_<RunId>.index.json`. It verifies the ZIP's size and SHA-256 hash.
 
 The ZIP contains a CSV report for each completed site. Failed sites aren't included in the ZIP. Review the JSON index for included sites, missing reports, and their reasons.
 
-An interrupted ZIP download resumes on the next call. Use `-Force` if the destination ZIP already exists.
+An interrupted ZIP download resumes on the next call. The index downloads again in full.
 
-Use an account with the SharePoint Advanced Management Administrator role. The Global Administrator and SharePoint Administrator roles alone don't grant permission to run this cmdlet.
+Export retries transient download errors separately for each file. Each file gets up to five attempts and five minutes of total waiting between attempts. If the server remains busy, run Export again later.
+
+Export saves both files under temporary names, then moves them into place together. Use `-Force` if either destination file already exists.
+
+With `-Force`, Export keeps previous files as `.bak` files until their replacements are in place. A warning lists any `.bak` files remaining from an earlier export.
+
+Use an account with the SharePoint Advanced Management Administrator role. Global Administrator, SharePoint Administrator, and Global Reader roles alone don't grant permission to run this cmdlet.
+
+App-only access requires `Sites.FullControl.All`. Export requires Update permission on Advanced Management reports because it can request packaging. Downloads through this cmdlet don't require separate permission on the report storage location.
 
 Your tenant and SharePoint Online Management Shell version must support this cmdlet. An unsupported tenant returns an experimental-feature error.
 
@@ -59,7 +67,7 @@ If Export returns `Packaging`, wait before running it again. If it returns `RunN
 Export-SPOLastAccessDateReport -RunId $report.RunId -Path "C:\Reports" -Force
 ```
 
-This example downloads the package to the existing `C:\Reports` folder and allows Export to overwrite an existing ZIP.
+This example downloads both files to the existing `C:\Reports` folder. It allows Export to replace an existing ZIP or index.
 
 ## PARAMETERS
 
@@ -99,12 +107,46 @@ Accept wildcard characters: False
 
 ### -Force
 
-Allows Export to overwrite an existing local ZIP for this request. Without this parameter, Export stops if that ZIP exists.
+Allows Export to overwrite an existing local ZIP or JSON index for this request. Without this parameter, Export stops if either file exists.
+
+Export keeps previous files as `.bak` files until both replacements are in place.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+
+Shows what would happen without exporting the reports.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+
+Prompts for confirmation before exporting the reports. This medium-impact cmdlet doesn't prompt by default with the standard confirmation preference.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -145,13 +187,15 @@ The returned object contains these properties:
 | State | Description |
 |---|---|
 | `RunNotFinished` | Sites are still queued, processing, or retrying. Check request status and wait. |
-| `Packaging` | The package isn't ready. Wait before exporting again. |
-| `Ready` | Export downloaded and verified the ZIP. Review the index for missing site reports. |
-| `Failed` | The previous packaging attempt failed. Review the warning and `Detail`. Export also requests another packaging attempt. |
+| `Packaging` | Packaging is underway, or this call requested it. Wait a few minutes before exporting again. |
+| `Ready` | Export downloaded the ZIP and index and verified the ZIP's size and SHA-256 hash. Review the index for missing site reports. |
+| `Failed` | Packaging failed, and this call already requested another attempt. Review the warning and `Detail`. Wait a few minutes before exporting again. |
 
 ## NOTES
 
-The service retains requests for 30 days. Export reports before the request expires.
+The service retains request records for 15 days after submission. Export reports before the request expires.
+
+Report data has a 30-day retention period, but the service doesn't currently delete report files automatically. Report files remain until manually removed.
 
 Reports contain file names, URLs, and access dates. Protect downloaded files according to your organization's data-handling requirements.
 

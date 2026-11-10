@@ -33,9 +33,11 @@ Without `-Site`, it returns a request summary and counts sites by processing sta
 
 A site count of zero in one state doesn't prove the request succeeded. Review the complete state breakdown and any failures before exporting results.
 
-Use an account with the SharePoint Advanced Management Administrator role. The Global Administrator and SharePoint Administrator roles alone don't grant permission to run this cmdlet.
+Use an account with the SharePoint Advanced Management Administrator role. Global Administrator, SharePoint Administrator, and Global Reader roles alone don't grant permission to run this cmdlet.
 
-Authorized callers can query requests from the connected tenant. The service retains requests for 30 days.
+App-only access requires `Sites.FullControl.All` with Read permission on Advanced Management reports.
+
+Authorized callers can query requests from the connected tenant. The service retains request records for 15 days after submission.
 
 Your tenant and SharePoint Online Management Shell version must support this cmdlet. An unsupported tenant returns an experimental-feature error.
 
@@ -133,6 +135,14 @@ Without `-Site`, the cmdlet returns these summary properties:
 | `PackageUrl` | Identifies the package location when ready. Use the export cmdlet to download it. |
 
 `PackageState = Ready` means the package is available. It doesn't mean every requested site produced a report.
+
+| PackageState | Description |
+|---|---|
+| `RunNotFinished` | Sites are still queued, processing, or retrying. Wait before exporting. |
+| `NotRequested` | Packaging doesn't exist, or its state couldn't be read. Export requests packaging. |
+| `Packaging` | The service is building the ZIP. Wait before exporting. |
+| `Ready` | The package is available. Use Export to download the ZIP and index. |
+| `Failed` | Packaging failed. Export requests another packaging attempt. |
 
 ### Microsoft.Online.SharePoint.PowerShell.SPOLastAccessDateReportStatusInfo
 

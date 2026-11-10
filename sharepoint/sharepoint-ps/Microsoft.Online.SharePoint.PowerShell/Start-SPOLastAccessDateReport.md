@@ -31,13 +31,15 @@ The `Start-SPOLastAccessDateReport` cmdlet submits a request and returns its `Ru
 
 The `Sampling` mode supports up to 1,000 sites per request and up to 1,000 files per site. It doesn't select files by age or access date. The sample isn't a complete inventory or a list of files eligible for archiving.
 
-Processing runs asynchronously. The service packages reports after site processing finishes. The service retains requests for 30 days.
+Processing runs asynchronously for up to 15 days after submission. Unfinished sites stop retrying after that period. The service packages reports after site processing finishes. Request records remain available for 15 days after submission.
 
 If another request already processes a site, this cmdlet skips that site and returns a warning with the existing `RunId`. The `SitesAlreadyInProgress` property also identifies skipped sites.
 
 If every site is already being processed, the cmdlet returns `AlreadyInProgress` and queues no new sites. The returned `RunId` belongs to the existing request for the first skipped site. Review `SitesAlreadyInProgress` because other sites might belong to different requests.
 
-Use an account with the SharePoint Advanced Management Administrator role. The Global Administrator and SharePoint Administrator roles alone don't grant permission to run this cmdlet.
+Use an account with the SharePoint Advanced Management Administrator role. Global Administrator, SharePoint Administrator, and Global Reader roles alone don't grant permission to run this cmdlet.
+
+App-only access requires `Sites.FullControl.All` with Update permission on Advanced Management reports.
 
 Your tenant and SharePoint Online Management Shell version must support this cmdlet. An unsupported tenant returns an experimental-feature error.
 
