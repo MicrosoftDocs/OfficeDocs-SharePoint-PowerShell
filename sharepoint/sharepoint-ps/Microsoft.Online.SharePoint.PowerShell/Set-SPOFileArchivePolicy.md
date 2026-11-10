@@ -26,7 +26,9 @@ Set-SPOFileArchivePolicy -PolicyId <Guid> [-Name <String>] [-PolicyType <SPOFile
 
 ## DESCRIPTION
 
-This cmdlet updates the properties of an existing file archive policy. Only the parameters that are specified will be updated; all other properties remain unchanged. You cannot set the State to `Active` unless the PolicyType is `AllSites` or `AllODBSites`, or at least one site has been added to the policy using `Add-SPOSiteToFileArchivePolicy`.
+This cmdlet updates the properties of an existing file archive policy. Only the parameters that are specified will be updated; all other properties remain unchanged.
+
+To activate a `SelectedSites` policy, at least one site must have been added as an inclusion using `Add-SPOSiteToFileArchivePolicy` without `-Exclude`. Excluded sites don't satisfy this requirement. The same requirement applies when changing an active `AllSites` or `AllODBSites` policy to `SelectedSites`. An `AllSites` or `AllODBSites` policy doesn't require explicitly included sites to be activated.
 
 > [!NOTE]
 > This cmdlet is part of the file archive policies feature which is currently in preview.
@@ -163,6 +165,8 @@ Specifies the updated policy type. Accepted values are:
 - `AllODBSites`: The policy applies to all OneDrive for Business sites in the tenant.
 - `SelectedSites`: The policy applies only to the sites you explicitly add to it.
 
+Changing an active `AllSites` or `AllODBSites` policy to `SelectedSites` requires at least one included site. Excluded sites don't satisfy this requirement.
+
 ```yaml
 Type: SPOFileArchivePolicyType
 Parameter Sets: (All)
@@ -178,7 +182,7 @@ Accept wildcard characters: False
 
 ### -State
 
-Specifies the updated state of the policy. Accepted values are `Active` and `Inactive`. A policy cannot be set to `Active` unless its PolicyType is `AllSites` or at least one site has been added to it.
+Specifies the updated state of the policy. Accepted values are `Active` and `Inactive`. A `SelectedSites` policy requires at least one included site before it can be set to `Active`; excluded sites don't satisfy this requirement. An `AllSites` or `AllODBSites` policy can be activated without explicitly included sites.
 
 ```yaml
 Type: SPOFileArchivePolicyState
