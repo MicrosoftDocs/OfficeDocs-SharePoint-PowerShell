@@ -8,7 +8,7 @@ schema: 2.0.0
 author: trent-green
 ms.author: trgreen
 ms.reviewer:
-manager: johmar
+manager: brgussin
 ai-usage: ai-generated
 ---
 
