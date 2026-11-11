@@ -5,6 +5,10 @@ online version: https://learn.microsoft.com/powershell/module/microsoft.online.s
 applicable: SharePoint Online
 title: Start-SPOContainerDataAccessGovernanceJob
 schema: 2.0.0
+author: pvrk
+ms.author: pullabhk
+manager:
+ms.reviewer:
 ---
 
 # Start-SPOContainerDataAccessGovernanceJob
@@ -21,11 +25,11 @@ Start-SPOContainerDataAccessGovernanceJob -JobType <String> -Name <String> [<Com
 
 ## DESCRIPTION
 
-The `Start-SPOContainerDataAccessGovernanceJob` cmdlet submits a report request and returns metadata that includes the report ID and status. Report generation is asynchronous. Use `Get-SPOContainerDataAccessGovernanceJob` to check the status before downloading the completed report with `Export-SPOContainerDataAccessGovernanceJob`.
+This cmdlet submits a report request and returns metadata that includes the report ID and status. Report generation is asynchronous. Use `Get-SPOContainerDataAccessGovernanceJob` to check the status before downloading the completed report with `Export-SPOContainerDataAccessGovernanceJob`.
 
 The supported job type is `SitePermissions`. This cmdlet targets SharePoint Embedded; it doesn't accept a workload parameter. To request reports for SharePoint sites or OneDrive accounts, use `Start-SPODataAccessGovernanceInsight`.
 
-Connect to the consuming tenant's administration endpoint with `Connect-SPOService` before running this cmdlet. You must be a SharePoint Embedded Administrator or Global Administrator to run this cmdlet. SharePoint Embedded Administrator is the least-privileged role for this operation. For role information, see [Consuming tenant admin](/sharepoint/dev/embedded/admin/consuming-tenant-admin).
+You must be a SharePoint Embedded Administrator or Global Administrator to run this cmdlet. SharePoint Embedded Administrator is the least-privileged role for this operation. For role information, see [Consuming tenant admin](/sharepoint/dev/embedded/admin/consuming-tenant-admin).
 
 The service must support SharePoint Embedded Data Access Governance reports. Report operations fail in environments where the required backend support hasn't been deployed.
 
@@ -101,7 +105,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

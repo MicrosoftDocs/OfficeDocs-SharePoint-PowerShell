@@ -5,6 +5,10 @@ online version: https://learn.microsoft.com/powershell/module/microsoft.online.s
 applicable: SharePoint Online
 title: Remove-SPOContainerDataAccessGovernanceJob
 schema: 2.0.0
+author: pvrk
+ms.author: pullabhk
+manager:
+ms.reviewer:
 ---
 
 # Remove-SPOContainerDataAccessGovernanceJob
@@ -21,13 +25,13 @@ Remove-SPOContainerDataAccessGovernanceJob -ReportID <Guid> [-WhatIf] [-Confirm]
 
 ## DESCRIPTION
 
-The `Remove-SPOContainerDataAccessGovernanceJob` cmdlet deletes the report identified by `ReportID`. It doesn't delete the SharePoint Embedded containers described by the report.
+This cmdlet deletes the report identified by `ReportID`. It doesn't delete the SharePoint Embedded containers described by the report.
 
 The cmdlet retrieves the report metadata and verifies that the report belongs to SharePoint Embedded before requesting confirmation or deletion. SharePoint and OneDrive report IDs aren't accepted.
 
 Use `WhatIf` to preview the deletion. The cmdlet still retrieves and validates the report, but doesn't send a deletion request.
 
-Connect to the consuming tenant's administration endpoint with `Connect-SPOService` before running this cmdlet. You must be a SharePoint Embedded Administrator or Global Administrator to run this cmdlet. SharePoint Embedded Administrator is the least-privileged role for this operation.
+You must be a SharePoint Embedded Administrator or Global Administrator to run this cmdlet. SharePoint Embedded Administrator is the least-privileged role for this operation.
 
 The service must support SharePoint Embedded Data Access Governance reports. Report operations fail in environments where the required backend support hasn't been deployed. For report scope, licensing, supported environments, and service limits, see [Start-SPOContainerDataAccessGovernanceJob](./Start-SPOContainerDataAccessGovernanceJob.md).
 
@@ -101,7 +105,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

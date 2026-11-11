@@ -5,6 +5,10 @@ online version: https://learn.microsoft.com/powershell/module/microsoft.online.s
 applicable: SharePoint Online
 title: Get-SPOContainerDataAccessGovernanceJob
 schema: 2.0.0
+author: pvrk
+ms.author: pullabhk
+manager:
+ms.reviewer:
 ---
 
 # Get-SPOContainerDataAccessGovernanceJob
@@ -29,13 +33,13 @@ Get-SPOContainerDataAccessGovernanceJob -ReportID <Guid> [<CommonParameters>]
 
 ## DESCRIPTION
 
-Use `Get-SPOContainerDataAccessGovernanceJob` to list full-detail SharePoint Embedded Site Permissions reports or retrieve a specific SharePoint Embedded report. Specify either `JobType` or `ReportID`, not both.
+This cmdlet lists full-detail SharePoint Embedded Site Permissions reports or retrieves a specific SharePoint Embedded report. Specify either `JobType` or `ReportID`, not both.
 
 The output includes the report ID, report name, workload, and status. Wait until the status is `Completed` before exporting the report. This cmdlet retrieves report metadata, not the report's CSV content.
 
 A report ID belonging to SharePoint or OneDrive isn't accepted. Use `Get-SPODataAccessGovernanceInsight` for those reports.
 
-Connect to the consuming tenant's administration endpoint with `Connect-SPOService` before running this cmdlet. You must be a SharePoint Embedded Administrator or Global Administrator to run this cmdlet. SharePoint Embedded Administrator is the least-privileged role for this operation.
+You must be a SharePoint Embedded Administrator or Global Administrator to run this cmdlet. SharePoint Embedded Administrator is the least-privileged role for this operation.
 
 The service must support SharePoint Embedded Data Access Governance reports. Report operations fail in environments where the required backend support hasn't been deployed. For report scope, licensing, supported environments, and service limits, see [Start-SPOContainerDataAccessGovernanceJob](./Start-SPOContainerDataAccessGovernanceJob.md).
 
@@ -94,7 +98,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 

@@ -5,6 +5,10 @@ online version: https://learn.microsoft.com/powershell/module/microsoft.online.s
 applicable: SharePoint Online
 title: Export-SPOContainerDataAccessGovernanceJob
 schema: 2.0.0
+author: pvrk
+ms.author: pullabhk
+manager:
+ms.reviewer:
 ---
 
 # Export-SPOContainerDataAccessGovernanceJob
@@ -21,13 +25,13 @@ Export-SPOContainerDataAccessGovernanceJob -ReportID <Guid> [-DownloadPath <Stri
 
 ## DESCRIPTION
 
-The `Export-SPOContainerDataAccessGovernanceJob` cmdlet downloads a completed report to a local folder. Use `Get-SPOContainerDataAccessGovernanceJob` to confirm that the report status is `Completed`.
+This cmdlet downloads a completed report to a local folder. Use `Get-SPOContainerDataAccessGovernanceJob` to confirm that the report status is `Completed`.
 
 The cmdlet checks that the report belongs to SharePoint Embedded and is completed before downloading its content. SharePoint and OneDrive report IDs aren't accepted.
 
 Specify a folder, not a file name, for `DownloadPath`. The file name is derived from the report metadata. If you omit the path, the cmdlet uses the current user's Downloads folder, which must exist. A specified folder is created if it doesn't exist. An existing file with the same name isn't overwritten.
 
-Connect to the consuming tenant's administration endpoint with `Connect-SPOService` before running this cmdlet. You must be a SharePoint Embedded Administrator or Global Administrator to run this cmdlet. SharePoint Embedded Administrator is the least-privileged role for this operation.
+You must be a SharePoint Embedded Administrator or Global Administrator to run this cmdlet. SharePoint Embedded Administrator is the least-privileged role for this operation.
 
 The service must support SharePoint Embedded Data Access Governance reports. Report operations fail in environments where the required backend support hasn't been deployed. For report scope, licensing, supported environments, and service limits, see [Start-SPOContainerDataAccessGovernanceJob](./Start-SPOContainerDataAccessGovernanceJob.md).
 
@@ -85,7 +89,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-ProgressAction`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
