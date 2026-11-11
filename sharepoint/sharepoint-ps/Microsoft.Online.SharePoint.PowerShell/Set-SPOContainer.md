@@ -108,6 +108,8 @@ For any parameters that are passed in, the `Set-SPOContainer` cmdlet sets or upd
 
 The `StorageQuota` parameter sets the container storage quota in megabytes (MB). The value must be from 1,024 MB (1 GB) through 26,214,400 MB (25 TB).
 
+`StorageQuota` is a container capacity limit, not a storage allocation or a billing amount. Setting a quota of 25 TB doesn't allocate or immediately charge for 25 TB of storage. SharePoint Embedded storage charges are based on the actual data stored, measured in GB, including metadata, versions, and recycle bin content. For more information, see [SharePoint Embedded billing meters](/sharepoint/dev/embedded/reference/billing-meters) and [SharePoint Embedded limits](/sharepoint/dev/embedded/plan/limits-calling-patterns).
+
 > [!IMPORTANT]
 > Always wait for the current principal owner transfer attempt to finish before reusing the cmdlet. Concurrent or premature reuse can lead to incomplete or invalid ownership changes.
 
@@ -344,7 +346,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Use this parameter to specify the container url.
+Use this parameter to specify the container ID or container URL.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SPOContainerPipeBind
