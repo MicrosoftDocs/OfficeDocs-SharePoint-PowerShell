@@ -15,7 +15,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Lists SharePoint Embedded Data Access Governance reports or gets a report by ID.
+This cmdlet lists SharePoint Embedded Data Access Governance reports or gets a report by ID.
 
 ## SYNTAX
 
@@ -113,8 +113,6 @@ Report metadata objects. A list operation can return no reports.
 ## NOTES
 
 ## RELATED LINKS
-
-[Connect-SPOService](./Connect-SPOService.md)
 
 [Start-SPOContainerDataAccessGovernanceJob](./Start-SPOContainerDataAccessGovernanceJob.md)
 

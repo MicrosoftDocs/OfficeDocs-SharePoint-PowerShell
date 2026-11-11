@@ -15,7 +15,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Downloads a completed SharePoint Embedded Data Access Governance report.
+This cmdlet downloads a completed SharePoint Embedded Data Access Governance report.
 
 ## SYNTAX
 
@@ -104,8 +104,6 @@ A success message containing the downloaded file path.
 ## NOTES
 
 ## RELATED LINKS
-
-[Connect-SPOService](./Connect-SPOService.md)
 
 [Start-SPOContainerDataAccessGovernanceJob](./Start-SPOContainerDataAccessGovernanceJob.md)
 

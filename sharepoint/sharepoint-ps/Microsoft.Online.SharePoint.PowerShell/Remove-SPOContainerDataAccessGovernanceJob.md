@@ -15,7 +15,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Deletes a SharePoint Embedded Data Access Governance report.
+This cmdlet deletes a SharePoint Embedded Data Access Governance report.
 
 ## SYNTAX
 
@@ -118,8 +118,6 @@ This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVar
 ## NOTES
 
 ## RELATED LINKS
-
-[Connect-SPOService](./Connect-SPOService.md)
 
 [Start-SPOContainerDataAccessGovernanceJob](./Start-SPOContainerDataAccessGovernanceJob.md)
 

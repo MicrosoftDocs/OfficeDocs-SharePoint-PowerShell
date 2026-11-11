@@ -15,7 +15,7 @@ ms.reviewer:
 
 ## SYNOPSIS
 
-Requests a Data Access Governance report for SharePoint Embedded containers.
+This cmdlet requests a Data Access Governance report for SharePoint Embedded containers.
 
 ## SYNTAX
 
@@ -120,8 +120,6 @@ Report metadata with `ReportId` and `Status` properties.
 ## NOTES
 
 ## RELATED LINKS
-
-[Connect-SPOService](./Connect-SPOService.md)
 
 [Get-SPOContainerDataAccessGovernanceJob](./Get-SPOContainerDataAccessGovernanceJob.md)
 
