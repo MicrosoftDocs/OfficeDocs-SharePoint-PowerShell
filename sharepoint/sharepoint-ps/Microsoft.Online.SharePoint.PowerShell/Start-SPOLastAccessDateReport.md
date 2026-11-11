@@ -27,21 +27,15 @@ Start-SPOLastAccessDateReport [-Site] <SpoSitePipeBind[]> [-Mode <LastAccessDate
 
 ## DESCRIPTION
 
-The `Start-SPOLastAccessDateReport` cmdlet submits a request and returns its `RunId`. Use `Get-SPOLastAccessDateReportStatus` to track progress and `Export-SPOLastAccessDateReport` to download the results.
+This cmdlet starts a last access date report for the specified SharePoint sites and returns a `RunId`. Use `Get-SPOLastAccessDateReportStatus` to check progress and `Export-SPOLastAccessDateReport` to download the results.
 
-The `Sampling` mode supports up to 1,000 sites per request and up to 1,000 files per site. It doesn't select files by age or access date. The sample isn't a complete inventory or a list of files eligible for archiving.
+`Sampling` supports up to 1,000 sites per request and samples up to 1,000 files per site. The sample isn't a complete file inventory. Don't use it to identify files eligible for archiving.
 
-Processing runs asynchronously for up to 15 days after submission. Unfinished sites stop retrying after that period. The service packages reports after site processing finishes. Request records remain available for 15 days after submission.
+Processing can take up to 15 days. Export reports within 15 days of submitting the request.
 
-If another request already processes a site, this cmdlet skips that site and returns a warning with the existing `RunId`. The `SitesAlreadyInProgress` property also identifies skipped sites.
+The cmdlet skips sites already included in an active request. Review `SitesAlreadyInProgress` for skipped sites and their existing requests.
 
-If every site is already being processed, the cmdlet returns `AlreadyInProgress` and queues no new sites. The returned `RunId` belongs to the existing request for the first skipped site. Review `SitesAlreadyInProgress` because other sites might belong to different requests.
-
-Use an account with the SharePoint Advanced Management Administrator role. Global Administrator, SharePoint Administrator, and Global Reader roles alone don't grant permission to run this cmdlet.
-
-App-only access requires `Sites.FullControl.All` with Update permission on Advanced Management reports.
-
-Your tenant and SharePoint Online Management Shell version must support this cmdlet. An unsupported tenant returns an experimental-feature error.
+You need the SharePoint Advanced Management Administrator role to run this cmdlet. App-only authentication requires `Sites.FullControl.All`.
 
 ## EXAMPLES
 
@@ -80,6 +74,8 @@ This example previews a request without submitting it. Pass site objects through
 
 ### -Site
 
+> Applicable: SharePoint Online
+
 Specifies one or more site collections by URL, site ID, `SPOSite` object, or `SPODeletedSite` object.
 
 All sites must belong to the connected tenant. A request can contain up to 1,000 sites.
@@ -98,6 +94,8 @@ Accept wildcard characters: False
 
 ### -Mode
 
+> Applicable: SharePoint Online
+
 Specifies the processing mode. `Sampling` is the only supported value and the default.
 
 ```yaml
@@ -115,6 +113,8 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
+> Applicable: SharePoint Online
+
 Shows what would happen without submitting a report request.
 
 ```yaml
@@ -130,6 +130,8 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+
+> Applicable: SharePoint Online
 
 Prompts for confirmation before submitting the request. This high-impact cmdlet prompts by default with the standard confirmation preference.
 
@@ -149,7 +151,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -165,7 +167,7 @@ The returned object contains these properties:
 
 | Property | Description |
 |---|---|
-| `RunId` | Identifies the request to use with the status and export cmdlets. |
+| `RunId` | Identifies the request. If all sites are already being processed, identifies the existing request for the first skipped site. |
 | `Mode` | Identifies the processing mode. |
 | `SiteCount` | Counts the sites queued by this request. |
 | `Status` | Returns `Accepted` when sites were queued, or `AlreadyInProgress` when no new sites were queued. |

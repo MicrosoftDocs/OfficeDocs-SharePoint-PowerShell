@@ -27,19 +27,13 @@ Get-SPOLastAccessDateReportStatus [-RunId] <Guid> [-Site <SpoSitePipeBind[]>]
 
 ## DESCRIPTION
 
-The `Get-SPOLastAccessDateReportStatus` cmdlet tracks a request submitted by `Start-SPOLastAccessDateReport`.
+This cmdlet gets the status of a report request created by `Start-SPOLastAccessDateReport`.
 
-Without `-Site`, it returns a request summary and counts sites by processing state. With `-Site`, it returns one status object for each specified site.
+By default, it returns a request summary and the number of sites in each processing state. Use `-Site` to get the status of specific sites. Review failures before exporting the report.
 
-A site count of zero in one state doesn't prove the request succeeded. Review the complete state breakdown and any failures before exporting results.
+You need the SharePoint Advanced Management Administrator role to run this cmdlet. App-only authentication requires `Sites.FullControl.All`.
 
-Use an account with the SharePoint Advanced Management Administrator role. Global Administrator, SharePoint Administrator, and Global Reader roles alone don't grant permission to run this cmdlet.
-
-App-only access requires `Sites.FullControl.All` with Read permission on Advanced Management reports.
-
-Authorized callers can query requests from the connected tenant. The service retains request records for 15 days after submission.
-
-Your tenant and SharePoint Online Management Shell version must support this cmdlet. An unsupported tenant returns an experimental-feature error.
+Report requests remain available for 15 days after submission.
 
 ## EXAMPLES
 
@@ -62,8 +56,7 @@ This example gets the request's status for one site, including its attempt count
 ### EXAMPLE 3
 
 ```powershell
-Get-SPOSite -Filter "Url -like '*marketing*'" |
-    Get-SPOLastAccessDateReportStatus -RunId $report.RunId
+Get-SPOSite -Filter "Url -like '*marketing*'" | Get-SPOLastAccessDateReportStatus -RunId $report.RunId
 ```
 
 This example gets per-site status for the sites returned by `Get-SPOSite`. A site outside this request returns `NotFound`.
@@ -71,6 +64,8 @@ This example gets per-site status for the sites returned by `Get-SPOSite`. A sit
 ## PARAMETERS
 
 ### -RunId
+
+> Applicable: SharePoint Online
 
 Specifies the request identifier returned by `Start-SPOLastAccessDateReport`. The identifier must not be an empty GUID.
 
@@ -87,6 +82,8 @@ Accept wildcard characters: False
 ```
 
 ### -Site
+
+> Applicable: SharePoint Online
 
 Specifies site collections by URL, site ID, `SPOSite` object, or `SPODeletedSite` object.
 
@@ -106,7 +103,7 @@ Accept wildcard characters: False
 
 ### CommonParameters
 
-This cmdlet supports the common parameters. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
+This cmdlet supports the common parameters: `-Debug`, `-ErrorAction`, `-ErrorVariable`, `-InformationAction`, `-InformationVariable`, `-OutVariable`, `-OutBuffer`, `-PipelineVariable`, `-Verbose`, `-WarningAction`, and `-WarningVariable`. For more information, see [about_CommonParameters](/powershell/module/microsoft.powershell.core/about/about_commonparameters).
 
 ## INPUTS
 
@@ -139,10 +136,10 @@ Without `-Site`, the cmdlet returns these summary properties:
 | PackageState | Description |
 |---|---|
 | `RunNotFinished` | Sites are still queued, processing, or retrying. Wait before exporting. |
-| `NotRequested` | Packaging doesn't exist, or its state couldn't be read. Export requests packaging. |
+| `NotRequested` | Run `Export-SPOLastAccessDateReport` to prepare the download. |
 | `Packaging` | The service is building the ZIP. Wait before exporting. |
 | `Ready` | The package is available. Use Export to download the ZIP and index. |
-| `Failed` | Packaging failed. Export requests another packaging attempt. |
+| `Failed` | Run `Export-SPOLastAccessDateReport` to try preparing the download again. |
 
 ### Microsoft.Online.SharePoint.PowerShell.SPOLastAccessDateReportStatusInfo
 
