@@ -1124,7 +1124,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-This parameter allows creation of classic publishing site collections (templates BLANKINTERNETCONTAINER#0, CMSPUBLISHING#0 and BLANKINTERNET#0) and activation of classic publishing features in sites.
+This parameter allows creation of classic publishing site collections (for example, using the `BLANKINTERNETCONTAINER#0` template) and activation of classic publishing features in sites.
 
 The valid values are:
 
