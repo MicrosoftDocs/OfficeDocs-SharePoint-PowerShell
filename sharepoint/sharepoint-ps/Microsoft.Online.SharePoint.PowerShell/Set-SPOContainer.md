@@ -104,7 +104,7 @@ Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-RestrictContentOrgWideSear
 
 ## DESCRIPTION
 
-For any parameters that are passed in, the `Set-SPOContainer` cmdlet sets or updates the setting for the active container identified by the parameter `Identity`. The cmdlet throws an error if the identity of an archived container is provided. The principal owner transfer operation is supported only for containers that are user-owned. Attempting to perform this operation on non user-owned containers will result in an error. 
+For any parameters that are passed in, the `Set-SPOContainer` cmdlet sets or updates the setting for the active container identified by the parameter `Identity`, which accepts a container ID or container URL. The cmdlet throws an error if the identity of an archived container is provided. The principal owner transfer operation is supported only for containers that are user-owned. Attempting to perform this operation on non user-owned containers will result in an error.
 
 The `StorageQuota` parameter sets the container storage quota in megabytes (MB). The value must be from 1,024 MB (1 GB) through 26,214,400 MB (25 TB).
 
