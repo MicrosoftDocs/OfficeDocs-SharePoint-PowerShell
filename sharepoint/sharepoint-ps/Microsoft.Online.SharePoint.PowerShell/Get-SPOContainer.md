@@ -52,7 +52,7 @@ Get-SPOContainer -Identity <SPOContainerPipeBind> [-ProgressAction <ActionPrefer
 
 ## DESCRIPTION
 
-The `Get-SPOContainer` cmdlet retrieves details of an individual container, either in the active or archived state, when paired with the `Identity` parameter, which requires specifying the container ID. When used with the `OwningApplicationId` parameter, the cmdlet returns a list of active containers associated with a SharePoint Embedded application. Additionally, when also used with the `ArchiveStatus` parameter, it returns a list of containers in the archived state as specified.
+The `Get-SPOContainer` cmdlet retrieves details of an individual container, either in the active or archived state, when paired with the `Identity` parameter, which accepts a container ID or container URL. The detailed output includes `StorageQuota`, reported in megabytes (MB). When used with the `OwningApplicationId` parameter, the cmdlet returns a list of active containers associated with a SharePoint Embedded application. Additionally, when also used with the `ArchiveStatus` parameter, it returns a list of containers in the archived state as specified.
 
 You must be a SharePoint Embedded Administrator to run this cmdlet.
 
@@ -88,7 +88,7 @@ Example 1 returns the details of all the containers in the tenant.
 Get-SPOContainer -Identity b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_8U
 ```
 
-Example 2 returns the detailed properties of the Container with associated Container ID b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_8U.
+Example 2 returns the detailed properties of the Container with associated Container ID b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_8U. The `StorageQuota` property is returned in megabytes (MB).
 
 ### Example 3
 
@@ -183,7 +183,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Use this parameter to specify the Container ID.
+Use this parameter to specify the container ID or container URL.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SPOContainerPipeBind

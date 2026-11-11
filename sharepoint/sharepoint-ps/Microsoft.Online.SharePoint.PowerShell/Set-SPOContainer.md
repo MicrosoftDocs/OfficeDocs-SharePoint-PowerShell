@@ -20,57 +20,57 @@ Sets or updates one or more property values for a container in SharePoint Embedd
 ### ParamSet1
 ```
 Set-SPOContainer [-Identity] <SPOContainerPipeBind> [[-SensitivityLabel] <String>]
- [-InformationBarriersMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-InformationBarriersMode <String>] [-StorageQuota <Int64>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### BlockDownloadPolicy
 ```
 Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-BlockDownloadPolicy <Boolean>]
  [-ExcludeBlockDownloadPolicyContainerOwners <Boolean>] [-ReadOnlyForBlockDownloadPolicy <Boolean>]
- [-InformationBarriersMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-InformationBarriersMode <String>] [-StorageQuota <Int64>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RestrictedAccessControl
 ```
 Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-EnableRestrictedAccessControl <Boolean>]
- [-RestrictedAccessControlGroups <Guid[]>] [-InformationBarriersMode <String>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-RestrictedAccessControlGroups <Guid[]>] [-InformationBarriersMode <String>] [-StorageQuota <Int64>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RestrictedAccessControlGroupsToAdd
 ```
 Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-RestrictedAccessControlGroupsToAdd <Guid[]>]
- [-InformationBarriersMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-InformationBarriersMode <String>] [-StorageQuota <Int64>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RestrictedAccessControlGroupsToRemove
 ```
 Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-RestrictedAccessControlGroupsToRemove <Guid[]>]
- [-InformationBarriersMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-InformationBarriersMode <String>] [-StorageQuota <Int64>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ClearRestrictedAccessControl
 ```
 Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-ClearRestrictedAccessControl]
- [-InformationBarriersMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-InformationBarriersMode <String>] [-StorageQuota <Int64>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ParamSet2
 ```
 Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-RemoveLabel] [-InformationBarriersMode <String>]
- [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-StorageQuota <Int64>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AddInformationBarrierSegments
 ```
 Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-AddInformationSegment <Guid[]>]
- [-InformationBarriersMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-InformationBarriersMode <String>] [-StorageQuota <Int64>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### RemoveInformationBarrierSegments
 ```
 Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-RemoveInformationSegment <Guid[]>]
- [-InformationBarriersMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-InformationBarriersMode <String>] [-StorageQuota <Int64>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### ConditionalAccess
@@ -78,32 +78,37 @@ Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-RemoveInformationSegment <
 Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-ConditionalAccessPolicy <SPOConditionalAccessPolicyType>]
  [-LimitedAccessFileType <SPOLimitedAccessFileType>] [-AllowEditing <Boolean>]
  [-ReadOnlyForUnmanagedDevices <Boolean>] [-AuthenticationContextName <String>]
- [-InformationBarriersMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-InformationBarriersMode <String>] [-StorageQuota <Int64>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### AllowDenyDomain
 ```
 Set-SPOContainer [-Identity] <SPOContainerPipeBind>
  [-SharingDomainRestrictionMode <SharingDomainRestrictionModes>] [-SharingAllowedDomainList <String>]
- [-SharingBlockedDomainList <String>] [-InformationBarriersMode <String>] [-WhatIf] [-Confirm]
- [<CommonParameters>]
+ [-SharingBlockedDomainList <String>] [-InformationBarriersMode <String>] [-StorageQuota <Int64>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### PrincipalOwnerTransfer
 ```
 Set-SPOContainer [-Identity] <SPOContainerPipeBind> -CurrentPrincipalOwner <String>
- -NewPrincipalOwner <String> [-InformationBarriersMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ -NewPrincipalOwner <String> [-InformationBarriersMode <String>] [-StorageQuota <Int64>] [-WhatIf]
+ [-Confirm] [<CommonParameters>]
 ```
 
 ### RestrictContentOrgWideSearch
 ```
 Set-SPOContainer [-Identity] <SPOContainerPipeBind> [-RestrictContentOrgWideSearch <Boolean>]
- [-InformationBarriersMode <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-InformationBarriersMode <String>] [-StorageQuota <Int64>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-For any parameters that are passed in, the `Set-SPOContainer` cmdlet sets or updates the setting for the active container identified by the parameter `Identity`. The cmdlet throws an error if the identity of an archived container is provided. The principal owner transfer operation is supported only for containers that are user-owned. Attempting to perform this operation on non user-owned containers will result in an error. 
+For any parameters that are passed in, the `Set-SPOContainer` cmdlet sets or updates the setting for the active container identified by the parameter `Identity`, which accepts a container ID or container URL. The cmdlet throws an error if the identity of an archived container is provided. The principal owner transfer operation is supported only for containers that are user-owned. Attempting to perform this operation on non user-owned containers will result in an error.
+
+The `StorageQuota` parameter sets the container storage quota in megabytes (MB). The value must be from 1,024 MB (1 GB) through 26,214,400 MB (25 TB).
+
+`StorageQuota` is a container capacity limit, not a storage allocation or a billing amount. Setting a quota of 25 TB doesn't allocate or immediately charge for 25 TB of storage. SharePoint Embedded storage charges are based on the actual data stored, measured in GB, including metadata, versions, and recycle bin content. For more information, see [SharePoint Embedded billing meters](/sharepoint/dev/embedded/reference/billing-meters) and [SharePoint Embedded limits](/sharepoint/dev/embedded/plan/limits-calling-patterns).
 
 > [!IMPORTANT]
 > Always wait for the current principal owner transfer attempt to finish before reusing the cmdlet. Concurrent or premature reuse can lead to incomplete or invalid ownership changes.
@@ -158,6 +163,14 @@ Set-SPOContainer -Identity https://contoso.sharepoint.com/contentstorage/CSP_33a
 ```
 
 In this example, `InformationSegment` 'a17efb47-e3c9-4d85-a188-1cd59c83de32' is removed from the container.
+
+### Example 7
+
+```powershell
+Set-SPOContainer -Identity b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_8U -StorageQuota 1024
+```
+
+This example sets the container storage quota to 1,024 MB (1 GB).
 
 ## PARAMETERS
 
@@ -333,7 +346,7 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Use this parameter to specify the container url.
+Use this parameter to specify the container ID or container URL.
 
 ```yaml
 Type: Microsoft.Online.SharePoint.PowerShell.SPOContainerPipeBind
@@ -619,6 +632,24 @@ Type: Microsoft.Online.SharePoint.TenantManagement.SharingDomainRestrictionModes
 Parameter Sets: AllowDenyDomain
 Aliases:
 Accepted values: None, AllowList, BlockList
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StorageQuota
+
+> Applicable: SharePoint Online
+
+Specifies the storage quota for the container in megabytes (MB). The value must be from 1,024 MB (1 GB) through 26,214,400 MB (25 TB).
+
+```yaml
+Type: System.Int64
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
