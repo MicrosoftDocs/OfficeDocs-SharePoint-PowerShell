@@ -5,8 +5,8 @@ online version: https://learn.microsoft.com/powershell/module/microsoft.online.s
 applicable: SharePoint Online
 title: Start-SPOContainerDataAccessGovernanceJob
 schema: 2.0.0
-author: pvrk
-ms.author: pullabhk
+author: niksvij
+ms.author: nikhilvijay
 manager:
 ms.reviewer:
 ---
