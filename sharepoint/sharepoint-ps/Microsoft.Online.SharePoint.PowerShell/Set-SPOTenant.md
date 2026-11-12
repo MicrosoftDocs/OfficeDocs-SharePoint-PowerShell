@@ -1335,7 +1335,7 @@ The valid values are:
 
 - False (default) - The organization-level `HideSyncButtonOnTeamSite` setting applies to every site. Site-level values are saved but not applied.
 
-- True - Every SharePoint site uses its own `HideSyncButtonOnTeamSite` value. The site-level value is `$false` until it's changed, so the **Sync** button is shown on sites where it isn't set to `$true`, even if the organization-level setting hides it.
+- True - Every SharePoint site uses its own `HideSyncButtonOnTeamSite` value. The site-level value is `$false` until it's changed, so the **Sync** button is shown on sites where it isn't set to `$true`, even if the organization-level setting hides it. OneDrive sites always use the organization-level setting.
 
 > [!NOTE]
 > Before you set this parameter to `$true`, run `Set-SPOSite -HideSyncButtonOnTeamSite $true` on the sites where the **Sync** button should stay hidden.
