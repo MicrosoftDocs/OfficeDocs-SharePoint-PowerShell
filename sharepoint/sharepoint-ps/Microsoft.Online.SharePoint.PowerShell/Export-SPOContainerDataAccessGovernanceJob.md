@@ -31,7 +31,7 @@ The cmdlet checks that the report belongs to SharePoint Embedded and is complete
 
 Specify a folder, not a file name, for `DownloadPath`. The file name is derived from the report metadata. If you omit the path, the cmdlet uses the current user's Downloads folder, which must exist. A specified folder is created if it doesn't exist. An existing file with the same name isn't overwritten.
 
-You must be a SharePoint Embedded Administrator or Global Administrator to run this cmdlet. SharePoint Embedded Administrator is the least-privileged role for this operation.
+You must be a SharePoint Embedded Administrator to run this cmdlet. SharePoint Embedded Administrator is the least-privileged role for this operation.
 
 The service must support SharePoint Embedded Data Access Governance reports. Report operations fail in environments where the required backend support hasn't been deployed. For report scope, licensing, supported environments, and service limits, see [Start-SPOContainerDataAccessGovernanceJob](./Start-SPOContainerDataAccessGovernanceJob.md).
 

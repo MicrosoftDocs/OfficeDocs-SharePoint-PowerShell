@@ -29,7 +29,7 @@ This cmdlet submits a report request and returns metadata that includes the repo
 
 The supported job type is `SitePermissions`. This cmdlet targets SharePoint Embedded; it doesn't accept a workload parameter. To request reports for SharePoint sites or OneDrive accounts, use `Start-SPODataAccessGovernanceInsight`.
 
-You must be a SharePoint Embedded Administrator or Global Administrator to run this cmdlet. SharePoint Embedded Administrator is the least-privileged role for this operation. For role information, see [Consuming tenant admin](/sharepoint/dev/embedded/admin/consuming-tenant-admin).
+You must be a SharePoint Embedded Administrator to run this cmdlet. SharePoint Embedded Administrator is the least-privileged role for this operation. For role information, see [Consuming tenant admin](/sharepoint/dev/embedded/admin/consuming-tenant-admin).
 
 The service must support SharePoint Embedded Data Access Governance reports. Report operations fail in environments where the required backend support hasn't been deployed.
 
