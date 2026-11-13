@@ -9,7 +9,7 @@ author: samkabue
 ms.author: speedta
 ms.reviewer: Mengke-GH
 description: 'A PowerShell cmdlet used in SharePoint Online to configure organization-wide tenant settings.'
-ms.date: 10/19/2026
+ms.date: 10/23/2026
 ai-usage: ai-assisted
 ---
 
@@ -95,6 +95,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-IsLoopEnabled <Boolean>] [-DisableDocumentLibraryDefaultLabeling <Boolean>]
  [-ExtendPermissionsToUnprotectedFiles <Boolean>] [-EnableSensitivityLabelForPDF <Boolean>]
  [-EnableSensitivityLabelForOneNote <Boolean>] [-EnableSensitivityLabelForVideoFiles <Boolean>]
+ [-EnableSensitivityLabelForHtmlFiles <Boolean>]
  [-BlockSendLabelMismatchEmail <Boolean>] [-LabelMismatchEmailHelpLink <String>]
  [-BlockUserInfoVisibility <String>] [-BlockUserInfoVisibilityInOneDrive <TenantBrowseUserInfoPolicyValue>]
  [-BlockUserInfoVisibilityInSharePoint <TenantBrowseUserInfoPolicyValue>]
@@ -232,6 +233,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-IsLoopEnabled <Boolean>] [-DisableDocumentLibraryDefaultLabeling <Boolean>]
  [-ExtendPermissionsToUnprotectedFiles <Boolean>] [-EnableSensitivityLabelForPDF <Boolean>]
  [-EnableSensitivityLabelForOneNote <Boolean>] [-EnableSensitivityLabelForVideoFiles <Boolean>]
+ [-EnableSensitivityLabelForHtmlFiles <Boolean>]
  [-BlockSendLabelMismatchEmail <Boolean>] [-LabelMismatchEmailHelpLink <String>]
  [-BlockUserInfoVisibility <String>] [-BlockUserInfoVisibilityInOneDrive <TenantBrowseUserInfoPolicyValue>]
  [-BlockUserInfoVisibilityInSharePoint <TenantBrowseUserInfoPolicyValue>]
@@ -370,6 +372,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-IsLoopEnabled <Boolean>] [-DisableDocumentLibraryDefaultLabeling <Boolean>]
  [-ExtendPermissionsToUnprotectedFiles <Boolean>] [-EnableSensitivityLabelForPDF <Boolean>]
  [-EnableSensitivityLabelForOneNote <Boolean>] [-EnableSensitivityLabelForVideoFiles <Boolean>]
+ [-EnableSensitivityLabelForHtmlFiles <Boolean>]
  [-BlockSendLabelMismatchEmail <Boolean>] [-LabelMismatchEmailHelpLink <String>]
  [-BlockUserInfoVisibility <String>] [-BlockUserInfoVisibilityInOneDrive <TenantBrowseUserInfoPolicyValue>]
  [-BlockUserInfoVisibilityInSharePoint <TenantBrowseUserInfoPolicyValue>]
@@ -506,6 +509,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-IsLoopEnabled <Boolean>] [-DisableDocumentLibraryDefaultLabeling <Boolean>]
  [-ExtendPermissionsToUnprotectedFiles <Boolean>] [-EnableSensitivityLabelForPDF <Boolean>]
  [-EnableSensitivityLabelForOneNote <Boolean>] [-EnableSensitivityLabelForVideoFiles <Boolean>]
+ [-EnableSensitivityLabelForHtmlFiles <Boolean>]
  [-BlockSendLabelMismatchEmail <Boolean>] [-LabelMismatchEmailHelpLink <String>]
  [-BlockUserInfoVisibility <String>] [-BlockUserInfoVisibilityInOneDrive <TenantBrowseUserInfoPolicyValue>]
  [-BlockUserInfoVisibilityInSharePoint <TenantBrowseUserInfoPolicyValue>]
@@ -642,6 +646,7 @@ Set-SPOTenant [-MinCompatibilityLevel <Int32>] [-MaxCompatibilityLevel <Int32>]
  [-IsLoopEnabled <Boolean>] [-DisableDocumentLibraryDefaultLabeling <Boolean>]
  [-ExtendPermissionsToUnprotectedFiles <Boolean>] [-EnableSensitivityLabelForPDF <Boolean>]
  [-EnableSensitivityLabelForOneNote <Boolean>] [-EnableSensitivityLabelForVideoFiles <Boolean>]
+ [-EnableSensitivityLabelForHtmlFiles <Boolean>]
  [-BlockSendLabelMismatchEmail <Boolean>] [-LabelMismatchEmailHelpLink <String>]
  [-BlockUserInfoVisibility <String>] [-BlockUserInfoVisibilityInOneDrive <TenantBrowseUserInfoPolicyValue>]
  [-BlockUserInfoVisibilityInSharePoint <TenantBrowseUserInfoPolicyValue>]
@@ -3344,6 +3349,31 @@ Accept wildcard characters: False
 Lets you and other Global or SharePoint Administrators restrict access to sites.
 
 PARAMVALUE: True | False
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableSensitivityLabelForHtmlFiles
+
+> Applicable: SharePoint Online
+
+Controls whether users can apply sensitivity labels to HTML (`.html` and `.htm`) files in SharePoint and OneDrive.
+
+The valid values are:
+
+- True - Enables users to apply sensitivity labels to HTML files.
+- False (default) - Prevents users from applying sensitivity labels to HTML files.
+
+Before enabling this setting, review the supported capabilities and known limitations in [Enable sensitivity labels for files in SharePoint and OneDrive](/purview/sensitivity-labels-sharepoint-onedrive-files).
 
 ```yaml
 Type: System.Boolean
