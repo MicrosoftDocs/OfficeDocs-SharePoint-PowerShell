@@ -336,8 +336,8 @@ The customer-visible stages run in this order:
 | `ReadOnlyChecks` | Checks site, directory, profile, location, and identity requirements; captures the previous OneDrive association. |
 | `OldProfile` | Disconnects the specified old profile when it still references the target. Otherwise, makes no changes. |
 | `DeletionSchedule` | Cancels pending personal-site deletion scheduling for the target. |
-| `Ownership` | Sets the primary site owner and site collection administrator, grants root-web Full Control when needed, and updates the root web's author. |
-| `OwnerIdentity` | Repairs the owner's cached site identity in place when needed, retaining the site-user ID and its role assignments. Fails if another site user already has the intended identity. |
+| `OwnerIdentity` | Resolves or ensures the owner's site user and repairs its cached identity in place when needed, retaining the site-user ID and its role assignments. Verifies the persisted identity before granting ownership. Fails if another site user already has the intended identity. |
+| `Ownership` | Sets the primary site owner and site collection administrator, grants root-web Full Control when needed, and updates the root web's author after identity verification succeeds. |
 | `ProfileReconnection` | Repairs the new owner's personal-site association and records the profile identifier on the selected site. Independently attempts capabilities, feed-identifier, and creation-state updates on a best-effort basis; their nonfatal failures don't fail recovery. Doesn't repair profile identity. |
 | `LicenseReevaluation` | Queues license reevaluation when required. Doesn't assign a license or wait for reevaluation to finish. |
 | `DirectoryUrlPublication` | Submits the owner's OneDrive URL update to Microsoft Entra ID. |
