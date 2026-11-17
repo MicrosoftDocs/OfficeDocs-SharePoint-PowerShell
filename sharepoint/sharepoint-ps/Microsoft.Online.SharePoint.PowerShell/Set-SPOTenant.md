@@ -9,7 +9,7 @@ author: samkabue
 ms.author: speedta
 ms.reviewer: Mengke-GH
 description: 'A PowerShell cmdlet used in SharePoint Online to configure organization-wide tenant settings.'
-ms.date: 10/23/2026
+ms.date: 10/19/2026
 ai-usage: ai-assisted
 ---
 
