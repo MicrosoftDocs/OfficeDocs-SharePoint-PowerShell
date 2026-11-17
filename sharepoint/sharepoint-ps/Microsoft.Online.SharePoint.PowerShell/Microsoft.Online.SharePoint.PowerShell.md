@@ -134,6 +134,9 @@ Enables the current tenant's "SharePoint Online Client" service principal.
 ### [Export-SPODataAccessGovernanceInsight](Export-SPODataAccessGovernanceInsight.md)
 This cmdlet downloads the Data Access Governance (DAG) reports to the specified path. The default is the "Downloads" folder.
 
+### [Export-SPOLastAccessDateReport](Export-SPOLastAccessDateReport.md)
+Downloads completed file last access date reports as a ZIP file and a JSON index.
+
 ### [Export-SPOQueryLogs](Export-SPOQueryLogs.md)
 Export query logs for a user in an Office 365 tenant.  > [!NOTE] > Beginning February 2022, we'll be removing the Export-SPOQueryLogs command from SharePoint in Microsoft 365. We encourage users to instead download their Microsoft Search query history logs from the [My Account privacy portal](https://myaccount.microsoft.com/settingsandprivacy/privacy).
 
@@ -277,6 +280,9 @@ Enables the SharePoint Administrator to check status of all active and completed
 
 ### [Get-SPOInformationBarriersPolicyComplianceReport](Get-SPOInformationBarriersPolicyComplianceReport.md)
 Gets the status and results of Information Barriers policy compliance reports.
+
+### [Get-SPOLastAccessDateReportStatus](Get-SPOLastAccessDateReportStatus.md)
+Gets the overall or per-site progress of a file last access date report request.
 
 ### [Get-SPOListDesign](Get-SPOListDesign.md)
 Gets details about list designs that are on the SharePoint tenant. You can specify an ID of a specific list design to retrieve. If there are no parameters listed, details about all list designs are listed.
@@ -934,6 +940,9 @@ Generates a new report to identify and discover the usage patterns of Informatio
 
 ### [Start-SPOInformationBarriersPolicyComplianceReport](Start-SPOInformationBarriersPolicyComplianceReport.md)
 Generates an Information Barriers policy compliance report for SharePoint sites, OneDrive accounts, and user-owned SharePoint Embedded containers in the organization.
+
+### [Start-SPOLastAccessDateReport](Start-SPOLastAccessDateReport.md)
+Requests a sample of file last access dates for one or more SharePoint site collections.
 
 ### [Start-SPOM365AgentAccessInsightsReport](Start-SPOM365AgentAccessInsightsReport.md)
 Using this cmdlet, administrators may trigger the build of a new Microsoft 365 agent insight report for the specified number of days.  > [!NOTE] > The feature associated with this cmdlet will be rolling out soon.
