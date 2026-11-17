@@ -10,6 +10,7 @@ ms.author: trgreen
 ms.reviewer:
 manager: brgussin
 ai-usage: ai-generated
+ms.date: 11/16/2026
 ---
 
 # Export-SPOLastAccessDateReport
