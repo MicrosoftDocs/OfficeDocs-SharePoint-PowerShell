@@ -3366,12 +3366,12 @@ Accept wildcard characters: False
 
 > Applicable: SharePoint Online
 
-Controls whether users can apply sensitivity labels to HTML (`.html` and `.htm`) files in SharePoint and OneDrive.
+Controls whether sensitivity-label support is enabled for HTML (`.html` and `.htm`) files in SharePoint and OneDrive.
 
 The valid values are:
 
-- True - Enables users to apply sensitivity labels to HTML files.
-- False (default) - Prevents users from applying sensitivity labels to HTML files.
+- True - Enables sensitivity-label support for HTML files in SharePoint and OneDrive.
+- False (default) - Sensitivity-label support for HTML files in SharePoint and OneDrive is disabled.
 
 Before enabling this setting, review the supported capabilities and known limitations in [Enable sensitivity labels for files in SharePoint and OneDrive](/purview/sensitivity-labels-sharepoint-onedrive-files).
 
